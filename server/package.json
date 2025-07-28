@@ -21,6 +21,6 @@
     "typescript": "^5.x.x"
   },
   "dependencies": {
-    "@risingmedia/fivem-shared": "git+ssh://git@git.risingmedia.dev/fivem/types/shared.git"
+    "@risinglife/fivem-shared": "^0.0.1"
   }
 }
