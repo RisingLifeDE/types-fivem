@@ -1,6 +1,7 @@
-import { Vector3, Entity, Ped, Player, Vehicle, Object } from '@risinglife/fivem-shared';
+import { Vector3, Entity, Ped, Player, Vehicle, Object } from '@risinglife/redm-shared';
 /**
  * Cancels the currently executing event.
+ *
  * Hash: 0xFA29D35D | Since: shared
  */
 export function cancelEvent() {
@@ -8,12 +9,16 @@ export function cancelEvent() {
 }
 /**
  * Adds a listener for Console Variable changes.
+ *
  * The function called expects to match the following signature:
+ *
  * ```ts
  * function ConVarChangeListener(conVarName: string, reserved: any);
  * ```
+ *
  * *   **conVarName**: The ConVar that changed.
  * *   **reserved**: Currently unused.
+ *
  * Hash: 0xAB7F7241 | Since: shared
  */
 export function addConvarChangeListener(handler) {
@@ -21,6 +26,7 @@ export function addConvarChangeListener(handler) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x1E86F206 | Since: shared
  */
 export function deleteFunctionReference() {
@@ -28,7 +34,9 @@ export function deleteFunctionReference() {
 }
 /**
  * Deletes the specified entity.
+ *
  * **NOTE**: For trains this will only work if called on the train engine, it will not work on its carriages.
+ *
  * Hash: 0xFAA3D236 | Since: server
  */
 export function deleteEntity(entity) {
@@ -37,6 +45,7 @@ export function deleteEntity(entity) {
 }
 /**
  * Returns whether or not the specified player has enough information to start a commerce session for.
+ *
  * Hash: 0x429461C3 | Since: server
  */
 export function canPlayerStartCommerceSession() {
@@ -44,19 +53,25 @@ export function canPlayerStartCommerceSession() {
 }
 /**
  * Adds a handler for changes to a state bag.
+ *
  * The function called expects to match the following signature:
+ *
  * ```ts
  * function StateBagChangeHandler(bagName: string, key: string, value: any, reserved: number, replicated: boolean);
  * ```
+ *
  * *   **bagName**: The internal bag ID for the state bag which changed. This is usually `player:Source`, `entity:NetID`
  * or `localEntity:Handle`.
  * *   **key**: The changed key.
  * *   **value**: The new value stored at key. The old value is still stored in the state bag at the time this callback executes.
  * *   **reserved**: Currently unused.
  * *   **replicated**: Whether the set is meant to be replicated.
+ *
  * At this time, the change handler can't opt to reject changes.
+ *
  * If bagName refers to an entity, use [GET_ENTITY_FROM_STATE_BAG_NAME](#\_0x4BDF1867) to get the entity handle
  * If bagName refers to a player, use [GET_PLAYER_FROM_STATE_BAG_NAME](#\_0xA56135E0) to get the player handle
+ *
  * Hash: 0x5BA35AAF | Since: shared
  */
 export function addStateBagChangeHandler(handler) {
@@ -64,6 +79,7 @@ export function addStateBagChangeHandler(handler) {
 }
 /**
  * This is a getter for [SET_HELI_TAIL_EXPLODE_THROW_DASHBOARD](#\_0x3EC8BF18AA453FE9)
+ *
  * Hash: 0x23E46BD7 | Since: server
  */
 export function isHeliTailBoomBreakable(heli) {
@@ -72,6 +88,7 @@ export function isHeliTailBoomBreakable(heli) {
 }
 /**
  * Requests whether or not the player owns the specified package.
+ *
  * Hash: 0xDEF0480B | Since: server
  */
 export function doesPlayerOwnSkuExt(skuId) {
@@ -79,6 +96,7 @@ export function doesPlayerOwnSkuExt(skuId) {
 }
 /**
  * Internal function for ensuring an entity has a state bag.
+ *
  * Hash: 0x3BB78F05 | Since: shared
  */
 export function ensureEntityStateBag(entity) {
@@ -87,6 +105,7 @@ export function ensureEntityStateBag(entity) {
 }
 /**
  * Requests whether or not the player owns the specified SKU.
+ *
  * Hash: 0x167ABA27 | Since: server
  */
 export function doesPlayerOwnSku(skuId) {
@@ -94,6 +113,7 @@ export function doesPlayerOwnSku(skuId) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xBA0613E1 | Since: server
  */
 export function dropPlayer() {
@@ -101,6 +121,7 @@ export function dropPlayer() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x77CC80DC | Since: shared
  */
 export function doesTrainStopAtStations(train) {
@@ -109,6 +130,7 @@ export function doesTrainStopAtStations(train) {
 }
 /**
  * Deletes the specified `entity` and any carriage its attached to, or that is attached to it.
+ *
  * Hash: 0x523BA3DA | Since: server
  */
 export function deleteTrain(entity) {
@@ -117,6 +139,7 @@ export function deleteTrain(entity) {
 }
 /**
  * Depending on your use case you may need to use `add_acl resource.<your_resource_name> command.<command_name> allow` to use this native in your resource.
+ *
  * Hash: 0x561C060B | Since: shared
  */
 export function executeCommand() {
@@ -124,6 +147,7 @@ export function executeCommand() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x43F15989 | Since: server
  */
 export function doesBoatSinkWhenWrecked(vehicle) {
@@ -132,6 +156,7 @@ export function doesBoatSinkWhenWrecked(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x3AC90869 | Since: server
  */
 export function doesEntityExist(entity) {
@@ -140,6 +165,7 @@ export function doesEntityExist(entity) {
 }
 /**
  * Returns whether or not the player exists
+ *
  * Hash: 0x12038599 | Since: server
  */
 export function doesPlayerExist() {
@@ -147,6 +173,7 @@ export function doesPlayerExist() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xF4E2079D | Since: shared
  */
 export function duplicateFunctionReference() {
@@ -154,6 +181,7 @@ export function duplicateFunctionReference() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xF97B1C93 | Since: server
  */
 export function enableEnhancedHostSupport(enabled) {
@@ -161,6 +189,7 @@ export function enableEnhancedHostSupport(enabled) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x972CC383 | Since: server
  */
 export function getEntityHeading(entity) {
@@ -169,6 +198,7 @@ export function getEntityHeading(entity) {
 }
 /**
  * An internal function for converting a stack trace object to a string.
+ *
  * Hash: 0xD70C3BCA | Since: shared
  */
 export function formatStackTrace(traceData) {
@@ -178,9 +208,11 @@ export function formatStackTrace(traceData) {
 /**
  * Returns all peds handles known to the server.
  * The data returned adheres to the following layout:
+ *
  * ```
  * [127, 42, 13, 37]
  * ```
+ *
  * Hash: 0xB8584FEF | Since: server
  */
 export function getAllPeds() {
@@ -189,9 +221,11 @@ export function getAllPeds() {
 /**
  * Returns all vehicle handles known to the server.
  * The data returned adheres to the following layout:
+ *
  * ```
  * [127, 42, 13, 37]
  * ```
+ *
  * Hash: 0x332169F5 | Since: server
  */
 export function getAllVehicles() {
@@ -199,6 +233,7 @@ export function getAllVehicles() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x13B6855D | Since: server
  */
 export function flagServerAsPrivate(private_) {
@@ -206,6 +241,7 @@ export function flagServerAsPrivate(private_) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xD16EA02F | Since: server
  */
 export function getEntityOrphanMode(entity) {
@@ -215,9 +251,11 @@ export function getEntityOrphanMode(entity) {
 /**
  * Returns all object handles known to the server.
  * The data returned adheres to the following layout:
+ *
  * ```
  * [127, 42, 13, 37]
  * ```
+ *
  * Hash: 0x6886C3FE | Since: server
  */
 export function getAllObjects() {
@@ -225,6 +263,7 @@ export function getAllObjects() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x62FC38D0 | Since: server
  */
 export function getAirDragMultiplierForPlayersVehicle() {
@@ -232,6 +271,7 @@ export function getAirDragMultiplierForPlayersVehicle() {
 }
 /**
  * Returns the hash of weapon the Ped is currently using.
+ *
  * Hash: 0xB0237302 | Since: server
  */
 export function getCurrentPedWeapon(ped) {
@@ -240,6 +280,7 @@ export function getCurrentPedWeapon(ped) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x22239130 | Since: server
  */
 export function getHeliTailRotorDamageScale(heli) {
@@ -248,6 +289,7 @@ export function getHeliTailRotorDamageScale(heli) {
 }
 /**
  * This will have floating point inaccuracy.
+ *
  * Hash: 0x9E666D | Since: shared
  */
 export function getConvarFloat(defaultValue) {
@@ -255,6 +297,7 @@ export function getConvarFloat(defaultValue) {
 }
 /**
  * Returns the name of the currently executing resource.
+ *
  * Hash: 0xE5E9EBBB | Since: shared
  */
 export function getCurrentResourceName() {
@@ -262,6 +305,7 @@ export function getCurrentResourceName() {
 }
 /**
  * Can be used to get a console variable casted back to `int` (an integer value).
+ *
  * Hash: 0x935C0AB2 | Since: shared
  */
 export function getConvarInt(default_) {
@@ -269,6 +313,7 @@ export function getConvarInt(default_) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x9BF8A73F | Since: server
  */
 export function getEntityRotationVelocity(entity) {
@@ -277,7 +322,9 @@ export function getEntityRotationVelocity(entity) {
 }
 /**
  * Gets the routing bucket for the specified entity.
+ *
  * Routing buckets are also known as 'dimensions' or 'virtual worlds' in past echoes, however they are population-aware.
+ *
  * Hash: 0xED4B0486 | Since: server
  */
 export function getEntityRoutingBucket(entity) {
@@ -286,6 +333,7 @@ export function getEntityRoutingBucket(entity) {
 }
 /**
  * Currently it only works with peds.
+ *
  * Hash: 0xC7AE6AA1 | Since: server
  */
 export function getEntityMaxHealth(entity) {
@@ -294,6 +342,7 @@ export function getEntityMaxHealth(entity) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xC14C9B6B | Since: server
  */
 export function getEntityVelocity(entity) {
@@ -302,6 +351,7 @@ export function getEntityVelocity(entity) {
 }
 /**
  * Can be used to get a console variable casted back to `bool`.
+ *
  * Hash: 0x7E8EBFE5 | Since: shared
  */
 export function getConvarBool(defaultValue) {
@@ -309,6 +359,7 @@ export function getConvarBool(defaultValue) {
 }
 /**
  * Can be used to get a console variable of type `char*`, for example a string.
+ *
  * Hash: 0x6CCD2564 | Since: shared
  */
 export function getConvar() {
@@ -316,6 +367,7 @@ export function getConvar() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x91B38FB6 | Since: server
  */
 export function getEntityRemoteSyncedScenesAllowed(entity) {
@@ -324,6 +376,7 @@ export function getEntityRemoteSyncedScenesAllowed(entity) {
 }
 /**
  * Returns the current console output buffer.
+ *
  * Hash: 0xE57429FA | Since: server
  */
 export function getConsoleBuffer() {
@@ -331,6 +384,7 @@ export function getConsoleBuffer() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xE8C0C629 | Since: server
  */
 export function getEntityCollisionDisabled(entity) {
@@ -339,6 +393,7 @@ export function getEntityCollisionDisabled(entity) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x8FF45B04 | Since: server
  */
 export function getEntityRotation(entity) {
@@ -347,6 +402,7 @@ export function getEntityRotation(entity) {
 }
 /**
  * Only works for vehicle and peds
+ *
  * Hash: 0x8E3222B7 | Since: server
  */
 export function getEntityHealth(entity) {
@@ -355,7 +411,9 @@ export function getEntityHealth(entity) {
 }
 /**
  * Gets the current coordinates for a specified entity. This native is used server side when using OneSync.
+ *
  * See [GET_ENTITY_COORDS](#\_0x3FEF770D40960D5A) for client side.
+ *
  * Hash: 0x1647F1CB | Since: server
  */
 export function getEntityCoords(entity) {
@@ -364,6 +422,7 @@ export function getEntityCoords(entity) {
 }
 /**
  * This native gets an entity's population type.
+ *
  * Hash: 0xFC30DDFF | Since: server
  */
 export function getEntityPopulationType(entity) {
@@ -372,6 +431,7 @@ export function getEntityPopulationType(entity) {
 }
 /**
  * Returns the entity handle for the specified state bag name. For use with [ADD_STATE_BAG_CHANGE_HANDLER](#\_0x5BA35AAF).
+ *
  * Hash: 0x4BDF1867 | Since: shared
  */
 export function getEntityFromStateBagName() {
@@ -379,25 +439,34 @@ export function getEntityFromStateBagName() {
 }
 /**
  * ### Supported types
+ *
  * *   \[1] : Peds (including animals) and players.
  * *   \[2] : Vehicles.
  * *   \[3] : Objects (props), doors, and projectiles.
+ *
  * ### Coordinates need to be send unpacked (x,y,z)
+ *
  * ```lua
+ *
  * -- Define the allowed model hashes
  * local allowedModelHashes = { GetHashKey("p_crate03x"), GetHashKey("p_crate22x") }
+ *
  * -- Get the player's current coordinates
  * local playerCoords = GetEntityCoords(PlayerPedId())
+ *
  * -- Retrieve all entities of type Object (type 3) within a radius of 10.0 units
  * -- that match the allowed model hashes
  * -- and sort output entities by distance
  * local entities = GetEntitiesInRadius(playerCoords.x, playerCoords.y, playerCoords.z, 10.0, 3, true, allowedModelHashes)
+ *
  * -- Iterate through the list of entities and print their ids
  * for i = 1, #entities do
  * local entity = entities[i]
  * print(entity)
  * end
+ *
  * ```
+ *
  * Hash: 0xDFFBA12F | Since: shared
  */
 export function getEntitiesInRadius(pos, radius, entityType, sortByDistance, models) {
@@ -406,6 +475,7 @@ export function getEntitiesInRadius(pos, radius, entityType, sortByDistance, mod
 }
 /**
  * No comment provided
+ *
  * Hash: 0xDAFCB3EC | Since: server
  */
 export function getEntityModel(entity) {
@@ -414,6 +484,7 @@ export function getEntityModel(entity) {
 }
 /**
  * Gets the entity that this entity is attached to.
+ *
  * Hash: 0xFE1589F9 | Since: server
  */
 export function getEntityAttachedTo(entity) {
@@ -422,12 +493,16 @@ export function getEntityAttachedTo(entity) {
 }
 /**
  * Gets the entity type (as an integer), which can be one of the following defined down below:
+ *
  * <strong>The following entities will return type `1`:</strong>
+ *
  * *   Ped
  * *   Player
  * *   Animal (Red Dead Redemption 2)
  * *   Horse (Red Dead Redemption 2)
+ *
  * <strong>The following entities will return type `2`:</strong>
+ *
  * *   Automobile
  * *   Bike
  * *   Boat
@@ -437,11 +512,15 @@ export function getEntityAttachedTo(entity) {
  * *   Trailer
  * *   Train
  * *   DraftVeh (Red Dead Redemption 2)
+ *
  * <strong>The following entities will return type `3`:</strong>
+ *
  * *   Object
  * *   Door
  * *   Pickup
+ *
  * Otherwise, a value of `0` will be returned.
+ *
  * Hash: 0xB1BD08D | Since: server
  */
 export function getEntityType(entity) {
@@ -450,6 +529,7 @@ export function getEntityType(entity) {
 }
 /**
  * This native converts the passed string to a hash.
+ *
  * Hash: 0x98EFF6F1 | Since: server
  */
 export function getHashKey() {
@@ -457,6 +537,7 @@ export function getHashKey() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xF7C6792D | Since: server
  */
 export function getLastPedInVehicleSeat(vehicle, seatIndex) {
@@ -465,10 +546,12 @@ export function getLastPedInVehicleSeat(vehicle, seatIndex) {
 }
 /**
  * Gets the current speed of the entity in meters per second.
+ *
  * ```
  * To convert to MPH: speed * 2.236936
  * To convert to KPH: speed * 3.6
  * ```
+ *
  * Hash: 0x9E1E4798 | Since: server
  */
 export function getEntitySpeed(entity) {
@@ -477,6 +560,7 @@ export function getEntitySpeed(entity) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xFF7F66AB | Since: server
  */
 export function getNumPlayerIdentifiers() {
@@ -484,6 +568,7 @@ export function getNumPlayerIdentifiers() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xB7F70784 | Since: server
  */
 export function getEntityScript(entity) {
@@ -492,6 +577,7 @@ export function getEntityScript(entity) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x8FDC0768 | Since: server
  */
 export function getHeliYawControl(heli) {
@@ -500,6 +586,7 @@ export function getHeliYawControl(heli) {
 }
 /**
  * **Note** This native will always return `1000.0` unless [SET_VEHICLE_BODY_HEALTH](#\_0xB77D05AC8C78AADB), [SET_VEHICLE_ENGINE_HEALTH](#\_0x45F6D8EEF34ABEF1), or [SET_VEHICLE_PETROL_TANK_HEALTH](#\_0x70DB57649FA8D0D8) have been called with a value greater than `1000.0`.
+ *
  * Hash: 0xA886495D | Since: server
  */
 export function getHeliBodyHealth(heli) {
@@ -508,6 +595,7 @@ export function getHeliBodyHealth(heli) {
 }
 /**
  * **Note** This native will always return `1000.0` unless [SET_VEHICLE_BODY_HEALTH](#\_0xB77D05AC8C78AADB), [SET_VEHICLE_ENGINE_HEALTH](#\_0x45F6D8EEF34ABEF1), or [SET_VEHICLE_PETROL_TANK_HEALTH](#\_0x70DB57649FA8D0D8) have been called with a value greater than `1000.0`.
+ *
  * Hash: 0xA0FA0354 | Since: server
  */
 export function getHeliEngineHealth(heli) {
@@ -516,6 +604,7 @@ export function getHeliEngineHealth(heli) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x5F70F5A3 | Since: server
  */
 export function getHostId() {
@@ -523,6 +612,7 @@ export function getHostId() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x619E4A3D | Since: server
  */
 export function getNumPlayerTokens() {
@@ -530,6 +620,7 @@ export function getNumPlayerTokens() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x8E86238D | Since: server
  */
 export function getHeliThrottleControl(heli) {
@@ -538,6 +629,7 @@ export function getHeliThrottleControl(heli) {
 }
 /**
  * **Note** This native will always return `1000.0` unless [SET_VEHICLE_BODY_HEALTH](#\_0xB77D05AC8C78AADB), [SET_VEHICLE_ENGINE_HEALTH](#\_0x45F6D8EEF34ABEF1), or [SET_VEHICLE_PETROL_TANK_HEALTH](#\_0x70DB57649FA8D0D8) have been called with a value greater than `1000.0`.
+ *
  * Hash: 0xD4EC7858 | Since: server
  */
 export function getHeliGasTankHealth(heli) {
@@ -546,6 +638,7 @@ export function getHeliGasTankHealth(heli) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xF01E2AAB | Since: server
  */
 export function getHeliMainRotorHealth(vehicle) {
@@ -554,6 +647,7 @@ export function getHeliMainRotorHealth(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x9F1C4383 | Since: shared
  */
 export function getInstanceId() {
@@ -561,6 +655,7 @@ export function getInstanceId() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x12948DE9 | Since: server
  */
 export function getHeliRollControl(heli) {
@@ -569,13 +664,16 @@ export function getHeliRollControl(heli) {
 }
 /**
  * Returns the current game being executed.
+ *
  * Possible values:
+ *
  * | Return value | Meaning                        |
  * | ------------ | ------------------------------ |
  * | `fxserver`   | Server-side code ('Duplicity') |
  * | `fivem`      | FiveM for GTA V                |
  * | `libertym`   | LibertyM for GTA IV            |
  * | `redm`       | RedM for Red Dead Redemption 2 |
+ *
  * Hash: 0xE8EAA18B | Since: shared
  */
 export function getGameName() {
@@ -584,15 +682,19 @@ export function getGameName() {
 /**
  * Returns a list of entity handles (script GUID) for all entities in the specified pool - the data returned is an array as
  * follows:
+ *
  * ```json
  * [ 770, 1026, 1282, 1538, 1794, 2050, 2306, 2562, 2818, 3074, 3330, 3586, 3842, 4098, 4354, 4610, ...]
  * ```
+ *
  * ### Supported pools
+ *
  * *   `CPed`: Peds (including animals) and players.
  * *   `CObject`: Objects (props), doors, and projectiles.
  * *   `CNetObject`: Networked objects
  * *   `CVehicle`: Vehicles.
  * *   `CPickup`: Pickups.
+ *
  * Hash: 0x2B9D4F50 | Since: shared
  */
 export function getGamePool() {
@@ -600,6 +702,7 @@ export function getGamePool() {
 }
 /**
  * This is a getter for [SET_DISABLE_HELI_EXPLODE_FROM_BODY_DAMAGE](#\_0xEDBC8405B3895CC9)
+ *
  * Hash: 0x82AFC0A3 | Since: server
  */
 export function getHeliDisableExplodeFromBodyDamage(heli) {
@@ -608,6 +711,7 @@ export function getHeliDisableExplodeFromBodyDamage(heli) {
 }
 /**
  * This native is a getter for [SET_HELI_TAIL_ROTOR_HEALTH](#\_0xFE205F38AAA58E5B)
+ *
  * Hash: 0x33EE6E2B | Since: server
  */
 export function getHeliRearRotorHealth(vehicle) {
@@ -616,6 +720,7 @@ export function getHeliRearRotorHealth(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x1944AC95 | Since: server
  */
 export function getHeliPitchControl(heli) {
@@ -624,7 +729,9 @@ export function getHeliPitchControl(heli) {
 }
 /**
  * Returns the internal build number of the current game being executed.
+ *
  * Possible values:
+ *
  * *   FiveM
  * *   1604
  * *   2060
@@ -649,6 +756,7 @@ export function getHeliPitchControl(heli) {
  * *   43
  * *   FXServer
  * *   0
+ *
  * Hash: 0x804B9F7B | Since: shared
  */
 export function getGameBuildNumber() {
@@ -656,6 +764,7 @@ export function getGameBuildNumber() {
 }
 /**
  * Gets the current game timer in milliseconds.
+ *
  * Hash: 0xA4EA0691 | Since: server
  */
 export function getGameTimer() {
@@ -663,6 +772,7 @@ export function getGameTimer() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xC37D668 | Since: server
  */
 export function getHeliMainRotorDamageScale(heli) {
@@ -671,6 +781,7 @@ export function getHeliMainRotorDamageScale(heli) {
 }
 /**
  * **Note**: This native is deprecated, please use [`GET_HELI_REAR_ROTOR_HEALTH`](#\_0x33EE6E2B) instead.
+ *
  * Hash: 0xA41BC13D | Since: server
  */
 export function getHeliTailRotorHealth(vehicle) {
@@ -679,6 +790,7 @@ export function getHeliTailRotorHealth(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xC40161E2 | Since: server
  */
 export function getHeliRearRotorDamageScale(heli) {
@@ -687,6 +799,7 @@ export function getHeliRearRotorDamageScale(heli) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x288AD228 | Since: server
  */
 export function getIsVehicleSecondaryColourCustom(vehicle) {
@@ -695,6 +808,7 @@ export function getIsVehicleSecondaryColourCustom(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x4D52FE5B | Since: shared
  */
 export function getInvokingResource() {
@@ -702,6 +816,7 @@ export function getInvokingResource() {
 }
 /**
  * Gets the stage of the peds scripted task.
+ *
  * Hash: 0x44B0E5E2 | Since: server
  */
 export function getPedScriptTaskStage(ped) {
@@ -710,6 +825,7 @@ export function getPedScriptTaskStage(ped) {
 }
 /**
  * See the client-side [GET_LANDING_GEAR_STATE](#\_0x9B0F3DCA3DB0F4CD) native for a description of landing gear states.
+ *
  * Hash: 0xA6F02670 | Since: server
  */
 export function getLandingGearState(vehicle) {
@@ -718,6 +834,7 @@ export function getLandingGearState(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xD7EC8760 | Since: server
  */
 export function getIsVehiclePrimaryColourCustom(vehicle) {
@@ -726,6 +843,7 @@ export function getIsVehiclePrimaryColourCustom(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x63458C27 | Since: server
  */
 export function getPedCauseOfDeath(ped) {
@@ -734,6 +852,7 @@ export function getPedCauseOfDeath(ped) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x7DC6D022 | Since: server
  */
 export function getIsVehicleEngineRunning(vehicle) {
@@ -742,6 +861,7 @@ export function getIsVehicleEngineRunning(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x63D13184 | Since: server
  */
 export function getNumPlayerIndices() {
@@ -749,6 +869,7 @@ export function getNumPlayerIndices() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x3EFE38D1 | Since: server
  */
 export function getIsHeliEngineRunning(heli) {
@@ -757,6 +878,7 @@ export function getIsHeliEngineRunning(heli) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x680C90EE | Since: server
  */
 export function getPlayerInvincible() {
@@ -764,6 +886,7 @@ export function getPlayerInvincible() {
 }
 /**
  * Gets the current relationship group hash of a ped.
+ *
  * Hash: 0x354F283C | Since: server
  */
 export function getPedRelationshipGroupHash(ped) {
@@ -772,6 +895,7 @@ export function getPedRelationshipGroupHash(ped) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x388FDE9A | Since: server
  */
 export function getPedInVehicleSeat(vehicle, seatIndex) {
@@ -780,6 +904,7 @@ export function getPedInVehicleSeat(vehicle, seatIndex) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x23473EA4 | Since: server
  */
 export function getPasswordHash() {
@@ -787,6 +912,7 @@ export function getPasswordHash() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xA45B6C8D | Since: server
  */
 export function getPedMaxHealth(ped) {
@@ -795,6 +921,7 @@ export function getPedMaxHealth(ped) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xC182F76E | Since: server
  */
 export function getPedDesiredHeading(ped) {
@@ -803,6 +930,7 @@ export function getPedDesiredHeading(ped) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x863F27B | Since: shared
  */
 export function getNumResources() {
@@ -810,6 +938,7 @@ export function getNumResources() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x2CE311A7 | Since: server
  */
 export function getPedArmour(ped) {
@@ -819,6 +948,7 @@ export function getPedArmour(ped) {
 /**
  * Gets the amount of metadata values with the specified key existing in the specified resource's manifest.
  * See also: [Resource manifest](https://docs.fivem.net/docs/scripting-reference/resource-manifest/resource-manifest/)
+ *
  * Hash: 0x776E864 | Since: shared
  */
 export function getNumResourceMetadata() {
@@ -826,6 +956,7 @@ export function getNumResourceMetadata() {
 }
 /**
  * Get the last entity that damaged the ped. This native is used server side when using OneSync.
+ *
  * Hash: 0x535DB43F | Since: server
  */
 export function getPedSourceOfDamage(ped) {
@@ -835,6 +966,7 @@ export function getPedSourceOfDamage(ped) {
 /**
  * Gets the metadata value at a specified key/index from a resource's manifest.
  * See also: [Resource manifest](https://docs.fivem.net/docs/scripting-reference/resource-manifest/resource-manifest/)
+ *
  * Hash: 0x964BAB1D | Since: shared
  */
 export function getResourceMetadata(index) {
@@ -842,6 +974,7 @@ export function getResourceMetadata(index) {
 }
 /**
  * Gets the current camera rotation for a specified player. This native is used server side when using OneSync.
+ *
  * Hash: 0x433C765D | Since: server
  */
 export function getPlayerCameraRotation() {
@@ -849,7 +982,9 @@ export function getPlayerCameraRotation() {
 }
 /**
  * Gets the routing bucket for the specified player.
+ *
  * Routing buckets are also known as 'dimensions' or 'virtual worlds' in past echoes, however they are population-aware.
+ *
  * Hash: 0x52441C34 | Since: server
  */
 export function getPlayerRoutingBucket() {
@@ -857,6 +992,7 @@ export function getPlayerRoutingBucket() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x40321B83 | Since: server
  */
 export function getPedStealthMovement(ped) {
@@ -865,6 +1001,7 @@ export function getPedStealthMovement(ped) {
 }
 /**
  * Get the entity that killed the ped. This native is used server side when using OneSync.
+ *
  * Hash: 0x84ADF9EB | Since: server
  */
 export function getPedSourceOfDeath(ped) {
@@ -873,6 +1010,7 @@ export function getPedSourceOfDeath(ped) {
 }
 /**
  * Gets the current fake wanted level for a specified player. This native is used server side when using OneSync.
+ *
  * Hash: 0x98D244 | Since: server
  */
 export function getPlayerFakeWantedLevel() {
@@ -881,6 +1019,7 @@ export function getPlayerFakeWantedLevel() {
 /**
  * Gets the type of a ped's specific task given an index of the CPedTaskSpecificDataNode nodes.
  * A ped will typically have a task at index 0, if a ped has multiple tasks at once they will be in the order 0, 1, 2, etc.
+ *
  * Hash: 0x7F4563D3 | Since: server
  */
 export function getPedSpecificTaskType(ped, index) {
@@ -889,6 +1028,7 @@ export function getPedSpecificTaskType(ped, index) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x1C939E87 | Since: server
  */
 export function getThrusterSideRcsThrottle(jetpack) {
@@ -897,7 +1037,9 @@ export function getThrusterSideRcsThrottle(jetpack) {
 }
 /**
  * To get the number of identifiers, use [GET_NUM_PLAYER_IDENTIFIERS](#\_0xFF7F66AB)
+ *
  * To get a specific type of identifier, use [GET_PLAYER_IDENTIFIER_BY_TYPE](#\_0xA61C8FC6)
+ *
  * Hash: 0x7302DBCF | Since: server
  */
 export function getPlayerIdentifier(identiferIndex) {
@@ -906,10 +1048,12 @@ export function getPlayerIdentifier(identiferIndex) {
 /**
  * ```cpp
  * const int ENET_PACKET_LOSS_SCALE = 65536;
+ *
  * enum PeerStatistics
  * {
  * // PacketLoss will only update once every 10 seconds, use PacketLossEpoch if you want the time
  * // since the last time the packet loss was updated.
+ *
  * // the amount of packet loss the player has, needs to be scaled with PACKET_LOSS_SCALE
  * PacketLoss = 0,
  * // The variance in the packet loss
@@ -929,7 +1073,9 @@ export function getPlayerIdentifier(identiferIndex) {
  * PacketThrottleEpoch = 7,
  * };
  * ```
+ *
  * These statistics only update once every 10 seconds.
+ *
  * Hash: 0x9A928294 | Since: server
  */
 export function getPlayerPeerStatistics(peerStatistic) {
@@ -937,6 +1083,7 @@ export function getPlayerPeerStatistics(peerStatistic) {
 }
 /**
  * Gets the script task command currently assigned to the ped.
+ *
  * Hash: 0x84FE084 | Since: server
  */
 export function getPedScriptTaskCommand(ped) {
@@ -945,6 +1092,7 @@ export function getPedScriptTaskCommand(ped) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x427E8E6A | Since: server
  */
 export function getPlayerLastMsg() {
@@ -952,6 +1100,7 @@ export function getPlayerLastMsg() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xE52D9680 | Since: server
  */
 export function getPlayerGuid() {
@@ -959,6 +1108,7 @@ export function getPlayerGuid() {
 }
 /**
  * Gets the trains desired speed.
+ *
  * Hash: 0xA4921EF5 | Since: shared
  */
 export function getTrainCruiseSpeed(train) {
@@ -967,6 +1117,7 @@ export function getTrainCruiseSpeed(train) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x406B4B20 | Since: server
  */
 export function getPlayerName() {
@@ -974,6 +1125,7 @@ export function getPlayerName() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x9873E404 | Since: server
  */
 export function getPlayerTeam() {
@@ -981,6 +1133,7 @@ export function getPlayerTeam() {
 }
 /**
  * On the server this will return the players source, on the client it will return the player handle.
+ *
  * Hash: 0xA56135E0 | Since: shared
  */
 export function getPlayerFromStateBagName() {
@@ -988,6 +1141,7 @@ export function getPlayerFromStateBagName() {
 }
 /**
  * Gets the focus position (i.e. the position of the active camera in the game world) of a player.
+ *
  * Hash: 0x586F80FF | Since: server
  */
 export function getPlayerFocusPos() {
@@ -995,6 +1149,7 @@ export function getPlayerFocusPos() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xC8A9CE08 | Since: server
  */
 export function getPlayerFromIndex(index) {
@@ -1002,6 +1157,7 @@ export function getPlayerFromIndex(index) {
 }
 /**
  * Used to get the player's Ped Entity ID when a valid `playerSrc` is passed.
+ *
  * Hash: 0x6E31E993 | Since: server
  */
 export function getPlayerPed() {
@@ -1009,6 +1165,7 @@ export function getPlayerPed() {
 }
 /**
  * A getter for [SET_PLAYER_WEAPON_DAMAGE_MODIFIER](#\_0xCE07B9F7817AADA3).
+ *
  * Hash: 0x2A3D7CDA | Since: shared
  */
 export function getPlayerWeaponDamageModifier(playerId) {
@@ -1018,6 +1175,7 @@ export function getPlayerWeaponDamageModifier(playerId) {
 /**
  * Get an identifier from a player by the type of the identifier.
  * Known [Identifiers](https://docs.fivem.net/docs/scripting-reference/runtimes/lua/functions/GetPlayerIdentifiers/#identifier-types)
+ *
  * Hash: 0xA61C8FC6 | Since: server
  */
 export function getPlayerIdentifierByType() {
@@ -1025,6 +1183,7 @@ export function getPlayerIdentifierByType() {
 }
 /**
  * See [GET_PLAYER_PEER_STATISTICS](#\_0x9A928294) if you want more detailed information, like packet loss, and packet/rtt variance
+ *
  * Hash: 0xFF1290D4 | Since: server
  */
 export function getPlayerPing() {
@@ -1032,6 +1191,7 @@ export function getPlayerPing() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x8154E470 | Since: server
  */
 export function getPlayerMaxHealth() {
@@ -1039,6 +1199,7 @@ export function getPlayerMaxHealth() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x2A50657 | Since: server
  */
 export function getPlayerMaxArmour() {
@@ -1046,6 +1207,7 @@ export function getPlayerMaxArmour() {
 }
 /**
  * Gets the current time online for a specified player.
+ *
  * Hash: 0x67D2E605 | Since: server
  */
 export function getPlayerTimeOnline() {
@@ -1053,6 +1215,7 @@ export function getPlayerTimeOnline() {
 }
 /**
  * Returns the value of a state bag key.
+ *
  * Hash: 0x637F4C75 | Since: shared
  */
 export function getStateBagValue() {
@@ -1064,6 +1227,7 @@ export function getStateBagValue() {
  * Counter starts and increments only when cops are chasing the player.
  * If the player is evading, the timer will pause.
  * ```
+ *
  * Hash: 0x7ADE63E1 | Since: server
  */
 export function getPlayerTimeInPursuit(lastPursuit) {
@@ -1071,6 +1235,7 @@ export function getPlayerTimeInPursuit(lastPursuit) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xFEE404F9 | Since: server
  */
 export function getPlayerEndpoint() {
@@ -1078,6 +1243,7 @@ export function getPlayerEndpoint() {
 }
 /**
  * A getter for [SET_PLAYER_WEAPON_DEFENSE_MODIFIER](#\_0x2D83BC011CA14A3C).
+ *
  * Hash: 0xF1543251 | Since: shared
  */
 export function getPlayerWeaponDefenseModifier(playerId) {
@@ -1086,6 +1252,7 @@ export function getPlayerWeaponDefenseModifier(playerId) {
 }
 /**
  * A getter for [SET_PLAYER_MELEE_WEAPON_DAMAGE_MODIFIER](#\_0x4A3DC7ECCC321032).
+ *
  * Hash: 0x8689A825 | Since: shared
  */
 export function getPlayerMeleeWeaponDamageModifier(playerId) {
@@ -1094,6 +1261,7 @@ export function getPlayerMeleeWeaponDamageModifier(playerId) {
 }
 /**
  * Gets the current known coordinates for the specified player from cops perspective. This native is used server side when using OneSync.
+ *
  * Hash: 0x821F2D2C | Since: server
  */
 export function getPlayerWantedCentrePosition() {
@@ -1101,6 +1269,7 @@ export function getPlayerWantedCentrePosition() {
 }
 /**
  * Gets a player's token. Tokens can be used to enhance banning logic, however are specific to a server.
+ *
  * Hash: 0x54C06897 | Since: server
  */
 export function getPlayerToken(index) {
@@ -1108,6 +1277,7 @@ export function getPlayerToken(index) {
 }
 /**
  * Returns the current state of the specified resource.
+ *
  * Hash: 0x4039B485 | Since: shared
  */
 export function getResourceState() {
@@ -1115,6 +1285,7 @@ export function getResourceState() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x387246B7 | Since: shared
  */
 export function getResourceByFindIndex(findIndex) {
@@ -1122,6 +1293,7 @@ export function getResourceByFindIndex(findIndex) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x78D864C7 | Since: shared
  */
 export function getStateBagKeys() {
@@ -1130,6 +1302,7 @@ export function getStateBagKeys() {
 /**
  * Returns all commands registered by the specified resource.
  * The data returned adheres to the following layout:
+ *
  * ```
  * [
  * {
@@ -1144,6 +1317,7 @@ export function getStateBagKeys() {
  * }
  * ]
  * ```
+ *
  * Hash: 0x97628584 | Since: shared
  */
 export function getResourceCommands() {
@@ -1152,6 +1326,7 @@ export function getResourceCommands() {
 /**
  * Returns all commands that are registered in the command system.
  * The data returned adheres to the following layout:
+ *
  * ```
  * [
  * {
@@ -1166,6 +1341,7 @@ export function getResourceCommands() {
  * }
  * ]
  * ```
+ *
  * Hash: 0xD4BEF069 | Since: shared
  */
 export function getRegisteredCommands() {
@@ -1173,6 +1349,7 @@ export function getRegisteredCommands() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xA0DBD08D | Since: server
  */
 export function getVehicleDashboardColour(vehicle) {
@@ -1181,6 +1358,7 @@ export function getVehicleDashboardColour(vehicle) {
 }
 /**
  * A getter for [\_SET_PLAYER_WEAPON_DEFENSE_MODIFIER\_2](#\_0xBCFDE9EDE4CF27DC).
+ *
  * Hash: 0x986B65FF | Since: shared
  */
 export function getPlayerWeaponDefenseModifier2(playerId) {
@@ -1189,7 +1367,9 @@ export function getPlayerWeaponDefenseModifier2(playerId) {
 }
 /**
  * An alias of [GET_CURRENT_PED_WEAPON](#\_0xB0237302).
+ *
  * Note, the client-side [GET_SELECTED_PED_WEAPON](#\_0x0A6DB4965674D243) native returns the weapon selected via the HUD (weapon wheel). This data is not available to FXServer.
+ *
  * Hash: 0xD240123E | Since: server
  */
 export function getSelectedPedWeapon(ped) {
@@ -1198,6 +1378,7 @@ export function getSelectedPedWeapon(ped) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x94E24C96 | Since: server
  */
 export function getThrusterThrottle(jetpack) {
@@ -1208,6 +1389,7 @@ export function getThrusterThrottle(jetpack) {
  * ```
  * Returns given players wanted level server-side.
  * ```
+ *
  * Hash: 0xBDCDD163 | Since: server
  */
 export function getPlayerWantedLevel() {
@@ -1215,6 +1397,7 @@ export function getPlayerWantedLevel() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x24DC88D9 | Since: server
  */
 export function getTrainForwardCarriage(train) {
@@ -1223,6 +1406,7 @@ export function getTrainForwardCarriage(train) {
 }
 /**
  * Returns the physical on-disk path of the specified resource.
+ *
  * Hash: 0x61DCF017 | Since: server
  */
 export function getResourcePath() {
@@ -1230,6 +1414,7 @@ export function getResourcePath() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x9AA339D | Since: shared
  */
 export function getTrainTrackIndex(train) {
@@ -1238,6 +1423,7 @@ export function getTrainTrackIndex(train) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x4B8285CF | Since: server
  */
 export function getTrainCarriageIndex(train) {
@@ -1246,6 +1432,7 @@ export function getTrainCarriageIndex(train) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x95070FA | Since: server
  */
 export function getTrainCarriageEngine(train) {
@@ -1254,6 +1441,7 @@ export function getTrainCarriageEngine(train) {
 }
 /**
  * Returns the open position of the specified door on the target vehicle.
+ *
  * Hash: 0x6E35C49C | Since: server
  */
 export function getVehicleDoorStatus(vehicle, doorIndex) {
@@ -1262,6 +1450,7 @@ export function getVehicleDoorStatus(vehicle, doorIndex) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xD7147656 | Since: server
  */
 export function getVehicleHeadlightsColour(vehicle) {
@@ -1270,6 +1459,7 @@ export function getVehicleHeadlightsColour(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xFD15C065 | Since: server
  */
 export function getVehicleDirtLevel(vehicle) {
@@ -1278,6 +1468,7 @@ export function getVehicleDirtLevel(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x3FF247A2 | Since: server
  */
 export function getVehicleCustomSecondaryColour(vehicle) {
@@ -1286,6 +1477,7 @@ export function getVehicleCustomSecondaryColour(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x456E34A | Since: server
  */
 export function getTrainBackwardCarriage(train) {
@@ -1294,6 +1486,7 @@ export function getTrainBackwardCarriage(train) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x40D82D88 | Since: server
  */
 export function getVehicleColours(vehicle) {
@@ -1302,6 +1495,7 @@ export function getVehicleColours(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x81B50033 | Since: shared
  */
 export function getTrainState(train) {
@@ -1310,6 +1504,7 @@ export function getTrainState(train) {
 }
 /**
  * Gets the flight nozzel position for the specified vehicle. See the client-side [\_GET_VEHICLE_FLIGHT_NOZZLE_POSITION](#\_0xDA62027C8BDB326E) native for usage examples.
+ *
  * Hash: 0xAD40AD55 | Since: server
  */
 export function getVehicleFlightNozzlePosition(vehicle) {
@@ -1318,6 +1513,7 @@ export function getVehicleFlightNozzlePosition(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x2B2FCC28 | Since: server
  */
 export function getVehicleBodyHealth(vehicle) {
@@ -1326,6 +1522,7 @@ export function getVehicleBodyHealth(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x80E4659B | Since: server
  */
 export function getVehicleExtraColours(vehicle) {
@@ -1334,6 +1531,7 @@ export function getVehicleExtraColours(vehicle) {
 }
 /**
  * Gets the direction the train is facing
+ *
  * Hash: 0x8DAF79B6 | Since: shared
  */
 export function getTrainDirection(train) {
@@ -1352,9 +1550,11 @@ export function getTrainDirection(train) {
  * CannotBeTriedToEnter = 10, -- Cannot be tried to enter (Nothing happens when you press the vehicle enter key).
  * }
  * ```
+ *
  * It should be [noted](https://forum.cfx.re/t/4863241) that while the [client-side command](#\_0x25BC98A59C2EA962) and its
  * setter distinguish between states 0 (unset) and 1 (unlocked), the game will synchronize both as state 0, so the server-side
  * command will return only '0' if unlocked.
+ *
  * Hash: 0xD72CEF2 | Since: server
  */
 export function getVehicleDoorLockStatus(vehicle) {
@@ -1363,6 +1563,7 @@ export function getVehicleDoorLockStatus(vehicle) {
 }
 /**
  * Currently it only works when set to "all players".
+ *
  * Hash: 0x1DC50247 | Since: server
  */
 export function getVehicleDoorsLockedForPlayer(vehicle) {
@@ -1371,6 +1572,7 @@ export function getVehicleDoorsLockedForPlayer(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xEC82A51D | Since: server
  */
 export function getVehicleLivery(vehicle) {
@@ -1379,6 +1581,7 @@ export function getVehicleLivery(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x7C278621 | Since: server
  */
 export function getVehicleLightsState(vehicle) {
@@ -1387,6 +1590,7 @@ export function getVehicleLightsState(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x499747B6 | Since: server
  */
 export function getVehicleNumberPlateTextIndex(vehicle) {
@@ -1395,6 +1599,7 @@ export function getVehicleNumberPlateTextIndex(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x1C2B9FEF | Since: server
  */
 export function getVehicleCustomPrimaryColour(vehicle) {
@@ -1403,7 +1608,9 @@ export function getVehicleCustomPrimaryColour(vehicle) {
 }
 /**
  * This is a getter for the client-side native [`START_VEHICLE_HORN`](#\_0x9C8C6504B5B63D2C), which allows you to return the horn type of the vehicle.
+ *
  * **Note**: This native only gets the hash value set with `START_VEHICLE_HORN`. If a wrong hash is passed into `START_VEHICLE_HORN`, it will return this wrong hash.
+ *
  * ```cpp
  * enum eHornTypes
  * {
@@ -1412,6 +1619,7 @@ export function getVehicleCustomPrimaryColour(vehicle) {
  * AGGRESSIVE = -92810745
  * }
  * ```
+ *
  * Hash: 0xDEA49773 | Since: server
  */
 export function getVehicleHornType(vehicle) {
@@ -1420,6 +1628,7 @@ export function getVehicleHornType(vehicle) {
 }
 /**
  * Gets the lock on state for the specified vehicle. See the client-side [GET_VEHICLE_HOMING_LOCKON_STATE](#\_0xE6B0E8CFC3633BF0) native for a description of lock on states.
+ *
  * Hash: 0xFBDE9FD8 | Since: server
  */
 export function getVehicleHomingLockonState(vehicle) {
@@ -1428,6 +1637,7 @@ export function getVehicleHomingLockonState(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x483B013C | Since: shared
  */
 export function getVehicleHandbrake(vehicle) {
@@ -1436,6 +1646,7 @@ export function getVehicleHandbrake(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x57037960 | Since: server
  */
 export function getVehicleRadioStationIndex(vehicle) {
@@ -1444,6 +1655,7 @@ export function getVehicleRadioStationIndex(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x8880038A | Since: server
  */
 export function getVehicleEngineHealth(vehicle) {
@@ -1452,6 +1664,7 @@ export function getVehicleEngineHealth(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xE41595CE | Since: server
  */
 export function getVehiclePetrolTankHealth(vehicle) {
@@ -1460,6 +1673,7 @@ export function getVehiclePetrolTankHealth(vehicle) {
 }
 /**
  * Getter to check the neon colour of a vehicle. This native is the server side getter of [GET_VEHICLE_NEON_LIGHTS_COLOUR](#\_0x7619EEE8C886757F).
+ *
  * Hash: 0xD9319DCB | Since: server
  */
 export function getVehicleNeonColour(vehicle) {
@@ -1468,6 +1682,7 @@ export function getVehicleNeonColour(vehicle) {
 }
 /**
  * Gets the vehicle the specified Ped is/was in depending on bool value. This native is used server side when using OneSync.
+ *
  * Hash: 0xAFE92319 | Since: server
  */
 export function getVehiclePedIsIn(ped, lastVehicle) {
@@ -1476,6 +1691,7 @@ export function getVehiclePedIsIn(ped, lastVehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x75280015 | Since: server
  */
 export function getVehicleTyreSmokeColor(vehicle) {
@@ -1484,6 +1700,7 @@ export function getVehicleTyreSmokeColor(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xE8522D58 | Since: server
  */
 export function getVehicleNumberPlateText(vehicle) {
@@ -1492,6 +1709,7 @@ export function getVehicleNumberPlateText(vehicle) {
 }
 /**
  * Gets the vehicle that is locked on to for the specified vehicle.
+ *
  * Hash: 0x4A557117 | Since: server
  */
 export function getVehicleLockOnTarget(vehicle) {
@@ -1500,6 +1718,7 @@ export function getVehicleLockOnTarget(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x9963D5F9 | Since: server
  */
 export function getVehicleTotalRepairs(vehicle) {
@@ -1508,6 +1727,7 @@ export function getVehicleTotalRepairs(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x13D53892 | Since: server
  */
 export function getVehicleWindowTint(vehicle) {
@@ -1516,6 +1736,7 @@ export function getVehicleWindowTint(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xCCFF3B6E | Since: server
  */
 export function getVehicleInteriorColour(vehicle) {
@@ -1524,6 +1745,7 @@ export function getVehicleInteriorColour(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x1382FCEA | Since: shared
  */
 export function getVehicleSteeringAngle(vehicle) {
@@ -1532,6 +1754,7 @@ export function getVehicleSteeringAngle(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x872CF42 | Since: server
  */
 export function getVehicleRoofLivery(vehicle) {
@@ -1540,8 +1763,11 @@ export function getVehicleRoofLivery(vehicle) {
 }
 /**
  * Returns the type of the passed vehicle.
+ *
  * For client scripts, reference the more detailed [GET_VEHICLE_TYPE_RAW](#\_0xDE73BC10) native.
+ *
  * ### Vehicle types
+ *
  * *   automobile
  * *   bike
  * *   boat
@@ -1550,6 +1776,7 @@ export function getVehicleRoofLivery(vehicle) {
  * *   submarine
  * *   trailer
  * *   train
+ *
  * Hash: 0xA273060E | Since: shared
  */
 export function getVehicleType(vehicle) {
@@ -1558,6 +1785,7 @@ export function getVehicleType(vehicle) {
 }
 /**
  * Getter to check if one of the neon lights of a vehicle is enabled. This native is the server side getter of [IS_VEHICLE_NEON_LIGHT_ENABLED](#\_0x8C4B92553E4766A5).
+ *
  * ```cpp
  * enum neonIndex
  * {
@@ -1567,6 +1795,7 @@ export function getVehicleType(vehicle) {
  * NEON_FRONT = 3   // Front neon
  * };
  * ```
+ *
  * Hash: 0x684BDBF2 | Since: server
  */
 export function getVehicleNeonEnabled(vehicle, neonIndex) {
@@ -1575,6 +1804,7 @@ export function getVehicleNeonEnabled(vehicle, neonIndex) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xD5C39EE6 | Since: server
  */
 export function isBoatAnchoredAndFrozen(vehicle) {
@@ -1583,6 +1813,7 @@ export function isBoatAnchoredAndFrozen(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xE4E83A5B | Since: server
  */
 export function hasVehicleBeenOwnedByPlayer(vehicle) {
@@ -1591,6 +1822,7 @@ export function hasVehicleBeenOwnedByPlayer(vehicle) {
 }
 /**
  * This native checks if the given ped is a player.
+ *
  * Hash: 0x404794CA | Since: server
  */
 export function isPedAPlayer(ped) {
@@ -1599,6 +1831,7 @@ export function isPedAPlayer(ped) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x9C9A3BE0 | Since: server
  */
 export function hasEntityBeenMarkedAsNoLongerNeeded(vehicle) {
@@ -1607,6 +1840,7 @@ export function hasEntityBeenMarkedAsNoLongerNeeded(vehicle) {
 }
 /**
  * A getter for [FREEZE_ENTITY_POSITION](#\_0x428CA6DBD1094446).
+ *
  * Hash: 0xEDBE6ADD | Since: shared
  */
 export function isEntityPositionFrozen(entity) {
@@ -1615,6 +1849,7 @@ export function isEntityPositionFrozen(entity) {
 }
 /**
  * Requests whether or not the commerce data for the specified player has loaded from Tebex.
+ *
  * Hash: 0x1D14F4FE | Since: server
  */
 export function isPlayerCommerceInfoLoadedExt() {
@@ -1622,6 +1857,7 @@ export function isPlayerCommerceInfoLoadedExt() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x76876154 | Since: server
  */
 export function isFlashLightOn(ped) {
@@ -1630,6 +1866,7 @@ export function isFlashLightOn(ped) {
 }
 /**
  * Gets whether or not this is the CitizenFX server.
+ *
  * Hash: 0xCF24C52E | Since: shared
  */
 export function isDuplicityVersion() {
@@ -1637,6 +1874,7 @@ export function isDuplicityVersion() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x9049DB44 | Since: server
  */
 export function isBoatWrecked(vehicle) {
@@ -1645,6 +1883,7 @@ export function isBoatWrecked(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xEFEED13C | Since: server
  */
 export function isPedStrafing(ped) {
@@ -1653,6 +1892,7 @@ export function isPedStrafing(ped) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xDA58D7AE | Since: server
  */
 export function getVehicleWheelType(vehicle) {
@@ -1661,6 +1901,7 @@ export function getVehicleWheelType(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xDEDAE23D | Since: server
  */
 export function isPlayerAceAllowed() {
@@ -1668,6 +1909,7 @@ export function isPlayerAceAllowed() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xC7D2C20C | Since: server
  */
 export function isPlayerUsingSuperJump() {
@@ -1675,6 +1917,7 @@ export function isPlayerUsingSuperJump() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x37CF52CE | Since: shared
  */
 export function isPrincipalAceAllowed() {
@@ -1682,6 +1925,7 @@ export function isPrincipalAceAllowed() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xC833BBE1 | Since: server
  */
 export function isPedRagdoll(ped) {
@@ -1690,6 +1934,7 @@ export function isPedRagdoll(ped) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xBB340D04 | Since: shared
  */
 export function isVehicleEngineStarting(vehicle) {
@@ -1698,9 +1943,13 @@ export function isVehicleEngineStarting(vehicle) {
 }
 /**
  * Requests the commerce data from Tebex for the specified player, including the owned SKUs.
+ *
  * Use [`IS_PLAYER_COMMERCE_INFO_LOADED_EXT`](#\_0x1D14F4FE) to check if it has loaded.
+ *
  * This will not automatically update whenever a client purchases a package, if you want to fetch new purchases you will need to call this native again.
+ *
  * This native will temporarily cache the players commerce data for 10 seconds, a call to this native after 10 seconds will re-fetch the players commerce data.
+ *
  * Hash: 0x7995539E | Since: server
  */
 export function loadPlayerCommerceDataExt() {
@@ -1708,6 +1957,7 @@ export function loadPlayerCommerceDataExt() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x2C59F987 | Since: server
  */
 export function isHeliTailBoomBroken(heli) {
@@ -1716,6 +1966,7 @@ export function isHeliTailBoomBroken(heli) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x7EBB9929 | Since: shared
  */
 export function isAceAllowed() {
@@ -1723,6 +1974,7 @@ export function isAceAllowed() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x1F14F2AC | Since: server
  */
 export function isPlayerInFreeCamMode() {
@@ -1730,6 +1982,7 @@ export function isPlayerInFreeCamMode() {
 }
 /**
  * See the client-side [IS_VEHICLE_WINDOW_INTACT](#\_0x46E571A0E20D01F1) for a window indexes list.
+ *
  * Hash: 0xAC4EF23D | Since: server
  */
 export function isVehicleWindowIntact(vehicle, windowIndex) {
@@ -1738,6 +1991,7 @@ export function isVehicleWindowIntact(vehicle, windowIndex) {
 }
 /**
  * This native checks if the given entity is visible.
+ *
  * Hash: 0x120B4ED5 | Since: server
  */
 export function isEntityVisible(entity) {
@@ -1746,6 +2000,7 @@ export function isEntityVisible(entity) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xB8AF3137 | Since: server
  */
 export function hasVehicleBeenDamagedByBullets(vehicle) {
@@ -1754,6 +2009,7 @@ export function hasVehicleBeenDamagedByBullets(vehicle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x25865633 | Since: server
  */
 export function isPedHandcuffed(ped) {
@@ -1762,6 +2018,7 @@ export function isPedHandcuffed(ped) {
 }
 /**
  * Requests the commerce data for the specified player, including the owned SKUs. Use `IS_PLAYER_COMMERCE_INFO_LOADED` to check if it has loaded.
+ *
  * Hash: 0xA8F63EAB | Since: server
  */
 export function loadPlayerCommerceData() {
@@ -1769,6 +2026,7 @@ export function loadPlayerCommerceData() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x42098B5 | Since: server
  */
 export function isVehicleExtraTurnedOn(vehicle, extraId) {
@@ -1779,8 +2037,10 @@ export function isVehicleExtraTurnedOn(vehicle, extraId) {
  * ```
  * This will return true if the player is evading wanted level, meaning that the wanted level stars are blink.
  * Otherwise will return false.
+ *
  * If the player is not wanted, it simply returns false.
  * ```
+ *
  * Hash: 0x89A3881A | Since: server
  */
 export function isPlayerEvadingWantedLevel() {
@@ -1788,6 +2048,7 @@ export function isPlayerEvadingWantedLevel() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x48C80210 | Since: server
  */
 export function isVehicleTyreBurst(vehicle, wheelID, completely) {
@@ -1796,6 +2057,7 @@ export function isVehicleTyreBurst(vehicle, wheelID, completely) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xFA9336E5 | Since: server
  */
 export function isTrainCaboose(train) {
@@ -1806,6 +2068,7 @@ export function isTrainCaboose(train) {
  * Reads the contents of a text file in a specified resource.
  * If executed on the client, this file has to be included in `files` in the resource manifest.
  * Example: `local data = LoadResourceFile("devtools", "data.json")`
+ *
  * Hash: 0x76A9EE1F | Since: shared
  */
 export function loadResourceFile() {
@@ -1813,6 +2076,7 @@ export function loadResourceFile() {
 }
 /**
  * Mutes or unmutes the specified player
+ *
  * Hash: 0xCC6C2EB1 | Since: server
  */
 export function mumbleSetPlayerMuted(playerSrc, toggle) {
@@ -1820,6 +2084,7 @@ export function mumbleSetPlayerMuted(playerSrc, toggle) {
 }
 /**
  * Create a permanent voice channel.
+ *
  * Hash: 0x262663C5 | Since: server
  */
 export function mumbleCreateChannel(id) {
@@ -1827,6 +2092,7 @@ export function mumbleCreateChannel(id) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x5AE7EDA2 | Since: server
  */
 export function isPedUsingActionMode(ped) {
@@ -1835,6 +2101,7 @@ export function isPedUsingActionMode(ped) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xFFEEF513 | Since: server
  */
 export function networkGetVoiceProximityOverrideForPlayer() {
@@ -1842,6 +2109,7 @@ export function networkGetVoiceProximityOverrideForPlayer() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x25EB5873 | Since: server
  */
 export function isVehicleSirenOn(vehicle) {
@@ -1850,6 +2118,7 @@ export function isVehicleSirenOn(vehicle) {
 }
 /**
  * Checks if the player is currently muted
+ *
  * Hash: 0x1D5D50C2 | Since: server
  */
 export function mumbleIsPlayerMuted(playerSrc) {
@@ -1857,6 +2126,7 @@ export function mumbleIsPlayerMuted(playerSrc) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x8E8CC653 | Since: server
  */
 export function performHttpRequestInternal(requestDataLength) {
@@ -1864,6 +2134,7 @@ export function performHttpRequestInternal(requestDataLength) {
 }
 /**
  * Requests whether or not the commerce data for the specified player has loaded.
+ *
  * Hash: 0xBEFE93F4 | Since: server
  */
 export function isPlayerCommerceInfoLoaded() {
@@ -1871,6 +2142,7 @@ export function isPlayerCommerceInfoLoaded() {
 }
 /**
  * Returns the first owner ID of the specified entity.
+ *
  * Hash: 0x1E546224 | Since: server
  */
 export function networkGetFirstEntityOwner(entity) {
@@ -1879,6 +2151,7 @@ export function networkGetFirstEntityOwner(entity) {
 }
 /**
  * Returns the owner ID of the specified entity.
+ *
  * Hash: 0x526FEE31 | Since: shared
  */
 export function networkGetEntityOwner(entity) {
@@ -1887,6 +2160,7 @@ export function networkGetEntityOwner(entity) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x6B171E87 | Since: server
  */
 export function performHttpRequestInternalEx(requestData) {
@@ -1895,6 +2169,7 @@ export function performHttpRequestInternalEx(requestData) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x5B912C3F | Since: server
  */
 export function networkGetEntityFromNetworkId(netId) {
@@ -1902,6 +2177,7 @@ export function networkGetEntityFromNetworkId(netId) {
 }
 /**
  * Scope exit for profiler.
+ *
  * Hash: 0xB39CA35C | Since: shared
  */
 export function profilerExitScope() {
@@ -1909,6 +2185,7 @@ export function profilerExitScope() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x9E35DAB6 | Since: server
  */
 export function networkGetNetworkIdFromEntity(entity) {
@@ -1918,15 +2195,18 @@ export function networkGetNetworkIdFromEntity(entity) {
 /**
  * Registers a build task factory for resources.
  * The function should return an object (msgpack map) with the following fields:
+ *
  * ```
  * {
  * // returns whether the specific resource should be built
  * shouldBuild = func(resourceName: string): bool,
+ *
  * // asynchronously start building the specific resource.
  * // call cb when completed
  * build = func(resourceName: string, cb: func(success: bool, status: string): void): void
  * }
  * ```
+ *
  * Hash: 0x285B43CA | Since: server
  */
 export function registerResourceBuildTaskFactory(factoryFn) {
@@ -1934,6 +2214,7 @@ export function registerResourceBuildTaskFactory(factoryFn) {
 }
 /**
  * Registers a listener for console output messages.
+ *
  * Hash: 0x281B5448 | Since: server
  */
 export function registerConsoleListener(listener) {
@@ -1941,6 +2222,7 @@ export function registerConsoleListener(listener) {
 }
 /**
  * An internal function which allows the current resource's HLL script runtimes to receive state for the specified event.
+ *
  * Hash: 0xD233A168 | Since: shared
  */
 export function registerResourceAsEventHandler() {
@@ -1948,6 +2230,7 @@ export function registerResourceAsEventHandler() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xEAC49841 | Since: shared
  */
 export function removeConvarChangeListener(cookie) {
@@ -1955,6 +2238,7 @@ export function removeConvarChangeListener(cookie) {
 }
 /**
  * Scope entry for profiler.
+ *
  * Hash: 0xC795A4A9 | Since: shared
  */
 export function profilerEnterScope() {
@@ -1963,6 +2247,7 @@ export function profilerEnterScope() {
 /**
  * Requests the specified player to buy the passed SKU. This'll pop up a prompt on the client, which upon acceptance
  * will open the browser prompting further purchase details.
+ *
  * Hash: 0x96F93CCE | Since: server
  */
 export function requestPlayerCommerceSession(skuId) {
@@ -1970,6 +2255,7 @@ export function requestPlayerCommerceSession(skuId) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x9338D547 | Since: server
  */
 export function setConvarServerInfo() {
@@ -1978,6 +2264,7 @@ export function setConvarServerInfo() {
 /**
  * Writes the specified data to a file in the specified resource.
  * Using a length of `-1` will automatically detect the length assuming the data is a C string.
+ *
  * Hash: 0xA09E7E7B | Since: server
  */
 export function saveResourceFile(dataLength) {
@@ -1985,6 +2272,7 @@ export function saveResourceFile(dataLength) {
 }
 /**
  * Returns true if the profiler is active.
+ *
  * Hash: 0xF8B7D7BB | Since: shared
  */
 export function profilerIsRecording() {
@@ -1992,7 +2280,9 @@ export function profilerIsRecording() {
 }
 /**
  * **Experimental**: This native may be altered or removed in future versions of CitizenFX without warning.
+ *
  * Registers a cached resource asset with the resource system, similar to the automatic scanning of the `stream/` folder.
+ *
  * Hash: 0x9862B266 | Since: server
  */
 export function registerResourceAsset() {
@@ -2000,7 +2290,9 @@ export function registerResourceAsset() {
 }
 /**
  * **Experimental**: This native may be altered or removed in future versions of CitizenFX without warning.
+ *
  * Removes a handler for changes to a state bag.
+ *
  * Hash: 0xD36BE661 | Since: shared
  */
 export function removeStateBagChangeHandler(cookie) {
@@ -2008,6 +2300,7 @@ export function removeStateBagChangeHandler(cookie) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x341B16D2 | Since: server
  */
 export function setConvar() {
@@ -2015,10 +2308,15 @@ export function setConvar() {
 }
 /**
  * Registered commands can be executed by entering them in the client console (this works for client side and server side registered commands). Or by entering them in the server console/through an RCON client (only works for server side registered commands). Or if you use a supported chat resource, like the default one provided in the cfx-server-data repository, then you can enter the command in chat by prefixing it with a `/`.
+ *
  * Commands registered using this function can also be executed by resources, using the [`ExecuteCommand` native](#\_0x561C060B).
+ *
  * The restricted bool is not used on the client side. Permissions can only be checked on the server side, so if you want to limit your command with an ace permission automatically, make it a server command (by registering it in a server script).
+ *
  * **Example result**:
+ *
  * ![](https://i.imgur.com/TaCnG09.png)
+ *
  * Hash: 0x5FA79B0F | Since: shared
  */
 export function registerCommand(handler, restricted) {
@@ -2026,6 +2324,7 @@ export function registerCommand(handler, restricted) {
 }
 /**
  * Used to replicate a server variable onto clients.
+ *
  * Hash: 0xF292858C | Since: server
  */
 export function setConvarReplicated() {
@@ -2034,7 +2333,9 @@ export function setConvarReplicated() {
 /**
  * It overrides the default distance culling radius of an entity. Set to `0.0` to reset.
  * If you want to interact with an entity outside of your players' scopes set the radius to a huge number.
+ *
  * **WARNING**: Culling natives are deprecated and have known, [unfixable issues](https://forum.cfx.re/t/issue-with-culling-radius-and-server-side-entities/4900677/4)
+ *
  * Hash: 0xD3A183A3 | Since: server
  */
 export function setEntityDistanceCullingRadius(entity, radius) {
@@ -2043,6 +2344,7 @@ export function setEntityDistanceCullingRadius(entity, radius) {
 }
 /**
  * Schedules the specified resource to run a tick as soon as possible, bypassing the server's fixed tick rate.
+ *
  * Hash: 0xB88A73AD | Since: server
  */
 export function scheduleResourceTick() {
@@ -2063,9 +2365,13 @@ export function scheduleResourceTick() {
  * KeepEntity = 2
  * }
  * ```
+ *
  * Sets what the server will do when the entity no longer has its original owner. By default the server will cleanup entities that it considers "no longer relevant".
+ *
  * When used on trains, this native will recursively call onto all attached carriages.
+ *
  * **NOTE**: When used with `KeepEntity` (2) this native only guarantees that the ***server*** will not delete the entity, client requests to delete the entity will still work perfectly fine.
+ *
  * Hash: 0x489E9162 | Since: server
  */
 export function setEntityOrphanMode(entity, orphanMode) {
@@ -2074,7 +2380,9 @@ export function setEntityOrphanMode(entity, orphanMode) {
 }
 /**
  * Sets the routing bucket for the specified entity.
+ *
  * Routing buckets are also known as 'dimensions' or 'virtual worlds' in past echoes, however they are population-aware.
+ *
  * Hash: 0x635E5289 | Since: server
  */
 export function setEntityRoutingBucket(entity, bucket) {
@@ -2083,6 +2391,7 @@ export function setEntityRoutingBucket(entity, bucket) {
 }
 /**
  * It allows to flag an entity to ignore the request control filter policy.
+ *
  * Hash: 0x9F7F8D36 | Since: server
  */
 export function setEntityIgnoreRequestControlFilter(entity, ignore) {
@@ -2091,7 +2400,9 @@ export function setEntityIgnoreRequestControlFilter(entity, ignore) {
 }
 /**
  * Enables or disables the owner check for the specified entity in network-synchronized scenes. When set to `false`, the entity cannot participate in synced scenes initiated by clients that do not own the entity.
+ *
  * By default, this is `false` for all entities, meaning only the entity's owner can include it in networked synchronized scenes.
+ *
  * Hash: 0xD3FC9D88 | Since: server
  */
 export function setEntityRemoteSyncedScenesAllowed(entity, allow) {
@@ -2100,6 +2411,7 @@ export function setEntityRemoteSyncedScenesAllowed(entity, allow) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xF90B7469 | Since: server
  */
 export function setGameType() {
@@ -2107,8 +2419,11 @@ export function setGameType() {
 }
 /**
  * Sets the handler for HTTP requests made to the executing resource.
+ *
  * Example request URL: `http://localhost:30120/http-test/ping` - this request will be sent to the `http-test` resource with the `/ping` path.
+ *
  * The handler function assumes the following signature:
+ *
  * ```ts
  * function HttpHandler(
  * request: {
@@ -2127,6 +2442,7 @@ export function setGameType() {
  * }
  * ): void;
  * ```
+ *
  * *   **request**: The request object.
  * *   **address**: The IP address of the request sender.
  * *   **path**: The path to where the request was sent.
@@ -2138,6 +2454,7 @@ export function setGameType() {
  * *   **writeHead**: Sets the status code & headers of the response. Can be only called once and won't work if called after running other response functions.
  * *   **write**: Writes to the response body without sending it. Can be called multiple times.
  * *   **send**: Writes to the response body and then sends it along with the status code & headers, finishing the request.
+ *
  * Hash: 0xF5C6330C | Since: server
  */
 export function setHttpHandler(handler) {
@@ -2145,6 +2462,7 @@ export function setHttpHandler(handler) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xB7BA82DC | Since: server
  */
 export function setMapName() {
@@ -2152,12 +2470,15 @@ export function setMapName() {
 }
 /**
  * Sets the entity lockdown mode for a specific routing bucket.
+ *
  * Lockdown modes are:
+ *
  * | Mode       | Meaning                                                    |
  * | ---------- | ---------------------------------------------------------- |
  * | `strict`   | No entities can be created by clients at all.              |
  * | `relaxed`  | Only script-owned entities created by clients are blocked. |
  * | `inactive` | Clients can create any entity they want.                   |
+ *
  * Hash: 0xA0F2201F | Since: server
  */
 export function setRoutingBucketEntityLockdownMode(bucketId) {
@@ -2166,7 +2487,9 @@ export function setRoutingBucketEntityLockdownMode(bucketId) {
 /**
  * Sets the culling radius for the specified player.
  * Set to `0.0` to reset.
+ *
  * **WARNING**: Culling natives are deprecated and have known, [unfixable issues](https://forum.cfx.re/t/issue-with-culling-radius-and-server-side-entities/4900677/4)
+ *
  * Hash: 0x8A2FBAD4 | Since: server
  */
 export function setPlayerCullingRadius(radius) {
@@ -2174,6 +2497,7 @@ export function setPlayerCullingRadius(radius) {
 }
 /**
  * Sets whether or not the specified routing bucket has automatically-created population enabled.
+ *
  * Hash: 0xCE51AC2C | Since: server
  */
 export function setRoutingBucketPopulationEnabled(bucketId, mode) {
@@ -2181,7 +2505,9 @@ export function setRoutingBucketPopulationEnabled(bucketId, mode) {
 }
 /**
  * Sets the routing bucket for the specified player.
+ *
  * Routing buckets are also known as 'dimensions' or 'virtual worlds' in past echoes, however they are population-aware.
+ *
  * Hash: 0x6504EB38 | Since: server
  */
 export function setPlayerRoutingBucket(bucket) {
@@ -2189,6 +2515,7 @@ export function setPlayerRoutingBucket(bucket) {
 }
 /**
  * Internal function for setting a state bag value.
+ *
  * Hash: 0x8D50E33A | Since: shared
  */
 export function setStateBagValue(valueLength, replicated) {
@@ -2196,6 +2523,7 @@ export function setStateBagValue(valueLength, replicated) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x29B440DC | Since: server
  */
 export function startResource() {
@@ -2203,6 +2531,7 @@ export function startResource() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x21783161 | Since: server
  */
 export function stopResource() {
@@ -2210,6 +2539,7 @@ export function stopResource() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x1E35DBBA | Since: server
  */
 export function tempBanPlayer() {
@@ -2217,6 +2547,7 @@ export function tempBanPlayer() {
 }
 /**
  * The backing function for TriggerLatentClientEvent.
+ *
  * Hash: 0x70B35890 | Since: server
  */
 export function triggerLatentClientEventInternal(payloadLength, bps) {
@@ -2224,6 +2555,7 @@ export function triggerLatentClientEventInternal(payloadLength, bps) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x12A330 | Since: shared
  */
 export function stateBagHasKey() {
@@ -2231,6 +2563,7 @@ export function stateBagHasKey() {
 }
 /**
  * Returns whether or not the currently executing event was canceled.
+ *
  * Hash: 0x58382A19 | Since: shared
  */
 export function wasEventCanceled() {
@@ -2238,6 +2571,7 @@ export function wasEventCanceled() {
 }
 /**
  * The backing function for TriggerClientEvent.
+ *
  * Hash: 0x2F7A49E6 | Since: server
  */
 export function triggerClientEventInternal(payloadLength) {
@@ -2246,6 +2580,7 @@ export function triggerClientEventInternal(payloadLength) {
 /**
  * Scans the resources in the specified resource root. This function is only available in the 'monitor mode' process and is
  * not available for user resources.
+ *
  * Hash: 0x636F097F | Since: server
  */
 export function scanResourceRoot(callback) {
@@ -2253,7 +2588,9 @@ export function scanResourceRoot(callback) {
 }
 /**
  * Nonsynchronous operations will not wait for a disk/filesystem flush before returning from a write or delete call. They will be much faster than their synchronous counterparts (e.g., bulk operations), however, a system crash may lose the data to some recent operations.
+ *
  * This native ensures all `_NO_SYNC` operations are synchronized with the disk/filesystem.
+ *
  * Hash: 0xE27C97A0 | Since: server
  */
 export function flushResourceKvp() {
@@ -2261,6 +2598,7 @@ export function flushResourceKvp() {
 }
 /**
  * The backing function for TriggerEvent.
+ *
  * Hash: 0x91310870 | Since: shared
  */
 export function triggerEventInternal(payloadLength) {
@@ -2269,6 +2607,7 @@ export function triggerEventInternal(payloadLength) {
 /**
  * Prints 'structured trace' data to the server `file descriptor 3` channel. This is not generally useful outside of
  * server monitoring utilities.
+ *
  * Hash: 0x90892DED | Since: server
  */
 export function printStructuredTrace() {
@@ -2276,6 +2615,7 @@ export function printStructuredTrace() {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xB3210203 | Since: shared
  */
 export function endFindKvp(handle) {
@@ -2284,7 +2624,9 @@ export function endFindKvp(handle) {
 /**
  * Equivalent to CREATE_VEHICLE, but it uses 'server setter' logic (like the former CREATE_AUTOMOBILE) as a workaround for
  * reliability concerns regarding entity creation RPC.
+ *
  * Unlike CREATE_AUTOMOBILE, this supports other vehicle types as well.
+ *
  * Hash: 0x6AE51D4B | Since: server
  */
 export function createVehicleServerSetter(modelHash, pos, heading) {
@@ -2294,6 +2636,7 @@ export function createVehicleServerSetter(modelHash, pos, heading) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0xBD7BEBC5 | Since: shared
  */
 export function findKvp(handle) {
@@ -2301,6 +2644,7 @@ export function findKvp(handle) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x2E310ACD | Since: server
  */
 export function verifyPasswordHash() {
@@ -2308,6 +2652,7 @@ export function verifyPasswordHash() {
 }
 /**
  * A setter for [GET_RESOURCE_KVP_FLOAT](#\_0x35BDCEEA).
+ *
  * Hash: 0x9ADD2938 | Since: shared
  */
 export function setResourceKvpFloat(value) {
@@ -2315,6 +2660,7 @@ export function setResourceKvpFloat(value) {
 }
 /**
  * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938).
+ *
  * Hash: 0x35BDCEEA | Since: shared
  */
 export function getResourceKvpFloat() {
@@ -2322,7 +2668,9 @@ export function getResourceKvpFloat() {
 }
 /**
  * Immediately stops the pedestrian from whatever it's doing. The difference between this and [CLEAR_PED_TASKS](#\_0xE1EF3C1216AFF2CD) is that this one teleports the ped but does not change the position of the ped.
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [CLEAR_PED_TASKS_IMMEDIATELY](?\_0xAAA34F8A7CB32098).</strong>
+ *
  * Hash: 0xBC045625 | Since: server
  */
 export function clearPedTasksImmediately(ped) {
@@ -2354,7 +2702,9 @@ export function clearPedTasksImmediately(ped) {
  * Code:
  * `PED::_0x5F5D1665E352A839(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY("mpbeach_overlays"), MISC::GET_HASH_KEY("fm_hair_fuzz"))`
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [ADD_PED_DECORATION_FROM_HASHES](?\_0x5F5D1665E352A839).</strong>
+ *
  * Hash: 0x70559AC7 | Since: server
  */
 export function addPedDecorationFromHashes(ped, collection, overlay) {
@@ -2367,6 +2717,7 @@ export function addPedDecorationFromHashes(ped, collection, overlay) {
 }
 /**
  * No comment provided
+ *
  * Hash: 0x7389B5DF | Since: shared
  */
 export function deleteResourceKvp() {
@@ -2374,6 +2725,7 @@ export function deleteResourceKvp() {
 }
 /**
  * Nonsynchronous [DELETE_RESOURCE_KVP](#\_0x7389B5DF) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
+ *
  * Hash: 0x4152C90 | Since: shared
  */
 export function deleteResourceKvpNoSync() {
@@ -2381,6 +2733,7 @@ export function deleteResourceKvpNoSync() {
 }
 /**
  * A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8).
+ *
  * Hash: 0x557B586A | Since: shared
  */
 export function getResourceKvpInt() {
@@ -2388,6 +2741,7 @@ export function getResourceKvpInt() {
 }
 /**
  * Nonsynchronous [SET_RESOURCE_KVP](#\_0x21C7A35B) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
+ *
  * Hash: 0xCF9A2FF | Since: shared
  */
 export function setResourceKvpNoSync() {
@@ -2395,6 +2749,7 @@ export function setResourceKvpNoSync() {
 }
 /**
  * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B).
+ *
  * Hash: 0x5240DA5A | Since: shared
  */
 export function getResourceKvpString() {
@@ -2411,7 +2766,9 @@ export function getResourceKvpString() {
  * APPLY_TYPE_ANGULAR_IMPULSE = 5
  * }
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [APPLY_FORCE_TO_ENTITY](?\_0xC5F68BE9613E2D18).</strong>
+ *
  * Hash: 0xC1C0855A | Since: server
  */
 export function applyForceToEntity(entity, forceType, pos, offX, offY, offZ, nComponent, bLocalForce, bLocalOffset, bScaleByMass, bPlayAudio, bScaleByTimeWarp) {
@@ -2420,6 +2777,7 @@ export function applyForceToEntity(entity, forceType, pos, offX, offY, offZ, nCo
 }
 /**
  * Nonsynchronous [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
+ *
  * Hash: 0x3517BFBE | Since: shared
  */
 export function setResourceKvpFloatNoSync(value) {
@@ -2429,7 +2787,9 @@ export function setResourceKvpFloatNoSync(value) {
  * Creates a ped (biped character, pedestrian, actor) with the specified model at the specified position and heading.
  * This ped will initially be owned by the creating script as a mission entity, and the model should be loaded already
  * (e.g. using REQUEST_MODEL).
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [CREATE_PED](?\_0xD49F9B0955C367DE).</strong>
+ *
  * Hash: 0x389EF71 | Since: server
  */
 export function createPed(pedType, modelHash, pos, heading, isNetwork, bScriptHostPed) {
@@ -2439,6 +2799,7 @@ export function createPed(pedType, modelHash, pos, heading, isNetwork, bScriptHo
 }
 /**
  * No comment provided
+ *
  * Hash: 0xDD379006 | Since: shared
  */
 export function startFindKvp() {
@@ -2446,6 +2807,7 @@ export function startFindKvp() {
 }
 /**
  * A setter for [GET_RESOURCE_KVP_STRING](#\_0x5240DA5A).
+ *
  * Hash: 0x21C7A35B | Since: shared
  */
 export function setResourceKvp() {
@@ -2459,7 +2821,9 @@ export function setResourceKvp() {
  * ![minimap](https://i.imgur.com/qLbXWcQ.png)
  * ![big map](https://i.imgur.com/0j7O7Rh.png)
  * (Native name is *likely* to actually be ADD_BLIP_FOR_AREA, but due to the usual reasons this can't be confirmed)
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [\_ADD_BLIP_FOR_AREA](?\_0xCE5D0E5E315DB238).</strong>
+ *
  * Hash: 0x6228F159 | Since: server
  */
 export function addBlipForArea(pos, width, height) {
@@ -2469,7 +2833,9 @@ export function addBlipForArea(pos, width, height) {
  * Create a blip with a radius for the specified coordinates (it doesnt create the blip sprite, so you need to use [AddBlipCoords](#\_0xC6F43D0E))
  * Example image:
  * ![example](https://i.imgur.com/9hQl3DB.png)
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [ADD_BLIP_FOR_RADIUS](?\_0x46818D79B1F7499A).</strong>
+ *
  * Hash: 0x4626756C | Since: server
  */
 export function addBlipForRadius(pos, radius) {
@@ -2477,7 +2843,9 @@ export function addBlipForRadius(pos, radius) {
 }
 /**
  * Clear a ped's tasks. Stop animations and other tasks created by scripts.
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [CLEAR_PED_TASKS](?\_0xE1EF3C1216AFF2CD).</strong>
+ *
  * Hash: 0xDE3316AB | Since: server
  */
 export function clearPedTasks(ped) {
@@ -2487,7 +2855,9 @@ export function clearPedTasks(ped) {
 /**
  * Creates an object (prop) with the specified model at the specified position, offset on the Z axis by the radius of the object's model.
  * This object will initially be owned by the creating script as a mission entity, and the model should be loaded already (e.g. using REQUEST_MODEL).
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [CREATE_OBJECT](?\_0x509D5878EB39E842).</strong>
+ *
  * Hash: 0x2F7AA05C | Since: server
  */
 export function createObject(modelHash, pos, isNetwork, netMissionEntity, doorFlag) {
@@ -2497,7 +2867,9 @@ export function createObject(modelHash, pos, isNetwork, netMissionEntity, doorFl
 }
 /**
  * CLEAR_PED_SECONDARY_TASK
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [CLEAR_PED_SECONDARY_TASK](?\_0x176CECF6F920D707).</strong>
+ *
  * Hash: 0xA635F451 | Since: server
  */
 export function clearPedSecondaryTask(ped) {
@@ -2506,6 +2878,7 @@ export function clearPedSecondaryTask(ped) {
 }
 /**
  * A setter for [GET_RESOURCE_KVP_INT](#\_0x557B586A).
+ *
  * Hash: 0x6A2B1E8 | Since: shared
  */
 export function setResourceKvpInt(value) {
@@ -2514,7 +2887,9 @@ export function setResourceKvpInt(value) {
 /**
  * Removes the blip from your map.
  * **Note:** This function only works on the script that created the blip, if you wish to remove blips created by other scripts, see [`SET_THIS_SCRIPT_CAN_REMOVE_BLIPS_CREATED_BY_ANY_SCRIPT`](#\_0x86A652570E5F25DD).
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [REMOVE_BLIP](?\_0x86A652570E5F25DD).</strong>
+ *
  * Hash: 0xD8C3C1CD | Since: server
  */
 export function removeBlip() {
@@ -2525,7 +2900,9 @@ export function removeBlip() {
  * `This executes at the same as speed as PLAYER::SET_PLAYER_WANTED_LEVEL(player, 0, false);`
  * `PLAYER::GET_PLAYER_WANTED_LEVEL(player); executes in less than half the time. Which means that it's worth first checking if the wanted level needs to be cleared before clearing. However, this is mostly about good code practice and can important in other situations. The difference in time in this example is negligible.`
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [CLEAR_PLAYER_WANTED_LEVEL](?\_0xB302540597885499).</strong>
+ *
  * Hash: 0x54EA5BCC | Since: server
  */
 export function clearPlayerWantedLevel(player) {
@@ -2534,7 +2911,9 @@ export function clearPlayerWantedLevel(player) {
 }
 /**
  * CLEAR_PED_PROP
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [CLEAR_PED_PROP](?\_0x0943E5B8E078E76E).</strong>
+ *
  * Hash: 0x2D23D743 | Since: server
  */
 export function clearPedProp(ped, propId) {
@@ -2543,7 +2922,9 @@ export function clearPedProp(ped, propId) {
 }
 /**
  * GIVE_WEAPON_TO_PED
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [GIVE_WEAPON_TO_PED](?\_0xBF0FD6E56C964FCB).</strong>
+ *
  * Hash: 0xC4D88A85 | Since: server
  */
 export function giveWeaponToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand) {
@@ -2554,7 +2935,9 @@ export function giveWeaponToPed(ped, weaponHash, ammoCount, isHidden, bForceInHa
 }
 /**
  * CREATE_PED_INSIDE_VEHICLE
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [CREATE_PED_INSIDE_VEHICLE](?\_0x7DD959874C1FD534).</strong>
+ *
  * Hash: 0x3000F092 | Since: server
  */
 export function createPedInsideVehicle(vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed) {
@@ -2565,6 +2948,7 @@ export function createPedInsideVehicle(vehicle, pedType, modelHash, seat, isNetw
 }
 /**
  * Nonsynchronous [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
+ *
  * Hash: 0x26AEB707 | Since: shared
  */
 export function setResourceKvpIntNoSync(value) {
@@ -2573,10 +2957,13 @@ export function setResourceKvpIntNoSync(value) {
 /**
  * Creates a vehicle with the specified model at the specified position. This vehicle will initially be owned by the creating
  * script as a mission entity, and the model should be loaded already (e.g. using REQUEST_MODEL).
+ *
  * ```
  * NativeDB Added Parameter 8: BOOL p7
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [CREATE_VEHICLE](?\_0xAF35D0D2583051B0).</strong>
+ *
  * Hash: 0xDD75460A | Since: server
  */
 export function createVehicle(modelHash, pos, heading, isNetwork, netMissionEntity) {
@@ -2588,7 +2975,9 @@ export function createVehicle(modelHash, pos, heading, isNetwork, netMissionEnti
  * ```
  * Sets Ped Default Clothes
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PED_DEFAULT_COMPONENT_VARIATION](?\_0x45EEE61580806D63).</strong>
+ *
  * Hash: 0xC866A984 | Since: server
  */
 export function setPedDefaultComponentVariation(ped) {
@@ -2599,7 +2988,9 @@ export function setPedDefaultComponentVariation(ped) {
  * ```
  * NativeDB Added Parameter 4: BOOL p3
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PED_AMMO](?\_0x14E56BC5B5DB6A19).</strong>
+ *
  * Hash: 0xBF90DF1A | Since: server
  */
 export function setPedAmmo(ped, weaponHash, ammo) {
@@ -2612,7 +3003,9 @@ export function setPedAmmo(ped, weaponHash, ammo) {
  * ```
  * Note that the third parameter(denoted as z) is "up and down" with positive numbers encouraging upwards movement.
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_ENTITY_VELOCITY](?\_0x1C99BB7B6E96D16F).</strong>
+ *
  * Hash: 0xFF5A1988 | Since: server
  */
 export function setEntityVelocity(entity, pos) {
@@ -2622,7 +3015,9 @@ export function setEntityVelocity(entity, pos) {
 /**
  * Creates an object (prop) with the specified model centered at the specified position.
  * This object will initially be owned by the creating script as a mission entity, and the model should be loaded already (e.g. using REQUEST_MODEL).
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [CREATE_OBJECT_NO_OFFSET](?\_0x9A294B2138ABB884).</strong>
+ *
  * Hash: 0x58040420 | Since: server
  */
 export function createObjectNoOffset(modelHash, pos, isNetwork, netMissionEntity, doorFlag) {
@@ -2632,7 +3027,9 @@ export function createObjectNoOffset(modelHash, pos, isNetwork, netMissionEntity
 }
 /**
  * Freezes or unfreezes an entity preventing its coordinates to change by the player if set to `true`. You can still change the entity position using [`SET_ENTITY_COORDS`](#\_0x06843DA7060A026B).
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [FREEZE_ENTITY_POSITION](?\_0x428CA6DBD1094446).</strong>
+ *
  * Hash: 0x65C16D57 | Since: server
  */
 export function freezeEntityPosition(entity, toggle) {
@@ -2646,7 +3043,9 @@ export function freezeEntityPosition(entity, toggle) {
  * ![enemy](https://i.imgur.com/fl78svv.png)
  * Example of friend:
  * ![friend](https://i.imgur.com/Q16ho5d.png)
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [ADD_BLIP_FOR_ENTITY](?\_0x5CDE92C702A8FCE7).</strong>
+ *
  * Hash: 0x30822554 | Since: server
  */
 export function addBlipForEntity(entity) {
@@ -2655,7 +3054,9 @@ export function addBlipForEntity(entity) {
 }
 /**
  * This native is used to set component variation on a ped. Components, drawables and textures IDs are related to the ped model.
+ *
  * ### MP Freemode list of components
+ *
  * **0**: Face
  * **1**: Mask
  * **2**: Hair
@@ -2669,6 +3070,7 @@ export function addBlipForEntity(entity) {
  * **10**: Badge
  * **11**: Torso 2
  * List of Component IDs
+ *
  * ```cpp
  * // Components
  * enum ePedVarComp
@@ -2689,7 +3091,9 @@ export function addBlipForEntity(entity) {
  * PV_COMP_MAX = 12,
  * };
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PED_COMPONENT_VARIATION](?\_0x262B14F48D29DE80).</strong>
+ *
  * Hash: 0xD4F7B05C | Since: server
  */
 export function setPedComponentVariation(ped, componentId, drawableId, textureId, paletteId) {
@@ -2698,7 +3102,9 @@ export function setPedComponentVariation(ped, componentId, drawableId, textureId
 }
 /**
  * Creates a blip for the specified coordinates. You can use `SET_BLIP_` natives to change the blip.
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [ADD_BLIP_FOR_COORD](?\_0x5A039BB0BCA604B6).</strong>
+ *
  * Hash: 0xC6F43D0E | Since: server
  */
 export function addBlipForCoord(pos) {
@@ -2706,7 +3112,9 @@ export function addBlipForCoord(pos) {
 }
 /**
  * Set the heading of an entity in degrees also known as "Yaw".
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_ENTITY_HEADING](?\_0x8E2530AA8ADA980E).</strong>
+ *
  * Hash: 0xE0FF064D | Since: server
  */
 export function setEntityHeading(entity, heading) {
@@ -2715,7 +3123,9 @@ export function setEntityHeading(entity, heading) {
 }
 /**
  * REMOVE_WEAPON_COMPONENT_FROM_PED
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [REMOVE_WEAPON_COMPONENT_FROM_PED](?\_0x1E8BE90C74FB4C09).</strong>
+ *
  * Hash: 0x412AA00D | Since: server
  */
 export function removeWeaponComponentFromPed(ped, weaponHash, componentHash) {
@@ -2731,11 +3141,14 @@ export function removeWeaponComponentFromPed(ped, weaponHash, componentHash) {
  * <strong>Other information:</strong>
  * IDs start at zero and go Male Non-DLC, Female Non-DLC, Male DLC, and Female DLC.</br>
  * This native function is often called prior to calling natives such as:
+ *
  * *   [`SetPedHairColor`](#\_0xBB43F090)
  * *   [`SetPedHeadOverlayColor`](#\_0x78935A27)
  * *   [`SetPedHeadOverlay`](#\_0xD28DBA90)
  * *   [`SetPedFaceFeature`](#\_0x6C8D4458)
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PED_HEAD_BLEND_DATA](?\_0x9414E18B9434C2FE).</strong>
+ *
  * Hash: 0x60746B88 | Since: server
  */
 export function setPedHeadBlendData(ped, shapeFirstID, shapeSecondID, shapeThirdID, skinFirstID, skinSecondID, skinThirdID, shapeMix, skinMix, thirdMix, isParent) {
@@ -2753,7 +3166,9 @@ export function setPedHeadBlendData(ped, shapeFirstID, shapeSecondID, shapeThird
  * `WEAPON::REMOVE_WEAPON_FROM_PED(PLAYER::PLAYER_PED_ID(), 0x99B507EA);`
  * The code above removes the knife from the player.
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [REMOVE_WEAPON_FROM_PED](?\_0x4899CB088EDF59B8).</strong>
+ *
  * Hash: 0x9C37F220 | Since: server
  */
 export function removeWeaponFromPed(ped, weaponHash) {
@@ -2764,7 +3179,9 @@ export function removeWeaponFromPed(ped, weaponHash) {
 }
 /**
  * GIVE_WEAPON_COMPONENT_TO_PED
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [GIVE_WEAPON_COMPONENT_TO_PED](?\_0xD966D51AA5B28BB9).</strong>
+ *
  * Hash: 0x3E1E286D | Since: server
  */
 export function giveWeaponComponentToPed(ped, weaponHash, componentHash) {
@@ -2777,7 +3194,9 @@ export function giveWeaponComponentToPed(ped, weaponHash, componentHash) {
 }
 /**
  * SET_PED_INTO_VEHICLE
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PED_INTO_VEHICLE](?\_0xF75B0D629E1C063D).</strong>
+ *
  * Hash: 0x7500C79 | Since: server
  */
 export function setPedIntoVehicle(ped, vehicle, seatIndex) {
@@ -2787,10 +3206,13 @@ export function setPedIntoVehicle(ped, vehicle, seatIndex) {
 }
 /**
  * Sets the rotation of a specified entity in the game world.
+ *
  * ```
  * NativeDB Introduced: v323
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_ENTITY_ROTATION](?\_0x8524A8B0171D5E07).</strong>
+ *
  * Hash: 0xA345EFE | Since: server
  */
 export function setEntityRotation(entity, pitch, roll, yaw, rotationOrder, bDeadCheck) {
@@ -2799,7 +3221,9 @@ export function setEntityRotation(entity, pitch, roll, yaw, rotationOrder, bDead
 }
 /**
  * SET_CURRENT_PED_WEAPON
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_CURRENT_PED_WEAPON](?\_0xADF692B254977C0C).</strong>
+ *
  * Hash: 0xB8278882 | Since: server
  */
 export function setCurrentPedWeapon(ped, weaponHash, bForceInHand) {
@@ -2810,7 +3234,9 @@ export function setCurrentPedWeapon(ped, weaponHash, bForceInHand) {
 }
 /**
  * Sets the coordinates (world position) for a specified entity, offset by the radius of the entity on the Z axis.
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_ENTITY_COORDS](?\_0x06843DA7060A026B).</strong>
+ *
  * Hash: 0xDF70B41B | Since: server
  */
 export function setEntityCoords(entity, pos, alive, deadFlag, ragdollFlag, clearArea) {
@@ -2820,7 +3246,9 @@ export function setEntityCoords(entity, pos, alive, deadFlag, ragdollFlag, clear
 /**
  * Sets the displayed sprite for a specific blip.
  * There's a [list of sprites](https://docs.fivem.net/game-references/blips/) on the FiveM documentation site.
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_BLIP_SPRITE](?\_0xDF735600A4696DAF).</strong>
+ *
  * Hash: 0x8DBBB0B9 | Since: server
  */
 export function setBlipSprite(blip, spriteId) {
@@ -2832,9 +3260,12 @@ export function setBlipSprite(blip, spriteId) {
  * Used for freemode (online) characters.
  * Called after SET_PED_HEAD_OVERLAY().
  * ```
+ *
  * <strong>Note:</strong>
  * You may need to call [`SetPedHeadBlendData`](#\_0x9414E18B9434C2FE) prior to calling this native in order for it to work.
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [\_SET_PED_HEAD_OVERLAY_COLOR](?\_0x497BF74A7B9CB952).</strong>
+ *
  * Hash: 0x78935A27 | Since: server
  */
 export function setPedHeadOverlayColor(ped, overlayID, colorType, colorID, secondColorID) {
@@ -2844,7 +3275,9 @@ export function setPedHeadOverlayColor(ped, overlayID, colorType, colorID, secon
 /**
  * Parameter `p1` does not seem to be used or referenced in game binaries.\
  * **Note:** When called for networked entities, a `CRemoveAllWeaponsEvent` will be created per request.
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [REMOVE_ALL_PED_WEAPONS](?\_0xF25DF915FA38C5F3).</strong>
+ *
  * Hash: 0xA44CE817 | Since: server
  */
 export function removeAllPedWeapons(ped) {
@@ -2854,7 +3287,9 @@ export function removeAllPedWeapons(ped) {
 /**
  * Set the model for a specific Player. Note that this will destroy the current Ped for the Player and create a new one, any reference to the old ped will be invalid after calling this.
  * As per usual, make sure to request the model first and wait until it has loaded.
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PLAYER_MODEL](?\_0x00A1CADD00108836).</strong>
+ *
  * Hash: 0x774A4C54 | Since: server
  */
 export function setPlayerModel(player, model) {
@@ -2881,9 +3316,12 @@ export function setPlayerModel(player, model) {
  * 11              Body Blemishes        0 - 11, 255
  * 12              Add Body Blemishes    0 - 1, 255
  * ```
+ *
  * <strong>Note:</strong>
  * You may need to call [`SetPedHeadBlendData`](#\_0x9414E18B9434C2FE) prior to calling this native in order for it to work.
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PED_HEAD_OVERLAY](?\_0x48F44967FA05CC1E).</strong>
+ *
  * Hash: 0xD28DBA90 | Since: server
  */
 export function setPedHeadOverlay(ped, overlayID, index, opacity) {
@@ -2892,7 +3330,9 @@ export function setPedHeadOverlay(ped, overlayID, index, opacity) {
 }
 /**
  * SET_PED_CAN_RAGDOLL
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PED_CAN_RAGDOLL](?\_0xB128377056A54E2A).</strong>
+ *
  * Hash: 0xCF1384C4 | Since: server
  */
 export function setPedCanRagdoll(ped, toggle) {
@@ -2905,7 +3345,9 @@ export function setPedCanRagdoll(ped, toggle) {
  * ped: The Ped to set the armor of.
  * amount: A value between 0 and 100 indicating the value to set the Ped's armor to.
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PED_ARMOUR](?\_0xCEA04D83135264CC).</strong>
+ *
  * Hash: 0x4E3A0CC4 | Since: server
  */
 export function setPedArmour(ped, amount) {
@@ -2914,13 +3356,16 @@ export function setPedArmour(ped, amount) {
 }
 /**
  * This native is used to set prop variation on a ped. Components, drawables and textures IDs are related to the ped model.
+ *
  * ### MP Freemode list of props
+ *
  * **0**: Hats
  * **1**: Glasses
  * **2**: Ears
  * **6**: Watches
  * **7**: Bracelets
  * List of Prop IDs
+ *
  * ```cpp
  * enum eAnchorPoints
  * {
@@ -2940,7 +3385,9 @@ export function setPedArmour(ped, amount) {
  * NUM_ANCHORS = 13,
  * };
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PED_PROP_INDEX](?\_0x93376B65A266EB5F).</strong>
+ *
  * Hash: 0x829F2E2 | Since: server
  */
 export function setPedPropIndex(ped, componentId, drawableId, textureId, attach) {
@@ -2950,7 +3397,9 @@ export function setPedPropIndex(ped, componentId, drawableId, textureId, attach)
 /**
  * `PED::SET_PED_RESET_FLAG(PLAYER::PLAYER_PED_ID(), 240, 1);`
  * Known values:
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PED_RESET_FLAG](?\_0xC1E8A365BF3B29F2).</strong>
+ *
  * Hash: 0xCFF6FF66 | Since: server
  */
 export function setPedResetFlag(ped, flagId, doReset) {
@@ -2961,7 +3410,9 @@ export function setPedResetFlag(ped, flagId, doReset) {
  * ```
  * p2 often set to 1000.0 in the decompiled scripts.
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_VEHICLE_BODY_HEALTH](?\_0xB77D05AC8C78AADB).</strong>
+ *
  * Hash: 0x920C2517 | Since: server
  */
 export function setVehicleBodyHealth(vehicle, value) {
@@ -2970,7 +3421,9 @@ export function setVehicleBodyHealth(vehicle, value) {
 }
 /**
  * Make the player impervious to all forms of damage.
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PLAYER_INVINCIBLE](?\_0x239528EACDC3E7DE).</strong>
+ *
  * Hash: 0xDFB9A2A2 | Since: server
  */
 export function setPlayerInvincible(player, bInvincible) {
@@ -2979,7 +3432,9 @@ export function setPlayerInvincible(player, bInvincible) {
 }
 /**
  * See eDoorId declared in [`SET_VEHICLE_DOOR_SHUT`](#\_0x93D9BD300D7789E5)
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_VEHICLE_DOOR_BROKEN](?\_0xD4D4F6A4AB575A33).</strong>
+ *
  * Hash: 0x8147FEA7 | Since: server
  */
 export function setVehicleDoorBroken(vehicle, doorIndex, deleteDoor) {
@@ -2990,7 +3445,9 @@ export function setVehicleDoorBroken(vehicle, doorIndex, deleteDoor) {
  * ```
  * p1, p2, p3 are RGB values for color (255,0,0 for Red, ect)
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_VEHICLE_CUSTOM_PRIMARY_COLOUR](?\_0x7141766F91D15BEA).</strong>
+ *
  * Hash: 0x8DF9F9BC | Since: server
  */
 export function setVehicleCustomPrimaryColour(vehicle, r, g, b) {
@@ -3009,6 +3466,7 @@ export function setVehicleCustomPrimaryColour(vehicle, r, g, b) {
  * TYPE_DIE_DOWN_STAIRS = 6
  * }
  * ```
+ *
  * ```
  * Return variable is never used in R*'s scripts.
  * Not sure what p2 does. It seems like it would be a time judging by it's usage in R*'s scripts, but didn't seem to affect anything in my testings.
@@ -3018,7 +3476,9 @@ export function setVehicleCustomPrimaryColour(vehicle, r, g, b) {
  * (Simplified) Example of the usage of the function from R*'s scripts:
  * `ped::set_ped_to_ragdoll_with_fall(ped, 1500, 2000, 1, -entity::get_entity_forward_vector(ped), 1f, 0f, 0f, 0f, 0f, 0f, 0f);`
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PED_TO_RAGDOLL_WITH_FALL](?\_0xD76632D99E4966C8).</strong>
+ *
  * Hash: 0xFA12E286 | Since: server
  */
 export function setPedToRagdollWithFall(ped, minTime, maxTime, nFallType, dirX, dirY, dirZ, fGroundHeight, grab1X, grab1Y, grab1Z, grab2X, grab2Y, grab2Z) {
@@ -3027,11 +3487,15 @@ export function setPedToRagdollWithFall(ped, minTime, maxTime, nFallType, dirX, 
 }
 /**
  * p4/p5: Unusued in TU27
+ *
  * ### Ragdoll Types
+ *
  * **0**: CTaskNMRelax
  * **1**: CTaskNMScriptControl: Hardcoded not to work in networked environments.
  * **Else**: CTaskNMBalance
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PED_TO_RAGDOLL](?\_0xAE99FB955581844A).</strong>
+ *
  * Hash: 0x83CB5052 | Since: server
  */
 export function setPedToRagdoll(ped, minTime, maxTime, ragdollType, bAbortIfInjured, bAbortIfDead, bForceScriptControl) {
@@ -3041,6 +3505,7 @@ export function setPedToRagdoll(ped, minTime, maxTime, ragdollType, bAbortIfInju
 /**
  * Used for freemode (online) characters.
  * Indices:
+ *
  * 1.  black
  * 2.  very light blue/green
  * 3.  dark blue
@@ -3071,7 +3536,9 @@ export function setPedToRagdoll(ped, minTime, maxTime, ragdollType, bAbortIfInju
  * 28. devil blue/black
  * 29. white small pupil
  * 30. glossed over
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [\_SET_PED_EYE_COLOR](?\_0x50B56988B170AFDF).</strong>
+ *
  * Hash: 0xEC09DB1B | Since: server
  */
 export function setPedEyeColor(ped, index) {
@@ -3087,7 +3554,9 @@ export function setPedEyeColor(ped, index) {
  * I marked p6 as distanceToShoot as if you think of GTA's Logic with the native SET_VEHICLE_SHOOT natives, it won't shoot till it gets within a certain distance of the target.
  * I marked p7 as pedAccuracy as it seems it's mostly 100 (Completely Accurate), 75, 90, etc. Although this could be the ammo count within the gun, but I highly doubt it. I will change this comment once I find out if it's ammo count or not.
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [TASK_DRIVE_BY](?\_0x2F8AF0E82773A171).</strong>
+ *
  * Hash: 0x2B84D1C4 | Since: server
  */
 export function taskDriveBy(driverPed, targetPed, targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, firingPattern) {
@@ -3100,10 +3569,13 @@ export function taskDriveBy(driverPed, targetPed, targetVehicle, targetX, target
 }
 /**
  * Sets the tint index for the hair on the specified ped.
+ *
  * ```
  * NativeDB Introduced: v323
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PED_HAIR_TINT](?\_0x4CFFC65454C93A49).</strong>
+ *
  * Hash: 0xA23FE32C | Since: server
  */
 export function setPedHairTint(ped, colorID, highlightColorID) {
@@ -3114,6 +3586,7 @@ export function setPedHairTint(ped, colorID, highlightColorID) {
  * Sets the various freemode face features, e.g. nose length, chin shape.
  * <strong>Indexes (From 0 to 19):</strong>
  * Parentheses indicate morph scale/direction as in (-1.0 to 1.0)
+ *
  * *   **0**: Nose Width (Thin/Wide)
  * *   **1**: Nose Peak (Up/Down)
  * *   **2**: Nose Length (Long/Short)
@@ -3136,7 +3609,9 @@ export function setPedHairTint(ped, colorID, highlightColorID) {
  * *   **19**: Neck Thickness (Thin/Thick)
  * <strong>Note:</strong>
  * You may need to call [`SetPedHeadBlendData`](#\_0x9414E18B9434C2FE) prior to calling this native in order for it to work.
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [\_SET_PED_FACE_FEATURE](?\_0x71A5C1DBA060049E).</strong>
+ *
  * Hash: 0x6C8D4458 | Since: server
  */
 export function setPedFaceFeature(ped, index, scale) {
@@ -3145,9 +3620,11 @@ export function setPedFaceFeature(ped, index, scale) {
 }
 /**
  * Locks the doors of a specified vehicle to a defined lock state, affecting how players and NPCs can interact with the vehicle.
+ *
  * ```
  * NativeDB Introduced: v323
  * ```
+ *
  * ```cpp
  * enum eVehicleLockState {
  * // No specific lock state, vehicle behaves according to the game's default settings.
@@ -3174,7 +3651,9 @@ export function setPedFaceFeature(ped, index, scale) {
  * VEHICLELOCK_CANNOT_ENTER = 10
  * };
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_VEHICLE_DOORS_LOCKED](?\_0xB664292EAECF7FA6).</strong>
+ *
  * Hash: 0x4CDD35D0 | Since: server
  */
 export function setVehicleDoorsLocked(vehicle, doorLockStatus) {
@@ -3184,7 +3663,9 @@ export function setVehicleDoorsLocked(vehicle, doorLockStatus) {
 /**
  * Sets the selected vehicle's colors to their default value (specific variant specified using the colorCombination parameter).
  * Range of possible values for colorCombination is currently unknown, I couldn't find where these values are stored either (Disquse's guess was vehicles.meta but I haven't seen it in there.)
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_VEHICLE_COLOUR_COMBINATION](?\_0x33E8CD3322E2FE31).</strong>
+ *
  * Hash: 0xA557AEAD | Since: server
  */
 export function setVehicleColourCombination(vehicle, colorCombination) {
@@ -3195,7 +3676,9 @@ export function setVehicleColourCombination(vehicle, colorCombination) {
  * ```
  * p1 is always 0 in R* scripts; and a quick disassembly seems to indicate that p1 is unused.
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PED_RANDOM_COMPONENT_VARIATION](?\_0xC8A9481A01E63C28).</strong>
+ *
  * Hash: 0x4111BA46 | Since: server
  */
 export function setPedRandomComponentVariation(ped) {
@@ -3219,7 +3702,9 @@ export function setPedRandomComponentVariation(ped) {
  * SPC_ALLOW_PAD_SHAKE = (1 << 12)
  * See: https://alloc8or.re/gta5/doc/enums/eSetPlayerControlFlag.txt
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PLAYER_CONTROL](?\_0x8D32347D6D4C40A2).</strong>
+ *
  * Hash: 0xD17AFCD8 | Since: server
  */
 export function setPlayerControl(player, bHasControl, flags) {
@@ -3228,7 +3713,9 @@ export function setPlayerControl(player, bHasControl, flags) {
 }
 /**
  * SET_PLAYER_WANTED_LEVEL
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PLAYER_WANTED_LEVEL](?\_0x39FF19C64EF7DA5B).</strong>
+ *
  * Hash: 0xB7A0914B | Since: server
  */
 export function setPlayerWantedLevel(player, wantedLevel, delayedResponse) {
@@ -3237,7 +3724,9 @@ export function setPlayerWantedLevel(player, wantedLevel, delayedResponse) {
 }
 /**
  * SET_VEHICLE_NUMBER_PLATE_TEXT
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_VEHICLE_NUMBER_PLATE_TEXT](?\_0x95A88F0B409CDA47).</strong>
+ *
  * Hash: 0x400F9556 | Since: server
  */
 export function setVehicleNumberPlateText(vehicle) {
@@ -3246,7 +3735,9 @@ export function setVehicleNumberPlateText(vehicle) {
 }
 /**
  * SET_PED_RANDOM_PROPS
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PED_RANDOM_PROPS](?\_0xC44AA05345C992C6).</strong>
+ *
  * Hash: 0xE3318E0E | Since: server
  */
 export function setPedRandomProps(ped) {
@@ -3259,7 +3750,9 @@ export function setPedRandomProps(ped) {
  * p3 seems to be duration or timeout of turn animation.
  * Also facingPed can be 0 or -1 so ped will just raise hands up.
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [TASK_HANDS_UP](?\_0xF2EAB31979A7F910).</strong>
+ *
  * Hash: 0x8DCC19C5 | Since: server
  */
 export function taskHandsUp(ped, duration, facingPed) {
@@ -3269,7 +3762,9 @@ export function taskHandsUp(ped, duration, facingPed) {
 }
 /**
  * Sets the dirt level of the passed vehicle.
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_VEHICLE_DIRT_LEVEL](?\_0x79D3B596FE44EE8B).</strong>
+ *
  * Hash: 0x2B39128B | Since: server
  */
 export function setVehicleDirtLevel(vehicle, dirtLevel) {
@@ -3746,7 +4241,9 @@ export function setVehicleDirtLevel(vehicle, dirtLevel) {
  * _0x1AA79A25 = 463,
  * }
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_PED_CONFIG_FLAG](?\_0x1913FE4CBF41C463).</strong>
+ *
  * Hash: 0x9CFBE10D | Since: server
  */
 export function setPedConfigFlag(ped, flagId, value) {
@@ -3756,7 +4253,9 @@ export function setPedConfigFlag(ped, flagId, value) {
 /**
  * colorPrimary & colorSecondary are the paint indexes for the vehicle.
  * For a list of valid paint indexes, view: pastebin.com/pwHci0xK
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_VEHICLE_COLOURS](?\_0x4F1D4BE3A7F24601).</strong>
+ *
  * Hash: 0x57F24253 | Since: server
  */
 export function setVehicleColours(vehicle, colorPrimary, colorSecondary) {
@@ -3770,7 +4269,9 @@ export function setVehicleColours(vehicle, colorPrimary, colorSecondary) {
  * `Example: TASK::TASK_GO_TO_ENTITY(pedHandle, vehicleHandle, 5000, 4.0, 100, 1073741824, 0)`
  * Ped will run towards the vehicle for 5 seconds and stop when time is over or when he gets 4 meters(?) around the vehicle (with duration = -1, the task duration will be ignored).
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [TASK_GO_TO_ENTITY](?\_0x6A071245EB0D1882).</strong>
+ *
  * Hash: 0x374827C2 | Since: server
  */
 export function taskGoToEntity(entity, target, duration, distance, speed) {
@@ -3782,7 +4283,9 @@ export function taskGoToEntity(entity, target, duration, distance, speed) {
  * ```
  * p1, p2, p3 are RGB values for color (255,0,0 for Red, ect)
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_VEHICLE_CUSTOM_SECONDARY_COLOUR](?\_0x36CED73BFED89754).</strong>
+ *
  * Hash: 0x9D77259E | Since: server
  */
 export function setVehicleCustomSecondaryColour(vehicle, r, g, b) {
@@ -3791,6 +4294,7 @@ export function setVehicleCustomSecondaryColour(vehicle, r, g, b) {
 }
 /**
  * [Animations list](https://alexguirre.github.io/animations-list/)
+ *
  * ```cpp
  * enum eScriptedAnimFlags
  * {
@@ -3827,7 +4331,9 @@ export function setVehicleCustomSecondaryColour(vehicle, r, g, b) {
  * AF_USE_FULL_BLENDING = 1073741824
  * }
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [TASK_PLAY_ANIM](?\_0xEA47FE3719165B94).</strong>
+ *
  * Hash: 0x5AB552C6 | Since: server
  */
 export function taskPlayAnim(ped, blendInSpeed, blendOutSpeed, duration, flag, playbackRate, lockX, lockY, lockZ) {
@@ -3836,7 +4342,9 @@ export function taskPlayAnim(ped, blendInSpeed, blendOutSpeed, duration, flag, p
 }
 /**
  * SET_VEHICLE_ALARM
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [SET_VEHICLE_ALARM](?\_0xCDE5E70C1DDB954C).</strong>
+ *
  * Hash: 0x24877D84 | Since: server
  */
 export function setVehicleAlarm(vehicle, state) {
@@ -3855,7 +4363,9 @@ export function setVehicleAlarm(vehicle, state) {
  * 262144 = ped moves to passenger seat first, then exits normally
  * Others to be tried out: 320, 512, 131072.
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [TASK_LEAVE_VEHICLE](?\_0xD3DBCE61A490BE02).</strong>
+ *
  * Hash: 0x7B1141C6 | Since: server
  */
 export function taskLeaveVehicle(ped, vehicle, flags) {
@@ -3869,7 +4379,9 @@ export function taskLeaveVehicle(ped, vehicle, flags) {
  * p2 should be 0
  * p3 should be 16
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [TASK_COMBAT_PED](?\_0xF166E48407BAC484).</strong>
+ *
  * Hash: 0xCB0D8932 | Since: server
  */
 export function taskCombatPed(ped, targetPed) {
@@ -3881,7 +4393,9 @@ export function taskCombatPed(ped, targetPed) {
  * ```
  * Firing Pattern Hash Information: https://pastebin.com/Px036isB
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [TASK_SHOOT_AT_COORD](?\_0x46A6CC01E0826106).</strong>
+ *
  * Hash: 0x601C22E3 | Since: server
  */
 export function taskShootAtCoord(ped, pos, duration, firingPattern) {
@@ -3896,7 +4410,9 @@ export function taskShootAtCoord(ped, pos, duration, firingPattern) {
  * p5 1 = normal, 3 = teleport to vehicle, 8 = normal/carjack ped from seat, 16 = teleport directly into vehicle
  * p6 is always 0
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [TASK_ENTER_VEHICLE](?\_0xC20E50AA46D09CA8).</strong>
+ *
  * Hash: 0xB8689B4E | Since: server
  */
 export function taskEnterVehicle(ped, vehicle, timeout, seatIndex, speed, flag) {
@@ -3906,7 +4422,9 @@ export function taskEnterVehicle(ped, vehicle, timeout, seatIndex, speed, flag) 
 }
 /**
  * TASK_REACT_AND_FLEE_PED
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [TASK_REACT_AND_FLEE_PED](?\_0x72C896464915D1B1).</strong>
+ *
  * Hash: 0x8A632BD8 | Since: server
  */
 export function taskReactAndFleePed(ped, fleeTarget) {
@@ -3916,7 +4434,9 @@ export function taskReactAndFleePed(ped, fleeTarget) {
 }
 /**
  * Flags are the same flags used in [`TASK_LEAVE_VEHICLE`](#\_0xD3DBCE61A490BE02)
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [TASK_LEAVE_ANY_VEHICLE](?\_0x504D54DF3F6F2247).</strong>
+ *
  * Hash: 0xDBDD79FA | Since: server
  */
 export function taskLeaveAnyVehicle(ped, flags) {
@@ -3927,9 +4447,12 @@ export function taskLeaveAnyVehicle(ped, flags) {
  * ```
  * NativeDB Introduced: v323
  * ```
+ *
  * Warp a ped into a vehicle.
  * **Note**: It's better to use [`TASK_ENTER_VEHICLE`](#\_0xC20E50AA46D09CA8) with the flag "warp" flag instead of this native.
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [TASK_WARP_PED_INTO_VEHICLE](?\_0x9A7D091411C5F684).</strong>
+ *
  * Hash: 0x65D4A35D | Since: server
  */
 export function taskWarpPedIntoVehicle(ped, vehicle, seatIndex) {
@@ -3940,7 +4463,9 @@ export function taskWarpPedIntoVehicle(ped, vehicle, seatIndex) {
 /**
  * Similar in functionality to [`TASK_PLAY_ANIM`](#\_0xEA47FE3719165B94), except the position and rotation parameters let you specify the initial position and rotation of the task. The ped is teleported to the position specified.
  * [Animations list](https://alexguirre.github.io/animations-list/)
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [TASK_PLAY_ANIM_ADVANCED](?\_0x83CDB10EA29B370B).</strong>
+ *
  * Hash: 0x3DDEB0E6 | Since: server
  */
 export function taskPlayAnimAdvanced(ped, pos, rot, blendInSpeed, blendOutSpeed, duration, flag, animTime) {
@@ -3949,7 +4474,9 @@ export function taskPlayAnimAdvanced(ped, pos, rot, blendInSpeed, blendOutSpeed,
 }
 /**
  * TASK_EVERYONE_LEAVE_VEHICLE
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [TASK_EVERYONE_LEAVE_VEHICLE](?\_0x7F93691AB4B92272).</strong>
+ *
  * Hash: 0xC1971F30 | Since: server
  */
 export function taskEveryoneLeaveVehicle(vehicle) {
@@ -3958,6 +4485,7 @@ export function taskEveryoneLeaveVehicle(vehicle) {
 }
 /**
  * Tells a ped to go to a coord by any means.
+ *
  * ```cpp
  * enum eDrivingMode {
  * DF_StopForCars = 1,
@@ -4007,7 +4535,9 @@ export function taskEveryoneLeaveVehicle(vehicle) {
  * DRIVINGMODE_AVOIDCARS_STOPFORPEDS_OBEYLIGHTS = 786599 // DF_SwerveAroundAllCars|DF_StopAtLights|DF_StopForPeds|DF_SteerAroundObjects|DF_UseShortCutLinks|DF_ChangeLanesAroundObstructions|DF_StopForCars
  * };
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [TASK_GO_TO_COORD_ANY_MEANS](?\_0x5BC448CB78FA3E88).</strong>
+ *
  * Hash: 0xF91DF93B | Since: server
  */
 export function taskGoToCoordAnyMeans(ped, pos, fMoveBlendRatio, vehicle, bUseLongRangeVehiclePathing, drivingFlags, fMaxRangeToShootTargets) {
@@ -4017,7 +4547,9 @@ export function taskGoToCoordAnyMeans(ped, pos, fMoveBlendRatio, vehicle, bUseLo
 }
 /**
  * TASK_GO_STRAIGHT_TO_COORD
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [TASK_GO_STRAIGHT_TO_COORD](?\_0xD76B57B44F1E6F8B).</strong>
+ *
  * Hash: 0x80A9E7A7 | Since: server
  */
 export function taskGoStraightToCoord(ped, pos, speed, timeout, targetHeading, distanceToSlide) {
@@ -4035,7 +4567,9 @@ export function taskGoStraightToCoord(ped, pos, speed, timeout, targetHeading, d
  * in practical usage, getting the entity the player is aiming at and then task the peds to shoot at the entity, at a button press event would be better.
  * Firing Pattern Hash Information: https://pastebin.com/Px036isB
  * ```
+ *
  * <strong>This is the server-side RPC native equivalent of the client native [TASK_SHOOT_AT_ENTITY](?\_0x08DA95E8298AE772).</strong>
+ *
  * Hash: 0xAC0631C9 | Since: server
  */
 export function taskShootAtEntity(entity, target, duration, firingPattern) {
@@ -4045,4 +4579,4 @@ export function taskShootAtEntity(entity, target, duration, firingPattern) {
         firingPattern = misc.getHashKey(firingPattern);
     TaskShootAtEntity(_entity, _target, duration, firingPattern);
 }
-export * from "@risinglife/fivem-shared";
+export * from "@risinglife/redm-shared";
