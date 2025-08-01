@@ -1,4 +1,4 @@
-import { Vector3, Entity, Ped, Player, Vehicle, Object } from '@risinglife/redm-shared';
+import { Vector3, Entity, Ped, Player, Vehicle, Object } from '@risinglife/fivem-shared';
 /**
  * Cancels the currently executing event.
  *
@@ -3612,4 +3612,4 @@ export declare function taskGoStraightToCoord(ped: number | Ped, pos: Vector3, s
  * Hash: 0xAC0631C9 | Since: server
  */
 export declare function taskShootAtEntity(entity: number | Entity, target: number | Entity, duration: number, firingPattern: number | string): void;
-export * from "@risinglife/redm-shared";
+export * from "@risinglife/fivem-shared";

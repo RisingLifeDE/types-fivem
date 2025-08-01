@@ -1,4 +1,4 @@
-import { Vector3, Vector2, Entity, Ped, Player, Vehicle, Object, Blip, Camera } from '@risinglife/redm-shared';
+import { Vector3, Vector2, Entity, Ped, Player, Vehicle, Object, Blip, Camera } from '@risinglife/fivem-shared';
 export declare namespace builtin {
     /**
      * Pauses execution of the current script, please note this behavior is only seen when called from one of the game script files(ysc). In order to wait an asi script use "static void WAIT(DWORD time);" found in main.h
@@ -102794,4 +102794,4 @@ export declare function clearPopscheduleOverrideVehicleModel(scheduleId: number)
  * @deprecated Use zone.getHashOfMapAreaAtCoords(pos) instead
  */
 export declare function getHashOfMapAreaAtCoords(pos: Vector3): number;
-export * from "@risinglife/redm-shared";
+export * from "@risinglife/fivem-shared";

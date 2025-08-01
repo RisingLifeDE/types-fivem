@@ -1,4 +1,4 @@
-import { Vector3, Entity, Ped, Player, Vehicle, Object } from '@risinglife/redm-shared';
+import { Vector3, Entity, Ped, Player, Vehicle, Object } from '@risinglife/fivem-shared';
 /**
  * Cancels the currently executing event.
  *
@@ -4579,4 +4579,4 @@ export function taskShootAtEntity(entity, target, duration, firingPattern) {
         firingPattern = misc.getHashKey(firingPattern);
     TaskShootAtEntity(_entity, _target, duration, firingPattern);
 }
-export * from "@risinglife/redm-shared";
+export * from "@risinglife/fivem-shared";

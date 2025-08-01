@@ -1,4 +1,4 @@
-import { Vector3, Vector2, Entity, Ped, Player, Vehicle, Object } from '@risinglife/redm-shared';
+import { Vector3, Vector2, Entity, Ped, Player, Vehicle, Object } from '@risinglife/fivem-shared';
 /**
  * Creates an audio submix with the specified name, or gets the existing audio submix by that name.
  *
@@ -4310,4 +4310,4 @@ export declare function setResourceKvpInt(value: number): string;
  * Hash: 0x26AEB707 | Since: shared
  */
 export declare function setResourceKvpIntNoSync(value: number): string;
-export * from "@risinglife/redm-shared";
+export * from "@risinglife/fivem-shared";
