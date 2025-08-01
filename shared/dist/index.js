@@ -286,6 +286,12 @@ export class Player extends Entity {
 }
 export class Vehicle extends Entity {
 }
+export class Object extends Entity {
+}
+export class Blip extends Entity {
+}
+export class Camera extends Entity {
+}
 export var Enums;
 (function (Enums) {
     let AmmoSpecialType;
