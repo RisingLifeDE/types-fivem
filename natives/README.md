@@ -2,6 +2,11 @@
 
 This package contains "easy-to-use" types for FiveM.
 
+**Note:**
+The typing names are oriented at the NativeDB of alloc8or.
+But as this is a wrapper, it will handle them mostly correct.
+If your game crashs for a native, please open an [issue here](https://github.com/RisingLifeDE/types-fivem/issues/new).
+
 For example:
 ```js
 import * as game from '@risinglife/fivem-natives';
