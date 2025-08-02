@@ -471,7 +471,7 @@ export declare function experimentalLoadCloneSync(entity: number | Entity): stri
  *
  * Hash: 0xCF143FB9 | Since: client
  */
-export declare function getActivePlayers(): number;
+export declare function getActivePlayers(): number[];
 /**
  * No comment provided
  *
