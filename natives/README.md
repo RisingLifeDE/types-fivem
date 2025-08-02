@@ -20,8 +20,6 @@ So that you can easily migrate, you only have to look at the deprecation message
 With v0.2.0, all root methods are completely removed.
 Alternatively, you can “install” `@risinglife/fivem-natives@rootless` to have no root methods at all.
 
-Translated with DeepL.com (free version)
-
 ### Information
 
 For client access see [this package](https://www.npmjs.com/package/@risinglife/fivem-client)<br>
