@@ -6004,7 +6004,7 @@ export declare namespace entity {
      *
      * Hash: 0xAE3CBE5BF394C9C9 | Since: 323
      */
-    function deleteEntity(): number;
+    function deleteEntity(entity: number | Entity): void;
     /**
      * If `collision` is set to true, both entities won't collide with the other until the distance between them is above 4 meters.
      * Set `dynamic` to true to keep velocity after dettaching
@@ -6136,25 +6136,25 @@ export declare namespace entity {
      *
      * Hash: 0xB736A491E64A32CF | Since: 323
      */
-    function setAsNoLongerNeeded(): number;
+    function setAsNoLongerNeeded(entity: number | Entity): void;
     /**
      * This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
      *
      * Hash: 0x2595DD4236549CE3 | Since: 323
      */
-    function setPedAsNoLongerNeeded(): number;
+    function setPedAsNoLongerNeeded(ped: number | Ped): void;
     /**
      * This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
      *
      * Hash: 0x629BFA74418D6239 | Since: 323
      */
-    function setVehicleAsNoLongerNeeded(): number;
+    function setVehicleAsNoLongerNeeded(vehicle: number | Vehicle): void;
     /**
      * This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
      *
      * Hash: 0x3AE22DEB5BA5A3E6 | Since: 323
      */
-    function setObjectAsNoLongerNeeded(): number;
+    function setObjectAsNoLongerNeeded(obj: number | Object): void;
     /**
      * No comment provided
      *
@@ -9776,7 +9776,7 @@ export declare namespace graphics {
      *
      * Hash: 0x1D132D614DD86811 | Since: 323
      */
-    function setScaleformMovieAsNoLongerNeeded(): number;
+    function setScaleformMovieAsNoLongerNeeded(scaleformHandle: number): void;
     /**
      * No comment provided
      *
@@ -12170,7 +12170,7 @@ export declare namespace hud {
      *
      * Hash: 0x86A652570E5F25DD | Since: 323
      */
-    function removeBlip(): number;
+    function removeBlip(blip: number | Blip): void;
     /**
      * false for enemy
      * true for friendly
@@ -25025,7 +25025,7 @@ export declare namespace object {
      *
      * Hash: 0x539E0AE3E6634B9F | Since: 323
      */
-    function deleteObject(): number;
+    function deleteObject(obj: number | Object): void;
     /**
      * No comment provided
      *
@@ -26962,7 +26962,7 @@ export declare namespace ped {
      *
      * Hash: 0x9614299DCB53E54B | Since: 323
      */
-    function deletePed(): number;
+    function deletePed(ped: number | Ped): void;
     /**
      * No comment provided
      *
@@ -27174,7 +27174,7 @@ export declare namespace ped {
      *
      * Hash: 0xAC6D445B994DF95E | Since: 323
      */
-    function removeElegantly(): number;
+    function removeElegantly(ped: number | Ped): void;
     /**
      * Same as SET_PED_ARMOUR, but ADDS 'amount' to the armor the Ped already has.
      *
@@ -32291,7 +32291,7 @@ export declare namespace physics {
      *
      * Hash: 0x52B4829281364649 | Since: 323
      */
-    function deleteRope(): number;
+    function deleteRope(ropeId: number): void;
     /**
      * No comment provided
      *
@@ -41214,7 +41214,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xEA386986E786A54F | Since: 323
      */
-    function deleteVehicle(): number;
+    function deleteVehicle(vehicle: number | Vehicle): void;
     /**
      * No comment provided
      *
@@ -42809,13 +42809,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x5B76B14AE875C795 | Since: 323
      */
-    function deleteMissionTrain(): number;
+    function deleteMissionTrain(train: number | Vehicle): void;
     /**
      * p1 is always 0
      *
      * Hash: 0xBBE7648349B49BE8 | Since: 323
      */
-    function setMissionTrainAsNoLongerNeeded(): number;
+    function setMissionTrainAsNoLongerNeeded(train: number | Vehicle): void;
     /**
      * No comment provided
      *
@@ -54933,9 +54933,9 @@ export declare function clearEntityLastDamageEntity(entity1: number | Entity): v
  * Deletes the specified entity, then sets the handle pointed to by the pointer to NULL.
  *
  * Hash: 0xAE3CBE5BF394C9C9 | Since: 323
- * @deprecated Use entity.deleteEntity() instead
+ * @deprecated Use entity.deleteEntity(entity1) instead
  */
-export declare function deleteEntity(): number;
+export declare function deleteEntity(entity1: number | Entity): void;
 /**
  * If `collision` is set to true, both entities won't collide with the other until the distance between them is above 4 meters.
  * Set `dynamic` to true to keep velocity after dettaching
@@ -55080,30 +55080,30 @@ export declare function setEntityAsMissionEntity(entity1: number | Entity): void
  * }
  *
  * Hash: 0xB736A491E64A32CF | Since: 323
- * @deprecated Use entity.setAsNoLongerNeeded() instead
+ * @deprecated Use entity.setAsNoLongerNeeded(entity) instead
  */
-export declare function setEntityAsNoLongerNeeded(): number;
+export declare function setEntityAsNoLongerNeeded(entity: number | Entity): void;
 /**
  * This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
  *
  * Hash: 0x2595DD4236549CE3 | Since: 323
- * @deprecated Use entity.setPedAsNoLongerNeeded() instead
+ * @deprecated Use entity.setPedAsNoLongerNeeded(ped) instead
  */
-export declare function setPedAsNoLongerNeeded(): number;
+export declare function setPedAsNoLongerNeeded(ped: number | Ped): void;
 /**
  * This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
  *
  * Hash: 0x629BFA74418D6239 | Since: 323
- * @deprecated Use entity.setVehicleAsNoLongerNeeded() instead
+ * @deprecated Use entity.setVehicleAsNoLongerNeeded(vehicle) instead
  */
-export declare function setVehicleAsNoLongerNeeded(): number;
+export declare function setVehicleAsNoLongerNeeded(vehicle: number | Vehicle): void;
 /**
  * This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
  *
  * Hash: 0x3AE22DEB5BA5A3E6 | Since: 323
- * @deprecated Use entity.setObjectAsNoLongerNeeded() instead
+ * @deprecated Use entity.setObjectAsNoLongerNeeded(obj) instead
  */
-export declare function setObjectAsNoLongerNeeded(): number;
+export declare function setObjectAsNoLongerNeeded(obj: number | Object): void;
 /**
  * No comment provided
  *
@@ -59201,9 +59201,9 @@ export declare function hasScaleformContainerMovieLoadedIntoParent(scaleformHand
  * No comment provided
  *
  * Hash: 0x1D132D614DD86811 | Since: 323
- * @deprecated Use graphics.setScaleformMovieAsNoLongerNeeded() instead
+ * @deprecated Use graphics.setScaleformMovieAsNoLongerNeeded(scaleformHandle) instead
  */
-export declare function setScaleformMovieAsNoLongerNeeded(): number;
+export declare function setScaleformMovieAsNoLongerNeeded(scaleformHandle: number): void;
 /**
  * No comment provided
  *
@@ -61912,7 +61912,7 @@ export declare function setBlipCategory(blip: number | Blip, index: number): voi
  * Hash: 0x86A652570E5F25DD | Since: 323
  * @deprecated Use hud.removeBlip() instead
  */
-export declare function removeBlip(): number;
+export declare function removeBlip(blip: number | Blip): void;
 /**
  * false for enemy
  * true for friendly
@@ -76706,9 +76706,9 @@ export declare function createObjectNoOffset(modelHash: number | string, pos: Ve
  * Deletes the specified object, then sets the handle pointed to by the pointer to NULL.
  *
  * Hash: 0x539E0AE3E6634B9F | Since: 323
- * @deprecated Use object.deleteObject() instead
+ * @deprecated Use object.deleteObject(obj) instead
  */
-export declare function deleteObject(): number;
+export declare function deleteObject(obj: number | Object): void;
 /**
  * No comment provided
  *
@@ -78912,9 +78912,9 @@ export declare function createPed(pedType: number, modelHash: number | string, p
  * Deletes the specified ped, then sets the handle pointed to by the pointer to NULL.
  *
  * Hash: 0x9614299DCB53E54B | Since: 323
- * @deprecated Use ped.deletePed() instead
+ * @deprecated Use ped.deletePed(ped1) instead
  */
-export declare function deletePed(): number;
+export declare function deletePed(ped1: number | Ped): void;
 /**
  * No comment provided
  *
@@ -79155,9 +79155,9 @@ export declare function explodePedHead(ped1: number | Ped, weaponHash: number | 
  * Judging purely from a quick disassembly, if the ped is in a vehicle, the ped will be deleted immediately. If not, it'll be marked as no longer needed. - very elegant..
  *
  * Hash: 0xAC6D445B994DF95E | Since: 323
- * @deprecated Use ped.removeElegantly() instead
+ * @deprecated Use ped.removeElegantly(ped1) instead
  */
-export declare function removePedElegantly(): number;
+export declare function removePedElegantly(ped1: number | Ped): void;
 /**
  * Same as SET_PED_ARMOUR, but ADDS 'amount' to the armor the Ped already has.
  *
@@ -84853,9 +84853,9 @@ export declare function addRope(pos: Vector3, rot: Vector3, length: number, rope
  * No comment provided
  *
  * Hash: 0x52B4829281364649 | Since: 323
- * @deprecated Use physics.deleteRope() instead
+ * @deprecated Use physics.deleteRope(ropeId) instead
  */
-export declare function deleteRope(): number;
+export declare function deleteRope(ropeId: number): void;
 /**
  * No comment provided
  *
@@ -94979,9 +94979,9 @@ export declare function createVehicle(modelHash: number | string, pos: Vector3, 
  * Deletes the specified vehicle, then sets the handle pointed to by the pointer to NULL.
  *
  * Hash: 0xEA386986E786A54F | Since: 323
- * @deprecated Use vehicle.deleteVehicle() instead
+ * @deprecated Use vehicle.deleteVehicle(vehicle1) instead
  */
-export declare function deleteVehicle(): number;
+export declare function deleteVehicle(vehicle1: number | Vehicle): void;
 /**
  * No comment provided
  *
@@ -96790,16 +96790,16 @@ export declare function isMissionTrain(train: number | Vehicle): boolean;
  * No comment provided
  *
  * Hash: 0x5B76B14AE875C795 | Since: 323
- * @deprecated Use vehicle.deleteMissionTrain() instead
+ * @deprecated Use vehicle.deleteMissionTrain(train) instead
  */
-export declare function deleteMissionTrain(): number;
+export declare function deleteMissionTrain(train: number | Vehicle): void;
 /**
  * p1 is always 0
  *
  * Hash: 0xBBE7648349B49BE8 | Since: 323
- * @deprecated Use vehicle.setMissionTrainAsNoLongerNeeded() instead
+ * @deprecated Use vehicle.setMissionTrainAsNoLongerNeeded(train) instead
  */
-export declare function setMissionTrainAsNoLongerNeeded(): number;
+export declare function setMissionTrainAsNoLongerNeeded(train: number | Vehicle): void;
 /**
  * No comment provided
  *

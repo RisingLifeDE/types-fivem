@@ -993,8 +993,8 @@ export function getGameName() {
  *
  * Hash: 0x2B9D4F50 | Since: shared
  */
-export function getGamePool() {
-    return GetGamePool();
+export function getGamePool(pool) {
+    return GetGamePool(pool);
 }
 /**
  * No comment provided
@@ -3217,8 +3217,8 @@ export function isRawKeyUp(rawKeyIndex) {
  *
  * Hash: 0x76A9EE1F | Since: shared
  */
-export function loadResourceFile() {
-    return LoadResourceFile();
+export function loadResourceFile(resource, path) {
+    return LoadResourceFile(resource, path);
 }
 /**
  * No comment provided
@@ -3420,8 +3420,8 @@ export function loadWaterFromPath() {
  *
  * Hash: 0xD7664FD1 | Since: client
  */
-export function registerKeyMapping() {
-    return RegisterKeyMapping();
+export function registerKeyMapping(commandString, description, defaultMapper, defaultParameter) {
+    RegisterKeyMapping(commandString, description, defaultMapper, defaultParameter);
 }
 /**
  * Overrides whether or not peds can stand on top of the specified vehicle.
@@ -3467,8 +3467,8 @@ export function registerStreamingFileFromKvs() {
  *
  * Hash: 0xC59B980C | Since: client
  */
-export function registerNuiCallback(callback) {
-    return RegisterNuiCallback(callback);
+export function registerNuiCallback(key, callback) {
+    RegisterNuiCallback(key, callback);
 }
 /**
  * Removes a dry volume from the game session.
@@ -3682,8 +3682,8 @@ export function registerTrackJunction(trackIndex, trackNode, newIndex, newNode, 
  *
  * Hash: 0x78608ACB | Since: client
  */
-export function sendNuiMessage() {
-    return SendNuiMessage();
+export function sendNuiMessage(message) {
+    return SendNuiMessage(message);
 }
 /**
  * Returns true if the profiler is active.

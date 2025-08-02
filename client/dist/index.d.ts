@@ -768,7 +768,7 @@ export declare function getGameName(): string;
  *
  * Hash: 0x2B9D4F50 | Since: shared
  */
-export declare function getGamePool(): [number, string];
+export declare function getGamePool(key: string): number[];
 /**
  * No comment provided
  *
@@ -2399,7 +2399,7 @@ export declare function isRawKeyUp(rawKeyIndex: number): boolean;
  *
  * Hash: 0x76A9EE1F | Since: shared
  */
-export declare function loadResourceFile(): [string, string, string];
+export declare function loadResourceFile(resource: string, path: string): string;
 /**
  * No comment provided
  *
@@ -2551,7 +2551,7 @@ export declare function loadWaterFromPath(): [boolean, string, string];
  *
  * Hash: 0xD7664FD1 | Since: client
  */
-export declare function registerKeyMapping(): [string, string, string, string];
+export declare function registerKeyMapping(commandString: string, description: string, defaultMapper: string, defaultParameter: string): void;
 /**
  * Overrides whether or not peds can stand on top of the specified vehicle.
  *
@@ -2587,7 +2587,7 @@ export declare function registerStreamingFileFromKvs(): string;
  *
  * Hash: 0xC59B980C | Since: client
  */
-export declare function registerNuiCallback(callback: Function): string;
+export declare function registerNuiCallback(key: string, callback: Function): void;
 /**
  * Removes a dry volume from the game session.
  * See CREATE_DRY_VOLUME for more info
@@ -2758,7 +2758,7 @@ export declare function registerTrackJunction(trackIndex: number, trackNode: num
  *
  * Hash: 0x78608ACB | Since: client
  */
-export declare function sendNuiMessage(): [boolean, string];
+export declare function sendNuiMessage(message: string): boolean;
 /**
  * Returns true if the profiler is active.
  *
