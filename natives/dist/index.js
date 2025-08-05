@@ -18293,8 +18293,9 @@ export var hud;
      *
      * Hash: 0x86A652570E5F25DD | Since: 323
      */
-    function removeBlip() {
-        return RemoveBlip();
+    function removeBlip(blip) {
+        const _blip = blip instanceof Blip ? blip.handle() : blip;
+        RemoveBlip(_blip);
     }
     hud.removeBlip = removeBlip;
     /**

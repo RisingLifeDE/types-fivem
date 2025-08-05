@@ -12523,7 +12523,7 @@ export declare namespace hud {
      *
      * Hash: 0x86A652570E5F25DD | Since: 323
      */
-    function removeBlip(): number;
+    function removeBlip(blip: number | Blip): void;
     /**
      * Interesting fact: A hash collision for this is RESET_JETPACK_MODEL_SETTINGS
      *
