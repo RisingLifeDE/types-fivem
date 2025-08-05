@@ -2900,7 +2900,7 @@ export declare function setDiscordRichPresenceAssetSmall(): string;
  *
  * Hash: 0x5FA79B0F | Since: shared
  */
-export declare function registerCommand(handler: Function, restricted: boolean): string;
+export declare function registerCommand(name: string, handler: Function, restricted: boolean): void;
 /**
  * Resets values from the zoom level data by index to defaults from mapzoomdata.meta.
  *

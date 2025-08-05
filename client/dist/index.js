@@ -3863,8 +3863,8 @@ export function setDiscordRichPresenceAssetSmall() {
  *
  * Hash: 0x5FA79B0F | Since: shared
  */
-export function registerCommand(handler, restricted) {
-    return RegisterCommand(handler, restricted);
+export function registerCommand(name, handler, restricted) {
+    return RegisterCommand(name, handler, restricted);
 }
 /**
  * Resets values from the zoom level data by index to defaults from mapzoomdata.meta.
