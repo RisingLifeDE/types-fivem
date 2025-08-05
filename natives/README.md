@@ -1,4 +1,4 @@
-# RedM Native/Game Types
+# FiveM Native/Game Types
 
 This package contains an wrapper for the FiveM typings.
 It oriented at the native db by alloc8or as it's always up-to-date.
