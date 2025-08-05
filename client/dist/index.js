@@ -3255,8 +3255,8 @@ export function mumbleSetVolumeOverride(player, volume) {
  *
  * Hash: 0xE6EB2CD8 | Since: client
  */
-export function mumbleSetServerAddress(port) {
-    return MumbleSetServerAddress(port);
+export function mumbleSetServerAddress(host, port) {
+    MumbleSetServerAddress(host, port);
 }
 /**
  * No comment provided
