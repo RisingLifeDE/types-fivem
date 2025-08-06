@@ -4199,13 +4199,13 @@ export declare function disableEditorRuntime(): void;
  *
  * Hash: 0x9ADD2938 | Since: shared
  */
-export declare function setResourceKvpFloat(value: number): string;
+export declare function setResourceKvpFloat(key: string, value: number): void;
 /**
  * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938).
  *
  * Hash: 0x35BDCEEA | Since: shared
  */
-export declare function getResourceKvpFloat(): [number, string];
+export declare function getResourceKvpFloat(key: string): number;
 /**
  * Enters cursor mode, suppressing mouse movement to the game and displaying a mouse cursor instead. This function supports
  * SDK infrastructure and is not intended to be used directly from your code.
@@ -4218,19 +4218,19 @@ export declare function enterCursorMode(): void;
  *
  * Hash: 0x8F2EECC3 | Since: client
  */
-export declare function startFindExternalKvp(): [number, string, string];
+export declare function startFindExternalKvp(resource: string, prefix: string): number;
 /**
  * No comment provided
  *
  * Hash: 0x7389B5DF | Since: shared
  */
-export declare function deleteResourceKvp(): string;
+export declare function deleteResourceKvp(key: string): void;
 /**
  * Nonsynchronous [DELETE_RESOURCE_KVP](#\_0x7389B5DF) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
  *
  * Hash: 0x4152C90 | Since: shared
  */
-export declare function deleteResourceKvpNoSync(): string;
+export declare function deleteResourceKvpNoSync(key: string): void;
 /**
  * Transiently updates the entity with the specified mapdata index and entity index.
  * This function supports SDK infrastructure and is not intended to be used directly from your code.
@@ -4249,65 +4249,65 @@ export declare function setEntityDrawOutlineColor(red: number, green: number, bl
  *
  * Hash: 0x557B586A | Since: shared
  */
-export declare function getResourceKvpInt(): [number, string];
+export declare function getResourceKvpInt(key: string): number;
 /**
  * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938), but for a specified resource.
  *
  * Hash: 0x3CC98B25 | Since: client
  */
-export declare function getExternalKvpFloat(): [number, string, string];
+export declare function getExternalKvpFloat(resource: string, key: string): number;
 /**
  * Nonsynchronous [SET_RESOURCE_KVP](#\_0x21C7A35B) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
  *
  * Hash: 0xCF9A2FF | Since: shared
  */
-export declare function setResourceKvpNoSync(): [string, string];
+export declare function setResourceKvpNoSync(key: string, value: string): void;
 /**
  * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B).
  *
  * Hash: 0x5240DA5A | Since: shared
  */
-export declare function getResourceKvpString(): [string, string];
+export declare function getResourceKvpString(key: string): string;
 /**
  * Nonsynchronous [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
  *
  * Hash: 0x3517BFBE | Since: shared
  */
-export declare function setResourceKvpFloatNoSync(value: number): string;
+export declare function setResourceKvpFloatNoSync(key: string, value: number): void;
 /**
  * A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8), but for a specified resource.
  *
  * Hash: 0x12B8D689 | Since: client
  */
-export declare function getExternalKvpInt(): [number, string, string];
+export declare function getExternalKvpInt(resource: string, key: string): number;
 /**
  * No comment provided
  *
  * Hash: 0xDD379006 | Since: shared
  */
-export declare function startFindKvp(): [number, string];
+export declare function startFindKvp(prefix: string): number;
 /**
  * A setter for [GET_RESOURCE_KVP_STRING](#\_0x5240DA5A).
  *
  * Hash: 0x21C7A35B | Since: shared
  */
-export declare function setResourceKvp(): [string, string];
+export declare function setResourceKvp(key: string, value: string): void;
 /**
  * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B), but for a specified resource.
  *
  * Hash: 0x9080363A | Since: client
  */
-export declare function getExternalKvpString(): [string, string, string];
+export declare function getExternalKvpString(resource: string, key: string): string;
 /**
  * A setter for [GET_RESOURCE_KVP_INT](#\_0x557B586A).
  *
  * Hash: 0x6A2B1E8 | Since: shared
  */
-export declare function setResourceKvpInt(value: number): string;
+export declare function setResourceKvpInt(key: string, value: number): void;
 /**
  * Nonsynchronous [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
  *
  * Hash: 0x26AEB707 | Since: shared
  */
-export declare function setResourceKvpIntNoSync(value: number): string;
+export declare function setResourceKvpIntNoSync(key: string, value: number): void;
 export * from "@risinglife/fivem-shared";

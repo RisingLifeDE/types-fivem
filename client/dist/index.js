@@ -5580,16 +5580,16 @@ export function disableEditorRuntime() {
  *
  * Hash: 0x9ADD2938 | Since: shared
  */
-export function setResourceKvpFloat(value) {
-    return SetResourceKvpFloat(value);
+export function setResourceKvpFloat(key, value) {
+    return SetResourceKvpFloat(key, value);
 }
 /**
  * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938).
  *
  * Hash: 0x35BDCEEA | Since: shared
  */
-export function getResourceKvpFloat() {
-    return GetResourceKvpFloat();
+export function getResourceKvpFloat(key) {
+    return GetResourceKvpFloat(key);
 }
 /**
  * Enters cursor mode, suppressing mouse movement to the game and displaying a mouse cursor instead. This function supports
@@ -5605,24 +5605,24 @@ export function enterCursorMode() {
  *
  * Hash: 0x8F2EECC3 | Since: client
  */
-export function startFindExternalKvp() {
-    return StartFindExternalKvp();
+export function startFindExternalKvp(resource, prefix) {
+    StartFindExternalKvp(resource, prefix);
 }
 /**
  * No comment provided
  *
  * Hash: 0x7389B5DF | Since: shared
  */
-export function deleteResourceKvp() {
-    return DeleteResourceKvp();
+export function deleteResourceKvp(key) {
+    DeleteResourceKvp(key);
 }
 /**
  * Nonsynchronous [DELETE_RESOURCE_KVP](#\_0x7389B5DF) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
  *
  * Hash: 0x4152C90 | Since: shared
  */
-export function deleteResourceKvpNoSync() {
-    return DeleteResourceKvpNoSync();
+export function deleteResourceKvpNoSync(key) {
+    DeleteResourceKvpNoSync(key);
 }
 /**
  * Transiently updates the entity with the specified mapdata index and entity index.
@@ -5647,87 +5647,87 @@ export function setEntityDrawOutlineColor(red, green, blue, alpha) {
  *
  * Hash: 0x557B586A | Since: shared
  */
-export function getResourceKvpInt() {
-    return GetResourceKvpInt();
+export function getResourceKvpInt(key) {
+    return GetResourceKvpInt(key);
 }
 /**
  * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938), but for a specified resource.
  *
  * Hash: 0x3CC98B25 | Since: client
  */
-export function getExternalKvpFloat() {
-    return GetExternalKvpFloat();
+export function getExternalKvpFloat(resource, key) {
+    return GetExternalKvpFloat(resource, key);
 }
 /**
  * Nonsynchronous [SET_RESOURCE_KVP](#\_0x21C7A35B) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
  *
  * Hash: 0xCF9A2FF | Since: shared
  */
-export function setResourceKvpNoSync() {
-    return SetResourceKvpNoSync();
+export function setResourceKvpNoSync(key, value) {
+    SetResourceKvpNoSync(key, value);
 }
 /**
  * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B).
  *
  * Hash: 0x5240DA5A | Since: shared
  */
-export function getResourceKvpString() {
-    return GetResourceKvpString();
+export function getResourceKvpString(key) {
+    return GetResourceKvpString(key);
 }
 /**
  * Nonsynchronous [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
  *
  * Hash: 0x3517BFBE | Since: shared
  */
-export function setResourceKvpFloatNoSync(value) {
-    return SetResourceKvpFloatNoSync(value);
+export function setResourceKvpFloatNoSync(key, value) {
+    SetResourceKvpFloatNoSync(key, value);
 }
 /**
  * A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8), but for a specified resource.
  *
  * Hash: 0x12B8D689 | Since: client
  */
-export function getExternalKvpInt() {
-    return GetExternalKvpInt();
+export function getExternalKvpInt(resource, key) {
+    return GetExternalKvpInt(resource, key);
 }
 /**
  * No comment provided
  *
  * Hash: 0xDD379006 | Since: shared
  */
-export function startFindKvp() {
-    return StartFindKvp();
+export function startFindKvp(prefix) {
+    return StartFindKvp(prefix);
 }
 /**
  * A setter for [GET_RESOURCE_KVP_STRING](#\_0x5240DA5A).
  *
  * Hash: 0x21C7A35B | Since: shared
  */
-export function setResourceKvp() {
-    return SetResourceKvp();
+export function setResourceKvp(key, value) {
+    SetResourceKvp(key, value);
 }
 /**
  * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B), but for a specified resource.
  *
  * Hash: 0x9080363A | Since: client
  */
-export function getExternalKvpString() {
-    return GetExternalKvpString();
+export function getExternalKvpString(resource, key) {
+    return GetExternalKvpString(resource, key);
 }
 /**
  * A setter for [GET_RESOURCE_KVP_INT](#\_0x557B586A).
  *
  * Hash: 0x6A2B1E8 | Since: shared
  */
-export function setResourceKvpInt(value) {
-    return SetResourceKvpInt(value);
+export function setResourceKvpInt(key, value) {
+    SetResourceKvpInt(value);
 }
 /**
  * Nonsynchronous [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8) operation; see [FLUSH_RESOURCE_KVP](#\_0x5240DA5A).
  *
  * Hash: 0x26AEB707 | Since: shared
  */
-export function setResourceKvpIntNoSync(value) {
-    return SetResourceKvpIntNoSync(value);
+export function setResourceKvpIntNoSync(key, value) {
+    SetResourceKvpIntNoSync(key, value);
 }
 export * from "@risinglife/fivem-shared";
