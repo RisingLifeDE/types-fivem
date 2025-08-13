@@ -29451,7 +29451,7 @@ export declare namespace ped {
      *
      * Hash: 0xAC6D445B994DF95E | Since: 323
      */
-    function removeElegantly(): number;
+    function removeElegantly(ped: number | Ped): void;
     /**
      * No comment provided
      *

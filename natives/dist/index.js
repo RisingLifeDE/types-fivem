@@ -43637,8 +43637,9 @@ export var ped;
      *
      * Hash: 0xAC6D445B994DF95E | Since: 323
      */
-    function removeElegantly() {
-        return RemovePedElegantly();
+    function removeElegantly(ped) {
+        const _ped = ped instanceof Ped ? ped.handle() : ped;
+        RemovePedElegantly(_ped);
     }
     ped_1.removeElegantly = removeElegantly;
     /**
