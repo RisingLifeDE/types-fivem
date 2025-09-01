@@ -2886,7 +2886,7 @@ export declare function registerNuiCallbackType(): string;
  *
  * Hash: 0xF61D04C4 | Since: client
  */
-export declare function setDiscordRichPresenceAssetSmall(): string;
+export declare function setDiscordRichPresenceAssetSmall(assetName: string): void;
 /**
  * Registered commands can be executed by entering them in the client console (this works for client side and server side registered commands). Or by entering them in the server console/through an RCON client (only works for server side registered commands). Or if you use a supported chat resource, like the default one provided in the cfx-server-data repository, then you can enter the command in chat by prefixing it with a `/`.
  *
@@ -2948,7 +2948,7 @@ export declare function sendDuiMouseWheel(duiObject: number, deltaY: number, del
  *
  * Hash: 0xCBBC3FAC | Since: client
  */
-export declare function setDiscordRichPresenceAction(index: number): [string, string];
+export declare function setDiscordRichPresenceAction(index: number, label: string, url: string): void;
 /**
  * Sets some in-game parameters which is used for checks is ped needs to fly through windscreen after a crash.
  *
@@ -3015,13 +3015,13 @@ export declare function setDefaultVehicleNumberPlateTextPattern(plateIndex: numb
  *
  * Hash: 0x35E62B6A | Since: client
  */
-export declare function setDiscordRichPresenceAssetSmallText(): string;
+export declare function setDiscordRichPresenceAssetSmallText(text: string): void;
 /**
  * This native sets the image asset for the discord rich presence implementation.
  *
  * Hash: 0x53DFD530 | Since: client
  */
-export declare function setDiscordRichPresenceAsset(): string;
+export declare function setDiscordRichPresenceAsset(assetName: string): void;
 /**
  * Sets a global handling override for a specific vehicle class. The name is supposed to match the `handlingName` field from handling.meta.
  * Example: `SetHandlingField('AIRTUG', 'CHandlingData', 'fSteeringLock', 360.0)`
@@ -3079,19 +3079,19 @@ export declare function setHandlingFloat(value: number): [string, string, string
  *
  * Hash: 0xB029D2FA | Since: client
  */
-export declare function setDiscordRichPresenceAssetText(): string;
+export declare function setDiscordRichPresenceAssetText(text: string): void;
 /**
  * Sends a message to the `loadingScreen` NUI frame, which contains the HTML page referenced in `loadscreen` resources.
  *
  * Hash: 0x8BBE6CC0 | Since: client
  */
-export declare function sendLoadingScreenMessage(): [boolean, string];
+export declare function sendLoadingScreenMessage(message: string): boolean;
 /**
  * Navigates the specified DUI browser to a different URL.
  *
  * Hash: 0xF761D9F3 | Since: client
  */
-export declare function setDuiUrl(duiObject: number): string;
+export declare function setDuiUrl(duiObject: number, url: string): void;
 /**
  * Sets values to the zoom level data by index.
  *

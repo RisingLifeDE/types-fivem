@@ -3847,8 +3847,8 @@ export function registerNuiCallbackType() {
  *
  * Hash: 0xF61D04C4 | Since: client
  */
-export function setDiscordRichPresenceAssetSmall() {
-    return SetDiscordRichPresenceAssetSmall();
+export function setDiscordRichPresenceAssetSmall(assetName) {
+    SetDiscordRichPresenceAssetSmall(assetName);
 }
 /**
  * Registered commands can be executed by entering them in the client console (this works for client side and server side registered commands). Or by entering them in the server console/through an RCON client (only works for server side registered commands). Or if you use a supported chat resource, like the default one provided in the cfx-server-data repository, then you can enter the command in chat by prefixing it with a `/`.
@@ -3929,8 +3929,8 @@ export function sendDuiMouseWheel(duiObject, deltaY, deltaX) {
  *
  * Hash: 0xCBBC3FAC | Since: client
  */
-export function setDiscordRichPresenceAction(index) {
-    return SetDiscordRichPresenceAction(index);
+export function setDiscordRichPresenceAction(index, label, url) {
+    SetDiscordRichPresenceAction(index, label, url);
 }
 /**
  * Sets some in-game parameters which is used for checks is ped needs to fly through windscreen after a crash.
@@ -4012,16 +4012,16 @@ export function setDefaultVehicleNumberPlateTextPattern(plateIndex) {
  *
  * Hash: 0x35E62B6A | Since: client
  */
-export function setDiscordRichPresenceAssetSmallText() {
-    return SetDiscordRichPresenceAssetSmallText();
+export function setDiscordRichPresenceAssetSmallText(text) {
+    SetDiscordRichPresenceAssetSmallText(text);
 }
 /**
  * This native sets the image asset for the discord rich presence implementation.
  *
  * Hash: 0x53DFD530 | Since: client
  */
-export function setDiscordRichPresenceAsset() {
-    return SetDiscordRichPresenceAsset();
+export function setDiscordRichPresenceAsset(assetName) {
+    SetDiscordRichPresenceAsset(assetName);
 }
 /**
  * Sets a global handling override for a specific vehicle class. The name is supposed to match the `handlingName` field from handling.meta.
@@ -4092,24 +4092,24 @@ export function setHandlingFloat(value) {
  *
  * Hash: 0xB029D2FA | Since: client
  */
-export function setDiscordRichPresenceAssetText() {
-    return SetDiscordRichPresenceAssetText();
+export function setDiscordRichPresenceAssetText(text) {
+    SetDiscordRichPresenceAssetText(text);
 }
 /**
  * Sends a message to the `loadingScreen` NUI frame, which contains the HTML page referenced in `loadscreen` resources.
  *
  * Hash: 0x8BBE6CC0 | Since: client
  */
-export function sendLoadingScreenMessage() {
-    return SendLoadingScreenMessage();
+export function sendLoadingScreenMessage(message) {
+    return SendLoadingScreenMessage(message);
 }
 /**
  * Navigates the specified DUI browser to a different URL.
  *
  * Hash: 0xF761D9F3 | Since: client
  */
-export function setDuiUrl(duiObject) {
-    return SetDuiUrl(duiObject);
+export function setDuiUrl(duiObject, url) {
+    SetDuiUrl(duiObject, url);
 }
 /**
  * Sets values to the zoom level data by index.
