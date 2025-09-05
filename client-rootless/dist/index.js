@@ -116,9 +116,9 @@ export var events;
             // @ts-ignore
             emitNet: (eventName, ...args) => emitNet(eventName, ...args),
             // @ts-ignore
-            on: (eventName, handler) => on(eventName, handler),
+            on: (eventName, handler) => addEventListener(eventName, handler),
             // @ts-ignore
-            emit: (eventName, ...args) => emit(eventName, ...args),
+            emit: (eventName, ...args) => TriggerEvent(eventName, ...args),
         };
         static getNetworkEventName(eventName) {
             return eventName.startsWith('net::') ? eventName : `net::${eventName}`;
@@ -173,9 +173,9 @@ export var events;
             // @ts-ignore
             emitNet: (eventName, ...args) => emitNet(eventName, ...args),
             // @ts-ignore
-            on: (eventName, handler) => on(eventName, handler),
+            on: (eventName, handler) => addEventListener(eventName, handler),
             // @ts-ignore
-            emit: (eventName, ...args) => emit(eventName, ...args),
+            emit: (eventName, ...args) => TriggerEvent(eventName, ...args),
         };
         static setupListener(eventName) {
             const { events, emitter } = EventRegistry.getLocalRegistry();

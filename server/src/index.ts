@@ -126,9 +126,9 @@ export namespace events {
             // @ts-ignore
             emitNet: (eventName: string, ...args: any[]) => emitNet(eventName, ...args),
             // @ts-ignore
-            on: (eventName: string, handler: Function) => on(eventName, handler),
+            on: (eventName: string, handler: Function) => addEventListener(eventName, handler),
             // @ts-ignore
-            emit: (eventName: string, ...args: any[]) => emit(eventName, ...args),
+            emit: (eventName: string, ...args: any[]) => TriggerEvent(eventName, ...args),
         };
 
         private static getNetworkEventName(eventName: string): string {
@@ -194,9 +194,9 @@ export namespace events {
             // @ts-ignore
             emitNet: (eventName: string, ...args: any[]) => emitNet(eventName, ...args),
             // @ts-ignore
-            on: (eventName: string, handler: Function) => on(eventName, handler),
+            on: (eventName: string, handler: Function) => addEventListener(eventName, handler),
             // @ts-ignore
-            emit: (eventName: string, ...args: any[]) => emit(eventName, ...args),
+            emit: (eventName: string, ...args: any[]) => TriggerEvent(eventName, ...args),
         };
 
         private static setupListener(eventName: string): void {
