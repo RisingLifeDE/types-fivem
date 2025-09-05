@@ -21,6 +21,6 @@
     "typescript": "^5.x.x"
   },
   "dependencies": {
-    "@risinglife/fivem-shared": "^0.0.7"
+    "@risinglife/fivem-shared": "^0.0.8"
   }
 }

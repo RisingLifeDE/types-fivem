@@ -1,7 +1,7 @@
 {
   "name": "@risinglife/fivem-shared",
   "description": "This package contains the type definitions for the FiveM JS module shared types",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "repository": {
     "url": "git+https://github.com/RisingLifeDE/types-fivem.git"
   },
