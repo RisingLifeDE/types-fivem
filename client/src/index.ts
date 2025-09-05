@@ -1,4 +1,4 @@
-import {Vector3,Vector2,Entity,Ped,Player,Vehicle,Object,Blip,Camera} from '@risinglife/fivem-shared'
+import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} from '@risinglife/fivem-shared'
 
 export namespace events {
     interface api {
@@ -184,7 +184,7 @@ export namespace events {
         static send(eventName: string, ...args: any[]): void {
             const networkEventName = this.getNetworkEventName(eventName);
             const parsedArgs = args.map((arg) => {
-                if (arg instanceof Entity) {
+                if (arg instanceof IEntity) {
                     return arg.remoteId();
                 }
                 return arg;
@@ -246,7 +246,7 @@ export namespace events {
 
         static send(eventName: string, ...args: any[]): void {
             const parsedArgs = args.map((arg) => {
-                if (arg instanceof Entity) {
+                if (arg instanceof IEntity) {
                     return arg.remoteId();
                 }
                 return arg;
@@ -424,9 +424,8 @@ export namespace entity {
      *
      * Hash: 0x47B870F5
      */
-    export function getArchetypeName(entity: number | Entity): string {
-        const _entity = entity instanceof Entity ? entity.handle() : entity;
-        return GetEntityArchetypeName(_entity);
+    export function getArchetypeName(entity: number | IEntity): string {
+        return GetEntityArchetypeName(entity);
     }
 
     /**
@@ -445,9 +444,8 @@ export namespace entity {
      *
      * Hash: 0xF6B815C5
      */
-    export function getMapdataOwner(entity: number | Entity): [boolean, number, number] {
-        const _entity = entity instanceof Entity ? entity.handle() : entity;
-        return GetEntityMapdataOwner(_entity);
+    export function getMapdataOwner(entity: number | IEntity): [boolean, number, number] {
+        return GetEntityMapdataOwner(entity);
     }
 
     /**
@@ -483,9 +481,8 @@ export namespace entity {
      *
      * Hash: 0xFB0639B
      */
-    export function setMatrix(entity: number | Entity, forwardX: number, forwardY: number, forwardZ: number, rightX: number, rightY: number, rightZ: number, upX: number, upY: number, upZ: number, atX: number, atY: number, atZ: number): void {
-        const _entity = entity instanceof Entity ? entity.handle() : entity;
-        SetEntityMatrix(_entity, forwardX, forwardY, forwardZ, rightX, rightY, rightZ, upX, upY, upZ, atX, atY, atZ);
+    export function setMatrix(entity: number | IEntity, forwardX: number, forwardY: number, forwardZ: number, rightX: number, rightY: number, rightZ: number, upX: number, upY: number, upZ: number, atX: number, atY: number, atZ: number): void {
+        SetEntityMatrix(entity, forwardX, forwardY, forwardZ, rightX, rightY, rightZ, upX, upY, upZ, atX, atY, atZ);
     }
 
     /**
@@ -493,9 +490,8 @@ export namespace entity {
      *
      * Hash: 0xEDBE6ADD
      */
-    export function isPositionFrozen(entity: number | Entity): boolean {
-        const _entity = entity instanceof Entity ? entity.handle() : entity;
-        return IsEntityPositionFrozen(_entity);
+    export function isPositionFrozen(entity: number | IEntity): boolean {
+        return IsEntityPositionFrozen(entity);
     }
 
     /**
@@ -507,9 +503,8 @@ export namespace entity {
      *
      * Hash: 0x9A3144BC
      */
-    export function getAddress(entity: number | Entity): any {
-        const _entity = entity instanceof Entity ? entity.handle() : entity;
-        return GetEntityAddress(_entity);
+    export function getAddress(entity: number | IEntity): any {
+        return GetEntityAddress(entity);
     }
 
     /**
@@ -517,9 +512,8 @@ export namespace entity {
      *
      * Hash: 0x3BB78F05
      */
-    export function ensureStateBag(entity: number | Entity): void {
-        const _entity = entity instanceof Entity ? entity.handle() : entity;
-        EnsureEntityStateBag(_entity);
+    export function ensureStateBag(entity: number | IEntity): void {
+        EnsureEntityStateBag(entity);
     }
 
     /**
@@ -554,9 +548,8 @@ export namespace entity {
      *
      * Hash: 0xDFFBA12F
      */
-    export function getEntitiesInRadius(pos: Vector3, radius: number, entityType: number, sortByDistance: boolean, models: number | Object): number {
-        const _models = models instanceof Object ? models.handle() : models;
-        return GetEntitiesInRadius(pos.x, pos.y, pos.z, radius, entityType, sortByDistance, _models);
+    export function getEntitiesInRadius(pos: Vector3, radius: number, entityType: number, sortByDistance: boolean, models: number | IObject): number {
+        return GetEntitiesInRadius(pos.x, pos.y, pos.z, radius, entityType, sortByDistance, models);
     }
 
     /**
@@ -792,9 +785,8 @@ export namespace graphics {
      *
      * Hash: 0x76180407
      */
-    export function setEntityDrawOutline(entity: number | Entity, enabled: boolean): void {
-        const _entity = entity instanceof Entity ? entity.handle() : entity;
-        SetEntityDrawOutline(_entity, enabled);
+    export function setEntityDrawOutline(entity: number | IEntity, enabled: boolean): void {
+        SetEntityDrawOutline(entity, enabled);
     }
 
     /**
@@ -1933,9 +1925,8 @@ export namespace misc {
      *
      * Hash: 0x6BC189AC
      */
-    export function experimentalLoadCloneSync(entity: number | Entity, data: string): void {
-        const _entity = entity instanceof Entity ? entity.handle() : entity;
-        ExperimentalLoadCloneSync(_entity, data);
+    export function experimentalLoadCloneSync(entity: number | IEntity, data: string): void {
+        ExperimentalLoadCloneSync(entity, data);
     }
 
     /**
@@ -1943,9 +1934,8 @@ export namespace misc {
      *
      * Hash: 0x9D65CAD2
      */
-    export function experimentalSaveCloneCreate(entity: number | Entity): string {
-        const _entity = entity instanceof Entity ? entity.handle() : entity;
-        return ExperimentalSaveCloneCreate(_entity);
+    export function experimentalSaveCloneCreate(entity: number | IEntity): string {
+        return ExperimentalSaveCloneCreate(entity);
     }
 
     /**
@@ -1953,9 +1943,8 @@ export namespace misc {
      *
      * Hash: 0x38D19210
      */
-    export function experimentalSaveCloneSync(entity: number | Entity): string {
-        const _entity = entity instanceof Entity ? entity.handle() : entity;
-        return ExperimentalSaveCloneSync(_entity);
+    export function experimentalSaveCloneSync(entity: number | IEntity): string {
+        return ExperimentalSaveCloneSync(entity);
     }
 
     /**
@@ -2354,9 +2343,8 @@ export namespace misc {
      *
      * Hash: 0xD70C3BCA
      */
-    export function formatStackTrace(traceData: number | Object): string {
-        const _traceData = traceData instanceof Object ? traceData.handle() : traceData;
-        return FormatStackTrace(_traceData);
+    export function formatStackTrace(traceData: number | IObject): string {
+        return FormatStackTrace(traceData);
     }
 
     /**
@@ -2632,9 +2620,8 @@ export namespace ped {
      *
      * Hash: 0x310D0271
      */
-    export function getNumberOfCollectionDrawableVariations(ped: number | Ped, componentId: number, collection: string): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetNumberOfPedCollectionDrawableVariations(_ped, componentId, collection);
+    export function getNumberOfCollectionDrawableVariations(ped: number | IPed, componentId: number, collection: string): number {
+        return GetNumberOfPedCollectionDrawableVariations(ped, componentId, collection);
     }
 
     /**
@@ -2642,9 +2629,8 @@ export namespace ped {
      *
      * Hash: 0x3B6A13E1
      */
-    export function getNumberOfCollectionPropDrawableVariations(ped: number | Ped, anchorPoint: number, collection: string): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetNumberOfPedCollectionPropDrawableVariations(_ped, anchorPoint, collection);
+    export function getNumberOfCollectionPropDrawableVariations(ped: number | IPed, anchorPoint: number, collection: string): number {
+        return GetNumberOfPedCollectionPropDrawableVariations(ped, anchorPoint, collection);
     }
 
     /**
@@ -2652,9 +2638,8 @@ export namespace ped {
      *
      * Hash: 0x75CAF9CC
      */
-    export function getNumberOfCollectionPropTextureVariations(ped: number | Ped, anchorPoint: number, collection: string, propIndex: number): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetNumberOfPedCollectionPropTextureVariations(_ped, anchorPoint, collection, propIndex);
+    export function getNumberOfCollectionPropTextureVariations(ped: number | IPed, anchorPoint: number, collection: string, propIndex: number): number {
+        return GetNumberOfPedCollectionPropTextureVariations(ped, anchorPoint, collection, propIndex);
     }
 
     /**
@@ -2662,9 +2647,8 @@ export namespace ped {
      *
      * Hash: 0xD2C15D7
      */
-    export function getNumberOfCollectionTextureVariations(ped: number | Ped, componentId: number, collection: string, drawableId: number): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetNumberOfPedCollectionTextureVariations(_ped, componentId, collection, drawableId);
+    export function getNumberOfCollectionTextureVariations(ped: number | IPed, componentId: number, collection: string, drawableId: number): number {
+        return GetNumberOfPedCollectionTextureVariations(ped, componentId, collection, drawableId);
     }
 
     /**
@@ -2676,9 +2660,8 @@ export namespace ped {
      *
      * Hash: 0x45946359
      */
-    export function getCollectionsCount(ped: number | Ped): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedCollectionsCount(_ped);
+    export function getCollectionsCount(ped: number | IPed): number {
+        return GetPedCollectionsCount(ped);
     }
 
     /**
@@ -2686,9 +2669,8 @@ export namespace ped {
      *
      * Hash: 0x94EB1FE4
      */
-    export function getCollectionLocalIndexFromDrawable(ped: number | Ped, componentId: number, drawableId: number): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedCollectionLocalIndexFromDrawable(_ped, componentId, drawableId);
+    export function getCollectionLocalIndexFromDrawable(ped: number | IPed, componentId: number, drawableId: number): number {
+        return GetPedCollectionLocalIndexFromDrawable(ped, componentId, drawableId);
     }
 
     /**
@@ -2696,9 +2678,8 @@ export namespace ped {
      *
      * Hash: 0xFBDB885F
      */
-    export function getCollectionLocalIndexFromProp(ped: number | Ped, anchorPoint: number, propIndex: number): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedCollectionLocalIndexFromProp(_ped, anchorPoint, propIndex);
+    export function getCollectionLocalIndexFromProp(ped: number | IPed, anchorPoint: number, propIndex: number): number {
+        return GetPedCollectionLocalIndexFromProp(ped, anchorPoint, propIndex);
     }
 
     /**
@@ -2710,9 +2691,8 @@ export namespace ped {
      *
      * Hash: 0xFED5D83A
      */
-    export function getCollectionName(ped: number | Ped, index: number): string {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedCollectionName(_ped, index);
+    export function getCollectionName(ped: number | IPed, index: number): string {
+        return GetPedCollectionName(ped, index);
     }
 
     /**
@@ -2720,9 +2700,8 @@ export namespace ped {
      *
      * Hash: 0xD6BBA48B
      */
-    export function getCollectionNameFromDrawable(ped: number | Ped, componentId: number, drawableId: number): string {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedCollectionNameFromDrawable(_ped, componentId, drawableId);
+    export function getCollectionNameFromDrawable(ped: number | IPed, componentId: number, drawableId: number): string {
+        return GetPedCollectionNameFromDrawable(ped, componentId, drawableId);
     }
 
     /**
@@ -2730,9 +2709,8 @@ export namespace ped {
      *
      * Hash: 0x8ED0C17
      */
-    export function getCollectionNameFromProp(ped: number | Ped, anchorPoint: number, propIndex: number): string {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedCollectionNameFromProp(_ped, anchorPoint, propIndex);
+    export function getCollectionNameFromProp(ped: number | IPed, anchorPoint: number, propIndex: number): string {
+        return GetPedCollectionNameFromProp(ped, anchorPoint, propIndex);
     }
 
     /**
@@ -2748,9 +2726,8 @@ export namespace ped {
      *
      * Hash: 0x7CCE1163
      */
-    export function getDecorations(ped: number | Ped): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedDecorations(_ped);
+    export function getDecorations(ped: number | IPed): number {
+        return GetPedDecorations(ped);
     }
 
     /**
@@ -2771,9 +2748,8 @@ export namespace ped {
      *
      * Hash: 0x280F1FC3
      */
-    export function getDrawableGlobalIndexFromCollection(ped: number | Ped, componentId: number, collection: string, drawableId: number): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedDrawableGlobalIndexFromCollection(_ped, componentId, collection, drawableId);
+    export function getDrawableGlobalIndexFromCollection(ped: number | IPed, componentId: number, collection: string, drawableId: number): number {
+        return GetPedDrawableGlobalIndexFromCollection(ped, componentId, collection, drawableId);
     }
 
     /**
@@ -2781,9 +2757,8 @@ export namespace ped {
      *
      * Hash: 0x9970386F
      */
-    export function getDrawableVariationCollectionLocalIndex(ped: number | Ped, componentId: number): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedDrawableVariationCollectionLocalIndex(_ped, componentId);
+    export function getDrawableVariationCollectionLocalIndex(ped: number | IPed, componentId: number): number {
+        return GetPedDrawableVariationCollectionLocalIndex(ped, componentId);
     }
 
     /**
@@ -2793,9 +2768,8 @@ export namespace ped {
      *
      * Hash: 0xBCE0AB63
      */
-    export function getDrawableVariationCollectionName(ped: number | Ped, componentId: number): string {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedDrawableVariationCollectionName(_ped, componentId);
+    export function getDrawableVariationCollectionName(ped: number | IPed, componentId: number): string {
+        return GetPedDrawableVariationCollectionName(ped, componentId);
     }
 
     /**
@@ -2803,9 +2777,8 @@ export namespace ped {
      *
      * Hash: 0xA47B860F
      */
-    export function getEyeColor(ped: number | Ped): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedEyeColor(_ped);
+    export function getEyeColor(ped: number | IPed): number {
+        return GetPedEyeColor(ped);
     }
 
     /**
@@ -2813,9 +2786,8 @@ export namespace ped {
      *
      * Hash: 0xBA352ADD
      */
-    export function getFaceFeature(ped: number | Ped, index: number): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedFaceFeature(_ped, index);
+    export function getFaceFeature(ped: number | IPed, index: number): number {
+        return GetPedFaceFeature(ped, index);
     }
 
     /**
@@ -2823,9 +2795,8 @@ export namespace ped {
      *
      * Hash: 0xA3EA2893
      */
-    export function getHairColor(ped: number | Ped): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedHairColor(_ped);
+    export function getHairColor(ped: number | IPed): number {
+        return GetPedHairColor(ped);
     }
 
     /**
@@ -2833,9 +2804,8 @@ export namespace ped {
      *
      * Hash: 0x4B087305
      */
-    export function getHairHighlightColor(ped: number | Ped): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedHairHighlightColor(_ped);
+    export function getHairHighlightColor(ped: number | IPed): number {
+        return GetPedHairHighlightColor(ped);
     }
 
     /**
@@ -2843,9 +2813,8 @@ export namespace ped {
      *
      * Hash: 0xC46EE605
      */
-    export function getHeadOverlayData(ped: number | Ped, index: number): [boolean, number, number, number, number, number] {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedHeadOverlayData(_ped, index);
+    export function getHeadOverlayData(ped: number | IPed, index: number): [boolean, number, number, number, number, number] {
+        return GetPedHeadOverlayData(ped, index);
     }
 
     /**
@@ -2873,9 +2842,8 @@ export namespace ped {
      *
      * Hash: 0x69E81E3D
      */
-    export function getMovementClipset(ped: number | Ped): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedMovementClipset(_ped);
+    export function getMovementClipset(ped: number | IPed): number {
+        return GetPedMovementClipset(ped);
     }
 
     /**
@@ -2883,9 +2851,8 @@ export namespace ped {
      *
      * Hash: 0xCD420AD1
      */
-    export function getPropCollectionLocalIndex(ped: number | Ped, anchorPoint: number): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedPropCollectionLocalIndex(_ped, anchorPoint);
+    export function getPropCollectionLocalIndex(ped: number | IPed, anchorPoint: number): number {
+        return GetPedPropCollectionLocalIndex(ped, anchorPoint);
     }
 
     /**
@@ -2895,9 +2862,8 @@ export namespace ped {
      *
      * Hash: 0x6B5653E4
      */
-    export function getPropCollectionName(ped: number | Ped, anchorPoint: number): string {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedPropCollectionName(_ped, anchorPoint);
+    export function getPropCollectionName(ped: number | IPed, anchorPoint: number): string {
+        return GetPedPropCollectionName(ped, anchorPoint);
     }
 
     /**
@@ -2909,9 +2875,8 @@ export namespace ped {
      *
      * Hash: 0x2CB45CDC
      */
-    export function getPropGlobalIndexFromCollection(ped: number | Ped, anchorPoint: number, collection: string, propIndex: number): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedPropGlobalIndexFromCollection(_ped, anchorPoint, collection, propIndex);
+    export function getPropGlobalIndexFromCollection(ped: number | IPed, anchorPoint: number, collection: string, propIndex: number): number {
+        return GetPedPropGlobalIndexFromCollection(ped, anchorPoint, collection, propIndex);
     }
 
     /**
@@ -2919,9 +2884,8 @@ export namespace ped {
      *
      * Hash: 0x44B91E94
      */
-    export function getSweat(ped: number | Ped): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedSweat(_ped);
+    export function getSweat(ped: number | IPed): number {
+        return GetPedSweat(ped);
     }
 
     /**
@@ -2933,9 +2897,8 @@ export namespace ped {
      *
      * Hash: 0x33B2AFA2
      */
-    export function isCollectionComponentVariationGen9Exclusive(ped: number | Ped, componentId: number, collection: string, drawableId: number): boolean {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return IsPedCollectionComponentVariationGen9Exclusive(_ped, componentId, collection, drawableId);
+    export function isCollectionComponentVariationGen9Exclusive(ped: number | IPed, componentId: number, collection: string, drawableId: number): boolean {
+        return IsPedCollectionComponentVariationGen9Exclusive(ped, componentId, collection, drawableId);
     }
 
     /**
@@ -2947,9 +2910,8 @@ export namespace ped {
      *
      * Hash: 0xCA63A52A
      */
-    export function isCollectionComponentVariationValid(ped: number | Ped, componentId: number, collection: string, drawableId: number, textureId: number): boolean {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return IsPedCollectionComponentVariationValid(_ped, componentId, collection, drawableId, textureId);
+    export function isCollectionComponentVariationValid(ped: number | IPed, componentId: number, collection: string, drawableId: number, textureId: number): boolean {
+        return IsPedCollectionComponentVariationValid(ped, componentId, collection, drawableId, textureId);
     }
 
     /**
@@ -2957,9 +2919,8 @@ export namespace ped {
      *
      * Hash: 0xC767B581
      */
-    export function isComponentVariationGen9Exclusive(ped: number | Ped, componentId: number, drawableId: number): boolean {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return IsPedComponentVariationGen9Exclusive(_ped, componentId, drawableId);
+    export function isComponentVariationGen9Exclusive(ped: number | IPed, componentId: number, drawableId: number): boolean {
+        return IsPedComponentVariationGen9Exclusive(ped, componentId, drawableId);
     }
 
     /**
@@ -3003,9 +2964,8 @@ export namespace ped {
      *
      * Hash: 0x88711BBA
      */
-    export function setCollectionComponentVariation(ped: number | Ped, componentId: number, collection: string, drawableId: number, textureId: number, paletteId: number): void {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        SetPedCollectionComponentVariation(_ped, componentId, collection, drawableId, textureId, paletteId);
+    export function setCollectionComponentVariation(ped: number | IPed, componentId: number, collection: string, drawableId: number, textureId: number, paletteId: number): void {
+        SetPedCollectionComponentVariation(ped, componentId, collection, drawableId, textureId, paletteId);
     }
 
     /**
@@ -3017,9 +2977,8 @@ export namespace ped {
      *
      * Hash: 0x14B5BBE0
      */
-    export function setCollectionPreloadPropData(ped: number | Ped, anchorPoint: number, collection: string, propIndex: number, textureId: number): void {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        SetPedCollectionPreloadPropData(_ped, anchorPoint, collection, propIndex, textureId);
+    export function setCollectionPreloadPropData(ped: number | IPed, anchorPoint: number, collection: string, propIndex: number, textureId: number): void {
+        SetPedCollectionPreloadPropData(ped, anchorPoint, collection, propIndex, textureId);
     }
 
     /**
@@ -3031,9 +2990,8 @@ export namespace ped {
      *
      * Hash: 0x3EC75558
      */
-    export function setCollectionPreloadVariationData(ped: number | Ped, componentId: number, collection: string, drawableId: number, textureId: number): void {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        SetPedCollectionPreloadVariationData(_ped, componentId, collection, drawableId, textureId);
+    export function setCollectionPreloadVariationData(ped: number | IPed, componentId: number, collection: string, drawableId: number, textureId: number): void {
+        SetPedCollectionPreloadVariationData(ped, componentId, collection, drawableId, textureId);
     }
 
     /**
@@ -3045,9 +3003,8 @@ export namespace ped {
      *
      * Hash: 0x75240BCB
      */
-    export function setCollectionPropIndex(ped: number | Ped, anchorPoint: number, collection: string, propIndex: number, textureId: number, attach: boolean): void {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        SetPedCollectionPropIndex(_ped, anchorPoint, collection, propIndex, textureId, attach);
+    export function setCollectionPropIndex(ped: number | IPed, anchorPoint: number, collection: string, propIndex: number, textureId: number, attach: boolean): void {
+        SetPedCollectionPropIndex(ped, anchorPoint, collection, propIndex, textureId, attach);
     }
 
     /**
@@ -3123,9 +3080,8 @@ export namespace ped {
      *
      * Hash: 0x9C5E7C9C
      */
-    export function getBoneMatrix(ped: number | Ped, boneId: number): [Vector3, Vector3, Vector3, Vector3] {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetPedBoneMatrix(_ped, boneId);
+    export function getBoneMatrix(ped: number | IPed, boneId: number): [Vector3, Vector3, Vector3, Vector3] {
+        return GetPedBoneMatrix(ped, boneId);
     }
 
 }
@@ -3245,9 +3201,8 @@ export namespace player {
      *
      * Hash: 0xF2E3912B
      */
-    export function getInvincible2(player: number | string | Player): boolean {
-        const _player = player instanceof Player ? player.localId() : player;
-        return GetPlayerInvincible2(_player);
+    export function getInvincible2(player: number | string | IPlayer): boolean {
+        return GetPlayerInvincible2(player);
     }
 
     /**
@@ -3255,9 +3210,8 @@ export namespace player {
      *
      * Hash: 0xD014AB79
      */
-    export function getMaxStamina(playerId: number | string | Player): number {
-        const _playerId = playerId instanceof Player ? playerId.localId() : playerId;
-        return GetPlayerMaxStamina(_playerId);
+    export function getMaxStamina(playerId: number | string | IPlayer): number {
+        return GetPlayerMaxStamina(playerId);
     }
 
     /**
@@ -3265,9 +3219,8 @@ export namespace player {
      *
      * Hash: 0x27E94EF8
      */
-    export function getMeleeWeaponDefenseModifier(playerId: number | string | Player): number {
-        const _playerId = playerId instanceof Player ? playerId.localId() : playerId;
-        return GetPlayerMeleeWeaponDefenseModifier(_playerId);
+    export function getMeleeWeaponDefenseModifier(playerId: number | string | IPlayer): number {
+        return GetPlayerMeleeWeaponDefenseModifier(playerId);
     }
 
     /**
@@ -3275,9 +3228,8 @@ export namespace player {
      *
      * Hash: 0xE415EC5C
      */
-    export function getStamina(playerId: number | string | Player): number {
-        const _playerId = playerId instanceof Player ? playerId.localId() : playerId;
-        return GetPlayerStamina(_playerId);
+    export function getStamina(playerId: number | string | IPlayer): number {
+        return GetPlayerStamina(playerId);
     }
 
     /**
@@ -3285,9 +3237,8 @@ export namespace player {
      *
      * Hash: 0x78F27B1F
      */
-    export function getVehicleDamageModifier(playerId: number | string | Player): number {
-        const _playerId = playerId instanceof Player ? playerId.localId() : playerId;
-        return GetPlayerVehicleDamageModifier(_playerId);
+    export function getVehicleDamageModifier(playerId: number | string | IPlayer): number {
+        return GetPlayerVehicleDamageModifier(playerId);
     }
 
     /**
@@ -3295,9 +3246,8 @@ export namespace player {
      *
      * Hash: 0x8326E7CD
      */
-    export function getVehicleDefenseModifier(playerId: number | string | Player): number {
-        const _playerId = playerId instanceof Player ? playerId.localId() : playerId;
-        return GetPlayerVehicleDefenseModifier(_playerId);
+    export function getVehicleDefenseModifier(playerId: number | string | IPlayer): number {
+        return GetPlayerVehicleDefenseModifier(playerId);
     }
 
     /**
@@ -3305,9 +3255,8 @@ export namespace player {
      *
      * Hash: 0x35594F67
      */
-    export function setMaxStamina(playerId: number | string | Player, maxStamina: number): boolean {
-        const _playerId = playerId instanceof Player ? playerId.localId() : playerId;
-        return SetPlayerMaxStamina(_playerId, maxStamina);
+    export function setMaxStamina(playerId: number | string | IPlayer, maxStamina: number): boolean {
+        return SetPlayerMaxStamina(playerId, maxStamina);
     }
 
     /**
@@ -3315,9 +3264,8 @@ export namespace player {
      *
      * Hash: 0xA9EC16C7
      */
-    export function setStamina(playerId: number | string | Player, stamina: number): boolean {
-        const _playerId = playerId instanceof Player ? playerId.localId() : playerId;
-        return SetPlayerStamina(_playerId, stamina);
+    export function setStamina(playerId: number | string | IPlayer, stamina: number): boolean {
+        return SetPlayerStamina(playerId, stamina);
     }
 
     /**
@@ -3325,9 +3273,8 @@ export namespace player {
      *
      * Hash: 0x8689A825
      */
-    export function getMeleeWeaponDamageModifier(playerId: number | string | Player): number {
-        const _playerId = playerId instanceof Player ? playerId.localId() : playerId;
-        return GetPlayerMeleeWeaponDamageModifier(_playerId);
+    export function getMeleeWeaponDamageModifier(playerId: number | string | IPlayer): number {
+        return GetPlayerMeleeWeaponDamageModifier(playerId);
     }
 
     /**
@@ -3335,9 +3282,8 @@ export namespace player {
      *
      * Hash: 0x2A3D7CDA
      */
-    export function getWeaponDamageModifier(playerId: number | string | Player): number {
-        const _playerId = playerId instanceof Player ? playerId.localId() : playerId;
-        return GetPlayerWeaponDamageModifier(_playerId);
+    export function getWeaponDamageModifier(playerId: number | string | IPlayer): number {
+        return GetPlayerWeaponDamageModifier(playerId);
     }
 
     /**
@@ -3345,9 +3291,8 @@ export namespace player {
      *
      * Hash: 0xF1543251
      */
-    export function getWeaponDefenseModifier(playerId: number | string | Player): number {
-        const _playerId = playerId instanceof Player ? playerId.localId() : playerId;
-        return GetPlayerWeaponDefenseModifier(_playerId);
+    export function getWeaponDefenseModifier(playerId: number | string | IPlayer): number {
+        return GetPlayerWeaponDefenseModifier(playerId);
     }
 
     /**
@@ -3355,9 +3300,8 @@ export namespace player {
      *
      * Hash: 0x986B65FF
      */
-    export function getWeaponDefenseModifier2(playerId: number | string | Player): number {
-        const _playerId = playerId instanceof Player ? playerId.localId() : playerId;
-        return GetPlayerWeaponDefenseModifier2(_playerId);
+    export function getWeaponDefenseModifier2(playerId: number | string | IPlayer): number {
+        return GetPlayerWeaponDefenseModifier2(playerId);
     }
 
     /**
@@ -3370,7 +3314,7 @@ export namespace player {
      *
      * Hash: 0xCF143FB9
      */
-    export function getActives(): number[] {
+    export function getActives(): number {
         return GetActivePlayers();
     }
 
@@ -3392,9 +3336,8 @@ export namespace player {
      *
      * Hash: 0x4D97BCC7
      */
-    export function getServerId(player: number | string | Player): number {
-        const _player = player instanceof Player ? player.localId() : player;
-        return GetPlayerServerId(_player);
+    export function getServerId(player: number | string | IPlayer): number {
+        return GetPlayerServerId(player);
     }
 
     /**
@@ -3403,9 +3346,8 @@ export namespace player {
      *
      * Hash: 0xFC02CAF6
      */
-    export function setTalkingOverride(player: number | string | Player, state: boolean): void {
-        const _player = player instanceof Player ? player.localId() : player;
-        SetPlayerTalkingOverride(_player, state);
+    export function setTalkingOverride(player: number | string | IPlayer, state: boolean): void {
+        SetPlayerTalkingOverride(player, state);
     }
 
     /**
@@ -3687,9 +3629,8 @@ export namespace streaming {
      *
      * Hash: 0xFC52CB91
      */
-    export function updateMapdataEntity(mapdata: number, entity: number, entityDef: number | Object): void {
-        const _entityDef = entityDef instanceof Object ? entityDef.handle() : entityDef;
-        UpdateMapdataEntity(mapdata, entity, _entityDef);
+    export function updateMapdataEntity(mapdata: number, entity: number, entityDef: number | IObject): void {
+        UpdateMapdataEntity(mapdata, entity, entityDef);
     }
 
     /**
@@ -3855,9 +3796,8 @@ export namespace vehicle {
      *
      * Hash: 0xA274CADB
      */
-    export function breakOffWheel(vehicle: number | Vehicle, wheelIndex: number, leaveDebrisTrail: boolean, deleteWheel: boolean, unknownFlag: boolean, putOnFire: boolean): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        BreakOffVehicleWheel(_vehicle, wheelIndex, leaveDebrisTrail, deleteWheel, unknownFlag, putOnFire);
+    export function breakOffWheel(vehicle: number | IVehicle, wheelIndex: number, leaveDebrisTrail: boolean, deleteWheel: boolean, unknownFlag: boolean, putOnFire: boolean): void {
+        BreakOffVehicleWheel(vehicle, wheelIndex, leaveDebrisTrail, deleteWheel, unknownFlag, putOnFire);
     }
 
     /**
@@ -3865,9 +3805,8 @@ export namespace vehicle {
      *
      * Hash: 0x2867ED8C
      */
-    export function clearXenonLightsCustomColor(vehicle: number | Vehicle): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        ClearVehicleXenonLightsCustomColor(_vehicle);
+    export function clearXenonLightsCustomColor(vehicle: number | IVehicle): void {
+        ClearVehicleXenonLightsCustomColor(vehicle);
     }
 
     /**
@@ -3886,9 +3825,8 @@ export namespace vehicle {
      *
      * Hash: 0xEF30A696
      */
-    export function doesUseFuel(vehicle: number | Vehicle): boolean {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return DoesVehicleUseFuel(_vehicle);
+    export function doesUseFuel(vehicle: number | IVehicle): boolean {
+        return DoesVehicleUseFuel(vehicle);
     }
 
     /**
@@ -3922,9 +3860,8 @@ export namespace vehicle {
      *
      * Hash: 0xE015E854
      */
-    export function getTrainCurrentTrackNode(train: number | Vehicle): number {
-        const _train = train instanceof Vehicle ? train.localId() : train;
-        return GetTrainCurrentTrackNode(_train);
+    export function getTrainCurrentTrackNode(train: number | IVehicle): number {
+        return GetTrainCurrentTrackNode(train);
     }
 
     /**
@@ -3932,9 +3869,8 @@ export namespace vehicle {
      *
      * Hash: 0x99974721
      */
-    export function getTrainDoorCount(train: number | Vehicle): number {
-        const _train = train instanceof Vehicle ? train.localId() : train;
-        return GetTrainDoorCount(_train);
+    export function getTrainDoorCount(train: number | IVehicle): number {
+        return GetTrainDoorCount(train);
     }
 
     /**
@@ -3942,9 +3878,8 @@ export namespace vehicle {
      *
      * Hash: 0x40B16551
      */
-    export function getTrainDoorOpenRatio(train: number | Vehicle, doorIndex: number): number {
-        const _train = train instanceof Vehicle ? train.localId() : train;
-        return GetTrainDoorOpenRatio(_train, doorIndex);
+    export function getTrainDoorOpenRatio(train: number | IVehicle, doorIndex: number): number {
+        return GetTrainDoorOpenRatio(train, doorIndex);
     }
 
     /**
@@ -3952,9 +3887,8 @@ export namespace vehicle {
      *
      * Hash: 0x428668B7
      */
-    export function getTrainSpeed(train: number | Vehicle): number {
-        const _train = train instanceof Vehicle ? train.localId() : train;
-        return GetTrainSpeed(_train);
+    export function getTrainSpeed(train: number | IVehicle): number {
+        return GetTrainSpeed(train);
     }
 
     /**
@@ -3962,9 +3896,8 @@ export namespace vehicle {
      *
      * Hash: 0xC62AAC98
      */
-    export function getAlarmTimeLeft(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleAlarmTimeLeft(_vehicle);
+    export function getAlarmTimeLeft(vehicle: number | IVehicle): number {
+        return GetVehicleAlarmTimeLeft(vehicle);
     }
 
     /**
@@ -3972,9 +3905,8 @@ export namespace vehicle {
      *
      * Hash: 0xC3C93F28
      */
-    export function getCheatPowerIncrease(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleCheatPowerIncrease(_vehicle);
+    export function getCheatPowerIncrease(vehicle: number | IVehicle): number {
+        return GetVehicleCheatPowerIncrease(vehicle);
     }
 
     /**
@@ -3982,9 +3914,8 @@ export namespace vehicle {
      *
      * Hash: 0x1DAD4583
      */
-    export function getClutch(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleClutch(_vehicle);
+    export function getClutch(vehicle: number | IVehicle): number {
+        return GetVehicleClutch(vehicle);
     }
 
     /**
@@ -3992,9 +3923,8 @@ export namespace vehicle {
      *
      * Hash: 0xB4F4E566
      */
-    export function getCurrentGear(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleCurrentGear(_vehicle);
+    export function getCurrentGear(vehicle: number | IVehicle): number {
+        return GetVehicleCurrentGear(vehicle);
     }
 
     /**
@@ -4002,9 +3932,8 @@ export namespace vehicle {
      *
      * Hash: 0xE7B12B54
      */
-    export function getCurrentRpm(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleCurrentRpm(_vehicle);
+    export function getCurrentRpm(vehicle: number | IVehicle): number {
+        return GetVehicleCurrentRpm(vehicle);
     }
 
     /**
@@ -4085,9 +4014,8 @@ export namespace vehicle {
      *
      * Hash: 0x9AAD420E
      */
-    export function getDashboardSpeed(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleDashboardSpeed(_vehicle);
+    export function getDashboardSpeed(vehicle: number | IVehicle): number {
+        return GetVehicleDashboardSpeed(vehicle);
     }
 
     /**
@@ -4122,9 +4050,8 @@ export namespace vehicle {
      *
      * Hash: 0x21C1DA8E
      */
-    export function getDrawnWheelAngleMult(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleDrawnWheelAngleMult(_vehicle);
+    export function getDrawnWheelAngleMult(vehicle: number | IVehicle): number {
+        return GetVehicleDrawnWheelAngleMult(vehicle);
     }
 
     /**
@@ -4132,9 +4059,8 @@ export namespace vehicle {
      *
      * Hash: 0xF4F495CB
      */
-    export function getEngineTemperature(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleEngineTemperature(_vehicle);
+    export function getEngineTemperature(vehicle: number | IVehicle): number {
+        return GetVehicleEngineTemperature(vehicle);
     }
 
     /**
@@ -4142,9 +4068,8 @@ export namespace vehicle {
      *
      * Hash: 0x5F739BB8
      */
-    export function getFuelLevel(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleFuelLevel(_vehicle);
+    export function getFuelLevel(vehicle: number | IVehicle): number {
+        return GetVehicleFuelLevel(vehicle);
     }
 
     /**
@@ -4152,9 +4077,8 @@ export namespace vehicle {
      *
      * Hash: 0x82E794B7
      */
-    export function getGearRatio(vehicle: number | Vehicle, gear: number): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleGearRatio(_vehicle, gear);
+    export function getGearRatio(vehicle: number | IVehicle, gear: number): number {
+        return GetVehicleGearRatio(vehicle, gear);
     }
 
     /**
@@ -4162,9 +4086,8 @@ export namespace vehicle {
      *
      * Hash: 0xB48A1292
      */
-    export function getGravityAmount(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleGravityAmount(_vehicle);
+    export function getGravityAmount(vehicle: number | IVehicle): number {
+        return GetVehicleGravityAmount(vehicle);
     }
 
     /**
@@ -4173,9 +4096,8 @@ export namespace vehicle {
      *
      * Hash: 0x642FC12F
      */
-    export function getHandlingFloat(vehicle: number | Vehicle, class_: string, fieldName: string): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleHandlingFloat(_vehicle, class_, fieldName);
+    export function getHandlingFloat(vehicle: number | IVehicle, class_: string, fieldName: string): number {
+        return GetVehicleHandlingFloat(vehicle, class_, fieldName);
     }
 
     /**
@@ -4184,9 +4106,8 @@ export namespace vehicle {
      *
      * Hash: 0x27396C75
      */
-    export function getHandlingInt(vehicle: number | Vehicle, class_: string, fieldName: string): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleHandlingInt(_vehicle, class_, fieldName);
+    export function getHandlingInt(vehicle: number | IVehicle, class_: string, fieldName: string): number {
+        return GetVehicleHandlingInt(vehicle, class_, fieldName);
     }
 
     /**
@@ -4195,9 +4116,8 @@ export namespace vehicle {
      *
      * Hash: 0xFB341304
      */
-    export function getHandlingVector(vehicle: number | Vehicle, class_: string, fieldName: string): Vector3 {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return new Vector3(GetVehicleHandlingVector(_vehicle, class_, fieldName));
+    export function getHandlingVector(vehicle: number | IVehicle, class_: string, fieldName: string): Vector3 {
+        return new Vector3(GetVehicleHandlingVector(vehicle, class_, fieldName));
     }
 
     /**
@@ -4205,9 +4125,8 @@ export namespace vehicle {
      *
      * Hash: 0xF1D1D689
      */
-    export function getHighGear(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleHighGear(_vehicle);
+    export function getHighGear(vehicle: number | IVehicle): number {
+        return GetVehicleHighGear(vehicle);
     }
 
     /**
@@ -4215,9 +4134,8 @@ export namespace vehicle {
      *
      * Hash: 0x83070354
      */
-    export function getIndicatorLights(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleIndicatorLights(_vehicle);
+    export function getIndicatorLights(vehicle: number | IVehicle): number {
+        return GetVehicleIndicatorLights(vehicle);
     }
 
     /**
@@ -4225,9 +4143,8 @@ export namespace vehicle {
      *
      * Hash: 0x7E6E219C
      */
-    export function getLightMultiplier(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleLightMultiplier(_vehicle);
+    export function getLightMultiplier(vehicle: number | IVehicle): number {
+        return GetVehicleLightMultiplier(vehicle);
     }
 
     /**
@@ -4235,9 +4152,8 @@ export namespace vehicle {
      *
      * Hash: 0xDDB298AE
      */
-    export function getNextGear(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleNextGear(_vehicle);
+    export function getNextGear(vehicle: number | IVehicle): number {
+        return GetVehicleNextGear(vehicle);
     }
 
     /**
@@ -4245,9 +4161,8 @@ export namespace vehicle {
      *
      * Hash: 0xEDF4B0FC
      */
-    export function getNumberOfWheels(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleNumberOfWheels(_vehicle);
+    export function getNumberOfWheels(vehicle: number | IVehicle): number {
+        return GetVehicleNumberOfWheels(vehicle);
     }
 
     /**
@@ -4255,9 +4170,8 @@ export namespace vehicle {
      *
      * Hash: 0xFC7F8EF4
      */
-    export function getOilLevel(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleOilLevel(_vehicle);
+    export function getOilLevel(vehicle: number | IVehicle): number {
+        return GetVehicleOilLevel(vehicle);
     }
 
     /**
@@ -4265,9 +4179,8 @@ export namespace vehicle {
      *
      * Hash: 0x954465DE
      */
-    export function getSteeringScale(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleSteeringScale(_vehicle);
+    export function getSteeringScale(vehicle: number | IVehicle): number {
+        return GetVehicleSteeringScale(vehicle);
     }
 
     /**
@@ -4275,9 +4188,8 @@ export namespace vehicle {
      *
      * Hash: 0xD1D07351
      */
-    export function getThrottleOffset(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleThrottleOffset(_vehicle);
+    export function getThrottleOffset(vehicle: number | IVehicle): number {
+        return GetVehicleThrottleOffset(vehicle);
     }
 
     /**
@@ -4285,9 +4197,8 @@ export namespace vehicle {
      *
      * Hash: 0x998B7FEE
      */
-    export function getTopSpeedModifier(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleTopSpeedModifier(_vehicle);
+    export function getTopSpeedModifier(vehicle: number | IVehicle): number {
+        return GetVehicleTopSpeedModifier(vehicle);
     }
 
     /**
@@ -4295,9 +4206,8 @@ export namespace vehicle {
      *
      * Hash: 0xE02B51D7
      */
-    export function getTurboPressure(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleTurboPressure(_vehicle);
+    export function getTurboPressure(vehicle: number | IVehicle): number {
+        return GetVehicleTurboPressure(vehicle);
     }
 
     /**
@@ -4311,9 +4221,8 @@ export namespace vehicle {
      *
      * Hash: 0x137260D1
      */
-    export function getWheelieState(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelieState(_vehicle);
+    export function getWheelieState(vehicle: number | IVehicle): number {
+        return GetVehicleWheelieState(vehicle);
     }
 
     /**
@@ -4323,9 +4232,8 @@ export namespace vehicle {
      *
      * Hash: 0x70FE2EFF
      */
-    export function getWheelBrakePressure(vehicle: number | Vehicle, wheelIndex: number): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelBrakePressure(_vehicle, wheelIndex);
+    export function getWheelBrakePressure(vehicle: number | IVehicle, wheelIndex: number): number {
+        return GetVehicleWheelBrakePressure(vehicle, wheelIndex);
     }
 
     /**
@@ -4334,9 +4242,8 @@ export namespace vehicle {
      *
      * Hash: 0xC70FA0C7
      */
-    export function getWheelFlags(vehicle: number | Vehicle, wheelIndex: number): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelFlags(_vehicle, wheelIndex);
+    export function getWheelFlags(vehicle: number | IVehicle, wheelIndex: number): number {
+        return GetVehicleWheelFlags(vehicle, wheelIndex);
     }
 
     /**
@@ -4344,9 +4251,8 @@ export namespace vehicle {
      *
      * Hash: 0x54A677F5
      */
-    export function getWheelHealth(vehicle: number | Vehicle, wheelIndex: number): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelHealth(_vehicle, wheelIndex);
+    export function getWheelHealth(vehicle: number | IVehicle, wheelIndex: number): number {
+        return GetVehicleWheelHealth(vehicle, wheelIndex);
     }
 
     /**
@@ -4356,9 +4262,8 @@ export namespace vehicle {
      *
      * Hash: 0x3CCF1B49
      */
-    export function getWheelIsPowered(vehicle: number | Vehicle, wheelIndex: number): boolean {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelIsPowered(_vehicle, wheelIndex);
+    export function getWheelIsPowered(vehicle: number | IVehicle, wheelIndex: number): boolean {
+        return GetVehicleWheelIsPowered(vehicle, wheelIndex);
     }
 
     /**
@@ -4367,9 +4272,8 @@ export namespace vehicle {
      *
      * Hash: 0xD203287
      */
-    export function getWheelPower(vehicle: number | Vehicle, wheelIndex: number): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelPower(_vehicle, wheelIndex);
+    export function getWheelPower(vehicle: number | IVehicle, wheelIndex: number): number {
+        return GetVehicleWheelPower(vehicle, wheelIndex);
     }
 
     /**
@@ -4377,9 +4281,8 @@ export namespace vehicle {
      *
      * Hash: 0xCEE21AB2
      */
-    export function getWheelRimColliderSize(vehicle: number | Vehicle, wheelIndex: number): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelRimColliderSize(_vehicle, wheelIndex);
+    export function getWheelRimColliderSize(vehicle: number | IVehicle, wheelIndex: number): number {
+        return GetVehicleWheelRimColliderSize(vehicle, wheelIndex);
     }
 
     /**
@@ -4389,9 +4292,8 @@ export namespace vehicle {
      *
      * Hash: 0xEA1859E5
      */
-    export function getWheelRotationSpeed(vehicle: number | Vehicle, wheelIndex: number): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelRotationSpeed(_vehicle, wheelIndex);
+    export function getWheelRotationSpeed(vehicle: number | IVehicle, wheelIndex: number): number {
+        return GetVehicleWheelRotationSpeed(vehicle, wheelIndex);
     }
 
     /**
@@ -4400,9 +4302,8 @@ export namespace vehicle {
      *
      * Hash: 0x4046B66
      */
-    export function getWheelSize(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelSize(_vehicle);
+    export function getWheelSize(vehicle: number | IVehicle): number {
+        return GetVehicleWheelSize(vehicle);
     }
 
     /**
@@ -4411,9 +4312,8 @@ export namespace vehicle {
      *
      * Hash: 0x149C9DA0
      */
-    export function getWheelSpeed(vehicle: number | Vehicle, wheelIndex: number): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelSpeed(_vehicle, wheelIndex);
+    export function getWheelSpeed(vehicle: number | IVehicle, wheelIndex: number): number {
+        return GetVehicleWheelSpeed(vehicle, wheelIndex);
     }
 
     /**
@@ -4422,9 +4322,8 @@ export namespace vehicle {
      *
      * Hash: 0xA0867448
      */
-    export function getWheelSteeringAngle(vehicle: number | Vehicle, wheelIndex: number): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelSteeringAngle(_vehicle, wheelIndex);
+    export function getWheelSteeringAngle(vehicle: number | IVehicle, wheelIndex: number): number {
+        return GetVehicleWheelSteeringAngle(vehicle, wheelIndex);
     }
 
     /**
@@ -4432,9 +4331,8 @@ export namespace vehicle {
      *
      * Hash: 0xA7F04022
      */
-    export function getWheelSurfaceMaterial(vehicle: number | Vehicle, wheelIndex: number): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelSurfaceMaterial(_vehicle, wheelIndex);
+    export function getWheelSurfaceMaterial(vehicle: number | IVehicle, wheelIndex: number): number {
+        return GetVehicleWheelSurfaceMaterial(vehicle, wheelIndex);
     }
 
     /**
@@ -4444,9 +4342,8 @@ export namespace vehicle {
      *
      * Hash: 0x2B48175B
      */
-    export function getWheelSuspensionCompression(vehicle: number | Vehicle, wheelIndex: number): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelSuspensionCompression(_vehicle, wheelIndex);
+    export function getWheelSuspensionCompression(vehicle: number | IVehicle, wheelIndex: number): number {
+        return GetVehicleWheelSuspensionCompression(vehicle, wheelIndex);
     }
 
     /**
@@ -4454,9 +4351,8 @@ export namespace vehicle {
      *
      * Hash: 0xE0BA9FE6
      */
-    export function getWheelTireColliderSize(vehicle: number | Vehicle, wheelIndex: number): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelTireColliderSize(_vehicle, wheelIndex);
+    export function getWheelTireColliderSize(vehicle: number | IVehicle, wheelIndex: number): number {
+        return GetVehicleWheelTireColliderSize(vehicle, wheelIndex);
     }
 
     /**
@@ -4464,9 +4360,8 @@ export namespace vehicle {
      *
      * Hash: 0xEF65929C
      */
-    export function getWheelTireColliderWidth(vehicle: number | Vehicle, wheelIndex: number): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelTireColliderWidth(_vehicle, wheelIndex);
+    export function getWheelTireColliderWidth(vehicle: number | IVehicle, wheelIndex: number): number {
+        return GetVehicleWheelTireColliderWidth(vehicle, wheelIndex);
     }
 
     /**
@@ -4475,9 +4370,8 @@ export namespace vehicle {
      *
      * Hash: 0x3BCFEE14
      */
-    export function getWheelTractionVectorLength(vehicle: number | Vehicle, wheelIndex: number): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelTractionVectorLength(_vehicle, wheelIndex);
+    export function getWheelTractionVectorLength(vehicle: number | IVehicle, wheelIndex: number): number {
+        return GetVehicleWheelTractionVectorLength(vehicle, wheelIndex);
     }
 
     /**
@@ -4486,9 +4380,8 @@ export namespace vehicle {
      *
      * Hash: 0x9C7B59F9
      */
-    export function getWheelWidth(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelWidth(_vehicle);
+    export function getWheelWidth(vehicle: number | IVehicle): number {
+        return GetVehicleWheelWidth(vehicle);
     }
 
     /**
@@ -4496,9 +4389,8 @@ export namespace vehicle {
      *
      * Hash: 0xCC90CBCA
      */
-    export function getWheelXOffset(vehicle: number | Vehicle, wheelIndex: number): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelXOffset(_vehicle, wheelIndex);
+    export function getWheelXOffset(vehicle: number | IVehicle, wheelIndex: number): number {
+        return GetVehicleWheelXOffset(vehicle, wheelIndex);
     }
 
     /**
@@ -4506,9 +4398,8 @@ export namespace vehicle {
      *
      * Hash: 0x2EA4AFFE
      */
-    export function getWheelYRotation(vehicle: number | Vehicle, wheelIndex: number): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleWheelYRotation(_vehicle, wheelIndex);
+    export function getWheelYRotation(vehicle: number | IVehicle, wheelIndex: number): number {
+        return GetVehicleWheelYRotation(vehicle, wheelIndex);
     }
 
     /**
@@ -4516,9 +4407,8 @@ export namespace vehicle {
      *
      * Hash: 0xC715F730
      */
-    export function getXenonLightsCustomColor(vehicle: number | Vehicle): [boolean, number, number, number] {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleXenonLightsCustomColor(_vehicle);
+    export function getXenonLightsCustomColor(vehicle: number | IVehicle): [boolean, number, number, number] {
+        return GetVehicleXenonLightsCustomColor(vehicle);
     }
 
     /**
@@ -4535,9 +4425,8 @@ export namespace vehicle {
      *
      * Hash: 0xDC921211
      */
-    export function isAlarmSet(vehicle: number | Vehicle): boolean {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return IsVehicleAlarmSet(_vehicle);
+    export function isAlarmSet(vehicle: number | IVehicle): boolean {
+        return IsVehicleAlarmSet(vehicle);
     }
 
     /**
@@ -4545,9 +4434,8 @@ export namespace vehicle {
      *
      * Hash: 0xA411F72C
      */
-    export function isInteriorLightOn(vehicle: number | Vehicle): boolean {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return IsVehicleInteriorLightOn(_vehicle);
+    export function isInteriorLightOn(vehicle: number | IVehicle): boolean {
+        return IsVehicleInteriorLightOn(vehicle);
     }
 
     /**
@@ -4555,9 +4443,8 @@ export namespace vehicle {
      *
      * Hash: 0xF9933BF4
      */
-    export function isNeedsToBeHotwired(vehicle: number | Vehicle): boolean {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return IsVehicleNeedsToBeHotwired(_vehicle);
+    export function isNeedsToBeHotwired(vehicle: number | IVehicle): boolean {
+        return IsVehicleNeedsToBeHotwired(vehicle);
     }
 
     /**
@@ -4565,9 +4452,8 @@ export namespace vehicle {
      *
      * Hash: 0xF849ED67
      */
-    export function isPreviouslyOwnedByPlayer(vehicle: number | Vehicle): boolean {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return IsVehiclePreviouslyOwnedByPlayer(_vehicle);
+    export function isPreviouslyOwnedByPlayer(vehicle: number | IVehicle): boolean {
+        return IsVehiclePreviouslyOwnedByPlayer(vehicle);
     }
 
     /**
@@ -4575,9 +4461,8 @@ export namespace vehicle {
      *
      * Hash: 0xA7DAF7C
      */
-    export function isWanted(vehicle: number | Vehicle): boolean {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return IsVehicleWanted(_vehicle);
+    export function isWanted(vehicle: number | IVehicle): boolean {
+        return IsVehicleWanted(vehicle);
     }
 
     /**
@@ -4604,9 +4489,8 @@ export namespace vehicle {
      *
      * Hash: 0x7FA03E76
      */
-    export function overridePedsCanStandOnTopFlag(vehicle: number | Vehicle, can: boolean): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        OverrideVehiclePedsCanStandOnTopFlag(_vehicle, can);
+    export function overridePedsCanStandOnTopFlag(vehicle: number | IVehicle, can: boolean): void {
+        OverrideVehiclePedsCanStandOnTopFlag(vehicle, can);
     }
 
     /**
@@ -4616,9 +4500,8 @@ export namespace vehicle {
      *
      * Hash: 0xDF62CFE2
      */
-    export function resetPedsCanStandOnTopFlag(vehicle: number | Vehicle): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        ResetVehiclePedsCanStandOnTopFlag(_vehicle);
+    export function resetPedsCanStandOnTopFlag(vehicle: number | IVehicle): void {
+        ResetVehiclePedsCanStandOnTopFlag(vehicle);
     }
 
     /**
@@ -4706,9 +4589,8 @@ export namespace vehicle {
      *
      * Hash: 0x2468DBE8
      */
-    export function setTrainDoorOpenRatio(train: number | Vehicle, doorIndex: number, ratio: number): void {
-        const _train = train instanceof Vehicle ? train.localId() : train;
-        SetTrainDoorOpenRatio(_train, doorIndex, ratio);
+    export function setTrainDoorOpenRatio(train: number | IVehicle, doorIndex: number, ratio: number): void {
+        SetTrainDoorOpenRatio(train, doorIndex, ratio);
     }
 
     /**
@@ -4716,9 +4598,8 @@ export namespace vehicle {
      *
      * Hash: 0x61CB74A0
      */
-    export function setTrainState(train: number | Vehicle, state: number): void {
-        const _train = train instanceof Vehicle ? train.localId() : train;
-        SetTrainState(_train, state);
+    export function setTrainState(train: number | IVehicle, state: number): void {
+        SetTrainState(train, state);
     }
 
     /**
@@ -4726,9 +4607,8 @@ export namespace vehicle {
      *
      * Hash: 0xECB8B577
      */
-    export function setTrainStopAtStations(train: number | Vehicle, state: boolean): void {
-        const _train = train instanceof Vehicle ? train.localId() : train;
-        SetTrainStopAtStations(_train, state);
+    export function setTrainStopAtStations(train: number | IVehicle, state: boolean): void {
+        SetTrainStopAtStations(train, state);
     }
 
     /**
@@ -4736,9 +4616,8 @@ export namespace vehicle {
      *
      * Hash: 0xC108EE6F
      */
-    export function setAlarmTimeLeft(vehicle: number | Vehicle, time: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleAlarmTimeLeft(_vehicle, time);
+    export function setAlarmTimeLeft(vehicle: number | IVehicle, time: number): void {
+        SetVehicleAlarmTimeLeft(vehicle, time);
     }
 
     /**
@@ -4746,9 +4625,8 @@ export namespace vehicle {
      *
      * Hash: 0x5F3A3574
      */
-    export function setAutoRepairDisabled(vehicle: number | Vehicle, value: boolean): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleAutoRepairDisabled(_vehicle, value);
+    export function setAutoRepairDisabled(vehicle: number | IVehicle, value: boolean): void {
+        SetVehicleAutoRepairDisabled(vehicle, value);
     }
 
     /**
@@ -4756,9 +4634,8 @@ export namespace vehicle {
      *
      * Hash: 0x2F70ACED
      */
-    export function setClutch(vehicle: number | Vehicle, clutch: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleClutch(_vehicle, clutch);
+    export function setClutch(vehicle: number | IVehicle, clutch: number): void {
+        SetVehicleClutch(vehicle, clutch);
     }
 
     /**
@@ -4766,9 +4643,8 @@ export namespace vehicle {
      *
      * Hash: 0x2A01A8FC
      */
-    export function setCurrentRpm(vehicle: number | Vehicle, rpm: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleCurrentRpm(_vehicle, rpm);
+    export function setCurrentRpm(vehicle: number | IVehicle, rpm: number): void {
+        SetVehicleCurrentRpm(vehicle, rpm);
     }
 
     /**
@@ -4776,9 +4652,8 @@ export namespace vehicle {
      *
      * Hash: 0x6C93C4A9
      */
-    export function setEngineTemperature(vehicle: number | Vehicle, temperature: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleEngineTemperature(_vehicle, temperature);
+    export function setEngineTemperature(vehicle: number | IVehicle, temperature: number): void {
+        SetVehicleEngineTemperature(vehicle, temperature);
     }
 
     /**
@@ -4786,9 +4661,8 @@ export namespace vehicle {
      *
      * Hash: 0xBA970511
      */
-    export function setFuelLevel(vehicle: number | Vehicle, level: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleFuelLevel(_vehicle, level);
+    export function setFuelLevel(vehicle: number | IVehicle, level: number): void {
+        SetVehicleFuelLevel(vehicle, level);
     }
 
     /**
@@ -4796,9 +4670,8 @@ export namespace vehicle {
      *
      * Hash: 0x496EF2F2
      */
-    export function setGearRatio(vehicle: number | Vehicle, gear: number, ratio: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleGearRatio(_vehicle, gear, ratio);
+    export function setGearRatio(vehicle: number | IVehicle, gear: number, ratio: number): void {
+        SetVehicleGearRatio(vehicle, gear, ratio);
     }
 
     /**
@@ -4806,9 +4679,8 @@ export namespace vehicle {
      *
      * Hash: 0x1A963E58
      */
-    export function setGravityAmount(vehicle: number | Vehicle, gravity: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleGravityAmount(_vehicle, gravity);
+    export function setGravityAmount(vehicle: number | IVehicle, gravity: number): void {
+        SetVehicleGravityAmount(vehicle, gravity);
     }
 
     /**
@@ -4817,9 +4689,8 @@ export namespace vehicle {
      *
      * Hash: 0x2BA40795
      */
-    export function setVehicleHandlingField(vehicle: number | Vehicle, class_: string, fieldName: string, value: any): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleHandlingField(_vehicle, class_, fieldName, value);
+    export function setVehicleHandlingField(vehicle: number | IVehicle, class_: string, fieldName: string, value: any): void {
+        SetVehicleHandlingField(vehicle, class_, fieldName, value);
     }
 
     /**
@@ -4828,9 +4699,8 @@ export namespace vehicle {
      *
      * Hash: 0x488C86D2
      */
-    export function setVehicleHandlingFloat(vehicle: number | Vehicle, class_: string, fieldName: string, value: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleHandlingFloat(_vehicle, class_, fieldName, value);
+    export function setVehicleHandlingFloat(vehicle: number | IVehicle, class_: string, fieldName: string, value: number): void {
+        SetVehicleHandlingFloat(vehicle, class_, fieldName, value);
     }
 
     /**
@@ -4838,9 +4708,8 @@ export namespace vehicle {
      *
      * Hash: 0xC37F4CF9
      */
-    export function setVehicleHandlingInt(vehicle: number | Vehicle, class_: string, fieldName: string, value: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleHandlingInt(_vehicle, class_, fieldName, value);
+    export function setVehicleHandlingInt(vehicle: number | IVehicle, class_: string, fieldName: string, value: number): void {
+        SetVehicleHandlingInt(vehicle, class_, fieldName, value);
     }
 
     /**
@@ -4848,9 +4717,8 @@ export namespace vehicle {
      *
      * Hash: 0x12497890
      */
-    export function setVehicleHandlingVector(vehicle: number | Vehicle, class_: string, fieldName: string, value: Vector3): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleHandlingVector(_vehicle, class_, fieldName, value);
+    export function setVehicleHandlingVector(vehicle: number | IVehicle, class_: string, fieldName: string, value: Vector3): void {
+        SetVehicleHandlingVector(vehicle, class_, fieldName, value);
     }
 
     /**
@@ -4858,9 +4726,8 @@ export namespace vehicle {
      *
      * Hash: 0x20B1B3E6
      */
-    export function setHighGear(vehicle: number | Vehicle, gear: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleHighGear(_vehicle, gear);
+    export function setHighGear(vehicle: number | IVehicle, gear: number): void {
+        SetVehicleHighGear(vehicle, gear);
     }
 
     /**
@@ -4877,9 +4744,8 @@ export namespace vehicle {
      *
      * Hash: 0x90D1CAD1
      */
-    export function setOilLevel(vehicle: number | Vehicle, level: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleOilLevel(_vehicle, level);
+    export function setOilLevel(vehicle: number | IVehicle, level: number): void {
+        SetVehicleOilLevel(vehicle, level);
     }
 
     /**
@@ -4887,9 +4753,8 @@ export namespace vehicle {
      *
      * Hash: 0x2A6CC9F2
      */
-    export function setPitchBias(vehicle: number | Vehicle, value: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehiclePitchBias(_vehicle, value);
+    export function setPitchBias(vehicle: number | IVehicle, value: number): void {
+        SetVehiclePitchBias(vehicle, value);
     }
 
     /**
@@ -4897,9 +4762,8 @@ export namespace vehicle {
      *
      * Hash: 0x264B45DE
      */
-    export function setRollBias(vehicle: number | Vehicle, value: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleRollBias(_vehicle, value);
+    export function setRollBias(vehicle: number | IVehicle, value: number): void {
+        SetVehicleRollBias(vehicle, value);
     }
 
     /**
@@ -4907,9 +4771,8 @@ export namespace vehicle {
      *
      * Hash: 0xFFCCC2EA
      */
-    export function setSteeringAngle(vehicle: number | Vehicle, angle: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleSteeringAngle(_vehicle, angle);
+    export function setSteeringAngle(vehicle: number | IVehicle, angle: number): void {
+        SetVehicleSteeringAngle(vehicle, angle);
     }
 
     /**
@@ -4917,9 +4780,8 @@ export namespace vehicle {
      *
      * Hash: 0xEB46596F
      */
-    export function setSteeringScale(vehicle: number | Vehicle, scale: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleSteeringScale(_vehicle, scale);
+    export function setSteeringScale(vehicle: number | IVehicle, scale: number): void {
+        SetVehicleSteeringScale(vehicle, scale);
     }
 
     /**
@@ -4931,9 +4793,8 @@ export namespace vehicle {
      *
      * Hash: 0xB3439A01
      */
-    export function setSuspensionHeight(vehicle: number | Vehicle, newHeight: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleSuspensionHeight(_vehicle, newHeight);
+    export function setSuspensionHeight(vehicle: number | IVehicle, newHeight: number): void {
+        SetVehicleSuspensionHeight(vehicle, newHeight);
     }
 
     /**
@@ -4941,9 +4802,8 @@ export namespace vehicle {
      *
      * Hash: 0x6485615E
      */
-    export function setTurboPressure(vehicle: number | Vehicle, pressure: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleTurboPressure(_vehicle, pressure);
+    export function setTurboPressure(vehicle: number | IVehicle, pressure: number): void {
+        SetVehicleTurboPressure(vehicle, pressure);
     }
 
     /**
@@ -4959,9 +4819,8 @@ export namespace vehicle {
      *
      * Hash: 0xEAB8DB65
      */
-    export function setWheelieState(vehicle: number | Vehicle, state: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleWheelieState(_vehicle, state);
+    export function setWheelieState(vehicle: number | IVehicle, state: number): void {
+        SetVehicleWheelieState(vehicle, state);
     }
 
     /**
@@ -4971,9 +4830,8 @@ export namespace vehicle {
      *
      * Hash: 0xE80F4E31
      */
-    export function setWheelBrakePressure(vehicle: number | Vehicle, wheelIndex: number, pressure: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleWheelBrakePressure(_vehicle, wheelIndex, pressure);
+    export function setWheelBrakePressure(vehicle: number | IVehicle, wheelIndex: number, pressure: number): void {
+        SetVehicleWheelBrakePressure(vehicle, wheelIndex, pressure);
     }
 
     /**
@@ -4982,9 +4840,8 @@ export namespace vehicle {
      *
      * Hash: 0xD2B9E90D
      */
-    export function setWheelFlags(vehicle: number | Vehicle, wheelIndex: number, flags: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleWheelFlags(_vehicle, wheelIndex, flags);
+    export function setWheelFlags(vehicle: number | IVehicle, wheelIndex: number, flags: number): void {
+        SetVehicleWheelFlags(vehicle, wheelIndex, flags);
     }
 
     /**
@@ -4992,9 +4849,8 @@ export namespace vehicle {
      *
      * Hash: 0xB22ECEFD
      */
-    export function setWheelHealth(vehicle: number | Vehicle, wheelIndex: number, health: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleWheelHealth(_vehicle, wheelIndex, health);
+    export function setWheelHealth(vehicle: number | IVehicle, wheelIndex: number, health: number): void {
+        SetVehicleWheelHealth(vehicle, wheelIndex, health);
     }
 
     /**
@@ -5005,9 +4861,8 @@ export namespace vehicle {
      *
      * Hash: 0xBD5291A0
      */
-    export function setWheelIsPowered(vehicle: number | Vehicle, wheelIndex: number, powered: boolean): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleWheelIsPowered(_vehicle, wheelIndex, powered);
+    export function setWheelIsPowered(vehicle: number | IVehicle, wheelIndex: number, powered: boolean): void {
+        SetVehicleWheelIsPowered(vehicle, wheelIndex, powered);
     }
 
     /**
@@ -5016,9 +4871,8 @@ export namespace vehicle {
      *
      * Hash: 0xC6146043
      */
-    export function setWheelPower(vehicle: number | Vehicle, wheelIndex: number, power: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleWheelPower(_vehicle, wheelIndex, power);
+    export function setWheelPower(vehicle: number | IVehicle, wheelIndex: number, power: number): void {
+        SetVehicleWheelPower(vehicle, wheelIndex, power);
     }
 
     /**
@@ -5026,9 +4880,8 @@ export namespace vehicle {
      *
      * Hash: 0xF380E184
      */
-    export function setWheelRimColliderSize(vehicle: number | Vehicle, wheelIndex: number, value: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleWheelRimColliderSize(_vehicle, wheelIndex, value);
+    export function setWheelRimColliderSize(vehicle: number | IVehicle, wheelIndex: number, value: number): void {
+        SetVehicleWheelRimColliderSize(vehicle, wheelIndex, value);
     }
 
     /**
@@ -5037,9 +4890,8 @@ export namespace vehicle {
      *
      * Hash: 0x35ED100D
      */
-    export function setWheelRotationSpeed(vehicle: number | Vehicle, wheelIndex: number, speed: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleWheelRotationSpeed(_vehicle, wheelIndex, speed);
+    export function setWheelRotationSpeed(vehicle: number | IVehicle, wheelIndex: number, speed: number): void {
+        SetVehicleWheelRotationSpeed(vehicle, wheelIndex, speed);
     }
 
     /**
@@ -5049,9 +4901,8 @@ export namespace vehicle {
      *
      * Hash: 0x53AB5C35
      */
-    export function setWheelSize(vehicle: number | Vehicle, size: number): boolean {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return SetVehicleWheelSize(_vehicle, size);
+    export function setWheelSize(vehicle: number | IVehicle, size: number): boolean {
+        return SetVehicleWheelSize(vehicle, size);
     }
 
     /**
@@ -5059,9 +4910,8 @@ export namespace vehicle {
      *
      * Hash: 0xB962D05C
      */
-    export function setWheelTireColliderSize(vehicle: number | Vehicle, wheelIndex: number, value: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleWheelTireColliderSize(_vehicle, wheelIndex, value);
+    export function setWheelTireColliderSize(vehicle: number | IVehicle, wheelIndex: number, value: number): void {
+        SetVehicleWheelTireColliderSize(vehicle, wheelIndex, value);
     }
 
     /**
@@ -5069,9 +4919,8 @@ export namespace vehicle {
      *
      * Hash: 0x47BD0270
      */
-    export function setWheelTireColliderWidth(vehicle: number | Vehicle, wheelIndex: number, value: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleWheelTireColliderWidth(_vehicle, wheelIndex, value);
+    export function setWheelTireColliderWidth(vehicle: number | IVehicle, wheelIndex: number, value: number): void {
+        SetVehicleWheelTireColliderWidth(vehicle, wheelIndex, value);
     }
 
     /**
@@ -5080,9 +4929,8 @@ export namespace vehicle {
      *
      * Hash: 0x85C85A3A
      */
-    export function setWheelTractionVectorLength(vehicle: number | Vehicle, wheelIndex: number, length: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleWheelTractionVectorLength(_vehicle, wheelIndex, length);
+    export function setWheelTractionVectorLength(vehicle: number | IVehicle, wheelIndex: number, length: number): void {
+        SetVehicleWheelTractionVectorLength(vehicle, wheelIndex, length);
     }
 
     /**
@@ -5092,9 +4940,8 @@ export namespace vehicle {
      *
      * Hash: 0x64C3F1C0
      */
-    export function setWheelWidth(vehicle: number | Vehicle, width: number): boolean {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return SetVehicleWheelWidth(_vehicle, width);
+    export function setWheelWidth(vehicle: number | IVehicle, width: number): boolean {
+        return SetVehicleWheelWidth(vehicle, width);
     }
 
     /**
@@ -5111,9 +4958,8 @@ export namespace vehicle {
      *
      * Hash: 0xBD6357D
      */
-    export function setWheelXOffset(vehicle: number | Vehicle, wheelIndex: number, offset: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleWheelXOffset(_vehicle, wheelIndex, offset);
+    export function setWheelXOffset(vehicle: number | IVehicle, wheelIndex: number, offset: number): void {
+        SetVehicleWheelXOffset(vehicle, wheelIndex, offset);
     }
 
     /**
@@ -5121,9 +4967,8 @@ export namespace vehicle {
      *
      * Hash: 0xC6C2171F
      */
-    export function setWheelYRotation(vehicle: number | Vehicle, wheelIndex: number, value: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleWheelYRotation(_vehicle, wheelIndex, value);
+    export function setWheelYRotation(vehicle: number | IVehicle, wheelIndex: number, value: number): void {
+        SetVehicleWheelYRotation(vehicle, wheelIndex, value);
     }
 
     /**
@@ -5131,9 +4976,8 @@ export namespace vehicle {
      *
      * Hash: 0x1683E7F0
      */
-    export function setXenonLightsCustomColor(vehicle: number | Vehicle, red: number, green: number, blue: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleXenonLightsCustomColor(_vehicle, red, green, blue);
+    export function setXenonLightsCustomColor(vehicle: number | IVehicle, red: number, green: number, blue: number): void {
+        SetVehicleXenonLightsCustomColor(vehicle, red, green, blue);
     }
 
     /**
@@ -5150,9 +4994,8 @@ export namespace vehicle {
      *
      * Hash: 0x77CC80DC
      */
-    export function doesTrainStopAtStations(train: number | Vehicle): boolean {
-        const _train = train instanceof Vehicle ? train.localId() : train;
-        return DoesTrainStopAtStations(_train);
+    export function doesTrainStopAtStations(train: number | IVehicle): boolean {
+        return DoesTrainStopAtStations(train);
     }
 
     /**
@@ -5160,9 +5003,8 @@ export namespace vehicle {
      *
      * Hash: 0xA4921EF5
      */
-    export function getTrainCruiseSpeed(train: number | Vehicle): number {
-        const _train = train instanceof Vehicle ? train.localId() : train;
-        return GetTrainCruiseSpeed(_train);
+    export function getTrainCruiseSpeed(train: number | IVehicle): number {
+        return GetTrainCruiseSpeed(train);
     }
 
     /**
@@ -5170,9 +5012,8 @@ export namespace vehicle {
      *
      * Hash: 0x8DAF79B6
      */
-    export function getTrainDirection(train: number | Vehicle): boolean {
-        const _train = train instanceof Vehicle ? train.localId() : train;
-        return GetTrainDirection(_train);
+    export function getTrainDirection(train: number | IVehicle): boolean {
+        return GetTrainDirection(train);
     }
 
     /**
@@ -5180,9 +5021,8 @@ export namespace vehicle {
      *
      * Hash: 0x81B50033
      */
-    export function getTrainState(train: number | Vehicle): number {
-        const _train = train instanceof Vehicle ? train.localId() : train;
-        return GetTrainState(_train);
+    export function getTrainState(train: number | IVehicle): number {
+        return GetTrainState(train);
     }
 
     /**
@@ -5190,9 +5030,8 @@ export namespace vehicle {
      *
      * Hash: 0x9AA339D
      */
-    export function getTrainTrackIndex(train: number | Vehicle): number {
-        const _train = train instanceof Vehicle ? train.localId() : train;
-        return GetTrainTrackIndex(_train);
+    export function getTrainTrackIndex(train: number | IVehicle): number {
+        return GetTrainTrackIndex(train);
     }
 
     /**
@@ -5200,9 +5039,8 @@ export namespace vehicle {
      *
      * Hash: 0x483B013C
      */
-    export function getHandbrake(vehicle: number | Vehicle): boolean {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleHandbrake(_vehicle);
+    export function getHandbrake(vehicle: number | IVehicle): boolean {
+        return GetVehicleHandbrake(vehicle);
     }
 
     /**
@@ -5210,9 +5048,8 @@ export namespace vehicle {
      *
      * Hash: 0x1382FCEA
      */
-    export function getSteeringAngle(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleSteeringAngle(_vehicle);
+    export function getSteeringAngle(vehicle: number | IVehicle): number {
+        return GetVehicleSteeringAngle(vehicle);
     }
 
     /**
@@ -5220,9 +5057,8 @@ export namespace vehicle {
      *
      * Hash: 0xBB340D04
      */
-    export function isEngineStarting(vehicle: number | Vehicle): boolean {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return IsVehicleEngineStarting(_vehicle);
+    export function isEngineStarting(vehicle: number | IVehicle): boolean {
+        return IsVehicleEngineStarting(vehicle);
     }
 
     /**
@@ -5232,9 +5068,8 @@ export namespace vehicle {
      *
      * Hash: 0xD85C9F57
      */
-    export function getHasFlag(vehicle: number | Vehicle, flagIndex: number): boolean {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleHasFlag(_vehicle, flagIndex);
+    export function getHasFlag(vehicle: number | IVehicle, flagIndex: number): boolean {
+        return GetVehicleHasFlag(vehicle, flagIndex);
     }
 
     /**
@@ -5265,9 +5100,8 @@ export namespace vehicle {
      *
      * Hash: 0xDE73BC10
      */
-    export function getTypeRaw(vehicle: number | Vehicle): number {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleTypeRaw(_vehicle);
+    export function getTypeRaw(vehicle: number | IVehicle): number {
+        return GetVehicleTypeRaw(vehicle);
     }
 
     /**
@@ -5275,9 +5109,8 @@ export namespace vehicle {
      *
      * Hash: 0xCF1BC668
      */
-    export function isWheelBrokenOff(vehicle: number | Vehicle, wheelIndex: number): boolean {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return IsVehicleWheelBrokenOff(_vehicle, wheelIndex);
+    export function isWheelBrokenOff(vehicle: number | IVehicle, wheelIndex: number): boolean {
+        return IsVehicleWheelBrokenOff(vehicle, wheelIndex);
     }
 
     /**
@@ -5285,9 +5118,8 @@ export namespace vehicle {
      *
      * Hash: 0x8923DD42
      */
-    export function setCurrentGear(vehicle: number | Vehicle, gear: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleCurrentGear(_vehicle, gear);
+    export function setCurrentGear(vehicle: number | IVehicle, gear: number): void {
+        SetVehicleCurrentGear(vehicle, gear);
     }
 
     /**
@@ -5295,9 +5127,8 @@ export namespace vehicle {
      *
      * Hash: 0x63AE1A34
      */
-    export function setFlag(vehicle: number | Vehicle, flagIndex: number, value: boolean): boolean {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return SetVehicleFlag(_vehicle, flagIndex, value);
+    export function setFlag(vehicle: number | IVehicle, flagIndex: number, value: boolean): boolean {
+        return SetVehicleFlag(vehicle, flagIndex, value);
     }
 
     /**
@@ -5305,9 +5136,8 @@ export namespace vehicle {
      *
      * Hash: 0x3A4566F4
      */
-    export function setNextGear(vehicle: number | Vehicle, nextGear: number): void {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        SetVehicleNextGear(_vehicle, nextGear);
+    export function setNextGear(vehicle: number | IVehicle, nextGear: number): void {
+        SetVehicleNextGear(vehicle, nextGear);
     }
 
     /**
@@ -5328,9 +5158,8 @@ export namespace vehicle {
      *
      * Hash: 0xA273060E
      */
-    export function getType(vehicle: number | Vehicle): string {
-        const _vehicle = vehicle instanceof Vehicle ? vehicle.localId() : vehicle;
-        return GetVehicleType(_vehicle);
+    export function getType(vehicle: number | IVehicle): string {
+        return GetVehicleType(vehicle);
     }
 
 }
@@ -5650,9 +5479,8 @@ export namespace weapon {
      *
      * Hash: 0x63ED2E7
      */
-    export function getAnimationOverride(ped: number | Ped): number {
-        const _ped = ped instanceof Ped ? ped.handle() : ped;
-        return GetWeaponAnimationOverride(_ped);
+    export function getAnimationOverride(ped: number | IPed): number {
+        return GetWeaponAnimationOverride(ped);
     }
 
     /**
@@ -5829,9 +5657,8 @@ export namespace network {
      *
      * Hash: 0x526FEE31
      */
-    export function getEntityOwner(entity: number | Entity): number {
-        const _entity = entity instanceof Entity ? entity.handle() : entity;
-        return NetworkGetEntityOwner(_entity);
+    export function getEntityOwner(entity: number | IEntity): number {
+        return NetworkGetEntityOwner(entity);
     }
 
 }
@@ -5860,9 +5687,8 @@ export namespace camera {
      *
      * Hash: 0x8F57A89D
      */
-    export function getCamMatrix(camera: number | Camera, rightVector: Vector3, forwardVector: Vector3, upVector: Vector3, position: Vector3): void {
-        const _camera = camera instanceof Camera ? camera.handle() : camera;
-        GetCamMatrix(_camera, rightVector, forwardVector, upVector, position);
+    export function getCamMatrix(camera: number | ICamera, rightVector: Vector3, forwardVector: Vector3, upVector: Vector3, position: Vector3): void {
+        GetCamMatrix(camera, rightVector, forwardVector, upVector, position);
     }
 
 }
@@ -6111,9 +5937,8 @@ export namespace mumble {
      *
      * Hash: 0x32C5355A
      */
-    export function addVoiceTargetPlayer(targetId: number, player: number | string | Player): void {
-        const _player = player instanceof Player ? player.localId() : player;
-        MumbleAddVoiceTargetPlayer(targetId, _player);
+    export function addVoiceTargetPlayer(targetId: number, player: number | string | IPlayer): void {
+        MumbleAddVoiceTargetPlayer(targetId, player);
     }
 
     /**
@@ -6212,9 +6037,8 @@ export namespace mumble {
      *
      * Hash: 0x33EEF97F
      */
-    export function isPlayerTalking(player: number | string | Player): boolean {
-        const _player = player instanceof Player ? player.localId() : player;
-        return MumbleIsPlayerTalking(_player);
+    export function isPlayerTalking(player: number | string | IPlayer): boolean {
+        return MumbleIsPlayerTalking(player);
     }
 
     /**
@@ -6244,9 +6068,8 @@ export namespace mumble {
      *
      * Hash: 0x88CD646F
      */
-    export function removeVoiceTargetPlayer(targetId: number, player: number | string | Player): void {
-        const _player = player instanceof Player ? player.localId() : player;
-        MumbleRemoveVoiceTargetPlayer(targetId, _player);
+    export function removeVoiceTargetPlayer(targetId: number, player: number | string | IPlayer): void {
+        MumbleRemoveVoiceTargetPlayer(targetId, player);
     }
 
     /**
@@ -6358,9 +6181,8 @@ export namespace mumble {
      *
      * Hash: 0x61C309E3
      */
-    export function setVolumeOverride(player: number | string | Player, volume: number): void {
-        const _player = player instanceof Player ? player.localId() : player;
-        MumbleSetVolumeOverride(_player, volume);
+    export function setVolumeOverride(player: number | string | IPlayer, volume: number): void {
+        MumbleSetVolumeOverride(player, volume);
     }
 
     /**
@@ -6991,7 +6813,7 @@ export function setAudioSubmixOutputVolumes(submixId: number, outputSlot: number
  * Hash: 0x47B870F5
  * @deprecated Use entity.getArchetypeName(entity1) instead
  */
-export function getEntityArchetypeName(entity1: number | Entity): string {
+export function getEntityArchetypeName(entity1: number | IEntity): string {
     return entity.getArchetypeName(entity1);
 }
 
@@ -7013,7 +6835,7 @@ export function getEntityIndexFromMapdata(mapdata: number, entity1: number): num
  * Hash: 0xF6B815C5
  * @deprecated Use entity.getMapdataOwner(entity1) instead
  */
-export function getEntityMapdataOwner(entity1: number | Entity): [boolean, number, number] {
+export function getEntityMapdataOwner(entity1: number | IEntity): [boolean, number, number] {
     return entity.getMapdataOwner(entity1);
 }
 
@@ -7054,7 +6876,7 @@ export function selectEntityAtPos(fracX: number, fracY: number, hitFlags: number
  * Hash: 0xFB0639B
  * @deprecated Use entity.setMatrix(entity1, forwardX, forwardY, forwardZ, rightX, rightY, rightZ, upX, upY, upZ, atX, atY, atZ) instead
  */
-export function setEntityMatrix(entity1: number | Entity, forwardX: number, forwardY: number, forwardZ: number, rightX: number, rightY: number, rightZ: number, upX: number, upY: number, upZ: number, atX: number, atY: number, atZ: number): void {
+export function setEntityMatrix(entity1: number | IEntity, forwardX: number, forwardY: number, forwardZ: number, rightX: number, rightY: number, rightZ: number, upX: number, upY: number, upZ: number, atX: number, atY: number, atZ: number): void {
     return entity.setMatrix(entity1, forwardX, forwardY, forwardZ, rightX, rightY, rightZ, upX, upY, upZ, atX, atY, atZ);
 }
 
@@ -7064,7 +6886,7 @@ export function setEntityMatrix(entity1: number | Entity, forwardX: number, forw
  * Hash: 0xEDBE6ADD
  * @deprecated Use entity.isPositionFrozen(entity1) instead
  */
-export function isEntityPositionFrozen(entity1: number | Entity): boolean {
+export function isEntityPositionFrozen(entity1: number | IEntity): boolean {
     return entity.isPositionFrozen(entity1);
 }
 
@@ -7078,7 +6900,7 @@ export function isEntityPositionFrozen(entity1: number | Entity): boolean {
  * Hash: 0x9A3144BC
  * @deprecated Use entity.getAddress(entity1) instead
  */
-export function getEntityAddress(entity1: number | Entity): any {
+export function getEntityAddress(entity1: number | IEntity): any {
     return entity.getAddress(entity1);
 }
 
@@ -7088,7 +6910,7 @@ export function getEntityAddress(entity1: number | Entity): any {
  * Hash: 0x3BB78F05
  * @deprecated Use entity.ensureStateBag(entity1) instead
  */
-export function ensureEntityStateBag(entity1: number | Entity): void {
+export function ensureEntityStateBag(entity1: number | IEntity): void {
     return entity.ensureStateBag(entity1);
 }
 
@@ -7125,7 +6947,7 @@ export function ensureEntityStateBag(entity1: number | Entity): void {
  * Hash: 0xDFFBA12F
  * @deprecated Use entity.getEntitiesInRadius(pos, radius, entityType, sortByDistance, models) instead
  */
-export function getEntitiesInRadius(pos: Vector3, radius: number, entityType: number, sortByDistance: boolean, models: number | Object): number {
+export function getEntitiesInRadius(pos: Vector3, radius: number, entityType: number, sortByDistance: boolean, models: number | IObject): number {
     return entity.getEntitiesInRadius(pos, radius, entityType, sortByDistance, models);
 }
 
@@ -7382,7 +7204,7 @@ export function resetEntityDrawOutlineRenderTechnique(): void {
  * Hash: 0x76180407
  * @deprecated Use graphics.setEntityDrawOutline(entity, enabled) instead
  */
-export function setEntityDrawOutline(entity: number | Entity, enabled: boolean): void {
+export function setEntityDrawOutline(entity: number | IEntity, enabled: boolean): void {
     return graphics.setEntityDrawOutline(entity, enabled);
 }
 
@@ -8621,7 +8443,7 @@ export function experimentalLoadCloneCreate(data: string, objectId: number, tree
  * Hash: 0x6BC189AC
  * @deprecated Use misc.experimentalLoadCloneSync(entity, data) instead
  */
-export function experimentalLoadCloneSync(entity: number | Entity, data: string): void {
+export function experimentalLoadCloneSync(entity: number | IEntity, data: string): void {
     return misc.experimentalLoadCloneSync(entity, data);
 }
 
@@ -8631,7 +8453,7 @@ export function experimentalLoadCloneSync(entity: number | Entity, data: string)
  * Hash: 0x9D65CAD2
  * @deprecated Use misc.experimentalSaveCloneCreate(entity) instead
  */
-export function experimentalSaveCloneCreate(entity: number | Entity): string {
+export function experimentalSaveCloneCreate(entity: number | IEntity): string {
     return misc.experimentalSaveCloneCreate(entity);
 }
 
@@ -8641,7 +8463,7 @@ export function experimentalSaveCloneCreate(entity: number | Entity): string {
  * Hash: 0x38D19210
  * @deprecated Use misc.experimentalSaveCloneSync(entity) instead
  */
-export function experimentalSaveCloneSync(entity: number | Entity): string {
+export function experimentalSaveCloneSync(entity: number | IEntity): string {
     return misc.experimentalSaveCloneSync(entity);
 }
 
@@ -9081,7 +8903,7 @@ export function executeCommand(commandString: string): void {
  * Hash: 0xD70C3BCA
  * @deprecated Use misc.formatStackTrace(traceData) instead
  */
-export function formatStackTrace(traceData: number | Object): string {
+export function formatStackTrace(traceData: number | IObject): string {
     return misc.formatStackTrace(traceData);
 }
 
@@ -9376,7 +9198,7 @@ export function wasEventCanceled(): boolean {
  * Hash: 0x310D0271
  * @deprecated Use ped.getNumberOfCollectionDrawableVariations(ped1, componentId, collection) instead
  */
-export function getNumberOfPedCollectionDrawableVariations(ped1: number | Ped, componentId: number, collection: string): number {
+export function getNumberOfPedCollectionDrawableVariations(ped1: number | IPed, componentId: number, collection: string): number {
     return ped.getNumberOfCollectionDrawableVariations(ped1, componentId, collection);
 }
 
@@ -9386,7 +9208,7 @@ export function getNumberOfPedCollectionDrawableVariations(ped1: number | Ped, c
  * Hash: 0x3B6A13E1
  * @deprecated Use ped.getNumberOfCollectionPropDrawableVariations(ped1, anchorPoint, collection) instead
  */
-export function getNumberOfPedCollectionPropDrawableVariations(ped1: number | Ped, anchorPoint: number, collection: string): number {
+export function getNumberOfPedCollectionPropDrawableVariations(ped1: number | IPed, anchorPoint: number, collection: string): number {
     return ped.getNumberOfCollectionPropDrawableVariations(ped1, anchorPoint, collection);
 }
 
@@ -9396,7 +9218,7 @@ export function getNumberOfPedCollectionPropDrawableVariations(ped1: number | Pe
  * Hash: 0x75CAF9CC
  * @deprecated Use ped.getNumberOfCollectionPropTextureVariations(ped1, anchorPoint, collection, propIndex) instead
  */
-export function getNumberOfPedCollectionPropTextureVariations(ped1: number | Ped, anchorPoint: number, collection: string, propIndex: number): number {
+export function getNumberOfPedCollectionPropTextureVariations(ped1: number | IPed, anchorPoint: number, collection: string, propIndex: number): number {
     return ped.getNumberOfCollectionPropTextureVariations(ped1, anchorPoint, collection, propIndex);
 }
 
@@ -9406,7 +9228,7 @@ export function getNumberOfPedCollectionPropTextureVariations(ped1: number | Ped
  * Hash: 0xD2C15D7
  * @deprecated Use ped.getNumberOfCollectionTextureVariations(ped1, componentId, collection, drawableId) instead
  */
-export function getNumberOfPedCollectionTextureVariations(ped1: number | Ped, componentId: number, collection: string, drawableId: number): number {
+export function getNumberOfPedCollectionTextureVariations(ped1: number | IPed, componentId: number, collection: string, drawableId: number): number {
     return ped.getNumberOfCollectionTextureVariations(ped1, componentId, collection, drawableId);
 }
 
@@ -9420,7 +9242,7 @@ export function getNumberOfPedCollectionTextureVariations(ped1: number | Ped, co
  * Hash: 0x45946359
  * @deprecated Use ped.getCollectionsCount(ped1) instead
  */
-export function getPedCollectionsCount(ped1: number | Ped): number {
+export function getPedCollectionsCount(ped1: number | IPed): number {
     return ped.getCollectionsCount(ped1);
 }
 
@@ -9430,7 +9252,7 @@ export function getPedCollectionsCount(ped1: number | Ped): number {
  * Hash: 0x94EB1FE4
  * @deprecated Use ped.getCollectionLocalIndexFromDrawable(ped1, componentId, drawableId) instead
  */
-export function getPedCollectionLocalIndexFromDrawable(ped1: number | Ped, componentId: number, drawableId: number): number {
+export function getPedCollectionLocalIndexFromDrawable(ped1: number | IPed, componentId: number, drawableId: number): number {
     return ped.getCollectionLocalIndexFromDrawable(ped1, componentId, drawableId);
 }
 
@@ -9440,7 +9262,7 @@ export function getPedCollectionLocalIndexFromDrawable(ped1: number | Ped, compo
  * Hash: 0xFBDB885F
  * @deprecated Use ped.getCollectionLocalIndexFromProp(ped1, anchorPoint, propIndex) instead
  */
-export function getPedCollectionLocalIndexFromProp(ped1: number | Ped, anchorPoint: number, propIndex: number): number {
+export function getPedCollectionLocalIndexFromProp(ped1: number | IPed, anchorPoint: number, propIndex: number): number {
     return ped.getCollectionLocalIndexFromProp(ped1, anchorPoint, propIndex);
 }
 
@@ -9454,7 +9276,7 @@ export function getPedCollectionLocalIndexFromProp(ped1: number | Ped, anchorPoi
  * Hash: 0xFED5D83A
  * @deprecated Use ped.getCollectionName(ped1, index) instead
  */
-export function getPedCollectionName(ped1: number | Ped, index: number): string {
+export function getPedCollectionName(ped1: number | IPed, index: number): string {
     return ped.getCollectionName(ped1, index);
 }
 
@@ -9464,7 +9286,7 @@ export function getPedCollectionName(ped1: number | Ped, index: number): string 
  * Hash: 0xD6BBA48B
  * @deprecated Use ped.getCollectionNameFromDrawable(ped1, componentId, drawableId) instead
  */
-export function getPedCollectionNameFromDrawable(ped1: number | Ped, componentId: number, drawableId: number): string {
+export function getPedCollectionNameFromDrawable(ped1: number | IPed, componentId: number, drawableId: number): string {
     return ped.getCollectionNameFromDrawable(ped1, componentId, drawableId);
 }
 
@@ -9474,7 +9296,7 @@ export function getPedCollectionNameFromDrawable(ped1: number | Ped, componentId
  * Hash: 0x8ED0C17
  * @deprecated Use ped.getCollectionNameFromProp(ped1, anchorPoint, propIndex) instead
  */
-export function getPedCollectionNameFromProp(ped1: number | Ped, anchorPoint: number, propIndex: number): string {
+export function getPedCollectionNameFromProp(ped1: number | IPed, anchorPoint: number, propIndex: number): string {
     return ped.getCollectionNameFromProp(ped1, anchorPoint, propIndex);
 }
 
@@ -9492,7 +9314,7 @@ export function getPedCollectionNameFromProp(ped1: number | Ped, anchorPoint: nu
  * Hash: 0x7CCE1163
  * @deprecated Use ped.getDecorations(ped1) instead
  */
-export function getPedDecorations(ped1: number | Ped): number {
+export function getPedDecorations(ped1: number | IPed): number {
     return ped.getDecorations(ped1);
 }
 
@@ -9516,7 +9338,7 @@ export function getPedDensityMultiplier(): number {
  * Hash: 0x280F1FC3
  * @deprecated Use ped.getDrawableGlobalIndexFromCollection(ped1, componentId, collection, drawableId) instead
  */
-export function getPedDrawableGlobalIndexFromCollection(ped1: number | Ped, componentId: number, collection: string, drawableId: number): number {
+export function getPedDrawableGlobalIndexFromCollection(ped1: number | IPed, componentId: number, collection: string, drawableId: number): number {
     return ped.getDrawableGlobalIndexFromCollection(ped1, componentId, collection, drawableId);
 }
 
@@ -9526,7 +9348,7 @@ export function getPedDrawableGlobalIndexFromCollection(ped1: number | Ped, comp
  * Hash: 0x9970386F
  * @deprecated Use ped.getDrawableVariationCollectionLocalIndex(ped1, componentId) instead
  */
-export function getPedDrawableVariationCollectionLocalIndex(ped1: number | Ped, componentId: number): number {
+export function getPedDrawableVariationCollectionLocalIndex(ped1: number | IPed, componentId: number): number {
     return ped.getDrawableVariationCollectionLocalIndex(ped1, componentId);
 }
 
@@ -9538,7 +9360,7 @@ export function getPedDrawableVariationCollectionLocalIndex(ped1: number | Ped, 
  * Hash: 0xBCE0AB63
  * @deprecated Use ped.getDrawableVariationCollectionName(ped1, componentId) instead
  */
-export function getPedDrawableVariationCollectionName(ped1: number | Ped, componentId: number): string {
+export function getPedDrawableVariationCollectionName(ped1: number | IPed, componentId: number): string {
     return ped.getDrawableVariationCollectionName(ped1, componentId);
 }
 
@@ -9548,7 +9370,7 @@ export function getPedDrawableVariationCollectionName(ped1: number | Ped, compon
  * Hash: 0xA47B860F
  * @deprecated Use ped.getEyeColor(ped1) instead
  */
-export function getPedEyeColor(ped1: number | Ped): number {
+export function getPedEyeColor(ped1: number | IPed): number {
     return ped.getEyeColor(ped1);
 }
 
@@ -9558,7 +9380,7 @@ export function getPedEyeColor(ped1: number | Ped): number {
  * Hash: 0xBA352ADD
  * @deprecated Use ped.getFaceFeature(ped1, index) instead
  */
-export function getPedFaceFeature(ped1: number | Ped, index: number): number {
+export function getPedFaceFeature(ped1: number | IPed, index: number): number {
     return ped.getFaceFeature(ped1, index);
 }
 
@@ -9568,7 +9390,7 @@ export function getPedFaceFeature(ped1: number | Ped, index: number): number {
  * Hash: 0xA3EA2893
  * @deprecated Use ped.getHairColor(ped1) instead
  */
-export function getPedHairColor(ped1: number | Ped): number {
+export function getPedHairColor(ped1: number | IPed): number {
     return ped.getHairColor(ped1);
 }
 
@@ -9578,7 +9400,7 @@ export function getPedHairColor(ped1: number | Ped): number {
  * Hash: 0x4B087305
  * @deprecated Use ped.getHairHighlightColor(ped1) instead
  */
-export function getPedHairHighlightColor(ped1: number | Ped): number {
+export function getPedHairHighlightColor(ped1: number | IPed): number {
     return ped.getHairHighlightColor(ped1);
 }
 
@@ -9588,7 +9410,7 @@ export function getPedHairHighlightColor(ped1: number | Ped): number {
  * Hash: 0xC46EE605
  * @deprecated Use ped.getHeadOverlayData(ped1, index) instead
  */
-export function getPedHeadOverlayData(ped1: number | Ped, index: number): [boolean, number, number, number, number, number] {
+export function getPedHeadOverlayData(ped1: number | IPed, index: number): [boolean, number, number, number, number, number] {
     return ped.getHeadOverlayData(ped1, index);
 }
 
@@ -9618,7 +9440,7 @@ export function getPedModelPersonality(modelHash: number | string): number {
  * Hash: 0x69E81E3D
  * @deprecated Use ped.getMovementClipset(ped1) instead
  */
-export function getPedMovementClipset(ped1: number | Ped): number {
+export function getPedMovementClipset(ped1: number | IPed): number {
     return ped.getMovementClipset(ped1);
 }
 
@@ -9628,7 +9450,7 @@ export function getPedMovementClipset(ped1: number | Ped): number {
  * Hash: 0xCD420AD1
  * @deprecated Use ped.getPropCollectionLocalIndex(ped1, anchorPoint) instead
  */
-export function getPedPropCollectionLocalIndex(ped1: number | Ped, anchorPoint: number): number {
+export function getPedPropCollectionLocalIndex(ped1: number | IPed, anchorPoint: number): number {
     return ped.getPropCollectionLocalIndex(ped1, anchorPoint);
 }
 
@@ -9640,7 +9462,7 @@ export function getPedPropCollectionLocalIndex(ped1: number | Ped, anchorPoint: 
  * Hash: 0x6B5653E4
  * @deprecated Use ped.getPropCollectionName(ped1, anchorPoint) instead
  */
-export function getPedPropCollectionName(ped1: number | Ped, anchorPoint: number): string {
+export function getPedPropCollectionName(ped1: number | IPed, anchorPoint: number): string {
     return ped.getPropCollectionName(ped1, anchorPoint);
 }
 
@@ -9654,7 +9476,7 @@ export function getPedPropCollectionName(ped1: number | Ped, anchorPoint: number
  * Hash: 0x2CB45CDC
  * @deprecated Use ped.getPropGlobalIndexFromCollection(ped1, anchorPoint, collection, propIndex) instead
  */
-export function getPedPropGlobalIndexFromCollection(ped1: number | Ped, anchorPoint: number, collection: string, propIndex: number): number {
+export function getPedPropGlobalIndexFromCollection(ped1: number | IPed, anchorPoint: number, collection: string, propIndex: number): number {
     return ped.getPropGlobalIndexFromCollection(ped1, anchorPoint, collection, propIndex);
 }
 
@@ -9664,7 +9486,7 @@ export function getPedPropGlobalIndexFromCollection(ped1: number | Ped, anchorPo
  * Hash: 0x44B91E94
  * @deprecated Use ped.getSweat(ped1) instead
  */
-export function getPedSweat(ped1: number | Ped): number {
+export function getPedSweat(ped1: number | IPed): number {
     return ped.getSweat(ped1);
 }
 
@@ -9678,7 +9500,7 @@ export function getPedSweat(ped1: number | Ped): number {
  * Hash: 0x33B2AFA2
  * @deprecated Use ped.isCollectionComponentVariationGen9Exclusive(ped1, componentId, collection, drawableId) instead
  */
-export function isPedCollectionComponentVariationGen9Exclusive(ped1: number | Ped, componentId: number, collection: string, drawableId: number): boolean {
+export function isPedCollectionComponentVariationGen9Exclusive(ped1: number | IPed, componentId: number, collection: string, drawableId: number): boolean {
     return ped.isCollectionComponentVariationGen9Exclusive(ped1, componentId, collection, drawableId);
 }
 
@@ -9692,7 +9514,7 @@ export function isPedCollectionComponentVariationGen9Exclusive(ped1: number | Pe
  * Hash: 0xCA63A52A
  * @deprecated Use ped.isCollectionComponentVariationValid(ped1, componentId, collection, drawableId, textureId) instead
  */
-export function isPedCollectionComponentVariationValid(ped1: number | Ped, componentId: number, collection: string, drawableId: number, textureId: number): boolean {
+export function isPedCollectionComponentVariationValid(ped1: number | IPed, componentId: number, collection: string, drawableId: number, textureId: number): boolean {
     return ped.isCollectionComponentVariationValid(ped1, componentId, collection, drawableId, textureId);
 }
 
@@ -9702,7 +9524,7 @@ export function isPedCollectionComponentVariationValid(ped1: number | Ped, compo
  * Hash: 0xC767B581
  * @deprecated Use ped.isComponentVariationGen9Exclusive(ped1, componentId, drawableId) instead
  */
-export function isPedComponentVariationGen9Exclusive(ped1: number | Ped, componentId: number, drawableId: number): boolean {
+export function isPedComponentVariationGen9Exclusive(ped1: number | IPed, componentId: number, drawableId: number): boolean {
     return ped.isComponentVariationGen9Exclusive(ped1, componentId, drawableId);
 }
 
@@ -9750,7 +9572,7 @@ export function resetPedModelPersonality(modelHash: number | string): void {
  * Hash: 0x88711BBA
  * @deprecated Use ped.setCollectionComponentVariation(ped1, componentId, collection, drawableId, textureId, paletteId) instead
  */
-export function setPedCollectionComponentVariation(ped1: number | Ped, componentId: number, collection: string, drawableId: number, textureId: number, paletteId: number): void {
+export function setPedCollectionComponentVariation(ped1: number | IPed, componentId: number, collection: string, drawableId: number, textureId: number, paletteId: number): void {
     return ped.setCollectionComponentVariation(ped1, componentId, collection, drawableId, textureId, paletteId);
 }
 
@@ -9764,7 +9586,7 @@ export function setPedCollectionComponentVariation(ped1: number | Ped, component
  * Hash: 0x14B5BBE0
  * @deprecated Use ped.setCollectionPreloadPropData(ped1, anchorPoint, collection, propIndex, textureId) instead
  */
-export function setPedCollectionPreloadPropData(ped1: number | Ped, anchorPoint: number, collection: string, propIndex: number, textureId: number): void {
+export function setPedCollectionPreloadPropData(ped1: number | IPed, anchorPoint: number, collection: string, propIndex: number, textureId: number): void {
     return ped.setCollectionPreloadPropData(ped1, anchorPoint, collection, propIndex, textureId);
 }
 
@@ -9778,7 +9600,7 @@ export function setPedCollectionPreloadPropData(ped1: number | Ped, anchorPoint:
  * Hash: 0x3EC75558
  * @deprecated Use ped.setCollectionPreloadVariationData(ped1, componentId, collection, drawableId, textureId) instead
  */
-export function setPedCollectionPreloadVariationData(ped1: number | Ped, componentId: number, collection: string, drawableId: number, textureId: number): void {
+export function setPedCollectionPreloadVariationData(ped1: number | IPed, componentId: number, collection: string, drawableId: number, textureId: number): void {
     return ped.setCollectionPreloadVariationData(ped1, componentId, collection, drawableId, textureId);
 }
 
@@ -9792,7 +9614,7 @@ export function setPedCollectionPreloadVariationData(ped1: number | Ped, compone
  * Hash: 0x75240BCB
  * @deprecated Use ped.setCollectionPropIndex(ped1, anchorPoint, collection, propIndex, textureId, attach) instead
  */
-export function setPedCollectionPropIndex(ped1: number | Ped, anchorPoint: number, collection: string, propIndex: number, textureId: number, attach: boolean): void {
+export function setPedCollectionPropIndex(ped1: number | IPed, anchorPoint: number, collection: string, propIndex: number, textureId: number, attach: boolean): void {
     return ped.setCollectionPropIndex(ped1, anchorPoint, collection, propIndex, textureId, attach);
 }
 
@@ -9871,7 +9693,7 @@ export function setPedTurningThresholds(min: number, max: number): void {
  * Hash: 0x9C5E7C9C
  * @deprecated Use ped.getBoneMatrix(ped1, boneId) instead
  */
-export function getPedBoneMatrix(ped1: number | Ped, boneId: number): [Vector3, Vector3, Vector3, Vector3] {
+export function getPedBoneMatrix(ped1: number | IPed, boneId: number): [Vector3, Vector3, Vector3, Vector3] {
     return ped.getBoneMatrix(ped1, boneId);
 }
 
@@ -9995,7 +9817,7 @@ export function setRopeLengthChangeRate(rope: number, lengthChangeRate: number):
  * Hash: 0xF2E3912B
  * @deprecated Use player.getInvincible2(player1) instead
  */
-export function getPlayerInvincible2(player1: number | string | Player): boolean {
+export function getPlayerInvincible2(player1: number | string | IPlayer): boolean {
     return player.getInvincible2(player1);
 }
 
@@ -10005,7 +9827,7 @@ export function getPlayerInvincible2(player1: number | string | Player): boolean
  * Hash: 0xD014AB79
  * @deprecated Use player.getMaxStamina(playerId) instead
  */
-export function getPlayerMaxStamina(playerId: number | string | Player): number {
+export function getPlayerMaxStamina(playerId: number | string | IPlayer): number {
     return player.getMaxStamina(playerId);
 }
 
@@ -10015,7 +9837,7 @@ export function getPlayerMaxStamina(playerId: number | string | Player): number 
  * Hash: 0x27E94EF8
  * @deprecated Use player.getMeleeWeaponDefenseModifier(playerId) instead
  */
-export function getPlayerMeleeWeaponDefenseModifier(playerId: number | string | Player): number {
+export function getPlayerMeleeWeaponDefenseModifier(playerId: number | string | IPlayer): number {
     return player.getMeleeWeaponDefenseModifier(playerId);
 }
 
@@ -10025,7 +9847,7 @@ export function getPlayerMeleeWeaponDefenseModifier(playerId: number | string | 
  * Hash: 0xE415EC5C
  * @deprecated Use player.getStamina(playerId) instead
  */
-export function getPlayerStamina(playerId: number | string | Player): number {
+export function getPlayerStamina(playerId: number | string | IPlayer): number {
     return player.getStamina(playerId);
 }
 
@@ -10035,7 +9857,7 @@ export function getPlayerStamina(playerId: number | string | Player): number {
  * Hash: 0x78F27B1F
  * @deprecated Use player.getVehicleDamageModifier(playerId) instead
  */
-export function getPlayerVehicleDamageModifier(playerId: number | string | Player): number {
+export function getPlayerVehicleDamageModifier(playerId: number | string | IPlayer): number {
     return player.getVehicleDamageModifier(playerId);
 }
 
@@ -10045,7 +9867,7 @@ export function getPlayerVehicleDamageModifier(playerId: number | string | Playe
  * Hash: 0x8326E7CD
  * @deprecated Use player.getVehicleDefenseModifier(playerId) instead
  */
-export function getPlayerVehicleDefenseModifier(playerId: number | string | Player): number {
+export function getPlayerVehicleDefenseModifier(playerId: number | string | IPlayer): number {
     return player.getVehicleDefenseModifier(playerId);
 }
 
@@ -10055,7 +9877,7 @@ export function getPlayerVehicleDefenseModifier(playerId: number | string | Play
  * Hash: 0x35594F67
  * @deprecated Use player.setMaxStamina(playerId, maxStamina) instead
  */
-export function setPlayerMaxStamina(playerId: number | string | Player, maxStamina: number): boolean {
+export function setPlayerMaxStamina(playerId: number | string | IPlayer, maxStamina: number): boolean {
     return player.setMaxStamina(playerId, maxStamina);
 }
 
@@ -10065,7 +9887,7 @@ export function setPlayerMaxStamina(playerId: number | string | Player, maxStami
  * Hash: 0xA9EC16C7
  * @deprecated Use player.setStamina(playerId, stamina) instead
  */
-export function setPlayerStamina(playerId: number | string | Player, stamina: number): boolean {
+export function setPlayerStamina(playerId: number | string | IPlayer, stamina: number): boolean {
     return player.setStamina(playerId, stamina);
 }
 
@@ -10075,7 +9897,7 @@ export function setPlayerStamina(playerId: number | string | Player, stamina: nu
  * Hash: 0x8689A825
  * @deprecated Use player.getMeleeWeaponDamageModifier(playerId) instead
  */
-export function getPlayerMeleeWeaponDamageModifier(playerId: number | string | Player): number {
+export function getPlayerMeleeWeaponDamageModifier(playerId: number | string | IPlayer): number {
     return player.getMeleeWeaponDamageModifier(playerId);
 }
 
@@ -10085,7 +9907,7 @@ export function getPlayerMeleeWeaponDamageModifier(playerId: number | string | P
  * Hash: 0x2A3D7CDA
  * @deprecated Use player.getWeaponDamageModifier(playerId) instead
  */
-export function getPlayerWeaponDamageModifier(playerId: number | string | Player): number {
+export function getPlayerWeaponDamageModifier(playerId: number | string | IPlayer): number {
     return player.getWeaponDamageModifier(playerId);
 }
 
@@ -10095,7 +9917,7 @@ export function getPlayerWeaponDamageModifier(playerId: number | string | Player
  * Hash: 0xF1543251
  * @deprecated Use player.getWeaponDefenseModifier(playerId) instead
  */
-export function getPlayerWeaponDefenseModifier(playerId: number | string | Player): number {
+export function getPlayerWeaponDefenseModifier(playerId: number | string | IPlayer): number {
     return player.getWeaponDefenseModifier(playerId);
 }
 
@@ -10105,7 +9927,7 @@ export function getPlayerWeaponDefenseModifier(playerId: number | string | Playe
  * Hash: 0x986B65FF
  * @deprecated Use player.getWeaponDefenseModifier2(playerId) instead
  */
-export function getPlayerWeaponDefenseModifier2(playerId: number | string | Player): number {
+export function getPlayerWeaponDefenseModifier2(playerId: number | string | IPlayer): number {
     return player.getWeaponDefenseModifier2(playerId);
 }
 
@@ -10120,7 +9942,7 @@ export function getPlayerWeaponDefenseModifier2(playerId: number | string | Play
  * Hash: 0xCF143FB9
  * @deprecated Use player.getActives() instead
  */
-export function getActivePlayers(): number[] {
+export function getActivePlayers(): number {
     return player.getActives();
 }
 
@@ -10144,7 +9966,7 @@ export function getPlayerFromServerId(serverId: number): number | string {
  * Hash: 0x4D97BCC7
  * @deprecated Use player.getServerId(player1) instead
  */
-export function getPlayerServerId(player1: number | string | Player): number {
+export function getPlayerServerId(player1: number | string | IPlayer): number {
     return player.getServerId(player1);
 }
 
@@ -10155,7 +9977,7 @@ export function getPlayerServerId(player1: number | string | Player): number {
  * Hash: 0xFC02CAF6
  * @deprecated Use player.setTalkingOverride(player1, state) instead
  */
-export function setPlayerTalkingOverride(player1: number | string | Player, state: boolean): void {
+export function setPlayerTalkingOverride(player1: number | string | IPlayer, state: boolean): void {
     return player.setTalkingOverride(player1, state);
 }
 
@@ -10464,7 +10286,7 @@ export function setInteriorRoomTimecycle(interiorId: number, roomIndex: number, 
  * Hash: 0xFC52CB91
  * @deprecated Use streaming.updateMapdataEntity(mapdata, entity, entityDef) instead
  */
-export function updateMapdataEntity(mapdata: number, entity: number, entityDef: number | Object): void {
+export function updateMapdataEntity(mapdata: number, entity: number, entityDef: number | IObject): void {
     return streaming.updateMapdataEntity(mapdata, entity, entityDef);
 }
 
@@ -10639,7 +10461,7 @@ export function setTrackMaxSpeed(track1: number, newSpeed: number): void {
  * Hash: 0xA274CADB
  * @deprecated Use vehicle.breakOffWheel(vehicle1, wheelIndex, leaveDebrisTrail, deleteWheel, unknownFlag, putOnFire) instead
  */
-export function breakOffVehicleWheel(vehicle1: number | Vehicle, wheelIndex: number, leaveDebrisTrail: boolean, deleteWheel: boolean, unknownFlag: boolean, putOnFire: boolean): void {
+export function breakOffVehicleWheel(vehicle1: number | IVehicle, wheelIndex: number, leaveDebrisTrail: boolean, deleteWheel: boolean, unknownFlag: boolean, putOnFire: boolean): void {
     return vehicle.breakOffWheel(vehicle1, wheelIndex, leaveDebrisTrail, deleteWheel, unknownFlag, putOnFire);
 }
 
@@ -10649,7 +10471,7 @@ export function breakOffVehicleWheel(vehicle1: number | Vehicle, wheelIndex: num
  * Hash: 0x2867ED8C
  * @deprecated Use vehicle.clearXenonLightsCustomColor(vehicle1) instead
  */
-export function clearVehicleXenonLightsCustomColor(vehicle1: number | Vehicle): void {
+export function clearVehicleXenonLightsCustomColor(vehicle1: number | IVehicle): void {
     return vehicle.clearXenonLightsCustomColor(vehicle1);
 }
 
@@ -10671,7 +10493,7 @@ export function disableVehiclePassengerIdleCamera(state: boolean): void {
  * Hash: 0xEF30A696
  * @deprecated Use vehicle.doesUseFuel(vehicle1) instead
  */
-export function doesVehicleUseFuel(vehicle1: number | Vehicle): boolean {
+export function doesVehicleUseFuel(vehicle1: number | IVehicle): boolean {
     return vehicle.doesUseFuel(vehicle1);
 }
 
@@ -10709,7 +10531,7 @@ export function getAmbientVehicleRangeMultiplier(): number {
  * Hash: 0xE015E854
  * @deprecated Use vehicle.getTrainCurrentTrackNode(train) instead
  */
-export function getTrainCurrentTrackNode(train: number | Vehicle): number {
+export function getTrainCurrentTrackNode(train: number | IVehicle): number {
     return vehicle.getTrainCurrentTrackNode(train);
 }
 
@@ -10719,7 +10541,7 @@ export function getTrainCurrentTrackNode(train: number | Vehicle): number {
  * Hash: 0x99974721
  * @deprecated Use vehicle.getTrainDoorCount(train) instead
  */
-export function getTrainDoorCount(train: number | Vehicle): number {
+export function getTrainDoorCount(train: number | IVehicle): number {
     return vehicle.getTrainDoorCount(train);
 }
 
@@ -10729,7 +10551,7 @@ export function getTrainDoorCount(train: number | Vehicle): number {
  * Hash: 0x40B16551
  * @deprecated Use vehicle.getTrainDoorOpenRatio(train, doorIndex) instead
  */
-export function getTrainDoorOpenRatio(train: number | Vehicle, doorIndex: number): number {
+export function getTrainDoorOpenRatio(train: number | IVehicle, doorIndex: number): number {
     return vehicle.getTrainDoorOpenRatio(train, doorIndex);
 }
 
@@ -10739,7 +10561,7 @@ export function getTrainDoorOpenRatio(train: number | Vehicle, doorIndex: number
  * Hash: 0x428668B7
  * @deprecated Use vehicle.getTrainSpeed(train) instead
  */
-export function getTrainSpeed(train: number | Vehicle): number {
+export function getTrainSpeed(train: number | IVehicle): number {
     return vehicle.getTrainSpeed(train);
 }
 
@@ -10749,7 +10571,7 @@ export function getTrainSpeed(train: number | Vehicle): number {
  * Hash: 0xC62AAC98
  * @deprecated Use vehicle.getAlarmTimeLeft(vehicle1) instead
  */
-export function getVehicleAlarmTimeLeft(vehicle1: number | Vehicle): number {
+export function getVehicleAlarmTimeLeft(vehicle1: number | IVehicle): number {
     return vehicle.getAlarmTimeLeft(vehicle1);
 }
 
@@ -10759,7 +10581,7 @@ export function getVehicleAlarmTimeLeft(vehicle1: number | Vehicle): number {
  * Hash: 0xC3C93F28
  * @deprecated Use vehicle.getCheatPowerIncrease(vehicle1) instead
  */
-export function getVehicleCheatPowerIncrease(vehicle1: number | Vehicle): number {
+export function getVehicleCheatPowerIncrease(vehicle1: number | IVehicle): number {
     return vehicle.getCheatPowerIncrease(vehicle1);
 }
 
@@ -10769,7 +10591,7 @@ export function getVehicleCheatPowerIncrease(vehicle1: number | Vehicle): number
  * Hash: 0x1DAD4583
  * @deprecated Use vehicle.getClutch(vehicle1) instead
  */
-export function getVehicleClutch(vehicle1: number | Vehicle): number {
+export function getVehicleClutch(vehicle1: number | IVehicle): number {
     return vehicle.getClutch(vehicle1);
 }
 
@@ -10779,7 +10601,7 @@ export function getVehicleClutch(vehicle1: number | Vehicle): number {
  * Hash: 0xB4F4E566
  * @deprecated Use vehicle.getCurrentGear(vehicle1) instead
  */
-export function getVehicleCurrentGear(vehicle1: number | Vehicle): number {
+export function getVehicleCurrentGear(vehicle1: number | IVehicle): number {
     return vehicle.getCurrentGear(vehicle1);
 }
 
@@ -10789,7 +10611,7 @@ export function getVehicleCurrentGear(vehicle1: number | Vehicle): number {
  * Hash: 0xE7B12B54
  * @deprecated Use vehicle.getCurrentRpm(vehicle1) instead
  */
-export function getVehicleCurrentRpm(vehicle1: number | Vehicle): number {
+export function getVehicleCurrentRpm(vehicle1: number | IVehicle): number {
     return vehicle.getCurrentRpm(vehicle1);
 }
 
@@ -10879,7 +10701,7 @@ export function getVehicleDashboardRpm(): number {
  * Hash: 0x9AAD420E
  * @deprecated Use vehicle.getDashboardSpeed(vehicle1) instead
  */
-export function getVehicleDashboardSpeed(vehicle1: number | Vehicle): number {
+export function getVehicleDashboardSpeed(vehicle1: number | IVehicle): number {
     return vehicle.getDashboardSpeed(vehicle1);
 }
 
@@ -10919,7 +10741,7 @@ export function getVehicleDensityMultiplier(): number {
  * Hash: 0x21C1DA8E
  * @deprecated Use vehicle.getDrawnWheelAngleMult(vehicle1) instead
  */
-export function getVehicleDrawnWheelAngleMult(vehicle1: number | Vehicle): number {
+export function getVehicleDrawnWheelAngleMult(vehicle1: number | IVehicle): number {
     return vehicle.getDrawnWheelAngleMult(vehicle1);
 }
 
@@ -10929,7 +10751,7 @@ export function getVehicleDrawnWheelAngleMult(vehicle1: number | Vehicle): numbe
  * Hash: 0xF4F495CB
  * @deprecated Use vehicle.getEngineTemperature(vehicle1) instead
  */
-export function getVehicleEngineTemperature(vehicle1: number | Vehicle): number {
+export function getVehicleEngineTemperature(vehicle1: number | IVehicle): number {
     return vehicle.getEngineTemperature(vehicle1);
 }
 
@@ -10939,7 +10761,7 @@ export function getVehicleEngineTemperature(vehicle1: number | Vehicle): number 
  * Hash: 0x5F739BB8
  * @deprecated Use vehicle.getFuelLevel(vehicle1) instead
  */
-export function getVehicleFuelLevel(vehicle1: number | Vehicle): number {
+export function getVehicleFuelLevel(vehicle1: number | IVehicle): number {
     return vehicle.getFuelLevel(vehicle1);
 }
 
@@ -10949,7 +10771,7 @@ export function getVehicleFuelLevel(vehicle1: number | Vehicle): number {
  * Hash: 0x82E794B7
  * @deprecated Use vehicle.getGearRatio(vehicle1, gear) instead
  */
-export function getVehicleGearRatio(vehicle1: number | Vehicle, gear: number): number {
+export function getVehicleGearRatio(vehicle1: number | IVehicle, gear: number): number {
     return vehicle.getGearRatio(vehicle1, gear);
 }
 
@@ -10959,7 +10781,7 @@ export function getVehicleGearRatio(vehicle1: number | Vehicle, gear: number): n
  * Hash: 0xB48A1292
  * @deprecated Use vehicle.getGravityAmount(vehicle1) instead
  */
-export function getVehicleGravityAmount(vehicle1: number | Vehicle): number {
+export function getVehicleGravityAmount(vehicle1: number | IVehicle): number {
     return vehicle.getGravityAmount(vehicle1);
 }
 
@@ -10970,7 +10792,7 @@ export function getVehicleGravityAmount(vehicle1: number | Vehicle): number {
  * Hash: 0x642FC12F
  * @deprecated Use vehicle.getHandlingFloat(vehicle1, class_, fieldName) instead
  */
-export function getVehicleHandlingFloat(vehicle1: number | Vehicle, class_: string, fieldName: string): number {
+export function getVehicleHandlingFloat(vehicle1: number | IVehicle, class_: string, fieldName: string): number {
     return vehicle.getHandlingFloat(vehicle1, class_, fieldName);
 }
 
@@ -10981,7 +10803,7 @@ export function getVehicleHandlingFloat(vehicle1: number | Vehicle, class_: stri
  * Hash: 0x27396C75
  * @deprecated Use vehicle.getHandlingInt(vehicle1, class_, fieldName) instead
  */
-export function getVehicleHandlingInt(vehicle1: number | Vehicle, class_: string, fieldName: string): number {
+export function getVehicleHandlingInt(vehicle1: number | IVehicle, class_: string, fieldName: string): number {
     return vehicle.getHandlingInt(vehicle1, class_, fieldName);
 }
 
@@ -10992,7 +10814,7 @@ export function getVehicleHandlingInt(vehicle1: number | Vehicle, class_: string
  * Hash: 0xFB341304
  * @deprecated Use vehicle.getHandlingVector(vehicle1, class_, fieldName) instead
  */
-export function getVehicleHandlingVector(vehicle1: number | Vehicle, class_: string, fieldName: string): Vector3 {
+export function getVehicleHandlingVector(vehicle1: number | IVehicle, class_: string, fieldName: string): Vector3 {
     return vehicle.getHandlingVector(vehicle1, class_, fieldName);
 }
 
@@ -11002,7 +10824,7 @@ export function getVehicleHandlingVector(vehicle1: number | Vehicle, class_: str
  * Hash: 0xF1D1D689
  * @deprecated Use vehicle.getHighGear(vehicle1) instead
  */
-export function getVehicleHighGear(vehicle1: number | Vehicle): number {
+export function getVehicleHighGear(vehicle1: number | IVehicle): number {
     return vehicle.getHighGear(vehicle1);
 }
 
@@ -11012,7 +10834,7 @@ export function getVehicleHighGear(vehicle1: number | Vehicle): number {
  * Hash: 0x83070354
  * @deprecated Use vehicle.getIndicatorLights(vehicle1) instead
  */
-export function getVehicleIndicatorLights(vehicle1: number | Vehicle): number {
+export function getVehicleIndicatorLights(vehicle1: number | IVehicle): number {
     return vehicle.getIndicatorLights(vehicle1);
 }
 
@@ -11022,7 +10844,7 @@ export function getVehicleIndicatorLights(vehicle1: number | Vehicle): number {
  * Hash: 0x7E6E219C
  * @deprecated Use vehicle.getLightMultiplier(vehicle1) instead
  */
-export function getVehicleLightMultiplier(vehicle1: number | Vehicle): number {
+export function getVehicleLightMultiplier(vehicle1: number | IVehicle): number {
     return vehicle.getLightMultiplier(vehicle1);
 }
 
@@ -11032,7 +10854,7 @@ export function getVehicleLightMultiplier(vehicle1: number | Vehicle): number {
  * Hash: 0xDDB298AE
  * @deprecated Use vehicle.getNextGear(vehicle1) instead
  */
-export function getVehicleNextGear(vehicle1: number | Vehicle): number {
+export function getVehicleNextGear(vehicle1: number | IVehicle): number {
     return vehicle.getNextGear(vehicle1);
 }
 
@@ -11042,7 +10864,7 @@ export function getVehicleNextGear(vehicle1: number | Vehicle): number {
  * Hash: 0xEDF4B0FC
  * @deprecated Use vehicle.getNumberOfWheels(vehicle1) instead
  */
-export function getVehicleNumberOfWheels(vehicle1: number | Vehicle): number {
+export function getVehicleNumberOfWheels(vehicle1: number | IVehicle): number {
     return vehicle.getNumberOfWheels(vehicle1);
 }
 
@@ -11052,7 +10874,7 @@ export function getVehicleNumberOfWheels(vehicle1: number | Vehicle): number {
  * Hash: 0xFC7F8EF4
  * @deprecated Use vehicle.getOilLevel(vehicle1) instead
  */
-export function getVehicleOilLevel(vehicle1: number | Vehicle): number {
+export function getVehicleOilLevel(vehicle1: number | IVehicle): number {
     return vehicle.getOilLevel(vehicle1);
 }
 
@@ -11062,7 +10884,7 @@ export function getVehicleOilLevel(vehicle1: number | Vehicle): number {
  * Hash: 0x954465DE
  * @deprecated Use vehicle.getSteeringScale(vehicle1) instead
  */
-export function getVehicleSteeringScale(vehicle1: number | Vehicle): number {
+export function getVehicleSteeringScale(vehicle1: number | IVehicle): number {
     return vehicle.getSteeringScale(vehicle1);
 }
 
@@ -11072,7 +10894,7 @@ export function getVehicleSteeringScale(vehicle1: number | Vehicle): number {
  * Hash: 0xD1D07351
  * @deprecated Use vehicle.getThrottleOffset(vehicle1) instead
  */
-export function getVehicleThrottleOffset(vehicle1: number | Vehicle): number {
+export function getVehicleThrottleOffset(vehicle1: number | IVehicle): number {
     return vehicle.getThrottleOffset(vehicle1);
 }
 
@@ -11082,7 +10904,7 @@ export function getVehicleThrottleOffset(vehicle1: number | Vehicle): number {
  * Hash: 0x998B7FEE
  * @deprecated Use vehicle.getTopSpeedModifier(vehicle1) instead
  */
-export function getVehicleTopSpeedModifier(vehicle1: number | Vehicle): number {
+export function getVehicleTopSpeedModifier(vehicle1: number | IVehicle): number {
     return vehicle.getTopSpeedModifier(vehicle1);
 }
 
@@ -11092,7 +10914,7 @@ export function getVehicleTopSpeedModifier(vehicle1: number | Vehicle): number {
  * Hash: 0xE02B51D7
  * @deprecated Use vehicle.getTurboPressure(vehicle1) instead
  */
-export function getVehicleTurboPressure(vehicle1: number | Vehicle): number {
+export function getVehicleTurboPressure(vehicle1: number | IVehicle): number {
     return vehicle.getTurboPressure(vehicle1);
 }
 
@@ -11108,7 +10930,7 @@ export function getVehicleTurboPressure(vehicle1: number | Vehicle): number {
  * Hash: 0x137260D1
  * @deprecated Use vehicle.getWheelieState(vehicle1) instead
  */
-export function getVehicleWheelieState(vehicle1: number | Vehicle): number {
+export function getVehicleWheelieState(vehicle1: number | IVehicle): number {
     return vehicle.getWheelieState(vehicle1);
 }
 
@@ -11120,7 +10942,7 @@ export function getVehicleWheelieState(vehicle1: number | Vehicle): number {
  * Hash: 0x70FE2EFF
  * @deprecated Use vehicle.getWheelBrakePressure(vehicle1, wheelIndex) instead
  */
-export function getVehicleWheelBrakePressure(vehicle1: number | Vehicle, wheelIndex: number): number {
+export function getVehicleWheelBrakePressure(vehicle1: number | IVehicle, wheelIndex: number): number {
     return vehicle.getWheelBrakePressure(vehicle1, wheelIndex);
 }
 
@@ -11131,7 +10953,7 @@ export function getVehicleWheelBrakePressure(vehicle1: number | Vehicle, wheelIn
  * Hash: 0xC70FA0C7
  * @deprecated Use vehicle.getWheelFlags(vehicle1, wheelIndex) instead
  */
-export function getVehicleWheelFlags(vehicle1: number | Vehicle, wheelIndex: number): number {
+export function getVehicleWheelFlags(vehicle1: number | IVehicle, wheelIndex: number): number {
     return vehicle.getWheelFlags(vehicle1, wheelIndex);
 }
 
@@ -11141,7 +10963,7 @@ export function getVehicleWheelFlags(vehicle1: number | Vehicle, wheelIndex: num
  * Hash: 0x54A677F5
  * @deprecated Use vehicle.getWheelHealth(vehicle1, wheelIndex) instead
  */
-export function getVehicleWheelHealth(vehicle1: number | Vehicle, wheelIndex: number): number {
+export function getVehicleWheelHealth(vehicle1: number | IVehicle, wheelIndex: number): number {
     return vehicle.getWheelHealth(vehicle1, wheelIndex);
 }
 
@@ -11153,7 +10975,7 @@ export function getVehicleWheelHealth(vehicle1: number | Vehicle, wheelIndex: nu
  * Hash: 0x3CCF1B49
  * @deprecated Use vehicle.getWheelIsPowered(vehicle1, wheelIndex) instead
  */
-export function getVehicleWheelIsPowered(vehicle1: number | Vehicle, wheelIndex: number): boolean {
+export function getVehicleWheelIsPowered(vehicle1: number | IVehicle, wheelIndex: number): boolean {
     return vehicle.getWheelIsPowered(vehicle1, wheelIndex);
 }
 
@@ -11164,7 +10986,7 @@ export function getVehicleWheelIsPowered(vehicle1: number | Vehicle, wheelIndex:
  * Hash: 0xD203287
  * @deprecated Use vehicle.getWheelPower(vehicle1, wheelIndex) instead
  */
-export function getVehicleWheelPower(vehicle1: number | Vehicle, wheelIndex: number): number {
+export function getVehicleWheelPower(vehicle1: number | IVehicle, wheelIndex: number): number {
     return vehicle.getWheelPower(vehicle1, wheelIndex);
 }
 
@@ -11174,7 +10996,7 @@ export function getVehicleWheelPower(vehicle1: number | Vehicle, wheelIndex: num
  * Hash: 0xCEE21AB2
  * @deprecated Use vehicle.getWheelRimColliderSize(vehicle1, wheelIndex) instead
  */
-export function getVehicleWheelRimColliderSize(vehicle1: number | Vehicle, wheelIndex: number): number {
+export function getVehicleWheelRimColliderSize(vehicle1: number | IVehicle, wheelIndex: number): number {
     return vehicle.getWheelRimColliderSize(vehicle1, wheelIndex);
 }
 
@@ -11186,7 +11008,7 @@ export function getVehicleWheelRimColliderSize(vehicle1: number | Vehicle, wheel
  * Hash: 0xEA1859E5
  * @deprecated Use vehicle.getWheelRotationSpeed(vehicle1, wheelIndex) instead
  */
-export function getVehicleWheelRotationSpeed(vehicle1: number | Vehicle, wheelIndex: number): number {
+export function getVehicleWheelRotationSpeed(vehicle1: number | IVehicle, wheelIndex: number): number {
     return vehicle.getWheelRotationSpeed(vehicle1, wheelIndex);
 }
 
@@ -11197,7 +11019,7 @@ export function getVehicleWheelRotationSpeed(vehicle1: number | Vehicle, wheelIn
  * Hash: 0x4046B66
  * @deprecated Use vehicle.getWheelSize(vehicle1) instead
  */
-export function getVehicleWheelSize(vehicle1: number | Vehicle): number {
+export function getVehicleWheelSize(vehicle1: number | IVehicle): number {
     return vehicle.getWheelSize(vehicle1);
 }
 
@@ -11208,7 +11030,7 @@ export function getVehicleWheelSize(vehicle1: number | Vehicle): number {
  * Hash: 0x149C9DA0
  * @deprecated Use vehicle.getWheelSpeed(vehicle1, wheelIndex) instead
  */
-export function getVehicleWheelSpeed(vehicle1: number | Vehicle, wheelIndex: number): number {
+export function getVehicleWheelSpeed(vehicle1: number | IVehicle, wheelIndex: number): number {
     return vehicle.getWheelSpeed(vehicle1, wheelIndex);
 }
 
@@ -11219,7 +11041,7 @@ export function getVehicleWheelSpeed(vehicle1: number | Vehicle, wheelIndex: num
  * Hash: 0xA0867448
  * @deprecated Use vehicle.getWheelSteeringAngle(vehicle1, wheelIndex) instead
  */
-export function getVehicleWheelSteeringAngle(vehicle1: number | Vehicle, wheelIndex: number): number {
+export function getVehicleWheelSteeringAngle(vehicle1: number | IVehicle, wheelIndex: number): number {
     return vehicle.getWheelSteeringAngle(vehicle1, wheelIndex);
 }
 
@@ -11229,7 +11051,7 @@ export function getVehicleWheelSteeringAngle(vehicle1: number | Vehicle, wheelIn
  * Hash: 0xA7F04022
  * @deprecated Use vehicle.getWheelSurfaceMaterial(vehicle1, wheelIndex) instead
  */
-export function getVehicleWheelSurfaceMaterial(vehicle1: number | Vehicle, wheelIndex: number): number {
+export function getVehicleWheelSurfaceMaterial(vehicle1: number | IVehicle, wheelIndex: number): number {
     return vehicle.getWheelSurfaceMaterial(vehicle1, wheelIndex);
 }
 
@@ -11241,7 +11063,7 @@ export function getVehicleWheelSurfaceMaterial(vehicle1: number | Vehicle, wheel
  * Hash: 0x2B48175B
  * @deprecated Use vehicle.getWheelSuspensionCompression(vehicle1, wheelIndex) instead
  */
-export function getVehicleWheelSuspensionCompression(vehicle1: number | Vehicle, wheelIndex: number): number {
+export function getVehicleWheelSuspensionCompression(vehicle1: number | IVehicle, wheelIndex: number): number {
     return vehicle.getWheelSuspensionCompression(vehicle1, wheelIndex);
 }
 
@@ -11251,7 +11073,7 @@ export function getVehicleWheelSuspensionCompression(vehicle1: number | Vehicle,
  * Hash: 0xE0BA9FE6
  * @deprecated Use vehicle.getWheelTireColliderSize(vehicle1, wheelIndex) instead
  */
-export function getVehicleWheelTireColliderSize(vehicle1: number | Vehicle, wheelIndex: number): number {
+export function getVehicleWheelTireColliderSize(vehicle1: number | IVehicle, wheelIndex: number): number {
     return vehicle.getWheelTireColliderSize(vehicle1, wheelIndex);
 }
 
@@ -11261,7 +11083,7 @@ export function getVehicleWheelTireColliderSize(vehicle1: number | Vehicle, whee
  * Hash: 0xEF65929C
  * @deprecated Use vehicle.getWheelTireColliderWidth(vehicle1, wheelIndex) instead
  */
-export function getVehicleWheelTireColliderWidth(vehicle1: number | Vehicle, wheelIndex: number): number {
+export function getVehicleWheelTireColliderWidth(vehicle1: number | IVehicle, wheelIndex: number): number {
     return vehicle.getWheelTireColliderWidth(vehicle1, wheelIndex);
 }
 
@@ -11272,7 +11094,7 @@ export function getVehicleWheelTireColliderWidth(vehicle1: number | Vehicle, whe
  * Hash: 0x3BCFEE14
  * @deprecated Use vehicle.getWheelTractionVectorLength(vehicle1, wheelIndex) instead
  */
-export function getVehicleWheelTractionVectorLength(vehicle1: number | Vehicle, wheelIndex: number): number {
+export function getVehicleWheelTractionVectorLength(vehicle1: number | IVehicle, wheelIndex: number): number {
     return vehicle.getWheelTractionVectorLength(vehicle1, wheelIndex);
 }
 
@@ -11283,7 +11105,7 @@ export function getVehicleWheelTractionVectorLength(vehicle1: number | Vehicle, 
  * Hash: 0x9C7B59F9
  * @deprecated Use vehicle.getWheelWidth(vehicle1) instead
  */
-export function getVehicleWheelWidth(vehicle1: number | Vehicle): number {
+export function getVehicleWheelWidth(vehicle1: number | IVehicle): number {
     return vehicle.getWheelWidth(vehicle1);
 }
 
@@ -11293,7 +11115,7 @@ export function getVehicleWheelWidth(vehicle1: number | Vehicle): number {
  * Hash: 0xCC90CBCA
  * @deprecated Use vehicle.getWheelXOffset(vehicle1, wheelIndex) instead
  */
-export function getVehicleWheelXOffset(vehicle1: number | Vehicle, wheelIndex: number): number {
+export function getVehicleWheelXOffset(vehicle1: number | IVehicle, wheelIndex: number): number {
     return vehicle.getWheelXOffset(vehicle1, wheelIndex);
 }
 
@@ -11303,7 +11125,7 @@ export function getVehicleWheelXOffset(vehicle1: number | Vehicle, wheelIndex: n
  * Hash: 0x2EA4AFFE
  * @deprecated Use vehicle.getWheelYRotation(vehicle1, wheelIndex) instead
  */
-export function getVehicleWheelYRotation(vehicle1: number | Vehicle, wheelIndex: number): number {
+export function getVehicleWheelYRotation(vehicle1: number | IVehicle, wheelIndex: number): number {
     return vehicle.getWheelYRotation(vehicle1, wheelIndex);
 }
 
@@ -11313,7 +11135,7 @@ export function getVehicleWheelYRotation(vehicle1: number | Vehicle, wheelIndex:
  * Hash: 0xC715F730
  * @deprecated Use vehicle.getXenonLightsCustomColor(vehicle1) instead
  */
-export function getVehicleXenonLightsCustomColor(vehicle1: number | Vehicle): [boolean, number, number, number] {
+export function getVehicleXenonLightsCustomColor(vehicle1: number | IVehicle): [boolean, number, number, number] {
     return vehicle.getXenonLightsCustomColor(vehicle1);
 }
 
@@ -11333,7 +11155,7 @@ export function getVehicleXmasSnowFactor(): number {
  * Hash: 0xDC921211
  * @deprecated Use vehicle.isAlarmSet(vehicle1) instead
  */
-export function isVehicleAlarmSet(vehicle1: number | Vehicle): boolean {
+export function isVehicleAlarmSet(vehicle1: number | IVehicle): boolean {
     return vehicle.isAlarmSet(vehicle1);
 }
 
@@ -11343,7 +11165,7 @@ export function isVehicleAlarmSet(vehicle1: number | Vehicle): boolean {
  * Hash: 0xA411F72C
  * @deprecated Use vehicle.isInteriorLightOn(vehicle1) instead
  */
-export function isVehicleInteriorLightOn(vehicle1: number | Vehicle): boolean {
+export function isVehicleInteriorLightOn(vehicle1: number | IVehicle): boolean {
     return vehicle.isInteriorLightOn(vehicle1);
 }
 
@@ -11353,7 +11175,7 @@ export function isVehicleInteriorLightOn(vehicle1: number | Vehicle): boolean {
  * Hash: 0xF9933BF4
  * @deprecated Use vehicle.isNeedsToBeHotwired(vehicle1) instead
  */
-export function isVehicleNeedsToBeHotwired(vehicle1: number | Vehicle): boolean {
+export function isVehicleNeedsToBeHotwired(vehicle1: number | IVehicle): boolean {
     return vehicle.isNeedsToBeHotwired(vehicle1);
 }
 
@@ -11363,7 +11185,7 @@ export function isVehicleNeedsToBeHotwired(vehicle1: number | Vehicle): boolean 
  * Hash: 0xF849ED67
  * @deprecated Use vehicle.isPreviouslyOwnedByPlayer(vehicle1) instead
  */
-export function isVehiclePreviouslyOwnedByPlayer(vehicle1: number | Vehicle): boolean {
+export function isVehiclePreviouslyOwnedByPlayer(vehicle1: number | IVehicle): boolean {
     return vehicle.isPreviouslyOwnedByPlayer(vehicle1);
 }
 
@@ -11373,7 +11195,7 @@ export function isVehiclePreviouslyOwnedByPlayer(vehicle1: number | Vehicle): bo
  * Hash: 0xA7DAF7C
  * @deprecated Use vehicle.isWanted(vehicle1) instead
  */
-export function isVehicleWanted(vehicle1: number | Vehicle): boolean {
+export function isVehicleWanted(vehicle1: number | IVehicle): boolean {
     return vehicle.isWanted(vehicle1);
 }
 
@@ -11403,7 +11225,7 @@ export function overrideReactionToVehicleSiren(state: boolean, reaction: number)
  * Hash: 0x7FA03E76
  * @deprecated Use vehicle.overridePedsCanStandOnTopFlag(vehicle1, can) instead
  */
-export function overrideVehiclePedsCanStandOnTopFlag(vehicle1: number | Vehicle, can: boolean): void {
+export function overrideVehiclePedsCanStandOnTopFlag(vehicle1: number | IVehicle, can: boolean): void {
     return vehicle.overridePedsCanStandOnTopFlag(vehicle1, can);
 }
 
@@ -11415,7 +11237,7 @@ export function overrideVehiclePedsCanStandOnTopFlag(vehicle1: number | Vehicle,
  * Hash: 0xDF62CFE2
  * @deprecated Use vehicle.resetPedsCanStandOnTopFlag(vehicle1) instead
  */
-export function resetVehiclePedsCanStandOnTopFlag(vehicle1: number | Vehicle): void {
+export function resetVehiclePedsCanStandOnTopFlag(vehicle1: number | IVehicle): void {
     return vehicle.resetPedsCanStandOnTopFlag(vehicle1);
 }
 
@@ -11512,7 +11334,7 @@ export function setTrainsForceDoorsOpen(forceOpen: boolean): void {
  * Hash: 0x2468DBE8
  * @deprecated Use vehicle.setTrainDoorOpenRatio(train, doorIndex, ratio) instead
  */
-export function setTrainDoorOpenRatio(train: number | Vehicle, doorIndex: number, ratio: number): void {
+export function setTrainDoorOpenRatio(train: number | IVehicle, doorIndex: number, ratio: number): void {
     return vehicle.setTrainDoorOpenRatio(train, doorIndex, ratio);
 }
 
@@ -11522,7 +11344,7 @@ export function setTrainDoorOpenRatio(train: number | Vehicle, doorIndex: number
  * Hash: 0x61CB74A0
  * @deprecated Use vehicle.setTrainState(train, state) instead
  */
-export function setTrainState(train: number | Vehicle, state: number): void {
+export function setTrainState(train: number | IVehicle, state: number): void {
     return vehicle.setTrainState(train, state);
 }
 
@@ -11532,7 +11354,7 @@ export function setTrainState(train: number | Vehicle, state: number): void {
  * Hash: 0xECB8B577
  * @deprecated Use vehicle.setTrainStopAtStations(train, state) instead
  */
-export function setTrainStopAtStations(train: number | Vehicle, state: boolean): void {
+export function setTrainStopAtStations(train: number | IVehicle, state: boolean): void {
     return vehicle.setTrainStopAtStations(train, state);
 }
 
@@ -11542,7 +11364,7 @@ export function setTrainStopAtStations(train: number | Vehicle, state: boolean):
  * Hash: 0xC108EE6F
  * @deprecated Use vehicle.setAlarmTimeLeft(vehicle1, time) instead
  */
-export function setVehicleAlarmTimeLeft(vehicle1: number | Vehicle, time: number): void {
+export function setVehicleAlarmTimeLeft(vehicle1: number | IVehicle, time: number): void {
     return vehicle.setAlarmTimeLeft(vehicle1, time);
 }
 
@@ -11552,7 +11374,7 @@ export function setVehicleAlarmTimeLeft(vehicle1: number | Vehicle, time: number
  * Hash: 0x5F3A3574
  * @deprecated Use vehicle.setAutoRepairDisabled(vehicle1, value) instead
  */
-export function setVehicleAutoRepairDisabled(vehicle1: number | Vehicle, value: boolean): void {
+export function setVehicleAutoRepairDisabled(vehicle1: number | IVehicle, value: boolean): void {
     return vehicle.setAutoRepairDisabled(vehicle1, value);
 }
 
@@ -11562,7 +11384,7 @@ export function setVehicleAutoRepairDisabled(vehicle1: number | Vehicle, value: 
  * Hash: 0x2F70ACED
  * @deprecated Use vehicle.setClutch(vehicle1, clutch) instead
  */
-export function setVehicleClutch(vehicle1: number | Vehicle, clutch: number): void {
+export function setVehicleClutch(vehicle1: number | IVehicle, clutch: number): void {
     return vehicle.setClutch(vehicle1, clutch);
 }
 
@@ -11572,7 +11394,7 @@ export function setVehicleClutch(vehicle1: number | Vehicle, clutch: number): vo
  * Hash: 0x2A01A8FC
  * @deprecated Use vehicle.setCurrentRpm(vehicle1, rpm) instead
  */
-export function setVehicleCurrentRpm(vehicle1: number | Vehicle, rpm: number): void {
+export function setVehicleCurrentRpm(vehicle1: number | IVehicle, rpm: number): void {
     return vehicle.setCurrentRpm(vehicle1, rpm);
 }
 
@@ -11582,7 +11404,7 @@ export function setVehicleCurrentRpm(vehicle1: number | Vehicle, rpm: number): v
  * Hash: 0x6C93C4A9
  * @deprecated Use vehicle.setEngineTemperature(vehicle1, temperature) instead
  */
-export function setVehicleEngineTemperature(vehicle1: number | Vehicle, temperature: number): void {
+export function setVehicleEngineTemperature(vehicle1: number | IVehicle, temperature: number): void {
     return vehicle.setEngineTemperature(vehicle1, temperature);
 }
 
@@ -11592,7 +11414,7 @@ export function setVehicleEngineTemperature(vehicle1: number | Vehicle, temperat
  * Hash: 0xBA970511
  * @deprecated Use vehicle.setFuelLevel(vehicle1, level) instead
  */
-export function setVehicleFuelLevel(vehicle1: number | Vehicle, level: number): void {
+export function setVehicleFuelLevel(vehicle1: number | IVehicle, level: number): void {
     return vehicle.setFuelLevel(vehicle1, level);
 }
 
@@ -11602,7 +11424,7 @@ export function setVehicleFuelLevel(vehicle1: number | Vehicle, level: number): 
  * Hash: 0x496EF2F2
  * @deprecated Use vehicle.setGearRatio(vehicle1, gear, ratio) instead
  */
-export function setVehicleGearRatio(vehicle1: number | Vehicle, gear: number, ratio: number): void {
+export function setVehicleGearRatio(vehicle1: number | IVehicle, gear: number, ratio: number): void {
     return vehicle.setGearRatio(vehicle1, gear, ratio);
 }
 
@@ -11612,7 +11434,7 @@ export function setVehicleGearRatio(vehicle1: number | Vehicle, gear: number, ra
  * Hash: 0x1A963E58
  * @deprecated Use vehicle.setGravityAmount(vehicle1, gravity) instead
  */
-export function setVehicleGravityAmount(vehicle1: number | Vehicle, gravity: number): void {
+export function setVehicleGravityAmount(vehicle1: number | IVehicle, gravity: number): void {
     return vehicle.setGravityAmount(vehicle1, gravity);
 }
 
@@ -11623,7 +11445,7 @@ export function setVehicleGravityAmount(vehicle1: number | Vehicle, gravity: num
  * Hash: 0x2BA40795
  * @deprecated Use vehicle.setVehicleHandlingField(vehicle1, class_, fieldName, value) instead
  */
-export function setVehicleHandlingField(vehicle1: number | Vehicle, class_: string, fieldName: string, value: any): void {
+export function setVehicleHandlingField(vehicle1: number | IVehicle, class_: string, fieldName: string, value: any): void {
     return vehicle.setVehicleHandlingField(vehicle1, class_, fieldName, value);
 }
 
@@ -11634,7 +11456,7 @@ export function setVehicleHandlingField(vehicle1: number | Vehicle, class_: stri
  * Hash: 0x488C86D2
  * @deprecated Use vehicle.setVehicleHandlingFloat(vehicle1, class_, fieldName, value) instead
  */
-export function setVehicleHandlingFloat(vehicle1: number | Vehicle, class_: string, fieldName: string, value: number): void {
+export function setVehicleHandlingFloat(vehicle1: number | IVehicle, class_: string, fieldName: string, value: number): void {
     return vehicle.setVehicleHandlingFloat(vehicle1, class_, fieldName, value);
 }
 
@@ -11644,7 +11466,7 @@ export function setVehicleHandlingFloat(vehicle1: number | Vehicle, class_: stri
  * Hash: 0xC37F4CF9
  * @deprecated Use vehicle.setVehicleHandlingInt(vehicle1, class_, fieldName, value) instead
  */
-export function setVehicleHandlingInt(vehicle1: number | Vehicle, class_: string, fieldName: string, value: number): void {
+export function setVehicleHandlingInt(vehicle1: number | IVehicle, class_: string, fieldName: string, value: number): void {
     return vehicle.setVehicleHandlingInt(vehicle1, class_, fieldName, value);
 }
 
@@ -11654,7 +11476,7 @@ export function setVehicleHandlingInt(vehicle1: number | Vehicle, class_: string
  * Hash: 0x12497890
  * @deprecated Use vehicle.setVehicleHandlingVector(vehicle1, class_, fieldName, value) instead
  */
-export function setVehicleHandlingVector(vehicle1: number | Vehicle, class_: string, fieldName: string, value: Vector3): void {
+export function setVehicleHandlingVector(vehicle1: number | IVehicle, class_: string, fieldName: string, value: Vector3): void {
     return vehicle.setVehicleHandlingVector(vehicle1, class_, fieldName, value);
 }
 
@@ -11664,7 +11486,7 @@ export function setVehicleHandlingVector(vehicle1: number | Vehicle, class_: str
  * Hash: 0x20B1B3E6
  * @deprecated Use vehicle.setHighGear(vehicle1, gear) instead
  */
-export function setVehicleHighGear(vehicle1: number | Vehicle, gear: number): void {
+export function setVehicleHighGear(vehicle1: number | IVehicle, gear: number): void {
     return vehicle.setHighGear(vehicle1, gear);
 }
 
@@ -11684,7 +11506,7 @@ export function setVehicleNitroPtfxRange(range: number): void {
  * Hash: 0x90D1CAD1
  * @deprecated Use vehicle.setOilLevel(vehicle1, level) instead
  */
-export function setVehicleOilLevel(vehicle1: number | Vehicle, level: number): void {
+export function setVehicleOilLevel(vehicle1: number | IVehicle, level: number): void {
     return vehicle.setOilLevel(vehicle1, level);
 }
 
@@ -11694,7 +11516,7 @@ export function setVehicleOilLevel(vehicle1: number | Vehicle, level: number): v
  * Hash: 0x2A6CC9F2
  * @deprecated Use vehicle.setPitchBias(vehicle1, value) instead
  */
-export function setVehiclePitchBias(vehicle1: number | Vehicle, value: number): void {
+export function setVehiclePitchBias(vehicle1: number | IVehicle, value: number): void {
     return vehicle.setPitchBias(vehicle1, value);
 }
 
@@ -11704,7 +11526,7 @@ export function setVehiclePitchBias(vehicle1: number | Vehicle, value: number): 
  * Hash: 0x264B45DE
  * @deprecated Use vehicle.setRollBias(vehicle1, value) instead
  */
-export function setVehicleRollBias(vehicle1: number | Vehicle, value: number): void {
+export function setVehicleRollBias(vehicle1: number | IVehicle, value: number): void {
     return vehicle.setRollBias(vehicle1, value);
 }
 
@@ -11714,7 +11536,7 @@ export function setVehicleRollBias(vehicle1: number | Vehicle, value: number): v
  * Hash: 0xFFCCC2EA
  * @deprecated Use vehicle.setSteeringAngle(vehicle1, angle) instead
  */
-export function setVehicleSteeringAngle(vehicle1: number | Vehicle, angle: number): void {
+export function setVehicleSteeringAngle(vehicle1: number | IVehicle, angle: number): void {
     return vehicle.setSteeringAngle(vehicle1, angle);
 }
 
@@ -11724,7 +11546,7 @@ export function setVehicleSteeringAngle(vehicle1: number | Vehicle, angle: numbe
  * Hash: 0xEB46596F
  * @deprecated Use vehicle.setSteeringScale(vehicle1, scale) instead
  */
-export function setVehicleSteeringScale(vehicle1: number | Vehicle, scale: number): void {
+export function setVehicleSteeringScale(vehicle1: number | IVehicle, scale: number): void {
     return vehicle.setSteeringScale(vehicle1, scale);
 }
 
@@ -11738,7 +11560,7 @@ export function setVehicleSteeringScale(vehicle1: number | Vehicle, scale: numbe
  * Hash: 0xB3439A01
  * @deprecated Use vehicle.setSuspensionHeight(vehicle1, newHeight) instead
  */
-export function setVehicleSuspensionHeight(vehicle1: number | Vehicle, newHeight: number): void {
+export function setVehicleSuspensionHeight(vehicle1: number | IVehicle, newHeight: number): void {
     return vehicle.setSuspensionHeight(vehicle1, newHeight);
 }
 
@@ -11748,7 +11570,7 @@ export function setVehicleSuspensionHeight(vehicle1: number | Vehicle, newHeight
  * Hash: 0x6485615E
  * @deprecated Use vehicle.setTurboPressure(vehicle1, pressure) instead
  */
-export function setVehicleTurboPressure(vehicle1: number | Vehicle, pressure: number): void {
+export function setVehicleTurboPressure(vehicle1: number | IVehicle, pressure: number): void {
     return vehicle.setTurboPressure(vehicle1, pressure);
 }
 
@@ -11766,7 +11588,7 @@ export function setVehicleTurboPressure(vehicle1: number | Vehicle, pressure: nu
  * Hash: 0xEAB8DB65
  * @deprecated Use vehicle.setWheelieState(vehicle1, state) instead
  */
-export function setVehicleWheelieState(vehicle1: number | Vehicle, state: number): void {
+export function setVehicleWheelieState(vehicle1: number | IVehicle, state: number): void {
     return vehicle.setWheelieState(vehicle1, state);
 }
 
@@ -11778,7 +11600,7 @@ export function setVehicleWheelieState(vehicle1: number | Vehicle, state: number
  * Hash: 0xE80F4E31
  * @deprecated Use vehicle.setWheelBrakePressure(vehicle1, wheelIndex, pressure) instead
  */
-export function setVehicleWheelBrakePressure(vehicle1: number | Vehicle, wheelIndex: number, pressure: number): void {
+export function setVehicleWheelBrakePressure(vehicle1: number | IVehicle, wheelIndex: number, pressure: number): void {
     return vehicle.setWheelBrakePressure(vehicle1, wheelIndex, pressure);
 }
 
@@ -11789,7 +11611,7 @@ export function setVehicleWheelBrakePressure(vehicle1: number | Vehicle, wheelIn
  * Hash: 0xD2B9E90D
  * @deprecated Use vehicle.setWheelFlags(vehicle1, wheelIndex, flags) instead
  */
-export function setVehicleWheelFlags(vehicle1: number | Vehicle, wheelIndex: number, flags: number): void {
+export function setVehicleWheelFlags(vehicle1: number | IVehicle, wheelIndex: number, flags: number): void {
     return vehicle.setWheelFlags(vehicle1, wheelIndex, flags);
 }
 
@@ -11799,7 +11621,7 @@ export function setVehicleWheelFlags(vehicle1: number | Vehicle, wheelIndex: num
  * Hash: 0xB22ECEFD
  * @deprecated Use vehicle.setWheelHealth(vehicle1, wheelIndex, health) instead
  */
-export function setVehicleWheelHealth(vehicle1: number | Vehicle, wheelIndex: number, health: number): void {
+export function setVehicleWheelHealth(vehicle1: number | IVehicle, wheelIndex: number, health: number): void {
     return vehicle.setWheelHealth(vehicle1, wheelIndex, health);
 }
 
@@ -11812,7 +11634,7 @@ export function setVehicleWheelHealth(vehicle1: number | Vehicle, wheelIndex: nu
  * Hash: 0xBD5291A0
  * @deprecated Use vehicle.setWheelIsPowered(vehicle1, wheelIndex, powered) instead
  */
-export function setVehicleWheelIsPowered(vehicle1: number | Vehicle, wheelIndex: number, powered: boolean): void {
+export function setVehicleWheelIsPowered(vehicle1: number | IVehicle, wheelIndex: number, powered: boolean): void {
     return vehicle.setWheelIsPowered(vehicle1, wheelIndex, powered);
 }
 
@@ -11823,7 +11645,7 @@ export function setVehicleWheelIsPowered(vehicle1: number | Vehicle, wheelIndex:
  * Hash: 0xC6146043
  * @deprecated Use vehicle.setWheelPower(vehicle1, wheelIndex, power) instead
  */
-export function setVehicleWheelPower(vehicle1: number | Vehicle, wheelIndex: number, power: number): void {
+export function setVehicleWheelPower(vehicle1: number | IVehicle, wheelIndex: number, power: number): void {
     return vehicle.setWheelPower(vehicle1, wheelIndex, power);
 }
 
@@ -11833,7 +11655,7 @@ export function setVehicleWheelPower(vehicle1: number | Vehicle, wheelIndex: num
  * Hash: 0xF380E184
  * @deprecated Use vehicle.setWheelRimColliderSize(vehicle1, wheelIndex, value) instead
  */
-export function setVehicleWheelRimColliderSize(vehicle1: number | Vehicle, wheelIndex: number, value: number): void {
+export function setVehicleWheelRimColliderSize(vehicle1: number | IVehicle, wheelIndex: number, value: number): void {
     return vehicle.setWheelRimColliderSize(vehicle1, wheelIndex, value);
 }
 
@@ -11844,7 +11666,7 @@ export function setVehicleWheelRimColliderSize(vehicle1: number | Vehicle, wheel
  * Hash: 0x35ED100D
  * @deprecated Use vehicle.setWheelRotationSpeed(vehicle1, wheelIndex, speed) instead
  */
-export function setVehicleWheelRotationSpeed(vehicle1: number | Vehicle, wheelIndex: number, speed: number): void {
+export function setVehicleWheelRotationSpeed(vehicle1: number | IVehicle, wheelIndex: number, speed: number): void {
     return vehicle.setWheelRotationSpeed(vehicle1, wheelIndex, speed);
 }
 
@@ -11856,7 +11678,7 @@ export function setVehicleWheelRotationSpeed(vehicle1: number | Vehicle, wheelIn
  * Hash: 0x53AB5C35
  * @deprecated Use vehicle.setWheelSize(vehicle1, size) instead
  */
-export function setVehicleWheelSize(vehicle1: number | Vehicle, size: number): boolean {
+export function setVehicleWheelSize(vehicle1: number | IVehicle, size: number): boolean {
     return vehicle.setWheelSize(vehicle1, size);
 }
 
@@ -11866,7 +11688,7 @@ export function setVehicleWheelSize(vehicle1: number | Vehicle, size: number): b
  * Hash: 0xB962D05C
  * @deprecated Use vehicle.setWheelTireColliderSize(vehicle1, wheelIndex, value) instead
  */
-export function setVehicleWheelTireColliderSize(vehicle1: number | Vehicle, wheelIndex: number, value: number): void {
+export function setVehicleWheelTireColliderSize(vehicle1: number | IVehicle, wheelIndex: number, value: number): void {
     return vehicle.setWheelTireColliderSize(vehicle1, wheelIndex, value);
 }
 
@@ -11876,7 +11698,7 @@ export function setVehicleWheelTireColliderSize(vehicle1: number | Vehicle, whee
  * Hash: 0x47BD0270
  * @deprecated Use vehicle.setWheelTireColliderWidth(vehicle1, wheelIndex, value) instead
  */
-export function setVehicleWheelTireColliderWidth(vehicle1: number | Vehicle, wheelIndex: number, value: number): void {
+export function setVehicleWheelTireColliderWidth(vehicle1: number | IVehicle, wheelIndex: number, value: number): void {
     return vehicle.setWheelTireColliderWidth(vehicle1, wheelIndex, value);
 }
 
@@ -11887,7 +11709,7 @@ export function setVehicleWheelTireColliderWidth(vehicle1: number | Vehicle, whe
  * Hash: 0x85C85A3A
  * @deprecated Use vehicle.setWheelTractionVectorLength(vehicle1, wheelIndex, length) instead
  */
-export function setVehicleWheelTractionVectorLength(vehicle1: number | Vehicle, wheelIndex: number, length: number): void {
+export function setVehicleWheelTractionVectorLength(vehicle1: number | IVehicle, wheelIndex: number, length: number): void {
     return vehicle.setWheelTractionVectorLength(vehicle1, wheelIndex, length);
 }
 
@@ -11899,7 +11721,7 @@ export function setVehicleWheelTractionVectorLength(vehicle1: number | Vehicle, 
  * Hash: 0x64C3F1C0
  * @deprecated Use vehicle.setWheelWidth(vehicle1, width) instead
  */
-export function setVehicleWheelWidth(vehicle1: number | Vehicle, width: number): boolean {
+export function setVehicleWheelWidth(vehicle1: number | IVehicle, width: number): boolean {
     return vehicle.setWheelWidth(vehicle1, width);
 }
 
@@ -11918,7 +11740,7 @@ export function setVehicleWheelWidth(vehicle1: number | Vehicle, width: number):
  * Hash: 0xBD6357D
  * @deprecated Use vehicle.setWheelXOffset(vehicle1, wheelIndex, offset) instead
  */
-export function setVehicleWheelXOffset(vehicle1: number | Vehicle, wheelIndex: number, offset: number): void {
+export function setVehicleWheelXOffset(vehicle1: number | IVehicle, wheelIndex: number, offset: number): void {
     return vehicle.setWheelXOffset(vehicle1, wheelIndex, offset);
 }
 
@@ -11928,7 +11750,7 @@ export function setVehicleWheelXOffset(vehicle1: number | Vehicle, wheelIndex: n
  * Hash: 0xC6C2171F
  * @deprecated Use vehicle.setWheelYRotation(vehicle1, wheelIndex, value) instead
  */
-export function setVehicleWheelYRotation(vehicle1: number | Vehicle, wheelIndex: number, value: number): void {
+export function setVehicleWheelYRotation(vehicle1: number | IVehicle, wheelIndex: number, value: number): void {
     return vehicle.setWheelYRotation(vehicle1, wheelIndex, value);
 }
 
@@ -11938,7 +11760,7 @@ export function setVehicleWheelYRotation(vehicle1: number | Vehicle, wheelIndex:
  * Hash: 0x1683E7F0
  * @deprecated Use vehicle.setXenonLightsCustomColor(vehicle1, red, green, blue) instead
  */
-export function setVehicleXenonLightsCustomColor(vehicle1: number | Vehicle, red: number, green: number, blue: number): void {
+export function setVehicleXenonLightsCustomColor(vehicle1: number | IVehicle, red: number, green: number, blue: number): void {
     return vehicle.setXenonLightsCustomColor(vehicle1, red, green, blue);
 }
 
@@ -11958,7 +11780,7 @@ export function setVehicleXmasSnowFactor(gripFactor: number): void {
  * Hash: 0x77CC80DC
  * @deprecated Use vehicle.doesTrainStopAtStations(train) instead
  */
-export function doesTrainStopAtStations(train: number | Vehicle): boolean {
+export function doesTrainStopAtStations(train: number | IVehicle): boolean {
     return vehicle.doesTrainStopAtStations(train);
 }
 
@@ -11968,7 +11790,7 @@ export function doesTrainStopAtStations(train: number | Vehicle): boolean {
  * Hash: 0xA4921EF5
  * @deprecated Use vehicle.getTrainCruiseSpeed(train) instead
  */
-export function getTrainCruiseSpeed(train: number | Vehicle): number {
+export function getTrainCruiseSpeed(train: number | IVehicle): number {
     return vehicle.getTrainCruiseSpeed(train);
 }
 
@@ -11978,7 +11800,7 @@ export function getTrainCruiseSpeed(train: number | Vehicle): number {
  * Hash: 0x8DAF79B6
  * @deprecated Use vehicle.getTrainDirection(train) instead
  */
-export function getTrainDirection(train: number | Vehicle): boolean {
+export function getTrainDirection(train: number | IVehicle): boolean {
     return vehicle.getTrainDirection(train);
 }
 
@@ -11988,7 +11810,7 @@ export function getTrainDirection(train: number | Vehicle): boolean {
  * Hash: 0x81B50033
  * @deprecated Use vehicle.getTrainState(train) instead
  */
-export function getTrainState(train: number | Vehicle): number {
+export function getTrainState(train: number | IVehicle): number {
     return vehicle.getTrainState(train);
 }
 
@@ -11998,7 +11820,7 @@ export function getTrainState(train: number | Vehicle): number {
  * Hash: 0x9AA339D
  * @deprecated Use vehicle.getTrainTrackIndex(train) instead
  */
-export function getTrainTrackIndex(train: number | Vehicle): number {
+export function getTrainTrackIndex(train: number | IVehicle): number {
     return vehicle.getTrainTrackIndex(train);
 }
 
@@ -12008,7 +11830,7 @@ export function getTrainTrackIndex(train: number | Vehicle): number {
  * Hash: 0x483B013C
  * @deprecated Use vehicle.getHandbrake(vehicle1) instead
  */
-export function getVehicleHandbrake(vehicle1: number | Vehicle): boolean {
+export function getVehicleHandbrake(vehicle1: number | IVehicle): boolean {
     return vehicle.getHandbrake(vehicle1);
 }
 
@@ -12018,7 +11840,7 @@ export function getVehicleHandbrake(vehicle1: number | Vehicle): boolean {
  * Hash: 0x1382FCEA
  * @deprecated Use vehicle.getSteeringAngle(vehicle1) instead
  */
-export function getVehicleSteeringAngle(vehicle1: number | Vehicle): number {
+export function getVehicleSteeringAngle(vehicle1: number | IVehicle): number {
     return vehicle.getSteeringAngle(vehicle1);
 }
 
@@ -12028,7 +11850,7 @@ export function getVehicleSteeringAngle(vehicle1: number | Vehicle): number {
  * Hash: 0xBB340D04
  * @deprecated Use vehicle.isEngineStarting(vehicle1) instead
  */
-export function isVehicleEngineStarting(vehicle1: number | Vehicle): boolean {
+export function isVehicleEngineStarting(vehicle1: number | IVehicle): boolean {
     return vehicle.isEngineStarting(vehicle1);
 }
 
@@ -12040,7 +11862,7 @@ export function isVehicleEngineStarting(vehicle1: number | Vehicle): boolean {
  * Hash: 0xD85C9F57
  * @deprecated Use vehicle.getHasFlag(vehicle1, flagIndex) instead
  */
-export function getVehicleHasFlag(vehicle1: number | Vehicle, flagIndex: number): boolean {
+export function getVehicleHasFlag(vehicle1: number | IVehicle, flagIndex: number): boolean {
     return vehicle.getHasFlag(vehicle1, flagIndex);
 }
 
@@ -12073,7 +11895,7 @@ export function getVehicleHasFlag(vehicle1: number | Vehicle, flagIndex: number)
  * Hash: 0xDE73BC10
  * @deprecated Use vehicle.getTypeRaw(vehicle1) instead
  */
-export function getVehicleTypeRaw(vehicle1: number | Vehicle): number {
+export function getVehicleTypeRaw(vehicle1: number | IVehicle): number {
     return vehicle.getTypeRaw(vehicle1);
 }
 
@@ -12083,7 +11905,7 @@ export function getVehicleTypeRaw(vehicle1: number | Vehicle): number {
  * Hash: 0xCF1BC668
  * @deprecated Use vehicle.isWheelBrokenOff(vehicle1, wheelIndex) instead
  */
-export function isVehicleWheelBrokenOff(vehicle1: number | Vehicle, wheelIndex: number): boolean {
+export function isVehicleWheelBrokenOff(vehicle1: number | IVehicle, wheelIndex: number): boolean {
     return vehicle.isWheelBrokenOff(vehicle1, wheelIndex);
 }
 
@@ -12093,7 +11915,7 @@ export function isVehicleWheelBrokenOff(vehicle1: number | Vehicle, wheelIndex: 
  * Hash: 0x8923DD42
  * @deprecated Use vehicle.setCurrentGear(vehicle1, gear) instead
  */
-export function setVehicleCurrentGear(vehicle1: number | Vehicle, gear: number): void {
+export function setVehicleCurrentGear(vehicle1: number | IVehicle, gear: number): void {
     return vehicle.setCurrentGear(vehicle1, gear);
 }
 
@@ -12103,7 +11925,7 @@ export function setVehicleCurrentGear(vehicle1: number | Vehicle, gear: number):
  * Hash: 0x63AE1A34
  * @deprecated Use vehicle.setFlag(vehicle1, flagIndex, value) instead
  */
-export function setVehicleFlag(vehicle1: number | Vehicle, flagIndex: number, value: boolean): boolean {
+export function setVehicleFlag(vehicle1: number | IVehicle, flagIndex: number, value: boolean): boolean {
     return vehicle.setFlag(vehicle1, flagIndex, value);
 }
 
@@ -12113,7 +11935,7 @@ export function setVehicleFlag(vehicle1: number | Vehicle, flagIndex: number, va
  * Hash: 0x3A4566F4
  * @deprecated Use vehicle.setNextGear(vehicle1, nextGear) instead
  */
-export function setVehicleNextGear(vehicle1: number | Vehicle, nextGear: number): void {
+export function setVehicleNextGear(vehicle1: number | IVehicle, nextGear: number): void {
     return vehicle.setNextGear(vehicle1, nextGear);
 }
 
@@ -12136,7 +11958,7 @@ export function setVehicleNextGear(vehicle1: number | Vehicle, nextGear: number)
  * Hash: 0xA273060E
  * @deprecated Use vehicle.getType(vehicle1) instead
  */
-export function getVehicleType(vehicle1: number | Vehicle): string {
+export function getVehicleType(vehicle1: number | IVehicle): string {
     return vehicle.getType(vehicle1);
 }
 
@@ -12480,7 +12302,7 @@ export function getWeaponAccuracySpread(weaponHash: number | string): number {
  * Hash: 0x63ED2E7
  * @deprecated Use weapon.getAnimationOverride(ped) instead
  */
-export function getWeaponAnimationOverride(ped: number | Ped): number {
+export function getWeaponAnimationOverride(ped: number | IPed): number {
     return weapon.getAnimationOverride(ped);
 }
 
@@ -12661,7 +12483,7 @@ export function networkDoesEntityExistWithNetworkId(netId: number): boolean {
  * Hash: 0x526FEE31
  * @deprecated Use network.getEntityOwner(entity) instead
  */
-export function networkGetEntityOwner(entity: number | Entity): number {
+export function networkGetEntityOwner(entity: number | IEntity): number {
     return network.getEntityOwner(entity);
 }
 
@@ -12685,7 +12507,7 @@ export function getShapeTestResultIncludingMaterial(shapeTestHandle: number): [n
  * Hash: 0x8F57A89D
  * @deprecated Use camera.getCamMatrix(camera1, rightVector, forwardVector, upVector, position) instead
  */
-export function getCamMatrix(camera1: number | Camera, rightVector: Vector3, forwardVector: Vector3, upVector: Vector3, position: Vector3): void {
+export function getCamMatrix(camera1: number | ICamera, rightVector: Vector3, forwardVector: Vector3, upVector: Vector3, position: Vector3): void {
     return camera.getCamMatrix(camera1, rightVector, forwardVector, upVector, position);
 }
 
@@ -12945,7 +12767,7 @@ export function mumbleAddVoiceTargetChannel(targetId: number, channel: number): 
  * Hash: 0x32C5355A
  * @deprecated Use mumble.addVoiceTargetPlayer(targetId, player) instead
  */
-export function mumbleAddVoiceTargetPlayer(targetId: number, player: number | string | Player): void {
+export function mumbleAddVoiceTargetPlayer(targetId: number, player: number | string | IPlayer): void {
     return mumble.addVoiceTargetPlayer(targetId, player);
 }
 
@@ -13056,7 +12878,7 @@ export function mumbleIsConnected(): boolean {
  * Hash: 0x33EEF97F
  * @deprecated Use mumble.isPlayerTalking(player) instead
  */
-export function mumbleIsPlayerTalking(player: number | string | Player): boolean {
+export function mumbleIsPlayerTalking(player: number | string | IPlayer): boolean {
     return mumble.isPlayerTalking(player);
 }
 
@@ -13090,7 +12912,7 @@ export function mumbleRemoveVoiceTargetChannel(targetId: number, channel: number
  * Hash: 0x88CD646F
  * @deprecated Use mumble.removeVoiceTargetPlayer(targetId, player) instead
  */
-export function mumbleRemoveVoiceTargetPlayer(targetId: number, player: number | string | Player): void {
+export function mumbleRemoveVoiceTargetPlayer(targetId: number, player: number | string | IPlayer): void {
     return mumble.removeVoiceTargetPlayer(targetId, player);
 }
 
@@ -13213,7 +13035,7 @@ export function mumbleSetVoiceTarget(targetId: number): void {
  * Hash: 0x61C309E3
  * @deprecated Use mumble.setVolumeOverride(player, volume) instead
  */
-export function mumbleSetVolumeOverride(player: number | string | Player, volume: number): void {
+export function mumbleSetVolumeOverride(player: number | string | IPlayer, volume: number): void {
     return mumble.setVolumeOverride(player, volume);
 }
 
@@ -13291,7 +13113,7 @@ export function registerRawNuiCallback(callbackType: string, callback: Function)
  * No comment provided
  *
  * Hash: 0x78608ACB
- * @deprecated Use nui.sendMessage() instead
+ * @deprecated Use nui.sendMessage(jsonString) instead
  */
 export function sendNuiMessage(jsonString: string): boolean {
     return nui.sendMessage(jsonString);

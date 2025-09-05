@@ -1,4 +1,4 @@
-import { Vector3, Vector2, Entity, Ped, Player, Vehicle, Object, Blip, Camera } from '@risinglife/fivem-shared';
+import { Vector3, Vector2, IEntity, IPed, IPlayer, IVehicle, IObject, IBlip, ICamera } from '@risinglife/fivem-shared';
 export declare namespace app {
     /**
      * No comment provided
@@ -129,7 +129,7 @@ export declare namespace audio {
      *
      * Hash: 0x153973AB99FE8980 | Since: 323
      */
-    function addEntityToMixGroup(entity: number | Entity, groupName: string): void;
+    function addEntityToMixGroup(entity: number | IEntity, groupName: string): void;
     /**
      * NOTE: ones that are -1, 0 - 35 are determined by a function where it gets a TextLabel from a global then runs,
      * GET_CHARACTER_FROM_AUDIO_CONVERSATION_FILENAME and depending on what the result is it goes in check order of 0 - 9 then A - Z then z (lowercase). So it will then return 0 - 35 or -1 if it's 'z'. The func to handle that ^^ is func_67 in dialog_handler.c atleast in TU27 Xbox360 scripts.
@@ -161,7 +161,7 @@ export declare namespace audio {
      *
      * Hash: 0x95D9F4BC443956E7 | Since: 323
      */
-    function addPedToConversation(index: number, ped: number | Ped): void;
+    function addPedToConversation(index: number, ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -180,13 +180,13 @@ export declare namespace audio {
      *
      * Hash: 0x1B9025BDA76822B6 | Since: 323
      */
-    function blipSiren(vehicle: number | Vehicle): void;
+    function blipSiren(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0xF8AD2EED7C47E8FE | Since: 1734
      */
-    function blockAllSpeechFromPed(ped: number | Ped): void;
+    function blockAllSpeechFromPed(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -217,7 +217,7 @@ export declare namespace audio {
      *
      * Hash: 0x032A116663A4D5AC | Since: 323
      */
-    function canVehicleReceiveCbRadio(vehicle: number | Vehicle): boolean;
+    function canVehicleReceiveCbRadio(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
@@ -266,7 +266,7 @@ export declare namespace audio {
      *
      * Hash: 0xA9A41C1E940FB0E8 | Since: 323
      */
-    function disablePedPain(ped: number | Ped, toggle: boolean): void;
+    function disablePedPain(ped: number | IPed, toggle: boolean): void;
     /**
      * If value is set to true, and ambient siren sound will be played.
      * Appears to enable/disable an audio flag.
@@ -279,7 +279,7 @@ export declare namespace audio {
      *
      * Hash: 0x49B99BF3FDA89A7A | Since: 323
      */
-    function doesContextExistForThisPed(ped: number | Ped, speechName: string): boolean;
+    function doesContextExistForThisPed(ped: number | IPed, speechName: string): boolean;
     /**
      * No comment provided
      *
@@ -291,7 +291,7 @@ export declare namespace audio {
      *
      * Hash: 0xC15907D667F7CFB2 | Since: 323
      */
-    function enableStallWarningSounds(vehicle: number | Vehicle, toggle: boolean): void;
+    function enableStallWarningSounds(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -303,13 +303,13 @@ export declare namespace audio {
      *
      * Hash: 0x2BE4BC731D039D5A | Since: 323
      */
-    function enableVehicleExhaustPops(vehicle: number | Vehicle, toggle: boolean): void;
+    function enableVehicleExhaustPops(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x1C073274E065C6D2 | Since: 323
      */
-    function enableVehicleFanbeltDamage(vehicle: number | Vehicle, toggle: boolean): void;
+    function enableVehicleFanbeltDamage(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -340,7 +340,7 @@ export declare namespace audio {
      *
      * Hash: 0x4F0C413926060B38 | Since: 323
      */
-    function forceUseGameObject(vehicle: number | Vehicle, audioName: string): void;
+    function forceUseGameObject(vehicle: number | IVehicle, audioName: string): void;
     /**
      * No comment provided
      *
@@ -358,7 +358,7 @@ export declare namespace audio {
      *
      * Hash: 0x5E203DA2BA15D436 | Since: 463
      */
-    function getAmbientVoiceNameHash(ped: number | Ped): number;
+    function getAmbientVoiceNameHash(ped: number | IPed): number;
     /**
      * No comment provided
      *
@@ -481,19 +481,19 @@ export declare namespace audio {
      *
      * Hash: 0x02165D55000219AC | Since: 323
      */
-    function getVehicleDefaultHorn(vehicle: number | Vehicle): number;
+    function getVehicleDefaultHorn(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0xACB5DCCA1EC76840 | Since: 323
      */
-    function getVehicleDefaultHornIgnoreMods(vehicle: number | Vehicle): number;
+    function getVehicleDefaultHornIgnoreMods(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0xD53F3A29BCE2580E | Since: 1365
      */
-    function getVehicleHornSoundIndex(vehicle: number | Vehicle): number;
+    function getVehicleHornSoundIndex(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
@@ -535,7 +535,7 @@ export declare namespace audio {
      *
      * Hash: 0x950A154B8DAB6185 | Since: 323
      */
-    function initSynchSceneWithEntity(audioEvent: string, entity: number | Entity): void;
+    function initSynchSceneWithEntity(audioEvent: string, entity: number | IEntity): void;
     /**
      * No comment provided
      *
@@ -548,7 +548,7 @@ export declare namespace audio {
      *
      * Hash: 0xA018A12E5C5C2FA6 | Since: 323
      */
-    function interruptConversation(ped: number | Ped, voiceline: string, speaker: string): void;
+    function interruptConversation(ped: number | IPed, voiceline: string, speaker: string): void;
     /**
      * One call found in the b617d scripts:
      *
@@ -556,7 +556,7 @@ export declare namespace audio {
      *
      * Hash: 0x8A694D7A68F8DC38 | Since: 323
      */
-    function interruptConversationAndPause(ped: number | Ped, speaker: string): void;
+    function interruptConversationAndPause(ped: number | IPed, speaker: string): void;
     /**
      * Example:
      *
@@ -572,13 +572,13 @@ export declare namespace audio {
      *
      * Hash: 0x932C2D096A2C3FFF | Since: 323
      */
-    function isAmbientSpeechDisabled(ped: number | Ped): boolean;
+    function isAmbientSpeechDisabled(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x9072C8B49907BFAD | Since: 323
      */
-    function isAmbientSpeechPlaying(ped: number | Ped): boolean;
+    function isAmbientSpeechPlaying(ped: number | IPed): boolean;
     /**
      * Full list of ambient zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientZones.json
      *
@@ -590,7 +590,7 @@ export declare namespace audio {
      *
      * Hash: 0xC265DF9FB44A9FBD | Since: 323
      */
-    function isAnimalVocalizationPlaying(pedHandle: number | Ped): boolean;
+    function isAnimalVocalizationPlaying(pedHandle: number | IPed): boolean;
     /**
      * No comment provided
      *
@@ -602,7 +602,7 @@ export declare namespace audio {
      *
      * Hash: 0x729072355FA39EC9 | Since: 323
      */
-    function isAnySpeechPlaying(ped: number | Ped): boolean;
+    function isAnySpeechPlaying(ped: number | IPed): boolean;
     /**
      * Full list of audio scene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/audioSceneNames.json
      *
@@ -620,7 +620,7 @@ export declare namespace audio {
      *
      * Hash: 0x9D6BFC12B05C6121 | Since: 323
      */
-    function isHornActive(vehicle: number | Vehicle): boolean;
+    function isHornActive(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
@@ -668,13 +668,13 @@ export declare namespace audio {
      *
      * Hash: 0x049E937F18F4020C | Since: 323
      */
-    function isPedInCurrentConversation(ped: number | Ped): boolean;
+    function isPedInCurrentConversation(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x1E8E5E20937E3137 | Since: 323
      */
-    function isPedRingtonePlaying(ped: number | Ped): boolean;
+    function isPedRingtonePlaying(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
@@ -716,7 +716,7 @@ export declare namespace audio {
      *
      * Hash: 0xCC9AA18DCC7084F4 | Since: 323
      */
-    function isScriptedSpeechPlaying(p0: number | Ped): boolean;
+    function isScriptedSpeechPlaying(p0: number | IPed): boolean;
     /**
      * No comment provided
      *
@@ -728,19 +728,19 @@ export declare namespace audio {
      *
      * Hash: 0x5DB8010EE71FDEF2 | Since: 323
      */
-    function isVehicleAudiblyDamaged(vehicle: number | Vehicle): boolean;
+    function isVehicleAudiblyDamaged(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x0BE4BE946463F917 | Since: 505
      */
-    function isVehicleRadioOn(vehicle: number | Vehicle): boolean;
+    function isVehicleRadioOn(vehicle: number | IVehicle): boolean;
     /**
      * Full list of static emitters by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/staticEmitters.json
      *
      * Hash: 0x651D3228960D08AF | Since: 505
      */
-    function linkStaticEmitterToEntity(emitterName: string, entity: number | Entity): void;
+    function linkStaticEmitterToEntity(emitterName: string, entity: number | IEntity): void;
     /**
      * Example:
      * `AUDIO::LOAD_STREAM("CAR_STEAL_1_PASSBY", "CAR_STEAL_1_SOUNDSET");`
@@ -811,7 +811,7 @@ export declare namespace audio {
      *
      * Hash: 0x3CDC1E622CCE0356 | Since: 323
      */
-    function overrideVehHorn(vehicle: number | Vehicle, override: boolean, hornHash: number): void;
+    function overrideVehHorn(vehicle: number | IVehicle, override: boolean, hornHash: number): void;
     /**
      * No comment provided
      *
@@ -831,7 +831,7 @@ export declare namespace audio {
      *
      * Hash: 0xEE066C7006C49C0A | Since: 323
      */
-    function playAnimalVocalization(pedHandle: number | Ped, speechName: string): void;
+    function playAnimalVocalization(pedHandle: number | IPed, speechName: string): void;
     /**
      * Only call found in the b617d scripts:
      *
@@ -878,7 +878,7 @@ export declare namespace audio {
      *
      * Hash: 0xBC9AE166038A5CEC | Since: 323
      */
-    function playPain(ped: number | Ped, painID: number): void;
+    function playPain(ped: number | IPed, painID: number): void;
     /**
      * Plays ambient speech. See also _0x5C57B85D.
      *
@@ -888,7 +888,7 @@ export declare namespace audio {
      *
      * Hash: 0xC6941B4A3A8FBBB9 | Since: 323
      */
-    function playPedAmbientSpeechAndCloneNative(ped: number | Ped, speechName: string, speechParam: string): void;
+    function playPedAmbientSpeechAndCloneNative(ped: number | IPed, speechName: string, speechParam: string): void;
     /**
      * Plays ambient speech. See also _0x444180DB.
      *
@@ -939,7 +939,7 @@ export declare namespace audio {
      *
      * Hash: 0x8E04FEDD28D42462 | Since: 323
      */
-    function playPedAmbientSpeechNative(ped: number | Ped, speechName: string, speechParam: string): void;
+    function playPedAmbientSpeechNative(ped: number | IPed, speechName: string, speechParam: string): void;
     /**
      * This is the same as PLAY_PED_AMBIENT_SPEECH_NATIVE and PLAY_PED_AMBIENT_SPEECH_AND_CLONE_NATIVE but it will allow you to play a speech file from a specific voice file. It works on players and all peds, even animals.
      *
@@ -952,7 +952,7 @@ export declare namespace audio {
      *
      * Hash: 0x3523634255FC3318 | Since: 323
      */
-    function playPedAmbientSpeechWithVoiceNative(ped: number | Ped, speechName: string, voiceName: string, speechParam: string): void;
+    function playPedAmbientSpeechWithVoiceNative(ped: number | IPed, speechName: string, voiceName: string, speechParam: string): void;
     /**
      * All found occurrences in b617d, sorted alphabetically and identical lines removed: https://pastebin.com/RFb4GTny
      *
@@ -962,7 +962,7 @@ export declare namespace audio {
      *
      * Hash: 0xF9E56683CA8E11A5 | Since: 323
      */
-    function playPedRingtone(ringtoneName: string, ped: number | Ped): void;
+    function playPedRingtone(ringtoneName: string, ped: number | IPed): void;
     /**
      * Plays the given police radio message.
      *
@@ -1000,14 +1000,14 @@ export declare namespace audio {
      *
      * Hash: 0xE65F427EB70AB1ED | Since: 323
      */
-    function playSoundFromEntity(soundId: number, audioName: string, entity: number | Entity, audioRef: string, isNetwork: boolean): void;
+    function playSoundFromEntity(soundId: number, audioName: string, entity: number | IEntity, audioRef: string, isNetwork: boolean): void;
     /**
      * Only used with "formation_flying_blips_soundset" and "biker_formation_blips_soundset".
      * p1 is always the model of p2
      *
      * Hash: 0x5B9853296731E88D | Since: 877
      */
-    function playSoundFromEntityHash(soundId: number, model: number | string, entity: number | Entity, soundSetHash: number | string): void;
+    function playSoundFromEntityHash(soundId: number, model: number | string, entity: number | IEntity, soundSetHash: number | string): void;
     /**
      * List: https://pastebin.com/DCeRiaLJ
      *
@@ -1033,13 +1033,13 @@ export declare namespace audio {
      *
      * Hash: 0xEBAA9B64D76356FD | Since: 323
      */
-    function playStreamFromObject(_object: number | Object): void;
+    function playStreamFromObject(_object: number | IObject): void;
     /**
      * No comment provided
      *
      * Hash: 0x89049DD63C08B5D1 | Since: 323
      */
-    function playStreamFromPed(ped: number | Ped): void;
+    function playStreamFromPed(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -1051,7 +1051,7 @@ export declare namespace audio {
      *
      * Hash: 0xB70374A758007DFA | Since: 323
      */
-    function playStreamFromVehicle(vehicle: number | Vehicle): void;
+    function playStreamFromVehicle(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -1069,13 +1069,13 @@ export declare namespace audio {
      *
      * Hash: 0x62A456AA4769EF34 | Since: 323
      */
-    function playVehicleDoorCloseSound(vehicle: number | Vehicle, doorId: number): void;
+    function playVehicleDoorCloseSound(vehicle: number | IVehicle, doorId: number): void;
     /**
      * doorId: see SET_VEHICLE_DOOR_SHUT
      *
      * Hash: 0x3A539D52857EA82D | Since: 323
      */
-    function playVehicleDoorOpenSound(vehicle: number | Vehicle, doorId: number): void;
+    function playVehicleDoorOpenSound(vehicle: number | IVehicle, doorId: number): void;
     /**
      * No comment provided
      *
@@ -1181,7 +1181,7 @@ export declare namespace audio {
      *
      * Hash: 0x18EB48CFC41F2EA0 | Since: 323
      */
-    function removeEntityFromMixGroup(entity: number | Entity): void;
+    function removeEntityFromMixGroup(entity: number | IEntity): void;
     /**
      * No comment provided
      *
@@ -1229,13 +1229,13 @@ export declare namespace audio {
      *
      * Hash: 0x4ADA3F19BE4A6047 | Since: 323
      */
-    function requestTennisBanks(ped: number | Ped): void;
+    function requestTennisBanks(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xF54BB7B61036F335 | Since: 323
      */
-    function resetPedFlags(ped: number | Ped): void;
+    function resetPedFlags(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -1247,7 +1247,7 @@ export declare namespace audio {
      *
      * Hash: 0xD2DCCD8E16E20997 | Since: 323
      */
-    function resetVehicleStartupRevSound(vehicle: number | Vehicle): void;
+    function resetVehicleStartupRevSound(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -1274,13 +1274,13 @@ export declare namespace audio {
      *
      * Hash: 0x6C8065A3B780185B | Since: 323
      */
-    function setAmbientVoiceName(ped: number | Ped, name: string): void;
+    function setAmbientVoiceName(ped: number | IPed, name: string): void;
     /**
      * No comment provided
      *
      * Hash: 0x9A53DED9921DE990 | Since: 463
      */
-    function setAmbientVoiceNameHash(ped: number | Ped, hash: number | string): void;
+    function setAmbientVoiceNameHash(ped: number | IPed, hash: number | string): void;
     /**
      * No comment provided
      *
@@ -1310,7 +1310,7 @@ export declare namespace audio {
      *
      * Hash: 0xCC97B29285B1DC3B | Since: 323
      */
-    function setAnimalMood(animal: number | Ped, mood: number): void;
+    function setAnimalMood(animal: number | IPed, mood: number): void;
     /**
      * Possible flag names:
      * "ActivateSwitchWheelAudio"
@@ -1453,7 +1453,7 @@ export declare namespace audio {
      *
      * Hash: 0xE5564483E407F914 | Since: 323
      */
-    function setVehiclePriority(vehicle: number | Vehicle): void;
+    function setVehiclePriority(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -1503,7 +1503,7 @@ export declare namespace audio {
      *
      * Hash: 0x892B6AB8F33606F5 | Since: 323
      */
-    function setEntityForNullConvPed(entity: number | Entity): void;
+    function setEntityForNullConvPed(entity: number | IEntity): void;
     /**
      * No comment provided
      *
@@ -1527,19 +1527,19 @@ export declare namespace audio {
      *
      * Hash: 0x76D683C108594D0E | Since: 323
      */
-    function setHornEnabled(vehicle: number | Vehicle, toggle: boolean): void;
+    function setHornEnabled(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x9C11908013EA4715 | Since: 323
      */
-    function setHornPermanentlyOn(vehicle: number | Vehicle): void;
+    function setHornPermanentlyOn(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x9D3AF56E94C9AE98 | Since: 323
      */
-    function setHornPermanentlyOnTime(vehicle: number | Vehicle, time: number): void;
+    function setHornPermanentlyOnTime(vehicle: number | IVehicle, time: number): void;
     /**
      * No comment provided
      *
@@ -1591,19 +1591,19 @@ export declare namespace audio {
      *
      * Hash: 0x29DA3CA8D8B2692D | Since: 1493
      */
-    function setPedClothEventsEnabled(ped: number | Ped, toggle: boolean): void;
+    function setPedClothEventsEnabled(ped: number | IPed, toggle: boolean): void;
     /**
      * Enables/disables ped's "loud" footstep sound.
      *
      * Hash: 0x0653B735BFBDFE87 | Since: 1493
      */
-    function setPedFootstepsEventsEnabled(ped: number | Ped, toggle: boolean): void;
+    function setPedFootstepsEventsEnabled(ped: number | IPed, toggle: boolean): void;
     /**
      * BOOL p1: 0 = Female; 1 = Male
      *
      * Hash: 0xA5342D390CDA41D6 | Since: 323
      */
-    function setPedGender(ped: number | Ped): void;
+    function setPedGender(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -1634,19 +1634,19 @@ export declare namespace audio {
      *
      * Hash: 0x95D2D383D5396B8A | Since: 323
      */
-    function setPedIsDrunk(ped: number | Ped, toggle: boolean): void;
+    function setPedIsDrunk(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x1B7ABE26CBCBF8C7 | Since: 372
      */
-    function setPedRaceAndVoiceGroup(ped: number | Ped, voiceGroup: number | string): void;
+    function setPedRaceAndVoiceGroup(ped: number | IPed, voiceGroup: number | string): void;
     /**
      * Assigns some ambient voice to the ped.
      *
      * Hash: 0x40CF0D12D142A9E8 | Since: 323
      */
-    function setPedVoiceFull(ped: number | Ped): void;
+    function setPedVoiceFull(ped: number | IPed): void;
     /**
      * From the scripts:
      *
@@ -1657,13 +1657,13 @@ export declare namespace audio {
      *
      * Hash: 0x7CDC8C3B89F661B3 | Since: 323
      */
-    function setPedVoiceGroup(ped: number | Ped, voiceGroupHash: number | string): void;
+    function setPedVoiceGroup(ped: number | IPed, voiceGroupHash: number | string): void;
     /**
      * Dat151RelType == 29
      *
      * Hash: 0x0BABC1345ABBFB16 | Since: 2699
      */
-    function setPedVoiceGroupFromRaceToPvg(ped: number | Ped, voiceGroupHash: number | string): void;
+    function setPedVoiceGroupFromRaceToPvg(ped: number | IPed, voiceGroupHash: number | string): void;
     /**
      * No comment provided
      *
@@ -1675,13 +1675,13 @@ export declare namespace audio {
      *
      * Hash: 0xEA241BB04110F091 | Since: 323
      */
-    function setPlayerAngry(ped: number | Ped, toggle: boolean): void;
+    function setPlayerAngry(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x6FDDAD856E36988A | Since: 323
      */
-    function setPlayerVehicleAlarmActive(vehicle: number | Vehicle, toggle: boolean): void;
+    function setPlayerVehicleAlarmActive(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Found in the b617d scripts, duplicates removed:
      *
@@ -1795,19 +1795,19 @@ export declare namespace audio {
      *
      * Hash: 0xF584CF8529B51434 | Since: 2372
      */
-    function setSirenBypassMpDriverCheck(vehicle: number | Vehicle, toggle: boolean): void;
+    function setSirenBypassMpDriverCheck(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x43FA0DFC5DF87815 | Since: 323
      */
-    function setSirenCanBeControlledBy(vehicle: number | Vehicle): void;
+    function setSirenCanBeControlledBy(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x1FEF0683B96EBCF2 | Since: 323
      */
-    function setSirenWithNoDriver(vehicle: number | Vehicle, toggle: boolean): void;
+    function setSirenWithNoDriver(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -1867,13 +1867,13 @@ export declare namespace audio {
      *
      * Hash: 0x01BB4D577D38BD9E | Since: 323
      */
-    function setVehicleBodyDamageFactor(vehicle: number | Vehicle, intensity: number): void;
+    function setVehicleBodyDamageFactor(vehicle: number | IVehicle, intensity: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x59E7B488451F4D3A | Since: 323
      */
-    function setVehicleEngineDamageFactor(vehicle: number | Vehicle, damageFactor: number): void;
+    function setVehicleEngineDamageFactor(vehicle: number | IVehicle, damageFactor: number): void;
     /**
      * SET_VEHICLE_BOOST_ACTIVE(vehicle, 1, 0);
      * SET_VEHICLE_BOOST_ACTIVE(vehicle, 0, 0);
@@ -1882,7 +1882,7 @@ export declare namespace audio {
      *
      * Hash: 0x4A04DE7CAB2739A1 | Since: 323
      */
-    function setVehicleBoostActive(vehicle: number | Vehicle, toggle: boolean): void;
+    function setVehicleBoostActive(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -1906,50 +1906,50 @@ export declare namespace audio {
      *
      * Hash: 0x0350E7E17BA767D0 | Since: 1365
      */
-    function setVehicleHornSoundIndex(vehicle: number | Vehicle, value: number): void;
+    function setVehicleHornSoundIndex(vehicle: number | IVehicle, value: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xF3365489E0DD50F9 | Since: 323
      */
-    function setVehicleMissileWarningEnabled(vehicle: number | Vehicle, toggle: boolean): void;
+    function setVehicleMissileWarningEnabled(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * can't seem to enable radio on cop cars etc
      *
      * Hash: 0x3B988190C0AA6C0B | Since: 323
      */
-    function setVehicleRadioEnabled(vehicle: number | Vehicle, toggle: boolean): void;
+    function setVehicleRadioEnabled(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xBB6F1CAEC68B0BCE | Since: 323
      */
-    function setVehicleRadioLoud(vehicle: number | Vehicle, toggle: boolean): void;
+    function setVehicleRadioLoud(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xF1F8157B8C3F171C | Since: 323
      */
-    function setVehicleStartupRevSound(vehicle: number | Vehicle): void;
+    function setVehicleStartupRevSound(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0xC1805D05E6D4FE10 | Since: 323
      */
-    function setVehForcedRadioThisFrame(vehicle: number | Vehicle): void;
+    function setVehForcedRadioThisFrame(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x3E45765F3FBB582F | Since: 2372
      */
-    function setVehHasNormalRadio(vehicle: number | Vehicle): void;
+    function setVehHasNormalRadio(vehicle: number | IVehicle): void;
     /**
      * List of radio stations that are in the wheel, in clockwise order, as of LS Tuners DLC: https://git.io/J8a3k
      * An older list including hidden radio stations: https://pastebin.com/Kj9t38KF
      *
      * Hash: 0x1B9C0099CB942AC6 | Since: 323
      */
-    function setVehRadioStation(vehicle: number | Vehicle, radioStation: string): void;
+    function setVehRadioStation(vehicle: number | IVehicle, radioStation: string): void;
     /**
      * No comment provided
      *
@@ -2062,13 +2062,13 @@ export declare namespace audio {
      *
      * Hash: 0xB8BEC0CA6F0EDB0F | Since: 323
      */
-    function stopCurrentPlayingAmbientSpeech(ped: number | Ped): void;
+    function stopCurrentPlayingAmbientSpeech(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x7A73D05A607734C7 | Since: 323
      */
-    function stopCurrentPlayingSpeech(ped: number | Ped): void;
+    function stopCurrentPlayingSpeech(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -2080,19 +2080,19 @@ export declare namespace audio {
      *
      * Hash: 0x6C5AE23EFA885092 | Since: 323
      */
-    function stopPedRingtone(ped: number | Ped): void;
+    function stopPedRingtone(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x9D64D7405520E3D3 | Since: 323
      */
-    function stopPedSpeaking(ped: number | Ped, shaking: boolean): void;
+    function stopPedSpeaking(ped: number | IPed, shaking: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xAB6781A5F3101470 | Since: 1868
      */
-    function stopPedSpeakingSynced(ped: number | Ped): void;
+    function stopPedSpeakingSynced(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -2137,7 +2137,7 @@ export declare namespace audio {
      *
      * Hash: 0x66C3FB05206041BA | Since: 1290
      */
-    function triggerSiren(vehicle: number | Vehicle): void;
+    function triggerSiren(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -2209,25 +2209,25 @@ export declare namespace audio {
      *
      * Hash: 0xBF4DC1784BE94DFA | Since: 323
      */
-    function useFootstepScriptSweeteners(ped: number | Ped, hash: number | string): void;
+    function useFootstepScriptSweeteners(ped: number | IPed, hash: number | string): void;
     /**
      * No comment provided
      *
      * Hash: 0xFA932DE350266EF8 | Since: 323
      */
-    function useSirenAsHorn(vehicle: number | Vehicle, toggle: boolean): void;
+    function useSirenAsHorn(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xBEFB80290414FD4F | Since: 3095
      */
-    function enableDragRaceStationaryWarningSounds(vehicle: number | Vehicle, enable: boolean): void;
+    function enableDragRaceStationaryWarningSounds(vehicle: number | IVehicle, enable: boolean): void;
     /**
      * Called together with SET_VEHICLE_TYRES_CAN_BURST
      *
      * Hash: 0xEB7D0E1FCC8FE17A | Since: 3258
      */
-    function forceVehicleEngineSynth(vehicle: number | Vehicle, force: boolean): void;
+    function forceVehicleEngineSynth(vehicle: number | IVehicle, force: boolean): void;
 }
 export declare namespace brain {
     /**
@@ -2259,7 +2259,7 @@ export declare namespace brain {
      *
      * Hash: 0xCCBA154209823057 | Since: 323
      */
-    function isObjectWithinActivationRange(_object: number | Object): boolean;
+    function isObjectWithinActivationRange(_object: number | IObject): boolean;
     /**
      * Gets whether the world point the calling script is registered to is within desired range of the player.
      *
@@ -2543,7 +2543,7 @@ export declare namespace camera {
      *
      * Hash: 0x8609C75EC438FB3B | Since: 323
      */
-    function addCamSplineNode(camera: number | Camera, pos: Vector3, rot: Vector3, length: number, smoothingStyle: number, rotationOrder: number): void;
+    function addCamSplineNode(camera: number | ICamera, pos: Vector3, rot: Vector3, length: number, smoothingStyle: number, rotationOrder: number): void;
     /**
      * p0 is the spline camera to which the node is being added.
      * p1 is the camera used to create the node.
@@ -2551,7 +2551,7 @@ export declare namespace camera {
      *
      * Hash: 0x0FB82563989CF4FB | Since: 323
      */
-    function addCamSplineNodeUsing(cam: number | Camera, cam2: number | Camera, length: number): void;
+    function addCamSplineNodeUsing(cam: number | ICamera, cam2: number | ICamera, length: number): void;
     /**
      * p0 is the spline camera to which the node is being added.
      * p1 is the camera used to create the node.
@@ -2559,13 +2559,13 @@ export declare namespace camera {
      *
      * Hash: 0x0A9F2A468B328E74 | Since: 323
      */
-    function addCamSplineNodeUsingFrame(cam: number | Camera, cam2: number | Camera, length: number): void;
+    function addCamSplineNodeUsingFrame(cam: number | ICamera, cam2: number | ICamera, length: number): void;
     /**
      * p2 is always 2 in scripts. It might be smoothing style or rotation order.
      *
      * Hash: 0x609278246A29CA34 | Since: 323
      */
-    function addCamSplineNodeUsingGameplayFrame(cam: number | Camera, length: number): void;
+    function addCamSplineNodeUsingGameplayFrame(cam: number | ICamera, length: number): void;
     /**
      * No comment provided
      *
@@ -2579,7 +2579,7 @@ export declare namespace camera {
      *
      * Hash: 0xA2746EEAE3E577CD | Since: 323
      */
-    function animatedShakeCam(cam: number | Camera, amplitude: number): void;
+    function animatedShakeCam(cam: number | ICamera, amplitude: number): void;
     /**
      * `CAM::ANIMATED_SHAKE_SCRIPT_GLOBAL("SHAKE_CAM_medium", "medium", "", 0.5f);`
      *
@@ -2599,19 +2599,19 @@ export declare namespace camera {
      *
      * Hash: 0xFEDB7D269E8C60E3 | Since: 323
      */
-    function attachCamToEntity(cam: number | Camera, entity: number | Entity, xOffset: number, yOffset: number, zOffset: number, isRelative: boolean): void;
+    function attachCamToEntity(cam: number | ICamera, entity: number | IEntity, xOffset: number, yOffset: number, zOffset: number, isRelative: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x61A3DBA14AB7F411 | Since: 323
      */
-    function attachCamToPedBone(cam: number | Camera, ped: number | Ped, boneIndex: number, pos: Vector3, heading: boolean): void;
+    function attachCamToPedBone(cam: number | ICamera, ped: number | IPed, boneIndex: number, pos: Vector3, heading: boolean): void;
     /**
      * This native works with vehicles only. Bone indexes are usually given by this native GET_ENTITY_BONE_INDEX_BY_NAME.
      *
      * Hash: 0x8DB3F12A02CAEF72 | Since: 1290
      */
-    function attachCamToVehicleBone(cam: number | Camera, vehicle: number | Vehicle, boneIndex: number, relativeRotation: boolean, rot: Vector3, offsetX: number, offsetY: number, offsetZ: number, fixedDirection: boolean): void;
+    function attachCamToVehicleBone(cam: number | ICamera, vehicle: number | IVehicle, boneIndex: number, relativeRotation: boolean, rot: Vector3, offsetX: number, offsetY: number, offsetZ: number, fixedDirection: boolean): void;
     /**
      * No comment provided
      *
@@ -2677,7 +2677,7 @@ export declare namespace camera {
      *
      * Hash: 0x741B0129D4560F31 | Since: 323
      */
-    function createCinematicShot(p0: number | string, time: number, entity: number | Entity): void;
+    function createCinematicShot(p0: number | string, time: number, entity: number | IEntity): void;
     /**
      * BOOL param indicates whether the cam should be destroyed if it belongs to the calling script.
      *
@@ -2689,13 +2689,13 @@ export declare namespace camera {
      *
      * Hash: 0x865908C81A2C22E9 | Since: 323
      */
-    function destroyCam(cam: number | Camera, bScriptHostCam: boolean): void;
+    function destroyCam(cam: number | ICamera, bScriptHostCam: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xA2FABBE87F4BAD82 | Since: 323
      */
-    function detachCam(cam: number | Camera): void;
+    function detachCam(cam: number | ICamera): void;
     /**
      * No comment provided
      *
@@ -2707,7 +2707,7 @@ export declare namespace camera {
      *
      * Hash: 0x49482F9FCD825AAA | Since: 323
      */
-    function disableCamCollisionForObject(entity: number | Entity): void;
+    function disableCamCollisionForObject(entity: number | IEntity): void;
     /**
      * No comment provided
      *
@@ -2765,7 +2765,7 @@ export declare namespace camera {
      *
      * Hash: 0xA7A932170592B50E | Since: 323
      */
-    function doesCamExist(cam: number | Camera): boolean;
+    function doesCamExist(cam: number | ICamera): boolean;
     /**
      * Fades the screen in.
      *
@@ -2799,7 +2799,7 @@ export declare namespace camera {
      *
      * Hash: 0xAABD62873FFB1A33 | Since: 2189
      */
-    function forceCamFarClip(cam: number | Camera): void;
+    function forceCamFarClip(cam: number | ICamera): void;
     /**
      * No comment provided
      *
@@ -2839,67 +2839,67 @@ export declare namespace camera {
      *
      * Hash: 0xA10B2DB49E92A6B0 | Since: 323
      */
-    function getCamAnimCurrentPhase(cam: number | Camera): number;
+    function getCamAnimCurrentPhase(cam: number | ICamera): number;
     /**
      * No comment provided
      *
      * Hash: 0xBAC038F7459AE5AE | Since: 323
      */
-    function getCamCoord(cam: number | Camera): Vector3;
+    function getCamCoord(cam: number | ICamera): Vector3;
     /**
      * No comment provided
      *
      * Hash: 0x06D153C0B99B6128 | Since: 2699
      */
-    function getCamDofStrength(cam: number | Camera): number;
+    function getCamDofStrength(cam: number | ICamera): number;
     /**
      * No comment provided
      *
      * Hash: 0xB60A9CFEB21CA6AA | Since: 323
      */
-    function getCamFarClip(cam: number | Camera): number;
+    function getCamFarClip(cam: number | ICamera): number;
     /**
      * No comment provided
      *
      * Hash: 0x255F8DAFD540D397 | Since: 323
      */
-    function getCamFarDof(cam: number | Camera): number;
+    function getCamFarDof(cam: number | ICamera): number;
     /**
      * No comment provided
      *
      * Hash: 0xC3330A45CCCDB26A | Since: 323
      */
-    function getCamFov(cam: number | Camera): number;
+    function getCamFov(cam: number | ICamera): number;
     /**
      * No comment provided
      *
      * Hash: 0xC520A34DAFBF24B1 | Since: 323
      */
-    function getCamNearClip(cam: number | Camera): number;
+    function getCamNearClip(cam: number | ICamera): number;
     /**
      * No comment provided
      *
      * Hash: 0xC2612D223D915A1C | Since: 2699
      */
-    function getCamNearDof(cam: number | Camera): number;
+    function getCamNearDof(cam: number | ICamera): number;
     /**
      * The last parameter, as in other "ROT" methods, is usually 2.
      *
      * Hash: 0x7D304C1C955E3E12 | Since: 323
      */
-    function getCamRot(cam: number | Camera, rotationOrder: number): Vector3;
+    function getCamRot(cam: number | ICamera, rotationOrder: number): Vector3;
     /**
      * No comment provided
      *
      * Hash: 0xB22B17DF858716A6 | Since: 323
      */
-    function getCamSplineNodeIndex(cam: number | Camera): number;
+    function getCamSplineNodeIndex(cam: number | ICamera): number;
     /**
      * I'm pretty sure the parameter is the camera as usual, but I am not certain so I'm going to leave it as is.
      *
      * Hash: 0xD9D0E694C8282C96 | Since: 323
      */
-    function getCamSplineNodePhase(cam: number | Camera): number;
+    function getCamSplineNodePhase(cam: number | ICamera): number;
     /**
      * Can use this with SET_CAM_SPLINE_PHASE to set the float it this native returns.
      *
@@ -2907,7 +2907,7 @@ export declare namespace camera {
      *
      * Hash: 0xB5349E36C546509A | Since: 323
      */
-    function getCamSplinePhase(cam: number | Camera): number;
+    function getCamSplinePhase(cam: number | ICamera): number;
     /**
      * context: see _GET_CAM_ACTIVE_VIEW_MODE_CONTEXT
      *
@@ -2975,13 +2975,13 @@ export declare namespace camera {
      *
      * Hash: 0x5F35F6732C3FBBA0 | Since: 323
      */
-    function getFinalRenderedRemotePlayerCamFov(player: number | string | Player): number;
+    function getFinalRenderedRemotePlayerCamFov(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
      * Hash: 0x26903D9CD1175F2C | Since: 323
      */
-    function getFinalRenderedRemotePlayerCamRot(player: number | string | Player, rotationOrder: number): Vector3;
+    function getFinalRenderedRemotePlayerCamRot(player: number | string | IPlayer, rotationOrder: number): Vector3;
     /**
      * No comment provided
      *
@@ -3079,13 +3079,13 @@ export declare namespace camera {
      *
      * Hash: 0x202A5ED9CE01D6E7 | Since: 2189
      */
-    function hardAttachCamToEntity(cam: number | Camera, entity: number | Entity, rot: Vector3, xOffset: number, yOffset: number, zOffset: number, isRelative: boolean): void;
+    function hardAttachCamToEntity(cam: number | ICamera, entity: number | IEntity, rot: Vector3, xOffset: number, yOffset: number, zOffset: number, isRelative: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x149916F50C34A40D | Since: 1180
      */
-    function hardAttachCamToPedBone(cam: number | Camera, ped: number | Ped, boneIndex: number): void;
+    function hardAttachCamToPedBone(cam: number | ICamera, ped: number | IPed, boneIndex: number): void;
     /**
      * No comment provided
      *
@@ -3133,37 +3133,37 @@ export declare namespace camera {
      *
      * Hash: 0xDFB2B516207D3534 | Since: 323
      */
-    function isCamActive(cam: number | Camera): boolean;
+    function isCamActive(cam: number | ICamera): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x036F97C908C2B52C | Since: 323
      */
-    function isCamInterpolating(cam: number | Camera): boolean;
+    function isCamInterpolating(cam: number | ICamera): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xC90621D8A0CEECF2 | Since: 323
      */
-    function isCamPlayingAnim(cam: number | Camera, animName: string, animDictionary: string): boolean;
+    function isCamPlayingAnim(cam: number | ICamera, animName: string, animDictionary: string): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x02EC0AF5C5A49B7A | Since: 323
      */
-    function isCamRendering(cam: number | Camera): boolean;
+    function isCamRendering(cam: number | ICamera): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x6B24BFE83A2BE47B | Since: 323
      */
-    function isCamShaking(cam: number | Camera): boolean;
+    function isCamShaking(cam: number | ICamera): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x0290F35C0AD97864 | Since: 323
      */
-    function isCamSplinePaused(cam: number | Camera): boolean;
+    function isCamSplinePaused(cam: number | ICamera): boolean;
     /**
      * Tests some cinematic camera flags
      *
@@ -3314,13 +3314,13 @@ export declare namespace camera {
      *
      * Hash: 0x7DCF7C708D292D55 | Since: 323
      */
-    function overrideCamSplineMotionBlur(cam: number | Camera): void;
+    function overrideCamSplineMotionBlur(cam: number | ICamera): void;
     /**
      * No comment provided
      *
      * Hash: 0x40B62FA033EB0346 | Since: 323
      */
-    function overrideCamSplineVelocity(cam: number | Camera): void;
+    function overrideCamSplineVelocity(cam: number | ICamera): void;
     /**
      * Atleast one time in a script for the zRot Rockstar uses GET_ENTITY_HEADING to help fill the parameter.
      *
@@ -3331,7 +3331,7 @@ export declare namespace camera {
      *
      * Hash: 0x9A2D0FB2E7852392 | Since: 323
      */
-    function playCamAnim(cam: number | Camera, animName: string, animDictionary: string, pos: Vector3, rot: Vector3): boolean;
+    function playCamAnim(cam: number | ICamera, animName: string, animDictionary: string, pos: Vector3, rot: Vector3): boolean;
     /**
      * Examples:
      *
@@ -3347,19 +3347,19 @@ export declare namespace camera {
      *
      * Hash: 0xF75497BB865F0803 | Since: 323
      */
-    function pointCamAtCoord(cam: number | Camera, pos: Vector3): void;
+    function pointCamAtCoord(cam: number | ICamera, pos: Vector3): void;
     /**
      * p5 always seems to be 1 i.e TRUE
      *
      * Hash: 0x5640BFF86B16E8DC | Since: 323
      */
-    function pointCamAtEntity(cam: number | Camera, entity: number | Entity): void;
+    function pointCamAtEntity(cam: number | ICamera, entity: number | IEntity): void;
     /**
      * Parameters p0-p5 seems correct. The bool p6 is unknown, but through every X360 script it's always 1. Please correct p0-p5 if any prove to be wrong.
      *
      * Hash: 0x68B2B5F33BA63C41 | Since: 323
      */
-    function pointCamAtPedBone(cam: number | Camera, ped: number | Ped, boneIndex: number, pos: Vector3): void;
+    function pointCamAtPedBone(cam: number | ICamera, ped: number | IPed, boneIndex: number, pos: Vector3): void;
     /**
      * ease - smooth transition between the camera's positions
      * easeTime - Time in milliseconds for the transition to happen
@@ -3394,38 +3394,38 @@ export declare namespace camera {
      *
      * Hash: 0x026FB97D0A425F84 | Since: 323
      */
-    function setCamActive(cam: number | Camera, active: boolean): void;
+    function setCamActive(cam: number | ICamera, active: boolean): void;
     /**
      * Previous declaration void SET_CAM_ACTIVE_WITH_INTERP(Cam camTo, Cam camFrom, int duration, BOOL easeLocation, BOOL easeRotation) is completely wrong. The last two params are integers not BOOLs...
      *
      *
      * Hash: 0x9FBDA379383A52A4 | Since: 323
      */
-    function setCamActiveWithInterp(camTo: number | Camera, camFrom: number | Camera, duration: number, easeLocation: number, easeRotation: number): void;
+    function setCamActiveWithInterp(camTo: number | ICamera, camFrom: number | ICamera, duration: number, easeLocation: number, easeRotation: number): void;
     /**
      * Allows you to aim and shoot at the direction the camera is facing.
      *
      * Hash: 0x8C1DC7770C51DC8D | Since: 323
      */
-    function setCamAffectsAiming(cam: number | Camera, toggle: boolean): void;
+    function setCamAffectsAiming(cam: number | ICamera, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x4145A4C44FF3B5A6 | Since: 323
      */
-    function setCamAnimCurrentPhase(cam: number | Camera, phase: number): void;
+    function setCamAnimCurrentPhase(cam: number | ICamera, phase: number): void;
     /**
      * Rotates the radar to match the camera's Z rotation
      *
      * Hash: 0x661B5C8654ADD825 | Since: 323
      */
-    function setCamControlsMiniMapHeading(cam: number | Camera, toggle: boolean): void;
+    function setCamControlsMiniMapHeading(cam: number | ICamera, toggle: boolean): void;
     /**
      * Sets the position of the cam.
      *
      * Hash: 0x4D41783FB745E42E | Since: 323
      */
-    function setCamCoord(cam: number | Camera, pos: Vector3): void;
+    function setCamCoord(cam: number | ICamera, pos: Vector3): void;
     /**
      * if p0 is 0, effect is cancelled
      *
@@ -3441,44 +3441,44 @@ export declare namespace camera {
      *
      * Hash: 0x1B93E0107865DD40 | Since: 323
      */
-    function setCamDebugName(camera: number | Camera, name: string): void;
+    function setCamDebugName(camera: number | ICamera, name: string): void;
     /**
      * This native has its name defined inside its codE
      *
      *
      * Hash: 0x7DD234D6F3914C5B | Since: 323
      */
-    function setCamDofFnumberOfLens(camera: number | Camera): void;
+    function setCamDofFnumberOfLens(camera: number | ICamera): void;
     /**
      * Native name labeled within its code
      *
      * Hash: 0x47B595D60664CFFA | Since: 1011
      */
-    function setCamDofFocalLengthMultiplier(camera: number | Camera, multiplier: number): void;
+    function setCamDofFocalLengthMultiplier(camera: number | ICamera, multiplier: number): void;
     /**
      * This native has a name defined inside its code
      *
      * Hash: 0xC669EEA5D031B7DE | Since: 323
      */
-    function setCamDofFocusDistanceBias(camera: number | Camera): void;
+    function setCamDofFocusDistanceBias(camera: number | ICamera): void;
     /**
      * This native has a name defined inside its code
      *
      * Hash: 0xC3654A441402562D | Since: 323
      */
-    function setCamDofMaxNearInFocusDistance(camera: number | Camera): void;
+    function setCamDofMaxNearInFocusDistance(camera: number | ICamera): void;
     /**
      * This native has a name defined inside its code
      *
      * Hash: 0x2C654B4943BDDF7C | Since: 323
      */
-    function setCamDofMaxNearInFocusDistanceBlendLevel(camera: number | Camera): void;
+    function setCamDofMaxNearInFocusDistanceBlendLevel(camera: number | ICamera): void;
     /**
      * No comment provided
      *
      * Hash: 0xF55E4046F6F831DC | Since: 323
      */
-    function setCamDofOverriddenFocusDistance(camera: number | Camera): void;
+    function setCamDofOverriddenFocusDistance(camera: number | ICamera): void;
     /**
      * No comment provided
      *
@@ -3490,31 +3490,31 @@ export declare namespace camera {
      *
      * Hash: 0x3CF48F6F96E749DC | Since: 323
      */
-    function setCamDofPlanes(cam: number | Camera): void;
+    function setCamDofPlanes(cam: number | ICamera): void;
     /**
      * This native has a name defined inside its code
      *
      * Hash: 0x7CF3AF51DCFE4108 | Since: 2944
      */
-    function setCamDofShouldKeepLookAtTargetInFocus(camera: number | Camera, state: boolean): void;
+    function setCamDofShouldKeepLookAtTargetInFocus(camera: number | ICamera, state: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x5EE29B4D7D5DF897 | Since: 323
      */
-    function setCamDofStrength(cam: number | Camera, dofStrength: number): void;
+    function setCamDofStrength(cam: number | ICamera, dofStrength: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xAE306F2A904BF86E | Since: 323
      */
-    function setCamFarClip(cam: number | Camera, farClip: number): void;
+    function setCamFarClip(cam: number | ICamera, farClip: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xEDD91296CD01AEE0 | Since: 323
      */
-    function setCamFarDof(cam: number | Camera, farDOF: number): void;
+    function setCamFarDof(cam: number | ICamera, farDOF: number): void;
     /**
      * Sets the field of view of the cam.
      * ---------------------------------------------
@@ -3523,7 +3523,7 @@ export declare namespace camera {
      *
      * Hash: 0xB13C14F66A00D047 | Since: 323
      */
-    function setCamFov(cam: number | Camera, fieldOfView: number): void;
+    function setCamFov(cam: number | ICamera, fieldOfView: number): void;
     /**
      * The native seems to only be called once.
      *
@@ -3533,38 +3533,38 @@ export declare namespace camera {
      *
      * Hash: 0x45F1DE9C34B93AE6 | Since: 323
      */
-    function setCamInheritRollVehicle(cam: number | Camera): void;
+    function setCamInheritRollVehicle(cam: number | ICamera): void;
     /**
      * When set to true shadows appear more smooth but less detailed.
      * Set to false by default.
      *
      * Hash: 0xA2767257A320FC82 | Since: 323
      */
-    function setCamIsInsideVehicle(cam: number | Camera, toggle: boolean): void;
+    function setCamIsInsideVehicle(cam: number | ICamera, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x6F0F77FBA9A8F2E6 | Since: 323
      */
-    function setCamMotionBlurStrength(cam: number | Camera, strength: number): void;
+    function setCamMotionBlurStrength(cam: number | ICamera, strength: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xC7848EFCCC545182 | Since: 323
      */
-    function setCamNearClip(cam: number | Camera, nearClip: number): void;
+    function setCamNearClip(cam: number | ICamera, nearClip: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x3FA4BF0A7AB7DE2C | Since: 323
      */
-    function setCamNearDof(cam: number | Camera, nearDOF: number): void;
+    function setCamNearDof(cam: number | ICamera, nearDOF: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xBFD8727AEA3CCEBA | Since: 323
      */
-    function setCamParams(cam: number | Camera, pos: Vector3, rot: Vector3, fieldOfView: number): void;
+    function setCamParams(cam: number | ICamera, pos: Vector3, rot: Vector3, fieldOfView: number): void;
     /**
      * Sets the rotation of the cam.
      * Last parameter unknown.
@@ -3573,55 +3573,55 @@ export declare namespace camera {
      *
      * Hash: 0x85973643155D0B07 | Since: 323
      */
-    function setCamRot(cam: number | Camera, rot: Vector3, rotationOrder: number): void;
+    function setCamRot(cam: number | ICamera, rot: Vector3, rotationOrder: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xD93DB43B82BC0D00 | Since: 323
      */
-    function setCamShakeAmplitude(cam: number | Camera, amplitude: number): void;
+    function setCamShakeAmplitude(cam: number | ICamera, amplitude: number): void;
     /**
      * I named p1 as timeDuration as it is obvious. I'm assuming tho it is ran in ms(Milliseconds) as usual.
      *
      * Hash: 0x1381539FEE034CDA | Since: 323
      */
-    function setCamSplineDuration(cam: number | Camera, timeDuration: number): void;
+    function setCamSplineDuration(cam: number | ICamera, timeDuration: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x83B8201ED82A9A2D | Since: 323
      */
-    function setCamSplineNodeEase(cam: number | Camera, easingFunction: number): void;
+    function setCamSplineNodeEase(cam: number | ICamera, easingFunction: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x7BF1A54AE67AC070 | Since: 323
      */
-    function setCamSplineNodeExtraFlags(cam: number | Camera, flags: number): void;
+    function setCamSplineNodeExtraFlags(cam: number | ICamera, flags: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xA6385DEB180F319F | Since: 323
      */
-    function setCamSplineNodeVelocityScale(cam: number | Camera, scale: number): void;
+    function setCamSplineNodeVelocityScale(cam: number | ICamera, scale: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x242B5874F0A4E052 | Since: 323
      */
-    function setCamSplinePhase(cam: number | Camera): void;
+    function setCamSplinePhase(cam: number | ICamera): void;
     /**
      * No comment provided
      *
      * Hash: 0xD1B0F412F109EA5D | Since: 323
      */
-    function setCamSplineSmoothingStyle(cam: number | Camera, smoothingStyle: number): void;
+    function setCamSplineSmoothingStyle(cam: number | ICamera, smoothingStyle: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x16A96863A17552BB | Since: 323
      */
-    function setCamUseShallowDofMode(cam: number | Camera, toggle: boolean): void;
+    function setCamUseShallowDofMode(cam: number | ICamera, toggle: boolean): void;
     /**
      * context: see _GET_CAM_ACTIVE_VIEW_MODE_CONTEXT, viewmode: see CAM.GET_FOLLOW_VEHICLE_CAM_VIEW_MODE
      *
@@ -3727,31 +3727,31 @@ export declare namespace camera {
      *
      * Hash: 0xC91C6C55199308CA | Since: 323
      */
-    function setFlyCamCoordAndConstrain(cam: number | Camera, pos: Vector3): void;
+    function setFlyCamCoordAndConstrain(cam: number | ICamera, pos: Vector3): void;
     /**
      * No comment provided
      *
      * Hash: 0x503F5920162365B2 | Since: 323
      */
-    function setFlyCamHorizontalResponse(cam: number | Camera): void;
+    function setFlyCamHorizontalResponse(cam: number | ICamera): void;
     /**
      * No comment provided
      *
      * Hash: 0xF9D02130ECDD1D77 | Since: 323
      */
-    function setFlyCamMaxHeight(cam: number | Camera, height: number): void;
+    function setFlyCamMaxHeight(cam: number | ICamera, height: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xC8B5C4A79CC18B94 | Since: 323
      */
-    function setFlyCamVerticalControlsThisUpdate(cam: number | Camera): void;
+    function setFlyCamVerticalControlsThisUpdate(cam: number | ICamera): void;
     /**
      * No comment provided
      *
      * Hash: 0xE827B9382CFB41BA | Since: 791
      */
-    function setFlyCamVerticalResponse(cam: number | Camera): void;
+    function setFlyCamVerticalResponse(cam: number | ICamera): void;
     /**
      * No comment provided
      *
@@ -3830,19 +3830,19 @@ export declare namespace camera {
      *
      * Hash: 0xFD3151CD37EA2245 | Since: 323
      */
-    function setGameplayCamEntityToLimitFocusOverBoundingSphereThisUpdate(entity: number | Entity): void;
+    function setGameplayCamEntityToLimitFocusOverBoundingSphereThisUpdate(entity: number | IEntity): void;
     /**
      * Forces gameplay cam to specified ped as if you were the ped or spectating it
      *
      * Hash: 0x8BBACBF51DA047A8 | Since: 323
      */
-    function setGameplayCamFollowPedThisUpdate(ped: number | Ped): void;
+    function setGameplayCamFollowPedThisUpdate(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x2AED6301F67007D5 | Since: 323
      */
-    function setGameplayCamIgnoreEntityCollisionThisUpdate(entity: number | Entity): void;
+    function setGameplayCamIgnoreEntityCollisionThisUpdate(entity: number | IEntity): void;
     /**
      * some camera effect that is (also) used in the drunk-cheat, and turned off (by setting it to 0.0) along with the shaking effects once the drunk cheat is disabled.
      *
@@ -3890,7 +3890,7 @@ export declare namespace camera {
      *
      * Hash: 0x189E955A8313E298 | Since: 323
      */
-    function setGameplayEntityHint(entity: number | Entity, xOffset: number, yOffset: number, zOffset: number, time: number, easeInTime: number, easeOutTime: number): void;
+    function setGameplayEntityHint(entity: number | IEntity, xOffset: number, yOffset: number, zOffset: number, time: number, easeInTime: number, easeOutTime: number): void;
     /**
      * No comment provided
      *
@@ -3932,25 +3932,25 @@ export declare namespace camera {
      *
      * Hash: 0x83E87508A2CA2AC6 | Since: 323
      */
-    function setGameplayObjectHint(_object: number | Object, xOffset: number, yOffset: number, zOffset: number, time: number, easeInTime: number, easeOutTime: number): void;
+    function setGameplayObjectHint(_object: number | IObject, xOffset: number, yOffset: number, zOffset: number, time: number, easeInTime: number, easeOutTime: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x2B486269ACD548D3 | Since: 323
      */
-    function setGameplayPedHint(ped: number | Ped, x1: number, y1: number, z1: number, duration: number, blendOutDuration: number, blendInDuration: number): void;
+    function setGameplayPedHint(ped: number | IPed, x1: number, y1: number, z1: number, duration: number, blendOutDuration: number, blendInDuration: number): void;
     /**
      * Focuses the camera on the specified vehicle.
      *
      * Hash: 0xA2297E18F3E71C2E | Since: 323
      */
-    function setGameplayVehicleHint(vehicle: number | Vehicle, offsetX: number, offsetY: number, offsetZ: number, time: number, easeInTime: number, easeOutTime: number): void;
+    function setGameplayVehicleHint(vehicle: number | IVehicle, offsetX: number, offsetY: number, offsetZ: number, time: number, easeInTime: number, easeOutTime: number): void;
     /**
      * Forces gameplay cam to specified vehicle as if you were in it
      *
      * Hash: 0xE9EA16D6E54CDCA4 | Since: 323
      */
-    function setInVehicleCamStateThisUpdate(p0: number | Vehicle): void;
+    function setInVehicleCamStateThisUpdate(p0: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -4048,7 +4048,7 @@ export declare namespace camera {
      *
      * Hash: 0x6A25241C340D3822 | Since: 323
      */
-    function shakeCam(cam: number | Camera, _type: string, amplitude: number): void;
+    function shakeCam(cam: number | ICamera, _type: string, amplitude: number): void;
     /**
      * p0 argument found in the b617d scripts: "DRUNK_SHAKE"
      *
@@ -4090,13 +4090,13 @@ export declare namespace camera {
      *
      * Hash: 0xF33AB75780BA57DE | Since: 323
      */
-    function stopCamPointing(cam: number | Camera): void;
+    function stopCamPointing(cam: number | ICamera): void;
     /**
      * No comment provided
      *
      * Hash: 0xBDECF64367884AC3 | Since: 323
      */
-    function stopCamShaking(cam: number | Camera): void;
+    function stopCamShaking(cam: number | ICamera): void;
     /**
      * No comment provided
      *
@@ -4159,7 +4159,7 @@ export declare namespace camera {
      *
      * Hash: 0x5D96CFB59DA076A0 | Since: 2060
      */
-    function triggerVehiclePartBrokenShake(vehicle: number | Vehicle): void;
+    function triggerVehiclePartBrokenShake(vehicle: number | IVehicle): void;
     /**
      * Sets gameplay camera to hash
      *
@@ -4183,13 +4183,13 @@ export declare namespace camera {
      *
      * Hash: 0x5C48A1D6E3B33179 | Since: 323
      */
-    function wasFlyCamConstrainedOnPreviousUdpate(cam: number | Camera): boolean;
+    function wasFlyCamConstrainedOnPreviousUdpate(cam: number | ICamera): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x34CFC4C2A38E83E3 | Since: 3258
      */
-    function activateCamWithInterpAndFovCurve(camTo: number | Camera, camFrom: number | Camera, duration: number, easeLocation: number, easeRotation: number, easeFov: number): void;
+    function activateCamWithInterpAndFovCurve(camTo: number | ICamera, camFrom: number | ICamera, duration: number, easeLocation: number, easeRotation: number, easeFov: number): void;
     /**
      * No comment provided
      *
@@ -4207,7 +4207,7 @@ export declare namespace camera {
      *
      * Hash: 0xDDA77EE33C005AAF | Since: 3258
      */
-    function interpolateCamWithParams(camera: number | Camera, camPosX: number, camPosY: number, camPosZ: number, camRotX: number, camRotY: number, camRotZ: number, fov: number, duration: number, posCurveType: number, rotCurveType: number, rotOrder: number, fovCurveType: number): void;
+    function interpolateCamWithParams(camera: number | ICamera, camPosX: number, camPosY: number, camPosZ: number, camRotX: number, camRotY: number, camRotZ: number, fov: number, duration: number, posCurveType: number, rotCurveType: number, rotOrder: number, fovCurveType: number): void;
 }
 export declare namespace clock {
     /**
@@ -4521,7 +4521,7 @@ export declare namespace cutscene {
      *
      * Hash: 0xE40C1C56DF95C2E8 | Since: 323
      */
-    function registerEntityFor(cutscenePed: number | Ped, cutsceneEntName: string, modelHash: number | string): void;
+    function registerEntityFor(cutscenePed: number | IPed, cutsceneEntName: string, modelHash: number | string): void;
     /**
      * No comment provided
      *
@@ -4624,7 +4624,7 @@ export declare namespace cutscene {
      *
      * Hash: 0x2A56C06EBEF2B0D9 | Since: 323
      */
-    function setPedComponentVariationFromPed(cutsceneEntName: string, ped: number | Ped, modelHash: number | string): void;
+    function setPedComponentVariationFromPed(cutsceneEntName: string, ped: number | IPed, modelHash: number | string): void;
     /**
      * Thanks R*! ;)
      *
@@ -5062,25 +5062,25 @@ export declare namespace decorator {
      *
      * Hash: 0x05661B80A8C9165F | Since: 323
      */
-    function decorExistOn(entity: number | Entity, propertyName: string): boolean;
+    function decorExistOn(entity: number | IEntity, propertyName: string): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xDACE671663F2F5DB | Since: 323
      */
-    function decorGetBool(entity: number | Entity, propertyName: string): boolean;
+    function decorGetBool(entity: number | IEntity, propertyName: string): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x6524A2F114706F43 | Since: 323
      */
-    function decorGetFloat(entity: number | Entity, propertyName: string): number;
+    function decorGetFloat(entity: number | IEntity, propertyName: string): number;
     /**
      * No comment provided
      *
      * Hash: 0xA06C969B02A97298 | Since: 323
      */
-    function decorGetInt(entity: number | Entity, propertyName: string): number;
+    function decorGetInt(entity: number | IEntity, propertyName: string): number;
     /**
      * type: see DECOR_REGISTER
      *
@@ -5104,32 +5104,32 @@ export declare namespace decorator {
      *
      * Hash: 0x00EE9F297C738720 | Since: 323
      */
-    function decorRemove(entity: number | Entity, propertyName: string): boolean;
+    function decorRemove(entity: number | IEntity, propertyName: string): boolean;
     /**
      * This function sets metadata of type bool to specified entity.
      *
      *
      * Hash: 0x6B1E8E2ED1335B71 | Since: 323
      */
-    function decorSetBool(entity: number | Entity, propertyName: string, value: boolean): boolean;
+    function decorSetBool(entity: number | IEntity, propertyName: string, value: boolean): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x211AB1DD8D0F363A | Since: 323
      */
-    function decorSetFloat(entity: number | Entity, propertyName: string, value: number): boolean;
+    function decorSetFloat(entity: number | IEntity, propertyName: string, value: number): boolean;
     /**
      * Sets property to int.
      *
      * Hash: 0x0CE3AA5E1CA19E10 | Since: 323
      */
-    function decorSetInt(entity: number | Entity, propertyName: string, value: number): boolean;
+    function decorSetInt(entity: number | IEntity, propertyName: string, value: number): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x95AED7B8E39ECAA4 | Since: 323
      */
-    function decorSetTime(entity: number | Entity, propertyName: string, timestamp: number): boolean;
+    function decorSetTime(entity: number | IEntity, propertyName: string, timestamp: number): boolean;
 }
 export declare namespace dlc {
     /**
@@ -5232,7 +5232,7 @@ export declare namespace entity {
      *
      * Hash: 0xC5F68BE9613E2D18 | Since: 323
      */
-    function applyForceTo(entity: number | Entity, forceFlags: number, pos: Vector3, offX: number, offY: number, offZ: number, boneIndex: number, isDirectionRel: boolean, ignoreUpVec: boolean, isForceRel: boolean): void;
+    function applyForceTo(entity: number | IEntity, forceFlags: number, pos: Vector3, offX: number, offY: number, offZ: number, boneIndex: number, isDirectionRel: boolean, ignoreUpVec: boolean, isForceRel: boolean): void;
     /**
      * Applies a force to the specified entity.
      *
@@ -5253,19 +5253,19 @@ export declare namespace entity {
      *
      * Hash: 0x18FF00FC7EFF559E | Since: 323
      */
-    function applyForceToCenterOfMass(entity: number | Entity, forceType: number, pos: Vector3, isDirectionRel: boolean, isForceRel: boolean): void;
+    function applyForceToCenterOfMass(entity: number | IEntity, forceType: number, pos: Vector3, isDirectionRel: boolean, isForceRel: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x5C48B75732C8456C | Since: 791
      */
-    function attachBoneToEntityBone(entity1: number | Entity, entity2: number | Entity, boneIndex1: number, boneIndex2: number): void;
+    function attachBoneToEntityBone(entity1: number | IEntity, entity2: number | IEntity, boneIndex1: number, boneIndex2: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xFD1695C5D3B05439 | Since: 791
      */
-    function attachBoneToEntityBoneYForward(entity1: number | Entity, entity2: number | Entity, boneIndex1: number, boneIndex2: number): void;
+    function attachBoneToEntityBoneYForward(entity1: number | IEntity, entity2: number | IEntity, boneIndex1: number, boneIndex2: number): void;
     /**
      * Attaches entity1 to bone (boneIndex) of entity2.
      *
@@ -5280,7 +5280,7 @@ export declare namespace entity {
      *
      * Hash: 0x6B9BBD38AB0796DF | Since: 323
      */
-    function attachToEntity(entity1: number | Entity, entity2: number | Entity, boneIndex: number, pos: Vector3, rot: Vector3, useSoftPinning: boolean, collision: boolean, isPed: boolean, vertexIndex: number, fixedRot: boolean): void;
+    function attachToEntity(entity1: number | IEntity, entity2: number | IEntity, boneIndex: number, pos: Vector3, rot: Vector3, useSoftPinning: boolean, collision: boolean, isPed: boolean, vertexIndex: number, fixedRot: boolean): void;
     /**
      * breakForce is the amount of force required to break the bond.
      * p14 - is always 1 in scripts
@@ -5293,19 +5293,19 @@ export declare namespace entity {
      *
      * Hash: 0xC3675780C92F90F9 | Since: 323
      */
-    function attachToEntityPhysically(entity1: number | Entity, entity2: number | Entity, boneIndex1: number, boneIndex2: number, xPos1: number, yPos1: number, zPos1: number, xPos2: number, yPos2: number, zPos2: number, rot: Vector3, breakForce: number, fixedRot: boolean, collision: boolean): void;
+    function attachToEntityPhysically(entity1: number | IEntity, entity2: number | IEntity, boneIndex1: number, boneIndex2: number, xPos1: number, yPos1: number, zPos1: number, xPos2: number, yPos2: number, zPos2: number, rot: Vector3, breakForce: number, fixedRot: boolean, collision: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x168A09D1B25B0BA4 | Since: 2944
      */
-    function attachToEntityPhysicallyOverrideInverseMass(firstEntityIndex: number | Entity, secondEntityIndex: number | Entity, firstEntityBoneIndex: number, secondEntityBoneIndex: number, secondEntityOffsetX: number, secondEntityOffsetY: number, secondEntityOffsetZ: number, firstEntityOffsetX: number, firstEntityOffsetY: number, firstEntityOffsetZ: number, vecRotationX: number, vecRotationY: number, vecRotationZ: number, physicalStrength: number, constrainRotation: boolean, doInitialWarp: boolean, collideWithEntity: boolean, addInitialSeperation: boolean, rotOrder: number, invMassScaleA: number, invMassScaleB: number): void;
+    function attachToEntityPhysicallyOverrideInverseMass(firstEntityIndex: number | IEntity, secondEntityIndex: number | IEntity, firstEntityBoneIndex: number, secondEntityBoneIndex: number, secondEntityOffsetX: number, secondEntityOffsetY: number, secondEntityOffsetZ: number, firstEntityOffsetX: number, firstEntityOffsetY: number, firstEntityOffsetZ: number, vecRotationX: number, vecRotationY: number, vecRotationZ: number, physicalStrength: number, constrainRotation: boolean, doInitialWarp: boolean, collideWithEntity: boolean, addInitialSeperation: boolean, rotOrder: number, invMassScaleA: number, invMassScaleB: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xA72CD9CA74A5ECBA | Since: 323
      */
-    function clearLastDamageEntity(entity: number | Entity): void;
+    function clearLastDamageEntity(entity: number | IEntity): void;
     /**
      * No comment provided
      *
@@ -5338,56 +5338,56 @@ export declare namespace entity {
      *
      * Hash: 0xAE3CBE5BF394C9C9 | Since: 323
      */
-    function deleteEntity(entity: number | Entity): void;
+    function deleteEntity(entity: number | IEntity): void;
     /**
      * If `collision` is set to true, both entities won't collide with the other until the distance between them is above 4 meters.
      * Set `dynamic` to true to keep velocity after dettaching
      *
      * Hash: 0x961AC54BF0613F5D | Since: 323
      */
-    function detach(entity: number | Entity, dynamic: boolean, collision: boolean): void;
+    function detach(entity: number | IEntity, dynamic: boolean, collision: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xDDE6DF5AE89981D2 | Since: 323
      */
-    function doesBelongToThisScript(entity: number | Entity): boolean;
+    function doesBelongToThisScript(entity: number | IEntity): boolean;
     /**
      * Checks whether an entity exists in the game world.
      *
      * Hash: 0x7239B21A38F536BA | Since: 323
      */
-    function doesExist(entity: number | Entity): boolean;
+    function doesExist(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x2158E81A6AF65EA9 | Since: 2699
      */
-    function doesHaveAnimDirector(entity: number | Entity): boolean;
+    function doesHaveAnimDirector(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x060D6E96F8B8E48D | Since: 323
      */
-    function doesHaveDrawable(entity: number | Entity): boolean;
+    function doesHaveDrawable(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xDA95EA3317CC5064 | Since: 323
      */
-    function doesHavePhysics(entity: number | Entity): boolean;
+    function doesHavePhysics(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x764EB96874EFFDC1 | Since: 2699
      */
-    function doesHaveSkeleton(entity: number | Entity): boolean;
+    function doesHaveSkeleton(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x6CE177D014502E8A | Since: 877
      */
-    function enableBulletCollision(entity: number | Entity): void;
+    function enableBulletCollision(entity: number | IEntity): void;
     /**
      * In the script "player_scene_t_bbfight.c4":
      * `"if (ENTITY::FIND_ANIM_EVENT_PHASE(&l_16E, &l_19F[v_4\/\*16\*\/], v_9, &v_A, &v_B))"`
@@ -5408,13 +5408,13 @@ export declare namespace entity {
      *
      * Hash: 0x40FDEDB72F8293B2 | Since: 323
      */
-    function forceAiAndAnimationUpdate(entity: number | Entity): void;
+    function forceAiAndAnimationUpdate(entity: number | IEntity): void;
     /**
      * Freezes or unfreezes an entity preventing its coordinates to change by the player if set to `true`. You can still change the entity position using SET_ENTITY_COORDS.
      *
      * Hash: 0x428CA6DBD1094446 | Since: 323
      */
-    function freezePosition(entity: number | Entity, toggle: boolean): void;
+    function freezePosition(entity: number | IEntity, toggle: boolean): void;
     /**
      * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
      *
@@ -5426,13 +5426,13 @@ export declare namespace entity {
      *
      * Hash: 0xE465D4AB7CA6AE72 | Since: 323
      */
-    function getCollisionNormalOfLastHitFor(entity: number | Entity): Vector3;
+    function getCollisionNormalOfLastHitFor(entity: number | IEntity): Vector3;
     /**
      * No comment provided
      *
      * Hash: 0x5A47B3B5E63E94C6 | Since: 323
      */
-    function getAlpha(entity: number | Entity): number;
+    function getAlpha(entity: number | IEntity): number;
     /**
      * Returns a float value representing animation's current playtime with respect to its total playtime. This value increasing in a range from [0 to 1] and wrap back to 0 when it reach 1.
      *
@@ -5445,7 +5445,7 @@ export declare namespace entity {
      *
      * Hash: 0x346D81500D088F42 | Since: 323
      */
-    function getAnimCurrentTime(entity: number | Entity, animDict: string, animName: string): number;
+    function getAnimCurrentTime(entity: number | IEntity, animDict: string, animName: string): number;
     /**
      * Returns a float value representing animation's total playtime in milliseconds.
      *
@@ -5457,19 +5457,19 @@ export declare namespace entity {
      *
      * Hash: 0x50BD2730B191E360 | Since: 323
      */
-    function getAnimTotalTime(entity: number | Entity, animDict: string, animName: string): number;
+    function getAnimTotalTime(entity: number | IEntity, animDict: string, animName: string): number;
     /**
      * No comment provided
      *
      * Hash: 0x48C2BED9180FE123 | Since: 323
      */
-    function getAttachedTo(entity: number | Entity): number;
+    function getAttachedTo(entity: number | IEntity): number;
     /**
      * No comment provided
      *
      * Hash: 0xB328DCC3A3AA401B | Since: 791
      */
-    function getBoneCount(entity: number | Entity): number;
+    function getBoneCount(entity: number | IEntity): number;
     /**
      * Returns the index of the bone. If the bone was not found, -1 will be returned.
      *
@@ -5524,43 +5524,43 @@ export declare namespace entity {
      *
      * Hash: 0xFB71170B7E76ACBA | Since: 323
      */
-    function getBoneIndexByName(entity: number | Entity, boneName: string): number;
+    function getBoneIndexByName(entity: number | IEntity, boneName: string): number;
     /**
      * No comment provided
      *
      * Hash: 0xCF1247CC86961FD6 | Since: 2802
      */
-    function getBoneObjectPostion(entity: number | Entity, boneIndex: number): Vector3;
+    function getBoneObjectPostion(entity: number | IEntity, boneIndex: number): Vector3;
     /**
      * Gets the local rotation of the specified bone of the specified entity.
      *
      * Hash: 0xBD8D32550E5CEBFE | Since: 1734
      */
-    function getBoneObjectRotation(entity: number | Entity, boneIndex: number): Vector3;
+    function getBoneObjectRotation(entity: number | IEntity, boneIndex: number): Vector3;
     /**
      * Gets the world position of the specified bone of the specified entity.
      *
      * Hash: 0x46F8696933A63C9B | Since: 877
      */
-    function getBonePostion(entity: number | Entity, boneIndex: number): Vector3;
+    function getBonePostion(entity: number | IEntity, boneIndex: number): Vector3;
     /**
      * Gets the world rotation of the specified bone of the specified entity.
      *
      * Hash: 0xCE6294A232D03786 | Since: 791
      */
-    function getBoneRotation(entity: number | Entity, boneIndex: number): Vector3;
+    function getBoneRotation(entity: number | IEntity, boneIndex: number): Vector3;
     /**
      * No comment provided
      *
      * Hash: 0xD95CC5D2AB15A09F | Since: 757
      */
-    function getCanBeDamaged(entity: number | Entity): boolean;
+    function getCanBeDamaged(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xCCF1E97BEFDAE480 | Since: 323
      */
-    function getCollisionDisabled(entity: number | Entity): boolean;
+    function getCollisionDisabled(entity: number | IEntity): boolean;
     /**
      * Gets the current coordinates for a specified entity.
      * `entity` = The entity to get the coordinates from.
@@ -5568,31 +5568,31 @@ export declare namespace entity {
      *
      * Hash: 0x3FEF770D40960D5A | Since: 323
      */
-    function getCoords(entity: number | Entity, alive: boolean): Vector3;
+    function getCoords(entity: number | IEntity, alive: boolean): Vector3;
     /**
      * Gets the entity's forward vector.
      *
      * Hash: 0x0A794A5A57F8DF91 | Since: 323
      */
-    function getForwardVector(entity: number | Entity): Vector3;
+    function getForwardVector(entity: number | IEntity): Vector3;
     /**
      * Gets the X-component of the entity's forward vector.
      *
      * Hash: 0x8BB4EF4214E0E6D5 | Since: 323
      */
-    function getForwardX(entity: number | Entity): number;
+    function getForwardX(entity: number | IEntity): number;
     /**
      * Gets the Y-component of the entity's forward vector.
      *
      * Hash: 0x866A4A5FAE349510 | Since: 323
      */
-    function getForwardY(entity: number | Entity): number;
+    function getForwardY(entity: number | IEntity): number;
     /**
      * Returns the heading of the entity in degrees. Also know as the "Yaw" of an entity.
      *
      * Hash: 0xE83D4F9BA2A38914 | Since: 323
      */
-    function getHeading(entity: number | Entity): number;
+    function getHeading(entity: number | IEntity): number;
     /**
      * Gets the heading of the entity physics in degrees, which tends to be more accurate than just "GET_ENTITY_HEADING". This can be clearly seen while, for example, ragdolling a ped/player.
      *
@@ -5600,7 +5600,7 @@ export declare namespace entity {
      *
      * Hash: 0x846BF6291198A71E | Since: 323
      */
-    function getHeadingFromEulers(entity: number | Entity): number;
+    function getHeadingFromEulers(entity: number | IEntity): number;
     /**
      * Returns an integer value of entity's current health.
      *
@@ -5616,13 +5616,13 @@ export declare namespace entity {
      *
      * Hash: 0xEEF059FAD016D209 | Since: 323
      */
-    function getHealth(entity: number | Entity): number;
+    function getHealth(entity: number | IEntity): number;
     /**
      * No comment provided
      *
      * Hash: 0x5A504562485944DD | Since: 323
      */
-    function getHeight(entity: number | Entity, pos: Vector3, atTop: boolean, inWorldCoords: boolean): number;
+    function getHeight(entity: number | IEntity, pos: Vector3, atTop: boolean, inWorldCoords: boolean): number;
     /**
      * Return height (z-dimension) above ground.
      * Example: The pilot in a titan plane is 1.844176 above ground.
@@ -5632,19 +5632,19 @@ export declare namespace entity {
      *
      * Hash: 0x1DD55701034110E5 | Since: 323
      */
-    function getHeightAboveGround(entity: number | Entity): number;
+    function getHeightAboveGround(entity: number | IEntity): number;
     /**
      * Returns the LOD distance of an entity.
      *
      * Hash: 0x4159C2762B5791D6 | Since: 323
      */
-    function getLodDist(entity: number | Entity): number;
+    function getLodDist(entity: number | IEntity): number;
     /**
      * No comment provided
      *
      * Hash: 0xECB2FC7235A7D137 | Since: 323
      */
-    function getMatrix(entity: number | Entity): [Vector3, Vector3, Vector3, Vector3];
+    function getMatrix(entity: number | IEntity): [Vector3, Vector3, Vector3, Vector3];
     /**
      * Return an integer value of entity's maximum health.
      *
@@ -5654,13 +5654,13 @@ export declare namespace entity {
      *
      * Hash: 0x15D757606D170C3C | Since: 323
      */
-    function getMaxHealth(entity: number | Entity): number;
+    function getMaxHealth(entity: number | IEntity): number;
     /**
      * Returns the model hash from the entity
      *
      * Hash: 0x9F47B058362C84B5 | Since: 323
      */
-    function getModel(entity: number | Entity): number;
+    function getModel(entity: number | IEntity): number;
     /**
      * Gets the handle of an entity with a specific model hash attached to another entity, such as an object attached to a ped.
      * This native does not appear to have anything to do with pickups as in scripts it is used with objects.
@@ -5671,38 +5671,38 @@ export declare namespace entity {
      *
      * Hash: 0x1F922734E259BD26 | Since: 1180
      */
-    function getOfTypeAttachedToEntity(entity: number | Entity, modelHash: number | string): number;
+    function getOfTypeAttachedToEntity(entity: number | IEntity, modelHash: number | string): number;
     /**
      * No comment provided
      *
      * Hash: 0xD45DC2893621E1FE | Since: 323
      */
-    function getPitch(entity: number | Entity): number;
+    function getPitch(entity: number | IEntity): number;
     /**
      * A population type, from the following enum: https://alloc8or.re/gta5/doc/enums/ePopulationType.txt
      *
      * Hash: 0xF6F5161F4534EDFF | Since: 323
      */
-    function getPopulationType(entity: number | Entity): number;
+    function getPopulationType(entity: number | IEntity): number;
     /**
      * No comment provided
      *
      * Hash: 0xBE8CD9BE829BBEBF | Since: 1604
      */
-    function getProofs(entity: number | Entity): [boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean];
+    function getProofs(entity: number | IEntity): [boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean];
     /**
      * w is the correct parameter name!
      *
      * Hash: 0x7B3703D2D32DFA18 | Since: 323
      */
-    function getQuaternion(entity: number | Entity): [number, number, number, number];
+    function getQuaternion(entity: number | IEntity): [number, number, number, number];
     /**
      * Displays the current ROLL axis of the entity [-180.0000/180.0000+]
      * (Sideways Roll) such as a vehicle tipped on its side
      *
      * Hash: 0x831E0242595560DF | Since: 323
      */
-    function getRoll(entity: number | Entity): number;
+    function getRoll(entity: number | IEntity): number;
     /**
      * rotationOrder is the order yaw, pitch and roll is applied. Usually 2. Returns a vector where the Z coordinate is the yaw.
      *
@@ -5721,19 +5721,19 @@ export declare namespace entity {
      *
      * Hash: 0xAFBD61CC738D9EB9 | Since: 323
      */
-    function getRotation(entity: number | Entity, rotationOrder: number): Vector3;
+    function getRotation(entity: number | IEntity, rotationOrder: number): Vector3;
     /**
      * No comment provided
      *
      * Hash: 0x213B91045D09B983 | Since: 323
      */
-    function getRotationVelocity(entity: number | Entity): Vector3;
+    function getRotationVelocity(entity: number | IEntity): Vector3;
     /**
      * Returns the name of the script that owns/created the entity or nullptr. Second parameter is unused, can just be a nullptr.
      *
      * Hash: 0xA6E9C38DB51D7748 | Since: 323
      */
-    function getScript(entity: number | Entity): [string, number];
+    function getScript(entity: number | IEntity): [string, number];
     /**
      * result is in meters per second
      *
@@ -5747,19 +5747,19 @@ export declare namespace entity {
      *
      * Hash: 0xD5037BA82E12416F | Since: 323
      */
-    function getSpeed(entity: number | Entity): number;
+    function getSpeed(entity: number | IEntity): number;
     /**
      * Relative can be used for getting speed relative to the frame of the vehicle, to determine for example, if you are going in reverse (-y speed) or not (+y speed).
      *
      * Hash: 0x9A8D700A51CB7B0D | Since: 323
      */
-    function getSpeedVector(entity: number | Entity, relative: boolean): Vector3;
+    function getSpeedVector(entity: number | IEntity, relative: boolean): Vector3;
     /**
      * Get how much of the entity is submerged.  1.0f is whole entity.
      *
      * Hash: 0xE81AFC1BC4CC41CE | Since: 323
      */
-    function getSubmergedLevel(entity: number | Entity): number;
+    function getSubmergedLevel(entity: number | IEntity): number;
     /**
      * Returns:
      * 0 = no entity
@@ -5769,49 +5769,49 @@ export declare namespace entity {
      *
      * Hash: 0x8ACD366038D14505 | Since: 323
      */
-    function getType(entity: number | Entity): number;
+    function getType(entity: number | IEntity): number;
     /**
      * No comment provided
      *
      * Hash: 0x95EED5A694951F9F | Since: 323
      */
-    function getUprightValue(entity: number | Entity): number;
+    function getUprightValue(entity: number | IEntity): number;
     /**
      * No comment provided
      *
      * Hash: 0x4805D2B1D8CF94A9 | Since: 323
      */
-    function getVelocity(entity: number | Entity): Vector3;
+    function getVelocity(entity: number | IEntity): Vector3;
     /**
      * No comment provided
      *
      * Hash: 0x5C3D0A935F535C4C | Since: 323
      */
-    function getLastMaterialHitBy(entity: number | Entity): number;
+    function getLastMaterialHitBy(entity: number | IEntity): number;
     /**
      * No comment provided
      *
      * Hash: 0xFFBD7052D65BE0FF | Since: 2944
      */
-    function getNearestParticipantTo(entity: number | Entity): number;
+    function getNearestParticipantTo(entity: number | IEntity): number;
     /**
      * No comment provided
      *
      * Hash: 0x7196842CB375CDB3 | Since: 323
      */
-    function getNearestPlayerTo(entity: number | Entity): number | string;
+    function getNearestPlayerTo(entity: number | IEntity): number | string;
     /**
      * No comment provided
      *
      * Hash: 0x4DC9A62F844D9337 | Since: 323
      */
-    function getNearestPlayerToOnTeam(entity: number | Entity, team: number): number | string;
+    function getNearestPlayerToOnTeam(entity: number | IEntity, team: number): number | string;
     /**
      * Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).
      *
      * Hash: 0xD7E3B9735C0F89D6 | Since: 323
      */
-    function getObjectIndexFromIndex(entity: number | Entity): number;
+    function getObjectIndexFromIndex(entity: number | IEntity): number;
     /**
      * Converts world coords (posX - Z) to coords relative to the entity
      *
@@ -5822,7 +5822,7 @@ export declare namespace entity {
      *
      * Hash: 0x2274BC1C4885E333 | Since: 323
      */
-    function getOffsetFromGivenWorldCoords(entity: number | Entity, pos: Vector3): Vector3;
+    function getOffsetFromGivenWorldCoords(entity: number | IEntity, pos: Vector3): Vector3;
     /**
      * Offset values are relative to the entity.
      *
@@ -5832,37 +5832,37 @@ export declare namespace entity {
      *
      * Hash: 0x1899F328B0E12848 | Since: 323
      */
-    function getOffsetFromInWorldCoords(entity: number | Entity, offsetX: number, offsetY: number, offsetZ: number): Vector3;
+    function getOffsetFromInWorldCoords(entity: number | IEntity, offsetX: number, offsetY: number, offsetZ: number): Vector3;
     /**
      * Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).
      *
      * Hash: 0x04A2A40C73395041 | Since: 323
      */
-    function getPedIndexFromIndex(entity: number | Entity): number;
+    function getPedIndexFromIndex(entity: number | IEntity): number;
     /**
      * Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).
      *
      * Hash: 0x4B53F92932ADFAC0 | Since: 323
      */
-    function getVehicleIndexFromIndex(entity: number | Entity): number;
+    function getVehicleIndexFromIndex(entity: number | IEntity): number;
     /**
      * Returns the coordinates of an entity-bone.
      *
      * Hash: 0x44A8FCB8ED227738 | Since: 323
      */
-    function getWorldPositionOfBone(entity: number | Entity, boneIndex: number): Vector3;
+    function getWorldPositionOfBone(entity: number | IEntity, boneIndex: number): Vector3;
     /**
      * `if (ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY("CreateObject")))`
      *
      * Hash: 0xEAF4CD9EA3E7E922 | Since: 323
      */
-    function hasAnimEventFired(entity: number | Entity, actionHash: number | string): boolean;
+    function hasAnimEventFired(entity: number | IEntity, actionHash: number | string): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xE9676F61BC0B3321 | Since: 323
      */
-    function hasCollisionLoadedAround(entity: number | Entity): boolean;
+    function hasCollisionLoadedAround(entity: number | IEntity): boolean;
     /**
      * P3 is always 3 as far as i cant tell
      *
@@ -5870,25 +5870,25 @@ export declare namespace entity {
      *
      * Hash: 0x20B711662962B472 | Since: 323
      */
-    function hasAnimFinished(entity: number | Entity, animDict: string, animName: string): boolean;
+    function hasAnimFinished(entity: number | IEntity, animDict: string, animName: string): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x95EB9964FF5C5C65 | Since: 323
      */
-    function hasBeenDamagedByAnyObject(entity: number | Entity): boolean;
+    function hasBeenDamagedByAnyObject(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x605F5A140F202491 | Since: 323
      */
-    function hasBeenDamagedByAnyPed(entity: number | Entity): boolean;
+    function hasBeenDamagedByAnyPed(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xDFD5033FDBA0A9C8 | Since: 323
      */
-    function hasBeenDamagedByAnyVehicle(entity: number | Entity): boolean;
+    function hasBeenDamagedByAnyVehicle(entity: number | IEntity): boolean;
     /**
      * Entity 1 = Victim
      * Entity 2 = Attacker
@@ -5897,7 +5897,7 @@ export declare namespace entity {
      *
      * Hash: 0xC86D67D52A707CF8 | Since: 323
      */
-    function hasBeenDamagedByEntity(entity1: number | Entity, entity2: number | Entity): boolean;
+    function hasBeenDamagedByEntity(entity1: number | IEntity, entity2: number | IEntity): boolean;
     /**
      * traceType is always 17 in the scripts.
      *
@@ -5908,20 +5908,20 @@ export declare namespace entity {
      *
      * Hash: 0xFCDFF7B72D23A1AC | Since: 323
      */
-    function hasClearLosToEntity(entity1: number | Entity, entity2: number | Entity, traceType: number): boolean;
+    function hasClearLosToEntity(entity1: number | IEntity, entity2: number | IEntity, traceType: number): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x394BDE2A7BBA031E | Since: 1868
      */
-    function hasClearLosToEntityAdjustForCover(entity1: number | Entity, entity2: number | Entity, traceType: number): boolean;
+    function hasClearLosToEntityAdjustForCover(entity1: number | IEntity, entity2: number | IEntity, traceType: number): boolean;
     /**
      * Has the entity1 got a clear line of sight to the other entity2 from the direction entity1 is facing.
      * This is one of the most CPU demanding BOOL natives in the game; avoid calling this in things like nested for-loops
      *
      * Hash: 0x0267D00AF114F17A | Since: 323
      */
-    function hasClearLosToEntityInFront(entity1: number | Entity, entity2: number | Entity): boolean;
+    function hasClearLosToEntityInFront(entity1: number | IEntity, entity2: number | IEntity): boolean;
     /**
      * Called on tick.
      * Tested with vehicles, returns true whenever the vehicle is touching any entity.
@@ -5930,7 +5930,7 @@ export declare namespace entity {
      *
      * Hash: 0x8BAD02F0368D9E14 | Since: 323
      */
-    function hasCollidedWithAnything(entity: number | Entity): boolean;
+    function hasCollidedWithAnything(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
@@ -5942,37 +5942,37 @@ export declare namespace entity {
      *
      * Hash: 0x8D68C8FD0FACA94E | Since: 323
      */
-    function isAnObject(entity: number | Entity): boolean;
+    function isAnObject(entity: number | IEntity): boolean;
     /**
      * Whether the entity is attached to any other entity.
      *
      * Hash: 0xB346476EF1A64897 | Since: 323
      */
-    function isAttached(entity: number | Entity): boolean;
+    function isAttached(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xCF511840CEEDE0CC | Since: 323
      */
-    function isAttachedToAnyObject(entity: number | Entity): boolean;
+    function isAttachedToAnyObject(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xB1632E9A5F988D11 | Since: 323
      */
-    function isAttachedToAnyPed(entity: number | Entity): boolean;
+    function isAttachedToAnyPed(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x26AA915AD89BFB4B | Since: 323
      */
-    function isAttachedToAnyVehicle(entity: number | Entity): boolean;
+    function isAttachedToAnyVehicle(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xEFBE71898A993728 | Since: 323
      */
-    function isAttachedToEntity(_from: number | Entity, to: number | Entity): boolean;
+    function isAttachedToEntity(_from: number | IEntity, to: number | IEntity): boolean;
     /**
      * Checks if entity is within x/y/zSize distance of x/y/z.
      *
@@ -5980,7 +5980,7 @@ export declare namespace entity {
      *
      * Hash: 0x20B60995556D004F | Since: 323
      */
-    function isAtCoord(entity: number | Entity, pos: Vector3, xSize: number, ySize: number, zSize: number): boolean;
+    function isAtCoord(entity: number | IEntity, pos: Vector3, xSize: number, ySize: number, zSize: number): boolean;
     /**
      * Checks if entity1 is within the box defined by x/y/zSize of entity2.
      *
@@ -5988,37 +5988,37 @@ export declare namespace entity {
      *
      * Hash: 0x751B70C3D034E187 | Since: 323
      */
-    function isAtEntity(entity1: number | Entity, entity2: number | Entity, xSize: number, ySize: number, zSize: number): boolean;
+    function isAtEntity(entity1: number | IEntity, entity2: number | IEntity, xSize: number, ySize: number, zSize: number): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x0A7B270912999B3C | Since: 323
      */
-    function isAMissionEntity(entity: number | Entity): boolean;
+    function isAMissionEntity(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x524AC5ECEA15343E | Since: 323
      */
-    function isAPed(entity: number | Entity): boolean;
+    function isAPed(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x6AC7003FA6E5575E | Since: 323
      */
-    function isAVehicle(entity: number | Entity): boolean;
+    function isAVehicle(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x5F9532F3B5CC2551 | Since: 323
      */
-    function isDead(entity: number | Entity): boolean;
+    function isDead(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x886E37EC497200B6 | Since: 323
      */
-    function isInAir(entity: number | Entity): boolean;
+    function isInAir(entity: number | IEntity): boolean;
     /**
      * `p8` is a debug flag invoking functions in the same path as ``DRAW_MARKER``
      * `p10` is some entity flag check, also used in `IS_ENTITY_AT_ENTITY`, `IS_ENTITY_IN_AREA`, and `IS_ENTITY_AT_COORD`.
@@ -6026,31 +6026,31 @@ export declare namespace entity {
      *
      * Hash: 0x51210CED3DA1C78A | Since: 323
      */
-    function isInAngledArea(entity: number | Entity, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, width: number, debug: boolean, includeZ: boolean): boolean;
+    function isInAngledArea(entity: number | IEntity, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, width: number, debug: boolean, includeZ: boolean): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x54736AA40E271165 | Since: 323
      */
-    function isInArea(entity: number | Entity, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): boolean;
+    function isInArea(entity: number | IEntity, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xCFB0A0D8EDD145A3 | Since: 323
      */
-    function isInWater(entity: number | Entity): boolean;
+    function isInWater(entity: number | IEntity): boolean;
     /**
      * Full list of zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/zones.json
      *
      * Hash: 0xB6463CF6AF527071 | Since: 323
      */
-    function isInZone(entity: number | Entity, zone: string): boolean;
+    function isInZone(entity: number | IEntity, zone: string): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xE31C2C72B8692B64 | Since: 323
      */
-    function isOccluded(entity: number | Entity): boolean;
+    function isOccluded(entity: number | IEntity): boolean;
     /**
      * Returns true if the entity is in between the minimum and maximum values for the 2d screen coords.
      * This means that it will return true even if the entity is behind a wall for example, as long as you're looking at their location.
@@ -6058,7 +6058,7 @@ export declare namespace entity {
      *
      * Hash: 0xE659E47AF827484B | Since: 323
      */
-    function isOnScreen(entity: number | Entity): boolean;
+    function isOnScreen(entity: number | IEntity): boolean;
     /**
      * `See also PED::IS_SCRIPTED_SCENARIO_PED_USING_CONDITIONAL_ANIM 0x6EC47A344923E1ED 0x3C30B447`
      *
@@ -6070,55 +6070,55 @@ export declare namespace entity {
      *
      * Hash: 0x1F0B79228E461EC9 | Since: 323
      */
-    function isPlayingAnim(entity: number | Entity, animDict: string, animName: string, taskFlag: number): boolean;
+    function isPlayingAnim(entity: number | IEntity, animDict: string, animName: string, taskFlag: number): boolean;
     /**
      * `a static ped will not react to natives like "APPLY_FORCE_TO_ENTITY" or "SET_ENTITY_VELOCITY" and oftentimes will not react to task-natives like "TASK::TASK_COMBAT_PED". The only way I know of to make one of these peds react is to ragdoll them (or sometimes to use CLEAR_PED_TASKS_IMMEDIATELY(). Static peds include almost all far-away peds, beach-combers, peds in certain scenarios, peds crossing a crosswalk, peds walking to get back into their cars, and others. If anyone knows how to make a ped non-static without ragdolling them, please edit this with the solution.`
      *
      * Hash: 0x1218E6886D3D8327 | Since: 323
      */
-    function isStatic(entity: number | Entity): boolean;
+    function isStatic(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x17FFC1B2BA35A494 | Since: 323
      */
-    function isTouchingEntity(entity: number | Entity, targetEntity: number | Entity): boolean;
+    function isTouchingEntity(entity: number | IEntity, targetEntity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x0F42323798A58C8C | Since: 323
      */
-    function isTouchingModel(entity: number | Entity, modelHash: number | string): boolean;
+    function isTouchingModel(entity: number | IEntity, modelHash: number | string): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x5333F526F6AB19AA | Since: 323
      */
-    function isUpright(entity: number | Entity, angle: number): boolean;
+    function isUpright(entity: number | IEntity, angle: number): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x1DBD58820FA61D71 | Since: 323
      */
-    function isUpsidedown(entity: number | Entity): boolean;
+    function isUpsidedown(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x47D6F43D77935C75 | Since: 323
      */
-    function isVisible(entity: number | Entity): boolean;
+    function isVisible(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xD796CB5BA8F20E32 | Since: 323
      */
-    function isVisibleToScript(entity: number | Entity): boolean;
+    function isVisibleToScript(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xD05BFF0C0A12C68F | Since: 323
      */
-    function isWaitingForWorldCollision(entity: number | Entity): boolean;
+    function isWaitingForWorldCollision(entity: number | IEntity): boolean;
     /**
      * delta and bitset are guessed fields. They are based on the fact that most of the calls have 0 or nil field types passed in.
      *
@@ -6128,7 +6128,7 @@ export declare namespace entity {
      *
      * Hash: 0x7FB218262B810701 | Since: 323
      */
-    function playAnim(entity: number | Entity, animName: string, animDict: string, loop: boolean, stayInAnim: boolean, delta: number, bitset: any): boolean;
+    function playAnim(entity: number | IEntity, animName: string, animDict: string, loop: boolean, stayInAnim: boolean, delta: number, bitset: any): boolean;
     /**
      * p4 and p7 are usually 1000.0f.
      *
@@ -6136,7 +6136,7 @@ export declare namespace entity {
      *
      * Hash: 0xC77720A12FE14A86 | Since: 323
      */
-    function playSynchronizedAnim(entity: number | Entity, syncedScene: number, animation: string, propName: string): boolean;
+    function playSynchronizedAnim(entity: number | IEntity, syncedScene: number, animation: string, propName: string): boolean;
     /**
      * p6,p7 probably animname and animdict
      *
@@ -6150,7 +6150,7 @@ export declare namespace entity {
      *
      * Hash: 0xF4080490ADC51C6F | Since: 323
      */
-    function processAttachments(entity: number | Entity): void;
+    function processAttachments(entity: number | IEntity): void;
     /**
      * No comment provided
      *
@@ -6175,62 +6175,62 @@ export declare namespace entity {
      *
      * Hash: 0x9B1E824FFBB7027A | Since: 323
      */
-    function resetAlpha(entity: number | Entity): void;
+    function resetAlpha(entity: number | IEntity): void;
     /**
      * Similar to RESET_ENTITY_ALPHA
      *
      * Hash: 0x490861B88F4FD846 | Since: 944
      */
-    function resetPickupGlow(entity: number | Entity): void;
+    function resetPickupGlow(entity: number | IEntity): void;
     /**
      * p1 is always set to 1
      *
      * Hash: 0x36F32DE87082343E | Since: 1011
      */
-    function setAllowMigrateToSpectator(entity: number | Entity): void;
+    function setAllowMigrateToSpectator(entity: number | IEntity): void;
     /**
      * p1 always false.
      *
      * Hash: 0xE12ABE5E3A389A6C | Since: 323
      */
-    function setCanAutoVaultOn(entity: number | Entity, toggle: boolean): void;
+    function setCanAutoVaultOn(entity: number | IEntity, toggle: boolean): void;
     /**
      * p1 always false.
      *
      * Hash: 0xA80AE305E0A3044F | Since: 323
      */
-    function setCanClimbOn(entity: number | Entity, toggle: boolean): void;
+    function setCanClimbOn(entity: number | IEntity, toggle: boolean): void;
     /**
      * skin - everything alpha except skin
      * Set entity alpha level. Ranging from 0 to 255 but chnages occur after every 20 percent (after every 51).
      *
      * Hash: 0x44A0870B7E92D7C0 | Since: 323
      */
-    function setAlpha(entity: number | Entity, alphaLevel: number, skin: boolean): void;
+    function setAlpha(entity: number | IEntity, alphaLevel: number, skin: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xACAD101E1FB66689 | Since: 323
      */
-    function setAlwaysPrerender(entity: number | Entity, toggle: boolean): void;
+    function setAlwaysPrerender(entity: number | IEntity, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x8339643499D1222E | Since: 2372
      */
-    function setAngularVelocity(entity: number | Entity, pos: Vector3): void;
+    function setAngularVelocity(entity: number | IEntity, pos: Vector3): void;
     /**
      * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
      *
      * Hash: 0x4487C259F0F70977 | Since: 323
      */
-    function setAnimCurrentTime(entity: number | Entity, animDictionary: string, animName: string, time: number): void;
+    function setAnimCurrentTime(entity: number | IEntity, animDictionary: string, animName: string, time: number): void;
     /**
      * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
      *
      * Hash: 0x28D1A16553C51776 | Since: 323
      */
-    function setAnimSpeed(entity: number | Entity, animDictionary: string, animName: string, speedMultiplier: number): void;
+    function setAnimSpeed(entity: number | IEntity, animDictionary: string, animName: string, speedMultiplier: number): void;
     /**
      * Makes the specified entity (ped, vehicle or object) persistent. Persistent entities will not automatically be removed by the engine.
      *
@@ -6242,7 +6242,7 @@ export declare namespace entity {
      *
      * Hash: 0xAD738C3085FE7E11 | Since: 323
      */
-    function setAsMissionEntity(entity: number | Entity): void;
+    function setAsMissionEntity(entity: number | IEntity): void;
     /**
      * Marks the specified entity (ped, vehicle or object) as no longer needed if its population type is set to the mission type.
      * If the entity is ped, it will also clear their tasks immediately just like when CLEAR_PED_TASKS_IMMEDIATELY is called.
@@ -6262,55 +6262,55 @@ export declare namespace entity {
      *
      * Hash: 0xB736A491E64A32CF | Since: 323
      */
-    function setAsNoLongerNeeded(entity: number | Entity): void;
+    function setAsNoLongerNeeded(entity: number | IEntity): void;
     /**
      * No comment provided
      *
      * Hash: 0x68B562E124CC0AEF | Since: 1180
      */
-    function setCantCauseCollisionDamagedEntity(entity1: number | Entity, entity2: number | Entity): void;
+    function setCantCauseCollisionDamagedEntity(entity1: number | IEntity, entity2: number | IEntity): void;
     /**
      * No comment provided
      *
      * Hash: 0x1760FFA8AB074D66 | Since: 323
      */
-    function setCanBeDamaged(entity: number | Entity, toggle: boolean): void;
+    function setCanBeDamaged(entity: number | IEntity, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xE22D8FDE858B8119 | Since: 323
      */
-    function setCanBeDamagedByRelationshipGroup(entity: number | Entity, bCanBeDamaged: boolean, relGroup: number): void;
+    function setCanBeDamagedByRelationshipGroup(entity: number | IEntity, bCanBeDamaged: boolean, relGroup: number): void;
     /**
      * Sets whether the entity can be targeted without being in line-of-sight.
      *
      * Hash: 0xD3997889736FD899 | Since: 323
      */
-    function setCanBeTargetedWithoutLos(entity: number | Entity, toggle: boolean): void;
+    function setCanBeTargetedWithoutLos(entity: number | IEntity, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xB17BC6453F6CF5AC | Since: 944
      */
-    function setCanOnlyBeDamagedByEntity(entity1: number | Entity, entity2: number | Entity): void;
+    function setCanOnlyBeDamagedByEntity(entity1: number | IEntity, entity2: number | IEntity): void;
     /**
      * No comment provided
      *
      * Hash: 0x352E2B5CF420BF3B | Since: 573
      */
-    function setCanOnlyBeDamagedByScriptParticipants(entity: number | Entity, toggle: boolean): void;
+    function setCanOnlyBeDamagedByScriptParticipants(entity: number | IEntity, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x1A9205C1B9EE827F | Since: 323
      */
-    function setCollision(entity: number | Entity, toggle: boolean, keepPhysics: boolean): void;
+    function setCollision(entity: number | IEntity, toggle: boolean, keepPhysics: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x9EBC85ED0FFFE51C | Since: 323
      */
-    function setCompletelyDisableCollision(entity: number | Entity, toggle: boolean, keepPhysics: boolean): void;
+    function setCompletelyDisableCollision(entity: number | IEntity, toggle: boolean, keepPhysics: boolean): void;
     /**
      * p7 is always 1 in the scripts. Set to 1, an area around the destination coords for the moved entity is cleared from other entities.
      *
@@ -6320,37 +6320,37 @@ export declare namespace entity {
      *
      * Hash: 0x06843DA7060A026B | Since: 323
      */
-    function setCoords(entity: number | Entity, pos: Vector3, xAxis: boolean, yAxis: boolean, zAxis: boolean, clearArea: boolean): void;
+    function setCoords(entity: number | IEntity, pos: Vector3, xAxis: boolean, yAxis: boolean, zAxis: boolean, clearArea: boolean): void;
     /**
      * Axis - Invert Axis Flags
      *
      * Hash: 0x239A3351AC1DA385 | Since: 323
      */
-    function setCoordsNoOffset(entity: number | Entity, pos: Vector3, xAxis: boolean, yAxis: boolean, zAxis: boolean): void;
+    function setCoordsNoOffset(entity: number | IEntity, pos: Vector3, xAxis: boolean, yAxis: boolean, zAxis: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x621873ECE1178967 | Since: 323
      */
-    function setCoordsWithoutPlantsReset(entity: number | Entity, pos: Vector3, alive: boolean, deadFlag: boolean, ragdollFlag: boolean, clearArea: boolean): void;
+    function setCoordsWithoutPlantsReset(entity: number | IEntity, pos: Vector3, alive: boolean, deadFlag: boolean, ragdollFlag: boolean, clearArea: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x1718DE8E3F2823CA | Since: 323
      */
-    function setDynamic(entity: number | Entity, toggle: boolean): void;
+    function setDynamic(entity: number | IEntity, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x4A4722448F18EEF5 | Since: 323
      */
-    function setHasGravity(entity: number | Entity, toggle: boolean): void;
+    function setHasGravity(entity: number | IEntity, toggle: boolean): void;
     /**
      * Set the heading of an entity in degrees also known as "Yaw".
      *
      * Hash: 0x8E2530AA8ADA980E | Since: 323
      */
-    function setHeading(entity: number | Entity, heading: number): void;
+    function setHeading(entity: number | IEntity, heading: number): void;
     /**
      * health >= 0
      * male ped ~= 100 - 200
@@ -6358,7 +6358,7 @@ export declare namespace entity {
      *
      * Hash: 0x6B76DC1F3AE6E6A3 | Since: 323
      */
-    function setHealth(entity: number | Entity, health: number, instigator: number | Entity, weaponType: number | string): void;
+    function setHealth(entity: number | IEntity, health: number, instigator: number | IEntity, weaponType: number | string): void;
     /**
      * Sets a ped or an object totally invincible. It doesn't take any kind of damage. Peds will not ragdoll on explosions and the tazer animation won't apply either.
      *
@@ -6381,68 +6381,68 @@ export declare namespace entity {
      *
      * Hash: 0x3882114BDE571AD4 | Since: 323
      */
-    function setInvincible(entity: number | Entity, toggle: boolean, dontResetOnCleanup: boolean): void;
+    function setInvincible(entity: number | IEntity, toggle: boolean, dontResetOnCleanup: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x78E8E3A640178255 | Since: 323
      */
-    function setIsInVehicle(entity: number | Entity): void;
+    function setIsInVehicle(entity: number | IEntity): void;
     /**
      * No comment provided
      *
      * Hash: 0xEA02E132F5C68722 | Since: 323
      */
-    function setIsTargetPriority(entity: number | Entity): void;
+    function setIsTargetPriority(entity: number | IEntity): void;
     /**
      * No comment provided
      *
      * Hash: 0x7CFBA6A80BDF3874 | Since: 323
      */
-    function setLights(entity: number | Entity, toggle: boolean): void;
+    function setLights(entity: number | IEntity, toggle: boolean): void;
     /**
      * Loads collision grid for an entity spawned outside of a player's loaded area. This allows peds to execute tasks rather than sit dormant because of a lack of a physics grid.
      * Certainly not the main usage of this native but when set to true for a Vehicle, it will prevent the vehicle to explode if it is spawned far away from the player.
      *
      * Hash: 0x0DC7CABAB1E9B67E | Since: 323
      */
-    function setLoadCollisionFlag(entity: number | Entity, toggle: boolean): void;
+    function setLoadCollisionFlag(entity: number | IEntity, toggle: boolean): void;
     /**
      * LOD distance can be 0 to 0xFFFF (higher values will result in 0xFFFF) as it is actually stored as a 16-bit value (aka uint16_t).
      *
      * Hash: 0x5927F96A78577363 | Since: 323
      */
-    function setLodDist(entity: number | Entity, value: number): void;
+    function setLodDist(entity: number | IEntity, value: number): void;
     /**
      * `For instance: ENTITY::SET_ENTITY_MAX_HEALTH(PLAYER::PLAYER_PED_ID(), 200); // director_mode.c4: 67849`
      *
      * Hash: 0x166E7CF68597D8B5 | Since: 323
      */
-    function setMaxHealth(entity: number | Entity, value: number): void;
+    function setMaxHealth(entity: number | IEntity, value: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x0E46A3FCBDE2A1B1 | Since: 323
      */
-    function setMaxSpeed(entity: number | Entity, speed: number): void;
+    function setMaxSpeed(entity: number | IEntity, speed: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xE66377CDDADA4810 | Since: 1734
      */
-    function setMirrorReflectionFlag(entity: number | Entity): void;
+    function setMirrorReflectionFlag(entity: number | IEntity): void;
     /**
      * No comment provided
      *
      * Hash: 0x295D82A8559F9150 | Since: 323
      */
-    function setMotionBlur(entity: number | Entity, toggle: boolean): void;
+    function setMotionBlur(entity: number | IEntity, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x2C2E3DC128F44309 | Since: 323
      */
-    function setNoweapondecals(entity: number | Entity): void;
+    function setNoweapondecals(entity: number | IEntity): void;
     /**
      * Calling this function disables collision between two entities.
      * The importance of the order for entity1 and entity2 is unclear.
@@ -6450,19 +6450,19 @@ export declare namespace entity {
      *
      * Hash: 0xA53ED5520C07654A | Since: 323
      */
-    function setNoCollisionEntity(entity1: number | Entity, entity2: number | Entity, thisFrameOnly: boolean): void;
+    function setNoCollisionEntity(entity1: number | IEntity, entity2: number | IEntity, thisFrameOnly: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x79F020FF9EDC0748 | Since: 323
      */
-    function setOnlyDamagedByPlayer(entity: number | Entity, toggle: boolean): void;
+    function setOnlyDamagedByPlayer(entity: number | IEntity, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x7022BD828FA0B082 | Since: 323
      */
-    function setOnlyDamagedByRelationshipGroup(entity: number | Entity): void;
+    function setOnlyDamagedByRelationshipGroup(entity: number | IEntity): void;
     /**
      * Enable / disable each type of damage.
      *
@@ -6473,31 +6473,31 @@ export declare namespace entity {
      *
      * Hash: 0xFAEE099C6F890BB8 | Since: 323
      */
-    function setProofs(entity: number | Entity, bulletProof: boolean, fireProof: boolean, explosionProof: boolean, collisionProof: boolean, meleeProof: boolean, steamProof: boolean, dontResetOnCleanup: boolean, waterProof: boolean): void;
+    function setProofs(entity: number | IEntity, bulletProof: boolean, fireProof: boolean, explosionProof: boolean, collisionProof: boolean, meleeProof: boolean, steamProof: boolean, dontResetOnCleanup: boolean, waterProof: boolean): void;
     /**
      * w is the correct parameter name!
      *
      * Hash: 0x77B21BE7AC540F07 | Since: 323
      */
-    function setQuaternion(entity: number | Entity, pos: Vector3, w: number): void;
+    function setQuaternion(entity: number | IEntity, pos: Vector3, w: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x0A50A1EEDAD01E65 | Since: 323
      */
-    function setRecordsCollisions(entity: number | Entity, toggle: boolean): void;
+    function setRecordsCollisions(entity: number | IEntity, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x730F5F8D3F0F2050 | Since: 323
      */
-    function setRenderScorched(entity: number | Entity, toggle: boolean): void;
+    function setRenderScorched(entity: number | IEntity, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x694E00132F2823ED | Since: 323
      */
-    function setRequiresMoreExpensiveRiverCheck(entity: number | Entity, toggle: boolean): void;
+    function setRequiresMoreExpensiveRiverCheck(entity: number | IEntity, toggle: boolean): void;
     /**
      * rotationOrder refers to the order yaw pitch roll is applied
      * value ranges from 0 to 5. What you use for rotationOrder when setting must be the same as rotationOrder when getting the rotation.
@@ -6508,7 +6508,7 @@ export declare namespace entity {
      *
      * Hash: 0x8524A8B0171D5E07 | Since: 323
      */
-    function setRotation(entity: number | Entity, pitch: number, roll: number, yaw: number, rotationOrder: number): void;
+    function setRotation(entity: number | IEntity, pitch: number, roll: number, yaw: number, rotationOrder: number): void;
     /**
      * True means it can be deleted by the engine when switching lobbies/missions/etc, false means the script is expected to clean it up.
      *
@@ -6516,7 +6516,7 @@ export declare namespace entity {
      *
      * Hash: 0x3910051CCECDB00C | Since: 323
      */
-    function setShouldFreezeWaitingOnCollision(entity: number | Entity, toggle: boolean): void;
+    function setShouldFreezeWaitingOnCollision(entity: number | IEntity, toggle: boolean): void;
     /**
      * Only called once in the scripts.
      *
@@ -6525,7 +6525,7 @@ export declare namespace entity {
      *
      * Hash: 0x5C3B791D580E0BC2 | Since: 323
      */
-    function setSortBias(entity: number | Entity): void;
+    function setSortBias(entity: number | IEntity): void;
     /**
      * Example here: www.gtaforums.com/topic/830463-help-with-turning-lights-green-and-causing-peds-to-crash-into-each-other/#entry1068211340
      *
@@ -6537,43 +6537,43 @@ export declare namespace entity {
      *
      * Hash: 0x57C5DB656185EAC4 | Since: 323
      */
-    function setTrafficlightOverride(entity: number | Entity, state: number): void;
+    function setTrafficlightOverride(entity: number | IEntity, state: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x1A092BB0C3808B96 | Since: 323
      */
-    function setUseMaxDistanceForWaterReflection(entity: number | Entity): void;
+    function setUseMaxDistanceForWaterReflection(entity: number | IEntity): void;
     /**
      * Note that the third parameter(denoted as z) is "up and down" with positive numbers encouraging upwards movement.
      *
      * Hash: 0x1C99BB7B6E96D16F | Since: 323
      */
-    function setVelocity(entity: number | Entity, pos: Vector3): void;
+    function setVelocity(entity: number | IEntity, pos: Vector3): void;
     /**
      * p2 is always 0.
      *
      * Hash: 0xEA1C610A04DB6BBB | Since: 323
      */
-    function setVisible(entity: number | Entity, toggle: boolean): void;
+    function setVisible(entity: number | IEntity, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xC34BC448DA29F5E9 | Since: 573
      */
-    function setWaterReflectionFlag(entity: number | Entity, toggle: boolean): void;
+    function setWaterReflectionFlag(entity: number | IEntity, toggle: boolean): void;
     /**
      * This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
      *
      * Hash: 0x3AE22DEB5BA5A3E6 | Since: 323
      */
-    function setObjectAsNoLongerNeeded(_object: number | Object): void;
+    function setObjectAsNoLongerNeeded(_object: number | IObject): void;
     /**
      * This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
      *
      * Hash: 0x2595DD4236549CE3 | Since: 323
      */
-    function setPedAsNoLongerNeeded(ped: number | Ped): void;
+    function setPedAsNoLongerNeeded(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -6585,13 +6585,13 @@ export declare namespace entity {
      *
      * Hash: 0xD7B80E7C3BEFC396 | Since: 1180
      */
-    function setPickUpByCargobobDisabled(entity: number | Entity, toggle: boolean): void;
+    function setPickUpByCargobobDisabled(entity: number | IEntity, toggle: boolean): void;
     /**
      * This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
      *
      * Hash: 0x629BFA74418D6239 | Since: 323
      */
-    function setVehicleAsNoLongerNeeded(vehicle: number | Vehicle): void;
+    function setVehicleAsNoLongerNeeded(vehicle: number | IVehicle): void;
     /**
      * Only called within 1 script for x360. 'fm_mission_controller' and it used on an object.
      *
@@ -6601,7 +6601,7 @@ export declare namespace entity {
      *
      * Hash: 0xDC6F8601FAF2E893 | Since: 323
      */
-    function setWaitForCollisionsBeforeProbe(entity: number | Entity, toggle: boolean): void;
+    function setWaitForCollisionsBeforeProbe(entity: number | IEntity, toggle: boolean): void;
     /**
      * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
      *
@@ -6609,13 +6609,13 @@ export declare namespace entity {
      *
      * Hash: 0x28004F88151E03E0 | Since: 323
      */
-    function stopAnim(entity: number | Entity, animation: string, animGroup: string): boolean;
+    function stopAnim(entity: number | IEntity, animation: string, animGroup: string): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x43D3807C077261E3 | Since: 323
      */
-    function stopSynchronizedAnim(entity: number | Entity): boolean;
+    function stopSynchronizedAnim(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
@@ -6633,13 +6633,13 @@ export declare namespace entity {
      *
      * Hash: 0xA75EE4F689B85391 | Since: 2802
      */
-    function getLastHitByEntity(entity: number | Entity): number;
+    function getLastHitByEntity(entity: number | IEntity): number;
     /**
      * No comment provided
      *
      * Hash: 0x0A27A7827347B3B1 | Since: 3407
      */
-    function setNoCollisionWithNetworkedEntity(entity1: number | Entity, entity2: number | Entity): void;
+    function setNoCollisionWithNetworkedEntity(entity1: number | IEntity, entity2: number | IEntity): void;
 }
 export declare namespace event {
     /**
@@ -6653,7 +6653,7 @@ export declare namespace event {
      *
      * Hash: 0x7FD8F3BE76F89422 | Since: 323
      */
-    function addShockingForEntity(eventType: number, entity: number | Entity, duration: number): number;
+    function addShockingForEntity(eventType: number, entity: number | IEntity, duration: number): number;
     /**
      * eventType: https://alloc8or.re/gta5/doc/enums/eEventType.txt
      *
@@ -6697,7 +6697,7 @@ export declare namespace event {
      *
      * Hash: 0xB604A2942ADED0EE | Since: 323
      */
-    function setDecisionMaker(ped: number | Ped, name: number | string): void;
+    function setDecisionMaker(ped: number | IPed, name: number | string): void;
     /**
      * No comment provided
      *
@@ -6729,13 +6729,13 @@ export declare namespace extrametadata {
      *
      * Hash: 0x7796B21B76221BC5 | Since: 2612
      */
-    function doesCurrentPedComponentHaveRestrictionTag(ped: number | Ped, componentId: number, restrictionTagHash: number | string): boolean;
+    function doesCurrentPedComponentHaveRestrictionTag(ped: number | IPed, componentId: number, restrictionTagHash: number | string): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xD726BAB4554DA580 | Since: 2612
      */
-    function doesCurrentPedPropHaveRestrictionTag(ped: number | Ped, componentId: number, restrictionTagHash: number | string): boolean;
+    function doesCurrentPedPropHaveRestrictionTag(ped: number | IPed, componentId: number, restrictionTagHash: number | string): boolean;
     /**
      * Full list of restriction tags by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedApparelRestrictionTags.json
      *
@@ -6860,13 +6860,13 @@ export declare namespace extrametadata {
      *
      * Hash: 0x0368B3A838070348 | Since: 323
      */
-    function getHashNameForComponent(entity: number | Entity, componentId: number, drawableVariant: number, textureVariant: number): number;
+    function getHashNameForComponent(entity: number | IEntity, componentId: number, drawableVariant: number, textureVariant: number): number;
     /**
      * No comment provided
      *
      * Hash: 0x5D6160275CAEC8DD | Since: 323
      */
-    function getHashNameForProp(entity: number | Entity, componentId: number, propIndex: number, propTextureIndex: number): number;
+    function getHashNameForProp(entity: number | IEntity, componentId: number, propIndex: number, propTextureIndex: number): number;
     /**
      * No comment provided
      *
@@ -7159,7 +7159,7 @@ export declare namespace fire {
      *
      * Hash: 0x172AA1B624FA1013 | Since: 323
      */
-    function addOwnedExplosion(ped: number | Ped, pos: Vector3, explosionType: number, damageScale: number, isAudible: boolean, isInvisible: boolean, cameraShake: number): void;
+    function addOwnedExplosion(ped: number | IPed, pos: Vector3, explosionType: number, damageScale: number, isAudible: boolean, isInvisible: boolean, cameraShake: number): void;
     /**
      * Returns TRUE if it found something. FALSE if not.
      *
@@ -7191,7 +7191,7 @@ export declare namespace fire {
      *
      * Hash: 0x28D3FED7190D3A0B | Since: 323
      */
-    function isEntityOn(entity: number | Entity): boolean;
+    function isEntityOn(entity: number | IEntity): boolean;
     /**
      * explosionType: See ADD_EXPLOSION.
      *
@@ -7234,7 +7234,7 @@ export declare namespace fire {
      *
      * Hash: 0xF6A9D9708F6F23DF | Since: 323
      */
-    function startEntity(entity: number | Entity): number;
+    function startEntity(entity: number | IEntity): number;
     /**
      * Starts a fire:
      *
@@ -7250,7 +7250,7 @@ export declare namespace fire {
      *
      * Hash: 0x7F0DD2EBBB651AFF | Since: 323
      */
-    function stopEntity(entity: number | Entity): void;
+    function stopEntity(entity: number | IEntity): void;
     /**
      * No comment provided
      *
@@ -7262,7 +7262,7 @@ export declare namespace fire {
      *
      * Hash: 0x5241DB47A8B8AD54 | Since: 3570
      */
-    function networkExpectExplosionEventsForPlayer(expect: boolean, player: number | string | Player): void;
+    function networkExpectExplosionEventsForPlayer(expect: boolean, player: number | string | IPlayer): void;
 }
 export declare namespace graphics {
     /**
@@ -7341,7 +7341,7 @@ export declare namespace graphics {
      *
      * Hash: 0x9CD43EEE12BF4DD0 | Since: 323
      */
-    function addEntityIcon(entity: number | Entity, icon: string): number;
+    function addEntityIcon(entity: number | IEntity, icon: string): number;
     /**
      * No comment provided
      *
@@ -7371,7 +7371,7 @@ export declare namespace graphics {
      *
      * Hash: 0x428BDCB9DA58DA53 | Since: 323
      */
-    function addVehicleCrewEmblem(vehicle: number | Vehicle, ped: number | Ped, boneIndex: number, x1: number, x2: number, x3: number, y1: number, y2: number, y3: number, z1: number, z2: number, z3: number, scale: number, alpha: number): boolean;
+    function addVehicleCrewEmblem(vehicle: number | IVehicle, ped: number | IPed, boneIndex: number, x1: number, x2: number, x3: number, y1: number, y2: number, y3: number, z1: number, z2: number, z3: number, scale: number, alpha: number): boolean;
     /**
      * No comment provided
      *
@@ -7432,7 +7432,7 @@ export declare namespace graphics {
      *
      * Hash: 0x845BAD77CC770633 | Since: 323
      */
-    function attachTvAudioToEntity(entity: number | Entity): void;
+    function attachTvAudioToEntity(entity: number | IEntity): void;
     /**
      * No comment provided
      *
@@ -7857,7 +7857,7 @@ export declare namespace graphics {
      *
      * Hash: 0x060D935D3981A275 | Since: 323
      */
-    function doesVehicleHaveCrewEmblem(vehicle: number | Vehicle): boolean;
+    function doesVehicleHaveCrewEmblem(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
@@ -8696,7 +8696,7 @@ export declare namespace graphics {
      *
      * Hash: 0xFE26117A5841B2FF | Since: 323
      */
-    function getVehicleCrewEmblemRequestState(vehicle: number | Vehicle): number;
+    function getVehicleCrewEmblemRequestState(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
@@ -8930,7 +8930,7 @@ export declare namespace graphics {
      *
      * Hash: 0x95EB5E34F821BABE | Since: 877
      */
-    function overridePedCrewLogoTexture(ped: number | Ped, txd: string, txn: string): boolean;
+    function overridePedCrewLogoTexture(ped: number | IPed, txd: string, txn: string): boolean;
     /**
      * No comment provided
      *
@@ -9064,19 +9064,19 @@ export declare namespace graphics {
      *
      * Hash: 0xCCF71CBDDF5B6CB9 | Since: 323
      */
-    function removeDecalsFromObject(obj: number | Object): void;
+    function removeDecalsFromObject(obj: number | IObject): void;
     /**
      * No comment provided
      *
      * Hash: 0xA6F6F70FDC6D144C | Since: 323
      */
-    function removeDecalsFromObjectFacing(obj: number | Object, pos: Vector3): void;
+    function removeDecalsFromObjectFacing(obj: number | IObject, pos: Vector3): void;
     /**
      * No comment provided
      *
      * Hash: 0xE91F1B65F2B48D57 | Since: 323
      */
-    function removeDecalsFromVehicle(vehicle: number | Vehicle): void;
+    function removeDecalsFromVehicle(vehicle: number | IVehicle): void;
     /**
      * Removes all decals in range from a position, it includes the bullet holes, blood pools, petrol...
      *
@@ -9100,7 +9100,7 @@ export declare namespace graphics {
      *
      * Hash: 0xB8FEAEEBCC127425 | Since: 323
      */
-    function removeParticleFxFromEntity(entity: number | Entity): void;
+    function removeParticleFxFromEntity(entity: number | IEntity): void;
     /**
      * No comment provided
      *
@@ -9118,7 +9118,7 @@ export declare namespace graphics {
      *
      * Hash: 0xD2300034310557E4 | Since: 323
      */
-    function removeVehicleCrewEmblem(vehicle: number | Vehicle): void;
+    function removeVehicleCrewEmblem(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -9528,13 +9528,13 @@ export declare namespace graphics {
      *
      * Hash: 0x1D5F595CCAE2E238 | Since: 323
      */
-    function setEntityIconColor(entity: number | Entity, red: number, green: number, blue: number, alpha: number): void;
+    function setEntityIconColor(entity: number | IEntity, red: number, green: number, blue: number, alpha: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xE0E8BEECCA96BA31 | Since: 323
      */
-    function setEntityIconVisibility(entity: number | Entity, toggle: boolean): void;
+    function setEntityIconVisibility(entity: number | IEntity, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -9662,7 +9662,7 @@ export declare namespace graphics {
      *
      * Hash: 0xACEE6F360FC1F6B6 | Since: 323
      */
-    function setParticleFxCamInsideNonplayerVehicle(vehicle: number | Vehicle): void;
+    function setParticleFxCamInsideNonplayerVehicle(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -9985,13 +9985,13 @@ export declare namespace graphics {
      *
      * Hash: 0x6F60E89A7B64EE1D | Since: 323
      */
-    function startNetworkedParticleFxLoopedOnEntity(effectName: string, entity: number | Entity, xOffset: number, yOffset: number, zOffset: number, rot: Vector3, scale: number, xAxis: boolean, yAxis: boolean, zAxis: boolean, r: number, g: number, b: number, a: number): number;
+    function startNetworkedParticleFxLoopedOnEntity(effectName: string, entity: number | IEntity, xOffset: number, yOffset: number, zOffset: number, rot: Vector3, scale: number, xAxis: boolean, yAxis: boolean, zAxis: boolean, r: number, g: number, b: number, a: number): number;
     /**
      * Full list of particle effect dictionaries and effects by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/particleEffectsCompact.json
      *
      * Hash: 0xDDE23F30CC5A0F03 | Since: 323
      */
-    function startNetworkedParticleFxLoopedOnEntityBone(effectName: string, entity: number | Entity, xOffset: number, yOffset: number, zOffset: number, rot: Vector3, boneIndex: number, scale: number, xAxis: boolean, yAxis: boolean, zAxis: boolean, r: number, g: number, b: number, a: number): number;
+    function startNetworkedParticleFxLoopedOnEntityBone(effectName: string, entity: number | IEntity, xOffset: number, yOffset: number, zOffset: number, rot: Vector3, boneIndex: number, scale: number, xAxis: boolean, yAxis: boolean, zAxis: boolean, r: number, g: number, b: number, a: number): number;
     /**
      * Full list of particle effect dictionaries and effects by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/particleEffectsCompact.json
      *
@@ -10003,13 +10003,13 @@ export declare namespace graphics {
      *
      * Hash: 0xC95EB1DB6E92113D | Since: 323
      */
-    function startNetworkedParticleFxNonLoopedOnEntity(effectName: string, entity: number | Entity, offsetX: number, offsetY: number, offsetZ: number, rot: Vector3, scale: number, axisX: boolean, axisY: boolean, axisZ: boolean): boolean;
+    function startNetworkedParticleFxNonLoopedOnEntity(effectName: string, entity: number | IEntity, offsetX: number, offsetY: number, offsetZ: number, rot: Vector3, scale: number, axisX: boolean, axisY: boolean, axisZ: boolean): boolean;
     /**
      * Full list of particle effect dictionaries and effects by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/particleEffectsCompact.json
      *
      * Hash: 0xA41B6A43642AC2CF | Since: 323
      */
-    function startNetworkedParticleFxNonLoopedOnPedBone(effectName: string, ped: number | Ped, offsetX: number, offsetY: number, offsetZ: number, rot: Vector3, boneIndex: number, scale: number, axisX: boolean, axisY: boolean, axisZ: boolean): boolean;
+    function startNetworkedParticleFxNonLoopedOnPedBone(effectName: string, ped: number | IPed, offsetX: number, offsetY: number, offsetZ: number, rot: Vector3, boneIndex: number, scale: number, axisX: boolean, axisY: boolean, axisZ: boolean): boolean;
     /**
      * `GRAPHICS::START_PARTICLE_FX_LOOPED_AT_COORD("scr_fbi_falling_debris", 93.7743f, -749.4572f, 70.86904f, 0f, 0f, 0f, 0x3F800000, 0, 0, 0, 0)`
      *
@@ -10026,19 +10026,19 @@ export declare namespace graphics {
      *
      * Hash: 0x1AE42C1660FD6517 | Since: 323
      */
-    function startParticleFxLoopedOnEntity(effectName: string, entity: number | Entity, xOffset: number, yOffset: number, zOffset: number, rot: Vector3, scale: number, xAxis: boolean, yAxis: boolean, zAxis: boolean): number;
+    function startParticleFxLoopedOnEntity(effectName: string, entity: number | IEntity, xOffset: number, yOffset: number, zOffset: number, rot: Vector3, scale: number, xAxis: boolean, yAxis: boolean, zAxis: boolean): number;
     /**
      * Full list of particle effect dictionaries and effects by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/particleEffectsCompact.json
      *
      * Hash: 0xC6EB449E33977F0B | Since: 323
      */
-    function startParticleFxLoopedOnEntityBone(effectName: string, entity: number | Entity, xOffset: number, yOffset: number, zOffset: number, rot: Vector3, boneIndex: number, scale: number, xAxis: boolean, yAxis: boolean, zAxis: boolean): number;
+    function startParticleFxLoopedOnEntityBone(effectName: string, entity: number | IEntity, xOffset: number, yOffset: number, zOffset: number, rot: Vector3, boneIndex: number, scale: number, xAxis: boolean, yAxis: boolean, zAxis: boolean): number;
     /**
      * Full list of particle effect dictionaries and effects by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/particleEffectsCompact.json
      *
      * Hash: 0xF28DA9F38CD1787C | Since: 323
      */
-    function startParticleFxLoopedOnPedBone(effectName: string, ped: number | Ped, xOffset: number, yOffset: number, zOffset: number, rot: Vector3, boneIndex: number, scale: number, xAxis: boolean, yAxis: boolean, zAxis: boolean): number;
+    function startParticleFxLoopedOnPedBone(effectName: string, ped: number | IPed, xOffset: number, yOffset: number, zOffset: number, rot: Vector3, boneIndex: number, scale: number, xAxis: boolean, yAxis: boolean, zAxis: boolean): number;
     /**
      * `GRAPHICS::START_PARTICLE_FX_NON_LOOPED_AT_COORD("scr_paleto_roof_impact", -140.8576f, 6420.789f, 41.1391f, 0f, 0f, 267.3957f, 0x3F800000, 0, 0, 0);`
      *
@@ -10084,13 +10084,13 @@ export declare namespace graphics {
      *
      * Hash: 0x0D53A3B8DA0809D2 | Since: 323
      */
-    function startParticleFxNonLoopedOnEntity(effectName: string, entity: number | Entity, offsetX: number, offsetY: number, offsetZ: number, rot: Vector3, scale: number, axisX: boolean, axisY: boolean, axisZ: boolean): boolean;
+    function startParticleFxNonLoopedOnEntity(effectName: string, entity: number | IEntity, offsetX: number, offsetY: number, offsetZ: number, rot: Vector3, scale: number, axisX: boolean, axisY: boolean, axisZ: boolean): boolean;
     /**
      * Full list of particle effect dictionaries and effects by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/particleEffectsCompact.json
      *
      * Hash: 0x02B1F2A72E0F5325 | Since: 2189
      */
-    function startParticleFxNonLoopedOnEntityBone(effectName: string, entity: number | Entity, offsetX: number, offsetY: number, offsetZ: number, rot: Vector3, boneIndex: number, scale: number, axisX: boolean, axisY: boolean, axisZ: boolean): boolean;
+    function startParticleFxNonLoopedOnEntityBone(effectName: string, entity: number | IEntity, offsetX: number, offsetY: number, offsetZ: number, rot: Vector3, boneIndex: number, scale: number, axisX: boolean, axisY: boolean, axisZ: boolean): boolean;
     /**
      * `GRAPHICS::START_PARTICLE_FX_NON_LOOPED_ON_PED_BONE("scr_sh_bong_smoke", PLAYER::PLAYER_PED_ID(), -0.025f, 0.13f, 0f, 0f, 0f, 0f, 31086, 0x3F800000, 0, 0, 0);`
      *
@@ -10100,7 +10100,7 @@ export declare namespace graphics {
      *
      * Hash: 0x0E7E72961BA18619 | Since: 323
      */
-    function startParticleFxNonLoopedOnPedBone(effectName: string, ped: number | Ped, offsetX: number, offsetY: number, offsetZ: number, rot: Vector3, boneIndex: number, scale: number, axisX: boolean, axisY: boolean, axisZ: boolean): boolean;
+    function startParticleFxNonLoopedOnPedBone(effectName: string, ped: number | IPed, offsetX: number, offsetY: number, offsetZ: number, rot: Vector3, boneIndex: number, scale: number, axisX: boolean, axisY: boolean, axisZ: boolean): boolean;
     /**
      * No comment provided
      *
@@ -10181,7 +10181,7 @@ export declare namespace graphics {
      *
      * Hash: 0x98C4FE6EC34154CA | Since: 323
      */
-    function ui3dsceneAssignPedToSlot(presetName: string, ped: number | Ped, slot: number, pos: Vector3): boolean;
+    function ui3dsceneAssignPedToSlot(presetName: string, ped: number | IPed, slot: number, pos: Vector3): boolean;
     /**
      * No comment provided
      *
@@ -10217,7 +10217,7 @@ export declare namespace graphics {
      *
      * Hash: 0xDEADC0DEDEADC0DE | Since: 323
      */
-    function updateLightsOnEntity(entity: number | Entity): void;
+    function updateLightsOnEntity(entity: number | IEntity): void;
     /**
      * From the b678d decompiled scripts:
      *
@@ -10251,7 +10251,7 @@ export declare namespace graphics {
      *
      * Hash: 0x5B712761429DBC14 | Since: 323
      */
-    function washDecalsFromVehicle(vehicle: number | Vehicle): void;
+    function washDecalsFromVehicle(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -10306,7 +10306,7 @@ export declare namespace graphics {
      *
      * Hash: 0xDF269BE2909E181A | Since: 3095
      */
-    function startVehicleParticleFxLooped(vehicle: number | Vehicle, effectName: string, frontBack: boolean, leftRight: boolean, localOnly: boolean): number;
+    function startVehicleParticleFxLooped(vehicle: number | IVehicle, effectName: string, frontBack: boolean, leftRight: boolean, localOnly: boolean): number;
 }
 export declare namespace hud {
     /**
@@ -10387,7 +10387,7 @@ export declare namespace hud {
      *
      * Hash: 0x5CDE92C702A8FCE7 | Since: 323
      */
-    function addBlipForEntity(entity: number | Entity): number;
+    function addBlipForEntity(entity: number | IEntity): number;
     /**
      * No comment provided
      *
@@ -10441,7 +10441,7 @@ export declare namespace hud {
      *
      * Hash: 0x80EAD8E2E1D5D52E | Since: 323
      */
-    function addTextComponentSubstringBlipName(blip: number | Blip): void;
+    function addTextComponentSubstringBlipName(blip: number | IBlip): void;
     /**
      * No comment provided
      *
@@ -10830,13 +10830,13 @@ export declare namespace hud {
      *
      * Hash: 0xBFEFE3321A3F5015 | Since: 323
      */
-    function createFakeMpGamerTag(ped: number | Ped, username: string, pointedClanTag: boolean, isRockstarClan: boolean, clanTag: string, clanFlag: number): number;
+    function createFakeMpGamerTag(ped: number | IPed, username: string, pointedClanTag: boolean, isRockstarClan: boolean, clanTag: string, clanFlag: number): number;
     /**
      * clanFlag: takes a number 0-5
      *
      * Hash: 0x6DD05E9D83EFA4C9 | Since: 323
      */
-    function createMpGamerTagWithCrewColor(player: number | string | Player, username: string, pointedClanTag: boolean, isRockstarClan: boolean, clanTag: string, clanFlag: number, r: number, g: number, b: number): void;
+    function createMpGamerTagWithCrewColor(player: number | string | IPlayer, username: string, pointedClanTag: boolean, isRockstarClan: boolean, clanTag: string, clanFlag: number, r: number, g: number, b: number): void;
     /**
      * No comment provided
      *
@@ -10963,19 +10963,19 @@ export declare namespace hud {
      *
      * Hash: 0xA6DB27D19ECBB7DA | Since: 323
      */
-    function doesBlipExist(blip: number | Blip): boolean;
+    function doesBlipExist(blip: number | IBlip): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xDD2238F57B977751 | Since: 323
      */
-    function doesBlipHaveGpsRoute(blip: number | Blip): boolean;
+    function doesBlipHaveGpsRoute(blip: number | IBlip): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x15B8ECF844EE67ED | Since: 323
      */
-    function doesPedHaveAiBlip(ped: number | Ped): boolean;
+    function doesPedHaveAiBlip(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
@@ -11122,7 +11122,7 @@ export declare namespace hud {
      *
      * Hash: 0xBC38B49BCB83BC9B | Since: 323
      */
-    function endTextCommandSetBlipName(blip: number | Blip): void;
+    function endTextCommandSetBlipName(blip: number | IBlip): void;
     /**
      * Shows an "award" notification above the minimap, example: https://i.imgur.com/e2DNaKX.png
      * Example:
@@ -11423,73 +11423,73 @@ export declare namespace hud {
      *
      * Hash: 0x7CD934010E115C2C | Since: 323
      */
-    function getAiPedPedBlipIndex(ped: number | Ped): number;
+    function getAiPedPedBlipIndex(ped: number | IPed): number;
     /**
      * Returns the current AI BLIP for the specified ped
      *
      * Hash: 0x56176892826A4FE8 | Since: 323
      */
-    function getAiPedVehicleBlipIndex(ped: number | Ped): number;
+    function getAiPedVehicleBlipIndex(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0x970F608F0EE6C885 | Since: 323
      */
-    function getBlipAlpha(blip: number | Blip): number;
+    function getBlipAlpha(blip: number | IBlip): number;
     /**
      * No comment provided
      *
      * Hash: 0xDF729E8D20CF7327 | Since: 323
      */
-    function getBlipColour(blip: number | Blip): number;
+    function getBlipColour(blip: number | IBlip): number;
     /**
      * No comment provided
      *
      * Hash: 0x586AFE3FF72D996E | Since: 323
      */
-    function getBlipCoords(blip: number | Blip): Vector3;
+    function getBlipCoords(blip: number | IBlip): Vector3;
     /**
      * Returns -1, 0, +1, depending on if the blip is fading out, doing nothing, or fading in respectively.
      *
      * Hash: 0x2C173AE2BDB9385E | Since: 463
      */
-    function getBlipFadeDirection(blip: number | Blip): number;
+    function getBlipFadeDirection(blip: number | IBlip): number;
     /**
      * Returns the Blip handle of given Entity.
      *
      * Hash: 0xBC8DBDCA2436F7E8 | Since: 323
      */
-    function getBlipFromEntity(entity: number | Entity): number;
+    function getBlipFromEntity(entity: number | IEntity): number;
     /**
      * No comment provided
      *
      * Hash: 0x729B5F1EFBC0AAEE | Since: 323
      */
-    function getBlipHudColour(blip: number | Blip): number;
+    function getBlipHudColour(blip: number | IBlip): number;
     /**
      * No comment provided
      *
      * Hash: 0xFA7C7F0AADF25D09 | Since: 323
      */
-    function getBlipInfoIdCoord(blip: number | Blip): Vector3;
+    function getBlipInfoIdCoord(blip: number | IBlip): Vector3;
     /**
      * No comment provided
      *
      * Hash: 0x1E314167F701DC3B | Since: 323
      */
-    function getBlipInfoIdDisplay(blip: number | Blip): number;
+    function getBlipInfoIdDisplay(blip: number | IBlip): number;
     /**
      * No comment provided
      *
      * Hash: 0x4BA4E2553AFEDC2C | Since: 323
      */
-    function getBlipInfoIdEntityIndex(blip: number | Blip): number;
+    function getBlipInfoIdEntityIndex(blip: number | IBlip): number;
     /**
      * This function is hard-coded to always return 0.
      *
      * Hash: 0x9B6786E4C03DD382 | Since: 323
      */
-    function getBlipInfoIdPickupIndex(blip: number | Blip): any;
+    function getBlipInfoIdPickupIndex(blip: number | IBlip): any;
     /**
      * Returns a value based on what the blip is attached to
      * 1 - Vehicle
@@ -11502,20 +11502,20 @@ export declare namespace hud {
      *
      * Hash: 0xBE9B0959FFD0779B | Since: 323
      */
-    function getBlipInfoIdType(blip: number | Blip): number;
+    function getBlipInfoIdType(blip: number | IBlip): number;
     /**
      * No comment provided
      *
      * Hash: 0x003E92BA477F9D7F | Since: 2060
      */
-    function getBlipRotation(blip: number | Blip): number;
+    function getBlipRotation(blip: number | IBlip): number;
     /**
      * Blips Images + IDs:
      * gtaxscripting.blogspot.com/2016/05/gta-v-blips-id-and-image.html
      *
      * Hash: 0x1FC877464A04FC4F | Since: 323
      */
-    function getBlipSprite(blip: number | Blip): number;
+    function getBlipSprite(blip: number | IBlip): number;
     /**
      * Returns a substring of a specified length starting at a specified position.
      *
@@ -11864,7 +11864,7 @@ export declare namespace hud {
      *
      * Hash: 0xAC0BFBDC3BE00E14 | Since: 323
      */
-    function givePedToPauseMenu(ped: number | Ped): void;
+    function givePedToPauseMenu(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -11973,7 +11973,7 @@ export declare namespace hud {
      *
      * Hash: 0x532CFF637EF80148 | Since: 323
      */
-    function hideNumberOnBlip(blip: number | Blip): void;
+    function hideNumberOnBlip(blip: number | IBlip): void;
     /**
      * No comment provided
      *
@@ -12033,19 +12033,19 @@ export declare namespace hud {
      *
      * Hash: 0xA5E41FD83AD6CEF0 | Since: 323
      */
-    function isBlipFlashing(blip: number | Blip): boolean;
+    function isBlipFlashing(blip: number | IBlip): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xE41CA53051197A27 | Since: 323
      */
-    function isBlipOnMinimap(blip: number | Blip): boolean;
+    function isBlipOnMinimap(blip: number | IBlip): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xDA5F8727EB75B926 | Since: 323
      */
-    function isBlipShortRange(blip: number | Blip): boolean;
+    function isBlipShortRange(blip: number | IBlip): boolean;
     /**
      * No comment provided
      *
@@ -12148,7 +12148,7 @@ export declare namespace hud {
      *
      * Hash: 0x26F49BF3381D933D | Since: 323
      */
-    function isMissionCreatorBlip(blip: number | Blip): boolean;
+    function isMissionCreatorBlip(blip: number | IBlip): boolean;
     /**
      * Returns TRUE if mouse is hovering above instructional buttons. Works with all buttons gfx, such as popup_warning, pause_menu_instructional_buttons, instructional_buttons, etc. Note: You have to call TOGGLE_MOUSE_BUTTONS on the scaleform if you want this native to work.
      *
@@ -12461,7 +12461,7 @@ export declare namespace hud {
      *
      * Hash: 0x742D6FD43115AF73 | Since: 323
      */
-    function pulseBlip(blip: number | Blip): void;
+    function pulseBlip(blip: number | IBlip): void;
     /**
      * No comment provided
      *
@@ -12523,19 +12523,19 @@ export declare namespace hud {
      *
      * Hash: 0x86A652570E5F25DD | Since: 323
      */
-    function removeBlip(blip: number | Blip): void;
+    function removeBlip(blip: number | IBlip): void;
     /**
      * Interesting fact: A hash collision for this is RESET_JETPACK_MODEL_SETTINGS
      *
      * Hash: 0xC594B315EDF2D4AF | Since: 323
      */
-    function removeCopBlipFromPed(ped: number | Ped): void;
+    function removeCopBlipFromPed(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x35A3CD97B2C0A6D2 | Since: 1290
      */
-    function removeFakeConeData(blip: number | Blip): void;
+    function removeFakeConeData(blip: number | IBlip): void;
     /**
      * No comment provided
      *
@@ -12629,7 +12629,7 @@ export declare namespace hud {
      *
      * Hash: 0xF83D0FEBE75E62C9 | Since: 1290
      */
-    function setupFakeConeData(blip: number | Blip): void;
+    function setupFakeConeData(blip: number | IBlip): void;
     /**
      * No comment provided
      *
@@ -12678,38 +12678,38 @@ export declare namespace hud {
      *
      * Hash: 0x45FF974EEE1C8734 | Since: 323
      */
-    function setBlipAlpha(blip: number | Blip, alpha: number): void;
+    function setBlipAlpha(blip: number | IBlip, alpha: number): void;
     /**
      * false for enemy
      * true for friendly
      *
      * Hash: 0x6F6F290102C02AB4 | Since: 323
      */
-    function setBlipAsFriendly(blip: number | Blip, toggle: boolean): void;
+    function setBlipAsFriendly(blip: number | IBlip, toggle: boolean): void;
     /**
      * Makes a blip go small when off the minimap.
      *
      * Hash: 0x2B6D467DAB714E8D | Since: 323
      */
-    function setBlipAsMinimalOnEdge(blip: number | Blip, toggle: boolean): void;
+    function setBlipAsMinimalOnEdge(blip: number | IBlip, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x24AC0137444F9FD5 | Since: 323
      */
-    function setBlipAsMissionCreatorBlip(blip: number | Blip, toggle: boolean): void;
+    function setBlipAsMissionCreatorBlip(blip: number | IBlip, toggle: boolean): void;
     /**
      * Sets whether or not the specified blip should only be displayed when nearby, or on the minimap.
      *
      * Hash: 0xBE8BE4FE60E27B72 | Since: 323
      */
-    function setBlipAsShortRange(blip: number | Blip, toggle: boolean): void;
+    function setBlipAsShortRange(blip: number | IBlip, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xB203913733F27884 | Since: 323
      */
-    function setBlipBright(blip: number | Blip, toggle: boolean): void;
+    function setBlipBright(blip: number | IBlip, toggle: boolean): void;
     /**
      * Example: https://i.imgur.com/skY6vAJ.png
      *
@@ -12731,19 +12731,19 @@ export declare namespace hud {
      *
      * Hash: 0x234CDD44D996FD9A | Since: 323
      */
-    function setBlipCategory(blip: number | Blip, index: number): void;
+    function setBlipCategory(blip: number | IBlip, index: number): void;
     /**
      * https://gtaforums.com/topic/864881-all-blip-color-ids-pictured/
      *
      * Hash: 0x03D7FB09E75D6B7E | Since: 323
      */
-    function setBlipColour(blip: number | Blip, color: number): void;
+    function setBlipColour(blip: number | IBlip, color: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xAE2AF67E9D9AF65D | Since: 323
      */
-    function setBlipCoords(blip: number | Blip, pos: Vector3): void;
+    function setBlipCoords(blip: number | IBlip, pos: Vector3): void;
     /**
      * Display Id behaviours:
      * 0 = Doesn't show up, ever, anywhere.
@@ -12762,55 +12762,55 @@ export declare namespace hud {
      *
      * Hash: 0x9029B2F3DA924928 | Since: 323
      */
-    function setBlipDisplay(blip: number | Blip, displayId: number): void;
+    function setBlipDisplay(blip: number | IBlip, displayId: number): void;
     /**
      * Must be toggled before being queued for animation
      *
      * Hash: 0xC4278F70131BAA6D | Since: 323
      */
-    function setBlipExtendedHeightThreshold(blip: number | Blip, toggle: boolean): void;
+    function setBlipExtendedHeightThreshold(blip: number | IBlip, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x2AEE8F8390D2298C | Since: 323
      */
-    function setBlipFade(blip: number | Blip, opacity: number, duration: number): void;
+    function setBlipFade(blip: number | IBlip, opacity: number, duration: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xB14552383D39CE3E | Since: 323
      */
-    function setBlipFlashes(blip: number | Blip, toggle: boolean): void;
+    function setBlipFlashes(blip: number | IBlip, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x2E8D9498C56DD0D1 | Since: 323
      */
-    function setBlipFlashesAlternate(blip: number | Blip, toggle: boolean): void;
+    function setBlipFlashesAlternate(blip: number | IBlip, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xAA51DB313C010A7E | Since: 323
      */
-    function setBlipFlashInterval(blip: number | Blip): void;
+    function setBlipFlashInterval(blip: number | IBlip): void;
     /**
      * Adds up after viewing multiple R* scripts. I believe that the duration is in miliseconds.
      *
      * Hash: 0xD3CD6FD297AE87CC | Since: 323
      */
-    function setBlipFlashTimer(blip: number | Blip, duration: number): void;
+    function setBlipFlashTimer(blip: number | IBlip, duration: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x54318C915D27E4CE | Since: 323
      */
-    function setBlipHiddenOnLegend(blip: number | Blip, toggle: boolean): void;
+    function setBlipHiddenOnLegend(blip: number | IBlip, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xE2590BC29220CEBB | Since: 323
      */
-    function setBlipHighDetail(blip: number | Blip, toggle: boolean): void;
+    function setBlipHighDetail(blip: number | IBlip, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -12822,61 +12822,61 @@ export declare namespace hud {
      *
      * Hash: 0xEAA0FFE120D92784 | Since: 323
      */
-    function setBlipNameFromTextFile(blip: number | Blip, gxtEntry: string): void;
+    function setBlipNameFromTextFile(blip: number | IBlip, gxtEntry: string): void;
     /**
      * No comment provided
      *
      * Hash: 0x127DE7B20C60A6A3 | Since: 323
      */
-    function setBlipNameToPlayerName(blip: number | Blip, player: number | string | Player): void;
+    function setBlipNameToPlayerName(blip: number | IBlip, player: number | string | IPlayer): void;
     /**
      * See this topic for more details : gtaforums.com/topic/717612-v-scriptnative-documentation-and-research/page-35?p=1069477935
      *
      * Hash: 0xAE9FC9EF6A9FAC79 | Since: 323
      */
-    function setBlipPriority(blip: number | Blip, priority: number): void;
+    function setBlipPriority(blip: number | IBlip, priority: number): void;
     /**
      * After some testing, looks like you need to use CEIL() on the rotation (vehicle/ped heading) before using it there.
      *
      * Hash: 0xF87683CDF73C3F6E | Since: 323
      */
-    function setBlipRotation(blip: number | Blip, rotation: number): void;
+    function setBlipRotation(blip: number | IBlip, rotation: number): void;
     /**
      * Does not require whole number/integer rotations.
      *
      * Hash: 0xA8B6AFDAC320AC87 | Since: 877
      */
-    function setBlipRotationWithFloat(blip: number | Blip, heading: number): void;
+    function setBlipRotationWithFloat(blip: number | IBlip, heading: number): void;
     /**
      * Enable / disable showing route for the Blip-object.
      *
      * Hash: 0x4F7D8A9BFB0B43E9 | Since: 323
      */
-    function setBlipRoute(blip: number | Blip, enabled: boolean): void;
+    function setBlipRoute(blip: number | IBlip, enabled: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x837155CD2F63DA09 | Since: 323
      */
-    function setBlipRouteColour(blip: number | Blip, colour: number): void;
+    function setBlipRouteColour(blip: number | IBlip, colour: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xD38744167B2FA257 | Since: 323
      */
-    function setBlipScale(blip: number | Blip, scale: number): void;
+    function setBlipScale(blip: number | IBlip, scale: number): void;
     /**
      * See https://imgur.com/a/lLkEsMN
      *
      * Hash: 0xCD6524439909C979 | Since: 1734
      */
-    function setBlipScale2d(blip: number | Blip, xScale: number, yScale: number): void;
+    function setBlipScale2d(blip: number | IBlip, xScale: number, yScale: number): void;
     /**
      * Can be used to give blips any RGB colour with SET_BLIP_COLOUR(blip, 84).
      *
      * Hash: 0x14892474891E09EB | Since: 323
      */
-    function setBlipSecondaryColour(blip: number | Blip, r: number, g: number, b: number): void;
+    function setBlipSecondaryColour(blip: number | IBlip, r: number, g: number, b: number): void;
     /**
      * No comment provided
      *
@@ -12888,7 +12888,7 @@ export declare namespace hud {
      *
      * Hash: 0x13127EC3665E8EE1 | Since: 323
      */
-    function setBlipShowCone(blip: number | Blip, toggle: boolean, hudColorIndex: number): void;
+    function setBlipShowCone(blip: number | IBlip, toggle: boolean, hudColorIndex: number): void;
     /**
      * Sets the displayed sprite for a specific blip..
      *
@@ -12900,13 +12900,13 @@ export declare namespace hud {
      *
      * Hash: 0xDF735600A4696DAF | Since: 323
      */
-    function setBlipSprite(blip: number | Blip, spriteId: number): void;
+    function setBlipSprite(blip: number | IBlip, spriteId: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x2C9F302398E13141 | Since: 1103
      */
-    function setBlipUseHeightIndicatorOnEdge(blip: number | Blip): void;
+    function setBlipUseHeightIndicatorOnEdge(blip: number | IBlip): void;
     /**
      * No comment provided
      *
@@ -12998,7 +12998,7 @@ export declare namespace hud {
      *
      * Hash: 0xB094BC1DB4018240 | Since: 323
      */
-    function setFloatingHelpTextToEntity(hudIndex: number, entity: number | Entity, offsetX: number, offsetY: number): void;
+    function setFloatingHelpTextToEntity(hudIndex: number, entity: number | IEntity, offsetX: number, offsetY: number): void;
     /**
      * No comment provided
      *
@@ -13152,7 +13152,7 @@ export declare namespace hud {
      *
      * Hash: 0x1A5CD7752DD28CD3 | Since: 323
      */
-    function setMinimapInSpectatorMode(toggle: boolean, ped: number | Ped): void;
+    function setMinimapInSpectatorMode(toggle: boolean, ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -13356,31 +13356,31 @@ export declare namespace hud {
      *
      * Hash: 0x0C4BBF625CA98C4E | Since: 323
      */
-    function setPedAiBlipForcedOn(ped: number | Ped, toggle: boolean): void;
+    function setPedAiBlipForcedOn(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xE52B8E7F85D39A08 | Since: 323
      */
-    function setPedAiBlipGangId(ped: number | Ped, gangId: number): void;
+    function setPedAiBlipGangId(ped: number | IPed, gangId: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x3EED80DFF7325CAA | Since: 323
      */
-    function setPedAiBlipHasCone(ped: number | Ped, toggle: boolean): void;
+    function setPedAiBlipHasCone(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x97C65887D4B37FA9 | Since: 323
      */
-    function setPedAiBlipNoticeRange(ped: number | Ped, range: number): void;
+    function setPedAiBlipNoticeRange(ped: number | IPed, range: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xFCFACD0DB9D7A57D | Since: 877
      */
-    function setPedAiBlipSprite(ped: number | Ped, spriteId: number): void;
+    function setPedAiBlipSprite(ped: number | IPed, spriteId: number): void;
     /**
      * This native turns on the AI blip on the specified ped. It also disappears automatically when the ped is too far or if the ped is dead. You don't need to control it with other natives.
      *
@@ -13388,13 +13388,13 @@ export declare namespace hud {
      *
      * Hash: 0xD30C50DF888D58B5 | Since: 323
      */
-    function setPedHasAiBlip(ped: number | Ped, hasCone: boolean): void;
+    function setPedHasAiBlip(ped: number | IPed, hasCone: boolean): void;
     /**
      * color: see SET_BLIP_COLOUR
      *
      * Hash: 0xB13DCB4C6FAAD238 | Since: 505
      */
-    function setPedHasAiBlipWithColour(ped: number | Ped, hasCone: boolean, color: number): void;
+    function setPedHasAiBlipWithColour(ped: number | IPed, hasCone: boolean, color: number): void;
     /**
      * No comment provided
      *
@@ -13450,7 +13450,7 @@ export declare namespace hud {
      *
      * Hash: 0xF98E4B3E56AFC7B1 | Since: 323
      */
-    function setRadarZoomToBlip(blip: number | Blip, zoom: number): void;
+    function setRadarZoomToBlip(blip: number | IBlip, zoom: number): void;
     /**
      * No comment provided
      *
@@ -13462,7 +13462,7 @@ export declare namespace hud {
      *
      * Hash: 0x25615540D894B814 | Since: 323
      */
-    function setRadiusBlipEdge(blip: number | Blip, toggle: boolean): void;
+    function setRadiusBlipEdge(blip: number | IBlip, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -13764,13 +13764,13 @@ export declare namespace hud {
      *
      * Hash: 0xDCFB5D4DB8BF367E | Since: 323
      */
-    function showCrewIndicatorOnBlip(blip: number | Blip, toggle: boolean): void;
+    function showCrewIndicatorOnBlip(blip: number | IBlip, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x19BD6E3C0E16A8FA | Since: 2802
      */
-    function showForSaleIconOnBlip(blip: number | Blip, toggle: boolean): void;
+    function showForSaleIconOnBlip(blip: number | IBlip, toggle: boolean): void;
     /**
      * Highlights a blip by a half cyan circle on the right side of the blip. https://i.imgur.com/FrV9M4e.png
      * .Indicating that that player is a friend (in GTA:O). This color can not be changed.
@@ -13778,26 +13778,26 @@ export declare namespace hud {
      *
      * Hash: 0x23C3EB807312F01A | Since: 323
      */
-    function showFriendIndicatorOnBlip(blip: number | Blip, toggle: boolean): void;
+    function showFriendIndicatorOnBlip(blip: number | IBlip, toggle: boolean): void;
     /**
      * Adds a orange checkmark on top of a given blip handle: https://imgur.com/a/aw5OTMF
      * _SHOW_FRIEND_INDICATOR_ON_BLIP* - _SHOW_HEADING_INDICATOR_ON_BLIP*
      *
      * Hash: 0xCAC2031EBF79B1A8 | Since: 2699
      */
-    function showGoldTickOnBlip(blip: number | Blip, toggle: boolean): void;
+    function showGoldTickOnBlip(blip: number | IBlip, toggle: boolean): void;
     /**
      * Adds the GTA: Online player heading indicator to a blip.
      *
      * Hash: 0x5FBCA48327B914DF | Since: 323
      */
-    function showHeadingIndicatorOnBlip(blip: number | Blip, toggle: boolean): void;
+    function showHeadingIndicatorOnBlip(blip: number | IBlip, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x75A16C3DA34F1245 | Since: 323
      */
-    function showHeightOnBlip(blip: number | Blip, toggle: boolean): void;
+    function showHeightOnBlip(blip: number | IBlip, toggle: boolean): void;
     /**
      * This function hides various HUD (Heads-up Display) components.
      * Listed below are the integers and the corresponding HUD component.
@@ -13834,7 +13834,7 @@ export declare namespace hud {
      *
      * Hash: 0xA3C0B359DCB848B6 | Since: 323
      */
-    function showNumberOnBlip(blip: number | Blip, _number: number): void;
+    function showNumberOnBlip(blip: number | IBlip, _number: number): void;
     /**
      * Highlights a blip by a cyan color circle.
      *
@@ -13842,7 +13842,7 @@ export declare namespace hud {
      *
      * Hash: 0xB81656BC81FE24D1 | Since: 323
      */
-    function showOutlineIndicatorOnBlip(blip: number | Blip, toggle: boolean): void;
+    function showOutlineIndicatorOnBlip(blip: number | IBlip, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -13860,7 +13860,7 @@ export declare namespace hud {
      *
      * Hash: 0x74513EA3E505181E | Since: 323
      */
-    function showTickOnBlip(blip: number | Blip, toggle: boolean): void;
+    function showTickOnBlip(blip: number | IBlip, toggle: boolean): void;
     /**
      * Starts a new GPS custom-route, allowing you to plot lines on the map.
      * Lines are drawn directly between points.
@@ -14115,7 +14115,7 @@ export declare namespace hud {
      *
      * Hash: 0x25D984CFB64ED6DE | Since: 3095
      */
-    function setBlipGpsRouteDisplayDistance(blip: number | Blip, blipChangeParam46: number, blipChangeParam47: boolean): void;
+    function setBlipGpsRouteDisplayDistance(blip: number | IBlip, blipChangeParam46: number, blipChangeParam47: boolean): void;
     /**
      * No comment provided
      *
@@ -14167,13 +14167,13 @@ export declare namespace interior {
      *
      * Hash: 0x85D5422B2039A70D | Since: 2189
      */
-    function clearStateOfEntity(entity: number | Entity): void;
+    function clearStateOfEntity(entity: number | IEntity): void;
     /**
      * No comment provided
      *
      * Hash: 0xB365FC0C4E27FFA7 | Since: 323
      */
-    function clearRoomForEntity(entity: number | Entity): void;
+    function clearRoomForEntity(entity: number | IEntity): void;
     /**
      * No comment provided
      *
@@ -14232,7 +14232,7 @@ export declare namespace interior {
      *
      * Hash: 0x52923C4710DD9907 | Since: 323
      */
-    function forceRoomForEntity(entity: number | Entity, interior: number, roomHashKey: number | string): void;
+    function forceRoomForEntity(entity: number | IEntity, interior: number, roomHashKey: number | string): void;
     /**
      * No comment provided
      *
@@ -14277,7 +14277,7 @@ export declare namespace interior {
      *
      * Hash: 0x2107BA504071A6BB | Since: 323
      */
-    function getFromEntity(entity: number | Entity): number;
+    function getFromEntity(entity: number | IEntity): number;
     /**
      * Returns the current interior id from gameplay camera
      *
@@ -14321,7 +14321,7 @@ export declare namespace interior {
      *
      * Hash: 0x399685DB942336BC | Since: 323
      */
-    function getKeyForEntityInRoom(entity: number | Entity): number;
+    function getKeyForEntityInRoom(entity: number | IEntity): number;
     /**
      * No comment provided
      *
@@ -14339,7 +14339,7 @@ export declare namespace interior {
      *
      * Hash: 0x47C2A06D4F5F424B | Since: 323
      */
-    function getRoomKeyFromEntity(entity: number | Entity): number;
+    function getRoomKeyFromEntity(entity: number | IEntity): number;
     /**
      * Returns true if the collision at the specified coords is marked as being outside (false if there's an interior)
      *
@@ -14399,7 +14399,7 @@ export declare namespace interior {
      *
      * Hash: 0x82EBB79E258FA2B7 | Since: 323
      */
-    function retainEntityIn(entity: number | Entity, interior: number): void;
+    function retainEntityIn(entity: number | IEntity, interior: number): void;
     /**
      * Full list of IPLs and interior entity sets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ipls.json
      *
@@ -14418,7 +14418,7 @@ export declare namespace interior {
      *
      * Hash: 0x7241CCB7D020DB69 | Since: 791
      */
-    function setIsExteriorOnly(entity: number | Entity, toggle: boolean): void;
+    function setIsExteriorOnly(entity: number | IEntity, toggle: boolean): void;
     /**
      * `Usage: INTERIOR::SET_ROOM_FOR_GAME_VIEWPORT_BY_KEY(INTERIOR::GET_KEY_FOR_ENTITY_IN_ROOM(PLAYER::PLAYER_PED_ID()));`
      *
@@ -14989,7 +14989,7 @@ export declare namespace misc {
      *
      * Hash: 0x05983472F0494E60 | Since: 323
      */
-    function createIncidentWithEntity(dispatchService: number, ped: number | Ped, numUnits: number, radius: number): [boolean, number];
+    function createIncidentWithEntity(dispatchService: number, ped: number | IPed, numUnits: number, radius: number): [boolean, number];
     /**
      * Delete an incident with a given id.
      *
@@ -15115,7 +15115,7 @@ export declare namespace misc {
      *
      * Hash: 0x28A04B411933F8A6 | Since: 323
      */
-    function enableTennisMode(ped: number | Ped, toggle: boolean): void;
+    function enableTennisMode(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -15235,7 +15235,7 @@ export declare namespace misc {
      *
      * Hash: 0xDFB4138EEFED7B81 | Since: 323
      */
-    function getCoordsOfProjectileTypeWithinDistance(ped: number | Ped, weaponHash: number | string, distance: number): [boolean, Vector3];
+    function getCoordsOfProjectileTypeWithinDistance(ped: number | IPed, weaponHash: number | string, distance: number): [boolean, Vector3];
     /**
      * No comment provided
      *
@@ -15407,7 +15407,7 @@ export declare namespace misc {
      *
      * Hash: 0x82FDE6A57EE4EE44 | Since: 323
      */
-    function getProjectileOfProjectileTypeWithinDistance(ped: number | Ped, weaponHash: number | string, distance: number): [boolean, Vector3, number];
+    function getProjectileOfProjectileTypeWithinDistance(ped: number | IPed, weaponHash: number | string, distance: number): [boolean, Vector3, number];
     /**
      * No comment provided
      *
@@ -15515,19 +15515,19 @@ export declare namespace misc {
      *
      * Hash: 0x19BFED045C647C49 | Since: 323
      */
-    function getTennisSwingAnimCanBeInterrupted(ped: number | Ped): boolean;
+    function getTennisSwingAnimCanBeInterrupted(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x17DF68D720AA77F8 | Since: 323
      */
-    function getTennisSwingAnimComplete(ped: number | Ped): boolean;
+    function getTennisSwingAnimComplete(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xE95B0C7D5BA3B96B | Since: 323
      */
-    function getTennisSwingAnimSwung(ped: number | Ped): boolean;
+    function getTennisSwingAnimSwung(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
@@ -15764,7 +15764,7 @@ export declare namespace misc {
      *
      * Hash: 0xADCDE75E1C60F32D | Since: 323
      */
-    function isPositionOccupied(pos: Vector3, range: number, checkVehicles: boolean, checkPeds: boolean, ignoreEntity: number | Entity): boolean;
+    function isPositionOccupied(pos: Vector3, range: number, checkVehicles: boolean, checkPeds: boolean, ignoreEntity: number | IEntity): boolean;
     /**
      * No comment provided
      *
@@ -15871,7 +15871,7 @@ export declare namespace misc {
      *
      * Hash: 0x5D5479D115290C3F | Since: 323
      */
-    function isTennisMode(ped: number | Ped): boolean;
+    function isTennisMode(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
@@ -15959,13 +15959,13 @@ export declare namespace misc {
      *
      * Hash: 0x8FA9C42FC5D7C64B | Since: 323
      */
-    function playTennisDiveAnim(ped: number | Ped): void;
+    function playTennisDiveAnim(ped: number | IPed): void;
     /**
      * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
      *
      * Hash: 0xE266ED23311F24D4 | Since: 323
      */
-    function playTennisSwingAnim(ped: number | Ped, animDict: string, animName: string): void;
+    function playTennisSwingAnim(ped: number | IPed, animDict: string, animName: string): void;
     /**
      * Returns duration of how long the game has been in power-saving mode (aka "constrained") in milliseconds.
      *
@@ -16176,7 +16176,7 @@ export declare namespace misc {
      *
      * Hash: 0x8EF5573A1F801A5C | Since: 323
      */
-    function scriptRaceGetPlayerSplitTime(player: number | string | Player): [boolean, number, number];
+    function scriptRaceGetPlayerSplitTime(player: number | string | IPlayer): [boolean, number, number];
     /**
      * No comment provided
      *
@@ -16188,7 +16188,7 @@ export declare namespace misc {
      *
      * Hash: 0x1BB299305C3E8C13 | Since: 323
      */
-    function scriptRacePlayerHitCheckpoint(player: number | string | Player): void;
+    function scriptRacePlayerHitCheckpoint(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
@@ -16200,7 +16200,7 @@ export declare namespace misc {
      *
      * Hash: 0x438822C279B73B93 | Since: 573
      */
-    function setBeastJumpThisFrame(player: number | string | Player): void;
+    function setBeastJumpThisFrame(player: number | string | IPlayer): void;
     /**
      * This sets bit [offset] of [address] to on.
      *
@@ -16316,13 +16316,13 @@ export declare namespace misc {
      *
      * Hash: 0xA66C71C98D5F2CFB | Since: 323
      */
-    function setExplosiveAmmoThisFrame(player: number | string | Player): void;
+    function setExplosiveAmmoThisFrame(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0xFF1BED81BFDC0FE0 | Since: 323
      */
-    function setExplosiveMeleeThisFrame(player: number | string | Player): void;
+    function setExplosiveMeleeThisFrame(player: number | string | IPlayer): void;
     /**
      * Sets whether the game should fade in after the player dies or is arrested.
      *
@@ -16360,13 +16360,13 @@ export declare namespace misc {
      *
      * Hash: 0x11879CDD803D30F4 | Since: 323
      */
-    function setFireAmmoThisFrame(player: number | string | Player): void;
+    function setFireAmmoThisFrame(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0xA1183BCFEE0F93D1 | Since: 1180
      */
-    function setForcedJumpThisFrame(player: number | string | Player): void;
+    function setForcedJumpThisFrame(player: number | string | IPlayer): void;
     /**
      * Make sure to call this from the correct thread if you're using multiple threads because all other threads except the one which is calling SET_GAME_PAUSED will be paused which means you will lose control and the game remains in paused mode until you exit GTA5.exe
      *
@@ -16528,7 +16528,7 @@ export declare namespace misc {
      *
      * Hash: 0x57FFF03E423A4C0B | Since: 323
      */
-    function setSuperJumpThisFrame(player: number | string | Player): void;
+    function setSuperJumpThisFrame(player: number | string | IPlayer): void;
     /**
      * From the scripts:
      *
@@ -16538,7 +16538,7 @@ export declare namespace misc {
      *
      * Hash: 0x54F157E0336A3822 | Since: 323
      */
-    function setTennisMoveNetworkSignalFloat(ped: number | Ped): void;
+    function setTennisMoveNetworkSignalFloat(ped: number | IPed): void;
     /**
      * Sets bit 3 in GtaThread+0x150
      *
@@ -16673,20 +16673,20 @@ export declare namespace misc {
      *
      * Hash: 0x867654CBC7606F2C | Since: 323
      */
-    function shootSingleBulletBetweenCoords(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, damage: number, weaponHash: number | string, ownerPed: number | Ped, isAudible: boolean, isInvisible: boolean, speed: number): void;
+    function shootSingleBulletBetweenCoords(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, damage: number, weaponHash: number | string, ownerPed: number | IPed, isAudible: boolean, isInvisible: boolean, speed: number): void;
     /**
      * entity - entity to ignore
      *
      * Hash: 0xE3A7742E0B7A2F8B | Since: 323
      */
-    function shootSingleBulletBetweenCoordsIgnoreEntity(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, damage: number, weaponHash: number | string, ownerPed: number | Ped, isAudible: boolean, isInvisible: boolean, speed: number, entity: number | Entity): void;
+    function shootSingleBulletBetweenCoordsIgnoreEntity(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, damage: number, weaponHash: number | string, ownerPed: number | IPed, isAudible: boolean, isInvisible: boolean, speed: number, entity: number | IEntity): void;
     /**
      * entity - entity to ignore
      * targetEntity - entity to home in on, if the weapon hash provided supports homing
      *
      * Hash: 0xBFE5756E7407064A | Since: 323
      */
-    function shootSingleBulletBetweenCoordsIgnoreEntityNew(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, damage: number, weaponHash: number | string, ownerPed: number | Ped, isAudible: boolean, isInvisible: boolean, speed: number, entity: number | Entity, targetEntity: number | Entity): void;
+    function shootSingleBulletBetweenCoordsIgnoreEntityNew(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, damage: number, weaponHash: number | string, ownerPed: number | IPed, isAudible: boolean, isInvisible: boolean, speed: number, entity: number | IEntity, targetEntity: number | IEntity): void;
     /**
      * Returns true if the game is using the metric measurement system (profile setting 227), false if imperial is used.
      *
@@ -16962,7 +16962,7 @@ export declare namespace mobile {
      *
      * Hash: 0x439E9BC95B7E7FBE | Since: 323
      */
-    function cellCamIsCharVisibleNoFaceCheck(entity: number | Entity): boolean;
+    function cellCamIsCharVisibleNoFaceCheck(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
@@ -17063,7 +17063,7 @@ export declare namespace mobile {
      *
      * Hash: 0x1CEFB61F193070AE | Since: 323
      */
-    function getPhoneRotation(p1: number | Vehicle): Vector3;
+    function getPhoneRotation(p1: number | IVehicle): Vector3;
     /**
      * If bool Toggle = true so the mobile is hide to screen.
      * If bool Toggle = false so the mobile is show to screen.
@@ -17133,7 +17133,7 @@ export declare namespace money {
      *
      * Hash: 0x7B718E197453F2D9 | Since: 323
      */
-    function networkBuyBounty(amount: number, victim: number | string | Player): void;
+    function networkBuyBounty(amount: number, victim: number | string | IPlayer): void;
     /**
      * No comment provided
      *
@@ -18747,7 +18747,7 @@ export declare namespace money {
      *
      * Hash: 0x876056684281655D | Since: 1493
      */
-    function networkSpentNightclubEntryFee(player: number | string | Player, amount: number): void;
+    function networkSpentNightclubEntryFee(player: number | string | IPlayer, amount: number): void;
     /**
      * No comment provided
      *
@@ -19559,7 +19559,7 @@ export declare namespace network {
      *
      * Hash: 0xBEC0816FF5ACBCDA | Since: 757
      */
-    function activateDamageTrackerOnPlayer(player: number | string | Player, toggle: boolean): void;
+    function activateDamageTrackerOnPlayer(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * Getter for SET_NETWORK_CUTSCENE_ENTITIES.
      *
@@ -19969,19 +19969,19 @@ export declare namespace network {
      *
      * Hash: 0xB2092A1EAA7FD45F | Since: 757
      */
-    function isDamageTrackerActiveOnPlayer(player: number | string | Player): boolean;
+    function isDamageTrackerActiveOnPlayer(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x21D04D7BC538C146 | Since: 323
      */
-    function isEntityAGhost(entity: number | Entity): boolean;
+    function isEntityAGhost(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x7EF7649B64D7FF10 | Since: 944
      */
-    function isEntityInGhostCollision(entity: number | Entity): boolean;
+    function isEntityInGhostCollision(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
@@ -20005,7 +20005,7 @@ export declare namespace network {
      *
      * Hash: 0xE73092F4157CD126 | Since: 323
      */
-    function isPlayerInCutscene(player: number | string | Player): boolean;
+    function isPlayerInCutscene(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
@@ -20150,7 +20150,7 @@ export declare namespace network {
      *
      * Hash: 0xF2404D68CBC855FA | Since: 323
      */
-    function addEntityToSynchronisedScene(entity: number | Entity, netScene: number, animDict: string, animName: string, speed: number, speedMulitiplier: number, flag: number): void;
+    function addEntityToSynchronisedScene(entity: number | IEntity, netScene: number, animDict: string, animName: string, speed: number, speedMulitiplier: number, flag: number): void;
     /**
      * ..
      *
@@ -20181,7 +20181,7 @@ export declare namespace network {
      *
      * Hash: 0x742A637471BCECD9 | Since: 323
      */
-    function addPedToSynchronisedScene(ped: number | Ped, netScene: number, animDict: string, animnName: string, speed: number, speedMultiplier: number, duration: number, flag: number, playbackRate: number): void;
+    function addPedToSynchronisedScene(ped: number | IPed, netScene: number, animDict: string, animnName: string, speed: number, speedMultiplier: number, duration: number, flag: number, playbackRate: number): void;
     /**
      * No comment provided
      *
@@ -20217,7 +20217,7 @@ export declare namespace network {
      *
      * Hash: 0x267C78C60E806B9A | Since: 323
      */
-    function allowRemoteAttachmentModification(entity: number | Entity, toggle: boolean): void;
+    function allowRemoteAttachmentModification(entity: number | IEntity, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -20235,7 +20235,7 @@ export declare namespace network {
      *
      * Hash: 0x87F395D957D4353D | Since: 323
      */
-    function amIBlockedByPlayer(player: number | string | Player): boolean;
+    function amIBlockedByPlayer(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
@@ -20247,19 +20247,19 @@ export declare namespace network {
      *
      * Hash: 0x9D6981DFC91A8604 | Since: 323
      */
-    function amIMutedByPlayer(player: number | string | Player): boolean;
+    function amIMutedByPlayer(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x99B72C7ABDE5C910 | Since: 323
      */
-    function applyCachedPlayerHeadBlendData(ped: number | Ped, player: number | string | Player): boolean;
+    function applyCachedPlayerHeadBlendData(ped: number | IPed, player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xE66C690248F11150 | Since: 323
      */
-    function applyPedScarData(ped: number | Ped): void;
+    function applyPedScarData(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -20289,7 +20289,7 @@ export declare namespace network {
      *
      * Hash: 0x9DE986FC9A87C474 | Since: 323
      */
-    function arePlayersInSameTutorialSession(player: number | string | Player, index: number): boolean;
+    function arePlayersInSameTutorialSession(player: number | string | IPlayer, index: number): boolean;
     /**
      * No comment provided
      *
@@ -20307,7 +20307,7 @@ export declare namespace network {
      *
      * Hash: 0x478DCBD2A98B705A | Since: 323
      */
-    function attachSynchronisedSceneToEntity(netScene: number, entity: number | Entity, bone: number): void;
+    function attachSynchronisedSceneToEntity(netScene: number, entity: number | IEntity, bone: number): void;
     /**
      * No comment provided
      *
@@ -20720,13 +20720,13 @@ export declare namespace network {
      *
      * Hash: 0x1632BE0AC1E62876 | Since: 877
      */
-    function concealEntity(entity: number | Entity, toggle: boolean): void;
+    function concealEntity(entity: number | IEntity, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xBBDF066252829606 | Since: 323
      */
-    function concealPlayer(player: number | string | Player, toggle: boolean): void;
+    function concealPlayer(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -20750,7 +20750,7 @@ export declare namespace network {
      *
      * Hash: 0x9DD368BF06983221 | Since: 323
      */
-    function disableInvincibleFlashing(player: number | string | Player, toggle: boolean): void;
+    function disableInvincibleFlashing(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -20774,7 +20774,7 @@ export declare namespace network {
      *
      * Hash: 0xCA575C391FEA25CC | Since: 323
      */
-    function disableVoiceBandwidthRestriction(player: number | string | Player): void;
+    function disableVoiceBandwidthRestriction(player: number | string | IPlayer): void;
     /**
      * Hardcoded to return -1.
      *
@@ -20865,7 +20865,7 @@ export declare namespace network {
      *
      * Hash: 0x5E3AA4CA2B6FB0EE | Since: 323
      */
-    function enableVoiceBandwidthRestriction(player: number | string | Player): void;
+    function enableVoiceBandwidthRestriction(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
@@ -20895,7 +20895,7 @@ export declare namespace network {
      *
      * Hash: 0x815F18AD865F057F | Since: 463
      */
-    function entityGetObjectId(entity: number | Entity): number;
+    function entityGetObjectId(entity: number | IEntity): number;
     /**
      * No comment provided
      *
@@ -20907,7 +20907,7 @@ export declare namespace network {
      *
      * Hash: 0x2A5E0621DD815A9A | Since: 463
      */
-    function explodeHeli(vehicle: number | Vehicle, isAudible: boolean, isInvisible: boolean, netId: number): void;
+    function explodeHeli(vehicle: number | IVehicle, isAudible: boolean, isInvisible: boolean, netId: number): void;
     /**
      * In the console script dumps, this is only referenced once.
      * `NETWORK::NETWORK_EXPLODE_VEHICLE(vehicle, 1, 0, 0);`
@@ -20933,7 +20933,7 @@ export declare namespace network {
      *
      * Hash: 0x301A42153C9AD707 | Since: 323
      */
-    function explodeVehicle(vehicle: number | Vehicle, isAudible: boolean, isInvisible: boolean, netId: number): boolean;
+    function explodeVehicle(vehicle: number | IVehicle, isAudible: boolean, isInvisible: boolean, netId: number): boolean;
     /**
      * state - 0 does 5 fades
      * state - 1 does 6 fades
@@ -20942,7 +20942,7 @@ export declare namespace network {
      *
      * Hash: 0x1F4ED342ACEFE62D | Since: 323
      */
-    function fadeInEntity(entity: number | Entity, state: boolean): void;
+    function fadeInEntity(entity: number | IEntity, state: boolean): void;
     /**
      * normal - transition like when your coming out of LSC
      * slow - transition like when you walk into a mission
@@ -20950,7 +20950,7 @@ export declare namespace network {
      *
      * Hash: 0xDE564951F95E09ED | Since: 323
      */
-    function fadeOutEntity(entity: number | Entity, normal: boolean, slow: boolean): void;
+    function fadeOutEntity(entity: number | IEntity, normal: boolean, slow: boolean): void;
     /**
      * No comment provided
      *
@@ -21040,31 +21040,31 @@ export declare namespace network {
      *
      * Hash: 0x4CACA84440FA26F6 | Since: 323
      */
-    function getAssistedDamageOfEntity(player: number | string | Player, entity: number | Entity): [boolean, number];
+    function getAssistedDamageOfEntity(player: number | string | IPlayer, entity: number | IEntity): [boolean, number];
     /**
      * NETWORK_GET_ASSISTED_DAMAGE_OF_ENTITY that ensures the entity is dead (IS_ENTITY_DEAD)
      *
      * Hash: 0x83660B734994124D | Since: 463
      */
-    function getAssistedKillOfEntity(player: number | string | Player, entity: number | Entity): [boolean, number];
+    function getAssistedKillOfEntity(player: number | string | IPlayer, entity: number | IEntity): [boolean, number];
     /**
      * No comment provided
      *
      * Hash: 0xD414BE129BB81B32 | Since: 323
      */
-    function getAverageLatency(player: number | string | Player): number;
+    function getAverageLatency(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
      * Hash: 0x350C23949E43686C | Since: 323
      */
-    function getAveragePacketLoss(player: number | string | Player): number;
+    function getAveragePacketLoss(player: number | string | IPlayer): number;
     /**
      * Same as NETWORK_GET_AVERAGE_LATENCY
      *
      * Hash: 0x0E3A041ED6AC2B45 | Since: 323
      */
-    function getAveragePing(player: number | string | Player): number;
+    function getAveragePing(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
@@ -21095,7 +21095,7 @@ export declare namespace network {
      *
      * Hash: 0xC434133D9BA52777 | Since: 463
      */
-    function getDestroyerOfEntity(entity: number | Entity): [number | string, number];
+    function getDestroyerOfEntity(entity: number | IEntity): [number | string, number];
     /**
      * No comment provided
      *
@@ -21130,19 +21130,19 @@ export declare namespace network {
      *
      * Hash: 0x0991549DE4D64762 | Since: 323
      */
-    function getEntityIsLocal(entity: number | Entity): boolean;
+    function getEntityIsLocal(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xC7827959479DCC78 | Since: 323
      */
-    function getEntityIsNetworked(entity: number | Entity): boolean;
+    function getEntityIsNetworked(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x42B2DAA6B596F5F8 | Since: 323
      */
-    function getEntityKillerOfPlayer(player: number | string | Player): [number, number];
+    function getEntityKillerOfPlayer(player: number | string | IPlayer): [number, number];
     /**
      * No comment provided
      *
@@ -21202,7 +21202,7 @@ export declare namespace network {
      *
      * Hash: 0x52C1EADAF7B10302 | Since: 323
      */
-    function getHighestReliableResendCount(player: number | string | Player): number;
+    function getHighestReliableResendCount(player: number | string | IPlayer): number;
     /**
      * scriptName examples:
      * "freemode", "AM_CR_SecurityVan", ...
@@ -21243,26 +21243,26 @@ export declare namespace network {
      *
      * Hash: 0x2DA41ED6E1FCD7A5 | Since: 463
      */
-    function getKillerOfPlayer(player: number | string | Player): [number | string, number];
+    function getKillerOfPlayer(player: number | string | IPlayer): [number | string, number];
     /**
      * No comment provided
      *
      * Hash: 0x64D779659BC37B19 | Since: 393
      */
-    function getLastEntityPosReceivedOverNetwork(entity: number | Entity): Vector3;
+    function getLastEntityPosReceivedOverNetwork(entity: number | IEntity): Vector3;
     /**
      * Returns the coordinates of another player.
      * Does not work if you enter your own player id as p0 (will return `(0.0, 0.0, 0.0)` in that case).
      *
      * Hash: 0x125E6D638B8605D4 | Since: 393
      */
-    function getLastPlayerPosReceivedOverNetwork(player: number | string | Player): Vector3;
+    function getLastPlayerPosReceivedOverNetwork(player: number | string | IPlayer): Vector3;
     /**
      * Used by NetBlender
      *
      * Hash: 0x33DE49EDF4DDE77A | Since: 1103
      */
-    function getLastVelReceivedOverNetwork(entity: number | Entity): Vector3;
+    function getLastVelReceivedOverNetwork(entity: number | IEntity): Vector3;
     /**
      * No comment provided
      *
@@ -21292,13 +21292,13 @@ export declare namespace network {
      *
      * Hash: 0xADB57E5B663CCA8B | Since: 323
      */
-    function getMuteCountForPlayer(p0: number | string | Player): [number, number];
+    function getMuteCountForPlayer(p0: number | string | IPlayer): [number, number];
     /**
      * No comment provided
      *
      * Hash: 0xA11700682F3AD45C | Since: 323
      */
-    function getNetworkIdFromEntity(entity: number | Entity): number;
+    function getNetworkIdFromEntity(entity: number | IEntity): number;
     /**
      * Does nothing (it's a nullsub).
      *
@@ -21371,7 +21371,7 @@ export declare namespace network {
      *
      * Hash: 0xFF8FCF9FFC458A1C | Since: 323
      */
-    function getNumUnackedReliables(player: number | string | Player): number;
+    function getNumUnackedReliables(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
@@ -21395,7 +21395,7 @@ export declare namespace network {
      *
      * Hash: 0xDB663CC9FF3407A9 | Since: 1734
      */
-    function getPlayerAccountId(player: number | string | Player): number;
+    function getPlayerAccountId(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
@@ -21407,31 +21407,31 @@ export declare namespace network {
      *
      * Hash: 0x24FB80D107371267 | Since: 323
      */
-    function getPlayerIndex(player: number | string | Player): number | string;
+    function getPlayerIndex(player: number | string | IPlayer): number | string;
     /**
      * Returns the Player associated to a given Ped when in an online session.
      *
      * Hash: 0x6C0E2E0125610278 | Since: 323
      */
-    function getPlayerIndexFromPed(ped: number | Ped): number | string;
+    function getPlayerIndexFromPed(ped: number | IPed): number | string;
     /**
      * No comment provided
      *
      * Hash: 0x21A1684A25C2867F | Since: 323
      */
-    function getPlayerLoudness(player: number | string | Player): number;
+    function getPlayerLoudness(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
      * Hash: 0x82377B65E943F72D | Since: 323
      */
-    function getPlayerOwnsWaypoint(player: number | string | Player): boolean;
+    function getPlayerOwnsWaypoint(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x3B39236746714134 | Since: 323
      */
-    function getPlayerTutorialSessionInstance(player: number | string | Player): number;
+    function getPlayerTutorialSessionInstance(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
@@ -21443,7 +21443,7 @@ export declare namespace network {
      *
      * Hash: 0xAA5FAFCD2C5F5E47 | Since: 1103
      */
-    function getPredictedVelocity(entity: number | Entity, maxSpeedToPredict: number): Vector3;
+    function getPredictedVelocity(entity: number | IEntity, maxSpeedToPredict: number): Vector3;
     /**
      * No comment provided
      *
@@ -21623,7 +21623,7 @@ export declare namespace network {
      *
      * Hash: 0x3765C3A3E8192E10 | Since: 323
      */
-    function getUnreliableResendCount(player: number | string | Player): number;
+    function getUnreliableResendCount(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
@@ -21641,7 +21641,7 @@ export declare namespace network {
      *
      * Hash: 0x388EB2B86C73B6B3 | Since: 323
      */
-    function handleFromPlayer(player: number | string | Player, gamerHandleSize: number): any;
+    function handleFromPlayer(player: number | string | IPlayer, gamerHandleSize: number): any;
     /**
      * No comment provided
      *
@@ -21659,7 +21659,7 @@ export declare namespace network {
      *
      * Hash: 0xBC1D768F2F5D6C05 | Since: 323
      */
-    function hashFromPlayerHandle(player: number | string | Player): number;
+    function hashFromPlayerHandle(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
@@ -21683,7 +21683,7 @@ export declare namespace network {
      *
      * Hash: 0x237D5336A9A54108 | Since: 323
      */
-    function hasCachedPlayerHeadBlendData(player: number | string | Player): boolean;
+    function hasCachedPlayerHeadBlendData(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
@@ -21701,7 +21701,7 @@ export declare namespace network {
      *
      * Hash: 0x01BF60A500E28887 | Since: 323
      */
-    function hasControlOfEntity(entity: number | Entity): boolean;
+    function hasControlOfEntity(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
@@ -21719,7 +21719,7 @@ export declare namespace network {
      *
      * Hash: 0xB07D3185E11657A5 | Since: 323
      */
-    function hasEntityBeenRegisteredWithThisThread(entity: number | Entity): boolean;
+    function hasEntityBeenRegisteredWithThisThread(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
@@ -21761,7 +21761,7 @@ export declare namespace network {
      *
      * Hash: 0x9AC9CCBFA8C29795 | Since: 323
      */
-    function hasPlayerStartedTransition(player: number | string | Player): boolean;
+    function hasPlayerStartedTransition(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
@@ -21827,7 +21827,7 @@ export declare namespace network {
      *
      * Hash: 0xAEEF48CDF5B6CE7C | Since: 323
      */
-    function haveCommunicationPrivileges(player: number | string | Player): boolean;
+    function haveCommunicationPrivileges(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
@@ -21992,7 +21992,7 @@ export declare namespace network {
      *
      * Hash: 0x16D3D49902F697BB | Since: 323
      */
-    function isConnectedViaRelay(player: number | string | Player): boolean;
+    function isConnectedViaRelay(player: number | string | IPlayer): boolean;
     /**
      * This function is hard-coded to always return 1.
      *
@@ -22010,13 +22010,13 @@ export declare namespace network {
      *
      * Hash: 0x71302EC70689052A | Since: 877
      */
-    function isEntityConcealed(entity: number | Entity): boolean;
+    function isEntityConcealed(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x422F32CC7E56ABAD | Since: 323
      */
-    function isEntityFading(entity: number | Entity): boolean;
+    function isEntityFading(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
@@ -22226,55 +22226,55 @@ export declare namespace network {
      *
      * Hash: 0xB8DFD30D6973E135 | Since: 323
      */
-    function isPlayerActive(player: number | string | Player): boolean;
+    function isPlayerActive(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x3CA58F6CB7CBD784 | Since: 323
      */
-    function isPlayerAParticipant(player: number | string | Player): boolean;
+    function isPlayerAParticipant(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x1AD5B71586B94820 | Since: 323
      */
-    function isPlayerAParticipantOnScript(player: number | string | Player, script: string, instance_id: number): boolean;
+    function isPlayerAParticipantOnScript(player: number | string | IPlayer, script: string, instance_id: number): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x57AF1F8E27483721 | Since: 323
      */
-    function isPlayerBlockedByMe(player: number | string | Player): boolean;
+    function isPlayerBlockedByMe(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x919B3C98ED8292F9 | Since: 323
      */
-    function isPlayerConcealed(player: number | string | Player): boolean;
+    function isPlayerConcealed(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x93DC1BE4E1ABE9D1 | Since: 323
      */
-    function isPlayerConnected(player: number | string | Player): boolean;
+    function isPlayerConnected(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x631DC5DFF4B110E3 | Since: 323
      */
-    function isPlayerFading(player: number | string | Player): boolean;
+    function isPlayerFading(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x63F9EE203C3619F2 | Since: 323
      */
-    function isPlayerInMpCutscene(player: number | string | Player): boolean;
+    function isPlayerInMpCutscene(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x8C71288AE68EDE39 | Since: 323
      */
-    function isPlayerMutedByMe(player: number | string | Player): boolean;
+    function isPlayerMutedByMe(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
@@ -22286,7 +22286,7 @@ export declare namespace network {
      *
      * Hash: 0x031E11F3D447647E | Since: 323
      */
-    function isPlayerTalking(player: number | string | Player): boolean;
+    function isPlayerTalking(player: number | string | IPlayer): boolean;
     /**
      * Hardcoded to return false.
      *
@@ -22497,7 +22497,7 @@ export declare namespace network {
      *
      * Hash: 0x9D060B08CD63321A | Since: 323
      */
-    function joinTransition(player: number | string | Player): boolean;
+    function joinTransition(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
@@ -22515,13 +22515,13 @@ export declare namespace network {
      *
      * Hash: 0xBF22E0F32968E967 | Since: 323
      */
-    function leavePedBehindBeforeCutscene(player: number | string | Player): void;
+    function leavePedBehindBeforeCutscene(player: number | string | IPlayer): void;
     /**
      * p4 and p5 are always 0 in scripts
      *
      * Hash: 0x9769F811D1785B03 | Since: 323
      */
-    function leavePedBehindBeforeWarp(player: number | string | Player, pos: Vector3): void;
+    function leavePedBehindBeforeWarp(player: number | string | IPlayer, pos: Vector3): void;
     /**
      * No comment provided
      *
@@ -22575,7 +22575,7 @@ export declare namespace network {
      *
      * Hash: 0x3039AE5AD2C9C0C4 | Since: 323
      */
-    function overrideChatRestrictions(player: number | string | Player, toggle: boolean): void;
+    function overrideChatRestrictions(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -22594,14 +22594,14 @@ export declare namespace network {
      *
      * Hash: 0xA7E30DE9272B6D49 | Since: 323
      */
-    function overrideCoordsAndHeading(entity: number | Entity, pos: Vector3, heading: number): void;
+    function overrideCoordsAndHeading(entity: number | IEntity, pos: Vector3, heading: number): void;
     /**
      * R* uses this to hear all player when spectating.
      * It allows you to hear other online players when their chat is on none, crew and or friends
      *
      * Hash: 0xDDF73E2B1FEC5AB4 | Since: 323
      */
-    function overrideReceiveRestrictions(player: number | string | Player, toggle: boolean): void;
+    function overrideReceiveRestrictions(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * p0 is always false in scripts.
      *
@@ -22614,7 +22614,7 @@ export declare namespace network {
      *
      * Hash: 0x97DD4C5944CC2E6A | Since: 323
      */
-    function overrideSendRestrictions(player: number | string | Player, toggle: boolean): void;
+    function overrideSendRestrictions(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -22638,7 +22638,7 @@ export declare namespace network {
      *
      * Hash: 0xF0BC9BCD24A511D5 | Since: 2372
      */
-    function patchPostCutsceneHs4fTunEnt(ped: number | Ped): void;
+    function patchPostCutsceneHs4fTunEnt(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -22656,26 +22656,26 @@ export declare namespace network {
      *
      * Hash: 0x7718D2E2060837D2 | Since: 323
      */
-    function playerGetName(player: number | string | Player): string;
+    function playerGetName(player: number | string | IPlayer): string;
     /**
      * Returns a string of the player's Rockstar Id.
      * Takes a 24 char buffer. Returns the buffer or "**Invalid**" if rlGamerInfo of the given player cannot be retrieved or the player doesn't exist.
      *
      * Hash: 0x4927FC39CD0869A0 | Since: 323
      */
-    function playerGetUserid(player: number | string | Player): [string, number];
+    function playerGetUserid(player: number | string | IPlayer): [string, number];
     /**
      * No comment provided
      *
      * Hash: 0x3FB99A8B08D18FD6 | Since: 323
      */
-    function playerHasHeadset(player: number | string | Player): boolean;
+    function playerHasHeadset(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x565E430DB3B05BEC | Since: 323
      */
-    function playerIndexIsCheater(player: number | string | Player): boolean;
+    function playerIndexIsCheater(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
@@ -22698,7 +22698,7 @@ export declare namespace network {
      *
      * Hash: 0x544ABDDA3B409B6D | Since: 323
      */
-    function playerIsRockstarDev(player: number | string | Player): boolean;
+    function playerIsRockstarDev(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
@@ -22728,7 +22728,7 @@ export declare namespace network {
      *
      * Hash: 0x06FAACD625D80CAA | Since: 323
      */
-    function registerEntityAsNetworked(entity: number | Entity): void;
+    function registerEntityAsNetworked(entity: number | IEntity): void;
     /**
      * No comment provided
      *
@@ -22836,7 +22836,7 @@ export declare namespace network {
      *
      * Hash: 0xB69317BF5E782347 | Since: 323
      */
-    function requestControlOfEntity(entity: number | Entity): boolean;
+    function requestControlOfEntity(entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
@@ -22992,7 +22992,7 @@ export declare namespace network {
      *
      * Hash: 0xD6D09A6F32F49EF1 | Since: 323
      */
-    function sessionGetKickVote(player: number | string | Player): boolean;
+    function sessionGetKickVote(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
@@ -23110,7 +23110,7 @@ export declare namespace network {
      *
      * Hash: 0xFA8904DC5F304220 | Since: 323
      */
-    function sessionKickPlayer(player: number | string | Player): void;
+    function sessionKickPlayer(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
@@ -23268,13 +23268,13 @@ export declare namespace network {
      *
      * Hash: 0x5C707A667DF8B9FA | Since: 323
      */
-    function setAntagonisticToPlayer(toggle: boolean, player: number | string | Player): void;
+    function setAntagonisticToPlayer(toggle: boolean, player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x0EDE326D47CD0F3E | Since: 323
      */
-    function setAttributeDamageToPlayer(ped: number | Ped, player: number | string | Player): boolean;
+    function setAttributeDamageToPlayer(ped: number | IPed, player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
@@ -23353,7 +23353,7 @@ export declare namespace network {
      *
      * Hash: 0xD830567D88A1E873 | Since: 323
      */
-    function setEntityCanBlend(entity: number | Entity, toggle: boolean): void;
+    function setEntityCanBlend(entity: number | IEntity, toggle: boolean): void;
     /**
      * if set to true other network players can't see it
      * if set to false other network player can see it
@@ -23366,7 +23366,7 @@ export declare namespace network {
      *
      * Hash: 0xF1CA12B18AEF5298 | Since: 323
      */
-    function setEntityOnlyExistsForParticipants(entity: number | Entity, toggle: boolean): void;
+    function setEntityOnlyExistsForParticipants(entity: number | IEntity, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -23420,13 +23420,13 @@ export declare namespace network {
      *
      * Hash: 0x423DE3854BB50894 | Since: 323
      */
-    function setInSpectatorMode(toggle: boolean, playerPed: number | Ped): void;
+    function setInSpectatorMode(toggle: boolean, playerPed: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x419594E137637120 | Since: 323
      */
-    function setInSpectatorModeExtended(toggle: boolean, playerPed: number | Ped): void;
+    function setInSpectatorModeExtended(toggle: boolean, playerPed: number | IPed): void;
     /**
      * No comment provided
      *
@@ -23462,7 +23462,7 @@ export declare namespace network {
      *
      * Hash: 0x3FC795691834481D | Since: 1868
      */
-    function setNoLongerNeeded(entity: number | Entity, toggle: boolean): void;
+    function setNoLongerNeeded(entity: number | IEntity, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -23474,13 +23474,13 @@ export declare namespace network {
      *
      * Hash: 0x0379DAF89BA09AA5 | Since: 944
      */
-    function setObjectCanBlendWhenFixed(_object: number | Object, toggle: boolean): void;
+    function setObjectCanBlendWhenFixed(_object: number | IObject, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xBA7F0B77D80A4EB7 | Since: 372
      */
-    function setObjectScopeDistance(_object: number | Object, range: number): void;
+    function setObjectScopeDistance(_object: number | IObject, range: number): void;
     /**
      * No comment provided
      *
@@ -23654,7 +23654,7 @@ export declare namespace network {
      *
      * Hash: 0x6BFF5F84102DF80A | Since: 323
      */
-    function showChatRestrictionMsc(player: number | string | Player): void;
+    function showChatRestrictionMsc(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
@@ -23693,13 +23693,13 @@ export declare namespace network {
      *
      * Hash: 0x5A6FFA2433E2F14C | Since: 323
      */
-    function startRespawnSearchForPlayer(player: number | string | Player, pos: Vector3, radius: number, flags: number): boolean;
+    function startRespawnSearchForPlayer(player: number | string | IPlayer, pos: Vector3, radius: number, flags: number): boolean;
     /**
      * p8, p9, p10 is another coordinate, or zero, often related to `GET_BLIP_COORDS in the decompiled scripts.
      *
      * Hash: 0x4BA92A18502BCA61 | Since: 323
      */
-    function startRespawnSearchInAngledAreaForPlayer(player: number | string | Player, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, width: number, flags: number): boolean;
+    function startRespawnSearchInAngledAreaForPlayer(player: number | string | IPlayer, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, width: number, flags: number): boolean;
     /**
      * No comment provided
      *
@@ -23795,13 +23795,13 @@ export declare namespace network {
      *
      * Hash: 0x890E2C5ABED7236D | Since: 1365
      */
-    function triggerDamageEventForZeroDamage(entity: number | Entity, toggle: boolean): void;
+    function triggerDamageEventForZeroDamage(entity: number | IEntity, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x38B7C51AB1EDC7D8 | Since: 1734
      */
-    function triggerDamageEventForZeroWeaponHash(entity: number | Entity, toggle: boolean): void;
+    function triggerDamageEventForZeroWeaponHash(entity: number | IEntity, toggle: boolean): void;
     /**
      * Returns defaultValue if the tunable doesn't exist.
      *
@@ -23825,7 +23825,7 @@ export declare namespace network {
      *
      * Hash: 0x7368E683BB9038D6 | Since: 323
      */
-    function unregisterNetworkedEntity(entity: number | Entity): void;
+    function unregisterNetworkedEntity(entity: number | IEntity): void;
     /**
      * No comment provided
      *
@@ -23837,7 +23837,7 @@ export declare namespace network {
      *
      * Hash: 0xCD71A4ECAB22709E | Since: 323
      */
-    function useLogarithmicBlendingThisFrame(entity: number | Entity): void;
+    function useLogarithmicBlendingThisFrame(entity: number | IEntity): void;
     /**
      * No comment provided
      *
@@ -23881,7 +23881,7 @@ export declare namespace network {
      *
      * Hash: 0x99BFDC94A603E541 | Since: 323
      */
-    function objToNet(_object: number | Object): number;
+    function objToNet(_object: number | IObject): number;
     /**
      * No comment provided
      *
@@ -23907,7 +23907,7 @@ export declare namespace network {
      *
      * Hash: 0x0EDEC3C276198689 | Since: 323
      */
-    function pedToNet(ped: number | Ped): number;
+    function pedToNet(ped: number | IPed): number;
     /**
      * No comment provided
      *
@@ -23925,13 +23925,13 @@ export declare namespace network {
      *
      * Hash: 0x472841A026D26D8B | Since: 1103
      */
-    function remoteCheaterPlayerDetected(player: number | string | Player, a: number, b: number): boolean;
+    function remoteCheaterPlayerDetected(player: number | string | IPlayer, a: number, b: number): boolean;
     /**
      * entity must be a valid entity; ped can be NULL
      *
      * Hash: 0x715135F4B82AC90D | Since: 323
      */
-    function removeAllStickyBombsFromEntity(entity: number | Entity, ped: number | Ped): void;
+    function removeAllStickyBombsFromEntity(entity: number | IEntity, ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -23991,19 +23991,19 @@ export declare namespace network {
      *
      * Hash: 0x4BA166079D658ED4 | Since: 944
      */
-    function setEntityGhostedForGhostPlayers(entity: number | Entity, toggle: boolean): void;
+    function setEntityGhostedForGhostPlayers(entity: number | IEntity, toggle: boolean): void;
     /**
      * Makes the provided entity visible for yourself for the current frame.
      *
      * Hash: 0xE135A9FF3F5D05D8 | Since: 323
      */
-    function setEntityLocallyInvisible(entity: number | Entity): void;
+    function setEntityLocallyInvisible(entity: number | IEntity): void;
     /**
      * No comment provided
      *
      * Hash: 0x241E289B5C059EDC | Since: 323
      */
-    function setEntityLocallyVisible(entity: number | Entity): void;
+    function setEntityLocallyVisible(entity: number | IEntity): void;
     /**
      * No comment provided
      *
@@ -24063,13 +24063,13 @@ export declare namespace network {
      *
      * Hash: 0x838DA0936A24ED4D | Since: 944
      */
-    function setEnableHighSpeedEdgeFallDetection(vehicle: number | Vehicle, toggle: boolean): void;
+    function setEnableHighSpeedEdgeFallDetection(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xA8A024587329F36A | Since: 323
      */
-    function setIdAlwaysExistsForPlayer(netId: number, player: number | string | Player, toggle: boolean): void;
+    function setIdAlwaysExistsForPlayer(netId: number, player: number | string | IPlayer, toggle: boolean): void;
     /**
      * "No Reassign" in CPhysicalScriptGameStateDataNode
      *
@@ -24117,13 +24117,13 @@ export declare namespace network {
      *
      * Hash: 0x6274C4712850841E | Since: 323
      */
-    function setVehicleAsGhost(vehicle: number | Vehicle, toggle: boolean): void;
+    function setVehicleAsGhost(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * `rage::netBlenderLinInterp::GetPositionMaxForUpdateLevel`
      *
      * Hash: 0xA2A707979FE754DC | Since: 877
      */
-    function setVehicleMaxPositionDeltaMultiplier(vehicle: number | Vehicle, multiplier: number): void;
+    function setVehicleMaxPositionDeltaMultiplier(vehicle: number | IVehicle, multiplier: number): void;
     /**
      * No comment provided
      *
@@ -24141,25 +24141,25 @@ export declare namespace network {
      *
      * Hash: 0x12B37D54667DB0B8 | Since: 323
      */
-    function setPlayerInvisibleLocally(player: number | string | Player, bIncludePlayersVehicle: boolean): void;
+    function setPlayerInvisibleLocally(player: number | string | IPlayer, bIncludePlayersVehicle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xFAA10F1FAFB11AF2 | Since: 323
      */
-    function setPlayerVisibleLocally(player: number | string | Player, bIncludePlayersVehicle: boolean): void;
+    function setPlayerVisibleLocally(player: number | string | IPlayer, bIncludePlayersVehicle: boolean): void;
     /**
      * Enables ghosting between specific players
      *
      * Hash: 0xA7C511FA1C5BDA38 | Since: 463
      */
-    function setRemotePlayerAsGhost(player: number | string | Player): void;
+    function setRemotePlayerAsGhost(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x96320E6549DAE7B4 | Since: 2802
      */
-    function setRemotePlayerVisibleInCutscene(player: number | string | Player, locallyVisible: boolean): void;
+    function setRemotePlayerVisibleInCutscene(player: number | string | IPlayer, locallyVisible: boolean): void;
     /**
      * Access to the store for shark cards etc...
      *
@@ -24742,7 +24742,7 @@ export declare namespace network {
      *
      * Hash: 0xB4C94523F023419C | Since: 323
      */
-    function vehToNet(vehicle: number | Vehicle): number;
+    function vehToNet(vehicle: number | IVehicle): number;
     /**
      * NETWORK_CAN_*
      *
@@ -24999,7 +24999,7 @@ export declare namespace network {
      *
      * Hash: 0xE9D0244ACBEE1BC4 | Since: 3258
      */
-    function triggerDamageEventForZeroPedDamage(entity: number | Entity, trigger: boolean): void;
+    function triggerDamageEventForZeroPedDamage(entity: number | IEntity, trigger: boolean): void;
     /**
      * reportData includes mc, ceo, yacht and licenceplate names
      *
@@ -25069,7 +25069,7 @@ export declare namespace object {
      *
      * Hash: 0x8DC39368BDD57755 | Since: 323
      */
-    function attachPortablePickupToPed(pickupObject: number | Object, ped: number | Ped): void;
+    function attachPortablePickupToPed(pickupObject: number | IObject, ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -25081,7 +25081,7 @@ export declare namespace object {
      *
      * Hash: 0xE7E4C198B0185900 | Since: 323
      */
-    function breakFragmentChild(p0: number | Object): void;
+    function breakFragmentChild(p0: number | IObject): void;
     /**
      * No comment provided
      *
@@ -25218,13 +25218,13 @@ export declare namespace object {
      *
      * Hash: 0x539E0AE3E6634B9F | Since: 323
      */
-    function deleteObject(_object: number | Object): void;
+    function deleteObject(_object: number | IObject): void;
     /**
      * No comment provided
      *
      * Hash: 0xCF463D1E9A0AECB1 | Since: 323
      */
-    function detachPortablePickupFromPed(pickupObject: number | Object): void;
+    function detachPortablePickupFromPed(pickupObject: number | IObject): void;
     /**
      * Sets a flag. A valid id is 0x157DC10D
      *
@@ -25248,7 +25248,7 @@ export declare namespace object {
      *
      * Hash: 0xD9EFB6DBF7DAAEA3 | Since: 323
      */
-    function doesPickupObjectExist(pickupObject: number | Object): boolean;
+    function doesPickupObjectExist(pickupObject: number | IObject): boolean;
     /**
      * Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
      *
@@ -25260,7 +25260,7 @@ export declare namespace object {
      *
      * Hash: 0x52AF537A0C5B8AAD | Since: 323
      */
-    function doesRayfireMapExist(_object: number | Object): boolean;
+    function doesRayfireMapExist(_object: number | IObject): boolean;
     /**
      * Search radius: 0.5
      *
@@ -25370,7 +25370,7 @@ export declare namespace object {
      *
      * Hash: 0xF9C1681347C8BD15 | Since: 323
      */
-    function fixFragment(_object: number | Object): void;
+    function fixFragment(_object: number | IObject): void;
     /**
      * No comment provided
      *
@@ -25394,7 +25394,7 @@ export declare namespace object {
      *
      * Hash: 0x5CE2E45A5CE2E45A | Since: 2545
      */
-    function forcePortablePickupLastAccessiblePositionSetting(_object: number | Object): void;
+    function forcePortablePickupLastAccessiblePositionSetting(_object: number | IObject): void;
     /**
      * Has 8 params in the latest patches.
      *
@@ -25432,7 +25432,7 @@ export declare namespace object {
      *
      * Hash: 0x43C677F1E1158005 | Since: 1604
      */
-    function getIsArticulatedJointAtMinAngle(_object: number | Object): boolean;
+    function getIsArticulatedJointAtMinAngle(_object: number | IObject): boolean;
     /**
      * No comment provided
      *
@@ -25444,7 +25444,7 @@ export declare namespace object {
      *
      * Hash: 0xE84EB93729C5F36A | Since: 757
      */
-    function getTintIndex(_object: number | Object): number;
+    function getTintIndex(_object: number | IObject): number;
     /**
      * No comment provided
      *
@@ -25488,7 +25488,7 @@ export declare namespace object {
      *
      * Hash: 0x260EE4FDBDF4DB01 | Since: 323
      */
-    function getRayfireMapAnimPhase(_object: number | Object): number;
+    function getRayfireMapAnimPhase(_object: number | IObject): number;
     /**
      * No comment provided
      *
@@ -25514,7 +25514,7 @@ export declare namespace object {
      *
      * Hash: 0x899BA936634A322E | Since: 323
      */
-    function getStateOfRayfireMap(_object: number | Object): number;
+    function getStateOfRayfireMap(_object: number | IObject): number;
     /**
      * Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
      *
@@ -25538,7 +25538,7 @@ export declare namespace object {
      *
      * Hash: 0x8ABFB70C49CC43E2 | Since: 323
      */
-    function hasBeenBroken(_object: number | Object): boolean;
+    function hasBeenBroken(_object: number | IObject): boolean;
     /**
      * No comment provided
      *
@@ -25550,7 +25550,7 @@ export declare namespace object {
      *
      * Hash: 0x867458251D47CCB2 | Since: 463
      */
-    function hidePortablePickupWhenDetached(pickupObject: number | Object, toggle: boolean): void;
+    function hidePortablePickupWhenDetached(pickupObject: number | IObject, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -25589,19 +25589,19 @@ export declare namespace object {
      *
      * Hash: 0xFC481C641EBBD27D | Since: 1365
      */
-    function isAPickup(_object: number | Object): boolean;
+    function isAPickup(_object: number | IObject): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x0378C08504160D0D | Since: 323
      */
-    function isAPortablePickup(_object: number | Object): boolean;
+    function isAPortablePickup(_object: number | IObject): boolean;
     /**
      * Despite the name, it does work for any entity type.
      *
      * Hash: 0x372EF6699146A1E4 | Since: 323
      */
-    function isEntirelyInsideGarage(garageHash: number | string, entity: number | Entity): boolean;
+    function isEntirelyInsideGarage(garageHash: number | string, entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
@@ -25613,31 +25613,31 @@ export declare namespace object {
      *
      * Hash: 0xF0EED5A6BC7B237A | Since: 323
      */
-    function isPartiallyInsideGarage(garageHash: number | string, entity: number | Entity): boolean;
+    function isPartiallyInsideGarage(garageHash: number | string, entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x8B32ACE6326A7546 | Since: 323
      */
-    function isVisible(_object: number | Object): boolean;
+    function isVisible(_object: number | IObject): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x11D1E53A726891FE | Since: 323
      */
-    function isPickupWeaponValid(_object: number | Object): boolean;
+    function isPickupWeaponValid(_object: number | IObject): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x024A60DEB0EA69F0 | Since: 323
      */
-    function isPlayerEntirelyInsideGarage(garageHash: number | string, player: number | string | Player): boolean;
+    function isPlayerEntirelyInsideGarage(garageHash: number | string, player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x1761DC5D8471CBAA | Since: 323
      */
-    function isPlayerPartiallyInsideGarage(garageHash: number | string, player: number | string | Player): boolean;
+    function isPlayerPartiallyInsideGarage(garageHash: number | string, player: number | string | IPlayer): boolean;
     /**
      * An angled area is an X-Z oriented rectangle with three parameters:
      * 1. origin: the mid-point along a base edge of the rectangle;
@@ -25656,13 +25656,13 @@ export declare namespace object {
      *
      * Hash: 0xADF084FB8F075D06 | Since: 1604
      */
-    function isPropLightOverriden(_object: number | Object): boolean;
+    function isPropLightOverriden(_object: number | IObject): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xADBE4809F19F927A | Since: 323
      */
-    function onlyCleanUpWhenOutOfRange(_object: number | Object): void;
+    function onlyCleanUpWhenOutOfRange(_object: number | IObject): void;
     /**
      * No comment provided
      *
@@ -25674,13 +25674,13 @@ export declare namespace object {
      *
      * Hash: 0xD76EEEF746057FD6 | Since: 505
      */
-    function placeOnGroundOrObjectProperly(_object: number | Object): boolean;
+    function placeOnGroundOrObjectProperly(_object: number | IObject): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x58A850EAEE20FAA3 | Since: 323
      */
-    function placeOnGroundProperly(_object: number | Object): boolean;
+    function placeOnGroundProperly(_object: number | IObject): boolean;
     /**
      * No comment provided
      *
@@ -25692,7 +25692,7 @@ export declare namespace object {
      *
      * Hash: 0x92AEFB5F6E294023 | Since: 323
      */
-    function preventCollectionOfPortablePickup(_object: number | Object): void;
+    function preventCollectionOfPortablePickup(_object: number | IObject): void;
     /**
      * Full list of pickup types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pickupTypes.json
      *
@@ -25711,7 +25711,7 @@ export declare namespace object {
      *
      * Hash: 0x4A39DB43E47CF3AA | Since: 323
      */
-    function removeHighDetailModel(_object: number | Object): void;
+    function removeHighDetailModel(_object: number | IObject): void;
     /**
      * No comment provided
      *
@@ -25736,13 +25736,13 @@ export declare namespace object {
      *
      * Hash: 0xAFE24E4D29249E4A | Since: 1734
      */
-    function rotate(_object: number | Object): boolean;
+    function rotate(_object: number | IObject): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x406137F8EF90EAF5 | Since: 323
      */
-    function setActivatePhysicsAsSoonAsItIsUnfrozen(_object: number | Object, toggle: boolean): void;
+    function setActivatePhysicsAsSoonAsItIsUnfrozen(_object: number | IObject, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -25754,7 +25754,7 @@ export declare namespace object {
      *
      * Hash: 0xBCE595371A5FBAAF | Since: 323
      */
-    function setCutscenesWeaponFlashlightOnThisFrame(_object: number | Object, toggle: boolean): void;
+    function setCutscenesWeaponFlashlightOnThisFrame(_object: number | IObject, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -25766,25 +25766,25 @@ export declare namespace object {
      *
      * Hash: 0x911024442F4898F0 | Since: 1604
      */
-    function setDriveArticulatedJoint(_object: number | Object, toggle: boolean): void;
+    function setDriveArticulatedJoint(_object: number | IObject, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xB20834A7DD3D8896 | Since: 1604
      */
-    function setDriveArticulatedJointWithInflictor(_object: number | Object, toggle: boolean, ped: number | Ped): void;
+    function setDriveArticulatedJointWithInflictor(_object: number | IObject, toggle: boolean, ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xB2D0BDE54F0E8E5A | Since: 323
      */
-    function setEntityFlagRenderSmallShadow(_object: number | Object, toggle: boolean): void;
+    function setEntityFlagRenderSmallShadow(_object: number | IObject, toggle: boolean): void;
     /**
      * Sets entity+38 to C (when false) or 0xFF3f (when true)
      *
      * Hash: 0xD05A3241B9A86F19 | Since: 1180
      */
-    function setEntityFlagSuppressShadow(entity: number | Entity, toggle: boolean): void;
+    function setEntityFlagSuppressShadow(entity: number | IEntity, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -25796,13 +25796,13 @@ export declare namespace object {
      *
      * Hash: 0x1C57C94A6446492A | Since: 1604
      */
-    function setIsArticulated(_object: number | Object, toggle: boolean): void;
+    function setIsArticulated(_object: number | IObject, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xB5B7742424BD4445 | Since: 1604
      */
-    function setIsBall(_object: number | Object, toggle: boolean): void;
+    function setIsBall(_object: number | IObject, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -25836,13 +25836,13 @@ export declare namespace object {
      *
      * Hash: 0x4D89D607CB3DD1D2 | Since: 323
      */
-    function setAllowLowLodBuoyancy(_object: number | Object, toggle: boolean): void;
+    function setAllowLowLodBuoyancy(_object: number | IObject, toggle: boolean): void;
     /**
      * Overrides a flag on the object which determines if the object should be avoided by a vehicle in task CTaskVehicleGoToPointWithAvoidanceAutomobile.
      *
      * Hash: 0x77F33F2CCF64B3AA | Since: 323
      */
-    function setForceVehiclesToAvoid(_object: number | Object, toggle: boolean): void;
+    function setForceVehiclesToAvoid(_object: number | IObject, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -25854,19 +25854,19 @@ export declare namespace object {
      *
      * Hash: 0x734E1714D077DA9A | Since: 1604
      */
-    function setIsAPressurePlate(_object: number | Object, toggle: boolean): void;
+    function setIsAPressurePlate(_object: number | IObject, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xC6033D32241F6FB5 | Since: 323
      */
-    function setIsSpecialGolfball(_object: number | Object, toggle: boolean): void;
+    function setIsSpecialGolfball(_object: number | IObject, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x3B2FD68DB5F8331C | Since: 757
      */
-    function setIsVisibleInMirrors(_object: number | Object, toggle: boolean): void;
+    function setIsVisibleInMirrors(_object: number | IObject, toggle: boolean): void;
     /**
      * Adjust the physics parameters of a prop, or otherwise known as "object". This is useful for simulated gravity.
      *
@@ -25879,19 +25879,19 @@ export declare namespace object {
      *
      * Hash: 0xF6DF6E90DE7DF90F | Since: 323
      */
-    function setPhysicsParams(_object: number | Object, weight: number, gravity: number, buoyancy: number): void;
+    function setPhysicsParams(_object: number | IObject, weight: number, gravity: number, buoyancy: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x96EE0EBA0163DF80 | Since: 791
      */
-    function setSpeedBoostAmount(_object: number | Object): void;
+    function setSpeedBoostAmount(_object: number | IObject): void;
     /**
      * No comment provided
      *
      * Hash: 0xDF6CA0330F2E737B | Since: 791
      */
-    function setSpeedBoostDuration(_object: number | Object, duration: number): void;
+    function setSpeedBoostDuration(_object: number | IObject, duration: number): void;
     /**
      * No comment provided
      *
@@ -25903,7 +25903,7 @@ export declare namespace object {
      *
      * Hash: 0x8A7391690F5AFD81 | Since: 323
      */
-    function setTargettable(_object: number | Object, targettable: boolean): void;
+    function setTargettable(_object: number | IObject, targettable: boolean): void;
     /**
      * enum ObjectPaintVariants
      * {
@@ -25927,7 +25927,7 @@ export declare namespace object {
      *
      * Hash: 0x971DA0055324D033 | Since: 323
      */
-    function setTintIndex(_object: number | Object, textureVariation: number): void;
+    function setTintIndex(_object: number | IObject, textureVariation: number): void;
     /**
      * No comment provided
      *
@@ -26026,7 +26026,7 @@ export declare namespace object {
      *
      * Hash: 0x616093EC6B139DD9 | Since: 323
      */
-    function setPlayerPermittedToCollectPickupsOfType(player: number | string | Player, pickupHash: number | string, toggle: boolean): void;
+    function setPlayerPermittedToCollectPickupsOfType(player: number | string | IPlayer, pickupHash: number | string, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -26038,13 +26038,13 @@ export declare namespace object {
      *
      * Hash: 0x63ECF581BC70E363 | Since: 1365
      */
-    function setProjectilesShouldExplodeOnContact(entity: number | Entity): void;
+    function setProjectilesShouldExplodeOnContact(entity: number | IEntity): void;
     /**
      * No comment provided
      *
      * Hash: 0x5F048334B4A4E774 | Since: 1493
      */
-    function setPropLightColor(_object: number | Object, r: number, g: number, b: number): boolean;
+    function setPropLightColor(_object: number | IObject, r: number, g: number, b: number): boolean;
     /**
      * No comment provided
      *
@@ -26083,13 +26083,13 @@ export declare namespace object {
      *
      * Hash: 0x5C29F698D404C5E1 | Since: 323
      */
-    function setStateOfRayfireMap(_object: number | Object, state: number): void;
+    function setStateOfRayfireMap(_object: number | IObject, state: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x53E0DF1A2A3CF0CA | Since: 323
      */
-    function setTeamPickup(_object: number | Object): void;
+    function setTeamPickup(_object: number | IObject): void;
     /**
      * No comment provided
      *
@@ -26101,7 +26101,7 @@ export declare namespace object {
      *
      * Hash: 0x1A6CBB06E2D0D79D | Since: 1604
      */
-    function setWeaponImpactsApplyGreaterForce(_object: number | Object): void;
+    function setWeaponImpactsApplyGreaterForce(_object: number | IObject): void;
     /**
      * Returns true if the object has finished moving.
      *
@@ -26112,7 +26112,7 @@ export declare namespace object {
      *
      * Hash: 0x2FDFF4107B8C1147 | Since: 323
      */
-    function slide(_object: number | Object, toX: number, toY: number, toZ: number, speedX: number, speedY: number, speedZ: number, collision: boolean): boolean;
+    function slide(_object: number | IObject, toX: number, toY: number, toZ: number, speedX: number, speedY: number, speedZ: number, collision: boolean): boolean;
     /**
      * enum ePickupRewardType
      * {
@@ -26146,13 +26146,13 @@ export declare namespace object {
      *
      * Hash: 0xB252BC036B525623 | Since: 323
      */
-    function trackVisibility(_object: number | Object): void;
+    function trackVisibility(_object: number | IObject): void;
     /**
      * Sets the 34th and 35th object flags related to player peds.
      *
      * Hash: 0xB39F03368DB0CAA2 | Since: 3258
      */
-    function setTargettableByPlayer(_object: number | Object, setFlag34: boolean, setFlag35: boolean): void;
+    function setTargettableByPlayer(_object: number | IObject, setFlag34: boolean, setFlag35: boolean): void;
     /**
      * No comment provided
      *
@@ -26823,7 +26823,7 @@ export declare namespace pathfind {
      *
      * Hash: 0x125BF4ABFC536B09 | Since: 323
      */
-    function isPointOnRoad(pos: Vector3, vehicle: number | Vehicle): boolean;
+    function isPointOnRoad(pos: Vector3, vehicle: number | IVehicle): boolean;
     /**
      * Returns true if the id is non zero.
      *
@@ -26954,7 +26954,7 @@ export declare namespace ped {
      *
      * Hash: 0x5BA652A0CD14DF2F | Since: 323
      */
-    function addArmourTo(ped: number | Ped, amount: number): void;
+    function addArmourTo(ped: number | IPed, amount: number): void;
     /**
      * Applies an Item from a PedDecorationCollection to a ped. These include tattoos and shirt decals.
      *
@@ -26986,13 +26986,13 @@ export declare namespace ped {
      *
      * Hash: 0x5F5D1665E352A839 | Since: 323
      */
-    function addDecorationFromHashes(ped: number | Ped, collection: number | string, overlay: number | string): void;
+    function addDecorationFromHashes(ped: number | IPed, collection: number | string, overlay: number | string): void;
     /**
      * Full list of ped overlays / decorations by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedOverlayCollections.json
      *
      * Hash: 0x5619BFA07CFD7833 | Since: 323
      */
-    function addDecorationFromHashesInCorona(ped: number | Ped, collection: number | string, overlay: number | string): void;
+    function addDecorationFromHashesInCorona(ped: number | IPed, collection: number | string, overlay: number | string): void;
     /**
      * Can't select void. This function returns nothing. The hash of the created relationship group is output in the second parameter.
      *
@@ -27010,7 +27010,7 @@ export declare namespace ped {
      *
      * Hash: 0x697157CED63F18D4 | Since: 323
      */
-    function applyDamageTo(ped: number | Ped, damageAmount: number, weaponType: number | string): void;
+    function applyDamageTo(ped: number | IPed, damageAmount: number, weaponType: number | string): void;
     /**
      * woundTypes:
      * - soak_splat
@@ -27029,25 +27029,25 @@ export declare namespace ped {
      *
      * Hash: 0x83F7E01C7B769A26 | Since: 323
      */
-    function applyBlood(ped: number | Ped, boneIndex: number, rot: Vector3, woundType: string): void;
+    function applyBlood(ped: number | IPed, boneIndex: number, rot: Vector3, woundType: string): void;
     /**
      * No comment provided
      *
      * Hash: 0x3311E47B91EDCBBC | Since: 323
      */
-    function applyBloodByZone(ped: number | Ped): void;
+    function applyBloodByZone(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x816F6981C60BF53B | Since: 323
      */
-    function applyBloodDamageByZone(ped: number | Ped): void;
+    function applyBloodDamageByZone(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xEF0D582CBF2D9B0F | Since: 323
      */
-    function applyBloodSpecific(ped: number | Ped): void;
+    function applyBloodSpecific(ped: number | IPed): void;
     /**
      * enum eDamageZone
      * {
@@ -27076,7 +27076,7 @@ export declare namespace ped {
      *
      * Hash: 0x397C38AA7B4A5F83 | Since: 323
      */
-    function applyDamageDecal(ped: number | Ped, damageZone: number, xOffset: number, yOffset: number, heading: number, scale: number, alpha: number, variation: number, fadeIn: boolean, decalName: string): void;
+    function applyDamageDecal(ped: number | IPed, damageZone: number, xOffset: number, yOffset: number, heading: number, scale: number, alpha: number, variation: number, fadeIn: boolean, decalName: string): void;
     /**
      * Damage Packs:
      *
@@ -27109,19 +27109,19 @@ export declare namespace ped {
      *
      * Hash: 0x46DF918788CB093F | Since: 323
      */
-    function applyDamagePack(ped: number | Ped, damagePack: string, damage: number, mult: number): void;
+    function applyDamagePack(ped: number | IPed, damagePack: string, damage: number, mult: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x272E4723B56A3B96 | Since: 323
      */
-    function attachSynchronizedSceneToEntity(sceneID: number, entity: number | Entity, boneIndex: number): void;
+    function attachSynchronizedSceneToEntity(sceneID: number, entity: number | IEntity, boneIndex: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xE43A13C9E4CCCBCF | Since: 323
      */
-    function blockFromGeneratingDeadBodyEventsWhenDead(ped: number | Ped, toggle: boolean): void;
+    function blockFromGeneratingDeadBodyEventsWhenDead(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -27151,13 +27151,13 @@ export declare namespace ped {
      *
      * Hash: 0x51AC07A44D4F5B8A | Since: 323
      */
-    function canKnockOffVehicle(ped: number | Ped): boolean;
+    function canKnockOffVehicle(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xEAD42DE3610D0721 | Since: 323
      */
-    function canInCombatSeeTarget(ped: number | Ped, target: number | Ped): boolean;
+    function canInCombatSeeTarget(ped: number | IPed, target: number | IPed): boolean;
     /**
      * Prevents the ped from going limp.
      *
@@ -27165,123 +27165,123 @@ export declare namespace ped {
      *
      * Hash: 0x128F79EDCECE4FD5 | Since: 323
      */
-    function canRagdoll(ped: number | Ped): boolean;
+    function canRagdoll(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x6CD5A433374D4CFB | Since: 323
      */
-    function canSeeHatedPed(ped1: number | Ped, ped2: number | Ped): boolean;
+    function canSeeHatedPed(ped1: number | IPed, ped2: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x2DFC81C9B9608549 | Since: 944
      */
-    function canShuffleToOrFromExtraSeat(ped: number | Ped): [boolean, number];
+    function canShuffleToOrFromExtraSeat(ped: number | IPed): [boolean, number];
     /**
      * No comment provided
      *
      * Hash: 0x9C6A6C19B6C0C496 | Since: 323
      */
-    function canShuffleToOrFromTurretSeat(ped: number | Ped): [boolean, number];
+    function canShuffleToOrFromTurretSeat(ped: number | IPed): [boolean, number];
     /**
      * List of component/props ID
      * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
      *
      * Hash: 0xCD8A7537A9B52F06 | Since: 323
      */
-    function clearAllProps(ped: number | Ped): void;
+    function clearAllProps(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xE6CA85E7259CE16B | Since: 323
      */
-    function clearAllVehicleForcedSeatUsage(ped: number | Ped): void;
+    function clearAllVehicleForcedSeatUsage(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x637822DC2AFEEBF8 | Since: 1493
      */
-    function clearCoverPointFor(ped: number | Ped): void;
+    function clearCoverPointFor(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x726256CC1EEB182F | Since: 323
      */
-    function clearFacialIdleAnimOverride(ped: number | Ped): void;
+    function clearFacialIdleAnimOverride(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xD8D19675ED5FBDCE | Since: 323
      */
-    function clearAlternateMovementAnim(ped: number | Ped, stance: number): void;
+    function clearAlternateMovementAnim(ped: number | IPed, stance: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x8844BBFCE30AA9E9 | Since: 323
      */
-    function clearAlternateWalkAnim(ped: number | Ped): void;
+    function clearAlternateWalkAnim(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x8FE22675A5A45817 | Since: 323
      */
-    function clearBloodDamage(ped: number | Ped): void;
+    function clearBloodDamage(ped: number | IPed): void;
     /**
      * Somehow related to changing ped's clothes.
      *
      * Hash: 0x56E3B78C5408D9F4 | Since: 323
      */
-    function clearBloodDamageByZone(ped: number | Ped): void;
+    function clearBloodDamageByZone(ped: number | IPed): void;
     /**
      * p1: from 0 to 5 in the b617d scripts.
      * p2: "blushing" and "ALL" found in the b617d scripts.
      *
      * Hash: 0x523C79AEEFCC4A2A | Since: 323
      */
-    function clearDamageDecalByZone(ped: number | Ped): void;
+    function clearDamageDecalByZone(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x0E5173C163976E38 | Since: 323
      */
-    function clearDecorations(ped: number | Ped): void;
+    function clearDecorations(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xE3B27E70CEAB9F0C | Since: 323
      */
-    function clearDecorationsLeaveScars(ped: number | Ped): void;
+    function clearDecorationsLeaveScars(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x4AFE3690D7E0B5AC | Since: 323
      */
-    function clearDriveByClipsetOverride(ped: number | Ped): void;
+    function clearDriveByClipsetOverride(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x6585D955A68452A5 | Since: 323
      */
-    function clearEnvDirt(ped: number | Ped): void;
+    function clearEnvDirt(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x80054D7FCC70EEC6 | Since: 323
      */
-    function clearFallUpperBodyClipsetOverride(ped: number | Ped): void;
+    function clearFallUpperBodyClipsetOverride(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x8EF6B7AC68E2F01B | Since: 323
      */
-    function clearLastDamageBone(ped: number | Ped): void;
+    function clearLastDamageBone(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xC79196DCB36F6121 | Since: 323
      */
-    function clearMotionInCoverClipsetOverride(ped: number | Ped): void;
+    function clearMotionInCoverClipsetOverride(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -27293,38 +27293,38 @@ export declare namespace ped {
      *
      * Hash: 0x1280804F7CFD2D6C | Since: 323
      */
-    function clearParachutePackVariation(ped: number | Ped): void;
+    function clearParachutePackVariation(ped: number | IPed): void;
     /**
      * List of component/props ID
      * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
      *
      * Hash: 0x0943E5B8E078E76E | Since: 323
      */
-    function clearProp(ped: number | Ped, propId: number): void;
+    function clearProp(ped: number | IPed, propId: number): void;
     /**
      * Removes the scubagear (for mp male: component id: 8, drawableId: 123, textureId: any) from peds. Does not play the 'remove scuba gear' animation, but instantly removes it.
      *
      * Hash: 0xB50EB4CCB29704AC | Since: 323
      */
-    function clearScubaGearVariation(ped: number | Ped): void;
+    function clearScubaGearVariation(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x687C0B594907D2E8 | Since: 323
      */
-    function clearStoredHatProp(ped: number | Ped): void;
+    function clearStoredHatProp(ped: number | IPed): void;
     /**
      * It clears the wetness of the selected Ped/Player. Clothes have to be wet to notice the difference.
      *
      * Hash: 0x9C720776DAA43E7E | Since: 323
      */
-    function clearWetness(ped: number | Ped): void;
+    function clearWetness(ped: number | IPed): void;
     /**
      * See SET_RAGDOLL_BLOCKING_FLAGS for flags
      *
      * Hash: 0xD86D101FCFD00A4B | Since: 323
      */
-    function clearRagdollBlockingFlags(ped: number | Ped, blockingFlag: number): void;
+    function clearRagdollBlockingFlags(ped: number | IPed, blockingFlag: number): void;
     /**
      * Clears the relationship between two groups. This should be called twice (once for each group).
      *
@@ -27350,37 +27350,37 @@ export declare namespace ped {
      *
      * Hash: 0xEF29A16337FACADB | Since: 323
      */
-    function clone(ped: number | Ped, isNetwork: boolean, bScriptHostPed: boolean, copyHeadBlendFlag: boolean): number;
+    function clone(ped: number | IPed, isNetwork: boolean, bScriptHostPed: boolean, copyHeadBlendFlag: boolean): number;
     /**
      * No comment provided
      *
      * Hash: 0x668FD40BCBA5DE48 | Since: 463
      */
-    function cloneAlt(ped: number | Ped, isNetwork: boolean, bScriptHostPed: boolean, copyHeadBlendFlag: boolean): number;
+    function cloneAlt(ped: number | IPed, isNetwork: boolean, bScriptHostPed: boolean, copyHeadBlendFlag: boolean): number;
     /**
      * Copies ped's components and props to targetPed.
      *
      * Hash: 0xE952D6431689AD9A | Since: 323
      */
-    function cloneToTarget(ped: number | Ped, targetPed: number | Ped): void;
+    function cloneToTarget(ped: number | IPed, targetPed: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x148B08C2D2ACB884 | Since: 463
      */
-    function cloneToTargetAlt(ped: number | Ped, targetPed: number | Ped): void;
+    function cloneToTargetAlt(ped: number | IPed, targetPed: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x5407B7288D0478B7 | Since: 323
      */
-    function countsInCombatWithTarget(ped: number | Ped): number;
+    function countsInCombatWithTarget(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0x336B3D200AB007CB | Since: 323
      */
-    function countsInCombatWithTargetWithinRadius(ped: number | Ped, pos: Vector3, radius: number): number;
+    function countsInCombatWithTargetWithinRadius(ped: number | IPed, pos: Vector3, radius: number): number;
     /**
      * Creates a new ped group.
      * Groups can contain up to 8 peds.
@@ -27408,7 +27408,7 @@ export declare namespace ped {
      *
      * Hash: 0x8C4F3BF23B6237DB | Since: 323
      */
-    function createParachuteBagObject(ped: number | Ped): number;
+    function createParachuteBagObject(ped: number | IPed): number;
     /**
      * https://alloc8or.re/gta5/doc/enums/ePedType.txt
      *
@@ -27424,7 +27424,7 @@ export declare namespace ped {
      *
      * Hash: 0x7DD959874C1FD534 | Since: 323
      */
-    function createInsideVehicle(vehicle: number | Vehicle, pedType: number, modelHash: number | string, seat: number, isNetwork: boolean, bScriptHostPed: boolean): number;
+    function createInsideVehicle(vehicle: number | IVehicle, pedType: number, modelHash: number | string, seat: number, isNetwork: boolean, bScriptHostPed: boolean): number;
     /**
      * vb.net
      * Dim ped_handle As Integer
@@ -27444,7 +27444,7 @@ export declare namespace ped {
      *
      * Hash: 0x9B62392B474F44A0 | Since: 323
      */
-    function createRandomAsDriver(vehicle: number | Vehicle, returnHandle: boolean): number;
+    function createRandomAsDriver(vehicle: number | IVehicle, returnHandle: boolean): number;
     /**
      * p6 always 2 (but it doesnt seem to matter...)
      *
@@ -27465,7 +27465,7 @@ export declare namespace ped {
      *
      * Hash: 0x9614299DCB53E54B | Since: 323
      */
-    function deletePed(ped: number | Ped): void;
+    function deletePed(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -27477,19 +27477,19 @@ export declare namespace ped {
      *
      * Hash: 0xA21C118553BBDF02 | Since: 323
      */
-    function disableHeadBlendPaletteColor(ped: number | Ped): void;
+    function disableHeadBlendPaletteColor(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x600048C60D5C2C51 | Since: 323
      */
-    function disableHeatscaleOverride(ped: number | Ped): void;
+    function disableHeatscaleOverride(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x733C87D4CE22BEA2 | Since: 323
      */
-    function disableInjuredOnGroundBehaviour(ped: number | Ped): void;
+    function disableInjuredOnGroundBehaviour(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -27513,13 +27513,13 @@ export declare namespace ped {
      *
      * Hash: 0xAFF4710E2A0A6C12 | Since: 323
      */
-    function dropAmbientProp(ped: number | Ped): void;
+    function dropAmbientProp(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xEE2476B9EE4A094F | Since: 1493
      */
-    function enableMpLight(ped: number | Ped, toggle: boolean): void;
+    function enableMpLight(ped: number | IPed, toggle: boolean): void;
     /**
      * Forces the ped to fall back and kills it.
      *
@@ -27527,31 +27527,31 @@ export declare namespace ped {
      *
      * Hash: 0x2D05CED3A38D0F3A | Since: 323
      */
-    function explodeHead(ped: number | Ped, weaponHash: number | string): void;
+    function explodeHead(ped: number | IPed, weaponHash: number | string): void;
     /**
      * No comment provided
      *
      * Hash: 0x4668D80430D6C299 | Since: 323
      */
-    function finalizeHeadBlend(ped: number | Ped): void;
+    function finalizeHeadBlend(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xFF287323B0E2C69A | Since: 323
      */
-    function forceAllHeadingValuesToAlign(ped: number | Ped): void;
+    function forceAllHeadingValuesToAlign(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xED3C76ADFA6D07C4 | Since: 323
      */
-    function forceInstantLegIkSetup(ped: number | Ped): void;
+    function forceInstantLegIkSetup(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x2208438012482A1A | Since: 323
      */
-    function forceAiAndAnimationUpdate(ped: number | Ped): void;
+    function forceAiAndAnimationUpdate(ped: number | IPed): void;
     /**
      * Regarding p2, p3 and p4: Most common is 0, 0, 0); followed by 0, 1, 0); and 1, 1, 0); in R* scripts. p4 is very rarely something other than 0.
      *
@@ -27585,19 +27585,19 @@ export declare namespace ped {
      *
      * Hash: 0xF28965D04F570DCA | Since: 323
      */
-    function forceMotionState(ped: number | Ped, motionStateHash: number | string): boolean;
+    function forceMotionState(ped: number | IPed, motionStateHash: number | string): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x16E42E800B472221 | Since: 323
      */
-    function forceToOpenParachute(ped: number | Ped): void;
+    function forceToOpenParachute(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xD33DAA36272177C4 | Since: 323
      */
-    function forceZeroMassInCollisions(ped: number | Ped): void;
+    function forceZeroMassInCollisions(ped: number | IPed): void;
     /**
      * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
      *
@@ -27615,7 +27615,7 @@ export declare namespace ped {
      *
      * Hash: 0x03EA03AF85A85CB7 | Since: 323
      */
-    function getCanBeGrabbedByScript(ped: number | Ped): boolean;
+    function getCanBeGrabbedByScript(ped: number | IPed): boolean;
     /**
      * Gets the closest ped in a radius.
      *
@@ -27690,13 +27690,13 @@ export declare namespace ped {
      *
      * Hash: 0x52DFF8A10508090A | Since: 323
      */
-    function getCombatFloat(ped: number | Ped): number;
+    function getCombatFloat(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0xCD5003B097200F36 | Since: 323
      */
-    function getDeadPickupCoords(ped: number | Ped): Vector3;
+    function getDeadPickupCoords(ped: number | IPed): Vector3;
     /**
      * No comment provided
      *
@@ -27732,19 +27732,19 @@ export declare namespace ped {
      *
      * Hash: 0x76BBA2CEE66D47E9 | Since: 1011
      */
-    function getHeadBlendEyeColor(ped: number | Ped): number;
+    function getHeadBlendEyeColor(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0x5486A79D9FBD342D | Since: 323
      */
-    function getJackTarget(ped: number | Ped): number;
+    function getJackTarget(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0x18A3E9EE1297FD39 | Since: 323
      */
-    function getMeleeTargetFor(ped: number | Ped): number;
+    function getMeleeTargetFor(ped: number | IPed): number;
     /**
      *
      * Function just returns 0
@@ -27759,13 +27759,13 @@ export declare namespace ped {
      *
      * Hash: 0xE7E11B8DCBED1058 | Since: 323
      */
-    function getMount(ped: number | Ped): number;
+    function getMount(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0x88274C11CF0D866D | Since: 1493
      */
-    function getMpLightEnabled(ped: number | Ped): boolean;
+    function getMpLightEnabled(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
@@ -27778,14 +27778,14 @@ export declare namespace ped {
      *
      * Hash: 0x27561561732A7842 | Since: 323
      */
-    function getNumberOfDrawableVariations(ped: number | Ped, componentId: number): number;
+    function getNumberOfDrawableVariations(ped: number | IPed, componentId: number): number;
     /**
      * List of component/props ID
      * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
      *
      * Hash: 0x5FAF9754E789FB47 | Since: 323
      */
-    function getNumberOfPropDrawableVariations(ped: number | Ped, propId: number): number;
+    function getNumberOfPropDrawableVariations(ped: number | IPed, propId: number): number;
     /**
      * Need to check behavior when drawableId = -1
      *
@@ -27801,14 +27801,14 @@ export declare namespace ped {
      *
      * Hash: 0xA6E7F1CEB523E171 | Since: 323
      */
-    function getNumberOfPropTextureVariations(ped: number | Ped, propId: number, drawableId: number): number;
+    function getNumberOfPropTextureVariations(ped: number | IPed, propId: number, drawableId: number): number;
     /**
      * List of component/props ID
      * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
      *
      * Hash: 0x8F7156A3142A6BAD | Since: 323
      */
-    function getNumberOfTextureVariations(ped: number | Ped, componentId: number, drawableId: number): number;
+    function getNumberOfTextureVariations(ped: number | IPed, componentId: number, drawableId: number): number;
     /**
      * No comment provided
      *
@@ -27832,13 +27832,13 @@ export declare namespace ped {
      *
      * Hash: 0x9B128DC36C1E04CF | Since: 323
      */
-    function getsJacker(ped: number | Ped): number;
+    function getsJacker(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0x37F4AD56ECBC0CD6 | Since: 323
      */
-    function getAccuracy(ped: number | Ped): number;
+    function getAccuracy(ped: number | IPed): number;
     /**
      * Returns the ped's alertness (0-3).
      *
@@ -27853,13 +27853,13 @@ export declare namespace ped {
      *
      * Hash: 0xF6AA118530443FD2 | Since: 323
      */
-    function getAlertness(ped: number | Ped): number;
+    function getAlertness(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0x9483AF821605B1D8 | Since: 323
      */
-    function getArmour(ped: number | Ped): number;
+    function getArmour(ped: number | IPed): number;
     /**
      * No comment provided
      *
@@ -27890,7 +27890,7 @@ export declare namespace ped {
      *
      * Hash: 0x17C07FC640E86B4E | Since: 323
      */
-    function getBoneCoords(ped: number | Ped, boneId: number, offsetX: number, offsetY: number, offsetZ: number): Vector3;
+    function getBoneCoords(ped: number | IPed, boneId: number, offsetX: number, offsetY: number, offsetZ: number): Vector3;
     /**
      * no bone= -1
      *
@@ -27996,43 +27996,43 @@ export declare namespace ped {
      *
      * Hash: 0x3F428D08BE5AAE31 | Since: 323
      */
-    function getBoneIndex(ped: number | Ped, boneId: number): number;
+    function getBoneIndex(ped: number | IPed, boneId: number): number;
     /**
      * Returns the hash of the weapon/model/object that killed the ped.
      *
      * Hash: 0x16FFE42AB2D2DC59 | Since: 323
      */
-    function getCauseOfDeath(ped: number | Ped): number;
+    function getCauseOfDeath(ped: number | IPed): number;
     /**
      * See SET_PED_COMBAT_MOVEMENT
      *
      * Hash: 0xDEA92412FCAEB3F5 | Since: 323
      */
-    function getCombatMovement(ped: number | Ped): number;
+    function getCombatMovement(ped: number | IPed): number;
     /**
      * See SET_PED_COMBAT_RANGE
      *
      * Hash: 0xF9D9F7F2DB8E2FA0 | Since: 323
      */
-    function getCombatRange(ped: number | Ped): number;
+    function getCombatRange(ped: number | IPed): number;
     /**
      * See SET_PED_CONFIG_FLAG
      *
      * Hash: 0x7EE53118C892B513 | Since: 323
      */
-    function getConfigFlag(ped: number | Ped, flagId: number): boolean;
+    function getConfigFlag(ped: number | IPed, flagId: number): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xF60165E1D2C5370B | Since: 323
      */
-    function getCurrentMoveBlendRatio(ped: number | Ped): [boolean, number, number];
+    function getCurrentMoveBlendRatio(ped: number | IPed): [boolean, number, number];
     /**
      * No comment provided
      *
      * Hash: 0x71EAB450D86954A1 | Since: 323
      */
-    function getDecorationsState(ped: number | Ped): number;
+    function getDecorationsState(ped: number | IPed): number;
     /**
      * Returns the zoneID for the overlay if it is a member of collection.
      * enum ePedDecorationZone
@@ -28057,13 +28057,13 @@ export declare namespace ped {
      *
      * Hash: 0x3C06B8786DD94CD1 | Since: 323
      */
-    function getDefensiveAreaPosition(ped: number | Ped): Vector3;
+    function getDefensiveAreaPosition(ped: number | IPed): Vector3;
     /**
      * No comment provided
      *
      * Hash: 0x65671A4FB8218930 | Since: 2699
      */
-    function getDiesInWater(ped: number | Ped): boolean;
+    function getDiesInWater(ped: number | IPed): boolean;
     /**
      * Ids
      * 0 - Head
@@ -28081,20 +28081,20 @@ export declare namespace ped {
      *
      * Hash: 0x67F3780DD425D4FC | Since: 323
      */
-    function getDrawableVariation(ped: number | Ped, componentId: number): number;
+    function getDrawableVariation(ped: number | IPed, componentId: number): number;
     /**
      * Use 0x4E90D746056E273D to set the illuminated clothing glow intensity for a specific ped.
      * Returns a float between 0.0 and 1.0 representing the current illuminated clothing glow intensity.
      *
      * Hash: 0x1461B28A06717D68 | Since: 944
      */
-    function getEmissiveScale(ped: number | Ped): number;
+    function getEmissiveScale(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0x9C14D30395A51A3C | Since: 323
      */
-    function getEnveffScale(ped: number | Ped): number;
+    function getEnveffScale(ped: number | IPed): number;
     /**
      * Gets the offset the specified ped has moved since the previous tick.
      *
@@ -28104,13 +28104,13 @@ export declare namespace ped {
      *
      * Hash: 0xE0AF41401ADF87E3 | Since: 323
      */
-    function getExtractedDisplacement(ped: number | Ped, worldSpace: boolean): Vector3;
+    function getExtractedDisplacement(ped: number | IPed, worldSpace: boolean): Vector3;
     /**
      * Returns the group id of which the specified ped is a member of.
      *
      * Hash: 0xF162E133B4E7A675 | Since: 323
      */
-    function getGroupIndex(ped: number | Ped): number;
+    function getGroupIndex(ped: number | IPed): number;
     /**
      * Input: Haircolor index, value between 0 and 63 (inclusive).
      * Output: RGB values for the haircolor specified in the input.
@@ -28149,7 +28149,7 @@ export declare namespace ped {
      *
      * Hash: 0x2746BD9D88C5C5D0 | Since: 323
      */
-    function getHeadBlendData(ped: number | Ped): [boolean, any];
+    function getHeadBlendData(ped: number | IPed): [boolean, any];
     /**
      * Type equals 0 for male non-dlc, 1 for female non-dlc, 2 for male dlc, and 3 for female dlc.
      *
@@ -28171,7 +28171,7 @@ export declare namespace ped {
      *
      * Hash: 0xA60EF3B6461A4D43 | Since: 323
      */
-    function getHeadOverlay(ped: number | Ped, overlayID: number): number;
+    function getHeadOverlay(ped: number | IPed, overlayID: number): number;
     /**
      * No comment provided
      *
@@ -28183,19 +28183,19 @@ export declare namespace ped {
      *
      * Hash: 0x451294E859ECC018 | Since: 323
      */
-    function getHelmetStoredHatPropIndex(ped: number | Ped): number;
+    function getHelmetStoredHatPropIndex(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0x9D728C1E12BF5518 | Since: 323
      */
-    function getHelmetStoredHatTexIndex(ped: number | Ped): number;
+    function getHelmetStoredHatTexIndex(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0xD75960F6BD9EA49C | Since: 323
      */
-    function getLastDamageBone(ped: number | Ped): [boolean, number];
+    function getLastDamageBone(ped: number | IPed): [boolean, number];
     /**
      * Input: Makeup color index, value between 0 and 63 (inclusive).
      * Output: RGB values for the makeup color specified in the input.
@@ -28211,13 +28211,13 @@ export declare namespace ped {
      *
      * Hash: 0x4700A416E8324EF3 | Since: 323
      */
-    function getMaxHealth(ped: number | Ped): number;
+    function getMaxHealth(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0x3F69145BBA87BAE7 | Since: 323
      */
-    function getMoney(ped: number | Ped): number;
+    function getMoney(ped: number | IPed): number;
     /**
      * sizeAndPeds - is a pointer to an array. The array is filled with peds found nearby the ped supplied to the first argument.
      * ignore - ped type to ignore
@@ -28236,7 +28236,7 @@ export declare namespace ped {
      *
      * Hash: 0x23F8F5FC7E8C4A6B | Since: 323
      */
-    function getNearbyPeds(ped: number | Ped, ignore: number): [number, any];
+    function getNearbyPeds(ped: number | IPed, ignore: number): [number, any];
     /**
      * Returns size of array, passed into the second variable.
      *
@@ -28269,14 +28269,14 @@ export declare namespace ped {
      *
      * Hash: 0xCFF869CBFA210D82 | Since: 323
      */
-    function getNearbyVehicles(ped: number | Ped): [number, any];
+    function getNearbyVehicles(ped: number | IPed): [number, any];
     /**
      * List of component/props ID
      * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
      *
      * Hash: 0xE3DD5F2A84B42281 | Since: 323
      */
-    function getPaletteVariation(ped: number | Ped, componentId: number): number;
+    function getPaletteVariation(ped: number | IPed, componentId: number): number;
     /**
      * -1: no landing
      * 0: landing on both feet
@@ -28286,7 +28286,7 @@ export declare namespace ped {
      *
      * Hash: 0x8B9F1FC6AE8166C0 | Since: 323
      */
-    function getParachuteLandingType(ped: number | Ped): number;
+    function getParachuteLandingType(ped: number | IPed): number;
     /**
      * Returns:
      *
@@ -28300,51 +28300,51 @@ export declare namespace ped {
      *
      * Hash: 0x79CFD9827CC979B6 | Since: 323
      */
-    function getParachuteState(ped: number | Ped): number;
+    function getParachuteState(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0xEAF5F7E5AE7C6C9D | Since: 323
      */
-    function getParachuteTintIndex(ped: number | Ped): number;
+    function getParachuteTintIndex(ped: number | IPed): number;
     /**
      * List of component/props ID
      * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
      *
      * Hash: 0x898CC20EA75BACD8 | Since: 323
      */
-    function getPropIndex(ped: number | Ped, componentId: number): number;
+    function getPropIndex(ped: number | IPed, componentId: number): number;
     /**
      * List of component/props ID
      * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
      *
      * Hash: 0xE131A28626F81AB2 | Since: 323
      */
-    function getPropTextureIndex(ped: number | Ped, componentId: number): number;
+    function getPropTextureIndex(ped: number | IPed, componentId: number): number;
     /**
      * No comment provided
      *
      * Hash: 0x2057EF813397A772 | Since: 323
      */
-    function getRagdollBoneIndex(ped: number | Ped, bone: number): number;
+    function getRagdollBoneIndex(ped: number | IPed, bone: number): number;
     /**
      * No comment provided
      *
      * Hash: 0x42FDD0F017B1E38E | Since: 323
      */
-    function getRelationshipGroupDefaultHash(ped: number | Ped): number;
+    function getRelationshipGroupDefaultHash(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0x7DBDD04862D95F04 | Since: 323
      */
-    function getRelationshipGroupHash(ped: number | Ped): number;
+    function getRelationshipGroupHash(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0xAF9E59B1B1FBF2A0 | Since: 323
      */
-    function getResetFlag(ped: number | Ped, flagId: number): boolean;
+    function getResetFlag(ped: number | IPed, flagId: number): boolean;
     /**
      * Returns the Entity (Ped, Vehicle, or ?Object?) that killed the 'ped'
      *
@@ -28352,56 +28352,56 @@ export declare namespace ped {
      *
      * Hash: 0x93C8B64DEB84728C | Since: 323
      */
-    function getSourceOfDeath(ped: number | Ped): number;
+    function getSourceOfDeath(ped: number | IPed): number;
     /**
      * Returns whether the entity is in stealth mode
      *
      * Hash: 0x7C2AC9CA66575FBF | Since: 323
      */
-    function getStealthMovement(ped: number | Ped): boolean;
+    function getStealthMovement(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x32C27A11307B01CC | Since: 2372
      */
-    function getTargetFromCombatPed(ped: number | Ped): number;
+    function getTargetFromCombatPed(ped: number | IPed): number;
     /**
      * List of component/props ID
      * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
      *
      * Hash: 0x04A355E041E004E6 | Since: 323
      */
-    function getTextureVariation(ped: number | Ped, componentId: number): number;
+    function getTextureVariation(ped: number | IPed, componentId: number): number;
     /**
      * No comment provided
      *
      * Hash: 0x1E98817B311AE98A | Since: 323
      */
-    function getTimeOfDeath(ped: number | Ped): number;
+    function getTimeOfDeath(ped: number | IPed): number;
     /**
      * https://alloc8or.re/gta5/doc/enums/ePedType.txt
      *
      * Hash: 0xFF059E1E4C01E63C | Since: 323
      */
-    function getType(ped: number | Ped): number;
+    function getType(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0xEF2C71A32CAD5FBD | Since: 1493
      */
-    function getVisualFieldCenterAngle(ped: number | Ped): number;
+    function getVisualFieldCenterAngle(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0x6A3975DEA89F9A17 | Since: 323
      */
-    function getPlayerIsFollowing(ped: number | Ped): number | string;
+    function getPlayerIsFollowing(ped: number | IPed): number | string;
     /**
      * No comment provided
      *
      * Hash: 0xBA656A3BB01BDEA3 | Since: 2189
      */
-    function getPosFromFiredEvent(ped: number | Ped, eventType: number): [boolean, any];
+    function getPosFromFiredEvent(ped: number | IPed, eventType: number): [boolean, any];
     /**
      * Gets a random ped in the x/y/zRadius near the x/y/z coordinates passed.
      *
@@ -28457,13 +28457,13 @@ export declare namespace ped {
      *
      * Hash: 0xEBA5AD3A0EAF7121 | Since: 323
      */
-    function getRelationshipBetweens(ped1: number | Ped, ped2: number | Ped): number;
+    function getRelationshipBetweens(ped1: number | IPed, ped2: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0x6F4C85ACD641BCD2 | Since: 323
      */
-    function getSeatIsTryingToEnter(ped: number | Ped): number;
+    function getSeatIsTryingToEnter(ped: number | IPed): number;
     /**
      * No comment provided
      *
@@ -28481,7 +28481,7 @@ export declare namespace ped {
      *
      * Hash: 0x36B77BB84687C318 | Since: 323
      */
-    function getTimeDamagedByWeapon(ped: number | Ped, weaponHash: number | string): number;
+    function getTimeDamagedByWeapon(ped: number | IPed, weaponHash: number | string): number;
     /**
      * No comment provided
      *
@@ -28493,31 +28493,31 @@ export declare namespace ped {
      *
      * Hash: 0x511F1A683387C7E2 | Since: 323
      */
-    function getTrackedPixelcount(ped: number | Ped): number;
+    function getTrackedPixelcount(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0xF92691AED837A5FC | Since: 323
      */
-    function getVehicleIsEntering(ped: number | Ped): number;
+    function getVehicleIsEntering(ped: number | IPed): number;
     /**
      * Gets the vehicle the specified Ped is in. Returns 0 if the ped is/was not in a vehicle.
      *
      * Hash: 0x9A9112A0FE9A4713 | Since: 323
      */
-    function getVehicleIsIn(ped: number | Ped, includeEntering: boolean): number;
+    function getVehicleIsIn(ped: number | IPed, includeEntering: boolean): number;
     /**
      * No comment provided
      *
      * Hash: 0x814FA8BE5449445D | Since: 323
      */
-    function getVehicleIsTryingToEnter(ped: number | Ped): number;
+    function getVehicleIsTryingToEnter(ped: number | IPed): number;
     /**
      * Gets ID of vehicle player using. It means it can get ID at any interaction with vehicle. Enter\exit for example. And that means it is faster than GET_VEHICLE_PED_IS_IN but less safe.
      *
      * Hash: 0x6094AD011A2EA87D | Since: 323
      */
-    function getVehicleIsUsing(ped: number | Ped): number;
+    function getVehicleIsUsing(ped: number | IPed): number;
     /**
      * PoliceMotorcycleHelmet   1024
      * RegularMotorcycleHelmet   4096
@@ -28529,7 +28529,7 @@ export declare namespace ped {
      *
      * Hash: 0x54C7C4A94367717E | Since: 323
      */
-    function giveHelmet(ped: number | Ped, cannotRemove: boolean, helmetFlag: number, textureIndex: number): void;
+    function giveHelmet(ped: number | IPed, cannotRemove: boolean, helmetFlag: number, textureIndex: number): void;
     /**
      * Sends the message that was created by a call to CREATE_NM_MESSAGE to the specified Ped.
      *
@@ -28553,7 +28553,7 @@ export declare namespace ped {
      *
      * Hash: 0xB158DFCCC56E5C5B | Since: 323
      */
-    function giveNmMessage(ped: number | Ped): void;
+    function giveNmMessage(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -28577,25 +28577,25 @@ export declare namespace ped {
      *
      * Hash: 0x654CD0A825161131 | Since: 323
      */
-    function hasHeadBlendFinished(ped: number | Ped): boolean;
+    function hasHeadBlendFinished(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x784002A632822099 | Since: 323
      */
-    function hasPreloadPropDataFinished(ped: number | Ped): boolean;
+    function hasPreloadPropDataFinished(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x66680A92700F43DF | Since: 323
      */
-    function hasPreloadVariationDataFinished(ped: number | Ped): boolean;
+    function hasPreloadVariationDataFinished(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x8507BCB710FA6DC0 | Since: 323
      */
-    function hasReceivedEvent(ped: number | Ped, eventId: number): boolean;
+    function hasReceivedEvent(ped: number | IPed, eventId: number): boolean;
     /**
      * No comment provided
      *
@@ -28607,13 +28607,13 @@ export declare namespace ped {
      *
      * Hash: 0x7350823473013C02 | Since: 323
      */
-    function haveAllStreamingRequestsCompleted(ped: number | Ped): boolean;
+    function haveAllStreamingRequestsCompleted(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x62AB793144DE75DC | Since: 323
      */
-    function hideBloodDamageByZone(ped: number | Ped): void;
+    function hideBloodDamageByZone(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -28625,7 +28625,7 @@ export declare namespace ped {
      *
      * Hash: 0x68772DB2B2526F9F | Since: 323
      */
-    function isAnyHostileNearPoint(ped: number | Ped, pos: Vector3, radius: number): boolean;
+    function isAnyHostileNearPoint(ped: number | IPed, pos: Vector3, radius: number): boolean;
     /**
      * No comment provided
      *
@@ -28643,7 +28643,7 @@ export declare namespace ped {
      *
      * Hash: 0xE0A0AEC214B1FABA | Since: 323
      */
-    function isConversationDead(ped: number | Ped): boolean;
+    function isConversationDead(ped: number | IPed): boolean;
     /**
      * xyz - relative to the world origin.
      *
@@ -28661,7 +28661,7 @@ export declare namespace ped {
      *
      * Hash: 0xA3F3564A5B3646C0 | Since: 323
      */
-    function isMobilePhoneToEar(ped: number | Ped): boolean;
+    function isMobilePhoneToEar(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
@@ -28685,31 +28685,31 @@ export declare namespace ped {
      *
      * Hash: 0x3998B1276A3300E5 | Since: 323
      */
-    function isAimingFromCover(ped: number | Ped): boolean;
+    function isAimingFromCover(ped: number | IPed): boolean;
     /**
      * Returns true if the given ped has a valid pointer to CPlayerInfo in its CPed class. That's all.
      *
      * Hash: 0x12534C348C6CB68B | Since: 323
      */
-    function isAPlayer(ped: number | Ped): boolean;
+    function isAPlayer(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x9A497FE2DF198913 | Since: 323
      */
-    function isBeingJacked(ped: number | Ped): boolean;
+    function isBeingJacked(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x863B23EFDE9C5DF2 | Since: 323
      */
-    function isBeingStealthKilled(ped: number | Ped): boolean;
+    function isBeingStealthKilled(ped: number | IPed): boolean;
     /**
      * p1 is always 0
      *
      * Hash: 0x4FBACCE3B4138EE8 | Since: 323
      */
-    function isBeingStunned(ped: number | Ped): boolean;
+    function isBeingStunned(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
@@ -28733,7 +28733,7 @@ export declare namespace ped {
      *
      * Hash: 0x53E8CB4F48BFE623 | Since: 323
      */
-    function isClimbing(ped: number | Ped): boolean;
+    function isClimbing(ped: number | IPed): boolean;
     /**
      * Checks if the component variation is valid, this works great for randomizing components using loops.
      *
@@ -28744,7 +28744,7 @@ export declare namespace ped {
      *
      * Hash: 0xE825F6B6CEA7671D | Since: 323
      */
-    function isComponentVariationValid(ped: number | Ped, componentId: number, drawableId: number, textureId: number): boolean;
+    function isComponentVariationValid(ped: number | IPed, componentId: number, drawableId: number, textureId: number): boolean;
     /**
      * Seems to consistently return true if the ped is dead.
      *
@@ -28758,19 +28758,19 @@ export declare namespace ped {
      *
      * Hash: 0x3317DEDB88C95038 | Since: 323
      */
-    function isDeadOrDying(ped: number | Ped): boolean;
+    function isDeadOrDying(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xBA63D9FE45412247 | Since: 323
      */
-    function isDefensiveAreaActive(ped: number | Ped): boolean;
+    function isDefensiveAreaActive(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x5527B8246FEF9B11 | Since: 323
      */
-    function isDiving(ped: number | Ped): boolean;
+    function isDiving(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
@@ -28782,13 +28782,13 @@ export declare namespace ped {
      *
      * Hash: 0xB2C086CC1BF8F2BF | Since: 323
      */
-    function isDoingDriveby(ped: number | Ped): boolean;
+    function isDoingDriveby(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xD125AE748725C6BC | Since: 323
      */
-    function isDucking(ped: number | Ped): boolean;
+    function isDucking(ped: number | IPed): boolean;
     /**
      * Presumably returns the Entity that the Ped is currently diving out of the way of.
      *
@@ -28798,32 +28798,32 @@ export declare namespace ped {
      *
      * Hash: 0x414641C26E105898 | Since: 323
      */
-    function isEvasiveDiving(ped: number | Ped): [boolean, number];
+    function isEvasiveDiving(ped: number | IPed): [boolean, number];
     /**
      * angle is ped's view cone
      *
      * Hash: 0xD71649DB0A545AA3 | Since: 323
      */
-    function isFacingPed(ped: number | Ped, otherPed: number | Ped, angle: number): boolean;
+    function isFacingPed(ped: number | IPed, otherPed: number | IPed, angle: number): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xFB92A102F1C4DFA3 | Since: 323
      */
-    function isFalling(ped: number | Ped): boolean;
+    function isFalling(ped: number | IPed): boolean;
     /**
      * Gets a value indicating whether this ped's health is below its fatally injured threshold. The default threshold is 100.
      * If the handle is invalid, the function returns true.
      *
      * Hash: 0xD839450756ED5A80 | Since: 323
      */
-    function isFatallyInjured(ped: number | Ped): boolean;
+    function isFatallyInjured(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xBBCCE00B381F8482 | Since: 323
      */
-    function isFleeing(ped: number | Ped): boolean;
+    function isFleeing(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
@@ -28835,19 +28835,19 @@ export declare namespace ped {
      *
      * Hash: 0xBB062B2B5722478E | Since: 323
      */
-    function isGettingIntoAVehicle(ped: number | Ped): boolean;
+    function isGettingIntoAVehicle(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x9F65DBC537E59AD5 | Since: 323
      */
-    function isGoingIntoCover(ped: number | Ped): boolean;
+    function isGoingIntoCover(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x9BB01E3834671191 | Since: 323
      */
-    function isGroupMember(ped: number | Ped, groupId: number): boolean;
+    function isGroupMember(ped: number | IPed, groupId: number): boolean;
     /**
      * No comment provided
      *
@@ -28865,43 +28865,43 @@ export declare namespace ped {
      *
      * Hash: 0x1C86D8AEF8254B78 | Since: 323
      */
-    function isHangingOnToVehicle(ped: number | Ped): boolean;
+    function isHangingOnToVehicle(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xFCF37A457CB96DC0 | Since: 323
      */
-    function isHeadingTowardsPosition(ped: number | Ped, pos: Vector3): boolean;
+    function isHeadingTowardsPosition(ped: number | IPed, pos: Vector3): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x813A0A7C9D2E831F | Since: 323
      */
-    function isHeadtrackingEntity(ped: number | Ped, entity: number | Entity): boolean;
+    function isHeadtrackingEntity(ped: number | IPed, entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x5CD3CB88A7F8850D | Since: 323
      */
-    function isHeadtrackingPed(ped1: number | Ped, ped2: number | Ped): boolean;
+    function isHeadtrackingPed(ped1: number | IPed, ped2: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xB9496CE47546DB2C | Since: 791
      */
-    function isHelmetVisorUp(ped: number | Ped): boolean;
+    function isHelmetVisorUp(ped: number | IPed): boolean;
     /**
      * Returns true/false if the ped is/isn't humanoid.
      *
      * Hash: 0xB980061DA992779D | Since: 323
      */
-    function isHuman(ped: number | Ped): boolean;
+    function isHuman(ped: number | IPed): boolean;
     /**
      * Returns whether the specified ped is hurt.
      *
      * Hash: 0x5983BB449D7FDB12 | Since: 323
      */
-    function isHurt(ped: number | Ped): boolean;
+    function isHurt(ped: number | IPed): boolean;
     /**
      * Gets a value indicating whether this ped's health is below its injured threshold.
      *
@@ -28909,49 +28909,49 @@ export declare namespace ped {
      *
      * Hash: 0x84A2DD9AC37C35C1 | Since: 323
      */
-    function isInjured(ped: number | Ped): boolean;
+    function isInjured(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x2E0E1C2B4F6CB339 | Since: 323
      */
-    function isInAnyBoat(ped: number | Ped): boolean;
+    function isInAnyBoat(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x298B91AE825E5705 | Since: 323
      */
-    function isInAnyHeli(ped: number | Ped): boolean;
+    function isInAnyHeli(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x5FFF4CFC74D8FB80 | Since: 323
      */
-    function isInAnyPlane(ped: number | Ped): boolean;
+    function isInAnyPlane(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x0BD04E29640C9C12 | Since: 323
      */
-    function isInAnyPoliceVehicle(ped: number | Ped): boolean;
+    function isInAnyPoliceVehicle(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xFBFC01CCFB35D99E | Since: 323
      */
-    function isInAnySub(ped: number | Ped): boolean;
+    function isInAnySub(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x6E575D6A898AB852 | Since: 323
      */
-    function isInAnyTaxi(ped: number | Ped): boolean;
+    function isInAnyTaxi(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x6F972C1AB75A1ED0 | Since: 323
      */
-    function isInAnyTrain(ped: number | Ped): boolean;
+    function isInAnyTrain(ped: number | IPed): boolean;
     /**
      * Gets a value indicating whether the specified ped is in any vehicle.
      *
@@ -28959,7 +28959,7 @@ export declare namespace ped {
      *
      * Hash: 0x997ABD671D25CA0B | Since: 323
      */
-    function isInAnyVehicle(ped: number | Ped, atGetIn: boolean): boolean;
+    function isInAnyVehicle(ped: number | IPed, atGetIn: boolean): boolean;
     /**
      * Checks to see if ped and target are in combat with eachother. Only goes one-way: if target is engaged in combat with ped but ped has not yet reacted, the function will return false until ped starts fighting back.
      *
@@ -28967,37 +28967,37 @@ export declare namespace ped {
      *
      * Hash: 0x4859F1FC66A6278E | Since: 323
      */
-    function isInCombat(ped: number | Ped, target: number | Ped): boolean;
+    function isInCombat(ped: number | IPed, target: number | IPed): boolean;
     /**
      * p1 is nearly always 0 in the scripts.
      *
      * Hash: 0x60DFD0691A170B88 | Since: 323
      */
-    function isInCover(ped: number | Ped, exceptUseWeapon: boolean): boolean;
+    function isInCover(ped: number | IPed, exceptUseWeapon: boolean): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x845333B3150583AB | Since: 323
      */
-    function isInCoverFacingLeft(ped: number | Ped): boolean;
+    function isInCoverFacingLeft(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x9134873537FA419C | Since: 323
      */
-    function isInFlyingVehicle(ped: number | Ped): boolean;
+    function isInFlyingVehicle(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x5891CAC5D4ACFF74 | Since: 323
      */
-    function isInGroup(ped: number | Ped): boolean;
+    function isInGroup(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x6A03BF943D767C93 | Since: 323
      */
-    function isInHighCover(ped: number | Ped): boolean;
+    function isInHighCover(ped: number | IPed): boolean;
     /**
      * Notes: The function only returns true while the ped is:
      * A.) Swinging a random melee attack (including pistol-whipping)
@@ -29010,19 +29010,19 @@ export declare namespace ped {
      *
      * Hash: 0x4E209B2C1EAD5159 | Since: 323
      */
-    function isInMeleeCombat(ped: number | Ped): boolean;
+    function isInMeleeCombat(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x796D90EFB19AA332 | Since: 323
      */
-    function isInModel(ped: number | Ped, modelHash: number | string): boolean;
+    function isInModel(ped: number | IPed, modelHash: number | string): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x7DCE8BDA0F1C1200 | Since: 323
      */
-    function isInParachuteFreeFall(ped: number | Ped): boolean;
+    function isInParachuteFreeFall(ped: number | IPed): boolean;
     /**
      * Gets a value indicating whether the specified ped is in the specified vehicle.
      *
@@ -29030,25 +29030,25 @@ export declare namespace ped {
      *
      * Hash: 0xA3EE4A07279BB9DB | Since: 323
      */
-    function isInVehicle(ped: number | Ped, vehicle: number | Vehicle, atGetIn: boolean): boolean;
+    function isInVehicle(ped: number | IPed, vehicle: number | IVehicle, atGetIn: boolean): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x4AE4FF911DFB61DA | Since: 323
      */
-    function isJacking(ped: number | Ped): boolean;
+    function isJacking(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xCEDABC5900A0BF97 | Since: 323
      */
-    function isJumping(ped: number | Ped): boolean;
+    function isJumping(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x433DDFFE2044B636 | Since: 323
      */
-    function isJumpingOutOfVehicle(ped: number | Ped): boolean;
+    function isJumpingOutOfVehicle(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
@@ -29072,37 +29072,37 @@ export declare namespace ped {
      *
      * Hash: 0x6D9F5FAA7488BA46 | Since: 323
      */
-    function isMale(ped: number | Ped): boolean;
+    function isMale(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xC9D55B1A358A5BF7 | Since: 323
      */
-    function isModel(ped: number | Ped, modelHash: number | string): boolean;
+    function isModel(ped: number | IPed, modelHash: number | string): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x94495889E22C6479 | Since: 323
      */
-    function isOnAnyBike(ped: number | Ped): boolean;
+    function isOnAnyBike(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x01FEE67DB37F59B2 | Since: 323
      */
-    function isOnFoot(ped: number | Ped): boolean;
+    function isOnFoot(ped: number | IPed): boolean;
     /**
      * `Same function call as PED::GET_MOUNT, aka just returns 0`
      *
      * Hash: 0x460BC76A0E10655E | Since: 323
      */
-    function isOnMount(ped: number | Ped): boolean;
+    function isOnMount(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xEC5F66E459AF3BB2 | Since: 323
      */
-    function isOnSpecificVehicle(ped: number | Ped, vehicle: number | Vehicle): boolean;
+    function isOnSpecificVehicle(ped: number | IPed, vehicle: number | IVehicle): boolean;
     /**
      * Gets a value indicating whether the specified ped is on top of any vehicle.
      *
@@ -29112,195 +29112,195 @@ export declare namespace ped {
      *
      * Hash: 0x67722AEB798E5FAB | Since: 323
      */
-    function isOnVehicle(ped: number | Ped): boolean;
+    function isOnVehicle(ped: number | IPed): boolean;
     /**
      * Returns true if the ped is currently opening a door (CTaskOpenDoor).
      *
      * Hash: 0x26AF0E8E30BD2A2C | Since: 323
      */
-    function isOpeningDoor(ped: number | Ped): boolean;
+    function isOpeningDoor(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xEBD0EDBA5BE957CF | Since: 323
      */
-    function isPerformingACounterAttack(ped: number | Ped): boolean;
+    function isPerformingACounterAttack(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xDCCA191DF9980FD7 | Since: 323
      */
-    function isPerformingMeleeAction(ped: number | Ped): boolean;
+    function isPerformingMeleeAction(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xFD4CCDBCC59941B7 | Since: 323
      */
-    function isPerformingStealthKill(ped: number | Ped): boolean;
+    function isPerformingStealthKill(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xC70B5FAE151982D8 | Since: 323
      */
-    function isPlantingBomb(ped: number | Ped): boolean;
+    function isPlantingBomb(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xD6A86331A537A7B9 | Since: 323
      */
-    function isProne(ped: number | Ped): boolean;
+    function isProne(ped: number | IPed): boolean;
     /**
      * If the ped handle passed through the parenthesis is in a ragdoll state this will return true.
      *
      * Hash: 0x47E4E977581C5B55 | Since: 323
      */
-    function isRagdoll(ped: number | Ped): boolean;
+    function isRagdoll(ped: number | IPed): boolean;
     /**
      * Returns whether the specified ped is reloading.
      *
      * Hash: 0x24B100C68C645951 | Since: 323
      */
-    function isReloading(ped: number | Ped): boolean;
+    function isReloading(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x625B774D75C87068 | Since: 323
      */
-    function isRespondingToEvent(ped: number | Ped, event: any): boolean;
+    function isRespondingToEvent(ped: number | IPed, event: any): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xD1871251F3B5ACD7 | Since: 323
      */
-    function isRunningMeleeTask(ped: number | Ped): boolean;
+    function isRunningMeleeTask(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x2AFE52F782F25775 | Since: 323
      */
-    function isRunningMobilePhoneTask(ped: number | Ped): boolean;
+    function isRunningMobilePhoneTask(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xE3B6097CC25AA69E | Since: 323
      */
-    function isRunningRagdollTask(ped: number | Ped): boolean;
+    function isRunningRagdollTask(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x81AA517FBBA05D39 | Since: 944
      */
-    function isShaderReady(ped: number | Ped): boolean;
+    function isShaderReady(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xB8B52E498014F5B0 | Since: 323
      */
-    function isSheltered(ped: number | Ped): boolean;
+    function isSheltered(ped: number | IPed): boolean;
     /**
      * Returns whether the specified ped is shooting.
      *
      * Hash: 0x34616828CD07F1A1 | Since: 323
      */
-    function isShooting(ped: number | Ped): boolean;
+    function isShooting(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x7E9DFE24AC1E58EF | Since: 323
      */
-    function isShootingInArea(ped: number | Ped, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): boolean;
+    function isShootingInArea(ped: number | IPed, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): boolean;
     /**
      * Detect if ped is in any vehicle
      * [True/False]
      *
      * Hash: 0x826AA586EDB9FEF8 | Since: 323
      */
-    function isSittingInAnyVehicle(ped: number | Ped): boolean;
+    function isSittingInAnyVehicle(ped: number | IPed): boolean;
     /**
      * Detect if ped is sitting in the specified vehicle
      * [True/False]
      *
      * Hash: 0xA808AA1D79230FC2 | Since: 323
      */
-    function isSittingInVehicle(ped: number | Ped, vehicle: number | Vehicle): boolean;
+    function isSittingInVehicle(ped: number | IPed, vehicle: number | IVehicle): boolean;
     /**
      * Returns true if the ped doesn't do any movement. If the ped is being pushed forwards by using APPLY_FORCE_TO_ENTITY for example, the function returns false.
      *
      * Hash: 0x530944F6F4B8A214 | Since: 323
      */
-    function isStopped(ped: number | Ped): boolean;
+    function isStopped(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x9DE327631295B4C2 | Since: 323
      */
-    function isSwimming(ped: number | Ped): boolean;
+    function isSwimming(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xC024869A53992F34 | Since: 323
      */
-    function isSwimmingUnderWater(ped: number | Ped): boolean;
+    function isSwimmingUnderWater(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x3795688A307E1EB6 | Since: 505
      */
-    function isSwitchingWeapon(Ped: number | Ped): boolean;
+    function isSwitchingWeapon(Ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x14590DDBEDB1EC85 | Since: 323
      */
-    function isTakingOffHelmet(ped: number | Ped): boolean;
+    function isTakingOffHelmet(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x4C5E1F087CD10BB7 | Since: 323
      */
-    function isTracked(ped: number | Ped): boolean;
+    function isTracked(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x44D28D5DDFE5F68C | Since: 323
      */
-    function isTryingToEnterALockedVehicle(ped: number | Ped): boolean;
+    function isTryingToEnterALockedVehicle(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x00E73468D085F745 | Since: 323
      */
-    function isUsingActionMode(ped: number | Ped): boolean;
+    function isUsingActionMode(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x57AB4A3080F85143 | Since: 323
      */
-    function isUsingAnyScenario(ped: number | Ped): boolean;
+    function isUsingAnyScenario(ped: number | IPed): boolean;
     /**
      * Full list of ped scenarios by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scenariosCompact.json
      *
      * Hash: 0x1BF094736DD62C2E | Since: 323
      */
-    function isUsingScenario(ped: number | Ped, scenario: string): boolean;
+    function isUsingScenario(ped: number | IPed, scenario: string): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x117C70D1F5730B5E | Since: 323
      */
-    function isVaulting(ped: number | Ped): boolean;
+    function isVaulting(ped: number | IPed): boolean;
     /**
      * Returns true if the ped passed through the parenthesis is wearing a helmet.
      *
      * Hash: 0xF33BDFE19B309B19 | Since: 323
      */
-    function isWearingHelmet(ped: number | Ped): boolean;
+    function isWearingHelmet(ped: number | IPed): boolean;
     /**
      * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
      *
      * Hash: 0x6EC47A344923E1ED | Since: 323
      */
-    function isScriptedScenarioUsingConditionalAnim(ped: number | Ped, animDict: string, anim: string): boolean;
+    function isScriptedScenarioUsingConditionalAnim(ped: number | IPed, animDict: string, anim: string): boolean;
     /**
      * No comment provided
      *
@@ -29324,7 +29324,7 @@ export declare namespace ped {
      *
      * Hash: 0x06087579E7AA85A9 | Since: 323
      */
-    function isTargetInPerceptionArea(ped: number | Ped, targetPed: number | Ped): boolean;
+    function isTargetInPerceptionArea(ped: number | IPed, targetPed: number | IPed): boolean;
     /**
      * returns whether or not a ped is visible within your FOV, not this check auto's to false after a certain distance.
      *
@@ -29333,7 +29333,7 @@ export declare namespace ped {
      *
      * Hash: 0x91C8E617F64188AC | Since: 323
      */
-    function isTrackedVisible(ped: number | Ped): boolean;
+    function isTrackedVisible(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
@@ -29346,19 +29346,19 @@ export declare namespace ped {
      *
      * Hash: 0x6FD7816A36615F48 | Since: 323
      */
-    function knockOffProp(ped: number | Ped): void;
+    function knockOffProp(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x45BBCBA77C29A841 | Since: 323
      */
-    function knockOffVehicle(ped: number | Ped): void;
+    function knockOffVehicle(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x2B694AFCF64E6994 | Since: 323
      */
-    function markDecorationsAsClonedFromLocalPlayer(ped: number | Ped): void;
+    function markDecorationsAsClonedFromLocalPlayer(ped: number | IPed): void;
     /**
      * Checks if the specified sexiness flag is set
      *
@@ -29371,37 +29371,37 @@ export declare namespace ped {
      *
      * Hash: 0x46B05BCAE43856B0 | Since: 323
      */
-    function hasSexinessFlagSet(ped: number | Ped, sexinessFlag: number): boolean;
+    function hasSexinessFlagSet(ped: number | IPed, sexinessFlag: number): boolean;
     /**
      * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
      *
      * Hash: 0xE1E65CA8AC9C00ED | Since: 323
      */
-    function playFacialAnim(ped: number | Ped, animName: string, animDict: string): void;
+    function playFacialAnim(ped: number | IPed, animName: string, animDict: string): void;
     /**
      * Based on TASK_COMBAT_HATED_TARGETS_AROUND_PED, the parameters are likely similar (PedHandle, and area to attack in).
      *
      * Hash: 0x9222F300BF8354FE | Since: 323
      */
-    function registerHatedTargetsAround(ped: number | Ped, radius: number): void;
+    function registerHatedTargetsAround(ped: number | IPed, radius: number): void;
     /**
      * gtaforums.com/topic/885580-ped-headshotmugshot-txd/
      *
      * Hash: 0x4462658788425076 | Since: 323
      */
-    function registerheadshot(ped: number | Ped): number;
+    function registerheadshot(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0xBA8805A1108A2515 | Since: 877
      */
-    function registerheadshotHires(ped: number | Ped): number;
+    function registerheadshotHires(ped: number | IPed): number;
     /**
      * Similar to REGISTER_PEDHEADSHOT but creates a transparent background instead of black. Example: https://i.imgur.com/iHz8ztn.png
      *
      * Hash: 0x953563CE563143AF | Since: 323
      */
-    function registerheadshotTransparent(ped: number | Ped): number;
+    function registerheadshotTransparent(ped: number | IPed): number;
     /**
      * `PED::REGISTER_TARGET(l_216, PLAYER::PLAYER_PED_ID()); from re_prisonbreak.txt.`
      *
@@ -29409,7 +29409,7 @@ export declare namespace ped {
      *
      * Hash: 0x2F25D9AEFA34FBA2 | Since: 323
      */
-    function registerTarget(ped: number | Ped, target: number | Ped): void;
+    function registerTarget(ped: number | IPed, target: number | IPed): void;
     /**
      * No comment provided
      *
@@ -29421,13 +29421,13 @@ export declare namespace ped {
      *
      * Hash: 0xF79F9DEF0AADE61A | Since: 323
      */
-    function releasePreloadPropData(ped: number | Ped): void;
+    function releasePreloadPropData(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x5AAB586FFEC0FD96 | Since: 323
      */
-    function releasePreloadVariationData(ped: number | Ped): void;
+    function releasePreloadVariationData(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -29445,31 +29445,31 @@ export declare namespace ped {
      *
      * Hash: 0x74D4E028107450A9 | Since: 323
      */
-    function removeDefensiveArea(ped: number | Ped, toggle: boolean): void;
+    function removeDefensiveArea(ped: number | IPed, toggle: boolean): void;
     /**
      * Judging purely from a quick disassembly, if the ped is in a vehicle, the ped will be deleted immediately. If not, it'll be marked as no longer needed. - very elegant..
      *
      * Hash: 0xAC6D445B994DF95E | Since: 323
      */
-    function removeElegantly(ped: number | Ped): void;
+    function removeElegantly(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xED74007FFB146BC2 | Since: 323
      */
-    function removeFromGroup(ped: number | Ped): void;
+    function removeFromGroup(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xA7B2458D0AD6DED8 | Since: 323
      */
-    function removeHelmet(ped: number | Ped, instantly: boolean): void;
+    function removeHelmet(ped: number | IPed, instantly: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xFDDB234CF74073D9 | Since: 323
      */
-    function removePreferredCoverSet(ped: number | Ped): void;
+    function removePreferredCoverSet(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -29511,25 +29511,25 @@ export declare namespace ped {
      *
      * Hash: 0xCD018C591F94CB43 | Since: 323
      */
-    function requestRestrictedVehicleVisibilityTracking(ped: number | Ped): void;
+    function requestRestrictedVehicleVisibilityTracking(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x75BA1CB3B7D40CAF | Since: 323
      */
-    function requestUseSmallBboxVisibilityTracking(ped: number | Ped): void;
+    function requestUseSmallBboxVisibilityTracking(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x2BC338A7B21F4608 | Since: 323
      */
-    function requestVehicleVisibilityTracking(ped: number | Ped): void;
+    function requestVehicleVisibilityTracking(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x7D7A2E43E74E2EB8 | Since: 323
      */
-    function requestVisibilityTracking(ped: number | Ped): void;
+    function requestVisibilityTracking(ped: number | IPed): void;
     /**
      * This native does absolutely nothing, just a nullsub
      *
@@ -29559,7 +29559,7 @@ export declare namespace ped {
      *
      * Hash: 0x007FDE5A7897E426 | Since: 2802
      */
-    function resetFacialIdleAnim(ped: number | Ped): void;
+    function resetFacialIdleAnim(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -29571,13 +29571,13 @@ export declare namespace ped {
      *
      * Hash: 0x22EF8FF8778030EB | Since: 323
      */
-    function resetInVehicleContext(ped: number | Ped): void;
+    function resetInVehicleContext(ped: number | IPed): void;
     /**
      * Resets the value for the last vehicle driven by the Ped.
      *
      * Hash: 0xBB8DE8CF6A8DD8BB | Since: 323
      */
-    function resetLastVehicle(ped: number | Ped): void;
+    function resetLastVehicle(ped: number | IPed): void;
     /**
      * If p1 is 0.0, I believe you are back to normal.
      * If p1 is 1.0, it looks like you can only rotate the ped, not walk.
@@ -29587,31 +29587,31 @@ export declare namespace ped {
      *
      * Hash: 0xAA74EC0CB0AAEA2C | Since: 323
      */
-    function resetMovementClipset(ped: number | Ped): void;
+    function resetMovementClipset(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x9FA4664CF62E47E8 | Since: 323
      */
-    function resetRagdollTimer(ped: number | Ped): void;
+    function resetRagdollTimer(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x20510814175EA477 | Since: 323
      */
-    function resetStrafeClipset(ped: number | Ped): void;
+    function resetStrafeClipset(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x3AC1F7B898F30C05 | Since: 323
      */
-    function resetVisibleDamage(ped: number | Ped): void;
+    function resetVisibleDamage(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x97B0DB5B4AA74E77 | Since: 323
      */
-    function resetWeaponMovementClipset(ped: number | Ped): void;
+    function resetWeaponMovementClipset(ped: number | IPed): void;
     /**
      * This function will simply bring the dead person back to life.
      *
@@ -29623,7 +29623,7 @@ export declare namespace ped {
      *
      * Hash: 0x71BC8E838B9C6035 | Since: 323
      */
-    function resurrect(ped: number | Ped): void;
+    function resurrect(ped: number | IPed): void;
     /**
      * It will revive/cure the injured ped. The condition is ped must not be dead.
      *
@@ -29633,7 +29633,7 @@ export declare namespace ped {
      *
      * Hash: 0x8D8ACD8388CD99CE | Since: 323
      */
-    function reviveInjured(ped: number | Ped): void;
+    function reviveInjured(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -29651,13 +29651,13 @@ export declare namespace ped {
      *
      * Hash: 0x061CB768363D6424 | Since: 323
      */
-    function setAllowLockonToIfFriendly(ped: number | Ped, toggle: boolean): void;
+    function setAllowLockonToIfFriendly(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xFAB944D4D481ACCB | Since: 1734
      */
-    function setAllowStuntJumpCamera(ped: number | Ped, toggle: boolean): void;
+    function setAllowStuntJumpCamera(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -29675,7 +29675,7 @@ export declare namespace ped {
      *
      * Hash: 0x9F8AA94D6D97DBF4 | Since: 323
      */
-    function setBlockingOfNonTemporaryEvents(ped: number | Ped, toggle: boolean): void;
+    function setBlockingOfNonTemporaryEvents(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -29692,13 +29692,13 @@ export declare namespace ped {
      *
      * Hash: 0xB3B1CB349FF9C75D | Since: 323
      */
-    function setCanAttackFriendly(ped: number | Ped, toggle: boolean): void;
+    function setCanAttackFriendly(ped: number | IPed, toggle: boolean): void;
     /**
      * combatType can be between 0-14. See GET_COMBAT_FLOAT below for a list of possible parameters.
      *
      * Hash: 0xFF41B4B141ED981C | Since: 323
      */
-    function setCombatFloat(ped: number | Ped, combatType: number): void;
+    function setCombatFloat(ped: number | IPed, combatType: number): void;
     /**
      * No comment provided
      *
@@ -29710,7 +29710,7 @@ export declare namespace ped {
      *
      * Hash: 0x2735233A786B1BEF | Since: 323
      */
-    function setCorpseRagdollFriction(ped: number | Ped): void;
+    function setCorpseRagdollFriction(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -29734,55 +29734,55 @@ export declare namespace ped {
      *
      * Hash: 0x711794453CFD692B | Since: 463
      */
-    function setDisableHighFallDeath(ped: number | Ped, toggle: boolean): void;
+    function setDisableHighFallDeath(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xDFE68C4B787E1BFB | Since: 1180
      */
-    function setDisableMapCollision(ped: number | Ped): void;
+    function setDisableMapCollision(ped: number | IPed): void;
     /**
      * The function specifically verifies the value is equal to, or less than 1.0f. If it is greater than 1.0f, the function does nothing at all.
      *
      * Hash: 0xB195FFA8042FC5C3 | Since: 323
      */
-    function setDriverAbility(driver: number | Ped, ability: number): void;
+    function setDriverAbility(driver: number | IPed, ability: number): void;
     /**
      * range 0.0f - 1.0f
      *
      * Hash: 0xA731F608CA104E3C | Since: 323
      */
-    function setDriverAggressiveness(driver: number | Ped, aggressiveness: number): void;
+    function setDriverAggressiveness(driver: number | IPed, aggressiveness: number): void;
     /**
      * Scripts use 0.2, 0.5 and 1.0. Value must be >= 0.0 && <= 1.0
      *
      * Hash: 0xDED5AF5A0EA4B297 | Since: 323
      */
-    function setDriverRacingModifier(driver: number | Ped, modifier: number): void;
+    function setDriverRacingModifier(driver: number | IPed, modifier: number): void;
     /**
      * Used with SET_ENABLE_HANDCUFFS in decompiled scripts. From my observations, I have noticed that while being ragdolled you are not able to get up but you can still run. Your legs can also bend.
      *
      * Hash: 0xC52E0F855C58FC2E | Since: 323
      */
-    function setEnableBoundAnkles(ped: number | Ped, toggle: boolean): void;
+    function setEnableBoundAnkles(ped: number | IPed, toggle: boolean): void;
     /**
      * ped can not pull out a weapon when true
      *
      * Hash: 0xDF1AF8B5D56542FA | Since: 323
      */
-    function setEnableHandcuffs(ped: number | Ped, toggle: boolean): void;
+    function setEnableHandcuffs(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xD2C5AA0C0E8D0F1E | Since: 323
      */
-    function setEnableEnveffScale(ped: number | Ped, toggle: boolean): void;
+    function setEnableEnveffScale(ped: number | IPed, toggle: boolean): void;
     /**
      * Enables diving motion when underwater.
      *
      * Hash: 0xF99F62004024D506 | Since: 323
      */
-    function setEnableScuba(ped: number | Ped, toggle: boolean): void;
+    function setEnableScuba(ped: number | IPed, toggle: boolean): void;
     /**
      * Clipsets:
      * facials@gen_female@base
@@ -29798,25 +29798,25 @@ export declare namespace ped {
      *
      * Hash: 0x5687C7F05B39E401 | Since: 1493
      */
-    function setFacialClipset(ped: number | Ped, animDict: string): void;
+    function setFacialClipset(ped: number | IPed, animDict: string): void;
     /**
      * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
      *
      * Hash: 0xFFC24B988B938B38 | Since: 323
      */
-    function setFacialIdleAnimOverride(ped: number | Ped, animName: string, animDict: string): void;
+    function setFacialIdleAnimOverride(ped: number | IPed, animName: string, animDict: string): void;
     /**
      * No comment provided
      *
      * Hash: 0x129466ED55140F8D | Since: 323
      */
-    function setForceFootstepUpdate(ped: number | Ped, toggle: boolean): void;
+    function setForceFootstepUpdate(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xCB968B53FC7F916D | Since: 323
      */
-    function setForceStepType(ped: number | Ped, _type: number): void;
+    function setForceStepType(ped: number | IPed, _type: number): void;
     /**
      * 0: Default
      * 1: Circle Around Leader
@@ -29876,14 +29876,14 @@ export declare namespace ped {
      *
      * Hash: 0x50B56988B170AFDF | Since: 323
      */
-    function setHeadBlendEyeColor(ped: number | Ped, index: number): void;
+    function setHeadBlendEyeColor(ped: number | IPed, index: number): void;
     /**
      * p4 seems to vary from 0 to 3.
      * Preview: https://gfycat.com/MaleRareAmazonparrot
      *
      * Hash: 0xCC9682B8951C5229 | Since: 323
      */
-    function setHeadBlendPaletteColor(ped: number | Ped, r: number, g: number, b: number, id: number): void;
+    function setHeadBlendPaletteColor(ped: number | IPed, r: number, g: number, b: number, id: number): void;
     /**
      * Related to Peds dropping pickup_health_snack; p0 is a value between [0.0, 1.0] that corresponds to drop rate
      *
@@ -29895,37 +29895,37 @@ export declare namespace ped {
      *
      * Hash: 0xC32779C16FCEECD9 | Since: 323
      */
-    function setIkTarget(ped: number | Ped, ikIndex: number, entityLookAt: number | Entity, boneLookAt: number, offsetX: number, offsetY: number, offsetZ: number, blendInDuration: number, blendOutDuration: number): void;
+    function setIkTarget(ped: number | IPed, ikIndex: number, entityLookAt: number | IEntity, boneLookAt: number, offsetX: number, offsetY: number, offsetZ: number, blendInDuration: number, blendOutDuration: number): void;
     /**
      * Only appears in lamar1 script.
      *
      * Hash: 0x1A330D297AAC6BC1 | Since: 323
      */
-    function setLadderClimbInputState(ped: number | Ped): void;
+    function setLadderClimbInputState(ped: number | IPed): void;
     /**
      * name: "MP_FEMALE_ACTION" found multiple times in the b617d scripts.
      *
      * Hash: 0x781DE8FA214E87D2 | Since: 323
      */
-    function setMovementModeOverride(ped: number | Ped, name: string): void;
+    function setMovementModeOverride(ped: number | IPed, name: string): void;
     /**
      * accuracy = 0-100, 100 being perfectly accurate
      *
      * Hash: 0x7AEFB85C1D49DEB6 | Since: 323
      */
-    function setAccuracy(ped: number | Ped, accuracy: number): void;
+    function setAccuracy(ped: number | IPed, accuracy: number): void;
     /**
      * value ranges from 0 to 3.
      *
      * Hash: 0xDBA71115ED9941A6 | Since: 323
      */
-    function setAlertness(ped: number | Ped, value: number): void;
+    function setAlertness(ped: number | IPed, value: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xDA1F1B7BE1A8766F | Since: 323
      */
-    function setAllowedToDuck(ped: number | Ped, toggle: boolean): void;
+    function setAllowedToDuck(ped: number | IPed, toggle: boolean): void;
     /**
      * ntoggle was always false except in one instance (b678).
      *
@@ -29939,13 +29939,13 @@ export declare namespace ped {
      *
      * Hash: 0x49E50BDB8BA4DAB2 | Since: 323
      */
-    function setAllowMinorReactionsAsMissionPed(ped: number | Ped, toggle: boolean): void;
+    function setAllowMinorReactionsAsMissionPed(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x3C028C636A414ED9 | Since: 323
      */
-    function setAllowVehiclesOverride(ped: number | Ped, toggle: boolean): void;
+    function setAllowVehiclesOverride(ped: number | IPed, toggle: boolean): void;
     /**
      * stance:
      * 0 = idle
@@ -29960,7 +29960,7 @@ export declare namespace ped {
      *
      * Hash: 0x90A43CC281FFAB46 | Since: 323
      */
-    function setAlternateMovementAnim(ped: number | Ped, stance: number, animDictionary: string, animationName: string): void;
+    function setAlternateMovementAnim(ped: number | IPed, stance: number, animDictionary: string, animationName: string): void;
     /**
      * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
      *
@@ -29968,19 +29968,19 @@ export declare namespace ped {
      *
      * Hash: 0x6C60394CB4F75E9A | Since: 323
      */
-    function setAlternateWalkAnim(ped: number | Ped, animDict: string, animName: string): void;
+    function setAlternateWalkAnim(ped: number | IPed, animDict: string, animName: string): void;
     /**
      * No comment provided
      *
      * Hash: 0xC7F76DF27A5045A1 | Since: 323
      */
-    function setAngledDefensiveArea(ped: number | Ped): void;
+    function setAngledDefensiveArea(ped: number | IPed): void;
     /**
      * Enable/disable ped shadow (ambient occlusion). https://gfycat.com/thankfulesteemedgecko
      *
      * Hash: 0x2B5AA717A181FB4C | Since: 323
      */
-    function setAoBlobRendering(ped: number | Ped, toggle: boolean): void;
+    function setAoBlobRendering(ped: number | IPed, toggle: boolean): void;
     /**
      * Sets the armor of the specified ped.
      *
@@ -29989,61 +29989,61 @@ export declare namespace ped {
      *
      * Hash: 0xCEA04D83135264CC | Since: 323
      */
-    function setArmour(ped: number | Ped, amount: number): void;
+    function setArmour(ped: number | IPed, amount: number): void;
     /**
      * Turns the desired ped into a cop. If you use this on the player ped, you will become almost invisible to cops dispatched for you. You will also report your own crimes, get a generic cop voice, get a cop-vision-cone on the radar, and you will be unable to shoot at other cops. SWAT and Army will still shoot at you. Toggling ped as "false" has no effect; you must change p0's ped model to disable the effect.
      *
      * Hash: 0xBB03C38DD3FB7FFD | Since: 323
      */
-    function setAsCop(ped: number | Ped, toggle: boolean): void;
+    function setAsCop(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x02A0C9720B854BFA | Since: 323
      */
-    function setAsEnemy(ped: number | Ped, toggle: boolean): void;
+    function setAsEnemy(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x2A7819605465FBCE | Since: 323
      */
-    function setAsGroupLeader(ped: number | Ped, groupId: number): void;
+    function setAsGroupLeader(ped: number | IPed, groupId: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x9F3480FE65DB31B5 | Since: 323
      */
-    function setAsGroupMember(ped: number | Ped, groupId: number): void;
+    function setAsGroupMember(ped: number | IPed, groupId: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x137BBD05230DB22D | Since: 323
      */
-    function setBlendFromParents(ped: number | Ped): void;
+    function setBlendFromParents(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x576594E8D64375E2 | Since: 323
      */
-    function setBlocksPathingWhenDead(ped: number | Ped, toggle: boolean): void;
+    function setBlocksPathingWhenDead(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x4F5F651ACCC9C4CF | Since: 323
      */
-    function setBoundsOrientation(ped: number | Ped, pos: Vector3): void;
+    function setBoundsOrientation(ped: number | IPed, pos: Vector3): void;
     /**
      * No comment provided
      *
      * Hash: 0x6C3B4D6D13B4C841 | Since: 323
      */
-    function setCanArmIk(ped: number | Ped, toggle: boolean): void;
+    function setCanArmIk(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xC1670E958EEE24E5 | Since: 323
      */
-    function setCanBeDraggedOut(ped: number | Ped, toggle: boolean): void;
+    function setCanBeDraggedOut(ped: number | IPed, toggle: boolean): void;
     /**
      * This native does absolutely nothing, just a nullsub
      *
@@ -30055,43 +30055,43 @@ export declare namespace ped {
      *
      * Hash: 0x7A6535691B477C48 | Since: 323
      */
-    function setCanBeKnockedOffVehicle(ped: number | Ped, state: number): void;
+    function setCanBeKnockedOffVehicle(ped: number | IPed, state: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xC7EF1BA83230BA07 | Since: 323
      */
-    function setCanBeShotInVehicle(ped: number | Ped, toggle: boolean): void;
+    function setCanBeShotInVehicle(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x638C03B0F9878F57 | Since: 323
      */
-    function setCanBeTargetedWhenInjured(ped: number | Ped, toggle: boolean): void;
+    function setCanBeTargetedWhenInjured(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x4328652AE5769C71 | Since: 323
      */
-    function setCanBeTargetedWithoutLos(ped: number | Ped, toggle: boolean): void;
+    function setCanBeTargetedWithoutLos(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x63F58F7C80513AAD | Since: 323
      */
-    function setCanBeTargetted(ped: number | Ped, toggle: boolean): void;
+    function setCanBeTargetted(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x66B57B72E0836A76 | Since: 323
      */
-    function setCanBeTargettedByPlayer(ped: number | Ped, player: number | string | Player, toggle: boolean): void;
+    function setCanBeTargettedByPlayer(ped: number | IPed, player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xBF1CA77833E58F2C | Since: 323
      */
-    function setCanBeTargettedByTeam(ped: number | Ped, team: number, toggle: boolean): void;
+    function setCanBeTargettedByTeam(ped: number | IPed, team: number, toggle: boolean): void;
     /**
      * It simply makes the said ped to cower behind cover object(wall, desk, car)
      *
@@ -30099,91 +30099,91 @@ export declare namespace ped {
      *
      * Hash: 0xCB7553CDCEF4A735 | Since: 323
      */
-    function setCanCowerInCover(ped: number | Ped, toggle: boolean): void;
+    function setCanCowerInCover(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x6B7A646C242A7059 | Since: 323
      */
-    function setCanEvasiveDive(ped: number | Ped, toggle: boolean): void;
+    function setCanEvasiveDive(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xC11C18092C5530DC | Since: 323
      */
-    function setCanHeadIk(ped: number | Ped, toggle: boolean): void;
+    function setCanHeadIk(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x73518ECE2485412B | Since: 323
      */
-    function setCanLegIk(ped: number | Ped, toggle: boolean): void;
+    function setCanLegIk(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xE861D0B05C7662B8 | Since: 323
      */
-    function setCanLosePropsOnDamage(ped: number | Ped, toggle: boolean): void;
+    function setCanLosePropsOnDamage(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xC514825C507E3736 | Since: 323
      */
-    function setCanPeekInCover(ped: number | Ped, toggle: boolean): void;
+    function setCanPeekInCover(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x6373D1349925A70E | Since: 323
      */
-    function setCanPlayAmbientAnims(ped: number | Ped, toggle: boolean): void;
+    function setCanPlayAmbientAnims(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x0EB0585D15254740 | Since: 323
      */
-    function setCanPlayAmbientBaseAnims(ped: number | Ped, toggle: boolean): void;
+    function setCanPlayAmbientBaseAnims(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xBAF20C5432058024 | Since: 323
      */
-    function setCanPlayGestureAnims(ped: number | Ped, toggle: boolean): void;
+    function setCanPlayGestureAnims(ped: number | IPed, toggle: boolean): void;
     /**
      * Toggles config flag CPED_CONFIG_FLAG_CanPlayInCarIdles.
      *
      * Hash: 0x820E9892A77E97CD | Since: 877
      */
-    function setCanPlayInCarIdles(ped: number | Ped, toggle: boolean): void;
+    function setCanPlayInCarIdles(ped: number | IPed, toggle: boolean): void;
     /**
      * p2 usually 0
      *
      * Hash: 0xF833DDBA3B104D43 | Since: 323
      */
-    function setCanPlayVisemeAnims(ped: number | Ped, toggle: boolean): void;
+    function setCanPlayVisemeAnims(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xB128377056A54E2A | Since: 323
      */
-    function setCanRagdoll(ped: number | Ped, toggle: boolean): void;
+    function setCanRagdoll(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xDF993EE5E90ABA25 | Since: 323
      */
-    function setCanRagdollFromPlayerImpact(ped: number | Ped, toggle: boolean): void;
+    function setCanRagdollFromPlayerImpact(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x1CCE141467FF42A2 | Since: 323
      */
-    function setCanSmashGlass(ped: number | Ped): void;
+    function setCanSmashGlass(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xED7F7EFE9FABF340 | Since: 323
      */
-    function setCanSwitchWeapon(ped: number | Ped, toggle: boolean): void;
+    function setCanSwitchWeapon(ped: number | IPed, toggle: boolean): void;
     /**
      * This only will teleport the ped to the group leader if the group leader teleports (sets coords).
      *
@@ -30191,31 +30191,31 @@ export declare namespace ped {
      *
      * Hash: 0x2E2F4240B3F24647 | Since: 323
      */
-    function setCanTeleportToGroupLeader(pedHandle: number | Ped, groupHandle: number, toggle: boolean): void;
+    function setCanTeleportToGroupLeader(pedHandle: number | IPed, groupHandle: number, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xF2B7106D37947CE0 | Since: 323
      */
-    function setCanTorsoIk(ped: number | Ped, toggle: boolean): void;
+    function setCanTorsoIk(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xF5846EDB26A98A24 | Since: 323
      */
-    function setCanTorsoReactIk(ped: number | Ped): void;
+    function setCanTorsoReactIk(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x6647C5F6F5792496 | Since: 323
      */
-    function setCanTorsoVehicleIk(ped: number | Ped): void;
+    function setCanTorsoVehicleIk(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xEC4686EC06434678 | Since: 323
      */
-    function setCanUseAutoConversationLookat(ped: number | Ped, toggle: boolean): void;
+    function setCanUseAutoConversationLookat(ped: number | IPed, toggle: boolean): void;
     /**
      * Overrides the ped's collision capsule radius for the current tick.
      * Must be called every tick to be effective.
@@ -30224,7 +30224,7 @@ export declare namespace ped {
      *
      * Hash: 0x364DF566EC833DE2 | Since: 323
      */
-    function setCapsule(ped: number | Ped, value: number): void;
+    function setCapsule(ped: number | IPed, value: number): void;
     /**
      * No comment provided
      *
@@ -30254,7 +30254,7 @@ export declare namespace ped {
      *
      * Hash: 0xC7622C0D36B2FDA8 | Since: 323
      */
-    function setCombatAbility(ped: number | Ped, abilityLevel: number): void;
+    function setCombatAbility(ped: number | IPed, abilityLevel: number): void;
     /**
      * enum eCombatAttributes // 0x0E8E7201
      * {
@@ -30354,7 +30354,7 @@ export declare namespace ped {
      *
      * Hash: 0x9F7794730795E019 | Since: 323
      */
-    function setCombatAttributes(ped: number | Ped, attributeId: number, enabled: boolean): void;
+    function setCombatAttributes(ped: number | IPed, attributeId: number, enabled: boolean): void;
     /**
      * enum eCombatMovement // 0x4F456B61
      * {
@@ -30366,7 +30366,7 @@ export declare namespace ped {
      *
      * Hash: 0x4D9CA1009AFBD057 | Since: 323
      */
-    function setCombatMovement(ped: number | Ped, combatMovement: number): void;
+    function setCombatMovement(ped: number | IPed, combatMovement: number): void;
     /**
      * enum eCombatRange // 0xB69160F5
      * {
@@ -30379,7 +30379,7 @@ export declare namespace ped {
      *
      * Hash: 0x3C606747B23E497B | Since: 323
      */
-    function setCombatRange(ped: number | Ped, combatRange: number): void;
+    function setCombatRange(ped: number | IPed, combatRange: number): void;
     /**
      * paletteId: 0 to 3.
      *
@@ -30408,7 +30408,7 @@ export declare namespace ped {
      *
      * Hash: 0x262B14F48D29DE80 | Since: 323
      */
-    function setComponentVariation(ped: number | Ped, componentId: number, drawableId: number, textureId: number, paletteId: number): void;
+    function setComponentVariation(ped: number | IPed, componentId: number, drawableId: number, textureId: number, paletteId: number): void;
     /**
      * enum ePedConfigFlags
      * {
@@ -30874,55 +30874,55 @@ export declare namespace ped {
      *
      * Hash: 0x1913FE4CBF41C463 | Since: 323
      */
-    function setConfigFlag(ped: number | Ped, flagId: number, value: boolean): void;
+    function setConfigFlag(ped: number | IPed, flagId: number, value: boolean): void;
     /**
      * teleports ped to coords along with the vehicle ped is in
      *
      * Hash: 0x9AFEFF481A85AB2E | Since: 323
      */
-    function setCoordsKeepVehicle(ped: number | Ped, pos: Vector3): void;
+    function setCoordsKeepVehicle(ped: number | IPed, pos: Vector3): void;
     /**
      * No comment provided
      *
      * Hash: 0x87052FE446E07247 | Since: 323
      */
-    function setCoordsNoGang(ped: number | Ped, pos: Vector3): void;
+    function setCoordsNoGang(ped: number | IPed, pos: Vector3): void;
     /**
      * p1: Only "CODE_HUMAN_STAND_COWER" found in the b617d scripts.
      *
      * Hash: 0xA549131166868ED3 | Since: 323
      */
-    function setCowerHash(ped: number | Ped): void;
+    function setCowerHash(ped: number | IPed): void;
     /**
      * Sets Ped Default Clothes
      *
      * Hash: 0x45EEE61580806D63 | Since: 323
      */
-    function setDefaultComponentVariation(ped: number | Ped): void;
+    function setDefaultComponentVariation(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x4EF47FE21698A8B6 | Since: 323
      */
-    function setDefensiveAreaAttachedToPed(ped: number | Ped, attachPed: number | Ped): void;
+    function setDefensiveAreaAttachedToPed(ped: number | IPed, attachPed: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x413C6C763A4AFFAD | Since: 323
      */
-    function setDefensiveAreaDirection(ped: number | Ped): void;
+    function setDefensiveAreaDirection(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xF9B8F91AAD3B953E | Since: 323
      */
-    function setDefensiveSphereAttachedToPed(ped: number | Ped, target: number | Ped, xOffset: number, yOffset: number, zOffset: number, radius: number): void;
+    function setDefensiveSphereAttachedToPed(ped: number | IPed, target: number | IPed, xOffset: number, yOffset: number, zOffset: number, radius: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xE4723DB6E736CCFF | Since: 323
      */
-    function setDefensiveSphereAttachedToVehicle(ped: number | Ped, target: number | Vehicle, xOffset: number, yOffset: number, zOffset: number, radius: number): void;
+    function setDefensiveSphereAttachedToVehicle(ped: number | IPed, target: number | IVehicle, xOffset: number, yOffset: number, zOffset: number, radius: number): void;
     /**
      * No comment provided
      *
@@ -30934,49 +30934,49 @@ export declare namespace ped {
      *
      * Hash: 0xAA5A7ECE2AA8FE70 | Since: 323
      */
-    function setDesiredHeading(ped: number | Ped, heading: number): void;
+    function setDesiredHeading(ped: number | IPed, heading: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xEEB64139BA29A7CF | Since: 323
      */
-    function setDiesInstantlyInWater(ped: number | Ped, toggle: boolean): void;
+    function setDiesInstantlyInWater(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xD718A22995E2B4BC | Since: 323
      */
-    function setDiesInSinkingVehicle(ped: number | Ped, toggle: boolean): void;
+    function setDiesInSinkingVehicle(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x2A30922C90C9B42C | Since: 323
      */
-    function setDiesInVehicle(ped: number | Ped, toggle: boolean): void;
+    function setDiesInVehicle(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x56CEF0AC79073BDE | Since: 323
      */
-    function setDiesInWater(ped: number | Ped, toggle: boolean): void;
+    function setDiesInWater(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x5BA7919BED300023 | Since: 323
      */
-    function setDiesWhenInjured(ped: number | Ped, toggle: boolean): void;
+    function setDiesWhenInjured(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xED34AB6C5CB36520 | Since: 323
      */
-    function setDriveByClipsetOverride(ped: number | Ped, clipset: string): void;
+    function setDriveByClipsetOverride(ped: number | IPed, clipset: string): void;
     /**
      * This is the SET_CHAR_DUCKING from GTA IV, that makes Peds duck. This function does nothing in GTA V. It cannot set the ped as ducking in vehicles, and IS_PED_DUCKING will always return false.
      *
      * Hash: 0x030983CA930B692D | Since: 323
      */
-    function setDucking(ped: number | Ped, toggle: boolean): void;
+    function setDucking(ped: number | IPed, toggle: boolean): void;
     /**
      * intensity: 0.0f - 1.0f
      *
@@ -30984,26 +30984,26 @@ export declare namespace ped {
      *
      * Hash: 0x4E90D746056E273D | Since: 944
      */
-    function setEmissiveScale(ped: number | Ped, intensity: number): void;
+    function setEmissiveScale(ped: number | IPed, intensity: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xE906EC930F5FE7C8 | Since: 791
      */
-    function setEnableCrewEmblem(ped: number | Ped, toggle: boolean): void;
+    function setEnableCrewEmblem(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x97A790315D3831FD | Since: 323
      */
-    function setEnableWeaponBlocking(ped: number | Ped, toggle: boolean): void;
+    function setEnableWeaponBlocking(ped: number | IPed, toggle: boolean): void;
     /**
      * Something related to the environmental effects natives.
      * In the "agency_heist3b" script, p1 - p3 are always under 100 - usually they are {87, 81, 68}. If SET_PED_ENVEFF_SCALE is set to 0.65 (instead of the usual 1.0), they use {74, 69, 60}
      *
      * Hash: 0xD69411AA0CEBF9E9 | Since: 323
      */
-    function setEnveffColorModulator(ped: number | Ped): void;
+    function setEnveffColorModulator(ped: number | IPed): void;
     /**
      * In agency_heist3b.c4, its like this 90% of the time:
      *
@@ -31021,7 +31021,7 @@ export declare namespace ped {
      *
      * Hash: 0x110F526AB784111F | Since: 323
      */
-    function setEnveffCpvAdd(ped: number | Ped): void;
+    function setEnveffCpvAdd(ped: number | IPed): void;
     /**
      * Values look to be between 0.0 and 1.0
      * From decompiled scripts: 0.0, 0.6, 0.65, 0.8, 1.0
@@ -31030,7 +31030,7 @@ export declare namespace ped {
      *
      * Hash: 0xBF29516833893561 | Since: 323
      */
-    function setEnveffScale(ped: number | Ped, value: number): void;
+    function setEnveffScale(ped: number | IPed, value: number): void;
     /**
      * FIRING_PATTERN_BURST_FIRE = 0xD6FF6D61 ( 1073727030 )
      * FIRING_PATTERN_BURST_FIRE_IN_COVER = 0x026321F1 ( 40051185 )
@@ -31053,20 +31053,20 @@ export declare namespace ped {
      *
      * Hash: 0x9AC577F5A12AD8A9 | Since: 323
      */
-    function setFiringPattern(ped: number | Ped, patternHash: number | string): void;
+    function setFiringPattern(ped: number | IPed, patternHash: number | string): void;
     /**
      * bit 1 (0x2) = use vehicle
      * bit 15 (0x8000) = force cower
      *
      * Hash: 0x70A2D1137C8ED7C9 | Since: 323
      */
-    function setFleeAttributes(ped: number | Ped, attributeFlags: number, enable: boolean): void;
+    function setFleeAttributes(ped: number | IPed, attributeFlags: number, enable: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x7FB17BA2E7DECA5B | Since: 323
      */
-    function setGeneratesDeadBodyEvents(ped: number | Ped, toggle: boolean): void;
+    function setGeneratesDeadBodyEvents(ped: number | IPed, toggle: boolean): void;
     /**
      * From the scripts:
      * `PED::SET_PED_GESTURE_GROUP(PLAYER::PLAYER_PED_ID(),`
@@ -31076,13 +31076,13 @@ export declare namespace ped {
      *
      * Hash: 0xDDF803377F94AAA8 | Since: 323
      */
-    function setGestureGroup(ped: number | Ped, animGroupGesture: string): void;
+    function setGestureGroup(ped: number | IPed, animGroupGesture: string): void;
     /**
      * No comment provided
      *
      * Hash: 0xBC0ED94165A48BC2 | Since: 323
      */
-    function setGetOutUpsideDownVehicle(ped: number | Ped, toggle: boolean): void;
+    function setGetOutUpsideDownVehicle(ped: number | IPed, toggle: boolean): void;
     /**
      * enable or disable the gravity of a ped
      *
@@ -31092,19 +31092,19 @@ export declare namespace ped {
      *
      * Hash: 0x9FF447B6B6AD960A | Since: 323
      */
-    function setGravity(ped: number | Ped, toggle: boolean): void;
+    function setGravity(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x0BDDB8D9EC6BCF3C | Since: 323
      */
-    function setGroupMemberPassengerIndex(ped: number | Ped, index: number): void;
+    function setGroupMemberPassengerIndex(ped: number | IPed, index: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x4CFFC65454C93A49 | Since: 323
      */
-    function setHairTint(ped: number | Ped, colorID: number, highlightColorID: number): void;
+    function setHairTint(ped: number | IPed, colorID: number, highlightColorID: number): void;
     /**
      * The "shape" parameters control the shape of the ped's face. The "skin" parameters control the skin tone. ShapeMix and skinMix control how much the first and second IDs contribute,(typically mother and father.) ThirdMix overrides the others in favor of the third IDs. IsParent is set for "children" of the player character's grandparents during old-gen character creation. It has unknown effect otherwise.
      *
@@ -31125,7 +31125,7 @@ export declare namespace ped {
      *
      * Hash: 0x9414E18B9434C2FE | Since: 323
      */
-    function setHeadBlendData(ped: number | Ped, shapeFirstID: number, shapeSecondID: number, shapeThirdID: number, skinFirstID: number, skinSecondID: number, skinThirdID: number, shapeMix: number, skinMix: number, thirdMix: number, isParent: boolean): void;
+    function setHeadBlendData(ped: number | IPed, shapeFirstID: number, shapeSecondID: number, shapeThirdID: number, skinFirstID: number, skinSecondID: number, skinThirdID: number, shapeMix: number, skinMix: number, thirdMix: number, isParent: boolean): void;
     /**
      * OverlayID ranges from 0 to 12, index from 0 to _GET_NUM_OVERLAY_VALUES(overlayID)-1, and opacity from 0.0 to 1.0.
      *
@@ -31146,7 +31146,7 @@ export declare namespace ped {
      *
      * Hash: 0x48F44967FA05CC1E | Since: 323
      */
-    function setHeadOverlay(ped: number | Ped, overlayID: number, index: number, opacity: number): void;
+    function setHeadOverlay(ped: number | IPed, overlayID: number, index: number, opacity: number): void;
     /**
      *
      *
@@ -31156,7 +31156,7 @@ export declare namespace ped {
      *
      * Hash: 0x497BF74A7B9CB952 | Since: 323
      */
-    function setHeadOverlayTint(ped: number | Ped, overlayID: number, colorType: number, colorID: number, secondColorID: number): void;
+    function setHeadOverlayTint(ped: number | IPed, overlayID: number, colorType: number, colorID: number, secondColorID: number): void;
     /**
      * No comment provided
      *
@@ -31168,68 +31168,68 @@ export declare namespace ped {
      *
      * Hash: 0x33A8F7F7D5F7F33C | Since: 323
      */
-    function setHearingRange(ped: number | Ped, value: number): void;
+    function setHearingRange(ped: number | IPed, value: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xC1F6EBF9A3D55538 | Since: 323
      */
-    function setHeatscaleOverride(ped: number | Ped, heatScale: number): void;
+    function setHeatscaleOverride(ped: number | IPed, heatScale: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x560A43136EB58105 | Since: 323
      */
-    function setHelmet(ped: number | Ped, canWearHelmet: boolean): void;
+    function setHelmet(ped: number | IPed, canWearHelmet: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xC0E78D5C2CE3EB25 | Since: 323
      */
-    function setHelmetFlag(ped: number | Ped, helmetFlag: number): void;
+    function setHelmetFlag(ped: number | IPed, helmetFlag: number): void;
     /**
      * List of component/props ID
      * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
      *
      * Hash: 0x26D83693ED99291C | Since: 323
      */
-    function setHelmetPropIndex(ped: number | Ped, propIndex: number): void;
+    function setHelmetPropIndex(ped: number | IPed, propIndex: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xF1550C4BD22582E2 | Since: 323
      */
-    function setHelmetTextureIndex(ped: number | Ped, textureIndex: number): void;
+    function setHelmetTextureIndex(ped: number | IPed, textureIndex: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x3F7325574E41B44D | Since: 791
      */
-    function setHelmetVisorPropIndices(ped: number | Ped): void;
+    function setHelmetVisorPropIndices(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x52D59AB61DDC05DD | Since: 323
      */
-    function setHighlyPerceptive(ped: number | Ped, toggle: boolean): void;
+    function setHighlyPerceptive(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xF107E836A70DCE05 | Since: 323
      */
-    function setIdRange(ped: number | Ped, value: number): void;
+    function setIdRange(ped: number | IPed, value: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x570389D1C3DE3C6B | Since: 323
      */
-    function setIncreasedAvoidanceRadius(ped: number | Ped): void;
+    function setIncreasedAvoidanceRadius(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xEC4B4B3B9908052A | Since: 323
      */
-    function setInjuredOnGroundBehaviour(ped: number | Ped): void;
+    function setInjuredOnGroundBehaviour(ped: number | IPed): void;
     /**
      * Ped: The ped to warp.
      * vehicle: The vehicle to warp the ped into.
@@ -31243,7 +31243,7 @@ export declare namespace ped {
      *
      * Hash: 0xF75B0D629E1C063D | Since: 323
      */
-    function setIntoVehicle(ped: number | Ped, vehicle: number | Vehicle, seatIndex: number): void;
+    function setIntoVehicle(ped: number | IPed, vehicle: number | IVehicle, seatIndex: number): void;
     /**
      * `PED::SET_PED_IN_VEHICLE_CONTEXT(l_128, MISC::GET_HASH_KEY("MINI_PROSTITUTE_LOW_PASSENGER"));`
      * `PED::SET_PED_IN_VEHICLE_CONTEXT(l_128, MISC::GET_HASH_KEY("MINI_PROSTITUTE_LOW_RESTRICTED_PASSENGER"));`
@@ -31256,7 +31256,7 @@ export declare namespace ped {
      *
      * Hash: 0x530071295899A8C6 | Since: 323
      */
-    function setInVehicleContext(ped: number | Ped, context: number | string): void;
+    function setInVehicleContext(ped: number | IPed, context: number | string): void;
     /**
      * No comment provided
      *
@@ -31268,49 +31268,49 @@ export declare namespace ped {
      *
      * Hash: 0x33A60D8BDD6E508C | Since: 323
      */
-    function setIsIgnoredByAutoOpenDoors(ped: number | Ped): void;
+    function setIsIgnoredByAutoOpenDoors(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x971D38760FBC02EF | Since: 323
      */
-    function setKeepTask(ped: number | Ped, toggle: boolean): void;
+    function setKeepTask(ped: number | IPed, toggle: boolean): void;
     /**
      * "IK" stands for "Inverse kinematics." I assume this has something to do with how the ped uses his legs to balance. In the scripts, the second parameter is always an int with a value of 2, 0, or sometimes 1
      *
      * Hash: 0xC396F5B86FF9FEBD | Since: 323
      */
-    function setLegIkMode(ped: number | Ped, mode: number): void;
+    function setLegIkMode(ped: number | IPed, mode: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xDC2C5C242AAC342B | Since: 323
      */
-    function setLodMultiplier(ped: number | Ped, multiplier: number): void;
+    function setLodMultiplier(ped: number | IPed, multiplier: number): void;
     /**
      * Sets the maximum health of a ped.
      *
      * Hash: 0xF5F6378C4F3419D3 | Since: 323
      */
-    function setMaxHealth(ped: number | Ped, value: number): void;
+    function setMaxHealth(ped: number | IPed, value: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x433083750C5E064A | Since: 323
      */
-    function setMaxMoveBlendRatio(ped: number | Ped, value: number): void;
+    function setMaxMoveBlendRatio(ped: number | IPed, value: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x43C851690662113D | Since: 323
      */
-    function setMaxTimeInWater(ped: number | Ped, value: number): void;
+    function setMaxTimeInWater(ped: number | IPed, value: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x6BA428C528D9E522 | Since: 323
      */
-    function setMaxTimeUnderwater(ped: number | Ped, value: number): void;
+    function setMaxTimeUnderwater(ped: number | IPed, value: number): void;
     /**
      * Sets the various freemode face features, e.g. nose length, chin shape. Scale ranges from -1.0 to 1.0.
      *
@@ -31358,19 +31358,19 @@ export declare namespace ped {
      *
      * Hash: 0x71A5C1DBA060049E | Since: 323
      */
-    function setMicroMorph(ped: number | Ped, index: number, scale: number): void;
+    function setMicroMorph(ped: number | IPed, index: number, scale: number): void;
     /**
      * Ped will stay on the ground after being stunned for at lest ms time. (in milliseconds)
      *
      * Hash: 0xFA0675AB151073FA | Since: 323
      */
-    function setMinGroundTimeForStungun(ped: number | Ped, ms: number): void;
+    function setMinGroundTimeForStungun(ped: number | IPed, ms: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x01A898D26E2333DD | Since: 323
      */
-    function setMinMoveBlendRatio(ped: number | Ped, value: number): void;
+    function setMinMoveBlendRatio(ped: number | IPed, value: number): void;
     /**
      * Full list of peds by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/peds.json
      *
@@ -31386,20 +31386,20 @@ export declare namespace ped {
      *
      * Hash: 0xA9C8960E8684C1B5 | Since: 323
      */
-    function setMoney(ped: number | Ped, amount: number): void;
+    function setMoney(ped: number | IPed, amount: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x0A986918B102B448 | Since: 323
      */
-    function setMotionBlur(ped: number | Ped, toggle: boolean): void;
+    function setMotionBlur(ped: number | IPed, toggle: boolean): void;
     /**
      * Found in the b617d scripts:
      * `PED::SET_PED_MOTION_IN_COVER_CLIPSET_OVERRIDE(v_7, "trevor_heist_cover_2h");`
      *
      * Hash: 0x9DBA107B4937F809 | Since: 323
      */
-    function setMotionInCoverClipsetOverride(ped: number | Ped): void;
+    function setMotionInCoverClipsetOverride(ped: number | IPed): void;
     /**
      * transitionSpeed is the time in seconds it takes to transition from one movement clipset to another.	ransitionSpeed is usually 1.0f
      *
@@ -31458,19 +31458,19 @@ export declare namespace ped {
      *
      * Hash: 0xAF8A94EDE7712BEF | Since: 323
      */
-    function setMovementClipset(ped: number | Ped, clipSet: string, transitionSpeed: number): void;
+    function setMovementClipset(ped: number | IPed, clipSet: string, transitionSpeed: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x9E8C908F41584ECD | Since: 323
      */
-    function setMoveAnimsBlendOut(ped: number | Ped): void;
+    function setMoveAnimsBlendOut(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x0B3E35AC043707D9 | Since: 573
      */
-    function setMoveRateInWaterOverride(ped: number | Ped): void;
+    function setMoveRateInWaterOverride(ped: number | IPed): void;
     /**
      * Min: 0.00
      * Max: 10.00
@@ -31487,7 +31487,7 @@ export declare namespace ped {
      *
      * Hash: 0x085BF80FA50A39D1 | Since: 323
      */
-    function setMoveRateOverride(ped: number | Ped, value: number): void;
+    function setMoveRateOverride(ped: number | IPed, value: number): void;
     /**
      * NOTE: Debugging functions are not present in the retail version of the game.
      *
@@ -31495,13 +31495,13 @@ export declare namespace ped {
      *
      * Hash: 0x98EFA132A4117BE1 | Since: 323
      */
-    function setNameDebug(ped: number | Ped, name: string): void;
+    function setNameDebug(ped: number | IPed, name: string): void;
     /**
      * No comment provided
      *
      * Hash: 0x3DBFC55D5C9BB447 | Since: 323
      */
-    function setNeverLeavesGroup(ped: number | Ped, toggle: boolean): void;
+    function setNeverLeavesGroup(ped: number | IPed, toggle: boolean): void;
     /**
      * The distance between these points, is the diagonal of a box (remember it's 3D).
      *
@@ -31525,7 +31525,7 @@ export declare namespace ped {
      *
      * Hash: 0x333FC8DB079B7186 | Since: 323
      */
-    function setParachuteTintIndex(ped: number | Ped, tintIndex: number): void;
+    function setParachuteTintIndex(ped: number | IPed, tintIndex: number): void;
     /**
      * No comment provided
      *
@@ -31537,26 +31537,26 @@ export declare namespace ped {
      *
      * Hash: 0xAAD6D1ACF08F4612 | Since: 323
      */
-    function setPinnedDown(ped: number | Ped, pinned: boolean, i: number): boolean;
+    function setPinnedDown(ped: number | IPed, pinned: boolean, i: number): boolean;
     /**
      * This native does absolutely nothing, just a nullsub
      *
      * Hash: 0x94D94BF1A75AED3D | Since: 323
      */
-    function setPlaysHeadOnHornAnimWhenDiesInVehicle(ped: number | Ped, toggle: boolean): void;
+    function setPlaysHeadOnHornAnimWhenDiesInVehicle(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x8421EB4DA7E391B9 | Since: 323
      */
-    function setPreferredCoverSet(ped: number | Ped, itemSet: any): void;
+    function setPreferredCoverSet(ped: number | IPed, itemSet: any): void;
     /**
      * List of component/props ID
      * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
      *
      * Hash: 0x2B16A3BFF1FBCE49 | Since: 323
      */
-    function setPreloadPropData(ped: number | Ped, componentId: number, drawableId: number, TextureId: number): number;
+    function setPreloadPropData(ped: number | IPed, componentId: number, drawableId: number, TextureId: number): number;
     /**
      * from extreme3.c4
      * `PED::SET_PED_PRELOAD_VARIATION_DATA(PLAYER::PLAYER_PED_ID(), 8, PED::GET_PED_DRAWABLE_VARIATION(PLAYER::PLAYER_PED_ID(), 8), PED::GET_PED_TEXTURE_VARIATION(PLAYER::PLAYER_PED_ID(), 8));`
@@ -31565,7 +31565,7 @@ export declare namespace ped {
      *
      * Hash: 0x39D55A620FCB6A3A | Since: 323
      */
-    function setPreloadVariationData(ped: number | Ped, slot: number, drawableId: number, textureId: number): number;
+    function setPreloadVariationData(ped: number | IPed, slot: number, drawableId: number, textureId: number): number;
     /**
      * This is only called once in the scripts.
      *
@@ -31575,7 +31575,7 @@ export declare namespace ped {
      *
      * Hash: 0xCD17B554996A8D9E | Since: 323
      */
-    function setPrimaryLookat(ped: number | Ped, lookAt: number | Ped): void;
+    function setPrimaryLookat(ped: number | IPed, lookAt: number | IPed): void;
     /**
      * ComponentId can be set to various things based on what category you're wanting to set
      * enum PedPropsData
@@ -31592,19 +31592,19 @@ export declare namespace ped {
      *
      * Hash: 0x93376B65A266EB5F | Since: 323
      */
-    function setPropIndex(ped: number | Ped, componentId: number, drawableId: number, TextureId: number, attach: boolean): void;
+    function setPropIndex(ped: number | IPed, componentId: number, drawableId: number, TextureId: number, attach: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x01F6594B923B9251 | Since: 323
      */
-    function setRagdollForceFall(ped: number | Ped): void;
+    function setRagdollForceFall(ped: number | IPed): void;
     /**
      * Causes Ped to ragdoll on collision with any object (e.g Running into trashcan). If applied to player you will sometimes trip on the sidewalk.
      *
      * Hash: 0xF0A4F1BBF4FA7497 | Since: 323
      */
-    function setRagdollOnCollision(ped: number | Ped, toggle: boolean): void;
+    function setRagdollOnCollision(ped: number | IPed, toggle: boolean): void;
     /**
      * p1 is always 0 in R* scripts.
      *
@@ -31613,32 +31613,32 @@ export declare namespace ped {
      *
      * Hash: 0xC8A9481A01E63C28 | Since: 323
      */
-    function setRandomComponentVariation(ped: number | Ped): void;
+    function setRandomComponentVariation(ped: number | IPed): void;
     /**
      * List of component/props ID
      * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
      *
      * Hash: 0xC44AA05345C992C6 | Since: 323
      */
-    function setRandomProps(ped: number | Ped): void;
+    function setRandomProps(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xADB3F206518799E8 | Since: 323
      */
-    function setRelationshipGroupDefaultHash(ped: number | Ped, hash: number | string): void;
+    function setRelationshipGroupDefaultHash(ped: number | IPed, hash: number | string): void;
     /**
      * No comment provided
      *
      * Hash: 0xC80A74AC829DDD92 | Since: 323
      */
-    function setRelationshipGroupHash(ped: number | Ped, hash: number | string): void;
+    function setRelationshipGroupHash(ped: number | IPed, hash: number | string): void;
     /**
      * No comment provided
      *
      * Hash: 0xE88DA0751C22A2AD | Since: 323
      */
-    function setReserveParachuteTintIndex(ped: number | Ped): void;
+    function setReserveParachuteTintIndex(ped: number | IPed): void;
     /**
      * `PED::SET_PED_RESET_FLAG(PLAYER::PLAYER_PED_ID(), 240, 1);`
      * Known values:
@@ -31646,37 +31646,37 @@ export declare namespace ped {
      *
      * Hash: 0xC1E8A365BF3B29F2 | Since: 323
      */
-    function setResetFlag(ped: number | Ped, flagId: number, doReset: boolean): void;
+    function setResetFlag(ped: number | IPed, flagId: number, doReset: boolean): void;
     /**
      * This native sets a scuba mask for freemode models and an oxygen bottle for player_* models. It works on freemode and player_* models.
      *
      * Hash: 0x36C6984C3ED0C911 | Since: 323
      */
-    function setScubaGearVariation(ped: number | Ped): void;
+    function setScubaGearVariation(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xF29CF591C4BF6CEE | Since: 323
      */
-    function setSeeingRange(ped: number | Ped, value: number): void;
+    function setSeeingRange(ped: number | IPed, value: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x96A05E4FB321B1BA | Since: 323
      */
-    function setShootsAtCoord(ped: number | Ped, pos: Vector3, toggle: boolean): void;
+    function setShootsAtCoord(ped: number | IPed, pos: Vector3, toggle: boolean): void;
     /**
      * shootRate 0-1000
      *
      * Hash: 0x614DA022990752DC | Since: 323
      */
-    function setShootRate(ped: number | Ped, shootRate: number): void;
+    function setShootRate(ped: number | IPed, shootRate: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x425AECF167663F48 | Since: 323
      */
-    function setShouldIgnoreScenarioExitCollisionChecks(ped: number | Ped): void;
+    function setShouldIgnoreScenarioExitCollisionChecks(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -31694,19 +31694,19 @@ export declare namespace ped {
      *
      * Hash: 0xEEED8FAFEC331A70 | Since: 323
      */
-    function setShouldPlayFleeScenarioExit(ped: number | Ped): boolean;
+    function setShouldPlayFleeScenarioExit(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xF1C03A5352243A30 | Since: 323
      */
-    function setShouldPlayImmediateScenarioExit(ped: number | Ped): void;
+    function setShouldPlayImmediateScenarioExit(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xA3A9299C4F2ADB98 | Since: 323
      */
-    function setShouldPlayNormalScenarioExit(ped: number | Ped): void;
+    function setShouldPlayNormalScenarioExit(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -31718,68 +31718,68 @@ export declare namespace ped {
      *
      * Hash: 0x9D3151A373974804 | Since: 323
      */
-    function setSphereDefensiveArea(ped: number | Ped, pos: Vector3, radius: number): void;
+    function setSphereDefensiveArea(ped: number | IPed, pos: Vector3, radius: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xEDF4079F9D54C9A1 | Since: 323
      */
-    function setStayInVehicleWhenJacked(ped: number | Ped, toggle: boolean): void;
+    function setStayInVehicleWhenJacked(ped: number | IPed, toggle: boolean): void;
     /**
      * p1 is usually 0 in the scripts. action is either 0 or a pointer to "DEFAULT_ACTION".
      *
      * Hash: 0x88CBB5CEB96B7BD2 | Since: 323
      */
-    function setStealthMovement(ped: number | Ped, action: string): void;
+    function setStealthMovement(ped: number | IPed, action: string): void;
     /**
      * No comment provided
      *
      * Hash: 0x2016C603D6B8987C | Since: 323
      */
-    function setSteersAroundDeadBodies(ped: number | Ped, toggle: boolean): void;
+    function setSteersAroundDeadBodies(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x1509C089ADC208BF | Since: 323
      */
-    function setSteersAroundObjects(ped: number | Ped, toggle: boolean): void;
+    function setSteersAroundObjects(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x46F2193B3AD1D891 | Since: 323
      */
-    function setSteersAroundPeds(ped: number | Ped, toggle: boolean): void;
+    function setSteersAroundPeds(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xEB6FB9D48DDE23EC | Since: 323
      */
-    function setSteersAroundVehicles(ped: number | Ped, toggle: boolean): void;
+    function setSteersAroundVehicles(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x288DF530C92DAD6F | Since: 323
      */
-    function setSteerBias(ped: number | Ped, value: number): void;
+    function setSteerBias(ped: number | IPed, value: number): void;
     /**
      * Full list of movement clipsets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/movementClipsetsCompact.json
      *
      * Hash: 0x29A28F3F8CF6D854 | Since: 323
      */
-    function setStrafeClipset(ped: number | Ped, clipSet: string): void;
+    function setStrafeClipset(ped: number | IPed, clipSet: string): void;
     /**
      * Ped no longer takes critical damage modifiers if set to FALSE.
      * Example: Headshotting a player no longer one shots them. Instead they will take the same damage as a torso shot.
      *
      * Hash: 0xEBD76F2359F190AC | Since: 323
      */
-    function setSuffersCriticalHits(ped: number | Ped, toggle: boolean): void;
+    function setSuffersCriticalHits(ped: number | IPed, toggle: boolean): void;
     /**
      * Sweat is set to 100.0 or 0.0 in the decompiled scripts.
      *
      * Hash: 0x27B0405F59637D1F | Since: 323
      */
-    function setSweat(ped: number | Ped, sweat: number): void;
+    function setSweat(ped: number | IPed, sweat: number): void;
     /**
      * enum eTargetLossResponseType
      * {
@@ -31790,19 +31790,19 @@ export declare namespace ped {
      *
      * Hash: 0x0703B9079823DA4A | Since: 323
      */
-    function setTargetLossResponse(ped: number | Ped, responseType: number): void;
+    function setTargetLossResponse(ped: number | IPed, responseType: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x112942C6E708F70B | Since: 323
      */
-    function setToInformRespectedFriends(ped: number | Ped, radius: number, maxFriends: number): void;
+    function setToInformRespectedFriends(ped: number | IPed, radius: number, maxFriends: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x332B562EEDA62399 | Since: 323
      */
-    function setToLoadCover(ped: number | Ped, toggle: boolean): void;
+    function setToLoadCover(ped: number | IPed, toggle: boolean): void;
     /**
      * p4/p5: Unused in TU27
      * Ragdoll Types:
@@ -31830,7 +31830,7 @@ export declare namespace ped {
      *
      * Hash: 0xAE99FB955581844A | Since: 323
      */
-    function setToRagdoll(ped: number | Ped, time1: number, time2: number, ragdollType: number): boolean;
+    function setToRagdoll(ped: number | IPed, time1: number, time2: number, ragdollType: number): boolean;
     /**
      * Return variable is never used in R*'s scripts.
      *
@@ -31854,7 +31854,7 @@ export declare namespace ped {
      *
      * Hash: 0xD76632D99E4966C8 | Since: 323
      */
-    function setToRagdollWithFall(ped: number | Ped, time: number, ragdollType: number, pos: Vector3, velocity: number): boolean;
+    function setToRagdollWithFall(ped: number | IPed, time: number, ragdollType: number, pos: Vector3, velocity: number): boolean;
     /**
      * No comment provided
      *
@@ -31866,74 +31866,74 @@ export declare namespace ped {
      *
      * Hash: 0xAFC976FD0580C7B3 | Since: 323
      */
-    function setUpperBodyDamageOnly(ped: number | Ped, toggle: boolean): void;
+    function setUpperBodyDamageOnly(ped: number | IPed, toggle: boolean): void;
     /**
      * p2 is usually -1 in the scripts. action is either 0 or "DEFAULT_ACTION".
      *
      * Hash: 0xD75ACCF5E0FB5367 | Since: 323
      */
-    function setUsingActionMode(ped: number | Ped, action: string): void;
+    function setUsingActionMode(ped: number | IPed, action: string): void;
     /**
      * seatIndex must be <= 2
      *
      * Hash: 0x952F06BEECD775CC | Since: 323
      */
-    function setVehicleForcedSeatUsage(ped: number | Ped, vehicle: number | Vehicle, seatIndex: number, flags: number): void;
+    function setVehicleForcedSeatUsage(ped: number | IPed, vehicle: number | IVehicle, seatIndex: number, flags: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x3B6405E8AB34A907 | Since: 323
      */
-    function setVisualFieldCenterAngle(ped: number | Ped, angle: number): void;
+    function setVisualFieldCenterAngle(ped: number | IPed, angle: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x70793BDCA1E854D4 | Since: 323
      */
-    function setVisualFieldMaxAngle(ped: number | Ped, value: number): void;
+    function setVisualFieldMaxAngle(ped: number | IPed, value: number): void;
     /**
      * This native refers to the field of vision the ped has above them, starting at 0 degrees. 90f would let the ped see enemies directly above of them.
      *
      * Hash: 0x78D0B67629D75856 | Since: 323
      */
-    function setVisualFieldMaxElevationAngle(ped: number | Ped, angle: number): void;
+    function setVisualFieldMaxElevationAngle(ped: number | IPed, angle: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x2DB492222FB21E26 | Since: 323
      */
-    function setVisualFieldMinAngle(ped: number | Ped, value: number): void;
+    function setVisualFieldMinAngle(ped: number | IPed, value: number): void;
     /**
      * This native refers to the field of vision the ped has below them, starting at 0 degrees. The angle value should be negative.
      * -90f should let the ped see 90 degrees below them, for example.
      *
      * Hash: 0x7A276EB2C224D70F | Since: 323
      */
-    function setVisualFieldMinElevationAngle(ped: number | Ped, angle: number): void;
+    function setVisualFieldMinElevationAngle(ped: number | IPed, angle: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x9C74B0BC831B753A | Since: 323
      */
-    function setVisualFieldPeripheralRange(ped: number | Ped, range: number): void;
+    function setVisualFieldPeripheralRange(ped: number | IPed, range: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x2622E35B77D3ACA2 | Since: 323
      */
-    function setWeaponMovementClipset(ped: number | Ped, clipSet: string): void;
+    function setWeaponMovementClipset(ped: number | IPed, clipSet: string): void;
     /**
      * No comment provided
      *
      * Hash: 0xAC0BB4D87777CAE2 | Since: 2802
      */
-    function setWetness(ped: number | Ped, wetLevel: number): void;
+    function setWetness(ped: number | IPed, wetLevel: number): void;
     /**
      * `combined with PED::SET_PED_WETNESS_HEIGHT(), this native makes the ped drenched in water up to the height specified in the other function`
      *
      * Hash: 0xB5485E4907B53019 | Since: 323
      */
-    function setWetnessEnabledThisFrame(ped: number | Ped): void;
+    function setWetnessEnabledThisFrame(ped: number | IPed): void;
     /**
      * It adds the wetness level to the player clothing/outfit. As if player just got out from water surface.
      *
@@ -31941,7 +31941,7 @@ export declare namespace ped {
      *
      * Hash: 0x44CB6447D2571AA0 | Since: 323
      */
-    function setWetnessHeight(ped: number | Ped, height: number): void;
+    function setWetnessHeight(ped: number | IPed, height: number): void;
     /**
      * No comment provided
      *
@@ -31983,7 +31983,7 @@ export declare namespace ped {
      *
      * Hash: 0x26695EC767728D84 | Since: 323
      */
-    function setRagdollBlockingFlags(ped: number | Ped, blockingFlag: number): void;
+    function setRagdollBlockingFlags(ped: number | IPed, blockingFlag: number): void;
     /**
      * Sets the relationship between two groups. This should be called twice (once for each group).
      *
@@ -32032,7 +32032,7 @@ export declare namespace ped {
      *
      * Hash: 0x5917BBA32D06C230 | Since: 323
      */
-    function setScriptedAnimSeatOffset(ped: number | Ped): void;
+    function setScriptedAnimSeatOffset(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -32074,13 +32074,13 @@ export declare namespace ped {
      *
      * Hash: 0x2F3C3D9F50681DE4 | Since: 323
      */
-    function setTreatAsAmbientForDriverLockon(ped: number | Ped): void;
+    function setTreatAsAmbientForDriverLockon(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xFD325494792302D7 | Since: 323
      */
-    function setUseCameraHeadingForDesiredDirectionLockOnTest(ped: number | Ped, toggle: boolean): void;
+    function setUseCameraHeadingForDesiredDirectionLockOnTest(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -32142,7 +32142,7 @@ export declare namespace ped {
      *
      * Hash: 0xF9ACF4A08098EA25 | Since: 323
      */
-    function specialFunctionDoNotUse(ped: number | Ped): void;
+    function specialFunctionDoNotUse(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -32154,7 +32154,7 @@ export declare namespace ped {
      *
      * Hash: 0xC158D28142A34608 | Since: 323
      */
-    function stopWeaponFiringWhenDropped(ped: number | Ped): void;
+    function stopWeaponFiringWhenDropped(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -32172,19 +32172,19 @@ export declare namespace ped {
      *
      * Hash: 0xAD27D957598E49E9 | Since: 1290
      */
-    function tellGroupsInAreaToAttack(ped: number | Ped, hash: number | string): void;
+    function tellGroupsInAreaToAttack(ped: number | IPed, hash: number | string): void;
     /**
      * No comment provided
      *
      * Hash: 0x9A77DFD295E29B09 | Since: 323
      */
-    function toggleScenarioCowerInPlace(ped: number | Ped, toggle: boolean): void;
+    function toggleScenarioCowerInPlace(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xC2EE020F5FB4DB53 | Since: 323
      */
-    function triggerIdleAnimationOn(ped: number | Ped): void;
+    function triggerIdleAnimationOn(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -32202,37 +32202,37 @@ export declare namespace ped {
      *
      * Hash: 0x723538F61C647C5A | Since: 323
      */
-    function updateHeadBlendData(ped: number | Ped, shapeMix: number, skinMix: number, thirdMix: number): void;
+    function updateHeadBlendData(ped: number | IPed, shapeMix: number, skinMix: number, thirdMix: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xF9800AA1A771B000 | Since: 323
      */
-    function wasKilledByStealth(ped: number | Ped): boolean;
+    function wasKilledByStealth(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x7F08E26039C7347C | Since: 323
      */
-    function wasKilledByTakedown(ped: number | Ped): boolean;
+    function wasKilledByTakedown(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x61767F73EACEED21 | Since: 323
      */
-    function wasKnockedOut(ped: number | Ped): boolean;
+    function wasKnockedOut(ped: number | IPed): boolean;
     /**
      * Despite this function's name, it simply returns whether the specified handle is a Ped.
      *
      * Hash: 0x11B499C1E0FF8559 | Since: 323
      */
-    function wasSkeletonUpdated(ped: number | Ped): boolean;
+    function wasSkeletonUpdated(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xA32ABFEB2A03B306 | Since: 3095
      */
-    function hasClearLosToEntity(ped: number | Ped, entity: number | Entity, pos: Vector3): boolean;
+    function hasClearLosToEntity(ped: number | IPed, entity: number | IEntity, pos: Vector3): boolean;
     /**
      * No comment provided
      *
@@ -32244,7 +32244,7 @@ export declare namespace ped {
      *
      * Hash: 0x100CD221F572F6E1 | Since: 3407
      */
-    function setSurvivesBeingOutOfWater(ped: number | Ped, toggle: boolean): boolean;
+    function setSurvivesBeingOutOfWater(ped: number | IPed, toggle: boolean): boolean;
 }
 export declare namespace physics {
     /**
@@ -32252,7 +32252,7 @@ export declare namespace physics {
      *
      * Hash: 0x710311ADF0E20730 | Since: 323
      */
-    function activate(entity: number | Entity): void;
+    function activate(entity: number | IEntity): void;
     /**
      * Creates a rope at the specific position, that extends in the specified direction when not attached to any entities.
      * __
@@ -32303,19 +32303,19 @@ export declare namespace physics {
      *
      * Hash: 0x3D95EC8B6D940AC3 | Since: 323
      */
-    function attachEntitiesToRope(ropeId: number, ent1: number | Entity, ent2: number | Entity, ent1_x: number, ent1_y: number, ent1_z: number, ent2_x: number, ent2_y: number, ent2_z: number, length: number): [any, any];
+    function attachEntitiesToRope(ropeId: number, ent1: number | IEntity, ent2: number | IEntity, ent1_x: number, ent1_y: number, ent1_z: number, ent2_x: number, ent2_y: number, ent2_z: number, length: number): [any, any];
     /**
      * The position supplied can be anywhere, and the entity should anchor relative to that point from it's origin.
      *
      * Hash: 0x4B490A6832559A65 | Since: 323
      */
-    function attachRopeToEntity(ropeId: number, entity: number | Entity, pos: Vector3): void;
+    function attachRopeToEntity(ropeId: number, entity: number | IEntity, pos: Vector3): void;
     /**
      * No comment provided
      *
      * Hash: 0x2E648D16F6E308F3 | Since: 323
      */
-    function breakEntityGlass(entity: number | Entity): void;
+    function breakEntityGlass(entity: number | IEntity): void;
     /**
      * No comment provided
      *
@@ -32333,7 +32333,7 @@ export declare namespace physics {
      *
      * Hash: 0xBCF3026912A8647D | Since: 323
      */
-    function detachRopeFromEntity(ropeId: number, entity: number | Entity): void;
+    function detachRopeFromEntity(ropeId: number, entity: number | IEntity): void;
     /**
      * No comment provided
      *
@@ -32351,19 +32351,19 @@ export declare namespace physics {
      *
      * Hash: 0x8214A4B5A7A33612 | Since: 323
      */
-    function getCgoffset(entity: number | Entity): Vector3;
+    function getCgoffset(entity: number | IEntity): Vector3;
     /**
      * No comment provided
      *
      * Hash: 0x8C520A929415BCD2 | Since: 3407
      */
-    function getDamping(entity: number | Entity, _type: number): Vector3;
+    function getDamping(entity: number | IEntity, _type: number): Vector3;
     /**
      * No comment provided
      *
      * Hash: 0x0C112765300C7E1E | Since: 505
      */
-    function getIsEntityAFrag(_object: number | Object): boolean;
+    function getIsEntityAFrag(_object: number | IObject): boolean;
     /**
      * No comment provided
      *
@@ -32405,7 +32405,7 @@ export declare namespace physics {
      *
      * Hash: 0xCC6E963682533882 | Since: 323
      */
-    function resetDisableBreaking(_object: number | Object): void;
+    function resetDisableBreaking(_object: number | IObject): void;
     /**
      * No comment provided
      *
@@ -32501,31 +32501,31 @@ export declare namespace physics {
      *
      * Hash: 0xD8FA3908D7B86904 | Since: 323
      */
-    function setCgoffset(entity: number | Entity, pos: Vector3): void;
+    function setCgoffset(entity: number | IEntity, pos: Vector3): void;
     /**
      * No comment provided
      *
      * Hash: 0xBE520D9761FF811F | Since: 323
      */
-    function setCgAtBoundcenter(entity: number | Entity): void;
+    function setCgAtBoundcenter(entity: number | IEntity): void;
     /**
      * No comment provided
      *
      * Hash: 0xEEA3B200A6FEB65B | Since: 323
      */
-    function setDamping(entity: number | Entity, vertex: number, value: number): void;
+    function setDamping(entity: number | IEntity, vertex: number, value: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x5CEC1A84620E7D5B | Since: 323
      */
-    function setDisableBreaking(_object: number | Object, toggle: boolean): void;
+    function setDisableBreaking(_object: number | IObject, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x01BA3AED21C16CFB | Since: 323
      */
-    function setDisableFragDamage(_object: number | Object, toggle: boolean): void;
+    function setDisableFragDamage(_object: number | IObject, toggle: boolean): void;
     /**
      * Related to the lower-end of a vehicles fTractionCurve, e.g., from standing starts and acceleration from low/zero speeds.
      *
@@ -32543,7 +32543,7 @@ export declare namespace physics {
      *
      * Hash: 0x15F944730C832252 | Since: 463
      */
-    function setUseKinematic(entity: number | Entity, toggle: boolean): void;
+    function setUseKinematic(entity: number | IEntity, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -32581,25 +32581,25 @@ export declare namespace player {
      *
      * Hash: 0x9097EB6D4BB9A12A | Since: 1868
      */
-    function addTargetableEntity(player: number | string | Player, entity: number | Entity): void;
+    function addTargetableEntity(player: number | string | IPlayer, entity: number | IEntity): void;
     /**
      * No comment provided
      *
      * Hash: 0x2F41A3BAE005E5FA | Since: 372
      */
-    function allowEvasionHudIfDisablingHiddenEvasionThisFrame(player: number | string | Player): void;
+    function allowEvasionHudIfDisablingHiddenEvasionThisFrame(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0xAFAF86043E5874E9 | Since: 323
      */
-    function areFlashingStarsAboutToDrop(player: number | string | Player): boolean;
+    function areFlashingStarsAboutToDrop(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x0A6EB355EE14A2DB | Since: 323
      */
-    function areStarsGreyedOut(player: number | string | Player): boolean;
+    function areStarsGreyedOut(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
@@ -32617,55 +32617,55 @@ export declare namespace player {
      *
      * Hash: 0xF297383AA91DCA29 | Since: 323
      */
-    function canPedHear(player: number | string | Player, ped: number | Ped): boolean;
+    function canPedHear(player: number | string | IPlayer, ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xDE7465A27D403C06 | Since: 323
      */
-    function canStartMission(player: number | string | Player): boolean;
+    function canStartMission(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x048189FAC643DEEE | Since: 323
      */
-    function changePed(player: number | string | Player, ped: number | Ped, resetDamage: boolean): void;
+    function changePed(player: number | string | IPlayer, ped: number | IPed, resetDamage: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x4AACB96203D11A31 | Since: 323
      */
-    function clearHasDamagedAtLeastOneNonAnimalPed(player: number | string | Player): void;
+    function clearHasDamagedAtLeastOneNonAnimalPed(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0xF0B67A4DE6AB5F98 | Since: 323
      */
-    function clearHasDamagedAtLeastOnePed(player: number | string | Player): void;
+    function clearHasDamagedAtLeastOnePed(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x8753997EB5F6EE3F | Since: 323
      */
-    function clearParachuteModelOverride(player: number | string | Player): void;
+    function clearParachuteModelOverride(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x10C54E4389C12B42 | Since: 323
      */
-    function clearParachutePackModelOverride(player: number | string | Player): void;
+    function clearParachutePackModelOverride(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x0F4CC924CF8C7B21 | Since: 323
      */
-    function clearParachuteVariationOverride(player: number | string | Player): void;
+    function clearParachuteVariationOverride(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x290D248E25815AE8 | Since: 2372
      */
-    function clearReserveParachuteModelOverride(player: number | string | Player): void;
+    function clearReserveParachuteModelOverride(player: number | string | IPlayer): void;
     /**
      * `This executes at the same as speed as PLAYER::SET_PLAYER_WANTED_LEVEL(player, 0, false);`
      *
@@ -32673,13 +32673,13 @@ export declare namespace player {
      *
      * Hash: 0xB302540597885499 | Since: 323
      */
-    function clearWantedLevel(player: number | string | Player): void;
+    function clearWantedLevel(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x5501B7A5CDB79D37 | Since: 323
      */
-    function disableCameraViewModeCycle(player: number | string | Player): void;
+    function disableCameraViewModeCycle(player: number | string | IPlayer): void;
     /**
      * Inhibits the player from using any method of combat including melee and firearms.
      *
@@ -32687,13 +32687,13 @@ export declare namespace player {
      *
      * Hash: 0x5E6CC07646BBEAB8 | Since: 323
      */
-    function disableFiring(player: number | string | Player, toggle: boolean): void;
+    function disableFiring(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * Needs to be called every frame.
      *
      * Hash: 0xBCB06442F7E52666 | Since: 2802
      */
-    function disableHealthRecharge(player: number | string | Player): void;
+    function disableHealthRecharge(player: number | string | IPlayer): void;
     /**
      * Used only once in R* scripts (freemode.ysc).
      *
@@ -32705,7 +32705,7 @@ export declare namespace player {
      *
      * Hash: 0xC142BE3BB9CE125F | Since: 323
      */
-    function disableVehicleRewards(player: number | string | Player): void;
+    function disableVehicleRewards(player: number | string | IPlayer): void;
     /**
      * Purpose of the BOOL currently unknown.
      * Both, true and false, work
@@ -32718,7 +32718,7 @@ export declare namespace player {
      *
      * Hash: 0x181EC197DAEFE121 | Since: 323
      */
-    function enableSpecialAbility(player: number | string | Player, toggle: boolean): void;
+    function enableSpecialAbility(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * Appears only 3 times in the scripts, more specifically in michael1.ysc
      *
@@ -32751,7 +32751,7 @@ export declare namespace player {
      *
      * Hash: 0xAD73CE5A09E42D12 | Since: 323
      */
-    function forceStartHiddenEvasion(player: number | string | Player): void;
+    function forceStartHiddenEvasion(player: number | string | IPlayer): void;
     /**
      * For Steam.
      * Always returns 0 in retail version of the game.
@@ -32779,25 +32779,25 @@ export declare namespace player {
      *
      * Hash: 0x2975C866E6713290 | Since: 323
      */
-    function getEntityIsFreeAimingAt(player: number | string | Player): [boolean, number];
+    function getEntityIsFreeAimingAt(player: number | string | IPlayer): [boolean, number];
     /**
      * 2 occurrences in agency_heist3a. p1 was 0.7f then 0.4f.
      *
      * Hash: 0xDD2620B7B9D16FF1 | Since: 323
      */
-    function getIsMoppingAreaFreeInFrontOf(player: number | string | Player): boolean;
+    function getIsMoppingAreaFreeInFrontOf(player: number | string | IPlayer): boolean;
     /**
      * Appears once in "re_dealgonewrong"
      *
      * Hash: 0x5FC472C501CCADB3 | Since: 323
      */
-    function getIsDrivingOnHighway(player: number | string | Player): boolean;
+    function getIsDrivingOnHighway(player: number | string | IPlayer): boolean;
     /**
      * Only 1 occurrence. p1 was 2.
      *
      * Hash: 0xF10B44FD479D69F3 | Since: 323
      */
-    function getIsDrivingWreckless(player: number | string | Player): boolean;
+    function getIsDrivingWreckless(player: number | string | IPlayer): boolean;
     /**
      * Returns profile setting 237.
      *
@@ -32841,37 +32841,37 @@ export declare namespace player {
      *
      * Hash: 0x2F395D61F3A1F877 | Since: 323
      */
-    function getCurrentStealthNoise(player: number | string | Player): number;
+    function getCurrentStealthNoise(player: number | string | IPlayer): number;
     /**
      * Always returns false.
      *
      * Hash: 0xDCC07526B8EC45AF | Since: 1868
      */
-    function getDebugInvincible(player: number | string | Player): boolean;
+    function getDebugInvincible(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x56105E599CAB0EFA | Since: 323
      */
-    function getFakeWantedLevel(player: number | string | Player): number;
+    function getFakeWantedLevel(player: number | string | IPlayer): number;
     /**
      * Returns the group ID the player is member of.
      *
      * Hash: 0x0D127585F77030AF | Since: 323
      */
-    function getGroup(player: number | string | Player): number;
+    function getGroup(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
      * Hash: 0x5DDFE2FF727F3CA3 | Since: 323
      */
-    function getHasReserveParachute(player: number | string | Player): boolean;
+    function getHasReserveParachute(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x8BC515BAE4AAF8FF | Since: 617
      */
-    function getHealthRechargeMaxPercent(player: number | string | Player): number;
+    function getHealthRechargeMaxPercent(player: number | string | IPlayer): number;
     /**
      * Returns the same as PLAYER_ID and NETWORK_PLAYER_ID_TO_INT
      *
@@ -32900,37 +32900,37 @@ export declare namespace player {
      *
      * Hash: 0xB721981B2B939E07 | Since: 323
      */
-    function getInvincible(player: number | string | Player): boolean;
+    function getInvincible(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x92659B4CE1863CB3 | Since: 323
      */
-    function getMaxArmour(player: number | string | Player): number;
+    function getMaxArmour(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
      * Hash: 0x6D0DE6A7B5DA71F8 | Since: 323
      */
-    function getName(player: number | string | Player): string;
+    function getName(player: number | string | IPlayer): string;
     /**
      * No comment provided
      *
      * Hash: 0xC219887CA3E65C41 | Since: 2372
      */
-    function getParachuteModelOverride(player: number | string | Player): number;
+    function getParachuteModelOverride(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
      * Hash: 0x6E9C742F340CE5A2 | Since: 323
      */
-    function getParachutePackTintIndex(player: number | string | Player): number;
+    function getParachutePackTintIndex(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
      * Hash: 0xEF56DBABD3CD4887 | Since: 323
      */
-    function getParachuteSmokeTrailColor(player: number | string | Player): [number, number, number];
+    function getParachuteSmokeTrailColor(player: number | string | IPlayer): [number, number, number];
     /**
      * Tints:
      * None = -1,
@@ -32951,31 +32951,31 @@ export declare namespace player {
      *
      * Hash: 0x75D3F7A1B0D9B145 | Since: 323
      */
-    function getParachuteTintIndex(player: number | string | Player): number;
+    function getParachuteTintIndex(player: number | string | IPlayer): number;
     /**
      * Gets the ped for a specified player index.
      *
      * Hash: 0x43A66C31C68491C0 | Since: 323
      */
-    function getPed(player: number | string | Player): number;
+    function getPed(player: number | string | IPlayer): number;
     /**
      * `Does the same like PLAYER::GET_PLAYER_PED`
      *
      * Hash: 0x50FAC3A3E030A6E1 | Since: 323
      */
-    function getPedScriptIndex(player: number | string | Player): number;
+    function getPedScriptIndex(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
      * Hash: 0xBC0753C9CA14B506 | Since: 323
      */
-    function getReceivedBattleEventRecently(player: number | string | Player): boolean;
+    function getReceivedBattleEventRecently(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x37FAAA68DCA9D08D | Since: 2372
      */
-    function getReserveParachuteModelOverride(player: number | string | Player): number;
+    function getReserveParachuteModelOverride(player: number | string | IPlayer): number;
     /**
      * Tints:
      * None = -1,
@@ -32996,25 +32996,25 @@ export declare namespace player {
      *
      * Hash: 0xD5A016BC3C09CF40 | Since: 323
      */
-    function getReserveParachuteTintIndex(player: number | string | Player): number;
+    function getReserveParachuteTintIndex(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
      * Hash: 0xE902EF951DCE178F | Since: 323
      */
-    function getRgbColour(player: number | string | Player): [number, number, number];
+    function getRgbColour(player: number | string | IPlayer): [number, number, number];
     /**
      * No comment provided
      *
      * Hash: 0x3F9F16F8E65A7ED7 | Since: 323
      */
-    function getSprintStaminaRemaining(player: number | string | Player): number;
+    function getSprintStaminaRemaining(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
      * Hash: 0x1885BC9B108B4C99 | Since: 323
      */
-    function getSprintTimeRemaining(player: number | string | Player): number;
+    function getSprintTimeRemaining(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
@@ -33027,32 +33027,32 @@ export declare namespace player {
      *
      * Hash: 0x13EDE1A5DBF797C9 | Since: 323
      */
-    function getTargetEntity(player: number | string | Player): [boolean, number];
+    function getTargetEntity(player: number | string | IPlayer): [boolean, number];
     /**
      * Gets the player's team.
      * Does nothing in singleplayer.
      *
      * Hash: 0x37039302F4E0A008 | Since: 323
      */
-    function getTeam(player: number | string | Player): number;
+    function getTeam(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
      * Hash: 0xA1FCF8E6AF40B731 | Since: 323
      */
-    function getUnderwaterTimeRemaining(player: number | string | Player): number;
+    function getUnderwaterTimeRemaining(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
      * Hash: 0x0C92BA89F1AF26F8 | Since: 323
      */
-    function getWantedCentrePosition(player: number | string | Player): Vector3;
+    function getWantedCentrePosition(player: number | string | IPlayer): Vector3;
     /**
      * No comment provided
      *
      * Hash: 0xE28E54788CE8F12D | Since: 323
      */
-    function getWantedLevel(player: number | string | Player): number;
+    function getWantedLevel(player: number | string | IPlayer): number;
     /**
      * Returns the time since the character was arrested in (ms) milliseconds.
      *
@@ -33086,31 +33086,31 @@ export declare namespace player {
      *
      * Hash: 0xDB89591E290D9182 | Since: 323
      */
-    function getTimeSinceDroveAgainstTraffic(player: number | string | Player): number;
+    function getTimeSinceDroveAgainstTraffic(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
      * Hash: 0xD559D2BE9E37853B | Since: 323
      */
-    function getTimeSinceDroveOnPavement(player: number | string | Player): number;
+    function getTimeSinceDroveOnPavement(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
      * Hash: 0xE36A25322DC35F42 | Since: 323
      */
-    function getTimeSinceHitPed(player: number | string | Player): number;
+    function getTimeSinceHitPed(player: number | string | IPlayer): number;
     /**
      * No comment provided
      *
      * Hash: 0x5D35ECF3A81A0EE0 | Since: 323
      */
-    function getTimeSinceHitVehicle(player: number | string | Player): number;
+    function getTimeSinceHitVehicle(player: number | string | IPlayer): number;
     /**
      * Remnant from GTA IV. Does nothing in GTA V.
      *
      * Hash: 0x085DEB493BE80812 | Since: 323
      */
-    function getWantedLevelRadius(player: number | string | Player): number;
+    function getWantedLevelRadius(player: number | string | IPlayer): number;
     /**
      * Drft
      *
@@ -33210,7 +33210,7 @@ export declare namespace player {
      *
      * Hash: 0x3C49C870E66F0A28 | Since: 323
      */
-    function giveRagdollControl(player: number | string | Player, toggle: boolean): void;
+    function giveRagdollControl(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * See GIVE_ACHIEVEMENT_TO_PLAYER
      *
@@ -33228,31 +33228,31 @@ export declare namespace player {
      *
      * Hash: 0xD705740BB0A1CF4C | Since: 323
      */
-    function hasBeenSpottedInStolenVehicle(player: number | string | Player): boolean;
+    function hasBeenSpottedInStolenVehicle(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xE4B90F367BD81752 | Since: 323
      */
-    function hasDamagedAtLeastOneNonAnimalPed(player: number | string | Player): boolean;
+    function hasDamagedAtLeastOneNonAnimalPed(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x20CE80B0C2BF4ACC | Since: 323
      */
-    function hasDamagedAtLeastOnePed(player: number | string | Player): boolean;
+    function hasDamagedAtLeastOnePed(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xD55DDFB47991A294 | Since: 323
      */
-    function hasLeftTheWorld(player: number | string | Player): boolean;
+    function hasLeftTheWorld(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x9EDD76E87D5D51BA | Since: 323
      */
-    function increaseJumpSuppressionRange(player: number | string | Player): void;
+    function increaseJumpSuppressionRange(player: number | string | IPlayer): void;
     /**
      * Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).
      * --------------------------------------------------------
@@ -33273,7 +33273,7 @@ export declare namespace player {
      *
      * Hash: 0x38D28DA81E4E9BF9 | Since: 323
      */
-    function isBattleAware(player: number | string | Player): boolean;
+    function isBattleAware(player: number | string | IPlayer): boolean;
     /**
      * Return true while player is being arrested / busted.
      *
@@ -33283,19 +33283,19 @@ export declare namespace player {
      *
      * Hash: 0x388A47C51ABDAC8E | Since: 323
      */
-    function isBeingArrested(player: number | string | Player, atArresting: boolean): boolean;
+    function isBeingArrested(player: number | string | IPlayer, atArresting: boolean): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x65FAEE425DE637B0 | Since: 323
      */
-    function isBluetoothEnable(player: number | string | Player): boolean;
+    function isBluetoothEnable(player: number | string | IPlayer): boolean;
     /**
      * Returns TRUE if the player ('s ped) is climbing at the moment.
      *
      * Hash: 0x95E8F73DC65EFB9C | Since: 323
      */
-    function isClimbing(player: number | string | Player): boolean;
+    function isClimbing(player: number | string | IPlayer): boolean;
     /**
      * Can the player control himself, used to disable controls for player for things like a cutscene.
      *
@@ -33305,31 +33305,31 @@ export declare namespace player {
      *
      * Hash: 0x49C32D60007AFA47 | Since: 323
      */
-    function isControlOn(player: number | string | Player): boolean;
+    function isControlOn(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x424D4687FA1E5652 | Since: 323
      */
-    function isDead(player: number | string | Player): boolean;
+    function isDead(player: number | string | IPlayer): boolean;
     /**
      * Gets a value indicating whether the specified player is currently aiming freely.
      *
      * Hash: 0x2E397FD2ECD37C87 | Since: 323
      */
-    function isFreeAiming(player: number | string | Player): boolean;
+    function isFreeAiming(player: number | string | IPlayer): boolean;
     /**
      * Gets a value indicating whether the specified player is currently aiming freely at the specified entity.
      *
      * Hash: 0x3C06B5C839B38F7B | Since: 323
      */
-    function isFreeAimingAtEntity(player: number | string | Player, entity: number | Entity): boolean;
+    function isFreeAimingAtEntity(player: number | string | IPlayer, entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xDCCFD3F106C36AB4 | Since: 323
      */
-    function isFreeForAmbientTask(player: number | string | Player): boolean;
+    function isFreeForAmbientTask(player: number | string | IPlayer): boolean;
     /**
      * this function is hard-coded to always return 0.
      *
@@ -33349,43 +33349,43 @@ export declare namespace player {
      *
      * Hash: 0x5E9564D8246B909A | Since: 323
      */
-    function isPlaying(player: number | string | Player): boolean;
+    function isPlaying(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xFA1E2BF8B10598F9 | Since: 323
      */
-    function isPressingHorn(player: number | string | Player): boolean;
+    function isPressingHorn(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x908CBECC2CAA3690 | Since: 323
      */
-    function isReadyForCutscene(player: number | string | Player): boolean;
+    function isReadyForCutscene(player: number | string | IPlayer): boolean;
     /**
      * Returns true if the player is riding a train.
      *
      * Hash: 0x4EC12697209F2196 | Since: 323
      */
-    function isRidingTrain(player: number | string | Player): boolean;
+    function isRidingTrain(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x8A876A65283DD7D7 | Since: 323
      */
-    function isScriptControlOn(player: number | string | Player): boolean;
+    function isScriptControlOn(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x78CFE51896B6B8A4 | Since: 323
      */
-    function isTargettingAnything(player: number | string | Player): boolean;
+    function isTargettingAnything(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x7912F7FC4F6264B6 | Since: 323
      */
-    function isTargettingEntity(player: number | string | Player, entity: number | Entity): boolean;
+    function isTargettingEntity(player: number | string | IPlayer, entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
@@ -33403,31 +33403,31 @@ export declare namespace player {
      *
      * Hash: 0x238DB2A2C23EE9EF | Since: 323
      */
-    function isWantedLevelGreater(player: number | string | Player, wantedLevel: number): boolean;
+    function isWantedLevelGreater(player: number | string | IPlayer, wantedLevel: number): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x690A61A6D13583F6 | Since: 323
      */
-    function isRemoteInNonClonedVehicle(player: number | string | Player): boolean;
+    function isRemoteInNonClonedVehicle(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x3E5F7FC85D854E15 | Since: 323
      */
-    function isSpecialAbilityActive(player: number | string | Player): boolean;
+    function isSpecialAbilityActive(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xB1D200FE26AEF3CB | Since: 323
      */
-    function isSpecialAbilityEnabled(player: number | string | Player): boolean;
+    function isSpecialAbilityEnabled(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x05A1FE504B7F2587 | Since: 323
      */
-    function isSpecialAbilityMeterFull(player: number | string | Player): boolean;
+    function isSpecialAbilityMeterFull(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
@@ -33445,7 +33445,7 @@ export declare namespace player {
      *
      * Hash: 0x7E07C78925D5FD96 | Since: 372
      */
-    function isWantedAndHasBeenSeenByCops(player: number | string | Player): boolean;
+    function isWantedAndHasBeenSeenByCops(player: number | string | IPlayer): boolean;
     /**
      * Does exactly the same thing as PLAYER_ID()
      *
@@ -33485,13 +33485,13 @@ export declare namespace player {
      *
      * Hash: 0xF3AC26D3CC576528 | Since: 323
      */
-    function removeHelmet(player: number | string | Player): void;
+    function removeHelmet(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x9F260BFB59ADBCA3 | Since: 1868
      */
-    function removeTargetableEntity(player: number | string | Player, entity: number | Entity): void;
+    function removeTargetableEntity(player: number | string | IPlayer, entity: number | IEntity): void;
     /**
      * Resets values set by SET_SCRIPT_FIRE_POSITION
      *
@@ -33560,13 +33560,13 @@ export declare namespace player {
      *
      * Hash: 0xE9B09589827545E7 | Since: 323
      */
-    function reportCrime(player: number | string | Player, crimeType: number, wantedLvlThresh: number): void;
+    function reportCrime(player: number | string | IPlayer, crimeType: number, wantedLvlThresh: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xDC64D2C53493ED12 | Since: 323
      */
-    function reportPoliceSpotted(player: number | string | Player): void;
+    function reportPoliceSpotted(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
@@ -33578,31 +33578,31 @@ export declare namespace player {
      *
      * Hash: 0x2D03E13C460760D6 | Since: 323
      */
-    function resetArrestState(player: number | string | Player): void;
+    function resetArrestState(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x19531C47A2ABD691 | Since: 323
      */
-    function resetInputGait(player: number | string | Player): void;
+    function resetInputGait(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0xA6F312FCCE9C1DFE | Since: 323
      */
-    function resetStamina(player: number | string | Player): void;
+    function resetStamina(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0xB9D0DD990DC141DD | Since: 323
      */
-    function resetWantedLevelDifficulty(player: number | string | Player): void;
+    function resetWantedLevelDifficulty(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x823EC8E82BA45986 | Since: 2060
      */
-    function resetWantedLevelHiddenEscapeTime(player: number | string | Player): void;
+    function resetWantedLevelHiddenEscapeTime(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
@@ -33614,7 +33614,7 @@ export declare namespace player {
      *
      * Hash: 0xA352C1B864CAFD33 | Since: 323
      */
-    function restoreStamina(player: number | string | Player): void;
+    function restoreStamina(player: number | string | IPlayer): void;
     /**
      * For Steam.
      * Does nothing and always returns false in the retail version of the game.
@@ -33631,80 +33631,80 @@ export declare namespace player {
      *
      * Hash: 0xCA7DC8329F0A1E9E | Since: 323
      */
-    function setAirDragMultiplierForsVehicle(player: number | string | Player, multiplier: number): void;
+    function setAirDragMultiplierForsVehicle(player: number | string | IPlayer, multiplier: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xDE45D1A1EF45EE61 | Since: 323
      */
-    function setAllNeutralRandomPedsFlee(player: number | string | Player, toggle: boolean): void;
+    function setAllNeutralRandomPedsFlee(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * - This is called after SET_ALL_RANDOM_PEDS_FLEE_THIS_FRAME
      *
      *
      * Hash: 0xC3376F42B1FACCC6 | Since: 323
      */
-    function setAllNeutralRandomPedsFleeThisFrame(player: number | string | Player): void;
+    function setAllNeutralRandomPedsFleeThisFrame(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x056E0FE8534C2949 | Since: 323
      */
-    function setAllRandomPedsFlee(player: number | string | Player, toggle: boolean): void;
+    function setAllRandomPedsFlee(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x471D2FF42A94B4F2 | Since: 323
      */
-    function setAllRandomPedsFleeThisFrame(player: number | string | Player): void;
+    function setAllRandomPedsFleeThisFrame(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x2382AB11450AE7BA | Since: 877
      */
-    function setApplyWaypointOf(player: number | string | Player, hudColor: number): void;
+    function setApplyWaypointOf(player: number | string | IPlayer, hudColor: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x9F343285A00B4BB6 | Since: 323
      */
-    function setAutoGiveParachuteWhenEnterPlane(player: number | string | Player, toggle: boolean): void;
+    function setAutoGiveParachuteWhenEnterPlane(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xD2B315B6689D537D | Since: 323
      */
-    function setAutoGiveScubaGearWhenExitVehicle(player: number | string | Player, toggle: boolean): void;
+    function setAutoGiveScubaGearWhenExitVehicle(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x2E8AABFA40A84F8C | Since: 323
      */
-    function setDisableAmbientMeleeMove(player: number | string | Player, toggle: boolean): void;
+    function setDisableAmbientMeleeMove(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xDB172424876553F4 | Since: 323
      */
-    function setDispatchCopsFor(player: number | string | Player, toggle: boolean): void;
+    function setDispatchCopsFor(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x8EEDA153AD141BA4 | Since: 323
      */
-    function setEveryoneIgnore(player: number | string | Player, toggle: boolean): void;
+    function setEveryoneIgnore(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x596976B02B6B5700 | Since: 323
      */
-    function setIgnoreLowPriorityShockingEvents(player: number | string | Player, toggle: boolean): void;
+    function setIgnoreLowPriorityShockingEvents(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xFAC75988A7D078D3 | Since: 463
      */
-    function setLawPedsCanAttackNonWantedThisFrame(player: number | string | Player): void;
+    function setLawPedsCanAttackNonWantedThisFrame(player: number | string | IPlayer): void;
     /**
      * `PLAYER::SET_LAW_RESPONSE_DELAY_OVERRIDE(rPtr((&l_122) + 71)); // Found in decompilation`
      *
@@ -33729,25 +33729,25 @@ export declare namespace player {
      *
      * Hash: 0x5DC40A8869C22141 | Since: 323
      */
-    function setBluetoothState(player: number | string | Player, state: boolean): void;
+    function setBluetoothState(player: number | string | IPlayer, state: boolean): void;
     /**
      * Sets whether this player can be hassled by gangs.
      *
      * Hash: 0xD5E460AD7020A246 | Since: 323
      */
-    function setCanBeHassledByGangs(player: number | string | Player, toggle: boolean): void;
+    function setCanBeHassledByGangs(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xCAC57395B151135F | Since: 323
      */
-    function setCanCollectDroppedMoney(player: number | string | Player): void;
+    function setCanCollectDroppedMoney(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x55FCC0C390620314 | Since: 573
      */
-    function setCanDamagePlayer(player1: number | string | Player, player2: number | string | Player, toggle: boolean): void;
+    function setCanDamagePlayer(player1: number | string | IPlayer, player2: number | string | IPlayer, toggle: boolean): void;
     /**
      * Set whether this player should be able to do drive-bys.
      *
@@ -33756,19 +33756,19 @@ export declare namespace player {
      *
      * Hash: 0x6E8834B52EC20C77 | Since: 323
      */
-    function setCanDoDriveBy(player: number | string | Player, toggle: boolean): void;
+    function setCanDoDriveBy(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xF401B182DBA8AF53 | Since: 323
      */
-    function setCanLeaveParachuteSmokeTrail(player: number | string | Player, enabled: boolean): void;
+    function setCanLeaveParachuteSmokeTrail(player: number | string | IPlayer, enabled: boolean): void;
     /**
      * Sets whether this player can take cover.
      *
      * Hash: 0xD465A8599DFF6814 | Since: 323
      */
-    function setCanUseCover(player: number | string | Player, toggle: boolean): void;
+    function setCanUseCover(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * 6 matches across 4 scripts. 5 occurrences were 240. The other was 255.
      *
@@ -33786,7 +33786,7 @@ export declare namespace player {
      *
      * Hash: 0x749FADDF97DFE930 | Since: 323
      */
-    function setClothPinFrames(player: number | string | Player): void;
+    function setClothPinFrames(player: number | string | IPlayer): void;
     /**
      * Flags:
      * SPC_AMBIENT_SCRIPT = (1 << 1),
@@ -33806,56 +33806,56 @@ export declare namespace player {
      *
      * Hash: 0x8D32347D6D4C40A2 | Since: 323
      */
-    function setControl(player: number | string | Player, bHasControl: boolean, flags: number): void;
+    function setControl(player: number | string | IPlayer, bHasControl: boolean, flags: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xD821056B9ACF8052 | Since: 1011
      */
-    function setExplosiveDamageModifier(player: number | string | Player): void;
+    function setExplosiveDamageModifier(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0xEFD79FA81DFBA9CB | Since: 573
      */
-    function setFallDistanceToTriggerRagdollOverride(player: number | string | Player): void;
+    function setFallDistanceToTriggerRagdollOverride(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x0FEE4F80AC44A726 | Since: 323
      */
-    function setForcedAim(player: number | string | Player, toggle: boolean): void;
+    function setForcedAim(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x75E7D505F2B15902 | Since: 323
      */
-    function setForcedZoom(player: number | string | Player, toggle: boolean): void;
+    function setForcedZoom(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x7651BC64AE59E128 | Since: 323
      */
-    function setForceSkipAimIntro(player: number | string | Player, toggle: boolean): void;
+    function setForceSkipAimIntro(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x7DDAB28D31FAC363 | Since: 323
      */
-    function setHasReserveParachute(player: number | string | Player): void;
+    function setHasReserveParachute(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0xC388A0F065F5BC34 | Since: 573
      */
-    function setHealthRechargeMaxPercent(player: number | string | Player, limit: number): void;
+    function setHealthRechargeMaxPercent(player: number | string | IPlayer, limit: number): void;
     /**
      * `regenRate`: The recharge multiplier, a value between 0.0 and 1.0.
      * Use 1.0 to reset it back to normal
      *
      * Hash: 0x5DB660B38DD98A31 | Since: 323
      */
-    function setHealthRechargeMultiplier(player: number | string | Player, regenRate: number): void;
+    function setHealthRechargeMultiplier(player: number | string | IPlayer, regenRate: number): void;
     /**
      * No comment provided
      *
@@ -33870,19 +33870,19 @@ export declare namespace player {
      *
      * Hash: 0x239528EACDC3E7DE | Since: 323
      */
-    function setInvincible(player: number | string | Player, toggle: boolean): void;
+    function setInvincible(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x6BC97F4F4BB3C04B | Since: 463
      */
-    function setInvincibleButHasReactions(player: number | string | Player, toggle: boolean): void;
+    function setInvincibleButHasReactions(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xFF300C7649724A0B | Since: 323
      */
-    function setLeavePedBehind(player: number | string | Player, toggle: boolean): void;
+    function setLeavePedBehind(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * Example from fm_mission_controler.ysc.c4:
      *
@@ -33894,74 +33894,74 @@ export declare namespace player {
      *
      * Hash: 0x5C8B2F450EE4328E | Since: 323
      */
-    function setLockon(player: number | string | Player, toggle: boolean): void;
+    function setLockon(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * Affects the range of auto aim target.
      *
      * Hash: 0x29961D490E5814FD | Since: 323
      */
-    function setLockonRangeOverride(player: number | string | Player, range: number): void;
+    function setLockonRangeOverride(player: number | string | IPlayer, range: number): void;
     /**
      * `Default is 100. Use player id and not ped id. For instance: PLAYER::SET_PLAYER_MAX_ARMOUR(PLAYER::PLAYER_ID(), 100); // main_persistent.ct4`
      *
      * Hash: 0x77DFCCF5948B8C71 | Since: 323
      */
-    function setMaxArmour(player: number | string | Player, value: number): void;
+    function setMaxArmour(player: number | string | IPlayer, value: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x8D768602ADEF2245 | Since: 463
      */
-    function setMaxExplosiveDamage(player: number | string | Player): void;
+    function setMaxExplosiveDamage(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x1DE37BBF9E9CC14A | Since: 323
      */
-    function setMayNotEnterAnyVehicle(player: number | string | Player): void;
+    function setMayNotEnterAnyVehicle(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x8026FF78F208978A | Since: 323
      */
-    function setMayOnlyEnterThisVehicle(player: number | string | Player, vehicle: number | Vehicle): void;
+    function setMayOnlyEnterThisVehicle(player: number | string | IPlayer, vehicle: number | IVehicle): void;
     /**
      * modifier's min value is 0.1
      *
      * Hash: 0x4A3DC7ECCC321032 | Since: 323
      */
-    function setMeleeWeaponDamageModifier(player: number | string | Player, modifier: number): void;
+    function setMeleeWeaponDamageModifier(player: number | string | IPlayer, modifier: number): void;
     /**
      * modifier's min value is 0.1
      *
      * Hash: 0xAE540335B4ABC4E2 | Since: 323
      */
-    function setMeleeWeaponDefenseModifier(player: number | string | Player, modifier: number): void;
+    function setMeleeWeaponDefenseModifier(player: number | string | IPlayer, modifier: number): void;
     /**
      * Set the model for a specific Player. Be aware that this will destroy the current Ped for the Player and create a new one, any reference to the old ped should be reset
      * Make sure to request the model first and wait until it has loaded.
      *
      * Hash: 0x00A1CADD00108836 | Since: 323
      */
-    function setModel(player: number | string | Player, model: number | string): void;
+    function setModel(player: number | string | IPlayer, model: number | string): void;
     /**
      * No comment provided
      *
      * Hash: 0xDB89EF50FF25FCE9 | Since: 323
      */
-    function setNoiseMultiplier(player: number | string | Player, multiplier: number): void;
+    function setNoiseMultiplier(player: number | string | IPlayer, multiplier: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x977DB4641F6FC3DB | Since: 323
      */
-    function setParachuteModelOverride(player: number | string | Player, model: number | string): void;
+    function setParachuteModelOverride(player: number | string | IPlayer, model: number | string): void;
     /**
      * No comment provided
      *
      * Hash: 0xDC80A4C2F18A2B64 | Since: 323
      */
-    function setParachutePackModelOverride(player: number | string | Player, model: number | string): void;
+    function setParachutePackModelOverride(player: number | string | IPlayer, model: number | string): void;
     /**
      * tints 0- 13
      * 0 - unkown
@@ -33972,13 +33972,13 @@ export declare namespace player {
      *
      * Hash: 0x93B0FB27C9A04060 | Since: 323
      */
-    function setParachutePackTintIndex(player: number | string | Player, tintIndex: number): void;
+    function setParachutePackTintIndex(player: number | string | IPlayer, tintIndex: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x8217FD371A4625CF | Since: 323
      */
-    function setParachuteSmokeTrailColor(player: number | string | Player, r: number, g: number, b: number): void;
+    function setParachuteSmokeTrailColor(player: number | string | IPlayer, r: number, g: number, b: number): void;
     /**
      * Tints:
      * None = -1,
@@ -34000,32 +34000,32 @@ export declare namespace player {
      *
      * Hash: 0xA3D0E54541D9A5E5 | Since: 323
      */
-    function setParachuteTintIndex(player: number | string | Player, tintIndex: number): void;
+    function setParachuteTintIndex(player: number | string | IPlayer, tintIndex: number): void;
     /**
      * p1 was always 5.
      * p4 was always false.
      *
      * Hash: 0xD9284A8C0D48352C | Since: 323
      */
-    function setParachuteVariationOverride(player: number | string | Player): void;
+    function setParachuteVariationOverride(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x11D5F725F0E780E0 | Since: 323
      */
-    function setPhonePaletteIdx(player: number | string | Player, idx: number): void;
+    function setPhonePaletteIdx(player: number | string | IPlayer, idx: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x7BAE68775557AE0B | Since: 1290
      */
-    function setPreviousVariationData(player: number | string | Player): void;
+    function setPreviousVariationData(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x0764486AEDE748DB | Since: 2372
      */
-    function setReserveParachuteModelOverride(player: number | string | Player, model: number | string): void;
+    function setReserveParachuteModelOverride(player: number | string | IPlayer, model: number | string): void;
     /**
      * Tints:
      * None = -1,
@@ -34046,19 +34046,19 @@ export declare namespace player {
      *
      * Hash: 0xAF04C87F5DC1DF38 | Since: 323
      */
-    function setReserveParachuteTintIndex(player: number | string | Player, index: number): void;
+    function setReserveParachuteTintIndex(player: number | string | IPlayer, index: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xC54C95DA968EC5B5 | Since: 323
      */
-    function setSimulateAiming(player: number | string | Player, toggle: boolean): void;
+    function setSimulateAiming(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * Values around 1.0f to 2.0f used in game scripts.
      *
      * Hash: 0xB2C1A29588A9F47C | Since: 323
      */
-    function setSneakingNoiseMultiplier(player: number | string | Player, multiplier: number): void;
+    function setSneakingNoiseMultiplier(player: number | string | IPlayer, multiplier: number): void;
     /**
      * No comment provided
      *
@@ -34070,13 +34070,13 @@ export declare namespace player {
      *
      * Hash: 0xA01B8075D8B92DF4 | Since: 323
      */
-    function setSprint(player: number | string | Player, toggle: boolean): void;
+    function setSprint(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x4E9021C1FCDD507A | Since: 323
      */
-    function setStealthPerceptionModifier(player: number | string | Player, value: number): void;
+    function setStealthPerceptionModifier(player: number | string | IPlayer, value: number): void;
     /**
      * Sets your targeting mode.
      * 0 = Assisted Aim - Full
@@ -34098,25 +34098,25 @@ export declare namespace player {
      *
      * Hash: 0x0299FA38396A4940 | Since: 323
      */
-    function setTeam(player: number | string | Player, team: number): void;
+    function setTeam(player: number | string | IPlayer, team: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xA0D3E4F7AAFB7E78 | Since: 757
      */
-    function setUnderwaterBreathPercentRemaining(player: number | string | Player, time: number): number;
+    function setUnderwaterBreathPercentRemaining(player: number | string | IPlayer, time: number): number;
     /**
      * modifier's min value is 0.1
      *
      * Hash: 0xA50E117CDDF82F0C | Since: 323
      */
-    function setVehicleDamageModifier(player: number | string | Player, modifier: number): void;
+    function setVehicleDamageModifier(player: number | string | IPlayer, modifier: number): void;
     /**
      * modifier's min value is 0.1
      *
      * Hash: 0x4C60E6EFDAFF2462 | Since: 323
      */
-    function setVehicleDefenseModifier(player: number | string | Player, modifier: number): void;
+    function setVehicleDefenseModifier(player: number | string | IPlayer, modifier: number): void;
     /**
      * Unsets playerPed+330 if the current weapon has certain flags.
      *
@@ -34134,7 +34134,7 @@ export declare namespace player {
      *
      * Hash: 0x520E541A97A13354 | Since: 323
      */
-    function setWantedCentrePosition(player: number | string | Player): Vector3;
+    function setWantedCentrePosition(player: number | string | IPlayer): Vector3;
     /**
      * Call SET_PLAYER_WANTED_LEVEL_NOW for immediate effect
      *
@@ -34145,7 +34145,7 @@ export declare namespace player {
      *
      * Hash: 0x39FF19C64EF7DA5B | Since: 323
      */
-    function setWantedLevel(player: number | string | Player, wantedLevel: number, disableNoMission: boolean): void;
+    function setWantedLevel(player: number | string | IPlayer, wantedLevel: number, disableNoMission: boolean): void;
     /**
      * Forces any pending wanted level to be applied to the specified player immediately.
      *
@@ -34155,13 +34155,13 @@ export declare namespace player {
      *
      * Hash: 0xE0A7D1E497FFCD6F | Since: 323
      */
-    function setWantedLevelNow(player: number | string | Player): void;
+    function setWantedLevelNow(player: number | string | IPlayer): void;
     /**
      * p2 is always false in R* scripts
      *
      * Hash: 0x340E61DE7F471565 | Since: 323
      */
-    function setWantedLevelNoDrop(player: number | string | Player, wantedLevel: number): void;
+    function setWantedLevelNoDrop(player: number | string | IPlayer, wantedLevel: number): void;
     /**
      * This modifies the damage value of your weapon. Whether it is a multiplier or base damage is unknown.
      *
@@ -34171,31 +34171,31 @@ export declare namespace player {
      *
      * Hash: 0xCE07B9F7817AADA3 | Since: 323
      */
-    function setWeaponDamageModifier(player: number | string | Player, modifier: number): void;
+    function setWeaponDamageModifier(player: number | string | IPlayer, modifier: number): void;
     /**
      * modifier's min value is 0.1
      *
      * Hash: 0x2D83BC011CA14A3C | Since: 323
      */
-    function setWeaponDefenseModifier(player: number | string | Player, modifier: number): void;
+    function setWeaponDefenseModifier(player: number | string | IPlayer, modifier: number): void;
     /**
      * modifier's min value is 0.1
      *
      * Hash: 0xBCFDE9EDE4CF27DC | Since: 944
      */
-    function setWeaponMinigunDefenseModifier(player: number | string | Player, modifier: number): void;
+    function setWeaponMinigunDefenseModifier(player: number | string | IPlayer, modifier: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x31E90B8873A4CD3B | Since: 617
      */
-    function setWeaponTakedownDefenseModifier(player: number | string | Player): void;
+    function setWeaponTakedownDefenseModifier(player: number | string | IPlayer): void;
     /**
      * The player will be ignored by the police if toggle is set to true
      *
      * Hash: 0x32C62AA929C2DA6A | Since: 323
      */
-    function setPoliceIgnore(player: number | string | Player, toggle: boolean): void;
+    function setPoliceIgnore(player: number | string | IPlayer, toggle: boolean): void;
     /**
      * If toggle is set to false:
      * The police won't be shown on the (mini)map
@@ -34215,7 +34215,7 @@ export declare namespace player {
      *
      * Hash: 0x6DB47AA77FD94E09 | Since: 323
      */
-    function setRunSprintMultiplierFor(player: number | string | Player, multiplier: number): void;
+    function setRunSprintMultiplierFor(player: number | string | IPlayer, multiplier: number): void;
     /**
      * No comment provided
      *
@@ -34227,7 +34227,7 @@ export declare namespace player {
      *
      * Hash: 0xB214D570EAD7F81A | Since: 678
      */
-    function setSpecialAbilityMp(player: number | string | Player): void;
+    function setSpecialAbilityMp(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
@@ -34244,19 +34244,19 @@ export declare namespace player {
      *
      * Hash: 0xA91C6F0FF7D16A13 | Since: 323
      */
-    function setSwimMultiplierFor(player: number | string | Player, multiplier: number): void;
+    function setSwimMultiplierFor(player: number | string | IPlayer, multiplier: number): void;
     /**
      * Max value is 1.0
      *
      * Hash: 0x9B0BB33B04405E7A | Since: 323
      */
-    function setWantedLevelDifficulty(player: number | string | Player, difficulty: number): void;
+    function setWantedLevelDifficulty(player: number | string | IPlayer, difficulty: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x49B856B1360C47C7 | Since: 2060
      */
-    function setWantedLevelHiddenEscapeTime(player: number | string | Player, wantedLevel: number, lossTime: number): void;
+    function setWantedLevelHiddenEscapeTime(player: number | string | IPlayer, wantedLevel: number, lossTime: number): void;
     /**
      * No comment provided
      *
@@ -34276,37 +34276,37 @@ export declare namespace player {
      *
      * Hash: 0x477D5D63E63ECA5D | Since: 323
      */
-    function simulateInputGait(player: number | string | Player, amount: number, gaitType: number, speed: number): void;
+    function simulateInputGait(player: number | string | IPlayer, amount: number, gaitType: number, speed: number): void;
     /**
      * p1 is always 0 in the scripts
      *
      * Hash: 0x821FDC827D6F4090 | Since: 678
      */
-    function specialAbilityActivate(player: number | string | Player): void;
+    function specialAbilityActivate(player: number | string | IPlayer): void;
     /**
      * p1 appears as 5, 10, 15, 25, or 30. p2 is always true.
      *
      * Hash: 0xB7B0870EB531D08D | Since: 323
      */
-    function specialAbilityChargeAbsolute(player: number | string | Player): void;
+    function specialAbilityChargeAbsolute(player: number | string | IPlayer): void;
     /**
      * p1 appears to always be 1 (only comes up twice)
      *
      * Hash: 0xED481732DFF7E997 | Since: 323
      */
-    function specialAbilityChargeContinuous(player: number | string | Player, p1: number | Ped): void;
+    function specialAbilityChargeContinuous(player: number | string | IPlayer, p1: number | IPed): void;
     /**
      * 2 matches. p1 was always true.
      *
      * Hash: 0xF733F45FA4497D93 | Since: 323
      */
-    function specialAbilityChargeLarge(player: number | string | Player): void;
+    function specialAbilityChargeLarge(player: number | string | IPlayer): void;
     /**
      * Only 1 match. Both p1 & p2 were true.
      *
      * Hash: 0xF113E3AA9BC54613 | Since: 323
      */
-    function specialAbilityChargeMedium(player: number | string | Player): void;
+    function specialAbilityChargeMedium(player: number | string | IPlayer): void;
     /**
      *
      * normalizedValue is from 0.0 - 1.0
@@ -34314,49 +34314,49 @@ export declare namespace player {
      *
      * Hash: 0xA0696A65F009EE18 | Since: 323
      */
-    function specialAbilityChargeNormalized(player: number | string | Player, normalizedValue: number): void;
+    function specialAbilityChargeNormalized(player: number | string | IPlayer, normalizedValue: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xC9A763D8FE87436A | Since: 323
      */
-    function specialAbilityChargeOnMissionFailed(player: number | string | Player): void;
+    function specialAbilityChargeOnMissionFailed(player: number | string | IPlayer): void;
     /**
      * Every occurrence of p1 & p2 were both true.
      *
      * Hash: 0x2E7B9B683481687D | Since: 323
      */
-    function specialAbilityChargeSmall(player: number | string | Player): void;
+    function specialAbilityChargeSmall(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0xD6A953C6D1492057 | Since: 323
      */
-    function specialAbilityDeactivate(player: number | string | Player): void;
+    function specialAbilityDeactivate(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x9CB5CE07A3968D5A | Since: 323
      */
-    function specialAbilityDeactivateFast(player: number | string | Player): void;
+    function specialAbilityDeactivateFast(player: number | string | IPlayer): void;
     /**
      * p1 is always 0 in the scripts
      *
      * Hash: 0x17F7471EACA78290 | Since: 678
      */
-    function specialAbilityDeactivateMp(player: number | string | Player): void;
+    function specialAbilityDeactivateMp(player: number | string | IPlayer): void;
     /**
      * p1 was always true.
      *
      * Hash: 0x1D506DBBBC51E64B | Since: 323
      */
-    function specialAbilityDepleteMeter(player: number | string | Player): void;
+    function specialAbilityDepleteMeter(player: number | string | IPlayer): void;
     /**
      * Also known as _RECHARGE_SPECIAL_ABILITY
      *
      * Hash: 0x3DACA8DDC6FD4980 | Since: 323
      */
-    function specialAbilityFillMeter(player: number | string | Player): void;
+    function specialAbilityFillMeter(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
@@ -34368,7 +34368,7 @@ export declare namespace player {
      *
      * Hash: 0x375F0E738F861A94 | Since: 323
      */
-    function specialAbilityReset(player: number | string | Player): void;
+    function specialAbilityReset(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
@@ -34386,7 +34386,7 @@ export declare namespace player {
      *
      * Hash: 0xAD15F075A4DA0FDE | Since: 323
      */
-    function startTeleport(player: number | string | Player, pos: Vector3, heading: number, findCollisionLand: boolean): void;
+    function startTeleport(player: number | string | IPlayer, pos: Vector3, heading: number, findCollisionLand: boolean): void;
     /**
      * Disables the player's teleportation
      *
@@ -34398,31 +34398,31 @@ export declare namespace player {
      *
      * Hash: 0x9A987297ED8BD838 | Since: 323
      */
-    function suppressCrimeThisFrame(player: number | string | Player, crimeType: number): void;
+    function suppressCrimeThisFrame(player: number | string | IPlayer, crimeType: number): void;
     /**
      * This has been found in use in the decompiled files.
      *
      * Hash: 0x4669B3ED80F24B4E | Since: 323
      */
-    function suppressLosingWantedLevelIfHiddenThisFrame(player: number | string | Player): void;
+    function suppressLosingWantedLevelIfHiddenThisFrame(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0x36F1B38855F2A8DF | Since: 323
      */
-    function suppressWitnessesCallingPoliceThisFrame(player: number | string | Player): void;
+    function suppressWitnessesCallingPoliceThisFrame(player: number | string | IPlayer): void;
     /**
      * No comment provided
      *
      * Hash: 0xE23D5873C2394C61 | Since: 323
      */
-    function updateTeleport(player: number | string | Player): boolean;
+    function updateTeleport(player: number | string | IPlayer): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xFFEE8FA29AB9A18E | Since: 323
      */
-    function updateSpecialAbilityFromStat(player: number | string | Player): void;
+    function updateSpecialAbilityFromStat(player: number | string | IPlayer): void;
     /**
      * This native is used in both singleplayer and multiplayer scripts.
      *
@@ -34431,7 +34431,7 @@ export declare namespace player {
      *
      * Hash: 0xBC9490CA15AEA8FB | Since: 323
      */
-    function updateWantedPositionThisFrame(player: number | string | Player): void;
+    function updateWantedPositionThisFrame(player: number | string | IPlayer): void;
 }
 export declare namespace recording {
     /**
@@ -34911,31 +34911,31 @@ export declare namespace shapetest {
      *
      * Hash: 0x2B3334BCA57CD799 | Since: 323
      */
-    function releaseScriptGuidFromEntity(entityHit: number | Entity): void;
+    function releaseScriptGuidFromEntity(entityHit: number | IEntity): void;
     /**
      * Does the same as 0x7EE9F5D83DD4F90E, except blocking until the shape test completes.
      *
      * Hash: 0x377906D8A31E5586 | Since: 323
      */
-    function startExpensiveSynchronousLosProbe(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, flags: number, entity: number | Entity): number;
+    function startExpensiveSynchronousLosProbe(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, flags: number, entity: number | IEntity): number;
     /**
      * No comment provided
      *
      * Hash: 0x37181417CE7C8900 | Since: 323
      */
-    function startBound(entity: number | Entity, flags1: number, flags2: number): number;
+    function startBound(entity: number | IEntity, flags1: number, flags2: number): number;
     /**
      * No comment provided
      *
      * Hash: 0x052837721A854EC7 | Since: 323
      */
-    function startBoundingBox(entity: number | Entity, flags1: number, flags2: number): number;
+    function startBoundingBox(entity: number | IEntity, flags1: number, flags2: number): number;
     /**
      * No comment provided
      *
      * Hash: 0xFE466162C4401D18 | Since: 323
      */
-    function startBox(pos: Vector3, dimX: number, dimY: number, dimZ: number, rot: Vector3, flags: number, entity: number | Entity): number;
+    function startBox(pos: Vector3, dimX: number, dimY: number, dimZ: number, rot: Vector3, flags: number, entity: number | IEntity): number;
     /**
      * Raycast from point to point, where the ray has a radius.
      *
@@ -34951,7 +34951,7 @@ export declare namespace shapetest {
      *
      * Hash: 0x28579D1B8F8AAC80 | Since: 323
      */
-    function startCapsule(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, radius: number, flags: number, entity: number | Entity): number;
+    function startCapsule(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, radius: number, flags: number, entity: number | IEntity): number;
     /**
      * Asynchronously starts a line-of-sight (raycast) world probe shape test.
      *
@@ -34961,7 +34961,7 @@ export declare namespace shapetest {
      *
      * Hash: 0x7EE9F5D83DD4F90E | Since: 323
      */
-    function startLosProbe(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, flags: number, entity: number | Entity): number;
+    function startLosProbe(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, flags: number, entity: number | IEntity): number;
     /**
      * Returns a ShapeTest handle that can be used with GET_SHAPE_TEST_RESULT.
      *
@@ -34969,13 +34969,13 @@ export declare namespace shapetest {
      *
      * Hash: 0xFF6BE494C7987F34 | Since: 323
      */
-    function startMouseCursorLosProbe(flag: number, entity: number | Entity, flag2: number): [number, Vector3, Vector3];
+    function startMouseCursorLosProbe(flag: number, entity: number | IEntity, flag2: number): [number, Vector3, Vector3];
     /**
      * No comment provided
      *
      * Hash: 0xE6AC6C45FBE83004 | Since: 323
      */
-    function startSweptSphere(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, radius: number, flags: number, entity: number | Entity): number;
+    function startSweptSphere(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, radius: number, flags: number, entity: number | IEntity): number;
 }
 export declare namespace socialclub {
     /**
@@ -36104,7 +36104,7 @@ export declare namespace stats {
      *
      * Hash: 0x34B973047A2268B9 | Since: 323
      */
-    function playClothChange(p0: number | Ped): void;
+    function playClothChange(p0: number | IPed): void;
     /**
      * No comment provided
      *
@@ -36566,7 +36566,7 @@ export declare namespace stats {
      *
      * Hash: 0xBA739D6D5A05D6E7 | Since: 323
      */
-    function playPropChange(p0: number | Ped): void;
+    function playPropChange(p0: number | IPed): void;
     /**
      * No comment provided
      *
@@ -36584,7 +36584,7 @@ export declare namespace stats {
      *
      * Hash: 0x9C375C315099DDE4 | Since: 323
      */
-    function playRaceCheckpoint(p0: number | Vehicle): void;
+    function playRaceCheckpoint(p0: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -36632,7 +36632,7 @@ export declare namespace stats {
      *
      * Hash: 0x121FB4DDDC2D5291 | Since: 323
      */
-    function playRosBet(amount: number, act: number, player: number | string | Player, cm: number): void;
+    function playRosBet(amount: number, act: number, player: number | string | IPlayer, cm: number): void;
     /**
      * No comment provided
      *
@@ -37525,7 +37525,7 @@ export declare namespace stats {
      *
      * Hash: 0x01D8B04D02F1217F | Since: 3570
      */
-    function playDeathInfo(victimPed: number | Ped, killerPed: number | Ped, mentalState: number, revengeKill: boolean, victimKvK: number, killerKvK: number): void;
+    function playDeathInfo(victimPed: number | IPed, killerPed: number | IPed, mentalState: number, revengeKill: boolean, victimKvK: number, killerKvK: number): void;
     /**
      * No comment provided
      *
@@ -37853,7 +37853,7 @@ export declare namespace streaming {
      *
      * Hash: 0x2DDFF3FB9075D747 | Since: 323
      */
-    function isEntityFocus(entity: number | Entity): boolean;
+    function isEntityFocus(entity: number | IEntity): boolean;
     /**
      * Full list of IPLs and interior entity sets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ipls.json
      *
@@ -38193,7 +38193,7 @@ export declare namespace streaming {
      *
      * Hash: 0x198F77705FA0931D | Since: 323
      */
-    function setFocusEntity(entity: number | Entity): void;
+    function setFocusEntity(entity: number | IEntity): void;
     /**
      * Override the area where the camera will render the terrain.
      * p3, p4 and p5 are usually set to 0.0
@@ -38289,7 +38289,7 @@ export declare namespace streaming {
      *
      * Hash: 0x0811381EF5062FEC | Since: 323
      */
-    function setRestoreFocusEntity(p0: number | Entity): void;
+    function setRestoreFocusEntity(p0: number | IEntity): void;
     /**
      * No comment provided
      *
@@ -38372,7 +38372,7 @@ export declare namespace streaming {
      *
      * Hash: 0xFAA23F2CBA159D67 | Since: 323
      */
-    function startPlayerSwitch(_from: number | Ped, to: number | Ped, flags: number, switchType: number): void;
+    function startPlayerSwitch(_from: number | IPed, to: number | IPed, flags: number, switchType: number): void;
     /**
      * No comment provided
      *
@@ -38438,13 +38438,13 @@ export declare namespace streaming {
      *
      * Hash: 0xAAB3200ED59016BC | Since: 323
      */
-    function switchToMultiFirstpart(ped: number | Ped, flags: number, switchType: number): void;
+    function switchToMultiFirstpart(ped: number | IPed, flags: number, switchType: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xD8295AF639FD9CB8 | Since: 323
      */
-    function switchToMultiSecondpart(ped: number | Ped): void;
+    function switchToMultiSecondpart(ped: number | IPed): void;
 }
 export declare namespace task {
     /**
@@ -38497,13 +38497,13 @@ export declare namespace task {
      *
      * Hash: 0x5CF0D8F9BBA0DD75 | Since: 323
      */
-    function addVehicleSubAttackCoord(ped: number | Ped, pos: Vector3): void;
+    function addVehicleSubAttackCoord(ped: number | IPed, pos: Vector3): void;
     /**
      * No comment provided
      *
      * Hash: 0x85F462BADC7DA47F | Since: 323
      */
-    function addVehicleSubAttackPed(ped: number | Ped, target: number | Ped): void;
+    function addVehicleSubAttackPed(ped: number | IPed, target: number | IPed): void;
     /**
      * No comment provided
      *
@@ -38539,44 +38539,44 @@ export declare namespace task {
      *
      * Hash: 0x6100B3CEFD43452E | Since: 2189
      */
-    function clearDefaultPrimary(ped: number | Ped): void;
+    function clearDefaultPrimary(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xC35B5CDB2824CF69 | Since: 323
      */
-    function clearDrivebyUnderneathDrivingTask(ped: number | Ped): void;
+    function clearDrivebyUnderneathDrivingTask(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xF6DC48E56BE1243A | Since: 3407
      */
-    function clearPedScriptIfRunningThreatResponseNonTempTask(ped: number | Ped): void;
+    function clearPedScriptIfRunningThreatResponseNonTempTask(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x176CECF6F920D707 | Since: 323
      */
-    function clearPedSecondary(ped: number | Ped): void;
+    function clearPedSecondary(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0xE1EF3C1216AFF2CD | Since: 323
      */
-    function clearPeds(ped: number | Ped): void;
+    function clearPeds(ped: number | IPed): void;
     /**
      * Immediately stops the pedestrian from whatever it's doing. They stop fighting, animations, etc. they forget what they were doing.
      *
      * Hash: 0xAAA34F8A7CB32098 | Since: 323
      */
-    function clearPedsImmediately(ped: number | Ped): void;
+    function clearPedsImmediately(ped: number | IPed): void;
     /**
      * This native is very useful when switching the player to a ped inside a vehicle that has a task assigned prior to the player switch.
      * It is necessary to clear the ped's tasks AND call this native with the vehicle the player is switching into in order to allow the player to control the vehicle after the player switches.
      *
      * Hash: 0xDBBC7A2432524127 | Since: 1290
      */
-    function clearPrimaryVehicle(vehicle: number | Vehicle): void;
+    function clearPrimaryVehicle(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -38588,7 +38588,7 @@ export declare namespace task {
      *
      * Hash: 0x53DDC75BC3AC0A90 | Since: 1290
      */
-    function clearVehicleCrash(vehicle: number | Vehicle): void;
+    function clearVehicleCrash(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -38607,7 +38607,7 @@ export declare namespace task {
      *
      * Hash: 0xDCFE42068FE0135A | Since: 323
      */
-    function controlMountedWeapon(ped: number | Ped): boolean;
+    function controlMountedWeapon(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
@@ -38689,7 +38689,7 @@ export declare namespace task {
      *
      * Hash: 0x534AEBA6E5ED4CAB | Since: 323
      */
-    function getActiveVehicleMissionType(vehicle: number | Vehicle): number;
+    function getActiveVehicleMissionType(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
@@ -38701,7 +38701,7 @@ export declare namespace task {
      *
      * Hash: 0xB0760331C7AA4155 | Since: 323
      */
-    function getIsActive(ped: number | Ped, taskIndex: number): boolean;
+    function getIsActive(ped: number | IPed, taskIndex: number): boolean;
     /**
      * Full list of waypoint recordings by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/waypointRecordings.json
      *
@@ -38718,25 +38718,25 @@ export declare namespace task {
      *
      * Hash: 0xC6F5C0BCDC74D62D | Since: 323
      */
-    function getNavmeshRouteDistanceRemaining(ped: number | Ped): [number, number, boolean];
+    function getNavmeshRouteDistanceRemaining(ped: number | IPed): [number, number, boolean];
     /**
      * See GET_NAVMESH_ROUTE_DISTANCE_REMAINING for more details.
      *
      * Hash: 0x632E831F382A0FA8 | Since: 323
      */
-    function getNavmeshRouteResult(ped: number | Ped): number;
+    function getNavmeshRouteResult(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0x52F734CEBE20DFBA | Since: 2545
      */
-    function getPatrolInfo(ped: number | Ped): [boolean, number, number];
+    function getPatrolInfo(ped: number | IPed): [boolean, number, number];
     /**
      * No comment provided
      *
      * Hash: 0x8517D4A6CA8513ED | Since: 323
      */
-    function getPedDesiredMoveBlendRatio(ped: number | Ped): number;
+    function getPedDesiredMoveBlendRatio(ped: number | IPed): number;
     /**
      * No comment provided
      *
@@ -38748,19 +38748,19 @@ export declare namespace task {
      *
      * Hash: 0x2720AAA75001E094 | Since: 323
      */
-    function getPedWaypointProgress(ped: number | Ped): number;
+    function getPedWaypointProgress(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0x47619ABE8B268C60 | Since: 323
      */
-    function getPhoneGestureAnimCurrentTime(ped: number | Ped): number;
+    function getPhoneGestureAnimCurrentTime(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0x1EE0F68A7C25DEC6 | Since: 323
      */
-    function getPhoneGestureAnimTotalTime(ped: number | Ped): number;
+    function getPhoneGestureAnimTotalTime(ped: number | IPed): number;
     /**
      * No comment provided
      *
@@ -38773,7 +38773,7 @@ export declare namespace task {
      *
      * Hash: 0x77F1BEB8863288D5 | Since: 323
      */
-    function getScriptStatus(ped: number | Ped, taskHash: number | string): number;
+    function getScriptStatus(ped: number | IPed, taskHash: number | string): number;
     /**
      * returned values:
      * 0 to 7 = task that's currently in progress, 0 meaning the first one.
@@ -38781,49 +38781,49 @@ export declare namespace task {
      *
      * Hash: 0x00A9010CFE1E3533 | Since: 323
      */
-    function getSequenceProgress(ped: number | Ped): number;
+    function getSequenceProgress(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0xB4F47213DF45A64C | Since: 323
      */
-    function getMoveNetworkEvent(ped: number | Ped, eventName: string): boolean;
+    function getMoveNetworkEvent(ped: number | IPed, eventName: string): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xA7FFBA498E4AAF67 | Since: 323
      */
-    function getMoveNetworkSignalBool(ped: number | Ped, signalName: string): boolean;
+    function getMoveNetworkSignalBool(ped: number | IPed, signalName: string): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x44AB0B3AFECCE242 | Since: 1493
      */
-    function getMoveNetworkSignalFloat(ped: number | Ped, signalName: string): number;
+    function getMoveNetworkSignalFloat(ped: number | IPed, signalName: string): number;
     /**
      * No comment provided
      *
      * Hash: 0x717E4D1F2048376D | Since: 323
      */
-    function getMoveNetworkState(ped: number | Ped): string;
+    function getMoveNetworkState(ped: number | IPed): string;
     /**
      * No comment provided
      *
      * Hash: 0x9D252648778160DF | Since: 1868
      */
-    function getRappelDownWallState(ped: number | Ped): number;
+    function getRappelDownWallState(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0x9824CFF8FC66E159 | Since: 323
      */
-    function getVehicleWaypointProgress(vehicle: number | Vehicle): number;
+    function getVehicleWaypointProgress(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0x416B62AC8B9E5BBD | Since: 323
      */
-    function getVehicleWaypointTargetPoint(vehicle: number | Vehicle): number;
+    function getVehicleWaypointTargetPoint(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
@@ -38835,74 +38835,74 @@ export declare namespace task {
      *
      * Hash: 0x3E38E28A1D80DDF6 | Since: 323
      */
-    function isControlledVehicleUnableToGetToRoad(ped: number | Ped): boolean;
+    function isControlledVehicleUnableToGetToRoad(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x8785E6E40C7A8818 | Since: 323
      */
-    function isDrivebyUnderneathDrivingTask(ped: number | Ped): boolean;
+    function isDrivebyUnderneathDrivingTask(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xA320EF046186FA3B | Since: 323
      */
-    function isMountedWeaponUnderneathDrivingTask(ped: number | Ped): boolean;
+    function isMountedWeaponUnderneathDrivingTask(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xD4D8636C0199A939 | Since: 323
      */
-    function isMoveBlendRatioRunning(ped: number | Ped): boolean;
+    function isMoveBlendRatioRunning(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x24A2AD74FA9814E2 | Since: 323
      */
-    function isMoveBlendRatioSprinting(ped: number | Ped): boolean;
+    function isMoveBlendRatioSprinting(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x349CE7B56DAFD95C | Since: 323
      */
-    function isMoveBlendRatioStill(ped: number | Ped): boolean;
+    function isMoveBlendRatioStill(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xF133BBBE91E1691F | Since: 323
      */
-    function isMoveBlendRatioWalking(ped: number | Ped): boolean;
+    function isMoveBlendRatioWalking(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xAA135F9482C82CC3 | Since: 323
      */
-    function isPedActiveInScenario(ped: number | Ped): boolean;
+    function isPedActiveInScenario(ped: number | IPed): boolean;
     /**
      * This function is hard-coded to always return 0.
      *
      * Hash: 0x90A09F3A45FED688 | Since: 323
      */
-    function isPedBeingArrested(ped: number | Ped): boolean;
+    function isPedBeingArrested(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x74E559B3BC910685 | Since: 323
      */
-    function isPedCuffed(ped: number | Ped): boolean;
+    function isPedCuffed(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x2A74E1D5F2F00EEC | Since: 323
      */
-    function isPedGettingUp(ped: number | Ped): boolean;
+    function isPedGettingUp(ped: number | IPed): boolean;
     /**
      * This native checks if a ped is on the ground, in pain from a (gunshot) wound.
      * Returns `true` if the ped is in writhe, `false` otherwise.
      *
      * Hash: 0xDEB6D52126E7D640 | Since: 323
      */
-    function isPedInWrithe(ped: number | Ped): boolean;
+    function isPedInWrithe(ped: number | IPed): boolean;
     /**
      * Used only once (am_mp_property_int)
      *
@@ -38912,49 +38912,49 @@ export declare namespace task {
      *
      * Hash: 0x621C6E4729388E41 | Since: 323
      */
-    function isPedPlayingBaseClipInScenario(ped: number | Ped): boolean;
+    function isPedPlayingBaseClipInScenario(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xC5286FFC176F28A2 | Since: 323
      */
-    function isPedRunning(ped: number | Ped): boolean;
+    function isPedRunning(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x3DC52677769B4AE0 | Since: 323
      */
-    function isPedRunningArrest(ped: number | Ped): boolean;
+    function isPedRunningArrest(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x57E457CD2C0FC168 | Since: 323
      */
-    function isPedSprinting(ped: number | Ped): boolean;
+    function isPedSprinting(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xAC29253EEF8F0180 | Since: 323
      */
-    function isPedStill(ped: number | Ped): boolean;
+    function isPedStill(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xE45B7F222DE47E09 | Since: 323
      */
-    function isPedStrafing(ped: number | Ped): boolean;
+    function isPedStrafing(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xDE4C184B2B9B071A | Since: 323
      */
-    function isPedWalking(ped: number | Ped): boolean;
+    function isPedWalking(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xB8EBB1E9D3588C10 | Since: 323
      */
-    function isPlayingPhoneGestureAnim(ped: number | Ped): boolean;
+    function isPlayingPhoneGestureAnim(ped: number | IPed): boolean;
     /**
      * Full list of scenario groups used in scripts by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scenarioGroupNames.json
      * Occurrences in the b617d scripts:
@@ -39019,25 +39019,25 @@ export declare namespace task {
      *
      * Hash: 0x921CE12C489C4C41 | Since: 323
      */
-    function isMoveNetworkActive(ped: number | Ped): boolean;
+    function isMoveNetworkActive(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x30ED88D5E0C56A37 | Since: 323
      */
-    function isMoveNetworkReadyForTransition(ped: number | Ped): boolean;
+    function isMoveNetworkReadyForTransition(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xE03B3F2D3DC59B64 | Since: 323
      */
-    function isWaypointPlaybackGoingOnForPed(ped: number | Ped): boolean;
+    function isWaypointPlaybackGoingOnForPed(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xF5134943EA29868C | Since: 323
      */
-    function isWaypointPlaybackGoingOnForVehicle(vehicle: number | Vehicle): boolean;
+    function isWaypointPlaybackGoingOnForVehicle(vehicle: number | IVehicle): boolean;
     /**
      * patrolRoutes found in the b617d scripts:
      * "miss_Ass0",
@@ -39075,19 +39075,19 @@ export declare namespace task {
      *
      * Hash: 0x295E3CCEC879CCD7 | Since: 323
      */
-    function pedHasUseScenario(ped: number | Ped): boolean;
+    function pedHasUseScenario(ped: number | IPed): boolean;
     /**
      * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
      *
      * Hash: 0x748040460F8DF5DC | Since: 323
      */
-    function playAnimOnRunningScenario(ped: number | Ped, animDict: string, animName: string): void;
+    function playAnimOnRunningScenario(ped: number | IPed, animDict: string, animName: string): void;
     /**
      * No comment provided
      *
      * Hash: 0x77A1EEC547E7FCF1 | Since: 323
      */
-    function playEntityScriptedAnim(entity: number | Entity, blendInDelta: number, blendOutDelta: number): [number, number, number];
+    function playEntityScriptedAnim(entity: number | IEntity, blendInDelta: number, blendOutDelta: number): [number, number, number];
     /**
      * No comment provided
      *
@@ -39123,7 +39123,7 @@ export declare namespace task {
      *
      * Hash: 0xD01015C7316AE176 | Since: 323
      */
-    function requestMoveNetworkStateTransition(ped: number | Ped, name: string): boolean;
+    function requestMoveNetworkStateTransition(ped: number | IPed, name: string): boolean;
     /**
      * Full list of waypoint recordings by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/waypointRecordings.json
      * For a full list of the points, see here: goo.gl/wIH0vn
@@ -39156,37 +39156,37 @@ export declare namespace task {
      *
      * Hash: 0x70033C3CC29A1FF4 | Since: 323
      */
-    function setAnimLooped(entity: number | Entity, looped: boolean, priority: number, secondary: boolean): void;
+    function setAnimLooped(entity: number | IEntity, looped: boolean, priority: number, secondary: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xDDF3CB5A0A4C0B49 | Since: 2372
      */
-    function setAnimPhase(entity: number | Entity, phase: number, priority: number, secondary: boolean): void;
+    function setAnimPhase(entity: number | IEntity, phase: number, priority: number, secondary: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x032D49C5E359C847 | Since: 323
      */
-    function setAnimRate(entity: number | Entity, rate: number, priority: number, secondary: boolean): void;
+    function setAnimRate(entity: number | IEntity, rate: number, priority: number, secondary: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x207F1A47C0342F48 | Since: 323
      */
-    function setAnimWeight(entity: number | Entity, weight: number, priority: number, index: number, secondary: boolean): void;
+    function setAnimWeight(entity: number | IEntity, weight: number, priority: number, index: number, secondary: boolean): void;
     /**
      * For p1 & p2 (Ped, Vehicle). I could be wrong, as the only time this native is called in scripts is once and both are 0, but I assume this native will work like SET_MOUNTED_WEAPON_TARGET in which has the same exact amount of parameters and the 1st and last 3 parameters are right and the same for both natives.
      *
      * Hash: 0xE5B302114D8162EE | Since: 323
      */
-    function setDrivebyTarget(shootingPed: number | Ped, targetPed: number | Ped, targetVehicle: number | Vehicle, pos: Vector3): void;
+    function setDrivebyTarget(shootingPed: number | IPed, targetPed: number | IPed, targetVehicle: number | IVehicle, pos: Vector3): void;
     /**
      * No comment provided
      *
      * Hash: 0x5C9B84BD7D31D908 | Since: 323
      */
-    function setDriveCruiseSpeed(driver: number | Ped, cruiseSpeed: number): void;
+    function setDriveCruiseSpeed(driver: number | IPed, cruiseSpeed: number): void;
     /**
      * This native is used to set the driving style for specific ped.
      *
@@ -39199,13 +39199,13 @@ export declare namespace task {
      *
      * Hash: 0xDACE1BE37D88AF67 | Since: 323
      */
-    function setDriveDrivingStyle(ped: number | Ped, drivingStyle: number): void;
+    function setDriveDrivingStyle(ped: number | IPed, drivingStyle: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x404A5AA9B9F0B746 | Since: 323
      */
-    function setDriveMaxCruiseSpeed(ped: number | Ped, speed: number, updateBaseTask: boolean): void;
+    function setDriveMaxCruiseSpeed(ped: number | IPed, speed: number, updateBaseTask: boolean): void;
     /**
      * Full list of scenario groups used in scripts by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scenarioGroupNames.json
      * Groups found in the scripts used with this native:
@@ -39226,7 +39226,7 @@ export declare namespace task {
      *
      * Hash: 0xAB13A5565480B6D9 | Since: 323
      */
-    function setExpectedCloneNextMoveNetworkState(ped: number | Ped, state: string): boolean;
+    function setExpectedCloneNextMoveNetworkState(ped: number | IPed, state: string): boolean;
     /**
      * Needs to be looped! And yes, it does work and is not a hash collision.
      * Birds will try to reach the given height.
@@ -39239,13 +39239,13 @@ export declare namespace task {
      *
      * Hash: 0x8C825BDC7741D37C | Since: 323
      */
-    function setHighFall(ped: number | Ped, minTime: number, maxTime: number, entryType: number): void;
+    function setHighFall(ped: number | IPed, minTime: number, maxTime: number, entryType: number): void;
     /**
      * Note: Look in decompiled scripts and the times that p1 and p2 aren't 0. They are filled with vars. If you look through out that script what other natives those vars are used in, you can tell p1 is a ped and p2 is a vehicle. Which most likely means if you want the mounted weapon to target a ped set targetVehicle to 0 or vice-versa.
      *
      * Hash: 0xCCD892192C6D2BB9 | Since: 323
      */
-    function setMountedWeaponTarget(shootingPed: number | Ped, targetPed: number | Ped, targetVehicle: number | Vehicle, pos: Vector3, taskMode: number, ignoreTargetVehDeadCheck: boolean): void;
+    function setMountedWeaponTarget(shootingPed: number | IPed, targetPed: number | IPed, targetVehicle: number | IVehicle, pos: Vector3, taskMode: number, ignoreTargetVehDeadCheck: boolean): void;
     /**
      * This native does absolutely nothing, just a nullsub
      *
@@ -39260,13 +39260,13 @@ export declare namespace task {
      *
      * Hash: 0xC313379AF0FCEDA7 | Since: 323
      */
-    function setParachuteTarget(ped: number | Ped, pos: Vector3): void;
+    function setParachuteTarget(ped: number | IPed, pos: Vector3): void;
     /**
      * No comment provided
      *
      * Hash: 0x0729BAC1B8C64317 | Since: 323
      */
-    function setParachuteThrust(ped: number | Ped, thrust: number): void;
+    function setParachuteThrust(ped: number | IPed, thrust: number): void;
     /**
      * Appears only in fm_mission_controller and used only 3 times.
      *
@@ -39276,67 +39276,67 @@ export declare namespace task {
      *
      * Hash: 0x8FD89A6240813FD0 | Since: 323
      */
-    function setPedCanPlayAmbientIdles(ped: number | Ped, blockIdleClips: boolean, removeIdleClipIfPlaying: boolean): void;
+    function setPedCanPlayAmbientIdles(ped: number | IPed, blockIdleClips: boolean, removeIdleClipIfPlaying: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x1E982AC8716912C5 | Since: 323
      */
-    function setPedDesiredMoveBlendRatio(ped: number | Ped, newMoveBlendRatio: number): void;
+    function setPedDesiredMoveBlendRatio(ped: number | IPed, newMoveBlendRatio: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x4455517B28441E60 | Since: 323
      */
-    function setPedPathAvoidFire(ped: number | Ped, avoidFire: boolean): void;
+    function setPedPathAvoidFire(ped: number | IPed, avoidFire: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xE361C5C71C431A4F | Since: 323
      */
-    function setPedPathCanDropFromHeight(ped: number | Ped, Toggle: boolean): void;
+    function setPedPathCanDropFromHeight(ped: number | IPed, Toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x8E06A6FE76C9EFF4 | Since: 323
      */
-    function setPedPathCanUseClimbovers(ped: number | Ped, Toggle: boolean): void;
+    function setPedPathCanUseClimbovers(ped: number | IPed, Toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x77A5B103C87F476E | Since: 323
      */
-    function setPedPathCanUseLadders(ped: number | Ped, Toggle: boolean): void;
+    function setPedPathCanUseLadders(ped: number | IPed, Toggle: boolean): void;
     /**
      * Default modifier is 1.0, minimum is 0.0 and maximum is 10.0.
      *
      * Hash: 0x88E32DB8C1A4AA4B | Since: 323
      */
-    function setPedPathClimbCostModifier(ped: number | Ped, modifier: number): void;
+    function setPedPathClimbCostModifier(ped: number | IPed, modifier: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xF35425A4204367EC | Since: 323
      */
-    function setPedPathMayEnterWater(ped: number | Ped, mayEnterWater: boolean): void;
+    function setPedPathMayEnterWater(ped: number | IPed, mayEnterWater: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x38FE1EC73743793C | Since: 323
      */
-    function setPedPathPreferToAvoidWater(ped: number | Ped, avoidWater: boolean): void;
+    function setPedPathPreferToAvoidWater(ped: number | IPed, avoidWater: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x686ECCD99D4E61BB | Since: 3570
      */
-    function setPedWaypointProgress(ped: number | Ped, progress: number): void;
+    function setPedWaypointProgress(ped: number | IPed, progress: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xED98E10B0AFCE4B4 | Since: 323
      */
-    function setPedWaypointRouteOffset(ped: number | Ped, pos: Vector3): boolean;
+    function setPedWaypointRouteOffset(ped: number | IPed, pos: Vector3): boolean;
     /**
      * Full list of scenario groups used in scripts by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scenarioGroupNames.json
      * Occurrences in the b617d scripts: https://pastebin.com/Tvg2PRHU
@@ -39400,19 +39400,19 @@ export declare namespace task {
      *
      * Hash: 0x8423541E8B3A1589 | Since: 1493
      */
-    function setMoveNetworkAnimSet(ped: number | Ped, clipSet: number | string, variableClipSet: number | string): void;
+    function setMoveNetworkAnimSet(ped: number | IPed, clipSet: number | string, variableClipSet: number | string): void;
     /**
      * Doesn't actually return anything.
      *
      * Hash: 0x0FFB3C758E8C07B9 | Since: 2060
      */
-    function setMoveNetworkEnableCollisionOnNetworkCloneWhenFixed(ped: number | Ped, enable: boolean): boolean;
+    function setMoveNetworkEnableCollisionOnNetworkCloneWhenFixed(ped: number | IPed, enable: boolean): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xB0A6CFD2C69C1088 | Since: 323
      */
-    function setMoveNetworkSignalBool(ped: number | Ped, signalName: string, value: boolean): void;
+    function setMoveNetworkSignalBool(ped: number | IPed, signalName: string, value: boolean): void;
     /**
      * signalName - "Phase", "Wobble", "x_axis","y_axis","introphase","speed".
      * p2 - From what i can see it goes up to 1f (maybe).
@@ -39421,19 +39421,19 @@ export declare namespace task {
      *
      * Hash: 0xD5BB4025AE449A4E | Since: 323
      */
-    function setMoveNetworkSignalFloat(ped: number | Ped, signalName: string, value: number): void;
+    function setMoveNetworkSignalFloat(ped: number | IPed, signalName: string, value: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x8634CEF2522D987B | Since: 1493
      */
-    function setMoveNetworkSignalFloatLerpRate(ped: number | Ped, signalName: string, value: number): void;
+    function setMoveNetworkSignalFloatLerpRate(ped: number | IPed, signalName: string, value: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x373EF409B82697A3 | Since: 1493
      */
-    function setMoveNetworkSignalLocalFloat(ped: number | Ped, signalName: string, value: number): void;
+    function setMoveNetworkSignalLocalFloat(ped: number | IPed, signalName: string, value: number): void;
     /**
      * Flag 8: Medium-aggressive boxing tactic with a bit of PIT
      * Flag 1: Aggressive ramming of suspect
@@ -39443,25 +39443,25 @@ export declare namespace task {
      *
      * Hash: 0xCC665AAC360D31E7 | Since: 323
      */
-    function setVehicleChaseBehaviorFlag(ped: number | Ped, flag: number, _set: boolean): void;
+    function setVehicleChaseBehaviorFlag(ped: number | IPed, flag: number, _set: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x639B642FACBE4EDD | Since: 323
      */
-    function setVehicleChaseIdealPursuitDistance(ped: number | Ped, distance: number): void;
+    function setVehicleChaseIdealPursuitDistance(ped: number | IPed, distance: number): void;
     /**
      * Looks like p1 may be a flag, still need to do some research, though.
      *
      * Hash: 0xEE08C992D238C5D1 | Since: 323
      */
-    function stopAnimPlayback(entity: number | Entity, priority: number, secondary: boolean): void;
+    function stopAnimPlayback(entity: number | IEntity, priority: number, secondary: boolean): void;
     /**
      * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
      *
      * Hash: 0x97FF36A1D40EA00A | Since: 323
      */
-    function stopAnim(entity: number | Entity, animDictionary: string, animationName: string, blendDelta: number): void;
+    function stopAnim(entity: number | IEntity, animDictionary: string, animationName: string, blendDelta: number): void;
     /**
      * Makes the specified ped achieve the specified heading.
      *
@@ -39471,37 +39471,37 @@ export declare namespace task {
      *
      * Hash: 0x93B93A37987F1F3D | Since: 323
      */
-    function achieveHeading(ped: number | Ped, heading: number, timeout: number): void;
+    function achieveHeading(ped: number | IPed, heading: number, timeout: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x19D1B791CB3670FE | Since: 877
      */
-    function agitatedActionConfrontResponse(ped: number | Ped, ped2: number | Ped): void;
+    function agitatedActionConfrontResponse(ped: number | IPed, ped2: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x6671F3EEC681BDA1 | Since: 323
      */
-    function aimGunAtCoord(ped: number | Ped, pos: Vector3, time: number, instantBlendToAim: boolean, playAnimIntro: boolean): void;
+    function aimGunAtCoord(ped: number | IPed, pos: Vector3, time: number, instantBlendToAim: boolean, playAnimIntro: boolean): void;
     /**
      * duration: the amount of time in milliseconds to do the task.  -1 will keep the task going until either another task is applied, or CLEAR_ALL_TASKS() is called with the ped
      *
      * Hash: 0x9B53BB6E8943AF53 | Since: 323
      */
-    function aimGunAtEntity(ped: number | Ped, entity: number | Entity, duration: number, instantBlendToAim: boolean): void;
+    function aimGunAtEntity(ped: number | IPed, entity: number | IEntity, duration: number, instantBlendToAim: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x7A192BE16D373D00 | Since: 323
      */
-    function aimGunScripted(ped: number | Ped, scriptTask: number | string, disableBlockingClip: boolean, instantBlendToAim: boolean): void;
+    function aimGunScripted(ped: number | IPed, scriptTask: number | string, disableBlockingClip: boolean, instantBlendToAim: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x8605AF0DE8B3A5AC | Since: 323
      */
-    function aimGunScriptedWithTarget(ped: number | Ped, target: number | Ped, pos: Vector3, gunTaskType: number, disableBlockingClip: boolean, forceAim: boolean): void;
+    function aimGunScriptedWithTarget(ped: number | IPed, target: number | IPed, pos: Vector3, gunTaskType: number, disableBlockingClip: boolean, forceAim: boolean): void;
     /**
      * Example from "me_amanda1.ysc.c4":
      * `TASK::TASK_ARREST_PED(l_19F \/\* This is a Ped \*\/ , PLAYER::PLAYER_PED_ID());`
@@ -39518,7 +39518,7 @@ export declare namespace task {
      *
      * Hash: 0xF3B9A78A178572B1 | Since: 323
      */
-    function arrestPed(ped: number | Ped, target: number | Ped): void;
+    function arrestPed(ped: number | IPed, target: number | IPed): void;
     /**
      * `You need to call PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS after TASK_BOAT_MISSION in order for the task to execute.`
      *
@@ -39531,39 +39531,39 @@ export declare namespace task {
      *
      * Hash: 0x15C86013127CE63F | Since: 323
      */
-    function boatMission(pedDriver: number | Ped, vehicle: number | Vehicle, targetVehicle: number | Vehicle, targetPed: number | Ped, pos: Vector3, mission: number, maxSpeed: number, drivingStyle: number, targetReached: number, boatFlags: any): void;
+    function boatMission(pedDriver: number | IPed, vehicle: number | IVehicle, targetVehicle: number | IVehicle, targetPed: number | IPed, pos: Vector3, mission: number, maxSpeed: number, drivingStyle: number, targetReached: number, boatFlags: any): void;
     /**
      * p2 tend to be 16, 17 or 1
      * p3 to p7 tend to be 0.0
      *
      * Hash: 0x8C338E0263E4FD19 | Since: 323
      */
-    function chatToPed(ped: number | Ped, target: number | Ped, flags: number, goToLocationX: number, goToLocationY: number, goToLocationZ: number, headingDegs: number, idleTime: number): void;
+    function chatToPed(ped: number | IPed, target: number | IPed, flags: number, goToLocationX: number, goToLocationY: number, goToLocationZ: number, headingDegs: number, idleTime: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x95A6C46A31D1917D | Since: 323
      */
-    function clearDefensiveArea(ped: number | Ped): void;
+    function clearDefensiveArea(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x0F804F1DB19B9689 | Since: 323
      */
-    function clearLookAt(ped: number | Ped): void;
+    function clearLookAt(ped: number | IPed): void;
     /**
      * Climbs or vaults the nearest thing.
      * usePlayerLaunchForce is unused.
      *
      * Hash: 0x89D9FCC2435112F1 | Since: 323
      */
-    function climb(ped: number | Ped, usePlayerLaunchForce: boolean): void;
+    function climb(ped: number | IPed, usePlayerLaunchForce: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xB6C987F9285A3814 | Since: 323
      */
-    function climbLadder(ped: number | Ped, fast: boolean): void;
+    function climbLadder(ped: number | IPed, fast: boolean): void;
     /**
      * Despite its name, it only attacks ONE hated target. The one closest hated target.
      *
@@ -39571,19 +39571,19 @@ export declare namespace task {
      *
      * Hash: 0x7BF835BB9E2698C8 | Since: 323
      */
-    function combatHatedTargetsAroundPed(ped: number | Ped, radius: number, combatFlags: number): void;
+    function combatHatedTargetsAroundPed(ped: number | IPed, radius: number, combatFlags: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x2BBA30B854534A0C | Since: 323
      */
-    function combatHatedTargetsAroundPedTimed(ped: number | Ped, radius: number, time: number, combatFlags: number): void;
+    function combatHatedTargetsAroundPedTimed(ped: number | IPed, radius: number, time: number, combatFlags: number): void;
     /**
      * Despite its name, it only attacks ONE hated target. The one closest to the specified position.
      *
      * Hash: 0x4CF5F55DAC3280A0 | Since: 323
      */
-    function combatHatedTargetsInArea(ped: number | Ped, pos: Vector3, radius: number, combatFlags: number): void;
+    function combatHatedTargetsInArea(ped: number | IPed, pos: Vector3, radius: number, combatFlags: number): void;
     /**
      * Makes the specified ped attack the target ped.
      * p2 should be 0
@@ -39591,19 +39591,19 @@ export declare namespace task {
      *
      * Hash: 0xF166E48407BAC484 | Since: 323
      */
-    function combatPed(ped: number | Ped, targetPed: number | Ped, combatFlags: number, threatResponseFlags: number): void;
+    function combatPed(ped: number | IPed, targetPed: number | IPed, combatFlags: number, threatResponseFlags: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x944F30DCB7096BDE | Since: 323
      */
-    function combatPedTimed(ped: number | Ped, target: number | Ped, time: number, flags: number): void;
+    function combatPedTimed(ped: number | IPed, target: number | IPed, time: number, flags: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x3EB1FE9E8E908E15 | Since: 323
      */
-    function cower(ped: number | Ped, duration: number): void;
+    function cower(ped: number | IPed, duration: number): void;
     /**
      * Example:
      *
@@ -39620,7 +39620,7 @@ export declare namespace task {
      *
      * Hash: 0x2F8AF0E82773A171 | Since: 323
      */
-    function driveBy(driverPed: number | Ped, targetPed: number | Ped, targetVehicle: number | Vehicle, targetX: number, targetY: number, targetZ: number, distanceToShoot: number, pedAccuracy: number, pushUnderneathDrivingTaskIfDriving: boolean, firingPattern: number | string): void;
+    function driveBy(driverPed: number | IPed, targetPed: number | IPed, targetVehicle: number | IVehicle, targetX: number, targetY: number, targetZ: number, distanceToShoot: number, pedAccuracy: number, pushUnderneathDrivingTaskIfDriving: boolean, firingPattern: number | string): void;
     /**
      * speed 1.0 = walk, 2.0 = run
      * p5 1 = normal, 3 = teleport to vehicle, 16 = teleport directly into vehicle
@@ -39636,19 +39636,19 @@ export declare namespace task {
      *
      * Hash: 0xC20E50AA46D09CA8 | Since: 323
      */
-    function enterVehicle(ped: number | Ped, vehicle: number | Vehicle, timeout: number, seat: number, speed: number, flag: number, overrideEntryClipsetName: string): void;
+    function enterVehicle(ped: number | IPed, vehicle: number | IVehicle, timeout: number, seat: number, speed: number, flag: number, overrideEntryClipsetName: string): void;
     /**
      * No comment provided
      *
      * Hash: 0x7F93691AB4B92272 | Since: 323
      */
-    function everyoneLeaveVehicle(vehicle: number | Vehicle): void;
+    function everyoneLeaveVehicle(vehicle: number | IVehicle): void;
     /**
      * p1 is 1, 2, or 3 in scripts
      *
      * Hash: 0x79B258E397854D29 | Since: 323
      */
-    function exitCover(ped: number | Ped, exitType: number, pos: Vector3): void;
+    function exitCover(ped: number | IPed, exitType: number, pos: Vector3): void;
     /**
      * MulleKD19: Adds a new point to the current point route. Call TASK_FLUSH_ROUTE before the first call to this. Call TASK_FOLLOW_POINT_ROUTE to make the Ped go the route.
      *
@@ -39668,13 +39668,13 @@ export declare namespace task {
      *
      * Hash: 0x15D3A79D4E44B913 | Since: 323
      */
-    function followNavMeshToCoord(ped: number | Ped, pos: Vector3, moveBlendRatio: number, time: number, targetRadius: number, flags: number, targetHeading: number): void;
+    function followNavMeshToCoord(ped: number | IPed, pos: Vector3, moveBlendRatio: number, time: number, targetRadius: number, flags: number, targetHeading: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x17F58B88D085DBAC | Since: 323
      */
-    function followNavMeshToCoordAdvanced(ped: number | Ped, pos: Vector3, moveBlendRatio: number, time: number, targetRadius: number, flags: number, slideToCoordHeading: number, maxSlopeNavigable: number, clampMaxSearchDistance: number, targetHeading: number): void;
+    function followNavMeshToCoordAdvanced(ped: number | IPed, pos: Vector3, moveBlendRatio: number, time: number, targetRadius: number, flags: number, slideToCoordHeading: number, maxSlopeNavigable: number, clampMaxSearchDistance: number, targetHeading: number): void;
     /**
      * MulleKD19: Makes the ped go on the created point route.
      *
@@ -39691,7 +39691,7 @@ export declare namespace task {
      *
      * Hash: 0x595583281858626E | Since: 323
      */
-    function followPointRoute(ped: number | Ped, speed: number, mode: number): void;
+    function followPointRoute(ped: number | IPed, speed: number, mode: number): void;
     /**
      * p6 always -1
      * p7 always 10.0
@@ -39699,13 +39699,13 @@ export declare namespace task {
      *
      * Hash: 0x304AE42E357B8C7E | Since: 323
      */
-    function followToOffsetOfEntity(ped: number | Ped, entity: number | Entity, offsetX: number, offsetY: number, offsetZ: number, movementSpeed: number, timeout: number, stoppingRange: number, persistFollowing: boolean): void;
+    function followToOffsetOfEntity(ped: number | IPed, entity: number | IEntity, offsetX: number, offsetY: number, offsetZ: number, movementSpeed: number, timeout: number, stoppingRange: number, persistFollowing: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x0759591819534F7B | Since: 323
      */
-    function followWaypointRecording(ped: number | Ped, name: string): void;
+    function followWaypointRecording(ped: number | IPed, name: string): void;
     /**
      * p2 always false
      *
@@ -39715,13 +39715,13 @@ export declare namespace task {
      *
      * Hash: 0x4F056E1AFFEF17AB | Since: 323
      */
-    function forceMotionState(ped: number | Ped, state: number | string, forceRestart: boolean): void;
+    function forceMotionState(ped: number | IPed, state: number | string, forceRestart: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x9C00E77AF14B2DFF | Since: 323
      */
-    function getOffBoat(ped: number | Ped, boat: number | Vehicle): void;
+    function getOffBoat(ped: number | IPed, boat: number | IVehicle): void;
     /**
      * eg
      *
@@ -39734,7 +39734,7 @@ export declare namespace task {
      *
      * Hash: 0xA9DA48FAB8A76C12 | Since: 323
      */
-    function gotoEntityAiming(ped: number | Ped, target: number | Entity, distanceToStopAt: number, StartAimingDist: number): void;
+    function gotoEntityAiming(ped: number | IPed, target: number | IEntity, distanceToStopAt: number, StartAimingDist: number): void;
     /**
      * enum ESEEK_ENTITY_OFFSET_FLAGS
      * {
@@ -39744,25 +39744,25 @@ export declare namespace task {
      *
      * Hash: 0xE39B4FF4FDEBDE27 | Since: 323
      */
-    function gotoEntityOffset(ped: number | Ped, entity: number | Entity, time: number, seekRadius: number, seekAngleDeg: number, moveBlendRatio: number, gotoEntityOffsetFlags: number): void;
+    function gotoEntityOffset(ped: number | IPed, entity: number | IEntity, time: number, seekRadius: number, seekAngleDeg: number, moveBlendRatio: number, gotoEntityOffsetFlags: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x338E7EF52B6095A9 | Since: 323
      */
-    function gotoEntityOffsetXy(ped: number | Ped, entity: number | Entity, duration: number, targetRadius: number, offsetX: number, offsetY: number, moveBlendRatio: number, gotoEntityOffsetFlags: number): void;
+    function gotoEntityOffsetXy(ped: number | IPed, entity: number | IEntity, duration: number, targetRadius: number, offsetX: number, offsetY: number, moveBlendRatio: number, gotoEntityOffsetFlags: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xD76B57B44F1E6F8B | Since: 323
      */
-    function goStraightToCoord(ped: number | Ped, pos: Vector3, speed: number, timeout: number, targetHeading: number, distanceToSlide: number): void;
+    function goStraightToCoord(ped: number | IPed, pos: Vector3, speed: number, timeout: number, targetHeading: number, distanceToSlide: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x61E360B7E040D12E | Since: 323
      */
-    function goStraightToCoordRelativeToEntity(ped: number | Ped, entity: number | Entity, pos: Vector3, moveBlendRatio: number, time: number): void;
+    function goStraightToCoordRelativeToEntity(ped: number | IPed, entity: number | IEntity, pos: Vector3, moveBlendRatio: number, time: number): void;
     /**
      * The ped will walk or run towards goToLocation, aiming towards goToLocation or focusLocation (depending on the aimingFlag) and shooting if shootAtEnemies = true to any enemy in his path.
      *
@@ -39807,7 +39807,7 @@ export declare namespace task {
      *
      * Hash: 0xA55547801EB331FC | Since: 323
      */
-    function goToCoordAndAimAtHatedEntitiesNearCoord(pedHandle: number | Ped, goToLocationX: number, goToLocationY: number, goToLocationZ: number, focusLocationX: number, focusLocationY: number, focusLocationZ: number, speed: number, shootAtEnemies: boolean, distanceToStopAt: number, noRoadsDistance: number, useNavMesh: boolean, navFlags: number, taskFlags: number, firingPattern: number | string): void;
+    function goToCoordAndAimAtHatedEntitiesNearCoord(pedHandle: number | IPed, goToLocationX: number, goToLocationY: number, goToLocationZ: number, focusLocationX: number, focusLocationY: number, focusLocationZ: number, speed: number, shootAtEnemies: boolean, distanceToStopAt: number, noRoadsDistance: number, useNavMesh: boolean, navFlags: number, taskFlags: number, firingPattern: number | string): void;
     /**
      * example from fm_mission_controller
      *
@@ -39816,19 +39816,19 @@ export declare namespace task {
      *
      * Hash: 0x5BC448CB78FA3E88 | Since: 323
      */
-    function goToCoordAnyMeans(ped: number | Ped, pos: Vector3, moveBlendRatio: number, vehicle: number | Vehicle, useLongRangeVehiclePathing: boolean, drivingFlags: number, maxRangeToShootTargets: number): void;
+    function goToCoordAnyMeans(ped: number | IPed, pos: Vector3, moveBlendRatio: number, vehicle: number | IVehicle, useLongRangeVehiclePathing: boolean, drivingFlags: number, maxRangeToShootTargets: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x1DD45F9ECFDB1BC9 | Since: 323
      */
-    function goToCoordAnyMeansExtraParams(ped: number | Ped, pos: Vector3, moveBlendRatio: number, vehicle: number | Vehicle, useLongRangeVehiclePathing: boolean, drivingFlags: number, maxRangeToShootTargets: number, extraVehToTargetDistToPreferVehicle: number, driveStraightLineDistance: number, extraFlags: number, warpTimerMS: number): void;
+    function goToCoordAnyMeansExtraParams(ped: number | IPed, pos: Vector3, moveBlendRatio: number, vehicle: number | IVehicle, useLongRangeVehiclePathing: boolean, drivingFlags: number, maxRangeToShootTargets: number, extraVehToTargetDistToPreferVehicle: number, driveStraightLineDistance: number, extraFlags: number, warpTimerMS: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xB8ECD61F531A7B02 | Since: 323
      */
-    function goToCoordAnyMeansExtraParamsWithCruiseSpeed(ped: number | Ped, pos: Vector3, moveBlendRatio: number, vehicle: number | Vehicle, useLongRangeVehiclePathing: boolean, drivingFlags: number, maxRangeToShootTargets: number, extraVehToTargetDistToPreferVehicle: number, driveStraightLineDistance: number, extraFlags: number, cruiseSpeed: number, targetArriveDist: number): void;
+    function goToCoordAnyMeansExtraParamsWithCruiseSpeed(ped: number | IPed, pos: Vector3, moveBlendRatio: number, vehicle: number | IVehicle, useLongRangeVehiclePathing: boolean, drivingFlags: number, maxRangeToShootTargets: number, extraVehToTargetDistToPreferVehicle: number, driveStraightLineDistance: number, extraFlags: number, cruiseSpeed: number, targetArriveDist: number): void;
     /**
      * movement_speed: mostly 2f, but also 1/1.2f, etc.
      * p8: always false
@@ -39841,13 +39841,13 @@ export declare namespace task {
      *
      * Hash: 0x11315AB3385B8AC0 | Since: 323
      */
-    function goToCoordWhileAimingAtCoord(ped: number | Ped, pos: Vector3, aimAtX: number, aimAtY: number, aimAtZ: number, moveBlendRatio: number, shoot: boolean, targetRadius: number, slowDistance: number, useNavMesh: boolean, navFlags: number, instantBlendToAim: boolean, firingPattern: number | string): void;
+    function goToCoordWhileAimingAtCoord(ped: number | IPed, pos: Vector3, aimAtX: number, aimAtY: number, aimAtZ: number, moveBlendRatio: number, shoot: boolean, targetRadius: number, slowDistance: number, useNavMesh: boolean, navFlags: number, instantBlendToAim: boolean, firingPattern: number | string): void;
     /**
      * No comment provided
      *
      * Hash: 0xB2A16444EAD9AE47 | Since: 323
      */
-    function goToCoordWhileAimingAtEntity(ped: number | Ped, pos: Vector3, aimAtID: number | Entity, moveBlendRatio: number, shoot: boolean, targetRadius: number, slowDistance: number, useNavMesh: boolean, navFlags: number, instantBlendToAim: boolean, firingPattern: number | string, time: number): void;
+    function goToCoordWhileAimingAtEntity(ped: number | IPed, pos: Vector3, aimAtID: number | IEntity, moveBlendRatio: number, shoot: boolean, targetRadius: number, slowDistance: number, useNavMesh: boolean, navFlags: number, instantBlendToAim: boolean, firingPattern: number | string, time: number): void;
     /**
      * The entity will move towards the target until time is over (duration) or get in target's range (distance). p5 and p6 are unknown, but you could leave p5 = 1073741824 or 100 or even 0 (didn't see any difference but on the decompiled scripts, they use 1073741824 mostly) and p6 = 0
      *
@@ -39864,13 +39864,13 @@ export declare namespace task {
      *
      * Hash: 0x6A071245EB0D1882 | Since: 323
      */
-    function goToEntity(entity: number | Entity, target: number | Entity, duration: number, distance: number, moveBlendRatio: number, slowDownDistance: number, flags: number): void;
+    function goToEntity(entity: number | IEntity, target: number | IEntity, duration: number, distance: number, moveBlendRatio: number, slowDownDistance: number, flags: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x04701832B739DCE5 | Since: 323
      */
-    function goToEntityWhileAimingAtCoord(ped: number | Ped, entity: number | Entity, aimX: number, aimY: number, aimZ: number, moveBlendRatio: number, shoot: boolean, targetRadius: number, slowDistance: number, useNavMesh: boolean, instantBlendToAim: boolean, firingPattern: number | string): void;
+    function goToEntityWhileAimingAtCoord(ped: number | IPed, entity: number | IEntity, aimX: number, aimY: number, aimZ: number, moveBlendRatio: number, shoot: boolean, targetRadius: number, slowDistance: number, useNavMesh: boolean, instantBlendToAim: boolean, firingPattern: number | string): void;
     /**
      * shootatEntity:
      * If true, peds will shoot at Entity till it is dead.
@@ -39878,13 +39878,13 @@ export declare namespace task {
      *
      * Hash: 0x97465886D35210E9 | Since: 323
      */
-    function goToEntityWhileAimingAtEntity(ped: number | Ped, entityToWalkTo: number | Entity, entityToAimAt: number | Entity, speed: number, shootatEntity: boolean, targetRadius: number, slowDistance: number, useNavMesh: boolean, instantBlendToAim: boolean, firingPattern: number | string): void;
+    function goToEntityWhileAimingAtEntity(ped: number | IPed, entityToWalkTo: number | IEntity, entityToAimAt: number | IEntity, speed: number, shootatEntity: boolean, targetRadius: number, slowDistance: number, useNavMesh: boolean, instantBlendToAim: boolean, firingPattern: number | string): void;
     /**
      * No comment provided
      *
      * Hash: 0xD2A207EEBDF9889B | Since: 323
      */
-    function guardAssignedDefensiveArea(ped: number | Ped, pos: Vector3, heading: number, maxPatrolProximity: number, timer: number): void;
+    function guardAssignedDefensiveArea(ped: number | IPed, pos: Vector3, heading: number, maxPatrolProximity: number, timer: number): void;
     /**
      * From re_prisonvanbreak:
      *
@@ -39892,13 +39892,13 @@ export declare namespace task {
      *
      * Hash: 0x4A58A47A72E3FCB4 | Since: 323
      */
-    function guardCurrentPosition(ped: number | Ped, maxPatrolProximity: number, defensiveAreaRadius: number, setDefensiveArea: boolean): void;
+    function guardCurrentPosition(ped: number | IPed, maxPatrolProximity: number, defensiveAreaRadius: number, setDefensiveArea: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xC946FE14BE0EB5E2 | Since: 323
      */
-    function guardSphereDefensiveArea(ped: number | Ped, defendPositionX: number, defendPositionY: number, defendPositionZ: number, heading: number, maxPatrolProximity: number, time: number, pos: Vector3, defensiveAreaRadius: number): void;
+    function guardSphereDefensiveArea(ped: number | IPed, defendPositionX: number, defendPositionY: number, defendPositionZ: number, heading: number, maxPatrolProximity: number, time: number, pos: Vector3, defensiveAreaRadius: number): void;
     /**
      * In the scripts, p3 was always -1.
      *
@@ -39907,7 +39907,7 @@ export declare namespace task {
      *
      * Hash: 0xF2EAB31979A7F910 | Since: 323
      */
-    function handsUp(ped: number | Ped, duration: number, facingPed: number | Ped, timeToFacePed: number, flags: number): void;
+    function handsUp(ped: number | IPed, duration: number, facingPed: number | IPed, timeToFacePed: number, flags: number): void;
     /**
      * Ped pilot should be in a heli.
      * EntityToFollow can be a vehicle or Ped.
@@ -39919,13 +39919,13 @@ export declare namespace task {
      *
      * Hash: 0xAC83B1DB38D0ADA0 | Since: 323
      */
-    function heliChase(pilot: number | Ped, entityToFollow: number | Entity, pos: Vector3): void;
+    function heliChase(pilot: number | IPed, entityToFollow: number | IEntity, pos: Vector3): void;
     /**
      * No comment provided
      *
      * Hash: 0xB385523325077210 | Since: 1290
      */
-    function heliEscortHeli(pilot: number | Ped, heli1: number | Vehicle, heli2: number | Vehicle, offsetX: number, offsetY: number, offsetZ: number): void;
+    function heliEscortHeli(pilot: number | IPed, heli1: number | IVehicle, heli2: number | IVehicle, offsetX: number, offsetY: number, offsetZ: number): void;
     /**
      * Must have targetVehicle, targetPed, OR destination X/Y/Z set
      * Will follow targeted vehicle/ped, or fly to destination
@@ -39976,7 +39976,7 @@ export declare namespace task {
      *
      * Hash: 0xDAD029E187A2BEB4 | Since: 323
      */
-    function heliMission(pilot: number | Ped, aircraft: number | Vehicle, targetVehicle: number | Vehicle, targetPed: number | Ped, destinationX: number, destinationY: number, destinationZ: number, missionFlag: number, maxSpeed: number, radius: number, targetHeading: number, maxHeight: number, minHeight: number, slowDownDistance: number, behaviorFlags: number): void;
+    function heliMission(pilot: number | IPed, aircraft: number | IVehicle, targetVehicle: number | IVehicle, targetPed: number | IPed, destinationX: number, destinationY: number, destinationZ: number, missionFlag: number, maxSpeed: number, radius: number, targetHeading: number, maxHeight: number, minHeight: number, slowDownDistance: number, behaviorFlags: number): void;
     /**
      * Definition is wrong. This has 4 parameters (Not sure when they were added. v350 has 2, v678 has 4).
      *
@@ -39987,13 +39987,13 @@ export declare namespace task {
      *
      * Hash: 0x0AE4086104E067B1 | Since: 323
      */
-    function jump(ped: number | Ped, usePlayerLaunchForce: boolean, doSuperJump: boolean, useFullSuperJumpForce: boolean): void;
+    function jump(ped: number | IPed, usePlayerLaunchForce: boolean, doSuperJump: boolean, useFullSuperJumpForce: boolean): void;
     /**
      * Flags are the same flags used in TASK_LEAVE_VEHICLE
      *
      * Hash: 0x504D54DF3F6F2247 | Since: 323
      */
-    function leaveAnyVehicle(ped: number | Ped, delayTime: number, flags: number): void;
+    function leaveAnyVehicle(ped: number | IPed, delayTime: number, flags: number): void;
     /**
      * Flags from decompiled scripts:
      * 0 = normal exit and closes door.
@@ -40008,7 +40008,7 @@ export declare namespace task {
      *
      * Hash: 0xD3DBCE61A490BE02 | Since: 323
      */
-    function leaveVehicle(ped: number | Ped, vehicle: number | Vehicle, flags: number): void;
+    function leaveVehicle(ped: number | IPed, vehicle: number | IVehicle, flags: number): void;
     /**
      * enum eScriptLookatFlags
      * {
@@ -40033,46 +40033,46 @@ export declare namespace task {
      *
      * Hash: 0x6FA46612594F7973 | Since: 323
      */
-    function lookAtCoord(entity: number | Entity, pos: Vector3, duration: number, flags: number, priority: number): void;
+    function lookAtCoord(entity: number | IEntity, pos: Vector3, duration: number, flags: number, priority: number): void;
     /**
      * For flags, please refer to TASK_LOOK_AT_COORD.
      *
      * Hash: 0x69F4BE8C8CC4796C | Since: 323
      */
-    function lookAtEntity(ped: number | Ped, lookAt: number | Entity, duration: number, flags: number, priority: number): void;
+    function lookAtEntity(ped: number | IPed, lookAt: number | IEntity, duration: number, flags: number, priority: number): void;
     /**
      * Example:
      * `TASK::TASK_MOVE_NETWORK_ADVANCED_BY_NAME(PLAYER::PLAYER_PED_ID(), "minigame_tattoo_michael_parts", 324.13f, 181.29f, 102.6f, 0.0f, 0.0f, 22.32f, 2, 0, false, 0, 0);`
      *
      * Hash: 0xD5B35BEA41919ACB | Since: 323
      */
-    function moveNetworkAdvancedByName(ped: number | Ped, network: string, pos: Vector3, rot: Vector3, rotOrder: number, blendDuration: number, allowOverrideCloneUpdate: boolean, animDict: string, flags: number): void;
+    function moveNetworkAdvancedByName(ped: number | IPed, network: string, pos: Vector3, rot: Vector3, rotOrder: number, blendDuration: number, allowOverrideCloneUpdate: boolean, animDict: string, flags: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x29682E2CCF21E9B5 | Since: 1868
      */
-    function moveNetworkAdvancedByNameWithInitParams(ped: number | Ped, network: string, pos: Vector3, rot: Vector3, rotOrder: number, blendDuration: number, allowOverrideCloneUpdate: boolean, dictionary: string, flags: number): number;
+    function moveNetworkAdvancedByNameWithInitParams(ped: number | IPed, network: string, pos: Vector3, rot: Vector3, rotOrder: number, blendDuration: number, allowOverrideCloneUpdate: boolean, dictionary: string, flags: number): number;
     /**
      * Example:
      * `TASK::TASK_MOVE_NETWORK_BY_NAME(PLAYER::PLAYER_PED_ID(), "arm_wrestling_sweep_paired_a_rev3", 0.0f, true, "mini@arm_wrestling", 0);`
      *
      * Hash: 0x2D537BA194896636 | Since: 323
      */
-    function moveNetworkByName(ped: number | Ped, task: string, multiplier: number, allowOverrideCloneUpdate: boolean, animDict: string, flags: number): void;
+    function moveNetworkByName(ped: number | IPed, task: string, multiplier: number, allowOverrideCloneUpdate: boolean, animDict: string, flags: number): void;
     /**
      * Used only once in the scripts (am_mp_nightclub)
      *
      * Hash: 0x3D45B0B355C5E0C9 | Since: 1493
      */
-    function moveNetworkByNameWithInitParams(ped: number | Ped, network: string, blendDuration: number, allowOverrideCloneUpdate: boolean, animDict: string, flags: number): number;
+    function moveNetworkByNameWithInitParams(ped: number | IPed, network: string, blendDuration: number, allowOverrideCloneUpdate: boolean, animDict: string, flags: number): number;
     /**
      * The given ped will try to open the nearest door to 'seat'.
      * Example: telling the ped to open the door for the driver seat does not necessarily mean it will open the driver door, it may choose to open the passenger door instead if that one is closer.
      *
      * Hash: 0x965791A9A488A062 | Since: 323
      */
-    function openVehicleDoor(ped: number | Ped, vehicle: number | Vehicle, timeOut: number, seat: number, speed: number): void;
+    function openVehicleDoor(ped: number | IPed, vehicle: number | IVehicle, timeOut: number, seat: number, speed: number): void;
     /**
      * Second parameter is unused.
      *
@@ -40080,13 +40080,13 @@ export declare namespace task {
      *
      * Hash: 0xD2F1C53C97EE81AB | Since: 323
      */
-    function parachute(ped: number | Ped, giveParachuteItem: boolean, instant: boolean): void;
+    function parachute(ped: number | IPed, giveParachuteItem: boolean, instant: boolean): void;
     /**
      * `makes ped parachute to coords x y z. Works well with PATHFIND::GET_SAFE_COORD_FOR_PED`
      *
      * Hash: 0xB33E291AFA6BD03A | Since: 323
      */
-    function parachuteToTarget(ped: number | Ped, pos: Vector3): void;
+    function parachuteToTarget(ped: number | IPed, pos: Vector3): void;
     /**
      * After looking at some scripts the second parameter seems to be an id of some kind. Here are some I found from some R* scripts:
      *
@@ -40114,61 +40114,61 @@ export declare namespace task {
      *
      * Hash: 0xBDA5DF49D080FE4E | Since: 323
      */
-    function patrol(ped: number | Ped, patrolRouteName: string, alertState: number, canChatToPeds: boolean, useHeadLookAt: boolean): void;
+    function patrol(ped: number | IPed, patrolRouteName: string, alertState: number, canChatToPeds: boolean, useHeadLookAt: boolean): void;
     /**
      * Stand still (?)
      *
      * Hash: 0xE73A266DB0CA9042 | Since: 323
      */
-    function pause(ped: number | Ped, ms: number): void;
+    function pause(ped: number | IPed, ms: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xD04FE6765D990A06 | Since: 323
      */
-    function pedSlideToCoord(ped: number | Ped, pos: Vector3, heading: number, speed: number): void;
+    function pedSlideToCoord(ped: number | IPed, pos: Vector3, heading: number, speed: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x5A4A6A6D3DC64F52 | Since: 323
      */
-    function pedSlideToCoordHdgRate(ped: number | Ped, pos: Vector3, heading: number, speed: number, headingChangeRate: number): void;
+    function pedSlideToCoordHdgRate(ped: number | IPed, pos: Vector3, heading: number, speed: number, headingChangeRate: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x5ABA3986D90D8A3B | Since: 323
      */
-    function performSequence(ped: number | Ped, taskSequenceId: number): void;
+    function performSequence(ped: number | IPed, taskSequenceId: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x89221B16730234F0 | Since: 323
      */
-    function performSequenceFromProgress(ped: number | Ped, taskIndex: number, progress1: number, progress2: number): void;
+    function performSequenceFromProgress(ped: number | IPed, taskIndex: number, progress1: number, progress2: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x8C33220C8D78CA0D | Since: 944
      */
-    function performSequenceLocally(ped: number | Ped, taskSequenceId: number): void;
+    function performSequenceLocally(ped: number | IPed, taskSequenceId: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x2D2386F273FF7A25 | Since: 323
      */
-    function planeChase(pilot: number | Ped, entityToFollow: number | Entity, pos: Vector3): void;
+    function planeChase(pilot: number | IPed, entityToFollow: number | IEntity, pos: Vector3): void;
     /**
      * No comment provided
      *
      * Hash: 0xF7F9DCCA89E7505B | Since: 1290
      */
-    function planeGotoPreciseVtol(ped: number | Ped, vehicle: number | Vehicle, pos: Vector3, flightHeight: number, minHeightAboveTerrain: number, useDesiredOrientation: boolean, desiredOrientation: number, autopilot: boolean): void;
+    function planeGotoPreciseVtol(ped: number | IPed, vehicle: number | IVehicle, pos: Vector3, flightHeight: number, minHeightAboveTerrain: number, useDesiredOrientation: boolean, desiredOrientation: number, autopilot: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xBF19721FA34D32C0 | Since: 323
      */
-    function planeLand(pilot: number | Ped, plane: number | Vehicle, runwayStartX: number, runwayStartY: number, runwayStartZ: number, runwayEndX: number, runwayEndY: number, runwayEndZ: number): void;
+    function planeLand(pilot: number | IPed, plane: number | IVehicle, runwayStartX: number, runwayStartY: number, runwayStartZ: number, runwayEndX: number, runwayEndY: number, runwayEndZ: number): void;
     /**
      * EXAMPLE USAGE:
      *
@@ -40220,19 +40220,19 @@ export declare namespace task {
      *
      * Hash: 0x23703CD154E83B88 | Since: 323
      */
-    function planeMission(pilot: number | Ped, aircraft: number | Vehicle, targetVehicle: number | Vehicle, targetPed: number | Ped, destinationX: number, destinationY: number, destinationZ: number, missionFlag: number, angularDrag: number, targetReached: number, targetHeading: number, maxZ: number, minZ: number, precise: boolean): void;
+    function planeMission(pilot: number | IPed, aircraft: number | IVehicle, targetVehicle: number | IVehicle, targetPed: number | IPed, destinationX: number, destinationY: number, destinationZ: number, missionFlag: number, angularDrag: number, targetReached: number, targetHeading: number, maxZ: number, minZ: number, precise: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x92C360B5F15D2302 | Since: 1103
      */
-    function planeTaxi(pilot: number | Ped, aircraft: number | Vehicle, pos: Vector3, cruiseSpeed: number, targetReached: number): void;
+    function planeTaxi(pilot: number | IPed, aircraft: number | IVehicle, pos: Vector3, cruiseSpeed: number, targetReached: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x965FEC691D55E9BF | Since: 323
      */
-    function plantBomb(ped: number | Ped, pos: Vector3, heading: number): void;
+    function plantBomb(ped: number | IPed, pos: Vector3, heading: number): void;
     /**
      * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
      *
@@ -40299,7 +40299,7 @@ export declare namespace task {
      *
      * Hash: 0xEA47FE3719165B94 | Since: 323
      */
-    function playAnim(ped: number | Ped, animDictionary: string, animationName: string, blendInSpeed: number, blendOutSpeed: number, duration: number, flag: number, playbackRate: number, lockX: boolean, lockY: boolean, lockZ: boolean): void;
+    function playAnim(ped: number | IPed, animDictionary: string, animationName: string, blendInSpeed: number, blendOutSpeed: number, duration: number, flag: number, playbackRate: number, lockX: boolean, lockY: boolean, lockZ: boolean): void;
     /**
      * It's similar to TASK_PLAY_ANIM, except the first 6 floats let you specify the initial position and rotation of the task. (Ped gets teleported to the position).
      *
@@ -40307,7 +40307,7 @@ export declare namespace task {
      *
      * Hash: 0x83CDB10EA29B370B | Since: 323
      */
-    function playAnimAdvanced(ped: number | Ped, animDict: string, animName: string, pos: Vector3, rot: Vector3, animEnterSpeed: number, animExitSpeed: number, duration: number, flag: any, animTime: number, rotOrder: number, ikFlags: number): void;
+    function playAnimAdvanced(ped: number | IPed, animDict: string, animName: string, pos: Vector3, rot: Vector3, animEnterSpeed: number, animExitSpeed: number, duration: number, flag: any, animTime: number, rotOrder: number, ikFlags: number): void;
     /**
      * Example from the scripts:
      * `TASK::TASK_PLAY_PHONE_GESTURE_ANIMATION(PLAYER::PLAYER_PED_ID(), v_3, v_2, v_4, 0.25, 0.25, 0, 0);`
@@ -40335,13 +40335,13 @@ export declare namespace task {
      *
      * Hash: 0x8FBB6758B3B3E9EC | Since: 323
      */
-    function playPhoneGestureAnimation(ped: number | Ped, animDict: string, animation: string, boneMaskType: string, blendInDuration: number, blendOutDuration: number, isLooping: boolean, holdLastFrame: boolean): void;
+    function playPhoneGestureAnimation(ped: number | IPed, animDict: string, animation: string, boneMaskType: string, blendInDuration: number, blendOutDuration: number, isLooping: boolean, holdLastFrame: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x4172393E6BE1FECE | Since: 323
      */
-    function putPedDirectlyIntoCover(ped: number | Ped, pos: Vector3, time: number, allowPeekingAndFiring: boolean, blendInDuration: number, forceInitialFacingDirection: boolean, forceFaceLeft: boolean, identifier: number, doEntry: boolean): void;
+    function putPedDirectlyIntoCover(ped: number | IPed, pos: Vector3, time: number, allowPeekingAndFiring: boolean, blendInDuration: number, forceInitialFacingDirection: boolean, forceFaceLeft: boolean, identifier: number, doEntry: boolean): void;
     /**
      * from armenian3.c4
      *
@@ -40350,14 +40350,14 @@ export declare namespace task {
      *
      * Hash: 0x1C6CD14A876FFE39 | Since: 323
      */
-    function putPedDirectlyIntoMelee(ped: number | Ped, meleeTarget: number | Ped, blendInDuration: number, timeInMelee: number, strafePhaseSync: number, aiCombatFlags: number): void;
+    function putPedDirectlyIntoMelee(ped: number | IPed, meleeTarget: number | IPed, blendInDuration: number, timeInMelee: number, strafePhaseSync: number, aiCombatFlags: number): void;
     /**
      * Attaches a ped to a rope and allows player control to rappel down a wall. Disables all collisions while on the rope.
      * p10: Usually 1 in the scripts, clipSet: Clipset to use for the task, minZ: Minimum Z that the player can descend to, ropeHandle: Rope to attach this task to created with ADD_ROPE
      *
      * Hash: 0xEAF66ACDDC794793 | Since: 1868
      */
-    function rappelDownWallUsingClipsetOverride(ped: number | Ped, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, minZ: number, ropeHandle: number, clipSet: string): void;
+    function rappelDownWallUsingClipsetOverride(ped: number | IPed, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, minZ: number, ropeHandle: number, clipSet: string): void;
     /**
      * minHeightAboveGround: the minimum height above ground the heli must be at before the ped can start rappelling
      *
@@ -40368,13 +40368,13 @@ export declare namespace task {
      *
      * Hash: 0x09693B0312F91649 | Since: 323
      */
-    function rappelFromHeli(ped: number | Ped, minHeightAboveGround: number): void;
+    function rappelFromHeli(ped: number | IPed, minHeightAboveGround: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x72C896464915D1B1 | Since: 323
      */
-    function reactAndFleePed(ped: number | Ped, fleeTarget: number | Ped): void;
+    function reactAndFleePed(ped: number | IPed, fleeTarget: number | IPed): void;
     /**
      * The 2nd param (drawWeapon) is not implemented.
      *
@@ -40388,7 +40388,7 @@ export declare namespace task {
      *
      * Hash: 0x62D2916F56B9CD2D | Since: 323
      */
-    function reloadWeapon(ped: number | Ped, drawWeapon: boolean): void;
+    function reloadWeapon(ped: number | IPed, drawWeapon: boolean): void;
     /**
      * From fm_mission_controller.c:
      * reserve_network_mission_objects(get_num_reserved_mission_objects(0) + 1);
@@ -40427,19 +40427,19 @@ export declare namespace task {
      *
      * Hash: 0x126EF75F1E17ABE5 | Since: 323
      */
-    function scriptedAnimation(ped: number | Ped, blendInDelta: number, blendOutDelta: number): [number, number, number];
+    function scriptedAnimation(ped: number | IPed, blendInDelta: number, blendOutDelta: number): [number, number, number];
     /**
      * No comment provided
      *
      * Hash: 0x84D32B3BEC531324 | Since: 323
      */
-    function seekCoverFromPed(ped: number | Ped, target: number | Ped, duration: number, allowPeekingAndFiring: boolean): void;
+    function seekCoverFromPed(ped: number | IPed, target: number | IPed, duration: number, allowPeekingAndFiring: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x75AC2B60386D89F2 | Since: 323
      */
-    function seekCoverFromPos(ped: number | Ped, pos: Vector3, duration: number, allowPeekingAndFiring: boolean): void;
+    function seekCoverFromPos(ped: number | IPed, pos: Vector3, duration: number, allowPeekingAndFiring: boolean): void;
     /**
      * p8 causes the ped to take the shortest route to the cover position. It may have something to do with navmesh or pathfinding mechanics.
      *
@@ -40453,13 +40453,13 @@ export declare namespace task {
      *
      * Hash: 0x39246A6958EF072C | Since: 323
      */
-    function seekCoverToCoords(ped: number | Ped, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, timeout: number, shortRoute: boolean): void;
+    function seekCoverToCoords(ped: number | IPed, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, timeout: number, shortRoute: boolean): void;
     /**
      * p5 is always -1
      *
      * Hash: 0xD43D95C7A869447F | Since: 323
      */
-    function seekCoverToCoverPoint(ped: number | Ped, coverpoint: number, pos: Vector3, time: number, allowPeekingAndFiring: boolean): void;
+    function seekCoverToCoverPoint(ped: number | IPed, coverpoint: number, pos: Vector3, time: number, allowPeekingAndFiring: boolean): void;
     /**
      * I cant believe I have to define this, this is one of the best natives.
      *
@@ -40469,37 +40469,37 @@ export declare namespace task {
      *
      * Hash: 0x90D2156198831D69 | Since: 323
      */
-    function setBlockingOfNonTemporaryEvents(ped: number | Ped, toggle: boolean): void;
+    function setBlockingOfNonTemporaryEvents(ped: number | IPed, toggle: boolean): void;
     /**
      * p1 is always GET_HASH_KEY("empty") in scripts, for the rare times this is used
      *
      * Hash: 0xEB8517DDA73720DA | Since: 323
      */
-    function setDecisionMaker(ped: number | Ped, decisionMakerId: number | string): void;
+    function setDecisionMaker(ped: number | IPed, decisionMakerId: number | string): void;
     /**
      * No comment provided
      *
      * Hash: 0x933C06518B52A9A4 | Since: 323
      */
-    function setSphereDefensiveArea(ped: number | Ped, pos: Vector3, radius: number): void;
+    function setSphereDefensiveArea(ped: number | IPed, pos: Vector3, radius: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x60A19CF85FF4CEFA | Since: 3407
      */
-    function sharkCircleCoord(ped: number | Ped, pos: Vector3, moveBlendRatio: number, radius: number): void;
+    function sharkCircleCoord(ped: number | IPed, pos: Vector3, moveBlendRatio: number, radius: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x452419CBD838065B | Since: 323
      */
-    function shockingEventReact(ped: number | Ped, eventHandle: number): void;
+    function shockingEventReact(ped: number | IPed, eventHandle: number): void;
     /**
      * Firing Pattern Hash Information: https://pastebin.com/Px036isB
      *
      * Hash: 0x46A6CC01E0826106 | Since: 323
      */
-    function shootAtCoord(ped: number | Ped, pos: Vector3, duration: number, firingPattern: number | string): void;
+    function shootAtCoord(ped: number | IPed, pos: Vector3, duration: number, firingPattern: number | string): void;
     /**
      * //this part of the code is to determine at which entity the player is aiming, for example if you want to create a mod where you give orders to peds
      * Entity aimedentity;
@@ -40515,26 +40515,26 @@ export declare namespace task {
      *
      * Hash: 0x08DA95E8298AE772 | Since: 323
      */
-    function shootAtEntity(entity: number | Entity, target: number | Entity, duration: number, firingPattern: number | string): void;
+    function shootAtEntity(entity: number | IEntity, target: number | IEntity, duration: number, firingPattern: number | string): void;
     /**
      * Makes the specified ped shuffle to the next vehicle seat.
      * The ped MUST be in a vehicle and the vehicle parameter MUST be the ped's current vehicle.
      *
      * Hash: 0x7AA80209BDA643EB | Since: 323
      */
-    function shuffleToNextVehicleSeat(ped: number | Ped, vehicle: number | Vehicle, useAlternateShuffle: boolean): void;
+    function shuffleToNextVehicleSeat(ped: number | IPed, vehicle: number | IVehicle, useAlternateShuffle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x601736CFE536B0A0 | Since: 323
      */
-    function skyDive(ped: number | Ped, instant: boolean): void;
+    function skyDive(ped: number | IPed, instant: boolean): void;
     /**
      * Makes the specified ped flee the specified distance from the specified position.
      *
      * Hash: 0x94587F17E9C365D5 | Since: 323
      */
-    function smartFleeCoord(ped: number | Ped, pos: Vector3, distance: number, time: number, preferPavements: boolean, quitIfOutOfRange: boolean): void;
+    function smartFleeCoord(ped: number | IPed, pos: Vector3, distance: number, time: number, preferPavements: boolean, quitIfOutOfRange: boolean): void;
     /**
      * Makes a ped run away from another ped (fleeTarget).
      *
@@ -40543,19 +40543,19 @@ export declare namespace task {
      *
      * Hash: 0x22B0D0E37CCB840D | Since: 323
      */
-    function smartFleePed(ped: number | Ped, fleeTarget: number | Ped, safeDistance: number, fleeTime: number, preferPavements: boolean, updateToNearestHatedPed: boolean): void;
+    function smartFleePed(ped: number | IPed, fleeTarget: number | IPed, safeDistance: number, fleeTime: number, preferPavements: boolean, updateToNearestHatedPed: boolean): void;
     /**
      * scenarioName example: "WORLD_HUMAN_GUARD_STAND"
      *
      * Hash: 0xAE032F8BBA959E90 | Since: 323
      */
-    function standGuard(ped: number | Ped, pos: Vector3, heading: number, scenarioName: string): void;
+    function standGuard(ped: number | IPed, pos: Vector3, heading: number, scenarioName: string): void;
     /**
      * Makes the specified ped stand still for (time) milliseconds.
      *
      * Hash: 0x919BE13EED931959 | Since: 323
      */
-    function standStill(ped: number | Ped, time: number): void;
+    function standStill(ped: number | IPed, time: number): void;
     /**
      * Full list of ped scenarios by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scenariosCompact.json
      *
@@ -40579,7 +40579,7 @@ export declare namespace task {
      *
      * Hash: 0xFA4EFC79F69D4F07 | Since: 323
      */
-    function startScenarioAtPosition(ped: number | Ped, scenarioName: string, pos: Vector3, heading: number, duration: number, sittingScenario: boolean, teleport: boolean): void;
+    function startScenarioAtPosition(ped: number | IPed, scenarioName: string, pos: Vector3, heading: number, duration: number, sittingScenario: boolean, teleport: boolean): void;
     /**
      * Plays a scenario on a Ped at their current location.
      *
@@ -40627,25 +40627,25 @@ export declare namespace task {
      *
      * Hash: 0x142A02425FF02BD9 | Since: 323
      */
-    function startScenarioInPlace(ped: number | Ped, scenarioName: string, unkDelay: number, playEnterAnim: boolean): void;
+    function startScenarioInPlace(ped: number | IPed, scenarioName: string, unkDelay: number, playEnterAnim: boolean): void;
     /**
      * Makes the ped run to take cover
      *
      * Hash: 0xE5DA8615A6180789 | Since: 323
      */
-    function stayInCover(ped: number | Ped): void;
+    function stayInCover(ped: number | IPed): void;
     /**
      * known "killTypes" are: "AR_stealth_kill_knife" and "AR_stealth_kill_a".
      *
      * Hash: 0xAA5DC05579D60BD9 | Since: 323
      */
-    function stealthKill(killer: number | Ped, target: number | Ped, stealthKillActionResultHash: number | string, desiredMoveBlendRatio: number, stealthFlags: number): void;
+    function stealthKill(killer: number | IPed, target: number | IPed, stealthKillActionResultHash: number | string, desiredMoveBlendRatio: number, stealthFlags: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x3FA00D4F4641BFAE | Since: 323
      */
-    function stopPhoneGestureAnimation(ped: number | Ped, blendOutOverride: number): void;
+    function stopPhoneGestureAnimation(ped: number | IPed, blendOutOverride: number): void;
     /**
      * Used in am_vehicle_spawn.ysc and am_mp_submarine.ysc.
      *
@@ -40657,13 +40657,13 @@ export declare namespace task {
      *
      * Hash: 0xC22B40579A498CA4 | Since: 2189
      */
-    function submarineGotoAndStop(ped: number | Ped, submarine: number | Vehicle, pos: Vector3, autopilot: boolean): void;
+    function submarineGotoAndStop(ped: number | IPed, submarine: number | IVehicle, pos: Vector3, autopilot: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xA21C51255B205245 | Since: 323
      */
-    function swapWeapon(ped: number | Ped, drawWeapon: boolean): void;
+    function swapWeapon(ped: number | IPed, drawWeapon: boolean): void;
     /**
      * This function is called on peds in vehicles.
      *
@@ -40673,13 +40673,13 @@ export declare namespace task {
      *
      * Hash: 0x2047C02158D6405A | Since: 323
      */
-    function sweepAimEntity(ped: number | Ped, animDict: string, lowAnimName: string, medAnimName: string, hiAnimName: string, runtime: number, targetEntity: number | Entity, turnRate: number, blendInDuration: number): void;
+    function sweepAimEntity(ped: number | IPed, animDict: string, lowAnimName: string, medAnimName: string, hiAnimName: string, runtime: number, targetEntity: number | IEntity, turnRate: number, blendInDuration: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x7AFE8FDC10BC07D2 | Since: 323
      */
-    function sweepAimPosition(ped: number | Ped, animDict: string, lowAnimName: string, medAnimName: string, hiAnimName: string, runtime: number, pos: Vector3, turnRate: number, blendInDuration: number): void;
+    function sweepAimPosition(ped: number | IPed, animDict: string, lowAnimName: string, medAnimName: string, hiAnimName: string, runtime: number, pos: Vector3, turnRate: number, blendInDuration: number): void;
     /**
      * `TASK::TASK_SYNCHRONIZED_SCENE(ped, scene, "creatures@rottweiler@in_vehicle@std_car", "get_in", 1000.0, -8.0, 4, 0, 0x447a0000, 0);`
      *
@@ -40687,7 +40687,7 @@ export declare namespace task {
      *
      * Hash: 0xEEA929141F699854 | Since: 323
      */
-    function synchronizedScene(ped: number | Ped, scene: number, animDictionary: string, animationName: string, blendIn: number, blendOut: number, flags: number, ragdollBlockingFlags: number, moverBlendDelta: number, ikFlags: number): void;
+    function synchronizedScene(ped: number | IPed, scene: number, animDictionary: string, animationName: string, blendIn: number, blendOut: number, flags: number, ragdollBlockingFlags: number, moverBlendDelta: number, ikFlags: number): void;
     /**
      * In every case of this native, I've only seen the first parameter passed as 0, although I believe it's a Ped after seeing tasks around it using 0. That's because it's used in a Sequence Task.
      *
@@ -40700,7 +40700,7 @@ export declare namespace task {
      *
      * Hash: 0x7285951DBF6B5A51 | Since: 323
      */
-    function throwProjectile(ped: number | Ped, pos: Vector3, ignoreCollisionEntityIndex: number, createInvincibleProjectile: boolean): void;
+    function throwProjectile(ped: number | IPed, pos: Vector3, ignoreCollisionEntityIndex: number, createInvincibleProjectile: boolean): void;
     /**
      * used in sequence task
      *
@@ -40708,19 +40708,19 @@ export declare namespace task {
      *
      * Hash: 0xAC96609B9995EDF8 | Since: 323
      */
-    function toggleDuck(ped: number | Ped, toggleType: number): void;
+    function toggleDuck(ped: number | IPed, toggleType: number): void;
     /**
      * duration in milliseconds
      *
      * Hash: 0x1DDA930A0AC38571 | Since: 323
      */
-    function turnPedToFaceCoord(ped: number | Ped, pos: Vector3, duration: number): void;
+    function turnPedToFaceCoord(ped: number | IPed, pos: Vector3, duration: number): void;
     /**
      * duration: the amount of time in milliseconds to do the task. -1 will keep the task going until either another task is applied, or CLEAR_ALL_TASKS() is called with the ped
      *
      * Hash: 0x5AD23D40115353AC | Since: 323
      */
-    function turnPedToFaceEntity(ped: number | Ped, entity: number | Entity, duration: number): void;
+    function turnPedToFaceEntity(ped: number | IPed, entity: number | IEntity, duration: number): void;
     /**
      * Actually has 3 params, not 2.
      *
@@ -40730,25 +40730,25 @@ export declare namespace task {
      *
      * Hash: 0xBD2A8EC3AF4DE7DB | Since: 323
      */
-    function useMobilePhone(ped: number | Ped, usePhone: boolean, desiredPhoneMode: number): void;
+    function useMobilePhone(ped: number | IPed, usePhone: boolean, desiredPhoneMode: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x5EE02954A14C69DB | Since: 323
      */
-    function useMobilePhoneTimed(ped: number | Ped, duration: number): void;
+    function useMobilePhoneTimed(ped: number | IPed, duration: number): void;
     /**
      * p5 is always 0 in scripts
      *
      * Hash: 0x9FDA1B3D7E7028B3 | Since: 323
      */
-    function useNearestScenarioChainToCoord(ped: number | Ped, pos: Vector3, maxRange: number, timeToLeave: number): void;
+    function useNearestScenarioChainToCoord(ped: number | IPed, pos: Vector3, maxRange: number, timeToLeave: number): void;
     /**
      * p5 is always -1 or 0 in scripts
      *
      * Hash: 0x97A28E63F0BA5631 | Since: 323
      */
-    function useNearestScenarioChainToCoordWarp(ped: number | Ped, pos: Vector3, radius: number, timeToLeave: number): void;
+    function useNearestScenarioChainToCoordWarp(ped: number | IPed, pos: Vector3, radius: number, timeToLeave: number): void;
     /**
      * Updated variables
      *
@@ -40756,25 +40756,25 @@ export declare namespace task {
      *
      * Hash: 0x277F471BA9DB000B | Since: 323
      */
-    function useNearestScenarioToCoord(ped: number | Ped, pos: Vector3, distance: number, duration: number): void;
+    function useNearestScenarioToCoord(ped: number | IPed, pos: Vector3, distance: number, duration: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x58E2E0F23F6B76C3 | Since: 323
      */
-    function useNearestScenarioToCoordWarp(ped: number | Ped, pos: Vector3, radius: number, timeToLeave: number): void;
+    function useNearestScenarioToCoordWarp(ped: number | IPed, pos: Vector3, radius: number, timeToLeave: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x447C1E9EF844BC0F | Since: 323
      */
-    function vehicleAimAtCoord(ped: number | Ped, pos: Vector3): void;
+    function vehicleAimAtCoord(ped: number | IPed, pos: Vector3): void;
     /**
      * No comment provided
      *
      * Hash: 0xE41885592B08B097 | Since: 323
      */
-    function vehicleAimAtPed(ped: number | Ped, target: number | Ped): void;
+    function vehicleAimAtPed(ped: number | IPed, target: number | IPed): void;
     /**
      * chases targetEnt fast and aggressively
      * --
@@ -40782,25 +40782,25 @@ export declare namespace task {
      *
      * Hash: 0x3C08A8E30363B353 | Since: 323
      */
-    function vehicleChase(driver: number | Ped, targetEnt: number | Entity): void;
+    function vehicleChase(driver: number | IPed, targetEnt: number | IEntity): void;
     /**
      * info about driving modes: https://gtaforums.com/topic/822314-guide-driving-styles/
      *
      * Hash: 0xE2A2AA2F659D77A7 | Since: 323
      */
-    function vehicleDriveToCoord(ped: number | Ped, vehicle: number | Vehicle, pos: Vector3, speed: number, vehicleModel: number | string, drivingMode: number, stopRange: number, straightLineDistance: number): void;
+    function vehicleDriveToCoord(ped: number | IPed, vehicle: number | IVehicle, pos: Vector3, speed: number, vehicleModel: number | string, drivingMode: number, stopRange: number, straightLineDistance: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x158BB33F920D360C | Since: 323
      */
-    function vehicleDriveToCoordLongrange(ped: number | Ped, vehicle: number | Vehicle, pos: Vector3, speed: number, driveMode: number, stopRange: number): void;
+    function vehicleDriveToCoordLongrange(ped: number | IPed, vehicle: number | IVehicle, pos: Vector3, speed: number, driveMode: number, stopRange: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x480142959D337D00 | Since: 323
      */
-    function vehicleDriveWander(ped: number | Ped, vehicle: number | Vehicle, speed: number, drivingStyle: number): void;
+    function vehicleDriveWander(ped: number | IPed, vehicle: number | IVehicle, speed: number, drivingStyle: number): void;
     /**
      * Makes a ped follow the targetVehicle with <minDistance> in between.
      *
@@ -40820,7 +40820,7 @@ export declare namespace task {
      *
      * Hash: 0x0FA6E4B75F302400 | Since: 323
      */
-    function vehicleEscort(ped: number | Ped, vehicle: number | Vehicle, targetVehicle: number | Vehicle, mode: number, speed: number, drivingStyle: number, minDistance: number, minHeightAboveTerrain: number, noRoadsDistance: number): void;
+    function vehicleEscort(ped: number | IPed, vehicle: number | IVehicle, targetVehicle: number | IVehicle, mode: number, speed: number, drivingStyle: number, minDistance: number, minHeightAboveTerrain: number, noRoadsDistance: number): void;
     /**
      * Makes a ped in a vehicle follow an entity (ped, vehicle, etc.)
      *
@@ -40828,7 +40828,7 @@ export declare namespace task {
      *
      * Hash: 0xFC545A9F0626E3B6 | Since: 323
      */
-    function vehicleFollow(driver: number | Ped, vehicle: number | Vehicle, targetEntity: number | Entity, speed: number, drivingStyle: number, minDistance: number): void;
+    function vehicleFollow(driver: number | IPed, vehicle: number | IVehicle, targetEntity: number | IEntity, speed: number, drivingStyle: number, minDistance: number): void;
     /**
      *
      *
@@ -40845,7 +40845,7 @@ export declare namespace task {
      *
      * Hash: 0x3123FAA6DB1CF7ED | Since: 323
      */
-    function vehicleFollowWaypointRecording(ped: number | Ped, vehicle: number | Vehicle, WPRecording: string): void;
+    function vehicleFollowWaypointRecording(ped: number | IPed, vehicle: number | IVehicle, WPRecording: string): void;
     /**
      * Differs from TASK_VEHICLE_DRIVE_TO_COORDS in that it will pick the shortest possible road route without taking one-way streets and other "road laws" into consideration.
      *
@@ -40865,7 +40865,7 @@ export declare namespace task {
      *
      * Hash: 0x195AEEB13CEFE2EE | Since: 323
      */
-    function vehicleGotoNavmesh(ped: number | Ped, vehicle: number | Vehicle, pos: Vector3, speed: number, behaviorFlag: number, stoppingRange: number): void;
+    function vehicleGotoNavmesh(ped: number | IPed, vehicle: number | IVehicle, pos: Vector3, speed: number, behaviorFlag: number, stoppingRange: number): void;
     /**
      * pilot, vehicle and altitude are rather self-explanatory.
      *
@@ -40883,25 +40883,25 @@ export declare namespace task {
      *
      * Hash: 0x1E09C32048FEFD1C | Since: 323
      */
-    function vehicleHeliProtect(pilot: number | Ped, vehicle: number | Vehicle, entityToFollow: number | Entity, targetSpeed: number, drivingFlags: number, radius: number, altitude: number, heliFlags: number): void;
+    function vehicleHeliProtect(pilot: number | IPed, vehicle: number | IVehicle, entityToFollow: number | IEntity, targetSpeed: number, drivingFlags: number, radius: number, altitude: number, heliFlags: number): void;
     /**
      * missionType: https://alloc8or.re/gta5/doc/enums/eVehicleMissionType.txt
      *
      * Hash: 0x659427E0EF36BCDE | Since: 323
      */
-    function vehicleMission(driver: number | Ped, vehicle: number | Vehicle, vehicleTarget: number | Vehicle, missionType: number, cruiseSpeed: number, drivingStyle: number, targetReached: number, straightLineDistance: number, DriveAgainstTraffic: boolean): void;
+    function vehicleMission(driver: number | IPed, vehicle: number | IVehicle, vehicleTarget: number | IVehicle, missionType: number, cruiseSpeed: number, drivingStyle: number, targetReached: number, straightLineDistance: number, DriveAgainstTraffic: boolean): void;
     /**
      * See TASK_VEHICLE_MISSION
      *
      * Hash: 0xF0AF20AA7731F8C3 | Since: 323
      */
-    function vehicleMissionCoorsTarget(ped: number | Ped, vehicle: number | Vehicle, pos: Vector3, mission: number, cruiseSpeed: number, drivingStyle: number, targetReached: number, straightLineDistance: number, DriveAgainstTraffic: boolean): void;
+    function vehicleMissionCoorsTarget(ped: number | IPed, vehicle: number | IVehicle, pos: Vector3, mission: number, cruiseSpeed: number, drivingStyle: number, targetReached: number, straightLineDistance: number, DriveAgainstTraffic: boolean): void;
     /**
      * See TASK_VEHICLE_MISSION
      *
      * Hash: 0x9454528DF15D657A | Since: 323
      */
-    function vehicleMissionPedTarget(ped: number | Ped, vehicle: number | Vehicle, pedTarget: number | Ped, missionType: number, maxSpeed: number, drivingStyle: number, minDistance: number, straightLineDistance: number, DriveAgainstTraffic: boolean): void;
+    function vehicleMissionPedTarget(ped: number | IPed, vehicle: number | IVehicle, pedTarget: number | IPed, missionType: number, maxSpeed: number, drivingStyle: number, minDistance: number, straightLineDistance: number, DriveAgainstTraffic: boolean): void;
     /**
      * Modes:
      * 0 - ignore heading
@@ -40914,7 +40914,7 @@ export declare namespace task {
      *
      * Hash: 0x0F3E34E968EA374E | Since: 323
      */
-    function vehiclePark(ped: number | Ped, vehicle: number | Vehicle, pos: Vector3, heading: number, mode: number, radius: number, keepEngineOn: boolean): void;
+    function vehiclePark(ped: number | IPed, vehicle: number | IVehicle, pos: Vector3, heading: number, mode: number, radius: number, keepEngineOn: boolean): void;
     /**
      * Most probably plays a specific animation on vehicle. For example getting chop out of van etc...
      *
@@ -40928,19 +40928,19 @@ export declare namespace task {
      *
      * Hash: 0x69F5C3BD0F3EBD89 | Since: 323
      */
-    function vehiclePlayAnim(vehicle: number | Vehicle, animationSet: string, animationName: string): void;
+    function vehiclePlayAnim(vehicle: number | IVehicle, animationSet: string, animationName: string): void;
     /**
      * No comment provided
      *
      * Hash: 0x5190796ED39C9B6D | Since: 323
      */
-    function vehicleShootAtCoord(ped: number | Ped, pos: Vector3, fireTolerance: number): void;
+    function vehicleShootAtCoord(ped: number | IPed, pos: Vector3, fireTolerance: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x10AB107B887214D8 | Since: 323
      */
-    function vehicleShootAtPed(ped: number | Ped, target: number | Ped, fireTolerance: number): void;
+    function vehicleShootAtPed(ped: number | IPed, target: number | IPed, fireTolerance: number): void;
     /**
      * '1 - brake
      * '3 - brake + reverse
@@ -40976,19 +40976,19 @@ export declare namespace task {
      *
      * Hash: 0xC429DCEEB339E129 | Since: 323
      */
-    function vehicleTempAction(driver: number | Ped, vehicle: number | Vehicle, action: number, time: number): void;
+    function vehicleTempAction(driver: number | IPed, vehicle: number | IVehicle, action: number, time: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xE054346CA3A0F315 | Since: 323
      */
-    function wanderInArea(ped: number | Ped, pos: Vector3, radius: number, minimalLength: number, timeBetweenWalks: number): void;
+    function wanderInArea(ped: number | IPed, pos: Vector3, radius: number, minimalLength: number, timeBetweenWalks: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x6919A2F136426098 | Since: 1868
      */
-    function wanderSpecific(ped: number | Ped, conditionalAnimGroupStr: string, conditionalAnimStr: string, heading: number): void;
+    function wanderSpecific(ped: number | IPed, conditionalAnimGroupStr: string, conditionalAnimStr: string, heading: number): void;
     /**
      * Makes ped walk around the area.
      *
@@ -40996,13 +40996,13 @@ export declare namespace task {
      *
      * Hash: 0xBB9CE077274F6A1B | Since: 323
      */
-    function wanderStandard(ped: number | Ped, heading: number, flags: number): void;
+    function wanderStandard(ped: number | IPed, heading: number, flags: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x6E01E9E8D89F8276 | Since: 2545
      */
-    function warpPedDirectlyIntoCover(ped: number | Ped, time: number, allowPeekingAndFiring: boolean, forceInitialFacingDirection: boolean, forceFaceLeft: boolean, identifier: number): void;
+    function warpPedDirectlyIntoCover(ped: number | IPed, time: number, allowPeekingAndFiring: boolean, forceInitialFacingDirection: boolean, forceFaceLeft: boolean, identifier: number): void;
     /**
      * Seat Numbers
      * -------------------------------
@@ -41015,7 +41015,7 @@ export declare namespace task {
      *
      * Hash: 0x9A7D091411C5F684 | Since: 323
      */
-    function warpPedIntoVehicle(ped: number | Ped, vehicle: number | Vehicle, seat: number): void;
+    function warpPedIntoVehicle(ped: number | IPed, vehicle: number | IVehicle, seat: number): void;
     /**
      * EX: Function.Call(Ped1, Ped2, Time, 0);
      *
@@ -41027,37 +41027,37 @@ export declare namespace task {
      *
      * Hash: 0xCDDC2B77CE54AC6E | Since: 323
      */
-    function writhe(ped: number | Ped, target: number | Ped, minFireLoops: number, startState: number, forceShootOnGround: boolean, shootFromGroundTimer: number): void;
+    function writhe(ped: number | IPed, target: number | IPed, minFireLoops: number, startState: number, forceShootOnGround: boolean, shootFromGroundTimer: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x67406F2C8F87FC4F | Since: 323
      */
-    function uncuffPed(ped: number | Ped): void;
+    function uncuffPed(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x9724FB59A3E72AD0 | Since: 323
      */
-    function updateAimGunScriptedTarget(ped: number | Ped, target: number | Ped, pos: Vector3, disableBlockingClip: boolean): void;
+    function updateAimGunScriptedTarget(ped: number | IPed, target: number | IPed, pos: Vector3, disableBlockingClip: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xA98FCAFD7893C834 | Since: 323
      */
-    function updateHandsUpDuration(ped: number | Ped, duration: number): void;
+    function updateHandsUpDuration(ped: number | IPed, duration: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xE4973DBDBE6E44B3 | Since: 323
      */
-    function updateSweepAimEntity(ped: number | Ped, entity: number | Entity): void;
+    function updateSweepAimEntity(ped: number | IPed, entity: number | IEntity): void;
     /**
      * No comment provided
      *
      * Hash: 0xBB106883F5201FC4 | Since: 323
      */
-    function updateSweepAimPosition(ped: number | Ped, pos: Vector3): void;
+    function updateSweepAimPosition(ped: number | IPed, pos: Vector3): void;
     /**
      * No comment provided
      *
@@ -41069,31 +41069,31 @@ export declare namespace task {
      *
      * Hash: 0xE435D3539EFDCD1B | Since: 3570
      */
-    function vehicleWaypointPlaybackGetIsPaused(vehicle: number | Vehicle): boolean;
+    function vehicleWaypointPlaybackGetIsPaused(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x121F0593E0A431D7 | Since: 323
      */
-    function vehicleWaypointPlaybackOverrideSpeed(vehicle: number | Vehicle, speed: number): void;
+    function vehicleWaypointPlaybackOverrideSpeed(vehicle: number | IVehicle, speed: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x8A4E6AC373666BC5 | Since: 323
      */
-    function vehicleWaypointPlaybackPause(vehicle: number | Vehicle): void;
+    function vehicleWaypointPlaybackPause(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0xDC04FCAA7839D492 | Since: 323
      */
-    function vehicleWaypointPlaybackResume(vehicle: number | Vehicle): void;
+    function vehicleWaypointPlaybackResume(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x5CEB25A7D2848963 | Since: 323
      */
-    function vehicleWaypointPlaybackUseDefaultSpeed(vehicle: number | Vehicle): void;
+    function vehicleWaypointPlaybackUseDefaultSpeed(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -41123,31 +41123,31 @@ export declare namespace task {
      *
      * Hash: 0x8968400D900ED8B3 | Since: 323
      */
-    function waypointPlaybackStartAimingAtCoord(ped: number | Ped, pos: Vector3): void;
+    function waypointPlaybackStartAimingAtCoord(ped: number | IPed, pos: Vector3): void;
     /**
      * No comment provided
      *
      * Hash: 0x20E330937C399D29 | Since: 323
      */
-    function waypointPlaybackStartAimingAtPed(ped: number | Ped, target: number | Ped): void;
+    function waypointPlaybackStartAimingAtPed(ped: number | IPed, target: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x057A25CFCC9DB671 | Since: 323
      */
-    function waypointPlaybackStartShootingAtCoord(ped: number | Ped, pos: Vector3, firingPattern: number | string): void;
+    function waypointPlaybackStartShootingAtCoord(ped: number | IPed, pos: Vector3, firingPattern: number | string): void;
     /**
      * No comment provided
      *
      * Hash: 0xE70BA7B90F8390DC | Since: 323
      */
-    function waypointPlaybackStartShootingAtPed(ped: number | Ped, ped2: number | Ped): void;
+    function waypointPlaybackStartShootingAtPed(ped: number | IPed, ped2: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x47EFA040EBB8E2EA | Since: 323
      */
-    function waypointPlaybackStopAimingOrShooting(ped: number | Ped): void;
+    function waypointPlaybackStopAimingOrShooting(ped: number | IPed): void;
     /**
      * No comment provided
      *
@@ -41186,13 +41186,13 @@ export declare namespace task {
      *
      * Hash: 0x0EFE4834A2F40563 | Since: 3570
      */
-    function setAmbientPedEnableCollisionOnNetworkCloneWhenFixed(ped: number | Ped, enable: boolean): void;
+    function setAmbientPedEnableCollisionOnNetworkCloneWhenFixed(ped: number | IPed, enable: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x32F6EEF031F943DC | Since: 3095
      */
-    function setScriptEnableCollisionOnNetworkCloneWhenFixed(ped: number | Ped, enable: boolean): void;
+    function setScriptEnableCollisionOnNetworkCloneWhenFixed(ped: number | IPed, enable: boolean): void;
 }
 export declare namespace vehicle {
     /**
@@ -41212,7 +41212,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x99AD4CCCB128CBC9 | Since: 323
      */
-    function addPhoneExplosiveDevice(vehicle: number | Vehicle): void;
+    function addPhoneExplosiveDevice(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -41224,7 +41224,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xB72E26D81006005B | Since: 323
      */
-    function addUpsidedownCheck(vehicle: number | Vehicle): void;
+    function addUpsidedownCheck(vehicle: number | IVehicle): void;
     /**
      * This native doesn't seem to do anything, might be a debug-only native.
      *
@@ -41232,13 +41232,13 @@ export declare namespace vehicle {
      *
      * Hash: 0xB264C4D2F2B0A78B | Since: 323
      */
-    function allowAmbientsToAvoidAdverseConditions(vehicle: number | Vehicle): void;
+    function allowAmbientsToAvoidAdverseConditions(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x0F3B4D4E43177236 | Since: 323
      */
-    function allowBoatBoomToAnimate(vehicle: number | Vehicle, toggle: boolean): void;
+    function allowBoatBoomToAnimate(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -41250,49 +41250,49 @@ export declare namespace vehicle {
      *
      * Hash: 0x249249D74F813EB2 | Since: 3095
      */
-    function applyEmpEffect(vehicle: number | Vehicle): void;
+    function applyEmpEffect(vehicle: number | IVehicle): void;
     /**
      * Appears to return false if any window is broken.
      *
      * Hash: 0x11D862A3E977A9EF | Since: 323
      */
-    function areAllWindowsIntact(vehicle: number | Vehicle): boolean;
+    function areAllWindowsIntact(vehicle: number | IVehicle): boolean;
     /**
      * Returns false if every seat is occupied.
      *
      * Hash: 0x2D34FC3BC4ADB780 | Since: 323
      */
-    function areAnySeatsFree(vehicle: number | Vehicle): boolean;
+    function areAnySeatsFree(vehicle: number | IVehicle): boolean;
     /**
      * Only used with the "akula" and "annihilator2" in the decompiled native scripts.
      *
      * Hash: 0xAEF12960FA943792 | Since: 1290
      */
-    function areFoldingWingsDeployed(vehicle: number | Vehicle): boolean;
+    function areFoldingWingsDeployed(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xF78F94D60248C737 | Since: 323
      */
-    function arePlaneControlPanelsIntact(vehicle: number | Vehicle): boolean;
+    function arePlaneControlPanelsIntact(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x755D6D5267CBBD7E | Since: 323
      */
-    function arePlanePropellersIntact(plane: number | Vehicle): boolean;
+    function arePlanePropellersIntact(plane: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x5991A01434CE9677 | Since: 323
      */
-    function areWingsOfPlaneIntact(plane: number | Vehicle): boolean;
+    function areWingsOfPlaneIntact(plane: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x6A98C2ECF57FA5D4 | Since: 323
      */
-    function attachContainerToHandlerFrameWhenLinedUp(vehicle: number | Vehicle, entity: number | Entity): void;
+    function attachContainerToHandlerFrameWhenLinedUp(vehicle: number | IVehicle, entity: number | IEntity): void;
     /**
      * No comment provided
      *
@@ -41304,25 +41304,25 @@ export declare namespace vehicle {
      *
      * Hash: 0x16B5E274BDE402F8 | Since: 323
      */
-    function attachOnToTrailer(vehicle: number | Vehicle, trailer: number | Vehicle, offsetX: number, offsetY: number, offsetZ: number, coordsX: number, coordsY: number, coordsZ: number, rotationX: number, rotationY: number, rotationZ: number, disableCollisions: number): void;
+    function attachOnToTrailer(vehicle: number | IVehicle, trailer: number | IVehicle, offsetX: number, offsetY: number, offsetZ: number, coordsX: number, coordsY: number, coordsZ: number, rotationX: number, rotationY: number, rotationZ: number, disableCollisions: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x4127F1D84E347769 | Since: 323
      */
-    function attachToCargobob(cargobob: number | Vehicle, vehicle: number | Vehicle, pos: Vector3): void;
+    function attachToCargobob(cargobob: number | IVehicle, vehicle: number | IVehicle, pos: Vector3): void;
     /**
      * HookOffset defines where the hook is attached. leave at 0 for default attachment.
      *
      * Hash: 0x29A16F8D621C4508 | Since: 323
      */
-    function attachToTowTruck(towTruck: number | Vehicle, vehicle: number | Vehicle, rear: boolean, hookOffsetX: number, hookOffsetY: number, hookOffsetZ: number): void;
+    function attachToTowTruck(towTruck: number | IVehicle, vehicle: number | IVehicle, rear: boolean, hookOffsetX: number, hookOffsetY: number, hookOffsetZ: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x3C7D42D58F770B54 | Since: 323
      */
-    function attachToTrailer(vehicle: number | Vehicle, trailer: number | Vehicle, radius: number): void;
+    function attachToTrailer(vehicle: number | IVehicle, trailer: number | IVehicle, radius: number): void;
     /**
      * This native makes the vehicle stop immediately, as happens when we enter a MP garage.
      *
@@ -41332,19 +41332,19 @@ export declare namespace vehicle {
      *
      * Hash: 0x260BE8F09E326A20 | Since: 323
      */
-    function bringToHalt(vehicle: number | Vehicle, distance: number, duration: number): void;
+    function bringToHalt(vehicle: number | IVehicle, distance: number, duration: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x26C10ECBDA5D043B | Since: 323
      */
-    function canAnchorBoatHere(vehicle: number | Vehicle): boolean;
+    function canAnchorBoatHere(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x24F4121D07579880 | Since: 678
      */
-    function canAnchorBoatHereIgnorePlayers(vehicle: number | Vehicle): boolean;
+    function canAnchorBoatHereIgnorePlayers(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
@@ -41356,7 +41356,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x30785D90C956BF35 | Since: 323
      */
-    function canShuffleSeat(vehicle: number | Vehicle, seatIndex: number): boolean;
+    function canShuffleSeat(vehicle: number | IVehicle, seatIndex: number): boolean;
     /**
      * No comment provided
      *
@@ -41368,19 +41368,19 @@ export declare namespace vehicle {
      *
      * Hash: 0xC889AE921400E1ED | Since: 3095
      */
-    function clearNitrous(vehicle: number | Vehicle): void;
+    function clearNitrous(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x55E1D2758F34E437 | Since: 323
      */
-    function clearCustomPrimaryColour(vehicle: number | Vehicle): void;
+    function clearCustomPrimaryColour(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x5FFBDEEC3E8E2009 | Since: 323
      */
-    function clearCustomSecondaryColour(vehicle: number | Vehicle): void;
+    function clearCustomSecondaryColour(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -41392,7 +41392,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x4419966C9936071A | Since: 463
      */
-    function clearPetroltankFireCulprit(vehicle: number | Vehicle): void;
+    function clearPetroltankFireCulprit(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -41404,13 +41404,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x6D6AF961B72728AE | Since: 323
      */
-    function clearRouteHistory(vehicle: number | Vehicle): void;
+    function clearRouteHistory(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x3556041742A0DC74 | Since: 323
      */
-    function closeBombBayDoors(vehicle: number | Vehicle): void;
+    function closeBombBayDoors(vehicle: number | IVehicle): void;
     /**
      * Works for vehicles with a retractable landing gear
      *
@@ -41423,13 +41423,13 @@ export declare namespace vehicle {
      *
      * Hash: 0xCFC8BE9A5E1FE575 | Since: 323
      */
-    function controlLandingGear(vehicle: number | Vehicle, state: number): void;
+    function controlLandingGear(vehicle: number | IVehicle, state: number): void;
     /**
      * Copies sourceVehicle's damage (broken bumpers, broken lights, etc.) to targetVehicle.
      *
      * Hash: 0xE44A982368A4AF23 | Since: 323
      */
-    function copyDamages(sourceVehicle: number | Vehicle, targetVehicle: number | Vehicle): void;
+    function copyDamages(sourceVehicle: number | IVehicle, targetVehicle: number | IVehicle): void;
     /**
      * Train models HAVE TO be loaded (requested) before you use this.
      * For variation 15 - request:
@@ -41458,7 +41458,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x7BEB0C7A235F6F3B | Since: 323
      */
-    function createPickUpRopeForCargobob(cargobob: number | Vehicle, state: number): void;
+    function createPickUpRopeForCargobob(cargobob: number | IVehicle, state: number): void;
     /**
      * Creates a script vehicle generator at the given coordinates. Most parameters after the model hash are unknown.
      *
@@ -41498,7 +41498,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x5B76B14AE875C795 | Since: 323
      */
-    function deleteMissionTrain(train: number | Vehicle): void;
+    function deleteMissionTrain(train: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -41517,49 +41517,49 @@ export declare namespace vehicle {
      *
      * Hash: 0xEA386986E786A54F | Since: 323
      */
-    function deleteVehicle(vehicle: number | Vehicle): void;
+    function deleteVehicle(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x7C0043FDFF6436BC | Since: 323
      */
-    function detachContainerFromHandlerFrame(vehicle: number | Vehicle): void;
+    function detachContainerFromHandlerFrame(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0xAF03011701811146 | Since: 678
      */
-    function detachEntityFromCargobob(cargobob: number | Vehicle, entity: number | Entity): boolean;
+    function detachEntityFromCargobob(cargobob: number | IVehicle, entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xADF7BE450512C12F | Since: 323
      */
-    function detachFromAnyCargobob(vehicle: number | Vehicle): boolean;
+    function detachFromAnyCargobob(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xD0E9CE05A1E68CD8 | Since: 323
      */
-    function detachFromAnyTowTruck(vehicle: number | Vehicle): boolean;
+    function detachFromAnyTowTruck(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x0E21D3DF1051399D | Since: 323
      */
-    function detachFromCargobob(vehicle: number | Vehicle, cargobob: number | Vehicle): void;
+    function detachFromCargobob(vehicle: number | IVehicle, cargobob: number | IVehicle): void;
     /**
      * First two parameters swapped. Scripts verify that towTruck is the first parameter, not the second.
      *
      * Hash: 0xC2DB6B6708350ED8 | Since: 323
      */
-    function detachFromTowTruck(towTruck: number | Vehicle, vehicle: number | Vehicle): void;
+    function detachFromTowTruck(towTruck: number | IVehicle, vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x90532EDF0D2BDD86 | Since: 323
      */
-    function detachFromTrailer(vehicle: number | Vehicle): void;
+    function detachFromTrailer(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -41571,13 +41571,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x500873A45724C863 | Since: 323
      */
-    function disableIndividualPlanePropeller(vehicle: number | Vehicle, propeller: number): void;
+    function disableIndividualPlanePropeller(vehicle: number | IVehicle, propeller: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x23428FC53C60919C | Since: 323
      */
-    function disablePlaneAileron(vehicle: number | Vehicle): void;
+    function disablePlaneAileron(vehicle: number | IVehicle): void;
     /**
      * Adds some kind of shadow to the vehicle.
      *
@@ -41585,7 +41585,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xF0E4BA16D1DB546C | Since: 323
      */
-    function disableVehcileDynamicAmbientScales(vehicle: number | Vehicle): void;
+    function disableVehcileDynamicAmbientScales(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -41597,31 +41597,31 @@ export declare namespace vehicle {
      *
      * Hash: 0x32CAEDF24A583345 | Since: 463
      */
-    function disableTurretMovementThisFrame(vehicle: number | Vehicle): void;
+    function disableTurretMovementThisFrame(vehicle: number | IVehicle): void;
     /**
      * Full list of weapons by DurtyFree (Search for VEHICLE_*): https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
      * Hash: 0xF4FC6A6F67D8D856 | Since: 323
      */
-    function disableWeapon(disabled: boolean, weaponHash: number | string, vehicle: number | Vehicle, owner: number | Ped): void;
+    function disableWeapon(disabled: boolean, weaponHash: number | string, vehicle: number | IVehicle, owner: number | IPed): void;
     /**
      * Returns true only when the magnet is active, will return false if the hook is active
      *
      * Hash: 0x6E08BF5B3722BAC9 | Since: 323
      */
-    function doesCargobobHavePickupMagnet(cargobob: number | Vehicle): boolean;
+    function doesCargobobHavePickupMagnet(cargobob: number | IVehicle): boolean;
     /**
      * Returns true only when the hook is active, will return false if the magnet is active
      *
      * Hash: 0x1821D91AD4B56108 | Since: 323
      */
-    function doesCargobobHavePickUpRope(cargobob: number | Vehicle): boolean;
+    function doesCargobobHavePickUpRope(cargobob: number | IVehicle): boolean;
     /**
      * Checks via CVehicleModelInfo
      *
      * Hash: 0x1262D55792428154 | Since: 323
      */
-    function doesExtraExist(vehicle: number | Vehicle, extraId: number): boolean;
+    function doesExtraExist(vehicle: number | IVehicle, extraId: number): boolean;
     /**
      * No comment provided
      *
@@ -41633,7 +41633,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x4E417C547182C84D | Since: 757
      */
-    function doesAllowRappel(vehicle: number | Vehicle): boolean;
+    function doesAllowRappel(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
@@ -41645,31 +41645,31 @@ export declare namespace vehicle {
      *
      * Hash: 0x8AC862B0B32C5B80 | Since: 323
      */
-    function doesHaveRoof(vehicle: number | Vehicle): boolean;
+    function doesHaveRoof(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x99015ED7DBEA5113 | Since: 2189
      */
-    function doesHaveSearchlight(vehicle: number | Vehicle): boolean;
+    function doesHaveSearchlight(vehicle: number | IVehicle): boolean;
     /**
      * Maximum amount of vehicles with vehicle stuck check appears to be 16.
      *
      * Hash: 0x57E4C39DE5EE8470 | Since: 323
      */
-    function doesHaveStuckVehicleCheck(vehicle: number | Vehicle): boolean;
+    function doesHaveStuckVehicleCheck(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x25ECB9F8017D98E0 | Since: 323
      */
-    function doesHaveWeapons(vehicle: number | Vehicle): boolean;
+    function doesHaveWeapons(vehicle: number | IVehicle): boolean;
     /**
      * Remove the weird shadow applied by DISABLE_VEHCILE_DYNAMIC_AMBIENT_SCALES.
      *
      * Hash: 0xF87D9F2301F7D206 | Since: 323
      */
-    function enableDynamicAmbientScales(vehicle: number | Vehicle): void;
+    function enableDynamicAmbientScales(vehicle: number | IVehicle): void;
     /**
      * Explodes a selected vehicle.
      *
@@ -41681,27 +41681,27 @@ export declare namespace vehicle {
      *
      * Hash: 0xBA71116ADF5B514C | Since: 323
      */
-    function explode(vehicle: number | Vehicle, isAudible: boolean, isInvisible: boolean): void;
+    function explode(vehicle: number | IVehicle, isAudible: boolean, isInvisible: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x786A4EB67B01BF0B | Since: 323
      */
-    function explodeInCutscene(vehicle: number | Vehicle): void;
+    function explodeInCutscene(vehicle: number | IVehicle): void;
     /**
      * Finds the vehicle that is carrying this entity with a handler frame.
      * The model of the entity must be prop_contr_03b_ld or the function will return 0.
      *
      * Hash: 0x375E7FC44F21C8AB | Since: 323
      */
-    function findHandlerContainerIsAttachedTo(entity: number | Entity): number;
+    function findHandlerContainerIsAttachedTo(entity: number | IEntity): number;
     /**
      * Native is significantly more complicated than simply generating a random vector & length.
      * `The 'point' is either 400.0 or 250.0 units away from the Ped's current coordinates; and paths into functions like rage::grcViewport___IsSphereVisible`
      *
      * Hash: 0x8DC9675797123522 | Since: 1290
      */
-    function findSpawnCoordinatesForHeli(ped: number | Ped): Vector3;
+    function findSpawnCoordinatesForHeli(ped: number | IPed): Vector3;
     /**
      * windowIndex:
      * 0 = Front Left Window
@@ -41720,13 +41720,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x772282EBEB95E682 | Since: 323
      */
-    function fixWindow(vehicle: number | Vehicle, windowIndex: number): void;
+    function fixWindow(vehicle: number | IVehicle, windowIndex: number): void;
     /**
      * Often called after START_PLAYBACK_RECORDED_VEHICLE and SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE; similar in use to FORCE_ENTITY_AI_AND_ANIMATION_UPDATE.
      *
      * Hash: 0x1F2E4E06DEA8992B | Since: 323
      */
-    function forcePlaybackRecordedUpdate(vehicle: number | Vehicle): void;
+    function forcePlaybackRecordedUpdate(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -41738,19 +41738,19 @@ export declare namespace vehicle {
      *
      * Hash: 0x33506883545AC0DF | Since: 323
      */
-    function forceSubmarineSurfaceMode(vehicle: number | Vehicle, toggle: boolean): void;
+    function forceSubmarineSurfaceMode(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x99CAD8E7AFDB60FA | Since: 323
      */
-    function forceSubThrottleForTime(vehicle: number | Vehicle): void;
+    function forceSubThrottleForTime(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x1A2BCC8C636F9226 | Since: 3095
      */
-    function fullyChargeNitrous(vehicle: number | Vehicle): void;
+    function fullyChargeNitrous(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -41768,19 +41768,19 @@ export declare namespace vehicle {
      *
      * Hash: 0xD0917A423314BBA8 | Since: 1180
      */
-    function getAreBombBayDoorsOpen(aircraft: number | Vehicle): boolean;
+    function getAreBombBayDoorsOpen(aircraft: number | IVehicle): boolean;
     /**
      * Gets the position of the cargobob hook, in world coords.
      *
      * Hash: 0xCBDB9B923CACC92D | Since: 323
      */
-    function getAttachedPickUpHookPosition(cargobob: number | Vehicle): Vector3;
+    function getAttachedPickUpHookPosition(cargobob: number | IVehicle): Vector3;
     /**
      * No comment provided
      *
      * Hash: 0x6636C535F6CC2725 | Since: 323
      */
-    function getBoatBoomPositionRatio(vehicle: number | Vehicle): number;
+    function getBoatBoomPositionRatio(vehicle: number | IVehicle): number;
     /**
      * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
      *
@@ -41792,7 +41792,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xEC69ADF931AAE0C3 | Since: 505
      */
-    function getBothHeadlightsDamaged(vehicle: number | Vehicle): boolean;
+    function getBothHeadlightsDamaged(vehicle: number | IVehicle): boolean;
     /**
      * Used in decompiled scripts in combination with GET_VEHICLE_SIZE
      * p7 is usually 2
@@ -41800,13 +41800,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x51F30DB60626A20E | Since: 1180
      */
-    function getCanBePlacedHere(vehicle: number | Vehicle, pos: Vector3, rot: Vector3): boolean;
+    function getCanBePlacedHere(vehicle: number | IVehicle, pos: Vector3, rot: Vector3): boolean;
     /**
      * Returns true if the vehicle has the FLAG_JUMPING_CAR flag set.
      *
      * Hash: 0x9078C0C5EF8C19E9 | Since: 944
      */
-    function getCarHasJump(vehicle: number | Vehicle): boolean;
+    function getCarHasJump(vehicle: number | IVehicle): boolean;
     /**
      * Example usage
      * `VEHICLE::GET_CLOSEST_VEHICLE(x, y, z, radius, hash, unknown leave at 70)`
@@ -41848,13 +41848,13 @@ export declare namespace vehicle {
      *
      * Hash: 0xF8C397922FC03F41 | Since: 323
      */
-    function getConvertibleRoofState(vehicle: number | Vehicle): number;
+    function getConvertibleRoofState(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0x42BC05C27A946054 | Since: 323
      */
-    function getCurrentPlaybackFor(vehicle: number | Vehicle): number;
+    function getCurrentPlaybackFor(vehicle: number | IVehicle): number;
     /**
      * Returns model name of vehicle in all caps. Needs to be displayed through localizing text natives to get proper display name.
      * -----------------------------------------------------------------------------------------------------------------------------------------
@@ -41875,19 +41875,19 @@ export declare namespace vehicle {
      *
      * Hash: 0xBCDC5017D3CE1E9E | Since: 323
      */
-    function getDoesHaveDamageDecals(vehicle: number | Vehicle): boolean;
+    function getDoesHaveDamageDecals(vehicle: number | IVehicle): boolean;
     /**
      * Returns true only if the "tombstone" bone is attached to the vehicle, irrespective of "FLAG_HAS_TOMBSTONE" being present or not. Detaching the tombstone will return false.
      *
      * Hash: 0x71AFB258CCED3A27 | Since: 1604
      */
-    function getDoesHaveTombstone(vehicle: number | Vehicle): boolean;
+    function getDoesHaveTombstone(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x2F5A72430E78C8D3 | Since: 2372
      */
-    function getDriftTyresSet(vehicle: number | Vehicle): boolean;
+    function getDriftTyresSet(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
@@ -41899,13 +41899,13 @@ export declare namespace vehicle {
      *
      * Hash: 0xEFEA18DCF10F8F75 | Since: 323
      */
-    function getEntityAttachedToTowTruck(towTruck: number | Vehicle): number;
+    function getEntityAttachedToTowTruck(towTruck: number | IVehicle): number;
     /**
      * doorId: see SET_VEHICLE_DOOR_SHUT
      *
      * Hash: 0xC0572928C0ABFDA3 | Since: 944
      */
-    function getEntryPointPosition(vehicle: number | Vehicle, doorId: number): Vector3;
+    function getEntryPointPosition(vehicle: number | IVehicle, doorId: number): Vector3;
     /**
      * Gets the height of the vehicle's suspension.
      * The higher the value the lower the suspension. Each 0.002 corresponds with one more level lowered.
@@ -41914,7 +41914,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x53952FD2BAA19F17 | Since: 323
      */
-    function getFakeSuspensionLoweringAmount(vehicle: number | Vehicle): number;
+    function getFakeSuspensionLoweringAmount(vehicle: number | IVehicle): number;
     /**
      * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
      *
@@ -41926,112 +41926,112 @@ export declare namespace vehicle {
      *
      * Hash: 0xDCA174A42133F08C | Since: 944
      */
-    function getHasRetractableWheels(vehicle: number | Vehicle): boolean;
+    function getHasRetractableWheels(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x36D782F68B309BDA | Since: 944
      */
-    function getHasRocketBoost(vehicle: number | Vehicle): boolean;
+    function getHasRocketBoost(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xE8718FAF591FD224 | Since: 1604
      */
-    function getHasBeenHitByShunt(vehicle: number | Vehicle): boolean;
+    function getHasBeenHitByShunt(vehicle: number | IVehicle): boolean;
     /**
      * Max 1000.
      * At 0 the main rotor will stall.
      *
      * Hash: 0xE4CB7541F413D2C5 | Since: 323
      */
-    function getHeliMainRotorHealth(vehicle: number | Vehicle): number;
+    function getHeliMainRotorHealth(vehicle: number | IVehicle): number;
     /**
      * Max 1000.
      * At -100 both helicopter rotors will stall.
      *
      * Hash: 0xAC51915D27E4A5F7 | Since: 323
      */
-    function getHeliTailBoomHealth(vehicle: number | Vehicle): number;
+    function getHeliTailBoomHealth(vehicle: number | IVehicle): number;
     /**
      * Max 1000.
      * At 0 the tail rotor will stall.
      *
      * Hash: 0xAE8CE82A4219AC8C | Since: 323
      */
-    function getHeliTailRotorHealth(vehicle: number | Vehicle): number;
+    function getHeliTailRotorHealth(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0x0BB5CBDDD0F25AE3 | Since: 2372
      */
-    function getHydraulicSuspensionRaiseFactor(vehicle: number | Vehicle, wheelId: number): number;
+    function getHydraulicSuspensionRaiseFactor(vehicle: number | IVehicle, wheelId: number): number;
     /**
      * No comment provided
      *
      * Hash: 0xA01BC64DD4BFBBAC | Since: 323
      */
-    function getInClipsetHashForSeat(vehicle: number | Vehicle): number;
+    function getInClipsetHashForSeat(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0xBA91D045575699AD | Since: 877
      */
-    function getIsBoatCapsized(vehicle: number | Vehicle): boolean;
+    function getIsBoatCapsized(vehicle: number | IVehicle): boolean;
     /**
      * doorId: see SET_VEHICLE_DOOR_SHUT
      *
      * Hash: 0x645F4B6E8499F632 | Since: 944
      */
-    function getIsDoorValid(vehicle: number | Vehicle, doorId: number): boolean;
+    function getIsDoorValid(vehicle: number | IVehicle, doorId: number): boolean;
     /**
      * From the driver's perspective, is the left headlight broken.
      *
      * Hash: 0x5EF77C9ADD3B11A3 | Since: 323
      */
-    function getIsLeftHeadlightDamaged(vehicle: number | Vehicle): boolean;
+    function getIsLeftHeadlightDamaged(vehicle: number | IVehicle): boolean;
     /**
      * From the driver's perspective, is the right headlight broken.
      *
      * Hash: 0xA7ECB73355EB2F20 | Since: 323
      */
-    function getIsRightHeadlightDamaged(vehicle: number | Vehicle): boolean;
+    function getIsRightHeadlightDamaged(vehicle: number | IVehicle): boolean;
     /**
      * Returns whether this vehicle is currently disabled by an EMP mine.
      *
      * Hash: 0x0506ED94363AD905 | Since: 1604
      */
-    function getIsDisabledByEmp(vehicle: number | Vehicle): boolean;
+    function getIsDisabledByEmp(vehicle: number | IVehicle): boolean;
     /**
      * Returns true when in a vehicle, false whilst entering/exiting.
      *
      * Hash: 0xAE31E7DF9B5B132E | Since: 323
      */
-    function getIsEngineRunning(vehicle: number | Vehicle): boolean;
+    function getIsEngineRunning(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xF095C0405307B21B | Since: 323
      */
-    function getIsPrimaryColourCustom(vehicle: number | Vehicle): boolean;
+    function getIsPrimaryColourCustom(vehicle: number | IVehicle): boolean;
     /**
      * Check if Vehicle Secondary is avaliable for customize
      *
      * Hash: 0x910A32E7AAD2656C | Since: 323
      */
-    function getIsSecondaryColourCustom(vehicle: number | Vehicle): boolean;
+    function getIsSecondaryColourCustom(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xA2459F72C14E2E8D | Since: 1604
      */
-    function getIsShunting(vehicle: number | Vehicle): boolean;
+    function getIsShunting(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x1DA0DA9CB3F0C8BF | Since: 944
      */
-    function getIsWheelsRetracted(vehicle: number | Vehicle): boolean;
+    function getIsWheelsRetracted(vehicle: number | IVehicle): boolean;
     /**
      * Landing gear states:
      *
@@ -42045,7 +42045,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x9B0F3DCA3DB0F4CD | Since: 323
      */
-    function getLandingGearState(vehicle: number | Vehicle): number;
+    function getLandingGearState(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
@@ -42057,13 +42057,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x83F969AA1EE2A664 | Since: 323
      */
-    function getLastPedInSeat(vehicle: number | Vehicle, seatIndex: number): number;
+    function getLastPedInSeat(vehicle: number | IVehicle, seatIndex: number): number;
     /**
      * Returns last vehicle that was rammed by the given vehicle using the shunt boost.
      *
      * Hash: 0x04F2FA6E234162F7 | Since: 1604
      */
-    function getLastShunt(vehicle: number | Vehicle): number;
+    function getLastShunt(vehicle: number | IVehicle): number;
     /**
      * Returns the text label of the vehicle's liveryIndex, as specified by the liveryNames section of the vehicle's modkit data in the carcols file.
      *
@@ -42092,7 +42092,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xB4C7A93837C91A1F | Since: 323
      */
-    function getLiveryName(vehicle: number | Vehicle, liveryIndex: number): string;
+    function getLiveryName(vehicle: number | IVehicle, liveryIndex: number): string;
     /**
      * Will return a vehicle's manufacturer display label.
      * Returns "CARNOTFOUND" if the hash doesn't match a vehicle hash.
@@ -42108,7 +42108,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x51F0FEB9F6AE98C0 | Since: 323
      */
-    function getModSlotName(vehicle: number | Vehicle, modType: number): string;
+    function getModSlotName(vehicle: number | IVehicle, modType: number): string;
     /**
      * Returns the text label of a mod type for a given vehicle
      *
@@ -42116,19 +42116,19 @@ export declare namespace vehicle {
      *
      * Hash: 0x8935624F8C5592CC | Since: 323
      */
-    function getModTextLabel(vehicle: number | Vehicle, modType: number, modValue: number): string;
+    function getModTextLabel(vehicle: number | IVehicle, modType: number, modValue: number): string;
     /**
      * Returns the total amount of color combinations found in the vehicle's carvariations.meta entry.
      *
      * Hash: 0x3B963160CD65D41E | Since: 323
      */
-    function getNumberOfColours(vehicle: number | Vehicle): number;
+    function getNumberOfColours(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0x92922A607497B14D | Since: 463
      */
-    function getNumberOfDoors(vehicle: number | Vehicle): number;
+    function getNumberOfDoors(vehicle: number | IVehicle): number;
     /**
      * Returns the number of *types* of licence plates, enumerated below in SET_VEHICLE_NUMBER_PLATE_TEXT_INDEX.
      *
@@ -42153,13 +42153,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x33F2E3FE70EAAE1D | Since: 323
      */
-    function getNumModKits(vehicle: number | Vehicle): number;
+    function getNumModKits(vehicle: number | IVehicle): number;
     /**
      * Returns how many possible mods a vehicle has for a given mod type
      *
      * Hash: 0xE38E9162A2500646 | Since: 323
      */
-    function getNumMods(vehicle: number | Vehicle, modType: number): number;
+    function getNumMods(vehicle: number | IVehicle, modType: number): number;
     /**
      * No comment provided
      *
@@ -42173,7 +42173,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x3A9128352EAC9E85 | Since: 1290
      */
-    function getOutriggersDeployed(vehicle: number | Vehicle): boolean;
+    function getOutriggersDeployed(vehicle: number | IVehicle): boolean;
     /**
      * If there is no ped in the seat, and the game considers the vehicle as ambient population, this will create a random occupant ped in the seat, which may be cleaned up by the game fairly soon if not marked as script-owned mission entity.
      *
@@ -42190,19 +42190,19 @@ export declare namespace vehicle {
      *
      * Hash: 0xBB40DD2270B65366 | Since: 323
      */
-    function getPedInSeat(vehicle: number | Vehicle, seatIndex: number): number;
+    function getPedInSeat(vehicle: number | IVehicle, seatIndex: number): number;
     /**
      * doorId: see SET_VEHICLE_DOOR_SHUT
      *
      * Hash: 0x218297BF0CFD853B | Since: 323
      */
-    function getPedUsingDoor(vehicle: number | Vehicle, doord: number): number;
+    function getPedUsingDoor(vehicle: number | IVehicle, doord: number): number;
     /**
      * Distance traveled in the vehicles current recording.
      *
      * Hash: 0x2DACD605FC681475 | Since: 323
      */
-    function getPositionInRecording(vehicle: number | Vehicle): number;
+    function getPositionInRecording(vehicle: number | IVehicle): number;
     /**
      * This native does no interpolation between pathpoints. The same position will be returned for all times up to the next pathpoint in the recording.
      *
@@ -42272,19 +42272,19 @@ export declare namespace vehicle {
      *
      * Hash: 0x3E71D0B300B7AA79 | Since: 2189
      */
-    function getSubmarineIsUnderDesignDepth(submarine: number | Vehicle): boolean;
+    function getSubmarineIsUnderDesignDepth(submarine: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x093D6DDCA5B8FBAE | Since: 2189
      */
-    function getSubmarineNumberOfAirLeaks(submarine: number | Vehicle): number;
+    function getSubmarineNumberOfAirLeaks(submarine: number | IVehicle): number;
     /**
      * Can be used with GET_TOTAL_DURATION_OF_VEHICLE_RECORDING{_ID} to compute a percentage.
      *
      * Hash: 0x5746F3A7AB7FE544 | Since: 323
      */
-    function getTimePositionInRecording(vehicle: number | Vehicle): number;
+    function getTimePositionInRecording(vehicle: number | IVehicle): number;
     /**
      * See REQUEST_VEHICLE_RECORDING
      *
@@ -42302,7 +42302,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x08AAFD0814722BC3 | Since: 323
      */
-    function getTrainCarriage(train: number | Vehicle, trailerNumber: number): number;
+    function getTrainCarriage(train: number | IVehicle, trailerNumber: number): number;
     /**
      * Usable wheels:
      * 0: wheel_lf
@@ -42314,7 +42314,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x55EAB010FAEE9380 | Since: 1868
      */
-    function getTyreHealth(vehicle: number | Vehicle, wheelIndex: number): number;
+    function getTyreHealth(vehicle: number | IVehicle, wheelIndex: number): number;
     /**
      * Returns the multiplier value from SET_TYRE_WEAR_RATE
      *
@@ -42328,19 +42328,19 @@ export declare namespace vehicle {
      *
      * Hash: 0x6E387895952F4F71 | Since: 2060
      */
-    function getTyreWearRate(vehicle: number | Vehicle, wheelIndex: number): number;
+    function getTyreWearRate(vehicle: number | IVehicle, wheelIndex: number): number;
     /**
      * static - max acceleration
      *
      * Hash: 0x5DD35C8D074E57AE | Since: 323
      */
-    function getAcceleration(vehicle: number | Vehicle): number;
+    function getAcceleration(vehicle: number | IVehicle): number;
     /**
      * Returns attached vehicle (Vehicle in parameter must be cargobob)
      *
      * Hash: 0x873B82D42AC2B9E5 | Since: 323
      */
-    function getAttachedToCargobob(cargobob: number | Vehicle): number;
+    function getAttachedToCargobob(cargobob: number | IVehicle): number;
     /**
      * Seems related to vehicle health, like the one in IV.
      * Max 1000, min 0.
@@ -42348,19 +42348,19 @@ export declare namespace vehicle {
      *
      * Hash: 0xF271147EB7B40F12 | Since: 323
      */
-    function getBodyHealth(vehicle: number | Vehicle): number;
+    function getBodyHealth(vehicle: number | IVehicle): number;
     /**
      * Gets the amount of bombs that this vehicle has. As far as I know, this does _not_ impact vehicle weapons or the ammo of those weapons in any way, it is just a way to keep track of the amount of bombs in a specific plane.
      *
      * Hash: 0xEA12BD130D7569A1 | Since: 1180
      */
-    function getBombAmmo(vehicle: number | Vehicle): number;
+    function getBombAmmo(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0xA916396DF4154EE3 | Since: 944
      */
-    function getCanDeployParachute(vehicle: number | Vehicle): boolean;
+    function getCanDeployParachute(vehicle: number | IVehicle): boolean;
     /**
      * iVar3 = get_vehicle_cause_of_destruction(uLocal_248[iVar2]);
      * if (iVar3 == joaat("weapon_stickybomb"))
@@ -42371,7 +42371,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xE495D1EF4C91FD20 | Since: 323
      */
-    function getCauseOfDestruction(vehicle: number | Vehicle): number;
+    function getCauseOfDestruction(vehicle: number | IVehicle): number;
     /**
      * Returns an int
      *
@@ -42406,7 +42406,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x29439776AAA00A62 | Since: 323
      */
-    function getClass(vehicle: number | Vehicle): number;
+    function getClass(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
@@ -42453,50 +42453,50 @@ export declare namespace vehicle {
      *
      * Hash: 0xF3CC740D36221548 | Since: 323
      */
-    function getColor(vehicle: number | Vehicle): [number, number, number];
+    function getColor(vehicle: number | IVehicle): [number, number, number];
     /**
      * No comment provided
      *
      * Hash: 0xA19435F193E081AC | Since: 323
      */
-    function getColours(vehicle: number | Vehicle): [number, number];
+    function getColours(vehicle: number | IVehicle): [number, number];
     /**
      * Some kind of flags.
      *
      * Hash: 0xEEBFC7A7EFDC35B4 | Since: 323
      */
-    function getColoursWhichCanBeSet(vehicle: number | Vehicle): number;
+    function getColoursWhichCanBeSet(vehicle: number | IVehicle): number;
     /**
      * Returns the index of the color combination found in the vehicle's carvariations.meta entry.
      *
      * Hash: 0x6A842D197F845D56 | Since: 323
      */
-    function getColourCombination(vehicle: number | Vehicle): number;
+    function getColourCombination(vehicle: number | IVehicle): number;
     /**
      * Similar to `GET_VEHICLE_BOMB_AMMO`, this gets the amount of countermeasures that are present on this vehicle.
      * Use SET_VEHICLE_COUNTERMEASURE_AMMO to set the current amount.
      *
      * Hash: 0xF846AA63DF56B804 | Since: 1180
      */
-    function getCountermeasureAmmo(vehicle: number | Vehicle): number;
+    function getCountermeasureAmmo(vehicle: number | IVehicle): number;
     /**
      * Returns a float value between 0.0 and 3.0 related to its slipstream draft (boost/speedup).
      *
      * Hash: 0x36492C2F0D134C56 | Since: 323
      */
-    function getCurrentTimeInSlipStream(vehicle: number | Vehicle): number;
+    function getCurrentTimeInSlipStream(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0xB64CF2CCA9D95F52 | Since: 323
      */
-    function getCustomPrimaryColour(vehicle: number | Vehicle): [number, number, number];
+    function getCustomPrimaryColour(vehicle: number | IVehicle): [number, number, number];
     /**
      * No comment provided
      *
      * Hash: 0x8389CD56CA8072DC | Since: 323
      */
-    function getCustomSecondaryColour(vehicle: number | Vehicle): [number, number, number];
+    function getCustomSecondaryColour(vehicle: number | IVehicle): [number, number, number];
     /**
      * The only example I can find of this function in the scripts, is this:
      *
@@ -42509,25 +42509,25 @@ export declare namespace vehicle {
      *
      * Hash: 0x4EC6CFBC7B2E9536 | Since: 323
      */
-    function getDeformationAtPos(vehicle: number | Vehicle, offsetX: number, offsetY: number, offsetZ: number): Vector3;
+    function getDeformationAtPos(vehicle: number | IVehicle, offsetX: number, offsetY: number, offsetZ: number): Vector3;
     /**
      * Dirt level does not become greater than 15.0
      *
      * Hash: 0x8F17BC8BA08DA62B | Since: 323
      */
-    function getDirtLevel(vehicle: number | Vehicle): number;
+    function getDirtLevel(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0xF6AF6CB341349015 | Since: 323
      */
-    function getDoorsLockedForPlayer(vehicle: number | Vehicle, player: number | string | Player): boolean;
+    function getDoorsLockedForPlayer(vehicle: number | IVehicle, player: number | string | IPlayer): boolean;
     /**
      * doorId: see SET_VEHICLE_DOOR_SHUT
      *
      * Hash: 0xFE3F9C29F7B32BD5 | Since: 323
      */
-    function getDoorAngleRatio(vehicle: number | Vehicle, doorId: number): number;
+    function getDoorAngleRatio(vehicle: number | IVehicle, doorId: number): number;
     /**
      * enum VehicleLockStatus = {
      * None = 0,
@@ -42542,7 +42542,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x25BC98A59C2EA962 | Since: 323
      */
-    function getDoorLockStatus(vehicle: number | Vehicle): number;
+    function getDoorLockStatus(vehicle: number | IVehicle): number;
     /**
      * Returns 1000.0 if the function is unable to get the address of the specified vehicle or if it's not a vehicle.
      *
@@ -42556,61 +42556,61 @@ export declare namespace vehicle {
      *
      * Hash: 0xC45D23BAF168AAB8 | Since: 323
      */
-    function getEngineHealth(vehicle: number | Vehicle): number;
+    function getEngineHealth(vehicle: number | IVehicle): number;
     /**
      * The result is a value from 0-1, where 0 is fresh paint.
      *
      * Hash: 0xA82819CAC9C4C403 | Since: 323
      */
-    function getEnveffScale(vehicle: number | Vehicle): number;
+    function getEnveffScale(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0x53AF99BAA671CA47 | Since: 323
      */
-    function getEstimatedMaxSpeed(vehicle: number | Vehicle): number;
+    function getEstimatedMaxSpeed(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0x3BC4245933A166F7 | Since: 323
      */
-    function getExtraColours(vehicle: number | Vehicle): [number, number];
+    function getExtraColours(vehicle: number | IVehicle): [number, number];
     /**
      * No comment provided
      *
      * Hash: 0x7D1464D472D32136 | Since: 505
      */
-    function getExtraColour5(vehicle: number | Vehicle): number;
+    function getExtraColour5(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0xB7635E80A5C31BFF | Since: 505
      */
-    function getExtraColour6(vehicle: number | Vehicle): number;
+    function getExtraColour6(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0xDA62027C8BDB326E | Since: 1180
      */
-    function getFlightNozzlePosition(plane: number | Vehicle): number;
+    function getFlightNozzlePosition(plane: number | IVehicle): number;
     /**
      * Returns true if the vehicle has a HF_HAS_KERS (strHandlingFlags 0x4) handing flag set, for instance the lectro/vindicator bikes or the open wheelers.
      *
      * Hash: 0x50634E348C8D44EF | Since: 372
      */
-    function getHasKers(vehicle: number | Vehicle): boolean;
+    function getHasKers(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xE43701C36CAFF1A4 | Since: 1180
      */
-    function getHasLandingGear(vehicle: number | Vehicle): boolean;
+    function getHasLandingGear(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xBC9CFF381338CB4F | Since: 944
      */
-    function getHasParachute(vehicle: number | Vehicle): boolean;
+    function getHasParachute(vehicle: number | IVehicle): boolean;
     /**
      * 0 min 100 max
      * starts at 100
@@ -42635,7 +42635,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xB8EF61207C2393A9 | Since: 323
      */
-    function getHealthPercentage(vehicle: number | Vehicle, maxEngineHealth: number, maxPetrolTankHealth: number, maxBodyHealth: number, maxMainRotorHealth: number, maxTailRotorHealth: number, maxUnkHealth: number): number;
+    function getHealthPercentage(vehicle: number | IVehicle, maxEngineHealth: number, maxPetrolTankHealth: number, maxBodyHealth: number, maxMainRotorHealth: number, maxTailRotorHealth: number, maxUnkHealth: number): number;
     /**
      * No comment provided
      *
@@ -42650,13 +42650,13 @@ export declare namespace vehicle {
      *
      * Hash: 0xE6B0E8CFC3633BF0 | Since: 323
      */
-    function getHomingLockonState(vehicle: number | Vehicle): number;
+    function getHomingLockonState(vehicle: number | IVehicle): number;
     /**
      * Returns vehicle door lock state previously set with SET_VEHICLE_INDIVIDUAL_DOORS_LOCKED
      *
      * Hash: 0xCA4AC3EAAE46EC7B | Since: 1103
      */
-    function getIndividualDoorLockStatus(vehicle: number | Vehicle, doorId: number): number;
+    function getIndividualDoorLockStatus(vehicle: number | IVehicle, doorId: number): number;
     /**
      * No comment provided
      *
@@ -42668,67 +42668,67 @@ export declare namespace vehicle {
      *
      * Hash: 0xD4C4642CB7F50B5D | Since: 323
      */
-    function getIsMercenary(vehicle: number | Vehicle): boolean;
+    function getIsMercenary(vehicle: number | IVehicle): boolean;
     /**
      * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
      *
      * Hash: 0x28D37D4F71AC5C58 | Since: 323
      */
-    function getLayoutHash(vehicle: number | Vehicle): number;
+    function getLayoutHash(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0xB91B4C20085BD12F | Since: 323
      */
-    function getLightsState(vehicle: number | Vehicle): [boolean, boolean, boolean];
+    function getLightsState(vehicle: number | IVehicle): [boolean, boolean, boolean];
     /**
      * -1 = no livery
      *
      * Hash: 0x2BB9230590DA5E8A | Since: 323
      */
-    function getLivery(vehicle: number | Vehicle): number;
+    function getLivery(vehicle: number | IVehicle): number;
     /**
      * Returns index of the current vehicle's secondary livery. A getter for SET_VEHICLE_LIVERY2.
      *
      * Hash: 0x60190048C0764A26 | Since: 505
      */
-    function getLivery2(vehicle: number | Vehicle): number;
+    function getLivery2(vehicle: number | IVehicle): number;
     /**
      * Returns a number of available secondary liveries, or -1 if vehicle has no secondary liveries available.
      *
      * Hash: 0x5ECB40269053C0D4 | Since: 505
      */
-    function getLivery2Count(vehicle: number | Vehicle): number;
+    function getLivery2Count(vehicle: number | IVehicle): number;
     /**
      * Returns -1 if the vehicle has no livery
      *
      * Hash: 0x87B63E25A529D526 | Since: 323
      */
-    function getLiveryCount(vehicle: number | Vehicle): number;
+    function getLiveryCount(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0x8F5EBAB1F260CFCE | Since: 323
      */
-    function getLockOnTarget(vehicle: number | Vehicle): [boolean, number];
+    function getLockOnTarget(vehicle: number | IVehicle): [boolean, number];
     /**
      * No comment provided
      *
      * Hash: 0xAD7E85FC227197C4 | Since: 323
      */
-    function getMaxBraking(vehicle: number | Vehicle): number;
+    function getMaxBraking(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0xA7C4F2C6E744A550 | Since: 323
      */
-    function getMaxNumberOfPassengers(vehicle: number | Vehicle): number;
+    function getMaxNumberOfPassengers(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0xA132FB5370554DB0 | Since: 323
      */
-    function getMaxTraction(vehicle: number | Vehicle): number;
+    function getMaxTraction(vehicle: number | IVehicle): number;
     /**
      * In b944, there are 50 (0 - 49) mod types. See SET_VEHICLE_MOD for the list.
      *
@@ -42736,7 +42736,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x772960298DA26FDB | Since: 323
      */
-    function getMod(vehicle: number | Vehicle, modType: number): number;
+    function getMod(vehicle: number | IVehicle, modType: number): number;
     /**
      * Returns the acceleration of the specified model.
      *
@@ -42802,7 +42802,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xE8D65CA700C9A693 | Since: 323
      */
-    function getModColor1(vehicle: number | Vehicle): [number, number, number];
+    function getModColor1(vehicle: number | IVehicle): [number, number, number];
     /**
      * Returns a string which is the codename of the vehicle's currently selected primary color
      *
@@ -42810,49 +42810,49 @@ export declare namespace vehicle {
      *
      * Hash: 0xB45085B721EFD38C | Since: 323
      */
-    function getModColor1Name(vehicle: number | Vehicle): string;
+    function getModColor1Name(vehicle: number | IVehicle): string;
     /**
      * No comment provided
      *
      * Hash: 0x81592BE4E3878728 | Since: 323
      */
-    function getModColor2(vehicle: number | Vehicle): [number, number];
+    function getModColor2(vehicle: number | IVehicle): [number, number];
     /**
      * Returns a string which is the codename of the vehicle's currently selected secondary color
      *
      * Hash: 0x4967A516ED23A5A1 | Since: 323
      */
-    function getModColor2Name(vehicle: number | Vehicle): string;
+    function getModColor2Name(vehicle: number | IVehicle): string;
     /**
      * Can be used for IS_DLC_VEHICLE_MOD and GET_DLC_VEHICLE_MOD_LOCK_HASH
      *
      * Hash: 0x4593CF82AA179706 | Since: 323
      */
-    function getModIdentifierHash(vehicle: number | Vehicle, modType: number, modIndex: number): number;
+    function getModIdentifierHash(vehicle: number | IVehicle, modType: number, modIndex: number): number;
     /**
      * No comment provided
      *
      * Hash: 0x6325D1A044AE510D | Since: 323
      */
-    function getModKit(vehicle: number | Vehicle): number;
+    function getModKit(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0xFC058F5121E54C32 | Since: 323
      */
-    function getModKitType(vehicle: number | Vehicle): number;
+    function getModKitType(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0x90A38E9838E0A8C1 | Since: 323
      */
-    function getModModifierValue(vehicle: number | Vehicle, modType: number, modIndex: number): number;
+    function getModModifierValue(vehicle: number | IVehicle, modType: number, modIndex: number): number;
     /**
      * Only used for wheels(ModType = 23/24) Returns true if the wheels are custom wheels
      *
      * Hash: 0xB3924ECD70E095DC | Since: 323
      */
-    function getModVariation(vehicle: number | Vehicle, modType: number): number;
+    function getModVariation(vehicle: number | IVehicle, modType: number): number;
     /**
      * Gets the color of the neon lights of the specified vehicle.
      *
@@ -42860,7 +42860,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x7619EEE8C886757F | Since: 323
      */
-    function getNeonColour(vehicle: number | Vehicle): [number, number, number];
+    function getNeonColour(vehicle: number | IVehicle): [number, number, number];
     /**
      * indices:
      * 0 = Left
@@ -42870,7 +42870,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x8C4B92553E4766A5 | Since: 323
      */
-    function getNeonEnabled(vehicle: number | Vehicle, index: number): boolean;
+    function getNeonEnabled(vehicle: number | IVehicle, index: number): boolean;
     /**
      * Gets the number of passengers.
      *
@@ -42880,13 +42880,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x24CB2137731FFE89 | Since: 323
      */
-    function getNumberOfPassengers(vehicle: number | Vehicle, includeDriver: boolean, includeDeadOccupants: boolean): number;
+    function getNumberOfPassengers(vehicle: number | IVehicle, includeDriver: boolean, includeDeadOccupants: boolean): number;
     /**
      * Returns the license plate text from a vehicle. 8 chars maximum.
      *
      * Hash: 0x7CE1CCB9B293020E | Since: 323
      */
-    function getNumberPlateText(vehicle: number | Vehicle): string;
+    function getNumberPlateText(vehicle: number | IVehicle): string;
     /**
      * Returns the PlateType of a vehicle
      * Blue_on_White_1 = 3,
@@ -42898,19 +42898,19 @@ export declare namespace vehicle {
      *
      * Hash: 0xF11BC2DD9A3E7195 | Since: 323
      */
-    function getNumberPlateTextIndex(vehicle: number | Vehicle): number;
+    function getNumberPlateTextIndex(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0x2C8CBFE1EA5FC631 | Since: 323
      */
-    function getNumOfBrokenLoosenParts(vehicle: number | Vehicle): number;
+    function getNumOfBrokenLoosenParts(vehicle: number | IVehicle): number;
     /**
      * Also includes some "turnOffBones" when vehicle mods are installed.
      *
      * Hash: 0x42A4BEB35D372407 | Since: 323
      */
-    function getNumOfBrokenOffParts(vehicle: number | Vehicle): number;
+    function getNumOfBrokenOffParts(vehicle: number | IVehicle): number;
     /**
      * 1000 is max health
      * Begins leaking gas at around 650 health
@@ -42918,13 +42918,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x7D5DABE888D2D074 | Since: 323
      */
-    function getPetrolTankHealth(vehicle: number | Vehicle): number;
+    function getPetrolTankHealth(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0x9CCC9525BF2408E0 | Since: 323
      */
-    function getPlateType(vehicle: number | Vehicle): number;
+    function getPlateType(vehicle: number | IVehicle): number;
     /**
      * See REQUEST_VEHICLE_RECORDING
      *
@@ -42938,31 +42938,31 @@ export declare namespace vehicle {
      *
      * Hash: 0xDF7E3EEB29642C38 | Since: 323
      */
-    function getSize(vehicle: number | Vehicle): [Vector3, Vector3];
+    function getSize(vehicle: number | IVehicle): [Vector3, Vector3];
     /**
      * Gets the trailer of a vehicle and puts it into the trailer parameter.
      *
      * Hash: 0x1CDD6BADC297830D | Since: 323
      */
-    function getTrailerVehicle(vehicle: number | Vehicle): [boolean, number];
+    function getTrailerVehicle(vehicle: number | IVehicle): [boolean, number];
     /**
      * No comment provided
      *
      * Hash: 0x678B9BB8C3F58FEB | Since: 323
      */
-    function getTyresCanBurst(vehicle: number | Vehicle): boolean;
+    function getTyresCanBurst(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xB635392A4938B3C3 | Since: 323
      */
-    function getTyreSmokeColor(vehicle: number | Vehicle): [number, number, number];
+    function getTyreSmokeColor(vehicle: number | IVehicle): [number, number, number];
     /**
      * No comment provided
      *
      * Hash: 0x8181CE2F25CB9BB7 | Since: 1011
      */
-    function getWeaponRestrictedAmmo(vehicle: number | Vehicle, weaponIndex: number): number;
+    function getWeaponRestrictedAmmo(vehicle: number | IVehicle, weaponIndex: number): number;
     /**
      * Returns an int
      *
@@ -42985,13 +42985,13 @@ export declare namespace vehicle {
      *
      * Hash: 0xB3ED1BFB4BE636DC | Since: 323
      */
-    function getWheelType(vehicle: number | Vehicle): number;
+    function getWheelType(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0x0EE21293DAD47C95 | Since: 323
      */
-    function getWindowTint(vehicle: number | Vehicle): number;
+    function getWindowTint(vehicle: number | IVehicle): number;
     /**
      * Returns the headlight color index from the vehicle. Value between 0, 12.
      * Use SET_VEHICLE_XENON_LIGHT_COLOR_INDEX to set the headlights color for the vehicle.
@@ -43001,7 +43001,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x3DFF319A831E0CDB | Since: 1604
      */
-    function getXenonLightColorIndex(vehicle: number | Vehicle): number;
+    function getXenonLightColorIndex(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
@@ -43013,7 +43013,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x06F43E5175EB6D96 | Since: 323
      */
-    function hasPreloadModsFinished(vehicle: number | Vehicle): boolean;
+    function hasPreloadModsFinished(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
@@ -43043,19 +43043,19 @@ export declare namespace vehicle {
      *
      * Hash: 0x9A83F5F9963775EF | Since: 323
      */
-    function haveModsStreamedIn(vehicle: number | Vehicle): boolean;
+    function haveModsStreamedIn(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x6B407F2525E93644 | Since: 2944
      */
-    function haveRearDoorsBeenBlownOpenByStickybomb(vehicle: number | Vehicle): boolean;
+    function haveRearDoorsBeenBlownOpenByStickybomb(vehicle: number | IVehicle): boolean;
     /**
      * Disables detachable bumber from domnator4, dominator5, dominator6, see https://gfycat.com/SecondUnluckyGosling
      *
      * Hash: 0xAE71FB656C600587 | Since: 1604
      */
-    function hideTombstone(vehicle: number | Vehicle, toggle: boolean): void;
+    function hideTombstone(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -43067,13 +43067,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x62CA17B74C435651 | Since: 323
      */
-    function isAnyEntityAttachedToHandlerFrame(vehicle: number | Vehicle): boolean;
+    function isAnyEntityAttachedToHandlerFrame(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x291E373D483E7EE7 | Since: 323
      */
-    function isAnyPedRappellingFromHeli(vehicle: number | Vehicle): boolean;
+    function isAnyPedRappellingFromHeli(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
@@ -43085,13 +43085,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x9F243D3919F442FE | Since: 323
      */
-    function isBig(vehicle: number | Vehicle): boolean;
+    function isBig(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xB0AD1238A709B1A2 | Since: 573
      */
-    function isBoatAnchored(vehicle: number | Vehicle): boolean;
+    function isBoatAnchored(vehicle: number | IVehicle): boolean;
     /**
      * Usage:
      *
@@ -43108,7 +43108,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x57715966069157AD | Since: 323
      */
-    function isEntityAttachedToHandlerFrame(vehicle: number | Vehicle, entity: number | Entity): boolean;
+    function isEntityAttachedToHandlerFrame(vehicle: number | IVehicle, entity: number | IEntity): boolean;
     /**
      * Check if a vehicle seat is accessible. If you park your vehicle near a wall and the ped cannot enter/exit this side, the return value toggles from true (not blocked) to false (blocked).
      *
@@ -43119,85 +43119,85 @@ export declare namespace vehicle {
      *
      * Hash: 0x639431E895B9AA57 | Since: 323
      */
-    function isEntryPointForSeatClear(ped: number | Ped, vehicle: number | Vehicle, seatIndex: number, side: boolean, onEnter: boolean): boolean;
+    function isEntryPointForSeatClear(ped: number | IPed, vehicle: number | IVehicle, seatIndex: number, side: boolean, onEnter: boolean): boolean;
     /**
      * Returns true if specified extra part is broken off. It only works for extras that can break off during collisions, non-breakable extras always return false. Also returns true if the breakable extra is toggled off through script.
      *
      * Hash: 0x534E36D4DB9ECC5D | Since: 1493
      */
-    function isExtraBrokenOff(vehicle: number | Vehicle, extraId: number): boolean;
+    function isExtraBrokenOff(vehicle: number | IVehicle, extraId: number): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x89D630CF5EA96D23 | Since: 323
      */
-    function isHandlerFrameLinedUpWithContainer(vehicle: number | Vehicle, entity: number | Entity): boolean;
+    function isHandlerFrameLinedUpWithContainer(vehicle: number | IVehicle, entity: number | IEntity): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x634148744F385576 | Since: 323
      */
-    function isHeliLandingAreaBlocked(vehicle: number | Vehicle): boolean;
+    function isHeliLandingAreaBlocked(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xBC74B4BE25EB6C8A | Since: 323
      */
-    function isHeliPartBroken(vehicle: number | Vehicle): boolean;
+    function isHeliPartBroken(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xAD464F2E18836BFC | Since: 2372
      */
-    function isMissionTrain(train: number | Vehicle): boolean;
+    function isMissionTrain(train: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x491E822B2C464FE4 | Since: 3095
      */
-    function isNitrousActive(vehicle: number | Vehicle): boolean;
+    function isNitrousActive(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xB09D25E77C33EB3F | Since: 463
      */
-    function isPedExclusiveDriverOf(ped: number | Ped, vehicle: number | Vehicle): [boolean, number];
+    function isPedExclusiveDriverOf(ped: number | IPed, vehicle: number | IVehicle): [boolean, number];
     /**
      * No comment provided
      *
      * Hash: 0x4198AB0022B15F87 | Since: 323
      */
-    function isPlaneLandingGearIntact(plane: number | Vehicle): boolean;
+    function isPlaneLandingGearIntact(plane: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x1C8A4C2C19E68EEC | Since: 323
      */
-    function isPlaybackGoingOnFor(vehicle: number | Vehicle): boolean;
+    function isPlaybackGoingOnFor(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xAEA8FD591FAD4106 | Since: 323
      */
-    function isPlaybackUsingAiGoingOnFor(vehicle: number | Vehicle): boolean;
+    function isPlaybackUsingAiGoingOnFor(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x3D34E80EED4AE3BE | Since: 944
      */
-    function isRocketBoostActive(vehicle: number | Vehicle): boolean;
+    function isRocketBoostActive(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xF7F203E31F96F6A1 | Since: 323
      */
-    function isSeatWarpOnly(vehicle: number | Vehicle, seatIndex: number): boolean;
+    function isSeatWarpOnly(vehicle: number | IVehicle, seatIndex: number): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x7504C0F113AB50FC | Since: 323
      */
-    function isTaxiLightOn(vehicle: number | Vehicle): boolean;
+    function isTaxiLightOn(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
@@ -43269,37 +43269,37 @@ export declare namespace vehicle {
      *
      * Hash: 0x84B233A8C8FC8AE7 | Since: 323
      */
-    function isToggleModOn(vehicle: number | Vehicle, modType: number): boolean;
+    function isToggleModOn(vehicle: number | IVehicle, modType: number): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xE33FFA906CE74880 | Since: 323
      */
-    function isTurretSeat(vehicle: number | Vehicle, seatIndex: number): boolean;
+    function isTurretSeat(vehicle: number | IVehicle, seatIndex: number): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x4319E335B71FFF34 | Since: 323
      */
-    function isAlarmActivated(vehicle: number | Vehicle): boolean;
+    function isAlarmActivated(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xD40148F22E81A1D9 | Since: 323
      */
-    function isAttachedToCargobob(cargobob: number | Vehicle, vehicleAttached: number | Vehicle): boolean;
+    function isAttachedToCargobob(cargobob: number | IVehicle, vehicleAttached: number | IVehicle): boolean;
     /**
      * Scripts verify that towTruck is the first parameter, not the second.
      *
      * Hash: 0x146DF9EC4C4B9FD4 | Since: 323
      */
-    function isAttachedToTowTruck(towTruck: number | Vehicle, vehicle: number | Vehicle): boolean;
+    function isAttachedToTowTruck(towTruck: number | IVehicle, vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xE7CF3C4F9F489F0C | Since: 323
      */
-    function isAttachedToTrailer(vehicle: number | Vehicle): boolean;
+    function isAttachedToTrailer(vehicle: number | IVehicle): boolean;
     /**
      * Returns true if the vehicle has a convertible roof.
      *
@@ -43307,37 +43307,37 @@ export declare namespace vehicle {
      *
      * Hash: 0x52F357A30698BCCE | Since: 323
      */
-    function isAConvertible(vehicle: number | Vehicle): boolean;
+    function isAConvertible(vehicle: number | IVehicle): boolean;
     /**
      * Returns true if vehicle is halted by BRING_VEHICLE_TO_HALT
      *
      * Hash: 0xC69BB1D832A710EF | Since: 1493
      */
-    function isBeingBroughtToHalt(vehicle: number | Vehicle): boolean;
+    function isBeingBroughtToHalt(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x27B926779DEB502D | Since: 323
      */
-    function isBumperBouncing(vehicle: number | Vehicle, frontBumper: boolean): boolean;
+    function isBumperBouncing(vehicle: number | IVehicle, frontBumper: boolean): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x468056A6BB6F3846 | Since: 323
      */
-    function isBumperBrokenOff(vehicle: number | Vehicle, frontBumper: boolean): boolean;
+    function isBumperBrokenOff(vehicle: number | IVehicle, frontBumper: boolean): boolean;
     /**
      * doorID starts at 0, not seeming to skip any numbers. Four door vehicles intuitively range from 0 to 3.
      *
      * Hash: 0xB8E181E559464527 | Since: 323
      */
-    function isDoorDamaged(veh: number | Vehicle, doorID: number): boolean;
+    function isDoorDamaged(veh: number | IVehicle, doorID: number): boolean;
     /**
      * doorId: see SET_VEHICLE_DOOR_SHUT
      *
      * Hash: 0x3E933CFF7B111C22 | Since: 323
      */
-    function isDoorFullyOpen(vehicle: number | Vehicle, doorId: number): boolean;
+    function isDoorFullyOpen(vehicle: number | IVehicle, doorId: number): boolean;
     /**
      * p1 is always 0 in the scripts.
      *
@@ -43345,19 +43345,19 @@ export declare namespace vehicle {
      *
      * Hash: 0x4C241E39B23DF959 | Since: 323
      */
-    function isDriveable(vehicle: number | Vehicle, isOnFireCheck: boolean): boolean;
+    function isDriveable(vehicle: number | IVehicle, isOnFireCheck: boolean): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xD2E6822DBFD6C8BD | Since: 323
      */
-    function isExtraTurnedOn(vehicle: number | Vehicle, extraId: number): boolean;
+    function isExtraTurnedOn(vehicle: number | IVehicle, extraId: number): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x1F25887F3C104278 | Since: 323
      */
-    function isHighDetail(vehicle: number | Vehicle): boolean;
+    function isHighDetail(vehicle: number | IVehicle): boolean;
     /**
      * Returns whether the specified vehicle is currently in a burnout.
      *
@@ -43369,7 +43369,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x1297A88E081430EB | Since: 323
      */
-    function isInBurnout(vehicle: number | Vehicle): boolean;
+    function isInBurnout(vehicle: number | IVehicle): boolean;
     /**
      * garageName example "Michael - Beverly Hills"
      *
@@ -43377,25 +43377,25 @@ export declare namespace vehicle {
      *
      * Hash: 0xCEE4490CD57BB3C2 | Since: 323
      */
-    function isInGarageArea(garageName: string, vehicle: number | Vehicle): boolean;
+    function isInGarageArea(garageName: string, vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xA77DC70BD689A1E5 | Since: 1290
      */
-    function isInSubmarineMode(vehicle: number | Vehicle): boolean;
+    function isInSubmarineMode(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x423E8DE37D934D89 | Since: 323
      */
-    function isModel(vehicle: number | Vehicle, model: number | string): boolean;
+    function isModel(vehicle: number | IVehicle, model: number | string): boolean;
     /**
      * Returns true for any mod part listed in GEN9_EXCLUSIVE_ASSETS_VEHICLES_FILE.
      *
      * Hash: 0x00834EAC4A96E010 | Since: 2699
      */
-    function isModGen9Exclusive(vehicle: number | Vehicle, modType: number, modIndex: number): boolean;
+    function isModGen9Exclusive(vehicle: number | IVehicle, modType: number, modIndex: number): boolean;
     /**
      * Public Function isVehicleOnAllWheels(vh As Vehicle) As Boolean
      * Return Native.Function.Call(Of Boolean)(Hash.IS_VEHICLE_ON_ALL_WHEELS, vh)
@@ -43404,19 +43404,19 @@ export declare namespace vehicle {
      *
      * Hash: 0xB104CD1BABF302E2 | Since: 323
      */
-    function isOnAllWheels(vehicle: number | Vehicle): boolean;
+    function isOnAllWheels(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x3DE51E9C80B116CF | Since: 1011
      */
-    function isParachuteDeployed(vehicle: number | Vehicle): boolean;
+    function isParachuteDeployed(vehicle: number | IVehicle): boolean;
     /**
      * Returns true if the vehicle is being slipstreamed by another vehicle
      *
      * Hash: 0x48C633E94A8142A7 | Since: 877
      */
-    function isProducingSlipStream(vehicle: number | Vehicle): boolean;
+    function isProducingSlipStream(vehicle: number | IVehicle): boolean;
     /**
      * Possibly: Returns whether the searchlight (found on police vehicles) is toggled on.
      *
@@ -43424,7 +43424,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xC0F97FCE55094987 | Since: 323
      */
-    function isSearchlightOn(vehicle: number | Vehicle): boolean;
+    function isSearchlightOn(vehicle: number | IVehicle): boolean;
     /**
      * Check if a vehicle seat is free.
      *
@@ -43434,31 +43434,31 @@ export declare namespace vehicle {
      *
      * Hash: 0x22AC59A870E6A669 | Since: 323
      */
-    function isSeatFree(vehicle: number | Vehicle, seatIndex: number, isTaskRunning: boolean): boolean;
+    function isSeatFree(vehicle: number | IVehicle, seatIndex: number, isTaskRunning: boolean): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xB5CC40FBCB586380 | Since: 323
      */
-    function isSirenAudioOn(vehicle: number | Vehicle): boolean;
+    function isSirenAudioOn(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x4C9BF537BE2634B2 | Since: 323
      */
-    function isSirenOn(vehicle: number | Vehicle): boolean;
+    function isSirenOn(vehicle: number | IVehicle): boolean;
     /**
      * Returns false if the vehicle has the FLAG_NO_RESPRAY flag set.
      *
      * Hash: 0x8D474C8FAEFF6CDE | Since: 323
      */
-    function isSprayable(vehicle: number | Vehicle): boolean;
+    function isSprayable(vehicle: number | IVehicle): boolean;
     /**
      * Only returns true if the vehicle was marked as stolen with SET_VEHICLE_IS_STOLEN.
      *
      * Hash: 0x4AF9BD80EEBEB453 | Since: 323
      */
-    function isStolen(vehicle: number | Vehicle): boolean;
+    function isStolen(vehicle: number | IVehicle): boolean;
     /**
      * Returns true if the vehicle's current speed is less than, or equal to 0.0025f.
      *
@@ -43466,26 +43466,26 @@ export declare namespace vehicle {
      *
      * Hash: 0x5721B434AD84D57A | Since: 323
      */
-    function isStopped(vehicle: number | Vehicle): boolean;
+    function isStopped(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x2959F696AE390A99 | Since: 323
      */
-    function isStoppedAtTrafficLights(vehicle: number | Vehicle): boolean;
+    function isStoppedAtTrafficLights(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xB497F06B288DCFDF | Since: 323
      */
-    function isStuckOnRoof(vehicle: number | Vehicle): boolean;
+    function isStuckOnRoof(vehicle: number | IVehicle): boolean;
     /**
      * p1 can be anywhere from 0 to 3 in the scripts.
      * p2 being how long in milliseconds the vehicle has been stuck
      *
      * Hash: 0x679BE1DAF71DA874 | Since: 323
      */
-    function isStuckTimerUp(vehicle: number | Vehicle, ms: number): boolean;
+    function isStuckTimerUp(vehicle: number | IVehicle, ms: number): boolean;
     /**
      * wheelID used for 4 wheelers seem to be (0, 1, 4, 5)
      * completely - is to check if tire completely gone from rim.
@@ -43501,7 +43501,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xBA291848A0815CA9 | Since: 323
      */
-    function isTyreBurst(vehicle: number | Vehicle, wheelID: number, completely: boolean): boolean;
+    function isTyreBurst(vehicle: number | IVehicle, wheelID: number, completely: boolean): boolean;
     /**
      * must be called after TRACK_VEHICLE_VISIBILITY
      *
@@ -43509,13 +43509,13 @@ export declare namespace vehicle {
      *
      * Hash: 0xAA0A52D24FB98293 | Since: 323
      */
-    function isVisible(vehicle: number | Vehicle): boolean;
+    function isVisible(vehicle: number | IVehicle): boolean;
     /**
      * Full list of weapons by DurtyFree (Search for VEHICLE_*): https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
      * Hash: 0x563B65A643ED072E | Since: 1011
      */
-    function isWeaponDisabled(weaponHash: number | string, vehicle: number | Vehicle, owner: number | Ped): boolean;
+    function isWeaponDisabled(weaponHash: number | string, vehicle: number | IVehicle, owner: number | IPed): boolean;
     /**
      * This will return false if the window is broken, or rolled down.
      * Window indexes:
@@ -43529,31 +43529,31 @@ export declare namespace vehicle {
      *
      * Hash: 0x46E571A0E20D01F1 | Since: 323
      */
-    function isWindowIntact(vehicle: number | Vehicle, windowIndex: number): boolean;
+    function isWindowIntact(vehicle: number | IVehicle, windowIndex: number): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xCFD778E7904C255E | Since: 323
      */
-    function lockDoorsWhenNoLongerNeeded(vehicle: number | Vehicle): void;
+    function lockDoorsWhenNoLongerNeeded(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0xDED51F703D0FA83D | Since: 323
      */
-    function lowerConvertibleRoof(vehicle: number | Vehicle, instantlyLower: boolean): void;
+    function lowerConvertibleRoof(vehicle: number | IVehicle, instantlyLower: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x923A293361DF44E5 | Since: 2802
      */
-    function lowerForkliftForks(forklift: number | Vehicle): void;
+    function lowerForkliftForks(forklift: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x93A3996368C94158 | Since: 323
      */
-    function modifyTopSpeed(vehicle: number | Vehicle, value: number): void;
+    function modifyTopSpeed(vehicle: number | IVehicle, value: number): void;
     /**
      * Default:1000||This sets a value which is used when NETWORK_ENABLE_EMPTY_CROWDING_VEHICLES_REMOVAL(true) is called each frame.
      *
@@ -43571,56 +43571,56 @@ export declare namespace vehicle {
      *
      * Hash: 0xEC0C1D4922AF9754 | Since: 2372
      */
-    function networkUseHighPrecisionTrainBlending(vehicle: number | Vehicle, toggle: boolean): void;
+    function networkUseHighPrecisionTrainBlending(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x87E7F24270732CB1 | Since: 323
      */
-    function openBombBayDoors(vehicle: number | Vehicle): void;
+    function openBombBayDoors(vehicle: number | IVehicle): void;
     /**
      * Used for helis.
      *
      * Hash: 0x5EE5632F47AE9695 | Since: 463
      */
-    function overridePlaneDamageThrehsold(vehicle: number | Vehicle, health: number): void;
+    function overridePlaneDamageThrehsold(vehicle: number | IVehicle, health: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x632A689BF42301B1 | Since: 323
      */
-    function pausePlaybackRecorded(vehicle: number | Vehicle): void;
+    function pausePlaybackRecorded(vehicle: number | IVehicle): void;
     /**
      * Pops off the "roof" bone in the direction of the specified offset from the vehicle.
      *
      * Hash: 0xE38CB9D7D39FDBCC | Since: 323
      */
-    function popOffRoofWithImpulse(vehicle: number | Vehicle, pos: Vector3): void;
+    function popOffRoofWithImpulse(vehicle: number | IVehicle, pos: Vector3): void;
     /**
      * Detaches the vehicle's windscreen.
      * For further information, see : gtaforums.com/topic/859570-glass/#entry1068894566
      *
      * Hash: 0x6D645D59FB5F5AD3 | Since: 323
      */
-    function popOutWindscreen(vehicle: number | Vehicle): void;
+    function popOutWindscreen(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x758F49C24925568A | Since: 323
      */
-    function preloadMod(vehicle: number | Vehicle, modType: number, modIndex: number): void;
+    function preloadMod(vehicle: number | IVehicle, modType: number, modIndex: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x8F5FB35D7E88FC70 | Since: 323
      */
-    function raiseConvertibleRoof(vehicle: number | Vehicle, instantlyRaise: boolean): void;
+    function raiseConvertibleRoof(vehicle: number | IVehicle, instantlyRaise: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x445D79F995508307 | Since: 323
      */
-    function releasePreloadMods(vehicle: number | Vehicle): void;
+    function releasePreloadMods(vehicle: number | IVehicle): void;
     /**
      * Retracts the hook on the cargobob.
      *
@@ -43628,7 +43628,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x9768CF648F54C804 | Since: 323
      */
-    function removePickUpRopeForCargobob(cargobob: number | Vehicle): void;
+    function removePickUpRopeForCargobob(cargobob: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -43658,13 +43658,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x00689CDE5F7C6787 | Since: 323
      */
-    function removeHighDetailModel(vehicle: number | Vehicle): void;
+    function removeHighDetailModel(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x92D619E420858204 | Since: 323
      */
-    function removeMod(vehicle: number | Vehicle, modType: number): void;
+    function removeMod(vehicle: number | IVehicle, modType: number): void;
     /**
      * See REQUEST_VEHICLE_RECORDING
      *
@@ -43676,13 +43676,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x8386BFB614D06749 | Since: 323
      */
-    function removeStuckCheck(vehicle: number | Vehicle): void;
+    function removeStuckCheck(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0xC53EB42A499A7E90 | Since: 323
      */
-    function removeUpsidedownCheck(vehicle: number | Vehicle): void;
+    function removeUpsidedownCheck(vehicle: number | IVehicle): void;
     /**
      * windowIndex:
      * 0 = Front Right Window
@@ -43696,7 +43696,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xA711568EEDB43069 | Since: 323
      */
-    function removeWindow(vehicle: number | Vehicle, windowIndex: number): void;
+    function removeWindow(vehicle: number | IVehicle, windowIndex: number): void;
     /**
      * REQUEST_VEHICLE_ASSET(GET_HASH_KEY(cargobob3), 3);
      *
@@ -43713,13 +43713,13 @@ export declare namespace vehicle {
      *
      * Hash: 0xDBA3C090E3D74690 | Since: 323
      */
-    function requestDial(vehicle: number | Vehicle): void;
+    function requestDial(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0xA6E9FDCB2C76785E | Since: 323
      */
-    function requestHighDetailModel(vehicle: number | Vehicle): void;
+    function requestHighDetailModel(vehicle: number | IVehicle): void;
     /**
      * Request the vehicle recording defined by the lowercase format string "%s%03d.yvr". For example, REQUEST_VEHICLE_RECORDING(1, "FBIs1UBER") corresponds to fbis1uber001.yvr.
      * For all vehicle recording/playback natives, "script" is a common prefix that usually corresponds to the script/mission the recording is used in, "recording" is its int suffix, and "id" (e.g., in native GET_TOTAL_DURATION_OF_VEHICLE_RECORDING_ID) corresponds to a unique identifier within the recording streaming module.
@@ -43761,13 +43761,13 @@ export declare namespace vehicle {
      *
      * Hash: 0xD7591B0065AFAA7A | Since: 323
      */
-    function resetStuckTimer(vehicle: number | Vehicle, nullAttributes: number): void;
+    function resetStuckTimer(vehicle: number | IVehicle, nullAttributes: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x21D2E5662C1F6FED | Since: 323
      */
-    function resetWheels(vehicle: number | Vehicle, toggle: boolean): void;
+    function resetWheels(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * windowIndex:
      * 0 = Front Left Window
@@ -43782,13 +43782,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x7AD9E6CE657D69E3 | Since: 323
      */
-    function rollDownWindow(vehicle: number | Vehicle, windowIndex: number): void;
+    function rollDownWindow(vehicle: number | IVehicle, windowIndex: number): void;
     /**
      * Roll down all the windows of the vehicle passed through the first parameter.
      *
      * Hash: 0x85796B0549DDE156 | Since: 323
      */
-    function rollDownWindows(vehicle: number | Vehicle): void;
+    function rollDownWindows(vehicle: number | IVehicle): void;
     /**
      * windowIndex:
      * 0 = Front Left Window
@@ -43803,25 +43803,25 @@ export declare namespace vehicle {
      *
      * Hash: 0x602E548F46E24D59 | Since: 323
      */
-    function rollUpWindow(vehicle: number | Vehicle, windowIndex: number): void;
+    function rollUpWindow(vehicle: number | IVehicle, windowIndex: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x5845066D8A1EA7F7 | Since: 323
      */
-    function setAdditionalRotationForRecordedPlayback(vehicle: number | Vehicle, pos: Vector3): void;
+    function setAdditionalRotationForRecordedPlayback(vehicle: number | IVehicle, pos: Vector3): void;
     /**
      * No comment provided
      *
      * Hash: 0xF8B49F5BA7F850E7 | Since: 2060
      */
-    function setAircraftIgnoreHightmapOptimisation(vehicle: number | Vehicle): void;
+    function setAircraftIgnoreHightmapOptimisation(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0xE5810AC70602F2F5 | Since: 323
      */
-    function setAircraftPilotSkillNoiseScalar(vehicle: number | Vehicle): void;
+    function setAircraftPilotSkillNoiseScalar(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -43833,7 +43833,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x3441CAD2F2231923 | Since: 323
      */
-    function setAllowExplodesOnContact(vehicle: number | Vehicle, toggle: boolean): void;
+    function setAllowExplodesOnContact(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -43870,13 +43870,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x0205F5365292D2EB | Since: 1290
      */
-    function setArriveDistanceOverrideForPersuitAttack(vehicle: number | Vehicle): void;
+    function setArriveDistanceOverrideForPersuitAttack(vehicle: number | IVehicle): void;
     /**
      * When enabled, the player won't fall off the bike when landing from large heights.
      *
      * Hash: 0x73561D4425A021A2 | Since: 791
      */
-    function setBikeEasyToLand(vehicle: number | Vehicle, toggle: boolean): void;
+    function setBikeEasyToLand(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Only works on bikes, both X and Y work in the -1 - 1 range.
      *
@@ -43888,19 +43888,19 @@ export declare namespace vehicle {
      *
      * Hash: 0x9CFA4896C3A53CBB | Since: 323
      */
-    function setBikeOnStand(vehicle: number | Vehicle, x: number, y: number): void;
+    function setBikeOnStand(vehicle: number | IVehicle, x: number, y: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x75DBEC174AEEAD10 | Since: 323
      */
-    function setBoatAnchor(vehicle: number | Vehicle, toggle: boolean): void;
+    function setBoatAnchor(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x0A6A279F3AA4FD70 | Since: 323
      */
-    function setBoatDisableAvoidance(vehicle: number | Vehicle): void;
+    function setBoatDisableAvoidance(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -43912,43 +43912,43 @@ export declare namespace vehicle {
      *
      * Hash: 0xE842A9398079BD82 | Since: 323
      */
-    function setBoatLowLodAnchorDistance(vehicle: number | Vehicle, value: number): void;
+    function setBoatLowLodAnchorDistance(vehicle: number | IVehicle, value: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xE3EBAAE484798530 | Since: 323
      */
-    function setBoatRemainsAnchoredWhilePlayerIsDriver(vehicle: number | Vehicle, toggle: boolean): void;
+    function setBoatRemainsAnchoredWhilePlayerIsDriver(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x8F719973E1445BA2 | Since: 323
      */
-    function setBoatSinksWhenWrecked(vehicle: number | Vehicle, toggle: boolean): void;
+    function setBoatSinksWhenWrecked(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xBD32E46AA95C1DD2 | Since: 757
      */
-    function setBoatWrecked(vehicle: number | Vehicle): void;
+    function setBoatWrecked(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0xA7DCDF4DED40A8F4 | Since: 323
      */
-    function setCanAdjustGroundClearance(vehicle: number | Vehicle): void;
+    function setCanAdjustGroundClearance(vehicle: number | IVehicle): void;
     /**
      * Hardcoded to not work in multiplayer.
      *
      * Hash: 0x52BBA29D5EC69356 | Since: 323
      */
-    function setCanRespray(vehicle: number | Vehicle, state: boolean): void;
+    function setCanRespray(vehicle: number | IVehicle, state: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x1201E8A3290A3B98 | Since: 505
      */
-    function setCanUseHydraulics(vehicle: number | Vehicle, toggle: boolean): void;
+    function setCanUseHydraulics(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -43966,67 +43966,67 @@ export declare namespace vehicle {
      *
      * Hash: 0x571FEB383F629926 | Since: 323
      */
-    function setCargobobForceDontDetach(cargobob: number | Vehicle, toggle: boolean): void;
+    function setCargobobForceDontDetach(cargobob: number | IVehicle, toggle: boolean): void;
     /**
      * Won't attract or magnetize to any helicopters or planes of course, but that's common sense.
      *
      * Hash: 0x9A665550F8DA349B | Since: 323
      */
-    function setCargobobPickupMagnetActive(cargobob: number | Vehicle, isActive: boolean): void;
+    function setCargobobPickupMagnetActive(cargobob: number | IVehicle, isActive: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x56EB5E94318D3FB6 | Since: 323
      */
-    function setCargobobPickupMagnetEnsurePickupEntityUpright(vehicle: number | Vehicle): void;
+    function setCargobobPickupMagnetEnsurePickupEntityUpright(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0xA17BAD153B51547E | Since: 323
      */
-    function setCargobobPickupMagnetFalloff(cargobob: number | Vehicle): void;
+    function setCargobobPickupMagnetFalloff(cargobob: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x685D5561680D088B | Since: 323
      */
-    function setCargobobPickupMagnetPullRopeLength(vehicle: number | Vehicle): void;
+    function setCargobobPickupMagnetPullRopeLength(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0xED8286F71A819BAA | Since: 323
      */
-    function setCargobobPickupMagnetPullStrength(cargobob: number | Vehicle): void;
+    function setCargobobPickupMagnetPullStrength(cargobob: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x6D8EAC07506291FB | Since: 323
      */
-    function setCargobobPickupMagnetReducedFalloff(cargobob: number | Vehicle): void;
+    function setCargobobPickupMagnetReducedFalloff(cargobob: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x66979ACF5102FD2F | Since: 323
      */
-    function setCargobobPickupMagnetReducedStrength(cargobob: number | Vehicle): void;
+    function setCargobobPickupMagnetReducedStrength(cargobob: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x9BDDC73CC6A115D4 | Since: 323
      */
-    function setCargobobPickupMagnetSetAmbientMode(vehicle: number | Vehicle): void;
+    function setCargobobPickupMagnetSetAmbientMode(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0xE301BD63E9E13CF0 | Since: 323
      */
-    function setCargobobPickupMagnetSetTargetedMode(vehicle: number | Vehicle, cargobob: number | Vehicle): void;
+    function setCargobobPickupMagnetSetTargetedMode(vehicle: number | IVehicle, cargobob: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0xBCBFCD9D1DAC19E2 | Since: 323
      */
-    function setCargobobPickupMagnetStrength(cargobob: number | Vehicle, strength: number): void;
+    function setCargobobPickupMagnetStrength(cargobob: number | IVehicle, strength: number): void;
     /**
      * No comment provided
      *
@@ -44050,7 +44050,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xFC40CBF7B90CA77C | Since: 877
      */
-    function setCarBootOpen(vehicle: number | Vehicle): void;
+    function setCarBootOpen(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -44062,43 +44062,43 @@ export declare namespace vehicle {
      *
      * Hash: 0xEF9D388F8D377F44 | Since: 2699
      */
-    function setCheckForEnoughRoomForPed(vehicle: number | Vehicle): void;
+    function setCheckForEnoughRoomForPed(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0xB2E0C0D6922D31F2 | Since: 944
      */
-    function setClearFreezeWaitingOnCollisionOncePlayerEnters(vehicle: number | Vehicle, toggle: boolean): void;
+    function setClearFreezeWaitingOnCollisionOncePlayerEnters(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xF39C4F538B5124C2 | Since: 323
      */
-    function setConvertibleRoof(vehicle: number | Vehicle): void;
+    function setConvertibleRoof(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x1A78AD3D8240536F | Since: 323
      */
-    function setConvertibleRoofLatchState(vehicle: number | Vehicle, state: boolean): void;
+    function setConvertibleRoofLatchState(vehicle: number | IVehicle, state: boolean): void;
     /**
      * Only used with the "akula" and "annihilator2" in the decompiled native scripts.
      *
      * Hash: 0xB251E0B33E58B424 | Since: 1290
      */
-    function setDeployFoldingWings(vehicle: number | Vehicle, deploy: boolean): void;
+    function setDeployFoldingWings(vehicle: number | IVehicle, deploy: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xAA653AE61924B0A0 | Since: 1290
      */
-    function setDipStraightDownWhenCrashingPlane(vehicle: number | Vehicle, toggle: boolean): void;
+    function setDipStraightDownWhenCrashingPlane(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Sets a flag on heli and another vehicle type.
      *
      * Hash: 0x97841634EF7DF1D6 | Since: 1180
      */
-    function setDisableAutomaticCrashTask(vehicle: number | Vehicle, toggle: boolean): void;
+    function setDisableAutomaticCrashTask(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -44116,13 +44116,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x26E13D440E7F6064 | Since: 1290
      */
-    function setDisableExplodeFromBodyDamageOnCollision(vehicle: number | Vehicle, disable: boolean): void;
+    function setDisableExplodeFromBodyDamageOnCollision(vehicle: number | IVehicle, disable: boolean): void;
     /**
      * Prevents the vehicle from exploding when taking body damage. Only works for helis and planes.
      *
      * Hash: 0xEDBC8405B3895CC9 | Since: 1103
      */
-    function setDisableHeliExplodeFromBodyDamage(vehicle: number | Vehicle, disable: boolean): void;
+    function setDisableHeliExplodeFromBodyDamage(vehicle: number | IVehicle, disable: boolean): void;
     /**
      * Disables "wings" for some flying vehicles. Works only for oppressor _2_ and deluxo.
      * For deluxo it just immediately removes vehicle's "wings" and you will be not able to fly up.
@@ -44131,7 +44131,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x2D55FE374D5FDB91 | Since: 1290
      */
-    function setDisableHoverModeFlight(vehicle: number | Vehicle, toggle: boolean): void;
+    function setDisableHoverModeFlight(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Disables collision for this vehicle (maybe it also supports other entities, not sure).
      * Only world/building/fixed world objects will have their collisions disabled, props, peds, or any other entity still collides with the vehicle.
@@ -44140,19 +44140,19 @@ export declare namespace vehicle {
      *
      * Hash: 0x75627043C6AA90AD | Since: 1180
      */
-    function setDisableMapCollision(vehicle: number | Vehicle): void;
+    function setDisableMapCollision(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x8235F1BEAD557629 | Since: 1180
      */
-    function setDisablePedStandOnTop(vehicle: number | Vehicle, toggle: boolean): void;
+    function setDisablePedStandOnTop(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x25367DE49D64CF16 | Since: 323
      */
-    function setDisablePretendOccupants(vehicle: number | Vehicle, toggle: boolean): void;
+    function setDisablePretendOccupants(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -44170,19 +44170,19 @@ export declare namespace vehicle {
      *
      * Hash: 0xB088E9A47AE6EDD5 | Since: 323
      */
-    function setDisableSuperdummy(vehicle: number | Vehicle): void;
+    function setDisableSuperdummy(vehicle: number | IVehicle): void;
     /**
      * Disables turret movement when called in a loop. You can still fire and aim. You cannot shoot backwards though.
      *
      * Hash: 0xE615BB7A7752C76A | Since: 1365
      */
-    function setDisableTurretMovement(vehicle: number | Vehicle, turretId: number): void;
+    function setDisableTurretMovement(vehicle: number | IVehicle, turretId: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x91A0BD635321F145 | Since: 323
      */
-    function setDisableEngineFires(vehicle: number | Vehicle, toggle: boolean): void;
+    function setDisableEngineFires(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -44194,25 +44194,25 @@ export declare namespace vehicle {
      *
      * Hash: 0x37C8252A7C92D017 | Since: 323
      */
-    function setDisablePetrolTankDamage(vehicle: number | Vehicle, toggle: boolean): void;
+    function setDisablePetrolTankDamage(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x465BF26AB9684352 | Since: 323
      */
-    function setDisablePetrolTankFires(vehicle: number | Vehicle, toggle: boolean): void;
+    function setDisablePetrolTankFires(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * True stops vtols from switching modes. Doesn't stop the sound though.
      *
      * Hash: 0xCE2B43770B655F8F | Since: 1290
      */
-    function setDisableVerticalFlightModeTransition(vehicle: number | Vehicle, toggle: boolean): void;
+    function setDisableVerticalFlightModeTransition(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x4AD280EB48B2D8E6 | Since: 1868
      */
-    function setDisableWantedConesResponse(vehicle: number | Vehicle, toggle: boolean): void;
+    function setDisableWantedConesResponse(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Sets some global vehicle related bool
      *
@@ -44230,25 +44230,25 @@ export declare namespace vehicle {
      *
      * Hash: 0xDBC631F109350B8C | Since: 323
      */
-    function setDontAllowPlayerToEnterIfLockedForPlayer(vehicle: number | Vehicle): void;
+    function setDontAllowPlayerToEnterIfLockedForPlayer(vehicle: number | IVehicle): void;
     /**
      * R* used it to "remove" vehicle windows when "nightshark" had some mod, which adding some kind of armored windows. When enabled, you can't break vehicles glass. All your bullets wiil shoot through glass. You also will not able to break the glass with any other way (hitting and etc)
      *
      * Hash: 0x1087BC8EC540DAEB | Since: 1103
      */
-    function setDontProcessGlass(vehicle: number | Vehicle, toggle: boolean): void;
+    function setDontProcessGlass(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * doorId: see SET_VEHICLE_DOOR_SHUT
      *
      * Hash: 0x2FA133A4A9D37ED8 | Since: 323
      */
-    function setDoorAllowedToBeBrokenOff(vehicle: number | Vehicle, doorId: number, isBreakable: boolean): void;
+    function setDoorAllowedToBeBrokenOff(vehicle: number | IVehicle, doorId: number, isBreakable: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x5AC79C98C5C17F05 | Since: 2372
      */
-    function setDriftTyres(vehicle: number | Vehicle, toggle: boolean): void;
+    function setDriftTyres(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Enable/Disables global slipstream physics
      *
@@ -44272,19 +44272,19 @@ export declare namespace vehicle {
      *
      * Hash: 0x887FA38787DE8C72 | Since: 1365
      */
-    function setForceFixLinkMatrices(vehicle: number | Vehicle): void;
+    function setForceFixLinkMatrices(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x97CE68CB032583F0 | Since: 323
      */
-    function setForceHd(vehicle: number | Vehicle, toggle: boolean): void;
+    function setForceHd(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No observed effect.
      *
      * Hash: 0xB28B1FE5BFADD7F5 | Since: 323
      */
-    function setForceLowLodAnchorMode(vehicle: number | Vehicle): void;
+    function setForceLowLodAnchorMode(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -44296,13 +44296,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x37EBBF3117BD6A25 | Since: 323
      */
-    function setForkliftForkHeight(vehicle: number | Vehicle, height: number): void;
+    function setForkliftForkHeight(vehicle: number | IVehicle, height: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x428AD3E26C8D9EB0 | Since: 877
      */
-    function setFormationLeader(vehicle: number | Vehicle, pos: Vector3): void;
+    function setFormationLeader(vehicle: number | IVehicle, pos: Vector3): void;
     /**
      * No comment provided
      *
@@ -44314,19 +44314,19 @@ export declare namespace vehicle {
      *
      * Hash: 0x544996C0081ABDEB | Since: 1103
      */
-    function setGliderActive(vehicle: number | Vehicle, state: boolean): void;
+    function setGliderActive(vehicle: number | IVehicle, state: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xFAF2A78061FD9EF4 | Since: 323
      */
-    function setGlobalPositionOffsetForRecordedPlayback(vehicle: number | Vehicle, pos: Vector3): void;
+    function setGlobalPositionOffsetForRecordedPlayback(vehicle: number | IVehicle, pos: Vector3): void;
     /**
      * Used for GTAO CEO/Associate spawned vehicles.
      *
      * Hash: 0xAB31EF4DE6800CE9 | Since: 573
      */
-    function setGoonBoss(vehicle: number | Vehicle, toggle: boolean): void;
+    function setGoonBoss(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -44338,7 +44338,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xA178472EBB8AE60D | Since: 323
      */
-    function setHeliBladesFullSpeed(vehicle: number | Vehicle): void;
+    function setHeliBladesFullSpeed(vehicle: number | IVehicle): void;
     /**
      * Sets the speed of the helicopter blades in percentage of the full speed.
      *
@@ -44347,61 +44347,61 @@ export declare namespace vehicle {
      *
      * Hash: 0xFD280B4D7F3ABC4D | Since: 323
      */
-    function setHeliBladesSpeed(vehicle: number | Vehicle, speed: number): void;
+    function setHeliBladesSpeed(vehicle: number | IVehicle, speed: number): void;
     /**
      * Stops the cargobob from being able to attach any vehicle
      *
      * Hash: 0x94A68DA412C4007D | Since: 1180
      */
-    function setHeliCanPickupEntityThatHasPickUpDisabled(vehicle: number | Vehicle, toggle: boolean): void;
+    function setHeliCanPickupEntityThatHasPickUpDisabled(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x0A3F820A9A9A9AC5 | Since: 1180
      */
-    function setHeliCombatOffset(vehicle: number | Vehicle, pos: Vector3): void;
+    function setHeliCombatOffset(vehicle: number | IVehicle, pos: Vector3): void;
     /**
      * value between 0.0 and 1.0
      *
      * Hash: 0x6E0859B530A365CC | Since: 323
      */
-    function setHeliControlLaggingRateScalar(helicopter: number | Vehicle, multiplier: number): void;
+    function setHeliControlLaggingRateScalar(helicopter: number | IVehicle, multiplier: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x4056EA1105F5ABD7 | Since: 463
      */
-    function setHeliMainRotorHealth(vehicle: number | Vehicle, health: number): void;
+    function setHeliMainRotorHealth(vehicle: number | IVehicle, health: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x8074CC1886802912 | Since: 2545
      */
-    function setHeliResistToExplosion(vehicle: number | Vehicle, toggle: boolean): void;
+    function setHeliResistToExplosion(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x3EC8BF18AA453FE9 | Since: 323
      */
-    function setHeliTailBoomCanBreakOff(vehicle: number | Vehicle, toggle: boolean): boolean;
+    function setHeliTailBoomCanBreakOff(vehicle: number | IVehicle, toggle: boolean): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xFE205F38AAA58E5B | Since: 463
      */
-    function setHeliTailRotorHealth(vehicle: number | Vehicle, health: number): void;
+    function setHeliTailRotorHealth(vehicle: number | IVehicle, health: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xE6F13851780394DA | Since: 323
      */
-    function setHeliTurbulenceScalar(vehicle: number | Vehicle): void;
+    function setHeliTurbulenceScalar(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x70A252F60A3E036B | Since: 1365
      */
-    function setHoverModeWingRatio(vehicle: number | Vehicle, ratio: number): void;
+    function setHoverModeWingRatio(vehicle: number | IVehicle, ratio: number): void;
     /**
      * If false, lowers hydraulics (if raised) and disables hydraulics controls. If true, raises hydraulics and enables hydraulics controls.
      *
@@ -44409,13 +44409,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x28B18377EB6E25F6 | Since: 505
      */
-    function setHydraulicsControl(vehicle: number | Vehicle, toggle: boolean): void;
+    function setHydraulicsControl(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Works only on vehicles that support hydraulics.
      *
      * Hash: 0x84EA99C62CB3EF0C | Since: 505
      */
-    function setHydraulicSuspensionRaiseFactor(vehicle: number | Vehicle, wheelId: number, value: number): void;
+    function setHydraulicSuspensionRaiseFactor(vehicle: number | IVehicle, wheelId: number, value: number): void;
     /**
      * States:
      * 4 = raise
@@ -44424,7 +44424,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x8EA86DF356801C7D | Since: 505
      */
-    function setHydraulicState(vehicle: number | Vehicle, state: number): void;
+    function setHydraulicState(vehicle: number | IVehicle, state: number): void;
     /**
      * Sets vehicle wheel hydraulic states transition. Known states:
      * 0 - reset
@@ -44433,7 +44433,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xC24075310A8B9CD1 | Since: 505
      */
-    function setHydraulicWheelState(vehicle: number | Vehicle, wheelId: number, state: number, value: number): void;
+    function setHydraulicWheelState(vehicle: number | IVehicle, wheelId: number, state: number, value: number): void;
     /**
      * No comment provided
      *
@@ -44445,20 +44445,20 @@ export declare namespace vehicle {
      *
      * Hash: 0x2970EAA18FD5E42F | Since: 1604
      */
-    function setIncreaseWheelCrushDamage(vehicle: number | Vehicle, toggle: boolean): void;
+    function setIncreaseWheelCrushDamage(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Inverts vehicle's controls. So INPUT_VEH_ACCELERATE will be INPUT_VEH_BRAKE and vise versa (same for A/D controls)
      * Doesn't work for planes/helis.
      *
      * Hash: 0x5B91B229243351A8 | Since: 791
      */
-    function setInvertControls(vehicle: number | Vehicle, state: boolean): void;
+    function setInvertControls(vehicle: number | IVehicle, state: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xACFB2463CC22BED2 | Since: 323
      */
-    function setLastDriven(vehicle: number | Vehicle): void;
+    function setLastDriven(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -44470,19 +44470,19 @@ export declare namespace vehicle {
      *
      * Hash: 0xBBE7648349B49BE8 | Since: 323
      */
-    function setMissionTrainAsNoLongerNeeded(train: number | Vehicle): void;
+    function setMissionTrainAsNoLongerNeeded(train: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x591CA673AA6AB736 | Since: 323
      */
-    function setMissionTrainCoords(train: number | Vehicle, pos: Vector3): void;
+    function setMissionTrainCoords(train: number | IVehicle, pos: Vector3): void;
     /**
      * No comment provided
      *
      * Hash: 0x9E566EA551F4F1A6 | Since: 3407
      */
-    function setNitrousIsActive(vehicle: number | Vehicle, toggle: boolean): void;
+    function setNitrousIsActive(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -44494,13 +44494,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x1B212B26DD3C04DF | Since: 757
      */
-    function setOpenRearDoorsOnExplosion(vehicle: number | Vehicle, toggle: boolean): void;
+    function setOpenRearDoorsOnExplosion(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xC8E9B6B71B8E660D | Since: 1604
      */
-    function setOverrideNitrousLevel(vehicle: number | Vehicle, toggle: boolean, level: number, power: number, rechargeTime: number, disableSound: boolean): void;
+    function setOverrideNitrousLevel(vehicle: number | IVehicle, toggle: boolean, level: number, power: number, rechargeTime: number, disableSound: boolean): void;
     /**
      * No comment provided
      *
@@ -44518,13 +44518,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x59C3757B3B7408E8 | Since: 1493
      */
-    function setPedsCanFallOffThisFromLargeFallDamage(vehicle: number | Vehicle, toggle: boolean): void;
+    function setPedsCanFallOffThisFromLargeFallDamage(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * min: 1.9f, max: 100.0f
      *
      * Hash: 0x877C1EAEAC531023 | Since: 323
      */
-    function setPickupRopeLengthForCargobob(cargobob: number | Vehicle, length1: number, length2: number): void;
+    function setPickupRopeLengthForCargobob(cargobob: number | IVehicle, length1: number, length2: number): void;
     /**
      * No comment provided
      *
@@ -44536,31 +44536,31 @@ export declare namespace vehicle {
      *
      * Hash: 0xDD8A2D3337F04196 | Since: 3407
      */
-    function setPlaneControlSectionsShouldBreakOffFromExplosions(vehicle: number | Vehicle, toggle: boolean): void;
+    function setPlaneControlSectionsShouldBreakOffFromExplosions(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Works just like SET_VEHICLE_ENGINE_HEALTH, but only for planes.
      *
      * Hash: 0x2A86A0475B6A1434 | Since: 1103
      */
-    function setPlaneEngineHealth(vehicle: number | Vehicle, health: number): void;
+    function setPlaneEngineHealth(vehicle: number | IVehicle, health: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x4C815EB175086F84 | Since: 1103
      */
-    function setPlanePropellerHealth(plane: number | Vehicle, health: number): boolean;
+    function setPlanePropellerHealth(plane: number | IVehicle, health: number): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xE16142B94664DEFD | Since: 323
      */
-    function setPlaneResistToExplosion(vehicle: number | Vehicle, toggle: boolean): void;
+    function setPlaneResistToExplosion(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x0BBB9A7A8FFE931B | Since: 1290
      */
-    function setPlaneSectionDamageScale(vehicle: number | Vehicle): void;
+    function setPlaneSectionDamageScale(vehicle: number | IVehicle): void;
     /**
      * This native sets the turbulence multiplier. It only works for planes.
      * 0.0 = no turbulence at all.
@@ -44569,43 +44569,43 @@ export declare namespace vehicle {
      *
      * Hash: 0xAD2D28A1AFDFF131 | Since: 323
      */
-    function setPlaneTurbulenceMultiplier(vehicle: number | Vehicle, multiplier: number): void;
+    function setPlaneTurbulenceMultiplier(vehicle: number | IVehicle, multiplier: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x6683AB880E427778 | Since: 323
      */
-    function setPlaybackSpeed(vehicle: number | Vehicle, speed: number): void;
+    function setPlaybackSpeed(vehicle: number | IVehicle, speed: number): void;
     /**
      * Identical to SET_PLAYBACK_TO_USE_AI_TRY_TO_REVERT_BACK_LATER with 0 as arguments for p1 and p3.
      *
      * Hash: 0xA549C3B37EA28131 | Since: 323
      */
-    function setPlaybackToUseAi(vehicle: number | Vehicle, drivingStyle: number): void;
+    function setPlaybackToUseAi(vehicle: number | IVehicle, drivingStyle: number): void;
     /**
      * Time is number of milliseconds before reverting, zero for indefinitely.
      *
      * Hash: 0x6E63860BBB190730 | Since: 323
      */
-    function setPlaybackToUseAiTryToRevertBackLater(vehicle: number | Vehicle, time: number, drivingStyle: number): void;
+    function setPlaybackToUseAiTryToRevertBackLater(vehicle: number | IVehicle, time: number, drivingStyle: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xBCDF8BAF56C87B6A | Since: 323
      */
-    function setPlayersLast(vehicle: number | Vehicle): void;
+    function setPlayersLast(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x4E74E62E0A97E901 | Since: 323
      */
-    function setPoliceFocusWillTrack(vehicle: number | Vehicle, toggle: boolean): void;
+    function setPoliceFocusWillTrack(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x796A877E459B99EA | Since: 323
      */
-    function setPositionOffsetForRecordedPlayback(vehicle: number | Vehicle, pos: Vector3): void;
+    function setPositionOffsetForRecordedPlayback(vehicle: number | IVehicle, pos: Vector3): void;
     /**
      * No comment provided
      *
@@ -44635,37 +44635,37 @@ export declare namespace vehicle {
      *
      * Hash: 0x3A375167F5782A65 | Since: 2372
      */
-    function setReducedSuspensionForce(vehicle: number | Vehicle, enable: boolean): void;
+    function setReducedSuspensionForce(vehicle: number | IVehicle, enable: boolean): void;
     /**
      * Makes the train all jumbled up and derailed as it moves on the tracks (though that wont stop it from its normal operations)
      *
      * Hash: 0x317B11A312DF5534 | Since: 323
      */
-    function setRenderTrainAsDerailed(train: number | Vehicle, toggle: boolean): void;
+    function setRenderTrainAsDerailed(train: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x81E1552E35DC3839 | Since: 944
      */
-    function setRocketBoostActive(vehicle: number | Vehicle, active: boolean): void;
+    function setRocketBoostActive(vehicle: number | IVehicle, active: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xFEB2DDED3509562E | Since: 1103
      */
-    function setRocketBoostFill(vehicle: number | Vehicle, percentage: number): void;
+    function setRocketBoostFill(vehicle: number | IVehicle, percentage: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xEFC13B1CE30D755D | Since: 944
      */
-    function setScriptRampImpulseScale(vehicle: number | Vehicle, impulseScale: number): void;
+    function setScriptRampImpulseScale(vehicle: number | IVehicle, impulseScale: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xE00F2AB100B76E89 | Since: 944
      */
-    function setScriptRocketBoostRechargeTime(vehicle: number | Vehicle, seconds: number): void;
+    function setScriptRocketBoostRechargeTime(vehicle: number | IVehicle, seconds: number): void;
     /**
      * Only called once in the decompiled scripts. Presumably activates the specified generator.
      *
@@ -44677,19 +44677,19 @@ export declare namespace vehicle {
      *
      * Hash: 0x107A473D7A6647A9 | Since: 1290
      */
-    function setShortSlowdownForLanding(vehicle: number | Vehicle): void;
+    function setShortSlowdownForLanding(vehicle: number | IVehicle): void;
     /**
      * A vehicle recording playback flag only used in jewelry_heist
      *
      * Hash: 0x063AE2B2CC273588 | Since: 323
      */
-    function setShouldLerpFromAiToFullRecording(vehicle: number | Vehicle): void;
+    function setShouldLerpFromAiToFullRecording(vehicle: number | IVehicle): void;
     /**
      * Resets the vehicle's turret to its default position in scripted cameras. Doesn't seem to affect turrets that are occupied by a ped.
      *
      * Hash: 0x78CEEE41F49F421F | Since: 1103
      */
-    function setShouldResetTurretInScriptedCameras(vehicle: number | Vehicle, shouldReset: boolean): void;
+    function setShouldResetTurretInScriptedCameras(vehicle: number | IVehicle, shouldReset: boolean): void;
     /**
      * Disables the screen effects and sound effects when driving over a slowdown pad.
      *
@@ -44701,7 +44701,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xF1211889DF15A763 | Since: 1290
      */
-    function setSpecialFlightModeAllowed(vehicle: number | Vehicle, toggle: boolean): void;
+    function setSpecialFlightModeAllowed(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Used in conjunction with SET_SPECIAL_FLIGHT_MODE_TARGET_RATIO, in Rockstar's scripts. Using this will instantly transform the vehicle into hover mode starting from the given ratio (ranging from 0.0 to 1.0, values greater than 1.0 will put the vehicle into a glitched state.) If this is not used alongside SET_SPECIAL_FLIGHT_MODE_TARGET_RATIO, the vehicle will automatically transform back into car mode.
      *
@@ -44715,7 +44715,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xD138FA15C9776837 | Since: 1290
      */
-    function setSpecialFlightModeRatio(vehicle: number | Vehicle, ratio: number): void;
+    function setSpecialFlightModeRatio(vehicle: number | IVehicle, ratio: number): void;
     /**
      * Used in conjunction with SET_SPECIAL_FLIGHT_MODE_RATIO, in Rockstar's scripts. The vehicle will transform into the given targetRatio, starting from the vehicle's current hover mode transform ratio (which can also be manually set by SET_SPECIAL_FLIGHT_MODE_RATIO,) i.e. setting targetRatio to 0.0 while the vehicle is in hover mode will transform the vehicle into car mode, likewise setting targetRatio to 1.0 while the vehicle is in car mode will transform the vehicle into hover mode, and if the current transform ratio is set to 0.7 while targetRatio is 1.0 the vehicle will transform into hover mode starting from being already partially transformed.
      *
@@ -44731,7 +44731,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x438B3D7CA026FE91 | Since: 1290
      */
-    function setSpecialFlightModeTargetRatio(vehicle: number | Vehicle, targetRatio: number): void;
+    function setSpecialFlightModeTargetRatio(vehicle: number | IVehicle, targetRatio: number): void;
     /**
      * Disables the screen effects and sound effects when driving over a speed boost pad.
      *
@@ -44743,13 +44743,13 @@ export declare namespace vehicle {
      *
      * Hash: 0xC59872A5134879C7 | Since: 323
      */
-    function setSubmarineCrushDepths(vehicle: number | Vehicle, depth1: number, depth2: number, depth3: number): void;
+    function setSubmarineCrushDepths(vehicle: number | IVehicle, depth1: number, depth2: number, depth3: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xB893215D8D4C015B | Since: 323
      */
-    function setTaskGotoPlaneMinHeightAboveTerrain(plane: number | Vehicle, height: number): void;
+    function setTaskGotoPlaneMinHeightAboveTerrain(plane: number | IVehicle, height: number): void;
     /**
      * This is not tested - it's just an assumption.
      * - Nac
@@ -44764,7 +44764,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x598803E85E8448D9 | Since: 323
      */
-    function setTaxiLights(vehicle: number | Vehicle, state: boolean): void;
+    function setTaxiLights(vehicle: number | IVehicle, state: boolean): void;
     /**
      * No comment provided
      *
@@ -44776,31 +44776,31 @@ export declare namespace vehicle {
      *
      * Hash: 0x2A8F319B392E7B3F | Since: 323
      */
-    function setTrailerInverseMassScale(vehicle: number | Vehicle): void;
+    function setTrailerInverseMassScale(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x878C75C09FBDB942 | Since: 1103
      */
-    function setTrailerLegsLowered(vehicle: number | Vehicle): void;
+    function setTrailerLegsLowered(vehicle: number | IVehicle): void;
     /**
      * in the decompiled scripts, seems to be always called on the vehicle right after being attached to a trailer.
      *
      * Hash: 0x95CF53B3D687F9FA | Since: 323
      */
-    function setTrailerLegsRaised(vehicle: number | Vehicle): void;
+    function setTrailerLegsRaised(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x16469284DB8C62B5 | Since: 323
      */
-    function setTrainCruiseSpeed(train: number | Vehicle, speed: number): void;
+    function setTrainCruiseSpeed(train: number | IVehicle, speed: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xAA0BC91BE0B796E3 | Since: 323
      */
-    function setTrainSpeed(train: number | Vehicle, speed: number): void;
+    function setTrainSpeed(train: number | IVehicle, speed: number): void;
     /**
      * Only called once inside main_persitant with the parameters p0 = 0, p1 = 120000
      *
@@ -44815,19 +44815,19 @@ export declare namespace vehicle {
      *
      * Hash: 0x498218259FB7C72D | Since: 1365
      */
-    function setTransformRateForAnimation(vehicle: number | Vehicle, transformRate: number): void;
+    function setTransformRateForAnimation(vehicle: number | IVehicle, transformRate: number): void;
     /**
      * When set to true, the key to transform a car to submarine mode changes from raise/lower convertible roof (hold H by default) to special vehicle transform (press X by default.)
      *
      * Hash: 0x41B9FB92EDED32A6 | Since: 1365
      */
-    function setTransformToSubmarineUsesAlternateInput(vehicle: number | Vehicle, toggle: boolean): void;
+    function setTransformToSubmarineUsesAlternateInput(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Toggles specific flag on turret
      *
      * Hash: 0xC60060EB0D8AC7B1 | Since: 1290
      */
-    function setTurretHidden(vehicle: number | Vehicle, index: number, toggle: boolean): void;
+    function setTurretHidden(vehicle: number | IVehicle, index: number, toggle: boolean): void;
     /**
      * SET_TYRE_WEAR_RATE must be active, otherwise values set to <1000.0f will default to 350.0f
      *
@@ -44841,7 +44841,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x74C68EF97645E79D | Since: 1868
      */
-    function setTyreHealth(vehicle: number | Vehicle, wheelIndex: number, health: number): void;
+    function setTyreHealth(vehicle: number | IVehicle, wheelIndex: number, health: number): void;
     /**
      * Controls how much traction the wheel loses.
      *
@@ -44860,7 +44860,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xC970D0E0FC31D768 | Since: 2060
      */
-    function setTyreMaximumGripDifferenceDueToWearRate(vehicle: number | Vehicle, wheelIndex: number, multiplier: number): void;
+    function setTyreMaximumGripDifferenceDueToWearRate(vehicle: number | IVehicle, wheelIndex: number, multiplier: number): void;
     /**
      * Needs to be run for tire wear to work. Multiplier affects the downforce and how fast the tires will wear out, higher values essentially make the vehicle slower on straights and its tires will wear down quicker when cornering. Value must be >0f.
      * Default value in Rockstar's Open Wheel Race JSON's ("owrtws", "owrtwm", "owrtwh") is 1.0
@@ -44875,7 +44875,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x01894E2EDE923CA2 | Since: 1868
      */
-    function setTyreWearRate(vehicle: number | Vehicle, wheelIndex: number, multiplier: number): void;
+    function setTyreWearRate(vehicle: number | IVehicle, wheelIndex: number, multiplier: number): void;
     /**
      * Controls how fast the tires wear out.
      *
@@ -44894,13 +44894,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x392183BB9EA57697 | Since: 2060
      */
-    function setTyreWearRateScale(vehicle: number | Vehicle, wheelIndex: number, multiplier: number): void;
+    function setTyreWearRateScale(vehicle: number | IVehicle, wheelIndex: number, multiplier: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xB68CFAF83A02768D | Since: 1290
      */
-    function setUseDesiredZCruiseSpeedForLanding(vehicle: number | Vehicle, toggle: boolean): void;
+    function setUseDesiredZCruiseSpeedForLanding(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Changes the car jump control to require a double-tap to activate.
      *
@@ -44912,68 +44912,68 @@ export declare namespace vehicle {
      *
      * Hash: 0xF06A16CA55D138D8 | Since: 944
      */
-    function setUseHigherCarJump(vehicle: number | Vehicle, toggle: boolean): void;
+    function setUseHigherCarJump(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xDFFCEF48E511DB48 | Since: 323
      */
-    function setActiveDuringPlayback(vehicle: number | Vehicle, toggle: boolean): void;
+    function setActiveDuringPlayback(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x21115BCD6E44656A | Since: 323
      */
-    function setActiveForPedNavigation(vehicle: number | Vehicle, toggle: boolean): void;
+    function setActiveForPedNavigation(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x9BECD4B9FEF3F8A6 | Since: 323
      */
-    function setActAsIfHasSirenOn(vehicle: number | Vehicle): void;
+    function setActAsIfHasSirenOn(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x1F9FB66F3A3842D2 | Since: 323
      */
-    function setActAsIfHighSpeedForFragSmashing(vehicle: number | Vehicle): void;
+    function setActAsIfHighSpeedForFragSmashing(vehicle: number | IVehicle): void;
     /**
      * Used to be incorrectly named SET_VEHICLE_EXCLUSIVE_DRIVER
      * Toggles a flag related to SET_VEHICLE_EXCLUSIVE_DRIVER, however, doesn't enable that feature (or trigger script events related to it).
      *
      * Hash: 0x41062318F23ED854 | Since: 323
      */
-    function setAiCanUseExclusiveSeats(vehicle: number | Vehicle, toggle: boolean): void;
+    function setAiCanUseExclusiveSeats(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xCDE5E70C1DDB954C | Since: 323
      */
-    function setAlarm(vehicle: number | Vehicle, state: boolean): void;
+    function setAlarm(vehicle: number | IVehicle, state: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x7D6F9A3EF26136A0 | Since: 323
      */
-    function setAllowHomingMissleLockon(vehicle: number | Vehicle, toggle: boolean): void;
+    function setAllowHomingMissleLockon(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x1DDA078D12879EEE | Since: 463
      */
-    function setAllowHomingMissleLockonSynced(vehicle: number | Vehicle, canBeLockedOn: boolean): void;
+    function setAllowHomingMissleLockonSynced(vehicle: number | IVehicle, canBeLockedOn: boolean): void;
     /**
      * Makes the vehicle accept no passengers.
      *
      * Hash: 0x5D14D4154BFE7B2C | Since: 323
      */
-    function setAllowNoPassengersLockon(veh: number | Vehicle, toggle: boolean): void;
+    function setAllowNoPassengersLockon(veh: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x8BA6F76BC53A1493 | Since: 323
      */
-    function setAutomaticallyAttaches(vehicle: number | Vehicle): number;
+    function setAutomaticallyAttaches(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
@@ -44985,7 +44985,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x9F3F689B814F2599 | Since: 323
      */
-    function setBlipThrottleRandomly(vehicle: number | Vehicle): void;
+    function setBlipThrottleRandomly(vehicle: number | IVehicle): void;
     /**
      * Controls how fast bobbleheads and tsurikawas move on each axis.
      *
@@ -44999,73 +44999,73 @@ export declare namespace vehicle {
      *
      * Hash: 0xB77D05AC8C78AADB | Since: 323
      */
-    function setBodyHealth(vehicle: number | Vehicle, value: number): void;
+    function setBodyHealth(vehicle: number | IVehicle, value: number): void;
     /**
      * Sets the amount of bombs that this vehicle has. As far as I know, this does _not_ impact vehicle weapons or the ammo of those weapons in any way, it is just a way to keep track of the amount of bombs in a specific plane.
      *
      * Hash: 0xF4B2ED59DEB5D774 | Since: 1180
      */
-    function setBombAmmo(vehicle: number | Vehicle, bombCount: number): void;
+    function setBombAmmo(vehicle: number | IVehicle, bombCount: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xE4E2FD323574965C | Since: 757
      */
-    function setBrake(vehicle: number | Vehicle, toggle: boolean): void;
+    function setBrake(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x92B35082E0B42F66 | Since: 323
      */
-    function setBrakeLights(vehicle: number | Vehicle, toggle: boolean): void;
+    function setBrakeLights(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xC361AA040D6637A8 | Since: 323
      */
-    function setBrokenPartsDontAffectAiHandling(vehicle: number | Vehicle): void;
+    function setBrokenPartsDontAffectAiHandling(vehicle: number | IVehicle): void;
     /**
      * Sets the arm position of a bulldozer. Position must be a value between 0.0 and 1.0. Ignored when `p2` is set to false, instead incrementing arm position by 0.1 (or 10%).
      *
      * Hash: 0xF8EBCCC96ADB9FB7 | Since: 323
      */
-    function setBulldozerArmPosition(vehicle: number | Vehicle, position: number): void;
+    function setBulldozerArmPosition(vehicle: number | IVehicle, position: number): void;
     /**
      * On accelerating, spins the driven wheels with the others braked, so you don't go anywhere.
      *
      * Hash: 0xFB8794444A7D60FB | Since: 323
      */
-    function setBurnout(vehicle: number | Vehicle, toggle: boolean): void;
+    function setBurnout(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * This has not yet been tested - it's just an assumption of what the types could be.
      *
      * Hash: 0x3750146A28097A82 | Since: 323
      */
-    function setCanBeTargetted(vehicle: number | Vehicle, state: boolean): void;
+    function setCanBeTargetted(vehicle: number | IVehicle, state: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x300504B23BD3B711 | Since: 323
      */
-    function setCanBeUsedByFleeingPeds(vehicle: number | Vehicle, toggle: boolean): void;
+    function setCanBeUsedByFleeingPeds(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x4C7028F78FFD3681 | Since: 323
      */
-    function setCanBeVisiblyDamaged(vehicle: number | Vehicle, state: boolean): void;
+    function setCanBeVisiblyDamaged(vehicle: number | IVehicle, state: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x59BF8C3D52C92F66 | Since: 323
      */
-    function setCanBreak(vehicle: number | Vehicle, toggle: boolean): void;
+    function setCanBreak(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x0CDDA42F9E360CA6 | Since: 323
      */
-    function setCanDeformWheels(vehicle: number | Vehicle, toggle: boolean): void;
+    function setCanDeformWheels(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -45077,37 +45077,37 @@ export declare namespace vehicle {
      *
      * Hash: 0x206BC5DC9D1AC70A | Since: 323
      */
-    function setCanEngineMissfire(vehicle: number | Vehicle, toggle: boolean): void;
+    function setCanEngineMissfire(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x51BB2D88D31A914B | Since: 323
      */
-    function setCanLeakOil(vehicle: number | Vehicle, toggle: boolean): void;
+    function setCanLeakOil(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x192547247864DFDD | Since: 323
      */
-    function setCanLeakPetrol(vehicle: number | Vehicle, toggle: boolean): void;
+    function setCanLeakPetrol(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x428BACCDF5E26EAD | Since: 323
      */
-    function setCanSaveInGarage(vehicle: number | Vehicle, toggle: boolean): void;
+    function setCanSaveInGarage(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x9849DE24FCF23CCC | Since: 1604
      */
-    function setCausesSwerving(vehicle: number | Vehicle, toggle: boolean): void;
+    function setCausesSwerving(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xA46413066687A328 | Since: 323
      */
-    function setCeilingHeight(vehicle: number | Vehicle, height: number): void;
+    function setCeilingHeight(vehicle: number | IVehicle, height: number): void;
     /**
      * <1.0 - Decreased torque
      * =1.0 - Default torque
@@ -45121,7 +45121,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xB59E4BD37AE292DB | Since: 323
      */
-    function setCheatPowerIncrease(vehicle: number | Vehicle, value: number): void;
+    function setCheatPowerIncrease(vehicle: number | IVehicle, value: number): void;
     /**
      * colorPrimary & colorSecondary are the paint index for the vehicle.
      * For a list of valid paint indexes, view: https://pastebin.com/pwHci0xK
@@ -45132,13 +45132,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x4F1D4BE3A7F24601 | Since: 323
      */
-    function setColours(vehicle: number | Vehicle, colorPrimary: number, colorSecondary: number): void;
+    function setColours(vehicle: number | IVehicle, colorPrimary: number, colorSecondary: number): void;
     /**
      * Sets the selected vehicle's colors to the specified index of the color combination found in the vehicle's carvariations.meta entry.
      *
      * Hash: 0x33E8CD3322E2FE31 | Since: 323
      */
-    function setColourCombination(vehicle: number | Vehicle, colorCombination: number): void;
+    function setColourCombination(vehicle: number | IVehicle, colorCombination: number): void;
     /**
      * Does nothing. It's a nullsub.
      *
@@ -45151,25 +45151,25 @@ export declare namespace vehicle {
      *
      * Hash: 0x9BDA23BF666F0855 | Since: 1180
      */
-    function setCountermeasureAmmo(vehicle: number | Vehicle, counterMeasureCount: number): void;
+    function setCountermeasureAmmo(vehicle: number | IVehicle, counterMeasureCount: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x182F266C2D9E2BEB | Since: 323
      */
-    function setCustomPathNodeStreamingRadius(vehicle: number | Vehicle): void;
+    function setCustomPathNodeStreamingRadius(vehicle: number | IVehicle): void;
     /**
      * p1, p2, p3 are RGB values for color (255,0,0 for Red, ect)
      *
      * Hash: 0x7141766F91D15BEA | Since: 323
      */
-    function setCustomPrimaryColour(vehicle: number | Vehicle, r: number, g: number, b: number): void;
+    function setCustomPrimaryColour(vehicle: number | IVehicle, r: number, g: number, b: number): void;
     /**
      * p1, p2, p3 are RGB values for color (255,0,0 for Red, ect)
      *
      * Hash: 0x36CED73BFED89754 | Since: 323
      */
-    function setCustomSecondaryColour(vehicle: number | Vehicle, r: number, g: number, b: number): void;
+    function setCustomSecondaryColour(vehicle: number | IVehicle, r: number, g: number, b: number): void;
     /**
      * Apply damage to vehicle at a location. Location is relative to vehicle model (not world).
      *
@@ -45178,25 +45178,25 @@ export declare namespace vehicle {
      *
      * Hash: 0xA1DD317EA8FD4F29 | Since: 323
      */
-    function setDamage(vehicle: number | Vehicle, xOffset: number, yOffset: number, zOffset: number, damage: number, radius: number, focusOnModel: boolean): void;
+    function setDamage(vehicle: number | IVehicle, xOffset: number, yOffset: number, zOffset: number, damage: number, radius: number, focusOnModel: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x4E20D2A627011E8E | Since: 757
      */
-    function setDamageScale(vehicle: number | Vehicle): boolean;
+    function setDamageScale(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x9640E30A7F395E4B | Since: 1290
      */
-    function setDamageScales(vehicle: number | Vehicle): void;
+    function setDamageScales(vehicle: number | IVehicle): void;
     /**
      * This fixes the deformation of a vehicle but the vehicle health doesn't improve
      *
      * Hash: 0x953DA1E1B12C0491 | Since: 323
      */
-    function setDeformationFixed(vehicle: number | Vehicle): void;
+    function setDeformationFixed(vehicle: number | IVehicle): void;
     /**
      * Use this native inside a looped function.
      * Values:
@@ -45218,31 +45218,31 @@ export declare namespace vehicle {
      *
      * Hash: 0x79D3B596FE44EE8B | Since: 323
      */
-    function setDirtLevel(vehicle: number | Vehicle, dirtLevel: number): void;
+    function setDirtLevel(vehicle: number | IVehicle, dirtLevel: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xAF60E6A2936F982A | Since: 1103
      */
-    function setDisableCollisionUponCreation(vehicle: number | Vehicle, disable: boolean): void;
+    function setDisableCollisionUponCreation(vehicle: number | IVehicle, disable: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x8AA9180DE2FEDD45 | Since: 323
      */
-    function setDisableHeightMapAvoidance(vehicle: number | Vehicle): void;
+    function setDisableHeightMapAvoidance(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x2B6747FAA9DB9D6B | Since: 323
      */
-    function setDisableTowing(vehicle: number | Vehicle, toggle: boolean): void;
+    function setDisableTowing(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x76D26A22750E849E | Since: 1103
      */
-    function setDontTerminateTaskWhenAchieved(vehicle: number | Vehicle): void;
+    function setDontTerminateTaskWhenAchieved(vehicle: number | IVehicle): void;
     /**
      * enum eVehicleLockState
      * {
@@ -45261,7 +45261,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xB664292EAECF7FA6 | Since: 323
      */
-    function setDoorsLocked(vehicle: number | Vehicle, doorLockStatus: number): void;
+    function setDoorsLocked(vehicle: number | IVehicle, doorLockStatus: number): void;
     /**
      * After some analysis, I've decided that these are what the parameters are.
      *
@@ -45272,37 +45272,37 @@ export declare namespace vehicle {
      *
      * Hash: 0xA2F80B8D040727CC | Since: 323
      */
-    function setDoorsLockedForAllPlayers(vehicle: number | Vehicle, toggle: boolean): void;
+    function setDoorsLockedForAllPlayers(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x203B527D1B77904C | Since: 1365
      */
-    function setDoorsLockedForAllTeams(vehicle: number | Vehicle, toggle: boolean): void;
+    function setDoorsLockedForAllTeams(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x9737A37136F07E75 | Since: 323
      */
-    function setDoorsLockedForNonScriptPlayers(vehicle: number | Vehicle, toggle: boolean): void;
+    function setDoorsLockedForNonScriptPlayers(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x517AAF684BB50CD1 | Since: 323
      */
-    function setDoorsLockedForPlayer(vehicle: number | Vehicle, player: number | string | Player, toggle: boolean): void;
+    function setDoorsLockedForPlayer(vehicle: number | IVehicle, player: number | string | IPlayer, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xB81F6D4A8F5EEBA8 | Since: 323
      */
-    function setDoorsLockedForTeam(vehicle: number | Vehicle, team: number, toggle: boolean): void;
+    function setDoorsLockedForTeam(vehicle: number | IVehicle, team: number, toggle: boolean): void;
     /**
      * Closes all doors of a vehicle:
      *
      * Hash: 0x781B3D62BB013EF5 | Since: 323
      */
-    function setDoorsShut(vehicle: number | Vehicle, closeInstantly: boolean): void;
+    function setDoorsShut(vehicle: number | IVehicle, closeInstantly: boolean): void;
     /**
      * doorId: see SET_VEHICLE_DOOR_SHUT
      *
@@ -45310,31 +45310,31 @@ export declare namespace vehicle {
      *
      * Hash: 0x3B458DDB57038F08 | Since: 877
      */
-    function setDoorAutoLock(vehicle: number | Vehicle, doorId: number, toggle: boolean): void;
+    function setDoorAutoLock(vehicle: number | IVehicle, doorId: number, toggle: boolean): void;
     /**
      * doorId: see SET_VEHICLE_DOOR_SHUT
      *
      * Hash: 0xD4D4F6A4AB575A33 | Since: 323
      */
-    function setDoorBroken(vehicle: number | Vehicle, doorId: number, deleteDoor: boolean): void;
+    function setDoorBroken(vehicle: number | IVehicle, doorId: number, deleteDoor: boolean): void;
     /**
      * doorId: see SET_VEHICLE_DOOR_SHUT
      *
      * Hash: 0xF2BFA0430F0A0FCB | Since: 323
      */
-    function setDoorControl(vehicle: number | Vehicle, doorId: number, speed: number, angle: number): void;
+    function setDoorControl(vehicle: number | IVehicle, doorId: number, speed: number, angle: number): void;
     /**
      * doorId: see SET_VEHICLE_DOOR_SHUT
      *
      * Hash: 0xA5A9653A8D2CAF48 | Since: 323
      */
-    function setDoorLatched(vehicle: number | Vehicle, doorId: number): void;
+    function setDoorLatched(vehicle: number | IVehicle, doorId: number): void;
     /**
      * doorId: see SET_VEHICLE_DOOR_SHUT
      *
      * Hash: 0x7C65DAC73C35C862 | Since: 323
      */
-    function setDoorOpen(vehicle: number | Vehicle, doorId: number, loose: boolean, openInstantly: boolean): void;
+    function setDoorOpen(vehicle: number | IVehicle, doorId: number, loose: boolean, openInstantly: boolean): void;
     /**
      * enum eDoorId
      * {
@@ -45349,7 +45349,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x93D9BD300D7789E5 | Since: 323
      */
-    function setDoorShut(vehicle: number | Vehicle, doorId: number, closeInstantly: boolean): void;
+    function setDoorShut(vehicle: number | IVehicle, doorId: number, closeInstantly: boolean): void;
     /**
      * Money pickups are created around cars when they explode. Only works when the vehicle model is a car. A single pickup is between 1 and 18 dollars in size. All car models seem to give the same amount of money.
      *
@@ -45358,13 +45358,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x068F64F2470F9656 | Since: 323
      */
-    function setDropsMoneyWhenBlownUp(vehicle: number | Vehicle, toggle: boolean): void;
+    function setDropsMoneyWhenBlownUp(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x983765856F2564F9 | Since: 323
      */
-    function setEngineCanDegrade(vehicle: number | Vehicle, toggle: boolean): void;
+    function setEngineCanDegrade(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * 1000 is max health
      * Begins leaking gas at around 650 health
@@ -45378,7 +45378,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x45F6D8EEF34ABEF1 | Since: 323
      */
-    function setEngineHealth(vehicle: number | Vehicle, health: number): void;
+    function setEngineHealth(vehicle: number | IVehicle, health: number): void;
     /**
      * Starts or stops the engine on the specified vehicle.
      *
@@ -45389,13 +45389,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x2497C4717C8B881E | Since: 323
      */
-    function setEngineOn(vehicle: number | Vehicle, value: boolean, instantly: boolean, disableAutoStart: boolean): void;
+    function setEngineOn(vehicle: number | IVehicle, value: boolean, instantly: boolean, disableAutoStart: boolean): void;
     /**
      * The parameter fade is a value from 0-1, where 0 is fresh paint.
      *
      * Hash: 0x3AFDC536C3D01674 | Since: 323
      */
-    function setEnveffScale(vehicle: number | Vehicle, fade: number): void;
+    function setEnveffScale(vehicle: number | IVehicle, fade: number): void;
     /**
      * index: 0 - 1
      *
@@ -45403,80 +45403,80 @@ export declare namespace vehicle {
      *
      * Hash: 0xB5C51B5502E85E83 | Since: 323
      */
-    function setExclusiveDriver(vehicle: number | Vehicle, ped: number | Ped, index: number): void;
+    function setExclusiveDriver(vehicle: number | IVehicle, ped: number | IPed, index: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xD565F438137F0E10 | Since: 1103
      */
-    function setExplodesOnExplosionDamageAtZeroBodyHealth(vehicle: number | Vehicle, toggle: boolean): void;
+    function setExplodesOnExplosionDamageAtZeroBodyHealth(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Sets a vehicle to be strongly resistant to explosions. p0 is the vehicle; set p1 to false to toggle the effect on/off.
      *
      * Hash: 0x71B0892EC081D60A | Since: 323
      */
-    function setExplodesOnHighExplosionDamage(vehicle: number | Vehicle, toggle: boolean): void;
+    function setExplodesOnHighExplosionDamage(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Max value is 32767
      *
      * Hash: 0x79DF7E806202CE01 | Since: 323
      */
-    function setExtendedRemovalRange(vehicle: number | Vehicle, range: number): void;
+    function setExtendedRemovalRange(vehicle: number | IVehicle, range: number): void;
     /**
      * Available extraIds are 1-14, however none of the vehicles have extras above 12.
      *
      * Hash: 0x7EE3A3C5E4A40CC9 | Since: 323
      */
-    function setExtra(vehicle: number | Vehicle, extraId: number, disable: boolean): void;
+    function setExtra(vehicle: number | IVehicle, extraId: number, disable: boolean): void;
     /**
      * They use the same color indexs as SET_VEHICLE_COLOURS.
      *
      * Hash: 0x2036F561ADD12E33 | Since: 323
      */
-    function setExtraColours(vehicle: number | Vehicle, pearlescentColor: number, wheelColor: number): void;
+    function setExtraColours(vehicle: number | IVehicle, pearlescentColor: number, wheelColor: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xF40DD601A65F7F19 | Since: 505
      */
-    function setExtraColour5(vehicle: number | Vehicle, color: number): void;
+    function setExtraColour5(vehicle: number | IVehicle, color: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x6089CDF6A57F326C | Since: 505
      */
-    function setExtraColour6(vehicle: number | Vehicle, color: number): void;
+    function setExtraColour6(vehicle: number | IVehicle, color: number): void;
     /**
      * This fixes a vehicle.
      * If the vehicle's engine's broken then you cannot fix it with this native.
      *
      * Hash: 0x115722B1B9C14C1C | Since: 323
      */
-    function setFixed(vehicle: number | Vehicle): void;
+    function setFixed(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x30D779DE7C4F6DD3 | Since: 323
      */
-    function setFlightNozzlePosition(vehicle: number | Vehicle, angleRatio: number): void;
+    function setFlightNozzlePosition(vehicle: number | IVehicle, angleRatio: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x9AA47FFF660CB932 | Since: 323
      */
-    function setFlightNozzlePositionImmediate(vehicle: number | Vehicle, angle: number): void;
+    function setFlightNozzlePositionImmediate(vehicle: number | IVehicle, angle: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xB055A34527CB8FD7 | Since: 323
      */
-    function setForceAfterburner(vehicle: number | Vehicle, toggle: boolean): void;
+    function setForceAfterburner(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Sets some bit of vehicle
      *
      * Hash: 0x8821196D91FA2DE5 | Since: 1290
      */
-    function setForceInteriorlight(vehicle: number | Vehicle, toggle: boolean): void;
+    function setForceInteriorlight(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * SCALE: Setting the speed to 30 would result in a speed of roughly 60mph, according to speedometer.
      *
@@ -45486,31 +45486,31 @@ export declare namespace vehicle {
      *
      * Hash: 0xAB54A438726D25D5 | Since: 323
      */
-    function setForwardSpeed(vehicle: number | Vehicle, speed: number): void;
+    function setForwardSpeed(vehicle: number | IVehicle, speed: number): void;
     /**
      * Seems to be identical to SET_VEHICLE_FORWARD_SPEED
      *
      * Hash: 0x6501129C9E0FFA05 | Since: 877
      */
-    function setForwardSpeedXy(vehicle: number | Vehicle, speed: number): void;
+    function setForwardSpeedXy(vehicle: number | IVehicle, speed: number): void;
     /**
      * Seems to be related to the metal parts, not tyres (like i was expecting lol)
      *
      * Hash: 0x1837AF7C627009BA | Since: 323
      */
-    function setFrictionOverride(vehicle: number | Vehicle, friction: number): void;
+    function setFrictionOverride(vehicle: number | IVehicle, friction: number): void;
     /**
      * It switch to highbeam when p1 is set to true.
      *
      * Hash: 0x8B7FD87F0DDB421E | Since: 323
      */
-    function setFullbeam(vehicle: number | Vehicle, toggle: boolean): void;
+    function setFullbeam(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Allows creation of CEventShockingPlaneFlyby, CEventShockingHelicopterOverhead, and other(?) Shocking events
      *
      * Hash: 0x279D50DE5652D935 | Since: 323
      */
-    function setGeneratesEngineShockingEvents(vehicle: number | Vehicle, toggle: boolean): void;
+    function setGeneratesEngineShockingEvents(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Related to car generators & CPlayerSwitchMgrLong
      *
@@ -45522,49 +45522,49 @@ export declare namespace vehicle {
      *
      * Hash: 0x89F149B6131E57DA | Since: 323
      */
-    function setGravity(vehicle: number | Vehicle, toggle: boolean): void;
+    function setGravity(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x684785568EF26A22 | Since: 323
      */
-    function setHandbrake(vehicle: number | Vehicle, toggle: boolean): void;
+    function setHandbrake(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Use the "AIHandling" string found in handling.meta
      *
      * Hash: 0x10655FAB9915623D | Since: 323
      */
-    function setHandlingOverride(vehicle: number | Vehicle, hash: number | string): void;
+    function setHandlingOverride(vehicle: number | IVehicle, hash: number | string): void;
     /**
      * No comment provided
      *
      * Hash: 0x02398B627547189C | Since: 323
      */
-    function setHasBeenDrivenFlag(vehicle: number | Vehicle, toggle: boolean): void;
+    function setHasBeenDrivenFlag(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x2B5F9D2AF1F1722D | Since: 323
      */
-    function setHasBeenOwnedByPlayer(vehicle: number | Vehicle, owned: boolean): void;
+    function setHasBeenOwnedByPlayer(vehicle: number | IVehicle, owned: boolean): void;
     /**
      * If set to true, prevents vehicle sirens from having sound, leaving only the lights.
      *
      * Hash: 0xD8050E0EB60CF274 | Since: 323
      */
-    function setHasMutedSirens(vehicle: number | Vehicle, toggle: boolean): void;
+    function setHasMutedSirens(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * if true, axles won't bend.
      *
      * Hash: 0x92F0CF722BC4202F | Since: 323
      */
-    function setHasStrongAxles(vehicle: number | Vehicle, toggle: boolean): void;
+    function setHasStrongAxles(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x1AA8A837D2169D94 | Since: 323
      */
-    function setHasUnbreakableLights(vehicle: number | Vehicle, toggle: boolean): void;
+    function setHasUnbreakableLights(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * p1 can be either 0, 1 or 2.
      *
@@ -45576,7 +45576,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x1FD09E7390A74D54 | Since: 323
      */
-    function setHeadlightShadows(vehicle: number | Vehicle): void;
+    function setHeadlightShadows(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -45588,26 +45588,26 @@ export declare namespace vehicle {
      *
      * Hash: 0x6A973569BA094650 | Since: 1604
      */
-    function setImpatienceTimer(vehicle: number | Vehicle): void;
+    function setImpatienceTimer(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x06582AFF74894C75 | Since: 323
      */
-    function setInactiveDuringPlayback(vehicle: number | Vehicle, toggle: boolean): void;
+    function setInactiveDuringPlayback(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Sets the turn signal enabled for a vehicle.
      * Set turnSignal to 1 for left light, 0 for right light.
      *
      * Hash: 0xB5D45264751B7DF0 | Since: 323
      */
-    function setIndicatorLights(vehicle: number | Vehicle, turnSignal: number, toggle: boolean): void;
+    function setIndicatorLights(vehicle: number | IVehicle, turnSignal: number, toggle: boolean): void;
     /**
      * doorId: see SET_VEHICLE_DOOR_SHUT
      *
      * Hash: 0xBE70724027F85BCD | Since: 323
      */
-    function setIndividualDoorsLocked(vehicle: number | Vehicle, doorId: number, doorLockStatus: number): void;
+    function setIndividualDoorsLocked(vehicle: number | IVehicle, doorId: number, doorLockStatus: number): void;
     /**
      * No comment provided
      *
@@ -45619,49 +45619,49 @@ export declare namespace vehicle {
      *
      * Hash: 0xBC2042F090AF6AD3 | Since: 323
      */
-    function setInteriorlight(vehicle: number | Vehicle, toggle: boolean): void;
+    function setInteriorlight(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * If set to TRUE, it seems to suppress door noises and doesn't allow the horn to be continuous.
      *
      * Hash: 0x9D44FCCE98450843 | Since: 323
      */
-    function setInCarModShop(vehicle: number | Vehicle, toggle: boolean): void;
+    function setInCarModShop(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Setting this to false, makes the specified vehicle to where if you press Y your character doesn't even attempt the animation to enter the vehicle. Hence it's not considered aka ignored.
      *
      * Hash: 0x31B927BBC44156CD | Since: 323
      */
-    function setIsConsideredByPlayer(vehicle: number | Vehicle, toggle: boolean): void;
+    function setIsConsideredByPlayer(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * p1 (toggle) was always 1 (true) except in one case in the b678 scripts.
      *
      * Hash: 0x07116E24E9D1929D | Since: 323
      */
-    function setIsRacing(vehicle: number | Vehicle, toggle: boolean): void;
+    function setIsRacing(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x67B2C79AA7FF5738 | Since: 323
      */
-    function setIsStolen(vehicle: number | Vehicle, isStolen: boolean): void;
+    function setIsStolen(vehicle: number | IVehicle, isStolen: boolean): void;
     /**
      * Sets the wanted state of this vehicle.
      *
      * Hash: 0xF7EC25A3EBEEC726 | Since: 323
      */
-    function setIsWanted(vehicle: number | Vehicle, state: boolean): void;
+    function setIsWanted(vehicle: number | IVehicle, state: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xB8FBC8B1330CA9B4 | Since: 323
      */
-    function setKeepEngineOnWhenAbandoned(vehicle: number | Vehicle, toggle: boolean): void;
+    function setKeepEngineOnWhenAbandoned(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x99C82F8A139F3E4E | Since: 323
      */
-    function setKersAllowed(vehicle: number | Vehicle, toggle: boolean): void;
+    function setKersAllowed(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * set's if the vehicle has lights or not.
      * not an on off toggle.
@@ -45675,7 +45675,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x34E710FF01247C5A | Since: 323
      */
-    function setLights(vehicle: number | Vehicle, state: number): void;
+    function setLights(vehicle: number | IVehicle, state: number): void;
     /**
      * multiplier = brightness of head lights.
      * this value isn't capped afaik.
@@ -45686,19 +45686,19 @@ export declare namespace vehicle {
      *
      * Hash: 0xB385454F8791F57C | Since: 323
      */
-    function setLightMultiplier(vehicle: number | Vehicle, multiplier: number): void;
+    function setLightMultiplier(vehicle: number | IVehicle, multiplier: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xC50CE861B55EAB8B | Since: 323
      */
-    function setLimitSpeedWhenPlayerInactive(vehicle: number | Vehicle, toggle: boolean): void;
+    function setLimitSpeedWhenPlayerInactive(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x60BF608F1B8CD1B6 | Since: 323
      */
-    function setLivery(vehicle: number | Vehicle, livery: number): void;
+    function setLivery(vehicle: number | IVehicle, livery: number): void;
     /**
      * Used to set the secondary livery (the roof on Tornado Custom being one such example.)
      *
@@ -45706,25 +45706,25 @@ export declare namespace vehicle {
      *
      * Hash: 0xA6D3A8750DC73270 | Since: 505
      */
-    function setLivery2(vehicle: number | Vehicle, livery: number): void;
+    function setLivery2(vehicle: number | IVehicle, livery: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x93AE6A61BE015BF1 | Since: 323
      */
-    function setLodMultiplier(vehicle: number | Vehicle, multiplier: number): void;
+    function setLodMultiplier(vehicle: number | IVehicle, multiplier: number): void;
     /**
      * To reset the max speed, set the `speed` value to `0.0` or lower.
      *
      * Hash: 0xBAA045B4E42F3C06 | Since: 1103
      */
-    function setMaxSpeed(vehicle: number | Vehicle, speed: number): void;
+    function setMaxSpeed(vehicle: number | IVehicle, speed: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xE851E480B814D4BA | Since: 323
      */
-    function setMayBeUsedByGotoPointAnyMeans(vehicle: number | Vehicle): void;
+    function setMayBeUsedByGotoPointAnyMeans(vehicle: number | IVehicle): void;
     /**
      * In b944, there are 50 (0 - 49) mod types.
      *
@@ -45767,7 +45767,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x6AF0636DDEDCB6DD | Since: 323
      */
-    function setMod(vehicle: number | Vehicle, modType: number, modIndex: number, customTires: boolean): void;
+    function setMod(vehicle: number | IVehicle, modType: number, modIndex: number, customTires: boolean): void;
     /**
      * Makes the vehicle stop spawning naturally in traffic. Here's an essential example:
      *
@@ -45796,7 +45796,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x43FEB945EE7F85B8 | Since: 323
      */
-    function setModColor1(vehicle: number | Vehicle, paintType: number, color: number, pearlescentColor: number): void;
+    function setModColor1(vehicle: number | IVehicle, paintType: number, color: number, pearlescentColor: number): void;
     /**
      * Changes the secondary paint type and color
      * paintType:
@@ -45814,7 +45814,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x816562BADFDEC83E | Since: 323
      */
-    function setModColor2(vehicle: number | Vehicle, paintType: number, color: number): void;
+    function setModColor2(vehicle: number | IVehicle, paintType: number, color: number): void;
     /**
      * Set modKit to 0 if you plan to call SET_VEHICLE_MOD. That's what the game does. Most body modifications through SET_VEHICLE_MOD will not take effect until this is set to 0.
      *
@@ -45822,25 +45822,25 @@ export declare namespace vehicle {
      *
      * Hash: 0x1F2AA07F00B3217A | Since: 323
      */
-    function setModKit(vehicle: number | Vehicle, modKit: number): void;
+    function setModKit(vehicle: number | IVehicle, modKit: number): void;
     /**
      * NOTE: Debugging functions are not present in the retail version of the game.
      *
      * Hash: 0xBFDF984E2C22B94F | Since: 323
      */
-    function setNameDebug(vehicle: number | Vehicle, name: string): void;
+    function setNameDebug(vehicle: number | IVehicle, name: string): void;
     /**
      * No comment provided
      *
      * Hash: 0xFBA550EA44404EE6 | Since: 323
      */
-    function setNeedsToBeHotwired(vehicle: number | Vehicle, toggle: boolean): void;
+    function setNeedsToBeHotwired(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Sets the color of the neon lights of the specified vehicle.
      *
      * Hash: 0x8E0A582209A62695 | Since: 323
      */
-    function setNeonColour(vehicle: number | Vehicle, r: number, g: number, b: number): void;
+    function setNeonColour(vehicle: number | IVehicle, r: number, g: number, b: number): void;
     /**
      * Sets the neon lights of the specified vehicle on/off.
      *
@@ -45852,25 +45852,25 @@ export declare namespace vehicle {
      *
      * Hash: 0x2AA720E4287BF269 | Since: 323
      */
-    function setNeonEnabled(vehicle: number | Vehicle, index: number, toggle: boolean): void;
+    function setNeonEnabled(vehicle: number | IVehicle, index: number, toggle: boolean): void;
     /**
      * Index references CVehicleModelColor
      *
      * Hash: 0xB93B2867F7B479D1 | Since: 1493
      */
-    function setNeonIndexColour(vehicle: number | Vehicle, index: number): void;
+    function setNeonIndexColour(vehicle: number | IVehicle, index: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xAB04325045427AAE | Since: 323
      */
-    function setNotStealableAmbiently(vehicle: number | Vehicle): void;
+    function setNotStealableAmbiently(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x5E569EC46EC21CAE | Since: 323
      */
-    function setNoExplosionDamageFromDriver(vehicle: number | Vehicle, toggle: boolean): void;
+    function setNoExplosionDamageFromDriver(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Sets a vehicle's license plate text.  8 chars maximum.
      *
@@ -45882,7 +45882,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x95A88F0B409CDA47 | Since: 323
      */
-    function setNumberPlateText(vehicle: number | Vehicle, plateText: string): void;
+    function setNumberPlateText(vehicle: number | IVehicle, plateText: string): void;
     /**
      * Plates:
      * Blue/White - 0
@@ -45894,13 +45894,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x9088EB5A43FFB0A1 | Since: 323
      */
-    function setNumberPlateTextIndex(vehicle: number | Vehicle, plateIndex: number): void;
+    function setNumberPlateTextIndex(vehicle: number | IVehicle, plateIndex: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x35BB21DE06784373 | Since: 463
      */
-    function setOccupantsTakeExplosiveDamage(vehicle: number | Vehicle, toggle: boolean): void;
+    function setOccupantsTakeExplosiveDamage(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Sets a vehicle on the ground on all wheels.  Returns whether or not the operation was successful.
      *
@@ -45908,13 +45908,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x49733E92263139D1 | Since: 323
      */
-    function setOnGroundProperly(vehicle: number | Vehicle): boolean;
+    function setOnGroundProperly(vehicle: number | IVehicle): boolean;
     /**
      * Tested on the player's current vehicle. Unless you kill the driver, the vehicle doesn't loose control, however, if enabled, explodeOnImpact is still active. The moment you crash, boom.
      *
      * Hash: 0xF19D095E42D430CC | Since: 323
      */
-    function setOutOfControl(vehicle: number | Vehicle, killDriver: boolean, explodeOnImpact: boolean): void;
+    function setOutOfControl(vehicle: number | IVehicle, killDriver: boolean, explodeOnImpact: boolean): void;
     /**
      * 1000 is max health
      * Begins leaking gas at around 650 health
@@ -45922,13 +45922,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x70DB57649FA8D0D8 | Since: 323
      */
-    function setPetrolTankHealth(vehicle: number | Vehicle, health: number): void;
+    function setPetrolTankHealth(vehicle: number | IVehicle, health: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x5AFEEDD9BB2899D7 | Since: 323
      */
-    function setProvidesCover(vehicle: number | Vehicle, toggle: boolean): void;
+    function setProvidesCover(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -45940,14 +45940,14 @@ export declare namespace vehicle {
      *
      * Hash: 0x222FF6A823D122E2 | Since: 323
      */
-    function setReduceGrip(vehicle: number | Vehicle, toggle: boolean): void;
+    function setReduceGrip(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * val is 0-3
      * Often used in conjunction with: SET_VEHICLE_REDUCE_GRIP
      *
      * Hash: 0x6DEE944E1EE90CFB | Since: 1604
      */
-    function setReduceGripLevel(vehicle: number | Vehicle, val: number): void;
+    function setReduceGripLevel(vehicle: number | IVehicle, val: number): void;
     /**
      * No comment provided
      *
@@ -45959,19 +45959,19 @@ export declare namespace vehicle {
      *
      * Hash: 0x2311DD7159F00582 | Since: 323
      */
-    function setRespectsLocksWhenHasDriver(vehicle: number | Vehicle): void;
+    function setRespectsLocksWhenHasDriver(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x09606148B6C71DEF | Since: 323
      */
-    function setRudderBroken(vehicle: number | Vehicle, toggle: boolean): void;
+    function setRudderBroken(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Only works during nighttime.
      *
      * Hash: 0x14E85C5EE7A4D542 | Since: 323
      */
-    function setSearchlight(heli: number | Vehicle, toggle: boolean, canBeUsedByAI: boolean): void;
+    function setSearchlight(heli: number | IVehicle, toggle: boolean, canBeUsedByAI: boolean): void;
     /**
      * Commands the driver of an armed vehicle (p0) to shoot its weapon at a target (p1). p3, p4 and p5 are the coordinates of the target. Example:
      *
@@ -45979,7 +45979,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x74CD9A9327A282EA | Since: 323
      */
-    function setShootAtTarget(driver: number | Ped, entity: number | Entity, xTarget: number, yTarget: number, zTarget: number): void;
+    function setShootAtTarget(driver: number | IPed, entity: number | IEntity, xTarget: number, yTarget: number, zTarget: number): void;
     /**
      * Does nothing. It's a nullsub.
      *
@@ -45991,7 +45991,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xF4924635A19EB37D | Since: 323
      */
-    function setSiren(vehicle: number | Vehicle, toggle: boolean): void;
+    function setSiren(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -46004,7 +46004,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x1CF38D529D7441D9 | Since: 323
      */
-    function setStaysFrozenWhenCleanedUp(vehicle: number | Vehicle, toggle: boolean): void;
+    function setStaysFrozenWhenCleanedUp(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -46023,13 +46023,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x42A8EC77D5150CBE | Since: 323
      */
-    function setSteerBias(vehicle: number | Vehicle, value: number): void;
+    function setSteerBias(vehicle: number | IVehicle, value: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xDCE97BDF8A0EABC8 | Since: 1103
      */
-    function setSteerForBuildings(vehicle: number | Vehicle): void;
+    function setSteerForBuildings(vehicle: number | IVehicle): void;
     /**
      * sfink: sets bit in vehicle's structure, used by maintransition, fm_mission_controller, mission_race and a couple of other scripts. see dissassembly:
      * CVehicle *__fastcall sub_140CDAA10(signed int a1, char a2)
@@ -46047,61 +46047,61 @@ export declare namespace vehicle {
      *
      * Hash: 0x6EBFB22D646FFC18 | Since: 323
      */
-    function setStopInstantlyWhenPlayerInactive(vehicle: number | Vehicle, toggle: boolean): void;
+    function setStopInstantlyWhenPlayerInactive(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * If set to true, vehicle will not take crash damage, but is still susceptible to damage from bullets and explosives
      *
      * Hash: 0x3E8C8727991A8A0B | Since: 323
      */
-    function setStrong(vehicle: number | Vehicle, toggle: boolean): void;
+    function setStrong(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x5815BD2763178DF4 | Since: 2802
      */
-    function setTailLights(vehicle: number | Vehicle, toggle: boolean): void;
+    function setTailLights(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x737E398138550FFF | Since: 944
      */
-    function setTankStationary(vehicle: number | Vehicle): void;
+    function setTankStationary(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x56B94C6D7127DFBA | Since: 323
      */
-    function setTankTurretPosition(vehicle: number | Vehicle, position: number): void;
+    function setTankTurretPosition(vehicle: number | IVehicle, position: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x2E0A74E1002380B1 | Since: 323
      */
-    function setTimedExplosion(vehicle: number | Vehicle, ped: number | Ped, toggle: boolean): void;
+    function setTimedExplosion(vehicle: number | IVehicle, ped: number | IPed, toggle: boolean): void;
     /**
      * Sets how much the crane on the tow truck is raised, where 0.0 is fully lowered and 1.0 is fully raised.
      *
      * Hash: 0xFE54B92A344583CA | Since: 323
      */
-    function setTowTruckArmPosition(vehicle: number | Vehicle, position: number): void;
+    function setTowTruckArmPosition(vehicle: number | IVehicle, position: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x1093408B4B9D1146 | Since: 323
      */
-    function setTurretSpeedThisFrame(vehicle: number | Vehicle, speed: number): void;
+    function setTurretSpeedThisFrame(vehicle: number | IVehicle, speed: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x0581730AB9380412 | Since: 1103
      */
-    function setTurretTarget(vehicle: number | Vehicle, pos: Vector3): void;
+    function setTurretTarget(vehicle: number | IVehicle, pos: Vector3): void;
     /**
      * Allows you to toggle bulletproof tires.
      *
      * Hash: 0xEB9DC3C7D8596C46 | Since: 323
      */
-    function setTyresCanBurst(vehicle: number | Vehicle, toggle: boolean): void;
+    function setTyresCanBurst(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * `"To burst tyres VEHICLE::SET_VEHICLE_TYRE_BURST(vehicle, 0, true, 1000.0)`
      * to burst all tyres type it 8 times where p1 = 0 to 7.
@@ -46119,7 +46119,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xEC6A202EE4960385 | Since: 323
      */
-    function setTyreBurst(vehicle: number | Vehicle, index: number, onRim: boolean): void;
+    function setTyreBurst(vehicle: number | IVehicle, index: number, onRim: boolean): void;
     /**
      * tyreIndex = 0 to 4 on normal vehicles
      *
@@ -46134,7 +46134,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x6E13FC662B882D1D | Since: 323
      */
-    function setTyreFixed(vehicle: number | Vehicle, tyreIndex: number): void;
+    function setTyreFixed(vehicle: number | IVehicle, tyreIndex: number): void;
     /**
      * Sets the tire smoke's color of this vehicle.
      *
@@ -46147,25 +46147,25 @@ export declare namespace vehicle {
      *
      * Hash: 0xB5BA80F839791C0F | Since: 323
      */
-    function setTyreSmokeColor(vehicle: number | Vehicle, r: number, g: number, b: number): void;
+    function setTyreSmokeColor(vehicle: number | IVehicle, r: number, g: number, b: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x8ABA6AF54B942B95 | Since: 323
      */
-    function setUndriveable(vehicle: number | Vehicle, toggle: boolean): void;
+    function setUndriveable(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xE05DD0E9707003A3 | Since: 323
      */
-    function setUsedForPilotSchool(vehicle: number | Vehicle, toggle: boolean): void;
+    function setUsedForPilotSchool(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * vehicle must be a plane
      *
      * Hash: 0xCAC66558B944DA67 | Since: 323
      */
-    function setUsesLargeRearRamp(vehicle: number | Vehicle, toggle: boolean): void;
+    function setUsesLargeRearRamp(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -46177,7 +46177,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x1D97D1E3A70A649F | Since: 323
      */
-    function setUseAlternateHandling(vehicle: number | Vehicle, toggle: boolean): void;
+    function setUseAlternateHandling(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Used for blazer5. Changes the quadbike-jetski transformation input from raise/lower convertible roof (hold H by default) to horn (press E by default.)
      *
@@ -46189,31 +46189,31 @@ export declare namespace vehicle {
      *
      * Hash: 0xE023E8AC4EF7C117 | Since: 323
      */
-    function setUseCutsceneWheelCompression(p0: number | Vehicle): boolean;
+    function setUseCutsceneWheelCompression(p0: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x88BC673CA9E0AE99 | Since: 323
      */
-    function setUseMoreRestrictiveSpawnChecks(vehicle: number | Vehicle): void;
+    function setUseMoreRestrictiveSpawnChecks(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0xC45C27EF50F36ADC | Since: 323
      */
-    function setUsePlayerLightSettings(vehicle: number | Vehicle, toggle: boolean): void;
+    function setUsePlayerLightSettings(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x86B4B6212CB8B627 | Since: 1011
      */
-    function setWeaponCanTargetObjects(vehicle: number | Vehicle, toggle: boolean): void;
+    function setWeaponCanTargetObjects(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x45A561A9421AB6AD | Since: 944
      */
-    function setWeaponDamageScale(vehicle: number | Vehicle, multiplier: number): boolean;
+    function setWeaponDamageScale(vehicle: number | IVehicle, multiplier: number): boolean;
     /**
      * Set vehicle's primary mounted weapon 2 ammo. For example, use it on APC.
      * For example, you can "remove" any vehicle weapon from any vehicle.
@@ -46221,19 +46221,19 @@ export declare namespace vehicle {
      *
      * Hash: 0x44CD1F493DB2A0A6 | Since: 944
      */
-    function setWeaponRestrictedAmmo(vehicle: number | Vehicle, weaponIndex: number, capacity: number): void;
+    function setWeaponRestrictedAmmo(vehicle: number | IVehicle, weaponIndex: number, capacity: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x29B18B4FD460CA8F | Since: 323
      */
-    function setWheelsCanBreak(vehicle: number | Vehicle, enabled: boolean): void;
+    function setWheelsCanBreak(vehicle: number | IVehicle, enabled: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xA37B9A517B133349 | Since: 323
      */
-    function setWheelsCanBreakOffWhenBlowUp(vehicle: number | Vehicle, toggle: boolean): void;
+    function setWheelsCanBreakOffWhenBlowUp(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * 0: Sport
      * 1: Muscle
@@ -46251,19 +46251,19 @@ export declare namespace vehicle {
      *
      * Hash: 0x487EB21CC7295BA1 | Since: 323
      */
-    function setWheelType(vehicle: number | Vehicle, WheelType: number): void;
+    function setWheelType(vehicle: number | IVehicle, WheelType: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xBE5C1255A1830FF5 | Since: 323
      */
-    function setWillForceOtherVehiclesToStop(vehicle: number | Vehicle, toggle: boolean): void;
+    function setWillForceOtherVehiclesToStop(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x2C4A1590ABF43E8B | Since: 323
      */
-    function setWillTellOthersToHurry(vehicle: number | Vehicle): void;
+    function setWillTellOthersToHurry(vehicle: number | IVehicle): void;
     /**
      * enum WindowTints
      * {
@@ -46279,7 +46279,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x57C51E6BAD752696 | Since: 323
      */
-    function setWindowTint(vehicle: number | Vehicle, tint: number): void;
+    function setWindowTint(vehicle: number | IVehicle, tint: number): void;
     /**
      * `color`: is the paint index for the vehicle.
      * Paint index goes from 0 to 12.
@@ -46288,37 +46288,37 @@ export declare namespace vehicle {
      *
      * Hash: 0xE41033B25D003A07 | Since: 1604
      */
-    function setXenonLightColorIndex(vehicle: number | Vehicle, colorIndex: number): void;
+    function setXenonLightColorIndex(vehicle: number | IVehicle, colorIndex: number): void;
     /**
      * Enables/disables the ability to wheelie on motorcycles.
      *
      * Hash: 0x1312DDD8385AEE4E | Since: 1103
      */
-    function setWheelieEnabled(vehicle: number | Vehicle, enabled: boolean): void;
+    function setWheelieEnabled(vehicle: number | IVehicle, enabled: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xF660602546D27BA8 | Since: 944
      */
-    function setWheelsExtendedInstantly(vehicle: number | Vehicle): void;
+    function setWheelsExtendedInstantly(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x5335BE58C083E74E | Since: 1011
      */
-    function setWheelsRetractedInstantly(vehicle: number | Vehicle): void;
+    function setWheelsRetractedInstantly(vehicle: number | IVehicle): void;
     /**
      * SET_TIME_POSITION_IN_RECORDING can be emulated by: desired_time - GET_TIME_POSITION_IN_RECORDING(vehicle)
      *
      * Hash: 0x9438F7AD68771A20 | Since: 323
      */
-    function skipTimeInPlaybackRecorded(vehicle: number | Vehicle, time: number): void;
+    function skipTimeInPlaybackRecorded(vehicle: number | IVehicle, time: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xAB8E2EDA0C0A5883 | Since: 323
      */
-    function skipToEndAndStopPlaybackRecorded(vehicle: number | Vehicle): void;
+    function skipToEndAndStopPlaybackRecorded(vehicle: number | IVehicle): void;
     /**
      * windowIndex:
      * 0 = Front Left Window
@@ -46333,13 +46333,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x9E5B5E4D2CCD2259 | Since: 323
      */
-    function smashWindow(vehicle: number | Vehicle, windowIndex: number): void;
+    function smashWindow(vehicle: number | IVehicle, windowIndex: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x374706271354CB18 | Since: 323
      */
-    function stabiliseEntityAttachedToHeli(vehicle: number | Vehicle, entity: number | Entity): void;
+    function stabiliseEntityAttachedToHeli(vehicle: number | IVehicle, entity: number | IEntity): void;
     /**
      * `p3 is some flag related to 'trailers' (invokes CVehicle::GetTrailer).`
      *
@@ -46347,7 +46347,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x3F878F92B3A7A071 | Since: 323
      */
-    function startPlaybackRecorded(vehicle: number | Vehicle, recording: number, script: string): void;
+    function startPlaybackRecorded(vehicle: number | IVehicle, recording: number, script: string): void;
     /**
      * AI abides by the provided driving style (e.g., stopping at red lights or waiting behind traffic) while executing the specificed vehicle recording.
      *
@@ -46355,7 +46355,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x29DE5FA52D00428C | Since: 323
      */
-    function startPlaybackRecordedUsingAi(vehicle: number | Vehicle, recording: number, script: string, speed: number, drivingStyle: number): void;
+    function startPlaybackRecordedUsingAi(vehicle: number | IVehicle, recording: number, script: string, speed: number, drivingStyle: number): void;
     /**
      * flags requires further research, e.g., 0x4/0x8 are related to the AI driving task and 0x20 is internally set and interacts with dynamic entity components.
      *
@@ -46363,13 +46363,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x7D80FD645D4DA346 | Since: 323
      */
-    function startPlaybackRecordedWithFlags(vehicle: number | Vehicle, recording: number, script: string, flags: number, time: number, drivingStyle: number): void;
+    function startPlaybackRecordedWithFlags(vehicle: number | IVehicle, recording: number, script: string, flags: number, time: number, drivingStyle: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xB8FF7AB45305C345 | Since: 323
      */
-    function startAlarm(vehicle: number | Vehicle): void;
+    function startAlarm(vehicle: number | IVehicle): void;
     /**
      * Sounds the horn for the specified vehicle.
      *
@@ -46381,7 +46381,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x9C8C6504B5B63D2C | Since: 323
      */
-    function startHorn(vehicle: number | Vehicle, duration: number, mode: number | string, forever: boolean): void;
+    function startHorn(vehicle: number | IVehicle, duration: number, mode: number | string, forever: boolean): void;
     /**
      * No comment provided
      *
@@ -46393,25 +46393,25 @@ export declare namespace vehicle {
      *
      * Hash: 0x7C06330BFDDA182E | Since: 1103
      */
-    function stopBringingToHalt(vehicle: number | Vehicle): void;
+    function stopBringingToHalt(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x54833611C17ABDEA | Since: 323
      */
-    function stopPlaybackRecorded(vehicle: number | Vehicle): void;
+    function stopPlaybackRecorded(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
      * Hash: 0x83F813570FF519DE | Since: 573
      */
-    function suppressNeonsOn(vehicle: number | Vehicle, toggle: boolean): void;
+    function suppressNeonsOn(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Same call as ALLOW_BOAT_BOOM_TO_ANIMATE
      *
      * Hash: 0xC1F981A6F74F0C23 | Since: 323
      */
-    function swingBoatBoomFreely(vehicle: number | Vehicle, toggle: boolean): void;
+    function swingBoatBoomFreely(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Sets the boat boom position for the `TR3` trailer.
      * Ratio value is between `0.0` and `1.0`, where `0.0` is 90 degrees to the left of the boat, and `1.0` is just slightly to the right/back of the boat.
@@ -46419,7 +46419,7 @@ export declare namespace vehicle {
      *
      * Hash: 0xF488C566413B4232 | Since: 323
      */
-    function swingBoatBoomToRatio(vehicle: number | Vehicle, ratio: number): void;
+    function swingBoatBoomToRatio(vehicle: number | IVehicle, ratio: number): void;
     /**
      * Toggles whether ambient trains can spawn on the specified track or not
      *
@@ -46455,7 +46455,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x2A1F4F37F95BAD08 | Since: 323
      */
-    function toggleMod(vehicle: number | Vehicle, modType: number, toggle: boolean): void;
+    function toggleMod(vehicle: number | IVehicle, modType: number, toggle: boolean): void;
     /**
      * in script hook .net
      *
@@ -46464,25 +46464,25 @@ export declare namespace vehicle {
      *
      * Hash: 0x64473AEFDCF47DCA | Since: 323
      */
-    function trackVisibility(vehicle: number | Vehicle): void;
+    function trackVisibility(vehicle: number | IVehicle): void;
     /**
      * Transforms the `stormberg`/`toreador` to its "road vehicle" variant. If the vehicle is already in that state then the vehicle transformation audio will still play, but the vehicle won't change at all.
      *
      * Hash: 0x2A69FFD1B42BFF9E | Since: 1290
      */
-    function transformToCar(vehicle: number | Vehicle, noAnimation: boolean): void;
+    function transformToCar(vehicle: number | IVehicle, noAnimation: boolean): void;
     /**
      * Transforms the `stormberg`/`toreador` to its "submarine" variant. If the vehicle is already in that state then the vehicle transformation audio will still play, but the vehicle won't change at all.
      *
      * Hash: 0xBE4C854FFDB6EEBE | Since: 1365
      */
-    function transformToSubmarine(vehicle: number | Vehicle, noAnimation: boolean): boolean;
+    function transformToSubmarine(vehicle: number | IVehicle, noAnimation: boolean): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x8879EE09268305D5 | Since: 323
      */
-    function unpausePlaybackRecorded(vehicle: number | Vehicle): void;
+    function unpausePlaybackRecorded(vehicle: number | IVehicle): void;
     /**
      * No comment provided
      *
@@ -46527,7 +46527,7 @@ export declare namespace vehicle {
      *
      * Hash: 0x4D610C6B56031351 | Since: 1011
      */
-    function setParachuteModelOverride(vehicle: number | Vehicle, modelHash: number | string): void;
+    function setParachuteModelOverride(vehicle: number | IVehicle, modelHash: number | string): void;
     /**
      * Variations available for the generic parachute (sr_prop_specraces_para_s_01):
      * - 0: Rainbow
@@ -46541,31 +46541,31 @@ export declare namespace vehicle {
      *
      * Hash: 0xA74AD2439468C883 | Since: 1011
      */
-    function setParachuteModelTintIndex(vehicle: number | Vehicle, textureVariation: number): void;
+    function setParachuteModelTintIndex(vehicle: number | IVehicle, textureVariation: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x28D034A93FE31BF5 | Since: 944
      */
-    function setRampAndRammingCarsTakeDamage(vehicle: number | Vehicle, toggle: boolean): void;
+    function setRampAndRammingCarsTakeDamage(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x0BFFB028B3DD0A97 | Since: 944
      */
-    function startParachuting(vehicle: number | Vehicle, active: boolean): void;
+    function startParachuting(vehicle: number | IVehicle, active: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xEA4743874D515F13 | Since: 2944
      */
-    function areMissileBaysDeployed(vehicle: number | Vehicle): boolean;
+    function areMissileBaysDeployed(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xDC05D2777F855F44 | Since: 3407
      */
-    function enableIndividualPlanePropeller(vehicle: number | Vehicle, propeller: number): void;
+    function enableIndividualPlanePropeller(vehicle: number | IVehicle, propeller: number): void;
     /**
      * No comment provided
      *
@@ -46577,25 +46577,25 @@ export declare namespace vehicle {
      *
      * Hash: 0xBEC4B8653462450E | Since: 3095
      */
-    function getRemainingNitrousDuration(vehicle: number | Vehicle): number;
+    function getRemainingNitrousDuration(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0x56185A25D45A0DCD | Since: 3095
      */
-    function getCurrentDriveGear(vehicle: number | Vehicle): number;
+    function getCurrentDriveGear(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0xF9DDA40BC293A61E | Since: 3095
      */
-    function getCurrentRevRatio(vehicle: number | Vehicle): number;
+    function getCurrentRevRatio(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0xFD8CE53356B5D745 | Since: 3095
      */
-    function getDesiredDriveGear(vehicle: number | Vehicle): number;
+    function getDesiredDriveGear(vehicle: number | IVehicle): number;
     /**
      * Returns the vehicle's drivetrain type.
      *
@@ -46617,13 +46617,13 @@ export declare namespace vehicle {
      *
      * Hash: 0xE728F090D538CB18 | Since: 3095
      */
-    function getExhaustBone(vehicle: number | Vehicle, index: number): [boolean, number, boolean];
+    function getExhaustBone(vehicle: number | IVehicle, index: number): [boolean, number, boolean];
     /**
      * No comment provided
      *
      * Hash: 0x24910C3D66BA770D | Since: 3095
      */
-    function getMaxDriveGearCount(vehicle: number | Vehicle): number;
+    function getMaxDriveGearCount(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
@@ -46641,13 +46641,13 @@ export declare namespace vehicle {
      *
      * Hash: 0x92D96892FC06AF22 | Since: 3095
      */
-    function getThrottle(vehicle: number | Vehicle): number;
+    function getThrottle(vehicle: number | IVehicle): number;
     /**
      * No comment provided
      *
      * Hash: 0x80D9D32636369C92 | Since: 2802
      */
-    function getTrailerParentVehicle(trailer: number | Vehicle): number;
+    function getTrailerParentVehicle(trailer: number | IVehicle): number;
     /**
      * No comment provided
      *
@@ -46659,92 +46659,92 @@ export declare namespace vehicle {
      *
      * Hash: 0x71C6302CBCA6CA35 | Since: 3407
      */
-    function isOnBoostPad(vehicle: number | Vehicle): boolean;
+    function isOnBoostPad(vehicle: number | IVehicle): boolean;
     /**
      * _SET_ALLOW_R* - _SET_ALLOW_V*
      *
      * Hash: 0x27D27223E8EF22ED | Since: 3095
      */
-    function setAllowCollisionWhenIn(vehicle: number | Vehicle, toggle: boolean): void;
+    function setAllowCollisionWhenIn(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x48BD57D0DD17786A | Since: 3095
      */
-    function setAttachedToTowTruckArm(towTruck: number | Vehicle, vehicle: number | Vehicle): void;
+    function setAttachedToTowTruckArm(towTruck: number | IVehicle, vehicle: number | IVehicle): void;
     /**
      * Use the vehicle bounds (instead of viewport) when deciding if a vehicle is sufficiently above the water (waterheight.dat), bypassing wave simulation checks
      *
      * Hash: 0x85FC953F6C6CBDE1 | Since: 2802
      */
-    function setBoundsAffectWaterProbes(vehicle: number | Vehicle, toggle: boolean): void;
+    function setBoundsAffectWaterProbes(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x0C02468829E4AA65 | Since: 2944
      */
-    function setDeployMissileBays(vehicle: number | Vehicle, deploy: boolean): void;
+    function setDeployMissileBays(vehicle: number | IVehicle, deploy: boolean): void;
     /**
      * Prevents the vehicle from exploding when taking body damage if the inflictor is an AI-controlled vehicle. Only works for planes.
      *
      * Hash: 0xB0B7DF5CB876FF5E | Since: 3407
      */
-    function setDisableExplodeFromBodyDamageReceivedByAi(vehicle: number | Vehicle, disable: boolean): void;
+    function setDisableExplodeFromBodyDamageReceivedByAi(vehicle: number | IVehicle, disable: boolean): void;
     /**
      * First two floats relate to rumble, the last is a threshold
      *
      * Hash: 0xDAF4C98C18AC6F06 | Since: 3095
      */
-    function setDriftSlipAngleLimits(vehicle: number | Vehicle, durationScalar: number, amplitudeScalar: number, slipAngleLimit: number): void;
+    function setDriftSlipAngleLimits(vehicle: number | IVehicle, durationScalar: number, amplitudeScalar: number, slipAngleLimit: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x16CFBC5E7EB32861 | Since: 3095
      */
-    function setMinimumTimeBetweenGearShifts(vehicle: number | Vehicle, time: number): void;
+    function setMinimumTimeBetweenGearShifts(vehicle: number | IVehicle, time: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x465EEA70AF251045 | Since: 3095
      */
-    function setNitrousIsVisible(vehicle: number | Vehicle, enabled: boolean): void;
+    function setNitrousIsVisible(vehicle: number | IVehicle, enabled: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xAFD262ACCA64479A | Since: 3095
      */
-    function setOverrideTractionLossMultiplier(vehicle: number | Vehicle, modifier: number): void;
+    function setOverrideTractionLossMultiplier(vehicle: number | IVehicle, modifier: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xBAFB99B304BC52A7 | Since: 3407
      */
-    function setPlaneAvoidsOthers(vehicle: number | Vehicle, toggle: boolean): void;
+    function setPlaneAvoidsOthers(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x1AD0F63A94E10EFF | Since: 3407
      */
-    function setRemainingNitrousDuration(vehicle: number | Vehicle, duration: number): void;
+    function setRemainingNitrousDuration(vehicle: number | IVehicle, duration: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x337EF33DA3DDB990 | Since: 3095
      */
-    function setTransmissionReducedGearRatio(vehicle: number | Vehicle, toggle: boolean): void;
+    function setTransmissionReducedGearRatio(vehicle: number | IVehicle, toggle: boolean): void;
     /**
      * Does not actually return anything.
      *
      * Hash: 0x84D7FFD223CAAFFD | Since: 3407
      */
-    function setExplosiveDamageScale(vehicle: number | Vehicle, scale: number): any;
+    function setExplosiveDamageScale(vehicle: number | IVehicle, scale: number): any;
     /**
      * 0.0f = engine rev minimum
      * 1.0f = engine rev limit
      *
      * Hash: 0x5AE614ECA5FDD423 | Since: 3095
      */
-    function setMaxLaunchEngineRevs(vehicle: number | Vehicle, modifier: number): void;
+    function setMaxLaunchEngineRevs(vehicle: number | IVehicle, modifier: number): void;
     /**
      * No comment provided
      *
@@ -46844,13 +46844,13 @@ export declare namespace weapon {
      *
      * Hash: 0x78F0424C34306220 | Since: 323
      */
-    function addAmmoToPed(ped: number | Ped, weaponHash: number | string, ammo: number): void;
+    function addAmmoToPed(ped: number | IPed, weaponHash: number | string, ammo: number): void;
     /**
      * Ammo types: https://gist.github.com/root-cause/faf41f59f7a6d818b7db0b839bd147c1
      *
      * Hash: 0x2472622CE1F2D45F | Since: 1103
      */
-    function addPedAmmoByType(ped: number | Ped, ammoTypeHash: number | string, ammo: number): void;
+    function addPedAmmoByType(ped: number | IPed, ammoTypeHash: number | string, ammo: number): void;
     /**
      * this returns if you can use the weapon while using a parachute
      * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -46863,13 +46863,13 @@ export declare namespace weapon {
      *
      * Hash: 0xAC678E40BE7C74D2 | Since: 323
      */
-    function clearEntityLastDamage(entity: number | Entity): void;
+    function clearEntityLastDamage(entity: number | IEntity): void;
     /**
      * Does NOT seem to work with HAS_PED_BEEN_DAMAGED_BY_WEAPON. Use CLEAR_ENTITY_LAST_WEAPON_DAMAGE and HAS_ENTITY_BEEN_DAMAGED_BY_WEAPON instead.
      *
      * Hash: 0x0E98F88A24C5F4B8 | Since: 323
      */
-    function clearPedLastDamage(ped: number | Ped): void;
+    function clearPedLastDamage(ped: number | IPed): void;
     /**
      * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
@@ -46913,7 +46913,7 @@ export declare namespace weapon {
      *
      * Hash: 0xFC4BD125DE7611E4 | Since: 323
      */
-    function explodeProjectiles(ped: number | Ped, weaponHash: number | string): void;
+    function explodeProjectiles(ped: number | IPed, weaponHash: number | string): void;
     /**
      * No comment provided
      *
@@ -46925,7 +46925,7 @@ export declare namespace weapon {
      *
      * Hash: 0x2E1202248937775C | Since: 323
      */
-    function getAmmoInClip(ped: number | Ped, weaponHash: number | string): [boolean, number];
+    function getAmmoInClip(ped: number | IPed, weaponHash: number | string): [boolean, number];
     /**
      * `WEAPON::GET_AMMO_IN_PED_WEAPON(PLAYER::PLAYER_PED_ID(), a_0)`
      *
@@ -46938,13 +46938,13 @@ export declare namespace weapon {
      *
      * Hash: 0x015A522136D7F951 | Since: 323
      */
-    function getAmmoInPed(ped: number | Ped, weaponhash: number | string): number;
+    function getAmmoInPed(ped: number | IPed, weaponhash: number | string): number;
     /**
      * p1 is always 0 in the scripts.
      *
      * Hash: 0x8483E98E8B888AE2 | Since: 323
      */
-    function getBestPed(ped: number | Ped): number;
+    function getBestPed(ped: number | IPed): number;
     /**
      * Example in VB
      *
@@ -46960,7 +46960,7 @@ export declare namespace weapon {
      *
      * Hash: 0x1017582BCD3832DC | Since: 323
      */
-    function getCurrentPedVehicle(ped: number | Ped): [boolean, number];
+    function getCurrentPedVehicle(ped: number | IPed): [boolean, number];
     /**
      * The return value seems to indicate returns true if the hash of the weapon object weapon equals the weapon hash.
      * p2 seems to be 1 most of the time.
@@ -46976,56 +46976,56 @@ export declare namespace weapon {
      *
      * Hash: 0x3A87E44BB9A01D54 | Since: 323
      */
-    function getCurrentPed(ped: number | Ped): [boolean, number];
+    function getCurrentPed(ped: number | IPed): [boolean, number];
     /**
      * No comment provided
      *
      * Hash: 0x3B390A939AF0B5FC | Since: 323
      */
-    function getCurrentPedEntityIndex(ped: number | Ped): number;
+    function getCurrentPedEntityIndex(ped: number | IPed): number;
     /**
      * gadgetHash - was always 0xFBAB5776 ("GADGET_PARACHUTE").
      *
      * Hash: 0xF731332072F5156C | Since: 323
      */
-    function getIsPedGadgetEquipped(ped: number | Ped, gadgetHash: number | string): boolean;
+    function getIsPedGadgetEquipped(ped: number | IPed, gadgetHash: number | string): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x840F03E9041E2C9C | Since: 323
      */
-    function getLockonDistanceOfCurrentPed(ped: number | Ped): number;
+    function getLockonDistanceOfCurrentPed(ped: number | IPed): number;
     /**
      * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
      * Hash: 0xDC16122C7A20C933 | Since: 323
      */
-    function getMaxAmmo(ped: number | Ped, weaponHash: number | string): [boolean, number];
+    function getMaxAmmo(ped: number | IPed, weaponHash: number | string): [boolean, number];
     /**
      * Returns the max ammo for an ammo type. Ammo types: https://gist.github.com/root-cause/faf41f59f7a6d818b7db0b839bd147c1
      *
      * Hash: 0x585847C5E4E11709 | Since: 1103
      */
-    function getMaxAmmoByType(ped: number | Ped, ammoTypeHash: number | string): [boolean, number];
+    function getMaxAmmoByType(ped: number | IPed, ammoTypeHash: number | string): [boolean, number];
     /**
      * p2 is mostly 1 in the scripts.
      * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
      * Hash: 0xA38DCFFCEA8962FA | Since: 323
      */
-    function getMaxAmmoInClip(ped: number | Ped, weaponHash: number | string): number;
+    function getMaxAmmoInClip(ped: number | IPed, weaponHash: number | string): number;
     /**
      * No comment provided
      *
      * Hash: 0x814C9D19DFD69679 | Since: 323
      */
-    function getMaxRangeOfCurrentPed(ped: number | Ped): number;
+    function getMaxRangeOfCurrentPed(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0x39D22031557946C1 | Since: 323
      */
-    function getPedAmmoByType(ped: number | Ped, ammoTypeHash: number | string): number;
+    function getPedAmmoByType(ped: number | IPed, ammoTypeHash: number | string): number;
     /**
      * Returns the current ammo type of the specified ped's specified weapon.
      * MkII magazines will change the return value, like Pistol MkII returning AMMO_PISTOL without any components and returning AMMO_PISTOL_TRACER after Tracer Rounds component is attached.
@@ -47034,7 +47034,7 @@ export declare namespace weapon {
      *
      * Hash: 0x7FEAD38B326B9F74 | Since: 323
      */
-    function getPedAmmoTypeFrom(ped: number | Ped, weaponHash: number | string): number;
+    function getPedAmmoTypeFrom(ped: number | IPed, weaponHash: number | string): number;
     /**
      * Pass ped. Pass address of Vector3.
      * The coord will be put into the Vector3.
@@ -47042,7 +47042,7 @@ export declare namespace weapon {
      *
      * Hash: 0x6C4D0409BA1A2BC2 | Since: 323
      */
-    function getPedLastImpactCoord(ped: number | Ped): [boolean, Vector3];
+    function getPedLastImpactCoord(ped: number | IPed): [boolean, Vector3];
     /**
      * Returns the base/default ammo type of the specified ped's specified weapon.
      * Use GET_PED_AMMO_TYPE_FROM_WEAPON if you want current ammo type (like AMMO_MG_INCENDIARY/AMMO_MG_TRACER while using MkII magazines) and use this if you want base ammo type. (AMMO_MG)
@@ -47050,32 +47050,32 @@ export declare namespace weapon {
      *
      * Hash: 0xF489B44DD5AF4BD9 | Since: 1103
      */
-    function getPedOriginalAmmoTypeFrom(ped: number | Ped, weaponHash: number | string): number;
+    function getPedOriginalAmmoTypeFrom(ped: number | IPed, weaponHash: number | string): number;
     /**
      * No comment provided
      *
      * Hash: 0xEFFED78E9011134D | Since: 323
      */
-    function getPedtypeInSlot(ped: number | Ped, weaponSlot: number | string): number;
+    function getPedtypeInSlot(ped: number | IPed, weaponSlot: number | string): number;
     /**
      * No comment provided
      *
      * Hash: 0xA2C9AC24B4061285 | Since: 1103
      */
-    function getPedCamoIndex(ped: number | Ped, weaponHash: number | string): number;
+    function getPedCamoIndex(ped: number | IPed, weaponHash: number | string): number;
     /**
      * Returns -1 if camoComponentHash is invalid/not attached to the weapon.
      * Full list of weapons, components, tint indexes & weapon liveries by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
      * Hash: 0xF0A60040BE558F2D | Since: 1103
      */
-    function getPedComponentTintIndex(ped: number | Ped, weaponHash: number | string, camoComponentHash: number | string): number;
+    function getPedComponentTintIndex(ped: number | IPed, weaponHash: number | string, camoComponentHash: number | string): number;
     /**
      * Full list of weapons, components & tint indexes by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
      * Hash: 0x2B9EEDC07BD06B9F | Since: 323
      */
-    function getPedTintIndex(ped: number | Ped, weaponHash: number | string): number;
+    function getPedTintIndex(ped: number | IPed, weaponHash: number | string): number;
     /**
      * Returns the hash of the weapon.
      *
@@ -47094,7 +47094,7 @@ export declare namespace weapon {
      *
      * Hash: 0x0A6DB4965674D243 | Since: 323
      */
-    function getSelectedPed(ped: number | Ped): number;
+    function getSelectedPed(ped: number | IPed): number;
     /**
      * No comment provided
      *
@@ -47227,7 +47227,7 @@ export declare namespace weapon {
      *
      * Hash: 0xB3EA4FEABF41464B | Since: 1103
      */
-    function getObjectComponentTintIndex(weaponObject: number | Object, camoComponentHash: number | string): number;
+    function getObjectComponentTintIndex(weaponObject: number | IObject, camoComponentHash: number | string): number;
     /**
      * Drops the current weapon and returns the object
      *
@@ -47235,13 +47235,13 @@ export declare namespace weapon {
      *
      * Hash: 0xCAE1DC9A0E22A16D | Since: 323
      */
-    function getObjectFromPed(ped: number | Ped): number;
+    function getObjectFromPed(ped: number | IPed): number;
     /**
      * No comment provided
      *
      * Hash: 0xCD183314F7CD2E57 | Since: 323
      */
-    function getObjectTintIndex(weapon: number | Object): number;
+    function getObjectTintIndex(weapon: number | IObject): number;
     /**
      * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
@@ -47262,20 +47262,20 @@ export declare namespace weapon {
      *
      * Hash: 0xB282DC6EBD803C75 | Since: 323
      */
-    function giveDelayedToPed(ped: number | Ped, weaponHash: number | string, ammoCount: number, bForceInHand: boolean): void;
+    function giveDelayedToPed(ped: number | IPed, weaponHash: number | string, ammoCount: number, bForceInHand: boolean): void;
     /**
      * Gives the specified loadout to the specified ped.
      * Loadouts are defined in common.rpf\data\ai\loadouts.meta
      *
      * Hash: 0x68F8BE6AF5CDF8A6 | Since: 505
      */
-    function giveLoadoutToPed(ped: number | Ped, loadoutHash: number | string): void;
+    function giveLoadoutToPed(ped: number | IPed, loadoutHash: number | string): void;
     /**
      * Full list of weapons & components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
      * Hash: 0xD966D51AA5B28BB9 | Since: 323
      */
-    function giveComponentToPed(ped: number | Ped, weaponHash: number | string, componentHash: number | string): void;
+    function giveComponentToPed(ped: number | IPed, weaponHash: number | string, componentHash: number | string): void;
     /**
      * componentHash:
      * `(use WEAPON::GET_WEAPON_COMPONENT_TYPE_MODEL() to get hash value)`
@@ -47283,19 +47283,19 @@ export declare namespace weapon {
      *
      * Hash: 0x33E179436C0B31DB | Since: 323
      */
-    function giveComponentToWeaponObject(weaponObject: number | Object, componentHash: number | string): void;
+    function giveComponentToWeaponObject(weaponObject: number | IObject, componentHash: number | string): void;
     /**
      * No comment provided
      *
      * Hash: 0xB1FA61371AF7C4B7 | Since: 323
      */
-    function giveObjectToPed(weaponObject: number | Object, ped: number | Ped): void;
+    function giveObjectToPed(weaponObject: number | IObject, ped: number | IPed): void;
     /**
      * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
      * Hash: 0xBF0FD6E56C964FCB | Since: 323
      */
-    function giveToPed(ped: number | Ped, weaponHash: number | string, ammoCount: number, isHidden: boolean, bForceInHand: boolean): void;
+    function giveToPed(ped: number | IPed, weaponHash: number | string, ammoCount: number, isHidden: boolean, bForceInHand: boolean): void;
     /**
      * It determines what weapons caused damage:
      *
@@ -47306,7 +47306,7 @@ export declare namespace weapon {
      *
      * Hash: 0x131D401334815E94 | Since: 323
      */
-    function hasEntityBeenDamagedBy(entity: number | Entity, weaponHash: number | string, weaponType: number): boolean;
+    function hasEntityBeenDamagedBy(entity: number | IEntity, weaponHash: number | string, weaponType: number): boolean;
     /**
      * It determines what weapons caused damage:
      *
@@ -47317,7 +47317,7 @@ export declare namespace weapon {
      *
      * Hash: 0x2D343D2219CD027A | Since: 323
      */
-    function hasPedBeenDamagedBy(ped: number | Ped, weaponHash: number | string, weaponType: number): boolean;
+    function hasPedBeenDamagedBy(ped: number | IPed, weaponHash: number | string, weaponType: number): boolean;
     /**
      * p2 should be FALSE, otherwise it seems to always return FALSE
      *
@@ -47326,19 +47326,19 @@ export declare namespace weapon {
      *
      * Hash: 0x8DECB02F88F428BC | Since: 323
      */
-    function hasPedGot(ped: number | Ped, weaponHash: number | string): boolean;
+    function hasPedGot(ped: number | IPed, weaponHash: number | string): boolean;
     /**
      * Full list of weapons & components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
      * Hash: 0xC593212475FAE340 | Since: 323
      */
-    function hasPedGotComponent(ped: number | Ped, weaponHash: number | string, componentHash: number | string): boolean;
+    function hasPedGotComponent(ped: number | IPed, weaponHash: number | string, componentHash: number | string): boolean;
     /**
      * Fourth Parameter = unsure, almost always -1
      *
      * Hash: 0x717C8481234E3B88 | Since: 323
      */
-    function hasVehicleGotProjectileAttached(driver: number | Ped, vehicle: number | Vehicle, weaponHash: number | string): boolean;
+    function hasVehicleGotProjectileAttached(driver: number | IPed, vehicle: number | IVehicle, weaponHash: number | string): boolean;
     /**
      * No comment provided
      *
@@ -47350,13 +47350,13 @@ export declare namespace weapon {
      *
      * Hash: 0x76A18844E743BF91 | Since: 323
      */
-    function hasGotWeaponComponent(weapon: number | Object, componentHash: number | string): boolean;
+    function hasGotWeaponComponent(weapon: number | IObject, componentHash: number | string): boolean;
     /**
      * Hides the players weapon during a cutscene.
      *
      * Hash: 0x6F6981D2253C208F | Since: 323
      */
-    function hidePedForScriptedCutscene(ped: number | Ped, toggle: boolean): void;
+    function hidePedForScriptedCutscene(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -47368,7 +47368,7 @@ export declare namespace weapon {
      *
      * Hash: 0x4B7620C47217126C | Since: 323
      */
-    function isFlashLightOn(ped: number | Ped): boolean;
+    function isFlashLightOn(ped: number | IPed): boolean;
     /**
      * Checks if the ped is currently equipped with a weapon matching a bit specified using a bitwise-or in typeFlags.
      *
@@ -47391,7 +47391,7 @@ export declare namespace weapon {
      *
      * Hash: 0x475768A975D5AD17 | Since: 323
      */
-    function isPedArmed(ped: number | Ped, typeFlags: number): boolean;
+    function isPedArmed(ped: number | IPed, typeFlags: number): boolean;
     /**
      * This native returns a true or false value.
      *
@@ -47399,19 +47399,19 @@ export declare namespace weapon {
      *
      * Hash: 0x65F0C5AE05943EC7 | Since: 323
      */
-    function isPedCurrentSilenced(ped: number | Ped): boolean;
+    function isPedCurrentSilenced(ped: number | IPed): boolean;
     /**
      * Full list of weapons & components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
      * Hash: 0x0D78DE0572D3969E | Since: 323
      */
-    function isPedComponentActive(ped: number | Ped, weaponHash: number | string, componentHash: number | string): boolean;
+    function isPedComponentActive(ped: number | IPed, weaponHash: number | string, componentHash: number | string): boolean;
     /**
      * No comment provided
      *
      * Hash: 0xB80CA294F2F26749 | Since: 323
      */
-    function isPedReadyToShoot(ped: number | Ped): boolean;
+    function isPedReadyToShoot(ped: number | IPed): boolean;
     /**
      * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
@@ -47423,13 +47423,13 @@ export declare namespace weapon {
      *
      * Hash: 0x20AE33F3AC9C0033 | Since: 323
      */
-    function makePedReload(ped: number | Ped): boolean;
+    function makePedReload(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x8C0D57EA686FAD87 | Since: 323
      */
-    function refillAmmoInstantly(ped: number | Ped): boolean;
+    function refillAmmoInstantly(ped: number | IPed): boolean;
     /**
      * No comment provided
      *
@@ -47447,7 +47447,7 @@ export declare namespace weapon {
      *
      * Hash: 0xF25DF915FA38C5F3 | Since: 323
      */
-    function removeAllPeds(ped: number | Ped): void;
+    function removeAllPeds(ped: number | IPed): void;
     /**
      * If `explode` true, then removal is done through exploding the projectile. Basically the same as EXPLODE_PROJECTILES but without defining the owner ped.
      *
@@ -47465,13 +47465,13 @@ export declare namespace weapon {
      *
      * Hash: 0x1E8BE90C74FB4C09 | Since: 323
      */
-    function removeComponentFromPed(ped: number | Ped, weaponHash: number | string, componentHash: number | string): void;
+    function removeComponentFromPed(ped: number | IPed, weaponHash: number | string, componentHash: number | string): void;
     /**
      * see DOES_WEAPON_TAKE_WEAPON_COMPONENT for full list of weapons & components
      *
      * Hash: 0xF7D82B0D66777611 | Since: 323
      */
-    function removeComponentFromWeaponObject(_object: number | Object, componentHash: number | string): void;
+    function removeComponentFromWeaponObject(_object: number | IObject, componentHash: number | string): void;
     /**
      * This native removes a specified weapon from your selected ped.
      *
@@ -47487,7 +47487,7 @@ export declare namespace weapon {
      *
      * Hash: 0x4899CB088EDF59B8 | Since: 323
      */
-    function removeFromPed(ped: number | Ped, weaponHash: number | string): void;
+    function removeFromPed(ped: number | IPed, weaponHash: number | string): void;
     /**
      * Nearly every instance of p1 I found was 31. Nearly every instance of p2 I found was 0.
      *
@@ -47501,50 +47501,50 @@ export declare namespace weapon {
      *
      * Hash: 0x48164DBB970AC3F0 | Since: 323
      */
-    function requestHighDetailModel(weaponObject: number | Entity): void;
+    function requestHighDetailModel(weaponObject: number | IEntity): void;
     /**
      * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
      * Hash: 0xDCD2A934D65CB497 | Since: 323
      */
-    function setAmmoInClip(ped: number | Ped, weaponHash: number | string, ammo: number): boolean;
+    function setAmmoInClip(ped: number | IPed, weaponHash: number | string, ammo: number): boolean;
     /**
      * Disable all weapons. Does the same as 0xB4771B9AAF4E68E4 except for all weapons.
      *
      * Hash: 0xEFF296097FF1E509 | Since: 1103
      */
-    function setCanPedSelectAlls(ped: number | Ped, toggle: boolean): void;
+    function setCanPedSelectAlls(ped: number | IPed, toggle: boolean): void;
     /**
      * Disables selecting the given weapon. Ped isn't forced to put the gun away. However you can't reselect the weapon if you holster then unholster. Weapon is also grayed out on the weapon wheel.
      * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
      * Hash: 0xB4771B9AAF4E68E4 | Since: 1103
      */
-    function setCanPedSelectInventory(ped: number | Ped, weaponHash: number | string, toggle: boolean): void;
+    function setCanPedSelectInventory(ped: number | IPed, weaponHash: number | string, toggle: boolean): void;
     /**
      * Full list of weapons by DurtyFree (Search for VEHICLE_*): https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
      * Hash: 0x75C55983C2C39DAA | Since: 323
      */
-    function setCurrentPedVehicle(ped: number | Ped, weaponHash: number | string): boolean;
+    function setCurrentPedVehicle(ped: number | IPed, weaponHash: number | string): boolean;
     /**
      * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
      * Hash: 0xADF692B254977C0C | Since: 323
      */
-    function setCurrentPed(ped: number | Ped, weaponHash: number | string, bForceInHand: boolean): void;
+    function setCurrentPed(ped: number | IPed, weaponHash: number | string, bForceInHand: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0xE4DCEC7FD5B739A5 | Since: 323
      */
-    function setEqippedStartSpinningAtFullSpeed(ped: number | Ped): void;
+    function setEqippedStartSpinningAtFullSpeed(ped: number | IPed): void;
     /**
      * Enables/disables flashlight on ped's weapon.
      *
      * Hash: 0x988DB6FE9B3AC000 | Since: 2060
      */
-    function setFlashLightActiveHistory(ped: number | Ped, toggle: boolean): void;
+    function setFlashLightActiveHistory(ped: number | IPed, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -47556,80 +47556,80 @@ export declare namespace weapon {
      *
      * Hash: 0x14E56BC5B5DB6A19 | Since: 323
      */
-    function setPedAmmo(ped: number | Ped, weaponHash: number | string, ammo: number): void;
+    function setPedAmmo(ped: number | IPed, weaponHash: number | string, ammo: number): void;
     /**
      * Ammo types: https://gist.github.com/root-cause/faf41f59f7a6d818b7db0b839bd147c1
      *
      * Hash: 0x5FD1E1F011E76D7E | Since: 323
      */
-    function setPedAmmoByType(ped: number | Ped, ammoTypeHash: number | string, ammo: number): void;
+    function setPedAmmoByType(ped: number | IPed, ammoTypeHash: number | string, ammo: number): void;
     /**
      * No comment provided
      *
      * Hash: 0xA4EFEF9440A5B0EF | Since: 323
      */
-    function setPedAmmoToDrop(ped: number | Ped): void;
+    function setPedAmmoToDrop(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x8378627201D5497D | Since: 323
      */
-    function setPedChanceOfFiringBlanks(ped: number | Ped, xBias: number, yBias: number): void;
+    function setPedChanceOfFiringBlanks(ped: number | IPed, xBias: number, yBias: number): void;
     /**
      * Has 5 parameters since latest patches.
      *
      * Hash: 0x0725A4CCFDED9A70 | Since: 323
      */
-    function setPedCurrentVisible(ped: number | Ped, visible: boolean, deselectWeapon: boolean): void;
+    function setPedCurrentVisible(ped: number | IPed, visible: boolean, deselectWeapon: boolean): void;
     /**
      * No comment provided
      *
      * Hash: 0x50276EF8172F5F12 | Since: 1734
      */
-    function setPedCycleVehiclesOnly(ped: number | Ped): void;
+    function setPedCycleVehiclesOnly(ped: number | IPed): void;
     /**
      * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
      * Hash: 0x208A1888007FC0E6 | Since: 323
      */
-    function setPedDropsInventory(ped: number | Ped, weaponHash: number | string, xOffset: number, yOffset: number, zOffset: number, ammoCount: number): void;
+    function setPedDropsInventory(ped: number | IPed, weaponHash: number | string, xOffset: number, yOffset: number, zOffset: number, ammoCount: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x6B7513D9966FBEC0 | Since: 323
      */
-    function setPedDrops(ped: number | Ped): void;
+    function setPedDrops(ped: number | IPed): void;
     /**
      * No comment provided
      *
      * Hash: 0x476AE72C1D19D1A8 | Since: 323
      */
-    function setPedDropssWhenDead(ped: number | Ped, toggle: boolean): void;
+    function setPedDropssWhenDead(ped: number | IPed, toggle: boolean): void;
     /**
      * p1/gadgetHash was always 0xFBAB5776 ("GADGET_PARACHUTE").
      * p2 is always true.
      *
      * Hash: 0xD0D7B1E680ED4A1A | Since: 323
      */
-    function setPedGadget(ped: number | Ped, gadgetHash: number | string): void;
+    function setPedGadget(ped: number | IPed, gadgetHash: number | string): void;
     /**
      * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
      * Hash: 0x3EDCB0505123623B | Since: 323
      */
-    function setPedInfiniteAmmo(ped: number | Ped, toggle: boolean, weaponHash: number | string): void;
+    function setPedInfiniteAmmo(ped: number | IPed, toggle: boolean, weaponHash: number | string): void;
     /**
      * No comment provided
      *
      * Hash: 0x183DADC6AA953186 | Since: 323
      */
-    function setPedInfiniteAmmoClip(ped: number | Ped, toggle: boolean): void;
+    function setPedInfiniteAmmoClip(ped: number | IPed, toggle: boolean): void;
     /**
      * Returns handle of the projectile.
      *
      * Hash: 0xB4C8D77C80C0421E | Since: 323
      */
-    function setPedShootOrdnance(ped: number | Ped): number;
+    function setPedShootOrdnance(ped: number | IPed): number;
     /**
      * No comment provided
      *
@@ -47674,7 +47674,7 @@ export declare namespace weapon {
      *
      * Hash: 0x9FE5633880ECD8ED | Since: 1103
      */
-    function setPedComponentTintIndex(ped: number | Ped, weaponHash: number | string, camoComponentHash: number | string, colorIndex: number): void;
+    function setPedComponentTintIndex(ped: number | IPed, weaponHash: number | string, camoComponentHash: number | string, colorIndex: number): void;
     /**
      * tintIndex can be the following:
      *
@@ -47690,7 +47690,7 @@ export declare namespace weapon {
      *
      * Hash: 0x50969B9B89ED5738 | Since: 323
      */
-    function setPedTintIndex(ped: number | Ped, weaponHash: number | string, tintIndex: number): void;
+    function setPedTintIndex(ped: number | IPed, weaponHash: number | string, tintIndex: number): void;
     /**
      * No comment provided
      *
@@ -47702,7 +47702,7 @@ export declare namespace weapon {
      *
      * Hash: 0xECDC202B25E5CF48 | Since: 573
      */
-    function setPlayerTargettableForAirDefenceSphere(player: number | string | Player, zoneId: number, enable: boolean): void;
+    function setPlayerTargettableForAirDefenceSphere(player: number | string | IPlayer, zoneId: number, enable: boolean): void;
     /**
      * Changes the selected ped aiming animation style.
      * Note : You must use GET_HASH_KEY!
@@ -47742,7 +47742,7 @@ export declare namespace weapon {
      *
      * Hash: 0x1055AC3A667F09D9 | Since: 323
      */
-    function setAnimationOverride(ped: number | Ped, animStyle: number | string): void;
+    function setAnimationOverride(ped: number | IPed, animStyle: number | string): void;
     /**
      * No comment provided
      *
@@ -47767,7 +47767,7 @@ export declare namespace weapon {
      *
      * Hash: 0x977CA98939E82E4B | Since: 1103
      */
-    function setObjectCamoIndex(weaponObject: number | Object): void;
+    function setObjectCamoIndex(weaponObject: number | IObject): void;
     /**
      * Colors:
      * 0 = Gray
@@ -47806,43 +47806,43 @@ export declare namespace weapon {
      *
      * Hash: 0x5DA825A85D0EA6E6 | Since: 1103
      */
-    function setObjectComponentTintIndex(weaponObject: number | Object, camoComponentHash: number | string, colorIndex: number): void;
+    function setObjectComponentTintIndex(weaponObject: number | IObject, camoComponentHash: number | string, colorIndex: number): void;
     /**
      * Full list of weapons, components & tint indexes by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
      *
      * Hash: 0xF827589017D4E4A9 | Since: 323
      */
-    function setObjectTintIndex(weapon: number | Object, tintIndex: number): void;
+    function setObjectTintIndex(weapon: number | IObject, tintIndex: number): void;
     /**
      * No comment provided
      *
      * Hash: 0x2857938C5D407AFA | Since: 3407
      */
-    function getAmmoInVehicleClip(vehicle: number | Vehicle, seat: number): [boolean, number];
+    function getAmmoInVehicleClip(vehicle: number | IVehicle, seat: number): [boolean, number];
     /**
      * No comment provided
      *
      * Hash: 0xC8C6F4B1CDEB40EF | Since: 3407
      */
-    function getTimeBeforeVehicleReloadFinishes(vehicle: number | Vehicle, seat: number): number;
+    function getTimeBeforeVehicleReloadFinishes(vehicle: number | IVehicle, seat: number): number;
     /**
      * No comment provided
      *
      * Hash: 0xD0AD348FFD7A6868 | Since: 3407
      */
-    function getVehicleReloadTime(vehicle: number | Vehicle, seat: number): number;
+    function getVehicleReloadTime(vehicle: number | IVehicle, seat: number): number;
     /**
      * No comment provided
      *
      * Hash: 0x8062F07153F4446F | Since: 3407
      */
-    function hasReloadingInVehicle(vehicle: number | Vehicle, seat: number): boolean;
+    function hasReloadingInVehicle(vehicle: number | IVehicle, seat: number): boolean;
     /**
      * No comment provided
      *
      * Hash: 0x873906720EE842C3 | Since: 3407
      */
-    function setAmmoInVehicleClip(vehicle: number | Vehicle, seat: number, ammo: number): boolean;
+    function setAmmoInVehicleClip(vehicle: number | IVehicle, seat: number, ammo: number): boolean;
     /**
      * No comment provided
      *
@@ -47854,7 +47854,7 @@ export declare namespace weapon {
      *
      * Hash: 0x5B1513F27F279A44 | Since: 3407
      */
-    function triggerVehicleReload(vehicle: number | Vehicle, seat: number, ped: number | Ped): boolean;
+    function triggerVehicleReload(vehicle: number | IVehicle, seat: number, ped: number | IPed): boolean;
 }
 export declare namespace zone {
     /**
