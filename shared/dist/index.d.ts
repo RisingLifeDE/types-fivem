@@ -2658,3 +2658,33 @@ export declare namespace Enums {
         ALIGN_JUSTIFY = 3
     }
 }
+
+
+
+export declare class EventEmitter {
+    private listeners;
+    on(eventName: string, callback: (...args: any[]) => void): void;
+    once(eventName: string, callback: (...args: any[]) => void): void;
+    emit(eventName: string, ...args: any[]): void;
+    off(eventName: string, callback: (...args: any[]) => void): void;
+    removeAllListeners(eventName?: string): void;
+}
+export declare class NetworkEventUtils {
+    private static api;
+    private static getNetworkEventName;
+    private static setupListener;
+    static registerEvent<T extends any[]>(eventName: string, callback: (...args: T) => void): void;
+    static registerEventOnce<T extends any[]>(eventName: string, callback: (...args: T) => void): void;
+    static removeListener<T extends any[]>(eventName: string, callback: (...args: T) => void): void;
+    static removeAllListeners(eventName?: string): void;
+    static send(eventName: string, ...args: any[]): void;
+}
+export declare class LocalEventUtils {
+    private static api;
+    private static setupListener;
+    static registerEvent<T extends any[]>(eventName: string, callback: (...args: T) => void): void;
+    static registerEventOnce<T extends any[]>(eventName: string, callback: (...args: T) => void): void;
+    static removeListener<T extends any[]>(eventName: string, callback: (...args: T) => void): void;
+    static removeAllListeners(eventName?: string): void;
+    static send(eventName: string, ...args: any[]): void;
+}

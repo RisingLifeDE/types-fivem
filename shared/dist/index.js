@@ -2807,3 +2807,208 @@ export var Enums;
         TextLabelAlignment[TextLabelAlignment["ALIGN_JUSTIFY"] = 3] = "ALIGN_JUSTIFY";
     })(TextLabelAlignment = Enums.TextLabelAlignment || (Enums.TextLabelAlignment = {}));
 })(Enums || (Enums = {}));
+
+
+export class EventEmitter {
+    listeners = new Map();
+    on(eventName, callback) {
+        if (!this.listeners.has(eventName)) {
+            this.listeners.set(eventName, []);
+        }
+        this.listeners.get(eventName).push(callback);
+    }
+    once(eventName, callback) {
+        const onceWrapper = (...args) => {
+            this.off(eventName, onceWrapper);
+            callback(...args);
+        };
+        this.on(eventName, onceWrapper);
+    }
+    emit(eventName, ...args) {
+        const callbacks = this.listeners.get(eventName);
+        if (callbacks) {
+            callbacks.forEach((callback) => {
+                try {
+                    callback(...args);
+                }
+                catch (error) {
+                    EventLogger.logError(eventName, error);
+                }
+            });
+        }
+    }
+    off(eventName, callback) {
+        const callbacks = this.listeners.get(eventName);
+        if (callbacks) {
+            const index = callbacks.indexOf(callback);
+            if (index !== -1) {
+                callbacks.splice(index, 1);
+            }
+        }
+    }
+    removeAllListeners(eventName) {
+        if (eventName) {
+            this.listeners.delete(eventName);
+        }
+        else {
+            this.listeners.clear();
+        }
+    }
+}
+class EventParsingUtils {
+    static parseArgument(arg) {
+        if (typeof arg === 'string') {
+            try {
+                return JSON.parse(arg);
+            }
+            catch {
+                return arg;
+            }
+        }
+        if (Array.isArray(arg)) {
+            return arg.map((item) => this.parseArgument(item));
+        }
+        if (arg && typeof arg === 'object') {
+            const result = {};
+            for (const [key, value] of Object.entries(arg)) {
+                result[key] = this.parseArgument(value);
+            }
+            return result;
+        }
+        return arg;
+    }
+    static parseAllArguments(args) {
+        return args.map((arg) => this.parseArgument(arg));
+    }
+    static assignFields(target, source) {
+        if (typeof target === 'object' && target !== null && typeof source === 'object' && source !== null) {
+            return Object.assign(target, source);
+        }
+        return source;
+    }
+}
+class EventRegistry {
+    static networkEvents = new Set();
+    static localEvents = new Set();
+    static networkEmitter = new EventEmitter();
+    static localEmitter = new EventEmitter();
+    static getNetworkRegistry() {
+        return {
+            events: this.networkEvents,
+            emitter: this.networkEmitter
+        };
+    }
+    static getLocalRegistry() {
+        return {
+            events: this.localEvents,
+            emitter: this.localEmitter
+        };
+    }
+}
+class EventLogger {
+    static logErrors = true;
+    static logEvents = false;
+    static logEvent(type, eventName, ...args) {
+        if (this.logEvents)
+            console.log(`[${type}] ${eventName}`, ...args);
+    }
+    static logError(eventName, error) {
+        if (this.logErrors)
+            console.error(`Error in event handler for "${eventName}":`, error);
+    }
+}
+export class NetworkEventUtils {
+    static api = {
+        onNet: (eventName, handler) => onNet(eventName, handler),
+        emitNet: (eventName, ...args) => emitNet(eventName, ...args),
+        on: (eventName, handler) => on(eventName, handler),
+        emit: (eventName, ...args) => emit(eventName, ...args),
+    };
+    static getNetworkEventName(eventName) {
+        return eventName.startsWith('net::') ? eventName : `net::${eventName}`;
+    }
+    static setupListener(eventName) {
+        const { events, emitter } = EventRegistry.getNetworkRegistry();
+        const networkEventName = this.getNetworkEventName(eventName);
+        if (!events.has(eventName)) {
+            events.add(eventName);
+            const handler = (...args) => {
+                const parsedArgs = EventParsingUtils.parseAllArguments(args);
+                emitter.emit(eventName, ...parsedArgs);
+                EventLogger.logEvent('NETWORK', eventName, ...args);
+            };
+            this.api.onNet(networkEventName, handler);
+        }
+    }
+    static registerEvent(eventName, callback) {
+        this.setupListener(eventName);
+        const { emitter } = EventRegistry.getNetworkRegistry();
+        emitter.on(eventName, callback);
+    }
+    static registerEventOnce(eventName, callback) {
+        this.setupListener(eventName);
+        const { emitter } = EventRegistry.getNetworkRegistry();
+        emitter.once(eventName, callback);
+    }
+    static removeListener(eventName, callback) {
+        const { emitter } = EventRegistry.getNetworkRegistry();
+        emitter.off(eventName, callback);
+    }
+    static removeAllListeners(eventName) {
+        const { emitter } = EventRegistry.getNetworkRegistry();
+        emitter.removeAllListeners(eventName);
+    }
+    static send(eventName, ...args) {
+        const networkEventName = this.getNetworkEventName(eventName);
+        const parsedArgs = args.map((arg) => {
+            if (arg instanceof Entity) {
+                return arg.remoteId();
+            }
+            return arg;
+        });
+        EventLogger.logEvent('NETWORK', eventName, ...parsedArgs);
+        this.api.emitNet(networkEventName, ...parsedArgs);
+    }
+}
+export class LocalEventUtils {
+    static api = {
+        onNet: (eventName, handler) => onNet(eventName, handler),
+        emitNet: (eventName, ...args) => emitNet(eventName, ...args),
+        on: (eventName, handler) => on(eventName, handler),
+        emit: (eventName, ...args) => emit(eventName, ...args),
+    };
+    static setupListener(eventName) {
+        const { events, emitter } = EventRegistry.getLocalRegistry();
+        if (!events.has(eventName)) {
+            events.add(eventName);
+            const handler = (...args) => {
+                const parsedArgs = EventParsingUtils.parseAllArguments(args);
+                emitter.emit(eventName, ...parsedArgs);
+                EventLogger.logEvent('LOCAL', eventName, ...args);
+            };
+            this.api.on(eventName, handler);
+        }
+    }
+    static registerEvent(eventName, callback) {
+        this.setupListener(eventName);
+        const { emitter } = EventRegistry.getLocalRegistry();
+        emitter.on(eventName, callback);
+    }
+    static registerEventOnce(eventName, callback) {
+        this.setupListener(eventName);
+        const { emitter } = EventRegistry.getLocalRegistry();
+        emitter.once(eventName, callback);
+    }
+    static removeListener(eventName, callback) {
+        const { emitter } = EventRegistry.getLocalRegistry();
+        emitter.off(eventName, callback);
+    }
+    static removeAllListeners(eventName) {
+        const { emitter } = EventRegistry.getLocalRegistry();
+        emitter.removeAllListeners(eventName);
+    }
+    static send(eventName, ...args) {
+        EventLogger.logEvent('LOCAL', eventName, ...args);
+        this.api.emit(eventName, ...args);
+    }
+}
