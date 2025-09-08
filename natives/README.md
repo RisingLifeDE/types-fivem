@@ -1,7 +1,6 @@
 # FiveM Native/Game Types
 
-This package contains an wrapper for the FiveM typings.
-It oriented at the native db by alloc8or as it's always up-to-date.
+This package contains "easy-to-use" types for FiveM.
 
 ### Example usage
 ```js
@@ -14,13 +13,13 @@ game.scripts.shutdownLoadingScreen();
 All root methods (e.g. `game.playerId()`) were removed.
 The reason for this is clearly that namespaced methods are better and clearer.
 
-If you want them, you must downgrade to version [0.1.1](https://www.npmjs.com/package/@risinglife/fivem-natives/v/0.1.1)
+If you want them, you must downgrade to version [0.1.16](https://www.npmjs.com/package/@risinglife/fivem-natives/v/0.1.16)
 Remind: Only the latest version contains the newest natives.
 
 ### Information
 
 For client access see [this package](https://www.npmjs.com/package/@risinglife/fivem-client)<br>
-You can see all functions, and how they can be use at [nativedb.dotindustries.dev](https://nativedb.dotindustries.dev/gta5/natives)<br>
+You can see all functions, and how they can be use at [https://nativedb.dotindustries.dev/gta5/natives/](https://nativedb.dotindustries.dev/gta5/natives/)<br>
 The package must be included when compile the code for example with **esbuild**.
 
 ### Contribute
@@ -30,4 +29,4 @@ If you have issues, please create a [Issue](https://github.com/RisingLifeDE/type
 
 ### Credits
 
-Thanks to [alloc8or NativeDB](https://github.com/alloc8or/gta5-nativedb-data/) and [cfx.re](https://cfx.re)
+Thanks to [alloc8or](https://github.com/alloc8or/gta5-nativedb-data) and [CFX.re](https://cfx.re)
