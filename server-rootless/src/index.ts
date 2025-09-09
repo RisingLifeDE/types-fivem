@@ -119,7 +119,7 @@ export namespace events {
         }
     }
 
-    class NetworkEventUtils {
+    class RemoteEventUtils {
         private static api: api = {
             // @ts-ignore
             onNet: (eventName: string, handler: Function) => onNet(eventName, handler),
@@ -252,7 +252,7 @@ export namespace events {
 
     export function removeAllListeners(key?: string): void {
         LocalEventUtils.removeAllListeners(key)
-        NetworkEventUtils.removeAllListeners(key)
+        RemoteEventUtils.removeAllListeners(key)
     }
 
     /**
@@ -286,7 +286,7 @@ export namespace events {
      * @param callback The callback which should be executed
      */
     export function onClient(key: string, callback: (...args: any[]) => void): void {
-        NetworkEventUtils.registerEvent(key, callback);
+        RemoteEventUtils.registerEvent(key, callback);
     }
     /**
      * Registers a onetime listener for a client emitted event
@@ -294,7 +294,7 @@ export namespace events {
      * @param callback The callback which should be executed
      */
     export function onceClient(key: string, callback: (...args: any[]) => void): void {
-        NetworkEventUtils.registerEventOnce(key, callback);
+        RemoteEventUtils.registerEventOnce(key, callback);
     }
     /**
      * Removes a listener for a client emitted event
@@ -302,7 +302,7 @@ export namespace events {
      * @param callback Must be the callback
      */
     export function offClient(key: string, callback: (...args: any[]) => void): void {
-        NetworkEventUtils.removeListener(key, callback);
+        RemoteEventUtils.removeListener(key, callback);
     }
 
     /**
@@ -320,7 +320,149 @@ export namespace events {
      * @param args All parameters
      */
     export function emitClient(key: string, target: number | string, ...args: any[]): void {
-        NetworkEventUtils.send(key, target, ...args)
+        RemoteEventUtils.send(key, target, ...args)
+    }
+
+    // Implementations
+
+    /**
+     * Will be triggered when the resource list was refreshed
+     */
+    export function onResourceListRefresh(callback: () => void) {
+        on("onResourceListRefresh", () => {
+            callback()
+        });
+    }
+
+    /**
+     * Will be triggered when a resource is started
+     */
+    export function onResourceStart(callback: (name: string) => void) {
+        on("onResourceStart", (name) => {
+            callback(name)
+        });
+    }
+
+    /**
+     * Will be triggered when a resource is being starting
+     * You can use {@link misc.cancelEvent()} to cancel the start
+     */
+    export function onResourceStarting(callback: (name: string) => void) {
+        on("onResourceStarting", (name) => {
+            callback(name)
+        });
+    }
+
+    /**
+     * Will be triggered when a resource is being stopped
+     */
+    export function onResourceStop(callback: (name: string) => void) {
+        on("onResourceStop", (name) => {
+            callback(name)
+        });
+    }
+
+    /**
+     * Will be triggered when an entity is being created.
+     * You can use {@link misc.cancelEvent()} to cancel the start
+     */
+    export function onEntityCreating(callback: (handle: number) => void) {
+        on("entityCreating", (handle: number) => {
+            callback(handle)
+        });
+    }
+
+    /**
+     * Will be triggered when an entity has been created.
+     * You can use {@link misc.cancelEvent()} to cancel the start
+     */
+    export function onEntityCreated(callback: (handle: number) => void) {
+        on("entityCreated", (handle: number) => {
+            callback(handle)
+        });
+    }
+
+    /**
+     * Will be triggered when an entity is removed on the server.
+     * You can use {@link misc.cancelEvent()} to cancel the start
+     */
+    export function onEntityRemoved(callback: (handle: number) => void) {
+        on("entityRemoved", (handle: number) => {
+            callback(handle)
+        });
+    }
+
+    /**
+     * Will be triggered when a player connects
+     */
+    export function onPlayerConnecting(callback: (playerName: string, setKickReason: (reason: string) => void, deferrals: { defer: any; done: any; handover: any; presentCard: any; update: any }, source: string) => void) {
+        on("playerConnecting", (playerName: string, setKickReason: (reason: string) => void, deferrals: { defer: any; done: any; handover: any; presentCard: any; update: any }, source: string) => {
+            callback(playerName, setKickReason, deferrals, source)
+        });
+    }
+
+    /**
+     * Will be triggered when a player joins
+     */
+    export function onPlayerJoining(callback: (source: string, oldID: string) => void) {
+        on("playerJoining", (source: string, oldID: string) => {
+            callback(source, oldID)
+        });
+    }
+
+    /**
+     * Will be triggered when a player enters a scope
+     */
+    export function onPlayerEnteredScope(callback: (data: { for: string; player: string }) => void) {
+        on('playerEnteredScope', (data: { for: string; player: string }) => {
+            callback(data)
+        });
+    }
+
+    /**
+     * Will be triggered when a player left a scope
+     */
+    export function onPlayerLeftScope(callback: (data: { for: string; player: string }) => void) {
+        on("playerLeftScope", (data: { for: string; player: string }) => {
+            callback(data)
+        });
+    }
+
+    /**
+     * Will be triggered when a particle fx (ptFx) is created.
+     */
+    export function onPtFxEvent(callback: (sender: number, data: { assetHash: number; axisBitset: number; effectHash: number; entityNetId: number; f100: number; f105: number; f106: number; f107: number; f109: boolean; f110: boolean; f111: boolean; f92: number; isOnEntity: boolean; offsetX: number; offsetY: number; offsetZ: number; posX: number; posY: number; posZ: number; rotX: number; rotY: number; rotZ: number; scale: number }) => void) {
+        on("ptFxEvent", (sender: number, data: { assetHash: number; axisBitset: number; effectHash: number; entityNetId: number; f100: number; f105: number; f106: number; f107: number; f109: boolean; f110: boolean; f111: boolean; f92: number; isOnEntity: boolean; offsetX: number; offsetY: number; offsetZ: number; posX: number; posY: number; posZ: number; rotX: number; rotY: number; rotZ: number; scale: number }) => {
+            callback(sender, data)
+        });
+    }
+
+    /**
+     * Will be triggered when a player removes all weapons from a ped owned by another player.
+     */
+    export function onRemoveAllWeaponsEvent(callback: (sender: number, data: { pedId: number }) => void) {
+        on("removeAllWeaponsEvent", (sender: number, data: { pedId: number }) => {
+            callback(sender, data)
+        });
+    }
+
+    /**
+     * Will be triggered when a projectile is created.
+     */
+    export function onStartProjectileEvent(callback: (sender: number, data: { commandFireSingleBullet: boolean; effectGroup: number; firePositionX: number; firePositionY: number; firePositionZ: number; initialPositionX: number; initialPositionY: number; initialPositionZ: number; ownerId: number; projectileHash: number; targetEntity: number; throwTaskSequence: number; unk10: number; unk11: number; unk12: number; unk13: number; unk14: number; unk15: number; unk16: number; unk3: number; unk4: number; unk5: number; unk6: number; unk7: number; unk9: number; unkX8: number; unkY8: number; unkZ8: number; weaponHash: number }) => void) {
+        on("startProjectileEvent", (sender: number, data: { commandFireSingleBullet: boolean; effectGroup: number; firePositionX: number; firePositionY: number; firePositionZ: number; initialPositionX: number; initialPositionY: number; initialPositionZ: number; ownerId: number; projectileHash: number; targetEntity: number; throwTaskSequence: number; unk10: number; unk11: number; unk12: number; unk13: number; unk14: number; unk15: number; unk16: number; unk3: number; unk4: number; unk5: number; unk6: number; unk7: number; unk9: number; unkX8: number; unkY8: number; unkZ8: number; weaponHash: number }) => {
+            callback(sender, data)
+        });
+    }
+
+    /**
+     * Will be triggered when a client wants to apply damage to a remotely-owned entity.
+     * You can use {@link misc.cancelEvent()} to cancel the start
+     */
+    export function onWeaponDamageEvent(callback: (sender: number, data: { actionResultId: number; actionResultName: number; damageFlags: number; damageTime: number; damageType: number; f104: number; f112: boolean; f112_1: number; f120: number; f133: boolean; hasActionResult: boolean; hasImpactDir: boolean; hasVehicleData: boolean; hitComponent: number; hitEntityWeapon: boolean; hitGlobalId: number; hitGlobalIds: number[]; hitWeaponAmmoAttachment: boolean; impactDirX: number; impactDirY: number; impactDirZ: number; isNetTargetPos: boolean; localPosX: number; localPosY: number; localPosZ: number; overrideDefaultDamage: boolean; parentGlobalId: number; silenced: boolean; suspensionIndex: number; tyreIndex: number; weaponDamage: number; weaponType: number; willKill: boolean }) => void) {
+        on("weaponDamageEvent", (sender: number, data: { actionResultId: number; actionResultName: number; damageFlags: number; damageTime: number; damageType: number; f104: number; f112: boolean; f112_1: number; f120: number; f133: boolean; hasActionResult: boolean; hasImpactDir: boolean; hasVehicleData: boolean; hitComponent: number; hitEntityWeapon: boolean; hitGlobalId: number; hitGlobalIds: number[]; hitWeaponAmmoAttachment: boolean; impactDirX: number; impactDirY: number; impactDirZ: number; isNetTargetPos: boolean; localPosX: number; localPosY: number; localPosZ: number; overrideDefaultDamage: boolean; parentGlobalId: number; silenced: boolean; suspensionIndex: number; tyreIndex: number; weaponDamage: number; weaponType: number; willKill: boolean }) => {
+            callback(sender, data)
+        });
     }
 }
 

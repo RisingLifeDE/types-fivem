@@ -49,6 +49,44 @@ export declare namespace events {
      * @param args All parameters
      */
     function emitServer(key: string, ...args: any[]): void;
+    /**
+     * Will be triggered when a resource is started
+     */
+    function onResourceStart(callback: (name: string) => void): void;
+    /**
+     * Will be triggered when a resource is being starting
+     * You can use {@link misc.cancelEvent()} to cancel the start
+     */
+    function onResourceStarting(callback: (name: string) => void): void;
+    /**
+     * Will be triggered when a resource is being stopped
+     */
+    function onResourceStop(callback: (name: string) => void): void;
+    /**
+     * Will be triggered when a game event is fired.
+     * You can find a list of all game events here: https://docs.fivem.net/docs/game-references/game-events/
+     */
+    function onGameEvent(callback: (name: string, ...args: any[]) => void): void;
+    /**
+     * Will be triggered when a population ped is being creating.
+     * You can use {@link misc.cancelEvent()} to cancel this event.
+     */
+    function onPopulationPedCreating(callback: (position: Vector3, model: number, setters: {
+        setModel: (model: string) => void;
+        setPosition: (x: number, y: number, z: number) => void;
+    }) => void): void;
+    /**
+     * Will be triggered when an Entity got damage
+     */
+    function onEntityDamaged(callback: (victim: number, culprit: number, weapon: number, baseDamage: number) => void): void;
+    /**
+     * Will be triggered when mumble is connected
+     */
+    function onMumbleConnected(callback: (address: string, reconnecting: boolean) => void): void;
+    /**
+     * Will be triggered when mumble is disconnected
+     */
+    function onMumbleDisconnected(callback: (address: string) => void): void;
 }
 export declare namespace audio {
     /**

@@ -109,7 +109,7 @@ export var events;
                 console.error(`Error in event handler for "${eventName}":`, error);
         }
     }
-    class NetworkEventUtils {
+    class RemoteEventUtils {
         static api = {
             // @ts-ignore
             onNet: (eventName, handler) => onNet(eventName, handler),
@@ -220,7 +220,7 @@ export var events;
     }
     function removeAllListeners(key) {
         LocalEventUtils.removeAllListeners(key);
-        NetworkEventUtils.removeAllListeners(key);
+        RemoteEventUtils.removeAllListeners(key);
     }
     events_1.removeAllListeners = removeAllListeners;
     /**
@@ -256,7 +256,7 @@ export var events;
      * @param callback The callback which should be executed
      */
     function onServer(key, callback) {
-        NetworkEventUtils.registerEvent(key, callback);
+        RemoteEventUtils.registerEvent(key, callback);
     }
     events_1.onServer = onServer;
     /**
@@ -265,7 +265,7 @@ export var events;
      * @param callback The callback which should be executed
      */
     function onceServer(key, callback) {
-        NetworkEventUtils.registerEventOnce(key, callback);
+        RemoteEventUtils.registerEventOnce(key, callback);
     }
     events_1.onceServer = onceServer;
     /**
@@ -274,7 +274,7 @@ export var events;
      * @param callback Must be the callback
      */
     function offServer(key, callback) {
-        NetworkEventUtils.removeListener(key, callback);
+        RemoteEventUtils.removeListener(key, callback);
     }
     events_1.offServer = offServer;
     /**
@@ -292,9 +292,85 @@ export var events;
      * @param args All parameters
      */
     function emitServer(key, ...args) {
-        NetworkEventUtils.send(key, ...args);
+        RemoteEventUtils.send(key, ...args);
     }
     events_1.emitServer = emitServer;
+    // Implementations
+    /**
+     * Will be triggered when a resource is started
+     */
+    function onResourceStart(callback) {
+        on("onResourceStart", (name) => {
+            callback(name);
+        });
+    }
+    events_1.onResourceStart = onResourceStart;
+    /**
+     * Will be triggered when a resource is being starting
+     * You can use {@link misc.cancelEvent()} to cancel the start
+     */
+    function onResourceStarting(callback) {
+        on("onResourceStarting", (name) => {
+            callback(name);
+        });
+    }
+    events_1.onResourceStarting = onResourceStarting;
+    /**
+     * Will be triggered when a resource is being stopped
+     */
+    function onResourceStop(callback) {
+        on("onResourceStop", (name) => {
+            callback(name);
+        });
+    }
+    events_1.onResourceStop = onResourceStop;
+    /**
+     * Will be triggered when a game event is fired.
+     * You can find a list of all game events here: https://docs.fivem.net/docs/game-references/game-events/
+     */
+    function onGameEvent(callback) {
+        on("gameEventTriggered", (name, args) => {
+            callback(name, args);
+        });
+    }
+    events_1.onGameEvent = onGameEvent;
+    /**
+     * Will be triggered when a population ped is being creating.
+     * You can use {@link misc.cancelEvent()} to cancel this event.
+     */
+    function onPopulationPedCreating(callback) {
+        on('populationPedCreating', (x, y, z, model, setters) => {
+            callback(new Vector3(x, y, z), model, setters);
+        });
+    }
+    events_1.onPopulationPedCreating = onPopulationPedCreating;
+    /**
+     * Will be triggered when an Entity got damage
+     */
+    function onEntityDamaged(callback) {
+        on('entityDamaged', (victim, culprit, weapon, baseDamage) => {
+            callback(victim, culprit, weapon, baseDamage);
+        });
+    }
+    events_1.onEntityDamaged = onEntityDamaged;
+    /**
+     * Will be triggered when mumble is connected
+     */
+    function onMumbleConnected(callback) {
+        on('mumbleConnected', (address, reconnecting) => {
+            callback(address, reconnecting);
+        });
+    }
+    events_1.onMumbleConnected = onMumbleConnected;
+    /**
+     * Will be triggered when mumble is disconnected
+     */
+    function onMumbleDisconnected(callback) {
+        on('mumbleDisconnected', (address) => {
+            callback(address);
+        });
+    }
+    events_1.onMumbleDisconnected = onMumbleDisconnected;
 })(events || (events = {}));
 // All below is auto-generated code
 export var audio;

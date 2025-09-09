@@ -126,7 +126,7 @@ export namespace events {
         }
     }
 
-    class NetworkEventUtils {
+    class RemoteEventUtils {
         private static api: api = {
             // @ts-ignore
             onNet: (eventName: string, handler: Function) => onNet(eventName, handler),
@@ -259,7 +259,7 @@ export namespace events {
 
     export function removeAllListeners(key?: string): void {
         LocalEventUtils.removeAllListeners(key)
-        NetworkEventUtils.removeAllListeners(key)
+        RemoteEventUtils.removeAllListeners(key)
     }
 
     /**
@@ -293,7 +293,7 @@ export namespace events {
      * @param callback The callback which should be executed
      */
     export function onServer(key: string, callback: (...args: any[]) => void): void {
-        NetworkEventUtils.registerEvent(key, callback);
+        RemoteEventUtils.registerEvent(key, callback);
     }
     /**
      * Registers a onetime listener for the server emitted event
@@ -301,7 +301,7 @@ export namespace events {
      * @param callback The callback which should be executed
      */
     export function onceServer(key: string, callback: (...args: any[]) => void): void {
-        NetworkEventUtils.registerEventOnce(key, callback);
+        RemoteEventUtils.registerEventOnce(key, callback);
     }
     /**
      * Removes a listener for the server emitted event
@@ -309,7 +309,7 @@ export namespace events {
      * @param callback Must be the callback
      */
     export function offServer(key: string, callback: (...args: any[]) => void): void {
-        NetworkEventUtils.removeListener(key, callback);
+        RemoteEventUtils.removeListener(key, callback);
     }
 
     /**
@@ -326,7 +326,84 @@ export namespace events {
      * @param args All parameters
      */
     export function emitServer(key: string, ...args: any[]): void {
-        NetworkEventUtils.send(key, ...args)
+        RemoteEventUtils.send(key, ...args)
+    }
+
+    // Implementations
+
+    /**
+     * Will be triggered when a resource is started
+     */
+    export function onResourceStart(callback: (name: string) => void) {
+        on("onResourceStart", (name) => {
+            callback(name)
+        });
+    }
+
+    /**
+     * Will be triggered when a resource is being starting
+     * You can use {@link misc.cancelEvent()} to cancel the start
+     */
+    export function onResourceStarting(callback: (name: string) => void) {
+        on("onResourceStarting", (name) => {
+            callback(name)
+        });
+    }
+
+    /**
+     * Will be triggered when a resource is being stopped
+     */
+    export function onResourceStop(callback: (name: string) => void) {
+        on("onResourceStop", (name) => {
+            callback(name)
+        });
+    }
+
+    /**
+     * Will be triggered when a game event is fired.
+     * You can find a list of all game events here: https://docs.fivem.net/docs/game-references/game-events/
+     */
+    export function onGameEvent(callback: (name: string, ...args: any[]) => void) {
+        on("gameEventTriggered", (name, args) => {
+            callback(name, args)
+        });
+    }
+
+    /**
+     * Will be triggered when a population ped is being creating.
+     * You can use {@link misc.cancelEvent()} to cancel this event.
+     */
+    export function onPopulationPedCreating(callback: (position: Vector3,  model: number,  setters: { setModel: (model: string) => void, setPosition: (x: number, y: number, z: number) => void }) => void) {
+        on('populationPedCreating', (x, y, z, model, setters) => {
+            callback(new Vector3(x, y, z), model, setters)
+        })
+    }
+
+    /**
+     * Will be triggered when an Entity got damage
+     */
+    export function onEntityDamaged(callback: (victim: number, culprit: number, weapon: number, baseDamage: number) => void) {
+        on('entityDamaged', (victim: number, culprit: number, weapon: number, baseDamage: number) => {
+            callback(victim, culprit, weapon, baseDamage)
+        })
+    }
+
+    /**
+     * Will be triggered when mumble is connected
+     */
+    export function onMumbleConnected(callback: (address: string, reconnecting: boolean) => void) {
+        on('mumbleConnected', (address: string, reconnecting: boolean) => {
+            callback(address, reconnecting)
+        })
+    }
+
+    /**
+     * Will be triggered when mumble is disconnected
+     */
+    export function onMumbleDisconnected(callback: (address: string) => void) {
+        on('mumbleDisconnected', (address: string) => {
+            callback(address)
+        })
     }
 }
 
