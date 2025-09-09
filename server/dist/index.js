@@ -103,7 +103,7 @@ export var events;
                 console.error(`Error in event handler for "${eventName}":`, error);
         }
     }
-    class NetworkEventUtils {
+    class RemoteEventUtils {
         static api = {
             // @ts-ignore
             onNet: (eventName, handler) => onNet(eventName, handler),
@@ -214,7 +214,7 @@ export var events;
     }
     function removeAllListeners(key) {
         LocalEventUtils.removeAllListeners(key);
-        NetworkEventUtils.removeAllListeners(key);
+        RemoteEventUtils.removeAllListeners(key);
     }
     events_1.removeAllListeners = removeAllListeners;
     /**
@@ -250,7 +250,7 @@ export var events;
      * @param callback The callback which should be executed
      */
     function onClient(key, callback) {
-        NetworkEventUtils.registerEvent(key, callback);
+        RemoteEventUtils.registerEvent(key, callback);
     }
     events_1.onClient = onClient;
     /**
@@ -259,7 +259,7 @@ export var events;
      * @param callback The callback which should be executed
      */
     function onceClient(key, callback) {
-        NetworkEventUtils.registerEventOnce(key, callback);
+        RemoteEventUtils.registerEventOnce(key, callback);
     }
     events_1.onceClient = onceClient;
     /**
@@ -268,7 +268,7 @@ export var events;
      * @param callback Must be the callback
      */
     function offClient(key, callback) {
-        NetworkEventUtils.removeListener(key, callback);
+        RemoteEventUtils.removeListener(key, callback);
     }
     events_1.offClient = offClient;
     /**
@@ -287,9 +287,150 @@ export var events;
      * @param args All parameters
      */
     function emitClient(key, target, ...args) {
-        NetworkEventUtils.send(key, target, ...args);
+        RemoteEventUtils.send(key, target, ...args);
     }
     events_1.emitClient = emitClient;
+    // Implementations
+    /**
+     * Will be triggered when the resource list was refreshed
+     */
+    function onResourceListRefresh(callback) {
+        on("onResourceListRefresh", () => {
+            callback();
+        });
+    }
+    events_1.onResourceListRefresh = onResourceListRefresh;
+    /**
+     * Will be triggered when a resource is started
+     */
+    function onResourceStart(callback) {
+        on("onResourceStart", (name) => {
+            callback(name);
+        });
+    }
+    events_1.onResourceStart = onResourceStart;
+    /**
+     * Will be triggered when a resource is being starting
+     * You can use {@link misc.cancelEvent()} to cancel the start
+     */
+    function onResourceStarting(callback) {
+        on("onResourceStarting", (name) => {
+            callback(name);
+        });
+    }
+    events_1.onResourceStarting = onResourceStarting;
+    /**
+     * Will be triggered when a resource is being stopped
+     */
+    function onResourceStop(callback) {
+        on("onResourceStop", (name) => {
+            callback(name);
+        });
+    }
+    events_1.onResourceStop = onResourceStop;
+    /**
+     * Will be triggered when an entity is being created.
+     * You can use {@link misc.cancelEvent()} to cancel the start
+     */
+    function onEntityCreating(callback) {
+        on("entityCreating", (handle) => {
+            callback(handle);
+        });
+    }
+    events_1.onEntityCreating = onEntityCreating;
+    /**
+     * Will be triggered when an entity has been created.
+     * You can use {@link misc.cancelEvent()} to cancel the start
+     */
+    function onEntityCreated(callback) {
+        on("entityCreated", (handle) => {
+            callback(handle);
+        });
+    }
+    events_1.onEntityCreated = onEntityCreated;
+    /**
+     * Will be triggered when an entity is removed on the server.
+     * You can use {@link misc.cancelEvent()} to cancel the start
+     */
+    function onEntityRemoved(callback) {
+        on("entityRemoved", (handle) => {
+            callback(handle);
+        });
+    }
+    events_1.onEntityRemoved = onEntityRemoved;
+    /**
+     * Will be triggered when a player connects
+     */
+    function onPlayerConnecting(callback) {
+        on("playerConnecting", (playerName, setKickReason, deferrals, source) => {
+            callback(playerName, setKickReason, deferrals, source);
+        });
+    }
+    events_1.onPlayerConnecting = onPlayerConnecting;
+    /**
+     * Will be triggered when a player joins
+     */
+    function onPlayerJoining(callback) {
+        on("playerJoining", (source, oldID) => {
+            callback(source, oldID);
+        });
+    }
+    events_1.onPlayerJoining = onPlayerJoining;
+    /**
+     * Will be triggered when a player enters a scope
+     */
+    function onPlayerEnteredScope(callback) {
+        on('playerEnteredScope', (data) => {
+            callback(data);
+        });
+    }
+    events_1.onPlayerEnteredScope = onPlayerEnteredScope;
+    /**
+     * Will be triggered when a player left a scope
+     */
+    function onPlayerLeftScope(callback) {
+        on("playerLeftScope", (data) => {
+            callback(data);
+        });
+    }
+    events_1.onPlayerLeftScope = onPlayerLeftScope;
+    /**
+     * Will be triggered when a particle fx (ptFx) is created.
+     */
+    function onPtFxEvent(callback) {
+        on("ptFxEvent", (sender, data) => {
+            callback(sender, data);
+        });
+    }
+    events_1.onPtFxEvent = onPtFxEvent;
+    /**
+     * Will be triggered when a player removes all weapons from a ped owned by another player.
+     */
+    function onRemoveAllWeaponsEvent(callback) {
+        on("removeAllWeaponsEvent", (sender, data) => {
+            callback(sender, data);
+        });
+    }
+    events_1.onRemoveAllWeaponsEvent = onRemoveAllWeaponsEvent;
+    /**
+     * Will be triggered when a projectile is created.
+     */
+    function onStartProjectileEvent(callback) {
+        on("startProjectileEvent", (sender, data) => {
+            callback(sender, data);
+        });
+    }
+    events_1.onStartProjectileEvent = onStartProjectileEvent;
+    /**
+     * Will be triggered when a client wants to apply damage to a remotely-owned entity.
+     * You can use {@link misc.cancelEvent()} to cancel the start
+     */
+    function onWeaponDamageEvent(callback) {
+        on("weaponDamageEvent", (sender, data) => {
+            callback(sender, data);
+        });
+    }
+    events_1.onWeaponDamageEvent = onWeaponDamageEvent;
 })(events || (events = {}));
 // All below is auto-generated code
 export var entity;
