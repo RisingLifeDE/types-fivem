@@ -4468,36 +4468,6 @@ export var network;
     }
     network.getEntityOwner = getEntityOwner;
 })(network || (network = {}));
-export var kvp;
-(function (kvp) {
-    /**
-     * No comment provided
-     *
-     * Hash: 0xB3210203
-     */
-    function endFind(handle) {
-        EndFindKvp(handle);
-    }
-    kvp.endFind = endFind;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xBD7BEBC5
-     */
-    function find(handle) {
-        return FindKvp(handle);
-    }
-    kvp.find = find;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xDD379006
-     */
-    function startFind(prefix) {
-        return StartFindKvp(prefix);
-    }
-    kvp.startFind = startFind;
-})(kvp || (kvp = {}));
 export var mumble;
 (function (mumble) {
     /**
@@ -4693,6 +4663,24 @@ export var resource;
     }
     resource_1.deleteKvpNoSync = deleteKvpNoSync;
     /**
+     * No comment provided
+     *
+     * Hash: 0xB3210203
+     */
+    function endFindKvp(handle) {
+        EndFindKvp(handle);
+    }
+    resource_1.endFindKvp = endFindKvp;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xBD7BEBC5
+     */
+    function findKvp(handle) {
+        return FindKvp(handle);
+    }
+    resource_1.findKvp = findKvp;
+    /**
      * Returns the name of the currently executing resource.
      *
      * Hash: 0xE5E9EBBB
@@ -4883,6 +4871,15 @@ export var resource;
         SetResourceKvpNoSync(key, value);
     }
     resource_1.setKvpNoSync = setKvpNoSync;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xDD379006
+     */
+    function startFindKvp(prefix) {
+        return StartFindKvp(prefix);
+    }
+    resource_1.startFindKvp = startFindKvp;
 })(resource || (resource = {}));
 export var task;
 (function (task) {
@@ -9242,33 +9239,6 @@ export function networkGetEntityOwner(entity) {
     return network.getEntityOwner(entity);
 }
 /**
- * No comment provided
- *
- * Hash: 0xB3210203
- * @deprecated Use kvp.endFind(handle) instead
- */
-export function endFindKvp(handle) {
-    return kvp.endFind(handle);
-}
-/**
- * No comment provided
- *
- * Hash: 0xBD7BEBC5
- * @deprecated Use kvp.find(handle) instead
- */
-export function findKvp(handle) {
-    return kvp.find(handle);
-}
-/**
- * No comment provided
- *
- * Hash: 0xDD379006
- * @deprecated Use kvp.startFind(prefix) instead
- */
-export function startFindKvp(prefix) {
-    return kvp.startFind(prefix);
-}
-/**
  * Create a permanent voice channel.
  *
  * Hash: 0x262663C5
@@ -9449,6 +9419,24 @@ export function deleteResourceKvp(key) {
  */
 export function deleteResourceKvpNoSync(key) {
     return resource.deleteKvpNoSync(key);
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0xB3210203
+ * @deprecated Use resource.endFindKvp(handle) instead
+ */
+export function endFindKvp(handle) {
+    return resource.endFindKvp(handle);
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0xBD7BEBC5
+ * @deprecated Use resource.findKvp(handle) instead
+ */
+export function findKvp(handle) {
+    return resource.findKvp(handle);
 }
 /**
  * Returns the name of the currently executing resource.
@@ -9640,6 +9628,15 @@ export function setResourceKvpIntNoSync(key, value) {
  */
 export function setResourceKvpNoSync(key, value) {
     return resource.setKvpNoSync(key, value);
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0xDD379006
+ * @deprecated Use resource.startFindKvp(prefix) instead
+ */
+export function startFindKvp(prefix) {
+    return resource.startFindKvp(prefix);
 }
 /**
  * Clear a ped's tasks. Stop animations and other tasks created by scripts.

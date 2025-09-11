@@ -3330,26 +3330,6 @@ export declare namespace network {
      */
     function getEntityOwner(entity: number | IEntity): number;
 }
-export declare namespace kvp {
-    /**
-     * No comment provided
-     *
-     * Hash: 0xB3210203
-     */
-    function endFind(handle: number): void;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xBD7BEBC5
-     */
-    function find(handle: number): string;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xDD379006
-     */
-    function startFind(prefix: string): number;
-}
 export declare namespace mumble {
     /**
      * Create a permanent voice channel.
@@ -3487,6 +3467,18 @@ export declare namespace resource {
      */
     function deleteKvpNoSync(key: string): void;
     /**
+     * No comment provided
+     *
+     * Hash: 0xB3210203
+     */
+    function endFindKvp(handle: number): void;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xBD7BEBC5
+     */
+    function findKvp(handle: number): string;
+    /**
      * Returns the name of the currently executing resource.
      *
      * Hash: 0xE5E9EBBB
@@ -3620,6 +3612,12 @@ export declare namespace resource {
      * Hash: 0xCF9A2FF
      */
     function setKvpNoSync(key: string, value: string): void;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xDD379006
+     */
+    function startFindKvp(prefix: string): number;
 }
 export declare namespace task {
     /**

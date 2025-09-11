@@ -3330,26 +3330,6 @@ export declare namespace network {
      */
     function getEntityOwner(entity: number | IEntity): number;
 }
-export declare namespace kvp {
-    /**
-     * No comment provided
-     *
-     * Hash: 0xB3210203
-     */
-    function endFind(handle: number): void;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xBD7BEBC5
-     */
-    function find(handle: number): string;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xDD379006
-     */
-    function startFind(prefix: string): number;
-}
 export declare namespace mumble {
     /**
      * Create a permanent voice channel.
@@ -3487,6 +3467,18 @@ export declare namespace resource {
      */
     function deleteKvpNoSync(key: string): void;
     /**
+     * No comment provided
+     *
+     * Hash: 0xB3210203
+     */
+    function endFindKvp(handle: number): void;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xBD7BEBC5
+     */
+    function findKvp(handle: number): string;
+    /**
      * Returns the name of the currently executing resource.
      *
      * Hash: 0xE5E9EBBB
@@ -3620,6 +3612,12 @@ export declare namespace resource {
      * Hash: 0xCF9A2FF
      */
     function setKvpNoSync(key: string, value: string): void;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xDD379006
+     */
+    function startFindKvp(prefix: string): number;
 }
 export declare namespace task {
     /**
@@ -7317,27 +7315,6 @@ export declare function networkGetVoiceProximityOverrideForPlayer(playerSrc: str
  */
 export declare function networkGetEntityOwner(entity: number | IEntity): number;
 /**
- * No comment provided
- *
- * Hash: 0xB3210203
- * @deprecated Use kvp.endFind(handle) instead
- */
-export declare function endFindKvp(handle: number): void;
-/**
- * No comment provided
- *
- * Hash: 0xBD7BEBC5
- * @deprecated Use kvp.find(handle) instead
- */
-export declare function findKvp(handle: number): string;
-/**
- * No comment provided
- *
- * Hash: 0xDD379006
- * @deprecated Use kvp.startFind(prefix) instead
- */
-export declare function startFindKvp(prefix: string): number;
-/**
  * Create a permanent voice channel.
  *
  * Hash: 0x262663C5
@@ -7485,6 +7462,20 @@ export declare function deleteResourceKvp(key: string): void;
  * @deprecated Use resource.deleteKvpNoSync(key) instead
  */
 export declare function deleteResourceKvpNoSync(key: string): void;
+/**
+ * No comment provided
+ *
+ * Hash: 0xB3210203
+ * @deprecated Use resource.endFindKvp(handle) instead
+ */
+export declare function endFindKvp(handle: number): void;
+/**
+ * No comment provided
+ *
+ * Hash: 0xBD7BEBC5
+ * @deprecated Use resource.findKvp(handle) instead
+ */
+export declare function findKvp(handle: number): string;
 /**
  * Returns the name of the currently executing resource.
  *
@@ -7638,6 +7629,13 @@ export declare function setResourceKvpIntNoSync(key: string, value: number): voi
  * @deprecated Use resource.setKvpNoSync(key, value) instead
  */
 export declare function setResourceKvpNoSync(key: string, value: string): void;
+/**
+ * No comment provided
+ *
+ * Hash: 0xDD379006
+ * @deprecated Use resource.startFindKvp(prefix) instead
+ */
+export declare function startFindKvp(prefix: string): number;
 /**
  * Clear a ped's tasks. Stop animations and other tasks created by scripts.
  *

@@ -4496,37 +4496,6 @@ export namespace network {
 }
 
 
-export namespace kvp {
-    /**
-     * No comment provided
-     *
-     * Hash: 0xB3210203
-     */
-    export function endFind(handle: number): void {
-        EndFindKvp(handle);
-    }
-
-    /**
-     * No comment provided
-     *
-     * Hash: 0xBD7BEBC5
-     */
-    export function find(handle: number): string {
-        return FindKvp(handle);
-    }
-
-    /**
-     * No comment provided
-     *
-     * Hash: 0xDD379006
-     */
-    export function startFind(prefix: string): number {
-        return StartFindKvp(prefix);
-    }
-
-}
-
-
 export namespace mumble {
     /**
      * Create a permanent voice channel.
@@ -4721,6 +4690,24 @@ export namespace resource {
     }
 
     /**
+     * No comment provided
+     *
+     * Hash: 0xB3210203
+     */
+    export function endFindKvp(handle: number): void {
+        EndFindKvp(handle);
+    }
+
+    /**
+     * No comment provided
+     *
+     * Hash: 0xBD7BEBC5
+     */
+    export function findKvp(handle: number): string {
+        return FindKvp(handle);
+    }
+
+    /**
      * Returns the name of the currently executing resource.
      *
      * Hash: 0xE5E9EBBB
@@ -4909,6 +4896,15 @@ export namespace resource {
      */
     export function setKvpNoSync(key: string, value: string): void {
         SetResourceKvpNoSync(key, value);
+    }
+
+    /**
+     * No comment provided
+     *
+     * Hash: 0xDD379006
+     */
+    export function startFindKvp(prefix: string): number {
+        return StartFindKvp(prefix);
     }
 
 }

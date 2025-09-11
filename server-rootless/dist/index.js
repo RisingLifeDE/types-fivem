@@ -4468,36 +4468,6 @@ export var network;
     }
     network.getEntityOwner = getEntityOwner;
 })(network || (network = {}));
-export var kvp;
-(function (kvp) {
-    /**
-     * No comment provided
-     *
-     * Hash: 0xB3210203
-     */
-    function endFind(handle) {
-        EndFindKvp(handle);
-    }
-    kvp.endFind = endFind;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xBD7BEBC5
-     */
-    function find(handle) {
-        return FindKvp(handle);
-    }
-    kvp.find = find;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xDD379006
-     */
-    function startFind(prefix) {
-        return StartFindKvp(prefix);
-    }
-    kvp.startFind = startFind;
-})(kvp || (kvp = {}));
 export var mumble;
 (function (mumble) {
     /**
@@ -4693,6 +4663,24 @@ export var resource;
     }
     resource_1.deleteKvpNoSync = deleteKvpNoSync;
     /**
+     * No comment provided
+     *
+     * Hash: 0xB3210203
+     */
+    function endFindKvp(handle) {
+        EndFindKvp(handle);
+    }
+    resource_1.endFindKvp = endFindKvp;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xBD7BEBC5
+     */
+    function findKvp(handle) {
+        return FindKvp(handle);
+    }
+    resource_1.findKvp = findKvp;
+    /**
      * Returns the name of the currently executing resource.
      *
      * Hash: 0xE5E9EBBB
@@ -4883,6 +4871,15 @@ export var resource;
         SetResourceKvpNoSync(key, value);
     }
     resource_1.setKvpNoSync = setKvpNoSync;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xDD379006
+     */
+    function startFindKvp(prefix) {
+        return StartFindKvp(prefix);
+    }
+    resource_1.startFindKvp = startFindKvp;
 })(resource || (resource = {}));
 export var task;
 (function (task) {
