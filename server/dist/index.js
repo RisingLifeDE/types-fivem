@@ -1,4 +1,13 @@
 import { Vector3, IEntity } from '@risinglife/fivem-shared';
+export function invokeNative(hash, ...args) {
+    return Citizen.invokeNative(hash, ...args);
+}
+export function startProfiling(name) {
+    Citizen.startProfiling(name);
+}
+export function stopProfiling(name) {
+    return Citizen.stopProfiling(name);
+}
 export var events;
 (function (events_1) {
     class EventEmitter {

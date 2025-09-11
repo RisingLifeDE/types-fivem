@@ -1,4 +1,7 @@
 import { Vector3, IEntity, IPed, IPlayer, IVehicle, IObject, IBlip } from '@risinglife/fivem-shared';
+export declare function invokeNative<T = void>(hash: string, ...args: any[]): T;
+export declare function startProfiling(name?: string): void;
+export declare function stopProfiling(name?: string): {};
 export declare namespace events {
     function removeAllListeners(key?: string): void;
     /**
