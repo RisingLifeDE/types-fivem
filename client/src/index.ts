@@ -1,5 +1,17 @@
 import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} from '@risinglife/fivem-shared'
 
+export function invokeNative<T = void>(hash: string, ...args: any[]): T {
+    return Citizen.invokeNative<T>(hash, ...args)
+}
+
+export function startProfiling(name?: string): void {
+    Citizen.startProfiling(name);
+}
+
+export function stopProfiling(name?: string): {} {
+    return Citizen.stopProfiling(name);
+}
+
 export namespace events {
     interface api {
         onNet: (eventName: string, handler: Function) => void;
