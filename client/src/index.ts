@@ -1,414 +1,5 @@
 import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} from '@risinglife/fivem-shared'
 
-export namespace events {
-    interface api {
-        onNet: (eventName: string, handler: Function) => void;
-        emitNet: (eventName: string, ...args: any[]) => void;
-        on: (eventName: string, handler: Function) => void;
-        emit: (eventName: string, ...args: any[]) => void;
-    }
-    class EventEmitter {
-        private listeners: Map<string, Array<(...args: any[]) => void>> = new Map();
-
-        on(eventName: string, callback: (...args: any[]) => void): void {
-            if (!this.listeners.has(eventName)) {
-                this.listeners.set(eventName, []);
-            }
-            this.listeners.get(eventName)!.push(callback);
-        }
-
-        once(eventName: string, callback: (...args: any[]) => void): void {
-            const onceWrapper = (...args: any[]) => {
-                this.off(eventName, onceWrapper);
-                callback(...args);
-            };
-            this.on(eventName, onceWrapper);
-        }
-
-        emit(eventName: string, ...args: any[]): void {
-            const callbacks = this.listeners.get(eventName);
-            if (callbacks) {
-                callbacks.forEach((callback) => {
-                    try {
-                        callback(...args);
-                    } catch (error) {
-                        EventLogger.logError(eventName, error);
-                    }
-                });
-            }
-        }
-
-        off(eventName: string, callback: (...args: any[]) => void): void {
-            const callbacks = this.listeners.get(eventName);
-            if (callbacks) {
-                const index = callbacks.indexOf(callback);
-                if (index !== -1) {
-                    callbacks.splice(index, 1);
-                }
-            }
-        }
-
-        removeAllListeners(eventName?: string): void {
-            if (eventName) {
-                this.listeners.delete(eventName);
-            } else {
-                this.listeners.clear();
-            }
-        }
-    }
-    class EventParsingUtils {
-        static parseArgument(arg: any): any {
-            if (typeof arg === 'string') {
-                try {
-                    return JSON.parse(arg);
-                } catch {
-                    return arg;
-                }
-            }
-
-            if (Array.isArray(arg)) {
-                return arg.map((item) => this.parseArgument(item));
-            }
-
-            if (arg && typeof arg === 'object') {
-                const result: any = {};
-                for (const [key, value] of Object.entries(arg)) {
-                    result[key] = this.parseArgument(value);
-                }
-                return result;
-            }
-
-            return arg;
-        }
-
-        static parseAllArguments(args: any[]): any[] {
-            return args.map((arg) => this.parseArgument(arg));
-        }
-
-        static assignFields(target: any, source: any): any {
-            if (typeof target === 'object' && target !== null && typeof source === 'object' && source !== null) {
-                return Object.assign(target, source);
-            }
-            return source;
-        }
-    }
-    class EventRegistry {
-        private static networkEvents = new Set<string>();
-        private static localEvents = new Set<string>();
-        private static networkEmitter = new EventEmitter();
-        private static localEmitter = new EventEmitter();
-
-        static getNetworkRegistry() {
-            return {
-                events: this.networkEvents,
-                emitter: this.networkEmitter
-            };
-        }
-
-        static getLocalRegistry() {
-            return {
-                events: this.localEvents,
-                emitter: this.localEmitter
-            };
-        }
-    }
-    class EventLogger {
-
-        static logErrors: boolean = true;
-        static logEvents: boolean = false;
-
-        static logEvent(type: 'NETWORK' | 'LOCAL', eventName: string, ...args: any[]): void {
-            if (this.logEvents) console.log(`[${type}] ${eventName}`, ...args);
-        }
-
-        static logError(eventName: string, error: any): void {
-            if (this.logErrors) console.error(`Error in event handler for "${eventName}":`, error);
-        }
-    }
-
-    class RemoteEventUtils {
-        private static api: api = {
-            // @ts-ignore
-            onNet: (eventName: string, handler: Function) => onNet(eventName, handler),
-            // @ts-ignore
-            emitNet: (eventName: string, ...args: any[]) => emitNet(eventName, ...args),
-            // @ts-ignore
-            on: (eventName: string, handler: Function) => addEventListener(eventName, handler),
-            // @ts-ignore
-            emit: (eventName: string, ...args: any[]) => TriggerEvent(eventName, ...args),
-        };
-
-        private static getNetworkEventName(eventName: string): string {
-            return eventName.startsWith('net::') ? eventName : `net::${eventName}`;
-        }
-
-        private static setupListener(eventName: string): void {
-            const {events, emitter} = EventRegistry.getNetworkRegistry();
-            const networkEventName = this.getNetworkEventName(eventName);
-
-            if (!events.has(eventName)) {
-                events.add(eventName);
-
-                const handler = (...args: any[]) => {
-                    const parsedArgs = EventParsingUtils.parseAllArguments(args);
-                    emitter.emit(eventName, ...parsedArgs);
-                    EventLogger.logEvent('NETWORK', eventName, ...args);
-                };
-
-                this.api.onNet(networkEventName, handler);
-            }
-        }
-
-        static registerEvent<T extends any[]>(eventName: string, callback: (...args: T) => void): void {
-            this.setupListener(eventName);
-            const {emitter} = EventRegistry.getNetworkRegistry();
-            emitter.on(eventName, callback);
-        }
-
-        static registerEventOnce<T extends any[]>(eventName: string, callback: (...args: T) => void): void {
-            this.setupListener(eventName);
-            const {emitter} = EventRegistry.getNetworkRegistry();
-            emitter.once(eventName, callback);
-        }
-
-        static removeListener<T extends any[]>(eventName: string, callback: (...args: T) => void): void {
-            const {emitter} = EventRegistry.getNetworkRegistry();
-            emitter.off(eventName, callback);
-        }
-
-        static removeAllListeners(eventName?: string): void {
-            const {emitter} = EventRegistry.getNetworkRegistry();
-            emitter.removeAllListeners(eventName);
-        }
-
-        static send(eventName: string, ...args: any[]): void {
-            const networkEventName = this.getNetworkEventName(eventName);
-            const parsedArgs = args.map((arg) => {
-                if (arg instanceof IEntity) {
-                    return arg.remoteId();
-                }
-                return arg;
-            });
-
-            EventLogger.logEvent('NETWORK', eventName, ...parsedArgs);
-            this.api.emitNet(networkEventName, ...parsedArgs);
-        }
-    }
-    class LocalEventUtils {
-        private static api: api = {
-            // @ts-ignore
-            onNet: (eventName: string, handler: Function) => onNet(eventName, handler),
-            // @ts-ignore
-            emitNet: (eventName: string, ...args: any[]) => emitNet(eventName, ...args),
-            // @ts-ignore
-            on: (eventName: string, handler: Function) => addEventListener(eventName, handler),
-            // @ts-ignore
-            emit: (eventName: string, ...args: any[]) => TriggerEvent(eventName, ...args),
-        };
-
-        private static setupListener(eventName: string): void {
-            const {events, emitter} = EventRegistry.getLocalRegistry();
-
-            if (!events.has(eventName)) {
-                events.add(eventName);
-
-                const handler = (...args: any[]) => {
-                    const parsedArgs = EventParsingUtils.parseAllArguments(args);
-                    emitter.emit(eventName, ...parsedArgs);
-                    EventLogger.logEvent('LOCAL', eventName, ...args);
-                };
-
-                this.api.on(eventName, handler);
-            }
-        }
-
-        static registerEvent<T extends any[]>(eventName: string, callback: (...args: T) => void): void {
-            this.setupListener(eventName);
-            const {emitter} = EventRegistry.getLocalRegistry();
-            emitter.on(eventName, callback);
-        }
-
-        static registerEventOnce<T extends any[]>(eventName: string, callback: (...args: T) => void): void {
-            this.setupListener(eventName);
-            const {emitter} = EventRegistry.getLocalRegistry();
-            emitter.once(eventName, callback);
-        }
-
-        static removeListener<T extends any[]>(eventName: string, callback: (...args: T) => void): void {
-            const {emitter} = EventRegistry.getLocalRegistry();
-            emitter.off(eventName, callback);
-        }
-
-        static removeAllListeners(eventName?: string): void {
-            const {emitter} = EventRegistry.getLocalRegistry();
-            emitter.removeAllListeners(eventName);
-        }
-
-        static send(eventName: string, ...args: any[]): void {
-            const parsedArgs = args.map((arg) => {
-                if (arg instanceof IEntity) {
-                    return arg.remoteId();
-                }
-                return arg;
-            });
-
-            EventLogger.logEvent('LOCAL', eventName, ...parsedArgs);
-            this.api.emit(eventName, ...parsedArgs);
-        }
-    }
-
-    export function removeAllListeners(key?: string): void {
-        LocalEventUtils.removeAllListeners(key)
-        RemoteEventUtils.removeAllListeners(key)
-    }
-
-    /**
-     * Registers a listener for a local emitted event
-     * @param key The event key which should be listened on
-     * @param callback The callback which should be executed
-     */
-    export function on(key: string, callback: (...args: any[]) => void): void {
-        LocalEventUtils.registerEvent(key, callback);
-    }
-    /**
-     * Registers a onetime listener for a local emitted event
-     * @param key The event key which should be listened on
-     * @param callback The callback which should be executed
-     */
-    export function once(key: string, callback: (...args: any[]) => void): void {
-        LocalEventUtils.registerEventOnce(key, callback);
-    }
-    /**
-     * Removes a listener for a local emitted event
-     * @param key The event key which should be removed
-     * @param callback Must be the callback
-     */
-    export function off(key: string, callback: (...args: any[]) => void): void {
-        LocalEventUtils.removeListener(key, callback);
-    }
-
-    /**
-     * Registers a listener for the server emitted event
-     * @param key The event key which should be listened on
-     * @param callback The callback which should be executed
-     */
-    export function onServer(key: string, callback: (...args: any[]) => void): void {
-        RemoteEventUtils.registerEvent(key, callback);
-    }
-    /**
-     * Registers a onetime listener for the server emitted event
-     * @param key The event key which should be listened on
-     * @param callback The callback which should be executed
-     */
-    export function onceServer(key: string, callback: (...args: any[]) => void): void {
-        RemoteEventUtils.registerEventOnce(key, callback);
-    }
-    /**
-     * Removes a listener for the server emitted event
-     * @param key The event key which should be removed
-     * @param callback Must be the callback
-     */
-    export function offServer(key: string, callback: (...args: any[]) => void): void {
-        RemoteEventUtils.removeListener(key, callback);
-    }
-
-    /**
-     * Sends data local, which can be listened by any resource
-     * @param key The event key
-     * @param args All parameters
-     */
-    export function emit(key: string, ...args: any[]): void {
-        LocalEventUtils.send(key, ...args)
-    }
-    /**
-     * Sends data to the server, which can be listened by any resource
-     * @param key The event key
-     * @param args All parameters
-     */
-    export function emitServer(key: string, ...args: any[]): void {
-        RemoteEventUtils.send(key, ...args)
-    }
-
-    // Implementations
-
-    /**
-     * Will be triggered when a resource is started
-     */
-    export function onResourceStart(callback: (name: string) => void) {
-        on("onResourceStart", (name) => {
-            callback(name)
-        });
-    }
-
-    /**
-     * Will be triggered when a resource is being starting
-     * You can use {@link misc.cancelEvent()} to cancel the start
-     */
-    export function onResourceStarting(callback: (name: string) => void) {
-        on("onResourceStarting", (name) => {
-            callback(name)
-        });
-    }
-
-    /**
-     * Will be triggered when a resource is being stopped
-     */
-    export function onResourceStop(callback: (name: string) => void) {
-        on("onResourceStop", (name) => {
-            callback(name)
-        });
-    }
-
-    /**
-     * Will be triggered when a game event is fired.
-     * You can find a list of all game events here: https://docs.fivem.net/docs/game-references/game-events/
-     */
-    export function onGameEvent(callback: (name: string, ...args: any[]) => void) {
-        on("gameEventTriggered", (name, args) => {
-            callback(name, args)
-        });
-    }
-
-    /**
-     * Will be triggered when a population ped is being creating.
-     * You can use {@link misc.cancelEvent()} to cancel this event.
-     */
-    export function onPopulationPedCreating(callback: (position: Vector3,  model: number,  setters: { setModel: (model: string) => void, setPosition: (x: number, y: number, z: number) => void }) => void) {
-        on('populationPedCreating', (x, y, z, model, setters) => {
-            callback(new Vector3(x, y, z), model, setters)
-        })
-    }
-
-    /**
-     * Will be triggered when an Entity got damage
-     */
-    export function onEntityDamaged(callback: (victim: number, culprit: number, weapon: number, baseDamage: number) => void) {
-        on('entityDamaged', (victim: number, culprit: number, weapon: number, baseDamage: number) => {
-            callback(victim, culprit, weapon, baseDamage)
-        })
-    }
-
-    /**
-     * Will be triggered when mumble is connected
-     */
-    export function onMumbleConnected(callback: (address: string, reconnecting: boolean) => void) {
-        on('mumbleConnected', (address: string, reconnecting: boolean) => {
-            callback(address, reconnecting)
-        })
-    }
-
-    /**
-     * Will be triggered when mumble is disconnected
-     */
-    export function onMumbleDisconnected(callback: (address: string) => void) {
-        on('mumbleDisconnected', (address: string) => {
-            callback(address)
-        })
-    }
-}
-
-// All below is auto-generated code
-
 export namespace audio {
     /**
      * Allows StaticEmitter's without a linked entity to make use of environment features like occlusion and reverb even if they are located higher than 20.0 units above any static collision inside interiors.
@@ -5923,73 +5514,6 @@ export namespace dui {
 }
 
 
-export namespace kvp {
-    /**
-     * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938), but for a specified resource.
-     *
-     * Hash: 0x3CC98B25
-     */
-    export function getExternalFloat(resource: string, key: string): number {
-        return GetExternalKvpFloat(resource, key);
-    }
-
-    /**
-     * A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8), but for a specified resource.
-     *
-     * Hash: 0x12B8D689
-     */
-    export function getExternalInt(resource: string, key: string): number {
-        return GetExternalKvpInt(resource, key);
-    }
-
-    /**
-     * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B), but for a specified resource.
-     *
-     * Hash: 0x9080363A
-     */
-    export function getExternalString(resource: string, key: string): string {
-        return GetExternalKvpString(resource, key);
-    }
-
-    /**
-     * Equivalent of [START_FIND_KVP](#\_0xDD379006), but for another resource than the current one.
-     *
-     * Hash: 0x8F2EECC3
-     */
-    export function startFindExternal(resourceName: string, prefix: string): number {
-        return StartFindExternalKvp(resourceName, prefix);
-    }
-
-    /**
-     * No comment provided
-     *
-     * Hash: 0xB3210203
-     */
-    export function endFind(handle: number): void {
-        EndFindKvp(handle);
-    }
-
-    /**
-     * No comment provided
-     *
-     * Hash: 0xBD7BEBC5
-     */
-    export function find(handle: number): string {
-        return FindKvp(handle);
-    }
-
-    /**
-     * No comment provided
-     *
-     * Hash: 0xDD379006
-     */
-    export function startFind(prefix: string): number {
-        return StartFindKvp(prefix);
-    }
-
-}
-
-
 export namespace mumble {
     /**
      * Starts listening to the specified channel, when available.
@@ -6537,20 +6061,43 @@ export namespace pad {
 }
 
 
-export namespace social {
+export namespace resource {
     /**
-     * Sets the player's rich presence detail state for social platform providers to a specified string.
+     * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938), but for a specified resource.
      *
-     * Hash: 0x7BDCBD45
+     * Hash: 0x3CC98B25
      */
-    export function setRichPresence(presenceState: string): void {
-        SetRichPresence(presenceState);
+    export function getExternalKvpFloat(resource: string, key: string): number {
+        return GetExternalKvpFloat(resource, key);
     }
 
-}
+    /**
+     * A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8), but for a specified resource.
+     *
+     * Hash: 0x12B8D689
+     */
+    export function getExternalKvpInt(resource: string, key: string): number {
+        return GetExternalKvpInt(resource, key);
+    }
 
+    /**
+     * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B), but for a specified resource.
+     *
+     * Hash: 0x9080363A
+     */
+    export function getExternalKvpString(resource: string, key: string): string {
+        return GetExternalKvpString(resource, key);
+    }
 
-export namespace resource {
+    /**
+     * Equivalent of [START_FIND_KVP](#\_0xDD379006), but for another resource than the current one.
+     *
+     * Hash: 0x8F2EECC3
+     */
+    export function startFindExternalKvp(resourceName: string, prefix: string): number {
+        return StartFindExternalKvp(resourceName, prefix);
+    }
+
     /**
      * No comment provided
      *
@@ -6567,6 +6114,24 @@ export namespace resource {
      */
     export function deleteKvpNoSync(key: string): void {
         DeleteResourceKvpNoSync(key);
+    }
+
+    /**
+     * No comment provided
+     *
+     * Hash: 0xB3210203
+     */
+    export function endFindKvp(handle: number): void {
+        EndFindKvp(handle);
+    }
+
+    /**
+     * No comment provided
+     *
+     * Hash: 0xBD7BEBC5
+     */
+    export function findKvp(handle: number): string {
+        return FindKvp(handle);
     }
 
     /**
@@ -6758,6 +6323,28 @@ export namespace resource {
      */
     export function setKvpNoSync(key: string, value: string): void {
         SetResourceKvpNoSync(key, value);
+    }
+
+    /**
+     * No comment provided
+     *
+     * Hash: 0xDD379006
+     */
+    export function startFindKvp(prefix: string): number {
+        return StartFindKvp(prefix);
+    }
+
+}
+
+
+export namespace social {
+    /**
+     * Sets the player's rich presence detail state for social platform providers to a specified string.
+     *
+     * Hash: 0x7BDCBD45
+     */
+    export function setRichPresence(presenceState: string): void {
+        SetRichPresence(presenceState);
     }
 
 }
@@ -12749,76 +12336,6 @@ export function setDuiUrl(duiObject: number, url: string): void {
 }
 
 /**
- * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938), but for a specified resource.
- *
- * Hash: 0x3CC98B25
- * @deprecated Use kvp.getExternalFloat(resource, key) instead
- */
-export function getExternalKvpFloat(resource: string, key: string): number {
-    return kvp.getExternalFloat(resource, key);
-}
-
-/**
- * A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8), but for a specified resource.
- *
- * Hash: 0x12B8D689
- * @deprecated Use kvp.getExternalInt(resource, key) instead
- */
-export function getExternalKvpInt(resource: string, key: string): number {
-    return kvp.getExternalInt(resource, key);
-}
-
-/**
- * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B), but for a specified resource.
- *
- * Hash: 0x9080363A
- * @deprecated Use kvp.getExternalString(resource, key) instead
- */
-export function getExternalKvpString(resource: string, key: string): string {
-    return kvp.getExternalString(resource, key);
-}
-
-/**
- * Equivalent of [START_FIND_KVP](#\_0xDD379006), but for another resource than the current one.
- *
- * Hash: 0x8F2EECC3
- * @deprecated Use kvp.startFindExternal(resourceName, prefix) instead
- */
-export function startFindExternalKvp(resourceName: string, prefix: string): number {
-    return kvp.startFindExternal(resourceName, prefix);
-}
-
-/**
- * No comment provided
- *
- * Hash: 0xB3210203
- * @deprecated Use kvp.endFind(handle) instead
- */
-export function endFindKvp(handle: number): void {
-    return kvp.endFind(handle);
-}
-
-/**
- * No comment provided
- *
- * Hash: 0xBD7BEBC5
- * @deprecated Use kvp.find(handle) instead
- */
-export function findKvp(handle: number): string {
-    return kvp.find(handle);
-}
-
-/**
- * No comment provided
- *
- * Hash: 0xDD379006
- * @deprecated Use kvp.startFind(prefix) instead
- */
-export function startFindKvp(prefix: string): number {
-    return kvp.startFind(prefix);
-}
-
-/**
  * Starts listening to the specified channel, when available.
  *
  * Hash: 0xC79F44BF
@@ -13402,13 +12919,43 @@ export function isRawKeyUp(rawKeyIndex: number): boolean {
 }
 
 /**
- * Sets the player's rich presence detail state for social platform providers to a specified string.
+ * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938), but for a specified resource.
  *
- * Hash: 0x7BDCBD45
- * @deprecated Use social.setRichPresence(presenceState) instead
+ * Hash: 0x3CC98B25
+ * @deprecated Use resource.getExternalKvpFloat(resource1, key) instead
  */
-export function setRichPresence(presenceState: string): void {
-    return social.setRichPresence(presenceState);
+export function getExternalKvpFloat(resource1: string, key: string): number {
+    return resource.getExternalKvpFloat(resource1, key);
+}
+
+/**
+ * A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8), but for a specified resource.
+ *
+ * Hash: 0x12B8D689
+ * @deprecated Use resource.getExternalKvpInt(resource1, key) instead
+ */
+export function getExternalKvpInt(resource1: string, key: string): number {
+    return resource.getExternalKvpInt(resource1, key);
+}
+
+/**
+ * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B), but for a specified resource.
+ *
+ * Hash: 0x9080363A
+ * @deprecated Use resource.getExternalKvpString(resource1, key) instead
+ */
+export function getExternalKvpString(resource1: string, key: string): string {
+    return resource.getExternalKvpString(resource1, key);
+}
+
+/**
+ * Equivalent of [START_FIND_KVP](#\_0xDD379006), but for another resource than the current one.
+ *
+ * Hash: 0x8F2EECC3
+ * @deprecated Use resource.startFindExternalKvp(resourceName, prefix) instead
+ */
+export function startFindExternalKvp(resourceName: string, prefix: string): number {
+    return resource.startFindExternalKvp(resourceName, prefix);
 }
 
 /**
@@ -13429,6 +12976,26 @@ export function deleteResourceKvp(key: string): void {
  */
 export function deleteResourceKvpNoSync(key: string): void {
     return resource.deleteKvpNoSync(key);
+}
+
+/**
+ * No comment provided
+ *
+ * Hash: 0xB3210203
+ * @deprecated Use resource.endFindKvp(handle) instead
+ */
+export function endFindKvp(handle: number): void {
+    return resource.endFindKvp(handle);
+}
+
+/**
+ * No comment provided
+ *
+ * Hash: 0xBD7BEBC5
+ * @deprecated Use resource.findKvp(handle) instead
+ */
+export function findKvp(handle: number): string {
+    return resource.findKvp(handle);
 }
 
 /**
@@ -13639,6 +13206,26 @@ export function setResourceKvpIntNoSync(key: string, value: number): void {
  */
 export function setResourceKvpNoSync(key: string, value: string): void {
     return resource.setKvpNoSync(key, value);
+}
+
+/**
+ * No comment provided
+ *
+ * Hash: 0xDD379006
+ * @deprecated Use resource.startFindKvp(prefix) instead
+ */
+export function startFindKvp(prefix: string): number {
+    return resource.startFindKvp(prefix);
+}
+
+/**
+ * Sets the player's rich presence detail state for social platform providers to a specified string.
+ *
+ * Hash: 0x7BDCBD45
+ * @deprecated Use social.setRichPresence(presenceState) instead
+ */
+export function setRichPresence(presenceState: string): void {
+    return social.setRichPresence(presenceState);
 }
 
 /**

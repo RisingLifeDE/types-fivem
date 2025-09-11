@@ -1,93 +1,4 @@
 import { Vector3, Vector2, IEntity, IPed, IPlayer, IVehicle, IObject, ICamera } from '@risinglife/fivem-shared';
-export declare namespace events {
-    function removeAllListeners(key?: string): void;
-    /**
-     * Registers a listener for a local emitted event
-     * @param key The event key which should be listened on
-     * @param callback The callback which should be executed
-     */
-    function on(key: string, callback: (...args: any[]) => void): void;
-    /**
-     * Registers a onetime listener for a local emitted event
-     * @param key The event key which should be listened on
-     * @param callback The callback which should be executed
-     */
-    function once(key: string, callback: (...args: any[]) => void): void;
-    /**
-     * Removes a listener for a local emitted event
-     * @param key The event key which should be removed
-     * @param callback Must be the callback
-     */
-    function off(key: string, callback: (...args: any[]) => void): void;
-    /**
-     * Registers a listener for the server emitted event
-     * @param key The event key which should be listened on
-     * @param callback The callback which should be executed
-     */
-    function onServer(key: string, callback: (...args: any[]) => void): void;
-    /**
-     * Registers a onetime listener for the server emitted event
-     * @param key The event key which should be listened on
-     * @param callback The callback which should be executed
-     */
-    function onceServer(key: string, callback: (...args: any[]) => void): void;
-    /**
-     * Removes a listener for the server emitted event
-     * @param key The event key which should be removed
-     * @param callback Must be the callback
-     */
-    function offServer(key: string, callback: (...args: any[]) => void): void;
-    /**
-     * Sends data local, which can be listened by any resource
-     * @param key The event key
-     * @param args All parameters
-     */
-    function emit(key: string, ...args: any[]): void;
-    /**
-     * Sends data to the server, which can be listened by any resource
-     * @param key The event key
-     * @param args All parameters
-     */
-    function emitServer(key: string, ...args: any[]): void;
-    /**
-     * Will be triggered when a resource is started
-     */
-    function onResourceStart(callback: (name: string) => void): void;
-    /**
-     * Will be triggered when a resource is being starting
-     * You can use {@link misc.cancelEvent()} to cancel the start
-     */
-    function onResourceStarting(callback: (name: string) => void): void;
-    /**
-     * Will be triggered when a resource is being stopped
-     */
-    function onResourceStop(callback: (name: string) => void): void;
-    /**
-     * Will be triggered when a game event is fired.
-     * You can find a list of all game events here: https://docs.fivem.net/docs/game-references/game-events/
-     */
-    function onGameEvent(callback: (name: string, ...args: any[]) => void): void;
-    /**
-     * Will be triggered when a population ped is being creating.
-     * You can use {@link misc.cancelEvent()} to cancel this event.
-     */
-    function onPopulationPedCreating(callback: (position: Vector3, model: number, setters: {
-        setModel: (model: string) => void;
-        setPosition: (x: number, y: number, z: number) => void;
-    }) => void): void;
-    /**
-     * Will be triggered when an Entity got damage
-     */
-    function onEntityDamaged(callback: (victim: number, culprit: number, weapon: number, baseDamage: number) => void): void;
-    /**
-     * Will be triggered when mumble is connected
-     */
-    function onMumbleConnected(callback: (address: string, reconnecting: boolean) => void): void;
-    /**
-     * Will be triggered when mumble is disconnected
-     */
-    function onMumbleDisconnected(callback: (address: string) => void): void;
-}
 export declare namespace audio {
     /**
      * Allows StaticEmitter's without a linked entity to make use of environment features like occlusion and reverb even if they are located higher than 20.0 units above any static collision inside interiors.
@@ -3949,50 +3860,6 @@ export declare namespace dui {
      */
     function setUrl(duiObject: number, url: string): void;
 }
-export declare namespace kvp {
-    /**
-     * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938), but for a specified resource.
-     *
-     * Hash: 0x3CC98B25
-     */
-    function getExternalFloat(resource: string, key: string): number;
-    /**
-     * A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8), but for a specified resource.
-     *
-     * Hash: 0x12B8D689
-     */
-    function getExternalInt(resource: string, key: string): number;
-    /**
-     * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B), but for a specified resource.
-     *
-     * Hash: 0x9080363A
-     */
-    function getExternalString(resource: string, key: string): string;
-    /**
-     * Equivalent of [START_FIND_KVP](#\_0xDD379006), but for another resource than the current one.
-     *
-     * Hash: 0x8F2EECC3
-     */
-    function startFindExternal(resourceName: string, prefix: string): number;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xB3210203
-     */
-    function endFind(handle: number): void;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xBD7BEBC5
-     */
-    function find(handle: number): string;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xDD379006
-     */
-    function startFind(prefix: string): number;
-}
 export declare namespace mumble {
     /**
      * Starts listening to the specified channel, when available.
@@ -4372,15 +4239,31 @@ export declare namespace pad {
      */
     function isRawKeyUp(rawKeyIndex: number): boolean;
 }
-export declare namespace social {
-    /**
-     * Sets the player's rich presence detail state for social platform providers to a specified string.
-     *
-     * Hash: 0x7BDCBD45
-     */
-    function setRichPresence(presenceState: string): void;
-}
 export declare namespace resource {
+    /**
+     * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938), but for a specified resource.
+     *
+     * Hash: 0x3CC98B25
+     */
+    function getExternalKvpFloat(resource: string, key: string): number;
+    /**
+     * A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8), but for a specified resource.
+     *
+     * Hash: 0x12B8D689
+     */
+    function getExternalKvpInt(resource: string, key: string): number;
+    /**
+     * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B), but for a specified resource.
+     *
+     * Hash: 0x9080363A
+     */
+    function getExternalKvpString(resource: string, key: string): string;
+    /**
+     * Equivalent of [START_FIND_KVP](#\_0xDD379006), but for another resource than the current one.
+     *
+     * Hash: 0x8F2EECC3
+     */
+    function startFindExternalKvp(resourceName: string, prefix: string): number;
     /**
      * No comment provided
      *
@@ -4393,6 +4276,18 @@ export declare namespace resource {
      * Hash: 0x4152C90
      */
     function deleteKvpNoSync(key: string): void;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xB3210203
+     */
+    function endFindKvp(handle: number): void;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xBD7BEBC5
+     */
+    function findKvp(handle: number): string;
     /**
      * Returns the name of the currently executing resource.
      *
@@ -4527,6 +4422,20 @@ export declare namespace resource {
      * Hash: 0xCF9A2FF
      */
     function setKvpNoSync(key: string, value: string): void;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xDD379006
+     */
+    function startFindKvp(prefix: string): number;
+}
+export declare namespace social {
+    /**
+     * Sets the player's rich presence detail state for social platform providers to a specified string.
+     *
+     * Hash: 0x7BDCBD45
+     */
+    function setRichPresence(presenceState: string): void;
 }
 export declare namespace profiler {
     /**
@@ -8906,55 +8815,6 @@ export declare function sendDuiMouseWheel(duiObject: number, deltaY: number, del
  */
 export declare function setDuiUrl(duiObject: number, url: string): void;
 /**
- * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938), but for a specified resource.
- *
- * Hash: 0x3CC98B25
- * @deprecated Use kvp.getExternalFloat(resource, key) instead
- */
-export declare function getExternalKvpFloat(resource: string, key: string): number;
-/**
- * A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8), but for a specified resource.
- *
- * Hash: 0x12B8D689
- * @deprecated Use kvp.getExternalInt(resource, key) instead
- */
-export declare function getExternalKvpInt(resource: string, key: string): number;
-/**
- * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B), but for a specified resource.
- *
- * Hash: 0x9080363A
- * @deprecated Use kvp.getExternalString(resource, key) instead
- */
-export declare function getExternalKvpString(resource: string, key: string): string;
-/**
- * Equivalent of [START_FIND_KVP](#\_0xDD379006), but for another resource than the current one.
- *
- * Hash: 0x8F2EECC3
- * @deprecated Use kvp.startFindExternal(resourceName, prefix) instead
- */
-export declare function startFindExternalKvp(resourceName: string, prefix: string): number;
-/**
- * No comment provided
- *
- * Hash: 0xB3210203
- * @deprecated Use kvp.endFind(handle) instead
- */
-export declare function endFindKvp(handle: number): void;
-/**
- * No comment provided
- *
- * Hash: 0xBD7BEBC5
- * @deprecated Use kvp.find(handle) instead
- */
-export declare function findKvp(handle: number): string;
-/**
- * No comment provided
- *
- * Hash: 0xDD379006
- * @deprecated Use kvp.startFind(prefix) instead
- */
-export declare function startFindKvp(prefix: string): number;
-/**
  * Starts listening to the specified channel, when available.
  *
  * Hash: 0xC79F44BF
@@ -9379,12 +9239,33 @@ export declare function isRawKeyReleased(rawKeyIndex: number): boolean;
  */
 export declare function isRawKeyUp(rawKeyIndex: number): boolean;
 /**
- * Sets the player's rich presence detail state for social platform providers to a specified string.
+ * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938), but for a specified resource.
  *
- * Hash: 0x7BDCBD45
- * @deprecated Use social.setRichPresence(presenceState) instead
+ * Hash: 0x3CC98B25
+ * @deprecated Use resource.getExternalKvpFloat(resource1, key) instead
  */
-export declare function setRichPresence(presenceState: string): void;
+export declare function getExternalKvpFloat(resource1: string, key: string): number;
+/**
+ * A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8), but for a specified resource.
+ *
+ * Hash: 0x12B8D689
+ * @deprecated Use resource.getExternalKvpInt(resource1, key) instead
+ */
+export declare function getExternalKvpInt(resource1: string, key: string): number;
+/**
+ * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B), but for a specified resource.
+ *
+ * Hash: 0x9080363A
+ * @deprecated Use resource.getExternalKvpString(resource1, key) instead
+ */
+export declare function getExternalKvpString(resource1: string, key: string): string;
+/**
+ * Equivalent of [START_FIND_KVP](#\_0xDD379006), but for another resource than the current one.
+ *
+ * Hash: 0x8F2EECC3
+ * @deprecated Use resource.startFindExternalKvp(resourceName, prefix) instead
+ */
+export declare function startFindExternalKvp(resourceName: string, prefix: string): number;
 /**
  * No comment provided
  *
@@ -9399,6 +9280,20 @@ export declare function deleteResourceKvp(key: string): void;
  * @deprecated Use resource.deleteKvpNoSync(key) instead
  */
 export declare function deleteResourceKvpNoSync(key: string): void;
+/**
+ * No comment provided
+ *
+ * Hash: 0xB3210203
+ * @deprecated Use resource.endFindKvp(handle) instead
+ */
+export declare function endFindKvp(handle: number): void;
+/**
+ * No comment provided
+ *
+ * Hash: 0xBD7BEBC5
+ * @deprecated Use resource.findKvp(handle) instead
+ */
+export declare function findKvp(handle: number): string;
 /**
  * Returns the name of the currently executing resource.
  *
@@ -9552,6 +9447,20 @@ export declare function setResourceKvpIntNoSync(key: string, value: number): voi
  * @deprecated Use resource.setKvpNoSync(key, value) instead
  */
 export declare function setResourceKvpNoSync(key: string, value: string): void;
+/**
+ * No comment provided
+ *
+ * Hash: 0xDD379006
+ * @deprecated Use resource.startFindKvp(prefix) instead
+ */
+export declare function startFindKvp(prefix: string): number;
+/**
+ * Sets the player's rich presence detail state for social platform providers to a specified string.
+ *
+ * Hash: 0x7BDCBD45
+ * @deprecated Use social.setRichPresence(presenceState) instead
+ */
+export declare function setRichPresence(presenceState: string): void;
 /**
  * Scope entry for profiler.
  *

@@ -3949,50 +3949,6 @@ export declare namespace dui {
      */
     function setUrl(duiObject: number, url: string): void;
 }
-export declare namespace kvp {
-    /**
-     * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938), but for a specified resource.
-     *
-     * Hash: 0x3CC98B25
-     */
-    function getExternalFloat(resource: string, key: string): number;
-    /**
-     * A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8), but for a specified resource.
-     *
-     * Hash: 0x12B8D689
-     */
-    function getExternalInt(resource: string, key: string): number;
-    /**
-     * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B), but for a specified resource.
-     *
-     * Hash: 0x9080363A
-     */
-    function getExternalString(resource: string, key: string): string;
-    /**
-     * Equivalent of [START_FIND_KVP](#\_0xDD379006), but for another resource than the current one.
-     *
-     * Hash: 0x8F2EECC3
-     */
-    function startFindExternal(resourceName: string, prefix: string): number;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xB3210203
-     */
-    function endFind(handle: number): void;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xBD7BEBC5
-     */
-    function find(handle: number): string;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xDD379006
-     */
-    function startFind(prefix: string): number;
-}
 export declare namespace mumble {
     /**
      * Starts listening to the specified channel, when available.
@@ -4372,15 +4328,31 @@ export declare namespace pad {
      */
     function isRawKeyUp(rawKeyIndex: number): boolean;
 }
-export declare namespace social {
-    /**
-     * Sets the player's rich presence detail state for social platform providers to a specified string.
-     *
-     * Hash: 0x7BDCBD45
-     */
-    function setRichPresence(presenceState: string): void;
-}
 export declare namespace resource {
+    /**
+     * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938), but for a specified resource.
+     *
+     * Hash: 0x3CC98B25
+     */
+    function getExternalKvpFloat(resource: string, key: string): number;
+    /**
+     * A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8), but for a specified resource.
+     *
+     * Hash: 0x12B8D689
+     */
+    function getExternalKvpInt(resource: string, key: string): number;
+    /**
+     * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B), but for a specified resource.
+     *
+     * Hash: 0x9080363A
+     */
+    function getExternalKvpString(resource: string, key: string): string;
+    /**
+     * Equivalent of [START_FIND_KVP](#\_0xDD379006), but for another resource than the current one.
+     *
+     * Hash: 0x8F2EECC3
+     */
+    function startFindExternalKvp(resourceName: string, prefix: string): number;
     /**
      * No comment provided
      *
@@ -4393,6 +4365,18 @@ export declare namespace resource {
      * Hash: 0x4152C90
      */
     function deleteKvpNoSync(key: string): void;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xB3210203
+     */
+    function endFindKvp(handle: number): void;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xBD7BEBC5
+     */
+    function findKvp(handle: number): string;
     /**
      * Returns the name of the currently executing resource.
      *
@@ -4527,6 +4511,20 @@ export declare namespace resource {
      * Hash: 0xCF9A2FF
      */
     function setKvpNoSync(key: string, value: string): void;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xDD379006
+     */
+    function startFindKvp(prefix: string): number;
+}
+export declare namespace social {
+    /**
+     * Sets the player's rich presence detail state for social platform providers to a specified string.
+     *
+     * Hash: 0x7BDCBD45
+     */
+    function setRichPresence(presenceState: string): void;
 }
 export declare namespace profiler {
     /**

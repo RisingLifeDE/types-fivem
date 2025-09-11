@@ -5890,72 +5890,6 @@ export var dui;
     }
     dui.setUrl = setUrl;
 })(dui || (dui = {}));
-export var kvp;
-(function (kvp) {
-    /**
-     * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938), but for a specified resource.
-     *
-     * Hash: 0x3CC98B25
-     */
-    function getExternalFloat(resource, key) {
-        return GetExternalKvpFloat(resource, key);
-    }
-    kvp.getExternalFloat = getExternalFloat;
-    /**
-     * A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8), but for a specified resource.
-     *
-     * Hash: 0x12B8D689
-     */
-    function getExternalInt(resource, key) {
-        return GetExternalKvpInt(resource, key);
-    }
-    kvp.getExternalInt = getExternalInt;
-    /**
-     * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B), but for a specified resource.
-     *
-     * Hash: 0x9080363A
-     */
-    function getExternalString(resource, key) {
-        return GetExternalKvpString(resource, key);
-    }
-    kvp.getExternalString = getExternalString;
-    /**
-     * Equivalent of [START_FIND_KVP](#\_0xDD379006), but for another resource than the current one.
-     *
-     * Hash: 0x8F2EECC3
-     */
-    function startFindExternal(resourceName, prefix) {
-        return StartFindExternalKvp(resourceName, prefix);
-    }
-    kvp.startFindExternal = startFindExternal;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xB3210203
-     */
-    function endFind(handle) {
-        EndFindKvp(handle);
-    }
-    kvp.endFind = endFind;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xBD7BEBC5
-     */
-    function find(handle) {
-        return FindKvp(handle);
-    }
-    kvp.find = find;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xDD379006
-     */
-    function startFind(prefix) {
-        return StartFindKvp(prefix);
-    }
-    kvp.startFind = startFind;
-})(kvp || (kvp = {}));
 export var mumble;
 (function (mumble) {
     /**
@@ -6500,20 +6434,44 @@ export var pad;
     }
     pad.isRawKeyUp = isRawKeyUp;
 })(pad || (pad = {}));
-export var social;
-(function (social) {
-    /**
-     * Sets the player's rich presence detail state for social platform providers to a specified string.
-     *
-     * Hash: 0x7BDCBD45
-     */
-    function setRichPresence(presenceState) {
-        SetRichPresence(presenceState);
-    }
-    social.setRichPresence = setRichPresence;
-})(social || (social = {}));
 export var resource;
 (function (resource_1) {
+    /**
+     * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938), but for a specified resource.
+     *
+     * Hash: 0x3CC98B25
+     */
+    function getExternalKvpFloat(resource, key) {
+        return GetExternalKvpFloat(resource, key);
+    }
+    resource_1.getExternalKvpFloat = getExternalKvpFloat;
+    /**
+     * A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8), but for a specified resource.
+     *
+     * Hash: 0x12B8D689
+     */
+    function getExternalKvpInt(resource, key) {
+        return GetExternalKvpInt(resource, key);
+    }
+    resource_1.getExternalKvpInt = getExternalKvpInt;
+    /**
+     * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B), but for a specified resource.
+     *
+     * Hash: 0x9080363A
+     */
+    function getExternalKvpString(resource, key) {
+        return GetExternalKvpString(resource, key);
+    }
+    resource_1.getExternalKvpString = getExternalKvpString;
+    /**
+     * Equivalent of [START_FIND_KVP](#\_0xDD379006), but for another resource than the current one.
+     *
+     * Hash: 0x8F2EECC3
+     */
+    function startFindExternalKvp(resourceName, prefix) {
+        return StartFindExternalKvp(resourceName, prefix);
+    }
+    resource_1.startFindExternalKvp = startFindExternalKvp;
     /**
      * No comment provided
      *
@@ -6532,6 +6490,24 @@ export var resource;
         DeleteResourceKvpNoSync(key);
     }
     resource_1.deleteKvpNoSync = deleteKvpNoSync;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xB3210203
+     */
+    function endFindKvp(handle) {
+        EndFindKvp(handle);
+    }
+    resource_1.endFindKvp = endFindKvp;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xBD7BEBC5
+     */
+    function findKvp(handle) {
+        return FindKvp(handle);
+    }
+    resource_1.findKvp = findKvp;
     /**
      * Returns the name of the currently executing resource.
      *
@@ -6723,7 +6699,28 @@ export var resource;
         SetResourceKvpNoSync(key, value);
     }
     resource_1.setKvpNoSync = setKvpNoSync;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xDD379006
+     */
+    function startFindKvp(prefix) {
+        return StartFindKvp(prefix);
+    }
+    resource_1.startFindKvp = startFindKvp;
 })(resource || (resource = {}));
+export var social;
+(function (social) {
+    /**
+     * Sets the player's rich presence detail state for social platform providers to a specified string.
+     *
+     * Hash: 0x7BDCBD45
+     */
+    function setRichPresence(presenceState) {
+        SetRichPresence(presenceState);
+    }
+    social.setRichPresence = setRichPresence;
+})(social || (social = {}));
 export var profiler;
 (function (profiler) {
     /**

@@ -5923,73 +5923,6 @@ export namespace dui {
 }
 
 
-export namespace kvp {
-    /**
-     * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938), but for a specified resource.
-     *
-     * Hash: 0x3CC98B25
-     */
-    export function getExternalFloat(resource: string, key: string): number {
-        return GetExternalKvpFloat(resource, key);
-    }
-
-    /**
-     * A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8), but for a specified resource.
-     *
-     * Hash: 0x12B8D689
-     */
-    export function getExternalInt(resource: string, key: string): number {
-        return GetExternalKvpInt(resource, key);
-    }
-
-    /**
-     * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B), but for a specified resource.
-     *
-     * Hash: 0x9080363A
-     */
-    export function getExternalString(resource: string, key: string): string {
-        return GetExternalKvpString(resource, key);
-    }
-
-    /**
-     * Equivalent of [START_FIND_KVP](#\_0xDD379006), but for another resource than the current one.
-     *
-     * Hash: 0x8F2EECC3
-     */
-    export function startFindExternal(resourceName: string, prefix: string): number {
-        return StartFindExternalKvp(resourceName, prefix);
-    }
-
-    /**
-     * No comment provided
-     *
-     * Hash: 0xB3210203
-     */
-    export function endFind(handle: number): void {
-        EndFindKvp(handle);
-    }
-
-    /**
-     * No comment provided
-     *
-     * Hash: 0xBD7BEBC5
-     */
-    export function find(handle: number): string {
-        return FindKvp(handle);
-    }
-
-    /**
-     * No comment provided
-     *
-     * Hash: 0xDD379006
-     */
-    export function startFind(prefix: string): number {
-        return StartFindKvp(prefix);
-    }
-
-}
-
-
 export namespace mumble {
     /**
      * Starts listening to the specified channel, when available.
@@ -6537,20 +6470,43 @@ export namespace pad {
 }
 
 
-export namespace social {
+export namespace resource {
     /**
-     * Sets the player's rich presence detail state for social platform providers to a specified string.
+     * A getter for [SET_RESOURCE_KVP_FLOAT](#\_0x9ADD2938), but for a specified resource.
      *
-     * Hash: 0x7BDCBD45
+     * Hash: 0x3CC98B25
      */
-    export function setRichPresence(presenceState: string): void {
-        SetRichPresence(presenceState);
+    export function getExternalKvpFloat(resource: string, key: string): number {
+        return GetExternalKvpFloat(resource, key);
     }
 
-}
+    /**
+     * A getter for [SET_RESOURCE_KVP_INT](#\_0x6A2B1E8), but for a specified resource.
+     *
+     * Hash: 0x12B8D689
+     */
+    export function getExternalKvpInt(resource: string, key: string): number {
+        return GetExternalKvpInt(resource, key);
+    }
 
+    /**
+     * A getter for [SET_RESOURCE_KVP](#\_0x21C7A35B), but for a specified resource.
+     *
+     * Hash: 0x9080363A
+     */
+    export function getExternalKvpString(resource: string, key: string): string {
+        return GetExternalKvpString(resource, key);
+    }
 
-export namespace resource {
+    /**
+     * Equivalent of [START_FIND_KVP](#\_0xDD379006), but for another resource than the current one.
+     *
+     * Hash: 0x8F2EECC3
+     */
+    export function startFindExternalKvp(resourceName: string, prefix: string): number {
+        return StartFindExternalKvp(resourceName, prefix);
+    }
+
     /**
      * No comment provided
      *
@@ -6567,6 +6523,24 @@ export namespace resource {
      */
     export function deleteKvpNoSync(key: string): void {
         DeleteResourceKvpNoSync(key);
+    }
+
+    /**
+     * No comment provided
+     *
+     * Hash: 0xB3210203
+     */
+    export function endFindKvp(handle: number): void {
+        EndFindKvp(handle);
+    }
+
+    /**
+     * No comment provided
+     *
+     * Hash: 0xBD7BEBC5
+     */
+    export function findKvp(handle: number): string {
+        return FindKvp(handle);
     }
 
     /**
@@ -6758,6 +6732,28 @@ export namespace resource {
      */
     export function setKvpNoSync(key: string, value: string): void {
         SetResourceKvpNoSync(key, value);
+    }
+
+    /**
+     * No comment provided
+     *
+     * Hash: 0xDD379006
+     */
+    export function startFindKvp(prefix: string): number {
+        return StartFindKvp(prefix);
+    }
+
+}
+
+
+export namespace social {
+    /**
+     * Sets the player's rich presence detail state for social platform providers to a specified string.
+     *
+     * Hash: 0x7BDCBD45
+     */
+    export function setRichPresence(presenceState: string): void {
+        SetRichPresence(presenceState);
     }
 
 }
