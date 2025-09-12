@@ -55509,6 +55509,15 @@ export var camera;
 export var discord;
 (function (discord) {
     /**
+     * Sets a clickable button to be displayed in a player's Discord rich presence.
+     *
+     * Hash: 0xCBBC3FAC | Since: unknown | API-Set: client
+     */
+    function setAction(index, label, url) {
+        SetDiscordRichPresenceAction(index, label, url);
+    }
+    discord.setAction = setAction;
+    /**
      * This native sets the app id for the discord rich presence implementation.
      *
      * Hash: 0x6A02254D | Since: unknown | API-Set: client
@@ -55518,50 +55527,50 @@ export var discord;
     }
     discord.setAppId = setAppId;
     /**
-     * Sets a clickable button to be displayed in a player's Discord rich presence.
-     *
-     * Hash: 0xCBBC3FAC | Since: unknown | API-Set: client
-     */
-    function setRichPresenceAction(index, label, url) {
-        SetDiscordRichPresenceAction(index, label, url);
-    }
-    discord.setRichPresenceAction = setRichPresenceAction;
-    /**
      * This native sets the image asset for the discord rich presence implementation.
      *
      * Hash: 0x53DFD530 | Since: unknown | API-Set: client
      */
-    function setRichPresenceAsset(assetName) {
+    function setAsset(assetName) {
         SetDiscordRichPresenceAsset(assetName);
     }
-    discord.setRichPresenceAsset = setRichPresenceAsset;
+    discord.setAsset = setAsset;
     /**
      * This native sets the small image asset for the discord rich presence implementation.
      *
      * Hash: 0xF61D04C4 | Since: unknown | API-Set: client
      */
-    function setRichPresenceAssetSmall(assetName) {
+    function setAssetSmall(assetName) {
         SetDiscordRichPresenceAssetSmall(assetName);
     }
-    discord.setRichPresenceAssetSmall = setRichPresenceAssetSmall;
+    discord.setAssetSmall = setAssetSmall;
     /**
      * This native sets the hover text of the small image asset for the discord rich presence implementation.
      *
      * Hash: 0x35E62B6A | Since: unknown | API-Set: client
      */
-    function setRichPresenceAssetSmallText(text) {
+    function setAssetSmallText(text) {
         SetDiscordRichPresenceAssetSmallText(text);
     }
-    discord.setRichPresenceAssetSmallText = setRichPresenceAssetSmallText;
+    discord.setAssetSmallText = setAssetSmallText;
     /**
      * This native sets the hover text of the image asset for the discord rich presence implementation.
      *
      * Hash: 0xB029D2FA | Since: unknown | API-Set: client
      */
-    function setRichPresenceAssetText(text) {
+    function setAssetText(text) {
         SetDiscordRichPresenceAssetText(text);
     }
-    discord.setRichPresenceAssetText = setRichPresenceAssetText;
+    discord.setAssetText = setAssetText;
+    /**
+     * Sets the player's rich presence detail state for social platform providers to a specified string.
+     *
+     * Hash: 0x7BDCBD45 | Since: unknown | API-Set: client
+     */
+    function setDetailState(presenceState) {
+        SetRichPresence(presenceState);
+    }
+    discord.setDetailState = setDetailState;
 })(discord || (discord = {}));
 export var dui;
 (function (dui) {
@@ -58749,18 +58758,6 @@ export var resource;
     }
     resource_1.startFindKvp = startFindKvp;
 })(resource || (resource = {}));
-export var social;
-(function (social) {
-    /**
-     * Sets the player's rich presence detail state for social platform providers to a specified string.
-     *
-     * Hash: 0x7BDCBD45 | Since: unknown | API-Set: client
-     */
-    function setRichPresence(presenceState) {
-        SetRichPresence(presenceState);
-    }
-    social.setRichPresence = setRichPresence;
-})(social || (social = {}));
 export var profiler;
 (function (profiler) {
     /**

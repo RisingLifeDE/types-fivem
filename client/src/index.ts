@@ -5785,21 +5785,21 @@ export namespace camera {
 
 export namespace discord {
     /**
+     * Sets a clickable button to be displayed in a player's Discord rich presence.
+     *
+     * Hash: 0xCBBC3FAC
+     */
+    export function setAction(index: number, label: string, url: string): void {
+        SetAction(index, label, url);
+    }
+
+    /**
      * This native sets the app id for the discord rich presence implementation.
      *
      * Hash: 0x6A02254D
      */
     export function setAppId(appId: string): void {
-        SetDiscordAppId(appId);
-    }
-
-    /**
-     * Sets a clickable button to be displayed in a player's Discord rich presence.
-     *
-     * Hash: 0xCBBC3FAC
-     */
-    export function setRichPresenceAction(index: number, label: string, url: string): void {
-        SetDiscordRichPresenceAction(index, label, url);
+        SetAppId(appId);
     }
 
     /**
@@ -5807,8 +5807,8 @@ export namespace discord {
      *
      * Hash: 0x53DFD530
      */
-    export function setRichPresenceAsset(assetName: string): void {
-        SetDiscordRichPresenceAsset(assetName);
+    export function setAsset(assetName: string): void {
+        SetAsset(assetName);
     }
 
     /**
@@ -5816,8 +5816,8 @@ export namespace discord {
      *
      * Hash: 0xF61D04C4
      */
-    export function setRichPresenceAssetSmall(assetName: string): void {
-        SetDiscordRichPresenceAssetSmall(assetName);
+    export function setAssetSmall(assetName: string): void {
+        SetAssetSmall(assetName);
     }
 
     /**
@@ -5825,8 +5825,8 @@ export namespace discord {
      *
      * Hash: 0x35E62B6A
      */
-    export function setRichPresenceAssetSmallText(text: string): void {
-        SetDiscordRichPresenceAssetSmallText(text);
+    export function setAssetSmallText(text: string): void {
+        SetAssetSmallText(text);
     }
 
     /**
@@ -5834,8 +5834,17 @@ export namespace discord {
      *
      * Hash: 0xB029D2FA
      */
-    export function setRichPresenceAssetText(text: string): void {
-        SetDiscordRichPresenceAssetText(text);
+    export function setAssetText(text: string): void {
+        SetAssetText(text);
+    }
+
+    /**
+     * Sets the player's rich presence detail state for social platform providers to a specified string.
+     *
+     * Hash: 0x7BDCBD45
+     */
+    export function setDetailState(presenceState: string): void {
+        SetDetailState(presenceState);
     }
 
 }
@@ -6753,19 +6762,6 @@ export namespace resource {
      */
     export function startFindKvp(prefix: string): number {
         return StartFindKvp(prefix);
-    }
-
-}
-
-
-export namespace social {
-    /**
-     * Sets the player's rich presence detail state for social platform providers to a specified string.
-     *
-     * Hash: 0x7BDCBD45
-     */
-    export function setRichPresence(presenceState: string): void {
-        SetRichPresence(presenceState);
     }
 
 }
