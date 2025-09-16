@@ -344,6 +344,13 @@ export namespace events {
     // Implementations
 
     /**
+     * Will be triggered when the current resource nui sends a message
+     */
+    export function onNui(name: string, callback: (data: any, cb: (key: any) => void) => void) {
+        nui.registerCallback(name, callback)
+    }
+
+    /**
      * Will be triggered when a resource is started
      */
     export function onResourceStart(callback: (name: string) => void) {

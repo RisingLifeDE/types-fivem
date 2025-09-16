@@ -53,6 +53,10 @@ export declare namespace events {
      */
     function emitServer(key: string, ...args: any[]): void;
     /**
+     * Will be triggered when the current resource nui sends a message
+     */
+    function onNui(name: string, callback: (data: any, cb: (key: any) => void) => void): void;
+    /**
      * Will be triggered when a resource is started
      */
     function onResourceStart(callback: (name: string) => void): void;

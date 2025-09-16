@@ -306,6 +306,13 @@ export var events;
     events_1.emitServer = emitServer;
     // Implementations
     /**
+     * Will be triggered when the current resource nui sends a message
+     */
+    function onNui(name, callback) {
+        nui.registerCallback(name, callback);
+    }
+    events_1.onNui = onNui;
+    /**
      * Will be triggered when a resource is started
      */
     function onResourceStart(callback) {
