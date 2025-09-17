@@ -218,6 +218,28 @@ export var events;
     }
     events_1.removeAllListeners = removeAllListeners;
     /**
+     * Enable or disable the error event logging.
+     * Default state: true
+     *
+     * @param value Is the new state
+     */
+    function setLogEventErrors(value) {
+        EventLogger.logErrors = value;
+    }
+    events_1.setLogEventErrors = setLogEventErrors;
+    /**
+     * Enable or disable the event logging.
+     * This could be helpful when you have to debug some errors.
+     *
+     * Default state: false
+     *
+     * @param value Is the new state
+     */
+    function setLogEvents(value) {
+        EventLogger.logEvents = value;
+    }
+    events_1.setLogEvents = setLogEvents;
+    /**
      * Registers a listener for a local emitted event
      * @param key The event key which should be listened on
      * @param callback The callback which should be executed

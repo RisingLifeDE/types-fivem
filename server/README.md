@@ -11,7 +11,7 @@ The package must be included when compile the code for example with **esbuild**.
 All root methods (e.g. `server.taskShootAtEntity()`) were removed.
 The reason for this is clearly that namespaced methods are better and clearer.
 
-If you want them, you must switch to version [0.1.0-legacy](https://www.npmjs.com/package/@risinglife/fivem-server/v/0.1.0-legacy)
+If you want them, you must switch to version [0.1.1-legacy](https://www.npmjs.com/package/@risinglife/fivem-server/v/0.1.1-legacy)
 
 ### Contribute
 

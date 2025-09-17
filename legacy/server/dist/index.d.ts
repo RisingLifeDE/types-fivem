@@ -2,6 +2,22 @@ import { Vector3, IEntity, IPed, IPlayer, IVehicle, IObject, IBlip } from '@risi
 export declare namespace events {
     function removeAllListeners(key?: string): void;
     /**
+     * Enable or disable the error event logging.
+     * Default state: true
+     *
+     * @param value Is the new state
+     */
+    function setLogEventErrors(value: boolean): void;
+    /**
+     * Enable or disable the event logging.
+     * This could be helpful when you have to debug some errors.
+     *
+     * Default state: false
+     *
+     * @param value Is the new state
+     */
+    function setLogEvents(value: boolean): void;
+    /**
      * Registers a listener for a local emitted event
      * @param key The event key which should be listened on
      * @param callback The callback which should be executed
