@@ -1,5 +1,443 @@
 import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} from '@risinglife/fivem-shared'
 
+export namespace events {
+    interface api {
+        onNet: (eventName: string, handler: Function) => void;
+        emitNet: (eventName: string, ...args: any[]) => void;
+        on: (eventName: string, handler: Function) => void;
+        emit: (eventName: string, ...args: any[]) => void;
+    }
+    class EventEmitter {
+        private listeners: Map<string, Array<(...args: any[]) => void>> = new Map();
+
+        on(eventName: string, callback: (...args: any[]) => void): void {
+            if (!this.listeners.has(eventName)) {
+                this.listeners.set(eventName, []);
+            }
+            this.listeners.get(eventName)!.push(callback);
+        }
+
+        once(eventName: string, callback: (...args: any[]) => void): void {
+            const onceWrapper = (...args: any[]) => {
+                this.off(eventName, onceWrapper);
+                callback(...args);
+            };
+            this.on(eventName, onceWrapper);
+        }
+
+        emit(eventName: string, ...args: any[]): void {
+            const callbacks = this.listeners.get(eventName);
+            if (callbacks) {
+                callbacks.forEach((callback) => {
+                    try {
+                        callback(...args);
+                    } catch (error) {
+                        EventLogger.logError(eventName, error);
+                    }
+                });
+            }
+        }
+
+        off(eventName: string, callback: (...args: any[]) => void): void {
+            const callbacks = this.listeners.get(eventName);
+            if (callbacks) {
+                const index = callbacks.indexOf(callback);
+                if (index !== -1) {
+                    callbacks.splice(index, 1);
+                }
+            }
+        }
+
+        removeAllListeners(eventName?: string): void {
+            if (eventName) {
+                this.listeners.delete(eventName);
+            } else {
+                this.listeners.clear();
+            }
+        }
+    }
+    class EventParsingUtils {
+        static parseArgument(arg: any): any {
+            if (typeof arg === 'string') {
+                try {
+                    return JSON.parse(arg);
+                } catch {
+                    return arg;
+                }
+            }
+
+            if (Array.isArray(arg)) {
+                return arg.map((item) => this.parseArgument(item));
+            }
+
+            if (arg && typeof arg === 'object') {
+                const result: any = {};
+                for (const [key, value] of Object.entries(arg)) {
+                    result[key] = this.parseArgument(value);
+                }
+                return result;
+            }
+
+            return arg;
+        }
+
+        static parseAllArguments(args: any[]): any[] {
+            return args.map((arg) => this.parseArgument(arg));
+        }
+
+        static assignFields(target: any, source: any): any {
+            if (typeof target === 'object' && target !== null && typeof source === 'object' && source !== null) {
+                return Object.assign(target, source);
+            }
+            return source;
+        }
+    }
+    class EventRegistry {
+        private static networkEvents = new Set<string>();
+        private static localEvents = new Set<string>();
+        private static networkEmitter = new EventEmitter();
+        private static localEmitter = new EventEmitter();
+
+        static getNetworkRegistry() {
+            return {
+                events: this.networkEvents,
+                emitter: this.networkEmitter
+            };
+        }
+
+        static getLocalRegistry() {
+            return {
+                events: this.localEvents,
+                emitter: this.localEmitter
+            };
+        }
+    }
+    class EventLogger {
+
+        static logErrors: boolean = true;
+        static logEvents: boolean = false;
+
+        static logEvent(type: 'NETWORK' | 'LOCAL', eventName: string, ...args: any[]): void {
+            if (this.logEvents) console.log(`[${type}] ${eventName}`, ...args);
+        }
+
+        static logError(eventName: string, error: any): void {
+            if (this.logErrors) console.error(`Error in event handler for "${eventName}":`, error);
+        }
+    }
+
+    class RemoteEventUtils {
+        private static api: api = {
+            // @ts-ignore
+            onNet: (eventName: string, handler: Function) => onNet(eventName, handler),
+            // @ts-ignore
+            emitNet: (eventName: string, ...args: any[]) => emitNet(eventName, ...args),
+            // @ts-ignore
+            on: (eventName: string, handler: Function) => addEventListener(eventName, handler),
+            // @ts-ignore
+            emit: (eventName: string, ...args: any[]) => TriggerEvent(eventName, ...args),
+        };
+
+        private static getNetworkEventName(eventName: string): string {
+            return eventName.startsWith('net::') ? eventName : `net::${eventName}`;
+        }
+
+        private static setupListener(eventName: string): void {
+            const {events, emitter} = EventRegistry.getNetworkRegistry();
+            const networkEventName = this.getNetworkEventName(eventName);
+
+            if (!events.has(eventName)) {
+                events.add(eventName);
+
+                const handler = (...args: any[]) => {
+                    const parsedArgs = EventParsingUtils.parseAllArguments(args);
+                    emitter.emit(eventName, ...parsedArgs);
+                    EventLogger.logEvent('NETWORK', eventName, ...args);
+                };
+
+                this.api.onNet(networkEventName, handler);
+            }
+        }
+
+        static registerEvent<T extends any[]>(eventName: string, callback: (...args: T) => void): void {
+            this.setupListener(eventName);
+            const {emitter} = EventRegistry.getNetworkRegistry();
+            emitter.on(eventName, callback);
+        }
+
+        static registerEventOnce<T extends any[]>(eventName: string, callback: (...args: T) => void): void {
+            this.setupListener(eventName);
+            const {emitter} = EventRegistry.getNetworkRegistry();
+            emitter.once(eventName, callback);
+        }
+
+        static removeListener<T extends any[]>(eventName: string, callback: (...args: T) => void): void {
+            const {emitter} = EventRegistry.getNetworkRegistry();
+            emitter.off(eventName, callback);
+        }
+
+        static removeAllListeners(eventName?: string): void {
+            const {emitter} = EventRegistry.getNetworkRegistry();
+            emitter.removeAllListeners(eventName);
+        }
+
+        static send(eventName: string, ...args: any[]): void {
+            const networkEventName = this.getNetworkEventName(eventName);
+            const parsedArgs = args.map((arg) => {
+                if (arg instanceof IEntity) {
+                    return arg.remoteId();
+                }
+                return arg;
+            });
+
+            EventLogger.logEvent('NETWORK', eventName, ...parsedArgs);
+            this.api.emitNet(networkEventName, ...parsedArgs);
+        }
+    }
+    class LocalEventUtils {
+        private static api: api = {
+            // @ts-ignore
+            onNet: (eventName: string, handler: Function) => onNet(eventName, handler),
+            // @ts-ignore
+            emitNet: (eventName: string, ...args: any[]) => emitNet(eventName, ...args),
+            // @ts-ignore
+            on: (eventName: string, handler: Function) => addEventListener(eventName, handler),
+            // @ts-ignore
+            emit: (eventName: string, ...args: any[]) => TriggerEvent(eventName, ...args),
+        };
+
+        private static setupListener(eventName: string): void {
+            const {events, emitter} = EventRegistry.getLocalRegistry();
+
+            if (!events.has(eventName)) {
+                events.add(eventName);
+
+                const handler = (...args: any[]) => {
+                    const parsedArgs = EventParsingUtils.parseAllArguments(args);
+                    emitter.emit(eventName, ...parsedArgs);
+                    EventLogger.logEvent('LOCAL', eventName, ...args);
+                };
+
+                this.api.on(eventName, handler);
+            }
+        }
+
+        static registerEvent<T extends any[]>(eventName: string, callback: (...args: T) => void): void {
+            this.setupListener(eventName);
+            const {emitter} = EventRegistry.getLocalRegistry();
+            emitter.on(eventName, callback);
+        }
+
+        static registerEventOnce<T extends any[]>(eventName: string, callback: (...args: T) => void): void {
+            this.setupListener(eventName);
+            const {emitter} = EventRegistry.getLocalRegistry();
+            emitter.once(eventName, callback);
+        }
+
+        static removeListener<T extends any[]>(eventName: string, callback: (...args: T) => void): void {
+            const {emitter} = EventRegistry.getLocalRegistry();
+            emitter.off(eventName, callback);
+        }
+
+        static removeAllListeners(eventName?: string): void {
+            const {emitter} = EventRegistry.getLocalRegistry();
+            emitter.removeAllListeners(eventName);
+        }
+
+        static send(eventName: string, ...args: any[]): void {
+            const parsedArgs = args.map((arg) => {
+                if (arg instanceof IEntity) {
+                    return arg.remoteId();
+                }
+                return arg;
+            });
+
+            EventLogger.logEvent('LOCAL', eventName, ...parsedArgs);
+            this.api.emit(eventName, ...parsedArgs);
+        }
+    }
+
+    export function removeAllListeners(key?: string): void {
+        LocalEventUtils.removeAllListeners(key)
+        RemoteEventUtils.removeAllListeners(key)
+    }
+
+    /**
+     * Enable or disable the error event logging.
+     * Default state: true
+     *
+     * @param value Is the new state
+     */
+    export function setLogEventErrors(value: boolean): void {
+        EventLogger.logErrors = value;
+    }
+
+    /**
+     * Enable or disable the event logging.
+     * This could be helpful when you have to debug some errors.
+     *
+     * Default state: false
+     *
+     * @param value Is the new state
+     */
+    export function setLogEvents(value: boolean): void {
+        EventLogger.logEvents = value;
+    }
+
+    /**
+     * Registers a listener for a local emitted event
+     * @param key The event key which should be listened on
+     * @param callback The callback which should be executed
+     */
+    export function on(key: string, callback: (...args: any[]) => void): void {
+        LocalEventUtils.registerEvent(key, callback);
+    }
+    /**
+     * Registers a onetime listener for a local emitted event
+     * @param key The event key which should be listened on
+     * @param callback The callback which should be executed
+     */
+    export function once(key: string, callback: (...args: any[]) => void): void {
+        LocalEventUtils.registerEventOnce(key, callback);
+    }
+    /**
+     * Removes a listener for a local emitted event
+     * @param key The event key which should be removed
+     * @param callback Must be the callback
+     */
+    export function off(key: string, callback: (...args: any[]) => void): void {
+        LocalEventUtils.removeListener(key, callback);
+    }
+
+    /**
+     * Registers a listener for the server emitted event
+     * @param key The event key which should be listened on
+     * @param callback The callback which should be executed
+     */
+    export function onServer(key: string, callback: (...args: any[]) => void): void {
+        RemoteEventUtils.registerEvent(key, callback);
+    }
+    /**
+     * Registers a onetime listener for the server emitted event
+     * @param key The event key which should be listened on
+     * @param callback The callback which should be executed
+     */
+    export function onceServer(key: string, callback: (...args: any[]) => void): void {
+        RemoteEventUtils.registerEventOnce(key, callback);
+    }
+    /**
+     * Removes a listener for the server emitted event
+     * @param key The event key which should be removed
+     * @param callback Must be the callback
+     */
+    export function offServer(key: string, callback: (...args: any[]) => void): void {
+        RemoteEventUtils.removeListener(key, callback);
+    }
+
+    /**
+     * Sends data local, which can be listened by any resource
+     * @param key The event key
+     * @param args All parameters
+     */
+    export function emit(key: string, ...args: any[]): void {
+        LocalEventUtils.send(key, ...args)
+    }
+    /**
+     * Sends data to the server, which can be listened by any resource
+     * @param key The event key
+     * @param args All parameters
+     */
+    export function emitServer(key: string, ...args: any[]): void {
+        RemoteEventUtils.send(key, ...args)
+    }
+
+    // Implementations
+
+    /**
+     * Will be triggered when the current resource nui sends a message
+     */
+    export function onNui(name: string, callback: (data: any, cb: (key: any) => void) => void) {
+        nui.registerCallback(name, callback)
+    }
+
+    /**
+     * Will be triggered when a resource is started
+     */
+    export function onResourceStart(callback: (name: string) => void) {
+        on("onResourceStart", (name) => {
+            callback(name)
+        });
+    }
+
+    /**
+     * Will be triggered when a resource is being starting
+     * You can use {@link misc.cancelEvent()} to cancel the start
+     */
+    export function onResourceStarting(callback: (name: string) => void) {
+        on("onResourceStarting", (name) => {
+            callback(name)
+        });
+    }
+
+    /**
+     * Will be triggered when a resource is being stopped
+     */
+    export function onResourceStop(callback: (name: string) => void) {
+        on("onResourceStop", (name) => {
+            callback(name)
+        });
+    }
+
+    /**
+     * Will be triggered when a game event is fired.
+     * You can find a list of all game events here: https://docs.fivem.net/docs/game-references/game-events/
+     */
+    export function onGameEvent(callback: (name: string, ...args: any[]) => void) {
+        on("gameEventTriggered", (name, args) => {
+            callback(name, args)
+        });
+    }
+
+    /**
+     * Will be triggered when a population ped is being creating.
+     * You can use {@link misc.cancelEvent()} to cancel this event.
+     */
+    export function onPopulationPedCreating(callback: (position: Vector3,  model: number,  setters: { setModel: (model: string) => void, setPosition: (x: number, y: number, z: number) => void }) => void) {
+        on('populationPedCreating', (x, y, z, model, setters) => {
+            callback(new Vector3(x, y, z), model, setters)
+        })
+    }
+
+    /**
+     * Will be triggered when an Entity got damage
+     */
+    export function onEntityDamaged(callback: (victim: number, culprit: number, weapon: number, baseDamage: number) => void) {
+        on('entityDamaged', (victim: number, culprit: number, weapon: number, baseDamage: number) => {
+            callback(victim, culprit, weapon, baseDamage)
+        })
+    }
+
+    /**
+     * Will be triggered when mumble is connected
+     */
+    export function onMumbleConnected(callback: (address: string, reconnecting: boolean) => void) {
+        on('mumbleConnected', (address: string, reconnecting: boolean) => {
+            callback(address, reconnecting)
+        })
+    }
+
+    /**
+     * Will be triggered when mumble is disconnected
+     */
+    export function onMumbleDisconnected(callback: (address: string) => void) {
+        on('mumbleDisconnected', (address: string) => {
+            callback(address)
+        })
+    }
+}
+
+// All below is auto-generated code
+
 export namespace audio {
     /**
      * Allows StaticEmitter's without a linked entity to make use of environment features like occlusion and reverb even if they are located higher than 20.0 units above any static collision inside interiors.
@@ -1070,7 +1508,7 @@ export namespace misc {
      * Hash: 0xD29D8EDD
      */
     export function getMapdataFromHashKey(mapdataHandle: number | string): number {
-        if (typeof mapdataHandle === 'string') mapdataHandle = game.getHashKey(mapdataHandle)
+        if (typeof mapdataHandle === 'string') mapdataHandle = GetHashKey(mapdataHandle)
         return GetMapdataFromHashKey(mapdataHandle);
     }
 
@@ -1413,7 +1851,7 @@ export namespace misc {
      * Hash: 0x7F6B8D75
      */
     export function setModelHeadlightConfiguration(modelHash: number | string, ratePerSecond: number, headlightRotation: number, invertRotation: boolean): void {
-        if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+        if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
         SetModelHeadlightConfiguration(modelHash, ratePerSecond, headlightRotation, invertRotation);
     }
 
@@ -2491,7 +2929,7 @@ export namespace ped {
      * Hash: 0xF71542F7
      */
     export function getModelHealthConfig(modelHash: number | string): number {
-        if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+        if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
         return GetPedModelHealthConfig(modelHash);
     }
 
@@ -2501,7 +2939,7 @@ export namespace ped {
      * Hash: 0xFE08CAD6
      */
     export function getModelPersonality(modelHash: number | string): number {
-        if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+        if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
         return GetPedModelPersonality(modelHash);
     }
 
@@ -2619,7 +3057,7 @@ export namespace ped {
      * Hash: 0x79A12861
      */
     export function resetModelPersonality(modelHash: number | string): void {
-        if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+        if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
         ResetPedModelPersonality(modelHash);
     }
 
@@ -2693,7 +3131,7 @@ export namespace ped {
      * Hash: 0xAF12A05D
      */
     export function setModelHealthConfig(modelHash: number | string, configName: string): void {
-        if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+        if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
         SetPedModelHealthConfig(modelHash, configName);
     }
 
@@ -2703,8 +3141,8 @@ export namespace ped {
      * Hash: 0x46F6B38B
      */
     export function setModelPersonality(modelHash: number | string, personalityHash: number | string): void {
-        if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
-        if (typeof personalityHash === 'string') personalityHash = game.getHashKey(personalityHash)
+        if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
+        if (typeof personalityHash === 'string') personalityHash = GetHashKey(personalityHash)
         SetPedModelPersonality(modelHash, personalityHash);
     }
 
@@ -3316,7 +3754,7 @@ export namespace streaming {
      * Hash: 0x289DA860
      */
     export function addTextEntryByHash(entryKey: number | string, entryText: string): void {
-        if (typeof entryKey === 'string') entryKey = game.getHashKey(entryKey)
+        if (typeof entryKey === 'string') entryKey = GetHashKey(entryKey)
         AddTextEntryByHash(entryKey, entryText);
     }
 
@@ -5138,7 +5576,7 @@ export namespace weapon {
      * Hash: 0x5343721
      */
     export function getAccuracySpread(weaponHash: number | string): number {
-        if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+        if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
         return GetWeaponAccuracySpread(weaponHash);
     }
 
@@ -5157,7 +5595,7 @@ export namespace weapon {
      * Hash: 0xC693E278
      */
     export function getComponentAccuracyModifier(componentHash: number | string): number {
-        if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+        if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
         return GetWeaponComponentAccuracyModifier(componentHash);
     }
 
@@ -5167,7 +5605,7 @@ export namespace weapon {
      * Hash: 0xACB7E68F
      */
     export function getComponentCameraHash(componentHash: number | string): number {
-        if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+        if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
         return GetWeaponComponentCameraHash(componentHash);
     }
 
@@ -5177,7 +5615,7 @@ export namespace weapon {
      * Hash: 0xE14CF665
      */
     export function getComponentClipSize(componentHash: number | string): number {
-        if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+        if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
         return GetWeaponComponentClipSize(componentHash);
     }
 
@@ -5187,7 +5625,7 @@ export namespace weapon {
      * Hash: 0x4A0E3855
      */
     export function getComponentDamageModifier(componentHash: number | string): number {
-        if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+        if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
         return GetWeaponComponentDamageModifier(componentHash);
     }
 
@@ -5197,7 +5635,7 @@ export namespace weapon {
      * Hash: 0xE134FB8D
      */
     export function getComponentRangeDamageModifier(componentHash: number | string): number {
-        if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+        if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
         return GetWeaponComponentRangeDamageModifier(componentHash);
     }
 
@@ -5207,7 +5645,7 @@ export namespace weapon {
      * Hash: 0x2FD0BC1B
      */
     export function getComponentRangeModifier(componentHash: number | string): number {
-        if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+        if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
         return GetWeaponComponentRangeModifier(componentHash);
     }
 
@@ -5217,7 +5655,7 @@ export namespace weapon {
      * Hash: 0xF9AB9297
      */
     export function getComponentReticuleHash(componentHash: number | string): number {
-        if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+        if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
         return GetWeaponComponentReticuleHash(componentHash);
     }
 
@@ -5227,7 +5665,7 @@ export namespace weapon {
      * Hash: 0xD979143
      */
     export function getDamageModifier(weaponHash: number | string): number {
-        if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+        if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
         return GetWeaponDamageModifier(weaponHash);
     }
 
@@ -5237,7 +5675,7 @@ export namespace weapon {
      * Hash: 0x5E1AF5F
      */
     export function getRecoilShakeAmplitude(weaponHash: number | string): number {
-        if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+        if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
         return GetWeaponRecoilShakeAmplitude(weaponHash);
     }
 
@@ -5275,7 +5713,7 @@ export namespace weapon {
      * Hash: 0x598DD6AE
      */
     export function setAccuracySpread(weaponHash: number | string, spread: number): void {
-        if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+        if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
         SetWeaponAccuracySpread(weaponHash, spread);
     }
 
@@ -5285,7 +5723,7 @@ export namespace weapon {
      * Hash: 0x9864312F
      */
     export function setRecoilShakeAmplitude(weaponHash: number | string, amplitude: number): void {
-        if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+        if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
         SetWeaponRecoilShakeAmplitude(weaponHash, amplitude);
     }
 
@@ -5715,7 +6153,7 @@ export namespace mumble {
      * Hash: 0x6383526B
      */
     export function setAudioInputIntent(intentHash: number | string): void {
-        if (typeof intentHash === 'string') intentHash = game.getHashKey(intentHash)
+        if (typeof intentHash === 'string') intentHash = GetHashKey(intentHash)
         MumbleSetAudioInputIntent(intentHash);
     }
 

@@ -275,6 +275,28 @@ export namespace events {
     }
 
     /**
+     * Enable or disable the error event logging.
+     * Default state: true
+     *
+     * @param value Is the new state
+     */
+    export function setLogEventErrors(value: boolean): void {
+        EventLogger.logErrors = value;
+    }
+
+    /**
+     * Enable or disable the event logging.
+     * This could be helpful when you have to debug some errors.
+     *
+     * Default state: false
+     *
+     * @param value Is the new state
+     */
+    export function setLogEvents(value: boolean): void {
+        EventLogger.logEvents = value;
+    }
+
+    /**
      * Registers a listener for a local emitted event
      * @param key The event key which should be listened on
      * @param callback The callback which should be executed
@@ -1498,7 +1520,7 @@ export namespace misc {
      * Hash: 0xD29D8EDD
      */
     export function getMapdataFromHashKey(mapdataHandle: number | string): number {
-        if (typeof mapdataHandle === 'string') mapdataHandle = game.getHashKey(mapdataHandle)
+        if (typeof mapdataHandle === 'string') mapdataHandle = GetHashKey(mapdataHandle)
         return GetMapdataFromHashKey(mapdataHandle);
     }
 
@@ -1841,7 +1863,7 @@ export namespace misc {
      * Hash: 0x7F6B8D75
      */
     export function setModelHeadlightConfiguration(modelHash: number | string, ratePerSecond: number, headlightRotation: number, invertRotation: boolean): void {
-        if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+        if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
         SetModelHeadlightConfiguration(modelHash, ratePerSecond, headlightRotation, invertRotation);
     }
 
@@ -2919,7 +2941,7 @@ export namespace ped {
      * Hash: 0xF71542F7
      */
     export function getModelHealthConfig(modelHash: number | string): number {
-        if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+        if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
         return GetPedModelHealthConfig(modelHash);
     }
 
@@ -2929,7 +2951,7 @@ export namespace ped {
      * Hash: 0xFE08CAD6
      */
     export function getModelPersonality(modelHash: number | string): number {
-        if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+        if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
         return GetPedModelPersonality(modelHash);
     }
 
@@ -3047,7 +3069,7 @@ export namespace ped {
      * Hash: 0x79A12861
      */
     export function resetModelPersonality(modelHash: number | string): void {
-        if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+        if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
         ResetPedModelPersonality(modelHash);
     }
 
@@ -3121,7 +3143,7 @@ export namespace ped {
      * Hash: 0xAF12A05D
      */
     export function setModelHealthConfig(modelHash: number | string, configName: string): void {
-        if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+        if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
         SetPedModelHealthConfig(modelHash, configName);
     }
 
@@ -3131,8 +3153,8 @@ export namespace ped {
      * Hash: 0x46F6B38B
      */
     export function setModelPersonality(modelHash: number | string, personalityHash: number | string): void {
-        if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
-        if (typeof personalityHash === 'string') personalityHash = game.getHashKey(personalityHash)
+        if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
+        if (typeof personalityHash === 'string') personalityHash = GetHashKey(personalityHash)
         SetPedModelPersonality(modelHash, personalityHash);
     }
 
@@ -3744,7 +3766,7 @@ export namespace streaming {
      * Hash: 0x289DA860
      */
     export function addTextEntryByHash(entryKey: number | string, entryText: string): void {
-        if (typeof entryKey === 'string') entryKey = game.getHashKey(entryKey)
+        if (typeof entryKey === 'string') entryKey = GetHashKey(entryKey)
         AddTextEntryByHash(entryKey, entryText);
     }
 
@@ -5566,7 +5588,7 @@ export namespace weapon {
      * Hash: 0x5343721
      */
     export function getAccuracySpread(weaponHash: number | string): number {
-        if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+        if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
         return GetWeaponAccuracySpread(weaponHash);
     }
 
@@ -5585,7 +5607,7 @@ export namespace weapon {
      * Hash: 0xC693E278
      */
     export function getComponentAccuracyModifier(componentHash: number | string): number {
-        if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+        if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
         return GetWeaponComponentAccuracyModifier(componentHash);
     }
 
@@ -5595,7 +5617,7 @@ export namespace weapon {
      * Hash: 0xACB7E68F
      */
     export function getComponentCameraHash(componentHash: number | string): number {
-        if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+        if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
         return GetWeaponComponentCameraHash(componentHash);
     }
 
@@ -5605,7 +5627,7 @@ export namespace weapon {
      * Hash: 0xE14CF665
      */
     export function getComponentClipSize(componentHash: number | string): number {
-        if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+        if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
         return GetWeaponComponentClipSize(componentHash);
     }
 
@@ -5615,7 +5637,7 @@ export namespace weapon {
      * Hash: 0x4A0E3855
      */
     export function getComponentDamageModifier(componentHash: number | string): number {
-        if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+        if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
         return GetWeaponComponentDamageModifier(componentHash);
     }
 
@@ -5625,7 +5647,7 @@ export namespace weapon {
      * Hash: 0xE134FB8D
      */
     export function getComponentRangeDamageModifier(componentHash: number | string): number {
-        if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+        if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
         return GetWeaponComponentRangeDamageModifier(componentHash);
     }
 
@@ -5635,7 +5657,7 @@ export namespace weapon {
      * Hash: 0x2FD0BC1B
      */
     export function getComponentRangeModifier(componentHash: number | string): number {
-        if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+        if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
         return GetWeaponComponentRangeModifier(componentHash);
     }
 
@@ -5645,7 +5667,7 @@ export namespace weapon {
      * Hash: 0xF9AB9297
      */
     export function getComponentReticuleHash(componentHash: number | string): number {
-        if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+        if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
         return GetWeaponComponentReticuleHash(componentHash);
     }
 
@@ -5655,7 +5677,7 @@ export namespace weapon {
      * Hash: 0xD979143
      */
     export function getDamageModifier(weaponHash: number | string): number {
-        if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+        if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
         return GetWeaponDamageModifier(weaponHash);
     }
 
@@ -5665,7 +5687,7 @@ export namespace weapon {
      * Hash: 0x5E1AF5F
      */
     export function getRecoilShakeAmplitude(weaponHash: number | string): number {
-        if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+        if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
         return GetWeaponRecoilShakeAmplitude(weaponHash);
     }
 
@@ -5703,7 +5725,7 @@ export namespace weapon {
      * Hash: 0x598DD6AE
      */
     export function setAccuracySpread(weaponHash: number | string, spread: number): void {
-        if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+        if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
         SetWeaponAccuracySpread(weaponHash, spread);
     }
 
@@ -5713,7 +5735,7 @@ export namespace weapon {
      * Hash: 0x9864312F
      */
     export function setRecoilShakeAmplitude(weaponHash: number | string, amplitude: number): void {
-        if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+        if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
         SetWeaponRecoilShakeAmplitude(weaponHash, amplitude);
     }
 
@@ -6152,7 +6174,7 @@ export namespace mumble {
      * Hash: 0x6383526B
      */
     export function setAudioInputIntent(intentHash: number | string): void {
-        if (typeof intentHash === 'string') intentHash = game.getHashKey(intentHash)
+        if (typeof intentHash === 'string') intentHash = GetHashKey(intentHash)
         MumbleSetAudioInputIntent(intentHash);
     }
 

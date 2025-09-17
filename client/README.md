@@ -17,7 +17,7 @@ The package must be included when compile the code for example with **esbuild**.
 All root methods (e.g. `client.shutdownLoadingScreenNui()`) were removed.
 The reason for this is clearly that namespaced methods are better and clearer.
 
-If you want them, you must switch to version [0.1.0-legacy](https://www.npmjs.com/package/@risinglife/fivem-client/v/0.1.0-legacy)
+If you want them, you must switch to version [0.1.1-legacy](https://www.npmjs.com/package/@risinglife/fivem-client/v/0.1.1-legacy)
 
 ### Looking for a bundled variant?
 Install the package [@risinglife/fivem-client-bundled](https://www.npmjs.com/package/@risinglife/fivem-client-bundled) to have both the client and Game Natives directly in one package.

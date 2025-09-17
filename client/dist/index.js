@@ -233,6 +233,28 @@ export var events;
     }
     events_1.removeAllListeners = removeAllListeners;
     /**
+     * Enable or disable the error event logging.
+     * Default state: true
+     *
+     * @param value Is the new state
+     */
+    function setLogEventErrors(value) {
+        EventLogger.logErrors = value;
+    }
+    events_1.setLogEventErrors = setLogEventErrors;
+    /**
+     * Enable or disable the event logging.
+     * This could be helpful when you have to debug some errors.
+     *
+     * Default state: false
+     *
+     * @param value Is the new state
+     */
+    function setLogEvents(value) {
+        EventLogger.logEvents = value;
+    }
+    events_1.setLogEvents = setLogEvents;
+    /**
      * Registers a listener for a local emitted event
      * @param key The event key which should be listened on
      * @param callback The callback which should be executed
@@ -1457,7 +1479,7 @@ export var misc;
      */
     function getMapdataFromHashKey(mapdataHandle) {
         if (typeof mapdataHandle === 'string')
-            mapdataHandle = game.getHashKey(mapdataHandle);
+            mapdataHandle = GetHashKey(mapdataHandle);
         return GetMapdataFromHashKey(mapdataHandle);
     }
     misc.getMapdataFromHashKey = getMapdataFromHashKey;
@@ -1801,7 +1823,7 @@ export var misc;
      */
     function setModelHeadlightConfiguration(modelHash, ratePerSecond, headlightRotation, invertRotation) {
         if (typeof modelHash === 'string')
-            modelHash = game.getHashKey(modelHash);
+            modelHash = GetHashKey(modelHash);
         SetModelHeadlightConfiguration(modelHash, ratePerSecond, headlightRotation, invertRotation);
     }
     misc.setModelHeadlightConfiguration = setModelHeadlightConfiguration;
@@ -2879,7 +2901,7 @@ export var ped;
      */
     function getModelHealthConfig(modelHash) {
         if (typeof modelHash === 'string')
-            modelHash = game.getHashKey(modelHash);
+            modelHash = GetHashKey(modelHash);
         return GetPedModelHealthConfig(modelHash);
     }
     ped_1.getModelHealthConfig = getModelHealthConfig;
@@ -2890,7 +2912,7 @@ export var ped;
      */
     function getModelPersonality(modelHash) {
         if (typeof modelHash === 'string')
-            modelHash = game.getHashKey(modelHash);
+            modelHash = GetHashKey(modelHash);
         return GetPedModelPersonality(modelHash);
     }
     ped_1.getModelPersonality = getModelPersonality;
@@ -3009,7 +3031,7 @@ export var ped;
      */
     function resetModelPersonality(modelHash) {
         if (typeof modelHash === 'string')
-            modelHash = game.getHashKey(modelHash);
+            modelHash = GetHashKey(modelHash);
         ResetPedModelPersonality(modelHash);
     }
     ped_1.resetModelPersonality = resetModelPersonality;
@@ -3084,7 +3106,7 @@ export var ped;
      */
     function setModelHealthConfig(modelHash, configName) {
         if (typeof modelHash === 'string')
-            modelHash = game.getHashKey(modelHash);
+            modelHash = GetHashKey(modelHash);
         SetPedModelHealthConfig(modelHash, configName);
     }
     ped_1.setModelHealthConfig = setModelHealthConfig;
@@ -3095,9 +3117,9 @@ export var ped;
      */
     function setModelPersonality(modelHash, personalityHash) {
         if (typeof modelHash === 'string')
-            modelHash = game.getHashKey(modelHash);
+            modelHash = GetHashKey(modelHash);
         if (typeof personalityHash === 'string')
-            personalityHash = game.getHashKey(personalityHash);
+            personalityHash = GetHashKey(personalityHash);
         SetPedModelPersonality(modelHash, personalityHash);
     }
     ped_1.setModelPersonality = setModelPersonality;
@@ -3707,7 +3729,7 @@ export var streaming;
      */
     function addTextEntryByHash(entryKey, entryText) {
         if (typeof entryKey === 'string')
-            entryKey = game.getHashKey(entryKey);
+            entryKey = GetHashKey(entryKey);
         AddTextEntryByHash(entryKey, entryText);
     }
     streaming.addTextEntryByHash = addTextEntryByHash;
@@ -5526,7 +5548,7 @@ export var weapon;
      */
     function getAccuracySpread(weaponHash) {
         if (typeof weaponHash === 'string')
-            weaponHash = game.getHashKey(weaponHash);
+            weaponHash = GetHashKey(weaponHash);
         return GetWeaponAccuracySpread(weaponHash);
     }
     weapon.getAccuracySpread = getAccuracySpread;
@@ -5546,7 +5568,7 @@ export var weapon;
      */
     function getComponentAccuracyModifier(componentHash) {
         if (typeof componentHash === 'string')
-            componentHash = game.getHashKey(componentHash);
+            componentHash = GetHashKey(componentHash);
         return GetWeaponComponentAccuracyModifier(componentHash);
     }
     weapon.getComponentAccuracyModifier = getComponentAccuracyModifier;
@@ -5557,7 +5579,7 @@ export var weapon;
      */
     function getComponentCameraHash(componentHash) {
         if (typeof componentHash === 'string')
-            componentHash = game.getHashKey(componentHash);
+            componentHash = GetHashKey(componentHash);
         return GetWeaponComponentCameraHash(componentHash);
     }
     weapon.getComponentCameraHash = getComponentCameraHash;
@@ -5568,7 +5590,7 @@ export var weapon;
      */
     function getComponentClipSize(componentHash) {
         if (typeof componentHash === 'string')
-            componentHash = game.getHashKey(componentHash);
+            componentHash = GetHashKey(componentHash);
         return GetWeaponComponentClipSize(componentHash);
     }
     weapon.getComponentClipSize = getComponentClipSize;
@@ -5579,7 +5601,7 @@ export var weapon;
      */
     function getComponentDamageModifier(componentHash) {
         if (typeof componentHash === 'string')
-            componentHash = game.getHashKey(componentHash);
+            componentHash = GetHashKey(componentHash);
         return GetWeaponComponentDamageModifier(componentHash);
     }
     weapon.getComponentDamageModifier = getComponentDamageModifier;
@@ -5590,7 +5612,7 @@ export var weapon;
      */
     function getComponentRangeDamageModifier(componentHash) {
         if (typeof componentHash === 'string')
-            componentHash = game.getHashKey(componentHash);
+            componentHash = GetHashKey(componentHash);
         return GetWeaponComponentRangeDamageModifier(componentHash);
     }
     weapon.getComponentRangeDamageModifier = getComponentRangeDamageModifier;
@@ -5601,7 +5623,7 @@ export var weapon;
      */
     function getComponentRangeModifier(componentHash) {
         if (typeof componentHash === 'string')
-            componentHash = game.getHashKey(componentHash);
+            componentHash = GetHashKey(componentHash);
         return GetWeaponComponentRangeModifier(componentHash);
     }
     weapon.getComponentRangeModifier = getComponentRangeModifier;
@@ -5612,7 +5634,7 @@ export var weapon;
      */
     function getComponentReticuleHash(componentHash) {
         if (typeof componentHash === 'string')
-            componentHash = game.getHashKey(componentHash);
+            componentHash = GetHashKey(componentHash);
         return GetWeaponComponentReticuleHash(componentHash);
     }
     weapon.getComponentReticuleHash = getComponentReticuleHash;
@@ -5623,7 +5645,7 @@ export var weapon;
      */
     function getDamageModifier(weaponHash) {
         if (typeof weaponHash === 'string')
-            weaponHash = game.getHashKey(weaponHash);
+            weaponHash = GetHashKey(weaponHash);
         return GetWeaponDamageModifier(weaponHash);
     }
     weapon.getDamageModifier = getDamageModifier;
@@ -5634,7 +5656,7 @@ export var weapon;
      */
     function getRecoilShakeAmplitude(weaponHash) {
         if (typeof weaponHash === 'string')
-            weaponHash = game.getHashKey(weaponHash);
+            weaponHash = GetHashKey(weaponHash);
         return GetWeaponRecoilShakeAmplitude(weaponHash);
     }
     weapon.getRecoilShakeAmplitude = getRecoilShakeAmplitude;
@@ -5673,7 +5695,7 @@ export var weapon;
      */
     function setAccuracySpread(weaponHash, spread) {
         if (typeof weaponHash === 'string')
-            weaponHash = game.getHashKey(weaponHash);
+            weaponHash = GetHashKey(weaponHash);
         SetWeaponAccuracySpread(weaponHash, spread);
     }
     weapon.setAccuracySpread = setAccuracySpread;
@@ -5684,7 +5706,7 @@ export var weapon;
      */
     function setRecoilShakeAmplitude(weaponHash, amplitude) {
         if (typeof weaponHash === 'string')
-            weaponHash = game.getHashKey(weaponHash);
+            weaponHash = GetHashKey(weaponHash);
         SetWeaponRecoilShakeAmplitude(weaponHash, amplitude);
     }
     weapon.setRecoilShakeAmplitude = setRecoilShakeAmplitude;
@@ -6118,7 +6140,7 @@ export var mumble;
      */
     function setAudioInputIntent(intentHash) {
         if (typeof intentHash === 'string')
-            intentHash = game.getHashKey(intentHash);
+            intentHash = GetHashKey(intentHash);
         MumbleSetAudioInputIntent(intentHash);
     }
     mumble.setAudioInputIntent = setAudioInputIntent;

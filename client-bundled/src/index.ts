@@ -275,6 +275,28 @@ export namespace events {
     }
 
     /**
+     * Enable or disable the error event logging.
+     * Default state: true
+     *
+     * @param value Is the new state
+     */
+    export function setLogEventErrors(value: boolean): void {
+        EventLogger.logErrors = value;
+    }
+
+    /**
+     * Enable or disable the event logging.
+     * This could be helpful when you have to debug some errors.
+     *
+     * Default state: false
+     *
+     * @param value Is the new state
+     */
+    export function setLogEvents(value: boolean): void {
+        EventLogger.logEvents = value;
+    }
+
+    /**
      * Registers a listener for a local emitted event
      * @param key The event key which should be listened on
      * @param callback The callback which should be executed
