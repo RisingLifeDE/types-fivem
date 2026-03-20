@@ -1,15 +1,14 @@
 {
   "name": "@risinglife/fivem-server",
   "description": "This package contains the type definitions for the FiveM JS module shared types",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "repository": {
     "url": "git+https://github.com/RisingLifeDE/types-fivem.git"
   },
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "files": [
-    "dist/index.js",
-    "dist/index.d.ts"
+    "dist"
   ],
   "scripts": {
     "build": "tsc",
