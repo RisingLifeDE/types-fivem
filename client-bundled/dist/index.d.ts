@@ -1021,6 +1021,12 @@ export declare namespace audio {
      */
     function playPedAmbientSpeechWithVoiceNative(ped: number | IPed, speechName: string, voiceName: string, speechParam: string): void;
     /**
+     * No comment provided
+     *
+     * Hash: 0xAD2191A6E3543189 | Since: 3717 | API-Set: unknown
+     */
+    function playPedEventAnim(pedHandle: number | IPed, audioEvent: string): void;
+    /**
      * All found occurrences in b617d, sorted alphabetically and identical lines removed: https://pastebin.com/RFb4GTny
      *
      * `AUDIO::PLAY_PED_RINGTONE("Remote_Ring", PLAYER::PLAYER_PED_ID(), 1);`
@@ -8806,6 +8812,12 @@ export declare namespace hud {
      */
     function getWaypointBlipEnumId(): number;
     /**
+     * No comment provided
+     *
+     * Hash: 0xF46851AB8B02EF40 | Since: 3717 | API-Set: unknown
+     */
+    function getWaypointClearOnArrivalMode(): number;
+    /**
      * p1 is either 1 or 2 in the PC scripts.
      *
      * Hash: 0xAC0BFBDC3BE00E14 | Since: 323 | API-Set: unknown
@@ -9059,6 +9071,12 @@ export declare namespace hud {
      * Hash: 0xBC4C9EA5391ECC0D | Since: 323 | API-Set: unknown
      */
     function isComponentActive(id: number): boolean;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x8EDC335C943465C8 | Since: 3717 | API-Set: unknown
+     */
+    function isComponentHiddenThisFrame(id: number): boolean;
     /**
      * No comment provided
      *
@@ -10674,6 +10692,12 @@ export declare namespace hud {
      * Hash: 0x38B55259C2E078ED | Since: 1493 | API-Set: unknown
      */
     function setWarningMessageWithHeaderExtended(entryHeader: string, entryLine1: string, flags: number, entryLine2: string, showBg: boolean): [any, any];
+    /**
+     * No comment provided
+     *
+     * Hash: 0x3FFC556B62146F75 | Since: 3717 | API-Set: unknown
+     */
+    function setWaypointClearOnArrivalMode(mode: number): void;
     /**
      * This native removes the current waypoint from the map.
      *
@@ -17889,6 +17913,12 @@ export declare namespace ped {
      */
     function setCanBeTargettedByTeam(ped: number | IPed, team: number, toggle: boolean): void;
     /**
+     * No comment provided
+     *
+     * Hash: 0xE84EC1735FB39663 | Since: 3717 | API-Set: unknown
+     */
+    function setCanBodyRecoilIk(ped: number | IPed, toggle: boolean): void;
+    /**
      * It simply makes the said ped to cower behind cover object(wall, desk, car)
      *
      * Peds flee attributes must be set to not to flee, first. Else, most of the peds, will just flee from gunshot sounds or any other panic situations.
@@ -23444,6 +23474,24 @@ export declare namespace streaming {
      * Hash: 0xD8295AF639FD9CB8 | Since: 323 | API-Set: unknown
      */
     function switchToMultiSecondpart(ped: number | IPed): void;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x0F7082C60FB479EF | Since: 3717 | API-Set: unknown
+     */
+    function getModelAdditionalCost(modelHash: number | string): number;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x4A91423C04BAADA1 | Since: 3717 | API-Set: unknown
+     */
+    function getTotalModelCost(modelHash: number | string): number;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x68F1C25420D5F6AA | Since: 3717 | API-Set: unknown
+     */
+    function setSphericalStreamDistantHilodsThisFrame(): void;
 }
 export declare namespace track {
     /**
@@ -29362,6 +29410,12 @@ export declare namespace vehicle {
     /**
      * No comment provided
      *
+     * Hash: 0x6CB5B84B78AC55FE | Since: 3717 | API-Set: unknown
+     */
+    function setTailBroken(vehicle: number | IVehicle, toggle: boolean): void;
+    /**
+     * No comment provided
+     *
      * Hash: 0x5815BD2763178DF4 | Since: 2802 | API-Set: unknown
      */
     function setTailLights(vehicle: number | IVehicle, toggle: boolean): void;
@@ -29880,9 +29934,21 @@ export declare namespace vehicle {
     /**
      * No comment provided
      *
+     * Hash: 0x7DFAD92A34F09C00 | Since: 3717 | API-Set: unknown
+     */
+    function getMissionTrainConfigIndexByName(name: string): number;
+    /**
+     * No comment provided
+     *
      * Hash: 0xBEC4B8653462450E | Since: 3095 | API-Set: unknown
      */
     function getRemainingNitrousDuration(vehicle: number | IVehicle): number;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x613A431BCD5A22EB | Since: 3717 | API-Set: unknown
+     */
+    function getAllowHomingMissleLockonSynced(vehicle: number | IVehicle): boolean;
     /**
      * No comment provided
      *
@@ -30001,6 +30067,12 @@ export declare namespace vehicle {
      * Hash: 0xDAF4C98C18AC6F06 | Since: 3095 | API-Set: unknown
      */
     function setDriftSlipAngleLimits(vehicle: number | IVehicle, durationScalar: number, amplitudeScalar: number, slipAngleLimit: number): void;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x559B6073DB7FFFF9 | Since: 3717 | API-Set: unknown
+     */
+    function setMakeTrainScanForBlockingEntities(train: number | IVehicle, toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -32313,7 +32385,7 @@ export declare namespace network {
     /**
      * No comment provided
      *
-     * Hash: 0x8F5D1AD832AEB06C | Since: 323 | API-Set: unknown
+     * Hash: 0xA150A4F065806B1F | Since: 323 | API-Set: unknown
      */
     function canCommunicateWithGamer(): [boolean, any];
     /**
@@ -32367,7 +32439,7 @@ export declare namespace network {
     /**
      * No comment provided
      *
-     * Hash: 0xA150A4F065806B1F | Since: 944 | API-Set: unknown
+     * Hash: 0xEEC02C7C0666D990 | Since: 944 | API-Set: unknown
      */
     function canTextChatWithGamer(): [boolean, any];
     /**
@@ -33156,6 +33228,12 @@ export declare namespace network {
     /**
      * No comment provided
      *
+     * Hash: 0xD3DEBE2991FE8098 | Since: 3717 | API-Set: unknown
+     */
+    function getHostOfThread(threadId: number): number | string;
+    /**
+     * No comment provided
+     *
      * Hash: 0x8251FB94DC4FDFC8 | Since: 2612 | API-Set: unknown
      */
     function getHostPlayerIndex(): number | string;
@@ -33725,6 +33803,12 @@ export declare namespace network {
      * Hash: 0x91B87C55093DE351 | Since: 323 | API-Set: unknown
      */
     function hasRosPrivilegeSpecialEditionContent(): boolean;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xAB286B2192A71E32 | Since: 3717 | API-Set: unknown
+     */
+    function hasScMembership(): boolean;
     /**
      * No comment provided
      *
@@ -36683,6 +36767,12 @@ export declare namespace network {
      */
     function canTextFromGamerBeViewed(): [boolean, any];
     /**
+     * No comment provided
+     *
+     * Hash: 0x0C1BF187985B15C8 | Since: 3717 | API-Set: unknown
+     */
+    function clearClockSyncTimeOverride(startGlobalTransition: boolean, transitionTime: number): void;
+    /**
      * Clears tunable contexts that were set up using _NETWORK_SET_TUNABLES_REGISTRATION_CONTEXTS
      *
      * Hash: 0x0C87C83C8950432B | Since: 3258 | API-Set: unknown
@@ -36778,6 +36868,12 @@ export declare namespace network {
      * Hash: 0xBF66ACD9AE81A99F | Since: 3570 | API-Set: unknown
      */
     function getCommunicationGroupValue(communicationType: number): number;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x69D05E1EAD74B9DD | Since: 3717 | API-Set: unknown
+     */
+    function getDumpOfAssetVerifier(): any;
     /**
      * enum eNetworkGameRestartReason
      * {
@@ -36894,6 +36990,12 @@ export declare namespace network {
      */
     function isAmericasVersion(): boolean;
     /**
+     * No comment provided
+     *
+     * Hash: 0x4666CD7431DE98E2 | Since: 3717 | API-Set: unknown
+     */
+    function isSpecialTutorialSession(): boolean;
+    /**
      * Returns the name from given friend gamer handle.
      *
      * Hash: 0x338ECE3637937BC2 | Since: 3258 | API-Set: unknown
@@ -36922,11 +37024,23 @@ export declare namespace network {
      */
     function setCommunicationGroupFlags(communicationType: number, communicationGroupFlag: number): void;
     /**
+     * No comment provided
+     *
+     * Hash: 0x67F7C81C1395672A | Since: 3717 | API-Set: unknown
+     */
+    function setIgnoreVehicleRammedByNonVehicle(toggle: boolean): void;
+    /**
      * Sets up tunable contexts for _NETWORK_GET_TUNABLES_REGISTRATION_{BOOL|INT|FLOAT}
      *
      * Hash: 0x014A73449675121D | Since: 3258 | API-Set: unknown
      */
     function setTunablesRegistrationContexts(): any;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x35AEB4AC7C73C6E1 | Since: 3717 | API-Set: unknown
+     */
+    function setTutorialSpecialSession(toggle: boolean): void;
     /**
      * No comment provided
      *
@@ -37597,6 +37711,12 @@ export declare namespace camera {
      * Hash: 0x7B8A361C1813FBEF | Since: 573 | API-Set: unknown
      */
     function ignoreMenuPreferenceForBonnetThisUpdate(): void;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xDDA77EE33C005AAF | Since: 3258 | API-Set: unknown
+     */
+    function interpolateWithParams(camera: number | ICamera, camPosX: number, camPosY: number, camPosZ: number, camRotX: number, camRotY: number, camRotZ: number, fov: number, duration: number, posCurveType: number, rotCurveType: number, rotOrder: number, fovCurveType: number): void;
     /**
      * Resets the vehicle idle camera timer. Calling this in a loop will disable the idle camera.
      *
@@ -38707,12 +38827,6 @@ export declare namespace camera {
      * Hash: 0xBC456FB703431785 | Since: 3095 | API-Set: unknown
      */
     function getThirdPersonCamMinOrbitDistanceSpring(): number;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xDDA77EE33C005AAF | Since: 3258 | API-Set: unknown
-     */
-    function interpolateCamWithParams(camera: number | ICamera, camPosX: number, camPosY: number, camPosZ: number, camRotX: number, camRotY: number, camRotZ: number, fov: number, duration: number, posCurveType: number, rotCurveType: number, rotOrder: number, fovCurveType: number): void;
 }
 export declare namespace discord {
     /**
@@ -42925,6 +43039,18 @@ export declare namespace fire {
      * Hash: 0x056A8A219B8E829F | Since: 323 | API-Set: unknown
      */
     function stopInRange(pos: Vector3, radius: number): void;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x56581E7E219D6263 | Since: 3717 | API-Set: unknown
+     */
+    function getMaximumNumberOfWaterCannons(): number;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xE61CBD3ED80E7327 | Since: 3717 | API-Set: unknown
+     */
+    function getWaterCannonCoords(index: number): Vector3;
     /**
      * No comment provided
      *
@@ -49433,6 +49559,12 @@ export declare namespace stats {
     /**
      * No comment provided
      *
+     * Hash: 0x72289B8C78B02962 | Since: 3717 | API-Set: unknown
+     */
+    function playCreatorEnd(): any;
+    /**
+     * No comment provided
+     *
      * Hash: 0x01D8B04D02F1217F | Since: 3570 | API-Set: unknown
      */
     function playDeathInfo(victimPed: number | IPed, killerPed: number | IPed, mentalState: number, revengeKill: boolean, victimKvK: number, killerKvK: number): void;
@@ -49466,6 +49598,18 @@ export declare namespace stats {
      * Hash: 0x7E5EED10B11CEDBA | Since: 3407 | API-Set: unknown
      */
     function playInitMultiplayer(): void;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x4649D80CE1A35BA1 | Since: 3717 | API-Set: unknown
+     */
+    function playLobbyExit(): any;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xDC00BB9C27347A8F | Since: 3717 | API-Set: unknown
+     */
+    function playLobbyStarted(): any;
     /**
      * Known text types: NAME_YACHT, NAME_ORG_OFFICE
      *

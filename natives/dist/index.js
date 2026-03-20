@@ -1358,6 +1358,15 @@ export var audio;
     }
     audio.playPedAmbientSpeechWithVoiceNative = playPedAmbientSpeechWithVoiceNative;
     /**
+     * No comment provided
+     *
+     * Hash: 0xAD2191A6E3543189 | Since: 3717
+     */
+    function playPedEventAnim(pedHandle, audioEvent) {
+        Citizen.invokeNative('0xAD2191A6E3543189', pedHandle, audioEvent);
+    }
+    audio.playPedEventAnim = playPedEventAnim;
+    /**
      * All found occurrences in b617d, sorted alphabetically and identical lines removed: https://pastebin.com/RFb4GTny
      *
      * `AUDIO::PLAY_PED_RINGTONE("Remote_Ring", PLAYER::PLAYER_PED_ID(), 1);`
@@ -4388,6 +4397,15 @@ export var camera;
     }
     camera_1.ignoreMenuPreferenceForBonnetThisUpdate = ignoreMenuPreferenceForBonnetThisUpdate;
     /**
+     * No comment provided
+     *
+     * Hash: 0xDDA77EE33C005AAF | Since: 3258
+     */
+    function interpolateWithParams(camera, camPosX, camPosY, camPosZ, camRotX, camRotY, camRotZ, fov, duration, posCurveType, rotCurveType, rotOrder, fovCurveType) {
+        InterpolateCamWithParams(camera, camPosX, camPosY, camPosZ, camRotX, camRotY, camRotZ, fov, duration, posCurveType, rotCurveType, rotOrder, fovCurveType);
+    }
+    camera_1.interpolateWithParams = interpolateWithParams;
+    /**
      * Resets the vehicle idle camera timer. Calling this in a loop will disable the idle camera.
      *
      * Hash: 0x9E4CFFF989258472 | Since: 323
@@ -6000,15 +6018,6 @@ export var camera;
         return Citizen.invokeNative('0xBC456FB703431785');
     }
     camera_1.getThirdPersonCamMinOrbitDistanceSpring = getThirdPersonCamMinOrbitDistanceSpring;
-    /**
-     * No comment provided
-     *
-     * Hash: 0xDDA77EE33C005AAF | Since: 3258
-     */
-    function interpolateCamWithParams(camera, camPosX, camPosY, camPosZ, camRotX, camRotY, camRotZ, fov, duration, posCurveType, rotCurveType, rotOrder, fovCurveType) {
-        InterpolateCamWithParams(camera, camPosX, camPosY, camPosZ, camRotX, camRotY, camRotZ, fov, duration, posCurveType, rotCurveType, rotOrder, fovCurveType);
-    }
-    camera_1.interpolateCamWithParams = interpolateCamWithParams;
 })(camera || (camera = {}));
 export var clock;
 (function (clock) {
@@ -10438,6 +10447,24 @@ export var fire;
         StopFireInRange(pos.x, pos.y, pos.z, radius);
     }
     fire.stopInRange = stopInRange;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x56581E7E219D6263 | Since: 3717
+     */
+    function getMaximumNumberOfWaterCannons() {
+        return Citizen.invokeNative('0x56581E7E219D6263');
+    }
+    fire.getMaximumNumberOfWaterCannons = getMaximumNumberOfWaterCannons;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xE61CBD3ED80E7327 | Since: 3717
+     */
+    function getWaterCannonCoords(index) {
+        return new Vector3(Citizen.invokeNative('0xE61CBD3ED80E7327', index));
+    }
+    fire.getWaterCannonCoords = getWaterCannonCoords;
     /**
      * No comment provided
      *
@@ -16856,6 +16883,15 @@ export var hud;
     }
     hud.getWaypointBlipEnumId = getWaypointBlipEnumId;
     /**
+     * No comment provided
+     *
+     * Hash: 0xF46851AB8B02EF40 | Since: 3717
+     */
+    function getWaypointClearOnArrivalMode() {
+        return Citizen.invokeNative('0xF46851AB8B02EF40');
+    }
+    hud.getWaypointClearOnArrivalMode = getWaypointClearOnArrivalMode;
+    /**
      * p1 is either 1 or 2 in the PC scripts.
      *
      * Hash: 0xAC0BFBDC3BE00E14 | Since: 323
@@ -17213,6 +17249,15 @@ export var hud;
         return IsHudComponentActive(id);
     }
     hud.isComponentActive = isComponentActive;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x8EDC335C943465C8 | Since: 3717
+     */
+    function isComponentHiddenThisFrame(id) {
+        return Citizen.invokeNative('0x8EDC335C943465C8', id);
+    }
+    hud.isComponentHiddenThisFrame = isComponentHiddenThisFrame;
     /**
      * No comment provided
      *
@@ -19530,6 +19575,15 @@ export var hud;
         return SetWarningMessageWithHeaderExtended(entryHeader, entryLine1, flags, entryLine2, false, undefined, showBg, undefined, undefined);
     }
     hud.setWarningMessageWithHeaderExtended = setWarningMessageWithHeaderExtended;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x3FFC556B62146F75 | Since: 3717
+     */
+    function setWaypointClearOnArrivalMode(mode) {
+        Citizen.invokeNative('0x3FFC556B62146F75', mode);
+    }
+    hud.setWaypointClearOnArrivalMode = setWaypointClearOnArrivalMode;
     /**
      * This native removes the current waypoint from the map.
      *
@@ -26681,7 +26735,7 @@ export var money;
      * Hash: 0x948705F6F9C50824 | Since: 2699
      */
     function networkSpentCargoSourcing() {
-        NetworkSpentCargoSourcing(undefined, undefined, undefined, undefined, undefined, undefined);
+        NetworkSpentCargoSourcing(undefined, undefined, undefined, undefined, undefined, undefined, undefined);
     }
     money.networkSpentCargoSourcing = networkSpentCargoSourcing;
     /**
@@ -27651,7 +27705,7 @@ export var money;
      * Hash: 0x8C7E8D6F96C9E948 | Since: 2944
      */
     function networkSpentAirFreight(hangarCargoSourcingPrice, fromBank, fromBankAndWallet, cost, warehouseId, warehouseSlot) {
-        Citizen.invokeNative('0x8C7E8D6F96C9E948', hangarCargoSourcingPrice, fromBank, fromBankAndWallet, cost, warehouseId, warehouseSlot);
+        Citizen.invokeNative('0x8C7E8D6F96C9E948', hangarCargoSourcingPrice, fromBank, fromBankAndWallet, cost, warehouseId, warehouseSlot, undefined);
     }
     money.networkSpentAirFreight = networkSpentAirFreight;
     /**
@@ -29341,10 +29395,10 @@ export var network;
     /**
      * No comment provided
      *
-     * Hash: 0x8F5D1AD832AEB06C | Since: 323
+     * Hash: 0xA150A4F065806B1F | Since: 323
      */
     function canCommunicateWithGamer() {
-        return NetworkCanCommunicateWithGamer2();
+        return NetworkCanCommunicateWithGamer();
     }
     network.canCommunicateWithGamer = canCommunicateWithGamer;
     /**
@@ -29422,10 +29476,10 @@ export var network;
     /**
      * No comment provided
      *
-     * Hash: 0xA150A4F065806B1F | Since: 944
+     * Hash: 0xEEC02C7C0666D990 | Since: 944
      */
     function canTextChatWithGamer() {
-        return NetworkCanCommunicateWithGamer();
+        return Citizen.invokeNative('0xEEC02C7C0666D990');
     }
     network.canTextChatWithGamer = canTextChatWithGamer;
     /**
@@ -30589,6 +30643,15 @@ export var network;
     /**
      * No comment provided
      *
+     * Hash: 0xD3DEBE2991FE8098 | Since: 3717
+     */
+    function getHostOfThread(threadId) {
+        return Citizen.invokeNative('0xD3DEBE2991FE8098', threadId);
+    }
+    network.getHostOfThread = getHostOfThread;
+    /**
+     * No comment provided
+     *
      * Hash: 0x8251FB94DC4FDFC8 | Since: 2612
      */
     function getHostPlayerIndex() {
@@ -31439,6 +31502,15 @@ export var network;
         return NetworkGetRosPrivilege25();
     }
     network.hasRosPrivilegeSpecialEditionContent = hasRosPrivilegeSpecialEditionContent;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xAB286B2192A71E32 | Since: 3717
+     */
+    function hasScMembership() {
+        return Citizen.invokeNative('0xAB286B2192A71E32');
+    }
+    network.hasScMembership = hasScMembership;
     /**
      * No comment provided
      *
@@ -35854,6 +35926,15 @@ export var network;
     }
     network.canTextFromGamerBeViewed = canTextFromGamerBeViewed;
     /**
+     * No comment provided
+     *
+     * Hash: 0x0C1BF187985B15C8 | Since: 3717
+     */
+    function clearClockSyncTimeOverride(startGlobalTransition, transitionTime) {
+        Citizen.invokeNative('0x0C1BF187985B15C8', startGlobalTransition, transitionTime);
+    }
+    network.clearClockSyncTimeOverride = clearClockSyncTimeOverride;
+    /**
      * Clears tunable contexts that were set up using _NETWORK_SET_TUNABLES_REGISTRATION_CONTEXTS
      *
      * Hash: 0x0C87C83C8950432B | Since: 3258
@@ -35993,6 +36074,15 @@ export var network;
         return Citizen.invokeNative('0xBF66ACD9AE81A99F', communicationType);
     }
     network.getCommunicationGroupValue = getCommunicationGroupValue;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x69D05E1EAD74B9DD | Since: 3717
+     */
+    function getDumpOfAssetVerifier() {
+        return Citizen.invokeNative('0x69D05E1EAD74B9DD');
+    }
+    network.getDumpOfAssetVerifier = getDumpOfAssetVerifier;
     /**
      * enum eNetworkGameRestartReason
      * {
@@ -36174,6 +36264,15 @@ export var network;
     }
     network.isAmericasVersion = isAmericasVersion;
     /**
+     * No comment provided
+     *
+     * Hash: 0x4666CD7431DE98E2 | Since: 3717
+     */
+    function isSpecialTutorialSession() {
+        return Citizen.invokeNative('0x4666CD7431DE98E2');
+    }
+    network.isSpecialTutorialSession = isSpecialTutorialSession;
+    /**
      * Returns the name from given friend gamer handle.
      *
      * Hash: 0x338ECE3637937BC2 | Since: 3258
@@ -36214,6 +36313,15 @@ export var network;
     }
     network.setCommunicationGroupFlags = setCommunicationGroupFlags;
     /**
+     * No comment provided
+     *
+     * Hash: 0x67F7C81C1395672A | Since: 3717
+     */
+    function setIgnoreVehicleRammedByNonVehicle(toggle) {
+        Citizen.invokeNative('0x67F7C81C1395672A', toggle);
+    }
+    network.setIgnoreVehicleRammedByNonVehicle = setIgnoreVehicleRammedByNonVehicle;
+    /**
      * Sets up tunable contexts for _NETWORK_GET_TUNABLES_REGISTRATION_{BOOL|INT|FLOAT}
      *
      * Hash: 0x014A73449675121D | Since: 3258
@@ -36222,6 +36330,15 @@ export var network;
         return Citizen.invokeNative('0x014A73449675121D');
     }
     network.setTunablesRegistrationContexts = setTunablesRegistrationContexts;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x35AEB4AC7C73C6E1 | Since: 3717
+     */
+    function setTutorialSpecialSession(toggle) {
+        Citizen.invokeNative('0x35AEB4AC7C73C6E1', toggle);
+    }
+    network.setTutorialSpecialSession = setTutorialSpecialSession;
     /**
      * No comment provided
      *
@@ -43557,6 +43674,15 @@ export var ped;
         SetPedCanBeTargettedByTeam(ped, team, toggle);
     }
     ped_1.setCanBeTargettedByTeam = setCanBeTargettedByTeam;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xE84EC1735FB39663 | Since: 3717
+     */
+    function setCanBodyRecoilIk(ped, toggle) {
+        Citizen.invokeNative('0xE84EC1735FB39663', ped, toggle);
+    }
+    ped_1.setCanBodyRecoilIk = setCanBodyRecoilIk;
     /**
      * It simply makes the said ped to cower behind cover object(wall, desk, car)
      *
@@ -54090,6 +54216,15 @@ export var stats;
     /**
      * No comment provided
      *
+     * Hash: 0x72289B8C78B02962 | Since: 3717
+     */
+    function playCreatorEnd() {
+        return Citizen.invokeNative('0x72289B8C78B02962');
+    }
+    stats.playCreatorEnd = playCreatorEnd;
+    /**
+     * No comment provided
+     *
      * Hash: 0x01D8B04D02F1217F | Since: 3570
      */
     function playDeathInfo(victimPed, killerPed, mentalState, revengeKill, victimKvK, killerKvK) {
@@ -54141,6 +54276,24 @@ export var stats;
         Citizen.invokeNative('0x7E5EED10B11CEDBA', undefined, undefined, undefined);
     }
     stats.playInitMultiplayer = playInitMultiplayer;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x4649D80CE1A35BA1 | Since: 3717
+     */
+    function playLobbyExit() {
+        return Citizen.invokeNative('0x4649D80CE1A35BA1');
+    }
+    stats.playLobbyExit = playLobbyExit;
+    /**
+     * No comment provided
+     *
+     * Hash: 0xDC00BB9C27347A8F | Since: 3717
+     */
+    function playLobbyStarted() {
+        return Citizen.invokeNative('0xDC00BB9C27347A8F');
+    }
+    stats.playLobbyStarted = playLobbyStarted;
     /**
      * Known text types: NAME_YACHT, NAME_ORG_OFFICE
      *
@@ -55444,6 +55597,37 @@ export var streaming;
         SwitchToMultiSecondpart(ped);
     }
     streaming.switchToMultiSecondpart = switchToMultiSecondpart;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x0F7082C60FB479EF | Since: 3717
+     */
+    function getModelAdditionalCost(modelHash) {
+        if (typeof modelHash === 'string')
+            modelHash = misc.getHashKey(modelHash);
+        return Citizen.invokeNative('0x0F7082C60FB479EF', modelHash);
+    }
+    streaming.getModelAdditionalCost = getModelAdditionalCost;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x4A91423C04BAADA1 | Since: 3717
+     */
+    function getTotalModelCost(modelHash) {
+        if (typeof modelHash === 'string')
+            modelHash = misc.getHashKey(modelHash);
+        return Citizen.invokeNative('0x4A91423C04BAADA1', modelHash);
+    }
+    streaming.getTotalModelCost = getTotalModelCost;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x68F1C25420D5F6AA | Since: 3717
+     */
+    function setSphericalStreamDistantHilodsThisFrame() {
+        Citizen.invokeNative('0x68F1C25420D5F6AA');
+    }
+    streaming.setSphericalStreamDistantHilodsThisFrame = setSphericalStreamDistantHilodsThisFrame;
 })(streaming || (streaming = {}));
 export var task;
 (function (task_1) {
@@ -66139,6 +66323,15 @@ export var vehicle;
     /**
      * No comment provided
      *
+     * Hash: 0x6CB5B84B78AC55FE | Since: 3717
+     */
+    function setTailBroken(vehicle, toggle) {
+        Citizen.invokeNative('0x6CB5B84B78AC55FE', vehicle, toggle);
+    }
+    vehicle_1.setTailBroken = setTailBroken;
+    /**
+     * No comment provided
+     *
      * Hash: 0x5815BD2763178DF4 | Since: 2802
      */
     function setTailLights(vehicle, toggle) {
@@ -66864,12 +67057,30 @@ export var vehicle;
     /**
      * No comment provided
      *
+     * Hash: 0x7DFAD92A34F09C00 | Since: 3717
+     */
+    function getMissionTrainConfigIndexByName(name) {
+        return Citizen.invokeNative('0x7DFAD92A34F09C00', name);
+    }
+    vehicle_1.getMissionTrainConfigIndexByName = getMissionTrainConfigIndexByName;
+    /**
+     * No comment provided
+     *
      * Hash: 0xBEC4B8653462450E | Since: 3095
      */
     function getRemainingNitrousDuration(vehicle) {
         return GetRemainingNitrousDuration(vehicle);
     }
     vehicle_1.getRemainingNitrousDuration = getRemainingNitrousDuration;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x613A431BCD5A22EB | Since: 3717
+     */
+    function getAllowHomingMissleLockonSynced(vehicle) {
+        return Citizen.invokeNative('0x613A431BCD5A22EB', vehicle);
+    }
+    vehicle_1.getAllowHomingMissleLockonSynced = getAllowHomingMissleLockonSynced;
     /**
      * No comment provided
      *
@@ -67048,6 +67259,15 @@ export var vehicle;
         Citizen.invokeNative('0xDAF4C98C18AC6F06', vehicle, durationScalar, amplitudeScalar, slipAngleLimit);
     }
     vehicle_1.setDriftSlipAngleLimits = setDriftSlipAngleLimits;
+    /**
+     * No comment provided
+     *
+     * Hash: 0x559B6073DB7FFFF9 | Since: 3717
+     */
+    function setMakeTrainScanForBlockingEntities(train, toggle) {
+        Citizen.invokeNative('0x559B6073DB7FFFF9', train, toggle);
+    }
+    vehicle_1.setMakeTrainScanForBlockingEntities = setMakeTrainScanForBlockingEntities;
     /**
      * No comment provided
      *
