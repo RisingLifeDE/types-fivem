@@ -263,7 +263,7 @@ export function isEngineStarting(vehicle) {
  */
 export function create(modelHash, pos, heading, isNetwork, netMissionEntity) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CreateVehicle(modelHash, pos.x, pos.y, pos.z, heading, isNetwork, netMissionEntity);
 }
 /**
@@ -276,7 +276,7 @@ export function create(modelHash, pos, heading, isNetwork, netMissionEntity) {
  */
 export function createServerSetter(modelHash, _type, pos, heading) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CreateVehicleServerSetter(modelHash, _type, pos.x, pos.y, pos.z, heading);
 }
 /**

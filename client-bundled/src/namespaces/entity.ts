@@ -274,7 +274,7 @@ export function clearLastDamageEntity(entity: number | IEntity): void {
  * Hash: 0x150E808B375A385A | Since: 323 | API-Set: unknown
  */
 export function createForcedObject(pos: Vector3, modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     CreateForcedObject(pos.x, pos.y, pos.z, undefined, modelHash, false);
 }
 
@@ -287,7 +287,7 @@ export function createForcedObject(pos: Vector3, modelHash: number | string): vo
  * Hash: 0x8A97BCA30A0CE478 | Since: 323 | API-Set: unknown
  */
 export function createModelHide(pos: Vector3, radius: number, modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     CreateModelHide(pos.x, pos.y, pos.z, radius, modelHash, false);
 }
 
@@ -297,7 +297,7 @@ export function createModelHide(pos: Vector3, radius: number, modelHash: number 
  * Hash: 0x3A52AE588830BF7F | Since: 323 | API-Set: unknown
  */
 export function createModelHideExcludingScriptObjects(pos: Vector3, radius: number, modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     CreateModelHideExcludingScriptObjects(pos.x, pos.y, pos.z, radius, modelHash, false);
 }
 
@@ -307,8 +307,8 @@ export function createModelHideExcludingScriptObjects(pos: Vector3, radius: numb
  * Hash: 0x92C47782FDA8B2A3 | Since: 323 | API-Set: unknown
  */
 export function createModelSwap(pos: Vector3, radius: number, originalModel: number | string, newModel: number | string): void {
-    if (typeof originalModel === 'string') originalModel = game.getHashKey(originalModel)
-    if (typeof newModel === 'string') newModel = game.getHashKey(newModel)
+    if (typeof originalModel === 'string') originalModel = GetHashKey(originalModel)
+    if (typeof newModel === 'string') newModel = GetHashKey(newModel)
     CreateModelSwap(pos.x, pos.y, pos.z, radius, originalModel, newModel, false);
 }
 
@@ -768,7 +768,7 @@ export function getModel(entity: number | IEntity): number {
  * Hash: 0x1F922734E259BD26 | Since: 1180 | API-Set: unknown
  */
 export function getOfTypeAttachedToEntity(entity: number | IEntity, modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetEntityPickup(entity, modelHash);
 }
 
@@ -1029,7 +1029,7 @@ export function getWorldPositionOfBone(entity: number | IEntity, boneIndex: numb
  * Hash: 0xEAF4CD9EA3E7E922 | Since: 323 | API-Set: unknown
  */
 export function hasAnimEventFired(entity: number | IEntity, actionHash: number | string): boolean {
-    if (typeof actionHash === 'string') actionHash = game.getHashKey(actionHash)
+    if (typeof actionHash === 'string') actionHash = GetHashKey(actionHash)
     return HasAnimEventFired(entity, actionHash);
 }
 
@@ -1364,7 +1364,7 @@ export function isTouchingEntity(entity: number | IEntity, targetEntity: number 
  * Hash: 0x0F42323798A58C8C | Since: 323 | API-Set: unknown
  */
 export function isTouchingModel(entity: number | IEntity, modelHash: number | string): boolean {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return IsEntityTouchingModel(entity, modelHash);
 }
 
@@ -1463,7 +1463,7 @@ export function processAttachments(entity: number | IEntity): void {
  * Hash: 0x61B6775E83C0DB6F | Since: 323 | API-Set: unknown
  */
 export function removeForcedObject(pos: Vector3, modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     RemoveForcedObject(pos.x, pos.y, pos.z, 0, modelHash);
 }
 
@@ -1474,7 +1474,7 @@ export function removeForcedObject(pos: Vector3, modelHash: number | string): vo
  * Hash: 0xD9E3006FB3CBD765 | Since: 323 | API-Set: unknown
  */
 export function removeModelHide(pos: Vector3, radius: number, modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     RemoveModelHide(pos.x, pos.y, pos.z, radius, modelHash, false);
 }
 
@@ -1484,8 +1484,8 @@ export function removeModelHide(pos: Vector3, radius: number, modelHash: number 
  * Hash: 0x033C0F9A64E229AE | Since: 323 | API-Set: unknown
  */
 export function removeModelSwap(pos: Vector3, radius: number, originalModel: number | string, newModel: number | string): void {
-    if (typeof originalModel === 'string') originalModel = game.getHashKey(originalModel)
-    if (typeof newModel === 'string') newModel = game.getHashKey(newModel)
+    if (typeof originalModel === 'string') originalModel = GetHashKey(originalModel)
+    if (typeof newModel === 'string') newModel = GetHashKey(newModel)
     RemoveModelSwap(pos.x, pos.y, pos.z, radius, originalModel, newModel, false);
 }
 
@@ -1756,7 +1756,7 @@ export function setHeading(entity: number | IEntity, heading: number): void {
  * Hash: 0x6B76DC1F3AE6E6A3 | Since: 323 | API-Set: unknown
  */
 export function setHealth(entity: number | IEntity, health: number, instigator: number | IEntity, weaponType: number | string): void {
-    if (typeof weaponType === 'string') weaponType = game.getHashKey(weaponType)
+    if (typeof weaponType === 'string') weaponType = GetHashKey(weaponType)
     SetEntityHealth(entity, health, instigator, weaponType);
 }
 
@@ -2137,7 +2137,7 @@ export function stopSynchronizedMapAnim(x1: number, y1: number, z1: number, x2: 
  * Hash: 0xEE5D2A122E09EC42 | Since: 323 | API-Set: unknown
  */
 export function wouldBeOccluded(entityModelHash: number | string, pos: Vector3): boolean {
-    if (typeof entityModelHash === 'string') entityModelHash = game.getHashKey(entityModelHash)
+    if (typeof entityModelHash === 'string') entityModelHash = GetHashKey(entityModelHash)
     return WouldEntityBeOccluded(entityModelHash, pos.x, pos.y, pos.z, false);
 }
 

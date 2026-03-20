@@ -266,7 +266,7 @@ export function getScumminess(zoneId) {
  */
 export function overridePopscheduleVehicleModel(scheduleId, vehicleHash) {
     if (typeof vehicleHash === 'string')
-        vehicleHash = game.getHashKey(vehicleHash);
+        vehicleHash = GetHashKey(vehicleHash);
     OverridePopscheduleVehicleModel(scheduleId, vehicleHash);
 }
 /**

@@ -761,8 +761,8 @@ export function accessTunableBool(tunableContext: string, tunableName: string): 
  * Hash: 0xEA16B69D93D71A45 | Since: 323
  */
 export function accessTunableBoolHash(tunableContext: number | string, tunableName: number | string): boolean {
-    if (typeof tunableContext === 'string') tunableContext = misc.getHashKey(tunableContext)
-    if (typeof tunableName === 'string') tunableName = misc.getHashKey(tunableName)
+    if (typeof tunableContext === 'string') tunableContext = GetHashKey(tunableContext)
+    if (typeof tunableName === 'string') tunableName = GetHashKey(tunableName)
     return NetworkAccessTunableBoolHash(tunableContext, tunableName);
 }
 
@@ -772,8 +772,8 @@ export function accessTunableBoolHash(tunableContext: number | string, tunableNa
  * Hash: 0x697F508861875B42 | Since: 393
  */
 export function accessTunableBoolModificationDetectionRegistrationHash(contextHash: number | string, nameHash: number | string): [boolean, boolean] {
-    if (typeof contextHash === 'string') contextHash = misc.getHashKey(contextHash)
-    if (typeof nameHash === 'string') nameHash = misc.getHashKey(nameHash)
+    if (typeof contextHash === 'string') contextHash = GetHashKey(contextHash)
+    if (typeof nameHash === 'string') nameHash = GetHashKey(nameHash)
     return NetworkRegisterTunableBoolHash(contextHash, nameHash);
 }
 
@@ -792,8 +792,8 @@ export function accessTunableFloat(tunableContext: string, tunableName: string):
  * Hash: 0x972BC203BBC4C4D5 | Since: 323
  */
 export function accessTunableFloatHash(tunableContext: number | string, tunableName: number | string): [boolean, number] {
-    if (typeof tunableContext === 'string') tunableContext = misc.getHashKey(tunableContext)
-    if (typeof tunableName === 'string') tunableName = misc.getHashKey(tunableName)
+    if (typeof tunableContext === 'string') tunableContext = GetHashKey(tunableContext)
+    if (typeof tunableName === 'string') tunableName = GetHashKey(tunableName)
     return NetworkAccessTunableFloatHash(tunableContext, tunableName);
 }
 
@@ -803,8 +803,8 @@ export function accessTunableFloatHash(tunableContext: number | string, tunableN
  * Hash: 0x1950DAE9848A4739 | Since: 393
  */
 export function accessTunableFloatModificationDetectionRegistrationHash(contextHash: number | string, nameHash: number | string): [boolean, number] {
-    if (typeof contextHash === 'string') contextHash = misc.getHashKey(contextHash)
-    if (typeof nameHash === 'string') nameHash = misc.getHashKey(nameHash)
+    if (typeof contextHash === 'string') contextHash = GetHashKey(contextHash)
+    if (typeof nameHash === 'string') nameHash = GetHashKey(nameHash)
     return NetworkRegisterTunableFloatHash(contextHash, nameHash);
 }
 
@@ -823,8 +823,8 @@ export function accessTunableInt(tunableContext: string, tunableName: string): [
  * Hash: 0x40FCE03E50E8DBE8 | Since: 323
  */
 export function accessTunableIntHash(tunableContext: number | string, tunableName: number | string): [boolean, number] {
-    if (typeof tunableContext === 'string') tunableContext = misc.getHashKey(tunableContext)
-    if (typeof tunableName === 'string') tunableName = misc.getHashKey(tunableName)
+    if (typeof tunableContext === 'string') tunableContext = GetHashKey(tunableContext)
+    if (typeof tunableName === 'string') tunableName = GetHashKey(tunableName)
     return NetworkAccessTunableIntHash(tunableContext, tunableName);
 }
 
@@ -834,8 +834,8 @@ export function accessTunableIntHash(tunableContext: number | string, tunableNam
  * Hash: 0x3A8B55FDA4C8DDEF | Since: 393
  */
 export function accessTunableIntModificationDetectionRegistrationHash(contextHash: number | string, nameHash: number | string): [boolean, number] {
-    if (typeof contextHash === 'string') contextHash = misc.getHashKey(contextHash)
-    if (typeof nameHash === 'string') nameHash = misc.getHashKey(nameHash)
+    if (typeof contextHash === 'string') contextHash = GetHashKey(contextHash)
+    if (typeof nameHash === 'string') nameHash = GetHashKey(nameHash)
     return NetworkRegisterTunableIntHash(contextHash, nameHash);
 }
 
@@ -927,7 +927,7 @@ export function addFriend(message: string): [boolean, any] {
  * Hash: 0x7F562DBC212E81F9 | Since: 2545
  */
 export function addInvalidObjectModel(modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     Citizen.invokeNative('0x7F562DBC212E81F9', modelHash, undefined);
 }
 
@@ -938,7 +938,7 @@ export function addInvalidObjectModel(modelHash: number | string): void {
  * Hash: 0x45F35C0EDC33B03B | Since: 1734
  */
 export function addMapEntityToSynchronisedScene(netScene: number, modelHash: number | string, pos: Vector3, flags: number): void {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     NetworkAddMapEntityToSynchronisedScene(netScene, modelHash, pos.x, pos.y, pos.z, 0, undefined, 0, 0, flags);
 }
 
@@ -1877,8 +1877,8 @@ export function doesTunableExist(tunableContext: string, tunableName: string): b
  * Hash: 0xE4E53E1419D81127 | Since: 323
  */
 export function doesTunableExistHash(tunableContext: number | string, tunableName: number | string): boolean {
-    if (typeof tunableContext === 'string') tunableContext = misc.getHashKey(tunableContext)
-    if (typeof tunableName === 'string') tunableName = misc.getHashKey(tunableName)
+    if (typeof tunableContext === 'string') tunableContext = GetHashKey(tunableContext)
+    if (typeof tunableName === 'string') tunableName = GetHashKey(tunableName)
     return NetworkDoesTunableExistHash(tunableContext, tunableName);
 }
 
@@ -2275,7 +2275,7 @@ export function getBoneIdOfFatalHit(): number {
  * Hash: 0x187382F8A3E0A6C3 | Since: 323
  */
 export function getContentModifierListId(contentHash: number | string): number {
-    if (typeof contentHash === 'string') contentHash = misc.getHashKey(contentHash)
+    if (typeof contentHash === 'string') contentHash = GetHashKey(contentHash)
     return NetworkGetContentModifierListId(contentHash);
 }
 
@@ -3191,7 +3191,7 @@ export function hasConfirmedInvite(): boolean {
  * Hash: 0xCB3C68ADB06195DF | Since: 323
  */
 export function hasControlOfDoor(doorHash: number | string): boolean {
-    if (typeof doorHash === 'string') doorHash = misc.getHashKey(doorHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
     return NetworkHasControlOfDoor(doorHash);
 }
 
@@ -3657,7 +3657,7 @@ export function isConnetedToNpPresence(): boolean {
  * Hash: 0xC01E93FAC20C3346 | Since: 323
  */
 export function isDoorNetworked(doorHash: number | string): boolean {
-    if (typeof doorHash === 'string') doorHash = misc.getHashKey(doorHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
     return NetworkIsDoorNetworked(doorHash);
 }
 
@@ -4135,7 +4135,7 @@ export function isScriptActive(scriptName: string, instance_id: number, position
  * Hash: 0xDA7DE67F5FE5EE13 | Since: 2245
  */
 export function isScriptActiveByHash(scriptHash: number | string): boolean {
-    if (typeof scriptHash === 'string') scriptHash = misc.getHashKey(scriptHash)
+    if (typeof scriptHash === 'string') scriptHash = GetHashKey(scriptHash)
     return NetworkIsScriptActiveByHash(scriptHash, 0, false, 0);
 }
 
@@ -4836,7 +4836,7 @@ export function removeEntityArea(areaHandle: number): boolean {
  * Hash: 0x791EDB5803B2F468 | Since: 2545
  */
 export function removeInvalidObjectModel(modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     Citizen.invokeNative('0x791EDB5803B2F468', modelHash);
 }
 
@@ -5633,7 +5633,7 @@ export function setCurrentPublicContentId(missionId: string): void {
  * Hash: 0xAA6D5451DC3448B6 | Since: 2699
  */
 export function setCurrentSpawnLocationOption(mpSettingSpawn: number | string): void {
-    if (typeof mpSettingSpawn === 'string') mpSettingSpawn = misc.getHashKey(mpSettingSpawn)
+    if (typeof mpSettingSpawn === 'string') mpSettingSpawn = GetHashKey(mpSettingSpawn)
     NetworkSetCurrentSpawnSetting(mpSettingSpawn);
 }
 
@@ -6055,7 +6055,7 @@ export function setVehicleDrivenInTestDrive(toggle: boolean): void {
  * Hash: 0xA0CE91E47531D3BB | Since: 2944
  */
 export function setVehicleDrivenLocation(location: number | string): void {
-    if (typeof location === 'string') location = misc.getHashKey(location)
+    if (typeof location === 'string') location = GetHashKey(location)
     Citizen.invokeNative('0xA0CE91E47531D3BB', location);
 }
 
@@ -6257,7 +6257,7 @@ export function textChatIsTyping(): boolean {
  * Hash: 0xC3BFED92026A2AAD | Since: 617
  */
 export function transitionAddStage(hash: number | string, state: number): boolean {
-    if (typeof hash === 'string') hash = misc.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     return NetworkTransitionTrack(hash, 0, 0, state, 0);
 }
 
@@ -6339,8 +6339,8 @@ export function triggerDamageEventForZeroWeaponHash(entity: number | IEntity, to
  * Hash: 0xC7420099936CE286 | Since: 323
  */
 export function tryAccessTunableBoolHash(tunableContext: number | string, tunableName: number | string, defaultValue: boolean): boolean {
-    if (typeof tunableContext === 'string') tunableContext = misc.getHashKey(tunableContext)
-    if (typeof tunableName === 'string') tunableName = misc.getHashKey(tunableName)
+    if (typeof tunableContext === 'string') tunableContext = GetHashKey(tunableContext)
+    if (typeof tunableName === 'string') tunableName = GetHashKey(tunableName)
     return NetworkTryAccessTunableBoolHash(tunableContext, tunableName, defaultValue);
 }
 
@@ -6669,8 +6669,8 @@ export function setInvertGhosting(): void {
  * Hash: 0xFAE628F1E9ADB239 | Since: 323
  */
 export function setLastViewedShopItem(p0: number | string, p2: number | string): void {
-    if (typeof p0 === 'string') p0 = misc.getHashKey(p0)
-    if (typeof p2 === 'string') p2 = misc.getHashKey(p2)
+    if (typeof p0 === 'string') p0 = GetHashKey(p0)
+    if (typeof p2 === 'string') p2 = GetHashKey(p2)
     Citizen.invokeNative('0xFAE628F1E9ADB239', p0, 0, p2);
 }
 
@@ -7841,8 +7841,8 @@ export function getBattleyeErrorMessageLabel(errorCode: number): string {
  * Hash: 0xE448693B3EA3B92C | Since: 3586
  */
 export function getBroadcastDataHostUpdateSize(scriptNameHash: number | string, instance: number, positionHash: number | string, handlerNum: number): number {
-    if (typeof scriptNameHash === 'string') scriptNameHash = misc.getHashKey(scriptNameHash)
-    if (typeof positionHash === 'string') positionHash = misc.getHashKey(positionHash)
+    if (typeof scriptNameHash === 'string') scriptNameHash = GetHashKey(scriptNameHash)
+    if (typeof positionHash === 'string') positionHash = GetHashKey(positionHash)
     return Citizen.invokeNative('0xE448693B3EA3B92C', scriptNameHash, instance, positionHash, handlerNum);
 }
 
@@ -7852,8 +7852,8 @@ export function getBroadcastDataHostUpdateSize(scriptNameHash: number | string, 
  * Hash: 0xAC3F722321800755 | Since: 3586
  */
 export function getBroadcastDataPlayerUpdateSize(scriptNameHash: number | string, instance: number, positionHash: number | string, handlerNum: number): number {
-    if (typeof scriptNameHash === 'string') scriptNameHash = misc.getHashKey(scriptNameHash)
-    if (typeof positionHash === 'string') positionHash = misc.getHashKey(positionHash)
+    if (typeof scriptNameHash === 'string') scriptNameHash = GetHashKey(scriptNameHash)
+    if (typeof positionHash === 'string') positionHash = GetHashKey(positionHash)
     return Citizen.invokeNative('0xAC3F722321800755', scriptNameHash, instance, positionHash, handlerNum);
 }
 
@@ -7939,8 +7939,8 @@ export function getGameRestartReasonMessageLabel(): string {
  * Hash: 0x72C8588ABE22C972 | Since: 3586
  */
 export function getHostBroadcastDataSizeUnsynced(scriptNameHash: number | string, instance: number, positionHash: number | string, handlerNum: number): number {
-    if (typeof scriptNameHash === 'string') scriptNameHash = misc.getHashKey(scriptNameHash)
-    if (typeof positionHash === 'string') positionHash = misc.getHashKey(positionHash)
+    if (typeof scriptNameHash === 'string') scriptNameHash = GetHashKey(scriptNameHash)
+    if (typeof positionHash === 'string') positionHash = GetHashKey(positionHash)
     return Citizen.invokeNative('0x72C8588ABE22C972', scriptNameHash, instance, positionHash, handlerNum);
 }
 
@@ -7950,8 +7950,8 @@ export function getHostBroadcastDataSizeUnsynced(scriptNameHash: number | string
  * Hash: 0xB99CD664FD4720A1 | Since: 3586
  */
 export function getPlayerBroadcastDataSizeUnsynced(scriptNameHash: number | string, instance: number, positionHash: number | string, handlerNum: number): number {
-    if (typeof scriptNameHash === 'string') scriptNameHash = misc.getHashKey(scriptNameHash)
-    if (typeof positionHash === 'string') positionHash = misc.getHashKey(positionHash)
+    if (typeof scriptNameHash === 'string') scriptNameHash = GetHashKey(scriptNameHash)
+    if (typeof positionHash === 'string') positionHash = GetHashKey(positionHash)
     return Citizen.invokeNative('0xB99CD664FD4720A1', scriptNameHash, instance, positionHash, handlerNum);
 }
 
@@ -7971,7 +7971,7 @@ export function getRandomFloatRanged(rangeStart: number, rangeEnd: number): numb
  * Hash: 0xB327CF1B8C2C0EA3 | Since: 3258
  */
 export function getTunablesRegistrationBool(tunableName: number | string, defaultValue: boolean): boolean {
-    if (typeof tunableName === 'string') tunableName = misc.getHashKey(tunableName)
+    if (typeof tunableName === 'string') tunableName = GetHashKey(tunableName)
     return Citizen.invokeNative('0xB327CF1B8C2C0EA3', tunableName, defaultValue);
 }
 
@@ -7982,7 +7982,7 @@ export function getTunablesRegistrationBool(tunableName: number | string, defaul
  * Hash: 0x367E5E33E7F0DD1A | Since: 3258
  */
 export function getTunablesRegistrationFloat(tunableName: number | string, defaultValue: number): number {
-    if (typeof tunableName === 'string') tunableName = misc.getHashKey(tunableName)
+    if (typeof tunableName === 'string') tunableName = GetHashKey(tunableName)
     return Citizen.invokeNative('0x367E5E33E7F0DD1A', tunableName, defaultValue);
 }
 
@@ -7993,7 +7993,7 @@ export function getTunablesRegistrationFloat(tunableName: number | string, defau
  * Hash: 0x0D94071E55F4C9CE | Since: 3258
  */
 export function getTunablesRegistrationInt(tunableName: number | string, defaultValue: number): number {
-    if (typeof tunableName === 'string') tunableName = misc.getHashKey(tunableName)
+    if (typeof tunableName === 'string') tunableName = GetHashKey(tunableName)
     return Citizen.invokeNative('0x0D94071E55F4C9CE', tunableName, defaultValue);
 }
 

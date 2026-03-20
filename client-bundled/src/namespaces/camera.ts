@@ -177,7 +177,7 @@ export function createCam(camName: string): number {
  * Hash: 0x5E3CF89C6BCCA67D | Since: 323 | API-Set: unknown
  */
 export function create(camHash: number | string): number {
-    if (typeof camHash === 'string') camHash = game.getHashKey(camHash)
+    if (typeof camHash === 'string') camHash = GetHashKey(camHash)
     return CreateCamera(camHash, false);
 }
 
@@ -187,7 +187,7 @@ export function create(camHash: number | string): number {
  * Hash: 0x6ABFA3E16460F22D | Since: 323 | API-Set: unknown
  */
 export function createWithParams(camHash: number | string, pos: Vector3, rot: Vector3, fov: number): number {
-    if (typeof camHash === 'string') camHash = game.getHashKey(camHash)
+    if (typeof camHash === 'string') camHash = GetHashKey(camHash)
     return CreateCameraWithParams(camHash, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, fov, false, undefined);
 }
 
@@ -214,7 +214,7 @@ export function createCamWithParams(camName: string, pos: Vector3, rot: Vector3,
  * Hash: 0x741B0129D4560F31 | Since: 323 | API-Set: unknown
  */
 export function createCinematicShot(p0: number | string, time: number, entity: number | IEntity): void {
-    if (typeof p0 === 'string') p0 = game.getHashKey(p0)
+    if (typeof p0 === 'string') p0 = GetHashKey(p0)
     CreateCinematicShot(p0, time, false, entity);
 }
 
@@ -986,7 +986,7 @@ export function isCinematicIdleCamRendering(): boolean {
  * Hash: 0xCC9F3371A7C28BC9 | Since: 323 | API-Set: unknown
  */
 export function isCinematicShotActive(p0: number | string): boolean {
-    if (typeof p0 === 'string') p0 = game.getHashKey(p0)
+    if (typeof p0 === 'string') p0 = GetHashKey(p0)
     return IsCinematicShotActive(p0);
 }
 
@@ -1718,7 +1718,7 @@ export function setFirstPersonFlashEffectType(): void {
  * Hash: 0x11FA5D3479C7DD47 | Since: 323 | API-Set: unknown
  */
 export function setFirstPersonFlashEffectVehicleModelHash(vehicleModel: number | string): void {
-    if (typeof vehicleModel === 'string') vehicleModel = game.getHashKey(vehicleModel)
+    if (typeof vehicleModel === 'string') vehicleModel = GetHashKey(vehicleModel)
     SetGameplayCamVehicleCameraName(vehicleModel);
 }
 
@@ -2102,7 +2102,7 @@ export function setScriptedIsFirstPersonThisFrame(): void {
  * Hash: 0x79C0E43EB9B944E2 | Since: 1734 | API-Set: unknown
  */
 export function setTableGamesThisUpdate(hash: number | string): boolean {
-    if (typeof hash === 'string') hash = game.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     return SetTableGamesCameraThisUpdate(hash);
 }
 
@@ -2294,7 +2294,7 @@ export function stopCinematicCamShaking(): void {
  * Hash: 0x7660C6E75D3A078E | Since: 323 | API-Set: unknown
  */
 export function stopCinematicShot(p0: number | string): void {
-    if (typeof p0 === 'string') p0 = game.getHashKey(p0)
+    if (typeof p0 === 'string') p0 = GetHashKey(p0)
     StopCinematicShot(p0);
 }
 

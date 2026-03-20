@@ -2622,7 +2622,7 @@ export function isTrackedPointVisible(point: number): boolean {
  * Hash: 0x0AD973CA1E077B60 | Since: 323 | API-Set: unknown
  */
 export function isTvshowCurrentlyPlaying(videoCliphash: number | string): boolean {
-    if (typeof videoCliphash === 'string') videoCliphash = game.getHashKey(videoCliphash)
+    if (typeof videoCliphash === 'string') videoCliphash = GetHashKey(videoCliphash)
     return IsTvPlaylistItemPlaying(videoCliphash);
 }
 

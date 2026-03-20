@@ -294,7 +294,7 @@ export function isEngineStarting(vehicle: number | IVehicle): boolean {
  * Hash: 0xDD75460A
  */
 export function create(modelHash: number | string, pos: Vector3, heading: number, isNetwork: boolean, netMissionEntity: boolean): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CreateVehicle(modelHash, pos.x, pos.y, pos.z, heading, isNetwork, netMissionEntity);
 }
 
@@ -307,7 +307,7 @@ export function create(modelHash: number | string, pos: Vector3, heading: number
  * Hash: 0x6AE51D4B
  */
 export function createServerSetter(modelHash: number | string, _type: string, pos: Vector3, heading: number): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CreateVehicleServerSetter(modelHash, _type, pos.x, pos.y, pos.z, heading);
 }
 

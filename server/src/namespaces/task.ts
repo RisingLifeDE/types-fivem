@@ -52,7 +52,7 @@ export function combatPed(ped: number | IPed, targetPed: number | IPed): void {
  * Hash: 0x2B84D1C4
  */
 export function driveBy(driverPed: number | IPed, targetPed: number | IPed, targetVehicle: number | IVehicle, targetX: number, targetY: number, targetZ: number, distanceToShoot: number, pedAccuracy: number, firingPattern: number | string): void {
-    if (typeof firingPattern === 'string') firingPattern = misc.getHashKey(firingPattern)
+    if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
     TaskDriveBy(driverPed, targetPed, targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, false, firingPattern);
 }
 
@@ -298,7 +298,7 @@ export function reactAndFleePed(ped: number | IPed, fleeTarget: number | IPed): 
  * Hash: 0x601C22E3
  */
 export function shootAtCoord(ped: number | IPed, pos: Vector3, duration: number, firingPattern: number | string): void {
-    if (typeof firingPattern === 'string') firingPattern = misc.getHashKey(firingPattern)
+    if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
     TaskShootAtCoord(ped, pos.x, pos.y, pos.z, duration, firingPattern);
 }
 
@@ -319,7 +319,7 @@ export function shootAtCoord(ped: number | IPed, pos: Vector3, duration: number,
  * Hash: 0xAC0631C9
  */
 export function shootAtEntity(entity: number | IEntity, target: number | IEntity, duration: number, firingPattern: number | string): void {
-    if (typeof firingPattern === 'string') firingPattern = misc.getHashKey(firingPattern)
+    if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
     TaskShootAtEntity(entity, target, duration, firingPattern);
 }
 

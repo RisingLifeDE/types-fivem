@@ -30,9 +30,9 @@
  */
 export function addDecorationFromHashes(ped, collection, overlay) {
     if (typeof collection === 'string')
-        collection = misc.getHashKey(collection);
+        collection = GetHashKey(collection);
     if (typeof overlay === 'string')
-        overlay = misc.getHashKey(overlay);
+        overlay = GetHashKey(overlay);
     AddPedDecorationFromHashes(ped, collection, overlay);
 }
 /**
@@ -66,7 +66,7 @@ export function clearSecondaryTask(ped) {
  */
 export function create(pedType, modelHash, pos, heading, isNetwork, bScriptHostPed) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CreatePed(pedType, modelHash, pos.x, pos.y, pos.z, heading, isNetwork, bScriptHostPed);
 }
 /**
@@ -78,7 +78,7 @@ export function create(pedType, modelHash, pos, heading, isNetwork, bScriptHostP
  */
 export function createInsideVehicle(vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CreatePedInsideVehicle(vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed);
 }
 /**
@@ -258,7 +258,7 @@ export function isUsingActionMode(ped) {
  */
 export function setCurrentWeapon(ped, weaponHash, bForceInHand) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     SetCurrentPedWeapon(ped, weaponHash, bForceInHand);
 }
 /**
@@ -272,7 +272,7 @@ export function setCurrentWeapon(ped, weaponHash, bForceInHand) {
  */
 export function setAmmo(ped, weaponHash, ammo) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     SetPedAmmo(ped, weaponHash, ammo);
 }
 /**

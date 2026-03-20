@@ -175,7 +175,7 @@ export function startNewScriptWithArgs(scriptName: string, argCount: number, sta
  * Hash: 0xEB1C67C3A5333A92 | Since: 323
  */
 export function startNewScriptWithNameHash(scriptHash: number | string, stackSize: number): number {
-    if (typeof scriptHash === 'string') scriptHash = misc.getHashKey(scriptHash)
+    if (typeof scriptHash === 'string') scriptHash = GetHashKey(scriptHash)
     return StartNewScriptWithNameHash(scriptHash, stackSize);
 }
 
@@ -185,7 +185,7 @@ export function startNewScriptWithNameHash(scriptHash: number | string, stackSiz
  * Hash: 0xC4BB298BD441BE78 | Since: 323
  */
 export function startNewScriptWithNameHashAndArgs(scriptHash: number | string, argCount: number, stackSize: number): [number, any] {
-    if (typeof scriptHash === 'string') scriptHash = misc.getHashKey(scriptHash)
+    if (typeof scriptHash === 'string') scriptHash = GetHashKey(scriptHash)
     return StartNewScriptWithNameHashAndArgs(scriptHash, argCount, stackSize);
 }
 

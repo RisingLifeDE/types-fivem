@@ -15,7 +15,7 @@ export function canRequestAssetsForEntity(): boolean {
  * Hash: 0x645D0B458D8E17B5 | Since: 323 | API-Set: unknown
  */
 export function canSetEnterStateForRegisteredEntity(cutsceneEntName: string, modelHash: number | string): boolean {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CanSetEnterStateForRegisteredEntity(cutsceneEntName, modelHash);
 }
 
@@ -34,7 +34,7 @@ export function canSetExitStateForCamera(): boolean {
  * Hash: 0x4C6A6451C79E4662 | Since: 323 | API-Set: unknown
  */
 export function canSetExitStateForRegisteredEntity(cutsceneEntName: string, modelHash: number | string): boolean {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CanSetExitStateForRegisteredEntity(cutsceneEntName, modelHash);
 }
 
@@ -53,7 +53,7 @@ export function canUseMobilePhoneDuring(): boolean {
  * Hash: 0x499EF20C5DB25C59 | Since: 323 | API-Set: unknown
  */
 export function doesEntityExist(cutsceneEntName: string, modelHash: number | string): boolean {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return DoesCutsceneEntityExist(cutsceneEntName, modelHash);
 }
 
@@ -153,7 +153,7 @@ export function getCutFileOffset(cutsceneName: string, index: number): Vector3 {
  * Hash: 0x0A2E9FDB9A8C62F6 | Since: 323 | API-Set: unknown
  */
 export function getEntityIndexOfEntity(cutsceneEntName: string, modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetEntityIndexOfCutsceneEntity(cutsceneEntName, modelHash);
 }
 
@@ -163,7 +163,7 @@ export function getEntityIndexOfEntity(cutsceneEntName: string, modelHash: numbe
  * Hash: 0xC0741A26499654CD | Since: 323 | API-Set: unknown
  */
 export function getEntityIndexOfRegisteredEntity(cutsceneEntName: string, modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetEntityIndexOfRegisteredEntity(cutsceneEntName, modelHash);
 }
 
@@ -273,7 +273,7 @@ export function networkSetMocapCanBeSkipped(toggle: boolean): void {
  * Hash: 0xE40C1C56DF95C2E8 | Since: 323 | API-Set: unknown
  */
 export function registerEntityFor(cutscenePed: number | IPed, cutsceneEntName: string, modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     RegisterEntityForCutscene(cutscenePed, cutsceneEntName, 0, modelHash, 0);
 }
 
@@ -416,7 +416,7 @@ export function setOriginAndOrientation(x1: number, y1: number, z1: number, x2: 
  * Hash: 0xBA01E7B6DEEFBBC9 | Since: 323 | API-Set: unknown
  */
 export function setPedComponentVariation(cutsceneEntName: string, componentId: number, drawableId: number, textureId: number, modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     SetCutscenePedComponentVariation(cutsceneEntName, componentId, drawableId, textureId, modelHash);
 }
 
@@ -426,7 +426,7 @@ export function setPedComponentVariation(cutsceneEntName: string, componentId: n
  * Hash: 0x2A56C06EBEF2B0D9 | Since: 323 | API-Set: unknown
  */
 export function setPedComponentVariationFromPed(cutsceneEntName: string, ped: number | IPed, modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     SetCutscenePedComponentVariationFromPed(cutsceneEntName, ped, modelHash);
 }
 
@@ -443,7 +443,7 @@ export function setPedComponentVariationFromPed(cutsceneEntName: string, ped: nu
  * Hash: 0x0546524ADE2E9723 | Since: 323 | API-Set: unknown
  */
 export function setPedPropVariation(cutsceneEntName: string, componentId: number, drawableId: number, textureId: number, modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     SetCutscenePedPropVariation(cutsceneEntName, componentId, drawableId, textureId, modelHash);
 }
 
@@ -480,7 +480,7 @@ export function setScriptCanStart(threadId: number): void {
  * Hash: 0x7F96F23FA9B73327 | Since: 323 | API-Set: unknown
  */
 export function setVehicleModelPlayerWillExitScene(modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     Citizen.invokeNative('0x7F96F23FA9B73327', modelHash);
 }
 

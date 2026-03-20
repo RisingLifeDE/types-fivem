@@ -487,7 +487,7 @@ export function setInvincible(player, bInvincible) {
  */
 export function setModel(player, model) {
     if (typeof model === 'string')
-        model = misc.getHashKey(model);
+        model = GetHashKey(model);
     SetPlayerModel(player, model);
 }
 /**

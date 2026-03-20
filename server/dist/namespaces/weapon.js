@@ -7,9 +7,9 @@
  */
 export function giveComponentToPed(ped, weaponHash, componentHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
-        componentHash = misc.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     GiveWeaponComponentToPed(ped, weaponHash, componentHash);
 }
 /**
@@ -21,7 +21,7 @@ export function giveComponentToPed(ped, weaponHash, componentHash) {
  */
 export function giveToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     GiveWeaponToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand);
 }
 /**
@@ -44,9 +44,9 @@ export function removeAllPeds(ped) {
  */
 export function removeComponentFromPed(ped, weaponHash, componentHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
-        componentHash = misc.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     RemoveWeaponComponentFromPed(ped, weaponHash, componentHash);
 }
 /**
@@ -67,6 +67,6 @@ export function removeComponentFromPed(ped, weaponHash, componentHash) {
  */
 export function removeFromPed(ped, weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     RemoveWeaponFromPed(ped, weaponHash);
 }

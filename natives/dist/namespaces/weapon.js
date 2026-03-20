@@ -5,7 +5,7 @@
  */
 export function addAmmoToPed(ped, weaponHash, ammo) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     AddAmmoToPed(ped, weaponHash, ammo);
 }
 /**
@@ -15,7 +15,7 @@ export function addAmmoToPed(ped, weaponHash, ammo) {
  */
 export function addPedAmmoByType(ped, ammoTypeHash, ammo) {
     if (typeof ammoTypeHash === 'string')
-        ammoTypeHash = misc.getHashKey(ammoTypeHash);
+        ammoTypeHash = GetHashKey(ammoTypeHash);
     AddAmmoToPedByType(ped, ammoTypeHash, ammo);
 }
 /**
@@ -26,7 +26,7 @@ export function addPedAmmoByType(ped, ammoTypeHash, ammo) {
  */
 export function canUseOnParachute(weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return CanUseWeaponOnParachute(weaponHash);
 }
 /**
@@ -52,7 +52,7 @@ export function clearPedLastDamage(ped) {
  */
 export function createAirDefenceAngledArea(radius, weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return CreateAirDefenseArea(0, 0, 0, 0, 0, 0, 0, 0, 0, radius, weaponHash);
 }
 /**
@@ -62,7 +62,7 @@ export function createAirDefenceAngledArea(radius, weaponHash) {
  */
 export function createAirDefenceSphere(pos, radius, weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return CreateAirDefenseSphere(pos.x, pos.y, pos.z, radius, 0, 0, 0, weaponHash);
 }
 /**
@@ -72,7 +72,7 @@ export function createAirDefenceSphere(pos, radius, weaponHash) {
  */
 export function createObject(weaponHash, ammoCount, pos, showWorldModel, scale) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return CreateWeaponObject(weaponHash, ammoCount, pos.x, pos.y, pos.z, showWorldModel, scale, undefined, undefined, undefined);
 }
 /**
@@ -90,9 +90,9 @@ export function doesAirDefenceSphereExist(zoneId) {
  */
 export function doesTakeWeaponComponent(weaponHash, componentHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
-        componentHash = misc.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return DoesWeaponTakeWeaponComponent(weaponHash, componentHash);
 }
 /**
@@ -112,7 +112,7 @@ export function enableLaserSightRendering(toggle) {
  */
 export function explodeProjectiles(ped, weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     ExplodeProjectiles(ped, weaponHash, false);
 }
 /**
@@ -130,7 +130,7 @@ export function fireAirDefenceSphereAtPosition(zoneId, pos) {
  */
 export function getAmmoInClip(ped, weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return GetAmmoInClip(ped, weaponHash);
 }
 /**
@@ -147,7 +147,7 @@ export function getAmmoInClip(ped, weaponHash) {
  */
 export function getAmmoInPed(ped, weaponhash) {
     if (typeof weaponhash === 'string')
-        weaponhash = misc.getHashKey(weaponhash);
+        weaponhash = GetHashKey(weaponhash);
     return GetAmmoInPedWeapon(ped, weaponhash);
 }
 /**
@@ -209,7 +209,7 @@ export function getCurrentPedEntityIndex(ped) {
  */
 export function getIsPedGadgetEquipped(ped, gadgetHash) {
     if (typeof gadgetHash === 'string')
-        gadgetHash = misc.getHashKey(gadgetHash);
+        gadgetHash = GetHashKey(gadgetHash);
     return GetIsPedGadgetEquipped(ped, gadgetHash);
 }
 /**
@@ -227,7 +227,7 @@ export function getLockonDistanceOfCurrentPed(ped) {
  */
 export function getMaxAmmo(ped, weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return GetMaxAmmo(ped, weaponHash);
 }
 /**
@@ -237,7 +237,7 @@ export function getMaxAmmo(ped, weaponHash) {
  */
 export function getMaxAmmoByType(ped, ammoTypeHash) {
     if (typeof ammoTypeHash === 'string')
-        ammoTypeHash = misc.getHashKey(ammoTypeHash);
+        ammoTypeHash = GetHashKey(ammoTypeHash);
     return GetMaxAmmoByType(ped, ammoTypeHash);
 }
 /**
@@ -248,7 +248,7 @@ export function getMaxAmmoByType(ped, ammoTypeHash) {
  */
 export function getMaxAmmoInClip(ped, weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return GetMaxAmmoInClip(ped, weaponHash, false);
 }
 /**
@@ -266,7 +266,7 @@ export function getMaxRangeOfCurrentPed(ped) {
  */
 export function getPedAmmoByType(ped, ammoTypeHash) {
     if (typeof ammoTypeHash === 'string')
-        ammoTypeHash = misc.getHashKey(ammoTypeHash);
+        ammoTypeHash = GetHashKey(ammoTypeHash);
     return GetPedAmmoByType(ped, ammoTypeHash);
 }
 /**
@@ -279,7 +279,7 @@ export function getPedAmmoByType(ped, ammoTypeHash) {
  */
 export function getPedAmmoTypeFrom(ped, weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return GetPedAmmoTypeFromWeapon(ped, weaponHash);
 }
 /**
@@ -301,7 +301,7 @@ export function getPedLastImpactCoord(ped) {
  */
 export function getPedOriginalAmmoTypeFrom(ped, weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return GetPedAmmoTypeFromWeapon2(ped, weaponHash);
 }
 /**
@@ -311,7 +311,7 @@ export function getPedOriginalAmmoTypeFrom(ped, weaponHash) {
  */
 export function getPedtypeInSlot(ped, weaponSlot) {
     if (typeof weaponSlot === 'string')
-        weaponSlot = misc.getHashKey(weaponSlot);
+        weaponSlot = GetHashKey(weaponSlot);
     return GetPedWeapontypeInSlot(ped, weaponSlot);
 }
 /**
@@ -321,7 +321,7 @@ export function getPedtypeInSlot(ped, weaponSlot) {
  */
 export function getPedCamoIndex(ped, weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return Citizen.invokeNative('0xA2C9AC24B4061285', ped, weaponHash);
 }
 /**
@@ -332,9 +332,9 @@ export function getPedCamoIndex(ped, weaponHash) {
  */
 export function getPedComponentTintIndex(ped, weaponHash, camoComponentHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     if (typeof camoComponentHash === 'string')
-        camoComponentHash = misc.getHashKey(camoComponentHash);
+        camoComponentHash = GetHashKey(camoComponentHash);
     return GetPedWeaponLiveryColor(ped, weaponHash, camoComponentHash);
 }
 /**
@@ -344,7 +344,7 @@ export function getPedComponentTintIndex(ped, weaponHash, camoComponentHash) {
  */
 export function getPedTintIndex(ped, weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return GetPedWeaponTintIndex(ped, weaponHash);
 }
 /**
@@ -375,7 +375,7 @@ export function getSelectedPed(ped) {
  */
 export function gettypeGroup(weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return GetWeapontypeGroup(weaponHash);
 }
 /**
@@ -388,7 +388,7 @@ export function gettypeGroup(weaponHash) {
  */
 export function gettypeModel(weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return GetWeapontypeModel(weaponHash);
 }
 /**
@@ -398,7 +398,7 @@ export function gettypeModel(weaponHash) {
  */
 export function gettypeSlot(weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return GetWeapontypeSlot(weaponHash);
 }
 /**
@@ -423,7 +423,7 @@ export function gettypeSlot(weaponHash) {
  */
 export function getClipSize(weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return GetWeaponClipSize(weaponHash);
 }
 /**
@@ -433,7 +433,7 @@ export function getClipSize(weaponHash) {
  */
 export function getComponentHudStats(componentHash) {
     if (typeof componentHash === 'string')
-        componentHash = misc.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return GetWeaponComponentHudStats(componentHash);
 }
 /**
@@ -443,7 +443,7 @@ export function getComponentHudStats(componentHash) {
  */
 export function getComponentTypeModel(componentHash) {
     if (typeof componentHash === 'string')
-        componentHash = misc.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return GetWeaponComponentTypeModel(componentHash);
 }
 /**
@@ -454,7 +454,7 @@ export function getComponentTypeModel(componentHash) {
  */
 export function getComponentVariantExtraCount(componentHash) {
     if (typeof componentHash === 'string')
-        componentHash = misc.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return GetWeaponComponentVariantExtraComponentCount(componentHash);
 }
 /**
@@ -464,7 +464,7 @@ export function getComponentVariantExtraCount(componentHash) {
  */
 export function getComponentVariantExtraModel(componentHash, extraComponentIndex) {
     if (typeof componentHash === 'string')
-        componentHash = misc.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return GetWeaponComponentVariantExtraComponentModel(componentHash, extraComponentIndex);
 }
 /**
@@ -475,9 +475,9 @@ export function getComponentVariantExtraModel(componentHash, extraComponentIndex
  */
 export function getDamage(weaponHash, componentHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
-        componentHash = misc.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return GetWeaponDamage(weaponHash, componentHash);
 }
 /**
@@ -507,7 +507,7 @@ export function getDamage(weaponHash, componentHash) {
  */
 export function getDamageType(weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return GetWeaponDamageType(weaponHash);
 }
 /**
@@ -537,7 +537,7 @@ export function getDamageType(weaponHash) {
  */
 export function getHudStats(weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return GetWeaponHudStats(weaponHash);
 }
 /**
@@ -548,7 +548,7 @@ export function getHudStats(weaponHash) {
  */
 export function getObjectComponentTintIndex(weaponObject, camoComponentHash) {
     if (typeof camoComponentHash === 'string')
-        camoComponentHash = misc.getHashKey(camoComponentHash);
+        camoComponentHash = GetHashKey(camoComponentHash);
     return GetWeaponObjectLiveryColor(weaponObject, camoComponentHash);
 }
 /**
@@ -576,7 +576,7 @@ export function getObjectTintIndex(weapon) {
  */
 export function getTimeBetweenShots(weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return GetWeaponTimeBetweenShots(weaponHash);
 }
 /**
@@ -586,7 +586,7 @@ export function getTimeBetweenShots(weaponHash) {
  */
 export function getTintCount(weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return GetWeaponTintCount(weaponHash);
 }
 /**
@@ -599,7 +599,7 @@ export function getTintCount(weaponHash) {
  */
 export function giveDelayedToPed(ped, weaponHash, ammoCount, bForceInHand) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     GiveDelayedWeaponToPed(ped, weaponHash, ammoCount, bForceInHand);
 }
 /**
@@ -610,7 +610,7 @@ export function giveDelayedToPed(ped, weaponHash, ammoCount, bForceInHand) {
  */
 export function giveLoadoutToPed(ped, loadoutHash) {
     if (typeof loadoutHash === 'string')
-        loadoutHash = misc.getHashKey(loadoutHash);
+        loadoutHash = GetHashKey(loadoutHash);
     GiveLoadoutToPed(ped, loadoutHash);
 }
 /**
@@ -620,9 +620,9 @@ export function giveLoadoutToPed(ped, loadoutHash) {
  */
 export function giveComponentToPed(ped, weaponHash, componentHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
-        componentHash = misc.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     GiveWeaponComponentToPed(ped, weaponHash, componentHash);
 }
 /**
@@ -634,7 +634,7 @@ export function giveComponentToPed(ped, weaponHash, componentHash) {
  */
 export function giveComponentToWeaponObject(weaponObject, componentHash) {
     if (typeof componentHash === 'string')
-        componentHash = misc.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     GiveWeaponComponentToWeaponObject(weaponObject, componentHash);
 }
 /**
@@ -652,7 +652,7 @@ export function giveObjectToPed(weaponObject, ped) {
  */
 export function giveToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     GiveWeaponToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand);
 }
 /**
@@ -667,7 +667,7 @@ export function giveToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand) {
  */
 export function hasEntityBeenDamagedBy(entity, weaponHash, weaponType) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return HasEntityBeenDamagedByWeapon(entity, weaponHash, weaponType);
 }
 /**
@@ -682,7 +682,7 @@ export function hasEntityBeenDamagedBy(entity, weaponHash, weaponType) {
  */
 export function hasPedBeenDamagedBy(ped, weaponHash, weaponType) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return HasPedBeenDamagedByWeapon(ped, weaponHash, weaponType);
 }
 /**
@@ -695,7 +695,7 @@ export function hasPedBeenDamagedBy(ped, weaponHash, weaponType) {
  */
 export function hasPedGot(ped, weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return HasPedGotWeapon(ped, weaponHash, false);
 }
 /**
@@ -705,9 +705,9 @@ export function hasPedGot(ped, weaponHash) {
  */
 export function hasPedGotComponent(ped, weaponHash, componentHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
-        componentHash = misc.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return HasPedGotWeaponComponent(ped, weaponHash, componentHash);
 }
 /**
@@ -717,7 +717,7 @@ export function hasPedGotComponent(ped, weaponHash, componentHash) {
  */
 export function hasVehicleGotProjectileAttached(driver, vehicle, weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return HasVehicleGotProjectileAttached(driver, vehicle, weaponHash, undefined);
 }
 /**
@@ -727,7 +727,7 @@ export function hasVehicleGotProjectileAttached(driver, vehicle, weaponHash) {
  */
 export function hasAssetLoaded(weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return HasWeaponAssetLoaded(weaponHash);
 }
 /**
@@ -737,7 +737,7 @@ export function hasAssetLoaded(weaponHash) {
  */
 export function hasGotWeaponComponent(weapon, componentHash) {
     if (typeof componentHash === 'string')
-        componentHash = misc.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return HasWeaponGotWeaponComponent(weapon, componentHash);
 }
 /**
@@ -806,9 +806,9 @@ export function isPedCurrentSilenced(ped) {
  */
 export function isPedComponentActive(ped, weaponHash, componentHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
-        componentHash = misc.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return IsPedWeaponComponentActive(ped, weaponHash, componentHash);
 }
 /**
@@ -826,7 +826,7 @@ export function isPedReadyToShoot(ped) {
  */
 export function isValid(weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return IsWeaponValid(weaponHash);
 }
 /**
@@ -876,7 +876,7 @@ export function removeAllPeds(ped) {
  */
 export function removeAllProjectilesOfType(weaponHash, explode) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     RemoveAllProjectilesOfType(weaponHash, explode);
 }
 /**
@@ -886,7 +886,7 @@ export function removeAllProjectilesOfType(weaponHash, explode) {
  */
 export function removeAsset(weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     RemoveWeaponAsset(weaponHash);
 }
 /**
@@ -896,9 +896,9 @@ export function removeAsset(weaponHash) {
  */
 export function removeComponentFromPed(ped, weaponHash, componentHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
-        componentHash = misc.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     RemoveWeaponComponentFromPed(ped, weaponHash, componentHash);
 }
 /**
@@ -908,7 +908,7 @@ export function removeComponentFromPed(ped, weaponHash, componentHash) {
  */
 export function removeComponentFromWeaponObject(_object, componentHash) {
     if (typeof componentHash === 'string')
-        componentHash = misc.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     RemoveWeaponComponentFromWeaponObject(_object, componentHash);
 }
 /**
@@ -928,7 +928,7 @@ export function removeComponentFromWeaponObject(_object, componentHash) {
  */
 export function removeFromPed(ped, weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     RemoveWeaponFromPed(ped, weaponHash);
 }
 /**
@@ -940,7 +940,7 @@ export function removeFromPed(ped, weaponHash) {
  */
 export function requestAsset(weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     RequestWeaponAsset(weaponHash, 0, 0);
 }
 /**
@@ -958,7 +958,7 @@ export function requestHighDetailModel(weaponObject) {
  */
 export function setAmmoInClip(ped, weaponHash, ammo) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return SetAmmoInClip(ped, weaponHash, ammo);
 }
 /**
@@ -977,7 +977,7 @@ export function setCanPedSelectAlls(ped, toggle) {
  */
 export function setCanPedSelectInventory(ped, weaponHash, toggle) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     SetCanPedEquipWeapon(ped, weaponHash, toggle);
 }
 /**
@@ -987,7 +987,7 @@ export function setCanPedSelectInventory(ped, weaponHash, toggle) {
  */
 export function setCurrentPedVehicle(ped, weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return SetCurrentPedVehicleWeapon(ped, weaponHash);
 }
 /**
@@ -997,7 +997,7 @@ export function setCurrentPedVehicle(ped, weaponHash) {
  */
 export function setCurrentPed(ped, weaponHash, bForceInHand) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     SetCurrentPedWeapon(ped, weaponHash, bForceInHand);
 }
 /**
@@ -1031,7 +1031,7 @@ export function setFlashLightFadeDistance(distance) {
  */
 export function setPedAmmo(ped, weaponHash, ammo) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     SetPedAmmo(ped, weaponHash, ammo, false);
 }
 /**
@@ -1041,7 +1041,7 @@ export function setPedAmmo(ped, weaponHash, ammo) {
  */
 export function setPedAmmoByType(ped, ammoTypeHash, ammo) {
     if (typeof ammoTypeHash === 'string')
-        ammoTypeHash = misc.getHashKey(ammoTypeHash);
+        ammoTypeHash = GetHashKey(ammoTypeHash);
     SetPedAmmoByType(ped, ammoTypeHash, ammo);
 }
 /**
@@ -1083,7 +1083,7 @@ export function setPedCycleVehiclesOnly(ped) {
  */
 export function setPedDropsInventory(ped, weaponHash, xOffset, yOffset, zOffset, ammoCount) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     SetPedDropsInventoryWeapon(ped, weaponHash, xOffset, yOffset, zOffset, ammoCount);
 }
 /**
@@ -1110,7 +1110,7 @@ export function setPedDropssWhenDead(ped, toggle) {
  */
 export function setPedGadget(ped, gadgetHash) {
     if (typeof gadgetHash === 'string')
-        gadgetHash = misc.getHashKey(gadgetHash);
+        gadgetHash = GetHashKey(gadgetHash);
     SetPedGadget(ped, gadgetHash, false);
 }
 /**
@@ -1120,7 +1120,7 @@ export function setPedGadget(ped, gadgetHash) {
  */
 export function setPedInfiniteAmmo(ped, toggle, weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     SetPedInfiniteAmmo(ped, toggle, weaponHash);
 }
 /**
@@ -1187,9 +1187,9 @@ export function setPedStunGunFiniteAmmo() {
  */
 export function setPedComponentTintIndex(ped, weaponHash, camoComponentHash, colorIndex) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     if (typeof camoComponentHash === 'string')
-        camoComponentHash = misc.getHashKey(camoComponentHash);
+        camoComponentHash = GetHashKey(camoComponentHash);
     SetPedWeaponLiveryColor(ped, weaponHash, camoComponentHash, colorIndex);
 }
 /**
@@ -1209,7 +1209,7 @@ export function setPedComponentTintIndex(ped, weaponHash, camoComponentHash, col
  */
 export function setPedTintIndex(ped, weaponHash, tintIndex) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     SetPedWeaponTintIndex(ped, weaponHash, tintIndex);
 }
 /**
@@ -1269,7 +1269,7 @@ export function setPlayerTargettableForAirDefenceSphere(player, zoneId, enable) 
  */
 export function setAnimationOverride(ped, animStyle) {
     if (typeof animStyle === 'string')
-        animStyle = misc.getHashKey(animStyle);
+        animStyle = GetHashKey(animStyle);
     SetWeaponAnimationOverride(ped, animStyle);
 }
 /**
@@ -1279,7 +1279,7 @@ export function setAnimationOverride(ped, animStyle) {
  */
 export function setAoeModifier(weaponHash, multiplier) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     SetWeaponExplosionRadiusMultiplier(weaponHash, multiplier);
 }
 /**
@@ -1290,7 +1290,7 @@ export function setAoeModifier(weaponHash, multiplier) {
  */
 export function setDamageModifier(weaponHash, damageMultiplier) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     SetWeaponDamageModifier(weaponHash, damageMultiplier);
 }
 /**
@@ -1300,7 +1300,7 @@ export function setDamageModifier(weaponHash, damageMultiplier) {
  */
 export function setEffectDurationModifier(p0) {
     if (typeof p0 === 'string')
-        p0 = misc.getHashKey(p0);
+        p0 = GetHashKey(p0);
     Citizen.invokeNative('0xE6D2CEDD370FF98E', p0, 0);
 }
 /**
@@ -1351,7 +1351,7 @@ export function setObjectCamoIndex(weaponObject) {
  */
 export function setObjectComponentTintIndex(weaponObject, camoComponentHash, colorIndex) {
     if (typeof camoComponentHash === 'string')
-        camoComponentHash = misc.getHashKey(camoComponentHash);
+        camoComponentHash = GetHashKey(camoComponentHash);
     SetWeaponObjectLiveryColor(weaponObject, camoComponentHash, colorIndex);
 }
 /**
@@ -1409,7 +1409,7 @@ export function setAmmoInVehicleClip(vehicle, seat, ammo) {
  */
 export function setPedDamageModifier(weapon, damageModifier) {
     if (typeof weapon === 'string')
-        weapon = misc.getHashKey(weapon);
+        weapon = GetHashKey(weapon);
     Citizen.invokeNative('0x1091922715B68DF0', weapon, damageModifier);
 }
 /**

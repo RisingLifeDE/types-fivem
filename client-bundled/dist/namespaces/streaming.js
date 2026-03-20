@@ -254,7 +254,7 @@ export function addTextEntry(entryKey, entryText) {
  */
 export function addTextEntryByHash(entryKey, entryText) {
     if (typeof entryKey === 'string')
-        entryKey = game.getHashKey(entryKey);
+        entryKey = GetHashKey(entryKey);
     AddTextEntryByHash(entryKey, entryText);
 }
 /**
@@ -264,7 +264,7 @@ export function addTextEntryByHash(entryKey, entryText) {
  */
 export function addModelToCreatorBudget(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = game.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return AddModelToCreatorBudget(modelHash);
 }
 /**
@@ -496,7 +496,7 @@ export function hasClipSetLoaded(clipSet) {
  */
 export function hasCollisionForModelLoaded(model) {
     if (typeof model === 'string')
-        model = game.getHashKey(model);
+        model = GetHashKey(model);
     return HasCollisionForModelLoaded(model);
 }
 /**
@@ -506,7 +506,7 @@ export function hasCollisionForModelLoaded(model) {
  */
 export function hasModelLoaded(model) {
     if (typeof model === 'string')
-        model = game.getHashKey(model);
+        model = GetHashKey(model);
     return HasModelLoaded(model);
 }
 /**
@@ -596,7 +596,7 @@ export function isIplActive(iplName) {
  */
 export function isModelAPed(model) {
     if (typeof model === 'string')
-        model = game.getHashKey(model);
+        model = GetHashKey(model);
     return IsModelAPed(model);
 }
 /**
@@ -606,7 +606,7 @@ export function isModelAPed(model) {
  */
 export function isModelAVehicle(model) {
     if (typeof model === 'string')
-        model = game.getHashKey(model);
+        model = GetHashKey(model);
     return IsModelAVehicle(model);
 }
 /**
@@ -616,7 +616,7 @@ export function isModelAVehicle(model) {
  */
 export function isModelInCdimage(model) {
     if (typeof model === 'string')
-        model = game.getHashKey(model);
+        model = GetHashKey(model);
     return IsModelInCdimage(model);
 }
 /**
@@ -626,7 +626,7 @@ export function isModelInCdimage(model) {
  */
 export function isModelValid(model) {
     if (typeof model === 'string')
-        model = game.getHashKey(model);
+        model = GetHashKey(model);
     return IsModelValid(model);
 }
 /**
@@ -858,7 +858,7 @@ export function removeIpl(iplName) {
  */
 export function removeModelFromCreatorBudget(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = game.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     RemoveModelFromCreatorBudget(modelHash);
 }
 /**
@@ -930,7 +930,7 @@ export function requestCollisionAtCoord(pos) {
  */
 export function requestCollisionForModel(model) {
     if (typeof model === 'string')
-        model = game.getHashKey(model);
+        model = GetHashKey(model);
     RequestCollisionForModel(model);
 }
 /**
@@ -950,7 +950,7 @@ export function requestIpl(iplName) {
  */
 export function requestMenuPedModel(model) {
     if (typeof model === 'string')
-        model = game.getHashKey(model);
+        model = GetHashKey(model);
     RequestMenuPedModel(model);
 }
 /**
@@ -961,7 +961,7 @@ export function requestMenuPedModel(model) {
  */
 export function requestModel(model) {
     if (typeof model === 'string')
-        model = game.getHashKey(model);
+        model = GetHashKey(model);
     RequestModel(model);
 }
 /**
@@ -1091,7 +1091,7 @@ export function setMapdatacullboxEnabled(name, toggle) {
  */
 export function setModelAsNoLongerNeeded(model) {
     if (typeof model === 'string')
-        model = game.getHashKey(model);
+        model = GetHashKey(model);
     SetModelAsNoLongerNeeded(model);
 }
 /**
@@ -1361,7 +1361,7 @@ export function switchToMultiSecondpart(ped) {
  */
 export function getModelAdditionalCost(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = game.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return Citizen.invokeNative('0x0F7082C60FB479EF', modelHash);
 }
 /**
@@ -1371,7 +1371,7 @@ export function getModelAdditionalCost(modelHash) {
  */
 export function getTotalModelCost(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = game.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return Citizen.invokeNative('0x4A91423C04BAADA1', modelHash);
 }
 /**

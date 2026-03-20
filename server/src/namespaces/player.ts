@@ -537,7 +537,7 @@ export function setInvincible(player: number | string | IPlayer, bInvincible: bo
  * Hash: 0x774A4C54
  */
 export function setModel(player: number | string | IPlayer, model: number | string): void {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     SetPlayerModel(player, model);
 }
 

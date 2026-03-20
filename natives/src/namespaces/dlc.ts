@@ -79,7 +79,7 @@ export function hasCloudRequestsFinished(unused: number): [boolean, boolean] {
  * Hash: 0x812595A0644CE1DE | Since: 323
  */
 export function isPresent(dlcHash: number | string): boolean {
-    if (typeof dlcHash === 'string') dlcHash = misc.getHashKey(dlcHash)
+    if (typeof dlcHash === 'string') dlcHash = GetHashKey(dlcHash)
     return IsDlcPresent(dlcHash);
 }
 

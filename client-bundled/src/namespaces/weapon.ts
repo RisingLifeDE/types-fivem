@@ -6,7 +6,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0x5343721 | Since: unknown | API-Set: client
  */
 export function getAccuracySpread(weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetWeaponAccuracySpread(weaponHash);
 }
 
@@ -25,7 +25,7 @@ export function getAnimationOverride(ped: number | IPed): number {
  * Hash: 0xC693E278 | Since: unknown | API-Set: client
  */
 export function getComponentAccuracyModifier(componentHash: number | string): number {
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetWeaponComponentAccuracyModifier(componentHash);
 }
 
@@ -35,7 +35,7 @@ export function getComponentAccuracyModifier(componentHash: number | string): nu
  * Hash: 0xACB7E68F | Since: unknown | API-Set: client
  */
 export function getComponentCameraHash(componentHash: number | string): number {
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetWeaponComponentCameraHash(componentHash);
 }
 
@@ -45,7 +45,7 @@ export function getComponentCameraHash(componentHash: number | string): number {
  * Hash: 0xE14CF665 | Since: unknown | API-Set: client
  */
 export function getComponentClipSize(componentHash: number | string): number {
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetWeaponComponentClipSize(componentHash);
 }
 
@@ -55,7 +55,7 @@ export function getComponentClipSize(componentHash: number | string): number {
  * Hash: 0x4A0E3855 | Since: unknown | API-Set: client
  */
 export function getComponentDamageModifier(componentHash: number | string): number {
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetWeaponComponentDamageModifier(componentHash);
 }
 
@@ -65,7 +65,7 @@ export function getComponentDamageModifier(componentHash: number | string): numb
  * Hash: 0xE134FB8D | Since: unknown | API-Set: client
  */
 export function getComponentRangeDamageModifier(componentHash: number | string): number {
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetWeaponComponentRangeDamageModifier(componentHash);
 }
 
@@ -75,7 +75,7 @@ export function getComponentRangeDamageModifier(componentHash: number | string):
  * Hash: 0x2FD0BC1B | Since: unknown | API-Set: client
  */
 export function getComponentRangeModifier(componentHash: number | string): number {
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetWeaponComponentRangeModifier(componentHash);
 }
 
@@ -85,7 +85,7 @@ export function getComponentRangeModifier(componentHash: number | string): numbe
  * Hash: 0xF9AB9297 | Since: unknown | API-Set: client
  */
 export function getComponentReticuleHash(componentHash: number | string): number {
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetWeaponComponentReticuleHash(componentHash);
 }
 
@@ -95,7 +95,7 @@ export function getComponentReticuleHash(componentHash: number | string): number
  * Hash: 0xD979143 | Since: unknown | API-Set: client
  */
 export function getDamageModifier(weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetWeaponDamageModifier(weaponHash);
 }
 
@@ -105,7 +105,7 @@ export function getDamageModifier(weaponHash: number | string): number {
  * Hash: 0x5E1AF5F | Since: unknown | API-Set: client
  */
 export function getRecoilShakeAmplitude(weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetWeaponRecoilShakeAmplitude(weaponHash);
 }
 
@@ -143,7 +143,7 @@ export function setsNoAutoswap(state: boolean): void {
  * Hash: 0x598DD6AE | Since: unknown | API-Set: client
  */
 export function setAccuracySpread(weaponHash: number | string, spread: number): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     SetWeaponAccuracySpread(weaponHash, spread);
 }
 
@@ -153,7 +153,7 @@ export function setAccuracySpread(weaponHash: number | string, spread: number): 
  * Hash: 0x9864312F | Since: unknown | API-Set: client
  */
 export function setRecoilShakeAmplitude(weaponHash: number | string, amplitude: number): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     SetWeaponRecoilShakeAmplitude(weaponHash, amplitude);
 }
 
@@ -163,7 +163,7 @@ export function setRecoilShakeAmplitude(weaponHash: number | string, amplitude: 
  * Hash: 0x78F0424C34306220 | Since: 323 | API-Set: unknown
  */
 export function addAmmoToPed(ped: number | IPed, weaponHash: number | string, ammo: number): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     AddAmmoToPed(ped, weaponHash, ammo);
 }
 
@@ -173,7 +173,7 @@ export function addAmmoToPed(ped: number | IPed, weaponHash: number | string, am
  * Hash: 0x2472622CE1F2D45F | Since: 1103 | API-Set: unknown
  */
 export function addPedAmmoByType(ped: number | IPed, ammoTypeHash: number | string, ammo: number): void {
-    if (typeof ammoTypeHash === 'string') ammoTypeHash = game.getHashKey(ammoTypeHash)
+    if (typeof ammoTypeHash === 'string') ammoTypeHash = GetHashKey(ammoTypeHash)
     AddAmmoToPedByType(ped, ammoTypeHash, ammo);
 }
 
@@ -184,7 +184,7 @@ export function addPedAmmoByType(ped: number | IPed, ammoTypeHash: number | stri
  * Hash: 0xBC7BE5ABC0879F74 | Since: 323 | API-Set: unknown
  */
 export function canUseOnParachute(weaponHash: number | string): boolean {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return CanUseWeaponOnParachute(weaponHash);
 }
 
@@ -212,7 +212,7 @@ export function clearPedLastDamage(ped: number | IPed): void {
  * Hash: 0x9DA58CDBF6BDBC08 | Since: 1011 | API-Set: unknown
  */
 export function createAirDefenceAngledArea(radius: number, weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return CreateAirDefenseArea(0, 0, 0, 0, 0, 0, 0, 0, 0, radius, weaponHash);
 }
 
@@ -222,7 +222,7 @@ export function createAirDefenceAngledArea(radius: number, weaponHash: number | 
  * Hash: 0x91EF34584710BE99 | Since: 573 | API-Set: unknown
  */
 export function createAirDefenceSphere(pos: Vector3, radius: number, weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return CreateAirDefenseSphere(pos.x, pos.y, pos.z, radius, 0, 0, 0, weaponHash);
 }
 
@@ -232,7 +232,7 @@ export function createAirDefenceSphere(pos: Vector3, radius: number, weaponHash:
  * Hash: 0x9541D3CF0D398F36 | Since: 323 | API-Set: unknown
  */
 export function createObject(weaponHash: number | string, ammoCount: number, pos: Vector3, showWorldModel: boolean, scale: number): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return CreateWeaponObject(weaponHash, ammoCount, pos.x, pos.y, pos.z, showWorldModel, scale, undefined, undefined, undefined);
 }
 
@@ -251,8 +251,8 @@ export function doesAirDefenceSphereExist(zoneId: number): boolean {
  * Hash: 0x5CEE3DF569CECAB0 | Since: 323 | API-Set: unknown
  */
 export function doesTakeWeaponComponent(weaponHash: number | string, componentHash: number | string): boolean {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return DoesWeaponTakeWeaponComponent(weaponHash, componentHash);
 }
 
@@ -273,7 +273,7 @@ export function enableLaserSightRendering(toggle: boolean): void {
  * Hash: 0xFC4BD125DE7611E4 | Since: 323 | API-Set: unknown
  */
 export function explodeProjectiles(ped: number | IPed, weaponHash: number | string): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     ExplodeProjectiles(ped, weaponHash, false);
 }
 
@@ -292,7 +292,7 @@ export function fireAirDefenceSphereAtPosition(zoneId: number, pos: Vector3): vo
  * Hash: 0x2E1202248937775C | Since: 323 | API-Set: unknown
  */
 export function getAmmoInClip(ped: number | IPed, weaponHash: number | string): [boolean, number] {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetAmmoInClip(ped, weaponHash);
 }
 
@@ -309,7 +309,7 @@ export function getAmmoInClip(ped: number | IPed, weaponHash: number | string): 
  * Hash: 0x015A522136D7F951 | Since: 323 | API-Set: unknown
  */
 export function getAmmoInPed(ped: number | IPed, weaponhash: number | string): number {
-    if (typeof weaponhash === 'string') weaponhash = game.getHashKey(weaponhash)
+    if (typeof weaponhash === 'string') weaponhash = GetHashKey(weaponhash)
     return GetAmmoInPedWeapon(ped, weaponhash);
 }
 
@@ -375,7 +375,7 @@ export function getCurrentPedEntityIndex(ped: number | IPed): number {
  * Hash: 0xF731332072F5156C | Since: 323 | API-Set: unknown
  */
 export function getIsPedGadgetEquipped(ped: number | IPed, gadgetHash: number | string): boolean {
-    if (typeof gadgetHash === 'string') gadgetHash = game.getHashKey(gadgetHash)
+    if (typeof gadgetHash === 'string') gadgetHash = GetHashKey(gadgetHash)
     return GetIsPedGadgetEquipped(ped, gadgetHash);
 }
 
@@ -394,7 +394,7 @@ export function getLockonDistanceOfCurrentPed(ped: number | IPed): number {
  * Hash: 0xDC16122C7A20C933 | Since: 323 | API-Set: unknown
  */
 export function getMaxAmmo(ped: number | IPed, weaponHash: number | string): [boolean, number] {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetMaxAmmo(ped, weaponHash);
 }
 
@@ -404,7 +404,7 @@ export function getMaxAmmo(ped: number | IPed, weaponHash: number | string): [bo
  * Hash: 0x585847C5E4E11709 | Since: 1103 | API-Set: unknown
  */
 export function getMaxAmmoByType(ped: number | IPed, ammoTypeHash: number | string): [boolean, number] {
-    if (typeof ammoTypeHash === 'string') ammoTypeHash = game.getHashKey(ammoTypeHash)
+    if (typeof ammoTypeHash === 'string') ammoTypeHash = GetHashKey(ammoTypeHash)
     return GetMaxAmmoByType(ped, ammoTypeHash);
 }
 
@@ -415,7 +415,7 @@ export function getMaxAmmoByType(ped: number | IPed, ammoTypeHash: number | stri
  * Hash: 0xA38DCFFCEA8962FA | Since: 323 | API-Set: unknown
  */
 export function getMaxAmmoInClip(ped: number | IPed, weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetMaxAmmoInClip(ped, weaponHash, false);
 }
 
@@ -434,7 +434,7 @@ export function getMaxRangeOfCurrentPed(ped: number | IPed): number {
  * Hash: 0x39D22031557946C1 | Since: 323 | API-Set: unknown
  */
 export function getPedAmmoByType(ped: number | IPed, ammoTypeHash: number | string): number {
-    if (typeof ammoTypeHash === 'string') ammoTypeHash = game.getHashKey(ammoTypeHash)
+    if (typeof ammoTypeHash === 'string') ammoTypeHash = GetHashKey(ammoTypeHash)
     return GetPedAmmoByType(ped, ammoTypeHash);
 }
 
@@ -447,7 +447,7 @@ export function getPedAmmoByType(ped: number | IPed, ammoTypeHash: number | stri
  * Hash: 0x7FEAD38B326B9F74 | Since: 323 | API-Set: unknown
  */
 export function getPedAmmoTypeFrom(ped: number | IPed, weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetPedAmmoTypeFromWeapon(ped, weaponHash);
 }
 
@@ -470,7 +470,7 @@ export function getPedLastImpactCoord(ped: number | IPed): [boolean, Vector3] {
  * Hash: 0xF489B44DD5AF4BD9 | Since: 1103 | API-Set: unknown
  */
 export function getPedOriginalAmmoTypeFrom(ped: number | IPed, weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetPedAmmoTypeFromWeapon2(ped, weaponHash);
 }
 
@@ -480,7 +480,7 @@ export function getPedOriginalAmmoTypeFrom(ped: number | IPed, weaponHash: numbe
  * Hash: 0xEFFED78E9011134D | Since: 323 | API-Set: unknown
  */
 export function getPedtypeInSlot(ped: number | IPed, weaponSlot: number | string): number {
-    if (typeof weaponSlot === 'string') weaponSlot = game.getHashKey(weaponSlot)
+    if (typeof weaponSlot === 'string') weaponSlot = GetHashKey(weaponSlot)
     return GetPedWeapontypeInSlot(ped, weaponSlot);
 }
 
@@ -490,7 +490,7 @@ export function getPedtypeInSlot(ped: number | IPed, weaponSlot: number | string
  * Hash: 0xA2C9AC24B4061285 | Since: 1103 | API-Set: unknown
  */
 export function getPedCamoIndex(ped: number | IPed, weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return Citizen.invokeNative('0xA2C9AC24B4061285', ped, weaponHash);
 }
 
@@ -501,8 +501,8 @@ export function getPedCamoIndex(ped: number | IPed, weaponHash: number | string)
  * Hash: 0xF0A60040BE558F2D | Since: 1103 | API-Set: unknown
  */
 export function getPedComponentTintIndex(ped: number | IPed, weaponHash: number | string, camoComponentHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
-    if (typeof camoComponentHash === 'string') camoComponentHash = game.getHashKey(camoComponentHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
+    if (typeof camoComponentHash === 'string') camoComponentHash = GetHashKey(camoComponentHash)
     return GetPedWeaponLiveryColor(ped, weaponHash, camoComponentHash);
 }
 
@@ -512,7 +512,7 @@ export function getPedComponentTintIndex(ped: number | IPed, weaponHash: number 
  * Hash: 0x2B9EEDC07BD06B9F | Since: 323 | API-Set: unknown
  */
 export function getPedTintIndex(ped: number | IPed, weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetPedWeaponTintIndex(ped, weaponHash);
 }
 
@@ -544,7 +544,7 @@ export function getSelectedPed(ped: number | IPed): number {
  * Hash: 0xC3287EE3050FB74C | Since: 323 | API-Set: unknown
  */
 export function gettypeGroup(weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetWeapontypeGroup(weaponHash);
 }
 
@@ -557,7 +557,7 @@ export function gettypeGroup(weaponHash: number | string): number {
  * Hash: 0xF46CDC33180FDA94 | Since: 323 | API-Set: unknown
  */
 export function gettypeModel(weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetWeapontypeModel(weaponHash);
 }
 
@@ -567,7 +567,7 @@ export function gettypeModel(weaponHash: number | string): number {
  * Hash: 0x4215460B9B8B7FA0 | Since: 323 | API-Set: unknown
  */
 export function gettypeSlot(weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetWeapontypeSlot(weaponHash);
 }
 
@@ -592,7 +592,7 @@ export function gettypeSlot(weaponHash: number | string): number {
  * Hash: 0x583BE370B1EC6EB4 | Since: 323 | API-Set: unknown
  */
 export function getClipSize(weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetWeaponClipSize(weaponHash);
 }
 
@@ -602,7 +602,7 @@ export function getClipSize(weaponHash: number | string): number {
  * Hash: 0xB3CAF387AE12E9F8 | Since: 323 | API-Set: unknown
  */
 export function getComponentHudStats(componentHash: number | string): [boolean, any] {
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetWeaponComponentHudStats(componentHash);
 }
 
@@ -612,7 +612,7 @@ export function getComponentHudStats(componentHash: number | string): [boolean, 
  * Hash: 0x0DB57B41EC1DB083 | Since: 323 | API-Set: unknown
  */
 export function getComponentTypeModel(componentHash: number | string): number {
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetWeaponComponentTypeModel(componentHash);
 }
 
@@ -623,7 +623,7 @@ export function getComponentTypeModel(componentHash: number | string): number {
  * Hash: 0x6558AC7C17BFEF58 | Since: 372 | API-Set: unknown
  */
 export function getComponentVariantExtraCount(componentHash: number | string): number {
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetWeaponComponentVariantExtraComponentCount(componentHash);
 }
 
@@ -633,7 +633,7 @@ export function getComponentVariantExtraCount(componentHash: number | string): n
  * Hash: 0x4D1CB8DC40208A17 | Since: 372 | API-Set: unknown
  */
 export function getComponentVariantExtraModel(componentHash: number | string, extraComponentIndex: number): number {
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetWeaponComponentVariantExtraComponentModel(componentHash, extraComponentIndex);
 }
 
@@ -644,8 +644,8 @@ export function getComponentVariantExtraModel(componentHash: number | string, ex
  * Hash: 0x3133B907D8B32053 | Since: 323 | API-Set: unknown
  */
 export function getDamage(weaponHash: number | string, componentHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetWeaponDamage(weaponHash, componentHash);
 }
 
@@ -675,7 +675,7 @@ export function getDamage(weaponHash: number | string, componentHash: number | s
  * Hash: 0x3BE0BB12D25FB305 | Since: 323 | API-Set: unknown
  */
 export function getDamageType(weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetWeaponDamageType(weaponHash);
 }
 
@@ -705,7 +705,7 @@ export function getDamageType(weaponHash: number | string): number {
  * Hash: 0xD92C739EE34C9EBA | Since: 323 | API-Set: unknown
  */
 export function getHudStats(weaponHash: number | string): [boolean, any] {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetWeaponHudStats(weaponHash);
 }
 
@@ -716,7 +716,7 @@ export function getHudStats(weaponHash: number | string): [boolean, any] {
  * Hash: 0xB3EA4FEABF41464B | Since: 1103 | API-Set: unknown
  */
 export function getObjectComponentTintIndex(weaponObject: number | IObject, camoComponentHash: number | string): number {
-    if (typeof camoComponentHash === 'string') camoComponentHash = game.getHashKey(camoComponentHash)
+    if (typeof camoComponentHash === 'string') camoComponentHash = GetHashKey(camoComponentHash)
     return GetWeaponObjectLiveryColor(weaponObject, camoComponentHash);
 }
 
@@ -746,7 +746,7 @@ export function getObjectTintIndex(weapon: number | IObject): number {
  * Hash: 0x065D2AACAD8CF7A4 | Since: 1290 | API-Set: unknown
  */
 export function getTimeBetweenShots(weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetWeaponTimeBetweenShots(weaponHash);
 }
 
@@ -756,7 +756,7 @@ export function getTimeBetweenShots(weaponHash: number | string): number {
  * Hash: 0x5DCF6C5CAB2E9BF7 | Since: 323 | API-Set: unknown
  */
 export function getTintCount(weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetWeaponTintCount(weaponHash);
 }
 
@@ -769,7 +769,7 @@ export function getTintCount(weaponHash: number | string): number {
  * Hash: 0xB282DC6EBD803C75 | Since: 323 | API-Set: unknown
  */
 export function giveDelayedToPed(ped: number | IPed, weaponHash: number | string, ammoCount: number, bForceInHand: boolean): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     GiveDelayedWeaponToPed(ped, weaponHash, ammoCount, bForceInHand);
 }
 
@@ -780,7 +780,7 @@ export function giveDelayedToPed(ped: number | IPed, weaponHash: number | string
  * Hash: 0x68F8BE6AF5CDF8A6 | Since: 505 | API-Set: unknown
  */
 export function giveLoadoutToPed(ped: number | IPed, loadoutHash: number | string): void {
-    if (typeof loadoutHash === 'string') loadoutHash = game.getHashKey(loadoutHash)
+    if (typeof loadoutHash === 'string') loadoutHash = GetHashKey(loadoutHash)
     GiveLoadoutToPed(ped, loadoutHash);
 }
 
@@ -790,8 +790,8 @@ export function giveLoadoutToPed(ped: number | IPed, loadoutHash: number | strin
  * Hash: 0xD966D51AA5B28BB9 | Since: 323 | API-Set: unknown
  */
 export function giveComponentToPed(ped: number | IPed, weaponHash: number | string, componentHash: number | string): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     GiveWeaponComponentToPed(ped, weaponHash, componentHash);
 }
 
@@ -803,7 +803,7 @@ export function giveComponentToPed(ped: number | IPed, weaponHash: number | stri
  * Hash: 0x33E179436C0B31DB | Since: 323 | API-Set: unknown
  */
 export function giveComponentToWeaponObject(weaponObject: number | IObject, componentHash: number | string): void {
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     GiveWeaponComponentToWeaponObject(weaponObject, componentHash);
 }
 
@@ -822,7 +822,7 @@ export function giveObjectToPed(weaponObject: number | IObject, ped: number | IP
  * Hash: 0xBF0FD6E56C964FCB | Since: 323 | API-Set: unknown
  */
 export function giveToPed(ped: number | IPed, weaponHash: number | string, ammoCount: number, isHidden: boolean, bForceInHand: boolean): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     GiveWeaponToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand);
 }
 
@@ -837,7 +837,7 @@ export function giveToPed(ped: number | IPed, weaponHash: number | string, ammoC
  * Hash: 0x131D401334815E94 | Since: 323 | API-Set: unknown
  */
 export function hasEntityBeenDamagedBy(entity: number | IEntity, weaponHash: number | string, weaponType: number): boolean {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return HasEntityBeenDamagedByWeapon(entity, weaponHash, weaponType);
 }
 
@@ -852,7 +852,7 @@ export function hasEntityBeenDamagedBy(entity: number | IEntity, weaponHash: num
  * Hash: 0x2D343D2219CD027A | Since: 323 | API-Set: unknown
  */
 export function hasPedBeenDamagedBy(ped: number | IPed, weaponHash: number | string, weaponType: number): boolean {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return HasPedBeenDamagedByWeapon(ped, weaponHash, weaponType);
 }
 
@@ -865,7 +865,7 @@ export function hasPedBeenDamagedBy(ped: number | IPed, weaponHash: number | str
  * Hash: 0x8DECB02F88F428BC | Since: 323 | API-Set: unknown
  */
 export function hasPedGot(ped: number | IPed, weaponHash: number | string): boolean {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return HasPedGotWeapon(ped, weaponHash, false);
 }
 
@@ -875,8 +875,8 @@ export function hasPedGot(ped: number | IPed, weaponHash: number | string): bool
  * Hash: 0xC593212475FAE340 | Since: 323 | API-Set: unknown
  */
 export function hasPedGotComponent(ped: number | IPed, weaponHash: number | string, componentHash: number | string): boolean {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return HasPedGotWeaponComponent(ped, weaponHash, componentHash);
 }
 
@@ -886,7 +886,7 @@ export function hasPedGotComponent(ped: number | IPed, weaponHash: number | stri
  * Hash: 0x717C8481234E3B88 | Since: 323 | API-Set: unknown
  */
 export function hasVehicleGotProjectileAttached(driver: number | IPed, vehicle: number | IVehicle, weaponHash: number | string): boolean {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return HasVehicleGotProjectileAttached(driver, vehicle, weaponHash, undefined);
 }
 
@@ -896,7 +896,7 @@ export function hasVehicleGotProjectileAttached(driver: number | IPed, vehicle: 
  * Hash: 0x36E353271F0E90EE | Since: 323 | API-Set: unknown
  */
 export function hasAssetLoaded(weaponHash: number | string): boolean {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return HasWeaponAssetLoaded(weaponHash);
 }
 
@@ -906,7 +906,7 @@ export function hasAssetLoaded(weaponHash: number | string): boolean {
  * Hash: 0x76A18844E743BF91 | Since: 323 | API-Set: unknown
  */
 export function hasGotWeaponComponent(weapon: number | IObject, componentHash: number | string): boolean {
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return HasWeaponGotWeaponComponent(weapon, componentHash);
 }
 
@@ -980,8 +980,8 @@ export function isPedCurrentSilenced(ped: number | IPed): boolean {
  * Hash: 0x0D78DE0572D3969E | Since: 323 | API-Set: unknown
  */
 export function isPedComponentActive(ped: number | IPed, weaponHash: number | string, componentHash: number | string): boolean {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return IsPedWeaponComponentActive(ped, weaponHash, componentHash);
 }
 
@@ -1000,7 +1000,7 @@ export function isPedReadyToShoot(ped: number | IPed): boolean {
  * Hash: 0x937C71165CF334B3 | Since: 323 | API-Set: unknown
  */
 export function isValid(weaponHash: number | string): boolean {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return IsWeaponValid(weaponHash);
 }
 
@@ -1055,7 +1055,7 @@ export function removeAllPeds(ped: number | IPed): void {
  * Hash: 0xFC52E0F37E446528 | Since: 323 | API-Set: unknown
  */
 export function removeAllProjectilesOfType(weaponHash: number | string, explode: boolean): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     RemoveAllProjectilesOfType(weaponHash, explode);
 }
 
@@ -1065,7 +1065,7 @@ export function removeAllProjectilesOfType(weaponHash: number | string, explode:
  * Hash: 0xAA08EF13F341C8FC | Since: 323 | API-Set: unknown
  */
 export function removeAsset(weaponHash: number | string): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     RemoveWeaponAsset(weaponHash);
 }
 
@@ -1075,8 +1075,8 @@ export function removeAsset(weaponHash: number | string): void {
  * Hash: 0x1E8BE90C74FB4C09 | Since: 323 | API-Set: unknown
  */
 export function removeComponentFromPed(ped: number | IPed, weaponHash: number | string, componentHash: number | string): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     RemoveWeaponComponentFromPed(ped, weaponHash, componentHash);
 }
 
@@ -1086,7 +1086,7 @@ export function removeComponentFromPed(ped: number | IPed, weaponHash: number | 
  * Hash: 0xF7D82B0D66777611 | Since: 323 | API-Set: unknown
  */
 export function removeComponentFromWeaponObject(_object: number | IObject, componentHash: number | string): void {
-    if (typeof componentHash === 'string') componentHash = game.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     RemoveWeaponComponentFromWeaponObject(_object, componentHash);
 }
 
@@ -1106,7 +1106,7 @@ export function removeComponentFromWeaponObject(_object: number | IObject, compo
  * Hash: 0x4899CB088EDF59B8 | Since: 323 | API-Set: unknown
  */
 export function removeFromPed(ped: number | IPed, weaponHash: number | string): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     RemoveWeaponFromPed(ped, weaponHash);
 }
 
@@ -1118,7 +1118,7 @@ export function removeFromPed(ped: number | IPed, weaponHash: number | string): 
  * Hash: 0x5443438F033E29C3 | Since: 323 | API-Set: unknown
  */
 export function requestAsset(weaponHash: number | string): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     RequestWeaponAsset(weaponHash, 0, 0);
 }
 
@@ -1137,7 +1137,7 @@ export function requestHighDetailModel(weaponObject: number | IEntity): void {
  * Hash: 0xDCD2A934D65CB497 | Since: 323 | API-Set: unknown
  */
 export function setAmmoInClip(ped: number | IPed, weaponHash: number | string, ammo: number): boolean {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return SetAmmoInClip(ped, weaponHash, ammo);
 }
 
@@ -1157,7 +1157,7 @@ export function setCanPedSelectAlls(ped: number | IPed, toggle: boolean): void {
  * Hash: 0xB4771B9AAF4E68E4 | Since: 1103 | API-Set: unknown
  */
 export function setCanPedSelectInventory(ped: number | IPed, weaponHash: number | string, toggle: boolean): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     SetCanPedEquipWeapon(ped, weaponHash, toggle);
 }
 
@@ -1167,7 +1167,7 @@ export function setCanPedSelectInventory(ped: number | IPed, weaponHash: number 
  * Hash: 0x75C55983C2C39DAA | Since: 323 | API-Set: unknown
  */
 export function setCurrentPedVehicle(ped: number | IPed, weaponHash: number | string): boolean {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return SetCurrentPedVehicleWeapon(ped, weaponHash);
 }
 
@@ -1177,7 +1177,7 @@ export function setCurrentPedVehicle(ped: number | IPed, weaponHash: number | st
  * Hash: 0xADF692B254977C0C | Since: 323 | API-Set: unknown
  */
 export function setCurrentPed(ped: number | IPed, weaponHash: number | string, bForceInHand: boolean): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     SetCurrentPedWeapon(ped, weaponHash, bForceInHand);
 }
 
@@ -1214,7 +1214,7 @@ export function setFlashLightFadeDistance(distance: number): boolean {
  * Hash: 0x14E56BC5B5DB6A19 | Since: 323 | API-Set: unknown
  */
 export function setPedAmmo(ped: number | IPed, weaponHash: number | string, ammo: number): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     SetPedAmmo(ped, weaponHash, ammo, false);
 }
 
@@ -1224,7 +1224,7 @@ export function setPedAmmo(ped: number | IPed, weaponHash: number | string, ammo
  * Hash: 0x5FD1E1F011E76D7E | Since: 323 | API-Set: unknown
  */
 export function setPedAmmoByType(ped: number | IPed, ammoTypeHash: number | string, ammo: number): void {
-    if (typeof ammoTypeHash === 'string') ammoTypeHash = game.getHashKey(ammoTypeHash)
+    if (typeof ammoTypeHash === 'string') ammoTypeHash = GetHashKey(ammoTypeHash)
     SetPedAmmoByType(ped, ammoTypeHash, ammo);
 }
 
@@ -1270,7 +1270,7 @@ export function setPedCycleVehiclesOnly(ped: number | IPed): void {
  * Hash: 0x208A1888007FC0E6 | Since: 323 | API-Set: unknown
  */
 export function setPedDropsInventory(ped: number | IPed, weaponHash: number | string, xOffset: number, yOffset: number, zOffset: number, ammoCount: number): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     SetPedDropsInventoryWeapon(ped, weaponHash, xOffset, yOffset, zOffset, ammoCount);
 }
 
@@ -1299,7 +1299,7 @@ export function setPedDropssWhenDead(ped: number | IPed, toggle: boolean): void 
  * Hash: 0xD0D7B1E680ED4A1A | Since: 323 | API-Set: unknown
  */
 export function setPedGadget(ped: number | IPed, gadgetHash: number | string): void {
-    if (typeof gadgetHash === 'string') gadgetHash = game.getHashKey(gadgetHash)
+    if (typeof gadgetHash === 'string') gadgetHash = GetHashKey(gadgetHash)
     SetPedGadget(ped, gadgetHash, false);
 }
 
@@ -1309,7 +1309,7 @@ export function setPedGadget(ped: number | IPed, gadgetHash: number | string): v
  * Hash: 0x3EDCB0505123623B | Since: 323 | API-Set: unknown
  */
 export function setPedInfiniteAmmo(ped: number | IPed, toggle: boolean, weaponHash: number | string): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     SetPedInfiniteAmmo(ped, toggle, weaponHash);
 }
 
@@ -1379,8 +1379,8 @@ export function setPedStunGunFiniteAmmo(): void {
  * Hash: 0x9FE5633880ECD8ED | Since: 1103 | API-Set: unknown
  */
 export function setPedComponentTintIndex(ped: number | IPed, weaponHash: number | string, camoComponentHash: number | string, colorIndex: number): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
-    if (typeof camoComponentHash === 'string') camoComponentHash = game.getHashKey(camoComponentHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
+    if (typeof camoComponentHash === 'string') camoComponentHash = GetHashKey(camoComponentHash)
     SetPedWeaponLiveryColor(ped, weaponHash, camoComponentHash, colorIndex);
 }
 
@@ -1400,7 +1400,7 @@ export function setPedComponentTintIndex(ped: number | IPed, weaponHash: number 
  * Hash: 0x50969B9B89ED5738 | Since: 323 | API-Set: unknown
  */
 export function setPedTintIndex(ped: number | IPed, weaponHash: number | string, tintIndex: number): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     SetPedWeaponTintIndex(ped, weaponHash, tintIndex);
 }
 
@@ -1462,7 +1462,7 @@ export function setPlayerTargettableForAirDefenceSphere(player: number | string 
  * Hash: 0x1055AC3A667F09D9 | Since: 323 | API-Set: unknown
  */
 export function setAnimationOverride(ped: number | IPed, animStyle: number | string): void {
-    if (typeof animStyle === 'string') animStyle = game.getHashKey(animStyle)
+    if (typeof animStyle === 'string') animStyle = GetHashKey(animStyle)
     SetWeaponAnimationOverride(ped, animStyle);
 }
 
@@ -1472,7 +1472,7 @@ export function setAnimationOverride(ped: number | IPed, animStyle: number | str
  * Hash: 0x4AE5AC8B852D642C | Since: 2372 | API-Set: unknown
  */
 export function setAoeModifier(weaponHash: number | string, multiplier: number): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     SetWeaponExplosionRadiusMultiplier(weaponHash, multiplier);
 }
 
@@ -1483,7 +1483,7 @@ export function setAoeModifier(weaponHash: number | string, multiplier: number):
  * Hash: 0x4757F00BC6323CFE | Since: 505 | API-Set: unknown
  */
 export function setDamageModifier(weaponHash: number | string, damageMultiplier: number): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     SetWeaponDamageModifier(weaponHash, damageMultiplier);
 }
 
@@ -1493,7 +1493,7 @@ export function setDamageModifier(weaponHash: number | string, damageMultiplier:
  * Hash: 0xE6D2CEDD370FF98E | Since: 2372 | API-Set: unknown
  */
 export function setEffectDurationModifier(p0: number | string): void {
-    if (typeof p0 === 'string') p0 = game.getHashKey(p0)
+    if (typeof p0 === 'string') p0 = GetHashKey(p0)
     Citizen.invokeNative('0xE6D2CEDD370FF98E', p0, 0);
 }
 
@@ -1545,7 +1545,7 @@ export function setObjectCamoIndex(weaponObject: number | IObject): void {
  * Hash: 0x5DA825A85D0EA6E6 | Since: 1103 | API-Set: unknown
  */
 export function setObjectComponentTintIndex(weaponObject: number | IObject, camoComponentHash: number | string, colorIndex: number): void {
-    if (typeof camoComponentHash === 'string') camoComponentHash = game.getHashKey(camoComponentHash)
+    if (typeof camoComponentHash === 'string') camoComponentHash = GetHashKey(camoComponentHash)
     SetWeaponObjectLiveryColor(weaponObject, camoComponentHash, colorIndex);
 }
 
@@ -1609,7 +1609,7 @@ export function setAmmoInVehicleClip(vehicle: number | IVehicle, seat: number, a
  * Hash: 0x1091922715B68DF0 | Since: 3095 | API-Set: unknown
  */
 export function setPedDamageModifier(weapon: number | string, damageModifier: number): void {
-    if (typeof weapon === 'string') weapon = game.getHashKey(weapon)
+    if (typeof weapon === 'string') weapon = GetHashKey(weapon)
     Citizen.invokeNative('0x1091922715B68DF0', weapon, damageModifier);
 }
 

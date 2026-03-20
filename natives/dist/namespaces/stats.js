@@ -383,7 +383,7 @@ export function leaderboardsWriteAddColumnLong() {
  */
 export function orderBossVehicle(vehicleHash) {
     if (typeof vehicleHash === 'string')
-        vehicleHash = misc.getHashKey(vehicleHash);
+        vehicleHash = GetHashKey(vehicleHash);
     OrderedBossVehicle(undefined, undefined, vehicleHash);
 }
 /**
@@ -489,9 +489,9 @@ export function playAwardNav() {
  */
 export function playAwardXp(amount, _type, category) {
     if (typeof _type === 'string')
-        _type = misc.getHashKey(_type);
+        _type = GetHashKey(_type);
     if (typeof category === 'string')
-        category = misc.getHashKey(category);
+        category = GetHashKey(category);
     PlaystatsAwardXp(amount, _type, category);
 }
 /**
@@ -685,7 +685,7 @@ export function playCarclubPoints() {
  */
 export function playCarclubPrize(vehicleModel) {
     if (typeof vehicleModel === 'string')
-        vehicleModel = misc.getHashKey(vehicleModel);
+        vehicleModel = GetHashKey(vehicleModel);
     PlaystatsCarclubPrize(0, vehicleModel);
 }
 /**
@@ -831,7 +831,7 @@ export function playClothChange(p0) {
  */
 export function playCollectiblePickedUp(objectHash, moneyAmount, rpAmount, chipsAmount) {
     if (typeof objectHash === 'string')
-        objectHash = misc.getHashKey(objectHash);
+        objectHash = GetHashKey(objectHash);
     PlaystatsCollectible(0, objectHash, undefined, undefined, moneyAmount, rpAmount, chipsAmount, undefined, 0, undefined, undefined);
 }
 /**
@@ -1161,7 +1161,7 @@ export function playHeist4Prep() {
  */
 export function playHeistSaveCheat(hash) {
     if (typeof hash === 'string')
-        hash = misc.getHashKey(hash);
+        hash = GetHashKey(hash);
     PlaystatsHeistSaveCheat(hash, 0);
 }
 /**
@@ -1427,7 +1427,7 @@ export function playOddjobDone(totalTimeMs) {
  */
 export function playPegasusAsPersonalAircraft(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     PlaystatsPegasaircraft(modelHash);
 }
 /**
@@ -1661,11 +1661,11 @@ export function playWarehouseMissionEnded() {
  */
 export function playWeaponModeChange(weaponHash, componentHashTo, componentHashFrom) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     if (typeof componentHashTo === 'string')
-        componentHashTo = misc.getHashKey(componentHashTo);
+        componentHashTo = GetHashKey(componentHashTo);
     if (typeof componentHashFrom === 'string')
-        componentHashFrom = misc.getHashKey(componentHashFrom);
+        componentHashFrom = GetHashKey(componentHashFrom);
     PlaystatsWeaponModeChange(weaponHash, componentHashTo, componentHashFrom);
 }
 /**
@@ -1675,7 +1675,7 @@ export function playWeaponModeChange(weaponHash, componentHashTo, componentHashF
  */
 export function playWebsiteVisited(scaleformHash) {
     if (typeof scaleformHash === 'string')
-        scaleformHash = misc.getHashKey(scaleformHash);
+        scaleformHash = GetHashKey(scaleformHash);
     PlaystatsWebsiteVisited(scaleformHash, 0);
 }
 /**
@@ -1685,7 +1685,7 @@ export function playWebsiteVisited(scaleformHash) {
  */
 export function presenceEventUpdatestatFloat(statHash, value) {
     if (typeof statHash === 'string')
-        statHash = misc.getHashKey(statHash);
+        statHash = GetHashKey(statHash);
     PresenceEventUpdatestatFloat(statHash, value, 0);
 }
 /**
@@ -1695,7 +1695,7 @@ export function presenceEventUpdatestatFloat(statHash, value) {
  */
 export function presenceEventUpdatestatInt(statHash, value) {
     if (typeof statHash === 'string')
-        statHash = misc.getHashKey(statHash);
+        statHash = GetHashKey(statHash);
     PresenceEventUpdatestatInt(statHash, value, 0);
 }
 /**
@@ -1705,7 +1705,7 @@ export function presenceEventUpdatestatInt(statHash, value) {
  */
 export function presenceEventUpdatestatIntWithString(statHash, value, _string) {
     if (typeof statHash === 'string')
-        statHash = misc.getHashKey(statHash);
+        statHash = GetHashKey(statHash);
     Citizen.invokeNative('0x6483C25849031C4F', statHash, value, 0, _string);
 }
 /**
@@ -1919,7 +1919,7 @@ export function statCloudSlotSaveFailed() {
  */
 export function statCommunityGetHistory(statName) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     return Citizen.invokeNative('0xBED9F5693F34ED17', statName, 0);
 }
 /**
@@ -1977,7 +1977,7 @@ export function statGetBlockSaves() {
  */
 export function statGetBool(statHash) {
     if (typeof statHash === 'string')
-        statHash = misc.getHashKey(statHash);
+        statHash = GetHashKey(statHash);
     return StatGetBool(statHash, undefined);
 }
 /**
@@ -2067,7 +2067,7 @@ export function statGetCurrentSpeed() {
  */
 export function statGetDate(statHash, numFields) {
     if (typeof statHash === 'string')
-        statHash = misc.getHashKey(statHash);
+        statHash = GetHashKey(statHash);
     return StatGetDate(statHash, numFields, undefined);
 }
 /**
@@ -2077,7 +2077,7 @@ export function statGetDate(statHash, numFields) {
  */
 export function statGetFloat(statHash) {
     if (typeof statHash === 'string')
-        statHash = misc.getHashKey(statHash);
+        statHash = GetHashKey(statHash);
     return StatGetFloat(statHash, undefined);
 }
 /**
@@ -2096,7 +2096,7 @@ export function statGetFlyingAltitude() {
  */
 export function statGetInt(statHash) {
     if (typeof statHash === 'string')
-        statHash = misc.getHashKey(statHash);
+        statHash = GetHashKey(statHash);
     return StatGetInt(statHash, 0);
 }
 /**
@@ -2106,7 +2106,7 @@ export function statGetInt(statHash) {
  */
 export function statGetLicensePlate(statName) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     return StatGetLicensePlate(statName);
 }
 /**
@@ -2124,7 +2124,7 @@ export function statGetLoadSafeToProgressToMpFromSp() {
  */
 export function statGetMaskedInt(statHash) {
     if (typeof statHash === 'string')
-        statHash = misc.getHashKey(statHash);
+        statHash = GetHashKey(statHash);
     return StatGetMaskedInt(statHash, 0, 0, undefined);
 }
 /**
@@ -2134,7 +2134,7 @@ export function statGetMaskedInt(statHash) {
  */
 export function statGetNumberOfDays(statName) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     return StatGetNumberOfDays(statName);
 }
 /**
@@ -2144,7 +2144,7 @@ export function statGetNumberOfDays(statName) {
  */
 export function statGetNumberOfHours(statName) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     return StatGetNumberOfHours(statName);
 }
 /**
@@ -2154,7 +2154,7 @@ export function statGetNumberOfHours(statName) {
  */
 export function statGetNumberOfMinutes(statName) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     return StatGetNumberOfMinutes(statName);
 }
 /**
@@ -2164,7 +2164,7 @@ export function statGetNumberOfMinutes(statName) {
  */
 export function statGetNumberOfSeconds(statName) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     return StatGetNumberOfSeconds(statName);
 }
 /**
@@ -2174,7 +2174,7 @@ export function statGetNumberOfSeconds(statName) {
  */
 export function statGetPos(statName) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     return StatGetPos(statName, undefined);
 }
 /**
@@ -2208,7 +2208,7 @@ export function statGetSaveMigrationStatus() {
  */
 export function statGetString(statHash) {
     if (typeof statHash === 'string')
-        statHash = misc.getHashKey(statHash);
+        statHash = GetHashKey(statHash);
     return StatGetString(statHash, 0);
 }
 /**
@@ -2218,7 +2218,7 @@ export function statGetString(statHash) {
  */
 export function statGetUserId(statHash) {
     if (typeof statHash === 'string')
-        statHash = misc.getHashKey(statHash);
+        statHash = GetHashKey(statHash);
     return StatGetUserId(statHash);
 }
 /**
@@ -2236,7 +2236,7 @@ export function statGetVehicleBailDistance() {
  */
 export function statIncrement(statName, value) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     StatIncrement(statName, value);
 }
 /**
@@ -2398,7 +2398,7 @@ export function aveMigrationCancelPendingOperation() {
  */
 export function aveMigrationConsumeContent(contentId, srcPlatform, srcGamerHandle) {
     if (typeof contentId === 'string')
-        contentId = misc.getHashKey(contentId);
+        contentId = GetHashKey(contentId);
     return StatSaveMigrationConsumeContentUnlock(contentId, srcPlatform, srcGamerHandle);
 }
 /**
@@ -2433,7 +2433,7 @@ export function etBlockSaves(toggle) {
  */
 export function etBool(statName, value, save) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     return StatSetBool(statName, value, save);
 }
 /**
@@ -2451,7 +2451,7 @@ export function etCheatIsActive() {
  */
 export function etCurrentPosixTime(statName) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     return StatSetCurrentPosixTime(statName, false);
 }
 /**
@@ -2473,7 +2473,7 @@ export function etCurrentPosixTime(statName) {
  */
 export function etDate(statName, numFields, save) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     return StatSetDate(statName, numFields, save);
 }
 /**
@@ -2484,7 +2484,7 @@ export function etDate(statName, numFields, save) {
  */
 export function etFloat(statName, value, save) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     return StatSetFloat(statName, value, save);
 }
 /**
@@ -2557,7 +2557,7 @@ export function etFloat(statName, value, save) {
  */
 export function etGxtLabel(statName, value, save) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     return StatSetGxtLabel(statName, value, save);
 }
 /**
@@ -2568,7 +2568,7 @@ export function etGxtLabel(statName, value, save) {
  */
 export function etInt(statName, value, save) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     return StatSetInt(statName, value, save);
 }
 /**
@@ -2578,7 +2578,7 @@ export function etInt(statName, value, save) {
  */
 export function etLicensePlate(statName, str) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     return StatSetLicensePlate(statName, str);
 }
 /**
@@ -2588,7 +2588,7 @@ export function etLicensePlate(statName, str) {
  */
 export function etMaskedInt(statName, save) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     return StatSetMaskedInt(statName, 0, 0, 0, save);
 }
 /**
@@ -2606,7 +2606,7 @@ export function etOpenSavetypeInJob() {
  */
 export function etPos(statName, pos, save) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     return StatSetPos(statName, pos.x, pos.y, pos.z, save);
 }
 /**
@@ -2626,7 +2626,7 @@ export function etProfileSettingValue(profileSetting, value) {
  */
 export function etString(statName, value, save) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     return StatSetString(statName, value, save);
 }
 /**
@@ -2636,7 +2636,7 @@ export function etString(statName, value, save) {
  */
 export function etUserId(statName, value, save) {
     if (typeof statName === 'string')
-        statName = misc.getHashKey(statName);
+        statName = GetHashKey(statName);
     return StatSetUserId(statName, value, save);
 }
 /**
@@ -2878,7 +2878,7 @@ export function playShopmenuNav() {
  */
 export function playShowroomNav(entity) {
     if (typeof entity === 'string')
-        entity = misc.getHashKey(entity);
+        entity = GetHashKey(entity);
     Citizen.invokeNative('0x961D4157B9B428DB', undefined, undefined, entity);
 }
 /**

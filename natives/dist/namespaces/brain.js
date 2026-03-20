@@ -11,7 +11,7 @@
  */
 export function addScriptToRandomPed(name, model) {
     if (typeof model === 'string')
-        model = misc.getHashKey(model);
+        model = GetHashKey(model);
     AddScriptToRandomPed(name, model, 0, 0);
 }
 /**
@@ -121,7 +121,7 @@ export function reactivateNamedWorldsWaitingTillOutOfRange(scriptName) {
  */
 export function registerObjectScript(scriptName, modelHash, activationRange) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     RegisterObjectScriptBrain(scriptName, modelHash, 0, activationRange, 0, 0);
 }
 /**

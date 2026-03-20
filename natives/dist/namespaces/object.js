@@ -13,9 +13,9 @@ import { Vector3 } from '@risinglife/fivem-shared';
  */
 export function addDoorToSystem(doorHash, modelHash, pos, scriptDoor, isLocal) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     AddDoorToSystem(doorHash, modelHash, pos.x, pos.y, pos.z, false, scriptDoor, isLocal, undefined);
 }
 /**
@@ -34,7 +34,7 @@ export function addExtendedPickupProbeArea(pos, radius) {
  */
 export function allowAllPlayersToCollectPickupsOfType(pickupHash) {
     if (typeof pickupHash === 'string')
-        pickupHash = misc.getHashKey(pickupHash);
+        pickupHash = GetHashKey(pickupHash);
     Citizen.invokeNative('0xFDC07C58E8AAB715', pickupHash);
 }
 /**
@@ -76,7 +76,7 @@ export function allowPortablePickupToMigrateToNonParticipants(pickup, toggle) {
  */
 export function areEntitiesEntirelyInsideGarage(garageHash) {
     if (typeof garageHash === 'string')
-        garageHash = misc.getHashKey(garageHash);
+        garageHash = GetHashKey(garageHash);
     return AreEntitiesEntirelyInsideGarage(garageHash, false, false, false, undefined);
 }
 /**
@@ -126,7 +126,7 @@ export function clearExtendedPickupProbeAreas() {
  */
 export function clearGarage(garageHash, isNetwork) {
     if (typeof garageHash === 'string')
-        garageHash = misc.getHashKey(garageHash);
+        garageHash = GetHashKey(garageHash);
     ClearGarageArea(garageHash, isNetwork);
 }
 /**
@@ -136,7 +136,7 @@ export function clearGarage(garageHash, isNetwork) {
  */
 export function clearsInsideGarage(garageHash, vehicles, peds, objects, isNetwork) {
     if (typeof garageHash === 'string')
-        garageHash = misc.getHashKey(garageHash);
+        garageHash = GetHashKey(garageHash);
     ClearObjectsInsideGarage(garageHash, vehicles, peds, objects, isNetwork);
 }
 /**
@@ -173,7 +173,7 @@ export function closeSafehouseGarages() {
  */
 export function convertOldPickupTypeToNew(pickupHash) {
     if (typeof pickupHash === 'string')
-        pickupHash = misc.getHashKey(pickupHash);
+        pickupHash = GetHashKey(pickupHash);
     return GetPickupHash(pickupHash);
 }
 /**
@@ -183,9 +183,9 @@ export function convertOldPickupTypeToNew(pickupHash) {
  */
 export function createAmbientPickup(pickupHash, pos, flags, value, modelHash) {
     if (typeof pickupHash === 'string')
-        pickupHash = misc.getHashKey(pickupHash);
+        pickupHash = GetHashKey(pickupHash);
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CreateAmbientPickup(pickupHash, pos.x, pos.y, pos.z, flags, value, modelHash, false, false);
 }
 /**
@@ -211,7 +211,7 @@ export function createAmbientPickup(pickupHash, pos, flags, value, modelHash) {
  */
 export function createMoneyPickups(pos, value, amount, model) {
     if (typeof model === 'string')
-        model = misc.getHashKey(model);
+        model = GetHashKey(model);
     CreateMoneyPickups(pos.x, pos.y, pos.z, value, amount, model);
 }
 /**
@@ -221,9 +221,9 @@ export function createMoneyPickups(pos, value, amount, model) {
  */
 export function createNonNetworkedAmbientPickup(pickupHash, pos, flags, value, modelHash) {
     if (typeof pickupHash === 'string')
-        pickupHash = misc.getHashKey(pickupHash);
+        pickupHash = GetHashKey(pickupHash);
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CreateNonNetworkedAmbientPickup(pickupHash, pos.x, pos.y, pos.z, flags, value, modelHash, false, false);
 }
 /**
@@ -233,9 +233,9 @@ export function createNonNetworkedAmbientPickup(pickupHash, pos, flags, value, m
  */
 export function createNonNetworkedPortablePickup(pickupHash, pos, placeOnGround, modelHash) {
     if (typeof pickupHash === 'string')
-        pickupHash = misc.getHashKey(pickupHash);
+        pickupHash = GetHashKey(pickupHash);
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CreateNonNetworkedPortablePickup(pickupHash, pos.x, pos.y, pos.z, placeOnGround, modelHash);
 }
 /**
@@ -245,7 +245,7 @@ export function createNonNetworkedPortablePickup(pickupHash, pos, placeOnGround,
  */
 export function create(modelHash, pos, isNetwork, bScriptHostObj, dynamic) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CreateObject(modelHash, pos.x, pos.y, pos.z, isNetwork, bScriptHostObj, dynamic);
 }
 /**
@@ -255,7 +255,7 @@ export function create(modelHash, pos, isNetwork, bScriptHostObj, dynamic) {
  */
 export function createNoOffset(modelHash, pos, isNetwork, bScriptHostObj, dynamic) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CreateObjectNoOffset(modelHash, pos.x, pos.y, pos.z, isNetwork, bScriptHostObj, dynamic, undefined);
 }
 /**
@@ -265,9 +265,9 @@ export function createNoOffset(modelHash, pos, isNetwork, bScriptHostObj, dynami
  */
 export function createPickup(pickupHash, pos, value, modelHash) {
     if (typeof pickupHash === 'string')
-        pickupHash = misc.getHashKey(pickupHash);
+        pickupHash = GetHashKey(pickupHash);
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CreatePickup(pickupHash, pos.x, pos.y, pos.z, 0, value, false, modelHash);
 }
 /**
@@ -281,9 +281,9 @@ export function createPickup(pickupHash, pos, value, modelHash) {
  */
 export function createPickupRotate(pickupHash, pos, rot, flag, amount, modelHash) {
     if (typeof pickupHash === 'string')
-        pickupHash = misc.getHashKey(pickupHash);
+        pickupHash = GetHashKey(pickupHash);
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CreatePickupRotate(pickupHash, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, flag, amount, undefined, false, modelHash);
 }
 /**
@@ -293,9 +293,9 @@ export function createPickupRotate(pickupHash, pos, rot, flag, amount, modelHash
  */
 export function createPortablePickup(pickupHash, pos, placeOnGround, modelHash) {
     if (typeof pickupHash === 'string')
-        pickupHash = misc.getHashKey(pickupHash);
+        pickupHash = GetHashKey(pickupHash);
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CreatePortablePickup(pickupHash, pos.x, pos.y, pos.z, placeOnGround, modelHash);
 }
 /**
@@ -337,7 +337,7 @@ export function disableTidyingUpInGarage(id, toggle) {
  */
 export function doesOfTypeExistAtCoords(pos, radius, hash) {
     if (typeof hash === 'string')
-        hash = misc.getHashKey(hash);
+        hash = GetHashKey(hash);
     return DoesObjectOfTypeExistAtCoords(pos.x, pos.y, pos.z, radius, hash, false);
 }
 /**
@@ -363,7 +363,7 @@ export function doesPickupObjectExist(pickupObject) {
  */
 export function doesPickupOfTypeExistInArea(pickupHash, pos, radius) {
     if (typeof pickupHash === 'string')
-        pickupHash = misc.getHashKey(pickupHash);
+        pickupHash = GetHashKey(pickupHash);
     return DoesPickupOfTypeExistInArea(pickupHash, pos.x, pos.y, pos.z, radius);
 }
 /**
@@ -381,7 +381,7 @@ export function doesRayfireMapExist(_object) {
  */
 export function doorSystemFindExistingDoor(pos, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return DoorSystemFindExistingDoor(pos.x, pos.y, pos.z, modelHash);
 }
 /**
@@ -391,7 +391,7 @@ export function doorSystemFindExistingDoor(pos, modelHash) {
  */
 export function doorSystemGetAutomaticDistance(doorHash) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     return DoorSystemGetAutomaticDistance(doorHash);
 }
 /**
@@ -401,7 +401,7 @@ export function doorSystemGetAutomaticDistance(doorHash) {
  */
 export function doorSystemGetDoorPendingState(doorHash) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     return DoorSystemGetDoorPendingState(doorHash);
 }
 /**
@@ -411,7 +411,7 @@ export function doorSystemGetDoorPendingState(doorHash) {
  */
 export function doorSystemGetDoorState(doorHash) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     return DoorSystemGetDoorState(doorHash);
 }
 /**
@@ -429,7 +429,7 @@ export function doorSystemGetIsPhysicsLoaded() {
  */
 export function doorSystemGetIsSpringRemoved(doorHash) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     return Citizen.invokeNative('0x8562FD8AB1E94D39', doorHash);
 }
 /**
@@ -439,7 +439,7 @@ export function doorSystemGetIsSpringRemoved(doorHash) {
  */
 export function doorSystemGetOpenRatio(doorHash) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     return DoorSystemGetOpenRatio(doorHash);
 }
 /**
@@ -449,7 +449,7 @@ export function doorSystemGetOpenRatio(doorHash) {
  */
 export function doorSystemSetAutomaticDistance(doorHash, distance, requestDoor, forceUpdate) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     DoorSystemSetAutomaticDistance(doorHash, distance, requestDoor, forceUpdate);
 }
 /**
@@ -460,7 +460,7 @@ export function doorSystemSetAutomaticDistance(doorHash, distance, requestDoor, 
  */
 export function doorSystemSetAutomaticRate(doorHash, rate, requestDoor, forceUpdate) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     DoorSystemSetAutomaticRate(doorHash, rate, requestDoor, forceUpdate);
 }
 /**
@@ -470,7 +470,7 @@ export function doorSystemSetAutomaticRate(doorHash, rate, requestDoor, forceUpd
  */
 export function doorSystemSetDoorOpenForRaces(doorHash) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     Citizen.invokeNative('0xA85A21582451E951', doorHash, false);
 }
 /**
@@ -490,7 +490,7 @@ export function doorSystemSetDoorOpenForRaces(doorHash) {
  */
 export function doorSystemSetDoorState(doorHash, state, requestDoor, forceUpdate) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     DoorSystemSetDoorState(doorHash, state, requestDoor, forceUpdate);
 }
 /**
@@ -500,7 +500,7 @@ export function doorSystemSetDoorState(doorHash, state, requestDoor, forceUpdate
  */
 export function doorSystemSetHoldOpen(doorHash, toggle) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     DoorSystemSetHoldOpen(doorHash, toggle);
 }
 /**
@@ -512,7 +512,7 @@ export function doorSystemSetHoldOpen(doorHash, toggle) {
  */
 export function doorSystemSetOpenRatio(doorHash, ajar, requestDoor, forceUpdate) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     DoorSystemSetOpenRatio(doorHash, ajar, requestDoor, forceUpdate);
 }
 /**
@@ -523,7 +523,7 @@ export function doorSystemSetOpenRatio(doorHash, ajar, requestDoor, forceUpdate)
  */
 export function doorSystemSetSpringRemoved(doorHash, removed, requestDoor, forceUpdate) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     DoorSystemSetSpringRemoved(doorHash, removed, requestDoor, forceUpdate);
 }
 /**
@@ -533,7 +533,7 @@ export function doorSystemSetSpringRemoved(doorHash, removed, requestDoor, force
  */
 export function enableSavingInGarage(garageHash, toggle) {
     if (typeof garageHash === 'string')
-        garageHash = misc.getHashKey(garageHash);
+        garageHash = GetHashKey(garageHash);
     EnableSavingInGarage(garageHash, toggle);
 }
 /**
@@ -585,7 +585,7 @@ export function forcePortablePickupLastAccessiblePositionSetting(_object) {
  */
 export function getClosestOfType(pos, radius, modelHash, isMission) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetClosestObjectOfType(pos.x, pos.y, pos.z, radius, modelHash, isMission, false, false);
 }
 /**
@@ -595,7 +595,7 @@ export function getClosestOfType(pos, radius, modelHash, isMission) {
  */
 export function getCoordsAndRotationOfClosestOfType(pos, radius, modelHash, rotationOrder) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetCoordsAndRotationOfClosestObjectOfType(pos.x, pos.y, pos.z, radius, modelHash, rotationOrder);
 }
 /**
@@ -605,7 +605,7 @@ export function getCoordsAndRotationOfClosestOfType(pos, radius, modelHash, rota
  */
 export function getDefaultAmmoForWeaponPickup(pickupHash) {
     if (typeof pickupHash === 'string')
-        pickupHash = misc.getHashKey(pickupHash);
+        pickupHash = GetHashKey(pickupHash);
     return Citizen.invokeNative('0xDB41D07A45A6D4B7', pickupHash);
 }
 /**
@@ -687,7 +687,7 @@ export function getPickup(pickup) {
  */
 export function getPickupTypeFromWeaponHash(weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return GetPickupHashFromWeapon(weaponHash);
 }
 /**
@@ -728,7 +728,7 @@ export function getSafePickupCoords(pos) {
  */
 export function getStateOfClosestDoorOfType(_type, pos) {
     if (typeof _type === 'string')
-        _type = misc.getHashKey(_type);
+        _type = GetHashKey(_type);
     return GetStateOfClosestDoorOfType(_type, pos.x, pos.y, pos.z);
 }
 /**
@@ -749,7 +749,7 @@ export function getStateOfRayfireMap(_object) {
  */
 export function getWeaponTypeFromPickupType(pickupHash) {
     if (typeof pickupHash === 'string')
-        pickupHash = misc.getHashKey(pickupHash);
+        pickupHash = GetHashKey(pickupHash);
     return GetWeaponTypeFromPickupType(pickupHash);
 }
 /**
@@ -759,7 +759,7 @@ export function getWeaponTypeFromPickupType(pickupHash) {
  */
 export function hasClosestOfTypeBeenBroken(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return HasClosestObjectOfTypeBeenBroken(0, 0, 0, 0, modelHash, undefined);
 }
 /**
@@ -769,7 +769,7 @@ export function hasClosestOfTypeBeenBroken(modelHash) {
  */
 export function hasClosestOfTypeBeenCompletelyDestroyed(pos, radius, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return HasClosestObjectOfTypeBeenCompletelyDestroyed(pos.x, pos.y, pos.z, radius, modelHash, false);
 }
 /**
@@ -803,7 +803,7 @@ export function hidePortablePickupWhenDetached(pickupObject, toggle) {
  */
 export function isAnyEntityEntirelyInsideGarage(garageHash) {
     if (typeof garageHash === 'string')
-        garageHash = misc.getHashKey(garageHash);
+        garageHash = GetHashKey(garageHash);
     return IsAnyEntityEntirelyInsideGarage(garageHash, false, false, false, undefined);
 }
 /**
@@ -821,7 +821,7 @@ export function isAnyNearPoint(pos, range) {
  */
 export function isDoorClosed(doorHash) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     return IsDoorClosed(doorHash);
 }
 /**
@@ -834,7 +834,7 @@ export function isDoorClosed(doorHash) {
  */
 export function isDoorRegisteredWithSystem(doorHash) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     return IsDoorRegisteredWithSystem(doorHash);
 }
 /**
@@ -844,7 +844,7 @@ export function isDoorRegisteredWithSystem(doorHash) {
  */
 export function isGarageEmpty(garageHash) {
     if (typeof garageHash === 'string')
-        garageHash = misc.getHashKey(garageHash);
+        garageHash = GetHashKey(garageHash);
     return IsGarageEmpty(garageHash, false, 0);
 }
 /**
@@ -870,7 +870,7 @@ export function isAPortablePickup(_object) {
  */
 export function isEntirelyInsideGarage(garageHash, entity) {
     if (typeof garageHash === 'string')
-        garageHash = misc.getHashKey(garageHash);
+        garageHash = GetHashKey(garageHash);
     return IsObjectEntirelyInsideGarage(garageHash, entity, 0, 0);
 }
 /**
@@ -880,7 +880,7 @@ export function isEntirelyInsideGarage(garageHash, entity) {
  */
 export function isNearPoint(objectHash, pos, range) {
     if (typeof objectHash === 'string')
-        objectHash = misc.getHashKey(objectHash);
+        objectHash = GetHashKey(objectHash);
     return IsObjectNearPoint(objectHash, pos.x, pos.y, pos.z, range);
 }
 /**
@@ -890,7 +890,7 @@ export function isNearPoint(objectHash, pos, range) {
  */
 export function isPartiallyInsideGarage(garageHash, entity) {
     if (typeof garageHash === 'string')
-        garageHash = misc.getHashKey(garageHash);
+        garageHash = GetHashKey(garageHash);
     return IsObjectPartiallyInsideGarage(garageHash, entity, 0);
 }
 /**
@@ -916,7 +916,7 @@ export function isPickupWeaponValid(_object) {
  */
 export function isPlayerEntirelyInsideGarage(garageHash, player) {
     if (typeof garageHash === 'string')
-        garageHash = misc.getHashKey(garageHash);
+        garageHash = GetHashKey(garageHash);
     return IsPlayerEntirelyInsideGarage(garageHash, player, 0, 0);
 }
 /**
@@ -926,7 +926,7 @@ export function isPlayerEntirelyInsideGarage(garageHash, player) {
  */
 export function isPlayerPartiallyInsideGarage(garageHash, player) {
     if (typeof garageHash === 'string')
-        garageHash = misc.getHashKey(garageHash);
+        garageHash = GetHashKey(garageHash);
     return IsPlayerPartiallyInsideGarage(garageHash, player, 0);
 }
 /**
@@ -1007,7 +1007,7 @@ export function preventCollectionOfPortablePickup(_object) {
  */
 export function removeAllPickupsOfType(pickupHash) {
     if (typeof pickupHash === 'string')
-        pickupHash = misc.getHashKey(pickupHash);
+        pickupHash = GetHashKey(pickupHash);
     RemoveAllPickupsOfType(pickupHash);
 }
 /**
@@ -1018,7 +1018,7 @@ export function removeAllPickupsOfType(pickupHash) {
  */
 export function removeDoorFromSystem(doorHash) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     RemoveDoorFromSystem(doorHash, undefined);
 }
 /**
@@ -1075,7 +1075,7 @@ export function setActivatePhysicsAsSoonAsItIsUnfrozen(_object, toggle) {
  */
 export function setCustomPickupWeaponHash(pickupHash, pickup) {
     if (typeof pickupHash === 'string')
-        pickupHash = misc.getHashKey(pickupHash);
+        pickupHash = GetHashKey(pickupHash);
     Citizen.invokeNative('0x826D1EE4D1CAFC78', pickupHash, pickup);
 }
 /**
@@ -1165,7 +1165,7 @@ export function setLocalPlayerCanCollectPortablePickups(toggle) {
  */
 export function setLocalPlayerPermittedToCollectPickupsWithModel(modelHash, toggle) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     SetLocalPlayerCanUsePickupsWithThisModel(modelHash, toggle);
 }
 /**
@@ -1179,7 +1179,7 @@ export function setLocalPlayerPermittedToCollectPickupsWithModel(modelHash, togg
  */
 export function setLockedUnstreamedInDoorOfType(modelHash, pos, locked, xRotMult, yRotMult, zRotMult) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     DoorControl(modelHash, pos.x, pos.y, pos.z, locked, xRotMult, yRotMult, zRotMult);
 }
 /**
@@ -1189,7 +1189,7 @@ export function setLockedUnstreamedInDoorOfType(modelHash, pos, locked, xRotMult
  */
 export function setMaxNumPortablePickupsCarriedByPlayer(modelHash, _number) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     SetMaxNumPortablePickupsCarriedByPlayer(modelHash, _number);
 }
 /**
@@ -1441,7 +1441,7 @@ export function setPickupUncollectable(pickup, toggle) {
  */
 export function setPlayerPermittedToCollectPickupsOfType(player, pickupHash, toggle) {
     if (typeof pickupHash === 'string')
-        pickupHash = misc.getHashKey(pickupHash);
+        pickupHash = GetHashKey(pickupHash);
     ToggleUsePickupsForPlayer(player, pickupHash, toggle);
 }
 /**
@@ -1499,7 +1499,7 @@ export function setPropTintIndex() {
  */
 export function setStateOfClosestDoorOfType(_type, pos, locked, heading) {
     if (typeof _type === 'string')
-        _type = misc.getHashKey(_type);
+        _type = GetHashKey(_type);
     SetStateOfClosestDoorOfType(_type, pos.x, pos.y, pos.z, locked, heading, false);
 }
 /**
@@ -1530,7 +1530,7 @@ export function setTeamPickup(_object) {
  */
 export function setTintIndexClosestBuildingOfType(pos, radius, modelHash, textureVariation) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return SetTextureVariationOfClosestObjectOfType(pos.x, pos.y, pos.z, radius, modelHash, textureVariation);
 }
 /**

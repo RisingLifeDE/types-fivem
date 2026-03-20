@@ -33,7 +33,7 @@ export function acos(): number {
  * Hash: 0xA6A12939F16D85BE | Since: 323
  */
 export function actionManagerEnableAction(hash: number | string, enable: boolean): void {
-    if (typeof hash === 'string') hash = misc.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     RemoveStealthKill(hash, enable);
 }
 
@@ -882,7 +882,7 @@ export function getCloudsAlpha(): number {
  * Hash: 0xECF041186C5A94DC | Since: 2612
  */
 export function getContentIdIndex(contentId: number | string): number {
-    if (typeof contentId === 'string') contentId = misc.getHashKey(contentId)
+    if (typeof contentId === 'string') contentId = GetHashKey(contentId)
     return Citizen.invokeNative('0xECF041186C5A94DC', contentId);
 }
 
@@ -901,7 +901,7 @@ export function getContentToLoad(): string {
  * Hash: 0x3DA8C28346B62CED | Since: 2802
  */
 export function getCoordsOfProjectileTypeInAngledArea(vecAngledAreaPoint1X: number, vecAngledAreaPoint1Y: number, vecAngledAreaPoint1Z: number, vecAngledAreaPoint2X: number, vecAngledAreaPoint2Y: number, vecAngledAreaPoint2Z: number, distanceOfOppositeFace: number, weaponType: number | string, bIsPlayer: boolean): [boolean, Vector3] {
-    if (typeof weaponType === 'string') weaponType = misc.getHashKey(weaponType)
+    if (typeof weaponType === 'string') weaponType = GetHashKey(weaponType)
     return Citizen.invokeNative('0x3DA8C28346B62CED', vecAngledAreaPoint1X, vecAngledAreaPoint1Y, vecAngledAreaPoint1Z, vecAngledAreaPoint2X, vecAngledAreaPoint2Y, vecAngledAreaPoint2Z, distanceOfOppositeFace, weaponType, bIsPlayer);
 }
 
@@ -911,7 +911,7 @@ export function getCoordsOfProjectileTypeInAngledArea(vecAngledAreaPoint1X: numb
  * Hash: 0x8D7A43EC6A5FEA45 | Since: 323
  */
 export function getCoordsOfProjectileTypeInArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, projectileHash: number | string, ownedByPlayer: boolean): [boolean, Vector3] {
-    if (typeof projectileHash === 'string') projectileHash = misc.getHashKey(projectileHash)
+    if (typeof projectileHash === 'string') projectileHash = GetHashKey(projectileHash)
     return GetCoordsOfProjectileTypeInArea(x1, y1, z1, x2, y2, z2, projectileHash, ownedByPlayer);
 }
 
@@ -921,7 +921,7 @@ export function getCoordsOfProjectileTypeInArea(x1: number, y1: number, z1: numb
  * Hash: 0xDFB4138EEFED7B81 | Since: 323
  */
 export function getCoordsOfProjectileTypeWithinDistance(ped: number | IPed, weaponHash: number | string, distance: number): [boolean, Vector3] {
-    if (typeof weaponHash === 'string') weaponHash = misc.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetCoordsOfProjectileTypeWithinDistance(ped, weaponHash, distance, false);
 }
 
@@ -1091,7 +1091,7 @@ export function getMissionFlag(): boolean {
  * Hash: 0x03E8D3D5F549087A | Since: 323
  */
 export function getModelDimensions(modelHash: number | string): [Vector3, Vector3] {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetModelDimensions(modelHash);
 }
 
@@ -1173,7 +1173,7 @@ export function getProfileSetting(profileSetting: number): number {
  * Hash: 0x82FDE6A57EE4EE44 | Since: 323
  */
 export function getProjectileOfProjectileTypeWithinDistance(ped: number | IPed, weaponHash: number | string, distance: number): [boolean, Vector3, number] {
-    if (typeof weaponHash === 'string') weaponHash = misc.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetProjectileNearPed(ped, weaponHash, distance, false);
 }
 
@@ -1419,7 +1419,7 @@ export function hasBulletImpactedInBox(): boolean {
  * Hash: 0x071E2A839DE82D90 | Since: 323
  */
 export function hasCheatWithHashBeenActivated(hash: number | string, amount: number): boolean {
-    if (typeof hash === 'string') hash = misc.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     return HasButtonCombinationJustBeenEntered(hash, amount);
 }
 
@@ -1459,7 +1459,7 @@ export function hasGameInstalledThisSession(): boolean {
  * Hash: 0x557E43C447E700A8 | Since: 323
  */
 export function hasPcCheatWithHashBeenActivated(hash: number | string): boolean {
-    if (typeof hash === 'string') hash = misc.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     return HasCheatStringJustBeenEntered(hash);
 }
 
@@ -1748,7 +1748,7 @@ export function isProjectileTypeInArea(x1: number, y1: number, z1: number, x2: n
  * Hash: 0x34318593248C8FB2 | Since: 323
  */
 export function isProjectileTypeWithinDistance(pos: Vector3, projectileHash: number | string, radius: number, ownedByPlayer: boolean): boolean {
-    if (typeof projectileHash === 'string') projectileHash = misc.getHashKey(projectileHash)
+    if (typeof projectileHash === 'string') projectileHash = GetHashKey(projectileHash)
     return IsProjectileTypeWithinDistance(pos.x, pos.y, pos.z, projectileHash, radius, ownedByPlayer);
 }
 
@@ -2385,7 +2385,7 @@ export function setCloudSettingsOverride(): void {
  * Hash: 0x4B82FA6F2D624634 | Since: 2612
  */
 export function setContentIdIndex(contentId: number | string, index: number): void {
-    if (typeof contentId === 'string') contentId = misc.getHashKey(contentId)
+    if (typeof contentId === 'string') contentId = GetHashKey(contentId)
     Citizen.invokeNative('0x4B82FA6F2D624634', contentId, index);
 }
 
@@ -2410,7 +2410,7 @@ export function setCreditsFadeOutWithScreen(toggle: boolean): void {
 /**
  * Mixes two weather types. If percentWeather2 is set to 0.0f, then the weather will be entirely of weatherType1, if it is set to 1.0f it will be entirely of weatherType2. If it's set somewhere in between, there will be a mixture of weather behaviors. To test, try this in the RPH console, and change the float to different values between 0 and 1:
  * 
- * execute "NativeFunction.Natives.x578C752848ECFA0C(Game.GetHashKey(""RAIN""), Game.GetHashKey(""SMOG""), 0.50f);
+ * execute "NativeFunction.Natives.x578C752848ECFA0C(Game.GetHashKey(""RAIN""), GetHashKey(""SMOG""), 0.50f);
  * 
  * Note that unlike most of the other weather natives, this native takes the hash of the weather name, not the plain string. These are the weather names and their hashes:
  * 
@@ -2441,8 +2441,8 @@ export function setCreditsFadeOutWithScreen(toggle: boolean): void {
  * Hash: 0x578C752848ECFA0C | Since: 323
  */
 export function setCurrWeatherState(weatherType1: number | string, weatherType2: number | string, percentWeather2: number): void {
-    if (typeof weatherType1 === 'string') weatherType1 = misc.getHashKey(weatherType1)
-    if (typeof weatherType2 === 'string') weatherType2 = misc.getHashKey(weatherType2)
+    if (typeof weatherType1 === 'string') weatherType1 = GetHashKey(weatherType1)
+    if (typeof weatherType2 === 'string') weatherType2 = GetHashKey(weatherType2)
     SetWeatherTypeTransition(weatherType1, weatherType2, percentWeather2);
 }
 
@@ -2986,7 +2986,7 @@ export function setWindSpeed(speed: number): void {
  * Hash: 0x867654CBC7606F2C | Since: 323
  */
 export function shootSingleBulletBetweenCoords(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, damage: number, weaponHash: number | string, ownerPed: number | IPed, isAudible: boolean, isInvisible: boolean, speed: number): void {
-    if (typeof weaponHash === 'string') weaponHash = misc.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     ShootSingleBulletBetweenCoords(x1, y1, z1, x2, y2, z2, damage, false, weaponHash, ownerPed, isAudible, isInvisible, speed);
 }
 
@@ -2996,7 +2996,7 @@ export function shootSingleBulletBetweenCoords(x1: number, y1: number, z1: numbe
  * Hash: 0xE3A7742E0B7A2F8B | Since: 323
  */
 export function shootSingleBulletBetweenCoordsIgnoreEntity(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, damage: number, weaponHash: number | string, ownerPed: number | IPed, isAudible: boolean, isInvisible: boolean, speed: number, entity: number | IEntity): void {
-    if (typeof weaponHash === 'string') weaponHash = misc.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     ShootSingleBulletBetweenCoordsIgnoreEntity(x1, y1, z1, x2, y2, z2, damage, false, weaponHash, ownerPed, isAudible, isInvisible, speed, entity, undefined);
 }
 
@@ -3007,7 +3007,7 @@ export function shootSingleBulletBetweenCoordsIgnoreEntity(x1: number, y1: numbe
  * Hash: 0xBFE5756E7407064A | Since: 323
  */
 export function shootSingleBulletBetweenCoordsIgnoreEntityNew(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, damage: number, weaponHash: number | string, ownerPed: number | IPed, isAudible: boolean, isInvisible: boolean, speed: number, entity: number | IEntity, targetEntity: number | IEntity): void {
-    if (typeof weaponHash === 'string') weaponHash = misc.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     ShootSingleBulletBetweenCoordsIgnoreEntityNew(x1, y1, z1, x2, y2, z2, damage, false, weaponHash, ownerPed, isAudible, isInvisible, speed, entity, false, false, targetEntity, false, undefined, undefined, undefined);
 }
 
@@ -3345,7 +3345,7 @@ export function waterOverrideSetStrength(strength: number): void {
  * Hash: 0x8BAF8AD59F47AAFC | Since: 3095
  */
 export function getContentPropType(model: number | string): number {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return Citizen.invokeNative('0x8BAF8AD59F47AAFC', model);
 }
 
@@ -3364,7 +3364,7 @@ export function isXboxpcVersion(): boolean {
  * Hash: 0xBA4583AF4C678A9B | Since: 3095
  */
 export function setContentPropType(model: number | string, _type: number): void {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     Citizen.invokeNative('0xBA4583AF4C678A9B', model, _type);
 }
 

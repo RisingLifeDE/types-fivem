@@ -40,9 +40,9 @@ export function addArmourTo(ped, amount) {
  */
 export function addDecorationFromHashes(ped, collection, overlay) {
     if (typeof collection === 'string')
-        collection = misc.getHashKey(collection);
+        collection = GetHashKey(collection);
     if (typeof overlay === 'string')
-        overlay = misc.getHashKey(overlay);
+        overlay = GetHashKey(overlay);
     AddPedDecorationFromHashes(ped, collection, overlay);
 }
 /**
@@ -52,9 +52,9 @@ export function addDecorationFromHashes(ped, collection, overlay) {
  */
 export function addDecorationFromHashesInCorona(ped, collection, overlay) {
     if (typeof collection === 'string')
-        collection = misc.getHashKey(collection);
+        collection = GetHashKey(collection);
     if (typeof overlay === 'string')
-        overlay = misc.getHashKey(overlay);
+        overlay = GetHashKey(overlay);
     AddPedDecorationFromHashesInCorona(ped, collection, overlay);
 }
 /**
@@ -80,7 +80,7 @@ export function addScenarioBlockingArea(x1, y1, z1, x2, y2, z2) {
  */
 export function applyDamageTo(ped, damageAmount, weaponType) {
     if (typeof weaponType === 'string')
-        weaponType = misc.getHashKey(weaponType);
+        weaponType = GetHashKey(weaponType);
     ApplyDamageToPed(ped, damageAmount, false, undefined, weaponType);
 }
 /**
@@ -500,9 +500,9 @@ export function clearRagdollBlockingFlags(ped, blockingFlag) {
  */
 export function clearRelationshipBetweenGroups(relationship, group1, group2) {
     if (typeof group1 === 'string')
-        group1 = misc.getHashKey(group1);
+        group1 = GetHashKey(group1);
     if (typeof group2 === 'string')
-        group2 = misc.getHashKey(group2);
+        group2 = GetHashKey(group2);
     ClearRelationshipBetweenGroups(relationship, group1, group2);
 }
 /**
@@ -596,7 +596,7 @@ export function createParachuteBagObject(ped) {
  */
 export function create(pedType, modelHash, pos, heading, isNetwork, bScriptHostPed) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CreatePed(pedType, modelHash, pos.x, pos.y, pos.z, heading, isNetwork, bScriptHostPed);
 }
 /**
@@ -608,7 +608,7 @@ export function create(pedType, modelHash, pos, heading, isNetwork, bScriptHostP
  */
 export function createInsideVehicle(vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CreatePedInsideVehicle(vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed);
 }
 /**
@@ -653,7 +653,7 @@ export function createSynchronizedScene(pos, roll, pitch, yaw) {
  */
 export function createSynchronizedSceneAtMapObject(pos, radius, _object) {
     if (typeof _object === 'string')
-        _object = misc.getHashKey(_object);
+        _object = GetHashKey(_object);
     return CreateSynchronizedScene2(pos.x, pos.y, pos.z, radius, _object);
 }
 /**
@@ -711,7 +711,7 @@ export function doesGroupExist(groupId) {
  */
 export function doesRelationshipGroupExist(groupHash) {
     if (typeof groupHash === 'string')
-        groupHash = misc.getHashKey(groupHash);
+        groupHash = GetHashKey(groupHash);
     return DoesRelationshipGroupExist(groupHash);
 }
 /**
@@ -747,7 +747,7 @@ export function enableMpLight(ped, toggle) {
  */
 export function explodeHead(ped, weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     ExplodePedHead(ped, weaponHash);
 }
 /**
@@ -817,7 +817,7 @@ export function forceAiAndAnimationUpdate(ped) {
  */
 export function forceMotionState(ped, motionStateHash) {
     if (typeof motionStateHash === 'string')
-        motionStateHash = misc.getHashKey(motionStateHash);
+        motionStateHash = GetHashKey(motionStateHash);
     return ForcePedMotionState(ped, motionStateHash, false, 0, false);
 }
 /**
@@ -1367,9 +1367,9 @@ export function getDecorationsState(ped) {
  */
 export function getDecorationZoneFromHashes(collection, overlay) {
     if (typeof collection === 'string')
-        collection = misc.getHashKey(collection);
+        collection = GetHashKey(collection);
     if (typeof overlay === 'string')
-        overlay = misc.getHashKey(overlay);
+        overlay = GetHashKey(overlay);
     return GetPedDecorationZoneFromHashes(collection, overlay);
 }
 /**
@@ -1841,9 +1841,9 @@ export function getRandomAtCoord(pos, xRadius, yRadius, zRadius, pedType) {
  */
 export function getRelationshipBetweenGroups(group1, group2) {
     if (typeof group1 === 'string')
-        group1 = misc.getHashKey(group1);
+        group1 = GetHashKey(group1);
     if (typeof group2 === 'string')
-        group2 = misc.getHashKey(group2);
+        group2 = GetHashKey(group2);
     return GetRelationshipBetweenGroups(group1, group2);
 }
 /**
@@ -1899,7 +1899,7 @@ export function getSynchronizedSceneRate(sceneID) {
  */
 export function getTimeDamagedByWeapon(ped, weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return GetTimeOfLastPedWeaponDamage(ped, weaponHash);
 }
 /**
@@ -1909,7 +1909,7 @@ export function getTimeDamagedByWeapon(ped, weaponHash) {
  */
 export function getTintIndexForLastGenHairTexture(modelHash, drawableId, textureId) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return Citizen.invokeNative('0xC56FBF2F228E1DAC', modelHash, drawableId, textureId);
 }
 /**
@@ -2598,7 +2598,7 @@ export function isInMeleeCombat(ped) {
  */
 export function isInModel(ped, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return IsPedInModel(ped, modelHash);
 }
 /**
@@ -2682,7 +2682,7 @@ export function isMale(ped) {
  */
 export function isModel(ped, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return IsPedModel(ped, modelHash);
 }
 /**
@@ -3207,7 +3207,7 @@ export function removePreferredCoverSet(ped) {
  */
 export function removeRelationshipGroup(groupHash) {
     if (typeof groupHash === 'string')
-        groupHash = misc.getHashKey(groupHash);
+        groupHash = GetHashKey(groupHash);
     RemoveRelationshipGroup(groupHash);
 }
 /**
@@ -5081,7 +5081,7 @@ export function setEnveffScale(ped, value) {
  */
 export function setFiringPattern(ped, patternHash) {
     if (typeof patternHash === 'string')
-        patternHash = misc.getHashKey(patternHash);
+        patternHash = GetHashKey(patternHash);
     SetPedFiringPattern(ped, patternHash);
 }
 /**
@@ -5334,7 +5334,7 @@ export function setIntoVehicle(ped, vehicle, seatIndex) {
  */
 export function setInVehicleContext(ped, context) {
     if (typeof context === 'string')
-        context = misc.getHashKey(context);
+        context = GetHashKey(context);
     SetPedInVehicleContext(ped, context);
 }
 /**
@@ -5482,7 +5482,7 @@ export function setMinMoveBlendRatio(ped, value) {
  */
 export function setModelIsSuppressed(modelHash, toggle) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     SetPedModelIsSuppressed(modelHash, toggle);
 }
 /**
@@ -5786,7 +5786,7 @@ export function setRandomProps(ped) {
  */
 export function setRelationshipGroupDefaultHash(ped, hash) {
     if (typeof hash === 'string')
-        hash = misc.getHashKey(hash);
+        hash = GetHashKey(hash);
     SetPedRelationshipGroupDefaultHash(ped, hash);
 }
 /**
@@ -5796,7 +5796,7 @@ export function setRelationshipGroupDefaultHash(ped, hash) {
  */
 export function setRelationshipGroupHash(ped, hash) {
     if (typeof hash === 'string')
-        hash = misc.getHashKey(hash);
+        hash = GetHashKey(hash);
     SetPedRelationshipGroupHash(ped, hash);
 }
 /**
@@ -6262,9 +6262,9 @@ export function setRagdollBlockingFlags(ped, blockingFlag) {
  */
 export function setRelationshipBetweenGroups(relationship, group1, group2) {
     if (typeof group1 === 'string')
-        group1 = misc.getHashKey(group1);
+        group1 = GetHashKey(group1);
     if (typeof group2 === 'string')
-        group2 = misc.getHashKey(group2);
+        group2 = GetHashKey(group2);
     SetRelationshipBetweenGroups(relationship, group1, group2);
 }
 /**
@@ -6274,7 +6274,7 @@ export function setRelationshipBetweenGroups(relationship, group1, group2) {
  */
 export function setRelationshipGroupAffectsWantedLevel(group) {
     if (typeof group === 'string')
-        group = misc.getHashKey(group);
+        group = GetHashKey(group);
     SetRelationshipGroupDontAffectWantedLevel(group, false);
 }
 /**
@@ -6494,7 +6494,7 @@ export function takeOwnershipOfSynchronizedScene(scene) {
  */
 export function tellGroupsInAreaToAttack(ped, hash) {
     if (typeof hash === 'string')
-        hash = misc.getHashKey(hash);
+        hash = GetHashKey(hash);
     Citizen.invokeNative('0xAD27D957598E49E9', ped, undefined, 0, hash, undefined, undefined);
 }
 /**

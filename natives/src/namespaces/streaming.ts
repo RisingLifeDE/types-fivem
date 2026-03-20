@@ -6,7 +6,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0x0BC3144DEB678666 | Since: 323
  */
 export function addModelToCreatorBudget(modelHash: number | string): boolean {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return AddModelToCreatorBudget(modelHash);
 }
 
@@ -264,7 +264,7 @@ export function hasClipSetLoaded(clipSet: string): boolean {
  * Hash: 0x22CCA434E368F03A | Since: 323
  */
 export function hasCollisionForModelLoaded(model: number | string): boolean {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return HasCollisionForModelLoaded(model);
 }
 
@@ -274,7 +274,7 @@ export function hasCollisionForModelLoaded(model: number | string): boolean {
  * Hash: 0x98A4EB5D89A0C952 | Since: 323
  */
 export function hasModelLoaded(model: number | string): boolean {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return HasModelLoaded(model);
 }
 
@@ -374,7 +374,7 @@ export function isIplActive(iplName: string): boolean {
  * Hash: 0x75816577FEA6DAD5 | Since: 1103
  */
 export function isModelAPed(model: number | string): boolean {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsModelAPed(model);
 }
 
@@ -384,7 +384,7 @@ export function isModelAPed(model: number | string): boolean {
  * Hash: 0x19AAC8F07BFEC53E | Since: 323
  */
 export function isModelAVehicle(model: number | string): boolean {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsModelAVehicle(model);
 }
 
@@ -394,7 +394,7 @@ export function isModelAVehicle(model: number | string): boolean {
  * Hash: 0x35B9E0803292B641 | Since: 323
  */
 export function isModelInCdimage(model: number | string): boolean {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsModelInCdimage(model);
 }
 
@@ -404,7 +404,7 @@ export function isModelInCdimage(model: number | string): boolean {
  * Hash: 0xC0296A2EDF545E92 | Since: 323
  */
 export function isModelValid(model: number | string): boolean {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsModelValid(model);
 }
 
@@ -660,7 +660,7 @@ export function removeIpl(iplName: string): void {
  * Hash: 0xF086AD9354FAC3A3 | Since: 323
  */
 export function removeModelFromCreatorBudget(modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     RemoveModelFromCreatorBudget(modelHash);
 }
 
@@ -739,7 +739,7 @@ export function requestCollisionAtCoord(pos: Vector3): void {
  * Hash: 0x923CB32A3B874FCB | Since: 323
  */
 export function requestCollisionForModel(model: number | string): void {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     RequestCollisionForModel(model);
 }
 
@@ -760,7 +760,7 @@ export function requestIpl(iplName: string): void {
  * Hash: 0xA0261AEF7ACFC51E | Since: 323
  */
 export function requestMenuPedModel(model: number | string): void {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     RequestMenuPedModel(model);
 }
 
@@ -771,7 +771,7 @@ export function requestMenuPedModel(model: number | string): void {
  * Hash: 0x963D27A58DF860AC | Since: 323
  */
 export function requestModel(model: number | string): void {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     RequestModel(model);
 }
 
@@ -913,7 +913,7 @@ export function setMapdatacullboxEnabled(name: string, toggle: boolean): void {
  * Hash: 0xE532F5D78798DAAB | Since: 323
  */
 export function setModelAsNoLongerNeeded(model: number | string): void {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     SetModelAsNoLongerNeeded(model);
 }
 
@@ -1211,7 +1211,7 @@ export function switchToMultiSecondpart(ped: number | IPed): void {
  * Hash: 0x0F7082C60FB479EF | Since: 3717
  */
 export function getModelAdditionalCost(modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return Citizen.invokeNative('0x0F7082C60FB479EF', modelHash);
 }
 
@@ -1221,7 +1221,7 @@ export function getModelAdditionalCost(modelHash: number | string): number {
  * Hash: 0x4A91423C04BAADA1 | Since: 3717
  */
 export function getTotalModelCost(modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return Citizen.invokeNative('0x4A91423C04BAADA1', modelHash);
 }
 

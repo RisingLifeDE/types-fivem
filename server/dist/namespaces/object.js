@@ -8,7 +8,7 @@
  */
 export function create(modelHash, pos, isNetwork, netMissionEntity, doorFlag) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CreateObject(modelHash, pos.x, pos.y, pos.z, isNetwork, netMissionEntity, doorFlag);
 }
 /**
@@ -21,7 +21,7 @@ export function create(modelHash, pos, isNetwork, netMissionEntity, doorFlag) {
  */
 export function createNoOffset(modelHash, pos, isNetwork, netMissionEntity, doorFlag) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CreateObjectNoOffset(modelHash, pos.x, pos.y, pos.z, isNetwork, netMissionEntity, doorFlag);
 }
 /**

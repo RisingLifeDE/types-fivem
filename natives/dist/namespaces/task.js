@@ -413,7 +413,7 @@ export function getScriptedCoverPointCoords(coverpoint) {
  */
 export function getScriptStatus(ped, taskHash) {
     if (typeof taskHash === 'string')
-        taskHash = misc.getHashKey(taskHash);
+        taskHash = GetHashKey(taskHash);
     return GetScriptTaskStatus(ped, taskHash);
 }
 /**
@@ -1208,9 +1208,9 @@ export function setSequenceToRepeat(taskSequenceId, repeat) {
  */
 export function setMoveNetworkAnimSet(ped, clipSet, variableClipSet) {
     if (typeof clipSet === 'string')
-        clipSet = misc.getHashKey(clipSet);
+        clipSet = GetHashKey(clipSet);
     if (typeof variableClipSet === 'string')
-        variableClipSet = misc.getHashKey(variableClipSet);
+        variableClipSet = GetHashKey(variableClipSet);
     Citizen.invokeNative('0x8423541E8B3A1589', ped, clipSet, variableClipSet);
 }
 /**
@@ -1335,7 +1335,7 @@ export function aimGunAtEntity(ped, entity, duration, instantBlendToAim) {
  */
 export function aimGunScripted(ped, scriptTask, disableBlockingClip, instantBlendToAim) {
     if (typeof scriptTask === 'string')
-        scriptTask = misc.getHashKey(scriptTask);
+        scriptTask = GetHashKey(scriptTask);
     TaskAimGunScripted(ped, scriptTask, disableBlockingClip, instantBlendToAim);
 }
 /**
@@ -1492,7 +1492,7 @@ export function cower(ped, duration) {
  */
 export function driveBy(driverPed, targetPed, targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, pushUnderneathDrivingTaskIfDriving, firingPattern) {
     if (typeof firingPattern === 'string')
-        firingPattern = misc.getHashKey(firingPattern);
+        firingPattern = GetHashKey(firingPattern);
     TaskDriveBy(driverPed, targetPed, targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, pushUnderneathDrivingTaskIfDriving, firingPattern);
 }
 /**
@@ -1611,7 +1611,7 @@ export function followWaypointRecording(ped, name) {
  */
 export function forceMotionState(ped, state, forceRestart) {
     if (typeof state === 'string')
-        state = misc.getHashKey(state);
+        state = GetHashKey(state);
     TaskForceMotionState(ped, state, forceRestart);
 }
 /**
@@ -1719,7 +1719,7 @@ export function goStraightToCoordRelativeToEntity(ped, entity, pos, moveBlendRat
  */
 export function goToCoordAndAimAtHatedEntitiesNearCoord(pedHandle, goToLocationX, goToLocationY, goToLocationZ, focusLocationX, focusLocationY, focusLocationZ, speed, shootAtEnemies, distanceToStopAt, noRoadsDistance, useNavMesh, navFlags, taskFlags, firingPattern) {
     if (typeof firingPattern === 'string')
-        firingPattern = misc.getHashKey(firingPattern);
+        firingPattern = GetHashKey(firingPattern);
     TaskGoToCoordAndAimAtHatedEntitiesNearCoord(pedHandle, goToLocationX, goToLocationY, goToLocationZ, focusLocationX, focusLocationY, focusLocationZ, speed, shootAtEnemies, distanceToStopAt, noRoadsDistance, useNavMesh, navFlags, taskFlags, firingPattern);
 }
 /**
@@ -1763,7 +1763,7 @@ export function goToCoordAnyMeansExtraParamsWithCruiseSpeed(ped, pos, moveBlendR
  */
 export function goToCoordWhileAimingAtCoord(ped, pos, aimAtX, aimAtY, aimAtZ, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, navFlags, instantBlendToAim, firingPattern) {
     if (typeof firingPattern === 'string')
-        firingPattern = misc.getHashKey(firingPattern);
+        firingPattern = GetHashKey(firingPattern);
     TaskGoToCoordWhileAimingAtCoord(ped, pos.x, pos.y, pos.z, aimAtX, aimAtY, aimAtZ, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, navFlags, instantBlendToAim, firingPattern);
 }
 /**
@@ -1773,7 +1773,7 @@ export function goToCoordWhileAimingAtCoord(ped, pos, aimAtX, aimAtY, aimAtZ, mo
  */
 export function goToCoordWhileAimingAtEntity(ped, pos, aimAtID, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, navFlags, instantBlendToAim, firingPattern, time) {
     if (typeof firingPattern === 'string')
-        firingPattern = misc.getHashKey(firingPattern);
+        firingPattern = GetHashKey(firingPattern);
     TaskGoToCoordWhileAimingAtEntity(ped, pos.x, pos.y, pos.z, aimAtID, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, navFlags, instantBlendToAim, firingPattern, time);
 }
 /**
@@ -1802,7 +1802,7 @@ export function goToEntity(entity, target, duration, distance, moveBlendRatio, s
  */
 export function goToEntityWhileAimingAtCoord(ped, entity, aimX, aimY, aimZ, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, instantBlendToAim, firingPattern) {
     if (typeof firingPattern === 'string')
-        firingPattern = misc.getHashKey(firingPattern);
+        firingPattern = GetHashKey(firingPattern);
     TaskGoToEntityWhileAimingAtCoord(ped, entity, aimX, aimY, aimZ, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, instantBlendToAim, firingPattern);
 }
 /**
@@ -1814,7 +1814,7 @@ export function goToEntityWhileAimingAtCoord(ped, entity, aimX, aimY, aimZ, move
  */
 export function goToEntityWhileAimingAtEntity(ped, entityToWalkTo, entityToAimAt, speed, shootatEntity, targetRadius, slowDistance, useNavMesh, instantBlendToAim, firingPattern) {
     if (typeof firingPattern === 'string')
-        firingPattern = misc.getHashKey(firingPattern);
+        firingPattern = GetHashKey(firingPattern);
     TaskGoToEntityWhileAimingAtEntity(ped, entityToWalkTo, entityToAimAt, speed, shootatEntity, targetRadius, slowDistance, useNavMesh, instantBlendToAim, firingPattern);
 }
 /**
@@ -2509,7 +2509,7 @@ export function setBlockingOfNonTemporaryEvents(ped, toggle) {
  */
 export function setDecisionMaker(ped, decisionMakerId) {
     if (typeof decisionMakerId === 'string')
-        decisionMakerId = misc.getHashKey(decisionMakerId);
+        decisionMakerId = GetHashKey(decisionMakerId);
     TaskSetDecisionMaker(ped, decisionMakerId);
 }
 /**
@@ -2543,7 +2543,7 @@ export function shockingEventReact(ped, eventHandle) {
  */
 export function shootAtCoord(ped, pos, duration, firingPattern) {
     if (typeof firingPattern === 'string')
-        firingPattern = misc.getHashKey(firingPattern);
+        firingPattern = GetHashKey(firingPattern);
     TaskShootAtCoord(ped, pos.x, pos.y, pos.z, duration, firingPattern);
 }
 /**
@@ -2563,7 +2563,7 @@ export function shootAtCoord(ped, pos, duration, firingPattern) {
  */
 export function shootAtEntity(entity, target, duration, firingPattern) {
     if (typeof firingPattern === 'string')
-        firingPattern = misc.getHashKey(firingPattern);
+        firingPattern = GetHashKey(firingPattern);
     TaskShootAtEntity(entity, target, duration, firingPattern);
 }
 /**
@@ -2709,7 +2709,7 @@ export function stayInCover(ped) {
  */
 export function stealthKill(killer, target, stealthKillActionResultHash, desiredMoveBlendRatio, stealthFlags) {
     if (typeof stealthKillActionResultHash === 'string')
-        stealthKillActionResultHash = misc.getHashKey(stealthKillActionResultHash);
+        stealthKillActionResultHash = GetHashKey(stealthKillActionResultHash);
     TaskStealthKill(killer, target, stealthKillActionResultHash, desiredMoveBlendRatio, stealthFlags);
 }
 /**
@@ -2900,7 +2900,7 @@ export function vehicleChase(driver, targetEnt) {
  */
 export function vehicleDriveToCoord(ped, vehicle, pos, speed, vehicleModel, drivingMode, stopRange, straightLineDistance) {
     if (typeof vehicleModel === 'string')
-        vehicleModel = misc.getHashKey(vehicleModel);
+        vehicleModel = GetHashKey(vehicleModel);
     TaskVehicleDriveToCoord(ped, vehicle, pos.x, pos.y, pos.z, speed, undefined, vehicleModel, drivingMode, stopRange, straightLineDistance);
 }
 /**
@@ -3327,7 +3327,7 @@ export function waypointPlaybackStartAimingAtPed(ped, target) {
  */
 export function waypointPlaybackStartShootingAtCoord(ped, pos, firingPattern) {
     if (typeof firingPattern === 'string')
-        firingPattern = misc.getHashKey(firingPattern);
+        firingPattern = GetHashKey(firingPattern);
     WaypointPlaybackStartShootingAtCoord(ped, pos.x, pos.y, pos.z, false, firingPattern);
 }
 /**

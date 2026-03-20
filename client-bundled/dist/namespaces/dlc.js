@@ -70,7 +70,7 @@ export function hasCloudRequestsFinished(unused) {
  */
 export function isPresent(dlcHash) {
     if (typeof dlcHash === 'string')
-        dlcHash = game.getHashKey(dlcHash);
+        dlcHash = GetHashKey(dlcHash);
     return IsDlcPresent(dlcHash);
 }
 /**

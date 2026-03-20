@@ -402,7 +402,7 @@ export function createPickUpRopeForCargobob(cargobob: number | IVehicle, state: 
  * Hash: 0x9DEF883114668116 | Since: 323
  */
 export function createScriptGenerator(pos: Vector3, heading: number, modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CreateScriptVehicleGenerator(pos.x, pos.y, pos.z, heading, 0, 0, modelHash, 0, 0, 0, 0, false, false, false, false, false, 0);
 }
 
@@ -413,7 +413,7 @@ export function createScriptGenerator(pos: Vector3, heading: number, modelHash: 
  * Hash: 0xAF35D0D2583051B0 | Since: 323
  */
 export function create(modelHash: number | string, pos: Vector3, heading: number, isNetwork: boolean, bScriptHostVeh: boolean): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CreateVehicle(modelHash, pos.x, pos.y, pos.z, heading, isNetwork, bScriptHostVeh, false);
 }
 
@@ -585,7 +585,7 @@ export function disableTurretMovementThisFrame(vehicle: number | IVehicle): void
  * Hash: 0xF4FC6A6F67D8D856 | Since: 323
  */
 export function disableWeapon(disabled: boolean, weaponHash: number | string, vehicle: number | IVehicle, owner: number | IPed): void {
-    if (typeof weaponHash === 'string') weaponHash = misc.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     DisableVehicleWeapon(disabled, weaponHash, vehicle, owner);
 }
 
@@ -850,7 +850,7 @@ export function getBoatBoomPositionRatio(vehicle: number | IVehicle): number {
  * Hash: 0x5AA3F878A178C4FC | Since: 323
  */
 export function getBoatModelAgility(modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetBoatVehicleModelAgility(modelHash);
 }
 
@@ -916,7 +916,7 @@ export function getCarHasJump(vehicle: number | IVehicle): boolean {
  * Hash: 0xF73EB622C4F1689B | Since: 323
  */
 export function getClosest(pos: Vector3, radius: number, modelHash: number | string, flags: number): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetClosestVehicle(pos.x, pos.y, pos.z, radius, modelHash, flags);
 }
 
@@ -956,7 +956,7 @@ export function getCurrentPlaybackFor(vehicle: number | IVehicle): number {
  * Hash: 0xB215AAC32D25D019 | Since: 323
  */
 export function getDisplayNameFromModel(modelHash: number | string): string {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetDisplayNameFromVehicleModel(modelHash);
 }
 
@@ -1032,7 +1032,7 @@ export function getFakeSuspensionLoweringAmount(vehicle: number | IVehicle): num
  * Hash: 0xC6AD107DDC9054CC | Since: 323
  */
 export function getFlyingModelAgility(modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetVehicleModelMaxKnots(modelHash);
 }
 
@@ -1286,7 +1286,7 @@ export function getLiveryName(vehicle: number | IVehicle, liveryIndex: number): 
  * Hash: 0xF7AF4F159FF99F97 | Since: 1868
  */
 export function getMakeNameFromModel(modelHash: number | string): string {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetMakeNameFromVehicleModel(modelHash);
 }
 
@@ -1483,7 +1483,7 @@ export function getRandomFrontBumperInSphere(): number {
  * Hash: 0x386F6CE5BAF6091C | Since: 323
  */
 export function getRandomInSphere(pos: Vector3, radius: number, modelHash: number | string, flags: number): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetRandomVehicleInSphere(pos.x, pos.y, pos.z, radius, modelHash, flags);
 }
 
@@ -1724,7 +1724,7 @@ export function getClassEstimatedMaxSpeed(vehicleClass: number): number {
  * Hash: 0xDEDF1C8BD47C2200 | Since: 323
  */
 export function getClassFromName(modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetVehicleClassFromName(modelHash);
 }
 
@@ -2181,7 +2181,7 @@ export function getMod(vehicle: number | IVehicle, modType: number): number {
  * Hash: 0x8C044C5C84505B6A | Since: 323
  */
 export function getModelAcceleration(modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetVehicleModelAcceleration(modelHash);
 }
 
@@ -2193,7 +2193,7 @@ export function getModelAcceleration(modelHash: number | string): number {
  * Hash: 0x53409B5163D5B846 | Since: 323
  */
 export function getModelAccelerationMaxMods(modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetVehicleModelEstimatedAgility(modelHash);
 }
 
@@ -2205,7 +2205,7 @@ export function getModelAccelerationMaxMods(modelHash: number | string): number 
  * Hash: 0xF417C2502FFFED43 | Since: 323
  */
 export function getModelEstimatedMaxSpeed(modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetVehicleModelEstimatedMaxSpeed(modelHash);
 }
 
@@ -2217,7 +2217,7 @@ export function getModelEstimatedMaxSpeed(modelHash: number | string): number {
  * Hash: 0xDC53FD41B4ED944C | Since: 323
  */
 export function getModelMaxBraking(modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetVehicleModelMaxBraking(modelHash);
 }
 
@@ -2227,7 +2227,7 @@ export function getModelMaxBraking(modelHash: number | string): number {
  * Hash: 0xBFBA3BA79CFF7EBF | Since: 323
  */
 export function getModelMaxBrakingMaxMods(modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetVehicleModelMaxBrakingMaxMods(modelHash);
 }
 
@@ -2239,7 +2239,7 @@ export function getModelMaxBrakingMaxMods(modelHash: number | string): number {
  * Hash: 0x539DE94D44FDFD0D | Since: 323
  */
 export function getModelMaxTraction(modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetVehicleModelMaxTraction(modelHash);
 }
 
@@ -2251,7 +2251,7 @@ export function getModelMaxTraction(modelHash: number | string): number {
  * Hash: 0x2AD93716F184EDA4 | Since: 323
  */
 export function getModelNumberOfSeats(modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetVehicleModelNumberOfSeats(modelHash);
 }
 
@@ -2261,7 +2261,7 @@ export function getModelNumberOfSeats(modelHash: number | string): number {
  * Hash: 0x5873C14A52D74236 | Since: 463
  */
 export function getModelValue(vehicleModel: number | string): number {
-    if (typeof vehicleModel === 'string') vehicleModel = misc.getHashKey(vehicleModel)
+    if (typeof vehicleModel === 'string') vehicleModel = GetHashKey(vehicleModel)
     return GetVehicleModelValue(vehicleModel);
 }
 
@@ -2846,7 +2846,7 @@ export function isTaxiLightOn(vehicle: number | IVehicle): boolean {
  * Hash: 0x633F6F44A537EBB6 | Since: 944
  */
 export function isThisModelAnAmphibiousCar(model: number | string): boolean {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsThisModelAnAmphibiousCar(model);
 }
 
@@ -2856,7 +2856,7 @@ export function isThisModelAnAmphibiousCar(model: number | string): boolean {
  * Hash: 0xA1A9FC1C76A6730D | Since: 1103
  */
 export function isThisModelAnAmphibiousQuadbike(model: number | string): boolean {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsThisModelAnAmphibiousQuadbike(model);
 }
 
@@ -2866,7 +2866,7 @@ export function isThisModelAnAmphibiousQuadbike(model: number | string): boolean
  * Hash: 0xBF94DD42F63BDED2 | Since: 323
  */
 export function isThisModelABicycle(model: number | string): boolean {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsThisModelABicycle(model);
 }
 
@@ -2876,7 +2876,7 @@ export function isThisModelABicycle(model: number | string): boolean {
  * Hash: 0xB50C0B0CEDC6CE84 | Since: 323
  */
 export function isThisModelABike(model: number | string): boolean {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsThisModelABike(model);
 }
 
@@ -2886,7 +2886,7 @@ export function isThisModelABike(model: number | string): boolean {
  * Hash: 0x45A9187928F4B9E3 | Since: 323
  */
 export function isThisModelABoat(model: number | string): boolean {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsThisModelABoat(model);
 }
 
@@ -2896,7 +2896,7 @@ export function isThisModelABoat(model: number | string): boolean {
  * Hash: 0x7F6DB52EEFC96DF8 | Since: 323
  */
 export function isThisModelACar(model: number | string): boolean {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsThisModelACar(model);
 }
 
@@ -2906,7 +2906,7 @@ export function isThisModelACar(model: number | string): boolean {
  * Hash: 0xDCE4334788AF94EA | Since: 323
  */
 export function isThisModelAHeli(model: number | string): boolean {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsThisModelAHeli(model);
 }
 
@@ -2916,7 +2916,7 @@ export function isThisModelAHeli(model: number | string): boolean {
  * Hash: 0x9537097412CF75FE | Since: 323
  */
 export function isThisModelAJetski(model: number | string): boolean {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsThisModelAJetski(model);
 }
 
@@ -2926,7 +2926,7 @@ export function isThisModelAJetski(model: number | string): boolean {
  * Hash: 0xA0948AB42D7BA0DE | Since: 323
  */
 export function isThisModelAPlane(model: number | string): boolean {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsThisModelAPlane(model);
 }
 
@@ -2936,7 +2936,7 @@ export function isThisModelAPlane(model: number | string): boolean {
  * Hash: 0x39DAC362EE65FA28 | Since: 323
  */
 export function isThisModelAQuadbike(model: number | string): boolean {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsThisModelAQuadbike(model);
 }
 
@@ -2946,7 +2946,7 @@ export function isThisModelAQuadbike(model: number | string): boolean {
  * Hash: 0xAB935175B22E822B | Since: 323
  */
 export function isThisModelATrain(model: number | string): boolean {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsThisModelATrain(model);
 }
 
@@ -3130,7 +3130,7 @@ export function isInSubmarineMode(vehicle: number | IVehicle): boolean {
  * Hash: 0x423E8DE37D934D89 | Since: 323
  */
 export function isModel(vehicle: number | IVehicle, model: number | string): boolean {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsVehicleModel(vehicle, model);
 }
 
@@ -3308,7 +3308,7 @@ export function isVisible(vehicle: number | IVehicle): boolean {
  * Hash: 0x563B65A643ED072E | Since: 1011
  */
 export function isWeaponDisabled(weaponHash: number | string, vehicle: number | IVehicle, owner: number | IPed): boolean {
-    if (typeof weaponHash === 'string') weaponHash = misc.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return IsVehicleWeaponDisabled(weaponHash, vehicle, owner);
 }
 
@@ -3585,7 +3585,7 @@ export function removeWindow(vehicle: number | IVehicle, windowIndex: number): v
  * Hash: 0x81A15811460FAB3A | Since: 323
  */
 export function requestAsset(vehicleHash: number | string, vehicleAsset: number): void {
-    if (typeof vehicleHash === 'string') vehicleHash = misc.getHashKey(vehicleHash)
+    if (typeof vehicleHash === 'string') vehicleHash = GetHashKey(vehicleHash)
     RequestVehicleAsset(vehicleHash, vehicleAsset);
 }
 
@@ -6217,7 +6217,7 @@ export function setHandbrake(vehicle: number | IVehicle, toggle: boolean): void 
  * Hash: 0x10655FAB9915623D | Since: 323
  */
 export function setHandlingOverride(vehicle: number | IVehicle, hash: number | string): void {
-    if (typeof hash === 'string') hash = misc.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     SetVehicleHandlingHashForAi(vehicle, hash);
 }
 
@@ -6551,7 +6551,7 @@ export function setMod(vehicle: number | IVehicle, modType: number, modIndex: nu
  * Hash: 0x0FC2D89AC25A5814 | Since: 323
  */
 export function setModelIsSuppressed(model: number | string, suppressed: boolean): void {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     SetVehicleModelIsSuppressed(model, suppressed);
 }
 
@@ -7393,7 +7393,7 @@ export function startAlarm(vehicle: number | IVehicle): void {
  * Hash: 0x9C8C6504B5B63D2C | Since: 323
  */
 export function startHorn(vehicle: number | IVehicle, duration: number, mode: number | string, forever: boolean): void {
-    if (typeof mode === 'string') mode = misc.getHashKey(mode)
+    if (typeof mode === 'string') mode = GetHashKey(mode)
     StartVehicleHorn(vehicle, duration, mode, forever);
 }
 
@@ -7597,7 +7597,7 @@ export function setOverrideSideRatio(): number {
  * Hash: 0x4D610C6B56031351 | Since: 1011
  */
 export function setParachuteModelOverride(vehicle: number | IVehicle, modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     SetVehicleParachuteModel(vehicle, modelHash);
 }
 
@@ -7660,7 +7660,7 @@ export function enableIndividualPlanePropeller(vehicle: number | IVehicle, prope
  * Hash: 0x1FCB07FE230B6639 | Since: 3258
  */
 export function getIsElectric(vehicleModel: number | string): boolean {
-    if (typeof vehicleModel === 'string') vehicleModel = misc.getHashKey(vehicleModel)
+    if (typeof vehicleModel === 'string') vehicleModel = GetHashKey(vehicleModel)
     return GetIsVehicleElectric(vehicleModel);
 }
 
@@ -7734,7 +7734,7 @@ export function getDesiredDriveGear(vehicle: number | IVehicle): number {
  * Hash: 0x1423725069EE1D14 | Since: 3258
  */
 export function getDrivetrainType(vehicleModel: number | string): number {
-    if (typeof vehicleModel === 'string') vehicleModel = misc.getHashKey(vehicleModel)
+    if (typeof vehicleModel === 'string') vehicleModel = GetHashKey(vehicleModel)
     return GetVehicleDrivetrainType(vehicleModel);
 }
 
@@ -7771,7 +7771,7 @@ export function getMaxExhaustBoneCount(): number {
  * Hash: 0x61F02E4E9A7A61EA | Since: 3095
  */
 export function getModelNumDriveGears(vehicleModel: number | string): number {
-    if (typeof vehicleModel === 'string') vehicleModel = misc.getHashKey(vehicleModel)
+    if (typeof vehicleModel === 'string') vehicleModel = GetHashKey(vehicleModel)
     return Citizen.invokeNative('0x61F02E4E9A7A61EA', vehicleModel);
 }
 
@@ -7799,7 +7799,7 @@ export function getTrailerParentVehicle(trailer: number | IVehicle): number {
  * Hash: 0x6638C0F19DE692FE | Since: 3095
  */
 export function isGen9ExclusiveModel(vehicleModel: number | string): boolean {
-    if (typeof vehicleModel === 'string') vehicleModel = misc.getHashKey(vehicleModel)
+    if (typeof vehicleModel === 'string') vehicleModel = GetHashKey(vehicleModel)
     return Citizen.invokeNative('0x6638C0F19DE692FE', vehicleModel);
 }
 

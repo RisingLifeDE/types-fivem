@@ -12,7 +12,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0x4EE5367468A65CCC | Since: 323
  */
 export function addScriptToRandomPed(name: string, model: number | string): void {
-    if (typeof model === 'string') model = misc.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     AddScriptToRandomPed(name, model, 0, 0);
 }
 
@@ -130,7 +130,7 @@ export function reactivateNamedWorldsWaitingTillOutOfRange(scriptName: string): 
  * Hash: 0x0BE84C318BA6EC22 | Since: 323
  */
 export function registerObjectScript(scriptName: string, modelHash: number | string, activationRange: number): void {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     RegisterObjectScriptBrain(scriptName, modelHash, 0, activationRange, 0, 0);
 }
 

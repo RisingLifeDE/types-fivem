@@ -20,7 +20,7 @@ export function addExplosion(pos: Vector3, explosionType: number, damageScale: n
  * Hash: 0x36DD3FE58B5E5212 | Since: 323
  */
 export function addExplosionWithUserVfx(pos: Vector3, explosionType: number, explosionFx: number | string, damageScale: number, isAudible: boolean, isInvisible: boolean, cameraShake: number): void {
-    if (typeof explosionFx === 'string') explosionFx = misc.getHashKey(explosionFx)
+    if (typeof explosionFx === 'string') explosionFx = GetHashKey(explosionFx)
     AddExplosionWithUserVfx(pos.x, pos.y, pos.z, explosionType, explosionFx, damageScale, isAudible, isInvisible, cameraShake);
 }
 

@@ -48,7 +48,7 @@ export function combatPed(ped, targetPed) {
  */
 export function driveBy(driverPed, targetPed, targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, firingPattern) {
     if (typeof firingPattern === 'string')
-        firingPattern = misc.getHashKey(firingPattern);
+        firingPattern = GetHashKey(firingPattern);
     TaskDriveBy(driverPed, targetPed, targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, false, firingPattern);
 }
 /**
@@ -283,7 +283,7 @@ export function reactAndFleePed(ped, fleeTarget) {
  */
 export function shootAtCoord(ped, pos, duration, firingPattern) {
     if (typeof firingPattern === 'string')
-        firingPattern = misc.getHashKey(firingPattern);
+        firingPattern = GetHashKey(firingPattern);
     TaskShootAtCoord(ped, pos.x, pos.y, pos.z, duration, firingPattern);
 }
 /**
@@ -304,7 +304,7 @@ export function shootAtCoord(ped, pos, duration, firingPattern) {
  */
 export function shootAtEntity(entity, target, duration, firingPattern) {
     if (typeof firingPattern === 'string')
-        firingPattern = misc.getHashKey(firingPattern);
+        firingPattern = GetHashKey(firingPattern);
     TaskShootAtEntity(entity, target, duration, firingPattern);
 }
 /**

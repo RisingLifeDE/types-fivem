@@ -19,7 +19,7 @@ export function addExplosion(pos, explosionType, damageScale, isAudible, isInvis
  */
 export function addExplosionWithUserVfx(pos, explosionType, explosionFx, damageScale, isAudible, isInvisible, cameraShake) {
     if (typeof explosionFx === 'string')
-        explosionFx = misc.getHashKey(explosionFx);
+        explosionFx = GetHashKey(explosionFx);
     AddExplosionWithUserVfx(pos.x, pos.y, pos.z, explosionType, explosionFx, damageScale, isAudible, isInvisible, cameraShake);
 }
 /**

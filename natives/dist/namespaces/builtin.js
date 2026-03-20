@@ -159,7 +159,7 @@ export function startNewScriptWithArgs(scriptName, argCount, stackSize) {
  */
 export function startNewScriptWithNameHash(scriptHash, stackSize) {
     if (typeof scriptHash === 'string')
-        scriptHash = misc.getHashKey(scriptHash);
+        scriptHash = GetHashKey(scriptHash);
     return StartNewScriptWithNameHash(scriptHash, stackSize);
 }
 /**
@@ -169,7 +169,7 @@ export function startNewScriptWithNameHash(scriptHash, stackSize) {
  */
 export function startNewScriptWithNameHashAndArgs(scriptHash, argCount, stackSize) {
     if (typeof scriptHash === 'string')
-        scriptHash = misc.getHashKey(scriptHash);
+        scriptHash = GetHashKey(scriptHash);
     return StartNewScriptWithNameHashAndArgs(scriptHash, argCount, stackSize);
 }
 /**

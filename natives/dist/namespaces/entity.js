@@ -124,7 +124,7 @@ export function clearLastDamageEntity(entity) {
  */
 export function createForcedObject(pos, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     CreateForcedObject(pos.x, pos.y, pos.z, undefined, modelHash, false);
 }
 /**
@@ -137,7 +137,7 @@ export function createForcedObject(pos, modelHash) {
  */
 export function createModelHide(pos, radius, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     CreateModelHide(pos.x, pos.y, pos.z, radius, modelHash, false);
 }
 /**
@@ -147,7 +147,7 @@ export function createModelHide(pos, radius, modelHash) {
  */
 export function createModelHideExcludingScriptObjects(pos, radius, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     CreateModelHideExcludingScriptObjects(pos.x, pos.y, pos.z, radius, modelHash, false);
 }
 /**
@@ -157,9 +157,9 @@ export function createModelHideExcludingScriptObjects(pos, radius, modelHash) {
  */
 export function createModelSwap(pos, radius, originalModel, newModel) {
     if (typeof originalModel === 'string')
-        originalModel = misc.getHashKey(originalModel);
+        originalModel = GetHashKey(originalModel);
     if (typeof newModel === 'string')
-        newModel = misc.getHashKey(newModel);
+        newModel = GetHashKey(newModel);
     CreateModelSwap(pos.x, pos.y, pos.z, radius, originalModel, newModel, false);
 }
 /**
@@ -580,7 +580,7 @@ export function getModel(entity) {
  */
 export function getOfTypeAttachedToEntity(entity, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetEntityPickup(entity, modelHash);
 }
 /**
@@ -817,7 +817,7 @@ export function getWorldPositionOfBone(entity, boneIndex) {
  */
 export function hasAnimEventFired(entity, actionHash) {
     if (typeof actionHash === 'string')
-        actionHash = misc.getHashKey(actionHash);
+        actionHash = GetHashKey(actionHash);
     return HasAnimEventFired(entity, actionHash);
 }
 /**
@@ -1119,7 +1119,7 @@ export function isTouchingEntity(entity, targetEntity) {
  */
 export function isTouchingModel(entity, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return IsEntityTouchingModel(entity, modelHash);
 }
 /**
@@ -1209,7 +1209,7 @@ export function processAttachments(entity) {
  */
 export function removeForcedObject(pos, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     RemoveForcedObject(pos.x, pos.y, pos.z, 0, modelHash);
 }
 /**
@@ -1220,7 +1220,7 @@ export function removeForcedObject(pos, modelHash) {
  */
 export function removeModelHide(pos, radius, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     RemoveModelHide(pos.x, pos.y, pos.z, radius, modelHash, false);
 }
 /**
@@ -1230,9 +1230,9 @@ export function removeModelHide(pos, radius, modelHash) {
  */
 export function removeModelSwap(pos, radius, originalModel, newModel) {
     if (typeof originalModel === 'string')
-        originalModel = misc.getHashKey(originalModel);
+        originalModel = GetHashKey(originalModel);
     if (typeof newModel === 'string')
-        newModel = misc.getHashKey(newModel);
+        newModel = GetHashKey(newModel);
     RemoveModelSwap(pos.x, pos.y, pos.z, radius, originalModel, newModel, false);
 }
 /**
@@ -1477,7 +1477,7 @@ export function setHeading(entity, heading) {
  */
 export function setHealth(entity, health, instigator, weaponType) {
     if (typeof weaponType === 'string')
-        weaponType = misc.getHashKey(weaponType);
+        weaponType = GetHashKey(weaponType);
     SetEntityHealth(entity, health, instigator, weaponType);
 }
 /**
@@ -1822,7 +1822,7 @@ export function stopSynchronizedMapAnim(x1, y1, z1, x2, y2, z2) {
  */
 export function wouldBeOccluded(entityModelHash, pos) {
     if (typeof entityModelHash === 'string')
-        entityModelHash = misc.getHashKey(entityModelHash);
+        entityModelHash = GetHashKey(entityModelHash);
     return WouldEntityBeOccluded(entityModelHash, pos.x, pos.y, pos.z, false);
 }
 /**

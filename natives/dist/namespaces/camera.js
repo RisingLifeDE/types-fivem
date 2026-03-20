@@ -152,7 +152,7 @@ export function createCam(camName) {
  */
 export function create(camHash) {
     if (typeof camHash === 'string')
-        camHash = misc.getHashKey(camHash);
+        camHash = GetHashKey(camHash);
     return CreateCamera(camHash, false);
 }
 /**
@@ -162,7 +162,7 @@ export function create(camHash) {
  */
 export function createWithParams(camHash, pos, rot, fov) {
     if (typeof camHash === 'string')
-        camHash = misc.getHashKey(camHash);
+        camHash = GetHashKey(camHash);
     return CreateCameraWithParams(camHash, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, fov, false, undefined);
 }
 /**
@@ -188,7 +188,7 @@ export function createCamWithParams(camName, pos, rot, fov) {
  */
 export function createCinematicShot(p0, time, entity) {
     if (typeof p0 === 'string')
-        p0 = misc.getHashKey(p0);
+        p0 = GetHashKey(p0);
     CreateCinematicShot(p0, time, false, entity);
 }
 /**
@@ -880,7 +880,7 @@ export function isCinematicIdleCamRendering() {
  */
 export function isCinematicShotActive(p0) {
     if (typeof p0 === 'string')
-        p0 = misc.getHashKey(p0);
+        p0 = GetHashKey(p0);
     return IsCinematicShotActive(p0);
 }
 /**
@@ -1536,7 +1536,7 @@ export function setFirstPersonFlashEffectType() {
  */
 export function setFirstPersonFlashEffectVehicleModelHash(vehicleModel) {
     if (typeof vehicleModel === 'string')
-        vehicleModel = misc.getHashKey(vehicleModel);
+        vehicleModel = GetHashKey(vehicleModel);
     SetGameplayCamVehicleCameraName(vehicleModel);
 }
 /**
@@ -1881,7 +1881,7 @@ export function setScriptedIsFirstPersonThisFrame() {
  */
 export function setTableGamesThisUpdate(hash) {
     if (typeof hash === 'string')
-        hash = misc.getHashKey(hash);
+        hash = GetHashKey(hash);
     return SetTableGamesCameraThisUpdate(hash);
 }
 /**
@@ -2059,7 +2059,7 @@ export function stopCinematicCamShaking() {
  */
 export function stopCinematicShot(p0) {
     if (typeof p0 === 'string')
-        p0 = misc.getHashKey(p0);
+        p0 = GetHashKey(p0);
     StopCinematicShot(p0);
 }
 /**

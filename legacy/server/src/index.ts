@@ -1740,8 +1740,8 @@ export namespace ped {
      * Hash: 0x70559AC7
      */
     export function addDecorationFromHashes(ped: number | IPed, collection: number | string, overlay: number | string): void {
-        if (typeof collection === 'string') collection = misc.getHashKey(collection)
-        if (typeof overlay === 'string') overlay = misc.getHashKey(overlay)
+        if (typeof collection === 'string') collection = GetHashKey(collection)
+        if (typeof overlay === 'string') overlay = GetHashKey(overlay)
         AddPedDecorationFromHashes(ped, collection, overlay);
     }
 
@@ -1777,7 +1777,7 @@ export namespace ped {
      * Hash: 0x389EF71
      */
     export function create(pedType: number, modelHash: number | string, pos: Vector3, heading: number, isNetwork: boolean, bScriptHostPed: boolean): number {
-        if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+        if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
         return CreatePed(pedType, modelHash, pos.x, pos.y, pos.z, heading, isNetwork, bScriptHostPed);
     }
 
@@ -1789,7 +1789,7 @@ export namespace ped {
      * Hash: 0x3000F092
      */
     export function createInsideVehicle(vehicle: number | IVehicle, pedType: number, modelHash: number | string, seat: number, isNetwork: boolean, bScriptHostPed: boolean): number {
-        if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+        if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
         return CreatePedInsideVehicle(vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed);
     }
 
@@ -1989,7 +1989,7 @@ export namespace ped {
      * Hash: 0xB8278882
      */
     export function setCurrentWeapon(ped: number | IPed, weaponHash: number | string, bForceInHand: boolean): void {
-        if (typeof weaponHash === 'string') weaponHash = misc.getHashKey(weaponHash)
+        if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
         SetCurrentPedWeapon(ped, weaponHash, bForceInHand);
     }
 
@@ -2003,7 +2003,7 @@ export namespace ped {
      * Hash: 0xBF90DF1A
      */
     export function setAmmo(ped: number | IPed, weaponHash: number | string, ammo: number): void {
-        if (typeof weaponHash === 'string') weaponHash = misc.getHashKey(weaponHash)
+        if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
         SetPedAmmo(ped, weaponHash, ammo);
     }
 
@@ -3409,7 +3409,7 @@ export namespace player {
      * Hash: 0x774A4C54
      */
     export function setModel(player: number | string | IPlayer, model: number | string): void {
-        if (typeof model === 'string') model = misc.getHashKey(model)
+        if (typeof model === 'string') model = GetHashKey(model)
         SetPlayerModel(player, model);
     }
 
@@ -3751,7 +3751,7 @@ export namespace vehicle {
      * Hash: 0xDD75460A
      */
     export function create(modelHash: number | string, pos: Vector3, heading: number, isNetwork: boolean, netMissionEntity: boolean): number {
-        if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+        if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
         return CreateVehicle(modelHash, pos.x, pos.y, pos.z, heading, isNetwork, netMissionEntity);
     }
 
@@ -3764,7 +3764,7 @@ export namespace vehicle {
      * Hash: 0x6AE51D4B
      */
     export function createServerSetter(modelHash: number | string, _type: string, pos: Vector3, heading: number): number {
-        if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+        if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
         return CreateVehicleServerSetter(modelHash, _type, pos.x, pos.y, pos.z, heading);
     }
 
@@ -4403,8 +4403,8 @@ export namespace weapon {
      * Hash: 0x3E1E286D
      */
     export function giveComponentToPed(ped: number | IPed, weaponHash: number | string, componentHash: number | string): void {
-        if (typeof weaponHash === 'string') weaponHash = misc.getHashKey(weaponHash)
-        if (typeof componentHash === 'string') componentHash = misc.getHashKey(componentHash)
+        if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
+        if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
         GiveWeaponComponentToPed(ped, weaponHash, componentHash);
     }
 
@@ -4416,7 +4416,7 @@ export namespace weapon {
      * Hash: 0xC4D88A85
      */
     export function giveToPed(ped: number | IPed, weaponHash: number | string, ammoCount: number, isHidden: boolean, bForceInHand: boolean): void {
-        if (typeof weaponHash === 'string') weaponHash = misc.getHashKey(weaponHash)
+        if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
         GiveWeaponToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand);
     }
 
@@ -4440,8 +4440,8 @@ export namespace weapon {
      * Hash: 0x412AA00D
      */
     export function removeComponentFromPed(ped: number | IPed, weaponHash: number | string, componentHash: number | string): void {
-        if (typeof weaponHash === 'string') weaponHash = misc.getHashKey(weaponHash)
-        if (typeof componentHash === 'string') componentHash = misc.getHashKey(componentHash)
+        if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
+        if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
         RemoveWeaponComponentFromPed(ped, weaponHash, componentHash);
     }
 
@@ -4462,7 +4462,7 @@ export namespace weapon {
      * Hash: 0x9C37F220
      */
     export function removeFromPed(ped: number | IPed, weaponHash: number | string): void {
-        if (typeof weaponHash === 'string') weaponHash = misc.getHashKey(weaponHash)
+        if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
         RemoveWeaponFromPed(ped, weaponHash);
     }
 
@@ -4559,7 +4559,7 @@ export namespace object {
      * Hash: 0x2F7AA05C
      */
     export function create(modelHash: number | string, pos: Vector3, isNetwork: boolean, netMissionEntity: boolean, doorFlag: boolean): number {
-        if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+        if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
         return CreateObject(modelHash, pos.x, pos.y, pos.z, isNetwork, netMissionEntity, doorFlag);
     }
 
@@ -4572,7 +4572,7 @@ export namespace object {
      * Hash: 0x58040420
      */
     export function createNoOffset(modelHash: number | string, pos: Vector3, isNetwork: boolean, netMissionEntity: boolean, doorFlag: boolean): number {
-        if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+        if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
         return CreateObjectNoOffset(modelHash, pos.x, pos.y, pos.z, isNetwork, netMissionEntity, doorFlag);
     }
 
@@ -4985,7 +4985,7 @@ export namespace task {
      * Hash: 0x2B84D1C4
      */
     export function driveBy(driverPed: number | IPed, targetPed: number | IPed, targetVehicle: number | IVehicle, targetX: number, targetY: number, targetZ: number, distanceToShoot: number, pedAccuracy: number, firingPattern: number | string): void {
-        if (typeof firingPattern === 'string') firingPattern = misc.getHashKey(firingPattern)
+        if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
         TaskDriveBy(driverPed, targetPed, targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, false, firingPattern);
     }
 
@@ -5231,7 +5231,7 @@ export namespace task {
      * Hash: 0x601C22E3
      */
     export function shootAtCoord(ped: number | IPed, pos: Vector3, duration: number, firingPattern: number | string): void {
-        if (typeof firingPattern === 'string') firingPattern = misc.getHashKey(firingPattern)
+        if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
         TaskShootAtCoord(ped, pos.x, pos.y, pos.z, duration, firingPattern);
     }
 
@@ -5252,7 +5252,7 @@ export namespace task {
      * Hash: 0xAC0631C9
      */
     export function shootAtEntity(entity: number | IEntity, target: number | IEntity, duration: number, firingPattern: number | string): void {
-        if (typeof firingPattern === 'string') firingPattern = misc.getHashKey(firingPattern)
+        if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
         TaskShootAtEntity(entity, target, duration, firingPattern);
     }
 
@@ -5986,10 +5986,10 @@ export function getGameTimer(): number {
  * This native converts the passed string to a hash.
  *
  * Hash: 0x98EFF6F1
- * @deprecated Use misc.getHashKey(model) instead
+ * @deprecated Use GetHashKey(model) instead
  */
 export function getHashKey(model: string): number {
-    return misc.getHashKey(model);
+    return GetHashKey(model);
 }
 
 /**

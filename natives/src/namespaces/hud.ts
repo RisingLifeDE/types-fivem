@@ -46,7 +46,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0xEF01D36B9C9D0C7B | Since: 323
  */
 export function activateFrontendMenu(menuhash: number | string, togglePause: boolean, component: number): void {
-    if (typeof menuhash === 'string') menuhash = misc.getHashKey(menuhash)
+    if (typeof menuhash === 'string') menuhash = GetHashKey(menuhash)
     ActivateFrontendMenu(menuhash, togglePause, component);
 }
 
@@ -215,7 +215,7 @@ export function addTextComponentSubstringTextLabel(labelName: string): void {
  * Hash: 0x17299B63C7683A2B | Since: 323
  */
 export function addTextComponentSubstringTextLabelHashKey(gxtEntryHash: number | string): void {
-    if (typeof gxtEntryHash === 'string') gxtEntryHash = misc.getHashKey(gxtEntryHash)
+    if (typeof gxtEntryHash === 'string') gxtEntryHash = GetHashKey(gxtEntryHash)
     AddTextComponentSubstringTextLabelHashKey(gxtEntryHash);
 }
 
@@ -1743,7 +1743,7 @@ export function getCharacterMenuPedIntStat(): [boolean, any] {
  * Hash: 0x24A49BEAF468DC90 | Since: 323
  */
 export function getCharacterMenuPedMaskedIntStat(statHash: number | string, mask: number): [boolean, any] {
-    if (typeof statHash === 'string') statHash = misc.getHashKey(statHash)
+    if (typeof statHash === 'string') statHash = GetHashKey(statHash)
     return Citizen.invokeNative('0x24A49BEAF468DC90', statHash, 0, mask, false);
 }
 
@@ -1940,7 +1940,7 @@ export function getMenuLayoutChangedEventDetails(): [number, number, number] {
  * Hash: 0x052991E59076E4E4 | Since: 323
  */
 export function getMenuPedBoolStat(statHash: number | string): [boolean, boolean] {
-    if (typeof statHash === 'string') statHash = misc.getHashKey(statHash)
+    if (typeof statHash === 'string') statHash = GetHashKey(statHash)
     return GetMenuPedBoolStat(statHash);
 }
 
@@ -1950,7 +1950,7 @@ export function getMenuPedBoolStat(statHash: number | string): [boolean, boolean
  * Hash: 0x5FBD7095FE7AE57F | Since: 323
  */
 export function getMenuPedFloatStat(statHash: number | string): [boolean, number] {
-    if (typeof statHash === 'string') statHash = misc.getHashKey(statHash)
+    if (typeof statHash === 'string') statHash = GetHashKey(statHash)
     return GetMenuPedFloatStat(statHash);
 }
 
@@ -1969,7 +1969,7 @@ export function getMenuPedIntStat(): [boolean, any] {
  * Hash: 0x90A6526CF0381030 | Since: 323
  */
 export function getMenuPedMaskedIntStat(statHash: number | string, mask: number): [boolean, number] {
-    if (typeof statHash === 'string') statHash = misc.getHashKey(statHash)
+    if (typeof statHash === 'string') statHash = GetHashKey(statHash)
     return GetMenuPedMaskedIntStat(statHash, mask, false);
 }
 
@@ -2126,7 +2126,7 @@ export function getStandardBlipEnumId(): number {
  * Hash: 0xD0EF8A959B8A4CB9 | Since: 323
  */
 export function getStreetNameFromHashKey(hash: number | string): string {
-    if (typeof hash === 'string') hash = misc.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     return GetStreetNameFromHashKey(hash);
 }
 
@@ -2377,7 +2377,7 @@ export function getWeaponWheelTopSlot(weaponTypeIndex: number): number {
  * Hash: 0x72C1056D678BB7D8 | Since: 323
  */
 export function setWeaponWheelTopSlot(weaponHash: number | string): void {
-    if (typeof weaponHash === 'string') weaponHash = misc.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     HudSetWeaponWheelTopSlot(weaponHash);
 }
 
@@ -2628,7 +2628,7 @@ export function isMpTextChatTyping(): boolean {
  * Hash: 0x113750538FA31298 | Since: 323
  */
 export function isNamedRendertargetLinked(modelHash: number | string): boolean {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return IsNamedRendertargetLinked(modelHash);
 }
 
@@ -2809,7 +2809,7 @@ export function isWaypointActive(): boolean {
  * Hash: 0xF6C09E276AEB3F2D | Since: 323
  */
 export function linkNamedRendertarget(modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     LinkNamedRendertarget(modelHash);
 }
 
@@ -2876,7 +2876,7 @@ export function openReportugcMenu(): void {
  * Hash: 0x75D3691713C3B05A | Since: 323
  */
 export function openSocialClubMenu(menu: number | string): void {
-    if (typeof menu === 'string') menu = misc.getHashKey(menu)
+    if (typeof menu === 'string') menu = GetHashKey(menu)
     OpenSocialClubMenu(menu);
 }
 
@@ -2895,7 +2895,7 @@ export function overrideMpTextChatColor(hudColor: number): void {
  * Hash: 0x6A1738B4323FE2D9 | Since: 573
  */
 export function overrideMpTextChatTeamString(gxtEntryHash: number | string): void {
-    if (typeof gxtEntryHash === 'string') gxtEntryHash = misc.getHashKey(gxtEntryHash)
+    if (typeof gxtEntryHash === 'string') gxtEntryHash = GetHashKey(gxtEntryHash)
     OverrideMultiplayerChatPrefix(gxtEntryHash);
 }
 
@@ -2927,7 +2927,7 @@ export function pauseMenuceptionTheKick(): void {
  * Hash: 0xDD564BDD0472C936 | Since: 323
  */
 export function pauseMenuActivateContext(contextHash: number | string): void {
-    if (typeof contextHash === 'string') contextHash = misc.getHashKey(contextHash)
+    if (typeof contextHash === 'string') contextHash = GetHashKey(contextHash)
     PauseMenuActivateContext(contextHash);
 }
 
@@ -2937,7 +2937,7 @@ export function pauseMenuActivateContext(contextHash: number | string): void {
  * Hash: 0x444D8CF241EC25C5 | Since: 323
  */
 export function pauseMenuDeactivateContext(contextHash: number | string): void {
-    if (typeof contextHash === 'string') contextHash = misc.getHashKey(contextHash)
+    if (typeof contextHash === 'string') contextHash = GetHashKey(contextHash)
     PauseMenuDeactivateContext(contextHash);
 }
 
@@ -2983,7 +2983,7 @@ export function pauseMenuGetMouseHoverUniqueId(): number {
  * Hash: 0x84698AB38D0C6636 | Since: 323
  */
 export function pauseMenuIsContextActive(contextHash: number | string): boolean {
-    if (typeof contextHash === 'string') contextHash = misc.getHashKey(contextHash)
+    if (typeof contextHash === 'string') contextHash = GetHashKey(contextHash)
     return PauseMenuIsContextActive(contextHash);
 }
 
@@ -3272,7 +3272,7 @@ export function resetReticuleValues(): void {
  * Hash: 0x10706DC6AD2D49C0 | Since: 323
  */
 export function restartFrontendMenu(menuHash: number | string): void {
-    if (typeof menuHash === 'string') menuHash = misc.getHashKey(menuHash)
+    if (typeof menuHash === 'string') menuHash = GetHashKey(menuHash)
     RestartFrontendMenu(menuHash, 0);
 }
 
@@ -4430,7 +4430,7 @@ export function setRadarAsExteriorThisFrame(): void {
  * Hash: 0x59E727A1C9D3E31A | Since: 323
  */
 export function setRadarAsInteriorThisFrame(interior: number | string, pos: Vector3, zoom: number): void {
-    if (typeof interior === 'string') interior = misc.getHashKey(interior)
+    if (typeof interior === 'string') interior = GetHashKey(interior)
     SetRadarAsInteriorThisFrame(interior, pos.x, pos.y, pos.z, zoom);
 }
 

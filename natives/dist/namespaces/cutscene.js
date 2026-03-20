@@ -14,7 +14,7 @@ export function canRequestAssetsForEntity() {
  */
 export function canSetEnterStateForRegisteredEntity(cutsceneEntName, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CanSetEnterStateForRegisteredEntity(cutsceneEntName, modelHash);
 }
 /**
@@ -32,7 +32,7 @@ export function canSetExitStateForCamera() {
  */
 export function canSetExitStateForRegisteredEntity(cutsceneEntName, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CanSetExitStateForRegisteredEntity(cutsceneEntName, modelHash);
 }
 /**
@@ -50,7 +50,7 @@ export function canUseMobilePhoneDuring() {
  */
 export function doesEntityExist(cutsceneEntName, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return DoesCutsceneEntityExist(cutsceneEntName, modelHash);
 }
 /**
@@ -140,7 +140,7 @@ export function getCutFileOffset(cutsceneName, index) {
  */
 export function getEntityIndexOfEntity(cutsceneEntName, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetEntityIndexOfCutsceneEntity(cutsceneEntName, modelHash);
 }
 /**
@@ -150,7 +150,7 @@ export function getEntityIndexOfEntity(cutsceneEntName, modelHash) {
  */
 export function getEntityIndexOfRegisteredEntity(cutsceneEntName, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetEntityIndexOfRegisteredEntity(cutsceneEntName, modelHash);
 }
 /**
@@ -249,7 +249,7 @@ export function networkSetMocapCanBeSkipped(toggle) {
  */
 export function registerEntityFor(cutscenePed, cutsceneEntName, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     RegisterEntityForCutscene(cutscenePed, cutsceneEntName, 0, modelHash, 0);
 }
 /**
@@ -378,7 +378,7 @@ export function setOriginAndOrientation(x1, y1, z1, x2, y2, z2) {
  */
 export function setPedComponentVariation(cutsceneEntName, componentId, drawableId, textureId, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     SetCutscenePedComponentVariation(cutsceneEntName, componentId, drawableId, textureId, modelHash);
 }
 /**
@@ -388,7 +388,7 @@ export function setPedComponentVariation(cutsceneEntName, componentId, drawableI
  */
 export function setPedComponentVariationFromPed(cutsceneEntName, ped, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     SetCutscenePedComponentVariationFromPed(cutsceneEntName, ped, modelHash);
 }
 /**
@@ -405,7 +405,7 @@ export function setPedComponentVariationFromPed(cutsceneEntName, ped, modelHash)
  */
 export function setPedPropVariation(cutsceneEntName, componentId, drawableId, textureId, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     SetCutscenePedPropVariation(cutsceneEntName, componentId, drawableId, textureId, modelHash);
 }
 /**
@@ -439,7 +439,7 @@ export function setScriptCanStart(threadId) {
  */
 export function setVehicleModelPlayerWillExitScene(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     Citizen.invokeNative('0x7F96F23FA9B73327', modelHash);
 }
 /**

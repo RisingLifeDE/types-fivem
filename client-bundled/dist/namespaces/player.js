@@ -1232,7 +1232,7 @@ export function isSpecialAbilityMeterFull(player) {
  */
 export function isSpecialAbilityUnlocked(playerModel) {
     if (typeof playerModel === 'string')
-        playerModel = game.getHashKey(playerModel);
+        playerModel = GetHashKey(playerModel);
     return IsSpecialAbilityUnlocked(playerModel);
 }
 /**
@@ -1880,7 +1880,7 @@ export function setMeleeWeaponDefenseModifier(player, modifier) {
  */
 export function setModel(player, model) {
     if (typeof model === 'string')
-        model = game.getHashKey(model);
+        model = GetHashKey(model);
     SetPlayerModel(player, model);
 }
 /**
@@ -1898,7 +1898,7 @@ export function setNoiseMultiplier(player, multiplier) {
  */
 export function setParachuteModelOverride(player, model) {
     if (typeof model === 'string')
-        model = game.getHashKey(model);
+        model = GetHashKey(model);
     SetPlayerParachuteModelOverride(player, model);
 }
 /**
@@ -1908,7 +1908,7 @@ export function setParachuteModelOverride(player, model) {
  */
 export function setParachutePackModelOverride(player, model) {
     if (typeof model === 'string')
-        model = game.getHashKey(model);
+        model = GetHashKey(model);
     SetPlayerParachutePackModelOverride(player, model);
 }
 /**
@@ -1988,7 +1988,7 @@ export function setPreviousVariationData(player) {
  */
 export function setReserveParachuteModelOverride(player, model) {
     if (typeof model === 'string')
-        model = game.getHashKey(model);
+        model = GetHashKey(model);
     SetPlayerReserveParachuteModelOverride(player, model);
 }
 /**
@@ -2419,7 +2419,7 @@ export function specialAbilityFillMeter(player) {
  */
 export function specialAbilityLock(playerModel) {
     if (typeof playerModel === 'string')
-        playerModel = game.getHashKey(playerModel);
+        playerModel = GetHashKey(playerModel);
     SpecialAbilityLock(playerModel, undefined);
 }
 /**
@@ -2437,7 +2437,7 @@ export function specialAbilityReset(player) {
  */
 export function specialAbilityUnlock(playerModel) {
     if (typeof playerModel === 'string')
-        playerModel = game.getHashKey(playerModel);
+        playerModel = GetHashKey(playerModel);
     SpecialAbilityUnlock(playerModel, undefined);
 }
 /**

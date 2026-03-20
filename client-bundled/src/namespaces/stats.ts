@@ -429,7 +429,7 @@ export function leaderboardsWriteAddColumnLong(): void {
  * Hash: 0xCEA553E35C2246E1 | Since: 573 | API-Set: unknown
  */
 export function orderBossVehicle(vehicleHash: number | string): void {
-    if (typeof vehicleHash === 'string') vehicleHash = game.getHashKey(vehicleHash)
+    if (typeof vehicleHash === 'string') vehicleHash = GetHashKey(vehicleHash)
     OrderedBossVehicle(undefined, undefined, vehicleHash);
 }
 
@@ -547,8 +547,8 @@ export function playAwardNav(): void {
  * Hash: 0x46F917F6B4128FE4 | Since: 323 | API-Set: unknown
  */
 export function playAwardXp(amount: number, _type: number | string, category: number | string): void {
-    if (typeof _type === 'string') _type = game.getHashKey(_type)
-    if (typeof category === 'string') category = game.getHashKey(category)
+    if (typeof _type === 'string') _type = GetHashKey(_type)
+    if (typeof category === 'string') category = GetHashKey(category)
     PlaystatsAwardXp(amount, _type, category);
 }
 
@@ -765,7 +765,7 @@ export function playCarclubPoints(): void {
  * Hash: 0x69C922B677621428 | Since: 2372 | API-Set: unknown
  */
 export function playCarclubPrize(vehicleModel: number | string): void {
-    if (typeof vehicleModel === 'string') vehicleModel = game.getHashKey(vehicleModel)
+    if (typeof vehicleModel === 'string') vehicleModel = GetHashKey(vehicleModel)
     PlaystatsCarclubPrize(0, vehicleModel);
 }
 
@@ -928,7 +928,7 @@ export function playClothChange(p0: number | IPed): void {
  * Hash: 0xCD0A8A9338681CF2 | Since: 1734 | API-Set: unknown
  */
 export function playCollectiblePickedUp(objectHash: number | string, moneyAmount: number, rpAmount: number, chipsAmount: number): void {
-    if (typeof objectHash === 'string') objectHash = game.getHashKey(objectHash)
+    if (typeof objectHash === 'string') objectHash = GetHashKey(objectHash)
     PlaystatsCollectible(0, objectHash, undefined, undefined, moneyAmount, rpAmount, chipsAmount, undefined, 0, undefined, undefined);
 }
 
@@ -1298,7 +1298,7 @@ export function playHeist4Prep(): void {
  * Hash: 0xF4FF020A08BC8863 | Since: 323 | API-Set: unknown
  */
 export function playHeistSaveCheat(hash: number | string): void {
-    if (typeof hash === 'string') hash = game.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     PlaystatsHeistSaveCheat(hash, 0);
 }
 
@@ -1596,7 +1596,7 @@ export function playOddjobDone(totalTimeMs: number): void {
  * Hash: 0x9572BD4DD6B72122 | Since: 1180 | API-Set: unknown
  */
 export function playPegasusAsPersonalAircraft(modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     PlaystatsPegasaircraft(modelHash);
 }
 
@@ -1858,9 +1858,9 @@ export function playWarehouseMissionEnded(): void {
  * Hash: 0xE95C8A1875A02CA4 | Since: 323 | API-Set: unknown
  */
 export function playWeaponModeChange(weaponHash: number | string, componentHashTo: number | string, componentHashFrom: number | string): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
-    if (typeof componentHashTo === 'string') componentHashTo = game.getHashKey(componentHashTo)
-    if (typeof componentHashFrom === 'string') componentHashFrom = game.getHashKey(componentHashFrom)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
+    if (typeof componentHashTo === 'string') componentHashTo = GetHashKey(componentHashTo)
+    if (typeof componentHashFrom === 'string') componentHashFrom = GetHashKey(componentHashFrom)
     PlaystatsWeaponModeChange(weaponHash, componentHashTo, componentHashFrom);
 }
 
@@ -1870,7 +1870,7 @@ export function playWeaponModeChange(weaponHash: number | string, componentHashT
  * Hash: 0xDDF24D535060F811 | Since: 323 | API-Set: unknown
  */
 export function playWebsiteVisited(scaleformHash: number | string): void {
-    if (typeof scaleformHash === 'string') scaleformHash = game.getHashKey(scaleformHash)
+    if (typeof scaleformHash === 'string') scaleformHash = GetHashKey(scaleformHash)
     PlaystatsWebsiteVisited(scaleformHash, 0);
 }
 
@@ -1880,7 +1880,7 @@ export function playWebsiteVisited(scaleformHash: number | string): void {
  * Hash: 0x30A6614C1F7799B8 | Since: 323 | API-Set: unknown
  */
 export function presenceEventUpdatestatFloat(statHash: number | string, value: number): void {
-    if (typeof statHash === 'string') statHash = game.getHashKey(statHash)
+    if (typeof statHash === 'string') statHash = GetHashKey(statHash)
     PresenceEventUpdatestatFloat(statHash, value, 0);
 }
 
@@ -1890,7 +1890,7 @@ export function presenceEventUpdatestatFloat(statHash: number | string, value: n
  * Hash: 0x11FF1C80276097ED | Since: 323 | API-Set: unknown
  */
 export function presenceEventUpdatestatInt(statHash: number | string, value: number): void {
-    if (typeof statHash === 'string') statHash = game.getHashKey(statHash)
+    if (typeof statHash === 'string') statHash = GetHashKey(statHash)
     PresenceEventUpdatestatInt(statHash, value, 0);
 }
 
@@ -1900,7 +1900,7 @@ export function presenceEventUpdatestatInt(statHash: number | string, value: num
  * Hash: 0x6483C25849031C4F | Since: 323 | API-Set: unknown
  */
 export function presenceEventUpdatestatIntWithString(statHash: number | string, value: number, _string: string): void {
-    if (typeof statHash === 'string') statHash = game.getHashKey(statHash)
+    if (typeof statHash === 'string') statHash = GetHashKey(statHash)
     Citizen.invokeNative('0x6483C25849031C4F', statHash, value, 0, _string);
 }
 
@@ -2139,7 +2139,7 @@ export function statCloudSlotSaveFailed(): boolean {
  * Hash: 0xBED9F5693F34ED17 | Since: 323 | API-Set: unknown
  */
 export function statCommunityGetHistory(statName: number | string): [boolean, number] {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     return Citizen.invokeNative('0xBED9F5693F34ED17', statName, 0);
 }
 
@@ -2203,7 +2203,7 @@ export function statGetBlockSaves(): boolean {
  * Hash: 0x11B5E6D2AE73F48E | Since: 323 | API-Set: unknown
  */
 export function statGetBool(statHash: number | string): [boolean, boolean] {
-    if (typeof statHash === 'string') statHash = game.getHashKey(statHash)
+    if (typeof statHash === 'string') statHash = GetHashKey(statHash)
     return StatGetBool(statHash, undefined);
 }
 
@@ -2303,7 +2303,7 @@ export function statGetCurrentSpeed(): number {
  * Hash: 0x8B0FACEFC36C824B | Since: 323 | API-Set: unknown
  */
 export function statGetDate(statHash: number | string, numFields: number): [boolean, any] {
-    if (typeof statHash === 'string') statHash = game.getHashKey(statHash)
+    if (typeof statHash === 'string') statHash = GetHashKey(statHash)
     return StatGetDate(statHash, numFields, undefined);
 }
 
@@ -2313,7 +2313,7 @@ export function statGetDate(statHash: number | string, numFields: number): [bool
  * Hash: 0xD7AE6C9C9C6AC54C | Since: 323 | API-Set: unknown
  */
 export function statGetFloat(statHash: number | string): [boolean, number] {
-    if (typeof statHash === 'string') statHash = game.getHashKey(statHash)
+    if (typeof statHash === 'string') statHash = GetHashKey(statHash)
     return StatGetFloat(statHash, undefined);
 }
 
@@ -2333,7 +2333,7 @@ export function statGetFlyingAltitude(): [boolean, number] {
  * Hash: 0x767FBC2AC802EF3D | Since: 323 | API-Set: unknown
  */
 export function statGetInt(statHash: number | string): [boolean, number] {
-    if (typeof statHash === 'string') statHash = game.getHashKey(statHash)
+    if (typeof statHash === 'string') statHash = GetHashKey(statHash)
     return StatGetInt(statHash, 0);
 }
 
@@ -2343,7 +2343,7 @@ export function statGetInt(statHash: number | string): [boolean, number] {
  * Hash: 0x5473D4195058B2E4 | Since: 323 | API-Set: unknown
  */
 export function statGetLicensePlate(statName: number | string): string {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     return StatGetLicensePlate(statName);
 }
 
@@ -2362,7 +2362,7 @@ export function statGetLoadSafeToProgressToMpFromSp(): boolean {
  * Hash: 0x655185A06D9EEAAB | Since: 323 | API-Set: unknown
  */
 export function statGetMaskedInt(statHash: number | string): [boolean, number] {
-    if (typeof statHash === 'string') statHash = game.getHashKey(statHash)
+    if (typeof statHash === 'string') statHash = GetHashKey(statHash)
     return StatGetMaskedInt(statHash, 0, 0, undefined);
 }
 
@@ -2372,7 +2372,7 @@ export function statGetMaskedInt(statHash: number | string): [boolean, number] {
  * Hash: 0xE0E854F5280FB769 | Since: 323 | API-Set: unknown
  */
 export function statGetNumberOfDays(statName: number | string): number {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     return StatGetNumberOfDays(statName);
 }
 
@@ -2382,7 +2382,7 @@ export function statGetNumberOfDays(statName: number | string): number {
  * Hash: 0xF2D4B2FE415AAFC3 | Since: 323 | API-Set: unknown
  */
 export function statGetNumberOfHours(statName: number | string): number {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     return StatGetNumberOfHours(statName);
 }
 
@@ -2392,7 +2392,7 @@ export function statGetNumberOfHours(statName: number | string): number {
  * Hash: 0x7583B4BE4C5A41B5 | Since: 323 | API-Set: unknown
  */
 export function statGetNumberOfMinutes(statName: number | string): number {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     return StatGetNumberOfMinutes(statName);
 }
 
@@ -2402,7 +2402,7 @@ export function statGetNumberOfMinutes(statName: number | string): number {
  * Hash: 0x2CE056FF3723F00B | Since: 323 | API-Set: unknown
  */
 export function statGetNumberOfSeconds(statName: number | string): number {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     return StatGetNumberOfSeconds(statName);
 }
 
@@ -2412,7 +2412,7 @@ export function statGetNumberOfSeconds(statName: number | string): number {
  * Hash: 0x350F82CCB186AA1B | Since: 323 | API-Set: unknown
  */
 export function statGetPos(statName: number | string): [boolean, number, number, number] {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     return StatGetPos(statName, undefined);
 }
 
@@ -2449,7 +2449,7 @@ export function statGetSaveMigrationStatus(): [number, any] {
  * Hash: 0xE50384ACC2C3DB74 | Since: 323 | API-Set: unknown
  */
 export function statGetString(statHash: number | string): string {
-    if (typeof statHash === 'string') statHash = game.getHashKey(statHash)
+    if (typeof statHash === 'string') statHash = GetHashKey(statHash)
     return StatGetString(statHash, 0);
 }
 
@@ -2459,7 +2459,7 @@ export function statGetString(statHash: number | string): string {
  * Hash: 0x2365C388E393BBE2 | Since: 323 | API-Set: unknown
  */
 export function statGetUserId(statHash: number | string): string {
-    if (typeof statHash === 'string') statHash = game.getHashKey(statHash)
+    if (typeof statHash === 'string') statHash = GetHashKey(statHash)
     return StatGetUserId(statHash);
 }
 
@@ -2478,7 +2478,7 @@ export function statGetVehicleBailDistance(): number {
  * Hash: 0x9B5A68C6489E9909 | Since: 323 | API-Set: unknown
  */
 export function statIncrement(statName: number | string, value: number): void {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     StatIncrement(statName, value);
 }
 
@@ -2659,7 +2659,7 @@ export function aveMigrationCancelPendingOperation(): boolean {
  * Hash: 0x3270F67EED31FBC1 | Since: 323 | API-Set: unknown
  */
 export function aveMigrationConsumeContent(contentId: number | string, srcPlatform: string, srcGamerHandle: string): boolean {
-    if (typeof contentId === 'string') contentId = game.getHashKey(contentId)
+    if (typeof contentId === 'string') contentId = GetHashKey(contentId)
     return StatSaveMigrationConsumeContentUnlock(contentId, srcPlatform, srcGamerHandle);
 }
 
@@ -2697,7 +2697,7 @@ export function etBlockSaves(toggle: boolean): void {
  * Hash: 0x4B33C4243DE0C432 | Since: 323 | API-Set: unknown
  */
 export function etBool(statName: number | string, value: boolean, save: boolean): boolean {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     return StatSetBool(statName, value, save);
 }
 
@@ -2716,7 +2716,7 @@ export function etCheatIsActive(): void {
  * Hash: 0xC2F84B7F9C4D0C61 | Since: 323 | API-Set: unknown
  */
 export function etCurrentPosixTime(statName: number | string): boolean {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     return StatSetCurrentPosixTime(statName, false);
 }
 
@@ -2738,7 +2738,7 @@ export function etCurrentPosixTime(statName: number | string): boolean {
  * Hash: 0x2C29BFB64F4FCBE4 | Since: 323 | API-Set: unknown
  */
 export function etDate(statName: number | string, numFields: number, save: boolean): [boolean, any] {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     return StatSetDate(statName, numFields, save);
 }
 
@@ -2749,7 +2749,7 @@ export function etDate(statName: number | string, numFields: number, save: boole
  * Hash: 0x4851997F37FE9B3C | Since: 323 | API-Set: unknown
  */
 export function etFloat(statName: number | string, value: number, save: boolean): boolean {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     return StatSetFloat(statName, value, save);
 }
 
@@ -2822,7 +2822,7 @@ export function etFloat(statName: number | string, value: number, save: boolean)
  * Hash: 0x17695002FD8B2AE0 | Since: 323 | API-Set: unknown
  */
 export function etGxtLabel(statName: number | string, value: string, save: boolean): boolean {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     return StatSetGxtLabel(statName, value, save);
 }
 
@@ -2833,7 +2833,7 @@ export function etGxtLabel(statName: number | string, value: string, save: boole
  * Hash: 0xB3271D7AB655B441 | Since: 323 | API-Set: unknown
  */
 export function etInt(statName: number | string, value: number, save: boolean): boolean {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     return StatSetInt(statName, value, save);
 }
 
@@ -2843,7 +2843,7 @@ export function etInt(statName: number | string, value: number, save: boolean): 
  * Hash: 0x69FF13266D7296DA | Since: 323 | API-Set: unknown
  */
 export function etLicensePlate(statName: number | string, str: string): boolean {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     return StatSetLicensePlate(statName, str);
 }
 
@@ -2853,7 +2853,7 @@ export function etLicensePlate(statName: number | string, str: string): boolean 
  * Hash: 0x7BBB1B54583ED410 | Since: 323 | API-Set: unknown
  */
 export function etMaskedInt(statName: number | string, save: boolean): boolean {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     return StatSetMaskedInt(statName, 0, 0, 0, save);
 }
 
@@ -2872,7 +2872,7 @@ export function etOpenSavetypeInJob(): void {
  * Hash: 0xDB283FDE680FE72E | Since: 323 | API-Set: unknown
  */
 export function etPos(statName: number | string, pos: Vector3, save: boolean): boolean {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     return StatSetPos(statName, pos.x, pos.y, pos.z, save);
 }
 
@@ -2893,7 +2893,7 @@ export function etProfileSettingValue(profileSetting: number, value: number): vo
  * Hash: 0xA87B2335D12531D7 | Since: 323 | API-Set: unknown
  */
 export function etString(statName: number | string, value: string, save: boolean): boolean {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     return StatSetString(statName, value, save);
 }
 
@@ -2903,7 +2903,7 @@ export function etString(statName: number | string, value: string, save: boolean
  * Hash: 0x8CDDF1E452BABE11 | Since: 323 | API-Set: unknown
  */
 export function etUserId(statName: number | string, value: string, save: boolean): boolean {
-    if (typeof statName === 'string') statName = game.getHashKey(statName)
+    if (typeof statName === 'string') statName = GetHashKey(statName)
     return StatSetUserId(statName, value, save);
 }
 
@@ -3169,7 +3169,7 @@ export function playShopmenuNav(): void {
  * Hash: 0x961D4157B9B428DB | Since: 2944 | API-Set: unknown
  */
 export function playShowroomNav(entity: number | string): void {
-    if (typeof entity === 'string') entity = game.getHashKey(entity)
+    if (typeof entity === 'string') entity = GetHashKey(entity)
     Citizen.invokeNative('0x961D4157B9B428DB', undefined, undefined, entity);
 }
 

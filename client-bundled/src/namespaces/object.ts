@@ -37,8 +37,8 @@ export function doorSystemGetSize(): number {
  * Hash: 0x6F8838D03D1DC226 | Since: 323 | API-Set: unknown
  */
 export function addDoorToSystem(doorHash: number | string, modelHash: number | string, pos: Vector3, scriptDoor: boolean, isLocal: boolean): void {
-    if (typeof doorHash === 'string') doorHash = game.getHashKey(doorHash)
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     AddDoorToSystem(doorHash, modelHash, pos.x, pos.y, pos.z, false, scriptDoor, isLocal, undefined);
 }
 
@@ -58,7 +58,7 @@ export function addExtendedPickupProbeArea(pos: Vector3, radius: number): void {
  * Hash: 0xFDC07C58E8AAB715 | Since: 1734 | API-Set: unknown
  */
 export function allowAllPlayersToCollectPickupsOfType(pickupHash: number | string): void {
-    if (typeof pickupHash === 'string') pickupHash = game.getHashKey(pickupHash)
+    if (typeof pickupHash === 'string') pickupHash = GetHashKey(pickupHash)
     Citizen.invokeNative('0xFDC07C58E8AAB715', pickupHash);
 }
 
@@ -104,7 +104,7 @@ export function allowPortablePickupToMigrateToNonParticipants(pickup: any, toggl
  * Hash: 0x85B6C850546FDDE2 | Since: 323 | API-Set: unknown
  */
 export function areEntitiesEntirelyInsideGarage(garageHash: number | string): boolean {
-    if (typeof garageHash === 'string') garageHash = game.getHashKey(garageHash)
+    if (typeof garageHash === 'string') garageHash = GetHashKey(garageHash)
     return AreEntitiesEntirelyInsideGarage(garageHash, false, false, false, undefined);
 }
 
@@ -159,7 +159,7 @@ export function clearExtendedPickupProbeAreas(): void {
  * Hash: 0xDA05194260CDCDF9 | Since: 678 | API-Set: unknown
  */
 export function clearGarage(garageHash: number | string, isNetwork: boolean): void {
-    if (typeof garageHash === 'string') garageHash = game.getHashKey(garageHash)
+    if (typeof garageHash === 'string') garageHash = GetHashKey(garageHash)
     ClearGarageArea(garageHash, isNetwork);
 }
 
@@ -169,7 +169,7 @@ export function clearGarage(garageHash: number | string, isNetwork: boolean): vo
  * Hash: 0x190428512B240692 | Since: 323 | API-Set: unknown
  */
 export function clearsInsideGarage(garageHash: number | string, vehicles: boolean, peds: boolean, objects: boolean, isNetwork: boolean): void {
-    if (typeof garageHash === 'string') garageHash = game.getHashKey(garageHash)
+    if (typeof garageHash === 'string') garageHash = GetHashKey(garageHash)
     ClearObjectsInsideGarage(garageHash, vehicles, peds, objects, isNetwork);
 }
 
@@ -209,7 +209,7 @@ export function closeSafehouseGarages(): void {
  * Hash: 0x5EAAD83F8CFB4575 | Since: 323 | API-Set: unknown
  */
 export function convertOldPickupTypeToNew(pickupHash: number | string): number {
-    if (typeof pickupHash === 'string') pickupHash = game.getHashKey(pickupHash)
+    if (typeof pickupHash === 'string') pickupHash = GetHashKey(pickupHash)
     return GetPickupHash(pickupHash);
 }
 
@@ -219,8 +219,8 @@ export function convertOldPickupTypeToNew(pickupHash: number | string): number {
  * Hash: 0x673966A0C0FD7171 | Since: 323 | API-Set: unknown
  */
 export function createAmbientPickup(pickupHash: number | string, pos: Vector3, flags: number, value: number, modelHash: number | string): number {
-    if (typeof pickupHash === 'string') pickupHash = game.getHashKey(pickupHash)
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof pickupHash === 'string') pickupHash = GetHashKey(pickupHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CreateAmbientPickup(pickupHash, pos.x, pos.y, pos.z, flags, value, modelHash, false, false);
 }
 
@@ -246,7 +246,7 @@ export function createAmbientPickup(pickupHash: number | string, pos: Vector3, f
  * Hash: 0x0589B5E791CE9B2B | Since: 323 | API-Set: unknown
  */
 export function createMoneyPickups(pos: Vector3, value: number, amount: number, model: number | string): void {
-    if (typeof model === 'string') model = game.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     CreateMoneyPickups(pos.x, pos.y, pos.z, value, amount, model);
 }
 
@@ -256,8 +256,8 @@ export function createMoneyPickups(pos: Vector3, value: number, amount: number, 
  * Hash: 0x9C93764223E29C50 | Since: 2372 | API-Set: unknown
  */
 export function createNonNetworkedAmbientPickup(pickupHash: number | string, pos: Vector3, flags: number, value: number, modelHash: number | string): number {
-    if (typeof pickupHash === 'string') pickupHash = game.getHashKey(pickupHash)
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof pickupHash === 'string') pickupHash = GetHashKey(pickupHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CreateNonNetworkedAmbientPickup(pickupHash, pos.x, pos.y, pos.z, flags, value, modelHash, false, false);
 }
 
@@ -267,8 +267,8 @@ export function createNonNetworkedAmbientPickup(pickupHash: number | string, pos
  * Hash: 0x125494B98A21AAF7 | Since: 323 | API-Set: unknown
  */
 export function createNonNetworkedPortablePickup(pickupHash: number | string, pos: Vector3, placeOnGround: boolean, modelHash: number | string): number {
-    if (typeof pickupHash === 'string') pickupHash = game.getHashKey(pickupHash)
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof pickupHash === 'string') pickupHash = GetHashKey(pickupHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CreateNonNetworkedPortablePickup(pickupHash, pos.x, pos.y, pos.z, placeOnGround, modelHash);
 }
 
@@ -278,7 +278,7 @@ export function createNonNetworkedPortablePickup(pickupHash: number | string, po
  * Hash: 0x509D5878EB39E842 | Since: 323 | API-Set: unknown
  */
 export function create(modelHash: number | string, pos: Vector3, isNetwork: boolean, bScriptHostObj: boolean, dynamic: boolean): number {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CreateObject(modelHash, pos.x, pos.y, pos.z, isNetwork, bScriptHostObj, dynamic);
 }
 
@@ -288,7 +288,7 @@ export function create(modelHash: number | string, pos: Vector3, isNetwork: bool
  * Hash: 0x9A294B2138ABB884 | Since: 323 | API-Set: unknown
  */
 export function createNoOffset(modelHash: number | string, pos: Vector3, isNetwork: boolean, bScriptHostObj: boolean, dynamic: boolean): number {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CreateObjectNoOffset(modelHash, pos.x, pos.y, pos.z, isNetwork, bScriptHostObj, dynamic, undefined);
 }
 
@@ -298,8 +298,8 @@ export function createNoOffset(modelHash: number | string, pos: Vector3, isNetwo
  * Hash: 0xFBA08C503DD5FA58 | Since: 323 | API-Set: unknown
  */
 export function createPickup(pickupHash: number | string, pos: Vector3, value: number, modelHash: number | string): any {
-    if (typeof pickupHash === 'string') pickupHash = game.getHashKey(pickupHash)
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof pickupHash === 'string') pickupHash = GetHashKey(pickupHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CreatePickup(pickupHash, pos.x, pos.y, pos.z, 0, value, false, modelHash);
 }
 
@@ -313,8 +313,8 @@ export function createPickup(pickupHash: number | string, pos: Vector3, value: n
  * Hash: 0x891804727E0A98B7 | Since: 323 | API-Set: unknown
  */
 export function createPickupRotate(pickupHash: number | string, pos: Vector3, rot: Vector3, flag: number, amount: number, modelHash: number | string): any {
-    if (typeof pickupHash === 'string') pickupHash = game.getHashKey(pickupHash)
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof pickupHash === 'string') pickupHash = GetHashKey(pickupHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CreatePickupRotate(pickupHash, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, flag, amount, undefined, false, modelHash);
 }
 
@@ -324,8 +324,8 @@ export function createPickupRotate(pickupHash: number | string, pos: Vector3, ro
  * Hash: 0x2EAF1FDB2FB55698 | Since: 323 | API-Set: unknown
  */
 export function createPortablePickup(pickupHash: number | string, pos: Vector3, placeOnGround: boolean, modelHash: number | string): number {
-    if (typeof pickupHash === 'string') pickupHash = game.getHashKey(pickupHash)
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof pickupHash === 'string') pickupHash = GetHashKey(pickupHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CreatePortablePickup(pickupHash, pos.x, pos.y, pos.z, placeOnGround, modelHash);
 }
 
@@ -371,7 +371,7 @@ export function disableTidyingUpInGarage(id: number, toggle: boolean): void {
  * Hash: 0xBFA48E2FF417213F | Since: 323 | API-Set: unknown
  */
 export function doesOfTypeExistAtCoords(pos: Vector3, radius: number, hash: number | string): boolean {
-    if (typeof hash === 'string') hash = game.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     return DoesObjectOfTypeExistAtCoords(pos.x, pos.y, pos.z, radius, hash, false);
 }
 
@@ -399,7 +399,7 @@ export function doesPickupObjectExist(pickupObject: number | IObject): boolean {
  * Hash: 0xF9C36251F6E48E33 | Since: 323 | API-Set: unknown
  */
 export function doesPickupOfTypeExistInArea(pickupHash: number | string, pos: Vector3, radius: number): boolean {
-    if (typeof pickupHash === 'string') pickupHash = game.getHashKey(pickupHash)
+    if (typeof pickupHash === 'string') pickupHash = GetHashKey(pickupHash)
     return DoesPickupOfTypeExistInArea(pickupHash, pos.x, pos.y, pos.z, radius);
 }
 
@@ -418,7 +418,7 @@ export function doesRayfireMapExist(_object: number | IObject): boolean {
  * Hash: 0x589F80B325CC82C5 | Since: 323 | API-Set: unknown
  */
 export function doorSystemFindExistingDoor(pos: Vector3, modelHash: number | string): [boolean, number] {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return DoorSystemFindExistingDoor(pos.x, pos.y, pos.z, modelHash);
 }
 
@@ -428,7 +428,7 @@ export function doorSystemFindExistingDoor(pos: Vector3, modelHash: number | str
  * Hash: 0xE851471AEFC3374F | Since: 1868 | API-Set: unknown
  */
 export function doorSystemGetAutomaticDistance(doorHash: number | string): number {
-    if (typeof doorHash === 'string') doorHash = game.getHashKey(doorHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
     return DoorSystemGetAutomaticDistance(doorHash);
 }
 
@@ -438,7 +438,7 @@ export function doorSystemGetAutomaticDistance(doorHash: number | string): numbe
  * Hash: 0x4BC2854478F3A749 | Since: 323 | API-Set: unknown
  */
 export function doorSystemGetDoorPendingState(doorHash: number | string): number {
-    if (typeof doorHash === 'string') doorHash = game.getHashKey(doorHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
     return DoorSystemGetDoorPendingState(doorHash);
 }
 
@@ -448,7 +448,7 @@ export function doorSystemGetDoorPendingState(doorHash: number | string): number
  * Hash: 0x160AA1B32F6139B8 | Since: 323 | API-Set: unknown
  */
 export function doorSystemGetDoorState(doorHash: number | string): number {
-    if (typeof doorHash === 'string') doorHash = game.getHashKey(doorHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
     return DoorSystemGetDoorState(doorHash);
 }
 
@@ -467,7 +467,7 @@ export function doorSystemGetIsPhysicsLoaded(): boolean {
  * Hash: 0x8562FD8AB1E94D39 | Since: 3407 | API-Set: unknown
  */
 export function doorSystemGetIsSpringRemoved(doorHash: number | string): boolean {
-    if (typeof doorHash === 'string') doorHash = game.getHashKey(doorHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
     return Citizen.invokeNative('0x8562FD8AB1E94D39', doorHash);
 }
 
@@ -477,7 +477,7 @@ export function doorSystemGetIsSpringRemoved(doorHash: number | string): boolean
  * Hash: 0x65499865FCA6E5EC | Since: 323 | API-Set: unknown
  */
 export function doorSystemGetOpenRatio(doorHash: number | string): number {
-    if (typeof doorHash === 'string') doorHash = game.getHashKey(doorHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
     return DoorSystemGetOpenRatio(doorHash);
 }
 
@@ -487,7 +487,7 @@ export function doorSystemGetOpenRatio(doorHash: number | string): number {
  * Hash: 0x9BA001CB45CBF627 | Since: 323 | API-Set: unknown
  */
 export function doorSystemSetAutomaticDistance(doorHash: number | string, distance: number, requestDoor: boolean, forceUpdate: boolean): void {
-    if (typeof doorHash === 'string') doorHash = game.getHashKey(doorHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
     DoorSystemSetAutomaticDistance(doorHash, distance, requestDoor, forceUpdate);
 }
 
@@ -498,7 +498,7 @@ export function doorSystemSetAutomaticDistance(doorHash: number | string, distan
  * Hash: 0x03C27E13B42A0E82 | Since: 323 | API-Set: unknown
  */
 export function doorSystemSetAutomaticRate(doorHash: number | string, rate: number, requestDoor: boolean, forceUpdate: boolean): void {
-    if (typeof doorHash === 'string') doorHash = game.getHashKey(doorHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
     DoorSystemSetAutomaticRate(doorHash, rate, requestDoor, forceUpdate);
 }
 
@@ -508,7 +508,7 @@ export function doorSystemSetAutomaticRate(doorHash: number | string, rate: numb
  * Hash: 0xA85A21582451E951 | Since: 323 | API-Set: unknown
  */
 export function doorSystemSetDoorOpenForRaces(doorHash: number | string): void {
-    if (typeof doorHash === 'string') doorHash = game.getHashKey(doorHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
     Citizen.invokeNative('0xA85A21582451E951', doorHash, false);
 }
 
@@ -528,7 +528,7 @@ export function doorSystemSetDoorOpenForRaces(doorHash: number | string): void {
  * Hash: 0x6BAB9442830C7F53 | Since: 323 | API-Set: unknown
  */
 export function doorSystemSetDoorState(doorHash: number | string, state: number, requestDoor: boolean, forceUpdate: boolean): void {
-    if (typeof doorHash === 'string') doorHash = game.getHashKey(doorHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
     DoorSystemSetDoorState(doorHash, state, requestDoor, forceUpdate);
 }
 
@@ -538,7 +538,7 @@ export function doorSystemSetDoorState(doorHash: number | string, state: number,
  * Hash: 0xD9B71952F78A2640 | Since: 323 | API-Set: unknown
  */
 export function doorSystemSetHoldOpen(doorHash: number | string, toggle: boolean): void {
-    if (typeof doorHash === 'string') doorHash = game.getHashKey(doorHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
     DoorSystemSetHoldOpen(doorHash, toggle);
 }
 
@@ -550,7 +550,7 @@ export function doorSystemSetHoldOpen(doorHash: number | string, toggle: boolean
  * Hash: 0xB6E6FBA95C7324AC | Since: 323 | API-Set: unknown
  */
 export function doorSystemSetOpenRatio(doorHash: number | string, ajar: number, requestDoor: boolean, forceUpdate: boolean): void {
-    if (typeof doorHash === 'string') doorHash = game.getHashKey(doorHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
     DoorSystemSetOpenRatio(doorHash, ajar, requestDoor, forceUpdate);
 }
 
@@ -561,7 +561,7 @@ export function doorSystemSetOpenRatio(doorHash: number | string, ajar: number, 
  * Hash: 0xC485E07E4F0B7958 | Since: 323 | API-Set: unknown
  */
 export function doorSystemSetSpringRemoved(doorHash: number | string, removed: boolean, requestDoor: boolean, forceUpdate: boolean): void {
-    if (typeof doorHash === 'string') doorHash = game.getHashKey(doorHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
     DoorSystemSetSpringRemoved(doorHash, removed, requestDoor, forceUpdate);
 }
 
@@ -571,7 +571,7 @@ export function doorSystemSetSpringRemoved(doorHash: number | string, removed: b
  * Hash: 0xF2E1A7133DD356A6 | Since: 323 | API-Set: unknown
  */
 export function enableSavingInGarage(garageHash: number | string, toggle: boolean): void {
-    if (typeof garageHash === 'string') garageHash = game.getHashKey(garageHash)
+    if (typeof garageHash === 'string') garageHash = GetHashKey(garageHash)
     EnableSavingInGarage(garageHash, toggle);
 }
 
@@ -628,7 +628,7 @@ export function forcePortablePickupLastAccessiblePositionSetting(_object: number
  * Hash: 0xE143FA2249364369 | Since: 323 | API-Set: unknown
  */
 export function getClosestOfType(pos: Vector3, radius: number, modelHash: number | string, isMission: boolean): number {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetClosestObjectOfType(pos.x, pos.y, pos.z, radius, modelHash, isMission, false, false);
 }
 
@@ -638,7 +638,7 @@ export function getClosestOfType(pos: Vector3, radius: number, modelHash: number
  * Hash: 0x163F8B586BC95F2A | Since: 323 | API-Set: unknown
  */
 export function getCoordsAndRotationOfClosestOfType(pos: Vector3, radius: number, modelHash: number | string, rotationOrder: number): [boolean, Vector3, Vector3] {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetCoordsAndRotationOfClosestObjectOfType(pos.x, pos.y, pos.z, radius, modelHash, rotationOrder);
 }
 
@@ -648,7 +648,7 @@ export function getCoordsAndRotationOfClosestOfType(pos: Vector3, radius: number
  * Hash: 0xDB41D07A45A6D4B7 | Since: 323 | API-Set: unknown
  */
 export function getDefaultAmmoForWeaponPickup(pickupHash: number | string): number {
-    if (typeof pickupHash === 'string') pickupHash = game.getHashKey(pickupHash)
+    if (typeof pickupHash === 'string') pickupHash = GetHashKey(pickupHash)
     return Citizen.invokeNative('0xDB41D07A45A6D4B7', pickupHash);
 }
 
@@ -739,7 +739,7 @@ export function getPickup(pickup: any): number {
  * Hash: 0xD6429A016084F1A5 | Since: 1290 | API-Set: unknown
  */
 export function getPickupTypeFromWeaponHash(weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetPickupHashFromWeapon(weaponHash);
 }
 
@@ -783,7 +783,7 @@ export function getSafePickupCoords(pos: Vector3): Vector3 {
  * Hash: 0xEDC1A5B84AEF33FF | Since: 323 | API-Set: unknown
  */
 export function getStateOfClosestDoorOfType(_type: number | string, pos: Vector3): [boolean, number] {
-    if (typeof _type === 'string') _type = game.getHashKey(_type)
+    if (typeof _type === 'string') _type = GetHashKey(_type)
     return GetStateOfClosestDoorOfType(_type, pos.x, pos.y, pos.z);
 }
 
@@ -805,7 +805,7 @@ export function getStateOfRayfireMap(_object: number | IObject): number {
  * Hash: 0x08F96CA6C551AD51 | Since: 323 | API-Set: unknown
  */
 export function getWeaponTypeFromPickupType(pickupHash: number | string): number {
-    if (typeof pickupHash === 'string') pickupHash = game.getHashKey(pickupHash)
+    if (typeof pickupHash === 'string') pickupHash = GetHashKey(pickupHash)
     return GetWeaponTypeFromPickupType(pickupHash);
 }
 
@@ -815,7 +815,7 @@ export function getWeaponTypeFromPickupType(pickupHash: number | string): number
  * Hash: 0x761B0E69AC4D007E | Since: 323 | API-Set: unknown
  */
 export function hasClosestOfTypeBeenBroken(modelHash: number | string): boolean {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return HasClosestObjectOfTypeBeenBroken(0, 0, 0, 0, modelHash, undefined);
 }
 
@@ -825,7 +825,7 @@ export function hasClosestOfTypeBeenBroken(modelHash: number | string): boolean 
  * Hash: 0x46494A2475701343 | Since: 323 | API-Set: unknown
  */
 export function hasClosestOfTypeBeenCompletelyDestroyed(pos: Vector3, radius: number, modelHash: number | string): boolean {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return HasClosestObjectOfTypeBeenCompletelyDestroyed(pos.x, pos.y, pos.z, radius, modelHash, false);
 }
 
@@ -862,7 +862,7 @@ export function hidePortablePickupWhenDetached(pickupObject: number | IObject, t
  * Hash: 0x673ED815D6E323B7 | Since: 323 | API-Set: unknown
  */
 export function isAnyEntityEntirelyInsideGarage(garageHash: number | string): boolean {
-    if (typeof garageHash === 'string') garageHash = game.getHashKey(garageHash)
+    if (typeof garageHash === 'string') garageHash = GetHashKey(garageHash)
     return IsAnyEntityEntirelyInsideGarage(garageHash, false, false, false, undefined);
 }
 
@@ -881,7 +881,7 @@ export function isAnyNearPoint(pos: Vector3, range: number): boolean {
  * Hash: 0xC531EE8A1145A149 | Since: 323 | API-Set: unknown
  */
 export function isDoorClosed(doorHash: number | string): boolean {
-    if (typeof doorHash === 'string') doorHash = game.getHashKey(doorHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
     return IsDoorClosed(doorHash);
 }
 
@@ -894,7 +894,7 @@ export function isDoorClosed(doorHash: number | string): boolean {
  * Hash: 0xC153C43EA202C8C1 | Since: 323 | API-Set: unknown
  */
 export function isDoorRegisteredWithSystem(doorHash: number | string): boolean {
-    if (typeof doorHash === 'string') doorHash = game.getHashKey(doorHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
     return IsDoorRegisteredWithSystem(doorHash);
 }
 
@@ -904,7 +904,7 @@ export function isDoorRegisteredWithSystem(doorHash: number | string): boolean {
  * Hash: 0x90E47239EA1980B8 | Since: 323 | API-Set: unknown
  */
 export function isGarageEmpty(garageHash: number | string): boolean {
-    if (typeof garageHash === 'string') garageHash = game.getHashKey(garageHash)
+    if (typeof garageHash === 'string') garageHash = GetHashKey(garageHash)
     return IsGarageEmpty(garageHash, false, 0);
 }
 
@@ -932,7 +932,7 @@ export function isAPortablePickup(_object: number | IObject): boolean {
  * Hash: 0x372EF6699146A1E4 | Since: 323 | API-Set: unknown
  */
 export function isEntirelyInsideGarage(garageHash: number | string, entity: number | IEntity): boolean {
-    if (typeof garageHash === 'string') garageHash = game.getHashKey(garageHash)
+    if (typeof garageHash === 'string') garageHash = GetHashKey(garageHash)
     return IsObjectEntirelyInsideGarage(garageHash, entity, 0, 0);
 }
 
@@ -942,7 +942,7 @@ export function isEntirelyInsideGarage(garageHash: number | string, entity: numb
  * Hash: 0x8C90FE4B381BA60A | Since: 323 | API-Set: unknown
  */
 export function isNearPoint(objectHash: number | string, pos: Vector3, range: number): boolean {
-    if (typeof objectHash === 'string') objectHash = game.getHashKey(objectHash)
+    if (typeof objectHash === 'string') objectHash = GetHashKey(objectHash)
     return IsObjectNearPoint(objectHash, pos.x, pos.y, pos.z, range);
 }
 
@@ -952,7 +952,7 @@ export function isNearPoint(objectHash: number | string, pos: Vector3, range: nu
  * Hash: 0xF0EED5A6BC7B237A | Since: 323 | API-Set: unknown
  */
 export function isPartiallyInsideGarage(garageHash: number | string, entity: number | IEntity): boolean {
-    if (typeof garageHash === 'string') garageHash = game.getHashKey(garageHash)
+    if (typeof garageHash === 'string') garageHash = GetHashKey(garageHash)
     return IsObjectPartiallyInsideGarage(garageHash, entity, 0);
 }
 
@@ -980,7 +980,7 @@ export function isPickupWeaponValid(_object: number | IObject): boolean {
  * Hash: 0x024A60DEB0EA69F0 | Since: 323 | API-Set: unknown
  */
 export function isPlayerEntirelyInsideGarage(garageHash: number | string, player: number | string | IPlayer): boolean {
-    if (typeof garageHash === 'string') garageHash = game.getHashKey(garageHash)
+    if (typeof garageHash === 'string') garageHash = GetHashKey(garageHash)
     return IsPlayerEntirelyInsideGarage(garageHash, player, 0, 0);
 }
 
@@ -990,7 +990,7 @@ export function isPlayerEntirelyInsideGarage(garageHash: number | string, player
  * Hash: 0x1761DC5D8471CBAA | Since: 323 | API-Set: unknown
  */
 export function isPlayerPartiallyInsideGarage(garageHash: number | string, player: number | string | IPlayer): boolean {
-    if (typeof garageHash === 'string') garageHash = game.getHashKey(garageHash)
+    if (typeof garageHash === 'string') garageHash = GetHashKey(garageHash)
     return IsPlayerPartiallyInsideGarage(garageHash, player, 0);
 }
 
@@ -1079,7 +1079,7 @@ export function preventCollectionOfPortablePickup(_object: number | IObject): vo
  * Hash: 0x27F9D613092159CF | Since: 323 | API-Set: unknown
  */
 export function removeAllPickupsOfType(pickupHash: number | string): void {
-    if (typeof pickupHash === 'string') pickupHash = game.getHashKey(pickupHash)
+    if (typeof pickupHash === 'string') pickupHash = GetHashKey(pickupHash)
     RemoveAllPickupsOfType(pickupHash);
 }
 
@@ -1090,7 +1090,7 @@ export function removeAllPickupsOfType(pickupHash: number | string): void {
  * Hash: 0x464D8E1427156FE4 | Since: 323 | API-Set: unknown
  */
 export function removeDoorFromSystem(doorHash: number | string): void {
-    if (typeof doorHash === 'string') doorHash = game.getHashKey(doorHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
     RemoveDoorFromSystem(doorHash, undefined);
 }
 
@@ -1152,7 +1152,7 @@ export function setActivatePhysicsAsSoonAsItIsUnfrozen(_object: number | IObject
  * Hash: 0x826D1EE4D1CAFC78 | Since: 505 | API-Set: unknown
  */
 export function setCustomPickupWeaponHash(pickupHash: number | string, pickup: any): void {
-    if (typeof pickupHash === 'string') pickupHash = game.getHashKey(pickupHash)
+    if (typeof pickupHash === 'string') pickupHash = GetHashKey(pickupHash)
     Citizen.invokeNative('0x826D1EE4D1CAFC78', pickupHash, pickup);
 }
 
@@ -1252,7 +1252,7 @@ export function setLocalPlayerCanCollectPortablePickups(toggle: boolean): void {
  * Hash: 0x88EAEC617CD26926 | Since: 323 | API-Set: unknown
  */
 export function setLocalPlayerPermittedToCollectPickupsWithModel(modelHash: number | string, toggle: boolean): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     SetLocalPlayerCanUsePickupsWithThisModel(modelHash, toggle);
 }
 
@@ -1266,7 +1266,7 @@ export function setLocalPlayerPermittedToCollectPickupsWithModel(modelHash: numb
  * Hash: 0x9B12F9A24FABEDB0 | Since: 323 | API-Set: unknown
  */
 export function setLockedUnstreamedInDoorOfType(modelHash: number | string, pos: Vector3, locked: boolean, xRotMult: number, yRotMult: number, zRotMult: number): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     DoorControl(modelHash, pos.x, pos.y, pos.z, locked, xRotMult, yRotMult, zRotMult);
 }
 
@@ -1276,7 +1276,7 @@ export function setLockedUnstreamedInDoorOfType(modelHash: number | string, pos:
  * Hash: 0x0BF3B3BD47D79C08 | Since: 323 | API-Set: unknown
  */
 export function setMaxNumPortablePickupsCarriedByPlayer(modelHash: number | string, _number: number): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     SetMaxNumPortablePickupsCarriedByPlayer(modelHash, _number);
 }
 
@@ -1554,7 +1554,7 @@ export function setPickupUncollectable(pickup: any, toggle: boolean): void {
  * Hash: 0x616093EC6B139DD9 | Since: 323 | API-Set: unknown
  */
 export function setPlayerPermittedToCollectPickupsOfType(player: number | string | IPlayer, pickupHash: number | string, toggle: boolean): void {
-    if (typeof pickupHash === 'string') pickupHash = game.getHashKey(pickupHash)
+    if (typeof pickupHash === 'string') pickupHash = GetHashKey(pickupHash)
     ToggleUsePickupsForPlayer(player, pickupHash, toggle);
 }
 
@@ -1616,7 +1616,7 @@ export function setPropTintIndex(): void {
  * Hash: 0xF82D8F1926A02C3D | Since: 323 | API-Set: unknown
  */
 export function setStateOfClosestDoorOfType(_type: number | string, pos: Vector3, locked: boolean, heading: number): void {
-    if (typeof _type === 'string') _type = game.getHashKey(_type)
+    if (typeof _type === 'string') _type = GetHashKey(_type)
     SetStateOfClosestDoorOfType(_type, pos.x, pos.y, pos.z, locked, heading, false);
 }
 
@@ -1649,7 +1649,7 @@ export function setTeamPickup(_object: number | IObject): void {
  * Hash: 0xF12E33034D887F66 | Since: 1103 | API-Set: unknown
  */
 export function setTintIndexClosestBuildingOfType(pos: Vector3, radius: number, modelHash: number | string, textureVariation: number): boolean {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return SetTextureVariationOfClosestObjectOfType(pos.x, pos.y, pos.z, radius, modelHash, textureVariation);
 }
 

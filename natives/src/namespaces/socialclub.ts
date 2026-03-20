@@ -600,7 +600,7 @@ export function scPauseNewsShutdown(): void {
  * Hash: 0xC4C4575F62534A24 | Since: 323
  */
 export function scPresenceAttrSetFloat(attrHash: number | string, value: number): boolean {
-    if (typeof attrHash === 'string') attrHash = misc.getHashKey(attrHash)
+    if (typeof attrHash === 'string') attrHash = GetHashKey(attrHash)
     return ScPresenceAttrSetFloat(attrHash, value);
 }
 
@@ -610,7 +610,7 @@ export function scPresenceAttrSetFloat(attrHash: number | string, value: number)
  * Hash: 0x1F1E9682483697C7 | Since: 323
  */
 export function scPresenceAttrSetInt(attrHash: number | string, value: number): boolean {
-    if (typeof attrHash === 'string') attrHash = misc.getHashKey(attrHash)
+    if (typeof attrHash === 'string') attrHash = GetHashKey(attrHash)
     return ScPresenceAttrSetInt(attrHash, value);
 }
 
@@ -620,7 +620,7 @@ export function scPresenceAttrSetInt(attrHash: number | string, value: number): 
  * Hash: 0x287F1F75D2803595 | Since: 323
  */
 export function scPresenceAttrSetString(attrHash: number | string, value: string): boolean {
-    if (typeof attrHash === 'string') attrHash = misc.getHashKey(attrHash)
+    if (typeof attrHash === 'string') attrHash = GetHashKey(attrHash)
     return ScPresenceAttrSetString(attrHash, value);
 }
 
@@ -759,7 +759,7 @@ export function scTransitionNewsShowTimed(): boolean {
  * Hash: 0x69AA35F3F391CDBA | Since: 3258
  */
 export function scEmailMarketingEmailOpened(index: number, _type: number | string): void {
-    if (typeof _type === 'string') _type = misc.getHashKey(_type)
+    if (typeof _type === 'string') _type = GetHashKey(_type)
     Citizen.invokeNative('0x69AA35F3F391CDBA', index, _type);
 }
 

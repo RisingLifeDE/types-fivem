@@ -1363,7 +1363,7 @@ export function isSpecialAbilityMeterFull(player: number | string | IPlayer): bo
  * Hash: 0xC6017F6A6CDFA694 | Since: 323 | API-Set: unknown
  */
 export function isSpecialAbilityUnlocked(playerModel: number | string): boolean {
-    if (typeof playerModel === 'string') playerModel = game.getHashKey(playerModel)
+    if (typeof playerModel === 'string') playerModel = GetHashKey(playerModel)
     return IsSpecialAbilityUnlocked(playerModel);
 }
 
@@ -2078,7 +2078,7 @@ export function setMeleeWeaponDefenseModifier(player: number | string | IPlayer,
  * Hash: 0x00A1CADD00108836 | Since: 323 | API-Set: unknown
  */
 export function setModel(player: number | string | IPlayer, model: number | string): void {
-    if (typeof model === 'string') model = game.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     SetPlayerModel(player, model);
 }
 
@@ -2097,7 +2097,7 @@ export function setNoiseMultiplier(player: number | string | IPlayer, multiplier
  * Hash: 0x977DB4641F6FC3DB | Since: 323 | API-Set: unknown
  */
 export function setParachuteModelOverride(player: number | string | IPlayer, model: number | string): void {
-    if (typeof model === 'string') model = game.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     SetPlayerParachuteModelOverride(player, model);
 }
 
@@ -2107,7 +2107,7 @@ export function setParachuteModelOverride(player: number | string | IPlayer, mod
  * Hash: 0xDC80A4C2F18A2B64 | Since: 323 | API-Set: unknown
  */
 export function setParachutePackModelOverride(player: number | string | IPlayer, model: number | string): void {
-    if (typeof model === 'string') model = game.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     SetPlayerParachutePackModelOverride(player, model);
 }
 
@@ -2193,7 +2193,7 @@ export function setPreviousVariationData(player: number | string | IPlayer): voi
  * Hash: 0x0764486AEDE748DB | Since: 2372 | API-Set: unknown
  */
 export function setReserveParachuteModelOverride(player: number | string | IPlayer, model: number | string): void {
-    if (typeof model === 'string') model = game.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     SetPlayerReserveParachuteModelOverride(player, model);
 }
 
@@ -2669,7 +2669,7 @@ export function specialAbilityFillMeter(player: number | string | IPlayer): void
  * Hash: 0x6A09D0D590A47D13 | Since: 323 | API-Set: unknown
  */
 export function specialAbilityLock(playerModel: number | string): void {
-    if (typeof playerModel === 'string') playerModel = game.getHashKey(playerModel)
+    if (typeof playerModel === 'string') playerModel = GetHashKey(playerModel)
     SpecialAbilityLock(playerModel, undefined);
 }
 
@@ -2688,7 +2688,7 @@ export function specialAbilityReset(player: number | string | IPlayer): void {
  * Hash: 0xF145F3BE2EFA9A3B | Since: 323 | API-Set: unknown
  */
 export function specialAbilityUnlock(playerModel: number | string): void {
-    if (typeof playerModel === 'string') playerModel = game.getHashKey(playerModel)
+    if (typeof playerModel === 'string') playerModel = GetHashKey(playerModel)
     SpecialAbilityUnlock(playerModel, undefined);
 }
 

@@ -51,8 +51,8 @@ export function netGameserverBasketIsFull(): boolean {
  * Hash: 0x279F08B1A4B29B7E | Since: 323
  */
 export function netGameserverBasketStart(categoryHash: number | string, actionHash: number | string, flags: number): [boolean, number] {
-    if (typeof categoryHash === 'string') categoryHash = misc.getHashKey(categoryHash)
-    if (typeof actionHash === 'string') actionHash = misc.getHashKey(actionHash)
+    if (typeof categoryHash === 'string') categoryHash = GetHashKey(categoryHash)
+    if (typeof actionHash === 'string') actionHash = GetHashKey(actionHash)
     return NetGameserverBasketStart(categoryHash, actionHash, flags);
 }
 
@@ -62,9 +62,9 @@ export function netGameserverBasketStart(categoryHash: number | string, actionHa
  * Hash: 0x3C5FD37B5499582E | Since: 323
  */
 export function netGameserverBeginService(categoryHash: number | string, itemHash: number | string, actionTypeHash: number | string, value: number, flags: number): [boolean, number] {
-    if (typeof categoryHash === 'string') categoryHash = misc.getHashKey(categoryHash)
-    if (typeof itemHash === 'string') itemHash = misc.getHashKey(itemHash)
-    if (typeof actionTypeHash === 'string') actionTypeHash = misc.getHashKey(actionTypeHash)
+    if (typeof categoryHash === 'string') categoryHash = GetHashKey(categoryHash)
+    if (typeof itemHash === 'string') itemHash = GetHashKey(itemHash)
+    if (typeof actionTypeHash === 'string') actionTypeHash = GetHashKey(actionTypeHash)
     return NetGameserverBeginService(categoryHash, itemHash, actionTypeHash, value, flags);
 }
 
@@ -92,7 +92,7 @@ export function netGameserverCatalogItemIsValid(name: string): boolean {
  * Hash: 0x247F0F73A182EA0B | Since: 323
  */
 export function netGameserverCatalogItemKeyIsValid(hash: number | string): boolean {
-    if (typeof hash === 'string') hash = misc.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     return NetGameserverCatalogItemExistsHash(hash);
 }
 
@@ -129,7 +129,7 @@ export function netGameserverClearSession(): boolean {
  * Hash: 0x51F1A8E48C3D2F6D | Since: 323
  */
 export function netGameserverDeleteCharacter(slot: number, transfer: boolean, reason: number | string): boolean {
-    if (typeof reason === 'string') reason = misc.getHashKey(reason)
+    if (typeof reason === 'string') reason = GetHashKey(reason)
     return NetGameserverDeleteCharacterSlot(slot, transfer, reason);
 }
 
@@ -175,8 +175,8 @@ export function netGameserverGetCatalogCloudCrc(): number {
  * Hash: 0xC27009422FCCA88D | Since: 323
  */
 export function netGameserverGetPrice(itemHash: number | string, categoryHash: number | string): number {
-    if (typeof itemHash === 'string') itemHash = misc.getHashKey(itemHash)
-    if (typeof categoryHash === 'string') categoryHash = misc.getHashKey(categoryHash)
+    if (typeof itemHash === 'string') itemHash = GetHashKey(itemHash)
+    if (typeof categoryHash === 'string') categoryHash = GetHashKey(categoryHash)
     return NetGameserverGetPrice(itemHash, categoryHash, false);
 }
 

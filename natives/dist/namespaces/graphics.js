@@ -1996,7 +1996,7 @@ export function isTrackedPointVisible(point) {
  */
 export function isTvshowCurrentlyPlaying(videoCliphash) {
     if (typeof videoCliphash === 'string')
-        videoCliphash = misc.getHashKey(videoCliphash);
+        videoCliphash = GetHashKey(videoCliphash);
     return IsTvPlaylistItemPlaying(videoCliphash);
 }
 /**

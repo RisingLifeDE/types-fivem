@@ -157,7 +157,7 @@ export function setMinimapType(_type) {
  */
 export function activateFrontendMenu(menuhash, togglePause, component) {
     if (typeof menuhash === 'string')
-        menuhash = game.getHashKey(menuhash);
+        menuhash = GetHashKey(menuhash);
     ActivateFrontendMenu(menuhash, togglePause, component);
 }
 /**
@@ -310,7 +310,7 @@ export function addTextComponentSubstringTextLabel(labelName) {
  */
 export function addTextComponentSubstringTextLabelHashKey(gxtEntryHash) {
     if (typeof gxtEntryHash === 'string')
-        gxtEntryHash = game.getHashKey(gxtEntryHash);
+        gxtEntryHash = GetHashKey(gxtEntryHash);
     AddTextComponentSubstringTextLabelHashKey(gxtEntryHash);
 }
 /**
@@ -1700,7 +1700,7 @@ export function getCharacterMenuPedIntStat() {
  */
 export function getCharacterMenuPedMaskedIntStat(statHash, mask) {
     if (typeof statHash === 'string')
-        statHash = game.getHashKey(statHash);
+        statHash = GetHashKey(statHash);
     return Citizen.invokeNative('0x24A49BEAF468DC90', statHash, 0, mask, false);
 }
 /**
@@ -1879,7 +1879,7 @@ export function getMenuLayoutChangedEventDetails() {
  */
 export function getMenuPedBoolStat(statHash) {
     if (typeof statHash === 'string')
-        statHash = game.getHashKey(statHash);
+        statHash = GetHashKey(statHash);
     return GetMenuPedBoolStat(statHash);
 }
 /**
@@ -1889,7 +1889,7 @@ export function getMenuPedBoolStat(statHash) {
  */
 export function getMenuPedFloatStat(statHash) {
     if (typeof statHash === 'string')
-        statHash = game.getHashKey(statHash);
+        statHash = GetHashKey(statHash);
     return GetMenuPedFloatStat(statHash);
 }
 /**
@@ -1907,7 +1907,7 @@ export function getMenuPedIntStat() {
  */
 export function getMenuPedMaskedIntStat(statHash, mask) {
     if (typeof statHash === 'string')
-        statHash = game.getHashKey(statHash);
+        statHash = GetHashKey(statHash);
     return GetMenuPedMaskedIntStat(statHash, mask, false);
 }
 /**
@@ -2049,7 +2049,7 @@ export function getStandardBlipEnumId() {
  */
 export function getStreetNameFromHashKey(hash) {
     if (typeof hash === 'string')
-        hash = game.getHashKey(hash);
+        hash = GetHashKey(hash);
     return GetStreetNameFromHashKey(hash);
 }
 /**
@@ -2276,7 +2276,7 @@ export function getWeaponWheelTopSlot(weaponTypeIndex) {
  */
 export function setWeaponWheelTopSlot(weaponHash) {
     if (typeof weaponHash === 'string')
-        weaponHash = game.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     HudSetWeaponWheelTopSlot(weaponHash);
 }
 /**
@@ -2503,7 +2503,7 @@ export function isMpTextChatTyping() {
  */
 export function isNamedRendertargetLinked(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = game.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return IsNamedRendertargetLinked(modelHash);
 }
 /**
@@ -2665,7 +2665,7 @@ export function isWaypointActive() {
  */
 export function linkNamedRendertarget(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = game.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     LinkNamedRendertarget(modelHash);
 }
 /**
@@ -2726,7 +2726,7 @@ export function openReportugcMenu() {
  */
 export function openSocialClubMenu(menu) {
     if (typeof menu === 'string')
-        menu = game.getHashKey(menu);
+        menu = GetHashKey(menu);
     OpenSocialClubMenu(menu);
 }
 /**
@@ -2744,7 +2744,7 @@ export function overrideMpTextChatColor(hudColor) {
  */
 export function overrideMpTextChatTeamString(gxtEntryHash) {
     if (typeof gxtEntryHash === 'string')
-        gxtEntryHash = game.getHashKey(gxtEntryHash);
+        gxtEntryHash = GetHashKey(gxtEntryHash);
     OverrideMultiplayerChatPrefix(gxtEntryHash);
 }
 /**
@@ -2774,7 +2774,7 @@ export function pauseMenuceptionTheKick() {
  */
 export function pauseMenuActivateContext(contextHash) {
     if (typeof contextHash === 'string')
-        contextHash = game.getHashKey(contextHash);
+        contextHash = GetHashKey(contextHash);
     PauseMenuActivateContext(contextHash);
 }
 /**
@@ -2784,7 +2784,7 @@ export function pauseMenuActivateContext(contextHash) {
  */
 export function pauseMenuDeactivateContext(contextHash) {
     if (typeof contextHash === 'string')
-        contextHash = game.getHashKey(contextHash);
+        contextHash = GetHashKey(contextHash);
     PauseMenuDeactivateContext(contextHash);
 }
 /**
@@ -2826,7 +2826,7 @@ export function pauseMenuGetMouseHoverUniqueId() {
  */
 export function pauseMenuIsContextActive(contextHash) {
     if (typeof contextHash === 'string')
-        contextHash = game.getHashKey(contextHash);
+        contextHash = GetHashKey(contextHash);
     return PauseMenuIsContextActive(contextHash);
 }
 /**
@@ -3088,7 +3088,7 @@ export function resetReticuleValues() {
  */
 export function restartFrontendMenu(menuHash) {
     if (typeof menuHash === 'string')
-        menuHash = game.getHashKey(menuHash);
+        menuHash = GetHashKey(menuHash);
     RestartFrontendMenu(menuHash, 0);
 }
 /**
@@ -4131,7 +4131,7 @@ export function setRadarAsExteriorThisFrame() {
  */
 export function setRadarAsInteriorThisFrame(interior, pos, zoom) {
     if (typeof interior === 'string')
-        interior = game.getHashKey(interior);
+        interior = GetHashKey(interior);
     SetRadarAsInteriorThisFrame(interior, pos.x, pos.y, pos.z, zoom);
 }
 /**

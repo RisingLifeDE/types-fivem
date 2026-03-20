@@ -363,7 +363,7 @@ export function createPickUpRopeForCargobob(cargobob, state) {
  */
 export function createScriptGenerator(pos, heading, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CreateScriptVehicleGenerator(pos.x, pos.y, pos.z, heading, 0, 0, modelHash, 0, 0, 0, 0, false, false, false, false, false, 0);
 }
 /**
@@ -374,7 +374,7 @@ export function createScriptGenerator(pos, heading, modelHash) {
  */
 export function create(modelHash, pos, heading, isNetwork, bScriptHostVeh) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return CreateVehicle(modelHash, pos.x, pos.y, pos.z, heading, isNetwork, bScriptHostVeh, false);
 }
 /**
@@ -529,7 +529,7 @@ export function disableTurretMovementThisFrame(vehicle) {
  */
 export function disableWeapon(disabled, weaponHash, vehicle, owner) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     DisableVehicleWeapon(disabled, weaponHash, vehicle, owner);
 }
 /**
@@ -768,7 +768,7 @@ export function getBoatBoomPositionRatio(vehicle) {
  */
 export function getBoatModelAgility(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetBoatVehicleModelAgility(modelHash);
 }
 /**
@@ -831,7 +831,7 @@ export function getCarHasJump(vehicle) {
  */
 export function getClosest(pos, radius, modelHash, flags) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetClosestVehicle(pos.x, pos.y, pos.z, radius, modelHash, flags);
 }
 /**
@@ -869,7 +869,7 @@ export function getCurrentPlaybackFor(vehicle) {
  */
 export function getDisplayNameFromModel(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetDisplayNameFromVehicleModel(modelHash);
 }
 /**
@@ -938,7 +938,7 @@ export function getFakeSuspensionLoweringAmount(vehicle) {
  */
 export function getFlyingModelAgility(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetVehicleModelMaxKnots(modelHash);
 }
 /**
@@ -1169,7 +1169,7 @@ export function getLiveryName(vehicle, liveryIndex) {
  */
 export function getMakeNameFromModel(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetMakeNameFromVehicleModel(modelHash);
 }
 /**
@@ -1349,7 +1349,7 @@ export function getRandomFrontBumperInSphere() {
  */
 export function getRandomInSphere(pos, radius, modelHash, flags) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetRandomVehicleInSphere(pos.x, pos.y, pos.z, radius, modelHash, flags);
 }
 /**
@@ -1571,7 +1571,7 @@ export function getClassEstimatedMaxSpeed(vehicleClass) {
  */
 export function getClassFromName(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetVehicleClassFromName(modelHash);
 }
 /**
@@ -1984,7 +1984,7 @@ export function getMod(vehicle, modType) {
  */
 export function getModelAcceleration(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetVehicleModelAcceleration(modelHash);
 }
 /**
@@ -1996,7 +1996,7 @@ export function getModelAcceleration(modelHash) {
  */
 export function getModelAccelerationMaxMods(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetVehicleModelEstimatedAgility(modelHash);
 }
 /**
@@ -2008,7 +2008,7 @@ export function getModelAccelerationMaxMods(modelHash) {
  */
 export function getModelEstimatedMaxSpeed(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetVehicleModelEstimatedMaxSpeed(modelHash);
 }
 /**
@@ -2020,7 +2020,7 @@ export function getModelEstimatedMaxSpeed(modelHash) {
  */
 export function getModelMaxBraking(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetVehicleModelMaxBraking(modelHash);
 }
 /**
@@ -2030,7 +2030,7 @@ export function getModelMaxBraking(modelHash) {
  */
 export function getModelMaxBrakingMaxMods(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetVehicleModelMaxBrakingMaxMods(modelHash);
 }
 /**
@@ -2042,7 +2042,7 @@ export function getModelMaxBrakingMaxMods(modelHash) {
  */
 export function getModelMaxTraction(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetVehicleModelMaxTraction(modelHash);
 }
 /**
@@ -2054,7 +2054,7 @@ export function getModelMaxTraction(modelHash) {
  */
 export function getModelNumberOfSeats(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     return GetVehicleModelNumberOfSeats(modelHash);
 }
 /**
@@ -2064,7 +2064,7 @@ export function getModelNumberOfSeats(modelHash) {
  */
 export function getModelValue(vehicleModel) {
     if (typeof vehicleModel === 'string')
-        vehicleModel = misc.getHashKey(vehicleModel);
+        vehicleModel = GetHashKey(vehicleModel);
     return GetVehicleModelValue(vehicleModel);
 }
 /**
@@ -2591,7 +2591,7 @@ export function isTaxiLightOn(vehicle) {
  */
 export function isThisModelAnAmphibiousCar(model) {
     if (typeof model === 'string')
-        model = misc.getHashKey(model);
+        model = GetHashKey(model);
     return IsThisModelAnAmphibiousCar(model);
 }
 /**
@@ -2601,7 +2601,7 @@ export function isThisModelAnAmphibiousCar(model) {
  */
 export function isThisModelAnAmphibiousQuadbike(model) {
     if (typeof model === 'string')
-        model = misc.getHashKey(model);
+        model = GetHashKey(model);
     return IsThisModelAnAmphibiousQuadbike(model);
 }
 /**
@@ -2611,7 +2611,7 @@ export function isThisModelAnAmphibiousQuadbike(model) {
  */
 export function isThisModelABicycle(model) {
     if (typeof model === 'string')
-        model = misc.getHashKey(model);
+        model = GetHashKey(model);
     return IsThisModelABicycle(model);
 }
 /**
@@ -2621,7 +2621,7 @@ export function isThisModelABicycle(model) {
  */
 export function isThisModelABike(model) {
     if (typeof model === 'string')
-        model = misc.getHashKey(model);
+        model = GetHashKey(model);
     return IsThisModelABike(model);
 }
 /**
@@ -2631,7 +2631,7 @@ export function isThisModelABike(model) {
  */
 export function isThisModelABoat(model) {
     if (typeof model === 'string')
-        model = misc.getHashKey(model);
+        model = GetHashKey(model);
     return IsThisModelABoat(model);
 }
 /**
@@ -2641,7 +2641,7 @@ export function isThisModelABoat(model) {
  */
 export function isThisModelACar(model) {
     if (typeof model === 'string')
-        model = misc.getHashKey(model);
+        model = GetHashKey(model);
     return IsThisModelACar(model);
 }
 /**
@@ -2651,7 +2651,7 @@ export function isThisModelACar(model) {
  */
 export function isThisModelAHeli(model) {
     if (typeof model === 'string')
-        model = misc.getHashKey(model);
+        model = GetHashKey(model);
     return IsThisModelAHeli(model);
 }
 /**
@@ -2661,7 +2661,7 @@ export function isThisModelAHeli(model) {
  */
 export function isThisModelAJetski(model) {
     if (typeof model === 'string')
-        model = misc.getHashKey(model);
+        model = GetHashKey(model);
     return IsThisModelAJetski(model);
 }
 /**
@@ -2671,7 +2671,7 @@ export function isThisModelAJetski(model) {
  */
 export function isThisModelAPlane(model) {
     if (typeof model === 'string')
-        model = misc.getHashKey(model);
+        model = GetHashKey(model);
     return IsThisModelAPlane(model);
 }
 /**
@@ -2681,7 +2681,7 @@ export function isThisModelAPlane(model) {
  */
 export function isThisModelAQuadbike(model) {
     if (typeof model === 'string')
-        model = misc.getHashKey(model);
+        model = GetHashKey(model);
     return IsThisModelAQuadbike(model);
 }
 /**
@@ -2691,7 +2691,7 @@ export function isThisModelAQuadbike(model) {
  */
 export function isThisModelATrain(model) {
     if (typeof model === 'string')
-        model = misc.getHashKey(model);
+        model = GetHashKey(model);
     return IsThisModelATrain(model);
 }
 /**
@@ -2857,7 +2857,7 @@ export function isInSubmarineMode(vehicle) {
  */
 export function isModel(vehicle, model) {
     if (typeof model === 'string')
-        model = misc.getHashKey(model);
+        model = GetHashKey(model);
     return IsVehicleModel(vehicle, model);
 }
 /**
@@ -3019,7 +3019,7 @@ export function isVisible(vehicle) {
  */
 export function isWeaponDisabled(weaponHash, vehicle, owner) {
     if (typeof weaponHash === 'string')
-        weaponHash = misc.getHashKey(weaponHash);
+        weaponHash = GetHashKey(weaponHash);
     return IsVehicleWeaponDisabled(weaponHash, vehicle, owner);
 }
 /**
@@ -3269,7 +3269,7 @@ export function removeWindow(vehicle, windowIndex) {
  */
 export function requestAsset(vehicleHash, vehicleAsset) {
     if (typeof vehicleHash === 'string')
-        vehicleHash = misc.getHashKey(vehicleHash);
+        vehicleHash = GetHashKey(vehicleHash);
     RequestVehicleAsset(vehicleHash, vehicleAsset);
 }
 /**
@@ -5634,7 +5634,7 @@ export function setHandbrake(vehicle, toggle) {
  */
 export function setHandlingOverride(vehicle, hash) {
     if (typeof hash === 'string')
-        hash = misc.getHashKey(hash);
+        hash = GetHashKey(hash);
     SetVehicleHandlingHashForAi(vehicle, hash);
 }
 /**
@@ -5939,7 +5939,7 @@ export function setMod(vehicle, modType, modIndex, customTires) {
  */
 export function setModelIsSuppressed(model, suppressed) {
     if (typeof model === 'string')
-        model = misc.getHashKey(model);
+        model = GetHashKey(model);
     SetVehicleModelIsSuppressed(model, suppressed);
 }
 /**
@@ -6705,7 +6705,7 @@ export function startAlarm(vehicle) {
  */
 export function startHorn(vehicle, duration, mode, forever) {
     if (typeof mode === 'string')
-        mode = misc.getHashKey(mode);
+        mode = GetHashKey(mode);
     StartVehicleHorn(vehicle, duration, mode, forever);
 }
 /**
@@ -6891,7 +6891,7 @@ export function setOverrideSideRatio() {
  */
 export function setParachuteModelOverride(vehicle, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     SetVehicleParachuteModel(vehicle, modelHash);
 }
 /**
@@ -6949,7 +6949,7 @@ export function enableIndividualPlanePropeller(vehicle, propeller) {
  */
 export function getIsElectric(vehicleModel) {
     if (typeof vehicleModel === 'string')
-        vehicleModel = misc.getHashKey(vehicleModel);
+        vehicleModel = GetHashKey(vehicleModel);
     return GetIsVehicleElectric(vehicleModel);
 }
 /**
@@ -7017,7 +7017,7 @@ export function getDesiredDriveGear(vehicle) {
  */
 export function getDrivetrainType(vehicleModel) {
     if (typeof vehicleModel === 'string')
-        vehicleModel = misc.getHashKey(vehicleModel);
+        vehicleModel = GetHashKey(vehicleModel);
     return GetVehicleDrivetrainType(vehicleModel);
 }
 /**
@@ -7051,7 +7051,7 @@ export function getMaxExhaustBoneCount() {
  */
 export function getModelNumDriveGears(vehicleModel) {
     if (typeof vehicleModel === 'string')
-        vehicleModel = misc.getHashKey(vehicleModel);
+        vehicleModel = GetHashKey(vehicleModel);
     return Citizen.invokeNative('0x61F02E4E9A7A61EA', vehicleModel);
 }
 /**
@@ -7077,7 +7077,7 @@ export function getTrailerParentVehicle(trailer) {
  */
 export function isGen9ExclusiveModel(vehicleModel) {
     if (typeof vehicleModel === 'string')
-        vehicleModel = misc.getHashKey(vehicleModel);
+        vehicleModel = GetHashKey(vehicleModel);
     return Citizen.invokeNative('0x6638C0F19DE692FE', vehicleModel);
 }
 /**

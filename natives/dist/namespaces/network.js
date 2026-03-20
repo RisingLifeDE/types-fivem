@@ -680,9 +680,9 @@ export function accessTunableBool(tunableContext, tunableName) {
  */
 export function accessTunableBoolHash(tunableContext, tunableName) {
     if (typeof tunableContext === 'string')
-        tunableContext = misc.getHashKey(tunableContext);
+        tunableContext = GetHashKey(tunableContext);
     if (typeof tunableName === 'string')
-        tunableName = misc.getHashKey(tunableName);
+        tunableName = GetHashKey(tunableName);
     return NetworkAccessTunableBoolHash(tunableContext, tunableName);
 }
 /**
@@ -692,9 +692,9 @@ export function accessTunableBoolHash(tunableContext, tunableName) {
  */
 export function accessTunableBoolModificationDetectionRegistrationHash(contextHash, nameHash) {
     if (typeof contextHash === 'string')
-        contextHash = misc.getHashKey(contextHash);
+        contextHash = GetHashKey(contextHash);
     if (typeof nameHash === 'string')
-        nameHash = misc.getHashKey(nameHash);
+        nameHash = GetHashKey(nameHash);
     return NetworkRegisterTunableBoolHash(contextHash, nameHash);
 }
 /**
@@ -712,9 +712,9 @@ export function accessTunableFloat(tunableContext, tunableName) {
  */
 export function accessTunableFloatHash(tunableContext, tunableName) {
     if (typeof tunableContext === 'string')
-        tunableContext = misc.getHashKey(tunableContext);
+        tunableContext = GetHashKey(tunableContext);
     if (typeof tunableName === 'string')
-        tunableName = misc.getHashKey(tunableName);
+        tunableName = GetHashKey(tunableName);
     return NetworkAccessTunableFloatHash(tunableContext, tunableName);
 }
 /**
@@ -724,9 +724,9 @@ export function accessTunableFloatHash(tunableContext, tunableName) {
  */
 export function accessTunableFloatModificationDetectionRegistrationHash(contextHash, nameHash) {
     if (typeof contextHash === 'string')
-        contextHash = misc.getHashKey(contextHash);
+        contextHash = GetHashKey(contextHash);
     if (typeof nameHash === 'string')
-        nameHash = misc.getHashKey(nameHash);
+        nameHash = GetHashKey(nameHash);
     return NetworkRegisterTunableFloatHash(contextHash, nameHash);
 }
 /**
@@ -744,9 +744,9 @@ export function accessTunableInt(tunableContext, tunableName) {
  */
 export function accessTunableIntHash(tunableContext, tunableName) {
     if (typeof tunableContext === 'string')
-        tunableContext = misc.getHashKey(tunableContext);
+        tunableContext = GetHashKey(tunableContext);
     if (typeof tunableName === 'string')
-        tunableName = misc.getHashKey(tunableName);
+        tunableName = GetHashKey(tunableName);
     return NetworkAccessTunableIntHash(tunableContext, tunableName);
 }
 /**
@@ -756,9 +756,9 @@ export function accessTunableIntHash(tunableContext, tunableName) {
  */
 export function accessTunableIntModificationDetectionRegistrationHash(contextHash, nameHash) {
     if (typeof contextHash === 'string')
-        contextHash = misc.getHashKey(contextHash);
+        contextHash = GetHashKey(contextHash);
     if (typeof nameHash === 'string')
-        nameHash = misc.getHashKey(nameHash);
+        nameHash = GetHashKey(nameHash);
     return NetworkRegisterTunableIntHash(contextHash, nameHash);
 }
 /**
@@ -841,7 +841,7 @@ export function addFriend(message) {
  */
 export function addInvalidObjectModel(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     Citizen.invokeNative('0x7F562DBC212E81F9', modelHash, undefined);
 }
 /**
@@ -852,7 +852,7 @@ export function addInvalidObjectModel(modelHash) {
  */
 export function addMapEntityToSynchronisedScene(netScene, modelHash, pos, flags) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     NetworkAddMapEntityToSynchronisedScene(netScene, modelHash, pos.x, pos.y, pos.z, 0, undefined, 0, 0, flags);
 }
 /**
@@ -1689,9 +1689,9 @@ export function doesTunableExist(tunableContext, tunableName) {
  */
 export function doesTunableExistHash(tunableContext, tunableName) {
     if (typeof tunableContext === 'string')
-        tunableContext = misc.getHashKey(tunableContext);
+        tunableContext = GetHashKey(tunableContext);
     if (typeof tunableName === 'string')
-        tunableName = misc.getHashKey(tunableName);
+        tunableName = GetHashKey(tunableName);
     return NetworkDoesTunableExistHash(tunableContext, tunableName);
 }
 /**
@@ -2050,7 +2050,7 @@ export function getBoneIdOfFatalHit() {
  */
 export function getContentModifierListId(contentHash) {
     if (typeof contentHash === 'string')
-        contentHash = misc.getHashKey(contentHash);
+        contentHash = GetHashKey(contentHash);
     return NetworkGetContentModifierListId(contentHash);
 }
 /**
@@ -2868,7 +2868,7 @@ export function hasConfirmedInvite() {
  */
 export function hasControlOfDoor(doorHash) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     return NetworkHasControlOfDoor(doorHash);
 }
 /**
@@ -3285,7 +3285,7 @@ export function isConnetedToNpPresence() {
  */
 export function isDoorNetworked(doorHash) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     return NetworkIsDoorNetworked(doorHash);
 }
 /**
@@ -3711,7 +3711,7 @@ export function isScriptActive(scriptName, instance_id, position_hash) {
  */
 export function isScriptActiveByHash(scriptHash) {
     if (typeof scriptHash === 'string')
-        scriptHash = misc.getHashKey(scriptHash);
+        scriptHash = GetHashKey(scriptHash);
     return NetworkIsScriptActiveByHash(scriptHash, 0, false, 0);
 }
 /**
@@ -4337,7 +4337,7 @@ export function removeEntityArea(areaHandle) {
  */
 export function removeInvalidObjectModel(modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     Citizen.invokeNative('0x791EDB5803B2F468', modelHash);
 }
 /**
@@ -5050,7 +5050,7 @@ export function setCurrentPublicContentId(missionId) {
  */
 export function setCurrentSpawnLocationOption(mpSettingSpawn) {
     if (typeof mpSettingSpawn === 'string')
-        mpSettingSpawn = misc.getHashKey(mpSettingSpawn);
+        mpSettingSpawn = GetHashKey(mpSettingSpawn);
     NetworkSetCurrentSpawnSetting(mpSettingSpawn);
 }
 /**
@@ -5427,7 +5427,7 @@ export function setVehicleDrivenInTestDrive(toggle) {
  */
 export function setVehicleDrivenLocation(location) {
     if (typeof location === 'string')
-        location = misc.getHashKey(location);
+        location = GetHashKey(location);
     Citizen.invokeNative('0xA0CE91E47531D3BB', location);
 }
 /**
@@ -5608,7 +5608,7 @@ export function textChatIsTyping() {
  */
 export function transitionAddStage(hash, state) {
     if (typeof hash === 'string')
-        hash = misc.getHashKey(hash);
+        hash = GetHashKey(hash);
     return NetworkTransitionTrack(hash, 0, 0, state, 0);
 }
 /**
@@ -5682,9 +5682,9 @@ export function triggerDamageEventForZeroWeaponHash(entity, toggle) {
  */
 export function tryAccessTunableBoolHash(tunableContext, tunableName, defaultValue) {
     if (typeof tunableContext === 'string')
-        tunableContext = misc.getHashKey(tunableContext);
+        tunableContext = GetHashKey(tunableContext);
     if (typeof tunableName === 'string')
-        tunableName = misc.getHashKey(tunableName);
+        tunableName = GetHashKey(tunableName);
     return NetworkTryAccessTunableBoolHash(tunableContext, tunableName, defaultValue);
 }
 /**
@@ -5978,9 +5978,9 @@ export function setInvertGhosting() {
  */
 export function setLastViewedShopItem(p0, p2) {
     if (typeof p0 === 'string')
-        p0 = misc.getHashKey(p0);
+        p0 = GetHashKey(p0);
     if (typeof p2 === 'string')
-        p2 = misc.getHashKey(p2);
+        p2 = GetHashKey(p2);
     Citizen.invokeNative('0xFAE628F1E9ADB239', p0, 0, p2);
 }
 /**
@@ -7024,9 +7024,9 @@ export function getBattleyeErrorMessageLabel(errorCode) {
  */
 export function getBroadcastDataHostUpdateSize(scriptNameHash, instance, positionHash, handlerNum) {
     if (typeof scriptNameHash === 'string')
-        scriptNameHash = misc.getHashKey(scriptNameHash);
+        scriptNameHash = GetHashKey(scriptNameHash);
     if (typeof positionHash === 'string')
-        positionHash = misc.getHashKey(positionHash);
+        positionHash = GetHashKey(positionHash);
     return Citizen.invokeNative('0xE448693B3EA3B92C', scriptNameHash, instance, positionHash, handlerNum);
 }
 /**
@@ -7036,9 +7036,9 @@ export function getBroadcastDataHostUpdateSize(scriptNameHash, instance, positio
  */
 export function getBroadcastDataPlayerUpdateSize(scriptNameHash, instance, positionHash, handlerNum) {
     if (typeof scriptNameHash === 'string')
-        scriptNameHash = misc.getHashKey(scriptNameHash);
+        scriptNameHash = GetHashKey(scriptNameHash);
     if (typeof positionHash === 'string')
-        positionHash = misc.getHashKey(positionHash);
+        positionHash = GetHashKey(positionHash);
     return Citizen.invokeNative('0xAC3F722321800755', scriptNameHash, instance, positionHash, handlerNum);
 }
 /**
@@ -7118,9 +7118,9 @@ export function getGameRestartReasonMessageLabel() {
  */
 export function getHostBroadcastDataSizeUnsynced(scriptNameHash, instance, positionHash, handlerNum) {
     if (typeof scriptNameHash === 'string')
-        scriptNameHash = misc.getHashKey(scriptNameHash);
+        scriptNameHash = GetHashKey(scriptNameHash);
     if (typeof positionHash === 'string')
-        positionHash = misc.getHashKey(positionHash);
+        positionHash = GetHashKey(positionHash);
     return Citizen.invokeNative('0x72C8588ABE22C972', scriptNameHash, instance, positionHash, handlerNum);
 }
 /**
@@ -7130,9 +7130,9 @@ export function getHostBroadcastDataSizeUnsynced(scriptNameHash, instance, posit
  */
 export function getPlayerBroadcastDataSizeUnsynced(scriptNameHash, instance, positionHash, handlerNum) {
     if (typeof scriptNameHash === 'string')
-        scriptNameHash = misc.getHashKey(scriptNameHash);
+        scriptNameHash = GetHashKey(scriptNameHash);
     if (typeof positionHash === 'string')
-        positionHash = misc.getHashKey(positionHash);
+        positionHash = GetHashKey(positionHash);
     return Citizen.invokeNative('0xB99CD664FD4720A1', scriptNameHash, instance, positionHash, handlerNum);
 }
 /**
@@ -7151,7 +7151,7 @@ export function getRandomFloatRanged(rangeStart, rangeEnd) {
  */
 export function getTunablesRegistrationBool(tunableName, defaultValue) {
     if (typeof tunableName === 'string')
-        tunableName = misc.getHashKey(tunableName);
+        tunableName = GetHashKey(tunableName);
     return Citizen.invokeNative('0xB327CF1B8C2C0EA3', tunableName, defaultValue);
 }
 /**
@@ -7162,7 +7162,7 @@ export function getTunablesRegistrationBool(tunableName, defaultValue) {
  */
 export function getTunablesRegistrationFloat(tunableName, defaultValue) {
     if (typeof tunableName === 'string')
-        tunableName = misc.getHashKey(tunableName);
+        tunableName = GetHashKey(tunableName);
     return Citizen.invokeNative('0x367E5E33E7F0DD1A', tunableName, defaultValue);
 }
 /**
@@ -7173,7 +7173,7 @@ export function getTunablesRegistrationFloat(tunableName, defaultValue) {
  */
 export function getTunablesRegistrationInt(tunableName, defaultValue) {
     if (typeof tunableName === 'string')
-        tunableName = misc.getHashKey(tunableName);
+        tunableName = GetHashKey(tunableName);
     return Citizen.invokeNative('0x0D94071E55F4C9CE', tunableName, defaultValue);
 }
 /**

@@ -6,7 +6,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0x7796B21B76221BC5 | Since: 2612
  */
 export function doesCurrentPedComponentHaveRestrictionTag(ped: number | IPed, componentId: number, restrictionTagHash: number | string): boolean {
-    if (typeof restrictionTagHash === 'string') restrictionTagHash = misc.getHashKey(restrictionTagHash)
+    if (typeof restrictionTagHash === 'string') restrictionTagHash = GetHashKey(restrictionTagHash)
     return Citizen.invokeNative('0x7796B21B76221BC5', ped, componentId, restrictionTagHash);
 }
 
@@ -16,7 +16,7 @@ export function doesCurrentPedComponentHaveRestrictionTag(ped: number | IPed, co
  * Hash: 0xD726BAB4554DA580 | Since: 2612
  */
 export function doesCurrentPedPropHaveRestrictionTag(ped: number | IPed, componentId: number, restrictionTagHash: number | string): boolean {
-    if (typeof restrictionTagHash === 'string') restrictionTagHash = misc.getHashKey(restrictionTagHash)
+    if (typeof restrictionTagHash === 'string') restrictionTagHash = GetHashKey(restrictionTagHash)
     return Citizen.invokeNative('0xD726BAB4554DA580', ped, componentId, restrictionTagHash);
 }
 
@@ -28,8 +28,8 @@ export function doesCurrentPedPropHaveRestrictionTag(ped: number | IPed, compone
  * Hash: 0x341DE7ED1D2A1BFD | Since: 323
  */
 export function doesShopPedApparelHaveRestrictionTag(componentHash: number | string, restrictionTagHash: number | string, componentId: number): boolean {
-    if (typeof componentHash === 'string') componentHash = misc.getHashKey(componentHash)
-    if (typeof restrictionTagHash === 'string') restrictionTagHash = misc.getHashKey(restrictionTagHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
+    if (typeof restrictionTagHash === 'string') restrictionTagHash = GetHashKey(restrictionTagHash)
     return DoesShopPedApparelHaveRestrictionTag(componentHash, restrictionTagHash, componentId);
 }
 
@@ -42,7 +42,7 @@ export function doesShopPedApparelHaveRestrictionTag(componentHash: number | str
  * Hash: 0x6BEDF5769AC2DC07 | Since: 1604
  */
 export function executeContentChangesetGroupForAll(hash: number | string): void {
-    if (typeof hash === 'string') hash = misc.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     LoadContentChangeSetGroup(hash);
 }
 
@@ -81,7 +81,7 @@ export function getDlcVehicleModel(dlcVehicleIndex: number): number {
  * Hash: 0xC098810437312FFF | Since: 323
  */
 export function getDlcVehicleModLockHash(hash: number | string): number {
-    if (typeof hash === 'string') hash = misc.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     return GetDlcVehicleModLockHash(hash);
 }
 
@@ -167,7 +167,7 @@ export function getDlcWeaponDataSp(dlcWeaponIndex: number): [boolean, any] {
  * Hash: 0x6C93ED8C2F74859B | Since: 323
  */
 export function getForcedComponent(componentHash: number | string, forcedComponentIndex: number): [number, number, number] {
-    if (typeof componentHash === 'string') componentHash = misc.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetForcedComponent(componentHash, forcedComponentIndex);
 }
 
@@ -177,7 +177,7 @@ export function getForcedComponent(componentHash: number | string, forcedCompone
  * Hash: 0xE1CA84EBF72E691D | Since: 323
  */
 export function getForcedProp(componentHash: number | string, forcedPropIndex: number): [number, number, number] {
-    if (typeof componentHash === 'string') componentHash = misc.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetForcedProp(componentHash, forcedPropIndex);
 }
 
@@ -264,7 +264,7 @@ export function getNumTattooShopDlcItems(character: number): number {
  * Hash: 0xC6B9DB42C04DD8C3 | Since: 323
  */
 export function getShopPedApparelForcedComponentCount(componentHash: number | string): number {
-    if (typeof componentHash === 'string') componentHash = misc.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetShopPedApparelForcedComponentCount(componentHash);
 }
 
@@ -274,7 +274,7 @@ export function getShopPedApparelForcedComponentCount(componentHash: number | st
  * Hash: 0x017568A8182D98A6 | Since: 323
  */
 export function getShopPedApparelForcedPropCount(componentHash: number | string): number {
-    if (typeof componentHash === 'string') componentHash = misc.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetShopPedApparelForcedPropCount(componentHash);
 }
 
@@ -284,7 +284,7 @@ export function getShopPedApparelForcedPropCount(componentHash: number | string)
  * Hash: 0xC17AD0E5752BECDA | Since: 323
  */
 export function getShopPedApparelVariantComponentCount(componentHash: number | string): number {
-    if (typeof componentHash === 'string') componentHash = misc.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetShopPedApparelVariantComponentCount(componentHash);
 }
 
@@ -295,7 +295,7 @@ export function getShopPedApparelVariantComponentCount(componentHash: number | s
  * Hash: 0xD40AAC51E8E4C663 | Since: 791
  */
 export function getShopPedApparelVariantPropCount(propHash: number | string): number {
-    if (typeof propHash === 'string') propHash = misc.getHashKey(propHash)
+    if (typeof propHash === 'string') propHash = GetHashKey(propHash)
     return GetShopPedApparelVariantPropCount(propHash);
 }
 
@@ -305,7 +305,7 @@ export function getShopPedApparelVariantPropCount(propHash: number | string): nu
  * Hash: 0x74C0E2A57EC66760 | Since: 323
  */
 export function getShopPedComponent(componentHash: number | string): any {
-    if (typeof componentHash === 'string') componentHash = misc.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetShopPedComponent(componentHash);
 }
 
@@ -324,7 +324,7 @@ export function getShopPedOutfit(): any {
  * Hash: 0x19F2A026EDF0013F | Since: 323
  */
 export function getShopPedOutfitComponentVariant(outfitHash: number | string, variantIndex: number): [boolean, any] {
-    if (typeof outfitHash === 'string') outfitHash = misc.getHashKey(outfitHash)
+    if (typeof outfitHash === 'string') outfitHash = GetHashKey(outfitHash)
     return GetShopPedOutfitComponentVariant(outfitHash, variantIndex);
 }
 
@@ -343,7 +343,7 @@ export function getShopPedOutfitLocate(): number {
  * Hash: 0xA9F9C2E0FDE11CBB | Since: 323
  */
 export function getShopPedOutfitPropVariant(outfitHash: number | string, variantIndex: number): [boolean, any] {
-    if (typeof outfitHash === 'string') outfitHash = misc.getHashKey(outfitHash)
+    if (typeof outfitHash === 'string') outfitHash = GetHashKey(outfitHash)
     return GetShopPedOutfitPropVariant(outfitHash, variantIndex);
 }
 
@@ -353,7 +353,7 @@ export function getShopPedOutfitPropVariant(outfitHash: number | string, variant
  * Hash: 0x5D5CAFF661DDF6FC | Since: 323
  */
 export function getShopPedProp(componentHash: number | string): any {
-    if (typeof componentHash === 'string') componentHash = misc.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetShopPedProp(componentHash);
 }
 
@@ -373,7 +373,7 @@ export function getShopPedQueryComponent(componentId: number): any {
  * Hash: 0x96E2929292A4DB77 | Since: 2189
  */
 export function getShopPedQueryComponentIndex(componentHash: number | string): number {
-    if (typeof componentHash === 'string') componentHash = misc.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return Citizen.invokeNative('0x96E2929292A4DB77', componentHash);
 }
 
@@ -403,7 +403,7 @@ export function getShopPedQueryProp(componentId: number): any {
  * Hash: 0x6CEBE002E58DEE97 | Since: 2189
  */
 export function getShopPedQueryPropIndex(componentHash: number | string): number {
-    if (typeof componentHash === 'string') componentHash = misc.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return Citizen.invokeNative('0x6CEBE002E58DEE97', componentHash);
 }
 
@@ -460,7 +460,7 @@ export function getTattooShopDlcItemData(characterType: number, decorationIndex:
  * Hash: 0x10144267DD22866C | Since: 2189
  */
 export function getTattooShopDlcItemIndex(overlayHash: number | string, character: number): number {
-    if (typeof overlayHash === 'string') overlayHash = misc.getHashKey(overlayHash)
+    if (typeof overlayHash === 'string') overlayHash = GetHashKey(overlayHash)
     return GetTattooShopDlcItemIndex(overlayHash, undefined, character);
 }
 
@@ -470,7 +470,7 @@ export function getTattooShopDlcItemIndex(overlayHash: number | string, characte
  * Hash: 0x6E11F282F11863B6 | Since: 323
  */
 export function getVariantComponent(componentHash: number | string, variantComponentIndex: number): [number, number, number] {
-    if (typeof componentHash === 'string') componentHash = misc.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetVariantComponent(componentHash, variantComponentIndex);
 }
 
@@ -480,7 +480,7 @@ export function getVariantComponent(componentHash: number | string, variantCompo
  * Hash: 0xD81B7F27BC773E66 | Since: 791
  */
 export function getVariantProp(componentHash: number | string, variantPropIndex: number): [number, number, number] {
-    if (typeof componentHash === 'string') componentHash = misc.getHashKey(componentHash)
+    if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
     return GetVariantProp(componentHash, variantPropIndex);
 }
 
@@ -508,7 +508,7 @@ export function initShopPedProp(): any {
  * Hash: 0xD4D7B033C3AA243C | Since: 323
  */
 export function isContentItemLocked(itemHash: number | string): boolean {
-    if (typeof itemHash === 'string') itemHash = misc.getHashKey(itemHash)
+    if (typeof itemHash === 'string') itemHash = GetHashKey(itemHash)
     return IsContentItemLocked(itemHash);
 }
 
@@ -518,7 +518,7 @@ export function isContentItemLocked(itemHash: number | string): boolean {
  * Hash: 0x0564B9FF9631B82C | Since: 323
  */
 export function isDlcVehicleMod(hash: number | string): boolean {
-    if (typeof hash === 'string') hash = misc.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     return IsDlcVehicleMod(hash);
 }
 
@@ -531,7 +531,7 @@ export function isDlcVehicleMod(hash: number | string): boolean {
  * Hash: 0x3C1978285B036B25 | Since: 1604
  */
 export function revertContentChangesetGroupForAll(hash: number | string): void {
-    if (typeof hash === 'string') hash = misc.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     UnloadContentChangeSetGroup(hash);
 }
 

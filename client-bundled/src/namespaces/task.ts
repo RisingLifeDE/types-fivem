@@ -456,7 +456,7 @@ export function getScriptedCoverPointCoords(coverpoint: number): Vector3 {
  * Hash: 0x77F1BEB8863288D5 | Since: 323 | API-Set: unknown
  */
 export function getScriptStatus(ped: number | IPed, taskHash: number | string): number {
-    if (typeof taskHash === 'string') taskHash = game.getHashKey(taskHash)
+    if (typeof taskHash === 'string') taskHash = GetHashKey(taskHash)
     return GetScriptTaskStatus(ped, taskHash);
 }
 
@@ -1333,8 +1333,8 @@ export function setSequenceToRepeat(taskSequenceId: number, repeat: boolean): vo
  * Hash: 0x8423541E8B3A1589 | Since: 1493 | API-Set: unknown
  */
 export function setMoveNetworkAnimSet(ped: number | IPed, clipSet: number | string, variableClipSet: number | string): void {
-    if (typeof clipSet === 'string') clipSet = game.getHashKey(clipSet)
-    if (typeof variableClipSet === 'string') variableClipSet = game.getHashKey(variableClipSet)
+    if (typeof clipSet === 'string') clipSet = GetHashKey(clipSet)
+    if (typeof variableClipSet === 'string') variableClipSet = GetHashKey(variableClipSet)
     Citizen.invokeNative('0x8423541E8B3A1589', ped, clipSet, variableClipSet);
 }
 
@@ -1472,7 +1472,7 @@ export function aimGunAtEntity(ped: number | IPed, entity: number | IEntity, dur
  * Hash: 0x7A192BE16D373D00 | Since: 323 | API-Set: unknown
  */
 export function aimGunScripted(ped: number | IPed, scriptTask: number | string, disableBlockingClip: boolean, instantBlendToAim: boolean): void {
-    if (typeof scriptTask === 'string') scriptTask = game.getHashKey(scriptTask)
+    if (typeof scriptTask === 'string') scriptTask = GetHashKey(scriptTask)
     TaskAimGunScripted(ped, scriptTask, disableBlockingClip, instantBlendToAim);
 }
 
@@ -1643,7 +1643,7 @@ export function cower(ped: number | IPed, duration: number): void {
  * Hash: 0x2F8AF0E82773A171 | Since: 323 | API-Set: unknown
  */
 export function driveBy(driverPed: number | IPed, targetPed: number | IPed, targetVehicle: number | IVehicle, targetX: number, targetY: number, targetZ: number, distanceToShoot: number, pedAccuracy: number, pushUnderneathDrivingTaskIfDriving: boolean, firingPattern: number | string): void {
-    if (typeof firingPattern === 'string') firingPattern = game.getHashKey(firingPattern)
+    if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
     TaskDriveBy(driverPed, targetPed, targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, pushUnderneathDrivingTaskIfDriving, firingPattern);
 }
 
@@ -1772,7 +1772,7 @@ export function followWaypointRecording(ped: number | IPed, name: string): void 
  * Hash: 0x4F056E1AFFEF17AB | Since: 323 | API-Set: unknown
  */
 export function forceMotionState(ped: number | IPed, state: number | string, forceRestart: boolean): void {
-    if (typeof state === 'string') state = game.getHashKey(state)
+    if (typeof state === 'string') state = GetHashKey(state)
     TaskForceMotionState(ped, state, forceRestart);
 }
 
@@ -1886,7 +1886,7 @@ export function goStraightToCoordRelativeToEntity(ped: number | IPed, entity: nu
  * Hash: 0xA55547801EB331FC | Since: 323 | API-Set: unknown
  */
 export function goToCoordAndAimAtHatedEntitiesNearCoord(pedHandle: number | IPed, goToLocationX: number, goToLocationY: number, goToLocationZ: number, focusLocationX: number, focusLocationY: number, focusLocationZ: number, speed: number, shootAtEnemies: boolean, distanceToStopAt: number, noRoadsDistance: number, useNavMesh: boolean, navFlags: number, taskFlags: number, firingPattern: number | string): void {
-    if (typeof firingPattern === 'string') firingPattern = game.getHashKey(firingPattern)
+    if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
     TaskGoToCoordAndAimAtHatedEntitiesNearCoord(pedHandle, goToLocationX, goToLocationY, goToLocationZ, focusLocationX, focusLocationY, focusLocationZ, speed, shootAtEnemies, distanceToStopAt, noRoadsDistance, useNavMesh, navFlags, taskFlags, firingPattern);
 }
 
@@ -1933,7 +1933,7 @@ export function goToCoordAnyMeansExtraParamsWithCruiseSpeed(ped: number | IPed, 
  * Hash: 0x11315AB3385B8AC0 | Since: 323 | API-Set: unknown
  */
 export function goToCoordWhileAimingAtCoord(ped: number | IPed, pos: Vector3, aimAtX: number, aimAtY: number, aimAtZ: number, moveBlendRatio: number, shoot: boolean, targetRadius: number, slowDistance: number, useNavMesh: boolean, navFlags: number, instantBlendToAim: boolean, firingPattern: number | string): void {
-    if (typeof firingPattern === 'string') firingPattern = game.getHashKey(firingPattern)
+    if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
     TaskGoToCoordWhileAimingAtCoord(ped, pos.x, pos.y, pos.z, aimAtX, aimAtY, aimAtZ, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, navFlags, instantBlendToAim, firingPattern);
 }
 
@@ -1943,7 +1943,7 @@ export function goToCoordWhileAimingAtCoord(ped: number | IPed, pos: Vector3, ai
  * Hash: 0xB2A16444EAD9AE47 | Since: 323 | API-Set: unknown
  */
 export function goToCoordWhileAimingAtEntity(ped: number | IPed, pos: Vector3, aimAtID: number | IEntity, moveBlendRatio: number, shoot: boolean, targetRadius: number, slowDistance: number, useNavMesh: boolean, navFlags: number, instantBlendToAim: boolean, firingPattern: number | string, time: number): void {
-    if (typeof firingPattern === 'string') firingPattern = game.getHashKey(firingPattern)
+    if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
     TaskGoToCoordWhileAimingAtEntity(ped, pos.x, pos.y, pos.z, aimAtID, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, navFlags, instantBlendToAim, firingPattern, time);
 }
 
@@ -1973,7 +1973,7 @@ export function goToEntity(entity: number | IEntity, target: number | IEntity, d
  * Hash: 0x04701832B739DCE5 | Since: 323 | API-Set: unknown
  */
 export function goToEntityWhileAimingAtCoord(ped: number | IPed, entity: number | IEntity, aimX: number, aimY: number, aimZ: number, moveBlendRatio: number, shoot: boolean, targetRadius: number, slowDistance: number, useNavMesh: boolean, instantBlendToAim: boolean, firingPattern: number | string): void {
-    if (typeof firingPattern === 'string') firingPattern = game.getHashKey(firingPattern)
+    if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
     TaskGoToEntityWhileAimingAtCoord(ped, entity, aimX, aimY, aimZ, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, instantBlendToAim, firingPattern);
 }
 
@@ -1985,7 +1985,7 @@ export function goToEntityWhileAimingAtCoord(ped: number | IPed, entity: number 
  * Hash: 0x97465886D35210E9 | Since: 323 | API-Set: unknown
  */
 export function goToEntityWhileAimingAtEntity(ped: number | IPed, entityToWalkTo: number | IEntity, entityToAimAt: number | IEntity, speed: number, shootatEntity: boolean, targetRadius: number, slowDistance: number, useNavMesh: boolean, instantBlendToAim: boolean, firingPattern: number | string): void {
-    if (typeof firingPattern === 'string') firingPattern = game.getHashKey(firingPattern)
+    if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
     TaskGoToEntityWhileAimingAtEntity(ped, entityToWalkTo, entityToAimAt, speed, shootatEntity, targetRadius, slowDistance, useNavMesh, instantBlendToAim, firingPattern);
 }
 
@@ -2727,7 +2727,7 @@ export function setBlockingOfNonTemporaryEvents(ped: number | IPed, toggle: bool
  * Hash: 0xEB8517DDA73720DA | Since: 323 | API-Set: unknown
  */
 export function setDecisionMaker(ped: number | IPed, decisionMakerId: number | string): void {
-    if (typeof decisionMakerId === 'string') decisionMakerId = game.getHashKey(decisionMakerId)
+    if (typeof decisionMakerId === 'string') decisionMakerId = GetHashKey(decisionMakerId)
     TaskSetDecisionMaker(ped, decisionMakerId);
 }
 
@@ -2764,7 +2764,7 @@ export function shockingEventReact(ped: number | IPed, eventHandle: number): voi
  * Hash: 0x46A6CC01E0826106 | Since: 323 | API-Set: unknown
  */
 export function shootAtCoord(ped: number | IPed, pos: Vector3, duration: number, firingPattern: number | string): void {
-    if (typeof firingPattern === 'string') firingPattern = game.getHashKey(firingPattern)
+    if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
     TaskShootAtCoord(ped, pos.x, pos.y, pos.z, duration, firingPattern);
 }
 
@@ -2784,7 +2784,7 @@ export function shootAtCoord(ped: number | IPed, pos: Vector3, duration: number,
  * Hash: 0x08DA95E8298AE772 | Since: 323 | API-Set: unknown
  */
 export function shootAtEntity(entity: number | IEntity, target: number | IEntity, duration: number, firingPattern: number | string): void {
-    if (typeof firingPattern === 'string') firingPattern = game.getHashKey(firingPattern)
+    if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
     TaskShootAtEntity(entity, target, duration, firingPattern);
 }
 
@@ -2939,7 +2939,7 @@ export function stayInCover(ped: number | IPed): void {
  * Hash: 0xAA5DC05579D60BD9 | Since: 323 | API-Set: unknown
  */
 export function stealthKill(killer: number | IPed, target: number | IPed, stealthKillActionResultHash: number | string, desiredMoveBlendRatio: number, stealthFlags: number): void {
-    if (typeof stealthKillActionResultHash === 'string') stealthKillActionResultHash = game.getHashKey(stealthKillActionResultHash)
+    if (typeof stealthKillActionResultHash === 'string') stealthKillActionResultHash = GetHashKey(stealthKillActionResultHash)
     TaskStealthKill(killer, target, stealthKillActionResultHash, desiredMoveBlendRatio, stealthFlags);
 }
 
@@ -3149,7 +3149,7 @@ export function vehicleChase(driver: number | IPed, targetEnt: number | IEntity)
  * Hash: 0xE2A2AA2F659D77A7 | Since: 323 | API-Set: unknown
  */
 export function vehicleDriveToCoord(ped: number | IPed, vehicle: number | IVehicle, pos: Vector3, speed: number, vehicleModel: number | string, drivingMode: number, stopRange: number, straightLineDistance: number): void {
-    if (typeof vehicleModel === 'string') vehicleModel = game.getHashKey(vehicleModel)
+    if (typeof vehicleModel === 'string') vehicleModel = GetHashKey(vehicleModel)
     TaskVehicleDriveToCoord(ped, vehicle, pos.x, pos.y, pos.z, speed, undefined, vehicleModel, drivingMode, stopRange, straightLineDistance);
 }
 
@@ -3614,7 +3614,7 @@ export function waypointPlaybackStartAimingAtPed(ped: number | IPed, target: num
  * Hash: 0x057A25CFCC9DB671 | Since: 323 | API-Set: unknown
  */
 export function waypointPlaybackStartShootingAtCoord(ped: number | IPed, pos: Vector3, firingPattern: number | string): void {
-    if (typeof firingPattern === 'string') firingPattern = game.getHashKey(firingPattern)
+    if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
     WaypointPlaybackStartShootingAtCoord(ped, pos.x, pos.y, pos.z, false, firingPattern);
 }
 

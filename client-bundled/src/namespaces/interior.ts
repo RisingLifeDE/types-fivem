@@ -103,7 +103,7 @@ export function disableMetroSystem(toggle: boolean): void {
  * Hash: 0xA97F257D0151A6AB | Since: 323 | API-Set: unknown
  */
 export function enableExteriorCullModelThisFrame(mapObjectHash: number | string): void {
-    if (typeof mapObjectHash === 'string') mapObjectHash = game.getHashKey(mapObjectHash)
+    if (typeof mapObjectHash === 'string') mapObjectHash = GetHashKey(mapObjectHash)
     EnableExteriorCullModelThisFrame(mapObjectHash);
 }
 
@@ -113,7 +113,7 @@ export function enableExteriorCullModelThisFrame(mapObjectHash: number | string)
  * Hash: 0x50C375537449F369 | Since: 757 | API-Set: unknown
  */
 export function enableShadowCullModelThisFrame(mapObjectHash: number | string): void {
-    if (typeof mapObjectHash === 'string') mapObjectHash = game.getHashKey(mapObjectHash)
+    if (typeof mapObjectHash === 'string') mapObjectHash = GetHashKey(mapObjectHash)
     EnableScriptCullModelThisFrame(mapObjectHash);
 }
 
@@ -141,7 +141,7 @@ export function forceActivatingTrackingOnEntity(): void {
  * Hash: 0x52923C4710DD9907 | Since: 323 | API-Set: unknown
  */
 export function forceRoomForEntity(entity: number | IEntity, interior: number, roomHashKey: number | string): void {
-    if (typeof roomHashKey === 'string') roomHashKey = game.getHashKey(roomHashKey)
+    if (typeof roomHashKey === 'string') roomHashKey = GetHashKey(roomHashKey)
     ForceRoomForEntity(entity, interior, roomHashKey);
 }
 
@@ -151,7 +151,7 @@ export function forceRoomForEntity(entity: number | IEntity, interior: number, r
  * Hash: 0x920D853F3E17F1DA | Since: 323 | API-Set: unknown
  */
 export function forceRoomForGameViewport(interiorID: number, roomHashKey: number | string): void {
-    if (typeof roomHashKey === 'string') roomHashKey = game.getHashKey(roomHashKey)
+    if (typeof roomHashKey === 'string') roomHashKey = GetHashKey(roomHashKey)
     ForceRoomForGameViewport(interiorID, roomHashKey);
 }
 
@@ -188,7 +188,7 @@ export function getAtCoordsWithType(pos: Vector3, interiorType: string): number 
  * Hash: 0xF0F77ADB9F67E79D | Since: 323 | API-Set: unknown
  */
 export function getAtCoordsWithTypehash(pos: Vector3, typeHash: number | string): number {
-    if (typeof typeHash === 'string') typeHash = game.getHashKey(typeHash)
+    if (typeof typeHash === 'string') typeHash = GetHashKey(typeHash)
     return GetInteriorAtCoordsWithTypehash(pos.x, pos.y, pos.z, typeHash);
 }
 
@@ -420,7 +420,7 @@ export function setIsExteriorOnly(entity: number | IEntity, toggle: boolean): vo
  * Hash: 0x405DC2AEF6AF95B9 | Since: 323 | API-Set: unknown
  */
 export function setRoomForGameViewportByKey(roomHashKey: number | string): void {
-    if (typeof roomHashKey === 'string') roomHashKey = game.getHashKey(roomHashKey)
+    if (typeof roomHashKey === 'string') roomHashKey = GetHashKey(roomHashKey)
     Citizen.invokeNative('0x405DC2AEF6AF95B9', roomHashKey);
 }
 

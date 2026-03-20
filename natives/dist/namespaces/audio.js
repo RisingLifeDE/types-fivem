@@ -263,7 +263,7 @@ export function enableVehicleFanbeltDamage(vehicle, toggle) {
  */
 export function findRadioStationIndex(stationNameHash) {
     if (typeof stationNameHash === 'string')
-        stationNameHash = misc.getHashKey(stationNameHash);
+        stationNameHash = GetHashKey(stationNameHash);
     return FindRadioStationIndex(stationNameHash);
 }
 /**
@@ -880,7 +880,7 @@ export function lockRadioStationTrackList(radioStation, trackListName) {
  */
 export function overrideMicrophoneSettings(hash, toggle) {
     if (typeof hash === 'string')
-        hash = misc.getHashKey(hash);
+        hash = GetHashKey(hash);
     OverrideMicrophoneSettings(hash, toggle);
 }
 /**
@@ -890,7 +890,7 @@ export function overrideMicrophoneSettings(hash, toggle) {
  */
 export function overridePlayerGroundMaterial(hash, toggle) {
     if (typeof hash === 'string')
-        hash = misc.getHashKey(hash);
+        hash = GetHashKey(hash);
     OverridePlayerGroundMaterial(hash, toggle);
 }
 /**
@@ -1155,9 +1155,9 @@ export function playSoundFromEntity(soundId, audioName, entity, audioRef, isNetw
  */
 export function playSoundFromEntityHash(soundId, model, entity, soundSetHash) {
     if (typeof model === 'string')
-        model = misc.getHashKey(model);
+        model = GetHashKey(model);
     if (typeof soundSetHash === 'string')
-        soundSetHash = misc.getHashKey(soundSetHash);
+        soundSetHash = GetHashKey(soundSetHash);
     Citizen.invokeNative('0x5B9853296731E88D', soundId, model, entity, soundSetHash, undefined, undefined);
 }
 /**
@@ -1269,7 +1269,7 @@ export function preloadScriptPhoneConversation() {
  */
 export function preloadVehicleBank(vehicleModel) {
     if (typeof vehicleModel === 'string')
-        vehicleModel = misc.getHashKey(vehicleModel);
+        vehicleModel = GetHashKey(vehicleModel);
     PreloadVehicleAudioBank(vehicleModel);
 }
 /**
@@ -1395,7 +1395,7 @@ export function removeEntityFromMixGroup(entity) {
  */
 export function removeIndividualPortalSettingsOverride(interiorNameHash, roomIndex, doorIndex) {
     if (typeof interiorNameHash === 'string')
-        interiorNameHash = misc.getHashKey(interiorNameHash);
+        interiorNameHash = GetHashKey(interiorNameHash);
     Citizen.invokeNative('0x8EF105736194F80C', interiorNameHash, roomIndex, doorIndex);
 }
 /**
@@ -1516,7 +1516,7 @@ export function setAmbientVoiceName(ped, name) {
  */
 export function setAmbientVoiceNameHash(ped, hash) {
     if (typeof hash === 'string')
-        hash = misc.getHashKey(hash);
+        hash = GetHashKey(hash);
     SetAmbientVoiceNameHash(ped, hash);
 }
 /**
@@ -1829,7 +1829,7 @@ export function setHornPermanentlyOnTime(vehicle, time) {
  */
 export function setIndividualPortalSettingsOverride(interiorNameHash, roomIndex, doorIndex, newPortalSettingsName) {
     if (typeof interiorNameHash === 'string')
-        interiorNameHash = misc.getHashKey(interiorNameHash);
+        interiorNameHash = GetHashKey(interiorNameHash);
     Citizen.invokeNative('0xC9D623C5A3D8FD5D', interiorNameHash, roomIndex, doorIndex, newPortalSettingsName);
 }
 /**
@@ -1950,7 +1950,7 @@ export function setPedIsDrunk(ped, toggle) {
  */
 export function setPedRaceAndVoiceGroup(ped, voiceGroup) {
     if (typeof voiceGroup === 'string')
-        voiceGroup = misc.getHashKey(voiceGroup);
+        voiceGroup = GetHashKey(voiceGroup);
     SetPedRaceAndVoiceGroup(ped, 0, voiceGroup);
 }
 /**
@@ -1973,7 +1973,7 @@ export function setPedVoiceFull(ped) {
  */
 export function setPedVoiceGroup(ped, voiceGroupHash) {
     if (typeof voiceGroupHash === 'string')
-        voiceGroupHash = misc.getHashKey(voiceGroupHash);
+        voiceGroupHash = GetHashKey(voiceGroupHash);
     SetPedVoiceGroup(ped, voiceGroupHash);
 }
 /**
@@ -1983,7 +1983,7 @@ export function setPedVoiceGroup(ped, voiceGroupHash) {
  */
 export function setPedVoiceGroupFromRaceToPvg(ped, voiceGroupHash) {
     if (typeof voiceGroupHash === 'string')
-        voiceGroupHash = misc.getHashKey(voiceGroupHash);
+        voiceGroupHash = GetHashKey(voiceGroupHash);
     SetPedVoiceGroupRace(ped, voiceGroupHash);
 }
 /**
@@ -2147,7 +2147,7 @@ export function setRadioTrackWithStartOffset(radioStationName, mixName) {
  */
 export function setScriptUpdateDoor(doorHash, toggle) {
     if (typeof doorHash === 'string')
-        doorHash = misc.getHashKey(doorHash);
+        doorHash = GetHashKey(doorHash);
     SetScriptUpdateDoorAudio(doorHash, toggle);
 }
 /**
@@ -2689,7 +2689,7 @@ export function updateUnlockableDjRadioTracks(enableMixes) {
  */
 export function useFootstepScriptSweeteners(ped, hash) {
     if (typeof hash === 'string')
-        hash = misc.getHashKey(hash);
+        hash = GetHashKey(hash);
     UseFootstepScriptSweeteners(ped, false, hash);
 }
 /**

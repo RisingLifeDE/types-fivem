@@ -45,9 +45,9 @@ export function netGameserverBasketIsFull() {
  */
 export function netGameserverBasketStart(categoryHash, actionHash, flags) {
     if (typeof categoryHash === 'string')
-        categoryHash = game.getHashKey(categoryHash);
+        categoryHash = GetHashKey(categoryHash);
     if (typeof actionHash === 'string')
-        actionHash = game.getHashKey(actionHash);
+        actionHash = GetHashKey(actionHash);
     return NetGameserverBasketStart(categoryHash, actionHash, flags);
 }
 /**
@@ -57,11 +57,11 @@ export function netGameserverBasketStart(categoryHash, actionHash, flags) {
  */
 export function netGameserverBeginService(categoryHash, itemHash, actionTypeHash, value, flags) {
     if (typeof categoryHash === 'string')
-        categoryHash = game.getHashKey(categoryHash);
+        categoryHash = GetHashKey(categoryHash);
     if (typeof itemHash === 'string')
-        itemHash = game.getHashKey(itemHash);
+        itemHash = GetHashKey(itemHash);
     if (typeof actionTypeHash === 'string')
-        actionTypeHash = game.getHashKey(actionTypeHash);
+        actionTypeHash = GetHashKey(actionTypeHash);
     return NetGameserverBeginService(categoryHash, itemHash, actionTypeHash, value, flags);
 }
 /**
@@ -87,7 +87,7 @@ export function netGameserverCatalogItemIsValid(name) {
  */
 export function netGameserverCatalogItemKeyIsValid(hash) {
     if (typeof hash === 'string')
-        hash = game.getHashKey(hash);
+        hash = GetHashKey(hash);
     return NetGameserverCatalogItemExistsHash(hash);
 }
 /**
@@ -121,7 +121,7 @@ export function netGameserverClearSession() {
  */
 export function netGameserverDeleteCharacter(slot, transfer, reason) {
     if (typeof reason === 'string')
-        reason = game.getHashKey(reason);
+        reason = GetHashKey(reason);
     return NetGameserverDeleteCharacterSlot(slot, transfer, reason);
 }
 /**
@@ -163,9 +163,9 @@ export function netGameserverGetCatalogCloudCrc() {
  */
 export function netGameserverGetPrice(itemHash, categoryHash) {
     if (typeof itemHash === 'string')
-        itemHash = game.getHashKey(itemHash);
+        itemHash = GetHashKey(itemHash);
     if (typeof categoryHash === 'string')
-        categoryHash = game.getHashKey(categoryHash);
+        categoryHash = GetHashKey(categoryHash);
     return NetGameserverGetPrice(itemHash, categoryHash, false);
 }
 /**

@@ -208,7 +208,7 @@ export function getHeadOverlayData(ped: number | IPed, index: number): [boolean,
  * Hash: 0xF71542F7 | Since: unknown | API-Set: client
  */
 export function getModelHealthConfig(modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetPedModelHealthConfig(modelHash);
 }
 
@@ -218,7 +218,7 @@ export function getModelHealthConfig(modelHash: number | string): number {
  * Hash: 0xFE08CAD6 | Since: unknown | API-Set: client
  */
 export function getModelPersonality(modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetPedModelPersonality(modelHash);
 }
 
@@ -336,7 +336,7 @@ export function overridesUseDefaultDriveByClipset(flag: boolean): void {
  * Hash: 0x79A12861 | Since: unknown | API-Set: client
  */
 export function resetModelPersonality(modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     ResetPedModelPersonality(modelHash);
 }
 
@@ -410,7 +410,7 @@ export function setMeleeCombatLimits(primaryCount: number, secondaryCount: numbe
  * Hash: 0xAF12A05D | Since: unknown | API-Set: client
  */
 export function setModelHealthConfig(modelHash: number | string, configName: string): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     SetPedModelHealthConfig(modelHash, configName);
 }
 
@@ -420,8 +420,8 @@ export function setModelHealthConfig(modelHash: number | string, configName: str
  * Hash: 0x46F6B38B | Since: unknown | API-Set: client
  */
 export function setModelPersonality(modelHash: number | string, personalityHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
-    if (typeof personalityHash === 'string') personalityHash = game.getHashKey(personalityHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
+    if (typeof personalityHash === 'string') personalityHash = GetHashKey(personalityHash)
     SetPedModelPersonality(modelHash, personalityHash);
 }
 
@@ -510,8 +510,8 @@ export function addArmourTo(ped: number | IPed, amount: number): void {
  * Hash: 0x5F5D1665E352A839 | Since: 323 | API-Set: unknown
  */
 export function addDecorationFromHashes(ped: number | IPed, collection: number | string, overlay: number | string): void {
-    if (typeof collection === 'string') collection = game.getHashKey(collection)
-    if (typeof overlay === 'string') overlay = game.getHashKey(overlay)
+    if (typeof collection === 'string') collection = GetHashKey(collection)
+    if (typeof overlay === 'string') overlay = GetHashKey(overlay)
     AddPedDecorationFromHashes(ped, collection, overlay);
 }
 
@@ -521,8 +521,8 @@ export function addDecorationFromHashes(ped: number | IPed, collection: number |
  * Hash: 0x5619BFA07CFD7833 | Since: 323 | API-Set: unknown
  */
 export function addDecorationFromHashesInCorona(ped: number | IPed, collection: number | string, overlay: number | string): void {
-    if (typeof collection === 'string') collection = game.getHashKey(collection)
-    if (typeof overlay === 'string') overlay = game.getHashKey(overlay)
+    if (typeof collection === 'string') collection = GetHashKey(collection)
+    if (typeof overlay === 'string') overlay = GetHashKey(overlay)
     AddPedDecorationFromHashesInCorona(ped, collection, overlay);
 }
 
@@ -550,7 +550,7 @@ export function addScenarioBlockingArea(x1: number, y1: number, z1: number, x2: 
  * Hash: 0x697157CED63F18D4 | Since: 323 | API-Set: unknown
  */
 export function applyDamageTo(ped: number | IPed, damageAmount: number, weaponType: number | string): void {
-    if (typeof weaponType === 'string') weaponType = game.getHashKey(weaponType)
+    if (typeof weaponType === 'string') weaponType = GetHashKey(weaponType)
     ApplyDamageToPed(ped, damageAmount, false, undefined, weaponType);
 }
 
@@ -1011,8 +1011,8 @@ export function clearRagdollBlockingFlags(ped: number | IPed, blockingFlag: numb
  * Hash: 0x5E29243FB56FC6D4 | Since: 323 | API-Set: unknown
  */
 export function clearRelationshipBetweenGroups(relationship: number, group1: number | string, group2: number | string): void {
-    if (typeof group1 === 'string') group1 = game.getHashKey(group1)
-    if (typeof group2 === 'string') group2 = game.getHashKey(group2)
+    if (typeof group1 === 'string') group1 = GetHashKey(group1)
+    if (typeof group2 === 'string') group2 = GetHashKey(group2)
     ClearRelationshipBetweenGroups(relationship, group1, group2);
 }
 
@@ -1115,7 +1115,7 @@ export function createParachuteBagObject(ped: number | IPed): number {
  * Hash: 0xD49F9B0955C367DE | Since: 323 | API-Set: unknown
  */
 export function create(pedType: number, modelHash: number | string, pos: Vector3, heading: number, isNetwork: boolean, bScriptHostPed: boolean): number {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CreatePed(pedType, modelHash, pos.x, pos.y, pos.z, heading, isNetwork, bScriptHostPed);
 }
 
@@ -1127,7 +1127,7 @@ export function create(pedType: number, modelHash: number | string, pos: Vector3
  * Hash: 0x7DD959874C1FD534 | Since: 323 | API-Set: unknown
  */
 export function createInsideVehicle(vehicle: number | IVehicle, pedType: number, modelHash: number | string, seat: number, isNetwork: boolean, bScriptHostPed: boolean): number {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CreatePedInsideVehicle(vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed);
 }
 
@@ -1175,7 +1175,7 @@ export function createSynchronizedScene(pos: Vector3, roll: number, pitch: numbe
  * Hash: 0x62EC273D00187DCA | Since: 323 | API-Set: unknown
  */
 export function createSynchronizedSceneAtMapObject(pos: Vector3, radius: number, _object: number | string): number {
-    if (typeof _object === 'string') _object = game.getHashKey(_object)
+    if (typeof _object === 'string') _object = GetHashKey(_object)
     return CreateSynchronizedScene2(pos.x, pos.y, pos.z, radius, _object);
 }
 
@@ -1239,7 +1239,7 @@ export function doesGroupExist(groupId: number): boolean {
  * Hash: 0xCC6E3B6BB69501F1 | Since: 505 | API-Set: unknown
  */
 export function doesRelationshipGroupExist(groupHash: number | string): boolean {
-    if (typeof groupHash === 'string') groupHash = game.getHashKey(groupHash)
+    if (typeof groupHash === 'string') groupHash = GetHashKey(groupHash)
     return DoesRelationshipGroupExist(groupHash);
 }
 
@@ -1278,7 +1278,7 @@ export function enableMpLight(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x2D05CED3A38D0F3A | Since: 323 | API-Set: unknown
  */
 export function explodeHead(ped: number | IPed, weaponHash: number | string): void {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     ExplodePedHead(ped, weaponHash);
 }
 
@@ -1352,7 +1352,7 @@ export function forceAiAndAnimationUpdate(ped: number | IPed): void {
  * Hash: 0xF28965D04F570DCA | Since: 323 | API-Set: unknown
  */
 export function forceMotionState(ped: number | IPed, motionStateHash: number | string): boolean {
-    if (typeof motionStateHash === 'string') motionStateHash = game.getHashKey(motionStateHash)
+    if (typeof motionStateHash === 'string') motionStateHash = GetHashKey(motionStateHash)
     return ForcePedMotionState(ped, motionStateHash, false, 0, false);
 }
 
@@ -1942,8 +1942,8 @@ export function getDecorationsState(ped: number | IPed): number {
  * Hash: 0x9FD452BFBE7A7A8B | Since: 323 | API-Set: unknown
  */
 export function getDecorationZoneFromHashes(collection: number | string, overlay: number | string): number {
-    if (typeof collection === 'string') collection = game.getHashKey(collection)
-    if (typeof overlay === 'string') overlay = game.getHashKey(overlay)
+    if (typeof collection === 'string') collection = GetHashKey(collection)
+    if (typeof overlay === 'string') overlay = GetHashKey(overlay)
     return GetPedDecorationZoneFromHashes(collection, overlay);
 }
 
@@ -2456,8 +2456,8 @@ export function getRandomAtCoord(pos: Vector3, xRadius: number, yRadius: number,
  * Hash: 0x9E6B70061662AE5C | Since: 323 | API-Set: unknown
  */
 export function getRelationshipBetweenGroups(group1: number | string, group2: number | string): number {
-    if (typeof group1 === 'string') group1 = game.getHashKey(group1)
-    if (typeof group2 === 'string') group2 = game.getHashKey(group2)
+    if (typeof group1 === 'string') group1 = GetHashKey(group1)
+    if (typeof group2 === 'string') group2 = GetHashKey(group2)
     return GetRelationshipBetweenGroups(group1, group2);
 }
 
@@ -2517,7 +2517,7 @@ export function getSynchronizedSceneRate(sceneID: number): number {
  * Hash: 0x36B77BB84687C318 | Since: 323 | API-Set: unknown
  */
 export function getTimeDamagedByWeapon(ped: number | IPed, weaponHash: number | string): number {
-    if (typeof weaponHash === 'string') weaponHash = game.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     return GetTimeOfLastPedWeaponDamage(ped, weaponHash);
 }
 
@@ -2527,7 +2527,7 @@ export function getTimeDamagedByWeapon(ped: number | IPed, weaponHash: number | 
  * Hash: 0xC56FBF2F228E1DAC | Since: 323 | API-Set: unknown
  */
 export function getTintIndexForLastGenHairTexture(modelHash: number | string, drawableId: number, textureId: number): number {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return Citizen.invokeNative('0xC56FBF2F228E1DAC', modelHash, drawableId, textureId);
 }
 
@@ -3294,7 +3294,7 @@ export function isInMeleeCombat(ped: number | IPed): boolean {
  * Hash: 0x796D90EFB19AA332 | Since: 323 | API-Set: unknown
  */
 export function isInModel(ped: number | IPed, modelHash: number | string): boolean {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return IsPedInModel(ped, modelHash);
 }
 
@@ -3387,7 +3387,7 @@ export function isMale(ped: number | IPed): boolean {
  * Hash: 0xC9D55B1A358A5BF7 | Since: 323 | API-Set: unknown
  */
 export function isModel(ped: number | IPed, modelHash: number | string): boolean {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return IsPedModel(ped, modelHash);
 }
 
@@ -3974,7 +3974,7 @@ export function removePreferredCoverSet(ped: number | IPed): void {
  * Hash: 0xB6BA2444AB393DA2 | Since: 323 | API-Set: unknown
  */
 export function removeRelationshipGroup(groupHash: number | string): void {
-    if (typeof groupHash === 'string') groupHash = game.getHashKey(groupHash)
+    if (typeof groupHash === 'string') groupHash = GetHashKey(groupHash)
     RemoveRelationshipGroup(groupHash);
 }
 
@@ -5991,7 +5991,7 @@ export function setEnveffScale(ped: number | IPed, value: number): void {
  * Hash: 0x9AC577F5A12AD8A9 | Since: 323 | API-Set: unknown
  */
 export function setFiringPattern(ped: number | IPed, patternHash: number | string): void {
-    if (typeof patternHash === 'string') patternHash = game.getHashKey(patternHash)
+    if (typeof patternHash === 'string') patternHash = GetHashKey(patternHash)
     SetPedFiringPattern(ped, patternHash);
 }
 
@@ -6267,7 +6267,7 @@ export function setIntoVehicle(ped: number | IPed, vehicle: number | IVehicle, s
  * Hash: 0x530071295899A8C6 | Since: 323 | API-Set: unknown
  */
 export function setInVehicleContext(ped: number | IPed, context: number | string): void {
-    if (typeof context === 'string') context = game.getHashKey(context)
+    if (typeof context === 'string') context = GetHashKey(context)
     SetPedInVehicleContext(ped, context);
 }
 
@@ -6427,7 +6427,7 @@ export function setMinMoveBlendRatio(ped: number | IPed, value: number): void {
  * Hash: 0xE163A4BCE4DE6F11 | Since: 323 | API-Set: unknown
  */
 export function setModelIsSuppressed(modelHash: number | string, toggle: boolean): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     SetPedModelIsSuppressed(modelHash, toggle);
 }
 
@@ -6756,7 +6756,7 @@ export function setRandomProps(ped: number | IPed): void {
  * Hash: 0xADB3F206518799E8 | Since: 323 | API-Set: unknown
  */
 export function setRelationshipGroupDefaultHash(ped: number | IPed, hash: number | string): void {
-    if (typeof hash === 'string') hash = game.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     SetPedRelationshipGroupDefaultHash(ped, hash);
 }
 
@@ -6766,7 +6766,7 @@ export function setRelationshipGroupDefaultHash(ped: number | IPed, hash: number
  * Hash: 0xC80A74AC829DDD92 | Since: 323 | API-Set: unknown
  */
 export function setRelationshipGroupHash(ped: number | IPed, hash: number | string): void {
-    if (typeof hash === 'string') hash = game.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     SetPedRelationshipGroupHash(ped, hash);
 }
 
@@ -7278,8 +7278,8 @@ export function setRagdollBlockingFlags(ped: number | IPed, blockingFlag: number
  * Hash: 0xBF25EB89375A37AD | Since: 323 | API-Set: unknown
  */
 export function setRelationshipBetweenGroups(relationship: number, group1: number | string, group2: number | string): void {
-    if (typeof group1 === 'string') group1 = game.getHashKey(group1)
-    if (typeof group2 === 'string') group2 = game.getHashKey(group2)
+    if (typeof group1 === 'string') group1 = GetHashKey(group1)
+    if (typeof group2 === 'string') group2 = GetHashKey(group2)
     SetRelationshipBetweenGroups(relationship, group1, group2);
 }
 
@@ -7289,7 +7289,7 @@ export function setRelationshipBetweenGroups(relationship: number, group1: numbe
  * Hash: 0x5615E0C5EB2BC6E2 | Since: 877 | API-Set: unknown
  */
 export function setRelationshipGroupAffectsWantedLevel(group: number | string): void {
-    if (typeof group === 'string') group = game.getHashKey(group)
+    if (typeof group === 'string') group = GetHashKey(group)
     SetRelationshipGroupDontAffectWantedLevel(group, false);
 }
 
@@ -7535,7 +7535,7 @@ export function takeOwnershipOfSynchronizedScene(scene: number): void {
  * Hash: 0xAD27D957598E49E9 | Since: 1290 | API-Set: unknown
  */
 export function tellGroupsInAreaToAttack(ped: number | IPed, hash: number | string): void {
-    if (typeof hash === 'string') hash = game.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     Citizen.invokeNative('0xAD27D957598E49E9', ped, undefined, 0, hash, undefined, undefined);
 }
 

@@ -26,7 +26,7 @@ export function addShockingForEntity(eventType: number, entity: number | IEntity
  * Hash: 0xE42FCDFD0E4196F7 | Since: 323 | API-Set: unknown
  */
 export function blockDecisionMaker(name: number | string, eventType: number): void {
-    if (typeof name === 'string') name = game.getHashKey(name)
+    if (typeof name === 'string') name = GetHashKey(name)
     BlockDecisionMakerEvent(name, eventType);
 }
 
@@ -36,7 +36,7 @@ export function blockDecisionMaker(name: number | string, eventType: number): vo
  * Hash: 0x4FC9381A7AEE8968 | Since: 323 | API-Set: unknown
  */
 export function clearDecisionMakerResponse(name: number | string, eventType: number): void {
-    if (typeof name === 'string') name = game.getHashKey(name)
+    if (typeof name === 'string') name = GetHashKey(name)
     ClearDecisionMakerEventResponse(name, eventType);
 }
 
@@ -82,7 +82,7 @@ export function removeShockingSpawnBlockingAreas(): void {
  * Hash: 0xB604A2942ADED0EE | Since: 323 | API-Set: unknown
  */
 export function setDecisionMaker(ped: number | IPed, name: number | string): void {
-    if (typeof name === 'string') name = game.getHashKey(name)
+    if (typeof name === 'string') name = GetHashKey(name)
     SetDecisionMaker(ped, name);
 }
 
@@ -119,7 +119,7 @@ export function suppressShockingTypeNextFrame(eventType: number): void {
  * Hash: 0xD7CD9CF34F2C99E8 | Since: 323 | API-Set: unknown
  */
 export function unblockDecisionMaker(name: number | string, eventType: number): void {
-    if (typeof name === 'string') name = game.getHashKey(name)
+    if (typeof name === 'string') name = GetHashKey(name)
     UnblockDecisionMakerEvent(name, eventType);
 }
 

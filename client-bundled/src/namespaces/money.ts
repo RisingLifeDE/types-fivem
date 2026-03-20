@@ -61,7 +61,7 @@ export function networkBuyBounty(amount: number, victim: number | string | IPlay
  * Hash: 0x30FD873ECE50E9F6 | Since: 757 | API-Set: unknown
  */
 export function networkBuyContrabandMission(p2: number | string): void {
-    if (typeof p2 === 'string') p2 = game.getHashKey(p2)
+    if (typeof p2 === 'string') p2 = GetHashKey(p2)
     NetworkBuyContraband(0, 0, p2, false, false);
 }
 
@@ -104,7 +104,7 @@ export function networkBuyHeliStrike(cost: number): void {
  * Hash: 0xF0077C797F66A355 | Since: 323 | API-Set: unknown
  */
 export function networkBuyItem(amount: number, item: number | string, item_name: string): void {
-    if (typeof item === 'string') item = game.getHashKey(item)
+    if (typeof item === 'string') item = GetHashKey(item)
     NetworkBuyItem(amount, item, undefined, undefined, false, item_name, undefined, undefined, undefined, false);
 }
 
@@ -114,7 +114,7 @@ export function networkBuyItem(amount: number, item: number | string, item_name:
  * Hash: 0x650A08A280870AF6 | Since: 323 | API-Set: unknown
  */
 export function networkBuyProperty(cost: number, propertyName: number | string): void {
-    if (typeof propertyName === 'string') propertyName = game.getHashKey(propertyName)
+    if (typeof propertyName === 'string') propertyName = GetHashKey(propertyName)
     NetworkBuyProperty(cost, propertyName, false, false);
 }
 
@@ -195,7 +195,7 @@ export function networkCasinoBuyChips(): boolean {
  * Hash: 0x158C16F5E4CF41F8 | Since: 1734 | API-Set: unknown
  */
 export function networkCasinoCanBet(hash: number | string): boolean {
-    if (typeof hash === 'string') hash = game.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     return NetworkCasinoCanUseGamblingType(hash);
 }
 
@@ -493,7 +493,7 @@ export function networkEarnCarclubMembership(): void {
  * Hash: 0x973A9781A34F8DEB | Since: 1734 | API-Set: unknown
  */
 export function networkEarnCasinoAward(amount: number, hash: number | string): void {
-    if (typeof hash === 'string') hash = game.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     NetworkEarnFromCasinoAward(amount, hash);
 }
 
@@ -656,7 +656,7 @@ export function networkEarnDispatchCall(amount: number): void {
  * Hash: 0x128A747F4A230952 | Since: 1290 | API-Set: unknown
  */
 export function networkEarnDoomsdayFinaleBonus(amount: number, vehicleHash: number | string): void {
-    if (typeof vehicleHash === 'string') vehicleHash = game.getHashKey(vehicleHash)
+    if (typeof vehicleHash === 'string') vehicleHash = GetHashKey(vehicleHash)
     NetworkEarnFromDoomsdayFinaleBonus(amount, vehicleHash);
 }
 
@@ -909,7 +909,7 @@ export function networkEarnFromHoldups(amount: number): void {
  * Hash: 0xF92A014A634442D6 | Since: 323 | API-Set: unknown
  */
 export function networkEarnFromImportExport(amount: number, modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     NetworkEarnFromImportExport(amount, modelHash);
 }
 
@@ -991,7 +991,7 @@ export function networkEarnFromPremiumJob(amount: number): void {
  * Hash: 0x849648349D77F5C5 | Since: 323 | API-Set: unknown
  */
 export function networkEarnFromProperty(amount: number, propertyName: number | string): void {
-    if (typeof propertyName === 'string') propertyName = game.getHashKey(propertyName)
+    if (typeof propertyName === 'string') propertyName = GetHashKey(propertyName)
     NetworkEarnFromProperty(amount, propertyName);
 }
 
@@ -1012,7 +1012,7 @@ export function networkEarnFromRobArmoredCars(amount: number): void {
  * Hash: 0x9251B6ABF2D0A5B4 | Since: 1103 | API-Set: unknown
  */
 export function networkEarnFromSellBunker(amount: number, bunkerHash: number | string): void {
-    if (typeof bunkerHash === 'string') bunkerHash = game.getHashKey(bunkerHash)
+    if (typeof bunkerHash === 'string') bunkerHash = GetHashKey(bunkerHash)
     NetworkEarnFromSellBunker(amount, bunkerHash);
 }
 
@@ -1211,7 +1211,7 @@ export function networkEarnRdrBonus(amount: number): void {
  * Hash: 0x0E1E2FF3F4EC11AA | Since: 1290 | API-Set: unknown
  */
 export function networkEarnSellBase(amount: number, baseNameHash: number | string): void {
-    if (typeof baseNameHash === 'string') baseNameHash = game.getHashKey(baseNameHash)
+    if (typeof baseNameHash === 'string') baseNameHash = GetHashKey(baseNameHash)
     NetworkEarnFromSellBase(amount, baseNameHash);
 }
 
@@ -2511,7 +2511,7 @@ export function networkSpentPayBusinessSupplies(): void {
  * Hash: 0x9FF28D88C766E3E8 | Since: 323 | API-Set: unknown
  */
 export function networkSpentPayVehicleInsurancePremium(amount: number, vehicleModel: number | string, notBankrupt: boolean, hasTheMoney: boolean): any {
-    if (typeof vehicleModel === 'string') vehicleModel = game.getHashKey(vehicleModel)
+    if (typeof vehicleModel === 'string') vehicleModel = GetHashKey(vehicleModel)
     return NetworkSpentPayVehicleInsurancePremium(amount, vehicleModel, notBankrupt, hasTheMoney);
 }
 
@@ -3052,7 +3052,7 @@ export function networkEarnFooliganJobParticipation(): void {
  * Hash: 0xBF7B5BB7ED890380 | Since: 3095 | API-Set: unknown
  */
 export function networkEarnGeneric(amount: number, earn: number | string): any {
-    if (typeof earn === 'string') earn = game.getHashKey(earn)
+    if (typeof earn === 'string') earn = GetHashKey(earn)
     return Citizen.invokeNative('0xBF7B5BB7ED890380', amount, earn, undefined, undefined);
 }
 
@@ -3251,8 +3251,8 @@ export function networkSpentAirFreight(hangarCargoSourcingPrice: number, fromBan
  * Hash: 0x2803B027479FB640 | Since: 3095 | API-Set: unknown
  */
 export function networkSpentGeneric(price: number, stat: number | string, spent: number | string): any {
-    if (typeof stat === 'string') stat = game.getHashKey(stat)
-    if (typeof spent === 'string') spent = game.getHashKey(spent)
+    if (typeof stat === 'string') stat = GetHashKey(stat)
+    if (typeof spent === 'string') spent = GetHashKey(spent)
     return Citizen.invokeNative('0x2803B027479FB640', price, false, false, stat, spent, undefined, undefined);
 }
 
@@ -3262,7 +3262,7 @@ export function networkSpentGeneric(price: number, stat: number | string, spent:
  * Hash: 0xD687100F616163F4 | Since: 2944 | API-Set: unknown
  */
 export function networkSpentMissileJammer(amount: number, fromBank: boolean, fromBankAndWallet: boolean, p3: number | string): void {
-    if (typeof p3 === 'string') p3 = game.getHashKey(p3)
+    if (typeof p3 === 'string') p3 = GetHashKey(p3)
     Citizen.invokeNative('0xD687100F616163F4', amount, fromBank, fromBankAndWallet, p3);
 }
 
@@ -3281,7 +3281,7 @@ export function networkSpentSkipCargoSourceSetup(amount: number, fromBank: boole
  * Hash: 0x95CE79A6939C537A | Since: 2944 | API-Set: unknown
  */
 export function networkSpentStealthModule(amount: number, fromBank: boolean, fromBankAndWallet: boolean, p3: number | string): void {
-    if (typeof p3 === 'string') p3 = game.getHashKey(p3)
+    if (typeof p3 === 'string') p3 = GetHashKey(p3)
     Citizen.invokeNative('0x95CE79A6939C537A', amount, fromBank, fromBankAndWallet, p3);
 }
 

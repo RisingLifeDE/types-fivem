@@ -21,7 +21,7 @@ export function bgEndContext(contextName) {
  */
 export function bgEndContextHash(contextHash) {
     if (typeof contextHash === 'string')
-        contextHash = game.getHashKey(contextHash);
+        contextHash = GetHashKey(contextHash);
     BgEndContextHash(contextHash);
 }
 /**
@@ -39,7 +39,7 @@ export function bgGetLaunchParamValue(scriptIndex) {
  */
 export function bgGetIdFromNameHash(p0) {
     if (typeof p0 === 'string')
-        p0 = game.getHashKey(p0);
+        p0 = GetHashKey(p0);
     return Citizen.invokeNative('0x829CD22E043A2577', p0);
 }
 /**
@@ -73,7 +73,7 @@ export function bgStartContext(contextName) {
  */
 export function bgStartContextHash(contextHash) {
     if (typeof contextHash === 'string')
-        contextHash = game.getHashKey(contextHash);
+        contextHash = GetHashKey(contextHash);
     BgStartContextHash(contextHash);
 }
 /**
@@ -99,7 +99,7 @@ export function doesExist(scriptName) {
  */
 export function doesWithNameHashExist(scriptHash) {
     if (typeof scriptHash === 'string')
-        scriptHash = game.getHashKey(scriptHash);
+        scriptHash = GetHashKey(scriptHash);
     return DoesScriptWithNameHashExist(scriptHash);
 }
 /**
@@ -180,7 +180,7 @@ export function getNumberOfEvents(eventGroup) {
  */
 export function getNumberOfThreadsRunningTheWithThisHash(scriptHash) {
     if (typeof scriptHash === 'string')
-        scriptHash = game.getHashKey(scriptHash);
+        scriptHash = GetHashKey(scriptHash);
     return GetNumberOfReferencesOfScriptWithNameHash(scriptHash);
 }
 /**
@@ -206,7 +206,7 @@ export function hasLoaded(scriptName) {
  */
 export function hasWithNameHashLoaded(scriptHash) {
     if (typeof scriptHash === 'string')
-        scriptHash = game.getHashKey(scriptHash);
+        scriptHash = GetHashKey(scriptHash);
     return HasScriptWithNameHashLoaded(scriptHash);
 }
 /**
@@ -232,7 +232,7 @@ export function request(scriptName) {
  */
 export function requestWithNameHash(scriptHash) {
     if (typeof scriptHash === 'string')
-        scriptHash = game.getHashKey(scriptHash);
+        scriptHash = GetHashKey(scriptHash);
     RequestScriptWithNameHash(scriptHash);
 }
 /**
@@ -275,7 +275,7 @@ export function setAsNoLongerNeeded(scriptName) {
  */
 export function setWithNameHashAsNoLongerNeeded(scriptHash) {
     if (typeof scriptHash === 'string')
-        scriptHash = game.getHashKey(scriptHash);
+        scriptHash = GetHashKey(scriptHash);
     SetScriptWithNameHashAsNoLongerNeeded(scriptHash);
 }
 /**
@@ -322,6 +322,6 @@ export function triggerEvent(eventGroup, eventDataSize, playerBits) {
  */
 export function sendTuEventNew(eventGroup, eventDataSize, playerBits, eventType) {
     if (typeof eventType === 'string')
-        eventType = game.getHashKey(eventType);
+        eventType = GetHashKey(eventType);
     return Citizen.invokeNative('0x71A6F836422FDD2B', eventGroup, eventDataSize, playerBits, eventType);
 }

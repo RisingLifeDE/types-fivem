@@ -23,7 +23,7 @@ export function addShockingForEntity(eventType, entity, duration) {
  */
 export function blockDecisionMaker(name, eventType) {
     if (typeof name === 'string')
-        name = misc.getHashKey(name);
+        name = GetHashKey(name);
     BlockDecisionMakerEvent(name, eventType);
 }
 /**
@@ -33,7 +33,7 @@ export function blockDecisionMaker(name, eventType) {
  */
 export function clearDecisionMakerResponse(name, eventType) {
     if (typeof name === 'string')
-        name = misc.getHashKey(name);
+        name = GetHashKey(name);
     ClearDecisionMakerEventResponse(name, eventType);
 }
 /**
@@ -75,7 +75,7 @@ export function removeShockingSpawnBlockingAreas() {
  */
 export function setDecisionMaker(ped, name) {
     if (typeof name === 'string')
-        name = misc.getHashKey(name);
+        name = GetHashKey(name);
     SetDecisionMaker(ped, name);
 }
 /**
@@ -109,6 +109,6 @@ export function suppressShockingTypeNextFrame(eventType) {
  */
 export function unblockDecisionMaker(name, eventType) {
     if (typeof name === 'string')
-        name = misc.getHashKey(name);
+        name = GetHashKey(name);
     UnblockDecisionMakerEvent(name, eventType);
 }

@@ -285,7 +285,7 @@ export function addTextEntry(entryKey: string, entryText: string): void {
  * Hash: 0x289DA860 | Since: unknown | API-Set: client
  */
 export function addTextEntryByHash(entryKey: number | string, entryText: string): void {
-    if (typeof entryKey === 'string') entryKey = game.getHashKey(entryKey)
+    if (typeof entryKey === 'string') entryKey = GetHashKey(entryKey)
     AddTextEntryByHash(entryKey, entryText);
 }
 
@@ -295,7 +295,7 @@ export function addTextEntryByHash(entryKey: number | string, entryText: string)
  * Hash: 0x0BC3144DEB678666 | Since: 323 | API-Set: unknown
  */
 export function addModelToCreatorBudget(modelHash: number | string): boolean {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return AddModelToCreatorBudget(modelHash);
 }
 
@@ -553,7 +553,7 @@ export function hasClipSetLoaded(clipSet: string): boolean {
  * Hash: 0x22CCA434E368F03A | Since: 323 | API-Set: unknown
  */
 export function hasCollisionForModelLoaded(model: number | string): boolean {
-    if (typeof model === 'string') model = game.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return HasCollisionForModelLoaded(model);
 }
 
@@ -563,7 +563,7 @@ export function hasCollisionForModelLoaded(model: number | string): boolean {
  * Hash: 0x98A4EB5D89A0C952 | Since: 323 | API-Set: unknown
  */
 export function hasModelLoaded(model: number | string): boolean {
-    if (typeof model === 'string') model = game.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return HasModelLoaded(model);
 }
 
@@ -663,7 +663,7 @@ export function isIplActive(iplName: string): boolean {
  * Hash: 0x75816577FEA6DAD5 | Since: 1103 | API-Set: unknown
  */
 export function isModelAPed(model: number | string): boolean {
-    if (typeof model === 'string') model = game.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsModelAPed(model);
 }
 
@@ -673,7 +673,7 @@ export function isModelAPed(model: number | string): boolean {
  * Hash: 0x19AAC8F07BFEC53E | Since: 323 | API-Set: unknown
  */
 export function isModelAVehicle(model: number | string): boolean {
-    if (typeof model === 'string') model = game.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsModelAVehicle(model);
 }
 
@@ -683,7 +683,7 @@ export function isModelAVehicle(model: number | string): boolean {
  * Hash: 0x35B9E0803292B641 | Since: 323 | API-Set: unknown
  */
 export function isModelInCdimage(model: number | string): boolean {
-    if (typeof model === 'string') model = game.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsModelInCdimage(model);
 }
 
@@ -693,7 +693,7 @@ export function isModelInCdimage(model: number | string): boolean {
  * Hash: 0xC0296A2EDF545E92 | Since: 323 | API-Set: unknown
  */
 export function isModelValid(model: number | string): boolean {
-    if (typeof model === 'string') model = game.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     return IsModelValid(model);
 }
 
@@ -949,7 +949,7 @@ export function removeIpl(iplName: string): void {
  * Hash: 0xF086AD9354FAC3A3 | Since: 323 | API-Set: unknown
  */
 export function removeModelFromCreatorBudget(modelHash: number | string): void {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     RemoveModelFromCreatorBudget(modelHash);
 }
 
@@ -1028,7 +1028,7 @@ export function requestCollisionAtCoord(pos: Vector3): void {
  * Hash: 0x923CB32A3B874FCB | Since: 323 | API-Set: unknown
  */
 export function requestCollisionForModel(model: number | string): void {
-    if (typeof model === 'string') model = game.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     RequestCollisionForModel(model);
 }
 
@@ -1049,7 +1049,7 @@ export function requestIpl(iplName: string): void {
  * Hash: 0xA0261AEF7ACFC51E | Since: 323 | API-Set: unknown
  */
 export function requestMenuPedModel(model: number | string): void {
-    if (typeof model === 'string') model = game.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     RequestMenuPedModel(model);
 }
 
@@ -1060,7 +1060,7 @@ export function requestMenuPedModel(model: number | string): void {
  * Hash: 0x963D27A58DF860AC | Since: 323 | API-Set: unknown
  */
 export function requestModel(model: number | string): void {
-    if (typeof model === 'string') model = game.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     RequestModel(model);
 }
 
@@ -1202,7 +1202,7 @@ export function setMapdatacullboxEnabled(name: string, toggle: boolean): void {
  * Hash: 0xE532F5D78798DAAB | Since: 323 | API-Set: unknown
  */
 export function setModelAsNoLongerNeeded(model: number | string): void {
-    if (typeof model === 'string') model = game.getHashKey(model)
+    if (typeof model === 'string') model = GetHashKey(model)
     SetModelAsNoLongerNeeded(model);
 }
 
@@ -1500,7 +1500,7 @@ export function switchToMultiSecondpart(ped: number | IPed): void {
  * Hash: 0x0F7082C60FB479EF | Since: 3717 | API-Set: unknown
  */
 export function getModelAdditionalCost(modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return Citizen.invokeNative('0x0F7082C60FB479EF', modelHash);
 }
 
@@ -1510,7 +1510,7 @@ export function getModelAdditionalCost(modelHash: number | string): number {
  * Hash: 0x4A91423C04BAADA1 | Since: 3717 | API-Set: unknown
  */
 export function getTotalModelCost(modelHash: number | string): number {
-    if (typeof modelHash === 'string') modelHash = game.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return Citizen.invokeNative('0x4A91423C04BAADA1', modelHash);
 }
 

@@ -31,8 +31,8 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0x70559AC7
  */
 export function addDecorationFromHashes(ped: number | IPed, collection: number | string, overlay: number | string): void {
-    if (typeof collection === 'string') collection = misc.getHashKey(collection)
-    if (typeof overlay === 'string') overlay = misc.getHashKey(overlay)
+    if (typeof collection === 'string') collection = GetHashKey(collection)
+    if (typeof overlay === 'string') overlay = GetHashKey(overlay)
     AddPedDecorationFromHashes(ped, collection, overlay);
 }
 
@@ -68,7 +68,7 @@ export function clearSecondaryTask(ped: number | IPed): void {
  * Hash: 0x389EF71
  */
 export function create(pedType: number, modelHash: number | string, pos: Vector3, heading: number, isNetwork: boolean, bScriptHostPed: boolean): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CreatePed(pedType, modelHash, pos.x, pos.y, pos.z, heading, isNetwork, bScriptHostPed);
 }
 
@@ -80,7 +80,7 @@ export function create(pedType: number, modelHash: number | string, pos: Vector3
  * Hash: 0x3000F092
  */
 export function createInsideVehicle(vehicle: number | IVehicle, pedType: number, modelHash: number | string, seat: number, isNetwork: boolean, bScriptHostPed: boolean): number {
-    if (typeof modelHash === 'string') modelHash = misc.getHashKey(modelHash)
+    if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CreatePedInsideVehicle(vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed);
 }
 
@@ -280,7 +280,7 @@ export function isUsingActionMode(ped: number | IPed): boolean {
  * Hash: 0xB8278882
  */
 export function setCurrentWeapon(ped: number | IPed, weaponHash: number | string, bForceInHand: boolean): void {
-    if (typeof weaponHash === 'string') weaponHash = misc.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     SetCurrentPedWeapon(ped, weaponHash, bForceInHand);
 }
 
@@ -294,7 +294,7 @@ export function setCurrentWeapon(ped: number | IPed, weaponHash: number | string
  * Hash: 0xBF90DF1A
  */
 export function setAmmo(ped: number | IPed, weaponHash: number | string, ammo: number): void {
-    if (typeof weaponHash === 'string') weaponHash = misc.getHashKey(weaponHash)
+    if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     SetPedAmmo(ped, weaponHash, ammo);
 }
 

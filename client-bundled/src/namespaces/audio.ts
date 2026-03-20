@@ -373,7 +373,7 @@ export function enableVehicleFanbeltDamage(vehicle: number | IVehicle, toggle: b
  * Hash: 0x8D67489793FF428B | Since: 323 | API-Set: unknown
  */
 export function findRadioStationIndex(stationNameHash: number | string): number {
-    if (typeof stationNameHash === 'string') stationNameHash = game.getHashKey(stationNameHash)
+    if (typeof stationNameHash === 'string') stationNameHash = GetHashKey(stationNameHash)
     return FindRadioStationIndex(stationNameHash);
 }
 
@@ -1062,7 +1062,7 @@ export function lockRadioStationTrackList(radioStation: string, trackListName: s
  * Hash: 0x75773E11BA459E90 | Since: 323 | API-Set: unknown
  */
 export function overrideMicrophoneSettings(hash: number | string, toggle: boolean): void {
-    if (typeof hash === 'string') hash = game.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     OverrideMicrophoneSettings(hash, toggle);
 }
 
@@ -1072,7 +1072,7 @@ export function overrideMicrophoneSettings(hash: number | string, toggle: boolea
  * Hash: 0xD2CC78CD3D0B50F9 | Since: 323 | API-Set: unknown
  */
 export function overridePlayerGroundMaterial(hash: number | string, toggle: boolean): void {
-    if (typeof hash === 'string') hash = game.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     OverridePlayerGroundMaterial(hash, toggle);
 }
 
@@ -1356,8 +1356,8 @@ export function playSoundFromEntity(soundId: number, audioName: string, entity: 
  * Hash: 0x5B9853296731E88D | Since: 877 | API-Set: unknown
  */
 export function playSoundFromEntityHash(soundId: number, model: number | string, entity: number | IEntity, soundSetHash: number | string): void {
-    if (typeof model === 'string') model = game.getHashKey(model)
-    if (typeof soundSetHash === 'string') soundSetHash = game.getHashKey(soundSetHash)
+    if (typeof model === 'string') model = GetHashKey(model)
+    if (typeof soundSetHash === 'string') soundSetHash = GetHashKey(soundSetHash)
     Citizen.invokeNative('0x5B9853296731E88D', soundId, model, entity, soundSetHash, undefined, undefined);
 }
 
@@ -1480,7 +1480,7 @@ export function preloadScriptPhoneConversation(): void {
  * Hash: 0xCA4CEA6AE0000A7E | Since: 1180 | API-Set: unknown
  */
 export function preloadVehicleBank(vehicleModel: number | string): void {
-    if (typeof vehicleModel === 'string') vehicleModel = game.getHashKey(vehicleModel)
+    if (typeof vehicleModel === 'string') vehicleModel = GetHashKey(vehicleModel)
     PreloadVehicleAudioBank(vehicleModel);
 }
 
@@ -1620,7 +1620,7 @@ export function removeEntityFromMixGroup(entity: number | IEntity): void {
  * Hash: 0x8EF105736194F80C | Since: 3570 | API-Set: unknown
  */
 export function removeIndividualPortalSettingsOverride(interiorNameHash: number | string, roomIndex: number, doorIndex: number): void {
-    if (typeof interiorNameHash === 'string') interiorNameHash = game.getHashKey(interiorNameHash)
+    if (typeof interiorNameHash === 'string') interiorNameHash = GetHashKey(interiorNameHash)
     Citizen.invokeNative('0x8EF105736194F80C', interiorNameHash, roomIndex, doorIndex);
 }
 
@@ -1753,7 +1753,7 @@ export function setAmbientVoiceName(ped: number | IPed, name: string): void {
  * Hash: 0x9A53DED9921DE990 | Since: 463 | API-Set: unknown
  */
 export function setAmbientVoiceNameHash(ped: number | IPed, hash: number | string): void {
-    if (typeof hash === 'string') hash = game.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     SetAmbientVoiceNameHash(ped, hash);
 }
 
@@ -2088,7 +2088,7 @@ export function setHornPermanentlyOnTime(vehicle: number | IVehicle, time: numbe
  * Hash: 0xC9D623C5A3D8FD5D | Since: 3570 | API-Set: unknown
  */
 export function setIndividualPortalSettingsOverride(interiorNameHash: number | string, roomIndex: number, doorIndex: number, newPortalSettingsName: string): void {
-    if (typeof interiorNameHash === 'string') interiorNameHash = game.getHashKey(interiorNameHash)
+    if (typeof interiorNameHash === 'string') interiorNameHash = GetHashKey(interiorNameHash)
     Citizen.invokeNative('0xC9D623C5A3D8FD5D', interiorNameHash, roomIndex, doorIndex, newPortalSettingsName);
 }
 
@@ -2220,7 +2220,7 @@ export function setPedIsDrunk(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x1B7ABE26CBCBF8C7 | Since: 372 | API-Set: unknown
  */
 export function setPedRaceAndVoiceGroup(ped: number | IPed, voiceGroup: number | string): void {
-    if (typeof voiceGroup === 'string') voiceGroup = game.getHashKey(voiceGroup)
+    if (typeof voiceGroup === 'string') voiceGroup = GetHashKey(voiceGroup)
     SetPedRaceAndVoiceGroup(ped, 0, voiceGroup);
 }
 
@@ -2244,7 +2244,7 @@ export function setPedVoiceFull(ped: number | IPed): void {
  * Hash: 0x7CDC8C3B89F661B3 | Since: 323 | API-Set: unknown
  */
 export function setPedVoiceGroup(ped: number | IPed, voiceGroupHash: number | string): void {
-    if (typeof voiceGroupHash === 'string') voiceGroupHash = game.getHashKey(voiceGroupHash)
+    if (typeof voiceGroupHash === 'string') voiceGroupHash = GetHashKey(voiceGroupHash)
     SetPedVoiceGroup(ped, voiceGroupHash);
 }
 
@@ -2254,7 +2254,7 @@ export function setPedVoiceGroup(ped: number | IPed, voiceGroupHash: number | st
  * Hash: 0x0BABC1345ABBFB16 | Since: 2699 | API-Set: unknown
  */
 export function setPedVoiceGroupFromRaceToPvg(ped: number | IPed, voiceGroupHash: number | string): void {
-    if (typeof voiceGroupHash === 'string') voiceGroupHash = game.getHashKey(voiceGroupHash)
+    if (typeof voiceGroupHash === 'string') voiceGroupHash = GetHashKey(voiceGroupHash)
     SetPedVoiceGroupRace(ped, voiceGroupHash);
 }
 
@@ -2435,7 +2435,7 @@ export function setRadioTrackWithStartOffset(radioStationName: string, mixName: 
  * Hash: 0x06C0023BED16DD6B | Since: 323 | API-Set: unknown
  */
 export function setScriptUpdateDoor(doorHash: number | string, toggle: boolean): void {
-    if (typeof doorHash === 'string') doorHash = game.getHashKey(doorHash)
+    if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
     SetScriptUpdateDoorAudio(doorHash, toggle);
 }
 
@@ -3036,7 +3036,7 @@ export function updateUnlockableDjRadioTracks(enableMixes: boolean): void {
  * Hash: 0xBF4DC1784BE94DFA | Since: 323 | API-Set: unknown
  */
 export function useFootstepScriptSweeteners(ped: number | IPed, hash: number | string): void {
-    if (typeof hash === 'string') hash = game.getHashKey(hash)
+    if (typeof hash === 'string') hash = GetHashKey(hash)
     UseFootstepScriptSweeteners(ped, false, hash);
 }
 

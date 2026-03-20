@@ -5,7 +5,7 @@
  */
 export function doesCurrentPedComponentHaveRestrictionTag(ped, componentId, restrictionTagHash) {
     if (typeof restrictionTagHash === 'string')
-        restrictionTagHash = game.getHashKey(restrictionTagHash);
+        restrictionTagHash = GetHashKey(restrictionTagHash);
     return Citizen.invokeNative('0x7796B21B76221BC5', ped, componentId, restrictionTagHash);
 }
 /**
@@ -15,7 +15,7 @@ export function doesCurrentPedComponentHaveRestrictionTag(ped, componentId, rest
  */
 export function doesCurrentPedPropHaveRestrictionTag(ped, componentId, restrictionTagHash) {
     if (typeof restrictionTagHash === 'string')
-        restrictionTagHash = game.getHashKey(restrictionTagHash);
+        restrictionTagHash = GetHashKey(restrictionTagHash);
     return Citizen.invokeNative('0xD726BAB4554DA580', ped, componentId, restrictionTagHash);
 }
 /**
@@ -27,9 +27,9 @@ export function doesCurrentPedPropHaveRestrictionTag(ped, componentId, restricti
  */
 export function doesShopPedApparelHaveRestrictionTag(componentHash, restrictionTagHash, componentId) {
     if (typeof componentHash === 'string')
-        componentHash = game.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     if (typeof restrictionTagHash === 'string')
-        restrictionTagHash = game.getHashKey(restrictionTagHash);
+        restrictionTagHash = GetHashKey(restrictionTagHash);
     return DoesShopPedApparelHaveRestrictionTag(componentHash, restrictionTagHash, componentId);
 }
 /**
@@ -42,7 +42,7 @@ export function doesShopPedApparelHaveRestrictionTag(componentHash, restrictionT
  */
 export function executeContentChangesetGroupForAll(hash) {
     if (typeof hash === 'string')
-        hash = game.getHashKey(hash);
+        hash = GetHashKey(hash);
     LoadContentChangeSetGroup(hash);
 }
 /**
@@ -78,7 +78,7 @@ export function getDlcVehicleModel(dlcVehicleIndex) {
  */
 export function getDlcVehicleModLockHash(hash) {
     if (typeof hash === 'string')
-        hash = game.getHashKey(hash);
+        hash = GetHashKey(hash);
     return GetDlcVehicleModLockHash(hash);
 }
 /**
@@ -160,7 +160,7 @@ export function getDlcWeaponDataSp(dlcWeaponIndex) {
  */
 export function getForcedComponent(componentHash, forcedComponentIndex) {
     if (typeof componentHash === 'string')
-        componentHash = game.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return GetForcedComponent(componentHash, forcedComponentIndex);
 }
 /**
@@ -170,7 +170,7 @@ export function getForcedComponent(componentHash, forcedComponentIndex) {
  */
 export function getForcedProp(componentHash, forcedPropIndex) {
     if (typeof componentHash === 'string')
-        componentHash = game.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return GetForcedProp(componentHash, forcedPropIndex);
 }
 /**
@@ -249,7 +249,7 @@ export function getNumTattooShopDlcItems(character) {
  */
 export function getShopPedApparelForcedComponentCount(componentHash) {
     if (typeof componentHash === 'string')
-        componentHash = game.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return GetShopPedApparelForcedComponentCount(componentHash);
 }
 /**
@@ -259,7 +259,7 @@ export function getShopPedApparelForcedComponentCount(componentHash) {
  */
 export function getShopPedApparelForcedPropCount(componentHash) {
     if (typeof componentHash === 'string')
-        componentHash = game.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return GetShopPedApparelForcedPropCount(componentHash);
 }
 /**
@@ -269,7 +269,7 @@ export function getShopPedApparelForcedPropCount(componentHash) {
  */
 export function getShopPedApparelVariantComponentCount(componentHash) {
     if (typeof componentHash === 'string')
-        componentHash = game.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return GetShopPedApparelVariantComponentCount(componentHash);
 }
 /**
@@ -280,7 +280,7 @@ export function getShopPedApparelVariantComponentCount(componentHash) {
  */
 export function getShopPedApparelVariantPropCount(propHash) {
     if (typeof propHash === 'string')
-        propHash = game.getHashKey(propHash);
+        propHash = GetHashKey(propHash);
     return GetShopPedApparelVariantPropCount(propHash);
 }
 /**
@@ -290,7 +290,7 @@ export function getShopPedApparelVariantPropCount(propHash) {
  */
 export function getShopPedComponent(componentHash) {
     if (typeof componentHash === 'string')
-        componentHash = game.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return GetShopPedComponent(componentHash);
 }
 /**
@@ -308,7 +308,7 @@ export function getShopPedOutfit() {
  */
 export function getShopPedOutfitComponentVariant(outfitHash, variantIndex) {
     if (typeof outfitHash === 'string')
-        outfitHash = game.getHashKey(outfitHash);
+        outfitHash = GetHashKey(outfitHash);
     return GetShopPedOutfitComponentVariant(outfitHash, variantIndex);
 }
 /**
@@ -326,7 +326,7 @@ export function getShopPedOutfitLocate() {
  */
 export function getShopPedOutfitPropVariant(outfitHash, variantIndex) {
     if (typeof outfitHash === 'string')
-        outfitHash = game.getHashKey(outfitHash);
+        outfitHash = GetHashKey(outfitHash);
     return GetShopPedOutfitPropVariant(outfitHash, variantIndex);
 }
 /**
@@ -336,7 +336,7 @@ export function getShopPedOutfitPropVariant(outfitHash, variantIndex) {
  */
 export function getShopPedProp(componentHash) {
     if (typeof componentHash === 'string')
-        componentHash = game.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return GetShopPedProp(componentHash);
 }
 /**
@@ -355,7 +355,7 @@ export function getShopPedQueryComponent(componentId) {
  */
 export function getShopPedQueryComponentIndex(componentHash) {
     if (typeof componentHash === 'string')
-        componentHash = game.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return Citizen.invokeNative('0x96E2929292A4DB77', componentHash);
 }
 /**
@@ -383,7 +383,7 @@ export function getShopPedQueryProp(componentId) {
  */
 export function getShopPedQueryPropIndex(componentHash) {
     if (typeof componentHash === 'string')
-        componentHash = game.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return Citizen.invokeNative('0x6CEBE002E58DEE97', componentHash);
 }
 /**
@@ -439,7 +439,7 @@ export function getTattooShopDlcItemData(characterType, decorationIndex) {
  */
 export function getTattooShopDlcItemIndex(overlayHash, character) {
     if (typeof overlayHash === 'string')
-        overlayHash = game.getHashKey(overlayHash);
+        overlayHash = GetHashKey(overlayHash);
     return GetTattooShopDlcItemIndex(overlayHash, undefined, character);
 }
 /**
@@ -449,7 +449,7 @@ export function getTattooShopDlcItemIndex(overlayHash, character) {
  */
 export function getVariantComponent(componentHash, variantComponentIndex) {
     if (typeof componentHash === 'string')
-        componentHash = game.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return GetVariantComponent(componentHash, variantComponentIndex);
 }
 /**
@@ -459,7 +459,7 @@ export function getVariantComponent(componentHash, variantComponentIndex) {
  */
 export function getVariantProp(componentHash, variantPropIndex) {
     if (typeof componentHash === 'string')
-        componentHash = game.getHashKey(componentHash);
+        componentHash = GetHashKey(componentHash);
     return GetVariantProp(componentHash, variantPropIndex);
 }
 /**
@@ -485,7 +485,7 @@ export function initShopPedProp() {
  */
 export function isContentItemLocked(itemHash) {
     if (typeof itemHash === 'string')
-        itemHash = game.getHashKey(itemHash);
+        itemHash = GetHashKey(itemHash);
     return IsContentItemLocked(itemHash);
 }
 /**
@@ -495,7 +495,7 @@ export function isContentItemLocked(itemHash) {
  */
 export function isDlcVehicleMod(hash) {
     if (typeof hash === 'string')
-        hash = game.getHashKey(hash);
+        hash = GetHashKey(hash);
     return IsDlcVehicleMod(hash);
 }
 /**
@@ -508,7 +508,7 @@ export function isDlcVehicleMod(hash) {
  */
 export function revertContentChangesetGroupForAll(hash) {
     if (typeof hash === 'string')
-        hash = game.getHashKey(hash);
+        hash = GetHashKey(hash);
     UnloadContentChangeSetGroup(hash);
 }
 /**

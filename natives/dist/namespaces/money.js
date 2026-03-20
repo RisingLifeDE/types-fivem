@@ -54,7 +54,7 @@ export function networkBuyBounty(amount, victim) {
  */
 export function networkBuyContrabandMission(p2) {
     if (typeof p2 === 'string')
-        p2 = misc.getHashKey(p2);
+        p2 = GetHashKey(p2);
     NetworkBuyContraband(0, 0, p2, false, false);
 }
 /**
@@ -94,7 +94,7 @@ export function networkBuyHeliStrike(cost) {
  */
 export function networkBuyItem(amount, item, item_name) {
     if (typeof item === 'string')
-        item = misc.getHashKey(item);
+        item = GetHashKey(item);
     NetworkBuyItem(amount, item, undefined, undefined, false, item_name, undefined, undefined, undefined, false);
 }
 /**
@@ -104,7 +104,7 @@ export function networkBuyItem(amount, item, item_name) {
  */
 export function networkBuyProperty(cost, propertyName) {
     if (typeof propertyName === 'string')
-        propertyName = misc.getHashKey(propertyName);
+        propertyName = GetHashKey(propertyName);
     NetworkBuyProperty(cost, propertyName, false, false);
 }
 /**
@@ -178,7 +178,7 @@ export function networkCasinoBuyChips() {
  */
 export function networkCasinoCanBet(hash) {
     if (typeof hash === 'string')
-        hash = misc.getHashKey(hash);
+        hash = GetHashKey(hash);
     return NetworkCasinoCanUseGamblingType(hash);
 }
 /**
@@ -444,7 +444,7 @@ export function networkEarnCarclubMembership() {
  */
 export function networkEarnCasinoAward(amount, hash) {
     if (typeof hash === 'string')
-        hash = misc.getHashKey(hash);
+        hash = GetHashKey(hash);
     NetworkEarnFromCasinoAward(amount, hash);
 }
 /**
@@ -590,7 +590,7 @@ export function networkEarnDispatchCall(amount) {
  */
 export function networkEarnDoomsdayFinaleBonus(amount, vehicleHash) {
     if (typeof vehicleHash === 'string')
-        vehicleHash = misc.getHashKey(vehicleHash);
+        vehicleHash = GetHashKey(vehicleHash);
     NetworkEarnFromDoomsdayFinaleBonus(amount, vehicleHash);
 }
 /**
@@ -816,7 +816,7 @@ export function networkEarnFromHoldups(amount) {
  */
 export function networkEarnFromImportExport(amount, modelHash) {
     if (typeof modelHash === 'string')
-        modelHash = misc.getHashKey(modelHash);
+        modelHash = GetHashKey(modelHash);
     NetworkEarnFromImportExport(amount, modelHash);
 }
 /**
@@ -890,7 +890,7 @@ export function networkEarnFromPremiumJob(amount) {
  */
 export function networkEarnFromProperty(amount, propertyName) {
     if (typeof propertyName === 'string')
-        propertyName = misc.getHashKey(propertyName);
+        propertyName = GetHashKey(propertyName);
     NetworkEarnFromProperty(amount, propertyName);
 }
 /**
@@ -910,7 +910,7 @@ export function networkEarnFromRobArmoredCars(amount) {
  */
 export function networkEarnFromSellBunker(amount, bunkerHash) {
     if (typeof bunkerHash === 'string')
-        bunkerHash = misc.getHashKey(bunkerHash);
+        bunkerHash = GetHashKey(bunkerHash);
     NetworkEarnFromSellBunker(amount, bunkerHash);
 }
 /**
@@ -1088,7 +1088,7 @@ export function networkEarnRdrBonus(amount) {
  */
 export function networkEarnSellBase(amount, baseNameHash) {
     if (typeof baseNameHash === 'string')
-        baseNameHash = misc.getHashKey(baseNameHash);
+        baseNameHash = GetHashKey(baseNameHash);
     NetworkEarnFromSellBase(amount, baseNameHash);
 }
 /**
@@ -2250,7 +2250,7 @@ export function networkSpentPayBusinessSupplies() {
  */
 export function networkSpentPayVehicleInsurancePremium(amount, vehicleModel, notBankrupt, hasTheMoney) {
     if (typeof vehicleModel === 'string')
-        vehicleModel = misc.getHashKey(vehicleModel);
+        vehicleModel = GetHashKey(vehicleModel);
     return NetworkSpentPayVehicleInsurancePremium(amount, vehicleModel, notBankrupt, hasTheMoney);
 }
 /**
@@ -2732,7 +2732,7 @@ export function networkEarnFooliganJobParticipation() {
  */
 export function networkEarnGeneric(amount, earn) {
     if (typeof earn === 'string')
-        earn = misc.getHashKey(earn);
+        earn = GetHashKey(earn);
     return Citizen.invokeNative('0xBF7B5BB7ED890380', amount, earn, undefined, undefined);
 }
 /**
@@ -2910,9 +2910,9 @@ export function networkSpentAirFreight(hangarCargoSourcingPrice, fromBank, fromB
  */
 export function networkSpentGeneric(price, stat, spent) {
     if (typeof stat === 'string')
-        stat = misc.getHashKey(stat);
+        stat = GetHashKey(stat);
     if (typeof spent === 'string')
-        spent = misc.getHashKey(spent);
+        spent = GetHashKey(spent);
     return Citizen.invokeNative('0x2803B027479FB640', price, false, false, stat, spent, undefined, undefined);
 }
 /**
@@ -2922,7 +2922,7 @@ export function networkSpentGeneric(price, stat, spent) {
  */
 export function networkSpentMissileJammer(amount, fromBank, fromBankAndWallet, p3) {
     if (typeof p3 === 'string')
-        p3 = misc.getHashKey(p3);
+        p3 = GetHashKey(p3);
     Citizen.invokeNative('0xD687100F616163F4', amount, fromBank, fromBankAndWallet, p3);
 }
 /**
@@ -2940,6 +2940,6 @@ export function networkSpentSkipCargoSourceSetup(amount, fromBank, fromBankAndWa
  */
 export function networkSpentStealthModule(amount, fromBank, fromBankAndWallet, p3) {
     if (typeof p3 === 'string')
-        p3 = misc.getHashKey(p3);
+        p3 = GetHashKey(p3);
     Citizen.invokeNative('0x95CE79A6939C537A', amount, fromBank, fromBankAndWallet, p3);
 }

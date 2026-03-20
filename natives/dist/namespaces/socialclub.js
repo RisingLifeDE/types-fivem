@@ -533,7 +533,7 @@ export function scPauseNewsShutdown() {
  */
 export function scPresenceAttrSetFloat(attrHash, value) {
     if (typeof attrHash === 'string')
-        attrHash = misc.getHashKey(attrHash);
+        attrHash = GetHashKey(attrHash);
     return ScPresenceAttrSetFloat(attrHash, value);
 }
 /**
@@ -543,7 +543,7 @@ export function scPresenceAttrSetFloat(attrHash, value) {
  */
 export function scPresenceAttrSetInt(attrHash, value) {
     if (typeof attrHash === 'string')
-        attrHash = misc.getHashKey(attrHash);
+        attrHash = GetHashKey(attrHash);
     return ScPresenceAttrSetInt(attrHash, value);
 }
 /**
@@ -553,7 +553,7 @@ export function scPresenceAttrSetInt(attrHash, value) {
  */
 export function scPresenceAttrSetString(attrHash, value) {
     if (typeof attrHash === 'string')
-        attrHash = misc.getHashKey(attrHash);
+        attrHash = GetHashKey(attrHash);
     return ScPresenceAttrSetString(attrHash, value);
 }
 /**
@@ -678,6 +678,6 @@ export function scTransitionNewsShowTimed() {
  */
 export function scEmailMarketingEmailOpened(index, _type) {
     if (typeof _type === 'string')
-        _type = misc.getHashKey(_type);
+        _type = GetHashKey(_type);
     Citizen.invokeNative('0x69AA35F3F391CDBA', index, _type);
 }

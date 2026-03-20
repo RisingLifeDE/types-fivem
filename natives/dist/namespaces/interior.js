@@ -93,7 +93,7 @@ export function disableMetroSystem(toggle) {
  */
 export function enableExteriorCullModelThisFrame(mapObjectHash) {
     if (typeof mapObjectHash === 'string')
-        mapObjectHash = misc.getHashKey(mapObjectHash);
+        mapObjectHash = GetHashKey(mapObjectHash);
     EnableExteriorCullModelThisFrame(mapObjectHash);
 }
 /**
@@ -103,7 +103,7 @@ export function enableExteriorCullModelThisFrame(mapObjectHash) {
  */
 export function enableShadowCullModelThisFrame(mapObjectHash) {
     if (typeof mapObjectHash === 'string')
-        mapObjectHash = misc.getHashKey(mapObjectHash);
+        mapObjectHash = GetHashKey(mapObjectHash);
     EnableScriptCullModelThisFrame(mapObjectHash);
 }
 /**
@@ -129,7 +129,7 @@ export function forceActivatingTrackingOnEntity() {
  */
 export function forceRoomForEntity(entity, interior, roomHashKey) {
     if (typeof roomHashKey === 'string')
-        roomHashKey = misc.getHashKey(roomHashKey);
+        roomHashKey = GetHashKey(roomHashKey);
     ForceRoomForEntity(entity, interior, roomHashKey);
 }
 /**
@@ -139,7 +139,7 @@ export function forceRoomForEntity(entity, interior, roomHashKey) {
  */
 export function forceRoomForGameViewport(interiorID, roomHashKey) {
     if (typeof roomHashKey === 'string')
-        roomHashKey = misc.getHashKey(roomHashKey);
+        roomHashKey = GetHashKey(roomHashKey);
     ForceRoomForGameViewport(interiorID, roomHashKey);
 }
 /**
@@ -174,7 +174,7 @@ export function getAtCoordsWithType(pos, interiorType) {
  */
 export function getAtCoordsWithTypehash(pos, typeHash) {
     if (typeof typeHash === 'string')
-        typeHash = misc.getHashKey(typeHash);
+        typeHash = GetHashKey(typeHash);
     return GetInteriorAtCoordsWithTypehash(pos.x, pos.y, pos.z, typeHash);
 }
 /**
@@ -383,7 +383,7 @@ export function setIsExteriorOnly(entity, toggle) {
  */
 export function setRoomForGameViewportByKey(roomHashKey) {
     if (typeof roomHashKey === 'string')
-        roomHashKey = misc.getHashKey(roomHashKey);
+        roomHashKey = GetHashKey(roomHashKey);
     Citizen.invokeNative('0x405DC2AEF6AF95B9', roomHashKey);
 }
 /**

@@ -24,7 +24,7 @@ export function bgEndContext(contextName: string): void {
  * Hash: 0x107E5CC7CA942BC1 | Since: 323 | API-Set: unknown
  */
 export function bgEndContextHash(contextHash: number | string): void {
-    if (typeof contextHash === 'string') contextHash = game.getHashKey(contextHash)
+    if (typeof contextHash === 'string') contextHash = GetHashKey(contextHash)
     BgEndContextHash(contextHash);
 }
 
@@ -43,7 +43,7 @@ export function bgGetLaunchParamValue(scriptIndex: number): number {
  * Hash: 0x829CD22E043A2577 | Since: 323 | API-Set: unknown
  */
 export function bgGetIdFromNameHash(p0: number | string): number {
-    if (typeof p0 === 'string') p0 = game.getHashKey(p0)
+    if (typeof p0 === 'string') p0 = GetHashKey(p0)
     return Citizen.invokeNative('0x829CD22E043A2577', p0);
 }
 
@@ -80,7 +80,7 @@ export function bgStartContext(contextName: string): void {
  * Hash: 0x75B18E49607874C7 | Since: 323 | API-Set: unknown
  */
 export function bgStartContextHash(contextHash: number | string): void {
-    if (typeof contextHash === 'string') contextHash = game.getHashKey(contextHash)
+    if (typeof contextHash === 'string') contextHash = GetHashKey(contextHash)
     BgStartContextHash(contextHash);
 }
 
@@ -108,7 +108,7 @@ export function doesExist(scriptName: string): boolean {
  * Hash: 0xF86AA3C56BA31381 | Since: 323 | API-Set: unknown
  */
 export function doesWithNameHashExist(scriptHash: number | string): boolean {
-    if (typeof scriptHash === 'string') scriptHash = game.getHashKey(scriptHash)
+    if (typeof scriptHash === 'string') scriptHash = GetHashKey(scriptHash)
     return DoesScriptWithNameHashExist(scriptHash);
 }
 
@@ -197,7 +197,7 @@ export function getNumberOfEvents(eventGroup: number): number {
  * Hash: 0x2C83A9DA6BFFC4F9 | Since: 323 | API-Set: unknown
  */
 export function getNumberOfThreadsRunningTheWithThisHash(scriptHash: number | string): number {
-    if (typeof scriptHash === 'string') scriptHash = game.getHashKey(scriptHash)
+    if (typeof scriptHash === 'string') scriptHash = GetHashKey(scriptHash)
     return GetNumberOfReferencesOfScriptWithNameHash(scriptHash);
 }
 
@@ -225,7 +225,7 @@ export function hasLoaded(scriptName: string): boolean {
  * Hash: 0x5F0F0C783EB16C04 | Since: 323 | API-Set: unknown
  */
 export function hasWithNameHashLoaded(scriptHash: number | string): boolean {
-    if (typeof scriptHash === 'string') scriptHash = game.getHashKey(scriptHash)
+    if (typeof scriptHash === 'string') scriptHash = GetHashKey(scriptHash)
     return HasScriptWithNameHashLoaded(scriptHash);
 }
 
@@ -253,7 +253,7 @@ export function request(scriptName: string): void {
  * Hash: 0xD62A67D26D9653E6 | Since: 323 | API-Set: unknown
  */
 export function requestWithNameHash(scriptHash: number | string): void {
-    if (typeof scriptHash === 'string') scriptHash = game.getHashKey(scriptHash)
+    if (typeof scriptHash === 'string') scriptHash = GetHashKey(scriptHash)
     RequestScriptWithNameHash(scriptHash);
 }
 
@@ -300,7 +300,7 @@ export function setAsNoLongerNeeded(scriptName: string): void {
  * Hash: 0xC5BC038960E9DB27 | Since: 323 | API-Set: unknown
  */
 export function setWithNameHashAsNoLongerNeeded(scriptHash: number | string): void {
-    if (typeof scriptHash === 'string') scriptHash = game.getHashKey(scriptHash)
+    if (typeof scriptHash === 'string') scriptHash = GetHashKey(scriptHash)
     SetScriptWithNameHashAsNoLongerNeeded(scriptHash);
 }
 
@@ -351,7 +351,7 @@ export function triggerEvent(eventGroup: number, eventDataSize: number, playerBi
  * Hash: 0x71A6F836422FDD2B | Since: 3095 | API-Set: unknown
  */
 export function sendTuEventNew(eventGroup: number, eventDataSize: number, playerBits: number, eventType: number | string): any {
-    if (typeof eventType === 'string') eventType = game.getHashKey(eventType)
+    if (typeof eventType === 'string') eventType = GetHashKey(eventType)
     return Citizen.invokeNative('0x71A6F836422FDD2B', eventGroup, eventDataSize, playerBits, eventType);
 }
 

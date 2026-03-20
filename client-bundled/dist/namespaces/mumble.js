@@ -179,7 +179,7 @@ export function setAudioInputDistance(distance) {
  */
 export function setAudioInputIntent(intentHash) {
     if (typeof intentHash === 'string')
-        intentHash = game.getHashKey(intentHash);
+        intentHash = GetHashKey(intentHash);
     MumbleSetAudioInputIntent(intentHash);
 }
 /**

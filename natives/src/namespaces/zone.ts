@@ -274,7 +274,7 @@ export function getScumminess(zoneId: number): number {
  * Hash: 0x5F7D596BAC2E7777 | Since: 323
  */
 export function overridePopscheduleVehicleModel(scheduleId: number, vehicleHash: number | string): void {
-    if (typeof vehicleHash === 'string') vehicleHash = misc.getHashKey(vehicleHash)
+    if (typeof vehicleHash === 'string') vehicleHash = GetHashKey(vehicleHash)
     OverridePopscheduleVehicleModel(scheduleId, vehicleHash);
 }
 
