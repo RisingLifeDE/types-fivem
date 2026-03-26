@@ -33,54 +33,49 @@ export namespace events {
         emit: (eventName: string, ...args: any[]) => void;
     }
     class EventEmitter {
-        private listeners: Map<string, Array<(...args: any[]) => void>> = new Map();
+    private listeners: Map<string, Set<(...args: any[]) => void>> = new Map();
 
-        on(eventName: string, callback: (...args: any[]) => void): void {
-            if (!this.listeners.has(eventName)) {
-                this.listeners.set(eventName, []);
-            }
-            this.listeners.get(eventName)!.push(callback);
+    on(eventName: string, callback: (...args: any[]) => void): void {
+        let callbacks = this.listeners.get(eventName);
+        if (!callbacks) {
+            callbacks = new Set();
+            this.listeners.set(eventName, callbacks);
         }
+        callbacks.add(callback);
+    }
 
-        once(eventName: string, callback: (...args: any[]) => void): void {
-            const onceWrapper = (...args: any[]) => {
-                this.off(eventName, onceWrapper);
+    once(eventName: string, callback: (...args: any[]) => void): void {
+        const onceWrapper = (...args: any[]) => {
+            this.listeners.get(eventName)?.delete(onceWrapper);
+            callback(...args);
+        };
+        this.on(eventName, onceWrapper);
+    }
+
+    emit(eventName: string, ...args: any[]): void {
+        const callbacks = this.listeners.get(eventName);
+        if (!callbacks) return;
+        for (const callback of callbacks) {
+            try {
                 callback(...args);
-            };
-            this.on(eventName, onceWrapper);
-        }
-
-        emit(eventName: string, ...args: any[]): void {
-            const callbacks = this.listeners.get(eventName);
-            if (callbacks) {
-                callbacks.forEach((callback) => {
-                    try {
-                        callback(...args);
-                    } catch (error) {
-                        EventLogger.logError(eventName, error);
-                    }
-                });
-            }
-        }
-
-        off(eventName: string, callback: (...args: any[]) => void): void {
-            const callbacks = this.listeners.get(eventName);
-            if (callbacks) {
-                const index = callbacks.indexOf(callback);
-                if (index !== -1) {
-                    callbacks.splice(index, 1);
-                }
-            }
-        }
-
-        removeAllListeners(eventName?: string): void {
-            if (eventName) {
-                this.listeners.delete(eventName);
-            } else {
-                this.listeners.clear();
+            } catch (error) {
+                EventLogger.logError(eventName, error);
             }
         }
     }
+
+    off(eventName: string, callback: (...args: any[]) => void): void {
+        this.listeners.get(eventName)?.delete(callback);
+    }
+
+    removeAllListeners(eventName?: string): void {
+        if (eventName) {
+            this.listeners.delete(eventName);
+        } else {
+            this.listeners.clear();
+        }
+    }
+}
     class EventParsingUtils {
         private static parseArgument(arg: any): any {
             if (typeof arg === 'string') {

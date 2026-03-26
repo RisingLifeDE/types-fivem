@@ -118,7 +118,7 @@ export function getWeaponDefenseModifier2(playerId: number | string | IPlayer): 
  * 
  * Hash: 0xCF143FB9
  */
-export function getActives(): number {
+export function getActives(): number[] {
     return GetActivePlayers();
 }
 

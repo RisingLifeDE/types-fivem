@@ -26,39 +26,35 @@ export var events;
     class EventEmitter {
         listeners = new Map();
         on(eventName, callback) {
-            if (!this.listeners.has(eventName)) {
-                this.listeners.set(eventName, []);
+            let callbacks = this.listeners.get(eventName);
+            if (!callbacks) {
+                callbacks = new Set();
+                this.listeners.set(eventName, callbacks);
             }
-            this.listeners.get(eventName).push(callback);
+            callbacks.add(callback);
         }
         once(eventName, callback) {
             const onceWrapper = (...args) => {
-                this.off(eventName, onceWrapper);
+                this.listeners.get(eventName)?.delete(onceWrapper);
                 callback(...args);
             };
             this.on(eventName, onceWrapper);
         }
         emit(eventName, ...args) {
             const callbacks = this.listeners.get(eventName);
-            if (callbacks) {
-                callbacks.forEach((callback) => {
-                    try {
-                        callback(...args);
-                    }
-                    catch (error) {
-                        EventLogger.logError(eventName, error);
-                    }
-                });
+            if (!callbacks)
+                return;
+            for (const callback of callbacks) {
+                try {
+                    callback(...args);
+                }
+                catch (error) {
+                    EventLogger.logError(eventName, error);
+                }
             }
         }
         off(eventName, callback) {
-            const callbacks = this.listeners.get(eventName);
-            if (callbacks) {
-                const index = callbacks.indexOf(callback);
-                if (index !== -1) {
-                    callbacks.splice(index, 1);
-                }
-            }
+            this.listeners.get(eventName)?.delete(callback);
         }
         removeAllListeners(eventName) {
             if (eventName) {
