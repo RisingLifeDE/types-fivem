@@ -176,6 +176,7 @@ export declare abstract class IEntity {
 export declare abstract class IPed extends IEntity {
 }
 export declare abstract class IPlayer extends IEntity {
+    abstract playerId(): number | string;
 }
 export declare abstract class IVehicle extends IEntity {
 }
