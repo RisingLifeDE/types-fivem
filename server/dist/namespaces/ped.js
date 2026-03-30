@@ -1,3 +1,4 @@
+import { IPed, IVehicle } from '@risinglife/fivem-shared';
 /**
  * ```
  * Applies an Item from a PedDecorationCollection to a ped. These include tattoos and shirt decals.
@@ -29,11 +30,12 @@
  * Hash: 0x70559AC7
  */
 export function addDecorationFromHashes(ped, collection, overlay) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof collection === 'string')
         collection = GetHashKey(collection);
     if (typeof overlay === 'string')
         overlay = GetHashKey(overlay);
-    AddPedDecorationFromHashes(ped, collection, overlay);
+    AddPedDecorationFromHashes(_ped, collection, overlay);
 }
 /**
  * CLEAR_PED_PROP
@@ -43,7 +45,8 @@ export function addDecorationFromHashes(ped, collection, overlay) {
  * Hash: 0x2D23D743
  */
 export function clearProp(ped, propId) {
-    ClearPedProp(ped, propId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedProp(_ped, propId);
 }
 /**
  * CLEAR_PED_SECONDARY_TASK
@@ -53,7 +56,8 @@ export function clearProp(ped, propId) {
  * Hash: 0xA635F451
  */
 export function clearSecondaryTask(ped) {
-    ClearPedSecondaryTask(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedSecondaryTask(_ped);
 }
 /**
  * Creates a ped (biped character, pedestrian, actor) with the specified model at the specified position and heading.
@@ -77,9 +81,10 @@ export function create(pedType, modelHash, pos, heading, isNetwork, bScriptHostP
  * Hash: 0x3000F092
  */
 export function createInsideVehicle(vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed) {
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
     if (typeof modelHash === 'string')
         modelHash = GetHashKey(modelHash);
-    return CreatePedInsideVehicle(vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed);
+    return CreatePedInsideVehicle(_vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed);
 }
 /**
  * Returns all peds handles known to the server.
@@ -100,7 +105,8 @@ export function getAlls() {
  * Hash: 0xB0237302
  */
 export function getCurrentWeapon(ped) {
-    return GetCurrentPedWeapon(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetCurrentPedWeapon(_ped);
 }
 /**
  * No comment provided
@@ -108,7 +114,8 @@ export function getCurrentWeapon(ped) {
  * Hash: 0xF7C6792D
  */
 export function getLastInVehicleSeat(vehicle, seatIndex) {
-    return GetLastPedInVehicleSeat(vehicle, seatIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetLastPedInVehicleSeat(_vehicle, seatIndex);
 }
 /**
  * No comment provided
@@ -116,7 +123,8 @@ export function getLastInVehicleSeat(vehicle, seatIndex) {
  * Hash: 0x2CE311A7
  */
 export function getArmour(ped) {
-    return GetPedArmour(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedArmour(_ped);
 }
 /**
  * No comment provided
@@ -124,7 +132,8 @@ export function getArmour(ped) {
  * Hash: 0x63458C27
  */
 export function getCauseOfDeath(ped) {
-    return GetPedCauseOfDeath(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedCauseOfDeath(_ped);
 }
 /**
  * No comment provided
@@ -132,7 +141,8 @@ export function getCauseOfDeath(ped) {
  * Hash: 0xC182F76E
  */
 export function getDesiredHeading(ped) {
-    return GetPedDesiredHeading(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedDesiredHeading(_ped);
 }
 /**
  * No comment provided
@@ -140,7 +150,8 @@ export function getDesiredHeading(ped) {
  * Hash: 0x388FDE9A
  */
 export function getInVehicleSeat(vehicle, seatIndex) {
-    return GetPedInVehicleSeat(vehicle, seatIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetPedInVehicleSeat(_vehicle, seatIndex);
 }
 /**
  * No comment provided
@@ -148,7 +159,8 @@ export function getInVehicleSeat(vehicle, seatIndex) {
  * Hash: 0xA45B6C8D
  */
 export function getMaxHealth(ped) {
-    return GetPedMaxHealth(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedMaxHealth(_ped);
 }
 /**
  * Gets the current relationship group hash of a ped.
@@ -156,7 +168,8 @@ export function getMaxHealth(ped) {
  * Hash: 0x354F283C
  */
 export function getRelationshipGroupHash(ped) {
-    return GetPedRelationshipGroupHash(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedRelationshipGroupHash(_ped);
 }
 /**
  * Gets the script task command currently assigned to the ped.
@@ -164,7 +177,8 @@ export function getRelationshipGroupHash(ped) {
  * Hash: 0x84FE084
  */
 export function getScriptTaskCommand(ped) {
-    return GetPedScriptTaskCommand(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedScriptTaskCommand(_ped);
 }
 /**
  * Gets the stage of the peds scripted task.
@@ -172,7 +186,8 @@ export function getScriptTaskCommand(ped) {
  * Hash: 0x44B0E5E2
  */
 export function getScriptTaskStage(ped) {
-    return GetPedScriptTaskStage(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedScriptTaskStage(_ped);
 }
 /**
  * Get the last entity that damaged the ped. This native is used server side when using OneSync.
@@ -180,7 +195,8 @@ export function getScriptTaskStage(ped) {
  * Hash: 0x535DB43F
  */
 export function getSourceOfDamage(ped) {
-    return GetPedSourceOfDamage(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedSourceOfDamage(_ped);
 }
 /**
  * Get the entity that killed the ped. This native is used server side when using OneSync.
@@ -188,7 +204,8 @@ export function getSourceOfDamage(ped) {
  * Hash: 0x84ADF9EB
  */
 export function getSourceOfDeath(ped) {
-    return GetPedSourceOfDeath(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedSourceOfDeath(_ped);
 }
 /**
  * Gets the type of a ped's specific task given an index of the CPedTaskSpecificDataNode nodes.
@@ -197,7 +214,8 @@ export function getSourceOfDeath(ped) {
  * Hash: 0x7F4563D3
  */
 export function getSpecificTaskType(ped, index) {
-    return GetPedSpecificTaskType(ped, index);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedSpecificTaskType(_ped, index);
 }
 /**
  * No comment provided
@@ -205,7 +223,8 @@ export function getSpecificTaskType(ped, index) {
  * Hash: 0x40321B83
  */
 export function getStealthMovement(ped) {
-    return GetPedStealthMovement(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedStealthMovement(_ped);
 }
 /**
  * An alias of [GET_CURRENT_PED_WEAPON](#\_0xB0237302).
@@ -215,7 +234,8 @@ export function getStealthMovement(ped) {
  * Hash: 0xD240123E
  */
 export function getSelectedWeapon(ped) {
-    return GetSelectedPedWeapon(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetSelectedPedWeapon(_ped);
 }
 /**
  * No comment provided
@@ -223,7 +243,8 @@ export function getSelectedWeapon(ped) {
  * Hash: 0x25865633
  */
 export function isHandcuffed(ped) {
-    return IsPedHandcuffed(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedHandcuffed(_ped);
 }
 /**
  * No comment provided
@@ -231,7 +252,8 @@ export function isHandcuffed(ped) {
  * Hash: 0xC833BBE1
  */
 export function isRagdoll(ped) {
-    return IsPedRagdoll(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedRagdoll(_ped);
 }
 /**
  * No comment provided
@@ -239,7 +261,8 @@ export function isRagdoll(ped) {
  * Hash: 0xEFEED13C
  */
 export function isStrafing(ped) {
-    return IsPedStrafing(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedStrafing(_ped);
 }
 /**
  * No comment provided
@@ -247,7 +270,8 @@ export function isStrafing(ped) {
  * Hash: 0x5AE7EDA2
  */
 export function isUsingActionMode(ped) {
-    return IsPedUsingActionMode(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedUsingActionMode(_ped);
 }
 /**
  * SET_CURRENT_PED_WEAPON
@@ -257,9 +281,10 @@ export function isUsingActionMode(ped) {
  * Hash: 0xB8278882
  */
 export function setCurrentWeapon(ped, weaponHash, bForceInHand) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    SetCurrentPedWeapon(ped, weaponHash, bForceInHand);
+    SetCurrentPedWeapon(_ped, weaponHash, bForceInHand);
 }
 /**
  * ```
@@ -271,9 +296,10 @@ export function setCurrentWeapon(ped, weaponHash, bForceInHand) {
  * Hash: 0xBF90DF1A
  */
 export function setAmmo(ped, weaponHash, ammo) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    SetPedAmmo(ped, weaponHash, ammo);
+    SetPedAmmo(_ped, weaponHash, ammo);
 }
 /**
  * ```
@@ -287,7 +313,8 @@ export function setAmmo(ped, weaponHash, ammo) {
  * Hash: 0x4E3A0CC4
  */
 export function setArmour(ped, amount) {
-    SetPedArmour(ped, amount);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedArmour(_ped, amount);
 }
 /**
  * SET_PED_CAN_RAGDOLL
@@ -297,7 +324,8 @@ export function setArmour(ped, amount) {
  * Hash: 0xCF1384C4
  */
 export function setCanRagdoll(ped, toggle) {
-    SetPedCanRagdoll(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanRagdoll(_ped, toggle);
 }
 /**
  * This native is used to set component variation on a ped. Components, drawables and textures IDs are related to the ped model.
@@ -344,7 +372,8 @@ export function setCanRagdoll(ped, toggle) {
  * Hash: 0xD4F7B05C
  */
 export function setComponentVariation(ped, componentId, drawableId, textureId, paletteId) {
-    SetPedComponentVariation(ped, componentId, drawableId, textureId, paletteId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedComponentVariation(_ped, componentId, drawableId, textureId, paletteId);
 }
 /**
  * ```cpp
@@ -822,7 +851,8 @@ export function setComponentVariation(ped, componentId, drawableId, textureId, p
  * Hash: 0x9CFBE10D
  */
 export function setConfigFlag(ped, flagId, value) {
-    SetPedConfigFlag(ped, flagId, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedConfigFlag(_ped, flagId, value);
 }
 /**
  * ```
@@ -834,7 +864,8 @@ export function setConfigFlag(ped, flagId, value) {
  * Hash: 0xC866A984
  */
 export function setDefaultComponentVariation(ped) {
-    SetPedDefaultComponentVariation(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedDefaultComponentVariation(_ped);
 }
 /**
  * Sets the tint index for the hair on the specified ped.
@@ -848,7 +879,8 @@ export function setDefaultComponentVariation(ped) {
  * Hash: 0xA23FE32C
  */
 export function setHairTint(ped, colorID, highlightColorID) {
-    SetPedHairTint(ped, colorID, highlightColorID);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedHairTint(_ped, colorID, highlightColorID);
 }
 /**
  * For more info please refer to [this](https://gtaforums.com/topic/858970-all-gtao-face-ids-pedset-ped-head-blend-data-explained) topic.
@@ -866,7 +898,8 @@ export function setHairTint(ped, colorID, highlightColorID) {
  * Hash: 0x60746B88
  */
 export function setHeadBlendData(ped, shapeFirstID, shapeSecondID, shapeThirdID, skinFirstID, skinSecondID, skinThirdID, shapeMix, skinMix, thirdMix, isParent) {
-    SetPedHeadBlendData(ped, shapeFirstID, shapeSecondID, shapeThirdID, skinFirstID, skinSecondID, skinThirdID, shapeMix, skinMix, thirdMix, isParent);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedHeadBlendData(_ped, shapeFirstID, shapeSecondID, shapeThirdID, skinFirstID, skinSecondID, skinThirdID, shapeMix, skinMix, thirdMix, isParent);
 }
 /**
  * ```
@@ -895,7 +928,8 @@ export function setHeadBlendData(ped, shapeFirstID, shapeSecondID, shapeThirdID,
  * Hash: 0xD28DBA90
  */
 export function setHeadOverlay(ped, overlayID, index, opacity) {
-    SetPedHeadOverlay(ped, overlayID, index, opacity);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedHeadOverlay(_ped, overlayID, index, opacity);
 }
 /**
  * SET_PED_INTO_VEHICLE
@@ -905,7 +939,9 @@ export function setHeadOverlay(ped, overlayID, index, opacity) {
  * Hash: 0x7500C79
  */
 export function setIntoVehicle(ped, vehicle, seatIndex) {
-    SetPedIntoVehicle(ped, vehicle, seatIndex);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetPedIntoVehicle(_ped, _vehicle, seatIndex);
 }
 /**
  * This native is used to set prop variation on a ped. Components, drawables and textures IDs are related to the ped model.
@@ -944,7 +980,8 @@ export function setIntoVehicle(ped, vehicle, seatIndex) {
  * Hash: 0x829F2E2
  */
 export function setPropIndex(ped, componentId, drawableId, textureId, attach) {
-    SetPedPropIndex(ped, componentId, drawableId, textureId, attach);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedPropIndex(_ped, componentId, drawableId, textureId, attach);
 }
 /**
  * ```
@@ -956,7 +993,8 @@ export function setPropIndex(ped, componentId, drawableId, textureId, attach) {
  * Hash: 0x4111BA46
  */
 export function setRandomComponentVariation(ped) {
-    SetPedRandomComponentVariation(ped, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedRandomComponentVariation(_ped, 0);
 }
 /**
  * SET_PED_RANDOM_PROPS
@@ -966,7 +1004,8 @@ export function setRandomComponentVariation(ped) {
  * Hash: 0xE3318E0E
  */
 export function setRandomProps(ped) {
-    SetPedRandomProps(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedRandomProps(_ped);
 }
 /**
  * `PED::SET_PED_RESET_FLAG(PLAYER::PLAYER_PED_ID(), 240, 1);`
@@ -977,7 +1016,8 @@ export function setRandomProps(ped) {
  * Hash: 0xCFF6FF66
  */
 export function setResetFlag(ped, flagId, doReset) {
-    SetPedResetFlag(ped, flagId, doReset);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedResetFlag(_ped, flagId, doReset);
 }
 /**
  * p4/p5: Unusued in TU27
@@ -993,7 +1033,8 @@ export function setResetFlag(ped, flagId, doReset) {
  * Hash: 0x83CB5052
  */
 export function setToRagdoll(ped, minTime, maxTime, ragdollType, bAbortIfInjured, bAbortIfDead, bForceScriptControl) {
-    SetPedToRagdoll(ped, minTime, maxTime, ragdollType, bAbortIfInjured, bAbortIfDead, bForceScriptControl);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedToRagdoll(_ped, minTime, maxTime, ragdollType, bAbortIfInjured, bAbortIfDead, bForceScriptControl);
 }
 /**
  * ```cpp
@@ -1023,7 +1064,8 @@ export function setToRagdoll(ped, minTime, maxTime, ragdollType, bAbortIfInjured
  * Hash: 0xFA12E286
  */
 export function setToRagdollWithFall(ped, minTime, maxTime, nFallType, dirX, dirY, dirZ, fGroundHeight, grab1X, grab1Y, grab1Z, grab2X, grab2Y, grab2Z) {
-    SetPedToRagdollWithFall(ped, minTime, maxTime, nFallType, dirX, dirY, dirZ, fGroundHeight, grab1X, grab1Y, grab1Z, grab2X, grab2Y, grab2Z);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedToRagdollWithFall(_ped, minTime, maxTime, nFallType, dirX, dirY, dirZ, fGroundHeight, grab1X, grab1Y, grab1Z, grab2X, grab2Y, grab2Z);
 }
 /**
  * Used for freemode (online) characters.
@@ -1065,7 +1107,8 @@ export function setToRagdollWithFall(ped, minTime, maxTime, nFallType, dirX, dir
  * Hash: 0xEC09DB1B
  */
 export function setEyeColor(ped, index) {
-    SetPedEyeColor(ped, index);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedEyeColor(_ped, index);
 }
 /**
  * Sets the various freemode face features, e.g. nose length, chin shape.
@@ -1100,7 +1143,8 @@ export function setEyeColor(ped, index) {
  * Hash: 0x6C8D4458
  */
 export function setFaceFeature(ped, index, scale) {
-    SetPedFaceFeature(ped, index, scale);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedFaceFeature(_ped, index, scale);
 }
 /**
  * ```
@@ -1116,5 +1160,6 @@ export function setFaceFeature(ped, index, scale) {
  * Hash: 0x78935A27
  */
 export function setHeadOverlayColor(ped, overlayID, colorType, colorID, secondColorID) {
-    SetPedHeadOverlayColor(ped, overlayID, colorType, colorID, secondColorID);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedHeadOverlayColor(_ped, overlayID, colorType, colorID, secondColorID);
 }

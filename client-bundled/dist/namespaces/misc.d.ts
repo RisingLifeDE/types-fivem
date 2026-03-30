@@ -2651,7 +2651,7 @@ export declare function setCreditsFadeOutWithScreen(toggle: boolean): void;
 /**
  * Mixes two weather types. If percentWeather2 is set to 0.0f, then the weather will be entirely of weatherType1, if it is set to 1.0f it will be entirely of weatherType2. If it's set somewhere in between, there will be a mixture of weather behaviors. To test, try this in the RPH console, and change the float to different values between 0 and 1:
  *
- * execute "NativeFunction.Natives.x578C752848ECFA0C(GetHashKey(""RAIN""), GetHashKey(""SMOG""), 0.50f);
+ * execute "NativeFunction.Natives.x578C752848ECFA0C(Game.GetHashKey(""RAIN""), Game.GetHashKey(""SMOG""), 0.50f);
  *
  * Note that unlike most of the other weather natives, this native takes the hash of the weather name, not the plain string. These are the weather names and their hashes:
  *

@@ -1,3 +1,4 @@
+import { IPed, IVehicle, IObject } from '@risinglife/fivem-shared';
 /**
  * No comment provided
  *
@@ -44,7 +45,8 @@ export function getHashKey(model) {
  * Hash: 0xF01E2AAB
  */
 export function getHeliMainRotorHealth(vehicle) {
-    return GetHeliMainRotorHealth(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetHeliMainRotorHealth(_vehicle);
 }
 /**
  * No comment provided
@@ -68,7 +70,8 @@ export function getPasswordHash(password) {
  * Hash: 0x76876154
  */
 export function isFlashLightOn(ped) {
-    return IsFlashLightOn(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsFlashLightOn(_ped);
 }
 /**
  * No comment provided
@@ -84,7 +87,8 @@ export function performHttpRequestInternal(requestData, requestDataLength) {
  * Hash: 0x6B171E87
  */
 export function performHttpRequestInternalEx(requestData) {
-    return PerformHttpRequestInternalEx(requestData);
+    const _requestData = requestData instanceof IObject ? requestData.handle() : requestData;
+    return PerformHttpRequestInternalEx(_requestData);
 }
 /**
  * Prints 'structured trace' data to the server `file descriptor 3` channel. This is not generally useful outside of
@@ -315,7 +319,8 @@ export function executeCommand(commandString) {
  * Hash: 0xD70C3BCA
  */
 export function formatStackTrace(traceData) {
-    return FormatStackTrace(traceData);
+    const _traceData = traceData instanceof IObject ? traceData.handle() : traceData;
+    return FormatStackTrace(_traceData);
 }
 /**
  * Can be used to get a console variable of type `char*`, for example a string.

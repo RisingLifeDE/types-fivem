@@ -6,7 +6,8 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0x47B870F5
  */
 export function getArchetypeName(entity: number | IEntity): string {
-    return GetEntityArchetypeName(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityArchetypeName(_entity);
 }
 
 /**
@@ -26,7 +27,8 @@ export function getIndexFromMapdata(mapdata: number, entity: number): number {
  * Hash: 0xF6B815C5
  */
 export function getMapdataOwner(entity: number | IEntity): [boolean, number, number] {
-    return GetEntityMapdataOwner(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityMapdataOwner(_entity);
 }
 
 /**
@@ -63,7 +65,8 @@ export function selectAtPos(fracX: number, fracY: number, hitFlags: number, prec
  * Hash: 0xFB0639B
  */
 export function setMatrix(entity: number | IEntity, forwardX: number, forwardY: number, forwardZ: number, rightX: number, rightY: number, rightZ: number, upX: number, upY: number, upZ: number, atX: number, atY: number, atZ: number): void {
-    SetEntityMatrix(entity, forwardX, forwardY, forwardZ, rightX, rightY, rightZ, upX, upY, upZ, atX, atY, atZ);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityMatrix(_entity, forwardX, forwardY, forwardZ, rightX, rightY, rightZ, upX, upY, upZ, atX, atY, atZ);
 }
 
 /**
@@ -72,7 +75,8 @@ export function setMatrix(entity: number | IEntity, forwardX: number, forwardY: 
  * Hash: 0xEDBE6ADD
  */
 export function isPositionFrozen(entity: number | IEntity): boolean {
-    return IsEntityPositionFrozen(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityPositionFrozen(_entity);
 }
 
 /**
@@ -85,7 +89,8 @@ export function isPositionFrozen(entity: number | IEntity): boolean {
  * Hash: 0x9A3144BC
  */
 export function getAddress(entity: number | IEntity): any {
-    return GetEntityAddress(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityAddress(_entity);
 }
 
 /**
@@ -94,7 +99,8 @@ export function getAddress(entity: number | IEntity): any {
  * Hash: 0x3BB78F05
  */
 export function ensureStateBag(entity: number | IEntity): void {
-    EnsureEntityStateBag(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    EnsureEntityStateBag(_entity);
 }
 
 /**
@@ -130,7 +136,8 @@ export function ensureStateBag(entity: number | IEntity): void {
  * Hash: 0xDFFBA12F
  */
 export function getEntitiesInRadius(pos: Vector3, radius: number, entityType: number, sortByDistance: boolean, models: number | IObject): number {
-    return GetEntitiesInRadius(pos.x, pos.y, pos.z, radius, entityType, sortByDistance, models);
+    const _models = models instanceof IObject ? models.handle() : models;
+    return GetEntitiesInRadius(pos.x, pos.y, pos.z, radius, entityType, sortByDistance, _models);
 }
 
 /**

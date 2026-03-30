@@ -24,7 +24,8 @@ export function addVoiceTargetChannel(targetId: number, channel: number): void {
  * Hash: 0x32C5355A | Since: unknown | API-Set: client
  */
 export function addVoiceTargetPlayer(targetId: number, player: number | string | IPlayer): void {
-    MumbleAddVoiceTargetPlayer(targetId, player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    MumbleAddVoiceTargetPlayer(targetId, _player);
 }
 
 /**
@@ -124,7 +125,8 @@ export function isConnected(): boolean {
  * Hash: 0x33EEF97F | Since: unknown | API-Set: client
  */
 export function isPlayerTalking(player: number | string | IPlayer): boolean {
-    return MumbleIsPlayerTalking(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return MumbleIsPlayerTalking(_player);
 }
 
 /**
@@ -155,7 +157,8 @@ export function removeVoiceTargetChannel(targetId: number, channel: number): voi
  * Hash: 0x88CD646F | Since: unknown | API-Set: client
  */
 export function removeVoiceTargetPlayer(targetId: number, player: number | string | IPlayer): void {
-    MumbleRemoveVoiceTargetPlayer(targetId, player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    MumbleRemoveVoiceTargetPlayer(targetId, _player);
 }
 
 /**
@@ -268,7 +271,8 @@ export function setVoiceTarget(targetId: number): void {
  * Hash: 0x61C309E3 | Since: unknown | API-Set: client
  */
 export function setVolumeOverride(player: number | string | IPlayer, volume: number): void {
-    MumbleSetVolumeOverride(player, volume);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    MumbleSetVolumeOverride(_player, volume);
 }
 
 /**

@@ -576,7 +576,8 @@ export function createIncident(dispatchService: number, pos: Vector3, numUnits: 
  * Hash: 0x05983472F0494E60 | Since: 323
  */
 export function createIncidentWithEntity(dispatchService: number, ped: number | IPed, numUnits: number, radius: number): [boolean, number] {
-    return CreateIncidentWithEntity(dispatchService, ped, numUnits, radius, undefined, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return CreateIncidentWithEntity(dispatchService, _ped, numUnits, radius, undefined, undefined);
 }
 
 /**
@@ -744,7 +745,8 @@ export function enableStuntJumpSet(): void {
  * Hash: 0x28A04B411933F8A6 | Since: 323
  */
 export function enableTennisMode(ped: number | IPed, toggle: boolean): void {
-    EnableTennisMode(ped, toggle, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    EnableTennisMode(_ped, toggle, false);
 }
 
 /**
@@ -921,8 +923,9 @@ export function getCoordsOfProjectileTypeInArea(x1: number, y1: number, z1: numb
  * Hash: 0xDFB4138EEFED7B81 | Since: 323
  */
 export function getCoordsOfProjectileTypeWithinDistance(ped: number | IPed, weaponHash: number | string, distance: number): [boolean, Vector3] {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
-    return GetCoordsOfProjectileTypeWithinDistance(ped, weaponHash, distance, false);
+    return GetCoordsOfProjectileTypeWithinDistance(_ped, weaponHash, distance, false);
 }
 
 /**
@@ -1173,8 +1176,9 @@ export function getProfileSetting(profileSetting: number): number {
  * Hash: 0x82FDE6A57EE4EE44 | Since: 323
  */
 export function getProjectileOfProjectileTypeWithinDistance(ped: number | IPed, weaponHash: number | string, distance: number): [boolean, Vector3, number] {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
-    return GetProjectileNearPed(ped, weaponHash, distance, false);
+    return GetProjectileNearPed(_ped, weaponHash, distance, false);
 }
 
 /**
@@ -1336,7 +1340,8 @@ export function getSystemTimeStep(): number {
  * Hash: 0x19BFED045C647C49 | Since: 323
  */
 export function getTennisSwingAnimCanBeInterrupted(ped: number | IPed): boolean {
-    return Citizen.invokeNative('0x19BFED045C647C49', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x19BFED045C647C49', _ped);
 }
 
 /**
@@ -1345,7 +1350,8 @@ export function getTennisSwingAnimCanBeInterrupted(ped: number | IPed): boolean 
  * Hash: 0x17DF68D720AA77F8 | Since: 323
  */
 export function getTennisSwingAnimComplete(ped: number | IPed): boolean {
-    return GetTennisSwingAnimComplete(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetTennisSwingAnimComplete(_ped);
 }
 
 /**
@@ -1354,7 +1360,8 @@ export function getTennisSwingAnimComplete(ped: number | IPed): boolean {
  * Hash: 0xE95B0C7D5BA3B96B | Since: 323
  */
 export function getTennisSwingAnimSwung(ped: number | IPed): boolean {
-    return Citizen.invokeNative('0xE95B0C7D5BA3B96B', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0xE95B0C7D5BA3B96B', _ped);
 }
 
 /**
@@ -1698,7 +1705,8 @@ export function isPopMultiplierAreaNetworked(id: number): boolean {
  * Hash: 0xADCDE75E1C60F32D | Since: 323
  */
 export function isPositionOccupied(pos: Vector3, range: number, checkVehicles: boolean, checkPeds: boolean, ignoreEntity: number | IEntity): boolean {
-    return IsPositionOccupied(pos.x, pos.y, pos.z, range, false, checkVehicles, checkPeds, false, false, ignoreEntity, false);
+    const _ignoreEntity = ignoreEntity instanceof IEntity ? ignoreEntity.handle() : ignoreEntity;
+    return IsPositionOccupied(pos.x, pos.y, pos.z, range, false, checkVehicles, checkPeds, false, false, _ignoreEntity, false);
 }
 
 /**
@@ -1857,7 +1865,8 @@ export function isStuntJumpMessageShowing(): boolean {
  * Hash: 0x5D5479D115290C3F | Since: 323
  */
 export function isTennisMode(ped: number | IPed): boolean {
-    return IsTennisMode(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsTennisMode(_ped);
 }
 
 /**
@@ -1978,7 +1987,8 @@ export function pauseDeathArrestRestart(toggle: boolean): void {
  * Hash: 0x8FA9C42FC5D7C64B | Since: 323
  */
 export function playTennisDiveAnim(ped: number | IPed): void {
-    PlayTennisDiveAnim(ped, 0, 0, 0, 0, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayTennisDiveAnim(_ped, 0, 0, 0, 0, false);
 }
 
 /**
@@ -1987,7 +1997,8 @@ export function playTennisDiveAnim(ped: number | IPed): void {
  * Hash: 0xE266ED23311F24D4 | Since: 323
  */
 export function playTennisSwingAnim(ped: number | IPed, animDict: string, animName: string): void {
-    PlayTennisSwingAnim(ped, animDict, animName, 0, 0, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayTennisSwingAnim(_ped, animDict, animName, 0, 0, false);
 }
 
 /**
@@ -2294,7 +2305,8 @@ export function saveEndUserBenchmark(): void {
  * Hash: 0x8EF5573A1F801A5C | Since: 323
  */
 export function scriptRaceGetPlayerSplitTime(player: number | string | IPlayer): [boolean, number, number] {
-    return ScriptRaceGetPlayerSplitTime(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return ScriptRaceGetPlayerSplitTime(_player);
 }
 
 /**
@@ -2312,7 +2324,8 @@ export function scriptRaceInit(): void {
  * Hash: 0x1BB299305C3E8C13 | Since: 323
  */
 export function scriptRacePlayerHitCheckpoint(player: number | string | IPlayer): void {
-    ScriptRacePlayerHitCheckpoint(player, undefined, undefined, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    ScriptRacePlayerHitCheckpoint(_player, undefined, undefined, undefined);
 }
 
 /**
@@ -2330,7 +2343,8 @@ export function scriptRaceShutdown(): void {
  * Hash: 0x438822C279B73B93 | Since: 573
  */
 export function setBeastJumpThisFrame(player: number | string | IPlayer): void {
-    SetBeastModeActive(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetBeastModeActive(_player);
 }
 
 /**
@@ -2410,7 +2424,7 @@ export function setCreditsFadeOutWithScreen(toggle: boolean): void {
 /**
  * Mixes two weather types. If percentWeather2 is set to 0.0f, then the weather will be entirely of weatherType1, if it is set to 1.0f it will be entirely of weatherType2. If it's set somewhere in between, there will be a mixture of weather behaviors. To test, try this in the RPH console, and change the float to different values between 0 and 1:
  * 
- * execute "NativeFunction.Natives.x578C752848ECFA0C(Game.GetHashKey(""RAIN""), GetHashKey(""SMOG""), 0.50f);
+ * execute "NativeFunction.Natives.x578C752848ECFA0C(Game.GetHashKey(""RAIN""), Game.GetHashKey(""SMOG""), 0.50f);
  * 
  * Note that unlike most of the other weather natives, this native takes the hash of the weather name, not the plain string. These are the weather names and their hashes:
  * 
@@ -2488,7 +2502,8 @@ export function setDispatchTimeBetweenSpawnAttemptsMultiplier(): void {
  * Hash: 0xA66C71C98D5F2CFB | Since: 323
  */
 export function setExplosiveAmmoThisFrame(player: number | string | IPlayer): void {
-    SetExplosiveAmmoThisFrame(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetExplosiveAmmoThisFrame(_player);
 }
 
 /**
@@ -2497,7 +2512,8 @@ export function setExplosiveAmmoThisFrame(player: number | string | IPlayer): vo
  * Hash: 0xFF1BED81BFDC0FE0 | Since: 323
  */
 export function setExplosiveMeleeThisFrame(player: number | string | IPlayer): void {
-    SetExplosiveMeleeThisFrame(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetExplosiveMeleeThisFrame(_player);
 }
 
 /**
@@ -2553,7 +2569,8 @@ export function setFakeWantedLevel(fakeWantedLevel: number): void {
  * Hash: 0x11879CDD803D30F4 | Since: 323
  */
 export function setFireAmmoThisFrame(player: number | string | IPlayer): void {
-    SetFireAmmoThisFrame(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetFireAmmoThisFrame(_player);
 }
 
 /**
@@ -2562,7 +2579,8 @@ export function setFireAmmoThisFrame(player: number | string | IPlayer): void {
  * Hash: 0xA1183BCFEE0F93D1 | Since: 1180
  */
 export function setForcedJumpThisFrame(player: number | string | IPlayer): void {
-    SetForcePlayerToJump(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetForcePlayerToJump(_player);
 }
 
 /**
@@ -2796,7 +2814,8 @@ export function setStuntJumpsCanTrigger(toggle: boolean): void {
  * Hash: 0x57FFF03E423A4C0B | Since: 323
  */
 export function setSuperJumpThisFrame(player: number | string | IPlayer): void {
-    SetSuperJumpThisFrame(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetSuperJumpThisFrame(_player);
 }
 
 /**
@@ -2809,7 +2828,8 @@ export function setSuperJumpThisFrame(player: number | string | IPlayer): void {
  * Hash: 0x54F157E0336A3822 | Since: 323
  */
 export function setTennisMoveNetworkSignalFloat(ped: number | IPed): void {
-    Citizen.invokeNative('0x54F157E0336A3822', ped, undefined, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x54F157E0336A3822', _ped, undefined, 0);
 }
 
 /**
@@ -2986,8 +3006,9 @@ export function setWindSpeed(speed: number): void {
  * Hash: 0x867654CBC7606F2C | Since: 323
  */
 export function shootSingleBulletBetweenCoords(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, damage: number, weaponHash: number | string, ownerPed: number | IPed, isAudible: boolean, isInvisible: boolean, speed: number): void {
+    const _ownerPed = ownerPed instanceof IPed ? ownerPed.handle() : ownerPed;
     if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
-    ShootSingleBulletBetweenCoords(x1, y1, z1, x2, y2, z2, damage, false, weaponHash, ownerPed, isAudible, isInvisible, speed);
+    ShootSingleBulletBetweenCoords(x1, y1, z1, x2, y2, z2, damage, false, weaponHash, _ownerPed, isAudible, isInvisible, speed);
 }
 
 /**
@@ -2996,8 +3017,10 @@ export function shootSingleBulletBetweenCoords(x1: number, y1: number, z1: numbe
  * Hash: 0xE3A7742E0B7A2F8B | Since: 323
  */
 export function shootSingleBulletBetweenCoordsIgnoreEntity(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, damage: number, weaponHash: number | string, ownerPed: number | IPed, isAudible: boolean, isInvisible: boolean, speed: number, entity: number | IEntity): void {
+    const _ownerPed = ownerPed instanceof IPed ? ownerPed.handle() : ownerPed;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
     if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
-    ShootSingleBulletBetweenCoordsIgnoreEntity(x1, y1, z1, x2, y2, z2, damage, false, weaponHash, ownerPed, isAudible, isInvisible, speed, entity, undefined);
+    ShootSingleBulletBetweenCoordsIgnoreEntity(x1, y1, z1, x2, y2, z2, damage, false, weaponHash, _ownerPed, isAudible, isInvisible, speed, _entity, undefined);
 }
 
 /**
@@ -3007,8 +3030,11 @@ export function shootSingleBulletBetweenCoordsIgnoreEntity(x1: number, y1: numbe
  * Hash: 0xBFE5756E7407064A | Since: 323
  */
 export function shootSingleBulletBetweenCoordsIgnoreEntityNew(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, damage: number, weaponHash: number | string, ownerPed: number | IPed, isAudible: boolean, isInvisible: boolean, speed: number, entity: number | IEntity, targetEntity: number | IEntity): void {
+    const _ownerPed = ownerPed instanceof IPed ? ownerPed.handle() : ownerPed;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _targetEntity = targetEntity instanceof IEntity ? targetEntity.handle() : targetEntity;
     if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
-    ShootSingleBulletBetweenCoordsIgnoreEntityNew(x1, y1, z1, x2, y2, z2, damage, false, weaponHash, ownerPed, isAudible, isInvisible, speed, entity, false, false, targetEntity, false, undefined, undefined, undefined);
+    ShootSingleBulletBetweenCoordsIgnoreEntityNew(x1, y1, z1, x2, y2, z2, damage, false, weaponHash, _ownerPed, isAudible, isInvisible, speed, _entity, false, false, _targetEntity, false, undefined, undefined, undefined);
 }
 
 /**

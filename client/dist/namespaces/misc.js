@@ -1,3 +1,4 @@
+import { IEntity, IObject } from '@risinglife/fivem-shared';
 /**
  * Adds the given model name hash to the list of valid models for the player ped's parachute.
  *
@@ -627,7 +628,8 @@ export function experimentalLoadCloneCreate(data, objectId, tree) {
  * Hash: 0x6BC189AC
  */
 export function experimentalLoadCloneSync(entity, data) {
-    ExperimentalLoadCloneSync(entity, data);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    ExperimentalLoadCloneSync(_entity, data);
 }
 /**
  * This native is not implemented.
@@ -635,7 +637,8 @@ export function experimentalLoadCloneSync(entity, data) {
  * Hash: 0x9D65CAD2
  */
 export function experimentalSaveCloneCreate(entity) {
-    return ExperimentalSaveCloneCreate(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return ExperimentalSaveCloneCreate(_entity);
 }
 /**
  * This native is not implemented.
@@ -643,7 +646,8 @@ export function experimentalSaveCloneCreate(entity) {
  * Hash: 0x38D19210
  */
 export function experimentalSaveCloneSync(entity) {
-    return ExperimentalSaveCloneSync(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return ExperimentalSaveCloneSync(_entity);
 }
 /**
  * No comment provided
@@ -1003,7 +1007,8 @@ export function executeCommand(commandString) {
  * Hash: 0xD70C3BCA
  */
 export function formatStackTrace(traceData) {
-    return FormatStackTrace(traceData);
+    const _traceData = traceData instanceof IObject ? traceData.handle() : traceData;
+    return FormatStackTrace(_traceData);
 }
 /**
  * Can be used to get a console variable of type `char*`, for example a string.

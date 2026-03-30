@@ -1,3 +1,4 @@
+import { IEntity } from '@risinglife/fivem-shared';
 /**
  * Returns the result of a shape test, also returning the material of any touched surface.
  *
@@ -26,7 +27,8 @@ export function getResult(shapeTestHandle) {
  * Hash: 0x2B3334BCA57CD799 | Since: 323 | API-Set: unknown
  */
 export function releaseScriptGuidFromEntity(entityHit) {
-    ReleaseScriptGuidFromEntity(entityHit);
+    const _entityHit = entityHit instanceof IEntity ? entityHit.handle() : entityHit;
+    ReleaseScriptGuidFromEntity(_entityHit);
 }
 /**
  * Does the same as 0x7EE9F5D83DD4F90E, except blocking until the shape test completes.
@@ -34,7 +36,8 @@ export function releaseScriptGuidFromEntity(entityHit) {
  * Hash: 0x377906D8A31E5586 | Since: 323 | API-Set: unknown
  */
 export function startExpensiveSynchronousLosProbe(x1, y1, z1, x2, y2, z2, flags, entity) {
-    return StartExpensiveSynchronousShapeTestLosProbe(x1, y1, z1, x2, y2, z2, flags, entity, 0);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StartExpensiveSynchronousShapeTestLosProbe(x1, y1, z1, x2, y2, z2, flags, _entity, 0);
 }
 /**
  * No comment provided
@@ -42,7 +45,8 @@ export function startExpensiveSynchronousLosProbe(x1, y1, z1, x2, y2, z2, flags,
  * Hash: 0x37181417CE7C8900 | Since: 323 | API-Set: unknown
  */
 export function startBound(entity, flags1, flags2) {
-    return StartShapeTestBound(entity, flags1, flags2);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StartShapeTestBound(_entity, flags1, flags2);
 }
 /**
  * No comment provided
@@ -50,7 +54,8 @@ export function startBound(entity, flags1, flags2) {
  * Hash: 0x052837721A854EC7 | Since: 323 | API-Set: unknown
  */
 export function startBoundingBox(entity, flags1, flags2) {
-    return StartShapeTestBoundingBox(entity, flags1, flags2);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StartShapeTestBoundingBox(_entity, flags1, flags2);
 }
 /**
  * No comment provided
@@ -58,7 +63,8 @@ export function startBoundingBox(entity, flags1, flags2) {
  * Hash: 0xFE466162C4401D18 | Since: 323 | API-Set: unknown
  */
 export function startBox(pos, dimX, dimY, dimZ, rot, flags, entity) {
-    return StartShapeTestBox(pos.x, pos.y, pos.z, dimX, dimY, dimZ, rot.x, rot.y, rot.z, undefined, flags, entity, undefined);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StartShapeTestBox(pos.x, pos.y, pos.z, dimX, dimY, dimZ, rot.x, rot.y, rot.z, undefined, flags, _entity, undefined);
 }
 /**
  * Raycast from point to point, where the ray has a radius.
@@ -76,7 +82,8 @@ export function startBox(pos, dimX, dimY, dimZ, rot, flags, entity) {
  * Hash: 0x28579D1B8F8AAC80 | Since: 323 | API-Set: unknown
  */
 export function startCapsule(x1, y1, z1, x2, y2, z2, radius, flags, entity) {
-    return StartShapeTestCapsule(x1, y1, z1, x2, y2, z2, radius, flags, entity, 0);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StartShapeTestCapsule(x1, y1, z1, x2, y2, z2, radius, flags, _entity, 0);
 }
 /**
  * Asynchronously starts a line-of-sight (raycast) world probe shape test.
@@ -88,7 +95,8 @@ export function startCapsule(x1, y1, z1, x2, y2, z2, radius, flags, entity) {
  * Hash: 0x7EE9F5D83DD4F90E | Since: 323 | API-Set: unknown
  */
 export function startLosProbe(x1, y1, z1, x2, y2, z2, flags, entity) {
-    return StartShapeTestLosProbe(x1, y1, z1, x2, y2, z2, flags, entity, 0);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StartShapeTestLosProbe(x1, y1, z1, x2, y2, z2, flags, _entity, 0);
 }
 /**
  * Returns a ShapeTest handle that can be used with GET_SHAPE_TEST_RESULT.
@@ -98,7 +106,8 @@ export function startLosProbe(x1, y1, z1, x2, y2, z2, flags, entity) {
  * Hash: 0xFF6BE494C7987F34 | Since: 323 | API-Set: unknown
  */
 export function startMouseCursorLosProbe(flag, entity, flag2) {
-    return StartShapeTestSurroundingCoords(flag, entity, flag2);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StartShapeTestSurroundingCoords(flag, _entity, flag2);
 }
 /**
  * No comment provided
@@ -106,5 +115,6 @@ export function startMouseCursorLosProbe(flag, entity, flag2) {
  * Hash: 0xE6AC6C45FBE83004 | Since: 323 | API-Set: unknown
  */
 export function startSweptSphere(x1, y1, z1, x2, y2, z2, radius, flags, entity) {
-    return StartShapeTestSweptSphere(x1, y1, z1, x2, y2, z2, radius, flags, entity, undefined);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StartShapeTestSweptSphere(x1, y1, z1, x2, y2, z2, radius, flags, _entity, undefined);
 }

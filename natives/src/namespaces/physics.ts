@@ -6,7 +6,8 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0x710311ADF0E20730 | Since: 323
  */
 export function activate(entity: number | IEntity): void {
-    ActivatePhysics(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    ActivatePhysics(_entity);
 }
 
 /**
@@ -66,7 +67,9 @@ export function applyImpulseToCloth(pos: Vector3, vecX: number, vecY: number, ve
  * Hash: 0x3D95EC8B6D940AC3 | Since: 323
  */
 export function attachEntitiesToRope(ropeId: number, ent1: number | IEntity, ent2: number | IEntity, ent1_x: number, ent1_y: number, ent1_z: number, ent2_x: number, ent2_y: number, ent2_z: number, length: number): [any, any] {
-    return AttachEntitiesToRope(ropeId, ent1, ent2, ent1_x, ent1_y, ent1_z, ent2_x, ent2_y, ent2_z, length, false, false);
+    const _ent1 = ent1 instanceof IEntity ? ent1.handle() : ent1;
+    const _ent2 = ent2 instanceof IEntity ? ent2.handle() : ent2;
+    return AttachEntitiesToRope(ropeId, _ent1, _ent2, ent1_x, ent1_y, ent1_z, ent2_x, ent2_y, ent2_z, length, false, false);
 }
 
 /**
@@ -75,7 +78,8 @@ export function attachEntitiesToRope(ropeId: number, ent1: number | IEntity, ent
  * Hash: 0x4B490A6832559A65 | Since: 323
  */
 export function attachRopeToEntity(ropeId: number, entity: number | IEntity, pos: Vector3): void {
-    AttachRopeToEntity(ropeId, entity, pos.x, pos.y, pos.z, false);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    AttachRopeToEntity(ropeId, _entity, pos.x, pos.y, pos.z, false);
 }
 
 /**
@@ -84,7 +88,8 @@ export function attachRopeToEntity(ropeId: number, entity: number | IEntity, pos
  * Hash: 0x2E648D16F6E308F3 | Since: 323
  */
 export function breakEntityGlass(entity: number | IEntity): void {
-    BreakEntityGlass(entity, 0, 0, 0, 0, 0, 0, 0, 0, undefined, false);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    BreakEntityGlass(_entity, 0, 0, 0, 0, 0, 0, 0, 0, undefined, false);
 }
 
 /**
@@ -111,7 +116,8 @@ export function deleteRope(ropeId: number): void {
  * Hash: 0xBCF3026912A8647D | Since: 323
  */
 export function detachRopeFromEntity(ropeId: number, entity: number | IEntity): void {
-    DetachRopeFromEntity(ropeId, entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    DetachRopeFromEntity(ropeId, _entity);
 }
 
 /**
@@ -138,7 +144,8 @@ export function doesScriptOwnRope(ropeId: number): boolean {
  * Hash: 0x8214A4B5A7A33612 | Since: 323
  */
 export function getCgoffset(entity: number | IEntity): Vector3 {
-    return new Vector3(GetCgoffset(entity));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetCgoffset(_entity));
 }
 
 /**
@@ -147,7 +154,8 @@ export function getCgoffset(entity: number | IEntity): Vector3 {
  * Hash: 0x8C520A929415BCD2 | Since: 3407
  */
 export function getDamping(entity: number | IEntity, _type: number): Vector3 {
-    return new Vector3(Citizen.invokeNative('0x8C520A929415BCD2', entity, _type));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(Citizen.invokeNative('0x8C520A929415BCD2', _entity, _type));
 }
 
 /**
@@ -156,7 +164,8 @@ export function getDamping(entity: number | IEntity, _type: number): Vector3 {
  * Hash: 0x0C112765300C7E1E | Since: 505
  */
 export function getIsEntityAFrag(_object: number | IObject): boolean {
-    return GetHasObjectFragInst(_object);
+    const __object = _object instanceof IObject ? _object.handle() : _object;
+    return GetHasObjectFragInst(__object);
 }
 
 /**
@@ -219,7 +228,8 @@ export function pinRopeVertex(ropeId: number, vertex: number, pos: Vector3): voi
  * Hash: 0xCC6E963682533882 | Since: 323
  */
 export function resetDisableBreaking(_object: number | IObject): void {
-    Citizen.invokeNative('0xCC6E963682533882', _object);
+    const __object = _object instanceof IObject ? _object.handle() : _object;
+    Citizen.invokeNative('0xCC6E963682533882', __object);
 }
 
 /**
@@ -363,7 +373,8 @@ export function ropeUnloadTextures(): void {
  * Hash: 0xD8FA3908D7B86904 | Since: 323
  */
 export function setCgoffset(entity: number | IEntity, pos: Vector3): void {
-    SetCgoffset(entity, pos.x, pos.y, pos.z);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetCgoffset(_entity, pos.x, pos.y, pos.z);
 }
 
 /**
@@ -372,7 +383,8 @@ export function setCgoffset(entity: number | IEntity, pos: Vector3): void {
  * Hash: 0xBE520D9761FF811F | Since: 323
  */
 export function setCgAtBoundcenter(entity: number | IEntity): void {
-    SetCgAtBoundcenter(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetCgAtBoundcenter(_entity);
 }
 
 /**
@@ -381,7 +393,8 @@ export function setCgAtBoundcenter(entity: number | IEntity): void {
  * Hash: 0xEEA3B200A6FEB65B | Since: 323
  */
 export function setDamping(entity: number | IEntity, vertex: number, value: number): void {
-    SetDamping(entity, vertex, value);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetDamping(_entity, vertex, value);
 }
 
 /**
@@ -390,7 +403,8 @@ export function setDamping(entity: number | IEntity, vertex: number, value: numb
  * Hash: 0x5CEC1A84620E7D5B | Since: 323
  */
 export function setDisableBreaking(_object: number | IObject, toggle: boolean): void {
-    SetDisableBreaking(_object, toggle);
+    const __object = _object instanceof IObject ? _object.handle() : _object;
+    SetDisableBreaking(__object, toggle);
 }
 
 /**
@@ -399,7 +413,8 @@ export function setDisableBreaking(_object: number | IObject, toggle: boolean): 
  * Hash: 0x01BA3AED21C16CFB | Since: 323
  */
 export function setDisableFragDamage(_object: number | IObject, toggle: boolean): void {
-    SetDisableFragDamage(_object, toggle);
+    const __object = _object instanceof IObject ? _object.handle() : _object;
+    SetDisableFragDamage(__object, toggle);
 }
 
 /**
@@ -426,7 +441,8 @@ export function setInStuntMode(): void {
  * Hash: 0x15F944730C832252 | Since: 463
  */
 export function setUseKinematic(entity: number | IEntity, toggle: boolean): void {
-    SetEntityProofUnk(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityProofUnk(_entity, toggle);
 }
 
 /**

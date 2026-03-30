@@ -1,3 +1,4 @@
+import { IPed } from '@risinglife/fivem-shared';
 /**
  * GIVE_WEAPON_COMPONENT_TO_PED
  *
@@ -6,11 +7,12 @@
  * Hash: 0x3E1E286D
  */
 export function giveComponentToPed(ped, weaponHash, componentHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
         componentHash = GetHashKey(componentHash);
-    GiveWeaponComponentToPed(ped, weaponHash, componentHash);
+    GiveWeaponComponentToPed(_ped, weaponHash, componentHash);
 }
 /**
  * GIVE_WEAPON_TO_PED
@@ -20,9 +22,10 @@ export function giveComponentToPed(ped, weaponHash, componentHash) {
  * Hash: 0xC4D88A85
  */
 export function giveToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    GiveWeaponToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand);
+    GiveWeaponToPed(_ped, weaponHash, ammoCount, isHidden, bForceInHand);
 }
 /**
  * Parameter `p1` does not seem to be used or referenced in game binaries.\
@@ -33,7 +36,8 @@ export function giveToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand) {
  * Hash: 0xA44CE817
  */
 export function removeAllPeds(ped) {
-    RemoveAllPedWeapons(ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    RemoveAllPedWeapons(_ped, false);
 }
 /**
  * REMOVE_WEAPON_COMPONENT_FROM_PED
@@ -43,11 +47,12 @@ export function removeAllPeds(ped) {
  * Hash: 0x412AA00D
  */
 export function removeComponentFromPed(ped, weaponHash, componentHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
         componentHash = GetHashKey(componentHash);
-    RemoveWeaponComponentFromPed(ped, weaponHash, componentHash);
+    RemoveWeaponComponentFromPed(_ped, weaponHash, componentHash);
 }
 /**
  * ```
@@ -66,7 +71,8 @@ export function removeComponentFromPed(ped, weaponHash, componentHash) {
  * Hash: 0x9C37F220
  */
 export function removeFromPed(ped, weaponHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    RemoveWeaponFromPed(ped, weaponHash);
+    RemoveWeaponFromPed(_ped, weaponHash);
 }

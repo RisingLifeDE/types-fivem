@@ -919,7 +919,8 @@ export function playCheatApplied(cheat: string): void {
  * Hash: 0x34B973047A2268B9 | Since: 323
  */
 export function playClothChange(p0: number | IPed): void {
-    PlaystatsClothChange(p0, undefined, undefined, undefined, undefined);
+    const _p0 = p0 instanceof IPed ? p0.handle() : p0;
+    PlaystatsClothChange(_p0, undefined, undefined, undefined, undefined);
 }
 
 /**
@@ -1615,7 +1616,8 @@ export function playPimenuHideOptions(): any {
  * Hash: 0xBA739D6D5A05D6E7 | Since: 323
  */
 export function playPropChange(p0: number | IPed): void {
-    PlaystatsPropChange(p0, 0, 0, 0);
+    const _p0 = p0 instanceof IPed ? p0.handle() : p0;
+    PlaystatsPropChange(_p0, 0, 0, 0);
 }
 
 /**
@@ -1642,7 +1644,8 @@ export function playQuitMode(): void {
  * Hash: 0x9C375C315099DDE4 | Since: 323
  */
 export function playRaceCheckpoint(p0: number | IVehicle): void {
-    PlaystatsRaceCheckpoint(p0, undefined, 0, 0, undefined);
+    const _p0 = p0 instanceof IVehicle ? p0.localId() : p0;
+    PlaystatsRaceCheckpoint(_p0, undefined, 0, 0, undefined);
 }
 
 /**
@@ -1714,7 +1717,8 @@ export function playRobberyPrep(): void {
  * Hash: 0x121FB4DDDC2D5291 | Since: 323
  */
 export function playRosBet(amount: number, act: number, player: number | string | IPlayer, cm: number): void {
-    PlaystatsRosBet(amount, act, player, cm);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    PlaystatsRosBet(amount, act, _player, cm);
 }
 
 /**
@@ -3034,7 +3038,9 @@ export function playCreatorEnd(): any {
  * Hash: 0x01D8B04D02F1217F | Since: 3570
  */
 export function playDeathInfo(victimPed: number | IPed, killerPed: number | IPed, mentalState: number, revengeKill: boolean, victimKvK: number, killerKvK: number): void {
-    Citizen.invokeNative('0x01D8B04D02F1217F', victimPed, killerPed, mentalState, revengeKill, victimKvK, killerKvK);
+    const _victimPed = victimPed instanceof IPed ? victimPed.handle() : victimPed;
+    const _killerPed = killerPed instanceof IPed ? killerPed.handle() : killerPed;
+    Citizen.invokeNative('0x01D8B04D02F1217F', _victimPed, _killerPed, mentalState, revengeKill, victimKvK, killerKvK);
 }
 
 /**

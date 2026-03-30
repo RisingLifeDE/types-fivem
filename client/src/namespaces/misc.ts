@@ -698,7 +698,8 @@ export function experimentalLoadCloneCreate(data: string, objectId: number, tree
  * Hash: 0x6BC189AC
  */
 export function experimentalLoadCloneSync(entity: number | IEntity, data: string): void {
-    ExperimentalLoadCloneSync(entity, data);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    ExperimentalLoadCloneSync(_entity, data);
 }
 
 /**
@@ -707,7 +708,8 @@ export function experimentalLoadCloneSync(entity: number | IEntity, data: string
  * Hash: 0x9D65CAD2
  */
 export function experimentalSaveCloneCreate(entity: number | IEntity): string {
-    return ExperimentalSaveCloneCreate(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return ExperimentalSaveCloneCreate(_entity);
 }
 
 /**
@@ -716,7 +718,8 @@ export function experimentalSaveCloneCreate(entity: number | IEntity): string {
  * Hash: 0x38D19210
  */
 export function experimentalSaveCloneSync(entity: number | IEntity): string {
-    return ExperimentalSaveCloneSync(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return ExperimentalSaveCloneSync(_entity);
 }
 
 /**
@@ -1116,7 +1119,8 @@ export function executeCommand(commandString: string): void {
  * Hash: 0xD70C3BCA
  */
 export function formatStackTrace(traceData: number | IObject): string {
-    return FormatStackTrace(traceData);
+    const _traceData = traceData instanceof IObject ? traceData.handle() : traceData;
+    return FormatStackTrace(_traceData);
 }
 
 /**

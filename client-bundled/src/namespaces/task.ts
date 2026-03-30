@@ -66,7 +66,8 @@ export function addScriptedCoverArea(pos: Vector3, radius: number): void {
  * Hash: 0x5CF0D8F9BBA0DD75 | Since: 323 | API-Set: unknown
  */
 export function addVehicleSubAttackCoord(ped: number | IPed, pos: Vector3): void {
-    AddVehicleSubtaskAttackCoord(ped, pos.x, pos.y, pos.z);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    AddVehicleSubtaskAttackCoord(_ped, pos.x, pos.y, pos.z);
 }
 
 /**
@@ -75,7 +76,9 @@ export function addVehicleSubAttackCoord(ped: number | IPed, pos: Vector3): void
  * Hash: 0x85F462BADC7DA47F | Since: 323 | API-Set: unknown
  */
 export function addVehicleSubAttackPed(ped: number | IPed, target: number | IPed): void {
-    AddVehicleSubtaskAttackPed(ped, target);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    AddVehicleSubtaskAttackPed(_ped, _target);
 }
 
 /**
@@ -129,7 +132,8 @@ export function assistedMovementSetRouteProperties(route: string, props: number)
  * Hash: 0x6100B3CEFD43452E | Since: 2189 | API-Set: unknown
  */
 export function clearDefaultPrimary(ped: number | IPed): void {
-    Citizen.invokeNative('0x6100B3CEFD43452E', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x6100B3CEFD43452E', _ped);
 }
 
 /**
@@ -138,7 +142,8 @@ export function clearDefaultPrimary(ped: number | IPed): void {
  * Hash: 0xC35B5CDB2824CF69 | Since: 323 | API-Set: unknown
  */
 export function clearDrivebyUnderneathDrivingTask(ped: number | IPed): void {
-    ClearDrivebyTaskUnderneathDrivingTask(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearDrivebyTaskUnderneathDrivingTask(_ped);
 }
 
 /**
@@ -147,7 +152,8 @@ export function clearDrivebyUnderneathDrivingTask(ped: number | IPed): void {
  * Hash: 0xF6DC48E56BE1243A | Since: 3407 | API-Set: unknown
  */
 export function clearPedScriptIfRunningThreatResponseNonTempTask(ped: number | IPed): void {
-    Citizen.invokeNative('0xF6DC48E56BE1243A', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0xF6DC48E56BE1243A', _ped);
 }
 
 /**
@@ -156,7 +162,8 @@ export function clearPedScriptIfRunningThreatResponseNonTempTask(ped: number | I
  * Hash: 0x176CECF6F920D707 | Since: 323 | API-Set: unknown
  */
 export function clearPedSecondary(ped: number | IPed): void {
-    ClearPedSecondaryTask(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedSecondaryTask(_ped);
 }
 
 /**
@@ -165,7 +172,8 @@ export function clearPedSecondary(ped: number | IPed): void {
  * Hash: 0xE1EF3C1216AFF2CD | Since: 323 | API-Set: unknown
  */
 export function clearPeds(ped: number | IPed): void {
-    ClearPedTasks(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedTasks(_ped);
 }
 
 /**
@@ -174,7 +182,8 @@ export function clearPeds(ped: number | IPed): void {
  * Hash: 0xAAA34F8A7CB32098 | Since: 323 | API-Set: unknown
  */
 export function clearPedsImmediately(ped: number | IPed): void {
-    ClearPedTasksImmediately(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedTasksImmediately(_ped);
 }
 
 /**
@@ -184,7 +193,8 @@ export function clearPedsImmediately(ped: number | IPed): void {
  * Hash: 0xDBBC7A2432524127 | Since: 1290 | API-Set: unknown
  */
 export function clearPrimaryVehicle(vehicle: number | IVehicle): void {
-    ClearVehicleTasks(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    ClearVehicleTasks(_vehicle);
 }
 
 /**
@@ -202,7 +212,8 @@ export function clearSequence(): number {
  * Hash: 0x53DDC75BC3AC0A90 | Since: 1290 | API-Set: unknown
  */
 export function clearVehicleCrash(vehicle: number | IVehicle): void {
-    Citizen.invokeNative('0x53DDC75BC3AC0A90', vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    Citizen.invokeNative('0x53DDC75BC3AC0A90', _vehicle);
 }
 
 /**
@@ -230,7 +241,8 @@ export function closeSequence(taskSequenceId: number): void {
  * Hash: 0xDCFE42068FE0135A | Since: 323 | API-Set: unknown
  */
 export function controlMountedWeapon(ped: number | IPed): boolean {
-    return ControlMountedWeapon(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return ControlMountedWeapon(_ped);
 }
 
 /**
@@ -333,7 +345,8 @@ export function doesScriptedCoverPointExistAtCoords(pos: Vector3): boolean {
  * Hash: 0x534AEBA6E5ED4CAB | Since: 323 | API-Set: unknown
  */
 export function getActiveVehicleMissionType(vehicle: number | IVehicle): number {
-    return GetActiveVehicleMissionType(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetActiveVehicleMissionType(_vehicle);
 }
 
 /**
@@ -351,7 +364,8 @@ export function getClipSetForScriptedGun(gunTaskType: number): string {
  * Hash: 0xB0760331C7AA4155 | Since: 323 | API-Set: unknown
  */
 export function getIsActive(ped: number | IPed, taskIndex: number): boolean {
-    return GetIsTaskActive(ped, taskIndex);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetIsTaskActive(_ped, taskIndex);
 }
 
 /**
@@ -374,7 +388,8 @@ export function getIsWaypointRecordingLoaded(name: string): boolean {
  * Hash: 0xC6F5C0BCDC74D62D | Since: 323 | API-Set: unknown
  */
 export function getNavmeshRouteDistanceRemaining(ped: number | IPed): [number, number, boolean] {
-    return GetNavmeshRouteDistanceRemaining(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetNavmeshRouteDistanceRemaining(_ped);
 }
 
 /**
@@ -383,7 +398,8 @@ export function getNavmeshRouteDistanceRemaining(ped: number | IPed): [number, n
  * Hash: 0x632E831F382A0FA8 | Since: 323 | API-Set: unknown
  */
 export function getNavmeshRouteResult(ped: number | IPed): number {
-    return GetNavmeshRouteResult(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetNavmeshRouteResult(_ped);
 }
 
 /**
@@ -392,7 +408,8 @@ export function getNavmeshRouteResult(ped: number | IPed): number {
  * Hash: 0x52F734CEBE20DFBA | Since: 2545 | API-Set: unknown
  */
 export function getPatrolInfo(ped: number | IPed): [boolean, number, number] {
-    return Citizen.invokeNative('0x52F734CEBE20DFBA', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x52F734CEBE20DFBA', _ped);
 }
 
 /**
@@ -401,7 +418,8 @@ export function getPatrolInfo(ped: number | IPed): [boolean, number, number] {
  * Hash: 0x8517D4A6CA8513ED | Since: 323 | API-Set: unknown
  */
 export function getPedDesiredMoveBlendRatio(ped: number | IPed): number {
-    return GetPedDesiredMoveBlendRatio(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedDesiredMoveBlendRatio(_ped);
 }
 
 /**
@@ -419,7 +437,8 @@ export function getPedWaypointDistance(): number {
  * Hash: 0x2720AAA75001E094 | Since: 323 | API-Set: unknown
  */
 export function getPedWaypointProgress(ped: number | IPed): number {
-    return GetPedWaypointProgress(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedWaypointProgress(_ped);
 }
 
 /**
@@ -428,7 +447,8 @@ export function getPedWaypointProgress(ped: number | IPed): number {
  * Hash: 0x47619ABE8B268C60 | Since: 323 | API-Set: unknown
  */
 export function getPhoneGestureAnimCurrentTime(ped: number | IPed): number {
-    return GetPhoneGestureAnimCurrentTime(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPhoneGestureAnimCurrentTime(_ped);
 }
 
 /**
@@ -437,7 +457,8 @@ export function getPhoneGestureAnimCurrentTime(ped: number | IPed): number {
  * Hash: 0x1EE0F68A7C25DEC6 | Since: 323 | API-Set: unknown
  */
 export function getPhoneGestureAnimTotalTime(ped: number | IPed): number {
-    return GetPhoneGestureAnimTotalTime(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPhoneGestureAnimTotalTime(_ped);
 }
 
 /**
@@ -456,8 +477,9 @@ export function getScriptedCoverPointCoords(coverpoint: number): Vector3 {
  * Hash: 0x77F1BEB8863288D5 | Since: 323 | API-Set: unknown
  */
 export function getScriptStatus(ped: number | IPed, taskHash: number | string): number {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof taskHash === 'string') taskHash = GetHashKey(taskHash)
-    return GetScriptTaskStatus(ped, taskHash);
+    return GetScriptTaskStatus(_ped, taskHash);
 }
 
 /**
@@ -468,7 +490,8 @@ export function getScriptStatus(ped: number | IPed, taskHash: number | string): 
  * Hash: 0x00A9010CFE1E3533 | Since: 323 | API-Set: unknown
  */
 export function getSequenceProgress(ped: number | IPed): number {
-    return GetSequenceProgress(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetSequenceProgress(_ped);
 }
 
 /**
@@ -477,7 +500,8 @@ export function getSequenceProgress(ped: number | IPed): number {
  * Hash: 0xB4F47213DF45A64C | Since: 323 | API-Set: unknown
  */
 export function getMoveNetworkEvent(ped: number | IPed, eventName: string): boolean {
-    return GetTaskMoveNetworkEvent(ped, eventName);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetTaskMoveNetworkEvent(_ped, eventName);
 }
 
 /**
@@ -486,7 +510,8 @@ export function getMoveNetworkEvent(ped: number | IPed, eventName: string): bool
  * Hash: 0xA7FFBA498E4AAF67 | Since: 323 | API-Set: unknown
  */
 export function getMoveNetworkSignalBool(ped: number | IPed, signalName: string): boolean {
-    return GetTaskMoveNetworkSignalBool(ped, signalName);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetTaskMoveNetworkSignalBool(_ped, signalName);
 }
 
 /**
@@ -495,7 +520,8 @@ export function getMoveNetworkSignalBool(ped: number | IPed, signalName: string)
  * Hash: 0x44AB0B3AFECCE242 | Since: 1493 | API-Set: unknown
  */
 export function getMoveNetworkSignalFloat(ped: number | IPed, signalName: string): number {
-    return GetTaskMoveNetworkSignalFloat(ped, signalName);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetTaskMoveNetworkSignalFloat(_ped, signalName);
 }
 
 /**
@@ -504,7 +530,8 @@ export function getMoveNetworkSignalFloat(ped: number | IPed, signalName: string
  * Hash: 0x717E4D1F2048376D | Since: 323 | API-Set: unknown
  */
 export function getMoveNetworkState(ped: number | IPed): string {
-    return GetTaskMoveNetworkState(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetTaskMoveNetworkState(_ped);
 }
 
 /**
@@ -513,7 +540,8 @@ export function getMoveNetworkState(ped: number | IPed): string {
  * Hash: 0x9D252648778160DF | Since: 1868 | API-Set: unknown
  */
 export function getRappelDownWallState(ped: number | IPed): number {
-    return Citizen.invokeNative('0x9D252648778160DF', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x9D252648778160DF', _ped);
 }
 
 /**
@@ -522,7 +550,8 @@ export function getRappelDownWallState(ped: number | IPed): number {
  * Hash: 0x9824CFF8FC66E159 | Since: 323 | API-Set: unknown
  */
 export function getVehicleWaypointProgress(vehicle: number | IVehicle): number {
-    return GetVehicleWaypointProgress(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWaypointProgress(_vehicle);
 }
 
 /**
@@ -531,7 +560,8 @@ export function getVehicleWaypointProgress(vehicle: number | IVehicle): number {
  * Hash: 0x416B62AC8B9E5BBD | Since: 323 | API-Set: unknown
  */
 export function getVehicleWaypointTargetPoint(vehicle: number | IVehicle): number {
-    return GetVehicleWaypointTargetPoint(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWaypointTargetPoint(_vehicle);
 }
 
 /**
@@ -549,7 +579,8 @@ export function getWaypointDistanceAlongRoute(name: string, point: number): numb
  * Hash: 0x3E38E28A1D80DDF6 | Since: 323 | API-Set: unknown
  */
 export function isControlledVehicleUnableToGetToRoad(ped: number | IPed): boolean {
-    return Citizen.invokeNative('0x3E38E28A1D80DDF6', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x3E38E28A1D80DDF6', _ped);
 }
 
 /**
@@ -558,7 +589,8 @@ export function isControlledVehicleUnableToGetToRoad(ped: number | IPed): boolea
  * Hash: 0x8785E6E40C7A8818 | Since: 323 | API-Set: unknown
  */
 export function isDrivebyUnderneathDrivingTask(ped: number | IPed): boolean {
-    return IsDrivebyTaskUnderneathDrivingTask(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsDrivebyTaskUnderneathDrivingTask(_ped);
 }
 
 /**
@@ -567,7 +599,8 @@ export function isDrivebyUnderneathDrivingTask(ped: number | IPed): boolean {
  * Hash: 0xA320EF046186FA3B | Since: 323 | API-Set: unknown
  */
 export function isMountedWeaponUnderneathDrivingTask(ped: number | IPed): boolean {
-    return IsMountedWeaponTaskUnderneathDrivingTask(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsMountedWeaponTaskUnderneathDrivingTask(_ped);
 }
 
 /**
@@ -576,7 +609,8 @@ export function isMountedWeaponUnderneathDrivingTask(ped: number | IPed): boolea
  * Hash: 0xD4D8636C0199A939 | Since: 323 | API-Set: unknown
  */
 export function isMoveBlendRatioRunning(ped: number | IPed): boolean {
-    return IsMoveBlendRatioRunning(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsMoveBlendRatioRunning(_ped);
 }
 
 /**
@@ -585,7 +619,8 @@ export function isMoveBlendRatioRunning(ped: number | IPed): boolean {
  * Hash: 0x24A2AD74FA9814E2 | Since: 323 | API-Set: unknown
  */
 export function isMoveBlendRatioSprinting(ped: number | IPed): boolean {
-    return IsMoveBlendRatioSprinting(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsMoveBlendRatioSprinting(_ped);
 }
 
 /**
@@ -594,7 +629,8 @@ export function isMoveBlendRatioSprinting(ped: number | IPed): boolean {
  * Hash: 0x349CE7B56DAFD95C | Since: 323 | API-Set: unknown
  */
 export function isMoveBlendRatioStill(ped: number | IPed): boolean {
-    return IsMoveBlendRatioStill(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsMoveBlendRatioStill(_ped);
 }
 
 /**
@@ -603,7 +639,8 @@ export function isMoveBlendRatioStill(ped: number | IPed): boolean {
  * Hash: 0xF133BBBE91E1691F | Since: 323 | API-Set: unknown
  */
 export function isMoveBlendRatioWalking(ped: number | IPed): boolean {
-    return IsMoveBlendRatioWalking(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsMoveBlendRatioWalking(_ped);
 }
 
 /**
@@ -612,7 +649,8 @@ export function isMoveBlendRatioWalking(ped: number | IPed): boolean {
  * Hash: 0xAA135F9482C82CC3 | Since: 323 | API-Set: unknown
  */
 export function isPedActiveInScenario(ped: number | IPed): boolean {
-    return IsPedActiveInScenario(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedActiveInScenario(_ped);
 }
 
 /**
@@ -621,7 +659,8 @@ export function isPedActiveInScenario(ped: number | IPed): boolean {
  * Hash: 0x90A09F3A45FED688 | Since: 323 | API-Set: unknown
  */
 export function isPedBeingArrested(ped: number | IPed): boolean {
-    return IsPedBeingArrested(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedBeingArrested(_ped);
 }
 
 /**
@@ -630,7 +669,8 @@ export function isPedBeingArrested(ped: number | IPed): boolean {
  * Hash: 0x74E559B3BC910685 | Since: 323 | API-Set: unknown
  */
 export function isPedCuffed(ped: number | IPed): boolean {
-    return IsPedCuffed(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedCuffed(_ped);
 }
 
 /**
@@ -639,7 +679,8 @@ export function isPedCuffed(ped: number | IPed): boolean {
  * Hash: 0x2A74E1D5F2F00EEC | Since: 323 | API-Set: unknown
  */
 export function isPedGettingUp(ped: number | IPed): boolean {
-    return IsPedGettingUp(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedGettingUp(_ped);
 }
 
 /**
@@ -649,7 +690,8 @@ export function isPedGettingUp(ped: number | IPed): boolean {
  * Hash: 0xDEB6D52126E7D640 | Since: 323 | API-Set: unknown
  */
 export function isPedInWrithe(ped: number | IPed): boolean {
-    return IsPedInWrithe(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInWrithe(_ped);
 }
 
 /**
@@ -662,7 +704,8 @@ export function isPedInWrithe(ped: number | IPed): boolean {
  * Hash: 0x621C6E4729388E41 | Since: 323 | API-Set: unknown
  */
 export function isPedPlayingBaseClipInScenario(ped: number | IPed): boolean {
-    return IsPedPlayingBaseClipInScenario(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedPlayingBaseClipInScenario(_ped);
 }
 
 /**
@@ -671,7 +714,8 @@ export function isPedPlayingBaseClipInScenario(ped: number | IPed): boolean {
  * Hash: 0xC5286FFC176F28A2 | Since: 323 | API-Set: unknown
  */
 export function isPedRunning(ped: number | IPed): boolean {
-    return IsPedRunning(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedRunning(_ped);
 }
 
 /**
@@ -680,7 +724,8 @@ export function isPedRunning(ped: number | IPed): boolean {
  * Hash: 0x3DC52677769B4AE0 | Since: 323 | API-Set: unknown
  */
 export function isPedRunningArrest(ped: number | IPed): boolean {
-    return IsPedRunningArrestTask(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedRunningArrestTask(_ped);
 }
 
 /**
@@ -689,7 +734,8 @@ export function isPedRunningArrest(ped: number | IPed): boolean {
  * Hash: 0x57E457CD2C0FC168 | Since: 323 | API-Set: unknown
  */
 export function isPedSprinting(ped: number | IPed): boolean {
-    return IsPedSprinting(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedSprinting(_ped);
 }
 
 /**
@@ -698,7 +744,8 @@ export function isPedSprinting(ped: number | IPed): boolean {
  * Hash: 0xAC29253EEF8F0180 | Since: 323 | API-Set: unknown
  */
 export function isPedStill(ped: number | IPed): boolean {
-    return IsPedStill(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedStill(_ped);
 }
 
 /**
@@ -707,7 +754,8 @@ export function isPedStill(ped: number | IPed): boolean {
  * Hash: 0xE45B7F222DE47E09 | Since: 323 | API-Set: unknown
  */
 export function isPedStrafing(ped: number | IPed): boolean {
-    return IsPedStrafing(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedStrafing(_ped);
 }
 
 /**
@@ -716,7 +764,8 @@ export function isPedStrafing(ped: number | IPed): boolean {
  * Hash: 0xDE4C184B2B9B071A | Since: 323 | API-Set: unknown
  */
 export function isPedWalking(ped: number | IPed): boolean {
-    return IsPedWalking(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedWalking(_ped);
 }
 
 /**
@@ -725,7 +774,8 @@ export function isPedWalking(ped: number | IPed): boolean {
  * Hash: 0xB8EBB1E9D3588C10 | Since: 323 | API-Set: unknown
  */
 export function isPlayingPhoneGestureAnim(ped: number | IPed): boolean {
-    return IsPlayingPhoneGestureAnim(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPlayingPhoneGestureAnim(_ped);
 }
 
 /**
@@ -802,7 +852,8 @@ export function isScenarioTypeEnabled(scenarioType: string): boolean {
  * Hash: 0x921CE12C489C4C41 | Since: 323 | API-Set: unknown
  */
 export function isMoveNetworkActive(ped: number | IPed): boolean {
-    return IsTaskMoveNetworkActive(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsTaskMoveNetworkActive(_ped);
 }
 
 /**
@@ -811,7 +862,8 @@ export function isMoveNetworkActive(ped: number | IPed): boolean {
  * Hash: 0x30ED88D5E0C56A37 | Since: 323 | API-Set: unknown
  */
 export function isMoveNetworkReadyForTransition(ped: number | IPed): boolean {
-    return IsTaskMoveNetworkReadyForTransition(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsTaskMoveNetworkReadyForTransition(_ped);
 }
 
 /**
@@ -820,7 +872,8 @@ export function isMoveNetworkReadyForTransition(ped: number | IPed): boolean {
  * Hash: 0xE03B3F2D3DC59B64 | Since: 323 | API-Set: unknown
  */
 export function isWaypointPlaybackGoingOnForPed(ped: number | IPed): boolean {
-    return IsWaypointPlaybackGoingOnForPed(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsWaypointPlaybackGoingOnForPed(_ped);
 }
 
 /**
@@ -829,7 +882,8 @@ export function isWaypointPlaybackGoingOnForPed(ped: number | IPed): boolean {
  * Hash: 0xF5134943EA29868C | Since: 323 | API-Set: unknown
  */
 export function isWaypointPlaybackGoingOnForVehicle(vehicle: number | IVehicle): boolean {
-    return IsWaypointPlaybackGoingOnForVehicle(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsWaypointPlaybackGoingOnForVehicle(_vehicle);
 }
 
 /**
@@ -876,7 +930,8 @@ export function openSequence(): number {
  * Hash: 0x295E3CCEC879CCD7 | Since: 323 | API-Set: unknown
  */
 export function pedHasUseScenario(ped: number | IPed): boolean {
-    return PedHasUseScenarioTask(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return PedHasUseScenarioTask(_ped);
 }
 
 /**
@@ -885,7 +940,8 @@ export function pedHasUseScenario(ped: number | IPed): boolean {
  * Hash: 0x748040460F8DF5DC | Since: 323 | API-Set: unknown
  */
 export function playAnimOnRunningScenario(ped: number | IPed, animDict: string, animName: string): void {
-    PlayAnimOnRunningScenario(ped, animDict, animName);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayAnimOnRunningScenario(_ped, animDict, animName);
 }
 
 /**
@@ -894,7 +950,8 @@ export function playAnimOnRunningScenario(ped: number | IPed, animDict: string, 
  * Hash: 0x77A1EEC547E7FCF1 | Since: 323 | API-Set: unknown
  */
 export function playEntityScriptedAnim(entity: number | IEntity, blendInDelta: number, blendOutDelta: number): [number, number, number] {
-    return PlayEntityScriptedAnim(entity, blendInDelta, blendOutDelta);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return PlayEntityScriptedAnim(_entity, blendInDelta, blendOutDelta);
 }
 
 /**
@@ -948,7 +1005,8 @@ export function removeWaypointRecording(name: string): void {
  * Hash: 0xD01015C7316AE176 | Since: 323 | API-Set: unknown
  */
 export function requestMoveNetworkStateTransition(ped: number | IPed, name: string): boolean {
-    return RequestTaskMoveNetworkStateTransition(ped, name);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return RequestTaskMoveNetworkStateTransition(_ped, name);
 }
 
 /**
@@ -996,7 +1054,8 @@ export function resetScenarioTypesEnabled(): void {
  * Hash: 0x70033C3CC29A1FF4 | Since: 323 | API-Set: unknown
  */
 export function setAnimLooped(entity: number | IEntity, looped: boolean, priority: number, secondary: boolean): void {
-    SetAnimLooped(entity, looped, priority, secondary);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetAnimLooped(_entity, looped, priority, secondary);
 }
 
 /**
@@ -1005,7 +1064,8 @@ export function setAnimLooped(entity: number | IEntity, looped: boolean, priorit
  * Hash: 0xDDF3CB5A0A4C0B49 | Since: 2372 | API-Set: unknown
  */
 export function setAnimPhase(entity: number | IEntity, phase: number, priority: number, secondary: boolean): void {
-    SetAnimPhase(entity, phase, priority, secondary);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetAnimPhase(_entity, phase, priority, secondary);
 }
 
 /**
@@ -1014,7 +1074,8 @@ export function setAnimPhase(entity: number | IEntity, phase: number, priority: 
  * Hash: 0x032D49C5E359C847 | Since: 323 | API-Set: unknown
  */
 export function setAnimRate(entity: number | IEntity, rate: number, priority: number, secondary: boolean): void {
-    SetAnimRate(entity, rate, priority, secondary);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetAnimRate(_entity, rate, priority, secondary);
 }
 
 /**
@@ -1023,7 +1084,8 @@ export function setAnimRate(entity: number | IEntity, rate: number, priority: nu
  * Hash: 0x207F1A47C0342F48 | Since: 323 | API-Set: unknown
  */
 export function setAnimWeight(entity: number | IEntity, weight: number, priority: number, index: number, secondary: boolean): void {
-    SetAnimWeight(entity, weight, priority, index, secondary);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetAnimWeight(_entity, weight, priority, index, secondary);
 }
 
 /**
@@ -1032,7 +1094,10 @@ export function setAnimWeight(entity: number | IEntity, weight: number, priority
  * Hash: 0xE5B302114D8162EE | Since: 323 | API-Set: unknown
  */
 export function setDrivebyTarget(shootingPed: number | IPed, targetPed: number | IPed, targetVehicle: number | IVehicle, pos: Vector3): void {
-    SetDrivebyTaskTarget(shootingPed, targetPed, targetVehicle, pos.x, pos.y, pos.z);
+    const _shootingPed = shootingPed instanceof IPed ? shootingPed.handle() : shootingPed;
+    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    const _targetVehicle = targetVehicle instanceof IVehicle ? targetVehicle.localId() : targetVehicle;
+    SetDrivebyTaskTarget(_shootingPed, _targetPed, _targetVehicle, pos.x, pos.y, pos.z);
 }
 
 /**
@@ -1041,7 +1106,8 @@ export function setDrivebyTarget(shootingPed: number | IPed, targetPed: number |
  * Hash: 0x5C9B84BD7D31D908 | Since: 323 | API-Set: unknown
  */
 export function setDriveCruiseSpeed(driver: number | IPed, cruiseSpeed: number): void {
-    SetDriveTaskCruiseSpeed(driver, cruiseSpeed);
+    const _driver = driver instanceof IPed ? driver.handle() : driver;
+    SetDriveTaskCruiseSpeed(_driver, cruiseSpeed);
 }
 
 /**
@@ -1057,7 +1123,8 @@ export function setDriveCruiseSpeed(driver: number | IPed, cruiseSpeed: number):
  * Hash: 0xDACE1BE37D88AF67 | Since: 323 | API-Set: unknown
  */
 export function setDriveDrivingStyle(ped: number | IPed, drivingStyle: number): void {
-    SetDriveTaskDrivingStyle(ped, drivingStyle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetDriveTaskDrivingStyle(_ped, drivingStyle);
 }
 
 /**
@@ -1066,7 +1133,8 @@ export function setDriveDrivingStyle(ped: number | IPed, drivingStyle: number): 
  * Hash: 0x404A5AA9B9F0B746 | Since: 323 | API-Set: unknown
  */
 export function setDriveMaxCruiseSpeed(ped: number | IPed, speed: number, updateBaseTask: boolean): void {
-    SetDriveTaskMaxCruiseSpeed(ped, speed, updateBaseTask);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetDriveTaskMaxCruiseSpeed(_ped, speed, updateBaseTask);
 }
 
 /**
@@ -1093,7 +1161,8 @@ export function setExclusiveScenarioGroup(scenarioGroup: string): void {
  * Hash: 0xAB13A5565480B6D9 | Since: 323 | API-Set: unknown
  */
 export function setExpectedCloneNextMoveNetworkState(ped: number | IPed, state: string): boolean {
-    return Citizen.invokeNative('0xAB13A5565480B6D9', ped, state);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0xAB13A5565480B6D9', _ped, state);
 }
 
 /**
@@ -1112,7 +1181,8 @@ export function setGlobalMinBirdFlightHeight(height: number): void {
  * Hash: 0x8C825BDC7741D37C | Since: 323 | API-Set: unknown
  */
 export function setHighFall(ped: number | IPed, minTime: number, maxTime: number, entryType: number): void {
-    SetHighFallTask(ped, minTime, maxTime, entryType);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetHighFallTask(_ped, minTime, maxTime, entryType);
 }
 
 /**
@@ -1121,7 +1191,10 @@ export function setHighFall(ped: number | IPed, minTime: number, maxTime: number
  * Hash: 0xCCD892192C6D2BB9 | Since: 323 | API-Set: unknown
  */
 export function setMountedWeaponTarget(shootingPed: number | IPed, targetPed: number | IPed, targetVehicle: number | IVehicle, pos: Vector3, taskMode: number, ignoreTargetVehDeadCheck: boolean): void {
-    SetMountedWeaponTarget(shootingPed, targetPed, targetVehicle, pos.x, pos.y, pos.z, taskMode, ignoreTargetVehDeadCheck);
+    const _shootingPed = shootingPed instanceof IPed ? shootingPed.handle() : shootingPed;
+    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    const _targetVehicle = targetVehicle instanceof IVehicle ? targetVehicle.localId() : targetVehicle;
+    SetMountedWeaponTarget(_shootingPed, _targetPed, _targetVehicle, pos.x, pos.y, pos.z, taskMode, ignoreTargetVehDeadCheck);
 }
 
 /**
@@ -1142,7 +1215,8 @@ export function setNextDesiredMoveState(nextMoveState: number): void {
  * Hash: 0xC313379AF0FCEDA7 | Since: 323 | API-Set: unknown
  */
 export function setParachuteTarget(ped: number | IPed, pos: Vector3): void {
-    SetParachuteTaskTarget(ped, pos.x, pos.y, pos.z);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetParachuteTaskTarget(_ped, pos.x, pos.y, pos.z);
 }
 
 /**
@@ -1151,7 +1225,8 @@ export function setParachuteTarget(ped: number | IPed, pos: Vector3): void {
  * Hash: 0x0729BAC1B8C64317 | Since: 323 | API-Set: unknown
  */
 export function setParachuteThrust(ped: number | IPed, thrust: number): void {
-    SetParachuteTaskThrust(ped, thrust);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetParachuteTaskThrust(_ped, thrust);
 }
 
 /**
@@ -1164,7 +1239,8 @@ export function setParachuteThrust(ped: number | IPed, thrust: number): void {
  * Hash: 0x8FD89A6240813FD0 | Since: 323 | API-Set: unknown
  */
 export function setPedCanPlayAmbientIdles(ped: number | IPed, blockIdleClips: boolean, removeIdleClipIfPlaying: boolean): void {
-    SetPedCanPlayAmbientIdles(ped, blockIdleClips, removeIdleClipIfPlaying);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanPlayAmbientIdles(_ped, blockIdleClips, removeIdleClipIfPlaying);
 }
 
 /**
@@ -1173,7 +1249,8 @@ export function setPedCanPlayAmbientIdles(ped: number | IPed, blockIdleClips: bo
  * Hash: 0x1E982AC8716912C5 | Since: 323 | API-Set: unknown
  */
 export function setPedDesiredMoveBlendRatio(ped: number | IPed, newMoveBlendRatio: number): void {
-    SetPedDesiredMoveBlendRatio(ped, newMoveBlendRatio);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedDesiredMoveBlendRatio(_ped, newMoveBlendRatio);
 }
 
 /**
@@ -1182,7 +1259,8 @@ export function setPedDesiredMoveBlendRatio(ped: number | IPed, newMoveBlendRati
  * Hash: 0x4455517B28441E60 | Since: 323 | API-Set: unknown
  */
 export function setPedPathAvoidFire(ped: number | IPed, avoidFire: boolean): void {
-    SetPedPathAvoidFire(ped, avoidFire);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedPathAvoidFire(_ped, avoidFire);
 }
 
 /**
@@ -1191,7 +1269,8 @@ export function setPedPathAvoidFire(ped: number | IPed, avoidFire: boolean): voi
  * Hash: 0xE361C5C71C431A4F | Since: 323 | API-Set: unknown
  */
 export function setPedPathCanDropFromHeight(ped: number | IPed, Toggle: boolean): void {
-    SetPedPathCanDropFromHeight(ped, Toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedPathCanDropFromHeight(_ped, Toggle);
 }
 
 /**
@@ -1200,7 +1279,8 @@ export function setPedPathCanDropFromHeight(ped: number | IPed, Toggle: boolean)
  * Hash: 0x8E06A6FE76C9EFF4 | Since: 323 | API-Set: unknown
  */
 export function setPedPathCanUseClimbovers(ped: number | IPed, Toggle: boolean): void {
-    SetPedPathCanUseClimbovers(ped, Toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedPathCanUseClimbovers(_ped, Toggle);
 }
 
 /**
@@ -1209,7 +1289,8 @@ export function setPedPathCanUseClimbovers(ped: number | IPed, Toggle: boolean):
  * Hash: 0x77A5B103C87F476E | Since: 323 | API-Set: unknown
  */
 export function setPedPathCanUseLadders(ped: number | IPed, Toggle: boolean): void {
-    SetPedPathCanUseLadders(ped, Toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedPathCanUseLadders(_ped, Toggle);
 }
 
 /**
@@ -1218,7 +1299,8 @@ export function setPedPathCanUseLadders(ped: number | IPed, Toggle: boolean): vo
  * Hash: 0x88E32DB8C1A4AA4B | Since: 323 | API-Set: unknown
  */
 export function setPedPathClimbCostModifier(ped: number | IPed, modifier: number): void {
-    SetPedPathClimbCostModifier(ped, modifier);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedPathClimbCostModifier(_ped, modifier);
 }
 
 /**
@@ -1227,7 +1309,8 @@ export function setPedPathClimbCostModifier(ped: number | IPed, modifier: number
  * Hash: 0xF35425A4204367EC | Since: 323 | API-Set: unknown
  */
 export function setPedPathMayEnterWater(ped: number | IPed, mayEnterWater: boolean): void {
-    SetPedPathMayEnterWater(ped, mayEnterWater);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedPathMayEnterWater(_ped, mayEnterWater);
 }
 
 /**
@@ -1236,7 +1319,8 @@ export function setPedPathMayEnterWater(ped: number | IPed, mayEnterWater: boole
  * Hash: 0x38FE1EC73743793C | Since: 323 | API-Set: unknown
  */
 export function setPedPathPreferToAvoidWater(ped: number | IPed, avoidWater: boolean): void {
-    SetPedPathPreferToAvoidWater(ped, avoidWater);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedPathPreferToAvoidWater(_ped, avoidWater);
 }
 
 /**
@@ -1245,7 +1329,8 @@ export function setPedPathPreferToAvoidWater(ped: number | IPed, avoidWater: boo
  * Hash: 0x686ECCD99D4E61BB | Since: 3570 | API-Set: unknown
  */
 export function setPedWaypointProgress(ped: number | IPed, progress: number): void {
-    Citizen.invokeNative('0x686ECCD99D4E61BB', ped, progress);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x686ECCD99D4E61BB', _ped, progress);
 }
 
 /**
@@ -1254,7 +1339,8 @@ export function setPedWaypointProgress(ped: number | IPed, progress: number): vo
  * Hash: 0xED98E10B0AFCE4B4 | Since: 323 | API-Set: unknown
  */
 export function setPedWaypointRouteOffset(ped: number | IPed, pos: Vector3): boolean {
-    return SetPedWaypointRouteOffset(ped, pos.x, pos.y, pos.z);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return SetPedWaypointRouteOffset(_ped, pos.x, pos.y, pos.z);
 }
 
 /**
@@ -1333,9 +1419,10 @@ export function setSequenceToRepeat(taskSequenceId: number, repeat: boolean): vo
  * Hash: 0x8423541E8B3A1589 | Since: 1493 | API-Set: unknown
  */
 export function setMoveNetworkAnimSet(ped: number | IPed, clipSet: number | string, variableClipSet: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof clipSet === 'string') clipSet = GetHashKey(clipSet)
     if (typeof variableClipSet === 'string') variableClipSet = GetHashKey(variableClipSet)
-    Citizen.invokeNative('0x8423541E8B3A1589', ped, clipSet, variableClipSet);
+    Citizen.invokeNative('0x8423541E8B3A1589', _ped, clipSet, variableClipSet);
 }
 
 /**
@@ -1344,7 +1431,8 @@ export function setMoveNetworkAnimSet(ped: number | IPed, clipSet: number | stri
  * Hash: 0x0FFB3C758E8C07B9 | Since: 2060 | API-Set: unknown
  */
 export function setMoveNetworkEnableCollisionOnNetworkCloneWhenFixed(ped: number | IPed, enable: boolean): boolean {
-    return Citizen.invokeNative('0x0FFB3C758E8C07B9', ped, enable);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x0FFB3C758E8C07B9', _ped, enable);
 }
 
 /**
@@ -1353,7 +1441,8 @@ export function setMoveNetworkEnableCollisionOnNetworkCloneWhenFixed(ped: number
  * Hash: 0xB0A6CFD2C69C1088 | Since: 323 | API-Set: unknown
  */
 export function setMoveNetworkSignalBool(ped: number | IPed, signalName: string, value: boolean): void {
-    SetTaskMoveNetworkSignalBool(ped, signalName, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetTaskMoveNetworkSignalBool(_ped, signalName, value);
 }
 
 /**
@@ -1365,7 +1454,8 @@ export function setMoveNetworkSignalBool(ped: number | IPed, signalName: string,
  * Hash: 0xD5BB4025AE449A4E | Since: 323 | API-Set: unknown
  */
 export function setMoveNetworkSignalFloat(ped: number | IPed, signalName: string, value: number): void {
-    SetTaskMoveNetworkSignalFloat(ped, signalName, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetTaskMoveNetworkSignalFloat(_ped, signalName, value);
 }
 
 /**
@@ -1374,7 +1464,8 @@ export function setMoveNetworkSignalFloat(ped: number | IPed, signalName: string
  * Hash: 0x8634CEF2522D987B | Since: 1493 | API-Set: unknown
  */
 export function setMoveNetworkSignalFloatLerpRate(ped: number | IPed, signalName: string, value: number): void {
-    Citizen.invokeNative('0x8634CEF2522D987B', ped, signalName, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x8634CEF2522D987B', _ped, signalName, value);
 }
 
 /**
@@ -1383,7 +1474,8 @@ export function setMoveNetworkSignalFloatLerpRate(ped: number | IPed, signalName
  * Hash: 0x373EF409B82697A3 | Since: 1493 | API-Set: unknown
  */
 export function setMoveNetworkSignalLocalFloat(ped: number | IPed, signalName: string, value: number): void {
-    SetTaskMoveNetworkSignalFloat2(ped, signalName, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetTaskMoveNetworkSignalFloat2(_ped, signalName, value);
 }
 
 /**
@@ -1396,7 +1488,8 @@ export function setMoveNetworkSignalLocalFloat(ped: number | IPed, signalName: s
  * Hash: 0xCC665AAC360D31E7 | Since: 323 | API-Set: unknown
  */
 export function setVehicleChaseBehaviorFlag(ped: number | IPed, flag: number, _set: boolean): void {
-    SetTaskVehicleChaseBehaviorFlag(ped, flag, _set);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetTaskVehicleChaseBehaviorFlag(_ped, flag, _set);
 }
 
 /**
@@ -1405,7 +1498,8 @@ export function setVehicleChaseBehaviorFlag(ped: number | IPed, flag: number, _s
  * Hash: 0x639B642FACBE4EDD | Since: 323 | API-Set: unknown
  */
 export function setVehicleChaseIdealPursuitDistance(ped: number | IPed, distance: number): void {
-    SetTaskVehicleChaseIdealPursuitDistance(ped, distance);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetTaskVehicleChaseIdealPursuitDistance(_ped, distance);
 }
 
 /**
@@ -1414,7 +1508,8 @@ export function setVehicleChaseIdealPursuitDistance(ped: number | IPed, distance
  * Hash: 0xEE08C992D238C5D1 | Since: 323 | API-Set: unknown
  */
 export function stopAnimPlayback(entity: number | IEntity, priority: number, secondary: boolean): void {
-    StopAnimPlayback(entity, priority, secondary);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    StopAnimPlayback(_entity, priority, secondary);
 }
 
 /**
@@ -1423,7 +1518,8 @@ export function stopAnimPlayback(entity: number | IEntity, priority: number, sec
  * Hash: 0x97FF36A1D40EA00A | Since: 323 | API-Set: unknown
  */
 export function stopAnim(entity: number | IEntity, animDictionary: string, animationName: string, blendDelta: number): void {
-    StopAnimTask(entity, animDictionary, animationName, blendDelta);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    StopAnimTask(_entity, animDictionary, animationName, blendDelta);
 }
 
 /**
@@ -1436,7 +1532,8 @@ export function stopAnim(entity: number | IEntity, animDictionary: string, anima
  * Hash: 0x93B93A37987F1F3D | Since: 323 | API-Set: unknown
  */
 export function achieveHeading(ped: number | IPed, heading: number, timeout: number): void {
-    TaskAchieveHeading(ped, heading, timeout);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskAchieveHeading(_ped, heading, timeout);
 }
 
 /**
@@ -1445,7 +1542,9 @@ export function achieveHeading(ped: number | IPed, heading: number, timeout: num
  * Hash: 0x19D1B791CB3670FE | Since: 877 | API-Set: unknown
  */
 export function agitatedActionConfrontResponse(ped: number | IPed, ped2: number | IPed): void {
-    TaskAgitatedAction(ped, ped2);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped2 = ped2 instanceof IPed ? ped2.handle() : ped2;
+    TaskAgitatedAction(_ped, _ped2);
 }
 
 /**
@@ -1454,7 +1553,8 @@ export function agitatedActionConfrontResponse(ped: number | IPed, ped2: number 
  * Hash: 0x6671F3EEC681BDA1 | Since: 323 | API-Set: unknown
  */
 export function aimGunAtCoord(ped: number | IPed, pos: Vector3, time: number, instantBlendToAim: boolean, playAnimIntro: boolean): void {
-    TaskAimGunAtCoord(ped, pos.x, pos.y, pos.z, time, instantBlendToAim, playAnimIntro);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskAimGunAtCoord(_ped, pos.x, pos.y, pos.z, time, instantBlendToAim, playAnimIntro);
 }
 
 /**
@@ -1463,7 +1563,9 @@ export function aimGunAtCoord(ped: number | IPed, pos: Vector3, time: number, in
  * Hash: 0x9B53BB6E8943AF53 | Since: 323 | API-Set: unknown
  */
 export function aimGunAtEntity(ped: number | IPed, entity: number | IEntity, duration: number, instantBlendToAim: boolean): void {
-    TaskAimGunAtEntity(ped, entity, duration, instantBlendToAim);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    TaskAimGunAtEntity(_ped, _entity, duration, instantBlendToAim);
 }
 
 /**
@@ -1472,8 +1574,9 @@ export function aimGunAtEntity(ped: number | IPed, entity: number | IEntity, dur
  * Hash: 0x7A192BE16D373D00 | Since: 323 | API-Set: unknown
  */
 export function aimGunScripted(ped: number | IPed, scriptTask: number | string, disableBlockingClip: boolean, instantBlendToAim: boolean): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof scriptTask === 'string') scriptTask = GetHashKey(scriptTask)
-    TaskAimGunScripted(ped, scriptTask, disableBlockingClip, instantBlendToAim);
+    TaskAimGunScripted(_ped, scriptTask, disableBlockingClip, instantBlendToAim);
 }
 
 /**
@@ -1482,7 +1585,9 @@ export function aimGunScripted(ped: number | IPed, scriptTask: number | string, 
  * Hash: 0x8605AF0DE8B3A5AC | Since: 323 | API-Set: unknown
  */
 export function aimGunScriptedWithTarget(ped: number | IPed, target: number | IPed, pos: Vector3, gunTaskType: number, disableBlockingClip: boolean, forceAim: boolean): void {
-    TaskAimGunScriptedWithTarget(ped, target, pos.x, pos.y, pos.z, gunTaskType, disableBlockingClip, forceAim);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    TaskAimGunScriptedWithTarget(_ped, _target, pos.x, pos.y, pos.z, gunTaskType, disableBlockingClip, forceAim);
 }
 
 /**
@@ -1502,7 +1607,9 @@ export function aimGunScriptedWithTarget(ped: number | IPed, target: number | IP
  * Hash: 0xF3B9A78A178572B1 | Since: 323 | API-Set: unknown
  */
 export function arrestPed(ped: number | IPed, target: number | IPed): void {
-    TaskArrestPed(ped, target);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    TaskArrestPed(_ped, _target);
 }
 
 /**
@@ -1518,7 +1625,11 @@ export function arrestPed(ped: number | IPed, target: number | IPed): void {
  * Hash: 0x15C86013127CE63F | Since: 323 | API-Set: unknown
  */
 export function boatMission(pedDriver: number | IPed, vehicle: number | IVehicle, targetVehicle: number | IVehicle, targetPed: number | IPed, pos: Vector3, mission: number, maxSpeed: number, drivingStyle: number, targetReached: number, boatFlags: any): void {
-    TaskBoatMission(pedDriver, vehicle, targetVehicle, targetPed, pos.x, pos.y, pos.z, mission, maxSpeed, drivingStyle, targetReached, boatFlags);
+    const _pedDriver = pedDriver instanceof IPed ? pedDriver.handle() : pedDriver;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _targetVehicle = targetVehicle instanceof IVehicle ? targetVehicle.localId() : targetVehicle;
+    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    TaskBoatMission(_pedDriver, _vehicle, _targetVehicle, _targetPed, pos.x, pos.y, pos.z, mission, maxSpeed, drivingStyle, targetReached, boatFlags);
 }
 
 /**
@@ -1528,7 +1639,9 @@ export function boatMission(pedDriver: number | IPed, vehicle: number | IVehicle
  * Hash: 0x8C338E0263E4FD19 | Since: 323 | API-Set: unknown
  */
 export function chatToPed(ped: number | IPed, target: number | IPed, flags: number, goToLocationX: number, goToLocationY: number, goToLocationZ: number, headingDegs: number, idleTime: number): void {
-    TaskChatToPed(ped, target, flags, goToLocationX, goToLocationY, goToLocationZ, headingDegs, idleTime);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    TaskChatToPed(_ped, _target, flags, goToLocationX, goToLocationY, goToLocationZ, headingDegs, idleTime);
 }
 
 /**
@@ -1537,7 +1650,8 @@ export function chatToPed(ped: number | IPed, target: number | IPed, flags: numb
  * Hash: 0x95A6C46A31D1917D | Since: 323 | API-Set: unknown
  */
 export function clearDefensiveArea(ped: number | IPed): void {
-    TaskClearDefensiveArea(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskClearDefensiveArea(_ped);
 }
 
 /**
@@ -1546,7 +1660,8 @@ export function clearDefensiveArea(ped: number | IPed): void {
  * Hash: 0x0F804F1DB19B9689 | Since: 323 | API-Set: unknown
  */
 export function clearLookAt(ped: number | IPed): void {
-    TaskClearLookAt(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskClearLookAt(_ped);
 }
 
 /**
@@ -1556,7 +1671,8 @@ export function clearLookAt(ped: number | IPed): void {
  * Hash: 0x89D9FCC2435112F1 | Since: 323 | API-Set: unknown
  */
 export function climb(ped: number | IPed, usePlayerLaunchForce: boolean): void {
-    TaskClimb(ped, usePlayerLaunchForce);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskClimb(_ped, usePlayerLaunchForce);
 }
 
 /**
@@ -1565,7 +1681,8 @@ export function climb(ped: number | IPed, usePlayerLaunchForce: boolean): void {
  * Hash: 0xB6C987F9285A3814 | Since: 323 | API-Set: unknown
  */
 export function climbLadder(ped: number | IPed, fast: boolean): void {
-    TaskClimbLadder(ped, fast);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskClimbLadder(_ped, fast);
 }
 
 /**
@@ -1576,7 +1693,8 @@ export function climbLadder(ped: number | IPed, fast: boolean): void {
  * Hash: 0x7BF835BB9E2698C8 | Since: 323 | API-Set: unknown
  */
 export function combatHatedTargetsAroundPed(ped: number | IPed, radius: number, combatFlags: number): void {
-    TaskCombatHatedTargetsAroundPed(ped, radius, combatFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskCombatHatedTargetsAroundPed(_ped, radius, combatFlags);
 }
 
 /**
@@ -1585,7 +1703,8 @@ export function combatHatedTargetsAroundPed(ped: number | IPed, radius: number, 
  * Hash: 0x2BBA30B854534A0C | Since: 323 | API-Set: unknown
  */
 export function combatHatedTargetsAroundPedTimed(ped: number | IPed, radius: number, time: number, combatFlags: number): void {
-    TaskCombatHatedTargetsAroundPedTimed(ped, radius, time, combatFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskCombatHatedTargetsAroundPedTimed(_ped, radius, time, combatFlags);
 }
 
 /**
@@ -1594,7 +1713,8 @@ export function combatHatedTargetsAroundPedTimed(ped: number | IPed, radius: num
  * Hash: 0x4CF5F55DAC3280A0 | Since: 323 | API-Set: unknown
  */
 export function combatHatedTargetsInArea(ped: number | IPed, pos: Vector3, radius: number, combatFlags: number): void {
-    TaskCombatHatedTargetsInArea(ped, pos.x, pos.y, pos.z, radius, combatFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskCombatHatedTargetsInArea(_ped, pos.x, pos.y, pos.z, radius, combatFlags);
 }
 
 /**
@@ -1605,7 +1725,9 @@ export function combatHatedTargetsInArea(ped: number | IPed, pos: Vector3, radiu
  * Hash: 0xF166E48407BAC484 | Since: 323 | API-Set: unknown
  */
 export function combatPed(ped: number | IPed, targetPed: number | IPed, combatFlags: number, threatResponseFlags: number): void {
-    TaskCombatPed(ped, targetPed, combatFlags, threatResponseFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    TaskCombatPed(_ped, _targetPed, combatFlags, threatResponseFlags);
 }
 
 /**
@@ -1614,7 +1736,9 @@ export function combatPed(ped: number | IPed, targetPed: number | IPed, combatFl
  * Hash: 0x944F30DCB7096BDE | Since: 323 | API-Set: unknown
  */
 export function combatPedTimed(ped: number | IPed, target: number | IPed, time: number, flags: number): void {
-    TaskCombatPedTimed(ped, target, time, flags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    TaskCombatPedTimed(_ped, _target, time, flags);
 }
 
 /**
@@ -1623,7 +1747,8 @@ export function combatPedTimed(ped: number | IPed, target: number | IPed, time: 
  * Hash: 0x3EB1FE9E8E908E15 | Since: 323 | API-Set: unknown
  */
 export function cower(ped: number | IPed, duration: number): void {
-    TaskCower(ped, duration);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskCower(_ped, duration);
 }
 
 /**
@@ -1643,8 +1768,11 @@ export function cower(ped: number | IPed, duration: number): void {
  * Hash: 0x2F8AF0E82773A171 | Since: 323 | API-Set: unknown
  */
 export function driveBy(driverPed: number | IPed, targetPed: number | IPed, targetVehicle: number | IVehicle, targetX: number, targetY: number, targetZ: number, distanceToShoot: number, pedAccuracy: number, pushUnderneathDrivingTaskIfDriving: boolean, firingPattern: number | string): void {
+    const _driverPed = driverPed instanceof IPed ? driverPed.handle() : driverPed;
+    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    const _targetVehicle = targetVehicle instanceof IVehicle ? targetVehicle.localId() : targetVehicle;
     if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
-    TaskDriveBy(driverPed, targetPed, targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, pushUnderneathDrivingTaskIfDriving, firingPattern);
+    TaskDriveBy(_driverPed, _targetPed, _targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, pushUnderneathDrivingTaskIfDriving, firingPattern);
 }
 
 /**
@@ -1663,7 +1791,9 @@ export function driveBy(driverPed: number | IPed, targetPed: number | IPed, targ
  * Hash: 0xC20E50AA46D09CA8 | Since: 323 | API-Set: unknown
  */
 export function enterVehicle(ped: number | IPed, vehicle: number | IVehicle, timeout: number, seat: number, speed: number, flag: number, overrideEntryClipsetName: string): void {
-    TaskEnterVehicle(ped, vehicle, timeout, seat, speed, flag, overrideEntryClipsetName);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskEnterVehicle(_ped, _vehicle, timeout, seat, speed, flag, overrideEntryClipsetName);
 }
 
 /**
@@ -1672,7 +1802,8 @@ export function enterVehicle(ped: number | IPed, vehicle: number | IVehicle, tim
  * Hash: 0x7F93691AB4B92272 | Since: 323 | API-Set: unknown
  */
 export function everyoneLeaveVehicle(vehicle: number | IVehicle): void {
-    TaskEveryoneLeaveVehicle(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskEveryoneLeaveVehicle(_vehicle);
 }
 
 /**
@@ -1681,7 +1812,8 @@ export function everyoneLeaveVehicle(vehicle: number | IVehicle): void {
  * Hash: 0x79B258E397854D29 | Since: 323 | API-Set: unknown
  */
 export function exitCover(ped: number | IPed, exitType: number, pos: Vector3): void {
-    TaskExitCover(ped, exitType, pos.x, pos.y, pos.z);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskExitCover(_ped, exitType, pos.x, pos.y, pos.z);
 }
 
 /**
@@ -1710,7 +1842,8 @@ export function flushRoute(): void {
  * Hash: 0x15D3A79D4E44B913 | Since: 323 | API-Set: unknown
  */
 export function followNavMeshToCoord(ped: number | IPed, pos: Vector3, moveBlendRatio: number, time: number, targetRadius: number, flags: number, targetHeading: number): void {
-    TaskFollowNavMeshToCoord(ped, pos.x, pos.y, pos.z, moveBlendRatio, time, targetRadius, flags, targetHeading);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskFollowNavMeshToCoord(_ped, pos.x, pos.y, pos.z, moveBlendRatio, time, targetRadius, flags, targetHeading);
 }
 
 /**
@@ -1719,7 +1852,8 @@ export function followNavMeshToCoord(ped: number | IPed, pos: Vector3, moveBlend
  * Hash: 0x17F58B88D085DBAC | Since: 323 | API-Set: unknown
  */
 export function followNavMeshToCoordAdvanced(ped: number | IPed, pos: Vector3, moveBlendRatio: number, time: number, targetRadius: number, flags: number, slideToCoordHeading: number, maxSlopeNavigable: number, clampMaxSearchDistance: number, targetHeading: number): void {
-    TaskFollowNavMeshToCoordAdvanced(ped, pos.x, pos.y, pos.z, moveBlendRatio, time, targetRadius, flags, slideToCoordHeading, maxSlopeNavigable, clampMaxSearchDistance, targetHeading);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskFollowNavMeshToCoordAdvanced(_ped, pos.x, pos.y, pos.z, moveBlendRatio, time, targetRadius, flags, slideToCoordHeading, maxSlopeNavigable, clampMaxSearchDistance, targetHeading);
 }
 
 /**
@@ -1739,7 +1873,8 @@ export function followNavMeshToCoordAdvanced(ped: number | IPed, pos: Vector3, m
  * Hash: 0x595583281858626E | Since: 323 | API-Set: unknown
  */
 export function followPointRoute(ped: number | IPed, speed: number, mode: number): void {
-    TaskFollowPointRoute(ped, speed, mode);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskFollowPointRoute(_ped, speed, mode);
 }
 
 /**
@@ -1750,7 +1885,9 @@ export function followPointRoute(ped: number | IPed, speed: number, mode: number
  * Hash: 0x304AE42E357B8C7E | Since: 323 | API-Set: unknown
  */
 export function followToOffsetOfEntity(ped: number | IPed, entity: number | IEntity, offsetX: number, offsetY: number, offsetZ: number, movementSpeed: number, timeout: number, stoppingRange: number, persistFollowing: boolean): void {
-    TaskFollowToOffsetOfEntity(ped, entity, offsetX, offsetY, offsetZ, movementSpeed, timeout, stoppingRange, persistFollowing);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    TaskFollowToOffsetOfEntity(_ped, _entity, offsetX, offsetY, offsetZ, movementSpeed, timeout, stoppingRange, persistFollowing);
 }
 
 /**
@@ -1759,7 +1896,8 @@ export function followToOffsetOfEntity(ped: number | IPed, entity: number | IEnt
  * Hash: 0x0759591819534F7B | Since: 323 | API-Set: unknown
  */
 export function followWaypointRecording(ped: number | IPed, name: string): void {
-    TaskFollowWaypointRecording(ped, name, 0, 0, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskFollowWaypointRecording(_ped, name, 0, 0, 0);
 }
 
 /**
@@ -1772,8 +1910,9 @@ export function followWaypointRecording(ped: number | IPed, name: string): void 
  * Hash: 0x4F056E1AFFEF17AB | Since: 323 | API-Set: unknown
  */
 export function forceMotionState(ped: number | IPed, state: number | string, forceRestart: boolean): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof state === 'string') state = GetHashKey(state)
-    TaskForceMotionState(ped, state, forceRestart);
+    TaskForceMotionState(_ped, state, forceRestart);
 }
 
 /**
@@ -1782,7 +1921,9 @@ export function forceMotionState(ped: number | IPed, state: number | string, for
  * Hash: 0x9C00E77AF14B2DFF | Since: 323 | API-Set: unknown
  */
 export function getOffBoat(ped: number | IPed, boat: number | IVehicle): void {
-    TaskGetOffBoat(ped, boat);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _boat = boat instanceof IVehicle ? boat.localId() : boat;
+    TaskGetOffBoat(_ped, _boat);
 }
 
 /**
@@ -1798,7 +1939,9 @@ export function getOffBoat(ped: number | IPed, boat: number | IVehicle): void {
  * Hash: 0xA9DA48FAB8A76C12 | Since: 323 | API-Set: unknown
  */
 export function gotoEntityAiming(ped: number | IPed, target: number | IEntity, distanceToStopAt: number, StartAimingDist: number): void {
-    TaskGotoEntityAiming(ped, target, distanceToStopAt, StartAimingDist);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IEntity ? target.handle() : target;
+    TaskGotoEntityAiming(_ped, _target, distanceToStopAt, StartAimingDist);
 }
 
 /**
@@ -1811,7 +1954,9 @@ export function gotoEntityAiming(ped: number | IPed, target: number | IEntity, d
  * Hash: 0xE39B4FF4FDEBDE27 | Since: 323 | API-Set: unknown
  */
 export function gotoEntityOffset(ped: number | IPed, entity: number | IEntity, time: number, seekRadius: number, seekAngleDeg: number, moveBlendRatio: number, gotoEntityOffsetFlags: number): void {
-    TaskGotoEntityOffset(ped, entity, time, seekRadius, seekAngleDeg, moveBlendRatio, gotoEntityOffsetFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    TaskGotoEntityOffset(_ped, _entity, time, seekRadius, seekAngleDeg, moveBlendRatio, gotoEntityOffsetFlags);
 }
 
 /**
@@ -1820,7 +1965,9 @@ export function gotoEntityOffset(ped: number | IPed, entity: number | IEntity, t
  * Hash: 0x338E7EF52B6095A9 | Since: 323 | API-Set: unknown
  */
 export function gotoEntityOffsetXy(ped: number | IPed, entity: number | IEntity, duration: number, targetRadius: number, offsetX: number, offsetY: number, moveBlendRatio: number, gotoEntityOffsetFlags: number): void {
-    TaskGotoEntityOffsetXy(ped, entity, duration, targetRadius, offsetX, offsetY, moveBlendRatio, gotoEntityOffsetFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    TaskGotoEntityOffsetXy(_ped, _entity, duration, targetRadius, offsetX, offsetY, moveBlendRatio, gotoEntityOffsetFlags);
 }
 
 /**
@@ -1829,7 +1976,8 @@ export function gotoEntityOffsetXy(ped: number | IPed, entity: number | IEntity,
  * Hash: 0xD76B57B44F1E6F8B | Since: 323 | API-Set: unknown
  */
 export function goStraightToCoord(ped: number | IPed, pos: Vector3, speed: number, timeout: number, targetHeading: number, distanceToSlide: number): void {
-    TaskGoStraightToCoord(ped, pos.x, pos.y, pos.z, speed, timeout, targetHeading, distanceToSlide);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskGoStraightToCoord(_ped, pos.x, pos.y, pos.z, speed, timeout, targetHeading, distanceToSlide);
 }
 
 /**
@@ -1838,7 +1986,9 @@ export function goStraightToCoord(ped: number | IPed, pos: Vector3, speed: numbe
  * Hash: 0x61E360B7E040D12E | Since: 323 | API-Set: unknown
  */
 export function goStraightToCoordRelativeToEntity(ped: number | IPed, entity: number | IEntity, pos: Vector3, moveBlendRatio: number, time: number): void {
-    TaskGoStraightToCoordRelativeToEntity(ped, entity, pos.x, pos.y, pos.z, moveBlendRatio, time);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    TaskGoStraightToCoordRelativeToEntity(_ped, _entity, pos.x, pos.y, pos.z, moveBlendRatio, time);
 }
 
 /**
@@ -1886,8 +2036,9 @@ export function goStraightToCoordRelativeToEntity(ped: number | IPed, entity: nu
  * Hash: 0xA55547801EB331FC | Since: 323 | API-Set: unknown
  */
 export function goToCoordAndAimAtHatedEntitiesNearCoord(pedHandle: number | IPed, goToLocationX: number, goToLocationY: number, goToLocationZ: number, focusLocationX: number, focusLocationY: number, focusLocationZ: number, speed: number, shootAtEnemies: boolean, distanceToStopAt: number, noRoadsDistance: number, useNavMesh: boolean, navFlags: number, taskFlags: number, firingPattern: number | string): void {
+    const _pedHandle = pedHandle instanceof IPed ? pedHandle.handle() : pedHandle;
     if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
-    TaskGoToCoordAndAimAtHatedEntitiesNearCoord(pedHandle, goToLocationX, goToLocationY, goToLocationZ, focusLocationX, focusLocationY, focusLocationZ, speed, shootAtEnemies, distanceToStopAt, noRoadsDistance, useNavMesh, navFlags, taskFlags, firingPattern);
+    TaskGoToCoordAndAimAtHatedEntitiesNearCoord(_pedHandle, goToLocationX, goToLocationY, goToLocationZ, focusLocationX, focusLocationY, focusLocationZ, speed, shootAtEnemies, distanceToStopAt, noRoadsDistance, useNavMesh, navFlags, taskFlags, firingPattern);
 }
 
 /**
@@ -1899,7 +2050,9 @@ export function goToCoordAndAimAtHatedEntitiesNearCoord(pedHandle: number | IPed
  * Hash: 0x5BC448CB78FA3E88 | Since: 323 | API-Set: unknown
  */
 export function goToCoordAnyMeans(ped: number | IPed, pos: Vector3, moveBlendRatio: number, vehicle: number | IVehicle, useLongRangeVehiclePathing: boolean, drivingFlags: number, maxRangeToShootTargets: number): void {
-    TaskGoToCoordAnyMeans(ped, pos.x, pos.y, pos.z, moveBlendRatio, vehicle, useLongRangeVehiclePathing, drivingFlags, maxRangeToShootTargets);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskGoToCoordAnyMeans(_ped, pos.x, pos.y, pos.z, moveBlendRatio, _vehicle, useLongRangeVehiclePathing, drivingFlags, maxRangeToShootTargets);
 }
 
 /**
@@ -1908,7 +2061,9 @@ export function goToCoordAnyMeans(ped: number | IPed, pos: Vector3, moveBlendRat
  * Hash: 0x1DD45F9ECFDB1BC9 | Since: 323 | API-Set: unknown
  */
 export function goToCoordAnyMeansExtraParams(ped: number | IPed, pos: Vector3, moveBlendRatio: number, vehicle: number | IVehicle, useLongRangeVehiclePathing: boolean, drivingFlags: number, maxRangeToShootTargets: number, extraVehToTargetDistToPreferVehicle: number, driveStraightLineDistance: number, extraFlags: number, warpTimerMS: number): void {
-    TaskGoToCoordAnyMeansExtraParams(ped, pos.x, pos.y, pos.z, moveBlendRatio, vehicle, useLongRangeVehiclePathing, drivingFlags, maxRangeToShootTargets, extraVehToTargetDistToPreferVehicle, driveStraightLineDistance, extraFlags, warpTimerMS);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskGoToCoordAnyMeansExtraParams(_ped, pos.x, pos.y, pos.z, moveBlendRatio, _vehicle, useLongRangeVehiclePathing, drivingFlags, maxRangeToShootTargets, extraVehToTargetDistToPreferVehicle, driveStraightLineDistance, extraFlags, warpTimerMS);
 }
 
 /**
@@ -1917,7 +2072,9 @@ export function goToCoordAnyMeansExtraParams(ped: number | IPed, pos: Vector3, m
  * Hash: 0xB8ECD61F531A7B02 | Since: 323 | API-Set: unknown
  */
 export function goToCoordAnyMeansExtraParamsWithCruiseSpeed(ped: number | IPed, pos: Vector3, moveBlendRatio: number, vehicle: number | IVehicle, useLongRangeVehiclePathing: boolean, drivingFlags: number, maxRangeToShootTargets: number, extraVehToTargetDistToPreferVehicle: number, driveStraightLineDistance: number, extraFlags: number, cruiseSpeed: number, targetArriveDist: number): void {
-    TaskGoToCoordAnyMeansExtraParamsWithCruiseSpeed(ped, pos.x, pos.y, pos.z, moveBlendRatio, vehicle, useLongRangeVehiclePathing, drivingFlags, maxRangeToShootTargets, extraVehToTargetDistToPreferVehicle, driveStraightLineDistance, extraFlags, cruiseSpeed, targetArriveDist);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskGoToCoordAnyMeansExtraParamsWithCruiseSpeed(_ped, pos.x, pos.y, pos.z, moveBlendRatio, _vehicle, useLongRangeVehiclePathing, drivingFlags, maxRangeToShootTargets, extraVehToTargetDistToPreferVehicle, driveStraightLineDistance, extraFlags, cruiseSpeed, targetArriveDist);
 }
 
 /**
@@ -1933,8 +2090,9 @@ export function goToCoordAnyMeansExtraParamsWithCruiseSpeed(ped: number | IPed, 
  * Hash: 0x11315AB3385B8AC0 | Since: 323 | API-Set: unknown
  */
 export function goToCoordWhileAimingAtCoord(ped: number | IPed, pos: Vector3, aimAtX: number, aimAtY: number, aimAtZ: number, moveBlendRatio: number, shoot: boolean, targetRadius: number, slowDistance: number, useNavMesh: boolean, navFlags: number, instantBlendToAim: boolean, firingPattern: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
-    TaskGoToCoordWhileAimingAtCoord(ped, pos.x, pos.y, pos.z, aimAtX, aimAtY, aimAtZ, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, navFlags, instantBlendToAim, firingPattern);
+    TaskGoToCoordWhileAimingAtCoord(_ped, pos.x, pos.y, pos.z, aimAtX, aimAtY, aimAtZ, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, navFlags, instantBlendToAim, firingPattern);
 }
 
 /**
@@ -1943,8 +2101,10 @@ export function goToCoordWhileAimingAtCoord(ped: number | IPed, pos: Vector3, ai
  * Hash: 0xB2A16444EAD9AE47 | Since: 323 | API-Set: unknown
  */
 export function goToCoordWhileAimingAtEntity(ped: number | IPed, pos: Vector3, aimAtID: number | IEntity, moveBlendRatio: number, shoot: boolean, targetRadius: number, slowDistance: number, useNavMesh: boolean, navFlags: number, instantBlendToAim: boolean, firingPattern: number | string, time: number): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _aimAtID = aimAtID instanceof IEntity ? aimAtID.handle() : aimAtID;
     if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
-    TaskGoToCoordWhileAimingAtEntity(ped, pos.x, pos.y, pos.z, aimAtID, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, navFlags, instantBlendToAim, firingPattern, time);
+    TaskGoToCoordWhileAimingAtEntity(_ped, pos.x, pos.y, pos.z, _aimAtID, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, navFlags, instantBlendToAim, firingPattern, time);
 }
 
 /**
@@ -1964,7 +2124,9 @@ export function goToCoordWhileAimingAtEntity(ped: number | IPed, pos: Vector3, a
  * Hash: 0x6A071245EB0D1882 | Since: 323 | API-Set: unknown
  */
 export function goToEntity(entity: number | IEntity, target: number | IEntity, duration: number, distance: number, moveBlendRatio: number, slowDownDistance: number, flags: number): void {
-    TaskGoToEntity(entity, target, duration, distance, moveBlendRatio, slowDownDistance, flags);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _target = target instanceof IEntity ? target.handle() : target;
+    TaskGoToEntity(_entity, _target, duration, distance, moveBlendRatio, slowDownDistance, flags);
 }
 
 /**
@@ -1973,8 +2135,10 @@ export function goToEntity(entity: number | IEntity, target: number | IEntity, d
  * Hash: 0x04701832B739DCE5 | Since: 323 | API-Set: unknown
  */
 export function goToEntityWhileAimingAtCoord(ped: number | IPed, entity: number | IEntity, aimX: number, aimY: number, aimZ: number, moveBlendRatio: number, shoot: boolean, targetRadius: number, slowDistance: number, useNavMesh: boolean, instantBlendToAim: boolean, firingPattern: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
     if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
-    TaskGoToEntityWhileAimingAtCoord(ped, entity, aimX, aimY, aimZ, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, instantBlendToAim, firingPattern);
+    TaskGoToEntityWhileAimingAtCoord(_ped, _entity, aimX, aimY, aimZ, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, instantBlendToAim, firingPattern);
 }
 
 /**
@@ -1985,8 +2149,11 @@ export function goToEntityWhileAimingAtCoord(ped: number | IPed, entity: number 
  * Hash: 0x97465886D35210E9 | Since: 323 | API-Set: unknown
  */
 export function goToEntityWhileAimingAtEntity(ped: number | IPed, entityToWalkTo: number | IEntity, entityToAimAt: number | IEntity, speed: number, shootatEntity: boolean, targetRadius: number, slowDistance: number, useNavMesh: boolean, instantBlendToAim: boolean, firingPattern: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entityToWalkTo = entityToWalkTo instanceof IEntity ? entityToWalkTo.handle() : entityToWalkTo;
+    const _entityToAimAt = entityToAimAt instanceof IEntity ? entityToAimAt.handle() : entityToAimAt;
     if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
-    TaskGoToEntityWhileAimingAtEntity(ped, entityToWalkTo, entityToAimAt, speed, shootatEntity, targetRadius, slowDistance, useNavMesh, instantBlendToAim, firingPattern);
+    TaskGoToEntityWhileAimingAtEntity(_ped, _entityToWalkTo, _entityToAimAt, speed, shootatEntity, targetRadius, slowDistance, useNavMesh, instantBlendToAim, firingPattern);
 }
 
 /**
@@ -1995,7 +2162,8 @@ export function goToEntityWhileAimingAtEntity(ped: number | IPed, entityToWalkTo
  * Hash: 0xD2A207EEBDF9889B | Since: 323 | API-Set: unknown
  */
 export function guardAssignedDefensiveArea(ped: number | IPed, pos: Vector3, heading: number, maxPatrolProximity: number, timer: number): void {
-    TaskGuardAssignedDefensiveArea(ped, pos.x, pos.y, pos.z, heading, maxPatrolProximity, timer);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskGuardAssignedDefensiveArea(_ped, pos.x, pos.y, pos.z, heading, maxPatrolProximity, timer);
 }
 
 /**
@@ -2006,7 +2174,8 @@ export function guardAssignedDefensiveArea(ped: number | IPed, pos: Vector3, hea
  * Hash: 0x4A58A47A72E3FCB4 | Since: 323 | API-Set: unknown
  */
 export function guardCurrentPosition(ped: number | IPed, maxPatrolProximity: number, defensiveAreaRadius: number, setDefensiveArea: boolean): void {
-    TaskGuardCurrentPosition(ped, maxPatrolProximity, defensiveAreaRadius, setDefensiveArea);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskGuardCurrentPosition(_ped, maxPatrolProximity, defensiveAreaRadius, setDefensiveArea);
 }
 
 /**
@@ -2015,7 +2184,8 @@ export function guardCurrentPosition(ped: number | IPed, maxPatrolProximity: num
  * Hash: 0xC946FE14BE0EB5E2 | Since: 323 | API-Set: unknown
  */
 export function guardSphereDefensiveArea(ped: number | IPed, defendPositionX: number, defendPositionY: number, defendPositionZ: number, heading: number, maxPatrolProximity: number, time: number, pos: Vector3, defensiveAreaRadius: number): void {
-    TaskGuardSphereDefensiveArea(ped, defendPositionX, defendPositionY, defendPositionZ, heading, maxPatrolProximity, time, pos.x, pos.y, pos.z, defensiveAreaRadius);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskGuardSphereDefensiveArea(_ped, defendPositionX, defendPositionY, defendPositionZ, heading, maxPatrolProximity, time, pos.x, pos.y, pos.z, defensiveAreaRadius);
 }
 
 /**
@@ -2027,7 +2197,9 @@ export function guardSphereDefensiveArea(ped: number | IPed, defendPositionX: nu
  * Hash: 0xF2EAB31979A7F910 | Since: 323 | API-Set: unknown
  */
 export function handsUp(ped: number | IPed, duration: number, facingPed: number | IPed, timeToFacePed: number, flags: number): void {
-    TaskHandsUp(ped, duration, facingPed, timeToFacePed, flags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _facingPed = facingPed instanceof IPed ? facingPed.handle() : facingPed;
+    TaskHandsUp(_ped, duration, _facingPed, timeToFacePed, flags);
 }
 
 /**
@@ -2042,7 +2214,9 @@ export function handsUp(ped: number | IPed, duration: number, facingPed: number 
  * Hash: 0xAC83B1DB38D0ADA0 | Since: 323 | API-Set: unknown
  */
 export function heliChase(pilot: number | IPed, entityToFollow: number | IEntity, pos: Vector3): void {
-    TaskHeliChase(pilot, entityToFollow, pos.x, pos.y, pos.z);
+    const _pilot = pilot instanceof IPed ? pilot.handle() : pilot;
+    const _entityToFollow = entityToFollow instanceof IEntity ? entityToFollow.handle() : entityToFollow;
+    TaskHeliChase(_pilot, _entityToFollow, pos.x, pos.y, pos.z);
 }
 
 /**
@@ -2051,7 +2225,10 @@ export function heliChase(pilot: number | IPed, entityToFollow: number | IEntity
  * Hash: 0xB385523325077210 | Since: 1290 | API-Set: unknown
  */
 export function heliEscortHeli(pilot: number | IPed, heli1: number | IVehicle, heli2: number | IVehicle, offsetX: number, offsetY: number, offsetZ: number): void {
-    TaskHeliEscortHeli(pilot, heli1, heli2, offsetX, offsetY, offsetZ);
+    const _pilot = pilot instanceof IPed ? pilot.handle() : pilot;
+    const _heli1 = heli1 instanceof IVehicle ? heli1.localId() : heli1;
+    const _heli2 = heli2 instanceof IVehicle ? heli2.localId() : heli2;
+    TaskHeliEscortHeli(_pilot, _heli1, _heli2, offsetX, offsetY, offsetZ);
 }
 
 /**
@@ -2105,7 +2282,11 @@ export function heliEscortHeli(pilot: number | IPed, heli1: number | IVehicle, h
  * Hash: 0xDAD029E187A2BEB4 | Since: 323 | API-Set: unknown
  */
 export function heliMission(pilot: number | IPed, aircraft: number | IVehicle, targetVehicle: number | IVehicle, targetPed: number | IPed, destinationX: number, destinationY: number, destinationZ: number, missionFlag: number, maxSpeed: number, radius: number, targetHeading: number, maxHeight: number, minHeight: number, slowDownDistance: number, behaviorFlags: number): void {
-    TaskHeliMission(pilot, aircraft, targetVehicle, targetPed, destinationX, destinationY, destinationZ, missionFlag, maxSpeed, radius, targetHeading, maxHeight, minHeight, slowDownDistance, behaviorFlags);
+    const _pilot = pilot instanceof IPed ? pilot.handle() : pilot;
+    const _aircraft = aircraft instanceof IVehicle ? aircraft.localId() : aircraft;
+    const _targetVehicle = targetVehicle instanceof IVehicle ? targetVehicle.localId() : targetVehicle;
+    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    TaskHeliMission(_pilot, _aircraft, _targetVehicle, _targetPed, destinationX, destinationY, destinationZ, missionFlag, maxSpeed, radius, targetHeading, maxHeight, minHeight, slowDownDistance, behaviorFlags);
 }
 
 /**
@@ -2119,7 +2300,8 @@ export function heliMission(pilot: number | IPed, aircraft: number | IVehicle, t
  * Hash: 0x0AE4086104E067B1 | Since: 323 | API-Set: unknown
  */
 export function jump(ped: number | IPed, usePlayerLaunchForce: boolean, doSuperJump: boolean, useFullSuperJumpForce: boolean): void {
-    TaskJump(ped, usePlayerLaunchForce, doSuperJump, useFullSuperJumpForce);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskJump(_ped, usePlayerLaunchForce, doSuperJump, useFullSuperJumpForce);
 }
 
 /**
@@ -2128,7 +2310,8 @@ export function jump(ped: number | IPed, usePlayerLaunchForce: boolean, doSuperJ
  * Hash: 0x504D54DF3F6F2247 | Since: 323 | API-Set: unknown
  */
 export function leaveAnyVehicle(ped: number | IPed, delayTime: number, flags: number): void {
-    TaskLeaveAnyVehicle(ped, delayTime, flags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskLeaveAnyVehicle(_ped, delayTime, flags);
 }
 
 /**
@@ -2146,7 +2329,9 @@ export function leaveAnyVehicle(ped: number | IPed, delayTime: number, flags: nu
  * Hash: 0xD3DBCE61A490BE02 | Since: 323 | API-Set: unknown
  */
 export function leaveVehicle(ped: number | IPed, vehicle: number | IVehicle, flags: number): void {
-    TaskLeaveVehicle(ped, vehicle, flags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskLeaveVehicle(_ped, _vehicle, flags);
 }
 
 /**
@@ -2174,7 +2359,8 @@ export function leaveVehicle(ped: number | IPed, vehicle: number | IVehicle, fla
  * Hash: 0x6FA46612594F7973 | Since: 323 | API-Set: unknown
  */
 export function lookAtCoord(entity: number | IEntity, pos: Vector3, duration: number, flags: number, priority: number): void {
-    TaskLookAtCoord(entity, pos.x, pos.y, pos.z, duration, flags, priority);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    TaskLookAtCoord(_entity, pos.x, pos.y, pos.z, duration, flags, priority);
 }
 
 /**
@@ -2183,7 +2369,9 @@ export function lookAtCoord(entity: number | IEntity, pos: Vector3, duration: nu
  * Hash: 0x69F4BE8C8CC4796C | Since: 323 | API-Set: unknown
  */
 export function lookAtEntity(ped: number | IPed, lookAt: number | IEntity, duration: number, flags: number, priority: number): void {
-    TaskLookAtEntity(ped, lookAt, duration, flags, priority);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _lookAt = lookAt instanceof IEntity ? lookAt.handle() : lookAt;
+    TaskLookAtEntity(_ped, _lookAt, duration, flags, priority);
 }
 
 /**
@@ -2193,7 +2381,8 @@ export function lookAtEntity(ped: number | IPed, lookAt: number | IEntity, durat
  * Hash: 0xD5B35BEA41919ACB | Since: 323 | API-Set: unknown
  */
 export function moveNetworkAdvancedByName(ped: number | IPed, network: string, pos: Vector3, rot: Vector3, rotOrder: number, blendDuration: number, allowOverrideCloneUpdate: boolean, animDict: string, flags: number): void {
-    TaskMoveNetworkAdvancedByName(ped, network, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, rotOrder, blendDuration, allowOverrideCloneUpdate, animDict, flags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskMoveNetworkAdvancedByName(_ped, network, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, rotOrder, blendDuration, allowOverrideCloneUpdate, animDict, flags);
 }
 
 /**
@@ -2202,7 +2391,8 @@ export function moveNetworkAdvancedByName(ped: number | IPed, network: string, p
  * Hash: 0x29682E2CCF21E9B5 | Since: 1868 | API-Set: unknown
  */
 export function moveNetworkAdvancedByNameWithInitParams(ped: number | IPed, network: string, pos: Vector3, rot: Vector3, rotOrder: number, blendDuration: number, allowOverrideCloneUpdate: boolean, dictionary: string, flags: number): number {
-    return Citizen.invokeNative('0x29682E2CCF21E9B5', ped, network, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, rotOrder, blendDuration, allowOverrideCloneUpdate, dictionary, flags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x29682E2CCF21E9B5', _ped, network, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, rotOrder, blendDuration, allowOverrideCloneUpdate, dictionary, flags);
 }
 
 /**
@@ -2212,7 +2402,8 @@ export function moveNetworkAdvancedByNameWithInitParams(ped: number | IPed, netw
  * Hash: 0x2D537BA194896636 | Since: 323 | API-Set: unknown
  */
 export function moveNetworkByName(ped: number | IPed, task: string, multiplier: number, allowOverrideCloneUpdate: boolean, animDict: string, flags: number): void {
-    TaskMoveNetworkByName(ped, task, multiplier, allowOverrideCloneUpdate, animDict, flags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskMoveNetworkByName(_ped, task, multiplier, allowOverrideCloneUpdate, animDict, flags);
 }
 
 /**
@@ -2221,7 +2412,8 @@ export function moveNetworkByName(ped: number | IPed, task: string, multiplier: 
  * Hash: 0x3D45B0B355C5E0C9 | Since: 1493 | API-Set: unknown
  */
 export function moveNetworkByNameWithInitParams(ped: number | IPed, network: string, blendDuration: number, allowOverrideCloneUpdate: boolean, animDict: string, flags: number): number {
-    return TaskMoveNetworkByNameWithInitParams(ped, network, blendDuration, allowOverrideCloneUpdate, animDict, flags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return TaskMoveNetworkByNameWithInitParams(_ped, network, blendDuration, allowOverrideCloneUpdate, animDict, flags);
 }
 
 /**
@@ -2231,7 +2423,9 @@ export function moveNetworkByNameWithInitParams(ped: number | IPed, network: str
  * Hash: 0x965791A9A488A062 | Since: 323 | API-Set: unknown
  */
 export function openVehicleDoor(ped: number | IPed, vehicle: number | IVehicle, timeOut: number, seat: number, speed: number): void {
-    TaskOpenVehicleDoor(ped, vehicle, timeOut, seat, speed);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskOpenVehicleDoor(_ped, _vehicle, timeOut, seat, speed);
 }
 
 /**
@@ -2242,7 +2436,8 @@ export function openVehicleDoor(ped: number | IPed, vehicle: number | IVehicle, 
  * Hash: 0xD2F1C53C97EE81AB | Since: 323 | API-Set: unknown
  */
 export function parachute(ped: number | IPed, giveParachuteItem: boolean, instant: boolean): void {
-    TaskParachute(ped, giveParachuteItem, instant);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskParachute(_ped, giveParachuteItem, instant);
 }
 
 /**
@@ -2251,7 +2446,8 @@ export function parachute(ped: number | IPed, giveParachuteItem: boolean, instan
  * Hash: 0xB33E291AFA6BD03A | Since: 323 | API-Set: unknown
  */
 export function parachuteToTarget(ped: number | IPed, pos: Vector3): void {
-    TaskParachuteToTarget(ped, pos.x, pos.y, pos.z);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskParachuteToTarget(_ped, pos.x, pos.y, pos.z);
 }
 
 /**
@@ -2282,7 +2478,8 @@ export function parachuteToTarget(ped: number | IPed, pos: Vector3): void {
  * Hash: 0xBDA5DF49D080FE4E | Since: 323 | API-Set: unknown
  */
 export function patrol(ped: number | IPed, patrolRouteName: string, alertState: number, canChatToPeds: boolean, useHeadLookAt: boolean): void {
-    TaskPatrol(ped, patrolRouteName, alertState, canChatToPeds, useHeadLookAt);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPatrol(_ped, patrolRouteName, alertState, canChatToPeds, useHeadLookAt);
 }
 
 /**
@@ -2291,7 +2488,8 @@ export function patrol(ped: number | IPed, patrolRouteName: string, alertState: 
  * Hash: 0xE73A266DB0CA9042 | Since: 323 | API-Set: unknown
  */
 export function pause(ped: number | IPed, ms: number): void {
-    TaskPause(ped, ms);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPause(_ped, ms);
 }
 
 /**
@@ -2300,7 +2498,8 @@ export function pause(ped: number | IPed, ms: number): void {
  * Hash: 0xD04FE6765D990A06 | Since: 323 | API-Set: unknown
  */
 export function pedSlideToCoord(ped: number | IPed, pos: Vector3, heading: number, speed: number): void {
-    TaskPedSlideToCoord(ped, pos.x, pos.y, pos.z, heading, speed);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPedSlideToCoord(_ped, pos.x, pos.y, pos.z, heading, speed);
 }
 
 /**
@@ -2309,7 +2508,8 @@ export function pedSlideToCoord(ped: number | IPed, pos: Vector3, heading: numbe
  * Hash: 0x5A4A6A6D3DC64F52 | Since: 323 | API-Set: unknown
  */
 export function pedSlideToCoordHdgRate(ped: number | IPed, pos: Vector3, heading: number, speed: number, headingChangeRate: number): void {
-    TaskPedSlideToCoordHdgRate(ped, pos.x, pos.y, pos.z, heading, speed, headingChangeRate);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPedSlideToCoordHdgRate(_ped, pos.x, pos.y, pos.z, heading, speed, headingChangeRate);
 }
 
 /**
@@ -2318,7 +2518,8 @@ export function pedSlideToCoordHdgRate(ped: number | IPed, pos: Vector3, heading
  * Hash: 0x5ABA3986D90D8A3B | Since: 323 | API-Set: unknown
  */
 export function performSequence(ped: number | IPed, taskSequenceId: number): void {
-    TaskPerformSequence(ped, taskSequenceId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPerformSequence(_ped, taskSequenceId);
 }
 
 /**
@@ -2327,7 +2528,8 @@ export function performSequence(ped: number | IPed, taskSequenceId: number): voi
  * Hash: 0x89221B16730234F0 | Since: 323 | API-Set: unknown
  */
 export function performSequenceFromProgress(ped: number | IPed, taskIndex: number, progress1: number, progress2: number): void {
-    TaskPerformSequenceFromProgress(ped, taskIndex, progress1, progress2);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPerformSequenceFromProgress(_ped, taskIndex, progress1, progress2);
 }
 
 /**
@@ -2336,7 +2538,8 @@ export function performSequenceFromProgress(ped: number | IPed, taskIndex: numbe
  * Hash: 0x8C33220C8D78CA0D | Since: 944 | API-Set: unknown
  */
 export function performSequenceLocally(ped: number | IPed, taskSequenceId: number): void {
-    TaskPerformSequenceLocally(ped, taskSequenceId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPerformSequenceLocally(_ped, taskSequenceId);
 }
 
 /**
@@ -2345,7 +2548,9 @@ export function performSequenceLocally(ped: number | IPed, taskSequenceId: numbe
  * Hash: 0x2D2386F273FF7A25 | Since: 323 | API-Set: unknown
  */
 export function planeChase(pilot: number | IPed, entityToFollow: number | IEntity, pos: Vector3): void {
-    TaskPlaneChase(pilot, entityToFollow, pos.x, pos.y, pos.z);
+    const _pilot = pilot instanceof IPed ? pilot.handle() : pilot;
+    const _entityToFollow = entityToFollow instanceof IEntity ? entityToFollow.handle() : entityToFollow;
+    TaskPlaneChase(_pilot, _entityToFollow, pos.x, pos.y, pos.z);
 }
 
 /**
@@ -2354,7 +2559,9 @@ export function planeChase(pilot: number | IPed, entityToFollow: number | IEntit
  * Hash: 0xF7F9DCCA89E7505B | Since: 1290 | API-Set: unknown
  */
 export function planeGotoPreciseVtol(ped: number | IPed, vehicle: number | IVehicle, pos: Vector3, flightHeight: number, minHeightAboveTerrain: number, useDesiredOrientation: boolean, desiredOrientation: number, autopilot: boolean): void {
-    TaskPlaneGotoPreciseVtol(ped, vehicle, pos.x, pos.y, pos.z, flightHeight, minHeightAboveTerrain, useDesiredOrientation, desiredOrientation, autopilot);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskPlaneGotoPreciseVtol(_ped, _vehicle, pos.x, pos.y, pos.z, flightHeight, minHeightAboveTerrain, useDesiredOrientation, desiredOrientation, autopilot);
 }
 
 /**
@@ -2363,7 +2570,9 @@ export function planeGotoPreciseVtol(ped: number | IPed, vehicle: number | IVehi
  * Hash: 0xBF19721FA34D32C0 | Since: 323 | API-Set: unknown
  */
 export function planeLand(pilot: number | IPed, plane: number | IVehicle, runwayStartX: number, runwayStartY: number, runwayStartZ: number, runwayEndX: number, runwayEndY: number, runwayEndZ: number): void {
-    TaskPlaneLand(pilot, plane, runwayStartX, runwayStartY, runwayStartZ, runwayEndX, runwayEndY, runwayEndZ);
+    const _pilot = pilot instanceof IPed ? pilot.handle() : pilot;
+    const _plane = plane instanceof IVehicle ? plane.localId() : plane;
+    TaskPlaneLand(_pilot, _plane, runwayStartX, runwayStartY, runwayStartZ, runwayEndX, runwayEndY, runwayEndZ);
 }
 
 /**
@@ -2418,7 +2627,11 @@ export function planeLand(pilot: number | IPed, plane: number | IVehicle, runway
  * Hash: 0x23703CD154E83B88 | Since: 323 | API-Set: unknown
  */
 export function planeMission(pilot: number | IPed, aircraft: number | IVehicle, targetVehicle: number | IVehicle, targetPed: number | IPed, destinationX: number, destinationY: number, destinationZ: number, missionFlag: number, angularDrag: number, targetReached: number, targetHeading: number, maxZ: number, minZ: number, precise: boolean): void {
-    TaskPlaneMission(pilot, aircraft, targetVehicle, targetPed, destinationX, destinationY, destinationZ, missionFlag, angularDrag, targetReached, targetHeading, maxZ, minZ, precise);
+    const _pilot = pilot instanceof IPed ? pilot.handle() : pilot;
+    const _aircraft = aircraft instanceof IVehicle ? aircraft.localId() : aircraft;
+    const _targetVehicle = targetVehicle instanceof IVehicle ? targetVehicle.localId() : targetVehicle;
+    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    TaskPlaneMission(_pilot, _aircraft, _targetVehicle, _targetPed, destinationX, destinationY, destinationZ, missionFlag, angularDrag, targetReached, targetHeading, maxZ, minZ, precise);
 }
 
 /**
@@ -2427,7 +2640,9 @@ export function planeMission(pilot: number | IPed, aircraft: number | IVehicle, 
  * Hash: 0x92C360B5F15D2302 | Since: 1103 | API-Set: unknown
  */
 export function planeTaxi(pilot: number | IPed, aircraft: number | IVehicle, pos: Vector3, cruiseSpeed: number, targetReached: number): void {
-    TaskPlaneTaxi(pilot, aircraft, pos.x, pos.y, pos.z, cruiseSpeed, targetReached);
+    const _pilot = pilot instanceof IPed ? pilot.handle() : pilot;
+    const _aircraft = aircraft instanceof IVehicle ? aircraft.localId() : aircraft;
+    TaskPlaneTaxi(_pilot, _aircraft, pos.x, pos.y, pos.z, cruiseSpeed, targetReached);
 }
 
 /**
@@ -2436,7 +2651,8 @@ export function planeTaxi(pilot: number | IPed, aircraft: number | IVehicle, pos
  * Hash: 0x965FEC691D55E9BF | Since: 323 | API-Set: unknown
  */
 export function plantBomb(ped: number | IPed, pos: Vector3, heading: number): void {
-    TaskPlantBomb(ped, pos.x, pos.y, pos.z, heading);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPlantBomb(_ped, pos.x, pos.y, pos.z, heading);
 }
 
 /**
@@ -2506,7 +2722,8 @@ export function plantBomb(ped: number | IPed, pos: Vector3, heading: number): vo
  * Hash: 0xEA47FE3719165B94 | Since: 323 | API-Set: unknown
  */
 export function playAnim(ped: number | IPed, animDictionary: string, animationName: string, blendInSpeed: number, blendOutSpeed: number, duration: number, flag: number, playbackRate: number, lockX: boolean, lockY: boolean, lockZ: boolean): void {
-    TaskPlayAnim(ped, animDictionary, animationName, blendInSpeed, blendOutSpeed, duration, flag, playbackRate, lockX, lockY, lockZ);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPlayAnim(_ped, animDictionary, animationName, blendInSpeed, blendOutSpeed, duration, flag, playbackRate, lockX, lockY, lockZ);
 }
 
 /**
@@ -2517,7 +2734,8 @@ export function playAnim(ped: number | IPed, animDictionary: string, animationNa
  * Hash: 0x83CDB10EA29B370B | Since: 323 | API-Set: unknown
  */
 export function playAnimAdvanced(ped: number | IPed, animDict: string, animName: string, pos: Vector3, rot: Vector3, animEnterSpeed: number, animExitSpeed: number, duration: number, flag: any, animTime: number, rotOrder: number, ikFlags: number): void {
-    TaskPlayAnimAdvanced(ped, animDict, animName, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, animEnterSpeed, animExitSpeed, duration, flag, animTime, rotOrder, ikFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPlayAnimAdvanced(_ped, animDict, animName, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, animEnterSpeed, animExitSpeed, duration, flag, animTime, rotOrder, ikFlags);
 }
 
 /**
@@ -2548,7 +2766,8 @@ export function playAnimAdvanced(ped: number | IPed, animDict: string, animName:
  * Hash: 0x8FBB6758B3B3E9EC | Since: 323 | API-Set: unknown
  */
 export function playPhoneGestureAnimation(ped: number | IPed, animDict: string, animation: string, boneMaskType: string, blendInDuration: number, blendOutDuration: number, isLooping: boolean, holdLastFrame: boolean): void {
-    TaskPlayPhoneGestureAnimation(ped, animDict, animation, boneMaskType, blendInDuration, blendOutDuration, isLooping, holdLastFrame);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPlayPhoneGestureAnimation(_ped, animDict, animation, boneMaskType, blendInDuration, blendOutDuration, isLooping, holdLastFrame);
 }
 
 /**
@@ -2557,7 +2776,8 @@ export function playPhoneGestureAnimation(ped: number | IPed, animDict: string, 
  * Hash: 0x4172393E6BE1FECE | Since: 323 | API-Set: unknown
  */
 export function putPedDirectlyIntoCover(ped: number | IPed, pos: Vector3, time: number, allowPeekingAndFiring: boolean, blendInDuration: number, forceInitialFacingDirection: boolean, forceFaceLeft: boolean, identifier: number, doEntry: boolean): void {
-    TaskPutPedDirectlyIntoCover(ped, pos.x, pos.y, pos.z, time, allowPeekingAndFiring, blendInDuration, forceInitialFacingDirection, forceFaceLeft, identifier, doEntry);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPutPedDirectlyIntoCover(_ped, pos.x, pos.y, pos.z, time, allowPeekingAndFiring, blendInDuration, forceInitialFacingDirection, forceFaceLeft, identifier, doEntry);
 }
 
 /**
@@ -2569,7 +2789,9 @@ export function putPedDirectlyIntoCover(ped: number | IPed, pos: Vector3, time: 
  * Hash: 0x1C6CD14A876FFE39 | Since: 323 | API-Set: unknown
  */
 export function putPedDirectlyIntoMelee(ped: number | IPed, meleeTarget: number | IPed, blendInDuration: number, timeInMelee: number, strafePhaseSync: number, aiCombatFlags: number): void {
-    TaskPutPedDirectlyIntoMelee(ped, meleeTarget, blendInDuration, timeInMelee, strafePhaseSync, aiCombatFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _meleeTarget = meleeTarget instanceof IPed ? meleeTarget.handle() : meleeTarget;
+    TaskPutPedDirectlyIntoMelee(_ped, _meleeTarget, blendInDuration, timeInMelee, strafePhaseSync, aiCombatFlags);
 }
 
 /**
@@ -2579,7 +2801,8 @@ export function putPedDirectlyIntoMelee(ped: number | IPed, meleeTarget: number 
  * Hash: 0xEAF66ACDDC794793 | Since: 1868 | API-Set: unknown
  */
 export function rappelDownWallUsingClipsetOverride(ped: number | IPed, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, minZ: number, ropeHandle: number, clipSet: string): void {
-    TaskRappelDownWall(ped, x1, y1, z1, x2, y2, z2, minZ, ropeHandle, clipSet, undefined, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskRappelDownWall(_ped, x1, y1, z1, x2, y2, z2, minZ, ropeHandle, clipSet, undefined, undefined);
 }
 
 /**
@@ -2593,7 +2816,8 @@ export function rappelDownWallUsingClipsetOverride(ped: number | IPed, x1: numbe
  * Hash: 0x09693B0312F91649 | Since: 323 | API-Set: unknown
  */
 export function rappelFromHeli(ped: number | IPed, minHeightAboveGround: number): void {
-    TaskRappelFromHeli(ped, minHeightAboveGround);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskRappelFromHeli(_ped, minHeightAboveGround);
 }
 
 /**
@@ -2602,7 +2826,9 @@ export function rappelFromHeli(ped: number | IPed, minHeightAboveGround: number)
  * Hash: 0x72C896464915D1B1 | Since: 323 | API-Set: unknown
  */
 export function reactAndFleePed(ped: number | IPed, fleeTarget: number | IPed): void {
-    TaskReactAndFleePed(ped, fleeTarget);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _fleeTarget = fleeTarget instanceof IPed ? fleeTarget.handle() : fleeTarget;
+    TaskReactAndFleePed(_ped, _fleeTarget);
 }
 
 /**
@@ -2619,7 +2845,8 @@ export function reactAndFleePed(ped: number | IPed, fleeTarget: number | IPed): 
  * Hash: 0x62D2916F56B9CD2D | Since: 323 | API-Set: unknown
  */
 export function reloadWeapon(ped: number | IPed, drawWeapon: boolean): void {
-    TaskReloadWeapon(ped, drawWeapon);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskReloadWeapon(_ped, drawWeapon);
 }
 
 /**
@@ -2661,7 +2888,8 @@ export function reloadWeapon(ped: number | IPed, drawWeapon: boolean): void {
  * Hash: 0x126EF75F1E17ABE5 | Since: 323 | API-Set: unknown
  */
 export function scriptedAnimation(ped: number | IPed, blendInDelta: number, blendOutDelta: number): [number, number, number] {
-    return TaskScriptedAnimation(ped, blendInDelta, blendOutDelta);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return TaskScriptedAnimation(_ped, blendInDelta, blendOutDelta);
 }
 
 /**
@@ -2670,7 +2898,9 @@ export function scriptedAnimation(ped: number | IPed, blendInDelta: number, blen
  * Hash: 0x84D32B3BEC531324 | Since: 323 | API-Set: unknown
  */
 export function seekCoverFromPed(ped: number | IPed, target: number | IPed, duration: number, allowPeekingAndFiring: boolean): void {
-    TaskSeekCoverFromPed(ped, target, duration, allowPeekingAndFiring);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    TaskSeekCoverFromPed(_ped, _target, duration, allowPeekingAndFiring);
 }
 
 /**
@@ -2679,7 +2909,8 @@ export function seekCoverFromPed(ped: number | IPed, target: number | IPed, dura
  * Hash: 0x75AC2B60386D89F2 | Since: 323 | API-Set: unknown
  */
 export function seekCoverFromPos(ped: number | IPed, pos: Vector3, duration: number, allowPeekingAndFiring: boolean): void {
-    TaskSeekCoverFromPos(ped, pos.x, pos.y, pos.z, duration, allowPeekingAndFiring);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSeekCoverFromPos(_ped, pos.x, pos.y, pos.z, duration, allowPeekingAndFiring);
 }
 
 /**
@@ -2696,7 +2927,8 @@ export function seekCoverFromPos(ped: number | IPed, pos: Vector3, duration: num
  * Hash: 0x39246A6958EF072C | Since: 323 | API-Set: unknown
  */
 export function seekCoverToCoords(ped: number | IPed, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, timeout: number, shortRoute: boolean): void {
-    TaskSeekCoverToCoords(ped, x1, y1, z1, x2, y2, z2, timeout, shortRoute);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSeekCoverToCoords(_ped, x1, y1, z1, x2, y2, z2, timeout, shortRoute);
 }
 
 /**
@@ -2705,7 +2937,8 @@ export function seekCoverToCoords(ped: number | IPed, x1: number, y1: number, z1
  * Hash: 0xD43D95C7A869447F | Since: 323 | API-Set: unknown
  */
 export function seekCoverToCoverPoint(ped: number | IPed, coverpoint: number, pos: Vector3, time: number, allowPeekingAndFiring: boolean): void {
-    TaskSeekCoverToCoverPoint(ped, coverpoint, pos.x, pos.y, pos.z, time, allowPeekingAndFiring);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSeekCoverToCoverPoint(_ped, coverpoint, pos.x, pos.y, pos.z, time, allowPeekingAndFiring);
 }
 
 /**
@@ -2718,7 +2951,8 @@ export function seekCoverToCoverPoint(ped: number | IPed, coverpoint: number, po
  * Hash: 0x90D2156198831D69 | Since: 323 | API-Set: unknown
  */
 export function setBlockingOfNonTemporaryEvents(ped: number | IPed, toggle: boolean): void {
-    TaskSetBlockingOfNonTemporaryEvents(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSetBlockingOfNonTemporaryEvents(_ped, toggle);
 }
 
 /**
@@ -2727,8 +2961,9 @@ export function setBlockingOfNonTemporaryEvents(ped: number | IPed, toggle: bool
  * Hash: 0xEB8517DDA73720DA | Since: 323 | API-Set: unknown
  */
 export function setDecisionMaker(ped: number | IPed, decisionMakerId: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof decisionMakerId === 'string') decisionMakerId = GetHashKey(decisionMakerId)
-    TaskSetDecisionMaker(ped, decisionMakerId);
+    TaskSetDecisionMaker(_ped, decisionMakerId);
 }
 
 /**
@@ -2737,7 +2972,8 @@ export function setDecisionMaker(ped: number | IPed, decisionMakerId: number | s
  * Hash: 0x933C06518B52A9A4 | Since: 323 | API-Set: unknown
  */
 export function setSphereDefensiveArea(ped: number | IPed, pos: Vector3, radius: number): void {
-    TaskSetSphereDefensiveArea(ped, pos.x, pos.y, pos.z, radius);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSetSphereDefensiveArea(_ped, pos.x, pos.y, pos.z, radius);
 }
 
 /**
@@ -2746,7 +2982,8 @@ export function setSphereDefensiveArea(ped: number | IPed, pos: Vector3, radius:
  * Hash: 0x60A19CF85FF4CEFA | Since: 3407 | API-Set: unknown
  */
 export function sharkCircleCoord(ped: number | IPed, pos: Vector3, moveBlendRatio: number, radius: number): void {
-    Citizen.invokeNative('0x60A19CF85FF4CEFA', ped, pos.x, pos.y, pos.z, moveBlendRatio, radius);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x60A19CF85FF4CEFA', _ped, pos.x, pos.y, pos.z, moveBlendRatio, radius);
 }
 
 /**
@@ -2755,7 +2992,8 @@ export function sharkCircleCoord(ped: number | IPed, pos: Vector3, moveBlendRati
  * Hash: 0x452419CBD838065B | Since: 323 | API-Set: unknown
  */
 export function shockingEventReact(ped: number | IPed, eventHandle: number): void {
-    TaskShockingEventReact(ped, eventHandle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskShockingEventReact(_ped, eventHandle);
 }
 
 /**
@@ -2764,8 +3002,9 @@ export function shockingEventReact(ped: number | IPed, eventHandle: number): voi
  * Hash: 0x46A6CC01E0826106 | Since: 323 | API-Set: unknown
  */
 export function shootAtCoord(ped: number | IPed, pos: Vector3, duration: number, firingPattern: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
-    TaskShootAtCoord(ped, pos.x, pos.y, pos.z, duration, firingPattern);
+    TaskShootAtCoord(_ped, pos.x, pos.y, pos.z, duration, firingPattern);
 }
 
 /**
@@ -2784,8 +3023,10 @@ export function shootAtCoord(ped: number | IPed, pos: Vector3, duration: number,
  * Hash: 0x08DA95E8298AE772 | Since: 323 | API-Set: unknown
  */
 export function shootAtEntity(entity: number | IEntity, target: number | IEntity, duration: number, firingPattern: number | string): void {
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _target = target instanceof IEntity ? target.handle() : target;
     if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
-    TaskShootAtEntity(entity, target, duration, firingPattern);
+    TaskShootAtEntity(_entity, _target, duration, firingPattern);
 }
 
 /**
@@ -2795,7 +3036,9 @@ export function shootAtEntity(entity: number | IEntity, target: number | IEntity
  * Hash: 0x7AA80209BDA643EB | Since: 323 | API-Set: unknown
  */
 export function shuffleToNextVehicleSeat(ped: number | IPed, vehicle: number | IVehicle, useAlternateShuffle: boolean): void {
-    TaskShuffleToNextVehicleSeat(ped, vehicle, useAlternateShuffle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskShuffleToNextVehicleSeat(_ped, _vehicle, useAlternateShuffle);
 }
 
 /**
@@ -2804,7 +3047,8 @@ export function shuffleToNextVehicleSeat(ped: number | IPed, vehicle: number | I
  * Hash: 0x601736CFE536B0A0 | Since: 323 | API-Set: unknown
  */
 export function skyDive(ped: number | IPed, instant: boolean): void {
-    TaskSkyDive(ped, instant);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSkyDive(_ped, instant);
 }
 
 /**
@@ -2813,7 +3057,8 @@ export function skyDive(ped: number | IPed, instant: boolean): void {
  * Hash: 0x94587F17E9C365D5 | Since: 323 | API-Set: unknown
  */
 export function smartFleeCoord(ped: number | IPed, pos: Vector3, distance: number, time: number, preferPavements: boolean, quitIfOutOfRange: boolean): void {
-    TaskSmartFleeCoord(ped, pos.x, pos.y, pos.z, distance, time, preferPavements, quitIfOutOfRange);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSmartFleeCoord(_ped, pos.x, pos.y, pos.z, distance, time, preferPavements, quitIfOutOfRange);
 }
 
 /**
@@ -2825,7 +3070,9 @@ export function smartFleeCoord(ped: number | IPed, pos: Vector3, distance: numbe
  * Hash: 0x22B0D0E37CCB840D | Since: 323 | API-Set: unknown
  */
 export function smartFleePed(ped: number | IPed, fleeTarget: number | IPed, safeDistance: number, fleeTime: number, preferPavements: boolean, updateToNearestHatedPed: boolean): void {
-    TaskSmartFleePed(ped, fleeTarget, safeDistance, fleeTime, preferPavements, updateToNearestHatedPed);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _fleeTarget = fleeTarget instanceof IPed ? fleeTarget.handle() : fleeTarget;
+    TaskSmartFleePed(_ped, _fleeTarget, safeDistance, fleeTime, preferPavements, updateToNearestHatedPed);
 }
 
 /**
@@ -2834,7 +3081,8 @@ export function smartFleePed(ped: number | IPed, fleeTarget: number | IPed, safe
  * Hash: 0xAE032F8BBA959E90 | Since: 323 | API-Set: unknown
  */
 export function standGuard(ped: number | IPed, pos: Vector3, heading: number, scenarioName: string): void {
-    TaskStandGuard(ped, pos.x, pos.y, pos.z, heading, scenarioName);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskStandGuard(_ped, pos.x, pos.y, pos.z, heading, scenarioName);
 }
 
 /**
@@ -2843,7 +3091,8 @@ export function standGuard(ped: number | IPed, pos: Vector3, heading: number, sc
  * Hash: 0x919BE13EED931959 | Since: 323 | API-Set: unknown
  */
 export function standStill(ped: number | IPed, time: number): void {
-    TaskStandStill(ped, time);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskStandStill(_ped, time);
 }
 
 /**
@@ -2870,7 +3119,8 @@ export function standStill(ped: number | IPed, time: number): void {
  * Hash: 0xFA4EFC79F69D4F07 | Since: 323 | API-Set: unknown
  */
 export function startScenarioAtPosition(ped: number | IPed, scenarioName: string, pos: Vector3, heading: number, duration: number, sittingScenario: boolean, teleport: boolean): void {
-    TaskStartScenarioAtPosition(ped, scenarioName, pos.x, pos.y, pos.z, heading, duration, sittingScenario, teleport);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskStartScenarioAtPosition(_ped, scenarioName, pos.x, pos.y, pos.z, heading, duration, sittingScenario, teleport);
 }
 
 /**
@@ -2921,7 +3171,8 @@ export function startScenarioAtPosition(ped: number | IPed, scenarioName: string
  * Hash: 0x142A02425FF02BD9 | Since: 323 | API-Set: unknown
  */
 export function startScenarioInPlace(ped: number | IPed, scenarioName: string, unkDelay: number, playEnterAnim: boolean): void {
-    TaskStartScenarioInPlace(ped, scenarioName, unkDelay, playEnterAnim);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskStartScenarioInPlace(_ped, scenarioName, unkDelay, playEnterAnim);
 }
 
 /**
@@ -2930,7 +3181,8 @@ export function startScenarioInPlace(ped: number | IPed, scenarioName: string, u
  * Hash: 0xE5DA8615A6180789 | Since: 323 | API-Set: unknown
  */
 export function stayInCover(ped: number | IPed): void {
-    TaskStayInCover(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskStayInCover(_ped);
 }
 
 /**
@@ -2939,8 +3191,10 @@ export function stayInCover(ped: number | IPed): void {
  * Hash: 0xAA5DC05579D60BD9 | Since: 323 | API-Set: unknown
  */
 export function stealthKill(killer: number | IPed, target: number | IPed, stealthKillActionResultHash: number | string, desiredMoveBlendRatio: number, stealthFlags: number): void {
+    const _killer = killer instanceof IPed ? killer.handle() : killer;
+    const _target = target instanceof IPed ? target.handle() : target;
     if (typeof stealthKillActionResultHash === 'string') stealthKillActionResultHash = GetHashKey(stealthKillActionResultHash)
-    TaskStealthKill(killer, target, stealthKillActionResultHash, desiredMoveBlendRatio, stealthFlags);
+    TaskStealthKill(_killer, _target, stealthKillActionResultHash, desiredMoveBlendRatio, stealthFlags);
 }
 
 /**
@@ -2949,7 +3203,8 @@ export function stealthKill(killer: number | IPed, target: number | IPed, stealt
  * Hash: 0x3FA00D4F4641BFAE | Since: 323 | API-Set: unknown
  */
 export function stopPhoneGestureAnimation(ped: number | IPed, blendOutOverride: number): void {
-    TaskStopPhoneGestureAnimation(ped, blendOutOverride);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskStopPhoneGestureAnimation(_ped, blendOutOverride);
 }
 
 /**
@@ -2964,7 +3219,9 @@ export function stopPhoneGestureAnimation(ped: number | IPed, blendOutOverride: 
  * Hash: 0xC22B40579A498CA4 | Since: 2189 | API-Set: unknown
  */
 export function submarineGotoAndStop(ped: number | IPed, submarine: number | IVehicle, pos: Vector3, autopilot: boolean): void {
-    TaskSubmarineGotoAndStop(ped, submarine, pos.x, pos.y, pos.z, autopilot);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _submarine = submarine instanceof IVehicle ? submarine.localId() : submarine;
+    TaskSubmarineGotoAndStop(_ped, _submarine, pos.x, pos.y, pos.z, autopilot);
 }
 
 /**
@@ -2973,7 +3230,8 @@ export function submarineGotoAndStop(ped: number | IPed, submarine: number | IVe
  * Hash: 0xA21C51255B205245 | Since: 323 | API-Set: unknown
  */
 export function swapWeapon(ped: number | IPed, drawWeapon: boolean): void {
-    TaskSwapWeapon(ped, drawWeapon);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSwapWeapon(_ped, drawWeapon);
 }
 
 /**
@@ -2986,7 +3244,9 @@ export function swapWeapon(ped: number | IPed, drawWeapon: boolean): void {
  * Hash: 0x2047C02158D6405A | Since: 323 | API-Set: unknown
  */
 export function sweepAimEntity(ped: number | IPed, animDict: string, lowAnimName: string, medAnimName: string, hiAnimName: string, runtime: number, targetEntity: number | IEntity, turnRate: number, blendInDuration: number): void {
-    TaskSweepAimEntity(ped, animDict, lowAnimName, medAnimName, hiAnimName, runtime, targetEntity, turnRate, blendInDuration);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _targetEntity = targetEntity instanceof IEntity ? targetEntity.handle() : targetEntity;
+    TaskSweepAimEntity(_ped, animDict, lowAnimName, medAnimName, hiAnimName, runtime, _targetEntity, turnRate, blendInDuration);
 }
 
 /**
@@ -2995,7 +3255,8 @@ export function sweepAimEntity(ped: number | IPed, animDict: string, lowAnimName
  * Hash: 0x7AFE8FDC10BC07D2 | Since: 323 | API-Set: unknown
  */
 export function sweepAimPosition(ped: number | IPed, animDict: string, lowAnimName: string, medAnimName: string, hiAnimName: string, runtime: number, pos: Vector3, turnRate: number, blendInDuration: number): void {
-    TaskSweepAimPosition(ped, animDict, lowAnimName, medAnimName, hiAnimName, runtime, pos.x, pos.y, pos.z, turnRate, blendInDuration);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSweepAimPosition(_ped, animDict, lowAnimName, medAnimName, hiAnimName, runtime, pos.x, pos.y, pos.z, turnRate, blendInDuration);
 }
 
 /**
@@ -3006,7 +3267,8 @@ export function sweepAimPosition(ped: number | IPed, animDict: string, lowAnimNa
  * Hash: 0xEEA929141F699854 | Since: 323 | API-Set: unknown
  */
 export function synchronizedScene(ped: number | IPed, scene: number, animDictionary: string, animationName: string, blendIn: number, blendOut: number, flags: number, ragdollBlockingFlags: number, moverBlendDelta: number, ikFlags: number): void {
-    TaskSynchronizedScene(ped, scene, animDictionary, animationName, blendIn, blendOut, flags, ragdollBlockingFlags, moverBlendDelta, ikFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSynchronizedScene(_ped, scene, animDictionary, animationName, blendIn, blendOut, flags, ragdollBlockingFlags, moverBlendDelta, ikFlags);
 }
 
 /**
@@ -3022,7 +3284,8 @@ export function synchronizedScene(ped: number | IPed, scene: number, animDiction
  * Hash: 0x7285951DBF6B5A51 | Since: 323 | API-Set: unknown
  */
 export function throwProjectile(ped: number | IPed, pos: Vector3, ignoreCollisionEntityIndex: number, createInvincibleProjectile: boolean): void {
-    TaskThrowProjectile(ped, pos.x, pos.y, pos.z, ignoreCollisionEntityIndex, createInvincibleProjectile);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskThrowProjectile(_ped, pos.x, pos.y, pos.z, ignoreCollisionEntityIndex, createInvincibleProjectile);
 }
 
 /**
@@ -3033,7 +3296,8 @@ export function throwProjectile(ped: number | IPed, pos: Vector3, ignoreCollisio
  * Hash: 0xAC96609B9995EDF8 | Since: 323 | API-Set: unknown
  */
 export function toggleDuck(ped: number | IPed, toggleType: number): void {
-    TaskToggleDuck(ped, toggleType);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskToggleDuck(_ped, toggleType);
 }
 
 /**
@@ -3042,7 +3306,8 @@ export function toggleDuck(ped: number | IPed, toggleType: number): void {
  * Hash: 0x1DDA930A0AC38571 | Since: 323 | API-Set: unknown
  */
 export function turnPedToFaceCoord(ped: number | IPed, pos: Vector3, duration: number): void {
-    TaskTurnPedToFaceCoord(ped, pos.x, pos.y, pos.z, duration);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskTurnPedToFaceCoord(_ped, pos.x, pos.y, pos.z, duration);
 }
 
 /**
@@ -3051,7 +3316,9 @@ export function turnPedToFaceCoord(ped: number | IPed, pos: Vector3, duration: n
  * Hash: 0x5AD23D40115353AC | Since: 323 | API-Set: unknown
  */
 export function turnPedToFaceEntity(ped: number | IPed, entity: number | IEntity, duration: number): void {
-    TaskTurnPedToFaceEntity(ped, entity, duration);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    TaskTurnPedToFaceEntity(_ped, _entity, duration);
 }
 
 /**
@@ -3064,7 +3331,8 @@ export function turnPedToFaceEntity(ped: number | IPed, entity: number | IEntity
  * Hash: 0xBD2A8EC3AF4DE7DB | Since: 323 | API-Set: unknown
  */
 export function useMobilePhone(ped: number | IPed, usePhone: boolean, desiredPhoneMode: number): void {
-    TaskUseMobilePhone(ped, usePhone, desiredPhoneMode);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskUseMobilePhone(_ped, usePhone, desiredPhoneMode);
 }
 
 /**
@@ -3073,7 +3341,8 @@ export function useMobilePhone(ped: number | IPed, usePhone: boolean, desiredPho
  * Hash: 0x5EE02954A14C69DB | Since: 323 | API-Set: unknown
  */
 export function useMobilePhoneTimed(ped: number | IPed, duration: number): void {
-    TaskUseMobilePhoneTimed(ped, duration);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskUseMobilePhoneTimed(_ped, duration);
 }
 
 /**
@@ -3082,7 +3351,8 @@ export function useMobilePhoneTimed(ped: number | IPed, duration: number): void 
  * Hash: 0x9FDA1B3D7E7028B3 | Since: 323 | API-Set: unknown
  */
 export function useNearestScenarioChainToCoord(ped: number | IPed, pos: Vector3, maxRange: number, timeToLeave: number): void {
-    TaskUseNearestScenarioChainToCoord(ped, pos.x, pos.y, pos.z, maxRange, timeToLeave);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskUseNearestScenarioChainToCoord(_ped, pos.x, pos.y, pos.z, maxRange, timeToLeave);
 }
 
 /**
@@ -3091,7 +3361,8 @@ export function useNearestScenarioChainToCoord(ped: number | IPed, pos: Vector3,
  * Hash: 0x97A28E63F0BA5631 | Since: 323 | API-Set: unknown
  */
 export function useNearestScenarioChainToCoordWarp(ped: number | IPed, pos: Vector3, radius: number, timeToLeave: number): void {
-    TaskUseNearestScenarioChainToCoordWarp(ped, pos.x, pos.y, pos.z, radius, timeToLeave);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskUseNearestScenarioChainToCoordWarp(_ped, pos.x, pos.y, pos.z, radius, timeToLeave);
 }
 
 /**
@@ -3102,7 +3373,8 @@ export function useNearestScenarioChainToCoordWarp(ped: number | IPed, pos: Vect
  * Hash: 0x277F471BA9DB000B | Since: 323 | API-Set: unknown
  */
 export function useNearestScenarioToCoord(ped: number | IPed, pos: Vector3, distance: number, duration: number): void {
-    TaskUseNearestScenarioToCoord(ped, pos.x, pos.y, pos.z, distance, duration);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskUseNearestScenarioToCoord(_ped, pos.x, pos.y, pos.z, distance, duration);
 }
 
 /**
@@ -3111,7 +3383,8 @@ export function useNearestScenarioToCoord(ped: number | IPed, pos: Vector3, dist
  * Hash: 0x58E2E0F23F6B76C3 | Since: 323 | API-Set: unknown
  */
 export function useNearestScenarioToCoordWarp(ped: number | IPed, pos: Vector3, radius: number, timeToLeave: number): void {
-    TaskUseNearestScenarioToCoordWarp(ped, pos.x, pos.y, pos.z, radius, timeToLeave);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskUseNearestScenarioToCoordWarp(_ped, pos.x, pos.y, pos.z, radius, timeToLeave);
 }
 
 /**
@@ -3120,7 +3393,8 @@ export function useNearestScenarioToCoordWarp(ped: number | IPed, pos: Vector3, 
  * Hash: 0x447C1E9EF844BC0F | Since: 323 | API-Set: unknown
  */
 export function vehicleAimAtCoord(ped: number | IPed, pos: Vector3): void {
-    TaskVehicleAimAtCoord(ped, pos.x, pos.y, pos.z);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskVehicleAimAtCoord(_ped, pos.x, pos.y, pos.z);
 }
 
 /**
@@ -3129,7 +3403,9 @@ export function vehicleAimAtCoord(ped: number | IPed, pos: Vector3): void {
  * Hash: 0xE41885592B08B097 | Since: 323 | API-Set: unknown
  */
 export function vehicleAimAtPed(ped: number | IPed, target: number | IPed): void {
-    TaskVehicleAimAtPed(ped, target);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    TaskVehicleAimAtPed(_ped, _target);
 }
 
 /**
@@ -3140,7 +3416,9 @@ export function vehicleAimAtPed(ped: number | IPed, target: number | IPed): void
  * Hash: 0x3C08A8E30363B353 | Since: 323 | API-Set: unknown
  */
 export function vehicleChase(driver: number | IPed, targetEnt: number | IEntity): void {
-    TaskVehicleChase(driver, targetEnt);
+    const _driver = driver instanceof IPed ? driver.handle() : driver;
+    const _targetEnt = targetEnt instanceof IEntity ? targetEnt.handle() : targetEnt;
+    TaskVehicleChase(_driver, _targetEnt);
 }
 
 /**
@@ -3149,8 +3427,10 @@ export function vehicleChase(driver: number | IPed, targetEnt: number | IEntity)
  * Hash: 0xE2A2AA2F659D77A7 | Since: 323 | API-Set: unknown
  */
 export function vehicleDriveToCoord(ped: number | IPed, vehicle: number | IVehicle, pos: Vector3, speed: number, vehicleModel: number | string, drivingMode: number, stopRange: number, straightLineDistance: number): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
     if (typeof vehicleModel === 'string') vehicleModel = GetHashKey(vehicleModel)
-    TaskVehicleDriveToCoord(ped, vehicle, pos.x, pos.y, pos.z, speed, undefined, vehicleModel, drivingMode, stopRange, straightLineDistance);
+    TaskVehicleDriveToCoord(_ped, _vehicle, pos.x, pos.y, pos.z, speed, undefined, vehicleModel, drivingMode, stopRange, straightLineDistance);
 }
 
 /**
@@ -3159,7 +3439,9 @@ export function vehicleDriveToCoord(ped: number | IPed, vehicle: number | IVehic
  * Hash: 0x158BB33F920D360C | Since: 323 | API-Set: unknown
  */
 export function vehicleDriveToCoordLongrange(ped: number | IPed, vehicle: number | IVehicle, pos: Vector3, speed: number, driveMode: number, stopRange: number): void {
-    TaskVehicleDriveToCoordLongrange(ped, vehicle, pos.x, pos.y, pos.z, speed, driveMode, stopRange);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskVehicleDriveToCoordLongrange(_ped, _vehicle, pos.x, pos.y, pos.z, speed, driveMode, stopRange);
 }
 
 /**
@@ -3168,7 +3450,9 @@ export function vehicleDriveToCoordLongrange(ped: number | IPed, vehicle: number
  * Hash: 0x480142959D337D00 | Since: 323 | API-Set: unknown
  */
 export function vehicleDriveWander(ped: number | IPed, vehicle: number | IVehicle, speed: number, drivingStyle: number): void {
-    TaskVehicleDriveWander(ped, vehicle, speed, drivingStyle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskVehicleDriveWander(_ped, _vehicle, speed, drivingStyle);
 }
 
 /**
@@ -3191,7 +3475,10 @@ export function vehicleDriveWander(ped: number | IPed, vehicle: number | IVehicl
  * Hash: 0x0FA6E4B75F302400 | Since: 323 | API-Set: unknown
  */
 export function vehicleEscort(ped: number | IPed, vehicle: number | IVehicle, targetVehicle: number | IVehicle, mode: number, speed: number, drivingStyle: number, minDistance: number, minHeightAboveTerrain: number, noRoadsDistance: number): void {
-    TaskVehicleEscort(ped, vehicle, targetVehicle, mode, speed, drivingStyle, minDistance, minHeightAboveTerrain, noRoadsDistance);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _targetVehicle = targetVehicle instanceof IVehicle ? targetVehicle.localId() : targetVehicle;
+    TaskVehicleEscort(_ped, _vehicle, _targetVehicle, mode, speed, drivingStyle, minDistance, minHeightAboveTerrain, noRoadsDistance);
 }
 
 /**
@@ -3202,7 +3489,10 @@ export function vehicleEscort(ped: number | IPed, vehicle: number | IVehicle, ta
  * Hash: 0xFC545A9F0626E3B6 | Since: 323 | API-Set: unknown
  */
 export function vehicleFollow(driver: number | IPed, vehicle: number | IVehicle, targetEntity: number | IEntity, speed: number, drivingStyle: number, minDistance: number): void {
-    TaskVehicleFollow(driver, vehicle, targetEntity, speed, drivingStyle, minDistance);
+    const _driver = driver instanceof IPed ? driver.handle() : driver;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _targetEntity = targetEntity instanceof IEntity ? targetEntity.handle() : targetEntity;
+    TaskVehicleFollow(_driver, _vehicle, _targetEntity, speed, drivingStyle, minDistance);
 }
 
 /**
@@ -3222,7 +3512,9 @@ export function vehicleFollow(driver: number | IPed, vehicle: number | IVehicle,
  * Hash: 0x3123FAA6DB1CF7ED | Since: 323 | API-Set: unknown
  */
 export function vehicleFollowWaypointRecording(ped: number | IPed, vehicle: number | IVehicle, WPRecording: string): void {
-    TaskVehicleFollowWaypointRecording(ped, vehicle, WPRecording, 0, 0, 0, 0, 0, false, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskVehicleFollowWaypointRecording(_ped, _vehicle, WPRecording, 0, 0, 0, 0, 0, false, 0);
 }
 
 /**
@@ -3245,7 +3537,9 @@ export function vehicleFollowWaypointRecording(ped: number | IPed, vehicle: numb
  * Hash: 0x195AEEB13CEFE2EE | Since: 323 | API-Set: unknown
  */
 export function vehicleGotoNavmesh(ped: number | IPed, vehicle: number | IVehicle, pos: Vector3, speed: number, behaviorFlag: number, stoppingRange: number): void {
-    TaskVehicleGotoNavmesh(ped, vehicle, pos.x, pos.y, pos.z, speed, behaviorFlag, stoppingRange);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskVehicleGotoNavmesh(_ped, _vehicle, pos.x, pos.y, pos.z, speed, behaviorFlag, stoppingRange);
 }
 
 /**
@@ -3266,7 +3560,10 @@ export function vehicleGotoNavmesh(ped: number | IPed, vehicle: number | IVehicl
  * Hash: 0x1E09C32048FEFD1C | Since: 323 | API-Set: unknown
  */
 export function vehicleHeliProtect(pilot: number | IPed, vehicle: number | IVehicle, entityToFollow: number | IEntity, targetSpeed: number, drivingFlags: number, radius: number, altitude: number, heliFlags: number): void {
-    TaskVehicleHeliProtect(pilot, vehicle, entityToFollow, targetSpeed, drivingFlags, radius, altitude, heliFlags);
+    const _pilot = pilot instanceof IPed ? pilot.handle() : pilot;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _entityToFollow = entityToFollow instanceof IEntity ? entityToFollow.handle() : entityToFollow;
+    TaskVehicleHeliProtect(_pilot, _vehicle, _entityToFollow, targetSpeed, drivingFlags, radius, altitude, heliFlags);
 }
 
 /**
@@ -3275,7 +3572,10 @@ export function vehicleHeliProtect(pilot: number | IPed, vehicle: number | IVehi
  * Hash: 0x659427E0EF36BCDE | Since: 323 | API-Set: unknown
  */
 export function vehicleMission(driver: number | IPed, vehicle: number | IVehicle, vehicleTarget: number | IVehicle, missionType: number, cruiseSpeed: number, drivingStyle: number, targetReached: number, straightLineDistance: number, DriveAgainstTraffic: boolean): void {
-    TaskVehicleMission(driver, vehicle, vehicleTarget, missionType, cruiseSpeed, drivingStyle, targetReached, straightLineDistance, DriveAgainstTraffic);
+    const _driver = driver instanceof IPed ? driver.handle() : driver;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicleTarget = vehicleTarget instanceof IVehicle ? vehicleTarget.localId() : vehicleTarget;
+    TaskVehicleMission(_driver, _vehicle, _vehicleTarget, missionType, cruiseSpeed, drivingStyle, targetReached, straightLineDistance, DriveAgainstTraffic);
 }
 
 /**
@@ -3284,7 +3584,9 @@ export function vehicleMission(driver: number | IPed, vehicle: number | IVehicle
  * Hash: 0xF0AF20AA7731F8C3 | Since: 323 | API-Set: unknown
  */
 export function vehicleMissionCoorsTarget(ped: number | IPed, vehicle: number | IVehicle, pos: Vector3, mission: number, cruiseSpeed: number, drivingStyle: number, targetReached: number, straightLineDistance: number, DriveAgainstTraffic: boolean): void {
-    TaskVehicleMissionCoorsTarget(ped, vehicle, pos.x, pos.y, pos.z, mission, cruiseSpeed, drivingStyle, targetReached, straightLineDistance, DriveAgainstTraffic);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskVehicleMissionCoorsTarget(_ped, _vehicle, pos.x, pos.y, pos.z, mission, cruiseSpeed, drivingStyle, targetReached, straightLineDistance, DriveAgainstTraffic);
 }
 
 /**
@@ -3293,7 +3595,10 @@ export function vehicleMissionCoorsTarget(ped: number | IPed, vehicle: number | 
  * Hash: 0x9454528DF15D657A | Since: 323 | API-Set: unknown
  */
 export function vehicleMissionPedTarget(ped: number | IPed, vehicle: number | IVehicle, pedTarget: number | IPed, missionType: number, maxSpeed: number, drivingStyle: number, minDistance: number, straightLineDistance: number, DriveAgainstTraffic: boolean): void {
-    TaskVehicleMissionPedTarget(ped, vehicle, pedTarget, missionType, maxSpeed, drivingStyle, minDistance, straightLineDistance, DriveAgainstTraffic);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _pedTarget = pedTarget instanceof IPed ? pedTarget.handle() : pedTarget;
+    TaskVehicleMissionPedTarget(_ped, _vehicle, _pedTarget, missionType, maxSpeed, drivingStyle, minDistance, straightLineDistance, DriveAgainstTraffic);
 }
 
 /**
@@ -3309,7 +3614,9 @@ export function vehicleMissionPedTarget(ped: number | IPed, vehicle: number | IV
  * Hash: 0x0F3E34E968EA374E | Since: 323 | API-Set: unknown
  */
 export function vehiclePark(ped: number | IPed, vehicle: number | IVehicle, pos: Vector3, heading: number, mode: number, radius: number, keepEngineOn: boolean): void {
-    TaskVehiclePark(ped, vehicle, pos.x, pos.y, pos.z, heading, mode, radius, keepEngineOn);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskVehiclePark(_ped, _vehicle, pos.x, pos.y, pos.z, heading, mode, radius, keepEngineOn);
 }
 
 /**
@@ -3326,7 +3633,8 @@ export function vehiclePark(ped: number | IPed, vehicle: number | IVehicle, pos:
  * Hash: 0x69F5C3BD0F3EBD89 | Since: 323 | API-Set: unknown
  */
 export function vehiclePlayAnim(vehicle: number | IVehicle, animationSet: string, animationName: string): void {
-    TaskVehiclePlayAnim(vehicle, animationSet, animationName);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskVehiclePlayAnim(_vehicle, animationSet, animationName);
 }
 
 /**
@@ -3335,7 +3643,8 @@ export function vehiclePlayAnim(vehicle: number | IVehicle, animationSet: string
  * Hash: 0x5190796ED39C9B6D | Since: 323 | API-Set: unknown
  */
 export function vehicleShootAtCoord(ped: number | IPed, pos: Vector3, fireTolerance: number): void {
-    TaskVehicleShootAtCoord(ped, pos.x, pos.y, pos.z, fireTolerance);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskVehicleShootAtCoord(_ped, pos.x, pos.y, pos.z, fireTolerance);
 }
 
 /**
@@ -3344,7 +3653,9 @@ export function vehicleShootAtCoord(ped: number | IPed, pos: Vector3, fireTolera
  * Hash: 0x10AB107B887214D8 | Since: 323 | API-Set: unknown
  */
 export function vehicleShootAtPed(ped: number | IPed, target: number | IPed, fireTolerance: number): void {
-    TaskVehicleShootAtPed(ped, target, fireTolerance);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    TaskVehicleShootAtPed(_ped, _target, fireTolerance);
 }
 
 /**
@@ -3383,7 +3694,9 @@ export function vehicleShootAtPed(ped: number | IPed, target: number | IPed, fir
  * Hash: 0xC429DCEEB339E129 | Since: 323 | API-Set: unknown
  */
 export function vehicleTempAction(driver: number | IPed, vehicle: number | IVehicle, action: number, time: number): void {
-    TaskVehicleTempAction(driver, vehicle, action, time);
+    const _driver = driver instanceof IPed ? driver.handle() : driver;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskVehicleTempAction(_driver, _vehicle, action, time);
 }
 
 /**
@@ -3392,7 +3705,8 @@ export function vehicleTempAction(driver: number | IPed, vehicle: number | IVehi
  * Hash: 0xE054346CA3A0F315 | Since: 323 | API-Set: unknown
  */
 export function wanderInArea(ped: number | IPed, pos: Vector3, radius: number, minimalLength: number, timeBetweenWalks: number): void {
-    TaskWanderInArea(ped, pos.x, pos.y, pos.z, radius, minimalLength, timeBetweenWalks);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskWanderInArea(_ped, pos.x, pos.y, pos.z, radius, minimalLength, timeBetweenWalks);
 }
 
 /**
@@ -3401,7 +3715,8 @@ export function wanderInArea(ped: number | IPed, pos: Vector3, radius: number, m
  * Hash: 0x6919A2F136426098 | Since: 1868 | API-Set: unknown
  */
 export function wanderSpecific(ped: number | IPed, conditionalAnimGroupStr: string, conditionalAnimStr: string, heading: number): void {
-    TaskWanderSpecific(ped, conditionalAnimGroupStr, conditionalAnimStr, heading);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskWanderSpecific(_ped, conditionalAnimGroupStr, conditionalAnimStr, heading);
 }
 
 /**
@@ -3412,7 +3727,8 @@ export function wanderSpecific(ped: number | IPed, conditionalAnimGroupStr: stri
  * Hash: 0xBB9CE077274F6A1B | Since: 323 | API-Set: unknown
  */
 export function wanderStandard(ped: number | IPed, heading: number, flags: number): void {
-    TaskWanderStandard(ped, heading, flags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskWanderStandard(_ped, heading, flags);
 }
 
 /**
@@ -3421,7 +3737,8 @@ export function wanderStandard(ped: number | IPed, heading: number, flags: numbe
  * Hash: 0x6E01E9E8D89F8276 | Since: 2545 | API-Set: unknown
  */
 export function warpPedDirectlyIntoCover(ped: number | IPed, time: number, allowPeekingAndFiring: boolean, forceInitialFacingDirection: boolean, forceFaceLeft: boolean, identifier: number): void {
-    TaskWarpPedDirectlyIntoCover(ped, time, allowPeekingAndFiring, forceInitialFacingDirection, forceFaceLeft, identifier);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskWarpPedDirectlyIntoCover(_ped, time, allowPeekingAndFiring, forceInitialFacingDirection, forceFaceLeft, identifier);
 }
 
 /**
@@ -3437,7 +3754,9 @@ export function warpPedDirectlyIntoCover(ped: number | IPed, time: number, allow
  * Hash: 0x9A7D091411C5F684 | Since: 323 | API-Set: unknown
  */
 export function warpPedIntoVehicle(ped: number | IPed, vehicle: number | IVehicle, seat: number): void {
-    TaskWarpPedIntoVehicle(ped, vehicle, seat);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskWarpPedIntoVehicle(_ped, _vehicle, seat);
 }
 
 /**
@@ -3452,7 +3771,9 @@ export function warpPedIntoVehicle(ped: number | IPed, vehicle: number | IVehicl
  * Hash: 0xCDDC2B77CE54AC6E | Since: 323 | API-Set: unknown
  */
 export function writhe(ped: number | IPed, target: number | IPed, minFireLoops: number, startState: number, forceShootOnGround: boolean, shootFromGroundTimer: number): void {
-    TaskWrithe(ped, target, minFireLoops, startState, forceShootOnGround, shootFromGroundTimer);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    TaskWrithe(_ped, _target, minFireLoops, startState, forceShootOnGround, shootFromGroundTimer);
 }
 
 /**
@@ -3461,7 +3782,8 @@ export function writhe(ped: number | IPed, target: number | IPed, minFireLoops: 
  * Hash: 0x67406F2C8F87FC4F | Since: 323 | API-Set: unknown
  */
 export function uncuffPed(ped: number | IPed): void {
-    UncuffPed(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    UncuffPed(_ped);
 }
 
 /**
@@ -3470,7 +3792,9 @@ export function uncuffPed(ped: number | IPed): void {
  * Hash: 0x9724FB59A3E72AD0 | Since: 323 | API-Set: unknown
  */
 export function updateAimGunScriptedTarget(ped: number | IPed, target: number | IPed, pos: Vector3, disableBlockingClip: boolean): void {
-    UpdateTaskAimGunScriptedTarget(ped, target, pos.x, pos.y, pos.z, disableBlockingClip);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    UpdateTaskAimGunScriptedTarget(_ped, _target, pos.x, pos.y, pos.z, disableBlockingClip);
 }
 
 /**
@@ -3479,7 +3803,8 @@ export function updateAimGunScriptedTarget(ped: number | IPed, target: number | 
  * Hash: 0xA98FCAFD7893C834 | Since: 323 | API-Set: unknown
  */
 export function updateHandsUpDuration(ped: number | IPed, duration: number): void {
-    UpdateTaskHandsUpDuration(ped, duration);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    UpdateTaskHandsUpDuration(_ped, duration);
 }
 
 /**
@@ -3488,7 +3813,9 @@ export function updateHandsUpDuration(ped: number | IPed, duration: number): voi
  * Hash: 0xE4973DBDBE6E44B3 | Since: 323 | API-Set: unknown
  */
 export function updateSweepAimEntity(ped: number | IPed, entity: number | IEntity): void {
-    UpdateTaskSweepAimEntity(ped, entity);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    UpdateTaskSweepAimEntity(_ped, _entity);
 }
 
 /**
@@ -3497,7 +3824,8 @@ export function updateSweepAimEntity(ped: number | IPed, entity: number | IEntit
  * Hash: 0xBB106883F5201FC4 | Since: 323 | API-Set: unknown
  */
 export function updateSweepAimPosition(ped: number | IPed, pos: Vector3): void {
-    UpdateTaskSweepAimPosition(ped, pos.x, pos.y, pos.z);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    UpdateTaskSweepAimPosition(_ped, pos.x, pos.y, pos.z);
 }
 
 /**
@@ -3515,7 +3843,8 @@ export function useWaypointRecordingAsAssistedMovementRoute(name: string): void 
  * Hash: 0xE435D3539EFDCD1B | Since: 3570 | API-Set: unknown
  */
 export function vehicleWaypointPlaybackGetIsPaused(vehicle: number | IVehicle): boolean {
-    return Citizen.invokeNative('0xE435D3539EFDCD1B', vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return Citizen.invokeNative('0xE435D3539EFDCD1B', _vehicle);
 }
 
 /**
@@ -3524,7 +3853,8 @@ export function vehicleWaypointPlaybackGetIsPaused(vehicle: number | IVehicle): 
  * Hash: 0x121F0593E0A431D7 | Since: 323 | API-Set: unknown
  */
 export function vehicleWaypointPlaybackOverrideSpeed(vehicle: number | IVehicle, speed: number): void {
-    VehicleWaypointPlaybackOverrideSpeed(vehicle, speed);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    VehicleWaypointPlaybackOverrideSpeed(_vehicle, speed);
 }
 
 /**
@@ -3533,7 +3863,8 @@ export function vehicleWaypointPlaybackOverrideSpeed(vehicle: number | IVehicle,
  * Hash: 0x8A4E6AC373666BC5 | Since: 323 | API-Set: unknown
  */
 export function vehicleWaypointPlaybackPause(vehicle: number | IVehicle): void {
-    VehicleWaypointPlaybackPause(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    VehicleWaypointPlaybackPause(_vehicle);
 }
 
 /**
@@ -3542,7 +3873,8 @@ export function vehicleWaypointPlaybackPause(vehicle: number | IVehicle): void {
  * Hash: 0xDC04FCAA7839D492 | Since: 323 | API-Set: unknown
  */
 export function vehicleWaypointPlaybackResume(vehicle: number | IVehicle): void {
-    VehicleWaypointPlaybackResume(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    VehicleWaypointPlaybackResume(_vehicle);
 }
 
 /**
@@ -3551,7 +3883,8 @@ export function vehicleWaypointPlaybackResume(vehicle: number | IVehicle): void 
  * Hash: 0x5CEB25A7D2848963 | Since: 323 | API-Set: unknown
  */
 export function vehicleWaypointPlaybackUseDefaultSpeed(vehicle: number | IVehicle): void {
-    VehicleWaypointPlaybackUseDefaultSpeed(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    VehicleWaypointPlaybackUseDefaultSpeed(_vehicle);
 }
 
 /**
@@ -3596,7 +3929,8 @@ export function waypointPlaybackResume(): void {
  * Hash: 0x8968400D900ED8B3 | Since: 323 | API-Set: unknown
  */
 export function waypointPlaybackStartAimingAtCoord(ped: number | IPed, pos: Vector3): void {
-    WaypointPlaybackStartAimingAtCoord(ped, pos.x, pos.y, pos.z, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    WaypointPlaybackStartAimingAtCoord(_ped, pos.x, pos.y, pos.z, false);
 }
 
 /**
@@ -3605,7 +3939,9 @@ export function waypointPlaybackStartAimingAtCoord(ped: number | IPed, pos: Vect
  * Hash: 0x20E330937C399D29 | Since: 323 | API-Set: unknown
  */
 export function waypointPlaybackStartAimingAtPed(ped: number | IPed, target: number | IPed): void {
-    WaypointPlaybackStartAimingAtPed(ped, target, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    WaypointPlaybackStartAimingAtPed(_ped, _target, false);
 }
 
 /**
@@ -3614,8 +3950,9 @@ export function waypointPlaybackStartAimingAtPed(ped: number | IPed, target: num
  * Hash: 0x057A25CFCC9DB671 | Since: 323 | API-Set: unknown
  */
 export function waypointPlaybackStartShootingAtCoord(ped: number | IPed, pos: Vector3, firingPattern: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
-    WaypointPlaybackStartShootingAtCoord(ped, pos.x, pos.y, pos.z, false, firingPattern);
+    WaypointPlaybackStartShootingAtCoord(_ped, pos.x, pos.y, pos.z, false, firingPattern);
 }
 
 /**
@@ -3624,7 +3961,9 @@ export function waypointPlaybackStartShootingAtCoord(ped: number | IPed, pos: Ve
  * Hash: 0xE70BA7B90F8390DC | Since: 323 | API-Set: unknown
  */
 export function waypointPlaybackStartShootingAtPed(ped: number | IPed, ped2: number | IPed): void {
-    WaypointPlaybackStartShootingAtPed(ped, ped2, false, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped2 = ped2 instanceof IPed ? ped2.handle() : ped2;
+    WaypointPlaybackStartShootingAtPed(_ped, _ped2, false, false);
 }
 
 /**
@@ -3633,7 +3972,8 @@ export function waypointPlaybackStartShootingAtPed(ped: number | IPed, ped2: num
  * Hash: 0x47EFA040EBB8E2EA | Since: 323 | API-Set: unknown
  */
 export function waypointPlaybackStopAimingOrShooting(ped: number | IPed): void {
-    WaypointPlaybackStopAimingOrShooting(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    WaypointPlaybackStopAimingOrShooting(_ped);
 }
 
 /**
@@ -3690,7 +4030,8 @@ export function waypointRecordingGetSpeedAtPoint(name: string, point: number): n
  * Hash: 0x0EFE4834A2F40563 | Since: 3570 | API-Set: unknown
  */
 export function setAmbientPedEnableCollisionOnNetworkCloneWhenFixed(ped: number | IPed, enable: boolean): void {
-    Citizen.invokeNative('0x0EFE4834A2F40563', ped, enable);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x0EFE4834A2F40563', _ped, enable);
 }
 
 /**
@@ -3699,6 +4040,7 @@ export function setAmbientPedEnableCollisionOnNetworkCloneWhenFixed(ped: number 
  * Hash: 0x32F6EEF031F943DC | Since: 3095 | API-Set: unknown
  */
 export function setScriptEnableCollisionOnNetworkCloneWhenFixed(ped: number | IPed, enable: boolean): void {
-    Citizen.invokeNative('0x32F6EEF031F943DC', ped, enable);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x32F6EEF031F943DC', _ped, enable);
 }
 

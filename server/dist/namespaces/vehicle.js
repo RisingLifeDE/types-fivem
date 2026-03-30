@@ -1,10 +1,12 @@
+import { IEntity, IPed, IVehicle } from '@risinglife/fivem-shared';
 /**
  * **Note** This native will always return `1000.0` unless [SET_VEHICLE_BODY_HEALTH](#\_0xB77D05AC8C78AADB), [SET_VEHICLE_ENGINE_HEALTH](#\_0x45F6D8EEF34ABEF1), or [SET_VEHICLE_PETROL_TANK_HEALTH](#\_0x70DB57649FA8D0D8) have been called with a value greater than `1000.0`.
  *
  * Hash: 0xA886495D
  */
 export function getHeliBodyHealth(heli) {
-    return GetHeliBodyHealth(heli);
+    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    return GetHeliBodyHealth(_heli);
 }
 /**
  * This is a getter for [SET_DISABLE_HELI_EXPLODE_FROM_BODY_DAMAGE](#\_0xEDBC8405B3895CC9)
@@ -12,7 +14,8 @@ export function getHeliBodyHealth(heli) {
  * Hash: 0x82AFC0A3
  */
 export function getHeliDisableExplodeFromBodyDamage(heli) {
-    return GetHeliDisableExplodeFromBodyDamage(heli);
+    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    return GetHeliDisableExplodeFromBodyDamage(_heli);
 }
 /**
  * **Note** This native will always return `1000.0` unless [SET_VEHICLE_BODY_HEALTH](#\_0xB77D05AC8C78AADB), [SET_VEHICLE_ENGINE_HEALTH](#\_0x45F6D8EEF34ABEF1), or [SET_VEHICLE_PETROL_TANK_HEALTH](#\_0x70DB57649FA8D0D8) have been called with a value greater than `1000.0`.
@@ -20,7 +23,8 @@ export function getHeliDisableExplodeFromBodyDamage(heli) {
  * Hash: 0xA0FA0354
  */
 export function getHeliEngineHealth(heli) {
-    return GetHeliEngineHealth(heli);
+    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    return GetHeliEngineHealth(_heli);
 }
 /**
  * **Note** This native will always return `1000.0` unless [SET_VEHICLE_BODY_HEALTH](#\_0xB77D05AC8C78AADB), [SET_VEHICLE_ENGINE_HEALTH](#\_0x45F6D8EEF34ABEF1), or [SET_VEHICLE_PETROL_TANK_HEALTH](#\_0x70DB57649FA8D0D8) have been called with a value greater than `1000.0`.
@@ -28,7 +32,8 @@ export function getHeliEngineHealth(heli) {
  * Hash: 0xD4EC7858
  */
 export function getHeliGasTankHealth(heli) {
-    return GetHeliGasTankHealth(heli);
+    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    return GetHeliGasTankHealth(_heli);
 }
 /**
  * No comment provided
@@ -36,7 +41,8 @@ export function getHeliGasTankHealth(heli) {
  * Hash: 0xC37D668
  */
 export function getHeliMainRotorDamageScale(heli) {
-    return GetHeliMainRotorDamageScale(heli);
+    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    return GetHeliMainRotorDamageScale(_heli);
 }
 /**
  * No comment provided
@@ -44,7 +50,8 @@ export function getHeliMainRotorDamageScale(heli) {
  * Hash: 0x1944AC95
  */
 export function getHeliPitchControl(heli) {
-    return GetHeliPitchControl(heli);
+    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    return GetHeliPitchControl(_heli);
 }
 /**
  * No comment provided
@@ -52,7 +59,8 @@ export function getHeliPitchControl(heli) {
  * Hash: 0xC40161E2
  */
 export function getHeliRearRotorDamageScale(heli) {
-    return GetHeliRearRotorDamageScale(heli);
+    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    return GetHeliRearRotorDamageScale(_heli);
 }
 /**
  * This native is a getter for [SET_HELI_TAIL_ROTOR_HEALTH](#\_0xFE205F38AAA58E5B)
@@ -60,7 +68,8 @@ export function getHeliRearRotorDamageScale(heli) {
  * Hash: 0x33EE6E2B
  */
 export function getHeliRearRotorHealth(vehicle) {
-    return GetHeliRearRotorHealth(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetHeliRearRotorHealth(_vehicle);
 }
 /**
  * No comment provided
@@ -68,7 +77,8 @@ export function getHeliRearRotorHealth(vehicle) {
  * Hash: 0x12948DE9
  */
 export function getHeliRollControl(heli) {
-    return GetHeliRollControl(heli);
+    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    return GetHeliRollControl(_heli);
 }
 /**
  * No comment provided
@@ -76,7 +86,8 @@ export function getHeliRollControl(heli) {
  * Hash: 0x22239130
  */
 export function getHeliTailRotorDamageScale(heli) {
-    return GetHeliTailRotorDamageScale(heli);
+    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    return GetHeliTailRotorDamageScale(_heli);
 }
 /**
  * **Note**: This native is deprecated, please use [`GET_HELI_REAR_ROTOR_HEALTH`](#\_0x33EE6E2B) instead.
@@ -84,7 +95,8 @@ export function getHeliTailRotorDamageScale(heli) {
  * Hash: 0xA41BC13D
  */
 export function getHeliTailRotorHealth(vehicle) {
-    return GetHeliTailRotorHealth(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetHeliTailRotorHealth(_vehicle);
 }
 /**
  * No comment provided
@@ -92,7 +104,8 @@ export function getHeliTailRotorHealth(vehicle) {
  * Hash: 0x8E86238D
  */
 export function getHeliThrottleControl(heli) {
-    return GetHeliThrottleControl(heli);
+    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    return GetHeliThrottleControl(_heli);
 }
 /**
  * No comment provided
@@ -100,7 +113,8 @@ export function getHeliThrottleControl(heli) {
  * Hash: 0x8FDC0768
  */
 export function getHeliYawControl(heli) {
-    return GetHeliYawControl(heli);
+    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    return GetHeliYawControl(_heli);
 }
 /**
  * No comment provided
@@ -108,7 +122,8 @@ export function getHeliYawControl(heli) {
  * Hash: 0x3EFE38D1
  */
 export function getIsHeliEngineRunning(heli) {
-    return GetIsHeliEngineRunning(heli);
+    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    return GetIsHeliEngineRunning(_heli);
 }
 /**
  * No comment provided
@@ -116,7 +131,8 @@ export function getIsHeliEngineRunning(heli) {
  * Hash: 0x1C939E87
  */
 export function getThrusterSideRcsThrottle(jetpack) {
-    return GetThrusterSideRcsThrottle(jetpack);
+    const _jetpack = jetpack instanceof IVehicle ? jetpack.localId() : jetpack;
+    return GetThrusterSideRcsThrottle(_jetpack);
 }
 /**
  * No comment provided
@@ -124,7 +140,8 @@ export function getThrusterSideRcsThrottle(jetpack) {
  * Hash: 0x94E24C96
  */
 export function getThrusterThrottle(jetpack) {
-    return GetThrusterThrottle(jetpack);
+    const _jetpack = jetpack instanceof IVehicle ? jetpack.localId() : jetpack;
+    return GetThrusterThrottle(_jetpack);
 }
 /**
  * No comment provided
@@ -132,7 +149,8 @@ export function getThrusterThrottle(jetpack) {
  * Hash: 0x456E34A
  */
 export function getTrainBackwardCarriage(train) {
-    return GetTrainBackwardCarriage(train);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return GetTrainBackwardCarriage(_train);
 }
 /**
  * No comment provided
@@ -140,7 +158,8 @@ export function getTrainBackwardCarriage(train) {
  * Hash: 0x24DC88D9
  */
 export function getTrainForwardCarriage(train) {
-    return GetTrainForwardCarriage(train);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return GetTrainForwardCarriage(_train);
 }
 /**
  * This is a getter for the client-side native [`START_VEHICLE_HORN`](#\_0x9C8C6504B5B63D2C), which allows you to return the horn type of the vehicle.
@@ -159,7 +178,8 @@ export function getTrainForwardCarriage(train) {
  * Hash: 0xDEA49773
  */
 export function getHornType(vehicle) {
-    return GetVehicleHornType(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleHornType(_vehicle);
 }
 /**
  * This is a getter for [SET_HELI_TAIL_EXPLODE_THROW_DASHBOARD](#\_0x3EC8BF18AA453FE9)
@@ -167,7 +187,8 @@ export function getHornType(vehicle) {
  * Hash: 0x23E46BD7
  */
 export function isHeliTailBoomBreakable(heli) {
-    return IsHeliTailBoomBreakable(heli);
+    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    return IsHeliTailBoomBreakable(_heli);
 }
 /**
  * No comment provided
@@ -175,7 +196,8 @@ export function isHeliTailBoomBreakable(heli) {
  * Hash: 0x2C59F987
  */
 export function isHeliTailBoomBroken(heli) {
-    return IsHeliTailBoomBroken(heli);
+    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    return IsHeliTailBoomBroken(_heli);
 }
 /**
  * No comment provided
@@ -183,7 +205,8 @@ export function isHeliTailBoomBroken(heli) {
  * Hash: 0xFA9336E5
  */
 export function isTrainCaboose(train) {
-    return IsTrainCaboose(train);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return IsTrainCaboose(_train);
 }
 /**
  * No comment provided
@@ -191,7 +214,8 @@ export function isTrainCaboose(train) {
  * Hash: 0x77CC80DC
  */
 export function doesTrainStopAtStations(train) {
-    return DoesTrainStopAtStations(train);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return DoesTrainStopAtStations(_train);
 }
 /**
  * Gets the trains desired speed.
@@ -199,7 +223,8 @@ export function doesTrainStopAtStations(train) {
  * Hash: 0xA4921EF5
  */
 export function getTrainCruiseSpeed(train) {
-    return GetTrainCruiseSpeed(train);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return GetTrainCruiseSpeed(_train);
 }
 /**
  * Gets the direction the train is facing
@@ -207,7 +232,8 @@ export function getTrainCruiseSpeed(train) {
  * Hash: 0x8DAF79B6
  */
 export function getTrainDirection(train) {
-    return GetTrainDirection(train);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return GetTrainDirection(_train);
 }
 /**
  * No comment provided
@@ -215,7 +241,8 @@ export function getTrainDirection(train) {
  * Hash: 0x81B50033
  */
 export function getTrainState(train) {
-    return GetTrainState(train);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return GetTrainState(_train);
 }
 /**
  * No comment provided
@@ -223,7 +250,8 @@ export function getTrainState(train) {
  * Hash: 0x9AA339D
  */
 export function getTrainTrackIndex(train) {
-    return GetTrainTrackIndex(train);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return GetTrainTrackIndex(_train);
 }
 /**
  * No comment provided
@@ -231,7 +259,8 @@ export function getTrainTrackIndex(train) {
  * Hash: 0x483B013C
  */
 export function getHandbrake(vehicle) {
-    return GetVehicleHandbrake(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleHandbrake(_vehicle);
 }
 /**
  * No comment provided
@@ -239,7 +268,8 @@ export function getHandbrake(vehicle) {
  * Hash: 0x1382FCEA
  */
 export function getSteeringAngle(vehicle) {
-    return GetVehicleSteeringAngle(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleSteeringAngle(_vehicle);
 }
 /**
  * No comment provided
@@ -247,7 +277,8 @@ export function getSteeringAngle(vehicle) {
  * Hash: 0xBB340D04
  */
 export function isEngineStarting(vehicle) {
-    return IsVehicleEngineStarting(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsVehicleEngineStarting(_vehicle);
 }
 /**
  * Creates a vehicle with the specified model at the specified position. This vehicle will initially be owned by the creating
@@ -285,7 +316,8 @@ export function createServerSetter(modelHash, _type, pos, heading) {
  * Hash: 0x523BA3DA
  */
 export function deleteTrain(entity) {
-    DeleteTrain(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    DeleteTrain(_entity);
 }
 /**
  * No comment provided
@@ -293,7 +325,8 @@ export function deleteTrain(entity) {
  * Hash: 0x43F15989
  */
 export function doesBoatSinkWhenWrecked(vehicle) {
-    return DoesBoatSinkWhenWrecked(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return DoesBoatSinkWhenWrecked(_vehicle);
 }
 /**
  * Returns all vehicle handles known to the server.
@@ -314,7 +347,8 @@ export function getAlls() {
  * Hash: 0x7DC6D022
  */
 export function getIsEngineRunning(vehicle) {
-    return GetIsVehicleEngineRunning(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetIsVehicleEngineRunning(_vehicle);
 }
 /**
  * No comment provided
@@ -322,7 +356,8 @@ export function getIsEngineRunning(vehicle) {
  * Hash: 0xD7EC8760
  */
 export function getIsPrimaryColourCustom(vehicle) {
-    return GetIsVehiclePrimaryColourCustom(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetIsVehiclePrimaryColourCustom(_vehicle);
 }
 /**
  * No comment provided
@@ -330,7 +365,8 @@ export function getIsPrimaryColourCustom(vehicle) {
  * Hash: 0x288AD228
  */
 export function getIsSecondaryColourCustom(vehicle) {
-    return GetIsVehicleSecondaryColourCustom(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetIsVehicleSecondaryColourCustom(_vehicle);
 }
 /**
  * See the client-side [GET_LANDING_GEAR_STATE](#\_0x9B0F3DCA3DB0F4CD) native for a description of landing gear states.
@@ -338,7 +374,8 @@ export function getIsSecondaryColourCustom(vehicle) {
  * Hash: 0xA6F02670
  */
 export function getLandingGearState(vehicle) {
-    return GetLandingGearState(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetLandingGearState(_vehicle);
 }
 /**
  * No comment provided
@@ -346,7 +383,8 @@ export function getLandingGearState(vehicle) {
  * Hash: 0x95070FA
  */
 export function getTrainCarriageEngine(train) {
-    return GetTrainCarriageEngine(train);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return GetTrainCarriageEngine(_train);
 }
 /**
  * No comment provided
@@ -354,7 +392,8 @@ export function getTrainCarriageEngine(train) {
  * Hash: 0x4B8285CF
  */
 export function getTrainCarriageIndex(train) {
-    return GetTrainCarriageIndex(train);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return GetTrainCarriageIndex(_train);
 }
 /**
  * No comment provided
@@ -362,7 +401,8 @@ export function getTrainCarriageIndex(train) {
  * Hash: 0x2B2FCC28
  */
 export function getBodyHealth(vehicle) {
-    return GetVehicleBodyHealth(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleBodyHealth(_vehicle);
 }
 /**
  * No comment provided
@@ -370,7 +410,8 @@ export function getBodyHealth(vehicle) {
  * Hash: 0x40D82D88
  */
 export function getColours(vehicle) {
-    return GetVehicleColours(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleColours(_vehicle);
 }
 /**
  * No comment provided
@@ -378,7 +419,8 @@ export function getColours(vehicle) {
  * Hash: 0x1C2B9FEF
  */
 export function getCustomPrimaryColour(vehicle) {
-    return GetVehicleCustomPrimaryColour(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleCustomPrimaryColour(_vehicle);
 }
 /**
  * No comment provided
@@ -386,7 +428,8 @@ export function getCustomPrimaryColour(vehicle) {
  * Hash: 0x3FF247A2
  */
 export function getCustomSecondaryColour(vehicle) {
-    return GetVehicleCustomSecondaryColour(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleCustomSecondaryColour(_vehicle);
 }
 /**
  * No comment provided
@@ -394,7 +437,8 @@ export function getCustomSecondaryColour(vehicle) {
  * Hash: 0xA0DBD08D
  */
 export function getDashboardColour(vehicle) {
-    return GetVehicleDashboardColour(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleDashboardColour(_vehicle);
 }
 /**
  * No comment provided
@@ -402,7 +446,8 @@ export function getDashboardColour(vehicle) {
  * Hash: 0xFD15C065
  */
 export function getDirtLevel(vehicle) {
-    return GetVehicleDirtLevel(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleDirtLevel(_vehicle);
 }
 /**
  * Currently it only works when set to "all players".
@@ -410,7 +455,8 @@ export function getDirtLevel(vehicle) {
  * Hash: 0x1DC50247
  */
 export function getDoorsLockedForPlayer(vehicle) {
-    return GetVehicleDoorsLockedForPlayer(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleDoorsLockedForPlayer(_vehicle);
 }
 /**
  * ```lua
@@ -432,7 +478,8 @@ export function getDoorsLockedForPlayer(vehicle) {
  * Hash: 0xD72CEF2
  */
 export function getDoorLockStatus(vehicle) {
-    return GetVehicleDoorLockStatus(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleDoorLockStatus(_vehicle);
 }
 /**
  * Returns the open position of the specified door on the target vehicle.
@@ -440,7 +487,8 @@ export function getDoorLockStatus(vehicle) {
  * Hash: 0x6E35C49C
  */
 export function getDoorStatus(vehicle, doorIndex) {
-    return GetVehicleDoorStatus(vehicle, doorIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleDoorStatus(_vehicle, doorIndex);
 }
 /**
  * No comment provided
@@ -448,7 +496,8 @@ export function getDoorStatus(vehicle, doorIndex) {
  * Hash: 0x8880038A
  */
 export function getEngineHealth(vehicle) {
-    return GetVehicleEngineHealth(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleEngineHealth(_vehicle);
 }
 /**
  * No comment provided
@@ -456,7 +505,8 @@ export function getEngineHealth(vehicle) {
  * Hash: 0x80E4659B
  */
 export function getExtraColours(vehicle) {
-    return GetVehicleExtraColours(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleExtraColours(_vehicle);
 }
 /**
  * Gets the flight nozzel position for the specified vehicle. See the client-side [\_GET_VEHICLE_FLIGHT_NOZZLE_POSITION](#\_0xDA62027C8BDB326E) native for usage examples.
@@ -464,7 +514,8 @@ export function getExtraColours(vehicle) {
  * Hash: 0xAD40AD55
  */
 export function getFlightNozzlePosition(vehicle) {
-    return GetVehicleFlightNozzlePosition(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleFlightNozzlePosition(_vehicle);
 }
 /**
  * No comment provided
@@ -472,7 +523,8 @@ export function getFlightNozzlePosition(vehicle) {
  * Hash: 0xD7147656
  */
 export function getHeadlightsColour(vehicle) {
-    return GetVehicleHeadlightsColour(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleHeadlightsColour(_vehicle);
 }
 /**
  * Gets the lock on state for the specified vehicle. See the client-side [GET_VEHICLE_HOMING_LOCKON_STATE](#\_0xE6B0E8CFC3633BF0) native for a description of lock on states.
@@ -480,7 +532,8 @@ export function getHeadlightsColour(vehicle) {
  * Hash: 0xFBDE9FD8
  */
 export function getHomingLockonState(vehicle) {
-    return GetVehicleHomingLockonState(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleHomingLockonState(_vehicle);
 }
 /**
  * No comment provided
@@ -488,7 +541,8 @@ export function getHomingLockonState(vehicle) {
  * Hash: 0xCCFF3B6E
  */
 export function getInteriorColour(vehicle) {
-    return GetVehicleInteriorColour(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleInteriorColour(_vehicle);
 }
 /**
  * No comment provided
@@ -496,7 +550,8 @@ export function getInteriorColour(vehicle) {
  * Hash: 0x7C278621
  */
 export function getLightsState(vehicle) {
-    return GetVehicleLightsState(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleLightsState(_vehicle);
 }
 /**
  * No comment provided
@@ -504,7 +559,8 @@ export function getLightsState(vehicle) {
  * Hash: 0xEC82A51D
  */
 export function getLivery(vehicle) {
-    return GetVehicleLivery(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleLivery(_vehicle);
 }
 /**
  * Gets the vehicle that is locked on to for the specified vehicle.
@@ -512,7 +568,8 @@ export function getLivery(vehicle) {
  * Hash: 0x4A557117
  */
 export function getLockOnTarget(vehicle) {
-    return GetVehicleLockOnTarget(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleLockOnTarget(_vehicle);
 }
 /**
  * Getter to check the neon colour of a vehicle. This native is the server side getter of [GET_VEHICLE_NEON_LIGHTS_COLOUR](#\_0x7619EEE8C886757F).
@@ -520,7 +577,8 @@ export function getLockOnTarget(vehicle) {
  * Hash: 0xD9319DCB
  */
 export function getNeonColour(vehicle) {
-    return GetVehicleNeonColour(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleNeonColour(_vehicle);
 }
 /**
  * Getter to check if one of the neon lights of a vehicle is enabled. This native is the server side getter of [IS_VEHICLE_NEON_LIGHT_ENABLED](#\_0x8C4B92553E4766A5).
@@ -538,7 +596,8 @@ export function getNeonColour(vehicle) {
  * Hash: 0x684BDBF2
  */
 export function getNeonEnabled(vehicle, neonIndex) {
-    return GetVehicleNeonEnabled(vehicle, neonIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleNeonEnabled(_vehicle, neonIndex);
 }
 /**
  * No comment provided
@@ -546,7 +605,8 @@ export function getNeonEnabled(vehicle, neonIndex) {
  * Hash: 0xE8522D58
  */
 export function getNumberPlateText(vehicle) {
-    return GetVehicleNumberPlateText(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleNumberPlateText(_vehicle);
 }
 /**
  * No comment provided
@@ -554,7 +614,8 @@ export function getNumberPlateText(vehicle) {
  * Hash: 0x499747B6
  */
 export function getNumberPlateTextIndex(vehicle) {
-    return GetVehicleNumberPlateTextIndex(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleNumberPlateTextIndex(_vehicle);
 }
 /**
  * Gets the vehicle the specified Ped is/was in depending on bool value. This native is used server side when using OneSync.
@@ -562,7 +623,8 @@ export function getNumberPlateTextIndex(vehicle) {
  * Hash: 0xAFE92319
  */
 export function getPedIsIn(ped, lastVehicle) {
-    return GetVehiclePedIsIn(ped, lastVehicle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetVehiclePedIsIn(_ped, lastVehicle);
 }
 /**
  * No comment provided
@@ -570,7 +632,8 @@ export function getPedIsIn(ped, lastVehicle) {
  * Hash: 0xE41595CE
  */
 export function getPetrolTankHealth(vehicle) {
-    return GetVehiclePetrolTankHealth(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehiclePetrolTankHealth(_vehicle);
 }
 /**
  * No comment provided
@@ -578,7 +641,8 @@ export function getPetrolTankHealth(vehicle) {
  * Hash: 0x57037960
  */
 export function getRadioStationIndex(vehicle) {
-    return GetVehicleRadioStationIndex(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleRadioStationIndex(_vehicle);
 }
 /**
  * No comment provided
@@ -586,7 +650,8 @@ export function getRadioStationIndex(vehicle) {
  * Hash: 0x872CF42
  */
 export function getRoofLivery(vehicle) {
-    return GetVehicleRoofLivery(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleRoofLivery(_vehicle);
 }
 /**
  * No comment provided
@@ -594,7 +659,8 @@ export function getRoofLivery(vehicle) {
  * Hash: 0x9963D5F9
  */
 export function getTotalRepairs(vehicle) {
-    return GetVehicleTotalRepairs(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleTotalRepairs(_vehicle);
 }
 /**
  * No comment provided
@@ -602,7 +668,8 @@ export function getTotalRepairs(vehicle) {
  * Hash: 0x75280015
  */
 export function getTyreSmokeColor(vehicle) {
-    return GetVehicleTyreSmokeColor(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleTyreSmokeColor(_vehicle);
 }
 /**
  * No comment provided
@@ -610,7 +677,8 @@ export function getTyreSmokeColor(vehicle) {
  * Hash: 0xDA58D7AE
  */
 export function getWheelType(vehicle) {
-    return GetVehicleWheelType(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelType(_vehicle);
 }
 /**
  * No comment provided
@@ -618,7 +686,8 @@ export function getWheelType(vehicle) {
  * Hash: 0x13D53892
  */
 export function getWindowTint(vehicle) {
-    return GetVehicleWindowTint(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWindowTint(_vehicle);
 }
 /**
  * No comment provided
@@ -626,7 +695,8 @@ export function getWindowTint(vehicle) {
  * Hash: 0xB8AF3137
  */
 export function hasBeenDamagedByBullets(vehicle) {
-    return HasVehicleBeenDamagedByBullets(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return HasVehicleBeenDamagedByBullets(_vehicle);
 }
 /**
  * No comment provided
@@ -634,7 +704,8 @@ export function hasBeenDamagedByBullets(vehicle) {
  * Hash: 0xE4E83A5B
  */
 export function hasBeenOwnedByPlayer(vehicle) {
-    return HasVehicleBeenOwnedByPlayer(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return HasVehicleBeenOwnedByPlayer(_vehicle);
 }
 /**
  * No comment provided
@@ -642,7 +713,8 @@ export function hasBeenOwnedByPlayer(vehicle) {
  * Hash: 0xD5C39EE6
  */
 export function isBoatAnchoredAndFrozen(vehicle) {
-    return IsBoatAnchoredAndFrozen(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsBoatAnchoredAndFrozen(_vehicle);
 }
 /**
  * No comment provided
@@ -650,7 +722,8 @@ export function isBoatAnchoredAndFrozen(vehicle) {
  * Hash: 0x9049DB44
  */
 export function isBoatWrecked(vehicle) {
-    return IsBoatWrecked(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsBoatWrecked(_vehicle);
 }
 /**
  * No comment provided
@@ -658,7 +731,8 @@ export function isBoatWrecked(vehicle) {
  * Hash: 0x42098B5
  */
 export function isExtraTurnedOn(vehicle, extraId) {
-    return IsVehicleExtraTurnedOn(vehicle, extraId);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsVehicleExtraTurnedOn(_vehicle, extraId);
 }
 /**
  * No comment provided
@@ -666,7 +740,8 @@ export function isExtraTurnedOn(vehicle, extraId) {
  * Hash: 0x25EB5873
  */
 export function isSirenOn(vehicle) {
-    return IsVehicleSirenOn(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsVehicleSirenOn(_vehicle);
 }
 /**
  * No comment provided
@@ -674,7 +749,8 @@ export function isSirenOn(vehicle) {
  * Hash: 0x48C80210
  */
 export function isTyreBurst(vehicle, wheelID, completely) {
-    return IsVehicleTyreBurst(vehicle, wheelID, completely);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsVehicleTyreBurst(_vehicle, wheelID, completely);
 }
 /**
  * See the client-side [IS_VEHICLE_WINDOW_INTACT](#\_0x46E571A0E20D01F1) for a window indexes list.
@@ -682,7 +758,8 @@ export function isTyreBurst(vehicle, wheelID, completely) {
  * Hash: 0xAC4EF23D
  */
 export function isWindowIntact(vehicle, windowIndex) {
-    return IsVehicleWindowIntact(vehicle, windowIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsVehicleWindowIntact(_vehicle, windowIndex);
 }
 /**
  * SET_VEHICLE_ALARM
@@ -692,7 +769,8 @@ export function isWindowIntact(vehicle, windowIndex) {
  * Hash: 0x24877D84
  */
 export function setAlarm(vehicle, state) {
-    SetVehicleAlarm(vehicle, state);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleAlarm(_vehicle, state);
 }
 /**
  * ```
@@ -704,7 +782,8 @@ export function setAlarm(vehicle, state) {
  * Hash: 0x920C2517
  */
 export function setBodyHealth(vehicle, value) {
-    SetVehicleBodyHealth(vehicle, value);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleBodyHealth(_vehicle, value);
 }
 /**
  * colorPrimary & colorSecondary are the paint indexes for the vehicle.
@@ -715,7 +794,8 @@ export function setBodyHealth(vehicle, value) {
  * Hash: 0x57F24253
  */
 export function setColours(vehicle, colorPrimary, colorSecondary) {
-    SetVehicleColours(vehicle, colorPrimary, colorSecondary);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleColours(_vehicle, colorPrimary, colorSecondary);
 }
 /**
  * Sets the selected vehicle's colors to their default value (specific variant specified using the colorCombination parameter).
@@ -726,7 +806,8 @@ export function setColours(vehicle, colorPrimary, colorSecondary) {
  * Hash: 0xA557AEAD
  */
 export function setColourCombination(vehicle, colorCombination) {
-    SetVehicleColourCombination(vehicle, colorCombination);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleColourCombination(_vehicle, colorCombination);
 }
 /**
  * ```
@@ -738,7 +819,8 @@ export function setColourCombination(vehicle, colorCombination) {
  * Hash: 0x8DF9F9BC
  */
 export function setCustomPrimaryColour(vehicle, r, g, b) {
-    SetVehicleCustomPrimaryColour(vehicle, r, g, b);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleCustomPrimaryColour(_vehicle, r, g, b);
 }
 /**
  * ```
@@ -750,7 +832,8 @@ export function setCustomPrimaryColour(vehicle, r, g, b) {
  * Hash: 0x9D77259E
  */
 export function setCustomSecondaryColour(vehicle, r, g, b) {
-    SetVehicleCustomSecondaryColour(vehicle, r, g, b);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleCustomSecondaryColour(_vehicle, r, g, b);
 }
 /**
  * Sets the dirt level of the passed vehicle.
@@ -760,7 +843,8 @@ export function setCustomSecondaryColour(vehicle, r, g, b) {
  * Hash: 0x2B39128B
  */
 export function setDirtLevel(vehicle, dirtLevel) {
-    SetVehicleDirtLevel(vehicle, dirtLevel);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleDirtLevel(_vehicle, dirtLevel);
 }
 /**
  * Locks the doors of a specified vehicle to a defined lock state, affecting how players and NPCs can interact with the vehicle.
@@ -801,7 +885,8 @@ export function setDirtLevel(vehicle, dirtLevel) {
  * Hash: 0x4CDD35D0
  */
 export function setDoorsLocked(vehicle, doorLockStatus) {
-    SetVehicleDoorsLocked(vehicle, doorLockStatus);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleDoorsLocked(_vehicle, doorLockStatus);
 }
 /**
  * See eDoorId declared in [`SET_VEHICLE_DOOR_SHUT`](#\_0x93D9BD300D7789E5)
@@ -811,7 +896,8 @@ export function setDoorsLocked(vehicle, doorLockStatus) {
  * Hash: 0x8147FEA7
  */
 export function setDoorBroken(vehicle, doorIndex, deleteDoor) {
-    SetVehicleDoorBroken(vehicle, doorIndex, deleteDoor);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleDoorBroken(_vehicle, doorIndex, deleteDoor);
 }
 /**
  * SET_VEHICLE_NUMBER_PLATE_TEXT
@@ -821,7 +907,8 @@ export function setDoorBroken(vehicle, doorIndex, deleteDoor) {
  * Hash: 0x400F9556
  */
 export function setNumberPlateText(vehicle, plateText) {
-    SetVehicleNumberPlateText(vehicle, plateText);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleNumberPlateText(_vehicle, plateText);
 }
 /**
  * Returns the type of the passed vehicle.
@@ -842,5 +929,6 @@ export function setNumberPlateText(vehicle, plateText) {
  * Hash: 0xA273060E
  */
 export function getType(vehicle) {
-    return GetVehicleType(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleType(_vehicle);
 }

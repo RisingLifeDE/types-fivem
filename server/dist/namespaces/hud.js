@@ -1,3 +1,4 @@
+import { IEntity, IBlip } from '@risinglife/fivem-shared';
 /**
  * Creates a blip for the specified coordinates. You can use `SET_BLIP_` natives to change the blip.
  *
@@ -21,7 +22,8 @@ export function addBlipForCoord(pos) {
  * Hash: 0x30822554
  */
 export function addBlipForEntity(entity) {
-    return AddBlipForEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return AddBlipForEntity(_entity);
 }
 /**
  * Create a blip with a radius for the specified coordinates (it doesnt create the blip sprite, so you need to use [AddBlipCoords](#\_0xC6F43D0E))
@@ -44,7 +46,8 @@ export function addBlipForRadius(pos, radius) {
  * Hash: 0xD8C3C1CD
  */
 export function removeBlip(blip) {
-    RemoveBlip(blip);
+    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    RemoveBlip(_blip);
 }
 /**
  * Sets the displayed sprite for a specific blip.
@@ -55,7 +58,8 @@ export function removeBlip(blip) {
  * Hash: 0x8DBBB0B9
  */
 export function setBlipSprite(blip, spriteId) {
-    SetBlipSprite(blip, spriteId);
+    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    SetBlipSprite(_blip, spriteId);
 }
 /**
  * Adds a rectangular blip for the specified coordinates/area.

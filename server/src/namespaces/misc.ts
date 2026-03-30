@@ -51,7 +51,8 @@ export function getHashKey(model: string): number {
  * Hash: 0xF01E2AAB
  */
 export function getHeliMainRotorHealth(vehicle: number | IVehicle): number {
-    return GetHeliMainRotorHealth(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetHeliMainRotorHealth(_vehicle);
 }
 
 /**
@@ -78,7 +79,8 @@ export function getPasswordHash(password: string): string {
  * Hash: 0x76876154
  */
 export function isFlashLightOn(ped: number | IPed): boolean {
-    return IsFlashLightOn(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsFlashLightOn(_ped);
 }
 
 /**
@@ -96,7 +98,8 @@ export function performHttpRequestInternal(requestData: string, requestDataLengt
  * Hash: 0x6B171E87
  */
 export function performHttpRequestInternalEx(requestData: number | IObject): number {
-    return PerformHttpRequestInternalEx(requestData);
+    const _requestData = requestData instanceof IObject ? requestData.handle() : requestData;
+    return PerformHttpRequestInternalEx(_requestData);
 }
 
 /**
@@ -347,7 +350,8 @@ export function executeCommand(commandString: string): void {
  * Hash: 0xD70C3BCA
  */
 export function formatStackTrace(traceData: number | IObject): string {
-    return FormatStackTrace(traceData);
+    const _traceData = traceData instanceof IObject ? traceData.handle() : traceData;
+    return FormatStackTrace(_traceData);
 }
 
 /**

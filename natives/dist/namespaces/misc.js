@@ -1,4 +1,4 @@
-import { Vector3 } from '@risinglife/fivem-shared';
+import { Vector3, IEntity, IPed, IPlayer } from '@risinglife/fivem-shared';
 /**
  * No comment provided
  *
@@ -521,7 +521,8 @@ export function createIncident(dispatchService, pos, numUnits, radius) {
  * Hash: 0x05983472F0494E60 | Since: 323
  */
 export function createIncidentWithEntity(dispatchService, ped, numUnits, radius) {
-    return CreateIncidentWithEntity(dispatchService, ped, numUnits, radius, undefined, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return CreateIncidentWithEntity(dispatchService, _ped, numUnits, radius, undefined, undefined);
 }
 /**
  * Delete an incident with a given id.
@@ -675,7 +676,8 @@ export function enableStuntJumpSet() {
  * Hash: 0x28A04B411933F8A6 | Since: 323
  */
 export function enableTennisMode(ped, toggle) {
-    EnableTennisMode(ped, toggle, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    EnableTennisMode(_ped, toggle, false);
 }
 /**
  * No comment provided
@@ -837,9 +839,10 @@ export function getCoordsOfProjectileTypeInArea(x1, y1, z1, x2, y2, z2, projecti
  * Hash: 0xDFB4138EEFED7B81 | Since: 323
  */
 export function getCoordsOfProjectileTypeWithinDistance(ped, weaponHash, distance) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    return GetCoordsOfProjectileTypeWithinDistance(ped, weaponHash, distance, false);
+    return GetCoordsOfProjectileTypeWithinDistance(_ped, weaponHash, distance, false);
 }
 /**
  * No comment provided
@@ -1065,9 +1068,10 @@ export function getProfileSetting(profileSetting) {
  * Hash: 0x82FDE6A57EE4EE44 | Since: 323
  */
 export function getProjectileOfProjectileTypeWithinDistance(ped, weaponHash, distance) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    return GetProjectileNearPed(ped, weaponHash, distance, false);
+    return GetProjectileNearPed(_ped, weaponHash, distance, false);
 }
 /**
  * No comment provided
@@ -1211,7 +1215,8 @@ export function getSystemTimeStep() {
  * Hash: 0x19BFED045C647C49 | Since: 323
  */
 export function getTennisSwingAnimCanBeInterrupted(ped) {
-    return Citizen.invokeNative('0x19BFED045C647C49', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x19BFED045C647C49', _ped);
 }
 /**
  * No comment provided
@@ -1219,7 +1224,8 @@ export function getTennisSwingAnimCanBeInterrupted(ped) {
  * Hash: 0x17DF68D720AA77F8 | Since: 323
  */
 export function getTennisSwingAnimComplete(ped) {
-    return GetTennisSwingAnimComplete(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetTennisSwingAnimComplete(_ped);
 }
 /**
  * No comment provided
@@ -1227,7 +1233,8 @@ export function getTennisSwingAnimComplete(ped) {
  * Hash: 0xE95B0C7D5BA3B96B | Since: 323
  */
 export function getTennisSwingAnimSwung(ped) {
-    return Citizen.invokeNative('0xE95B0C7D5BA3B96B', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0xE95B0C7D5BA3B96B', _ped);
 }
 /**
  * No comment provided
@@ -1538,7 +1545,8 @@ export function isPopMultiplierAreaNetworked(id) {
  * Hash: 0xADCDE75E1C60F32D | Since: 323
  */
 export function isPositionOccupied(pos, range, checkVehicles, checkPeds, ignoreEntity) {
-    return IsPositionOccupied(pos.x, pos.y, pos.z, range, false, checkVehicles, checkPeds, false, false, ignoreEntity, false);
+    const _ignoreEntity = ignoreEntity instanceof IEntity ? ignoreEntity.handle() : ignoreEntity;
+    return IsPositionOccupied(pos.x, pos.y, pos.z, range, false, checkVehicles, checkPeds, false, false, _ignoreEntity, false);
 }
 /**
  * No comment provided
@@ -1681,7 +1689,8 @@ export function isStuntJumpMessageShowing() {
  * Hash: 0x5D5479D115290C3F | Since: 323
  */
 export function isTennisMode(ped) {
-    return IsTennisMode(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsTennisMode(_ped);
 }
 /**
  * No comment provided
@@ -1791,7 +1800,8 @@ export function pauseDeathArrestRestart(toggle) {
  * Hash: 0x8FA9C42FC5D7C64B | Since: 323
  */
 export function playTennisDiveAnim(ped) {
-    PlayTennisDiveAnim(ped, 0, 0, 0, 0, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayTennisDiveAnim(_ped, 0, 0, 0, 0, false);
 }
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
@@ -1799,7 +1809,8 @@ export function playTennisDiveAnim(ped) {
  * Hash: 0xE266ED23311F24D4 | Since: 323
  */
 export function playTennisSwingAnim(ped, animDict, animName) {
-    PlayTennisSwingAnim(ped, animDict, animName, 0, 0, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayTennisSwingAnim(_ped, animDict, animName, 0, 0, false);
 }
 /**
  * Returns duration of how long the game has been in power-saving mode (aka "constrained") in milliseconds.
@@ -2074,7 +2085,8 @@ export function saveEndUserBenchmark() {
  * Hash: 0x8EF5573A1F801A5C | Since: 323
  */
 export function scriptRaceGetPlayerSplitTime(player) {
-    return ScriptRaceGetPlayerSplitTime(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return ScriptRaceGetPlayerSplitTime(_player);
 }
 /**
  * No comment provided
@@ -2090,7 +2102,8 @@ export function scriptRaceInit() {
  * Hash: 0x1BB299305C3E8C13 | Since: 323
  */
 export function scriptRacePlayerHitCheckpoint(player) {
-    ScriptRacePlayerHitCheckpoint(player, undefined, undefined, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    ScriptRacePlayerHitCheckpoint(_player, undefined, undefined, undefined);
 }
 /**
  * No comment provided
@@ -2106,7 +2119,8 @@ export function scriptRaceShutdown() {
  * Hash: 0x438822C279B73B93 | Since: 573
  */
 export function setBeastJumpThisFrame(player) {
-    SetBeastModeActive(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetBeastModeActive(_player);
 }
 /**
  * This sets bit [offset] of [address] to on.
@@ -2179,7 +2193,7 @@ export function setCreditsFadeOutWithScreen(toggle) {
 /**
  * Mixes two weather types. If percentWeather2 is set to 0.0f, then the weather will be entirely of weatherType1, if it is set to 1.0f it will be entirely of weatherType2. If it's set somewhere in between, there will be a mixture of weather behaviors. To test, try this in the RPH console, and change the float to different values between 0 and 1:
  *
- * execute "NativeFunction.Natives.x578C752848ECFA0C(Game.GetHashKey(""RAIN""), GetHashKey(""SMOG""), 0.50f);
+ * execute "NativeFunction.Natives.x578C752848ECFA0C(Game.GetHashKey(""RAIN""), Game.GetHashKey(""SMOG""), 0.50f);
  *
  * Note that unlike most of the other weather natives, this native takes the hash of the weather name, not the plain string. These are the weather names and their hashes:
  *
@@ -2254,7 +2268,8 @@ export function setDispatchTimeBetweenSpawnAttemptsMultiplier() {
  * Hash: 0xA66C71C98D5F2CFB | Since: 323
  */
 export function setExplosiveAmmoThisFrame(player) {
-    SetExplosiveAmmoThisFrame(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetExplosiveAmmoThisFrame(_player);
 }
 /**
  * No comment provided
@@ -2262,7 +2277,8 @@ export function setExplosiveAmmoThisFrame(player) {
  * Hash: 0xFF1BED81BFDC0FE0 | Since: 323
  */
 export function setExplosiveMeleeThisFrame(player) {
-    SetExplosiveMeleeThisFrame(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetExplosiveMeleeThisFrame(_player);
 }
 /**
  * Sets whether the game should fade in after the player dies or is arrested.
@@ -2312,7 +2328,8 @@ export function setFakeWantedLevel(fakeWantedLevel) {
  * Hash: 0x11879CDD803D30F4 | Since: 323
  */
 export function setFireAmmoThisFrame(player) {
-    SetFireAmmoThisFrame(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetFireAmmoThisFrame(_player);
 }
 /**
  * No comment provided
@@ -2320,7 +2337,8 @@ export function setFireAmmoThisFrame(player) {
  * Hash: 0xA1183BCFEE0F93D1 | Since: 1180
  */
 export function setForcedJumpThisFrame(player) {
-    SetForcePlayerToJump(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetForcePlayerToJump(_player);
 }
 /**
  * Make sure to call this from the correct thread if you're using multiple threads because all other threads except the one which is calling SET_GAME_PAUSED will be paused which means you will lose control and the game remains in paused mode until you exit GTA5.exe
@@ -2530,7 +2548,8 @@ export function setStuntJumpsCanTrigger(toggle) {
  * Hash: 0x57FFF03E423A4C0B | Since: 323
  */
 export function setSuperJumpThisFrame(player) {
-    SetSuperJumpThisFrame(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetSuperJumpThisFrame(_player);
 }
 /**
  * From the scripts:
@@ -2542,7 +2561,8 @@ export function setSuperJumpThisFrame(player) {
  * Hash: 0x54F157E0336A3822 | Since: 323
  */
 export function setTennisMoveNetworkSignalFloat(ped) {
-    Citizen.invokeNative('0x54F157E0336A3822', ped, undefined, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x54F157E0336A3822', _ped, undefined, 0);
 }
 /**
  * Sets bit 3 in GtaThread+0x150
@@ -2705,9 +2725,10 @@ export function setWindSpeed(speed) {
  * Hash: 0x867654CBC7606F2C | Since: 323
  */
 export function shootSingleBulletBetweenCoords(x1, y1, z1, x2, y2, z2, damage, weaponHash, ownerPed, isAudible, isInvisible, speed) {
+    const _ownerPed = ownerPed instanceof IPed ? ownerPed.handle() : ownerPed;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    ShootSingleBulletBetweenCoords(x1, y1, z1, x2, y2, z2, damage, false, weaponHash, ownerPed, isAudible, isInvisible, speed);
+    ShootSingleBulletBetweenCoords(x1, y1, z1, x2, y2, z2, damage, false, weaponHash, _ownerPed, isAudible, isInvisible, speed);
 }
 /**
  * entity - entity to ignore
@@ -2715,9 +2736,11 @@ export function shootSingleBulletBetweenCoords(x1, y1, z1, x2, y2, z2, damage, w
  * Hash: 0xE3A7742E0B7A2F8B | Since: 323
  */
 export function shootSingleBulletBetweenCoordsIgnoreEntity(x1, y1, z1, x2, y2, z2, damage, weaponHash, ownerPed, isAudible, isInvisible, speed, entity) {
+    const _ownerPed = ownerPed instanceof IPed ? ownerPed.handle() : ownerPed;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    ShootSingleBulletBetweenCoordsIgnoreEntity(x1, y1, z1, x2, y2, z2, damage, false, weaponHash, ownerPed, isAudible, isInvisible, speed, entity, undefined);
+    ShootSingleBulletBetweenCoordsIgnoreEntity(x1, y1, z1, x2, y2, z2, damage, false, weaponHash, _ownerPed, isAudible, isInvisible, speed, _entity, undefined);
 }
 /**
  * entity - entity to ignore
@@ -2726,9 +2749,12 @@ export function shootSingleBulletBetweenCoordsIgnoreEntity(x1, y1, z1, x2, y2, z
  * Hash: 0xBFE5756E7407064A | Since: 323
  */
 export function shootSingleBulletBetweenCoordsIgnoreEntityNew(x1, y1, z1, x2, y2, z2, damage, weaponHash, ownerPed, isAudible, isInvisible, speed, entity, targetEntity) {
+    const _ownerPed = ownerPed instanceof IPed ? ownerPed.handle() : ownerPed;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _targetEntity = targetEntity instanceof IEntity ? targetEntity.handle() : targetEntity;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    ShootSingleBulletBetweenCoordsIgnoreEntityNew(x1, y1, z1, x2, y2, z2, damage, false, weaponHash, ownerPed, isAudible, isInvisible, speed, entity, false, false, targetEntity, false, undefined, undefined, undefined);
+    ShootSingleBulletBetweenCoordsIgnoreEntityNew(x1, y1, z1, x2, y2, z2, damage, false, weaponHash, _ownerPed, isAudible, isInvisible, speed, _entity, false, false, _targetEntity, false, undefined, undefined, undefined);
 }
 /**
  * Returns true if the game is using the metric measurement system (profile setting 227), false if imperial is used.

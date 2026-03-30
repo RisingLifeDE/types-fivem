@@ -8,9 +8,10 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0x3E1E286D
  */
 export function giveComponentToPed(ped: number | IPed, weaponHash: number | string, componentHash: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
-    GiveWeaponComponentToPed(ped, weaponHash, componentHash);
+    GiveWeaponComponentToPed(_ped, weaponHash, componentHash);
 }
 
 /**
@@ -21,8 +22,9 @@ export function giveComponentToPed(ped: number | IPed, weaponHash: number | stri
  * Hash: 0xC4D88A85
  */
 export function giveToPed(ped: number | IPed, weaponHash: number | string, ammoCount: number, isHidden: boolean, bForceInHand: boolean): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
-    GiveWeaponToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand);
+    GiveWeaponToPed(_ped, weaponHash, ammoCount, isHidden, bForceInHand);
 }
 
 /**
@@ -34,7 +36,8 @@ export function giveToPed(ped: number | IPed, weaponHash: number | string, ammoC
  * Hash: 0xA44CE817
  */
 export function removeAllPeds(ped: number | IPed): void {
-    RemoveAllPedWeapons(ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    RemoveAllPedWeapons(_ped, false);
 }
 
 /**
@@ -45,9 +48,10 @@ export function removeAllPeds(ped: number | IPed): void {
  * Hash: 0x412AA00D
  */
 export function removeComponentFromPed(ped: number | IPed, weaponHash: number | string, componentHash: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     if (typeof componentHash === 'string') componentHash = GetHashKey(componentHash)
-    RemoveWeaponComponentFromPed(ped, weaponHash, componentHash);
+    RemoveWeaponComponentFromPed(_ped, weaponHash, componentHash);
 }
 
 /**
@@ -67,7 +71,8 @@ export function removeComponentFromPed(ped: number | IPed, weaponHash: number | 
  * Hash: 0x9C37F220
  */
 export function removeFromPed(ped: number | IPed, weaponHash: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
-    RemoveWeaponFromPed(ped, weaponHash);
+    RemoveWeaponFromPed(_ped, weaponHash);
 }
 

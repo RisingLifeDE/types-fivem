@@ -1,4 +1,4 @@
-import { Vector3 } from '@risinglife/fivem-shared';
+import { Vector3, IEntity, IObject } from '@risinglife/fivem-shared';
 /**
  * Returns all rope handles. The data returned adheres to the following layout:
  *
@@ -99,7 +99,8 @@ export function setRopeLengthChangeRate(rope, lengthChangeRate) {
  * Hash: 0x710311ADF0E20730 | Since: 323 | API-Set: unknown
  */
 export function activate(entity) {
-    ActivatePhysics(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    ActivatePhysics(_entity);
 }
 /**
  * Creates a rope at the specific position, that extends in the specified direction when not attached to any entities.
@@ -156,7 +157,9 @@ export function applyImpulseToCloth(pos, vecX, vecY, vecZ, impulse) {
  * Hash: 0x3D95EC8B6D940AC3 | Since: 323 | API-Set: unknown
  */
 export function attachEntitiesToRope(ropeId, ent1, ent2, ent1_x, ent1_y, ent1_z, ent2_x, ent2_y, ent2_z, length) {
-    return AttachEntitiesToRope(ropeId, ent1, ent2, ent1_x, ent1_y, ent1_z, ent2_x, ent2_y, ent2_z, length, false, false);
+    const _ent1 = ent1 instanceof IEntity ? ent1.handle() : ent1;
+    const _ent2 = ent2 instanceof IEntity ? ent2.handle() : ent2;
+    return AttachEntitiesToRope(ropeId, _ent1, _ent2, ent1_x, ent1_y, ent1_z, ent2_x, ent2_y, ent2_z, length, false, false);
 }
 /**
  * The position supplied can be anywhere, and the entity should anchor relative to that point from it's origin.
@@ -164,7 +167,8 @@ export function attachEntitiesToRope(ropeId, ent1, ent2, ent1_x, ent1_y, ent1_z,
  * Hash: 0x4B490A6832559A65 | Since: 323 | API-Set: unknown
  */
 export function attachRopeToEntity(ropeId, entity, pos) {
-    AttachRopeToEntity(ropeId, entity, pos.x, pos.y, pos.z, false);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    AttachRopeToEntity(ropeId, _entity, pos.x, pos.y, pos.z, false);
 }
 /**
  * No comment provided
@@ -172,7 +176,8 @@ export function attachRopeToEntity(ropeId, entity, pos) {
  * Hash: 0x2E648D16F6E308F3 | Since: 323 | API-Set: unknown
  */
 export function breakEntityGlass(entity) {
-    BreakEntityGlass(entity, 0, 0, 0, 0, 0, 0, 0, 0, undefined, false);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    BreakEntityGlass(_entity, 0, 0, 0, 0, 0, 0, 0, 0, undefined, false);
 }
 /**
  * No comment provided
@@ -196,7 +201,8 @@ export function deleteRope(ropeId) {
  * Hash: 0xBCF3026912A8647D | Since: 323 | API-Set: unknown
  */
 export function detachRopeFromEntity(ropeId, entity) {
-    DetachRopeFromEntity(ropeId, entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    DetachRopeFromEntity(ropeId, _entity);
 }
 /**
  * No comment provided
@@ -220,7 +226,8 @@ export function doesScriptOwnRope(ropeId) {
  * Hash: 0x8214A4B5A7A33612 | Since: 323 | API-Set: unknown
  */
 export function getCgoffset(entity) {
-    return new Vector3(GetCgoffset(entity));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetCgoffset(_entity));
 }
 /**
  * No comment provided
@@ -228,7 +235,8 @@ export function getCgoffset(entity) {
  * Hash: 0x8C520A929415BCD2 | Since: 3407 | API-Set: unknown
  */
 export function getDamping(entity, _type) {
-    return new Vector3(Citizen.invokeNative('0x8C520A929415BCD2', entity, _type));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(Citizen.invokeNative('0x8C520A929415BCD2', _entity, _type));
 }
 /**
  * No comment provided
@@ -236,7 +244,8 @@ export function getDamping(entity, _type) {
  * Hash: 0x0C112765300C7E1E | Since: 505 | API-Set: unknown
  */
 export function getIsEntityAFrag(_object) {
-    return GetHasObjectFragInst(_object);
+    const __object = _object instanceof IObject ? _object.handle() : _object;
+    return GetHasObjectFragInst(__object);
 }
 /**
  * No comment provided
@@ -292,7 +301,8 @@ export function pinRopeVertex(ropeId, vertex, pos) {
  * Hash: 0xCC6E963682533882 | Since: 323 | API-Set: unknown
  */
 export function resetDisableBreaking(_object) {
-    Citizen.invokeNative('0xCC6E963682533882', _object);
+    const __object = _object instanceof IObject ? _object.handle() : _object;
+    Citizen.invokeNative('0xCC6E963682533882', __object);
 }
 /**
  * No comment provided
@@ -420,7 +430,8 @@ export function ropeUnloadTextures() {
  * Hash: 0xD8FA3908D7B86904 | Since: 323 | API-Set: unknown
  */
 export function setCgoffset(entity, pos) {
-    SetCgoffset(entity, pos.x, pos.y, pos.z);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetCgoffset(_entity, pos.x, pos.y, pos.z);
 }
 /**
  * No comment provided
@@ -428,7 +439,8 @@ export function setCgoffset(entity, pos) {
  * Hash: 0xBE520D9761FF811F | Since: 323 | API-Set: unknown
  */
 export function setCgAtBoundcenter(entity) {
-    SetCgAtBoundcenter(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetCgAtBoundcenter(_entity);
 }
 /**
  * No comment provided
@@ -436,7 +448,8 @@ export function setCgAtBoundcenter(entity) {
  * Hash: 0xEEA3B200A6FEB65B | Since: 323 | API-Set: unknown
  */
 export function setDamping(entity, vertex, value) {
-    SetDamping(entity, vertex, value);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetDamping(_entity, vertex, value);
 }
 /**
  * No comment provided
@@ -444,7 +457,8 @@ export function setDamping(entity, vertex, value) {
  * Hash: 0x5CEC1A84620E7D5B | Since: 323 | API-Set: unknown
  */
 export function setDisableBreaking(_object, toggle) {
-    SetDisableBreaking(_object, toggle);
+    const __object = _object instanceof IObject ? _object.handle() : _object;
+    SetDisableBreaking(__object, toggle);
 }
 /**
  * No comment provided
@@ -452,7 +466,8 @@ export function setDisableBreaking(_object, toggle) {
  * Hash: 0x01BA3AED21C16CFB | Since: 323 | API-Set: unknown
  */
 export function setDisableFragDamage(_object, toggle) {
-    SetDisableFragDamage(_object, toggle);
+    const __object = _object instanceof IObject ? _object.handle() : _object;
+    SetDisableFragDamage(__object, toggle);
 }
 /**
  * Related to the lower-end of a vehicles fTractionCurve, e.g., from standing starts and acceleration from low/zero speeds.
@@ -476,7 +491,8 @@ export function setInStuntMode() {
  * Hash: 0x15F944730C832252 | Since: 463 | API-Set: unknown
  */
 export function setUseKinematic(entity, toggle) {
-    SetEntityProofUnk(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityProofUnk(_entity, toggle);
 }
 /**
  * No comment provided

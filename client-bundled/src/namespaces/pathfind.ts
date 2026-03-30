@@ -434,7 +434,8 @@ export function isNavmeshRequiredRegionInUse(): boolean {
  * Hash: 0x125BF4ABFC536B09 | Since: 323 | API-Set: unknown
  */
 export function isPointOnRoad(pos: Vector3, vehicle: number | IVehicle): boolean {
-    return IsPointOnRoad(pos.x, pos.y, pos.z, vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsPointOnRoad(pos.x, pos.y, pos.z, _vehicle);
 }
 
 /**

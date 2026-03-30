@@ -6,7 +6,8 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0x310D0271
  */
 export function getNumberOfCollectionDrawableVariations(ped: number | IPed, componentId: number, collection: string): number {
-    return GetNumberOfPedCollectionDrawableVariations(ped, componentId, collection);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetNumberOfPedCollectionDrawableVariations(_ped, componentId, collection);
 }
 
 /**
@@ -15,7 +16,8 @@ export function getNumberOfCollectionDrawableVariations(ped: number | IPed, comp
  * Hash: 0x3B6A13E1
  */
 export function getNumberOfCollectionPropDrawableVariations(ped: number | IPed, anchorPoint: number, collection: string): number {
-    return GetNumberOfPedCollectionPropDrawableVariations(ped, anchorPoint, collection);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetNumberOfPedCollectionPropDrawableVariations(_ped, anchorPoint, collection);
 }
 
 /**
@@ -24,7 +26,8 @@ export function getNumberOfCollectionPropDrawableVariations(ped: number | IPed, 
  * Hash: 0x75CAF9CC
  */
 export function getNumberOfCollectionPropTextureVariations(ped: number | IPed, anchorPoint: number, collection: string, propIndex: number): number {
-    return GetNumberOfPedCollectionPropTextureVariations(ped, anchorPoint, collection, propIndex);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetNumberOfPedCollectionPropTextureVariations(_ped, anchorPoint, collection, propIndex);
 }
 
 /**
@@ -33,7 +36,8 @@ export function getNumberOfCollectionPropTextureVariations(ped: number | IPed, a
  * Hash: 0xD2C15D7
  */
 export function getNumberOfCollectionTextureVariations(ped: number | IPed, componentId: number, collection: string, drawableId: number): number {
-    return GetNumberOfPedCollectionTextureVariations(ped, componentId, collection, drawableId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetNumberOfPedCollectionTextureVariations(_ped, componentId, collection, drawableId);
 }
 
 /**
@@ -46,7 +50,8 @@ export function getNumberOfCollectionTextureVariations(ped: number | IPed, compo
  * Hash: 0x45946359
  */
 export function getCollectionsCount(ped: number | IPed): number {
-    return GetPedCollectionsCount(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedCollectionsCount(_ped);
 }
 
 /**
@@ -55,7 +60,8 @@ export function getCollectionsCount(ped: number | IPed): number {
  * Hash: 0x94EB1FE4
  */
 export function getCollectionLocalIndexFromDrawable(ped: number | IPed, componentId: number, drawableId: number): number {
-    return GetPedCollectionLocalIndexFromDrawable(ped, componentId, drawableId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedCollectionLocalIndexFromDrawable(_ped, componentId, drawableId);
 }
 
 /**
@@ -64,7 +70,8 @@ export function getCollectionLocalIndexFromDrawable(ped: number | IPed, componen
  * Hash: 0xFBDB885F
  */
 export function getCollectionLocalIndexFromProp(ped: number | IPed, anchorPoint: number, propIndex: number): number {
-    return GetPedCollectionLocalIndexFromProp(ped, anchorPoint, propIndex);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedCollectionLocalIndexFromProp(_ped, anchorPoint, propIndex);
 }
 
 /**
@@ -77,7 +84,8 @@ export function getCollectionLocalIndexFromProp(ped: number | IPed, anchorPoint:
  * Hash: 0xFED5D83A
  */
 export function getCollectionName(ped: number | IPed, index: number): string {
-    return GetPedCollectionName(ped, index);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedCollectionName(_ped, index);
 }
 
 /**
@@ -86,7 +94,8 @@ export function getCollectionName(ped: number | IPed, index: number): string {
  * Hash: 0xD6BBA48B
  */
 export function getCollectionNameFromDrawable(ped: number | IPed, componentId: number, drawableId: number): string {
-    return GetPedCollectionNameFromDrawable(ped, componentId, drawableId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedCollectionNameFromDrawable(_ped, componentId, drawableId);
 }
 
 /**
@@ -95,7 +104,8 @@ export function getCollectionNameFromDrawable(ped: number | IPed, componentId: n
  * Hash: 0x8ED0C17
  */
 export function getCollectionNameFromProp(ped: number | IPed, anchorPoint: number, propIndex: number): string {
-    return GetPedCollectionNameFromProp(ped, anchorPoint, propIndex);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedCollectionNameFromProp(_ped, anchorPoint, propIndex);
 }
 
 /**
@@ -112,7 +122,8 @@ export function getCollectionNameFromProp(ped: number | IPed, anchorPoint: numbe
  * Hash: 0x7CCE1163
  */
 export function getDecorations(ped: number | IPed): number {
-    return GetPedDecorations(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedDecorations(_ped);
 }
 
 /**
@@ -134,7 +145,8 @@ export function getDensityMultiplier(): number {
  * Hash: 0x280F1FC3
  */
 export function getDrawableGlobalIndexFromCollection(ped: number | IPed, componentId: number, collection: string, drawableId: number): number {
-    return GetPedDrawableGlobalIndexFromCollection(ped, componentId, collection, drawableId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedDrawableGlobalIndexFromCollection(_ped, componentId, collection, drawableId);
 }
 
 /**
@@ -143,7 +155,8 @@ export function getDrawableGlobalIndexFromCollection(ped: number | IPed, compone
  * Hash: 0x9970386F
  */
 export function getDrawableVariationCollectionLocalIndex(ped: number | IPed, componentId: number): number {
-    return GetPedDrawableVariationCollectionLocalIndex(ped, componentId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedDrawableVariationCollectionLocalIndex(_ped, componentId);
 }
 
 /**
@@ -154,7 +167,8 @@ export function getDrawableVariationCollectionLocalIndex(ped: number | IPed, com
  * Hash: 0xBCE0AB63
  */
 export function getDrawableVariationCollectionName(ped: number | IPed, componentId: number): string {
-    return GetPedDrawableVariationCollectionName(ped, componentId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedDrawableVariationCollectionName(_ped, componentId);
 }
 
 /**
@@ -163,7 +177,8 @@ export function getDrawableVariationCollectionName(ped: number | IPed, component
  * Hash: 0xA47B860F
  */
 export function getEyeColor(ped: number | IPed): number {
-    return GetPedEyeColor(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedEyeColor(_ped);
 }
 
 /**
@@ -172,7 +187,8 @@ export function getEyeColor(ped: number | IPed): number {
  * Hash: 0xBA352ADD
  */
 export function getFaceFeature(ped: number | IPed, index: number): number {
-    return GetPedFaceFeature(ped, index);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedFaceFeature(_ped, index);
 }
 
 /**
@@ -181,7 +197,8 @@ export function getFaceFeature(ped: number | IPed, index: number): number {
  * Hash: 0xA3EA2893
  */
 export function getHairColor(ped: number | IPed): number {
-    return GetPedHairColor(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedHairColor(_ped);
 }
 
 /**
@@ -190,7 +207,8 @@ export function getHairColor(ped: number | IPed): number {
  * Hash: 0x4B087305
  */
 export function getHairHighlightColor(ped: number | IPed): number {
-    return GetPedHairHighlightColor(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedHairHighlightColor(_ped);
 }
 
 /**
@@ -199,7 +217,8 @@ export function getHairHighlightColor(ped: number | IPed): number {
  * Hash: 0xC46EE605
  */
 export function getHeadOverlayData(ped: number | IPed, index: number): [boolean, number, number, number, number, number] {
-    return GetPedHeadOverlayData(ped, index);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedHeadOverlayData(_ped, index);
 }
 
 /**
@@ -228,7 +247,8 @@ export function getModelPersonality(modelHash: number | string): number {
  * Hash: 0x69E81E3D
  */
 export function getMovementClipset(ped: number | IPed): number {
-    return GetPedMovementClipset(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedMovementClipset(_ped);
 }
 
 /**
@@ -237,7 +257,8 @@ export function getMovementClipset(ped: number | IPed): number {
  * Hash: 0xCD420AD1
  */
 export function getPropCollectionLocalIndex(ped: number | IPed, anchorPoint: number): number {
-    return GetPedPropCollectionLocalIndex(ped, anchorPoint);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedPropCollectionLocalIndex(_ped, anchorPoint);
 }
 
 /**
@@ -248,7 +269,8 @@ export function getPropCollectionLocalIndex(ped: number | IPed, anchorPoint: num
  * Hash: 0x6B5653E4
  */
 export function getPropCollectionName(ped: number | IPed, anchorPoint: number): string {
-    return GetPedPropCollectionName(ped, anchorPoint);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedPropCollectionName(_ped, anchorPoint);
 }
 
 /**
@@ -261,7 +283,8 @@ export function getPropCollectionName(ped: number | IPed, anchorPoint: number): 
  * Hash: 0x2CB45CDC
  */
 export function getPropGlobalIndexFromCollection(ped: number | IPed, anchorPoint: number, collection: string, propIndex: number): number {
-    return GetPedPropGlobalIndexFromCollection(ped, anchorPoint, collection, propIndex);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedPropGlobalIndexFromCollection(_ped, anchorPoint, collection, propIndex);
 }
 
 /**
@@ -270,7 +293,8 @@ export function getPropGlobalIndexFromCollection(ped: number | IPed, anchorPoint
  * Hash: 0x44B91E94
  */
 export function getSweat(ped: number | IPed): number {
-    return GetPedSweat(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedSweat(_ped);
 }
 
 /**
@@ -283,7 +307,8 @@ export function getSweat(ped: number | IPed): number {
  * Hash: 0x33B2AFA2
  */
 export function isCollectionComponentVariationGen9Exclusive(ped: number | IPed, componentId: number, collection: string, drawableId: number): boolean {
-    return IsPedCollectionComponentVariationGen9Exclusive(ped, componentId, collection, drawableId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedCollectionComponentVariationGen9Exclusive(_ped, componentId, collection, drawableId);
 }
 
 /**
@@ -296,7 +321,8 @@ export function isCollectionComponentVariationGen9Exclusive(ped: number | IPed, 
  * Hash: 0xCA63A52A
  */
 export function isCollectionComponentVariationValid(ped: number | IPed, componentId: number, collection: string, drawableId: number, textureId: number): boolean {
-    return IsPedCollectionComponentVariationValid(ped, componentId, collection, drawableId, textureId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedCollectionComponentVariationValid(_ped, componentId, collection, drawableId, textureId);
 }
 
 /**
@@ -305,7 +331,8 @@ export function isCollectionComponentVariationValid(ped: number | IPed, componen
  * Hash: 0xC767B581
  */
 export function isComponentVariationGen9Exclusive(ped: number | IPed, componentId: number, drawableId: number): boolean {
-    return IsPedComponentVariationGen9Exclusive(ped, componentId, drawableId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedComponentVariationGen9Exclusive(_ped, componentId, drawableId);
 }
 
 /**
@@ -350,7 +377,8 @@ export function resetModelPersonality(modelHash: number | string): void {
  * Hash: 0x88711BBA
  */
 export function setCollectionComponentVariation(ped: number | IPed, componentId: number, collection: string, drawableId: number, textureId: number, paletteId: number): void {
-    SetPedCollectionComponentVariation(ped, componentId, collection, drawableId, textureId, paletteId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCollectionComponentVariation(_ped, componentId, collection, drawableId, textureId, paletteId);
 }
 
 /**
@@ -363,7 +391,8 @@ export function setCollectionComponentVariation(ped: number | IPed, componentId:
  * Hash: 0x14B5BBE0
  */
 export function setCollectionPreloadPropData(ped: number | IPed, anchorPoint: number, collection: string, propIndex: number, textureId: number): void {
-    SetPedCollectionPreloadPropData(ped, anchorPoint, collection, propIndex, textureId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCollectionPreloadPropData(_ped, anchorPoint, collection, propIndex, textureId);
 }
 
 /**
@@ -376,7 +405,8 @@ export function setCollectionPreloadPropData(ped: number | IPed, anchorPoint: nu
  * Hash: 0x3EC75558
  */
 export function setCollectionPreloadVariationData(ped: number | IPed, componentId: number, collection: string, drawableId: number, textureId: number): void {
-    SetPedCollectionPreloadVariationData(ped, componentId, collection, drawableId, textureId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCollectionPreloadVariationData(_ped, componentId, collection, drawableId, textureId);
 }
 
 /**
@@ -389,7 +419,8 @@ export function setCollectionPreloadVariationData(ped: number | IPed, componentI
  * Hash: 0x75240BCB
  */
 export function setCollectionPropIndex(ped: number | IPed, anchorPoint: number, collection: string, propIndex: number, textureId: number, attach: boolean): void {
-    SetPedCollectionPropIndex(ped, anchorPoint, collection, propIndex, textureId, attach);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCollectionPropIndex(_ped, anchorPoint, collection, propIndex, textureId, attach);
 }
 
 /**
@@ -466,6 +497,7 @@ export function setTurningThresholds(min: number, max: number): void {
  * Hash: 0x9C5E7C9C
  */
 export function getBoneMatrix(ped: number | IPed, boneId: number): [Vector3, Vector3, Vector3, Vector3] {
-    return GetPedBoneMatrix(ped, boneId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedBoneMatrix(_ped, boneId);
 }
 

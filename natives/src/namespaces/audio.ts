@@ -27,7 +27,8 @@ export function activateSlowmoMode(mode: string): void {
  * Hash: 0x153973AB99FE8980 | Since: 323
  */
 export function addEntityToMixGroup(entity: number | IEntity, groupName: string): void {
-    AddEntityToAudioMixGroup(entity, groupName, 0);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    AddEntityToAudioMixGroup(_entity, groupName, 0);
 }
 
 /**
@@ -65,7 +66,8 @@ export function addLineToConversation(index: number): void {
  * Hash: 0x95D9F4BC443956E7 | Since: 323
  */
 export function addPedToConversation(index: number, ped: number | IPed): void {
-    AddPedToConversation(index, ped, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    AddPedToConversation(index, _ped, undefined);
 }
 
 /**
@@ -93,7 +95,8 @@ export function isScriptedMusicPlaying(): boolean {
  * Hash: 0x1B9025BDA76822B6 | Since: 323
  */
 export function blipSiren(vehicle: number | IVehicle): void {
-    BlipSiren(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    BlipSiren(_vehicle);
 }
 
 /**
@@ -102,7 +105,8 @@ export function blipSiren(vehicle: number | IVehicle): void {
  * Hash: 0xF8AD2EED7C47E8FE | Since: 1734
  */
 export function blockAllSpeechFromPed(ped: number | IPed): void {
-    BlockAllSpeechFromPed(ped, false, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    BlockAllSpeechFromPed(_ped, false, false);
 }
 
 /**
@@ -148,7 +152,8 @@ export function cancelMusicEvent(eventName: string): boolean {
  * Hash: 0x032A116663A4D5AC | Since: 323
  */
 export function canVehicleReceiveCbRadio(vehicle: number | IVehicle): boolean {
-    return CanVehicleReceiveCbRadio(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return CanVehicleReceiveCbRadio(_vehicle);
 }
 
 /**
@@ -218,7 +223,8 @@ export function deactivateSlowmoMode(mode: string): void {
  * Hash: 0xA9A41C1E940FB0E8 | Since: 323
  */
 export function disablePedPain(ped: number | IPed, toggle: boolean): void {
-    DisablePedPainAudio(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    DisablePedPainAudio(_ped, toggle);
 }
 
 /**
@@ -237,7 +243,8 @@ export function distantCopCarSirens(value: boolean): void {
  * Hash: 0x49B99BF3FDA89A7A | Since: 323
  */
 export function doesContextExistForThisPed(ped: number | IPed, speechName: string): boolean {
-    return DoesContextExistForThisPed(ped, speechName, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return DoesContextExistForThisPed(_ped, speechName, false);
 }
 
 /**
@@ -255,7 +262,8 @@ export function doesPlayerVehHaveRadio(): boolean {
  * Hash: 0xC15907D667F7CFB2 | Since: 323
  */
 export function enableStallWarningSounds(vehicle: number | IVehicle, toggle: boolean): void {
-    EnableStallWarningSounds(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    EnableStallWarningSounds(_vehicle, toggle);
 }
 
 /**
@@ -273,7 +281,8 @@ export function enableStuntJump(): void {
  * Hash: 0x2BE4BC731D039D5A | Since: 323
  */
 export function enableVehicleExhaustPops(vehicle: number | IVehicle, toggle: boolean): void {
-    EnableVehicleExhaustPops(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    EnableVehicleExhaustPops(_vehicle, toggle);
 }
 
 /**
@@ -282,7 +291,8 @@ export function enableVehicleExhaustPops(vehicle: number | IVehicle, toggle: boo
  * Hash: 0x1C073274E065C6D2 | Since: 323
  */
 export function enableVehicleFanbeltDamage(vehicle: number | IVehicle, toggle: boolean): void {
-    EnableVehicleFanbeltDamage(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    EnableVehicleFanbeltDamage(_vehicle, toggle);
 }
 
 /**
@@ -326,7 +336,8 @@ export function forcePedPanicWalla(): void {
  * Hash: 0x4F0C413926060B38 | Since: 323
  */
 export function forceUseGameObject(vehicle: number | IVehicle, audioName: string): void {
-    ForceUseAudioGameObject(vehicle, audioName);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    ForceUseAudioGameObject(_vehicle, audioName);
 }
 
 /**
@@ -353,7 +364,8 @@ export function freezeRadioStation(radioStation: string): void {
  * Hash: 0x5E203DA2BA15D436 | Since: 463
  */
 export function getAmbientVoiceNameHash(ped: number | IPed): number {
-    return GetAmbientVoiceNameHash(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetAmbientVoiceNameHash(_ped);
 }
 
 /**
@@ -536,7 +548,8 @@ export function getVariationChosenForScriptedLine(): [number, any] {
  * Hash: 0x02165D55000219AC | Since: 323
  */
 export function getVehicleDefaultHorn(vehicle: number | IVehicle): number {
-    return GetVehicleDefaultHorn(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleDefaultHorn(_vehicle);
 }
 
 /**
@@ -545,7 +558,8 @@ export function getVehicleDefaultHorn(vehicle: number | IVehicle): number {
  * Hash: 0xACB5DCCA1EC76840 | Since: 323
  */
 export function getVehicleDefaultHornIgnoreMods(vehicle: number | IVehicle): number {
-    return GetVehicleDefaultHornIgnoreMods(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleDefaultHornIgnoreMods(_vehicle);
 }
 
 /**
@@ -554,7 +568,8 @@ export function getVehicleDefaultHornIgnoreMods(vehicle: number | IVehicle): num
  * Hash: 0xD53F3A29BCE2580E | Since: 1365
  */
 export function getVehicleHornSoundIndex(vehicle: number | IVehicle): number {
-    return GetVehicleHornSoundIndex(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleHornSoundIndex(_vehicle);
 }
 
 /**
@@ -617,7 +632,8 @@ export function hintScriptBank(audioBank: string): boolean {
  * Hash: 0x950A154B8DAB6185 | Since: 323
  */
 export function initSynchSceneWithEntity(audioEvent: string, entity: number | IEntity): void {
-    InitSynchSceneAudioWithEntity(audioEvent, entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    InitSynchSceneAudioWithEntity(audioEvent, _entity);
 }
 
 /**
@@ -636,7 +652,8 @@ export function initSynchSceneWithPosition(audioEvent: string, pos: Vector3): vo
  * Hash: 0xA018A12E5C5C2FA6 | Since: 323
  */
 export function interruptConversation(ped: number | IPed, voiceline: string, speaker: string): void {
-    InterruptConversation(ped, voiceline, speaker);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    InterruptConversation(_ped, voiceline, speaker);
 }
 
 /**
@@ -647,7 +664,8 @@ export function interruptConversation(ped: number | IPed, voiceline: string, spe
  * Hash: 0x8A694D7A68F8DC38 | Since: 323
  */
 export function interruptConversationAndPause(ped: number | IPed, speaker: string): void {
-    InterruptConversationAndPause(ped, undefined, speaker);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    InterruptConversationAndPause(_ped, undefined, speaker);
 }
 
 /**
@@ -669,7 +687,8 @@ export function isAlarmPlaying(alarmName: string): boolean {
  * Hash: 0x932C2D096A2C3FFF | Since: 323
  */
 export function isAmbientSpeechDisabled(ped: number | IPed): boolean {
-    return IsAmbientSpeechDisabled(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsAmbientSpeechDisabled(_ped);
 }
 
 /**
@@ -678,7 +697,8 @@ export function isAmbientSpeechDisabled(ped: number | IPed): boolean {
  * Hash: 0x9072C8B49907BFAD | Since: 323
  */
 export function isAmbientSpeechPlaying(ped: number | IPed): boolean {
-    return IsAmbientSpeechPlaying(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsAmbientSpeechPlaying(_ped);
 }
 
 /**
@@ -696,7 +716,8 @@ export function isAmbientZoneEnabled(ambientZone: string): boolean {
  * Hash: 0xC265DF9FB44A9FBD | Since: 323
  */
 export function isAnimalVocalizationPlaying(pedHandle: number | IPed): boolean {
-    return IsAnimalVocalizationPlaying(pedHandle);
+    const _pedHandle = pedHandle instanceof IPed ? pedHandle.handle() : pedHandle;
+    return IsAnimalVocalizationPlaying(_pedHandle);
 }
 
 /**
@@ -714,7 +735,8 @@ export function isAnyPositionalSpeechPlaying(): boolean {
  * Hash: 0x729072355FA39EC9 | Since: 323
  */
 export function isAnySpeechPlaying(ped: number | IPed): boolean {
-    return IsAnySpeechPlaying(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsAnySpeechPlaying(_ped);
 }
 
 /**
@@ -741,7 +763,8 @@ export function isGameInControlOfMusic(): boolean {
  * Hash: 0x9D6BFC12B05C6121 | Since: 323
  */
 export function isHornActive(vehicle: number | IVehicle): boolean {
-    return IsHornActive(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsHornActive(_vehicle);
 }
 
 /**
@@ -813,7 +836,8 @@ export function isMusicOneshotPlaying(): boolean {
  * Hash: 0x049E937F18F4020C | Since: 323
  */
 export function isPedInCurrentConversation(ped: number | IPed): boolean {
-    return IsPedInCurrentConversation(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInCurrentConversation(_ped);
 }
 
 /**
@@ -822,7 +846,8 @@ export function isPedInCurrentConversation(ped: number | IPed): boolean {
  * Hash: 0x1E8E5E20937E3137 | Since: 323
  */
 export function isPedRingtonePlaying(ped: number | IPed): boolean {
-    return IsPedRingtonePlaying(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedRingtonePlaying(_ped);
 }
 
 /**
@@ -885,7 +910,8 @@ export function isScriptedConversationOngoing(): boolean {
  * Hash: 0xCC9AA18DCC7084F4 | Since: 323
  */
 export function isScriptedSpeechPlaying(p0: number | IPed): boolean {
-    return IsScriptedSpeechPlaying(p0);
+    const _p0 = p0 instanceof IPed ? p0.handle() : p0;
+    return IsScriptedSpeechPlaying(_p0);
 }
 
 /**
@@ -903,7 +929,8 @@ export function isStreamPlaying(): boolean {
  * Hash: 0x5DB8010EE71FDEF2 | Since: 323
  */
 export function isVehicleAudiblyDamaged(vehicle: number | IVehicle): boolean {
-    return IsVehicleAudiblyDamaged(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsVehicleAudiblyDamaged(_vehicle);
 }
 
 /**
@@ -912,7 +939,8 @@ export function isVehicleAudiblyDamaged(vehicle: number | IVehicle): boolean {
  * Hash: 0x0BE4BE946463F917 | Since: 505
  */
 export function isVehicleRadioOn(vehicle: number | IVehicle): boolean {
-    return IsVehicleRadioOn(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsVehicleRadioOn(_vehicle);
 }
 
 /**
@@ -921,7 +949,8 @@ export function isVehicleRadioOn(vehicle: number | IVehicle): boolean {
  * Hash: 0x651D3228960D08AF | Since: 505
  */
 export function linkStaticEmitterToEntity(emitterName: string, entity: number | IEntity): void {
-    LinkStaticEmitterToEntity(emitterName, entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    LinkStaticEmitterToEntity(emitterName, _entity);
 }
 
 /**
@@ -1021,7 +1050,8 @@ export function overrideUnderwaterStream(): void {
  * Hash: 0x3CDC1E622CCE0356 | Since: 323
  */
 export function overrideVehHorn(vehicle: number | IVehicle, override: boolean, hornHash: number): void {
-    OverrideVehHorn(vehicle, override, hornHash);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    OverrideVehHorn(_vehicle, override, hornHash);
 }
 
 /**
@@ -1050,7 +1080,8 @@ export function playAmbientSpeechFromPositionNative(speechName: string, voiceNam
  * Hash: 0xEE066C7006C49C0A | Since: 323
  */
 export function playAnimalVocalization(pedHandle: number | IPed, speechName: string): void {
-    PlayAnimalVocalization(pedHandle, 0, speechName);
+    const _pedHandle = pedHandle instanceof IPed ? pedHandle.handle() : pedHandle;
+    PlayAnimalVocalization(_pedHandle, 0, speechName);
 }
 
 /**
@@ -1109,7 +1140,8 @@ export function playMissionComplete(audioName: string): void {
  * Hash: 0xBC9AE166038A5CEC | Since: 323
  */
 export function playPain(ped: number | IPed, painID: number): void {
-    PlayPain(ped, painID, 0, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayPain(_ped, painID, 0, undefined);
 }
 
 /**
@@ -1122,7 +1154,8 @@ export function playPain(ped: number | IPed, painID: number): void {
  * Hash: 0xC6941B4A3A8FBBB9 | Since: 323
  */
 export function playPedAmbientSpeechAndCloneNative(ped: number | IPed, speechName: string, speechParam: string): void {
-    PlayPedAmbientSpeechAndCloneNative(ped, speechName, speechParam, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayPedAmbientSpeechAndCloneNative(_ped, speechName, speechParam, undefined);
 }
 
 /**
@@ -1176,7 +1209,8 @@ export function playPedAmbientSpeechAndCloneNative(ped: number | IPed, speechNam
  * Hash: 0x8E04FEDD28D42462 | Since: 323
  */
 export function playPedAmbientSpeechNative(ped: number | IPed, speechName: string, speechParam: string): void {
-    PlayPedAmbientSpeechNative(ped, speechName, speechParam, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayPedAmbientSpeechNative(_ped, speechName, speechParam, undefined);
 }
 
 /**
@@ -1192,7 +1226,8 @@ export function playPedAmbientSpeechNative(ped: number | IPed, speechName: strin
  * Hash: 0x3523634255FC3318 | Since: 323
  */
 export function playPedAmbientSpeechWithVoiceNative(ped: number | IPed, speechName: string, voiceName: string, speechParam: string): void {
-    PlayPedAmbientSpeechWithVoiceNative(ped, speechName, voiceName, speechParam, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayPedAmbientSpeechWithVoiceNative(_ped, speechName, voiceName, speechParam, false);
 }
 
 /**
@@ -1201,7 +1236,8 @@ export function playPedAmbientSpeechWithVoiceNative(ped: number | IPed, speechNa
  * Hash: 0xAD2191A6E3543189 | Since: 3717
  */
 export function playPedEventAnim(pedHandle: number | IPed, audioEvent: string): void {
-    Citizen.invokeNative('0xAD2191A6E3543189', pedHandle, audioEvent);
+    const _pedHandle = pedHandle instanceof IPed ? pedHandle.handle() : pedHandle;
+    Citizen.invokeNative('0xAD2191A6E3543189', _pedHandle, audioEvent);
 }
 
 /**
@@ -1214,7 +1250,8 @@ export function playPedEventAnim(pedHandle: number | IPed, audioEvent: string): 
  * Hash: 0xF9E56683CA8E11A5 | Since: 323
  */
 export function playPedRingtone(ringtoneName: string, ped: number | IPed): void {
-    PlayPedRingtone(ringtoneName, ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayPedRingtone(ringtoneName, _ped, false);
 }
 
 /**
@@ -1264,7 +1301,8 @@ export function playSoundFromCoord(soundId: number, audioName: string, pos: Vect
  * Hash: 0xE65F427EB70AB1ED | Since: 323
  */
 export function playSoundFromEntity(soundId: number, audioName: string, entity: number | IEntity, audioRef: string, isNetwork: boolean): void {
-    PlaySoundFromEntity(soundId, audioName, entity, audioRef, isNetwork, undefined);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    PlaySoundFromEntity(soundId, audioName, _entity, audioRef, isNetwork, undefined);
 }
 
 /**
@@ -1274,9 +1312,10 @@ export function playSoundFromEntity(soundId: number, audioName: string, entity: 
  * Hash: 0x5B9853296731E88D | Since: 877
  */
 export function playSoundFromEntityHash(soundId: number, model: number | string, entity: number | IEntity, soundSetHash: number | string): void {
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
     if (typeof model === 'string') model = GetHashKey(model)
     if (typeof soundSetHash === 'string') soundSetHash = GetHashKey(soundSetHash)
-    Citizen.invokeNative('0x5B9853296731E88D', soundId, model, entity, soundSetHash, undefined, undefined);
+    Citizen.invokeNative('0x5B9853296731E88D', soundId, model, _entity, soundSetHash, undefined, undefined);
 }
 
 /**
@@ -1308,7 +1347,8 @@ export function playSoundFrontend(soundId: number, audioName: string, audioRef: 
  * Hash: 0xEBAA9B64D76356FD | Since: 323
  */
 export function playStreamFromObject(_object: number | IObject): void {
-    PlayStreamFromObject(_object);
+    const __object = _object instanceof IObject ? _object.handle() : _object;
+    PlayStreamFromObject(__object);
 }
 
 /**
@@ -1317,7 +1357,8 @@ export function playStreamFromObject(_object: number | IObject): void {
  * Hash: 0x89049DD63C08B5D1 | Since: 323
  */
 export function playStreamFromPed(ped: number | IPed): void {
-    PlayStreamFromPed(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayStreamFromPed(_ped);
 }
 
 /**
@@ -1335,7 +1376,8 @@ export function playStreamFromPosition(pos: Vector3): void {
  * Hash: 0xB70374A758007DFA | Since: 323
  */
 export function playStreamFromVehicle(vehicle: number | IVehicle): void {
-    PlayStreamFromVehicle(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    PlayStreamFromVehicle(_vehicle);
 }
 
 /**
@@ -1362,7 +1404,8 @@ export function playSynchronizedEvent(sceneID: number): boolean {
  * Hash: 0x62A456AA4769EF34 | Since: 323
  */
 export function playVehicleDoorCloseSound(vehicle: number | IVehicle, doorId: number): void {
-    PlayVehicleDoorCloseSound(vehicle, doorId);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    PlayVehicleDoorCloseSound(_vehicle, doorId);
 }
 
 /**
@@ -1371,7 +1414,8 @@ export function playVehicleDoorCloseSound(vehicle: number | IVehicle, doorId: nu
  * Hash: 0x3A539D52857EA82D | Since: 323
  */
 export function playVehicleDoorOpenSound(vehicle: number | IVehicle, doorId: number): void {
-    PlayVehicleDoorOpenSound(vehicle, doorId);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    PlayVehicleDoorOpenSound(_vehicle, doorId);
 }
 
 /**
@@ -1529,7 +1573,8 @@ export function releaseWeapon(): void {
  * Hash: 0x18EB48CFC41F2EA0 | Since: 323
  */
 export function removeEntityFromMixGroup(entity: number | IEntity): void {
-    RemoveEntityFromAudioMixGroup(entity, 0);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    RemoveEntityFromAudioMixGroup(_entity, 0);
 }
 
 /**
@@ -1596,7 +1641,8 @@ export function requestScriptBank(audioBank: string): boolean {
  * Hash: 0x4ADA3F19BE4A6047 | Since: 323
  */
 export function requestTennisBanks(ped: number | IPed): void {
-    RequestTennisBanks(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    RequestTennisBanks(_ped);
 }
 
 /**
@@ -1605,7 +1651,8 @@ export function requestTennisBanks(ped: number | IPed): void {
  * Hash: 0xF54BB7B61036F335 | Since: 323
  */
 export function resetPedFlags(ped: number | IPed): void {
-    ResetPedAudioFlags(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ResetPedAudioFlags(_ped);
 }
 
 /**
@@ -1623,7 +1670,8 @@ export function resetTrevorRage(): void {
  * Hash: 0xD2DCCD8E16E20997 | Since: 323
  */
 export function resetVehicleStartupRevSound(vehicle: number | IVehicle): void {
-    ResetVehicleStartupRevSound(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    ResetVehicleStartupRevSound(_vehicle);
 }
 
 /**
@@ -1662,7 +1710,8 @@ export function setAggressiveHorns(toggle: boolean): void {
  * Hash: 0x6C8065A3B780185B | Since: 323
  */
 export function setAmbientVoiceName(ped: number | IPed, name: string): void {
-    SetAmbientVoiceName(ped, name);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetAmbientVoiceName(_ped, name);
 }
 
 /**
@@ -1671,8 +1720,9 @@ export function setAmbientVoiceName(ped: number | IPed, name: string): void {
  * Hash: 0x9A53DED9921DE990 | Since: 463
  */
 export function setAmbientVoiceNameHash(ped: number | IPed, hash: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof hash === 'string') hash = GetHashKey(hash)
-    SetAmbientVoiceNameHash(ped, hash);
+    SetAmbientVoiceNameHash(_ped, hash);
 }
 
 /**
@@ -1717,7 +1767,8 @@ export function setAmbientZoneStatePersistent(ambientZone: string): void {
  * Hash: 0xCC97B29285B1DC3B | Since: 323
  */
 export function setAnimalMood(animal: number | IPed, mood: number): void {
-    SetAnimalMood(animal, mood);
+    const _animal = animal instanceof IPed ? animal.handle() : animal;
+    SetAnimalMood(_animal, mood);
 }
 
 /**
@@ -1875,7 +1926,8 @@ export function setSpecialEffectMode(mode: number): void {
  * Hash: 0xE5564483E407F914 | Since: 323
  */
 export function setVehiclePriority(vehicle: number | IVehicle): void {
-    SetAudioVehiclePriority(vehicle, undefined);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetAudioVehiclePriority(_vehicle, undefined);
 }
 
 /**
@@ -1943,7 +1995,8 @@ export function setEmitterRadioStation(emitterName: string, radioStation: string
  * Hash: 0x892B6AB8F33606F5 | Since: 323
  */
 export function setEntityForNullConvPed(entity: number | IEntity): void {
-    SetEntityForNullConvPed(0, entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityForNullConvPed(0, _entity);
 }
 
 /**
@@ -1979,7 +2032,8 @@ export function setGpsActive(active: boolean): void {
  * Hash: 0x76D683C108594D0E | Since: 323
  */
 export function setHornEnabled(vehicle: number | IVehicle, toggle: boolean): void {
-    SetHornEnabled(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetHornEnabled(_vehicle, toggle);
 }
 
 /**
@@ -1988,7 +2042,8 @@ export function setHornEnabled(vehicle: number | IVehicle, toggle: boolean): voi
  * Hash: 0x9C11908013EA4715 | Since: 323
  */
 export function setHornPermanentlyOn(vehicle: number | IVehicle): void {
-    SoundVehicleHornThisFrame(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SoundVehicleHornThisFrame(_vehicle);
 }
 
 /**
@@ -1997,7 +2052,8 @@ export function setHornPermanentlyOn(vehicle: number | IVehicle): void {
  * Hash: 0x9D3AF56E94C9AE98 | Since: 323
  */
 export function setHornPermanentlyOnTime(vehicle: number | IVehicle, time: number): void {
-    Citizen.invokeNative('0x9D3AF56E94C9AE98', vehicle, time);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    Citizen.invokeNative('0x9D3AF56E94C9AE98', _vehicle, time);
 }
 
 /**
@@ -2074,7 +2130,8 @@ export function setNoDuckingForConversation(): void {
  * Hash: 0x29DA3CA8D8B2692D | Since: 1493
  */
 export function setPedClothEventsEnabled(ped: number | IPed, toggle: boolean): void {
-    SetPedClothEventsEnabled(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedClothEventsEnabled(_ped, toggle);
 }
 
 /**
@@ -2083,7 +2140,8 @@ export function setPedClothEventsEnabled(ped: number | IPed, toggle: boolean): v
  * Hash: 0x0653B735BFBDFE87 | Since: 1493
  */
 export function setPedFootstepsEventsEnabled(ped: number | IPed, toggle: boolean): void {
-    SetPedAudioFootstepLoud(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedAudioFootstepLoud(_ped, toggle);
 }
 
 /**
@@ -2092,7 +2150,8 @@ export function setPedFootstepsEventsEnabled(ped: number | IPed, toggle: boolean
  * Hash: 0xA5342D390CDA41D6 | Since: 323
  */
 export function setPedGender(ped: number | IPed): void {
-    SetPedAudioGender(ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedAudioGender(_ped, false);
 }
 
 /**
@@ -2129,7 +2188,8 @@ export function setPedInteriorWallaDensity(): void {
  * Hash: 0x95D2D383D5396B8A | Since: 323
  */
 export function setPedIsDrunk(ped: number | IPed, toggle: boolean): void {
-    SetPedIsDrunk(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedIsDrunk(_ped, toggle);
 }
 
 /**
@@ -2138,8 +2198,9 @@ export function setPedIsDrunk(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x1B7ABE26CBCBF8C7 | Since: 372
  */
 export function setPedRaceAndVoiceGroup(ped: number | IPed, voiceGroup: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof voiceGroup === 'string') voiceGroup = GetHashKey(voiceGroup)
-    SetPedRaceAndVoiceGroup(ped, 0, voiceGroup);
+    SetPedRaceAndVoiceGroup(_ped, 0, voiceGroup);
 }
 
 /**
@@ -2148,7 +2209,8 @@ export function setPedRaceAndVoiceGroup(ped: number | IPed, voiceGroup: number |
  * Hash: 0x40CF0D12D142A9E8 | Since: 323
  */
 export function setPedVoiceFull(ped: number | IPed): void {
-    SetPedVoiceFull(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedVoiceFull(_ped);
 }
 
 /**
@@ -2162,8 +2224,9 @@ export function setPedVoiceFull(ped: number | IPed): void {
  * Hash: 0x7CDC8C3B89F661B3 | Since: 323
  */
 export function setPedVoiceGroup(ped: number | IPed, voiceGroupHash: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof voiceGroupHash === 'string') voiceGroupHash = GetHashKey(voiceGroupHash)
-    SetPedVoiceGroup(ped, voiceGroupHash);
+    SetPedVoiceGroup(_ped, voiceGroupHash);
 }
 
 /**
@@ -2172,8 +2235,9 @@ export function setPedVoiceGroup(ped: number | IPed, voiceGroupHash: number | st
  * Hash: 0x0BABC1345ABBFB16 | Since: 2699
  */
 export function setPedVoiceGroupFromRaceToPvg(ped: number | IPed, voiceGroupHash: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof voiceGroupHash === 'string') voiceGroupHash = GetHashKey(voiceGroupHash)
-    SetPedVoiceGroupRace(ped, voiceGroupHash);
+    SetPedVoiceGroupRace(_ped, voiceGroupHash);
 }
 
 /**
@@ -2191,7 +2255,8 @@ export function setPedWallaDensity(): void {
  * Hash: 0xEA241BB04110F091 | Since: 323
  */
 export function setPlayerAngry(ped: number | IPed, toggle: boolean): void {
-    SetPlayerAngry(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPlayerAngry(_ped, toggle);
 }
 
 /**
@@ -2200,7 +2265,8 @@ export function setPlayerAngry(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x6FDDAD856E36988A | Since: 323
  */
 export function setPlayerVehicleAlarmActive(vehicle: number | IVehicle, toggle: boolean): void {
-    SetPlayerVehicleAlarmAudioActive(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetPlayerVehicleAlarmAudioActive(_vehicle, toggle);
 }
 
 /**
@@ -2363,7 +2429,8 @@ export function setScriptUpdateDoor(doorHash: number | string, toggle: boolean):
  * Hash: 0xF584CF8529B51434 | Since: 2372
  */
 export function setSirenBypassMpDriverCheck(vehicle: number | IVehicle, toggle: boolean): void {
-    SetSirenKeepOn(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetSirenKeepOn(_vehicle, toggle);
 }
 
 /**
@@ -2372,7 +2439,8 @@ export function setSirenBypassMpDriverCheck(vehicle: number | IVehicle, toggle: 
  * Hash: 0x43FA0DFC5DF87815 | Since: 323
  */
 export function setSirenCanBeControlledBy(vehicle: number | IVehicle): void {
-    Citizen.invokeNative('0x43FA0DFC5DF87815', vehicle, false);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    Citizen.invokeNative('0x43FA0DFC5DF87815', _vehicle, false);
 }
 
 /**
@@ -2381,7 +2449,8 @@ export function setSirenCanBeControlledBy(vehicle: number | IVehicle): void {
  * Hash: 0x1FEF0683B96EBCF2 | Since: 323
  */
 export function setSirenWithNoDriver(vehicle: number | IVehicle, toggle: boolean): void {
-    SetSirenWithNoDriver(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetSirenWithNoDriver(_vehicle, toggle);
 }
 
 /**
@@ -2465,7 +2534,8 @@ export function setVariableOnUnderWaterStream(variableName: string, value: numbe
  * Hash: 0x01BB4D577D38BD9E | Since: 323
  */
 export function setVehicleBodyDamageFactor(vehicle: number | IVehicle, intensity: number): void {
-    SetVehicleAudioBodyDamageFactor(vehicle, intensity);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleAudioBodyDamageFactor(_vehicle, intensity);
 }
 
 /**
@@ -2474,7 +2544,8 @@ export function setVehicleBodyDamageFactor(vehicle: number | IVehicle, intensity
  * Hash: 0x59E7B488451F4D3A | Since: 323
  */
 export function setVehicleEngineDamageFactor(vehicle: number | IVehicle, damageFactor: number): void {
-    SetVehicleAudioEngineDamageFactor(vehicle, damageFactor);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleAudioEngineDamageFactor(_vehicle, damageFactor);
 }
 
 /**
@@ -2486,7 +2557,8 @@ export function setVehicleEngineDamageFactor(vehicle: number | IVehicle, damageF
  * Hash: 0x4A04DE7CAB2739A1 | Since: 323
  */
 export function setVehicleBoostActive(vehicle: number | IVehicle, toggle: boolean): void {
-    SetVehicleBoostActive(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleBoostActive(_vehicle, toggle);
 }
 
 /**
@@ -2522,7 +2594,8 @@ export function setVehicleForceReverseWarning(): void {
  * Hash: 0x0350E7E17BA767D0 | Since: 1365
  */
 export function setVehicleHornSoundIndex(vehicle: number | IVehicle, value: number): void {
-    SetVehicleHornVariation(vehicle, value);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleHornVariation(_vehicle, value);
 }
 
 /**
@@ -2531,7 +2604,8 @@ export function setVehicleHornSoundIndex(vehicle: number | IVehicle, value: numb
  * Hash: 0xF3365489E0DD50F9 | Since: 323
  */
 export function setVehicleMissileWarningEnabled(vehicle: number | IVehicle, toggle: boolean): void {
-    Citizen.invokeNative('0xF3365489E0DD50F9', vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    Citizen.invokeNative('0xF3365489E0DD50F9', _vehicle, toggle);
 }
 
 /**
@@ -2540,7 +2614,8 @@ export function setVehicleMissileWarningEnabled(vehicle: number | IVehicle, togg
  * Hash: 0x3B988190C0AA6C0B | Since: 323
  */
 export function setVehicleRadioEnabled(vehicle: number | IVehicle, toggle: boolean): void {
-    SetVehicleRadioEnabled(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleRadioEnabled(_vehicle, toggle);
 }
 
 /**
@@ -2549,7 +2624,8 @@ export function setVehicleRadioEnabled(vehicle: number | IVehicle, toggle: boole
  * Hash: 0xBB6F1CAEC68B0BCE | Since: 323
  */
 export function setVehicleRadioLoud(vehicle: number | IVehicle, toggle: boolean): void {
-    SetVehicleRadioLoud(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleRadioLoud(_vehicle, toggle);
 }
 
 /**
@@ -2558,7 +2634,8 @@ export function setVehicleRadioLoud(vehicle: number | IVehicle, toggle: boolean)
  * Hash: 0xF1F8157B8C3F171C | Since: 323
  */
 export function setVehicleStartupRevSound(vehicle: number | IVehicle): void {
-    SetVehicleStartupRevSound(vehicle, undefined, undefined);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleStartupRevSound(_vehicle, undefined, undefined);
 }
 
 /**
@@ -2567,7 +2644,8 @@ export function setVehicleStartupRevSound(vehicle: number | IVehicle): void {
  * Hash: 0xC1805D05E6D4FE10 | Since: 323
  */
 export function setVehForcedRadioThisFrame(vehicle: number | IVehicle): void {
-    Citizen.invokeNative('0xC1805D05E6D4FE10', vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    Citizen.invokeNative('0xC1805D05E6D4FE10', _vehicle);
 }
 
 /**
@@ -2576,7 +2654,8 @@ export function setVehForcedRadioThisFrame(vehicle: number | IVehicle): void {
  * Hash: 0x3E45765F3FBB582F | Since: 2372
  */
 export function setVehHasNormalRadio(vehicle: number | IVehicle): void {
-    SetVehHasRadioOverride(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehHasRadioOverride(_vehicle);
 }
 
 /**
@@ -2586,7 +2665,8 @@ export function setVehHasNormalRadio(vehicle: number | IVehicle): void {
  * Hash: 0x1B9C0099CB942AC6 | Since: 323
  */
 export function setVehRadioStation(vehicle: number | IVehicle, radioStation: string): void {
-    SetVehRadioStation(vehicle, radioStation);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehRadioStation(_vehicle, radioStation);
 }
 
 /**
@@ -2735,7 +2815,8 @@ export function stopScenes(): void {
  * Hash: 0xB8BEC0CA6F0EDB0F | Since: 323
  */
 export function stopCurrentPlayingAmbientSpeech(ped: number | IPed): void {
-    StopCurrentPlayingAmbientSpeech(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    StopCurrentPlayingAmbientSpeech(_ped);
 }
 
 /**
@@ -2744,7 +2825,8 @@ export function stopCurrentPlayingAmbientSpeech(ped: number | IPed): void {
  * Hash: 0x7A73D05A607734C7 | Since: 323
  */
 export function stopCurrentPlayingSpeech(ped: number | IPed): void {
-    StopCurrentPlayingSpeech(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    StopCurrentPlayingSpeech(_ped);
 }
 
 /**
@@ -2762,7 +2844,8 @@ export function stopCutscene(): void {
  * Hash: 0x6C5AE23EFA885092 | Since: 323
  */
 export function stopPedRingtone(ped: number | IPed): void {
-    StopPedRingtone(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    StopPedRingtone(_ped);
 }
 
 /**
@@ -2771,7 +2854,8 @@ export function stopPedRingtone(ped: number | IPed): void {
  * Hash: 0x9D64D7405520E3D3 | Since: 323
  */
 export function stopPedSpeaking(ped: number | IPed, shaking: boolean): void {
-    StopPedSpeaking(ped, shaking);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    StopPedSpeaking(_ped, shaking);
 }
 
 /**
@@ -2780,7 +2864,8 @@ export function stopPedSpeaking(ped: number | IPed, shaking: boolean): void {
  * Hash: 0xAB6781A5F3101470 | Since: 1868
  */
 export function stopPedSpeakingSynced(ped: number | IPed): void {
-    StopPedSpeakingSynced(ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    StopPedSpeakingSynced(_ped, false);
 }
 
 /**
@@ -2846,7 +2931,8 @@ export function triggerMusicEvent(eventName: string): boolean {
  * Hash: 0x66C3FB05206041BA | Since: 1290
  */
 export function triggerSiren(vehicle: number | IVehicle): void {
-    TriggerSiren(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TriggerSiren(_vehicle);
 }
 
 /**
@@ -2954,8 +3040,9 @@ export function updateUnlockableDjRadioTracks(enableMixes: boolean): void {
  * Hash: 0xBF4DC1784BE94DFA | Since: 323
  */
 export function useFootstepScriptSweeteners(ped: number | IPed, hash: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof hash === 'string') hash = GetHashKey(hash)
-    UseFootstepScriptSweeteners(ped, false, hash);
+    UseFootstepScriptSweeteners(_ped, false, hash);
 }
 
 /**
@@ -2964,7 +3051,8 @@ export function useFootstepScriptSweeteners(ped: number | IPed, hash: number | s
  * Hash: 0xFA932DE350266EF8 | Since: 323
  */
 export function useSirenAsHorn(vehicle: number | IVehicle, toggle: boolean): void {
-    UseSirenAsHorn(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    UseSirenAsHorn(_vehicle, toggle);
 }
 
 /**
@@ -2973,7 +3061,8 @@ export function useSirenAsHorn(vehicle: number | IVehicle, toggle: boolean): voi
  * Hash: 0xBEFB80290414FD4F | Since: 3095
  */
 export function enableDragRaceStationaryWarningSounds(vehicle: number | IVehicle, enable: boolean): void {
-    Citizen.invokeNative('0xBEFB80290414FD4F', vehicle, enable);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    Citizen.invokeNative('0xBEFB80290414FD4F', _vehicle, enable);
 }
 
 /**
@@ -2982,6 +3071,7 @@ export function enableDragRaceStationaryWarningSounds(vehicle: number | IVehicle
  * Hash: 0xEB7D0E1FCC8FE17A | Since: 3258
  */
 export function forceVehicleEngineSynth(vehicle: number | IVehicle, force: boolean): void {
-    ForceVehicleEngineSynth(vehicle, force);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    ForceVehicleEngineSynth(_vehicle, force);
 }
 

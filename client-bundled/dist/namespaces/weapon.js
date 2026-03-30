@@ -1,3 +1,4 @@
+import { IEntity, IPed, IPlayer, IVehicle, IObject } from '@risinglife/fivem-shared';
 /**
  * A getter for the accuracy spread of a weapon.
  *
@@ -14,7 +15,8 @@ export function getAccuracySpread(weaponHash) {
  * Hash: 0x63ED2E7 | Since: unknown | API-Set: client
  */
 export function getAnimationOverride(ped) {
-    return GetWeaponAnimationOverride(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetWeaponAnimationOverride(_ped);
 }
 /**
  * A getter for `CWeaponAccuracyModifier` in a weapon component.
@@ -157,9 +159,10 @@ export function setRecoilShakeAmplitude(weaponHash, amplitude) {
  * Hash: 0x78F0424C34306220 | Since: 323 | API-Set: unknown
  */
 export function addAmmoToPed(ped, weaponHash, ammo) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    AddAmmoToPed(ped, weaponHash, ammo);
+    AddAmmoToPed(_ped, weaponHash, ammo);
 }
 /**
  * Ammo types: https://gist.github.com/root-cause/faf41f59f7a6d818b7db0b839bd147c1
@@ -167,9 +170,10 @@ export function addAmmoToPed(ped, weaponHash, ammo) {
  * Hash: 0x2472622CE1F2D45F | Since: 1103 | API-Set: unknown
  */
 export function addPedAmmoByType(ped, ammoTypeHash, ammo) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof ammoTypeHash === 'string')
         ammoTypeHash = GetHashKey(ammoTypeHash);
-    AddAmmoToPedByType(ped, ammoTypeHash, ammo);
+    AddAmmoToPedByType(_ped, ammoTypeHash, ammo);
 }
 /**
  * this returns if you can use the weapon while using a parachute
@@ -188,7 +192,8 @@ export function canUseOnParachute(weaponHash) {
  * Hash: 0xAC678E40BE7C74D2 | Since: 323 | API-Set: unknown
  */
 export function clearEntityLastDamage(entity) {
-    ClearEntityLastWeaponDamage(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    ClearEntityLastWeaponDamage(_entity);
 }
 /**
  * Does NOT seem to work with HAS_PED_BEEN_DAMAGED_BY_WEAPON. Use CLEAR_ENTITY_LAST_WEAPON_DAMAGE and HAS_ENTITY_BEEN_DAMAGED_BY_WEAPON instead.
@@ -196,7 +201,8 @@ export function clearEntityLastDamage(entity) {
  * Hash: 0x0E98F88A24C5F4B8 | Since: 323 | API-Set: unknown
  */
 export function clearPedLastDamage(ped) {
-    ClearPedLastWeaponDamage(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedLastWeaponDamage(_ped);
 }
 /**
  * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -264,9 +270,10 @@ export function enableLaserSightRendering(toggle) {
  * Hash: 0xFC4BD125DE7611E4 | Since: 323 | API-Set: unknown
  */
 export function explodeProjectiles(ped, weaponHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    ExplodeProjectiles(ped, weaponHash, false);
+    ExplodeProjectiles(_ped, weaponHash, false);
 }
 /**
  * No comment provided
@@ -282,9 +289,10 @@ export function fireAirDefenceSphereAtPosition(zoneId, pos) {
  * Hash: 0x2E1202248937775C | Since: 323 | API-Set: unknown
  */
 export function getAmmoInClip(ped, weaponHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    return GetAmmoInClip(ped, weaponHash);
+    return GetAmmoInClip(_ped, weaponHash);
 }
 /**
  * `WEAPON::GET_AMMO_IN_PED_WEAPON(PLAYER::PLAYER_PED_ID(), a_0)`
@@ -299,9 +307,10 @@ export function getAmmoInClip(ped, weaponHash) {
  * Hash: 0x015A522136D7F951 | Since: 323 | API-Set: unknown
  */
 export function getAmmoInPed(ped, weaponhash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponhash === 'string')
         weaponhash = GetHashKey(weaponhash);
-    return GetAmmoInPedWeapon(ped, weaponhash);
+    return GetAmmoInPedWeapon(_ped, weaponhash);
 }
 /**
  * p1 is always 0 in the scripts.
@@ -309,7 +318,8 @@ export function getAmmoInPed(ped, weaponhash) {
  * Hash: 0x8483E98E8B888AE2 | Since: 323 | API-Set: unknown
  */
 export function getBestPed(ped) {
-    return GetBestPedWeapon(ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetBestPedWeapon(_ped, false);
 }
 /**
  * Example in VB
@@ -327,7 +337,8 @@ export function getBestPed(ped) {
  * Hash: 0x1017582BCD3832DC | Since: 323 | API-Set: unknown
  */
 export function getCurrentPedVehicle(ped) {
-    return GetCurrentPedVehicleWeapon(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetCurrentPedVehicleWeapon(_ped);
 }
 /**
  * The return value seems to indicate returns true if the hash of the weapon object weapon equals the weapon hash.
@@ -345,7 +356,8 @@ export function getCurrentPedVehicle(ped) {
  * Hash: 0x3A87E44BB9A01D54 | Since: 323 | API-Set: unknown
  */
 export function getCurrentPed(ped) {
-    return GetCurrentPedWeapon(ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetCurrentPedWeapon(_ped, false);
 }
 /**
  * No comment provided
@@ -353,7 +365,8 @@ export function getCurrentPed(ped) {
  * Hash: 0x3B390A939AF0B5FC | Since: 323 | API-Set: unknown
  */
 export function getCurrentPedEntityIndex(ped) {
-    return GetCurrentPedWeaponEntityIndex(ped, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetCurrentPedWeaponEntityIndex(_ped, undefined);
 }
 /**
  * gadgetHash - was always 0xFBAB5776 ("GADGET_PARACHUTE").
@@ -361,9 +374,10 @@ export function getCurrentPedEntityIndex(ped) {
  * Hash: 0xF731332072F5156C | Since: 323 | API-Set: unknown
  */
 export function getIsPedGadgetEquipped(ped, gadgetHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof gadgetHash === 'string')
         gadgetHash = GetHashKey(gadgetHash);
-    return GetIsPedGadgetEquipped(ped, gadgetHash);
+    return GetIsPedGadgetEquipped(_ped, gadgetHash);
 }
 /**
  * No comment provided
@@ -371,7 +385,8 @@ export function getIsPedGadgetEquipped(ped, gadgetHash) {
  * Hash: 0x840F03E9041E2C9C | Since: 323 | API-Set: unknown
  */
 export function getLockonDistanceOfCurrentPed(ped) {
-    return GetLockonDistanceOfCurrentPedWeapon(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetLockonDistanceOfCurrentPedWeapon(_ped);
 }
 /**
  * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -379,9 +394,10 @@ export function getLockonDistanceOfCurrentPed(ped) {
  * Hash: 0xDC16122C7A20C933 | Since: 323 | API-Set: unknown
  */
 export function getMaxAmmo(ped, weaponHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    return GetMaxAmmo(ped, weaponHash);
+    return GetMaxAmmo(_ped, weaponHash);
 }
 /**
  * Returns the max ammo for an ammo type. Ammo types: https://gist.github.com/root-cause/faf41f59f7a6d818b7db0b839bd147c1
@@ -389,9 +405,10 @@ export function getMaxAmmo(ped, weaponHash) {
  * Hash: 0x585847C5E4E11709 | Since: 1103 | API-Set: unknown
  */
 export function getMaxAmmoByType(ped, ammoTypeHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof ammoTypeHash === 'string')
         ammoTypeHash = GetHashKey(ammoTypeHash);
-    return GetMaxAmmoByType(ped, ammoTypeHash);
+    return GetMaxAmmoByType(_ped, ammoTypeHash);
 }
 /**
  * p2 is mostly 1 in the scripts.
@@ -400,9 +417,10 @@ export function getMaxAmmoByType(ped, ammoTypeHash) {
  * Hash: 0xA38DCFFCEA8962FA | Since: 323 | API-Set: unknown
  */
 export function getMaxAmmoInClip(ped, weaponHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    return GetMaxAmmoInClip(ped, weaponHash, false);
+    return GetMaxAmmoInClip(_ped, weaponHash, false);
 }
 /**
  * No comment provided
@@ -410,7 +428,8 @@ export function getMaxAmmoInClip(ped, weaponHash) {
  * Hash: 0x814C9D19DFD69679 | Since: 323 | API-Set: unknown
  */
 export function getMaxRangeOfCurrentPed(ped) {
-    return GetMaxRangeOfCurrentPedWeapon(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetMaxRangeOfCurrentPedWeapon(_ped);
 }
 /**
  * No comment provided
@@ -418,9 +437,10 @@ export function getMaxRangeOfCurrentPed(ped) {
  * Hash: 0x39D22031557946C1 | Since: 323 | API-Set: unknown
  */
 export function getPedAmmoByType(ped, ammoTypeHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof ammoTypeHash === 'string')
         ammoTypeHash = GetHashKey(ammoTypeHash);
-    return GetPedAmmoByType(ped, ammoTypeHash);
+    return GetPedAmmoByType(_ped, ammoTypeHash);
 }
 /**
  * Returns the current ammo type of the specified ped's specified weapon.
@@ -431,9 +451,10 @@ export function getPedAmmoByType(ped, ammoTypeHash) {
  * Hash: 0x7FEAD38B326B9F74 | Since: 323 | API-Set: unknown
  */
 export function getPedAmmoTypeFrom(ped, weaponHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    return GetPedAmmoTypeFromWeapon(ped, weaponHash);
+    return GetPedAmmoTypeFromWeapon(_ped, weaponHash);
 }
 /**
  * Pass ped. Pass address of Vector3.
@@ -443,7 +464,8 @@ export function getPedAmmoTypeFrom(ped, weaponHash) {
  * Hash: 0x6C4D0409BA1A2BC2 | Since: 323 | API-Set: unknown
  */
 export function getPedLastImpactCoord(ped) {
-    return GetPedLastWeaponImpactCoord(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedLastWeaponImpactCoord(_ped);
 }
 /**
  * Returns the base/default ammo type of the specified ped's specified weapon.
@@ -453,9 +475,10 @@ export function getPedLastImpactCoord(ped) {
  * Hash: 0xF489B44DD5AF4BD9 | Since: 1103 | API-Set: unknown
  */
 export function getPedOriginalAmmoTypeFrom(ped, weaponHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    return GetPedAmmoTypeFromWeapon2(ped, weaponHash);
+    return GetPedAmmoTypeFromWeapon2(_ped, weaponHash);
 }
 /**
  * No comment provided
@@ -463,9 +486,10 @@ export function getPedOriginalAmmoTypeFrom(ped, weaponHash) {
  * Hash: 0xEFFED78E9011134D | Since: 323 | API-Set: unknown
  */
 export function getPedtypeInSlot(ped, weaponSlot) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponSlot === 'string')
         weaponSlot = GetHashKey(weaponSlot);
-    return GetPedWeapontypeInSlot(ped, weaponSlot);
+    return GetPedWeapontypeInSlot(_ped, weaponSlot);
 }
 /**
  * No comment provided
@@ -473,9 +497,10 @@ export function getPedtypeInSlot(ped, weaponSlot) {
  * Hash: 0xA2C9AC24B4061285 | Since: 1103 | API-Set: unknown
  */
 export function getPedCamoIndex(ped, weaponHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    return Citizen.invokeNative('0xA2C9AC24B4061285', ped, weaponHash);
+    return Citizen.invokeNative('0xA2C9AC24B4061285', _ped, weaponHash);
 }
 /**
  * Returns -1 if camoComponentHash is invalid/not attached to the weapon.
@@ -484,11 +509,12 @@ export function getPedCamoIndex(ped, weaponHash) {
  * Hash: 0xF0A60040BE558F2D | Since: 1103 | API-Set: unknown
  */
 export function getPedComponentTintIndex(ped, weaponHash, camoComponentHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     if (typeof camoComponentHash === 'string')
         camoComponentHash = GetHashKey(camoComponentHash);
-    return GetPedWeaponLiveryColor(ped, weaponHash, camoComponentHash);
+    return GetPedWeaponLiveryColor(_ped, weaponHash, camoComponentHash);
 }
 /**
  * Full list of weapons, components & tint indexes by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -496,9 +522,10 @@ export function getPedComponentTintIndex(ped, weaponHash, camoComponentHash) {
  * Hash: 0x2B9EEDC07BD06B9F | Since: 323 | API-Set: unknown
  */
 export function getPedTintIndex(ped, weaponHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    return GetPedWeaponTintIndex(ped, weaponHash);
+    return GetPedWeaponTintIndex(_ped, weaponHash);
 }
 /**
  * Returns the hash of the weapon.
@@ -519,7 +546,8 @@ export function getPedTintIndex(ped, weaponHash) {
  * Hash: 0x0A6DB4965674D243 | Since: 323 | API-Set: unknown
  */
 export function getSelectedPed(ped) {
-    return GetSelectedPedWeapon(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetSelectedPedWeapon(_ped);
 }
 /**
  * No comment provided
@@ -700,9 +728,10 @@ export function getHudStats(weaponHash) {
  * Hash: 0xB3EA4FEABF41464B | Since: 1103 | API-Set: unknown
  */
 export function getObjectComponentTintIndex(weaponObject, camoComponentHash) {
+    const _weaponObject = weaponObject instanceof IObject ? weaponObject.handle() : weaponObject;
     if (typeof camoComponentHash === 'string')
         camoComponentHash = GetHashKey(camoComponentHash);
-    return GetWeaponObjectLiveryColor(weaponObject, camoComponentHash);
+    return GetWeaponObjectLiveryColor(_weaponObject, camoComponentHash);
 }
 /**
  * Drops the current weapon and returns the object
@@ -712,7 +741,8 @@ export function getObjectComponentTintIndex(weaponObject, camoComponentHash) {
  * Hash: 0xCAE1DC9A0E22A16D | Since: 323 | API-Set: unknown
  */
 export function getObjectFromPed(ped) {
-    return GetWeaponObjectFromPed(ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetWeaponObjectFromPed(_ped, false);
 }
 /**
  * No comment provided
@@ -720,7 +750,8 @@ export function getObjectFromPed(ped) {
  * Hash: 0xCD183314F7CD2E57 | Since: 323 | API-Set: unknown
  */
 export function getObjectTintIndex(weapon) {
-    return GetWeaponObjectTintIndex(weapon);
+    const _weapon = weapon instanceof IObject ? weapon.handle() : weapon;
+    return GetWeaponObjectTintIndex(_weapon);
 }
 /**
  * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -751,9 +782,10 @@ export function getTintCount(weaponHash) {
  * Hash: 0xB282DC6EBD803C75 | Since: 323 | API-Set: unknown
  */
 export function giveDelayedToPed(ped, weaponHash, ammoCount, bForceInHand) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    GiveDelayedWeaponToPed(ped, weaponHash, ammoCount, bForceInHand);
+    GiveDelayedWeaponToPed(_ped, weaponHash, ammoCount, bForceInHand);
 }
 /**
  * Gives the specified loadout to the specified ped.
@@ -762,9 +794,10 @@ export function giveDelayedToPed(ped, weaponHash, ammoCount, bForceInHand) {
  * Hash: 0x68F8BE6AF5CDF8A6 | Since: 505 | API-Set: unknown
  */
 export function giveLoadoutToPed(ped, loadoutHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof loadoutHash === 'string')
         loadoutHash = GetHashKey(loadoutHash);
-    GiveLoadoutToPed(ped, loadoutHash);
+    GiveLoadoutToPed(_ped, loadoutHash);
 }
 /**
  * Full list of weapons & components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -772,11 +805,12 @@ export function giveLoadoutToPed(ped, loadoutHash) {
  * Hash: 0xD966D51AA5B28BB9 | Since: 323 | API-Set: unknown
  */
 export function giveComponentToPed(ped, weaponHash, componentHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
         componentHash = GetHashKey(componentHash);
-    GiveWeaponComponentToPed(ped, weaponHash, componentHash);
+    GiveWeaponComponentToPed(_ped, weaponHash, componentHash);
 }
 /**
  * componentHash:
@@ -786,9 +820,10 @@ export function giveComponentToPed(ped, weaponHash, componentHash) {
  * Hash: 0x33E179436C0B31DB | Since: 323 | API-Set: unknown
  */
 export function giveComponentToWeaponObject(weaponObject, componentHash) {
+    const _weaponObject = weaponObject instanceof IObject ? weaponObject.handle() : weaponObject;
     if (typeof componentHash === 'string')
         componentHash = GetHashKey(componentHash);
-    GiveWeaponComponentToWeaponObject(weaponObject, componentHash);
+    GiveWeaponComponentToWeaponObject(_weaponObject, componentHash);
 }
 /**
  * No comment provided
@@ -796,7 +831,9 @@ export function giveComponentToWeaponObject(weaponObject, componentHash) {
  * Hash: 0xB1FA61371AF7C4B7 | Since: 323 | API-Set: unknown
  */
 export function giveObjectToPed(weaponObject, ped) {
-    GiveWeaponObjectToPed(weaponObject, ped);
+    const _weaponObject = weaponObject instanceof IObject ? weaponObject.handle() : weaponObject;
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    GiveWeaponObjectToPed(_weaponObject, _ped);
 }
 /**
  * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -804,9 +841,10 @@ export function giveObjectToPed(weaponObject, ped) {
  * Hash: 0xBF0FD6E56C964FCB | Since: 323 | API-Set: unknown
  */
 export function giveToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    GiveWeaponToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand);
+    GiveWeaponToPed(_ped, weaponHash, ammoCount, isHidden, bForceInHand);
 }
 /**
  * It determines what weapons caused damage:
@@ -819,9 +857,10 @@ export function giveToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand) {
  * Hash: 0x131D401334815E94 | Since: 323 | API-Set: unknown
  */
 export function hasEntityBeenDamagedBy(entity, weaponHash, weaponType) {
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    return HasEntityBeenDamagedByWeapon(entity, weaponHash, weaponType);
+    return HasEntityBeenDamagedByWeapon(_entity, weaponHash, weaponType);
 }
 /**
  * It determines what weapons caused damage:
@@ -834,9 +873,10 @@ export function hasEntityBeenDamagedBy(entity, weaponHash, weaponType) {
  * Hash: 0x2D343D2219CD027A | Since: 323 | API-Set: unknown
  */
 export function hasPedBeenDamagedBy(ped, weaponHash, weaponType) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    return HasPedBeenDamagedByWeapon(ped, weaponHash, weaponType);
+    return HasPedBeenDamagedByWeapon(_ped, weaponHash, weaponType);
 }
 /**
  * p2 should be FALSE, otherwise it seems to always return FALSE
@@ -847,9 +887,10 @@ export function hasPedBeenDamagedBy(ped, weaponHash, weaponType) {
  * Hash: 0x8DECB02F88F428BC | Since: 323 | API-Set: unknown
  */
 export function hasPedGot(ped, weaponHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    return HasPedGotWeapon(ped, weaponHash, false);
+    return HasPedGotWeapon(_ped, weaponHash, false);
 }
 /**
  * Full list of weapons & components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -857,11 +898,12 @@ export function hasPedGot(ped, weaponHash) {
  * Hash: 0xC593212475FAE340 | Since: 323 | API-Set: unknown
  */
 export function hasPedGotComponent(ped, weaponHash, componentHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
         componentHash = GetHashKey(componentHash);
-    return HasPedGotWeaponComponent(ped, weaponHash, componentHash);
+    return HasPedGotWeaponComponent(_ped, weaponHash, componentHash);
 }
 /**
  * Fourth Parameter = unsure, almost always -1
@@ -869,9 +911,11 @@ export function hasPedGotComponent(ped, weaponHash, componentHash) {
  * Hash: 0x717C8481234E3B88 | Since: 323 | API-Set: unknown
  */
 export function hasVehicleGotProjectileAttached(driver, vehicle, weaponHash) {
+    const _driver = driver instanceof IPed ? driver.handle() : driver;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    return HasVehicleGotProjectileAttached(driver, vehicle, weaponHash, undefined);
+    return HasVehicleGotProjectileAttached(_driver, _vehicle, weaponHash, undefined);
 }
 /**
  * No comment provided
@@ -889,9 +933,10 @@ export function hasAssetLoaded(weaponHash) {
  * Hash: 0x76A18844E743BF91 | Since: 323 | API-Set: unknown
  */
 export function hasGotWeaponComponent(weapon, componentHash) {
+    const _weapon = weapon instanceof IObject ? weapon.handle() : weapon;
     if (typeof componentHash === 'string')
         componentHash = GetHashKey(componentHash);
-    return HasWeaponGotWeaponComponent(weapon, componentHash);
+    return HasWeaponGotWeaponComponent(_weapon, componentHash);
 }
 /**
  * Hides the players weapon during a cutscene.
@@ -899,7 +944,8 @@ export function hasGotWeaponComponent(weapon, componentHash) {
  * Hash: 0x6F6981D2253C208F | Since: 323 | API-Set: unknown
  */
 export function hidePedForScriptedCutscene(ped, toggle) {
-    HidePedWeaponForScriptedCutscene(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    HidePedWeaponForScriptedCutscene(_ped, toggle);
 }
 /**
  * No comment provided
@@ -915,7 +961,8 @@ export function isAirDefenceSphereInArea(pos, radius) {
  * Hash: 0x4B7620C47217126C | Since: 323 | API-Set: unknown
  */
 export function isFlashLightOn(ped) {
-    return IsFlashLightOn(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsFlashLightOn(_ped);
 }
 /**
  * Checks if the ped is currently equipped with a weapon matching a bit specified using a bitwise-or in typeFlags.
@@ -940,7 +987,8 @@ export function isFlashLightOn(ped) {
  * Hash: 0x475768A975D5AD17 | Since: 323 | API-Set: unknown
  */
 export function isPedArmed(ped, typeFlags) {
-    return IsPedArmed(ped, typeFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedArmed(_ped, typeFlags);
 }
 /**
  * This native returns a true or false value.
@@ -950,7 +998,8 @@ export function isPedArmed(ped, typeFlags) {
  * Hash: 0x65F0C5AE05943EC7 | Since: 323 | API-Set: unknown
  */
 export function isPedCurrentSilenced(ped) {
-    return IsPedCurrentWeaponSilenced(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedCurrentWeaponSilenced(_ped);
 }
 /**
  * Full list of weapons & components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -958,11 +1007,12 @@ export function isPedCurrentSilenced(ped) {
  * Hash: 0x0D78DE0572D3969E | Since: 323 | API-Set: unknown
  */
 export function isPedComponentActive(ped, weaponHash, componentHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
         componentHash = GetHashKey(componentHash);
-    return IsPedWeaponComponentActive(ped, weaponHash, componentHash);
+    return IsPedWeaponComponentActive(_ped, weaponHash, componentHash);
 }
 /**
  * No comment provided
@@ -970,7 +1020,8 @@ export function isPedComponentActive(ped, weaponHash, componentHash) {
  * Hash: 0xB80CA294F2F26749 | Since: 323 | API-Set: unknown
  */
 export function isPedReadyToShoot(ped) {
-    return IsPedWeaponReadyToShoot(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedWeaponReadyToShoot(_ped);
 }
 /**
  * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -988,7 +1039,8 @@ export function isValid(weaponHash) {
  * Hash: 0x20AE33F3AC9C0033 | Since: 323 | API-Set: unknown
  */
 export function makePedReload(ped) {
-    return MakePedReload(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return MakePedReload(_ped);
 }
 /**
  * No comment provided
@@ -996,7 +1048,8 @@ export function makePedReload(ped) {
  * Hash: 0x8C0D57EA686FAD87 | Since: 323 | API-Set: unknown
  */
 export function refillAmmoInstantly(ped) {
-    return RefillAmmoInstantly(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return RefillAmmoInstantly(_ped);
 }
 /**
  * No comment provided
@@ -1020,7 +1073,8 @@ export function removeAllAirDefenceSpheres() {
  * Hash: 0xF25DF915FA38C5F3 | Since: 323 | API-Set: unknown
  */
 export function removeAllPeds(ped) {
-    RemoveAllPedWeapons(ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    RemoveAllPedWeapons(_ped, false);
 }
 /**
  * If `explode` true, then removal is done through exploding the projectile. Basically the same as EXPLODE_PROJECTILES but without defining the owner ped.
@@ -1048,11 +1102,12 @@ export function removeAsset(weaponHash) {
  * Hash: 0x1E8BE90C74FB4C09 | Since: 323 | API-Set: unknown
  */
 export function removeComponentFromPed(ped, weaponHash, componentHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
         componentHash = GetHashKey(componentHash);
-    RemoveWeaponComponentFromPed(ped, weaponHash, componentHash);
+    RemoveWeaponComponentFromPed(_ped, weaponHash, componentHash);
 }
 /**
  * see DOES_WEAPON_TAKE_WEAPON_COMPONENT for full list of weapons & components
@@ -1060,9 +1115,10 @@ export function removeComponentFromPed(ped, weaponHash, componentHash) {
  * Hash: 0xF7D82B0D66777611 | Since: 323 | API-Set: unknown
  */
 export function removeComponentFromWeaponObject(_object, componentHash) {
+    const __object = _object instanceof IObject ? _object.handle() : _object;
     if (typeof componentHash === 'string')
         componentHash = GetHashKey(componentHash);
-    RemoveWeaponComponentFromWeaponObject(_object, componentHash);
+    RemoveWeaponComponentFromWeaponObject(__object, componentHash);
 }
 /**
  * This native removes a specified weapon from your selected ped.
@@ -1080,9 +1136,10 @@ export function removeComponentFromWeaponObject(_object, componentHash) {
  * Hash: 0x4899CB088EDF59B8 | Since: 323 | API-Set: unknown
  */
 export function removeFromPed(ped, weaponHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    RemoveWeaponFromPed(ped, weaponHash);
+    RemoveWeaponFromPed(_ped, weaponHash);
 }
 /**
  * Nearly every instance of p1 I found was 31. Nearly every instance of p2 I found was 0.
@@ -1102,7 +1159,8 @@ export function requestAsset(weaponHash) {
  * Hash: 0x48164DBB970AC3F0 | Since: 323 | API-Set: unknown
  */
 export function requestHighDetailModel(weaponObject) {
-    RequestWeaponHighDetailModel(weaponObject);
+    const _weaponObject = weaponObject instanceof IEntity ? weaponObject.handle() : weaponObject;
+    RequestWeaponHighDetailModel(_weaponObject);
 }
 /**
  * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -1110,9 +1168,10 @@ export function requestHighDetailModel(weaponObject) {
  * Hash: 0xDCD2A934D65CB497 | Since: 323 | API-Set: unknown
  */
 export function setAmmoInClip(ped, weaponHash, ammo) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    return SetAmmoInClip(ped, weaponHash, ammo);
+    return SetAmmoInClip(_ped, weaponHash, ammo);
 }
 /**
  * Disable all weapons. Does the same as 0xB4771B9AAF4E68E4 except for all weapons.
@@ -1120,7 +1179,8 @@ export function setAmmoInClip(ped, weaponHash, ammo) {
  * Hash: 0xEFF296097FF1E509 | Since: 1103 | API-Set: unknown
  */
 export function setCanPedSelectAlls(ped, toggle) {
-    SetCanPedEquipAllWeapons(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetCanPedEquipAllWeapons(_ped, toggle);
 }
 /**
  * Disables selecting the given weapon. Ped isn't forced to put the gun away. However you can't reselect the weapon if you holster then unholster. Weapon is also grayed out on the weapon wheel.
@@ -1129,9 +1189,10 @@ export function setCanPedSelectAlls(ped, toggle) {
  * Hash: 0xB4771B9AAF4E68E4 | Since: 1103 | API-Set: unknown
  */
 export function setCanPedSelectInventory(ped, weaponHash, toggle) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    SetCanPedEquipWeapon(ped, weaponHash, toggle);
+    SetCanPedEquipWeapon(_ped, weaponHash, toggle);
 }
 /**
  * Full list of weapons by DurtyFree (Search for VEHICLE_*): https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -1139,9 +1200,10 @@ export function setCanPedSelectInventory(ped, weaponHash, toggle) {
  * Hash: 0x75C55983C2C39DAA | Since: 323 | API-Set: unknown
  */
 export function setCurrentPedVehicle(ped, weaponHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    return SetCurrentPedVehicleWeapon(ped, weaponHash);
+    return SetCurrentPedVehicleWeapon(_ped, weaponHash);
 }
 /**
  * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -1149,9 +1211,10 @@ export function setCurrentPedVehicle(ped, weaponHash) {
  * Hash: 0xADF692B254977C0C | Since: 323 | API-Set: unknown
  */
 export function setCurrentPed(ped, weaponHash, bForceInHand) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    SetCurrentPedWeapon(ped, weaponHash, bForceInHand);
+    SetCurrentPedWeapon(_ped, weaponHash, bForceInHand);
 }
 /**
  * No comment provided
@@ -1159,7 +1222,8 @@ export function setCurrentPed(ped, weaponHash, bForceInHand) {
  * Hash: 0xE4DCEC7FD5B739A5 | Since: 323 | API-Set: unknown
  */
 export function setEqippedStartSpinningAtFullSpeed(ped) {
-    Citizen.invokeNative('0xE4DCEC7FD5B739A5', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0xE4DCEC7FD5B739A5', _ped);
 }
 /**
  * Enables/disables flashlight on ped's weapon.
@@ -1167,7 +1231,8 @@ export function setEqippedStartSpinningAtFullSpeed(ped) {
  * Hash: 0x988DB6FE9B3AC000 | Since: 2060 | API-Set: unknown
  */
 export function setFlashLightActiveHistory(ped, toggle) {
-    SetFlashLightEnabled(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetFlashLightEnabled(_ped, toggle);
 }
 /**
  * No comment provided
@@ -1183,9 +1248,10 @@ export function setFlashLightFadeDistance(distance) {
  * Hash: 0x14E56BC5B5DB6A19 | Since: 323 | API-Set: unknown
  */
 export function setPedAmmo(ped, weaponHash, ammo) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    SetPedAmmo(ped, weaponHash, ammo, false);
+    SetPedAmmo(_ped, weaponHash, ammo, false);
 }
 /**
  * Ammo types: https://gist.github.com/root-cause/faf41f59f7a6d818b7db0b839bd147c1
@@ -1193,9 +1259,10 @@ export function setPedAmmo(ped, weaponHash, ammo) {
  * Hash: 0x5FD1E1F011E76D7E | Since: 323 | API-Set: unknown
  */
 export function setPedAmmoByType(ped, ammoTypeHash, ammo) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof ammoTypeHash === 'string')
         ammoTypeHash = GetHashKey(ammoTypeHash);
-    SetPedAmmoByType(ped, ammoTypeHash, ammo);
+    SetPedAmmoByType(_ped, ammoTypeHash, ammo);
 }
 /**
  * No comment provided
@@ -1203,7 +1270,8 @@ export function setPedAmmoByType(ped, ammoTypeHash, ammo) {
  * Hash: 0xA4EFEF9440A5B0EF | Since: 323 | API-Set: unknown
  */
 export function setPedAmmoToDrop(ped) {
-    SetPedAmmoToDrop(ped, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedAmmoToDrop(_ped, 0);
 }
 /**
  * No comment provided
@@ -1211,7 +1279,8 @@ export function setPedAmmoToDrop(ped) {
  * Hash: 0x8378627201D5497D | Since: 323 | API-Set: unknown
  */
 export function setPedChanceOfFiringBlanks(ped, xBias, yBias) {
-    SetPedChanceOfFiringBlanks(ped, xBias, yBias);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedChanceOfFiringBlanks(_ped, xBias, yBias);
 }
 /**
  * Has 5 parameters since latest patches.
@@ -1219,7 +1288,8 @@ export function setPedChanceOfFiringBlanks(ped, xBias, yBias) {
  * Hash: 0x0725A4CCFDED9A70 | Since: 323 | API-Set: unknown
  */
 export function setPedCurrentVisible(ped, visible, deselectWeapon) {
-    SetPedCurrentWeaponVisible(ped, visible, deselectWeapon, false, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCurrentWeaponVisible(_ped, visible, deselectWeapon, false, false);
 }
 /**
  * No comment provided
@@ -1227,7 +1297,8 @@ export function setPedCurrentVisible(ped, visible, deselectWeapon) {
  * Hash: 0x50276EF8172F5F12 | Since: 1734 | API-Set: unknown
  */
 export function setPedCycleVehiclesOnly(ped) {
-    Citizen.invokeNative('0x50276EF8172F5F12', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x50276EF8172F5F12', _ped);
 }
 /**
  * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -1235,9 +1306,10 @@ export function setPedCycleVehiclesOnly(ped) {
  * Hash: 0x208A1888007FC0E6 | Since: 323 | API-Set: unknown
  */
 export function setPedDropsInventory(ped, weaponHash, xOffset, yOffset, zOffset, ammoCount) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    SetPedDropsInventoryWeapon(ped, weaponHash, xOffset, yOffset, zOffset, ammoCount);
+    SetPedDropsInventoryWeapon(_ped, weaponHash, xOffset, yOffset, zOffset, ammoCount);
 }
 /**
  * No comment provided
@@ -1245,7 +1317,8 @@ export function setPedDropsInventory(ped, weaponHash, xOffset, yOffset, zOffset,
  * Hash: 0x6B7513D9966FBEC0 | Since: 323 | API-Set: unknown
  */
 export function setPedDrops(ped) {
-    SetPedDropsWeapon(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedDropsWeapon(_ped);
 }
 /**
  * No comment provided
@@ -1253,7 +1326,8 @@ export function setPedDrops(ped) {
  * Hash: 0x476AE72C1D19D1A8 | Since: 323 | API-Set: unknown
  */
 export function setPedDropssWhenDead(ped, toggle) {
-    SetPedDropsWeaponsWhenDead(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedDropsWeaponsWhenDead(_ped, toggle);
 }
 /**
  * p1/gadgetHash was always 0xFBAB5776 ("GADGET_PARACHUTE").
@@ -1262,9 +1336,10 @@ export function setPedDropssWhenDead(ped, toggle) {
  * Hash: 0xD0D7B1E680ED4A1A | Since: 323 | API-Set: unknown
  */
 export function setPedGadget(ped, gadgetHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof gadgetHash === 'string')
         gadgetHash = GetHashKey(gadgetHash);
-    SetPedGadget(ped, gadgetHash, false);
+    SetPedGadget(_ped, gadgetHash, false);
 }
 /**
  * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -1272,9 +1347,10 @@ export function setPedGadget(ped, gadgetHash) {
  * Hash: 0x3EDCB0505123623B | Since: 323 | API-Set: unknown
  */
 export function setPedInfiniteAmmo(ped, toggle, weaponHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    SetPedInfiniteAmmo(ped, toggle, weaponHash);
+    SetPedInfiniteAmmo(_ped, toggle, weaponHash);
 }
 /**
  * No comment provided
@@ -1282,7 +1358,8 @@ export function setPedInfiniteAmmo(ped, toggle, weaponHash) {
  * Hash: 0x183DADC6AA953186 | Since: 323 | API-Set: unknown
  */
 export function setPedInfiniteAmmoClip(ped, toggle) {
-    SetPedInfiniteAmmoClip(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedInfiniteAmmoClip(_ped, toggle);
 }
 /**
  * Returns handle of the projectile.
@@ -1290,7 +1367,8 @@ export function setPedInfiniteAmmoClip(ped, toggle) {
  * Hash: 0xB4C8D77C80C0421E | Since: 323 | API-Set: unknown
  */
 export function setPedShootOrdnance(ped) {
-    return SetPedShootOrdnanceWeapon(ped, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return SetPedShootOrdnanceWeapon(_ped, 0);
 }
 /**
  * No comment provided
@@ -1339,11 +1417,12 @@ export function setPedStunGunFiniteAmmo() {
  * Hash: 0x9FE5633880ECD8ED | Since: 1103 | API-Set: unknown
  */
 export function setPedComponentTintIndex(ped, weaponHash, camoComponentHash, colorIndex) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     if (typeof camoComponentHash === 'string')
         camoComponentHash = GetHashKey(camoComponentHash);
-    SetPedWeaponLiveryColor(ped, weaponHash, camoComponentHash, colorIndex);
+    SetPedWeaponLiveryColor(_ped, weaponHash, camoComponentHash, colorIndex);
 }
 /**
  * tintIndex can be the following:
@@ -1361,9 +1440,10 @@ export function setPedComponentTintIndex(ped, weaponHash, camoComponentHash, col
  * Hash: 0x50969B9B89ED5738 | Since: 323 | API-Set: unknown
  */
 export function setPedTintIndex(ped, weaponHash, tintIndex) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    SetPedWeaponTintIndex(ped, weaponHash, tintIndex);
+    SetPedWeaponTintIndex(_ped, weaponHash, tintIndex);
 }
 /**
  * No comment provided
@@ -1379,7 +1459,8 @@ export function setPickupAmmoAmountScaler() {
  * Hash: 0xECDC202B25E5CF48 | Since: 573 | API-Set: unknown
  */
 export function setPlayerTargettableForAirDefenceSphere(player, zoneId, enable) {
-    SetPlayerAirDefenseZoneFlag(player, zoneId, enable);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerAirDefenseZoneFlag(_player, zoneId, enable);
 }
 /**
  * Changes the selected ped aiming animation style.
@@ -1421,9 +1502,10 @@ export function setPlayerTargettableForAirDefenceSphere(player, zoneId, enable) 
  * Hash: 0x1055AC3A667F09D9 | Since: 323 | API-Set: unknown
  */
 export function setAnimationOverride(ped, animStyle) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof animStyle === 'string')
         animStyle = GetHashKey(animStyle);
-    SetWeaponAnimationOverride(ped, animStyle);
+    SetWeaponAnimationOverride(_ped, animStyle);
 }
 /**
  * No comment provided
@@ -1462,7 +1544,8 @@ export function setEffectDurationModifier(p0) {
  * Hash: 0x977CA98939E82E4B | Since: 1103 | API-Set: unknown
  */
 export function setObjectCamoIndex(weaponObject) {
-    Citizen.invokeNative('0x977CA98939E82E4B', weaponObject, 0);
+    const _weaponObject = weaponObject instanceof IObject ? weaponObject.handle() : weaponObject;
+    Citizen.invokeNative('0x977CA98939E82E4B', _weaponObject, 0);
 }
 /**
  * Colors:
@@ -1503,9 +1586,10 @@ export function setObjectCamoIndex(weaponObject) {
  * Hash: 0x5DA825A85D0EA6E6 | Since: 1103 | API-Set: unknown
  */
 export function setObjectComponentTintIndex(weaponObject, camoComponentHash, colorIndex) {
+    const _weaponObject = weaponObject instanceof IObject ? weaponObject.handle() : weaponObject;
     if (typeof camoComponentHash === 'string')
         camoComponentHash = GetHashKey(camoComponentHash);
-    SetWeaponObjectLiveryColor(weaponObject, camoComponentHash, colorIndex);
+    SetWeaponObjectLiveryColor(_weaponObject, camoComponentHash, colorIndex);
 }
 /**
  * Full list of weapons, components & tint indexes by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
@@ -1513,7 +1597,8 @@ export function setObjectComponentTintIndex(weaponObject, camoComponentHash, col
  * Hash: 0xF827589017D4E4A9 | Since: 323 | API-Set: unknown
  */
 export function setObjectTintIndex(weapon, tintIndex) {
-    SetWeaponObjectTintIndex(weapon, tintIndex);
+    const _weapon = weapon instanceof IObject ? weapon.handle() : weapon;
+    SetWeaponObjectTintIndex(_weapon, tintIndex);
 }
 /**
  * No comment provided
@@ -1521,7 +1606,8 @@ export function setObjectTintIndex(weapon, tintIndex) {
  * Hash: 0x2857938C5D407AFA | Since: 3407 | API-Set: unknown
  */
 export function getAmmoInVehicleClip(vehicle, seat) {
-    return Citizen.invokeNative('0x2857938C5D407AFA', vehicle, seat);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return Citizen.invokeNative('0x2857938C5D407AFA', _vehicle, seat);
 }
 /**
  * No comment provided
@@ -1529,7 +1615,8 @@ export function getAmmoInVehicleClip(vehicle, seat) {
  * Hash: 0xC8C6F4B1CDEB40EF | Since: 3407 | API-Set: unknown
  */
 export function getTimeBeforeVehicleReloadFinishes(vehicle, seat) {
-    return Citizen.invokeNative('0xC8C6F4B1CDEB40EF', vehicle, seat);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return Citizen.invokeNative('0xC8C6F4B1CDEB40EF', _vehicle, seat);
 }
 /**
  * No comment provided
@@ -1537,7 +1624,8 @@ export function getTimeBeforeVehicleReloadFinishes(vehicle, seat) {
  * Hash: 0xD0AD348FFD7A6868 | Since: 3407 | API-Set: unknown
  */
 export function getVehicleReloadTime(vehicle, seat) {
-    return Citizen.invokeNative('0xD0AD348FFD7A6868', vehicle, seat);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return Citizen.invokeNative('0xD0AD348FFD7A6868', _vehicle, seat);
 }
 /**
  * No comment provided
@@ -1545,7 +1633,8 @@ export function getVehicleReloadTime(vehicle, seat) {
  * Hash: 0x8062F07153F4446F | Since: 3407 | API-Set: unknown
  */
 export function hasReloadingInVehicle(vehicle, seat) {
-    return Citizen.invokeNative('0x8062F07153F4446F', vehicle, seat);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return Citizen.invokeNative('0x8062F07153F4446F', _vehicle, seat);
 }
 /**
  * No comment provided
@@ -1553,7 +1642,8 @@ export function hasReloadingInVehicle(vehicle, seat) {
  * Hash: 0x873906720EE842C3 | Since: 3407 | API-Set: unknown
  */
 export function setAmmoInVehicleClip(vehicle, seat, ammo) {
-    return Citizen.invokeNative('0x873906720EE842C3', vehicle, seat, ammo);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return Citizen.invokeNative('0x873906720EE842C3', _vehicle, seat, ammo);
 }
 /**
  * No comment provided
@@ -1571,5 +1661,7 @@ export function setPedDamageModifier(weapon, damageModifier) {
  * Hash: 0x5B1513F27F279A44 | Since: 3407 | API-Set: unknown
  */
 export function triggerVehicleReload(vehicle, seat, ped) {
-    return Citizen.invokeNative('0x5B1513F27F279A44', vehicle, seat, ped);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x5B1513F27F279A44', _vehicle, seat, _ped);
 }

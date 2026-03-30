@@ -1,11 +1,12 @@
-import { Vector3 } from '@risinglife/fivem-shared';
+import { Vector3, IEntity, IVehicle, IObject } from '@risinglife/fivem-shared';
 /**
  * No comment provided
  *
  * Hash: 0x91B38FB6
  */
 export function getRemoteSyncedScenesAllowed(entity) {
-    return GetEntityRemoteSyncedScenesAllowed(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityRemoteSyncedScenesAllowed(_entity);
 }
 /**
  * Enables or disables the owner check for the specified entity in network-synchronized scenes. When set to `false`, the entity cannot participate in synced scenes initiated by clients that do not own the entity.
@@ -15,7 +16,8 @@ export function getRemoteSyncedScenesAllowed(entity) {
  * Hash: 0xD3FC9D88
  */
 export function setRemoteSyncedScenesAllowed(entity, allow) {
-    SetEntityRemoteSyncedScenesAllowed(entity, allow);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityRemoteSyncedScenesAllowed(_entity, allow);
 }
 /**
  * A getter for [FREEZE_ENTITY_POSITION](#\_0x428CA6DBD1094446).
@@ -23,7 +25,8 @@ export function setRemoteSyncedScenesAllowed(entity, allow) {
  * Hash: 0xEDBE6ADD
  */
 export function isPositionFrozen(entity) {
-    return IsEntityPositionFrozen(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityPositionFrozen(_entity);
 }
 /**
  * ```cpp
@@ -42,7 +45,8 @@ export function isPositionFrozen(entity) {
  * Hash: 0xC1C0855A
  */
 export function applyForceTo(entity, forceType, pos, offX, offY, offZ, nComponent, bLocalForce, bLocalOffset, bScaleByMass, bPlayAudio, bScaleByTimeWarp) {
-    ApplyForceToEntity(entity, forceType, pos.x, pos.y, pos.z, offX, offY, offZ, nComponent, bLocalForce, bLocalOffset, bScaleByMass, bPlayAudio, bScaleByTimeWarp);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    ApplyForceToEntity(_entity, forceType, pos.x, pos.y, pos.z, offX, offY, offZ, nComponent, bLocalForce, bLocalOffset, bScaleByMass, bPlayAudio, bScaleByTimeWarp);
 }
 /**
  * Deletes the specified entity.
@@ -52,7 +56,8 @@ export function applyForceTo(entity, forceType, pos, offX, offY, offZ, nComponen
  * Hash: 0xFAA3D236
  */
 export function deleteEntity(entity) {
-    DeleteEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    DeleteEntity(_entity);
 }
 /**
  * No comment provided
@@ -60,7 +65,8 @@ export function deleteEntity(entity) {
  * Hash: 0x3AC90869
  */
 export function doesExist(entity) {
-    return DoesEntityExist(entity);
+    const _entity = entity instanceof IObject ? entity.handle() : entity;
+    return DoesEntityExist(_entity);
 }
 /**
  * Freezes or unfreezes an entity preventing its coordinates to change by the player if set to `true`. You can still change the entity position using [`SET_ENTITY_COORDS`](#\_0x06843DA7060A026B).
@@ -70,7 +76,8 @@ export function doesExist(entity) {
  * Hash: 0x65C16D57
  */
 export function freezePosition(entity, toggle) {
-    FreezeEntityPosition(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    FreezeEntityPosition(_entity, toggle);
 }
 /**
  * Gets the entity that this entity is attached to.
@@ -78,7 +85,8 @@ export function freezePosition(entity, toggle) {
  * Hash: 0xFE1589F9
  */
 export function getAttachedTo(entity) {
-    return GetEntityAttachedTo(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityAttachedTo(_entity);
 }
 /**
  * No comment provided
@@ -86,7 +94,8 @@ export function getAttachedTo(entity) {
  * Hash: 0xE8C0C629
  */
 export function getCollisionDisabled(entity) {
-    return GetEntityCollisionDisabled(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityCollisionDisabled(_entity);
 }
 /**
  * Gets the current coordinates for a specified entity. This native is used server side when using OneSync.
@@ -96,7 +105,8 @@ export function getCollisionDisabled(entity) {
  * Hash: 0x1647F1CB
  */
 export function getCoords(entity) {
-    return new Vector3(GetEntityCoords(entity));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetEntityCoords(_entity));
 }
 /**
  * No comment provided
@@ -104,7 +114,8 @@ export function getCoords(entity) {
  * Hash: 0x972CC383
  */
 export function getHeading(entity) {
-    return GetEntityHeading(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityHeading(_entity);
 }
 /**
  * Only works for vehicle and peds
@@ -112,7 +123,8 @@ export function getHeading(entity) {
  * Hash: 0x8E3222B7
  */
 export function getHealth(entity) {
-    return GetEntityHealth(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityHealth(_entity);
 }
 /**
  * Currently it only works with peds.
@@ -120,7 +132,8 @@ export function getHealth(entity) {
  * Hash: 0xC7AE6AA1
  */
 export function getMaxHealth(entity) {
-    return GetEntityMaxHealth(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityMaxHealth(_entity);
 }
 /**
  * No comment provided
@@ -128,7 +141,8 @@ export function getMaxHealth(entity) {
  * Hash: 0xDAFCB3EC
  */
 export function getModel(entity) {
-    return GetEntityModel(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityModel(_entity);
 }
 /**
  * No comment provided
@@ -136,7 +150,8 @@ export function getModel(entity) {
  * Hash: 0xD16EA02F
  */
 export function getOrphanMode(entity) {
-    return GetEntityOrphanMode(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityOrphanMode(_entity);
 }
 /**
  * This native gets an entity's population type.
@@ -144,7 +159,8 @@ export function getOrphanMode(entity) {
  * Hash: 0xFC30DDFF
  */
 export function getPopulationType(entity) {
-    return GetEntityPopulationType(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityPopulationType(_entity);
 }
 /**
  * No comment provided
@@ -152,7 +168,8 @@ export function getPopulationType(entity) {
  * Hash: 0x8FF45B04
  */
 export function getRotation(entity) {
-    return new Vector3(GetEntityRotation(entity));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetEntityRotation(_entity));
 }
 /**
  * No comment provided
@@ -160,7 +177,8 @@ export function getRotation(entity) {
  * Hash: 0x9BF8A73F
  */
 export function getRotationVelocity(entity) {
-    return new Vector3(GetEntityRotationVelocity(entity));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetEntityRotationVelocity(_entity));
 }
 /**
  * Gets the routing bucket for the specified entity.
@@ -170,7 +188,8 @@ export function getRotationVelocity(entity) {
  * Hash: 0xED4B0486
  */
 export function getRoutingBucket(entity) {
-    return GetEntityRoutingBucket(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityRoutingBucket(_entity);
 }
 /**
  * No comment provided
@@ -178,7 +197,8 @@ export function getRoutingBucket(entity) {
  * Hash: 0xB7F70784
  */
 export function getScript(entity) {
-    return GetEntityScript(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityScript(_entity);
 }
 /**
  * Gets the current speed of the entity in meters per second.
@@ -191,7 +211,8 @@ export function getScript(entity) {
  * Hash: 0x9E1E4798
  */
 export function getSpeed(entity) {
-    return GetEntitySpeed(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntitySpeed(_entity);
 }
 /**
  * Gets the entity type (as an integer), which can be one of the following defined down below:
@@ -226,7 +247,8 @@ export function getSpeed(entity) {
  * Hash: 0xB1BD08D
  */
 export function getType(entity) {
-    return GetEntityType(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityType(_entity);
 }
 /**
  * No comment provided
@@ -234,7 +256,8 @@ export function getType(entity) {
  * Hash: 0xC14C9B6B
  */
 export function getVelocity(entity) {
-    return new Vector3(GetEntityVelocity(entity));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetEntityVelocity(_entity));
 }
 /**
  * Gets the specific entity type (as an integer), which can be one of the following defined down below:
@@ -302,7 +325,8 @@ export function getVelocity(entity) {
  * Hash: 0x23B2A641
  */
 export function getNetTypeFrom(entity) {
-    return GetNetTypeFromEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetNetTypeFromEntity(_entity);
 }
 /**
  * No comment provided
@@ -310,7 +334,8 @@ export function getNetTypeFrom(entity) {
  * Hash: 0x9C9A3BE0
  */
 export function hasBeenMarkedAsNoLongerNeeded(vehicle) {
-    return HasEntityBeenMarkedAsNoLongerNeeded(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return HasEntityBeenMarkedAsNoLongerNeeded(_vehicle);
 }
 /**
  * This native checks if the given entity is visible.
@@ -318,7 +343,8 @@ export function hasBeenMarkedAsNoLongerNeeded(vehicle) {
  * Hash: 0x120B4ED5
  */
 export function isVisible(entity) {
-    return IsEntityVisible(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityVisible(_entity);
 }
 /**
  * Sets the coordinates (world position) for a specified entity, offset by the radius of the entity on the Z axis.
@@ -328,7 +354,8 @@ export function isVisible(entity) {
  * Hash: 0xDF70B41B
  */
 export function setCoords(entity, pos, alive, deadFlag, ragdollFlag, clearArea) {
-    SetEntityCoords(entity, pos.x, pos.y, pos.z, alive, deadFlag, ragdollFlag, clearArea);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityCoords(_entity, pos.x, pos.y, pos.z, alive, deadFlag, ragdollFlag, clearArea);
 }
 /**
  * It overrides the default distance culling radius of an entity. Set to `0.0` to reset.
@@ -339,7 +366,8 @@ export function setCoords(entity, pos, alive, deadFlag, ragdollFlag, clearArea) 
  * Hash: 0xD3A183A3
  */
 export function setDistanceCullingRadius(entity, radius) {
-    SetEntityDistanceCullingRadius(entity, radius);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityDistanceCullingRadius(_entity, radius);
 }
 /**
  * Set the heading of an entity in degrees also known as "Yaw".
@@ -349,7 +377,8 @@ export function setDistanceCullingRadius(entity, radius) {
  * Hash: 0xE0FF064D
  */
 export function setHeading(entity, heading) {
-    SetEntityHeading(entity, heading);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityHeading(_entity, heading);
 }
 /**
  * It allows to flag an entity to ignore the request control filter policy.
@@ -357,7 +386,8 @@ export function setHeading(entity, heading) {
  * Hash: 0x9F7F8D36
  */
 export function setIgnoreRequestControlFilter(entity, ignore) {
-    SetEntityIgnoreRequestControlFilter(entity, ignore);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityIgnoreRequestControlFilter(_entity, ignore);
 }
 /**
  * ```cpp
@@ -384,7 +414,8 @@ export function setIgnoreRequestControlFilter(entity, ignore) {
  * Hash: 0x489E9162
  */
 export function setOrphanMode(entity, orphanMode) {
-    SetEntityOrphanMode(entity, orphanMode);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityOrphanMode(_entity, orphanMode);
 }
 /**
  * Sets the rotation of a specified entity in the game world.
@@ -398,7 +429,8 @@ export function setOrphanMode(entity, orphanMode) {
  * Hash: 0xA345EFE
  */
 export function setRotation(entity, pitch, roll, yaw, rotationOrder, bDeadCheck) {
-    SetEntityRotation(entity, pitch, roll, yaw, rotationOrder, bDeadCheck);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityRotation(_entity, pitch, roll, yaw, rotationOrder, bDeadCheck);
 }
 /**
  * Sets the routing bucket for the specified entity.
@@ -408,7 +440,8 @@ export function setRotation(entity, pitch, roll, yaw, rotationOrder, bDeadCheck)
  * Hash: 0x635E5289
  */
 export function setRoutingBucket(entity, bucket) {
-    SetEntityRoutingBucket(entity, bucket);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityRoutingBucket(_entity, bucket);
 }
 /**
  * ```
@@ -420,7 +453,8 @@ export function setRoutingBucket(entity, bucket) {
  * Hash: 0xFF5A1988
  */
 export function setVelocity(entity, pos) {
-    SetEntityVelocity(entity, pos.x, pos.y, pos.z);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityVelocity(_entity, pos.x, pos.y, pos.z);
 }
 /**
  * Internal function for ensuring an entity has a state bag.
@@ -428,7 +462,8 @@ export function setVelocity(entity, pos) {
  * Hash: 0x3BB78F05
  */
 export function ensureStateBag(entity) {
-    EnsureEntityStateBag(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    EnsureEntityStateBag(_entity);
 }
 /**
  * ### Supported types
@@ -463,7 +498,8 @@ export function ensureStateBag(entity) {
  * Hash: 0xDFFBA12F
  */
 export function getEntitiesInRadius(pos, radius, entityType, sortByDistance, models) {
-    return GetEntitiesInRadius(pos.x, pos.y, pos.z, radius, entityType, sortByDistance, models);
+    const _models = models instanceof IObject ? models.handle() : models;
+    return GetEntitiesInRadius(pos.x, pos.y, pos.z, radius, entityType, sortByDistance, _models);
 }
 /**
  * Returns the entity handle for the specified state bag name. For use with [ADD_STATE_BAG_CHANGE_HANDLER](#\_0x5BA35AAF).

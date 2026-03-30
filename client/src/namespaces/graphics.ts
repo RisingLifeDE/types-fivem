@@ -221,7 +221,8 @@ export function resetEntityDrawOutlineRenderTechnique(): void {
  * Hash: 0x76180407
  */
 export function setEntityDrawOutline(entity: number | IEntity, enabled: boolean): void {
-    SetEntityDrawOutline(entity, enabled);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityDrawOutline(_entity, enabled);
 }
 
 /**

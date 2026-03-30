@@ -1,3 +1,4 @@
+import { IEntity, IPed } from '@risinglife/fivem-shared';
 /**
  * eventType: https://alloc8or.re/gta5/doc/enums/eEventType.txt
  *
@@ -12,7 +13,8 @@ export function addShockingAtPosition(eventType, pos, duration) {
  * Hash: 0x7FD8F3BE76F89422 | Since: 323
  */
 export function addShockingForEntity(eventType, entity, duration) {
-    return AddShockingEventForEntity(eventType, entity, duration);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return AddShockingEventForEntity(eventType, _entity, duration);
 }
 /**
  * eventType: https://alloc8or.re/gta5/doc/enums/eEventType.txt
@@ -74,9 +76,10 @@ export function removeShockingSpawnBlockingAreas() {
  * Hash: 0xB604A2942ADED0EE | Since: 323
  */
 export function setDecisionMaker(ped, name) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof name === 'string')
         name = GetHashKey(name);
-    SetDecisionMaker(ped, name);
+    SetDecisionMaker(_ped, name);
 }
 /**
  * No comment provided

@@ -1,10 +1,12 @@
+import { IEntity, IObject } from '@risinglife/fivem-shared';
 /**
  * Returns entity's archetype name, if available.
  *
  * Hash: 0x47B870F5
  */
 export function getArchetypeName(entity) {
-    return GetEntityArchetypeName(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityArchetypeName(_entity);
 }
 /**
  * Returns the transient entity index for a specified mapdata/entity pair.
@@ -22,7 +24,8 @@ export function getIndexFromMapdata(mapdata, entity) {
  * Hash: 0xF6B815C5
  */
 export function getMapdataOwner(entity) {
-    return GetEntityMapdataOwner(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityMapdataOwner(_entity);
 }
 /**
  * Resets mapdata entity transform matrix to its original state.
@@ -55,7 +58,8 @@ export function selectAtPos(fracX, fracY, hitFlags, precise) {
  * Hash: 0xFB0639B
  */
 export function setMatrix(entity, forwardX, forwardY, forwardZ, rightX, rightY, rightZ, upX, upY, upZ, atX, atY, atZ) {
-    SetEntityMatrix(entity, forwardX, forwardY, forwardZ, rightX, rightY, rightZ, upX, upY, upZ, atX, atY, atZ);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityMatrix(_entity, forwardX, forwardY, forwardZ, rightX, rightY, rightZ, upX, upY, upZ, atX, atY, atZ);
 }
 /**
  * A getter for [FREEZE_ENTITY_POSITION](#\_0x428CA6DBD1094446).
@@ -63,7 +67,8 @@ export function setMatrix(entity, forwardX, forwardY, forwardZ, rightX, rightY, 
  * Hash: 0xEDBE6ADD
  */
 export function isPositionFrozen(entity) {
-    return IsEntityPositionFrozen(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityPositionFrozen(_entity);
 }
 /**
  * **Experimental**: This native may be altered or removed in future versions of CitizenFX without warning.
@@ -75,7 +80,8 @@ export function isPositionFrozen(entity) {
  * Hash: 0x9A3144BC
  */
 export function getAddress(entity) {
-    return GetEntityAddress(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityAddress(_entity);
 }
 /**
  * Internal function for ensuring an entity has a state bag.
@@ -83,7 +89,8 @@ export function getAddress(entity) {
  * Hash: 0x3BB78F05
  */
 export function ensureStateBag(entity) {
-    EnsureEntityStateBag(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    EnsureEntityStateBag(_entity);
 }
 /**
  * ### Supported types
@@ -118,7 +125,8 @@ export function ensureStateBag(entity) {
  * Hash: 0xDFFBA12F
  */
 export function getEntitiesInRadius(pos, radius, entityType, sortByDistance, models) {
-    return GetEntitiesInRadius(pos.x, pos.y, pos.z, radius, entityType, sortByDistance, models);
+    const _models = models instanceof IObject ? models.handle() : models;
+    return GetEntitiesInRadius(pos.x, pos.y, pos.z, radius, entityType, sortByDistance, _models);
 }
 /**
  * Returns the entity handle for the specified state bag name. For use with [ADD_STATE_BAG_CHANGE_HANDLER](#\_0x5BA35AAF).

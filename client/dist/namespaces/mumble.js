@@ -1,3 +1,4 @@
+import { IPlayer } from '@risinglife/fivem-shared';
 /**
  * Starts listening to the specified channel, when available.
  *
@@ -20,7 +21,8 @@ export function addVoiceTargetChannel(targetId, channel) {
  * Hash: 0x32C5355A
  */
 export function addVoiceTargetPlayer(targetId, player) {
-    MumbleAddVoiceTargetPlayer(targetId, player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    MumbleAddVoiceTargetPlayer(targetId, _player);
 }
 /**
  * Adds the specified player to the target list for the specified Mumble voice target ID.
@@ -109,7 +111,8 @@ export function isConnected() {
  * Hash: 0x33EEF97F
  */
 export function isPlayerTalking(player) {
-    return MumbleIsPlayerTalking(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return MumbleIsPlayerTalking(_player);
 }
 /**
  * Stops listening to the specified channel.
@@ -137,7 +140,8 @@ export function removeVoiceTargetChannel(targetId, channel) {
  * Hash: 0x88CD646F
  */
 export function removeVoiceTargetPlayer(targetId, player) {
-    MumbleRemoveVoiceTargetPlayer(targetId, player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    MumbleRemoveVoiceTargetPlayer(targetId, _player);
 }
 /**
  * Removes the specified player from the user's voice targets.
@@ -240,7 +244,8 @@ export function setVoiceTarget(targetId) {
  * Hash: 0x61C309E3
  */
 export function setVolumeOverride(player, volume) {
-    MumbleSetVolumeOverride(player, volume);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    MumbleSetVolumeOverride(_player, volume);
 }
 /**
  * Overrides the output volume for a particular player with the specified server id and player name on Mumble. This will also bypass 3D audio and distance calculations. -1.0 to reset the override.

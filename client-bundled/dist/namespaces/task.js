@@ -1,4 +1,4 @@
-import { Vector3 } from '@risinglife/fivem-shared';
+import { Vector3, IEntity, IPed, IVehicle } from '@risinglife/fivem-shared';
 /**
  * No comment provided
  *
@@ -60,7 +60,8 @@ export function addScriptedCoverArea(pos, radius) {
  * Hash: 0x5CF0D8F9BBA0DD75 | Since: 323 | API-Set: unknown
  */
 export function addVehicleSubAttackCoord(ped, pos) {
-    AddVehicleSubtaskAttackCoord(ped, pos.x, pos.y, pos.z);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    AddVehicleSubtaskAttackCoord(_ped, pos.x, pos.y, pos.z);
 }
 /**
  * No comment provided
@@ -68,7 +69,9 @@ export function addVehicleSubAttackCoord(ped, pos) {
  * Hash: 0x85F462BADC7DA47F | Since: 323 | API-Set: unknown
  */
 export function addVehicleSubAttackPed(ped, target) {
-    AddVehicleSubtaskAttackPed(ped, target);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    AddVehicleSubtaskAttackPed(_ped, _target);
 }
 /**
  * No comment provided
@@ -116,7 +119,8 @@ export function assistedMovementSetRouteProperties(route, props) {
  * Hash: 0x6100B3CEFD43452E | Since: 2189 | API-Set: unknown
  */
 export function clearDefaultPrimary(ped) {
-    Citizen.invokeNative('0x6100B3CEFD43452E', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x6100B3CEFD43452E', _ped);
 }
 /**
  * No comment provided
@@ -124,7 +128,8 @@ export function clearDefaultPrimary(ped) {
  * Hash: 0xC35B5CDB2824CF69 | Since: 323 | API-Set: unknown
  */
 export function clearDrivebyUnderneathDrivingTask(ped) {
-    ClearDrivebyTaskUnderneathDrivingTask(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearDrivebyTaskUnderneathDrivingTask(_ped);
 }
 /**
  * No comment provided
@@ -132,7 +137,8 @@ export function clearDrivebyUnderneathDrivingTask(ped) {
  * Hash: 0xF6DC48E56BE1243A | Since: 3407 | API-Set: unknown
  */
 export function clearPedScriptIfRunningThreatResponseNonTempTask(ped) {
-    Citizen.invokeNative('0xF6DC48E56BE1243A', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0xF6DC48E56BE1243A', _ped);
 }
 /**
  * No comment provided
@@ -140,7 +146,8 @@ export function clearPedScriptIfRunningThreatResponseNonTempTask(ped) {
  * Hash: 0x176CECF6F920D707 | Since: 323 | API-Set: unknown
  */
 export function clearPedSecondary(ped) {
-    ClearPedSecondaryTask(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedSecondaryTask(_ped);
 }
 /**
  * No comment provided
@@ -148,7 +155,8 @@ export function clearPedSecondary(ped) {
  * Hash: 0xE1EF3C1216AFF2CD | Since: 323 | API-Set: unknown
  */
 export function clearPeds(ped) {
-    ClearPedTasks(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedTasks(_ped);
 }
 /**
  * Immediately stops the pedestrian from whatever it's doing. They stop fighting, animations, etc. they forget what they were doing.
@@ -156,7 +164,8 @@ export function clearPeds(ped) {
  * Hash: 0xAAA34F8A7CB32098 | Since: 323 | API-Set: unknown
  */
 export function clearPedsImmediately(ped) {
-    ClearPedTasksImmediately(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedTasksImmediately(_ped);
 }
 /**
  * This native is very useful when switching the player to a ped inside a vehicle that has a task assigned prior to the player switch.
@@ -165,7 +174,8 @@ export function clearPedsImmediately(ped) {
  * Hash: 0xDBBC7A2432524127 | Since: 1290 | API-Set: unknown
  */
 export function clearPrimaryVehicle(vehicle) {
-    ClearVehicleTasks(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    ClearVehicleTasks(_vehicle);
 }
 /**
  * No comment provided
@@ -181,7 +191,8 @@ export function clearSequence() {
  * Hash: 0x53DDC75BC3AC0A90 | Since: 1290 | API-Set: unknown
  */
 export function clearVehicleCrash(vehicle) {
-    Citizen.invokeNative('0x53DDC75BC3AC0A90', vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    Citizen.invokeNative('0x53DDC75BC3AC0A90', _vehicle);
 }
 /**
  * No comment provided
@@ -206,7 +217,8 @@ export function closeSequence(taskSequenceId) {
  * Hash: 0xDCFE42068FE0135A | Since: 323 | API-Set: unknown
  */
 export function controlMountedWeapon(ped) {
-    return ControlMountedWeapon(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return ControlMountedWeapon(_ped);
 }
 /**
  * No comment provided
@@ -302,7 +314,8 @@ export function doesScriptedCoverPointExistAtCoords(pos) {
  * Hash: 0x534AEBA6E5ED4CAB | Since: 323 | API-Set: unknown
  */
 export function getActiveVehicleMissionType(vehicle) {
-    return GetActiveVehicleMissionType(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetActiveVehicleMissionType(_vehicle);
 }
 /**
  * No comment provided
@@ -318,7 +331,8 @@ export function getClipSetForScriptedGun(gunTaskType) {
  * Hash: 0xB0760331C7AA4155 | Since: 323 | API-Set: unknown
  */
 export function getIsActive(ped, taskIndex) {
-    return GetIsTaskActive(ped, taskIndex);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetIsTaskActive(_ped, taskIndex);
 }
 /**
  * Full list of waypoint recordings by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/waypointRecordings.json
@@ -339,7 +353,8 @@ export function getIsWaypointRecordingLoaded(name) {
  * Hash: 0xC6F5C0BCDC74D62D | Since: 323 | API-Set: unknown
  */
 export function getNavmeshRouteDistanceRemaining(ped) {
-    return GetNavmeshRouteDistanceRemaining(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetNavmeshRouteDistanceRemaining(_ped);
 }
 /**
  * See GET_NAVMESH_ROUTE_DISTANCE_REMAINING for more details.
@@ -347,7 +362,8 @@ export function getNavmeshRouteDistanceRemaining(ped) {
  * Hash: 0x632E831F382A0FA8 | Since: 323 | API-Set: unknown
  */
 export function getNavmeshRouteResult(ped) {
-    return GetNavmeshRouteResult(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetNavmeshRouteResult(_ped);
 }
 /**
  * No comment provided
@@ -355,7 +371,8 @@ export function getNavmeshRouteResult(ped) {
  * Hash: 0x52F734CEBE20DFBA | Since: 2545 | API-Set: unknown
  */
 export function getPatrolInfo(ped) {
-    return Citizen.invokeNative('0x52F734CEBE20DFBA', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x52F734CEBE20DFBA', _ped);
 }
 /**
  * No comment provided
@@ -363,7 +380,8 @@ export function getPatrolInfo(ped) {
  * Hash: 0x8517D4A6CA8513ED | Since: 323 | API-Set: unknown
  */
 export function getPedDesiredMoveBlendRatio(ped) {
-    return GetPedDesiredMoveBlendRatio(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedDesiredMoveBlendRatio(_ped);
 }
 /**
  * No comment provided
@@ -379,7 +397,8 @@ export function getPedWaypointDistance() {
  * Hash: 0x2720AAA75001E094 | Since: 323 | API-Set: unknown
  */
 export function getPedWaypointProgress(ped) {
-    return GetPedWaypointProgress(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedWaypointProgress(_ped);
 }
 /**
  * No comment provided
@@ -387,7 +406,8 @@ export function getPedWaypointProgress(ped) {
  * Hash: 0x47619ABE8B268C60 | Since: 323 | API-Set: unknown
  */
 export function getPhoneGestureAnimCurrentTime(ped) {
-    return GetPhoneGestureAnimCurrentTime(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPhoneGestureAnimCurrentTime(_ped);
 }
 /**
  * No comment provided
@@ -395,7 +415,8 @@ export function getPhoneGestureAnimCurrentTime(ped) {
  * Hash: 0x1EE0F68A7C25DEC6 | Since: 323 | API-Set: unknown
  */
 export function getPhoneGestureAnimTotalTime(ped) {
-    return GetPhoneGestureAnimTotalTime(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPhoneGestureAnimTotalTime(_ped);
 }
 /**
  * No comment provided
@@ -412,9 +433,10 @@ export function getScriptedCoverPointCoords(coverpoint) {
  * Hash: 0x77F1BEB8863288D5 | Since: 323 | API-Set: unknown
  */
 export function getScriptStatus(ped, taskHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof taskHash === 'string')
         taskHash = GetHashKey(taskHash);
-    return GetScriptTaskStatus(ped, taskHash);
+    return GetScriptTaskStatus(_ped, taskHash);
 }
 /**
  * returned values:
@@ -424,7 +446,8 @@ export function getScriptStatus(ped, taskHash) {
  * Hash: 0x00A9010CFE1E3533 | Since: 323 | API-Set: unknown
  */
 export function getSequenceProgress(ped) {
-    return GetSequenceProgress(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetSequenceProgress(_ped);
 }
 /**
  * No comment provided
@@ -432,7 +455,8 @@ export function getSequenceProgress(ped) {
  * Hash: 0xB4F47213DF45A64C | Since: 323 | API-Set: unknown
  */
 export function getMoveNetworkEvent(ped, eventName) {
-    return GetTaskMoveNetworkEvent(ped, eventName);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetTaskMoveNetworkEvent(_ped, eventName);
 }
 /**
  * No comment provided
@@ -440,7 +464,8 @@ export function getMoveNetworkEvent(ped, eventName) {
  * Hash: 0xA7FFBA498E4AAF67 | Since: 323 | API-Set: unknown
  */
 export function getMoveNetworkSignalBool(ped, signalName) {
-    return GetTaskMoveNetworkSignalBool(ped, signalName);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetTaskMoveNetworkSignalBool(_ped, signalName);
 }
 /**
  * No comment provided
@@ -448,7 +473,8 @@ export function getMoveNetworkSignalBool(ped, signalName) {
  * Hash: 0x44AB0B3AFECCE242 | Since: 1493 | API-Set: unknown
  */
 export function getMoveNetworkSignalFloat(ped, signalName) {
-    return GetTaskMoveNetworkSignalFloat(ped, signalName);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetTaskMoveNetworkSignalFloat(_ped, signalName);
 }
 /**
  * No comment provided
@@ -456,7 +482,8 @@ export function getMoveNetworkSignalFloat(ped, signalName) {
  * Hash: 0x717E4D1F2048376D | Since: 323 | API-Set: unknown
  */
 export function getMoveNetworkState(ped) {
-    return GetTaskMoveNetworkState(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetTaskMoveNetworkState(_ped);
 }
 /**
  * No comment provided
@@ -464,7 +491,8 @@ export function getMoveNetworkState(ped) {
  * Hash: 0x9D252648778160DF | Since: 1868 | API-Set: unknown
  */
 export function getRappelDownWallState(ped) {
-    return Citizen.invokeNative('0x9D252648778160DF', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x9D252648778160DF', _ped);
 }
 /**
  * No comment provided
@@ -472,7 +500,8 @@ export function getRappelDownWallState(ped) {
  * Hash: 0x9824CFF8FC66E159 | Since: 323 | API-Set: unknown
  */
 export function getVehicleWaypointProgress(vehicle) {
-    return GetVehicleWaypointProgress(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWaypointProgress(_vehicle);
 }
 /**
  * No comment provided
@@ -480,7 +509,8 @@ export function getVehicleWaypointProgress(vehicle) {
  * Hash: 0x416B62AC8B9E5BBD | Since: 323 | API-Set: unknown
  */
 export function getVehicleWaypointTargetPoint(vehicle) {
-    return GetVehicleWaypointTargetPoint(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWaypointTargetPoint(_vehicle);
 }
 /**
  * No comment provided
@@ -496,7 +526,8 @@ export function getWaypointDistanceAlongRoute(name, point) {
  * Hash: 0x3E38E28A1D80DDF6 | Since: 323 | API-Set: unknown
  */
 export function isControlledVehicleUnableToGetToRoad(ped) {
-    return Citizen.invokeNative('0x3E38E28A1D80DDF6', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x3E38E28A1D80DDF6', _ped);
 }
 /**
  * No comment provided
@@ -504,7 +535,8 @@ export function isControlledVehicleUnableToGetToRoad(ped) {
  * Hash: 0x8785E6E40C7A8818 | Since: 323 | API-Set: unknown
  */
 export function isDrivebyUnderneathDrivingTask(ped) {
-    return IsDrivebyTaskUnderneathDrivingTask(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsDrivebyTaskUnderneathDrivingTask(_ped);
 }
 /**
  * No comment provided
@@ -512,7 +544,8 @@ export function isDrivebyUnderneathDrivingTask(ped) {
  * Hash: 0xA320EF046186FA3B | Since: 323 | API-Set: unknown
  */
 export function isMountedWeaponUnderneathDrivingTask(ped) {
-    return IsMountedWeaponTaskUnderneathDrivingTask(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsMountedWeaponTaskUnderneathDrivingTask(_ped);
 }
 /**
  * No comment provided
@@ -520,7 +553,8 @@ export function isMountedWeaponUnderneathDrivingTask(ped) {
  * Hash: 0xD4D8636C0199A939 | Since: 323 | API-Set: unknown
  */
 export function isMoveBlendRatioRunning(ped) {
-    return IsMoveBlendRatioRunning(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsMoveBlendRatioRunning(_ped);
 }
 /**
  * No comment provided
@@ -528,7 +562,8 @@ export function isMoveBlendRatioRunning(ped) {
  * Hash: 0x24A2AD74FA9814E2 | Since: 323 | API-Set: unknown
  */
 export function isMoveBlendRatioSprinting(ped) {
-    return IsMoveBlendRatioSprinting(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsMoveBlendRatioSprinting(_ped);
 }
 /**
  * No comment provided
@@ -536,7 +571,8 @@ export function isMoveBlendRatioSprinting(ped) {
  * Hash: 0x349CE7B56DAFD95C | Since: 323 | API-Set: unknown
  */
 export function isMoveBlendRatioStill(ped) {
-    return IsMoveBlendRatioStill(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsMoveBlendRatioStill(_ped);
 }
 /**
  * No comment provided
@@ -544,7 +580,8 @@ export function isMoveBlendRatioStill(ped) {
  * Hash: 0xF133BBBE91E1691F | Since: 323 | API-Set: unknown
  */
 export function isMoveBlendRatioWalking(ped) {
-    return IsMoveBlendRatioWalking(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsMoveBlendRatioWalking(_ped);
 }
 /**
  * No comment provided
@@ -552,7 +589,8 @@ export function isMoveBlendRatioWalking(ped) {
  * Hash: 0xAA135F9482C82CC3 | Since: 323 | API-Set: unknown
  */
 export function isPedActiveInScenario(ped) {
-    return IsPedActiveInScenario(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedActiveInScenario(_ped);
 }
 /**
  * This function is hard-coded to always return 0.
@@ -560,7 +598,8 @@ export function isPedActiveInScenario(ped) {
  * Hash: 0x90A09F3A45FED688 | Since: 323 | API-Set: unknown
  */
 export function isPedBeingArrested(ped) {
-    return IsPedBeingArrested(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedBeingArrested(_ped);
 }
 /**
  * No comment provided
@@ -568,7 +607,8 @@ export function isPedBeingArrested(ped) {
  * Hash: 0x74E559B3BC910685 | Since: 323 | API-Set: unknown
  */
 export function isPedCuffed(ped) {
-    return IsPedCuffed(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedCuffed(_ped);
 }
 /**
  * No comment provided
@@ -576,7 +616,8 @@ export function isPedCuffed(ped) {
  * Hash: 0x2A74E1D5F2F00EEC | Since: 323 | API-Set: unknown
  */
 export function isPedGettingUp(ped) {
-    return IsPedGettingUp(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedGettingUp(_ped);
 }
 /**
  * This native checks if a ped is on the ground, in pain from a (gunshot) wound.
@@ -585,7 +626,8 @@ export function isPedGettingUp(ped) {
  * Hash: 0xDEB6D52126E7D640 | Since: 323 | API-Set: unknown
  */
 export function isPedInWrithe(ped) {
-    return IsPedInWrithe(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInWrithe(_ped);
 }
 /**
  * Used only once (am_mp_property_int)
@@ -597,7 +639,8 @@ export function isPedInWrithe(ped) {
  * Hash: 0x621C6E4729388E41 | Since: 323 | API-Set: unknown
  */
 export function isPedPlayingBaseClipInScenario(ped) {
-    return IsPedPlayingBaseClipInScenario(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedPlayingBaseClipInScenario(_ped);
 }
 /**
  * No comment provided
@@ -605,7 +648,8 @@ export function isPedPlayingBaseClipInScenario(ped) {
  * Hash: 0xC5286FFC176F28A2 | Since: 323 | API-Set: unknown
  */
 export function isPedRunning(ped) {
-    return IsPedRunning(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedRunning(_ped);
 }
 /**
  * No comment provided
@@ -613,7 +657,8 @@ export function isPedRunning(ped) {
  * Hash: 0x3DC52677769B4AE0 | Since: 323 | API-Set: unknown
  */
 export function isPedRunningArrest(ped) {
-    return IsPedRunningArrestTask(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedRunningArrestTask(_ped);
 }
 /**
  * No comment provided
@@ -621,7 +666,8 @@ export function isPedRunningArrest(ped) {
  * Hash: 0x57E457CD2C0FC168 | Since: 323 | API-Set: unknown
  */
 export function isPedSprinting(ped) {
-    return IsPedSprinting(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedSprinting(_ped);
 }
 /**
  * No comment provided
@@ -629,7 +675,8 @@ export function isPedSprinting(ped) {
  * Hash: 0xAC29253EEF8F0180 | Since: 323 | API-Set: unknown
  */
 export function isPedStill(ped) {
-    return IsPedStill(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedStill(_ped);
 }
 /**
  * No comment provided
@@ -637,7 +684,8 @@ export function isPedStill(ped) {
  * Hash: 0xE45B7F222DE47E09 | Since: 323 | API-Set: unknown
  */
 export function isPedStrafing(ped) {
-    return IsPedStrafing(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedStrafing(_ped);
 }
 /**
  * No comment provided
@@ -645,7 +693,8 @@ export function isPedStrafing(ped) {
  * Hash: 0xDE4C184B2B9B071A | Since: 323 | API-Set: unknown
  */
 export function isPedWalking(ped) {
-    return IsPedWalking(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedWalking(_ped);
 }
 /**
  * No comment provided
@@ -653,7 +702,8 @@ export function isPedWalking(ped) {
  * Hash: 0xB8EBB1E9D3588C10 | Since: 323 | API-Set: unknown
  */
 export function isPlayingPhoneGestureAnim(ped) {
-    return IsPlayingPhoneGestureAnim(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPlayingPhoneGestureAnim(_ped);
 }
 /**
  * Full list of scenario groups used in scripts by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scenarioGroupNames.json
@@ -726,7 +776,8 @@ export function isScenarioTypeEnabled(scenarioType) {
  * Hash: 0x921CE12C489C4C41 | Since: 323 | API-Set: unknown
  */
 export function isMoveNetworkActive(ped) {
-    return IsTaskMoveNetworkActive(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsTaskMoveNetworkActive(_ped);
 }
 /**
  * No comment provided
@@ -734,7 +785,8 @@ export function isMoveNetworkActive(ped) {
  * Hash: 0x30ED88D5E0C56A37 | Since: 323 | API-Set: unknown
  */
 export function isMoveNetworkReadyForTransition(ped) {
-    return IsTaskMoveNetworkReadyForTransition(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsTaskMoveNetworkReadyForTransition(_ped);
 }
 /**
  * No comment provided
@@ -742,7 +794,8 @@ export function isMoveNetworkReadyForTransition(ped) {
  * Hash: 0xE03B3F2D3DC59B64 | Since: 323 | API-Set: unknown
  */
 export function isWaypointPlaybackGoingOnForPed(ped) {
-    return IsWaypointPlaybackGoingOnForPed(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsWaypointPlaybackGoingOnForPed(_ped);
 }
 /**
  * No comment provided
@@ -750,7 +803,8 @@ export function isWaypointPlaybackGoingOnForPed(ped) {
  * Hash: 0xF5134943EA29868C | Since: 323 | API-Set: unknown
  */
 export function isWaypointPlaybackGoingOnForVehicle(vehicle) {
-    return IsWaypointPlaybackGoingOnForVehicle(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsWaypointPlaybackGoingOnForVehicle(_vehicle);
 }
 /**
  * patrolRoutes found in the b617d scripts:
@@ -794,7 +848,8 @@ export function openSequence() {
  * Hash: 0x295E3CCEC879CCD7 | Since: 323 | API-Set: unknown
  */
 export function pedHasUseScenario(ped) {
-    return PedHasUseScenarioTask(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return PedHasUseScenarioTask(_ped);
 }
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
@@ -802,7 +857,8 @@ export function pedHasUseScenario(ped) {
  * Hash: 0x748040460F8DF5DC | Since: 323 | API-Set: unknown
  */
 export function playAnimOnRunningScenario(ped, animDict, animName) {
-    PlayAnimOnRunningScenario(ped, animDict, animName);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayAnimOnRunningScenario(_ped, animDict, animName);
 }
 /**
  * No comment provided
@@ -810,7 +866,8 @@ export function playAnimOnRunningScenario(ped, animDict, animName) {
  * Hash: 0x77A1EEC547E7FCF1 | Since: 323 | API-Set: unknown
  */
 export function playEntityScriptedAnim(entity, blendInDelta, blendOutDelta) {
-    return PlayEntityScriptedAnim(entity, blendInDelta, blendOutDelta);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return PlayEntityScriptedAnim(_entity, blendInDelta, blendOutDelta);
 }
 /**
  * No comment provided
@@ -858,7 +915,8 @@ export function removeWaypointRecording(name) {
  * Hash: 0xD01015C7316AE176 | Since: 323 | API-Set: unknown
  */
 export function requestMoveNetworkStateTransition(ped, name) {
-    return RequestTaskMoveNetworkStateTransition(ped, name);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return RequestTaskMoveNetworkStateTransition(_ped, name);
 }
 /**
  * Full list of waypoint recordings by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/waypointRecordings.json
@@ -901,7 +959,8 @@ export function resetScenarioTypesEnabled() {
  * Hash: 0x70033C3CC29A1FF4 | Since: 323 | API-Set: unknown
  */
 export function setAnimLooped(entity, looped, priority, secondary) {
-    SetAnimLooped(entity, looped, priority, secondary);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetAnimLooped(_entity, looped, priority, secondary);
 }
 /**
  * No comment provided
@@ -909,7 +968,8 @@ export function setAnimLooped(entity, looped, priority, secondary) {
  * Hash: 0xDDF3CB5A0A4C0B49 | Since: 2372 | API-Set: unknown
  */
 export function setAnimPhase(entity, phase, priority, secondary) {
-    SetAnimPhase(entity, phase, priority, secondary);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetAnimPhase(_entity, phase, priority, secondary);
 }
 /**
  * No comment provided
@@ -917,7 +977,8 @@ export function setAnimPhase(entity, phase, priority, secondary) {
  * Hash: 0x032D49C5E359C847 | Since: 323 | API-Set: unknown
  */
 export function setAnimRate(entity, rate, priority, secondary) {
-    SetAnimRate(entity, rate, priority, secondary);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetAnimRate(_entity, rate, priority, secondary);
 }
 /**
  * No comment provided
@@ -925,7 +986,8 @@ export function setAnimRate(entity, rate, priority, secondary) {
  * Hash: 0x207F1A47C0342F48 | Since: 323 | API-Set: unknown
  */
 export function setAnimWeight(entity, weight, priority, index, secondary) {
-    SetAnimWeight(entity, weight, priority, index, secondary);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetAnimWeight(_entity, weight, priority, index, secondary);
 }
 /**
  * For p1 & p2 (Ped, Vehicle). I could be wrong, as the only time this native is called in scripts is once and both are 0, but I assume this native will work like SET_MOUNTED_WEAPON_TARGET in which has the same exact amount of parameters and the 1st and last 3 parameters are right and the same for both natives.
@@ -933,7 +995,10 @@ export function setAnimWeight(entity, weight, priority, index, secondary) {
  * Hash: 0xE5B302114D8162EE | Since: 323 | API-Set: unknown
  */
 export function setDrivebyTarget(shootingPed, targetPed, targetVehicle, pos) {
-    SetDrivebyTaskTarget(shootingPed, targetPed, targetVehicle, pos.x, pos.y, pos.z);
+    const _shootingPed = shootingPed instanceof IPed ? shootingPed.handle() : shootingPed;
+    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    const _targetVehicle = targetVehicle instanceof IVehicle ? targetVehicle.localId() : targetVehicle;
+    SetDrivebyTaskTarget(_shootingPed, _targetPed, _targetVehicle, pos.x, pos.y, pos.z);
 }
 /**
  * No comment provided
@@ -941,7 +1006,8 @@ export function setDrivebyTarget(shootingPed, targetPed, targetVehicle, pos) {
  * Hash: 0x5C9B84BD7D31D908 | Since: 323 | API-Set: unknown
  */
 export function setDriveCruiseSpeed(driver, cruiseSpeed) {
-    SetDriveTaskCruiseSpeed(driver, cruiseSpeed);
+    const _driver = driver instanceof IPed ? driver.handle() : driver;
+    SetDriveTaskCruiseSpeed(_driver, cruiseSpeed);
 }
 /**
  * This native is used to set the driving style for specific ped.
@@ -956,7 +1022,8 @@ export function setDriveCruiseSpeed(driver, cruiseSpeed) {
  * Hash: 0xDACE1BE37D88AF67 | Since: 323 | API-Set: unknown
  */
 export function setDriveDrivingStyle(ped, drivingStyle) {
-    SetDriveTaskDrivingStyle(ped, drivingStyle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetDriveTaskDrivingStyle(_ped, drivingStyle);
 }
 /**
  * No comment provided
@@ -964,7 +1031,8 @@ export function setDriveDrivingStyle(ped, drivingStyle) {
  * Hash: 0x404A5AA9B9F0B746 | Since: 323 | API-Set: unknown
  */
 export function setDriveMaxCruiseSpeed(ped, speed, updateBaseTask) {
-    SetDriveTaskMaxCruiseSpeed(ped, speed, updateBaseTask);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetDriveTaskMaxCruiseSpeed(_ped, speed, updateBaseTask);
 }
 /**
  * Full list of scenario groups used in scripts by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scenarioGroupNames.json
@@ -989,7 +1057,8 @@ export function setExclusiveScenarioGroup(scenarioGroup) {
  * Hash: 0xAB13A5565480B6D9 | Since: 323 | API-Set: unknown
  */
 export function setExpectedCloneNextMoveNetworkState(ped, state) {
-    return Citizen.invokeNative('0xAB13A5565480B6D9', ped, state);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0xAB13A5565480B6D9', _ped, state);
 }
 /**
  * Needs to be looped! And yes, it does work and is not a hash collision.
@@ -1006,7 +1075,8 @@ export function setGlobalMinBirdFlightHeight(height) {
  * Hash: 0x8C825BDC7741D37C | Since: 323 | API-Set: unknown
  */
 export function setHighFall(ped, minTime, maxTime, entryType) {
-    SetHighFallTask(ped, minTime, maxTime, entryType);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetHighFallTask(_ped, minTime, maxTime, entryType);
 }
 /**
  * Note: Look in decompiled scripts and the times that p1 and p2 aren't 0. They are filled with vars. If you look through out that script what other natives those vars are used in, you can tell p1 is a ped and p2 is a vehicle. Which most likely means if you want the mounted weapon to target a ped set targetVehicle to 0 or vice-versa.
@@ -1014,7 +1084,10 @@ export function setHighFall(ped, minTime, maxTime, entryType) {
  * Hash: 0xCCD892192C6D2BB9 | Since: 323 | API-Set: unknown
  */
 export function setMountedWeaponTarget(shootingPed, targetPed, targetVehicle, pos, taskMode, ignoreTargetVehDeadCheck) {
-    SetMountedWeaponTarget(shootingPed, targetPed, targetVehicle, pos.x, pos.y, pos.z, taskMode, ignoreTargetVehDeadCheck);
+    const _shootingPed = shootingPed instanceof IPed ? shootingPed.handle() : shootingPed;
+    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    const _targetVehicle = targetVehicle instanceof IVehicle ? targetVehicle.localId() : targetVehicle;
+    SetMountedWeaponTarget(_shootingPed, _targetPed, _targetVehicle, pos.x, pos.y, pos.z, taskMode, ignoreTargetVehDeadCheck);
 }
 /**
  * This native does absolutely nothing, just a nullsub
@@ -1033,7 +1106,8 @@ export function setNextDesiredMoveState(nextMoveState) {
  * Hash: 0xC313379AF0FCEDA7 | Since: 323 | API-Set: unknown
  */
 export function setParachuteTarget(ped, pos) {
-    SetParachuteTaskTarget(ped, pos.x, pos.y, pos.z);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetParachuteTaskTarget(_ped, pos.x, pos.y, pos.z);
 }
 /**
  * No comment provided
@@ -1041,7 +1115,8 @@ export function setParachuteTarget(ped, pos) {
  * Hash: 0x0729BAC1B8C64317 | Since: 323 | API-Set: unknown
  */
 export function setParachuteThrust(ped, thrust) {
-    SetParachuteTaskThrust(ped, thrust);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetParachuteTaskThrust(_ped, thrust);
 }
 /**
  * Appears only in fm_mission_controller and used only 3 times.
@@ -1053,7 +1128,8 @@ export function setParachuteThrust(ped, thrust) {
  * Hash: 0x8FD89A6240813FD0 | Since: 323 | API-Set: unknown
  */
 export function setPedCanPlayAmbientIdles(ped, blockIdleClips, removeIdleClipIfPlaying) {
-    SetPedCanPlayAmbientIdles(ped, blockIdleClips, removeIdleClipIfPlaying);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanPlayAmbientIdles(_ped, blockIdleClips, removeIdleClipIfPlaying);
 }
 /**
  * No comment provided
@@ -1061,7 +1137,8 @@ export function setPedCanPlayAmbientIdles(ped, blockIdleClips, removeIdleClipIfP
  * Hash: 0x1E982AC8716912C5 | Since: 323 | API-Set: unknown
  */
 export function setPedDesiredMoveBlendRatio(ped, newMoveBlendRatio) {
-    SetPedDesiredMoveBlendRatio(ped, newMoveBlendRatio);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedDesiredMoveBlendRatio(_ped, newMoveBlendRatio);
 }
 /**
  * No comment provided
@@ -1069,7 +1146,8 @@ export function setPedDesiredMoveBlendRatio(ped, newMoveBlendRatio) {
  * Hash: 0x4455517B28441E60 | Since: 323 | API-Set: unknown
  */
 export function setPedPathAvoidFire(ped, avoidFire) {
-    SetPedPathAvoidFire(ped, avoidFire);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedPathAvoidFire(_ped, avoidFire);
 }
 /**
  * No comment provided
@@ -1077,7 +1155,8 @@ export function setPedPathAvoidFire(ped, avoidFire) {
  * Hash: 0xE361C5C71C431A4F | Since: 323 | API-Set: unknown
  */
 export function setPedPathCanDropFromHeight(ped, Toggle) {
-    SetPedPathCanDropFromHeight(ped, Toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedPathCanDropFromHeight(_ped, Toggle);
 }
 /**
  * No comment provided
@@ -1085,7 +1164,8 @@ export function setPedPathCanDropFromHeight(ped, Toggle) {
  * Hash: 0x8E06A6FE76C9EFF4 | Since: 323 | API-Set: unknown
  */
 export function setPedPathCanUseClimbovers(ped, Toggle) {
-    SetPedPathCanUseClimbovers(ped, Toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedPathCanUseClimbovers(_ped, Toggle);
 }
 /**
  * No comment provided
@@ -1093,7 +1173,8 @@ export function setPedPathCanUseClimbovers(ped, Toggle) {
  * Hash: 0x77A5B103C87F476E | Since: 323 | API-Set: unknown
  */
 export function setPedPathCanUseLadders(ped, Toggle) {
-    SetPedPathCanUseLadders(ped, Toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedPathCanUseLadders(_ped, Toggle);
 }
 /**
  * Default modifier is 1.0, minimum is 0.0 and maximum is 10.0.
@@ -1101,7 +1182,8 @@ export function setPedPathCanUseLadders(ped, Toggle) {
  * Hash: 0x88E32DB8C1A4AA4B | Since: 323 | API-Set: unknown
  */
 export function setPedPathClimbCostModifier(ped, modifier) {
-    SetPedPathClimbCostModifier(ped, modifier);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedPathClimbCostModifier(_ped, modifier);
 }
 /**
  * No comment provided
@@ -1109,7 +1191,8 @@ export function setPedPathClimbCostModifier(ped, modifier) {
  * Hash: 0xF35425A4204367EC | Since: 323 | API-Set: unknown
  */
 export function setPedPathMayEnterWater(ped, mayEnterWater) {
-    SetPedPathMayEnterWater(ped, mayEnterWater);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedPathMayEnterWater(_ped, mayEnterWater);
 }
 /**
  * No comment provided
@@ -1117,7 +1200,8 @@ export function setPedPathMayEnterWater(ped, mayEnterWater) {
  * Hash: 0x38FE1EC73743793C | Since: 323 | API-Set: unknown
  */
 export function setPedPathPreferToAvoidWater(ped, avoidWater) {
-    SetPedPathPreferToAvoidWater(ped, avoidWater);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedPathPreferToAvoidWater(_ped, avoidWater);
 }
 /**
  * No comment provided
@@ -1125,7 +1209,8 @@ export function setPedPathPreferToAvoidWater(ped, avoidWater) {
  * Hash: 0x686ECCD99D4E61BB | Since: 3570 | API-Set: unknown
  */
 export function setPedWaypointProgress(ped, progress) {
-    Citizen.invokeNative('0x686ECCD99D4E61BB', ped, progress);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x686ECCD99D4E61BB', _ped, progress);
 }
 /**
  * No comment provided
@@ -1133,7 +1218,8 @@ export function setPedWaypointProgress(ped, progress) {
  * Hash: 0xED98E10B0AFCE4B4 | Since: 323 | API-Set: unknown
  */
 export function setPedWaypointRouteOffset(ped, pos) {
-    return SetPedWaypointRouteOffset(ped, pos.x, pos.y, pos.z);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return SetPedWaypointRouteOffset(_ped, pos.x, pos.y, pos.z);
 }
 /**
  * Full list of scenario groups used in scripts by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scenarioGroupNames.json
@@ -1207,11 +1293,12 @@ export function setSequenceToRepeat(taskSequenceId, repeat) {
  * Hash: 0x8423541E8B3A1589 | Since: 1493 | API-Set: unknown
  */
 export function setMoveNetworkAnimSet(ped, clipSet, variableClipSet) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof clipSet === 'string')
         clipSet = GetHashKey(clipSet);
     if (typeof variableClipSet === 'string')
         variableClipSet = GetHashKey(variableClipSet);
-    Citizen.invokeNative('0x8423541E8B3A1589', ped, clipSet, variableClipSet);
+    Citizen.invokeNative('0x8423541E8B3A1589', _ped, clipSet, variableClipSet);
 }
 /**
  * Doesn't actually return anything.
@@ -1219,7 +1306,8 @@ export function setMoveNetworkAnimSet(ped, clipSet, variableClipSet) {
  * Hash: 0x0FFB3C758E8C07B9 | Since: 2060 | API-Set: unknown
  */
 export function setMoveNetworkEnableCollisionOnNetworkCloneWhenFixed(ped, enable) {
-    return Citizen.invokeNative('0x0FFB3C758E8C07B9', ped, enable);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x0FFB3C758E8C07B9', _ped, enable);
 }
 /**
  * No comment provided
@@ -1227,7 +1315,8 @@ export function setMoveNetworkEnableCollisionOnNetworkCloneWhenFixed(ped, enable
  * Hash: 0xB0A6CFD2C69C1088 | Since: 323 | API-Set: unknown
  */
 export function setMoveNetworkSignalBool(ped, signalName, value) {
-    SetTaskMoveNetworkSignalBool(ped, signalName, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetTaskMoveNetworkSignalBool(_ped, signalName, value);
 }
 /**
  * signalName - "Phase", "Wobble", "x_axis","y_axis","introphase","speed".
@@ -1238,7 +1327,8 @@ export function setMoveNetworkSignalBool(ped, signalName, value) {
  * Hash: 0xD5BB4025AE449A4E | Since: 323 | API-Set: unknown
  */
 export function setMoveNetworkSignalFloat(ped, signalName, value) {
-    SetTaskMoveNetworkSignalFloat(ped, signalName, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetTaskMoveNetworkSignalFloat(_ped, signalName, value);
 }
 /**
  * No comment provided
@@ -1246,7 +1336,8 @@ export function setMoveNetworkSignalFloat(ped, signalName, value) {
  * Hash: 0x8634CEF2522D987B | Since: 1493 | API-Set: unknown
  */
 export function setMoveNetworkSignalFloatLerpRate(ped, signalName, value) {
-    Citizen.invokeNative('0x8634CEF2522D987B', ped, signalName, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x8634CEF2522D987B', _ped, signalName, value);
 }
 /**
  * No comment provided
@@ -1254,7 +1345,8 @@ export function setMoveNetworkSignalFloatLerpRate(ped, signalName, value) {
  * Hash: 0x373EF409B82697A3 | Since: 1493 | API-Set: unknown
  */
 export function setMoveNetworkSignalLocalFloat(ped, signalName, value) {
-    SetTaskMoveNetworkSignalFloat2(ped, signalName, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetTaskMoveNetworkSignalFloat2(_ped, signalName, value);
 }
 /**
  * Flag 8: Medium-aggressive boxing tactic with a bit of PIT
@@ -1266,7 +1358,8 @@ export function setMoveNetworkSignalLocalFloat(ped, signalName, value) {
  * Hash: 0xCC665AAC360D31E7 | Since: 323 | API-Set: unknown
  */
 export function setVehicleChaseBehaviorFlag(ped, flag, _set) {
-    SetTaskVehicleChaseBehaviorFlag(ped, flag, _set);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetTaskVehicleChaseBehaviorFlag(_ped, flag, _set);
 }
 /**
  * No comment provided
@@ -1274,7 +1367,8 @@ export function setVehicleChaseBehaviorFlag(ped, flag, _set) {
  * Hash: 0x639B642FACBE4EDD | Since: 323 | API-Set: unknown
  */
 export function setVehicleChaseIdealPursuitDistance(ped, distance) {
-    SetTaskVehicleChaseIdealPursuitDistance(ped, distance);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetTaskVehicleChaseIdealPursuitDistance(_ped, distance);
 }
 /**
  * Looks like p1 may be a flag, still need to do some research, though.
@@ -1282,7 +1376,8 @@ export function setVehicleChaseIdealPursuitDistance(ped, distance) {
  * Hash: 0xEE08C992D238C5D1 | Since: 323 | API-Set: unknown
  */
 export function stopAnimPlayback(entity, priority, secondary) {
-    StopAnimPlayback(entity, priority, secondary);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    StopAnimPlayback(_entity, priority, secondary);
 }
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
@@ -1290,7 +1385,8 @@ export function stopAnimPlayback(entity, priority, secondary) {
  * Hash: 0x97FF36A1D40EA00A | Since: 323 | API-Set: unknown
  */
 export function stopAnim(entity, animDictionary, animationName, blendDelta) {
-    StopAnimTask(entity, animDictionary, animationName, blendDelta);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    StopAnimTask(_entity, animDictionary, animationName, blendDelta);
 }
 /**
  * Makes the specified ped achieve the specified heading.
@@ -1302,7 +1398,8 @@ export function stopAnim(entity, animDictionary, animationName, blendDelta) {
  * Hash: 0x93B93A37987F1F3D | Since: 323 | API-Set: unknown
  */
 export function achieveHeading(ped, heading, timeout) {
-    TaskAchieveHeading(ped, heading, timeout);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskAchieveHeading(_ped, heading, timeout);
 }
 /**
  * No comment provided
@@ -1310,7 +1407,9 @@ export function achieveHeading(ped, heading, timeout) {
  * Hash: 0x19D1B791CB3670FE | Since: 877 | API-Set: unknown
  */
 export function agitatedActionConfrontResponse(ped, ped2) {
-    TaskAgitatedAction(ped, ped2);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped2 = ped2 instanceof IPed ? ped2.handle() : ped2;
+    TaskAgitatedAction(_ped, _ped2);
 }
 /**
  * No comment provided
@@ -1318,7 +1417,8 @@ export function agitatedActionConfrontResponse(ped, ped2) {
  * Hash: 0x6671F3EEC681BDA1 | Since: 323 | API-Set: unknown
  */
 export function aimGunAtCoord(ped, pos, time, instantBlendToAim, playAnimIntro) {
-    TaskAimGunAtCoord(ped, pos.x, pos.y, pos.z, time, instantBlendToAim, playAnimIntro);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskAimGunAtCoord(_ped, pos.x, pos.y, pos.z, time, instantBlendToAim, playAnimIntro);
 }
 /**
  * duration: the amount of time in milliseconds to do the task.  -1 will keep the task going until either another task is applied, or CLEAR_ALL_TASKS() is called with the ped
@@ -1326,7 +1426,9 @@ export function aimGunAtCoord(ped, pos, time, instantBlendToAim, playAnimIntro) 
  * Hash: 0x9B53BB6E8943AF53 | Since: 323 | API-Set: unknown
  */
 export function aimGunAtEntity(ped, entity, duration, instantBlendToAim) {
-    TaskAimGunAtEntity(ped, entity, duration, instantBlendToAim);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    TaskAimGunAtEntity(_ped, _entity, duration, instantBlendToAim);
 }
 /**
  * No comment provided
@@ -1334,9 +1436,10 @@ export function aimGunAtEntity(ped, entity, duration, instantBlendToAim) {
  * Hash: 0x7A192BE16D373D00 | Since: 323 | API-Set: unknown
  */
 export function aimGunScripted(ped, scriptTask, disableBlockingClip, instantBlendToAim) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof scriptTask === 'string')
         scriptTask = GetHashKey(scriptTask);
-    TaskAimGunScripted(ped, scriptTask, disableBlockingClip, instantBlendToAim);
+    TaskAimGunScripted(_ped, scriptTask, disableBlockingClip, instantBlendToAim);
 }
 /**
  * No comment provided
@@ -1344,7 +1447,9 @@ export function aimGunScripted(ped, scriptTask, disableBlockingClip, instantBlen
  * Hash: 0x8605AF0DE8B3A5AC | Since: 323 | API-Set: unknown
  */
 export function aimGunScriptedWithTarget(ped, target, pos, gunTaskType, disableBlockingClip, forceAim) {
-    TaskAimGunScriptedWithTarget(ped, target, pos.x, pos.y, pos.z, gunTaskType, disableBlockingClip, forceAim);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    TaskAimGunScriptedWithTarget(_ped, _target, pos.x, pos.y, pos.z, gunTaskType, disableBlockingClip, forceAim);
 }
 /**
  * Example from "me_amanda1.ysc.c4":
@@ -1363,7 +1468,9 @@ export function aimGunScriptedWithTarget(ped, target, pos, gunTaskType, disableB
  * Hash: 0xF3B9A78A178572B1 | Since: 323 | API-Set: unknown
  */
 export function arrestPed(ped, target) {
-    TaskArrestPed(ped, target);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    TaskArrestPed(_ped, _target);
 }
 /**
  * `You need to call PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS after TASK_BOAT_MISSION in order for the task to execute.`
@@ -1378,7 +1485,11 @@ export function arrestPed(ped, target) {
  * Hash: 0x15C86013127CE63F | Since: 323 | API-Set: unknown
  */
 export function boatMission(pedDriver, vehicle, targetVehicle, targetPed, pos, mission, maxSpeed, drivingStyle, targetReached, boatFlags) {
-    TaskBoatMission(pedDriver, vehicle, targetVehicle, targetPed, pos.x, pos.y, pos.z, mission, maxSpeed, drivingStyle, targetReached, boatFlags);
+    const _pedDriver = pedDriver instanceof IPed ? pedDriver.handle() : pedDriver;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _targetVehicle = targetVehicle instanceof IVehicle ? targetVehicle.localId() : targetVehicle;
+    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    TaskBoatMission(_pedDriver, _vehicle, _targetVehicle, _targetPed, pos.x, pos.y, pos.z, mission, maxSpeed, drivingStyle, targetReached, boatFlags);
 }
 /**
  * p2 tend to be 16, 17 or 1
@@ -1387,7 +1498,9 @@ export function boatMission(pedDriver, vehicle, targetVehicle, targetPed, pos, m
  * Hash: 0x8C338E0263E4FD19 | Since: 323 | API-Set: unknown
  */
 export function chatToPed(ped, target, flags, goToLocationX, goToLocationY, goToLocationZ, headingDegs, idleTime) {
-    TaskChatToPed(ped, target, flags, goToLocationX, goToLocationY, goToLocationZ, headingDegs, idleTime);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    TaskChatToPed(_ped, _target, flags, goToLocationX, goToLocationY, goToLocationZ, headingDegs, idleTime);
 }
 /**
  * No comment provided
@@ -1395,7 +1508,8 @@ export function chatToPed(ped, target, flags, goToLocationX, goToLocationY, goTo
  * Hash: 0x95A6C46A31D1917D | Since: 323 | API-Set: unknown
  */
 export function clearDefensiveArea(ped) {
-    TaskClearDefensiveArea(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskClearDefensiveArea(_ped);
 }
 /**
  * No comment provided
@@ -1403,7 +1517,8 @@ export function clearDefensiveArea(ped) {
  * Hash: 0x0F804F1DB19B9689 | Since: 323 | API-Set: unknown
  */
 export function clearLookAt(ped) {
-    TaskClearLookAt(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskClearLookAt(_ped);
 }
 /**
  * Climbs or vaults the nearest thing.
@@ -1412,7 +1527,8 @@ export function clearLookAt(ped) {
  * Hash: 0x89D9FCC2435112F1 | Since: 323 | API-Set: unknown
  */
 export function climb(ped, usePlayerLaunchForce) {
-    TaskClimb(ped, usePlayerLaunchForce);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskClimb(_ped, usePlayerLaunchForce);
 }
 /**
  * No comment provided
@@ -1420,7 +1536,8 @@ export function climb(ped, usePlayerLaunchForce) {
  * Hash: 0xB6C987F9285A3814 | Since: 323 | API-Set: unknown
  */
 export function climbLadder(ped, fast) {
-    TaskClimbLadder(ped, fast);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskClimbLadder(_ped, fast);
 }
 /**
  * Despite its name, it only attacks ONE hated target. The one closest hated target.
@@ -1430,7 +1547,8 @@ export function climbLadder(ped, fast) {
  * Hash: 0x7BF835BB9E2698C8 | Since: 323 | API-Set: unknown
  */
 export function combatHatedTargetsAroundPed(ped, radius, combatFlags) {
-    TaskCombatHatedTargetsAroundPed(ped, radius, combatFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskCombatHatedTargetsAroundPed(_ped, radius, combatFlags);
 }
 /**
  * No comment provided
@@ -1438,7 +1556,8 @@ export function combatHatedTargetsAroundPed(ped, radius, combatFlags) {
  * Hash: 0x2BBA30B854534A0C | Since: 323 | API-Set: unknown
  */
 export function combatHatedTargetsAroundPedTimed(ped, radius, time, combatFlags) {
-    TaskCombatHatedTargetsAroundPedTimed(ped, radius, time, combatFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskCombatHatedTargetsAroundPedTimed(_ped, radius, time, combatFlags);
 }
 /**
  * Despite its name, it only attacks ONE hated target. The one closest to the specified position.
@@ -1446,7 +1565,8 @@ export function combatHatedTargetsAroundPedTimed(ped, radius, time, combatFlags)
  * Hash: 0x4CF5F55DAC3280A0 | Since: 323 | API-Set: unknown
  */
 export function combatHatedTargetsInArea(ped, pos, radius, combatFlags) {
-    TaskCombatHatedTargetsInArea(ped, pos.x, pos.y, pos.z, radius, combatFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskCombatHatedTargetsInArea(_ped, pos.x, pos.y, pos.z, radius, combatFlags);
 }
 /**
  * Makes the specified ped attack the target ped.
@@ -1456,7 +1576,9 @@ export function combatHatedTargetsInArea(ped, pos, radius, combatFlags) {
  * Hash: 0xF166E48407BAC484 | Since: 323 | API-Set: unknown
  */
 export function combatPed(ped, targetPed, combatFlags, threatResponseFlags) {
-    TaskCombatPed(ped, targetPed, combatFlags, threatResponseFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    TaskCombatPed(_ped, _targetPed, combatFlags, threatResponseFlags);
 }
 /**
  * No comment provided
@@ -1464,7 +1586,9 @@ export function combatPed(ped, targetPed, combatFlags, threatResponseFlags) {
  * Hash: 0x944F30DCB7096BDE | Since: 323 | API-Set: unknown
  */
 export function combatPedTimed(ped, target, time, flags) {
-    TaskCombatPedTimed(ped, target, time, flags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    TaskCombatPedTimed(_ped, _target, time, flags);
 }
 /**
  * No comment provided
@@ -1472,7 +1596,8 @@ export function combatPedTimed(ped, target, time, flags) {
  * Hash: 0x3EB1FE9E8E908E15 | Since: 323 | API-Set: unknown
  */
 export function cower(ped, duration) {
-    TaskCower(ped, duration);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskCower(_ped, duration);
 }
 /**
  * Example:
@@ -1491,9 +1616,12 @@ export function cower(ped, duration) {
  * Hash: 0x2F8AF0E82773A171 | Since: 323 | API-Set: unknown
  */
 export function driveBy(driverPed, targetPed, targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, pushUnderneathDrivingTaskIfDriving, firingPattern) {
+    const _driverPed = driverPed instanceof IPed ? driverPed.handle() : driverPed;
+    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    const _targetVehicle = targetVehicle instanceof IVehicle ? targetVehicle.localId() : targetVehicle;
     if (typeof firingPattern === 'string')
         firingPattern = GetHashKey(firingPattern);
-    TaskDriveBy(driverPed, targetPed, targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, pushUnderneathDrivingTaskIfDriving, firingPattern);
+    TaskDriveBy(_driverPed, _targetPed, _targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, pushUnderneathDrivingTaskIfDriving, firingPattern);
 }
 /**
  * speed 1.0 = walk, 2.0 = run
@@ -1511,7 +1639,9 @@ export function driveBy(driverPed, targetPed, targetVehicle, targetX, targetY, t
  * Hash: 0xC20E50AA46D09CA8 | Since: 323 | API-Set: unknown
  */
 export function enterVehicle(ped, vehicle, timeout, seat, speed, flag, overrideEntryClipsetName) {
-    TaskEnterVehicle(ped, vehicle, timeout, seat, speed, flag, overrideEntryClipsetName);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskEnterVehicle(_ped, _vehicle, timeout, seat, speed, flag, overrideEntryClipsetName);
 }
 /**
  * No comment provided
@@ -1519,7 +1649,8 @@ export function enterVehicle(ped, vehicle, timeout, seat, speed, flag, overrideE
  * Hash: 0x7F93691AB4B92272 | Since: 323 | API-Set: unknown
  */
 export function everyoneLeaveVehicle(vehicle) {
-    TaskEveryoneLeaveVehicle(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskEveryoneLeaveVehicle(_vehicle);
 }
 /**
  * p1 is 1, 2, or 3 in scripts
@@ -1527,7 +1658,8 @@ export function everyoneLeaveVehicle(vehicle) {
  * Hash: 0x79B258E397854D29 | Since: 323 | API-Set: unknown
  */
 export function exitCover(ped, exitType, pos) {
-    TaskExitCover(ped, exitType, pos.x, pos.y, pos.z);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskExitCover(_ped, exitType, pos.x, pos.y, pos.z);
 }
 /**
  * MulleKD19: Adds a new point to the current point route. Call TASK_FLUSH_ROUTE before the first call to this. Call TASK_FOLLOW_POINT_ROUTE to make the Ped go the route.
@@ -1553,7 +1685,8 @@ export function flushRoute() {
  * Hash: 0x15D3A79D4E44B913 | Since: 323 | API-Set: unknown
  */
 export function followNavMeshToCoord(ped, pos, moveBlendRatio, time, targetRadius, flags, targetHeading) {
-    TaskFollowNavMeshToCoord(ped, pos.x, pos.y, pos.z, moveBlendRatio, time, targetRadius, flags, targetHeading);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskFollowNavMeshToCoord(_ped, pos.x, pos.y, pos.z, moveBlendRatio, time, targetRadius, flags, targetHeading);
 }
 /**
  * No comment provided
@@ -1561,7 +1694,8 @@ export function followNavMeshToCoord(ped, pos, moveBlendRatio, time, targetRadiu
  * Hash: 0x17F58B88D085DBAC | Since: 323 | API-Set: unknown
  */
 export function followNavMeshToCoordAdvanced(ped, pos, moveBlendRatio, time, targetRadius, flags, slideToCoordHeading, maxSlopeNavigable, clampMaxSearchDistance, targetHeading) {
-    TaskFollowNavMeshToCoordAdvanced(ped, pos.x, pos.y, pos.z, moveBlendRatio, time, targetRadius, flags, slideToCoordHeading, maxSlopeNavigable, clampMaxSearchDistance, targetHeading);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskFollowNavMeshToCoordAdvanced(_ped, pos.x, pos.y, pos.z, moveBlendRatio, time, targetRadius, flags, slideToCoordHeading, maxSlopeNavigable, clampMaxSearchDistance, targetHeading);
 }
 /**
  * MulleKD19: Makes the ped go on the created point route.
@@ -1580,7 +1714,8 @@ export function followNavMeshToCoordAdvanced(ped, pos, moveBlendRatio, time, tar
  * Hash: 0x595583281858626E | Since: 323 | API-Set: unknown
  */
 export function followPointRoute(ped, speed, mode) {
-    TaskFollowPointRoute(ped, speed, mode);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskFollowPointRoute(_ped, speed, mode);
 }
 /**
  * p6 always -1
@@ -1590,7 +1725,9 @@ export function followPointRoute(ped, speed, mode) {
  * Hash: 0x304AE42E357B8C7E | Since: 323 | API-Set: unknown
  */
 export function followToOffsetOfEntity(ped, entity, offsetX, offsetY, offsetZ, movementSpeed, timeout, stoppingRange, persistFollowing) {
-    TaskFollowToOffsetOfEntity(ped, entity, offsetX, offsetY, offsetZ, movementSpeed, timeout, stoppingRange, persistFollowing);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    TaskFollowToOffsetOfEntity(_ped, _entity, offsetX, offsetY, offsetZ, movementSpeed, timeout, stoppingRange, persistFollowing);
 }
 /**
  * No comment provided
@@ -1598,7 +1735,8 @@ export function followToOffsetOfEntity(ped, entity, offsetX, offsetY, offsetZ, m
  * Hash: 0x0759591819534F7B | Since: 323 | API-Set: unknown
  */
 export function followWaypointRecording(ped, name) {
-    TaskFollowWaypointRecording(ped, name, 0, 0, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskFollowWaypointRecording(_ped, name, 0, 0, 0);
 }
 /**
  * p2 always false
@@ -1610,9 +1748,10 @@ export function followWaypointRecording(ped, name) {
  * Hash: 0x4F056E1AFFEF17AB | Since: 323 | API-Set: unknown
  */
 export function forceMotionState(ped, state, forceRestart) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof state === 'string')
         state = GetHashKey(state);
-    TaskForceMotionState(ped, state, forceRestart);
+    TaskForceMotionState(_ped, state, forceRestart);
 }
 /**
  * No comment provided
@@ -1620,7 +1759,9 @@ export function forceMotionState(ped, state, forceRestart) {
  * Hash: 0x9C00E77AF14B2DFF | Since: 323 | API-Set: unknown
  */
 export function getOffBoat(ped, boat) {
-    TaskGetOffBoat(ped, boat);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _boat = boat instanceof IVehicle ? boat.localId() : boat;
+    TaskGetOffBoat(_ped, _boat);
 }
 /**
  * eg
@@ -1635,7 +1776,9 @@ export function getOffBoat(ped, boat) {
  * Hash: 0xA9DA48FAB8A76C12 | Since: 323 | API-Set: unknown
  */
 export function gotoEntityAiming(ped, target, distanceToStopAt, StartAimingDist) {
-    TaskGotoEntityAiming(ped, target, distanceToStopAt, StartAimingDist);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IEntity ? target.handle() : target;
+    TaskGotoEntityAiming(_ped, _target, distanceToStopAt, StartAimingDist);
 }
 /**
  * enum ESEEK_ENTITY_OFFSET_FLAGS
@@ -1647,7 +1790,9 @@ export function gotoEntityAiming(ped, target, distanceToStopAt, StartAimingDist)
  * Hash: 0xE39B4FF4FDEBDE27 | Since: 323 | API-Set: unknown
  */
 export function gotoEntityOffset(ped, entity, time, seekRadius, seekAngleDeg, moveBlendRatio, gotoEntityOffsetFlags) {
-    TaskGotoEntityOffset(ped, entity, time, seekRadius, seekAngleDeg, moveBlendRatio, gotoEntityOffsetFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    TaskGotoEntityOffset(_ped, _entity, time, seekRadius, seekAngleDeg, moveBlendRatio, gotoEntityOffsetFlags);
 }
 /**
  * No comment provided
@@ -1655,7 +1800,9 @@ export function gotoEntityOffset(ped, entity, time, seekRadius, seekAngleDeg, mo
  * Hash: 0x338E7EF52B6095A9 | Since: 323 | API-Set: unknown
  */
 export function gotoEntityOffsetXy(ped, entity, duration, targetRadius, offsetX, offsetY, moveBlendRatio, gotoEntityOffsetFlags) {
-    TaskGotoEntityOffsetXy(ped, entity, duration, targetRadius, offsetX, offsetY, moveBlendRatio, gotoEntityOffsetFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    TaskGotoEntityOffsetXy(_ped, _entity, duration, targetRadius, offsetX, offsetY, moveBlendRatio, gotoEntityOffsetFlags);
 }
 /**
  * No comment provided
@@ -1663,7 +1810,8 @@ export function gotoEntityOffsetXy(ped, entity, duration, targetRadius, offsetX,
  * Hash: 0xD76B57B44F1E6F8B | Since: 323 | API-Set: unknown
  */
 export function goStraightToCoord(ped, pos, speed, timeout, targetHeading, distanceToSlide) {
-    TaskGoStraightToCoord(ped, pos.x, pos.y, pos.z, speed, timeout, targetHeading, distanceToSlide);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskGoStraightToCoord(_ped, pos.x, pos.y, pos.z, speed, timeout, targetHeading, distanceToSlide);
 }
 /**
  * No comment provided
@@ -1671,7 +1819,9 @@ export function goStraightToCoord(ped, pos, speed, timeout, targetHeading, dista
  * Hash: 0x61E360B7E040D12E | Since: 323 | API-Set: unknown
  */
 export function goStraightToCoordRelativeToEntity(ped, entity, pos, moveBlendRatio, time) {
-    TaskGoStraightToCoordRelativeToEntity(ped, entity, pos.x, pos.y, pos.z, moveBlendRatio, time);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    TaskGoStraightToCoordRelativeToEntity(_ped, _entity, pos.x, pos.y, pos.z, moveBlendRatio, time);
 }
 /**
  * The ped will walk or run towards goToLocation, aiming towards goToLocation or focusLocation (depending on the aimingFlag) and shooting if shootAtEnemies = true to any enemy in his path.
@@ -1718,9 +1868,10 @@ export function goStraightToCoordRelativeToEntity(ped, entity, pos, moveBlendRat
  * Hash: 0xA55547801EB331FC | Since: 323 | API-Set: unknown
  */
 export function goToCoordAndAimAtHatedEntitiesNearCoord(pedHandle, goToLocationX, goToLocationY, goToLocationZ, focusLocationX, focusLocationY, focusLocationZ, speed, shootAtEnemies, distanceToStopAt, noRoadsDistance, useNavMesh, navFlags, taskFlags, firingPattern) {
+    const _pedHandle = pedHandle instanceof IPed ? pedHandle.handle() : pedHandle;
     if (typeof firingPattern === 'string')
         firingPattern = GetHashKey(firingPattern);
-    TaskGoToCoordAndAimAtHatedEntitiesNearCoord(pedHandle, goToLocationX, goToLocationY, goToLocationZ, focusLocationX, focusLocationY, focusLocationZ, speed, shootAtEnemies, distanceToStopAt, noRoadsDistance, useNavMesh, navFlags, taskFlags, firingPattern);
+    TaskGoToCoordAndAimAtHatedEntitiesNearCoord(_pedHandle, goToLocationX, goToLocationY, goToLocationZ, focusLocationX, focusLocationY, focusLocationZ, speed, shootAtEnemies, distanceToStopAt, noRoadsDistance, useNavMesh, navFlags, taskFlags, firingPattern);
 }
 /**
  * example from fm_mission_controller
@@ -1731,7 +1882,9 @@ export function goToCoordAndAimAtHatedEntitiesNearCoord(pedHandle, goToLocationX
  * Hash: 0x5BC448CB78FA3E88 | Since: 323 | API-Set: unknown
  */
 export function goToCoordAnyMeans(ped, pos, moveBlendRatio, vehicle, useLongRangeVehiclePathing, drivingFlags, maxRangeToShootTargets) {
-    TaskGoToCoordAnyMeans(ped, pos.x, pos.y, pos.z, moveBlendRatio, vehicle, useLongRangeVehiclePathing, drivingFlags, maxRangeToShootTargets);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskGoToCoordAnyMeans(_ped, pos.x, pos.y, pos.z, moveBlendRatio, _vehicle, useLongRangeVehiclePathing, drivingFlags, maxRangeToShootTargets);
 }
 /**
  * No comment provided
@@ -1739,7 +1892,9 @@ export function goToCoordAnyMeans(ped, pos, moveBlendRatio, vehicle, useLongRang
  * Hash: 0x1DD45F9ECFDB1BC9 | Since: 323 | API-Set: unknown
  */
 export function goToCoordAnyMeansExtraParams(ped, pos, moveBlendRatio, vehicle, useLongRangeVehiclePathing, drivingFlags, maxRangeToShootTargets, extraVehToTargetDistToPreferVehicle, driveStraightLineDistance, extraFlags, warpTimerMS) {
-    TaskGoToCoordAnyMeansExtraParams(ped, pos.x, pos.y, pos.z, moveBlendRatio, vehicle, useLongRangeVehiclePathing, drivingFlags, maxRangeToShootTargets, extraVehToTargetDistToPreferVehicle, driveStraightLineDistance, extraFlags, warpTimerMS);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskGoToCoordAnyMeansExtraParams(_ped, pos.x, pos.y, pos.z, moveBlendRatio, _vehicle, useLongRangeVehiclePathing, drivingFlags, maxRangeToShootTargets, extraVehToTargetDistToPreferVehicle, driveStraightLineDistance, extraFlags, warpTimerMS);
 }
 /**
  * No comment provided
@@ -1747,7 +1902,9 @@ export function goToCoordAnyMeansExtraParams(ped, pos, moveBlendRatio, vehicle, 
  * Hash: 0xB8ECD61F531A7B02 | Since: 323 | API-Set: unknown
  */
 export function goToCoordAnyMeansExtraParamsWithCruiseSpeed(ped, pos, moveBlendRatio, vehicle, useLongRangeVehiclePathing, drivingFlags, maxRangeToShootTargets, extraVehToTargetDistToPreferVehicle, driveStraightLineDistance, extraFlags, cruiseSpeed, targetArriveDist) {
-    TaskGoToCoordAnyMeansExtraParamsWithCruiseSpeed(ped, pos.x, pos.y, pos.z, moveBlendRatio, vehicle, useLongRangeVehiclePathing, drivingFlags, maxRangeToShootTargets, extraVehToTargetDistToPreferVehicle, driveStraightLineDistance, extraFlags, cruiseSpeed, targetArriveDist);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskGoToCoordAnyMeansExtraParamsWithCruiseSpeed(_ped, pos.x, pos.y, pos.z, moveBlendRatio, _vehicle, useLongRangeVehiclePathing, drivingFlags, maxRangeToShootTargets, extraVehToTargetDistToPreferVehicle, driveStraightLineDistance, extraFlags, cruiseSpeed, targetArriveDist);
 }
 /**
  * movement_speed: mostly 2f, but also 1/1.2f, etc.
@@ -1762,9 +1919,10 @@ export function goToCoordAnyMeansExtraParamsWithCruiseSpeed(ped, pos, moveBlendR
  * Hash: 0x11315AB3385B8AC0 | Since: 323 | API-Set: unknown
  */
 export function goToCoordWhileAimingAtCoord(ped, pos, aimAtX, aimAtY, aimAtZ, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, navFlags, instantBlendToAim, firingPattern) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof firingPattern === 'string')
         firingPattern = GetHashKey(firingPattern);
-    TaskGoToCoordWhileAimingAtCoord(ped, pos.x, pos.y, pos.z, aimAtX, aimAtY, aimAtZ, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, navFlags, instantBlendToAim, firingPattern);
+    TaskGoToCoordWhileAimingAtCoord(_ped, pos.x, pos.y, pos.z, aimAtX, aimAtY, aimAtZ, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, navFlags, instantBlendToAim, firingPattern);
 }
 /**
  * No comment provided
@@ -1772,9 +1930,11 @@ export function goToCoordWhileAimingAtCoord(ped, pos, aimAtX, aimAtY, aimAtZ, mo
  * Hash: 0xB2A16444EAD9AE47 | Since: 323 | API-Set: unknown
  */
 export function goToCoordWhileAimingAtEntity(ped, pos, aimAtID, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, navFlags, instantBlendToAim, firingPattern, time) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _aimAtID = aimAtID instanceof IEntity ? aimAtID.handle() : aimAtID;
     if (typeof firingPattern === 'string')
         firingPattern = GetHashKey(firingPattern);
-    TaskGoToCoordWhileAimingAtEntity(ped, pos.x, pos.y, pos.z, aimAtID, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, navFlags, instantBlendToAim, firingPattern, time);
+    TaskGoToCoordWhileAimingAtEntity(_ped, pos.x, pos.y, pos.z, _aimAtID, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, navFlags, instantBlendToAim, firingPattern, time);
 }
 /**
  * The entity will move towards the target until time is over (duration) or get in target's range (distance). p5 and p6 are unknown, but you could leave p5 = 1073741824 or 100 or even 0 (didn't see any difference but on the decompiled scripts, they use 1073741824 mostly) and p6 = 0
@@ -1793,7 +1953,9 @@ export function goToCoordWhileAimingAtEntity(ped, pos, aimAtID, moveBlendRatio, 
  * Hash: 0x6A071245EB0D1882 | Since: 323 | API-Set: unknown
  */
 export function goToEntity(entity, target, duration, distance, moveBlendRatio, slowDownDistance, flags) {
-    TaskGoToEntity(entity, target, duration, distance, moveBlendRatio, slowDownDistance, flags);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _target = target instanceof IEntity ? target.handle() : target;
+    TaskGoToEntity(_entity, _target, duration, distance, moveBlendRatio, slowDownDistance, flags);
 }
 /**
  * No comment provided
@@ -1801,9 +1963,11 @@ export function goToEntity(entity, target, duration, distance, moveBlendRatio, s
  * Hash: 0x04701832B739DCE5 | Since: 323 | API-Set: unknown
  */
 export function goToEntityWhileAimingAtCoord(ped, entity, aimX, aimY, aimZ, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, instantBlendToAim, firingPattern) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
     if (typeof firingPattern === 'string')
         firingPattern = GetHashKey(firingPattern);
-    TaskGoToEntityWhileAimingAtCoord(ped, entity, aimX, aimY, aimZ, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, instantBlendToAim, firingPattern);
+    TaskGoToEntityWhileAimingAtCoord(_ped, _entity, aimX, aimY, aimZ, moveBlendRatio, shoot, targetRadius, slowDistance, useNavMesh, instantBlendToAim, firingPattern);
 }
 /**
  * shootatEntity:
@@ -1813,9 +1977,12 @@ export function goToEntityWhileAimingAtCoord(ped, entity, aimX, aimY, aimZ, move
  * Hash: 0x97465886D35210E9 | Since: 323 | API-Set: unknown
  */
 export function goToEntityWhileAimingAtEntity(ped, entityToWalkTo, entityToAimAt, speed, shootatEntity, targetRadius, slowDistance, useNavMesh, instantBlendToAim, firingPattern) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entityToWalkTo = entityToWalkTo instanceof IEntity ? entityToWalkTo.handle() : entityToWalkTo;
+    const _entityToAimAt = entityToAimAt instanceof IEntity ? entityToAimAt.handle() : entityToAimAt;
     if (typeof firingPattern === 'string')
         firingPattern = GetHashKey(firingPattern);
-    TaskGoToEntityWhileAimingAtEntity(ped, entityToWalkTo, entityToAimAt, speed, shootatEntity, targetRadius, slowDistance, useNavMesh, instantBlendToAim, firingPattern);
+    TaskGoToEntityWhileAimingAtEntity(_ped, _entityToWalkTo, _entityToAimAt, speed, shootatEntity, targetRadius, slowDistance, useNavMesh, instantBlendToAim, firingPattern);
 }
 /**
  * No comment provided
@@ -1823,7 +1990,8 @@ export function goToEntityWhileAimingAtEntity(ped, entityToWalkTo, entityToAimAt
  * Hash: 0xD2A207EEBDF9889B | Since: 323 | API-Set: unknown
  */
 export function guardAssignedDefensiveArea(ped, pos, heading, maxPatrolProximity, timer) {
-    TaskGuardAssignedDefensiveArea(ped, pos.x, pos.y, pos.z, heading, maxPatrolProximity, timer);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskGuardAssignedDefensiveArea(_ped, pos.x, pos.y, pos.z, heading, maxPatrolProximity, timer);
 }
 /**
  * From re_prisonvanbreak:
@@ -1833,7 +2001,8 @@ export function guardAssignedDefensiveArea(ped, pos, heading, maxPatrolProximity
  * Hash: 0x4A58A47A72E3FCB4 | Since: 323 | API-Set: unknown
  */
 export function guardCurrentPosition(ped, maxPatrolProximity, defensiveAreaRadius, setDefensiveArea) {
-    TaskGuardCurrentPosition(ped, maxPatrolProximity, defensiveAreaRadius, setDefensiveArea);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskGuardCurrentPosition(_ped, maxPatrolProximity, defensiveAreaRadius, setDefensiveArea);
 }
 /**
  * No comment provided
@@ -1841,7 +2010,8 @@ export function guardCurrentPosition(ped, maxPatrolProximity, defensiveAreaRadiu
  * Hash: 0xC946FE14BE0EB5E2 | Since: 323 | API-Set: unknown
  */
 export function guardSphereDefensiveArea(ped, defendPositionX, defendPositionY, defendPositionZ, heading, maxPatrolProximity, time, pos, defensiveAreaRadius) {
-    TaskGuardSphereDefensiveArea(ped, defendPositionX, defendPositionY, defendPositionZ, heading, maxPatrolProximity, time, pos.x, pos.y, pos.z, defensiveAreaRadius);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskGuardSphereDefensiveArea(_ped, defendPositionX, defendPositionY, defendPositionZ, heading, maxPatrolProximity, time, pos.x, pos.y, pos.z, defensiveAreaRadius);
 }
 /**
  * In the scripts, p3 was always -1.
@@ -1852,7 +2022,9 @@ export function guardSphereDefensiveArea(ped, defendPositionX, defendPositionY, 
  * Hash: 0xF2EAB31979A7F910 | Since: 323 | API-Set: unknown
  */
 export function handsUp(ped, duration, facingPed, timeToFacePed, flags) {
-    TaskHandsUp(ped, duration, facingPed, timeToFacePed, flags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _facingPed = facingPed instanceof IPed ? facingPed.handle() : facingPed;
+    TaskHandsUp(_ped, duration, _facingPed, timeToFacePed, flags);
 }
 /**
  * Ped pilot should be in a heli.
@@ -1866,7 +2038,9 @@ export function handsUp(ped, duration, facingPed, timeToFacePed, flags) {
  * Hash: 0xAC83B1DB38D0ADA0 | Since: 323 | API-Set: unknown
  */
 export function heliChase(pilot, entityToFollow, pos) {
-    TaskHeliChase(pilot, entityToFollow, pos.x, pos.y, pos.z);
+    const _pilot = pilot instanceof IPed ? pilot.handle() : pilot;
+    const _entityToFollow = entityToFollow instanceof IEntity ? entityToFollow.handle() : entityToFollow;
+    TaskHeliChase(_pilot, _entityToFollow, pos.x, pos.y, pos.z);
 }
 /**
  * No comment provided
@@ -1874,7 +2048,10 @@ export function heliChase(pilot, entityToFollow, pos) {
  * Hash: 0xB385523325077210 | Since: 1290 | API-Set: unknown
  */
 export function heliEscortHeli(pilot, heli1, heli2, offsetX, offsetY, offsetZ) {
-    TaskHeliEscortHeli(pilot, heli1, heli2, offsetX, offsetY, offsetZ);
+    const _pilot = pilot instanceof IPed ? pilot.handle() : pilot;
+    const _heli1 = heli1 instanceof IVehicle ? heli1.localId() : heli1;
+    const _heli2 = heli2 instanceof IVehicle ? heli2.localId() : heli2;
+    TaskHeliEscortHeli(_pilot, _heli1, _heli2, offsetX, offsetY, offsetZ);
 }
 /**
  * Must have targetVehicle, targetPed, OR destination X/Y/Z set
@@ -1927,7 +2104,11 @@ export function heliEscortHeli(pilot, heli1, heli2, offsetX, offsetY, offsetZ) {
  * Hash: 0xDAD029E187A2BEB4 | Since: 323 | API-Set: unknown
  */
 export function heliMission(pilot, aircraft, targetVehicle, targetPed, destinationX, destinationY, destinationZ, missionFlag, maxSpeed, radius, targetHeading, maxHeight, minHeight, slowDownDistance, behaviorFlags) {
-    TaskHeliMission(pilot, aircraft, targetVehicle, targetPed, destinationX, destinationY, destinationZ, missionFlag, maxSpeed, radius, targetHeading, maxHeight, minHeight, slowDownDistance, behaviorFlags);
+    const _pilot = pilot instanceof IPed ? pilot.handle() : pilot;
+    const _aircraft = aircraft instanceof IVehicle ? aircraft.localId() : aircraft;
+    const _targetVehicle = targetVehicle instanceof IVehicle ? targetVehicle.localId() : targetVehicle;
+    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    TaskHeliMission(_pilot, _aircraft, _targetVehicle, _targetPed, destinationX, destinationY, destinationZ, missionFlag, maxSpeed, radius, targetHeading, maxHeight, minHeight, slowDownDistance, behaviorFlags);
 }
 /**
  * Definition is wrong. This has 4 parameters (Not sure when they were added. v350 has 2, v678 has 4).
@@ -1940,7 +2121,8 @@ export function heliMission(pilot, aircraft, targetVehicle, targetPed, destinati
  * Hash: 0x0AE4086104E067B1 | Since: 323 | API-Set: unknown
  */
 export function jump(ped, usePlayerLaunchForce, doSuperJump, useFullSuperJumpForce) {
-    TaskJump(ped, usePlayerLaunchForce, doSuperJump, useFullSuperJumpForce);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskJump(_ped, usePlayerLaunchForce, doSuperJump, useFullSuperJumpForce);
 }
 /**
  * Flags are the same flags used in TASK_LEAVE_VEHICLE
@@ -1948,7 +2130,8 @@ export function jump(ped, usePlayerLaunchForce, doSuperJump, useFullSuperJumpFor
  * Hash: 0x504D54DF3F6F2247 | Since: 323 | API-Set: unknown
  */
 export function leaveAnyVehicle(ped, delayTime, flags) {
-    TaskLeaveAnyVehicle(ped, delayTime, flags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskLeaveAnyVehicle(_ped, delayTime, flags);
 }
 /**
  * Flags from decompiled scripts:
@@ -1965,7 +2148,9 @@ export function leaveAnyVehicle(ped, delayTime, flags) {
  * Hash: 0xD3DBCE61A490BE02 | Since: 323 | API-Set: unknown
  */
 export function leaveVehicle(ped, vehicle, flags) {
-    TaskLeaveVehicle(ped, vehicle, flags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskLeaveVehicle(_ped, _vehicle, flags);
 }
 /**
  * enum eScriptLookatFlags
@@ -1992,7 +2177,8 @@ export function leaveVehicle(ped, vehicle, flags) {
  * Hash: 0x6FA46612594F7973 | Since: 323 | API-Set: unknown
  */
 export function lookAtCoord(entity, pos, duration, flags, priority) {
-    TaskLookAtCoord(entity, pos.x, pos.y, pos.z, duration, flags, priority);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    TaskLookAtCoord(_entity, pos.x, pos.y, pos.z, duration, flags, priority);
 }
 /**
  * For flags, please refer to TASK_LOOK_AT_COORD.
@@ -2000,7 +2186,9 @@ export function lookAtCoord(entity, pos, duration, flags, priority) {
  * Hash: 0x69F4BE8C8CC4796C | Since: 323 | API-Set: unknown
  */
 export function lookAtEntity(ped, lookAt, duration, flags, priority) {
-    TaskLookAtEntity(ped, lookAt, duration, flags, priority);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _lookAt = lookAt instanceof IEntity ? lookAt.handle() : lookAt;
+    TaskLookAtEntity(_ped, _lookAt, duration, flags, priority);
 }
 /**
  * Example:
@@ -2009,7 +2197,8 @@ export function lookAtEntity(ped, lookAt, duration, flags, priority) {
  * Hash: 0xD5B35BEA41919ACB | Since: 323 | API-Set: unknown
  */
 export function moveNetworkAdvancedByName(ped, network, pos, rot, rotOrder, blendDuration, allowOverrideCloneUpdate, animDict, flags) {
-    TaskMoveNetworkAdvancedByName(ped, network, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, rotOrder, blendDuration, allowOverrideCloneUpdate, animDict, flags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskMoveNetworkAdvancedByName(_ped, network, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, rotOrder, blendDuration, allowOverrideCloneUpdate, animDict, flags);
 }
 /**
  * No comment provided
@@ -2017,7 +2206,8 @@ export function moveNetworkAdvancedByName(ped, network, pos, rot, rotOrder, blen
  * Hash: 0x29682E2CCF21E9B5 | Since: 1868 | API-Set: unknown
  */
 export function moveNetworkAdvancedByNameWithInitParams(ped, network, pos, rot, rotOrder, blendDuration, allowOverrideCloneUpdate, dictionary, flags) {
-    return Citizen.invokeNative('0x29682E2CCF21E9B5', ped, network, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, rotOrder, blendDuration, allowOverrideCloneUpdate, dictionary, flags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x29682E2CCF21E9B5', _ped, network, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, rotOrder, blendDuration, allowOverrideCloneUpdate, dictionary, flags);
 }
 /**
  * Example:
@@ -2026,7 +2216,8 @@ export function moveNetworkAdvancedByNameWithInitParams(ped, network, pos, rot, 
  * Hash: 0x2D537BA194896636 | Since: 323 | API-Set: unknown
  */
 export function moveNetworkByName(ped, task, multiplier, allowOverrideCloneUpdate, animDict, flags) {
-    TaskMoveNetworkByName(ped, task, multiplier, allowOverrideCloneUpdate, animDict, flags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskMoveNetworkByName(_ped, task, multiplier, allowOverrideCloneUpdate, animDict, flags);
 }
 /**
  * Used only once in the scripts (am_mp_nightclub)
@@ -2034,7 +2225,8 @@ export function moveNetworkByName(ped, task, multiplier, allowOverrideCloneUpdat
  * Hash: 0x3D45B0B355C5E0C9 | Since: 1493 | API-Set: unknown
  */
 export function moveNetworkByNameWithInitParams(ped, network, blendDuration, allowOverrideCloneUpdate, animDict, flags) {
-    return TaskMoveNetworkByNameWithInitParams(ped, network, blendDuration, allowOverrideCloneUpdate, animDict, flags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return TaskMoveNetworkByNameWithInitParams(_ped, network, blendDuration, allowOverrideCloneUpdate, animDict, flags);
 }
 /**
  * The given ped will try to open the nearest door to 'seat'.
@@ -2043,7 +2235,9 @@ export function moveNetworkByNameWithInitParams(ped, network, blendDuration, all
  * Hash: 0x965791A9A488A062 | Since: 323 | API-Set: unknown
  */
 export function openVehicleDoor(ped, vehicle, timeOut, seat, speed) {
-    TaskOpenVehicleDoor(ped, vehicle, timeOut, seat, speed);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskOpenVehicleDoor(_ped, _vehicle, timeOut, seat, speed);
 }
 /**
  * Second parameter is unused.
@@ -2053,7 +2247,8 @@ export function openVehicleDoor(ped, vehicle, timeOut, seat, speed) {
  * Hash: 0xD2F1C53C97EE81AB | Since: 323 | API-Set: unknown
  */
 export function parachute(ped, giveParachuteItem, instant) {
-    TaskParachute(ped, giveParachuteItem, instant);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskParachute(_ped, giveParachuteItem, instant);
 }
 /**
  * `makes ped parachute to coords x y z. Works well with PATHFIND::GET_SAFE_COORD_FOR_PED`
@@ -2061,7 +2256,8 @@ export function parachute(ped, giveParachuteItem, instant) {
  * Hash: 0xB33E291AFA6BD03A | Since: 323 | API-Set: unknown
  */
 export function parachuteToTarget(ped, pos) {
-    TaskParachuteToTarget(ped, pos.x, pos.y, pos.z);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskParachuteToTarget(_ped, pos.x, pos.y, pos.z);
 }
 /**
  * After looking at some scripts the second parameter seems to be an id of some kind. Here are some I found from some R* scripts:
@@ -2091,7 +2287,8 @@ export function parachuteToTarget(ped, pos) {
  * Hash: 0xBDA5DF49D080FE4E | Since: 323 | API-Set: unknown
  */
 export function patrol(ped, patrolRouteName, alertState, canChatToPeds, useHeadLookAt) {
-    TaskPatrol(ped, patrolRouteName, alertState, canChatToPeds, useHeadLookAt);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPatrol(_ped, patrolRouteName, alertState, canChatToPeds, useHeadLookAt);
 }
 /**
  * Stand still (?)
@@ -2099,7 +2296,8 @@ export function patrol(ped, patrolRouteName, alertState, canChatToPeds, useHeadL
  * Hash: 0xE73A266DB0CA9042 | Since: 323 | API-Set: unknown
  */
 export function pause(ped, ms) {
-    TaskPause(ped, ms);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPause(_ped, ms);
 }
 /**
  * No comment provided
@@ -2107,7 +2305,8 @@ export function pause(ped, ms) {
  * Hash: 0xD04FE6765D990A06 | Since: 323 | API-Set: unknown
  */
 export function pedSlideToCoord(ped, pos, heading, speed) {
-    TaskPedSlideToCoord(ped, pos.x, pos.y, pos.z, heading, speed);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPedSlideToCoord(_ped, pos.x, pos.y, pos.z, heading, speed);
 }
 /**
  * No comment provided
@@ -2115,7 +2314,8 @@ export function pedSlideToCoord(ped, pos, heading, speed) {
  * Hash: 0x5A4A6A6D3DC64F52 | Since: 323 | API-Set: unknown
  */
 export function pedSlideToCoordHdgRate(ped, pos, heading, speed, headingChangeRate) {
-    TaskPedSlideToCoordHdgRate(ped, pos.x, pos.y, pos.z, heading, speed, headingChangeRate);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPedSlideToCoordHdgRate(_ped, pos.x, pos.y, pos.z, heading, speed, headingChangeRate);
 }
 /**
  * No comment provided
@@ -2123,7 +2323,8 @@ export function pedSlideToCoordHdgRate(ped, pos, heading, speed, headingChangeRa
  * Hash: 0x5ABA3986D90D8A3B | Since: 323 | API-Set: unknown
  */
 export function performSequence(ped, taskSequenceId) {
-    TaskPerformSequence(ped, taskSequenceId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPerformSequence(_ped, taskSequenceId);
 }
 /**
  * No comment provided
@@ -2131,7 +2332,8 @@ export function performSequence(ped, taskSequenceId) {
  * Hash: 0x89221B16730234F0 | Since: 323 | API-Set: unknown
  */
 export function performSequenceFromProgress(ped, taskIndex, progress1, progress2) {
-    TaskPerformSequenceFromProgress(ped, taskIndex, progress1, progress2);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPerformSequenceFromProgress(_ped, taskIndex, progress1, progress2);
 }
 /**
  * No comment provided
@@ -2139,7 +2341,8 @@ export function performSequenceFromProgress(ped, taskIndex, progress1, progress2
  * Hash: 0x8C33220C8D78CA0D | Since: 944 | API-Set: unknown
  */
 export function performSequenceLocally(ped, taskSequenceId) {
-    TaskPerformSequenceLocally(ped, taskSequenceId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPerformSequenceLocally(_ped, taskSequenceId);
 }
 /**
  * No comment provided
@@ -2147,7 +2350,9 @@ export function performSequenceLocally(ped, taskSequenceId) {
  * Hash: 0x2D2386F273FF7A25 | Since: 323 | API-Set: unknown
  */
 export function planeChase(pilot, entityToFollow, pos) {
-    TaskPlaneChase(pilot, entityToFollow, pos.x, pos.y, pos.z);
+    const _pilot = pilot instanceof IPed ? pilot.handle() : pilot;
+    const _entityToFollow = entityToFollow instanceof IEntity ? entityToFollow.handle() : entityToFollow;
+    TaskPlaneChase(_pilot, _entityToFollow, pos.x, pos.y, pos.z);
 }
 /**
  * No comment provided
@@ -2155,7 +2360,9 @@ export function planeChase(pilot, entityToFollow, pos) {
  * Hash: 0xF7F9DCCA89E7505B | Since: 1290 | API-Set: unknown
  */
 export function planeGotoPreciseVtol(ped, vehicle, pos, flightHeight, minHeightAboveTerrain, useDesiredOrientation, desiredOrientation, autopilot) {
-    TaskPlaneGotoPreciseVtol(ped, vehicle, pos.x, pos.y, pos.z, flightHeight, minHeightAboveTerrain, useDesiredOrientation, desiredOrientation, autopilot);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskPlaneGotoPreciseVtol(_ped, _vehicle, pos.x, pos.y, pos.z, flightHeight, minHeightAboveTerrain, useDesiredOrientation, desiredOrientation, autopilot);
 }
 /**
  * No comment provided
@@ -2163,7 +2370,9 @@ export function planeGotoPreciseVtol(ped, vehicle, pos, flightHeight, minHeightA
  * Hash: 0xBF19721FA34D32C0 | Since: 323 | API-Set: unknown
  */
 export function planeLand(pilot, plane, runwayStartX, runwayStartY, runwayStartZ, runwayEndX, runwayEndY, runwayEndZ) {
-    TaskPlaneLand(pilot, plane, runwayStartX, runwayStartY, runwayStartZ, runwayEndX, runwayEndY, runwayEndZ);
+    const _pilot = pilot instanceof IPed ? pilot.handle() : pilot;
+    const _plane = plane instanceof IVehicle ? plane.localId() : plane;
+    TaskPlaneLand(_pilot, _plane, runwayStartX, runwayStartY, runwayStartZ, runwayEndX, runwayEndY, runwayEndZ);
 }
 /**
  * EXAMPLE USAGE:
@@ -2217,7 +2426,11 @@ export function planeLand(pilot, plane, runwayStartX, runwayStartY, runwayStartZ
  * Hash: 0x23703CD154E83B88 | Since: 323 | API-Set: unknown
  */
 export function planeMission(pilot, aircraft, targetVehicle, targetPed, destinationX, destinationY, destinationZ, missionFlag, angularDrag, targetReached, targetHeading, maxZ, minZ, precise) {
-    TaskPlaneMission(pilot, aircraft, targetVehicle, targetPed, destinationX, destinationY, destinationZ, missionFlag, angularDrag, targetReached, targetHeading, maxZ, minZ, precise);
+    const _pilot = pilot instanceof IPed ? pilot.handle() : pilot;
+    const _aircraft = aircraft instanceof IVehicle ? aircraft.localId() : aircraft;
+    const _targetVehicle = targetVehicle instanceof IVehicle ? targetVehicle.localId() : targetVehicle;
+    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    TaskPlaneMission(_pilot, _aircraft, _targetVehicle, _targetPed, destinationX, destinationY, destinationZ, missionFlag, angularDrag, targetReached, targetHeading, maxZ, minZ, precise);
 }
 /**
  * No comment provided
@@ -2225,7 +2438,9 @@ export function planeMission(pilot, aircraft, targetVehicle, targetPed, destinat
  * Hash: 0x92C360B5F15D2302 | Since: 1103 | API-Set: unknown
  */
 export function planeTaxi(pilot, aircraft, pos, cruiseSpeed, targetReached) {
-    TaskPlaneTaxi(pilot, aircraft, pos.x, pos.y, pos.z, cruiseSpeed, targetReached);
+    const _pilot = pilot instanceof IPed ? pilot.handle() : pilot;
+    const _aircraft = aircraft instanceof IVehicle ? aircraft.localId() : aircraft;
+    TaskPlaneTaxi(_pilot, _aircraft, pos.x, pos.y, pos.z, cruiseSpeed, targetReached);
 }
 /**
  * No comment provided
@@ -2233,7 +2448,8 @@ export function planeTaxi(pilot, aircraft, pos, cruiseSpeed, targetReached) {
  * Hash: 0x965FEC691D55E9BF | Since: 323 | API-Set: unknown
  */
 export function plantBomb(ped, pos, heading) {
-    TaskPlantBomb(ped, pos.x, pos.y, pos.z, heading);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPlantBomb(_ped, pos.x, pos.y, pos.z, heading);
 }
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
@@ -2302,7 +2518,8 @@ export function plantBomb(ped, pos, heading) {
  * Hash: 0xEA47FE3719165B94 | Since: 323 | API-Set: unknown
  */
 export function playAnim(ped, animDictionary, animationName, blendInSpeed, blendOutSpeed, duration, flag, playbackRate, lockX, lockY, lockZ) {
-    TaskPlayAnim(ped, animDictionary, animationName, blendInSpeed, blendOutSpeed, duration, flag, playbackRate, lockX, lockY, lockZ);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPlayAnim(_ped, animDictionary, animationName, blendInSpeed, blendOutSpeed, duration, flag, playbackRate, lockX, lockY, lockZ);
 }
 /**
  * It's similar to TASK_PLAY_ANIM, except the first 6 floats let you specify the initial position and rotation of the task. (Ped gets teleported to the position).
@@ -2312,7 +2529,8 @@ export function playAnim(ped, animDictionary, animationName, blendInSpeed, blend
  * Hash: 0x83CDB10EA29B370B | Since: 323 | API-Set: unknown
  */
 export function playAnimAdvanced(ped, animDict, animName, pos, rot, animEnterSpeed, animExitSpeed, duration, flag, animTime, rotOrder, ikFlags) {
-    TaskPlayAnimAdvanced(ped, animDict, animName, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, animEnterSpeed, animExitSpeed, duration, flag, animTime, rotOrder, ikFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPlayAnimAdvanced(_ped, animDict, animName, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, animEnterSpeed, animExitSpeed, duration, flag, animTime, rotOrder, ikFlags);
 }
 /**
  * Example from the scripts:
@@ -2342,7 +2560,8 @@ export function playAnimAdvanced(ped, animDict, animName, pos, rot, animEnterSpe
  * Hash: 0x8FBB6758B3B3E9EC | Since: 323 | API-Set: unknown
  */
 export function playPhoneGestureAnimation(ped, animDict, animation, boneMaskType, blendInDuration, blendOutDuration, isLooping, holdLastFrame) {
-    TaskPlayPhoneGestureAnimation(ped, animDict, animation, boneMaskType, blendInDuration, blendOutDuration, isLooping, holdLastFrame);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPlayPhoneGestureAnimation(_ped, animDict, animation, boneMaskType, blendInDuration, blendOutDuration, isLooping, holdLastFrame);
 }
 /**
  * No comment provided
@@ -2350,7 +2569,8 @@ export function playPhoneGestureAnimation(ped, animDict, animation, boneMaskType
  * Hash: 0x4172393E6BE1FECE | Since: 323 | API-Set: unknown
  */
 export function putPedDirectlyIntoCover(ped, pos, time, allowPeekingAndFiring, blendInDuration, forceInitialFacingDirection, forceFaceLeft, identifier, doEntry) {
-    TaskPutPedDirectlyIntoCover(ped, pos.x, pos.y, pos.z, time, allowPeekingAndFiring, blendInDuration, forceInitialFacingDirection, forceFaceLeft, identifier, doEntry);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskPutPedDirectlyIntoCover(_ped, pos.x, pos.y, pos.z, time, allowPeekingAndFiring, blendInDuration, forceInitialFacingDirection, forceFaceLeft, identifier, doEntry);
 }
 /**
  * from armenian3.c4
@@ -2361,7 +2581,9 @@ export function putPedDirectlyIntoCover(ped, pos, time, allowPeekingAndFiring, b
  * Hash: 0x1C6CD14A876FFE39 | Since: 323 | API-Set: unknown
  */
 export function putPedDirectlyIntoMelee(ped, meleeTarget, blendInDuration, timeInMelee, strafePhaseSync, aiCombatFlags) {
-    TaskPutPedDirectlyIntoMelee(ped, meleeTarget, blendInDuration, timeInMelee, strafePhaseSync, aiCombatFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _meleeTarget = meleeTarget instanceof IPed ? meleeTarget.handle() : meleeTarget;
+    TaskPutPedDirectlyIntoMelee(_ped, _meleeTarget, blendInDuration, timeInMelee, strafePhaseSync, aiCombatFlags);
 }
 /**
  * Attaches a ped to a rope and allows player control to rappel down a wall. Disables all collisions while on the rope.
@@ -2370,7 +2592,8 @@ export function putPedDirectlyIntoMelee(ped, meleeTarget, blendInDuration, timeI
  * Hash: 0xEAF66ACDDC794793 | Since: 1868 | API-Set: unknown
  */
 export function rappelDownWallUsingClipsetOverride(ped, x1, y1, z1, x2, y2, z2, minZ, ropeHandle, clipSet) {
-    TaskRappelDownWall(ped, x1, y1, z1, x2, y2, z2, minZ, ropeHandle, clipSet, undefined, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskRappelDownWall(_ped, x1, y1, z1, x2, y2, z2, minZ, ropeHandle, clipSet, undefined, undefined);
 }
 /**
  * minHeightAboveGround: the minimum height above ground the heli must be at before the ped can start rappelling
@@ -2383,7 +2606,8 @@ export function rappelDownWallUsingClipsetOverride(ped, x1, y1, z1, x2, y2, z2, 
  * Hash: 0x09693B0312F91649 | Since: 323 | API-Set: unknown
  */
 export function rappelFromHeli(ped, minHeightAboveGround) {
-    TaskRappelFromHeli(ped, minHeightAboveGround);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskRappelFromHeli(_ped, minHeightAboveGround);
 }
 /**
  * No comment provided
@@ -2391,7 +2615,9 @@ export function rappelFromHeli(ped, minHeightAboveGround) {
  * Hash: 0x72C896464915D1B1 | Since: 323 | API-Set: unknown
  */
 export function reactAndFleePed(ped, fleeTarget) {
-    TaskReactAndFleePed(ped, fleeTarget);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _fleeTarget = fleeTarget instanceof IPed ? fleeTarget.handle() : fleeTarget;
+    TaskReactAndFleePed(_ped, _fleeTarget);
 }
 /**
  * The 2nd param (drawWeapon) is not implemented.
@@ -2407,7 +2633,8 @@ export function reactAndFleePed(ped, fleeTarget) {
  * Hash: 0x62D2916F56B9CD2D | Since: 323 | API-Set: unknown
  */
 export function reloadWeapon(ped, drawWeapon) {
-    TaskReloadWeapon(ped, drawWeapon);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskReloadWeapon(_ped, drawWeapon);
 }
 /**
  * From fm_mission_controller.c:
@@ -2448,7 +2675,8 @@ export function reloadWeapon(ped, drawWeapon) {
  * Hash: 0x126EF75F1E17ABE5 | Since: 323 | API-Set: unknown
  */
 export function scriptedAnimation(ped, blendInDelta, blendOutDelta) {
-    return TaskScriptedAnimation(ped, blendInDelta, blendOutDelta);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return TaskScriptedAnimation(_ped, blendInDelta, blendOutDelta);
 }
 /**
  * No comment provided
@@ -2456,7 +2684,9 @@ export function scriptedAnimation(ped, blendInDelta, blendOutDelta) {
  * Hash: 0x84D32B3BEC531324 | Since: 323 | API-Set: unknown
  */
 export function seekCoverFromPed(ped, target, duration, allowPeekingAndFiring) {
-    TaskSeekCoverFromPed(ped, target, duration, allowPeekingAndFiring);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    TaskSeekCoverFromPed(_ped, _target, duration, allowPeekingAndFiring);
 }
 /**
  * No comment provided
@@ -2464,7 +2694,8 @@ export function seekCoverFromPed(ped, target, duration, allowPeekingAndFiring) {
  * Hash: 0x75AC2B60386D89F2 | Since: 323 | API-Set: unknown
  */
 export function seekCoverFromPos(ped, pos, duration, allowPeekingAndFiring) {
-    TaskSeekCoverFromPos(ped, pos.x, pos.y, pos.z, duration, allowPeekingAndFiring);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSeekCoverFromPos(_ped, pos.x, pos.y, pos.z, duration, allowPeekingAndFiring);
 }
 /**
  * p8 causes the ped to take the shortest route to the cover position. It may have something to do with navmesh or pathfinding mechanics.
@@ -2480,7 +2711,8 @@ export function seekCoverFromPos(ped, pos, duration, allowPeekingAndFiring) {
  * Hash: 0x39246A6958EF072C | Since: 323 | API-Set: unknown
  */
 export function seekCoverToCoords(ped, x1, y1, z1, x2, y2, z2, timeout, shortRoute) {
-    TaskSeekCoverToCoords(ped, x1, y1, z1, x2, y2, z2, timeout, shortRoute);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSeekCoverToCoords(_ped, x1, y1, z1, x2, y2, z2, timeout, shortRoute);
 }
 /**
  * p5 is always -1
@@ -2488,7 +2720,8 @@ export function seekCoverToCoords(ped, x1, y1, z1, x2, y2, z2, timeout, shortRou
  * Hash: 0xD43D95C7A869447F | Since: 323 | API-Set: unknown
  */
 export function seekCoverToCoverPoint(ped, coverpoint, pos, time, allowPeekingAndFiring) {
-    TaskSeekCoverToCoverPoint(ped, coverpoint, pos.x, pos.y, pos.z, time, allowPeekingAndFiring);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSeekCoverToCoverPoint(_ped, coverpoint, pos.x, pos.y, pos.z, time, allowPeekingAndFiring);
 }
 /**
  * I cant believe I have to define this, this is one of the best natives.
@@ -2500,7 +2733,8 @@ export function seekCoverToCoverPoint(ped, coverpoint, pos, time, allowPeekingAn
  * Hash: 0x90D2156198831D69 | Since: 323 | API-Set: unknown
  */
 export function setBlockingOfNonTemporaryEvents(ped, toggle) {
-    TaskSetBlockingOfNonTemporaryEvents(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSetBlockingOfNonTemporaryEvents(_ped, toggle);
 }
 /**
  * p1 is always GET_HASH_KEY("empty") in scripts, for the rare times this is used
@@ -2508,9 +2742,10 @@ export function setBlockingOfNonTemporaryEvents(ped, toggle) {
  * Hash: 0xEB8517DDA73720DA | Since: 323 | API-Set: unknown
  */
 export function setDecisionMaker(ped, decisionMakerId) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof decisionMakerId === 'string')
         decisionMakerId = GetHashKey(decisionMakerId);
-    TaskSetDecisionMaker(ped, decisionMakerId);
+    TaskSetDecisionMaker(_ped, decisionMakerId);
 }
 /**
  * No comment provided
@@ -2518,7 +2753,8 @@ export function setDecisionMaker(ped, decisionMakerId) {
  * Hash: 0x933C06518B52A9A4 | Since: 323 | API-Set: unknown
  */
 export function setSphereDefensiveArea(ped, pos, radius) {
-    TaskSetSphereDefensiveArea(ped, pos.x, pos.y, pos.z, radius);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSetSphereDefensiveArea(_ped, pos.x, pos.y, pos.z, radius);
 }
 /**
  * No comment provided
@@ -2526,7 +2762,8 @@ export function setSphereDefensiveArea(ped, pos, radius) {
  * Hash: 0x60A19CF85FF4CEFA | Since: 3407 | API-Set: unknown
  */
 export function sharkCircleCoord(ped, pos, moveBlendRatio, radius) {
-    Citizen.invokeNative('0x60A19CF85FF4CEFA', ped, pos.x, pos.y, pos.z, moveBlendRatio, radius);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x60A19CF85FF4CEFA', _ped, pos.x, pos.y, pos.z, moveBlendRatio, radius);
 }
 /**
  * No comment provided
@@ -2534,7 +2771,8 @@ export function sharkCircleCoord(ped, pos, moveBlendRatio, radius) {
  * Hash: 0x452419CBD838065B | Since: 323 | API-Set: unknown
  */
 export function shockingEventReact(ped, eventHandle) {
-    TaskShockingEventReact(ped, eventHandle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskShockingEventReact(_ped, eventHandle);
 }
 /**
  * Firing Pattern Hash Information: https://pastebin.com/Px036isB
@@ -2542,9 +2780,10 @@ export function shockingEventReact(ped, eventHandle) {
  * Hash: 0x46A6CC01E0826106 | Since: 323 | API-Set: unknown
  */
 export function shootAtCoord(ped, pos, duration, firingPattern) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof firingPattern === 'string')
         firingPattern = GetHashKey(firingPattern);
-    TaskShootAtCoord(ped, pos.x, pos.y, pos.z, duration, firingPattern);
+    TaskShootAtCoord(_ped, pos.x, pos.y, pos.z, duration, firingPattern);
 }
 /**
  * //this part of the code is to determine at which entity the player is aiming, for example if you want to create a mod where you give orders to peds
@@ -2562,9 +2801,11 @@ export function shootAtCoord(ped, pos, duration, firingPattern) {
  * Hash: 0x08DA95E8298AE772 | Since: 323 | API-Set: unknown
  */
 export function shootAtEntity(entity, target, duration, firingPattern) {
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _target = target instanceof IEntity ? target.handle() : target;
     if (typeof firingPattern === 'string')
         firingPattern = GetHashKey(firingPattern);
-    TaskShootAtEntity(entity, target, duration, firingPattern);
+    TaskShootAtEntity(_entity, _target, duration, firingPattern);
 }
 /**
  * Makes the specified ped shuffle to the next vehicle seat.
@@ -2573,7 +2814,9 @@ export function shootAtEntity(entity, target, duration, firingPattern) {
  * Hash: 0x7AA80209BDA643EB | Since: 323 | API-Set: unknown
  */
 export function shuffleToNextVehicleSeat(ped, vehicle, useAlternateShuffle) {
-    TaskShuffleToNextVehicleSeat(ped, vehicle, useAlternateShuffle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskShuffleToNextVehicleSeat(_ped, _vehicle, useAlternateShuffle);
 }
 /**
  * No comment provided
@@ -2581,7 +2824,8 @@ export function shuffleToNextVehicleSeat(ped, vehicle, useAlternateShuffle) {
  * Hash: 0x601736CFE536B0A0 | Since: 323 | API-Set: unknown
  */
 export function skyDive(ped, instant) {
-    TaskSkyDive(ped, instant);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSkyDive(_ped, instant);
 }
 /**
  * Makes the specified ped flee the specified distance from the specified position.
@@ -2589,7 +2833,8 @@ export function skyDive(ped, instant) {
  * Hash: 0x94587F17E9C365D5 | Since: 323 | API-Set: unknown
  */
 export function smartFleeCoord(ped, pos, distance, time, preferPavements, quitIfOutOfRange) {
-    TaskSmartFleeCoord(ped, pos.x, pos.y, pos.z, distance, time, preferPavements, quitIfOutOfRange);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSmartFleeCoord(_ped, pos.x, pos.y, pos.z, distance, time, preferPavements, quitIfOutOfRange);
 }
 /**
  * Makes a ped run away from another ped (fleeTarget).
@@ -2600,7 +2845,9 @@ export function smartFleeCoord(ped, pos, distance, time, preferPavements, quitIf
  * Hash: 0x22B0D0E37CCB840D | Since: 323 | API-Set: unknown
  */
 export function smartFleePed(ped, fleeTarget, safeDistance, fleeTime, preferPavements, updateToNearestHatedPed) {
-    TaskSmartFleePed(ped, fleeTarget, safeDistance, fleeTime, preferPavements, updateToNearestHatedPed);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _fleeTarget = fleeTarget instanceof IPed ? fleeTarget.handle() : fleeTarget;
+    TaskSmartFleePed(_ped, _fleeTarget, safeDistance, fleeTime, preferPavements, updateToNearestHatedPed);
 }
 /**
  * scenarioName example: "WORLD_HUMAN_GUARD_STAND"
@@ -2608,7 +2855,8 @@ export function smartFleePed(ped, fleeTarget, safeDistance, fleeTime, preferPave
  * Hash: 0xAE032F8BBA959E90 | Since: 323 | API-Set: unknown
  */
 export function standGuard(ped, pos, heading, scenarioName) {
-    TaskStandGuard(ped, pos.x, pos.y, pos.z, heading, scenarioName);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskStandGuard(_ped, pos.x, pos.y, pos.z, heading, scenarioName);
 }
 /**
  * Makes the specified ped stand still for (time) milliseconds.
@@ -2616,7 +2864,8 @@ export function standGuard(ped, pos, heading, scenarioName) {
  * Hash: 0x919BE13EED931959 | Since: 323 | API-Set: unknown
  */
 export function standStill(ped, time) {
-    TaskStandStill(ped, time);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskStandStill(_ped, time);
 }
 /**
  * Full list of ped scenarios by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scenariosCompact.json
@@ -2642,7 +2891,8 @@ export function standStill(ped, time) {
  * Hash: 0xFA4EFC79F69D4F07 | Since: 323 | API-Set: unknown
  */
 export function startScenarioAtPosition(ped, scenarioName, pos, heading, duration, sittingScenario, teleport) {
-    TaskStartScenarioAtPosition(ped, scenarioName, pos.x, pos.y, pos.z, heading, duration, sittingScenario, teleport);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskStartScenarioAtPosition(_ped, scenarioName, pos.x, pos.y, pos.z, heading, duration, sittingScenario, teleport);
 }
 /**
  * Plays a scenario on a Ped at their current location.
@@ -2692,7 +2942,8 @@ export function startScenarioAtPosition(ped, scenarioName, pos, heading, duratio
  * Hash: 0x142A02425FF02BD9 | Since: 323 | API-Set: unknown
  */
 export function startScenarioInPlace(ped, scenarioName, unkDelay, playEnterAnim) {
-    TaskStartScenarioInPlace(ped, scenarioName, unkDelay, playEnterAnim);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskStartScenarioInPlace(_ped, scenarioName, unkDelay, playEnterAnim);
 }
 /**
  * Makes the ped run to take cover
@@ -2700,7 +2951,8 @@ export function startScenarioInPlace(ped, scenarioName, unkDelay, playEnterAnim)
  * Hash: 0xE5DA8615A6180789 | Since: 323 | API-Set: unknown
  */
 export function stayInCover(ped) {
-    TaskStayInCover(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskStayInCover(_ped);
 }
 /**
  * known "killTypes" are: "AR_stealth_kill_knife" and "AR_stealth_kill_a".
@@ -2708,9 +2960,11 @@ export function stayInCover(ped) {
  * Hash: 0xAA5DC05579D60BD9 | Since: 323 | API-Set: unknown
  */
 export function stealthKill(killer, target, stealthKillActionResultHash, desiredMoveBlendRatio, stealthFlags) {
+    const _killer = killer instanceof IPed ? killer.handle() : killer;
+    const _target = target instanceof IPed ? target.handle() : target;
     if (typeof stealthKillActionResultHash === 'string')
         stealthKillActionResultHash = GetHashKey(stealthKillActionResultHash);
-    TaskStealthKill(killer, target, stealthKillActionResultHash, desiredMoveBlendRatio, stealthFlags);
+    TaskStealthKill(_killer, _target, stealthKillActionResultHash, desiredMoveBlendRatio, stealthFlags);
 }
 /**
  * No comment provided
@@ -2718,7 +2972,8 @@ export function stealthKill(killer, target, stealthKillActionResultHash, desired
  * Hash: 0x3FA00D4F4641BFAE | Since: 323 | API-Set: unknown
  */
 export function stopPhoneGestureAnimation(ped, blendOutOverride) {
-    TaskStopPhoneGestureAnimation(ped, blendOutOverride);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskStopPhoneGestureAnimation(_ped, blendOutOverride);
 }
 /**
  * Used in am_vehicle_spawn.ysc and am_mp_submarine.ysc.
@@ -2732,7 +2987,9 @@ export function stopPhoneGestureAnimation(ped, blendOutOverride) {
  * Hash: 0xC22B40579A498CA4 | Since: 2189 | API-Set: unknown
  */
 export function submarineGotoAndStop(ped, submarine, pos, autopilot) {
-    TaskSubmarineGotoAndStop(ped, submarine, pos.x, pos.y, pos.z, autopilot);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _submarine = submarine instanceof IVehicle ? submarine.localId() : submarine;
+    TaskSubmarineGotoAndStop(_ped, _submarine, pos.x, pos.y, pos.z, autopilot);
 }
 /**
  * No comment provided
@@ -2740,7 +2997,8 @@ export function submarineGotoAndStop(ped, submarine, pos, autopilot) {
  * Hash: 0xA21C51255B205245 | Since: 323 | API-Set: unknown
  */
 export function swapWeapon(ped, drawWeapon) {
-    TaskSwapWeapon(ped, drawWeapon);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSwapWeapon(_ped, drawWeapon);
 }
 /**
  * This function is called on peds in vehicles.
@@ -2752,7 +3010,9 @@ export function swapWeapon(ped, drawWeapon) {
  * Hash: 0x2047C02158D6405A | Since: 323 | API-Set: unknown
  */
 export function sweepAimEntity(ped, animDict, lowAnimName, medAnimName, hiAnimName, runtime, targetEntity, turnRate, blendInDuration) {
-    TaskSweepAimEntity(ped, animDict, lowAnimName, medAnimName, hiAnimName, runtime, targetEntity, turnRate, blendInDuration);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _targetEntity = targetEntity instanceof IEntity ? targetEntity.handle() : targetEntity;
+    TaskSweepAimEntity(_ped, animDict, lowAnimName, medAnimName, hiAnimName, runtime, _targetEntity, turnRate, blendInDuration);
 }
 /**
  * No comment provided
@@ -2760,7 +3020,8 @@ export function sweepAimEntity(ped, animDict, lowAnimName, medAnimName, hiAnimNa
  * Hash: 0x7AFE8FDC10BC07D2 | Since: 323 | API-Set: unknown
  */
 export function sweepAimPosition(ped, animDict, lowAnimName, medAnimName, hiAnimName, runtime, pos, turnRate, blendInDuration) {
-    TaskSweepAimPosition(ped, animDict, lowAnimName, medAnimName, hiAnimName, runtime, pos.x, pos.y, pos.z, turnRate, blendInDuration);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSweepAimPosition(_ped, animDict, lowAnimName, medAnimName, hiAnimName, runtime, pos.x, pos.y, pos.z, turnRate, blendInDuration);
 }
 /**
  * `TASK::TASK_SYNCHRONIZED_SCENE(ped, scene, "creatures@rottweiler@in_vehicle@std_car", "get_in", 1000.0, -8.0, 4, 0, 0x447a0000, 0);`
@@ -2770,7 +3031,8 @@ export function sweepAimPosition(ped, animDict, lowAnimName, medAnimName, hiAnim
  * Hash: 0xEEA929141F699854 | Since: 323 | API-Set: unknown
  */
 export function synchronizedScene(ped, scene, animDictionary, animationName, blendIn, blendOut, flags, ragdollBlockingFlags, moverBlendDelta, ikFlags) {
-    TaskSynchronizedScene(ped, scene, animDictionary, animationName, blendIn, blendOut, flags, ragdollBlockingFlags, moverBlendDelta, ikFlags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskSynchronizedScene(_ped, scene, animDictionary, animationName, blendIn, blendOut, flags, ragdollBlockingFlags, moverBlendDelta, ikFlags);
 }
 /**
  * In every case of this native, I've only seen the first parameter passed as 0, although I believe it's a Ped after seeing tasks around it using 0. That's because it's used in a Sequence Task.
@@ -2785,7 +3047,8 @@ export function synchronizedScene(ped, scene, animDictionary, animationName, ble
  * Hash: 0x7285951DBF6B5A51 | Since: 323 | API-Set: unknown
  */
 export function throwProjectile(ped, pos, ignoreCollisionEntityIndex, createInvincibleProjectile) {
-    TaskThrowProjectile(ped, pos.x, pos.y, pos.z, ignoreCollisionEntityIndex, createInvincibleProjectile);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskThrowProjectile(_ped, pos.x, pos.y, pos.z, ignoreCollisionEntityIndex, createInvincibleProjectile);
 }
 /**
  * used in sequence task
@@ -2795,7 +3058,8 @@ export function throwProjectile(ped, pos, ignoreCollisionEntityIndex, createInvi
  * Hash: 0xAC96609B9995EDF8 | Since: 323 | API-Set: unknown
  */
 export function toggleDuck(ped, toggleType) {
-    TaskToggleDuck(ped, toggleType);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskToggleDuck(_ped, toggleType);
 }
 /**
  * duration in milliseconds
@@ -2803,7 +3067,8 @@ export function toggleDuck(ped, toggleType) {
  * Hash: 0x1DDA930A0AC38571 | Since: 323 | API-Set: unknown
  */
 export function turnPedToFaceCoord(ped, pos, duration) {
-    TaskTurnPedToFaceCoord(ped, pos.x, pos.y, pos.z, duration);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskTurnPedToFaceCoord(_ped, pos.x, pos.y, pos.z, duration);
 }
 /**
  * duration: the amount of time in milliseconds to do the task. -1 will keep the task going until either another task is applied, or CLEAR_ALL_TASKS() is called with the ped
@@ -2811,7 +3076,9 @@ export function turnPedToFaceCoord(ped, pos, duration) {
  * Hash: 0x5AD23D40115353AC | Since: 323 | API-Set: unknown
  */
 export function turnPedToFaceEntity(ped, entity, duration) {
-    TaskTurnPedToFaceEntity(ped, entity, duration);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    TaskTurnPedToFaceEntity(_ped, _entity, duration);
 }
 /**
  * Actually has 3 params, not 2.
@@ -2823,7 +3090,8 @@ export function turnPedToFaceEntity(ped, entity, duration) {
  * Hash: 0xBD2A8EC3AF4DE7DB | Since: 323 | API-Set: unknown
  */
 export function useMobilePhone(ped, usePhone, desiredPhoneMode) {
-    TaskUseMobilePhone(ped, usePhone, desiredPhoneMode);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskUseMobilePhone(_ped, usePhone, desiredPhoneMode);
 }
 /**
  * No comment provided
@@ -2831,7 +3099,8 @@ export function useMobilePhone(ped, usePhone, desiredPhoneMode) {
  * Hash: 0x5EE02954A14C69DB | Since: 323 | API-Set: unknown
  */
 export function useMobilePhoneTimed(ped, duration) {
-    TaskUseMobilePhoneTimed(ped, duration);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskUseMobilePhoneTimed(_ped, duration);
 }
 /**
  * p5 is always 0 in scripts
@@ -2839,7 +3108,8 @@ export function useMobilePhoneTimed(ped, duration) {
  * Hash: 0x9FDA1B3D7E7028B3 | Since: 323 | API-Set: unknown
  */
 export function useNearestScenarioChainToCoord(ped, pos, maxRange, timeToLeave) {
-    TaskUseNearestScenarioChainToCoord(ped, pos.x, pos.y, pos.z, maxRange, timeToLeave);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskUseNearestScenarioChainToCoord(_ped, pos.x, pos.y, pos.z, maxRange, timeToLeave);
 }
 /**
  * p5 is always -1 or 0 in scripts
@@ -2847,7 +3117,8 @@ export function useNearestScenarioChainToCoord(ped, pos, maxRange, timeToLeave) 
  * Hash: 0x97A28E63F0BA5631 | Since: 323 | API-Set: unknown
  */
 export function useNearestScenarioChainToCoordWarp(ped, pos, radius, timeToLeave) {
-    TaskUseNearestScenarioChainToCoordWarp(ped, pos.x, pos.y, pos.z, radius, timeToLeave);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskUseNearestScenarioChainToCoordWarp(_ped, pos.x, pos.y, pos.z, radius, timeToLeave);
 }
 /**
  * Updated variables
@@ -2857,7 +3128,8 @@ export function useNearestScenarioChainToCoordWarp(ped, pos, radius, timeToLeave
  * Hash: 0x277F471BA9DB000B | Since: 323 | API-Set: unknown
  */
 export function useNearestScenarioToCoord(ped, pos, distance, duration) {
-    TaskUseNearestScenarioToCoord(ped, pos.x, pos.y, pos.z, distance, duration);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskUseNearestScenarioToCoord(_ped, pos.x, pos.y, pos.z, distance, duration);
 }
 /**
  * No comment provided
@@ -2865,7 +3137,8 @@ export function useNearestScenarioToCoord(ped, pos, distance, duration) {
  * Hash: 0x58E2E0F23F6B76C3 | Since: 323 | API-Set: unknown
  */
 export function useNearestScenarioToCoordWarp(ped, pos, radius, timeToLeave) {
-    TaskUseNearestScenarioToCoordWarp(ped, pos.x, pos.y, pos.z, radius, timeToLeave);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskUseNearestScenarioToCoordWarp(_ped, pos.x, pos.y, pos.z, radius, timeToLeave);
 }
 /**
  * No comment provided
@@ -2873,7 +3146,8 @@ export function useNearestScenarioToCoordWarp(ped, pos, radius, timeToLeave) {
  * Hash: 0x447C1E9EF844BC0F | Since: 323 | API-Set: unknown
  */
 export function vehicleAimAtCoord(ped, pos) {
-    TaskVehicleAimAtCoord(ped, pos.x, pos.y, pos.z);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskVehicleAimAtCoord(_ped, pos.x, pos.y, pos.z);
 }
 /**
  * No comment provided
@@ -2881,7 +3155,9 @@ export function vehicleAimAtCoord(ped, pos) {
  * Hash: 0xE41885592B08B097 | Since: 323 | API-Set: unknown
  */
 export function vehicleAimAtPed(ped, target) {
-    TaskVehicleAimAtPed(ped, target);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    TaskVehicleAimAtPed(_ped, _target);
 }
 /**
  * chases targetEnt fast and aggressively
@@ -2891,7 +3167,9 @@ export function vehicleAimAtPed(ped, target) {
  * Hash: 0x3C08A8E30363B353 | Since: 323 | API-Set: unknown
  */
 export function vehicleChase(driver, targetEnt) {
-    TaskVehicleChase(driver, targetEnt);
+    const _driver = driver instanceof IPed ? driver.handle() : driver;
+    const _targetEnt = targetEnt instanceof IEntity ? targetEnt.handle() : targetEnt;
+    TaskVehicleChase(_driver, _targetEnt);
 }
 /**
  * info about driving modes: https://gtaforums.com/topic/822314-guide-driving-styles/
@@ -2899,9 +3177,11 @@ export function vehicleChase(driver, targetEnt) {
  * Hash: 0xE2A2AA2F659D77A7 | Since: 323 | API-Set: unknown
  */
 export function vehicleDriveToCoord(ped, vehicle, pos, speed, vehicleModel, drivingMode, stopRange, straightLineDistance) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
     if (typeof vehicleModel === 'string')
         vehicleModel = GetHashKey(vehicleModel);
-    TaskVehicleDriveToCoord(ped, vehicle, pos.x, pos.y, pos.z, speed, undefined, vehicleModel, drivingMode, stopRange, straightLineDistance);
+    TaskVehicleDriveToCoord(_ped, _vehicle, pos.x, pos.y, pos.z, speed, undefined, vehicleModel, drivingMode, stopRange, straightLineDistance);
 }
 /**
  * No comment provided
@@ -2909,7 +3189,9 @@ export function vehicleDriveToCoord(ped, vehicle, pos, speed, vehicleModel, driv
  * Hash: 0x158BB33F920D360C | Since: 323 | API-Set: unknown
  */
 export function vehicleDriveToCoordLongrange(ped, vehicle, pos, speed, driveMode, stopRange) {
-    TaskVehicleDriveToCoordLongrange(ped, vehicle, pos.x, pos.y, pos.z, speed, driveMode, stopRange);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskVehicleDriveToCoordLongrange(_ped, _vehicle, pos.x, pos.y, pos.z, speed, driveMode, stopRange);
 }
 /**
  * No comment provided
@@ -2917,7 +3199,9 @@ export function vehicleDriveToCoordLongrange(ped, vehicle, pos, speed, driveMode
  * Hash: 0x480142959D337D00 | Since: 323 | API-Set: unknown
  */
 export function vehicleDriveWander(ped, vehicle, speed, drivingStyle) {
-    TaskVehicleDriveWander(ped, vehicle, speed, drivingStyle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskVehicleDriveWander(_ped, _vehicle, speed, drivingStyle);
 }
 /**
  * Makes a ped follow the targetVehicle with <minDistance> in between.
@@ -2939,7 +3223,10 @@ export function vehicleDriveWander(ped, vehicle, speed, drivingStyle) {
  * Hash: 0x0FA6E4B75F302400 | Since: 323 | API-Set: unknown
  */
 export function vehicleEscort(ped, vehicle, targetVehicle, mode, speed, drivingStyle, minDistance, minHeightAboveTerrain, noRoadsDistance) {
-    TaskVehicleEscort(ped, vehicle, targetVehicle, mode, speed, drivingStyle, minDistance, minHeightAboveTerrain, noRoadsDistance);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _targetVehicle = targetVehicle instanceof IVehicle ? targetVehicle.localId() : targetVehicle;
+    TaskVehicleEscort(_ped, _vehicle, _targetVehicle, mode, speed, drivingStyle, minDistance, minHeightAboveTerrain, noRoadsDistance);
 }
 /**
  * Makes a ped in a vehicle follow an entity (ped, vehicle, etc.)
@@ -2949,7 +3236,10 @@ export function vehicleEscort(ped, vehicle, targetVehicle, mode, speed, drivingS
  * Hash: 0xFC545A9F0626E3B6 | Since: 323 | API-Set: unknown
  */
 export function vehicleFollow(driver, vehicle, targetEntity, speed, drivingStyle, minDistance) {
-    TaskVehicleFollow(driver, vehicle, targetEntity, speed, drivingStyle, minDistance);
+    const _driver = driver instanceof IPed ? driver.handle() : driver;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _targetEntity = targetEntity instanceof IEntity ? targetEntity.handle() : targetEntity;
+    TaskVehicleFollow(_driver, _vehicle, _targetEntity, speed, drivingStyle, minDistance);
 }
 /**
  *
@@ -2968,7 +3258,9 @@ export function vehicleFollow(driver, vehicle, targetEntity, speed, drivingStyle
  * Hash: 0x3123FAA6DB1CF7ED | Since: 323 | API-Set: unknown
  */
 export function vehicleFollowWaypointRecording(ped, vehicle, WPRecording) {
-    TaskVehicleFollowWaypointRecording(ped, vehicle, WPRecording, 0, 0, 0, 0, 0, false, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskVehicleFollowWaypointRecording(_ped, _vehicle, WPRecording, 0, 0, 0, 0, 0, false, 0);
 }
 /**
  * Differs from TASK_VEHICLE_DRIVE_TO_COORDS in that it will pick the shortest possible road route without taking one-way streets and other "road laws" into consideration.
@@ -2990,7 +3282,9 @@ export function vehicleFollowWaypointRecording(ped, vehicle, WPRecording) {
  * Hash: 0x195AEEB13CEFE2EE | Since: 323 | API-Set: unknown
  */
 export function vehicleGotoNavmesh(ped, vehicle, pos, speed, behaviorFlag, stoppingRange) {
-    TaskVehicleGotoNavmesh(ped, vehicle, pos.x, pos.y, pos.z, speed, behaviorFlag, stoppingRange);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskVehicleGotoNavmesh(_ped, _vehicle, pos.x, pos.y, pos.z, speed, behaviorFlag, stoppingRange);
 }
 /**
  * pilot, vehicle and altitude are rather self-explanatory.
@@ -3010,7 +3304,10 @@ export function vehicleGotoNavmesh(ped, vehicle, pos, speed, behaviorFlag, stopp
  * Hash: 0x1E09C32048FEFD1C | Since: 323 | API-Set: unknown
  */
 export function vehicleHeliProtect(pilot, vehicle, entityToFollow, targetSpeed, drivingFlags, radius, altitude, heliFlags) {
-    TaskVehicleHeliProtect(pilot, vehicle, entityToFollow, targetSpeed, drivingFlags, radius, altitude, heliFlags);
+    const _pilot = pilot instanceof IPed ? pilot.handle() : pilot;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _entityToFollow = entityToFollow instanceof IEntity ? entityToFollow.handle() : entityToFollow;
+    TaskVehicleHeliProtect(_pilot, _vehicle, _entityToFollow, targetSpeed, drivingFlags, radius, altitude, heliFlags);
 }
 /**
  * missionType: https://alloc8or.re/gta5/doc/enums/eVehicleMissionType.txt
@@ -3018,7 +3315,10 @@ export function vehicleHeliProtect(pilot, vehicle, entityToFollow, targetSpeed, 
  * Hash: 0x659427E0EF36BCDE | Since: 323 | API-Set: unknown
  */
 export function vehicleMission(driver, vehicle, vehicleTarget, missionType, cruiseSpeed, drivingStyle, targetReached, straightLineDistance, DriveAgainstTraffic) {
-    TaskVehicleMission(driver, vehicle, vehicleTarget, missionType, cruiseSpeed, drivingStyle, targetReached, straightLineDistance, DriveAgainstTraffic);
+    const _driver = driver instanceof IPed ? driver.handle() : driver;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicleTarget = vehicleTarget instanceof IVehicle ? vehicleTarget.localId() : vehicleTarget;
+    TaskVehicleMission(_driver, _vehicle, _vehicleTarget, missionType, cruiseSpeed, drivingStyle, targetReached, straightLineDistance, DriveAgainstTraffic);
 }
 /**
  * See TASK_VEHICLE_MISSION
@@ -3026,7 +3326,9 @@ export function vehicleMission(driver, vehicle, vehicleTarget, missionType, crui
  * Hash: 0xF0AF20AA7731F8C3 | Since: 323 | API-Set: unknown
  */
 export function vehicleMissionCoorsTarget(ped, vehicle, pos, mission, cruiseSpeed, drivingStyle, targetReached, straightLineDistance, DriveAgainstTraffic) {
-    TaskVehicleMissionCoorsTarget(ped, vehicle, pos.x, pos.y, pos.z, mission, cruiseSpeed, drivingStyle, targetReached, straightLineDistance, DriveAgainstTraffic);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskVehicleMissionCoorsTarget(_ped, _vehicle, pos.x, pos.y, pos.z, mission, cruiseSpeed, drivingStyle, targetReached, straightLineDistance, DriveAgainstTraffic);
 }
 /**
  * See TASK_VEHICLE_MISSION
@@ -3034,7 +3336,10 @@ export function vehicleMissionCoorsTarget(ped, vehicle, pos, mission, cruiseSpee
  * Hash: 0x9454528DF15D657A | Since: 323 | API-Set: unknown
  */
 export function vehicleMissionPedTarget(ped, vehicle, pedTarget, missionType, maxSpeed, drivingStyle, minDistance, straightLineDistance, DriveAgainstTraffic) {
-    TaskVehicleMissionPedTarget(ped, vehicle, pedTarget, missionType, maxSpeed, drivingStyle, minDistance, straightLineDistance, DriveAgainstTraffic);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _pedTarget = pedTarget instanceof IPed ? pedTarget.handle() : pedTarget;
+    TaskVehicleMissionPedTarget(_ped, _vehicle, _pedTarget, missionType, maxSpeed, drivingStyle, minDistance, straightLineDistance, DriveAgainstTraffic);
 }
 /**
  * Modes:
@@ -3049,7 +3354,9 @@ export function vehicleMissionPedTarget(ped, vehicle, pedTarget, missionType, ma
  * Hash: 0x0F3E34E968EA374E | Since: 323 | API-Set: unknown
  */
 export function vehiclePark(ped, vehicle, pos, heading, mode, radius, keepEngineOn) {
-    TaskVehiclePark(ped, vehicle, pos.x, pos.y, pos.z, heading, mode, radius, keepEngineOn);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskVehiclePark(_ped, _vehicle, pos.x, pos.y, pos.z, heading, mode, radius, keepEngineOn);
 }
 /**
  * Most probably plays a specific animation on vehicle. For example getting chop out of van etc...
@@ -3065,7 +3372,8 @@ export function vehiclePark(ped, vehicle, pos, heading, mode, radius, keepEngine
  * Hash: 0x69F5C3BD0F3EBD89 | Since: 323 | API-Set: unknown
  */
 export function vehiclePlayAnim(vehicle, animationSet, animationName) {
-    TaskVehiclePlayAnim(vehicle, animationSet, animationName);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskVehiclePlayAnim(_vehicle, animationSet, animationName);
 }
 /**
  * No comment provided
@@ -3073,7 +3381,8 @@ export function vehiclePlayAnim(vehicle, animationSet, animationName) {
  * Hash: 0x5190796ED39C9B6D | Since: 323 | API-Set: unknown
  */
 export function vehicleShootAtCoord(ped, pos, fireTolerance) {
-    TaskVehicleShootAtCoord(ped, pos.x, pos.y, pos.z, fireTolerance);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskVehicleShootAtCoord(_ped, pos.x, pos.y, pos.z, fireTolerance);
 }
 /**
  * No comment provided
@@ -3081,7 +3390,9 @@ export function vehicleShootAtCoord(ped, pos, fireTolerance) {
  * Hash: 0x10AB107B887214D8 | Since: 323 | API-Set: unknown
  */
 export function vehicleShootAtPed(ped, target, fireTolerance) {
-    TaskVehicleShootAtPed(ped, target, fireTolerance);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    TaskVehicleShootAtPed(_ped, _target, fireTolerance);
 }
 /**
  * '1 - brake
@@ -3119,7 +3430,9 @@ export function vehicleShootAtPed(ped, target, fireTolerance) {
  * Hash: 0xC429DCEEB339E129 | Since: 323 | API-Set: unknown
  */
 export function vehicleTempAction(driver, vehicle, action, time) {
-    TaskVehicleTempAction(driver, vehicle, action, time);
+    const _driver = driver instanceof IPed ? driver.handle() : driver;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskVehicleTempAction(_driver, _vehicle, action, time);
 }
 /**
  * No comment provided
@@ -3127,7 +3440,8 @@ export function vehicleTempAction(driver, vehicle, action, time) {
  * Hash: 0xE054346CA3A0F315 | Since: 323 | API-Set: unknown
  */
 export function wanderInArea(ped, pos, radius, minimalLength, timeBetweenWalks) {
-    TaskWanderInArea(ped, pos.x, pos.y, pos.z, radius, minimalLength, timeBetweenWalks);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskWanderInArea(_ped, pos.x, pos.y, pos.z, radius, minimalLength, timeBetweenWalks);
 }
 /**
  * No comment provided
@@ -3135,7 +3449,8 @@ export function wanderInArea(ped, pos, radius, minimalLength, timeBetweenWalks) 
  * Hash: 0x6919A2F136426098 | Since: 1868 | API-Set: unknown
  */
 export function wanderSpecific(ped, conditionalAnimGroupStr, conditionalAnimStr, heading) {
-    TaskWanderSpecific(ped, conditionalAnimGroupStr, conditionalAnimStr, heading);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskWanderSpecific(_ped, conditionalAnimGroupStr, conditionalAnimStr, heading);
 }
 /**
  * Makes ped walk around the area.
@@ -3145,7 +3460,8 @@ export function wanderSpecific(ped, conditionalAnimGroupStr, conditionalAnimStr,
  * Hash: 0xBB9CE077274F6A1B | Since: 323 | API-Set: unknown
  */
 export function wanderStandard(ped, heading, flags) {
-    TaskWanderStandard(ped, heading, flags);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskWanderStandard(_ped, heading, flags);
 }
 /**
  * No comment provided
@@ -3153,7 +3469,8 @@ export function wanderStandard(ped, heading, flags) {
  * Hash: 0x6E01E9E8D89F8276 | Since: 2545 | API-Set: unknown
  */
 export function warpPedDirectlyIntoCover(ped, time, allowPeekingAndFiring, forceInitialFacingDirection, forceFaceLeft, identifier) {
-    TaskWarpPedDirectlyIntoCover(ped, time, allowPeekingAndFiring, forceInitialFacingDirection, forceFaceLeft, identifier);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    TaskWarpPedDirectlyIntoCover(_ped, time, allowPeekingAndFiring, forceInitialFacingDirection, forceFaceLeft, identifier);
 }
 /**
  * Seat Numbers
@@ -3168,7 +3485,9 @@ export function warpPedDirectlyIntoCover(ped, time, allowPeekingAndFiring, force
  * Hash: 0x9A7D091411C5F684 | Since: 323 | API-Set: unknown
  */
 export function warpPedIntoVehicle(ped, vehicle, seat) {
-    TaskWarpPedIntoVehicle(ped, vehicle, seat);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TaskWarpPedIntoVehicle(_ped, _vehicle, seat);
 }
 /**
  * EX: Function.Call(Ped1, Ped2, Time, 0);
@@ -3182,7 +3501,9 @@ export function warpPedIntoVehicle(ped, vehicle, seat) {
  * Hash: 0xCDDC2B77CE54AC6E | Since: 323 | API-Set: unknown
  */
 export function writhe(ped, target, minFireLoops, startState, forceShootOnGround, shootFromGroundTimer) {
-    TaskWrithe(ped, target, minFireLoops, startState, forceShootOnGround, shootFromGroundTimer);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    TaskWrithe(_ped, _target, minFireLoops, startState, forceShootOnGround, shootFromGroundTimer);
 }
 /**
  * No comment provided
@@ -3190,7 +3511,8 @@ export function writhe(ped, target, minFireLoops, startState, forceShootOnGround
  * Hash: 0x67406F2C8F87FC4F | Since: 323 | API-Set: unknown
  */
 export function uncuffPed(ped) {
-    UncuffPed(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    UncuffPed(_ped);
 }
 /**
  * No comment provided
@@ -3198,7 +3520,9 @@ export function uncuffPed(ped) {
  * Hash: 0x9724FB59A3E72AD0 | Since: 323 | API-Set: unknown
  */
 export function updateAimGunScriptedTarget(ped, target, pos, disableBlockingClip) {
-    UpdateTaskAimGunScriptedTarget(ped, target, pos.x, pos.y, pos.z, disableBlockingClip);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    UpdateTaskAimGunScriptedTarget(_ped, _target, pos.x, pos.y, pos.z, disableBlockingClip);
 }
 /**
  * No comment provided
@@ -3206,7 +3530,8 @@ export function updateAimGunScriptedTarget(ped, target, pos, disableBlockingClip
  * Hash: 0xA98FCAFD7893C834 | Since: 323 | API-Set: unknown
  */
 export function updateHandsUpDuration(ped, duration) {
-    UpdateTaskHandsUpDuration(ped, duration);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    UpdateTaskHandsUpDuration(_ped, duration);
 }
 /**
  * No comment provided
@@ -3214,7 +3539,9 @@ export function updateHandsUpDuration(ped, duration) {
  * Hash: 0xE4973DBDBE6E44B3 | Since: 323 | API-Set: unknown
  */
 export function updateSweepAimEntity(ped, entity) {
-    UpdateTaskSweepAimEntity(ped, entity);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    UpdateTaskSweepAimEntity(_ped, _entity);
 }
 /**
  * No comment provided
@@ -3222,7 +3549,8 @@ export function updateSweepAimEntity(ped, entity) {
  * Hash: 0xBB106883F5201FC4 | Since: 323 | API-Set: unknown
  */
 export function updateSweepAimPosition(ped, pos) {
-    UpdateTaskSweepAimPosition(ped, pos.x, pos.y, pos.z);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    UpdateTaskSweepAimPosition(_ped, pos.x, pos.y, pos.z);
 }
 /**
  * No comment provided
@@ -3238,7 +3566,8 @@ export function useWaypointRecordingAsAssistedMovementRoute(name) {
  * Hash: 0xE435D3539EFDCD1B | Since: 3570 | API-Set: unknown
  */
 export function vehicleWaypointPlaybackGetIsPaused(vehicle) {
-    return Citizen.invokeNative('0xE435D3539EFDCD1B', vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return Citizen.invokeNative('0xE435D3539EFDCD1B', _vehicle);
 }
 /**
  * No comment provided
@@ -3246,7 +3575,8 @@ export function vehicleWaypointPlaybackGetIsPaused(vehicle) {
  * Hash: 0x121F0593E0A431D7 | Since: 323 | API-Set: unknown
  */
 export function vehicleWaypointPlaybackOverrideSpeed(vehicle, speed) {
-    VehicleWaypointPlaybackOverrideSpeed(vehicle, speed);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    VehicleWaypointPlaybackOverrideSpeed(_vehicle, speed);
 }
 /**
  * No comment provided
@@ -3254,7 +3584,8 @@ export function vehicleWaypointPlaybackOverrideSpeed(vehicle, speed) {
  * Hash: 0x8A4E6AC373666BC5 | Since: 323 | API-Set: unknown
  */
 export function vehicleWaypointPlaybackPause(vehicle) {
-    VehicleWaypointPlaybackPause(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    VehicleWaypointPlaybackPause(_vehicle);
 }
 /**
  * No comment provided
@@ -3262,7 +3593,8 @@ export function vehicleWaypointPlaybackPause(vehicle) {
  * Hash: 0xDC04FCAA7839D492 | Since: 323 | API-Set: unknown
  */
 export function vehicleWaypointPlaybackResume(vehicle) {
-    VehicleWaypointPlaybackResume(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    VehicleWaypointPlaybackResume(_vehicle);
 }
 /**
  * No comment provided
@@ -3270,7 +3602,8 @@ export function vehicleWaypointPlaybackResume(vehicle) {
  * Hash: 0x5CEB25A7D2848963 | Since: 323 | API-Set: unknown
  */
 export function vehicleWaypointPlaybackUseDefaultSpeed(vehicle) {
-    VehicleWaypointPlaybackUseDefaultSpeed(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    VehicleWaypointPlaybackUseDefaultSpeed(_vehicle);
 }
 /**
  * No comment provided
@@ -3310,7 +3643,8 @@ export function waypointPlaybackResume() {
  * Hash: 0x8968400D900ED8B3 | Since: 323 | API-Set: unknown
  */
 export function waypointPlaybackStartAimingAtCoord(ped, pos) {
-    WaypointPlaybackStartAimingAtCoord(ped, pos.x, pos.y, pos.z, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    WaypointPlaybackStartAimingAtCoord(_ped, pos.x, pos.y, pos.z, false);
 }
 /**
  * No comment provided
@@ -3318,7 +3652,9 @@ export function waypointPlaybackStartAimingAtCoord(ped, pos) {
  * Hash: 0x20E330937C399D29 | Since: 323 | API-Set: unknown
  */
 export function waypointPlaybackStartAimingAtPed(ped, target) {
-    WaypointPlaybackStartAimingAtPed(ped, target, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    WaypointPlaybackStartAimingAtPed(_ped, _target, false);
 }
 /**
  * No comment provided
@@ -3326,9 +3662,10 @@ export function waypointPlaybackStartAimingAtPed(ped, target) {
  * Hash: 0x057A25CFCC9DB671 | Since: 323 | API-Set: unknown
  */
 export function waypointPlaybackStartShootingAtCoord(ped, pos, firingPattern) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof firingPattern === 'string')
         firingPattern = GetHashKey(firingPattern);
-    WaypointPlaybackStartShootingAtCoord(ped, pos.x, pos.y, pos.z, false, firingPattern);
+    WaypointPlaybackStartShootingAtCoord(_ped, pos.x, pos.y, pos.z, false, firingPattern);
 }
 /**
  * No comment provided
@@ -3336,7 +3673,9 @@ export function waypointPlaybackStartShootingAtCoord(ped, pos, firingPattern) {
  * Hash: 0xE70BA7B90F8390DC | Since: 323 | API-Set: unknown
  */
 export function waypointPlaybackStartShootingAtPed(ped, ped2) {
-    WaypointPlaybackStartShootingAtPed(ped, ped2, false, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped2 = ped2 instanceof IPed ? ped2.handle() : ped2;
+    WaypointPlaybackStartShootingAtPed(_ped, _ped2, false, false);
 }
 /**
  * No comment provided
@@ -3344,7 +3683,8 @@ export function waypointPlaybackStartShootingAtPed(ped, ped2) {
  * Hash: 0x47EFA040EBB8E2EA | Since: 323 | API-Set: unknown
  */
 export function waypointPlaybackStopAimingOrShooting(ped) {
-    WaypointPlaybackStopAimingOrShooting(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    WaypointPlaybackStopAimingOrShooting(_ped);
 }
 /**
  * No comment provided
@@ -3395,7 +3735,8 @@ export function waypointRecordingGetSpeedAtPoint(name, point) {
  * Hash: 0x0EFE4834A2F40563 | Since: 3570 | API-Set: unknown
  */
 export function setAmbientPedEnableCollisionOnNetworkCloneWhenFixed(ped, enable) {
-    Citizen.invokeNative('0x0EFE4834A2F40563', ped, enable);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x0EFE4834A2F40563', _ped, enable);
 }
 /**
  * No comment provided
@@ -3403,5 +3744,6 @@ export function setAmbientPedEnableCollisionOnNetworkCloneWhenFixed(ped, enable)
  * Hash: 0x32F6EEF031F943DC | Since: 3095 | API-Set: unknown
  */
 export function setScriptEnableCollisionOnNetworkCloneWhenFixed(ped, enable) {
-    Citizen.invokeNative('0x32F6EEF031F943DC', ped, enable);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x32F6EEF031F943DC', _ped, enable);
 }

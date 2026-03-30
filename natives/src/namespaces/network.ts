@@ -15,7 +15,8 @@ export function activateDamageTrackerOnId(netID: number, toggle: boolean): void 
  * Hash: 0xBEC0816FF5ACBCDA | Since: 757
  */
 export function activateDamageTrackerOnPlayer(player: number | string | IPlayer, toggle: boolean): void {
-    ActivateDamageTrackerOnPlayer(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    ActivateDamageTrackerOnPlayer(_player, toggle);
 }
 
 /**
@@ -617,7 +618,8 @@ export function isDamageTrackerActiveOnId(netID: number): boolean {
  * Hash: 0xB2092A1EAA7FD45F | Since: 757
  */
 export function isDamageTrackerActiveOnPlayer(player: number | string | IPlayer): boolean {
-    return IsDamageTrackerActiveOnPlayer(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsDamageTrackerActiveOnPlayer(_player);
 }
 
 /**
@@ -626,7 +628,8 @@ export function isDamageTrackerActiveOnPlayer(player: number | string | IPlayer)
  * Hash: 0x21D04D7BC538C146 | Since: 323
  */
 export function isEntityAGhost(entity: number | IEntity): boolean {
-    return IsEntityGhostedToLocalPlayer(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityGhostedToLocalPlayer(_entity);
 }
 
 /**
@@ -635,7 +638,8 @@ export function isEntityAGhost(entity: number | IEntity): boolean {
  * Hash: 0x7EF7649B64D7FF10 | Since: 944
  */
 export function isEntityInGhostCollision(entity: number | IEntity): boolean {
-    return Citizen.invokeNative('0x7EF7649B64D7FF10', entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return Citizen.invokeNative('0x7EF7649B64D7FF10', _entity);
 }
 
 /**
@@ -671,7 +675,8 @@ export function isObjectReassignmentInProgress(): boolean {
  * Hash: 0xE73092F4157CD126 | Since: 323
  */
 export function isPlayerInCutscene(player: number | string | IPlayer): boolean {
-    return IsPlayerInCutscene(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsPlayerInCutscene(_player);
 }
 
 /**
@@ -900,7 +905,8 @@ export function addEntityArea(x1: number, y1: number, z1: number, x2: number, y2
  * Hash: 0xF2404D68CBC855FA | Since: 323
  */
 export function addEntityToSynchronisedScene(entity: number | IEntity, netScene: number, animDict: string, animName: string, speed: number, speedMulitiplier: number, flag: number): void {
-    NetworkAddEntityToSynchronisedScene(entity, netScene, animDict, animName, speed, speedMulitiplier, flag);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    NetworkAddEntityToSynchronisedScene(_entity, netScene, animDict, animName, speed, speedMulitiplier, flag);
 }
 
 /**
@@ -948,7 +954,8 @@ export function addMapEntityToSynchronisedScene(netScene: number, modelHash: num
  * Hash: 0x742A637471BCECD9 | Since: 323
  */
 export function addPedToSynchronisedScene(ped: number | IPed, netScene: number, animDict: string, animnName: string, speed: number, speedMultiplier: number, duration: number, flag: number, playbackRate: number): void {
-    NetworkAddPedToSynchronisedScene(ped, netScene, animDict, animnName, speed, speedMultiplier, duration, flag, playbackRate, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    NetworkAddPedToSynchronisedScene(_ped, netScene, animDict, animnName, speed, speedMultiplier, duration, flag, playbackRate, undefined);
 }
 
 /**
@@ -1002,7 +1009,8 @@ export function allowInviteProcessInPlayerSwitch(): void {
  * Hash: 0x267C78C60E806B9A | Since: 323
  */
 export function allowRemoteAttachmentModification(entity: number | IEntity, toggle: boolean): void {
-    NetworkAllowRemoteAttachmentModification(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    NetworkAllowRemoteAttachmentModification(_entity, toggle);
 }
 
 /**
@@ -1029,7 +1037,8 @@ export function amIBlockedByGamer(): [boolean, any] {
  * Hash: 0x87F395D957D4353D | Since: 323
  */
 export function amIBlockedByPlayer(player: number | string | IPlayer): boolean {
-    return NetworkAmIBlockedByPlayer(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkAmIBlockedByPlayer(_player);
 }
 
 /**
@@ -1047,7 +1056,8 @@ export function amIMutedByGamer(): [boolean, any] {
  * Hash: 0x9D6981DFC91A8604 | Since: 323
  */
 export function amIMutedByPlayer(player: number | string | IPlayer): boolean {
-    return NetworkAmIMutedByPlayer(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkAmIMutedByPlayer(_player);
 }
 
 /**
@@ -1056,7 +1066,9 @@ export function amIMutedByPlayer(player: number | string | IPlayer): boolean {
  * Hash: 0x99B72C7ABDE5C910 | Since: 323
  */
 export function applyCachedPlayerHeadBlendData(ped: number | IPed, player: number | string | IPlayer): boolean {
-    return NetworkApplyCachedPlayerHeadBlendData(ped, player);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkApplyCachedPlayerHeadBlendData(_ped, _player);
 }
 
 /**
@@ -1065,7 +1077,8 @@ export function applyCachedPlayerHeadBlendData(ped: number | IPed, player: numbe
  * Hash: 0xE66C690248F11150 | Since: 323
  */
 export function applyPedScarData(ped: number | IPed): void {
-    NetworkApplyPedScarData(ped, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    NetworkApplyPedScarData(_ped, 0);
 }
 
 /**
@@ -1110,7 +1123,8 @@ export function areHandlesTheSame(): [boolean, any, any] {
  * Hash: 0x9DE986FC9A87C474 | Since: 323
  */
 export function arePlayersInSameTutorialSession(player: number | string | IPlayer, index: number): boolean {
-    return NetworkIsPlayerEqualToIndex(player, index);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkIsPlayerEqualToIndex(_player, index);
 }
 
 /**
@@ -1137,7 +1151,8 @@ export function areTransitionDetailsValid(): boolean {
  * Hash: 0x478DCBD2A98B705A | Since: 323
  */
 export function attachSynchronisedSceneToEntity(netScene: number, entity: number | IEntity, bone: number): void {
-    NetworkAttachSynchronisedSceneToEntity(netScene, entity, bone);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    NetworkAttachSynchronisedSceneToEntity(netScene, _entity, bone);
 }
 
 /**
@@ -1751,7 +1766,8 @@ export function closeTransitionMatchmaking(): void {
  * Hash: 0x1632BE0AC1E62876 | Since: 877
  */
 export function concealEntity(entity: number | IEntity, toggle: boolean): void {
-    NetworkConcealEntity(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    NetworkConcealEntity(_entity, toggle);
 }
 
 /**
@@ -1760,7 +1776,8 @@ export function concealEntity(entity: number | IEntity, toggle: boolean): void {
  * Hash: 0xBBDF066252829606 | Since: 323
  */
 export function concealPlayer(player: number | string | IPlayer, toggle: boolean): void {
-    NetworkConcealPlayer(player, toggle, false);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    NetworkConcealPlayer(_player, toggle, false);
 }
 
 /**
@@ -1796,7 +1813,8 @@ export function didGetGamerStatusSucceed(): boolean {
  * Hash: 0x9DD368BF06983221 | Since: 323
  */
 export function disableInvincibleFlashing(player: number | string | IPlayer, toggle: boolean): void {
-    NetworkDisableInvincibleFlashing(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    NetworkDisableInvincibleFlashing(_player, toggle);
 }
 
 /**
@@ -1832,7 +1850,8 @@ export function disableRealtimeMultiplayer(): void {
  * Hash: 0xCA575C391FEA25CC | Since: 323
  */
 export function disableVoiceBandwidthRestriction(player: number | string | IPlayer): void {
-    Citizen.invokeNative('0xCA575C391FEA25CC', player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0xCA575C391FEA25CC', _player);
 }
 
 /**
@@ -1970,7 +1989,8 @@ export function enableExtraVehicleOrientationBlendChecks(netId: number, toggle: 
  * Hash: 0x5E3AA4CA2B6FB0EE | Since: 323
  */
 export function enableVoiceBandwidthRestriction(player: number | string | IPlayer): void {
-    Citizen.invokeNative('0x5E3AA4CA2B6FB0EE', player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0x5E3AA4CA2B6FB0EE', _player);
 }
 
 /**
@@ -2015,7 +2035,8 @@ export function entityAreaIsOccupied(areaHandle: number): boolean {
  * Hash: 0x815F18AD865F057F | Since: 463
  */
 export function entityGetObjectId(entity: number | IEntity): number {
-    return NetworkGetEntityNetScriptId(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return NetworkGetEntityNetScriptId(_entity);
 }
 
 /**
@@ -2033,7 +2054,8 @@ export function entityUseHighPrecisionRotation(netId: number, toggle: boolean): 
  * Hash: 0x2A5E0621DD815A9A | Since: 463
  */
 export function explodeHeli(vehicle: number | IVehicle, isAudible: boolean, isInvisible: boolean, netId: number): void {
-    NetworkExplodeHeli(vehicle, isAudible, isInvisible, netId);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    NetworkExplodeHeli(_vehicle, isAudible, isInvisible, netId);
 }
 
 /**
@@ -2062,7 +2084,8 @@ export function explodeHeli(vehicle: number | IVehicle, isAudible: boolean, isIn
  * Hash: 0x301A42153C9AD707 | Since: 323
  */
 export function explodeVehicle(vehicle: number | IVehicle, isAudible: boolean, isInvisible: boolean, netId: number): boolean {
-    return NetworkExplodeVehicle(vehicle, isAudible, isInvisible, netId);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return NetworkExplodeVehicle(_vehicle, isAudible, isInvisible, netId);
 }
 
 /**
@@ -2074,7 +2097,8 @@ export function explodeVehicle(vehicle: number | IVehicle, isAudible: boolean, i
  * Hash: 0x1F4ED342ACEFE62D | Since: 323
  */
 export function fadeInEntity(entity: number | IEntity, state: boolean): void {
-    NetworkFadeInEntity(entity, state, undefined);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    NetworkFadeInEntity(_entity, state, undefined);
 }
 
 /**
@@ -2085,7 +2109,8 @@ export function fadeInEntity(entity: number | IEntity, state: boolean): void {
  * Hash: 0xDE564951F95E09ED | Since: 323
  */
 export function fadeOutEntity(entity: number | IEntity, normal: boolean, slow: boolean): void {
-    NetworkFadeOutEntity(entity, normal, slow);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    NetworkFadeOutEntity(_entity, normal, slow);
 }
 
 /**
@@ -2214,7 +2239,9 @@ export function getAgeGroup(): number {
  * Hash: 0x4CACA84440FA26F6 | Since: 323
  */
 export function getAssistedDamageOfEntity(player: number | string | IPlayer, entity: number | IEntity): [boolean, number] {
-    return NetworkGetDestroyerOfEntity(player, entity);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return NetworkGetDestroyerOfEntity(_player, _entity);
 }
 
 /**
@@ -2223,7 +2250,9 @@ export function getAssistedDamageOfEntity(player: number | string | IPlayer, ent
  * Hash: 0x83660B734994124D | Since: 463
  */
 export function getAssistedKillOfEntity(player: number | string | IPlayer, entity: number | IEntity): [boolean, number] {
-    return Citizen.invokeNative('0x83660B734994124D', player, entity);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return Citizen.invokeNative('0x83660B734994124D', _player, _entity);
 }
 
 /**
@@ -2232,7 +2261,8 @@ export function getAssistedKillOfEntity(player: number | string | IPlayer, entit
  * Hash: 0xD414BE129BB81B32 | Since: 323
  */
 export function getAverageLatency(player: number | string | IPlayer): number {
-    return NetworkGetAverageLatencyForPlayer(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkGetAverageLatencyForPlayer(_player);
 }
 
 /**
@@ -2241,7 +2271,8 @@ export function getAverageLatency(player: number | string | IPlayer): number {
  * Hash: 0x350C23949E43686C | Since: 323
  */
 export function getAveragePacketLoss(player: number | string | IPlayer): number {
-    return NetworkGetAveragePacketLossForPlayer(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkGetAveragePacketLossForPlayer(_player);
 }
 
 /**
@@ -2250,7 +2281,8 @@ export function getAveragePacketLoss(player: number | string | IPlayer): number 
  * Hash: 0x0E3A041ED6AC2B45 | Since: 323
  */
 export function getAveragePing(player: number | string | IPlayer): number {
-    return NetworkGetAverageLatencyForPlayer2(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkGetAverageLatencyForPlayer2(_player);
 }
 
 /**
@@ -2294,7 +2326,8 @@ export function getCurrentlySelectedGamerHandleFromInviteMenu(): [boolean, any] 
  * Hash: 0xC434133D9BA52777 | Since: 463
  */
 export function getDestroyerOfEntity(entity: number | IEntity): [number | string, number] {
-    return Citizen.invokeNative('0xC434133D9BA52777', entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return Citizen.invokeNative('0xC434133D9BA52777', _entity);
 }
 
 /**
@@ -2344,7 +2377,8 @@ export function getEntityFromObjectId(): number {
  * Hash: 0x0991549DE4D64762 | Since: 323
  */
 export function getEntityIsLocal(entity: number | IEntity): boolean {
-    return NetworkGetEntityIsLocal(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return NetworkGetEntityIsLocal(_entity);
 }
 
 /**
@@ -2353,7 +2387,8 @@ export function getEntityIsLocal(entity: number | IEntity): boolean {
  * Hash: 0xC7827959479DCC78 | Since: 323
  */
 export function getEntityIsNetworked(entity: number | IEntity): boolean {
-    return NetworkGetEntityIsNetworked(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return NetworkGetEntityIsNetworked(_entity);
 }
 
 /**
@@ -2362,7 +2397,8 @@ export function getEntityIsNetworked(entity: number | IEntity): boolean {
  * Hash: 0x42B2DAA6B596F5F8 | Since: 323
  */
 export function getEntityKillerOfPlayer(player: number | string | IPlayer): [number, number] {
-    return NetworkGetEntityKillerOfPlayer(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkGetEntityKillerOfPlayer(_player);
 }
 
 /**
@@ -2452,7 +2488,8 @@ export function getGlobalMultiplayerClock(): [number, number, number] {
  * Hash: 0x52C1EADAF7B10302 | Since: 323
  */
 export function getHighestReliableResendCount(player: number | string | IPlayer): number {
-    return NetworkGetOldestResendCountForPlayer(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkGetOldestResendCountForPlayer(_player);
 }
 
 /**
@@ -2520,7 +2557,8 @@ export function getInviteReplyStatus(): number {
  * Hash: 0x2DA41ED6E1FCD7A5 | Since: 463
  */
 export function getKillerOfPlayer(player: number | string | IPlayer): [number | string, number] {
-    return Citizen.invokeNative('0x2DA41ED6E1FCD7A5', player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return Citizen.invokeNative('0x2DA41ED6E1FCD7A5', _player);
 }
 
 /**
@@ -2529,7 +2567,8 @@ export function getKillerOfPlayer(player: number | string | IPlayer): [number | 
  * Hash: 0x64D779659BC37B19 | Since: 393
  */
 export function getLastEntityPosReceivedOverNetwork(entity: number | IEntity): Vector3 {
-    return new Vector3(Citizen.invokeNative('0x64D779659BC37B19', entity));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(Citizen.invokeNative('0x64D779659BC37B19', _entity));
 }
 
 /**
@@ -2539,7 +2578,8 @@ export function getLastEntityPosReceivedOverNetwork(entity: number | IEntity): V
  * Hash: 0x125E6D638B8605D4 | Since: 393
  */
 export function getLastPlayerPosReceivedOverNetwork(player: number | string | IPlayer): Vector3 {
-    return new Vector3(NetworkGetPlayerCoords(player));
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return new Vector3(NetworkGetPlayerCoords(_player));
 }
 
 /**
@@ -2548,7 +2588,8 @@ export function getLastPlayerPosReceivedOverNetwork(player: number | string | IP
  * Hash: 0x33DE49EDF4DDE77A | Since: 1103
  */
 export function getLastVelReceivedOverNetwork(entity: number | IEntity): Vector3 {
-    return new Vector3(NetworkGetLastVelocityReceived(entity));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(NetworkGetLastVelocityReceived(_entity));
 }
 
 /**
@@ -2593,7 +2634,8 @@ export function getMaxNumParticipants(): number {
  * Hash: 0xADB57E5B663CCA8B | Since: 323
  */
 export function getMuteCountForPlayer(p0: number | string | IPlayer): [number, number] {
-    return Citizen.invokeNative('0xADB57E5B663CCA8B', p0);
+    const _p0 = p0 instanceof IPlayer ? p0.playerId() : p0;
+    return Citizen.invokeNative('0xADB57E5B663CCA8B', _p0);
 }
 
 /**
@@ -2602,7 +2644,8 @@ export function getMuteCountForPlayer(p0: number | string | IPlayer): [number, n
  * Hash: 0xA11700682F3AD45C | Since: 323
  */
 export function getNetworkIdFromEntity(entity: number | IEntity): number {
-    return NetworkGetNetworkIdFromEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return NetworkGetNetworkIdFromEntity(_entity);
 }
 
 /**
@@ -2705,7 +2748,8 @@ export function getNumTransitionNonAsyncGamers(): number {
  * Hash: 0xFF8FCF9FFC458A1C | Since: 323
  */
 export function getNumUnackedReliables(player: number | string | IPlayer): number {
-    return NetworkGetNumUnackedForPlayer(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkGetNumUnackedForPlayer(_player);
 }
 
 /**
@@ -2741,7 +2785,8 @@ export function getPlatformPartyMemberCount(): number {
  * Hash: 0xDB663CC9FF3407A9 | Since: 1734
  */
 export function getPlayerAccountId(player: number | string | IPlayer): number {
-    return Citizen.invokeNative('0xDB663CC9FF3407A9', player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return Citizen.invokeNative('0xDB663CC9FF3407A9', _player);
 }
 
 /**
@@ -2759,7 +2804,8 @@ export function getPlayerFromGamerHandle(): [number | string, any] {
  * Hash: 0x24FB80D107371267 | Since: 323
  */
 export function getPlayerIndex(player: number | string | IPlayer): number | string {
-    return NetworkGetPlayerIndex(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkGetPlayerIndex(_player);
 }
 
 /**
@@ -2768,7 +2814,8 @@ export function getPlayerIndex(player: number | string | IPlayer): number | stri
  * Hash: 0x6C0E2E0125610278 | Since: 323
  */
 export function getPlayerIndexFromPed(ped: number | IPed): number | string {
-    return NetworkGetPlayerIndexFromPed(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return NetworkGetPlayerIndexFromPed(_ped);
 }
 
 /**
@@ -2777,7 +2824,8 @@ export function getPlayerIndexFromPed(ped: number | IPed): number | string {
  * Hash: 0x21A1684A25C2867F | Since: 323
  */
 export function getPlayerLoudness(player: number | string | IPlayer): number {
-    return NetworkGetPlayerLoudness(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkGetPlayerLoudness(_player);
 }
 
 /**
@@ -2786,7 +2834,8 @@ export function getPlayerLoudness(player: number | string | IPlayer): number {
  * Hash: 0x82377B65E943F72D | Since: 323
  */
 export function getPlayerOwnsWaypoint(player: number | string | IPlayer): boolean {
-    return NetworkGetPlayerOwnsWaypoint(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkGetPlayerOwnsWaypoint(_player);
 }
 
 /**
@@ -2795,7 +2844,8 @@ export function getPlayerOwnsWaypoint(player: number | string | IPlayer): boolea
  * Hash: 0x3B39236746714134 | Since: 323
  */
 export function getPlayerTutorialSessionInstance(player: number | string | IPlayer): number {
-    return NetworkGetPlayerTutorialSessionInstance(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkGetPlayerTutorialSessionInstance(_player);
 }
 
 /**
@@ -2813,7 +2863,8 @@ export function getPositionHashOfThisScript(): number {
  * Hash: 0xAA5FAFCD2C5F5E47 | Since: 1103
  */
 export function getPredictedVelocity(entity: number | IEntity, maxSpeedToPredict: number): Vector3 {
-    return new Vector3(Citizen.invokeNative('0xAA5FAFCD2C5F5E47', entity, maxSpeedToPredict));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(Citizen.invokeNative('0xAA5FAFCD2C5F5E47', _entity, maxSpeedToPredict));
 }
 
 /**
@@ -3083,7 +3134,8 @@ export function getTunableCloudCrc(): number {
  * Hash: 0x3765C3A3E8192E10 | Since: 323
  */
 export function getUnreliableResendCount(player: number | string | IPlayer): number {
-    return NetworkGetUnreliableResendCountForPlayer(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkGetUnreliableResendCountForPlayer(_player);
 }
 
 /**
@@ -3110,7 +3162,8 @@ export function handleFromMemberId(memberId: string, gamerHandleSize: number): a
  * Hash: 0x388EB2B86C73B6B3 | Since: 323
  */
 export function handleFromPlayer(player: number | string | IPlayer, gamerHandleSize: number): any {
-    return NetworkHandleFromPlayer(player, gamerHandleSize);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkHandleFromPlayer(_player, gamerHandleSize);
 }
 
 /**
@@ -3137,7 +3190,8 @@ export function hashFromGamerHandle(): [number, any] {
  * Hash: 0xBC1D768F2F5D6C05 | Since: 323
  */
 export function hashFromPlayerHandle(player: number | string | IPlayer): number {
-    return NetworkHashFromPlayerHandle(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkHashFromPlayerHandle(_player);
 }
 
 /**
@@ -3173,7 +3227,8 @@ export function hasBoneBeenHitByKiller(boneIndex: number): boolean {
  * Hash: 0x237D5336A9A54108 | Since: 323
  */
 export function hasCachedPlayerHeadBlendData(player: number | string | IPlayer): boolean {
-    return NetworkHasCachedPlayerHeadBlendData(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkHasCachedPlayerHeadBlendData(_player);
 }
 
 /**
@@ -3201,7 +3256,8 @@ export function hasControlOfDoor(doorHash: number | string): boolean {
  * Hash: 0x01BF60A500E28887 | Since: 323
  */
 export function hasControlOfEntity(entity: number | IEntity): boolean {
-    return NetworkHasControlOfEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return NetworkHasControlOfEntity(_entity);
 }
 
 /**
@@ -3228,7 +3284,8 @@ export function hasControlOfPickup(pickup: any): boolean {
  * Hash: 0xB07D3185E11657A5 | Since: 323
  */
 export function hasEntityBeenRegisteredWithThisThread(entity: number | IEntity): boolean {
-    return NetworkHasEntityBeenRegisteredWithThisThread(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return NetworkHasEntityBeenRegisteredWithThisThread(_entity);
 }
 
 /**
@@ -3291,7 +3348,8 @@ export function hasPendingInvite(): boolean {
  * Hash: 0x9AC9CCBFA8C29795 | Since: 323
  */
 export function hasPlayerStartedTransition(player: number | string | IPlayer): boolean {
-    return NetworkHasPlayerStartedTransition(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkHasPlayerStartedTransition(_player);
 }
 
 /**
@@ -3399,7 +3457,8 @@ export function hasViewGamerUserContentResult(): [boolean, any] {
  * Hash: 0xAEEF48CDF5B6CE7C | Since: 323
  */
 export function haveCommunicationPrivileges(player: number | string | IPlayer): boolean {
-    return NetworkHaveCommunicationPrivileges(0, player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkHaveCommunicationPrivileges(0, _player);
 }
 
 /**
@@ -3639,7 +3698,8 @@ export function isCloudBackgroundScriptRequestPending(): boolean {
  * Hash: 0x16D3D49902F697BB | Since: 323
  */
 export function isConnectedViaRelay(player: number | string | IPlayer): boolean {
-    return NetworkIsConnectionEndpointRelayServer(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkIsConnectionEndpointRelayServer(_player);
 }
 
 /**
@@ -3667,7 +3727,8 @@ export function isDoorNetworked(doorHash: number | string): boolean {
  * Hash: 0x71302EC70689052A | Since: 877
  */
 export function isEntityConcealed(entity: number | IEntity): boolean {
-    return NetworkIsEntityConcealed(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return NetworkIsEntityConcealed(_entity);
 }
 
 /**
@@ -3676,7 +3737,8 @@ export function isEntityConcealed(entity: number | IEntity): boolean {
  * Hash: 0x422F32CC7E56ABAD | Since: 323
  */
 export function isEntityFading(entity: number | IEntity): boolean {
-    return NetworkIsEntityFading(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return NetworkIsEntityFading(_entity);
 }
 
 /**
@@ -3991,7 +4053,8 @@ export function isPlatformSubscriptionCheckPending(): boolean {
  * Hash: 0xB8DFD30D6973E135 | Since: 323
  */
 export function isPlayerActive(player: number | string | IPlayer): boolean {
-    return NetworkIsPlayerActive(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkIsPlayerActive(_player);
 }
 
 /**
@@ -4000,7 +4063,8 @@ export function isPlayerActive(player: number | string | IPlayer): boolean {
  * Hash: 0x3CA58F6CB7CBD784 | Since: 323
  */
 export function isPlayerAParticipant(player: number | string | IPlayer): boolean {
-    return NetworkIsPlayerAParticipant(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkIsPlayerAParticipant(_player);
 }
 
 /**
@@ -4009,7 +4073,8 @@ export function isPlayerAParticipant(player: number | string | IPlayer): boolean
  * Hash: 0x1AD5B71586B94820 | Since: 323
  */
 export function isPlayerAParticipantOnScript(player: number | string | IPlayer, script: string, instance_id: number): boolean {
-    return NetworkIsPlayerAParticipantOnScript(player, script, instance_id);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkIsPlayerAParticipantOnScript(_player, script, instance_id);
 }
 
 /**
@@ -4018,7 +4083,8 @@ export function isPlayerAParticipantOnScript(player: number | string | IPlayer, 
  * Hash: 0x57AF1F8E27483721 | Since: 323
  */
 export function isPlayerBlockedByMe(player: number | string | IPlayer): boolean {
-    return NetworkIsPlayerBlockedByMe(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkIsPlayerBlockedByMe(_player);
 }
 
 /**
@@ -4027,7 +4093,8 @@ export function isPlayerBlockedByMe(player: number | string | IPlayer): boolean 
  * Hash: 0x919B3C98ED8292F9 | Since: 323
  */
 export function isPlayerConcealed(player: number | string | IPlayer): boolean {
-    return NetworkIsPlayerConcealed(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkIsPlayerConcealed(_player);
 }
 
 /**
@@ -4036,7 +4103,8 @@ export function isPlayerConcealed(player: number | string | IPlayer): boolean {
  * Hash: 0x93DC1BE4E1ABE9D1 | Since: 323
  */
 export function isPlayerConnected(player: number | string | IPlayer): boolean {
-    return NetworkIsPlayerConnected(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkIsPlayerConnected(_player);
 }
 
 /**
@@ -4045,7 +4113,8 @@ export function isPlayerConnected(player: number | string | IPlayer): boolean {
  * Hash: 0x631DC5DFF4B110E3 | Since: 323
  */
 export function isPlayerFading(player: number | string | IPlayer): boolean {
-    return NetworkIsPlayerFading(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkIsPlayerFading(_player);
 }
 
 /**
@@ -4054,7 +4123,8 @@ export function isPlayerFading(player: number | string | IPlayer): boolean {
  * Hash: 0x63F9EE203C3619F2 | Since: 323
  */
 export function isPlayerInMpCutscene(player: number | string | IPlayer): boolean {
-    return NetworkIsPlayerInMpCutscene(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkIsPlayerInMpCutscene(_player);
 }
 
 /**
@@ -4063,7 +4133,8 @@ export function isPlayerInMpCutscene(player: number | string | IPlayer): boolean
  * Hash: 0x8C71288AE68EDE39 | Since: 323
  */
 export function isPlayerMutedByMe(player: number | string | IPlayer): boolean {
-    return NetworkIsPlayerMutedByMe(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkIsPlayerMutedByMe(_player);
 }
 
 /**
@@ -4081,7 +4152,8 @@ export function isPlayerOnBlocklist(): [boolean, any] {
  * Hash: 0x031E11F3D447647E | Since: 323
  */
 export function isPlayerTalking(player: number | string | IPlayer): boolean {
-    return NetworkIsPlayerTalking(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkIsPlayerTalking(_player);
 }
 
 /**
@@ -4395,7 +4467,8 @@ export function joinPreviouslyFailedTransition(): boolean {
  * Hash: 0x9D060B08CD63321A | Since: 323
  */
 export function joinTransition(player: number | string | IPlayer): boolean {
-    return NetworkJoinTransition(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkJoinTransition(_player);
 }
 
 /**
@@ -4422,7 +4495,8 @@ export function launchTransition(): boolean {
  * Hash: 0xBF22E0F32968E967 | Since: 323
  */
 export function leavePedBehindBeforeCutscene(player: number | string | IPlayer): void {
-    Citizen.invokeNative('0xBF22E0F32968E967', player, false);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0xBF22E0F32968E967', _player, false);
 }
 
 /**
@@ -4431,7 +4505,8 @@ export function leavePedBehindBeforeCutscene(player: number | string | IPlayer):
  * Hash: 0x9769F811D1785B03 | Since: 323
  */
 export function leavePedBehindBeforeWarp(player: number | string | IPlayer, pos: Vector3): void {
-    NetworkRespawnCoords(player, pos.x, pos.y, pos.z, false, false);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    NetworkRespawnCoords(_player, pos.x, pos.y, pos.z, false, false);
 }
 
 /**
@@ -4512,7 +4587,8 @@ export function openTransitionMatchmaking(): void {
  * Hash: 0x3039AE5AD2C9C0C4 | Since: 323
  */
 export function overrideChatRestrictions(player: number | string | IPlayer, toggle: boolean): void {
-    NetworkOverrideChatRestrictions(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    NetworkOverrideChatRestrictions(_player, toggle);
 }
 
 /**
@@ -4540,7 +4616,8 @@ export function overrideClockTime(hours: number, minutes: number, seconds: numbe
  * Hash: 0xA7E30DE9272B6D49 | Since: 323
  */
 export function overrideCoordsAndHeading(entity: number | IEntity, pos: Vector3, heading: number): void {
-    NetworkOverrideCoordsAndHeading(entity, pos.x, pos.y, pos.z, heading);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    NetworkOverrideCoordsAndHeading(_entity, pos.x, pos.y, pos.z, heading);
 }
 
 /**
@@ -4550,7 +4627,8 @@ export function overrideCoordsAndHeading(entity: number | IEntity, pos: Vector3,
  * Hash: 0xDDF73E2B1FEC5AB4 | Since: 323
  */
 export function overrideReceiveRestrictions(player: number | string | IPlayer, toggle: boolean): void {
-    NetworkOverrideReceiveRestrictions(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    NetworkOverrideReceiveRestrictions(_player, toggle);
 }
 
 /**
@@ -4569,7 +4647,8 @@ export function overrideReceiveRestrictionsAll(toggle: boolean): void {
  * Hash: 0x97DD4C5944CC2E6A | Since: 323
  */
 export function overrideSendRestrictions(player: number | string | IPlayer, toggle: boolean): void {
-    NetworkOverrideSendRestrictions(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    NetworkOverrideSendRestrictions(_player, toggle);
 }
 
 /**
@@ -4605,7 +4684,8 @@ export function overrideTransitionChat(): void {
  * Hash: 0xF0BC9BCD24A511D5 | Since: 2372
  */
 export function patchPostCutsceneHs4fTunEnt(ped: number | IPed): void {
-    NetworkPedForceGameStateUpdate(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    NetworkPedForceGameStateUpdate(_ped);
 }
 
 /**
@@ -4632,7 +4712,8 @@ export function playerGetCheaterReason(): number {
  * Hash: 0x7718D2E2060837D2 | Since: 323
  */
 export function playerGetName(player: number | string | IPlayer): string {
-    return NetworkPlayerGetName(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkPlayerGetName(_player);
 }
 
 /**
@@ -4642,7 +4723,8 @@ export function playerGetName(player: number | string | IPlayer): string {
  * Hash: 0x4927FC39CD0869A0 | Since: 323
  */
 export function playerGetUserid(player: number | string | IPlayer): [string, number] {
-    return NetworkPlayerGetUserid(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkPlayerGetUserid(_player);
 }
 
 /**
@@ -4651,7 +4733,8 @@ export function playerGetUserid(player: number | string | IPlayer): [string, num
  * Hash: 0x3FB99A8B08D18FD6 | Since: 323
  */
 export function playerHasHeadset(player: number | string | IPlayer): boolean {
-    return NetworkPlayerHasHeadset(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkPlayerHasHeadset(_player);
 }
 
 /**
@@ -4660,7 +4743,8 @@ export function playerHasHeadset(player: number | string | IPlayer): boolean {
  * Hash: 0x565E430DB3B05BEC | Since: 323
  */
 export function playerIndexIsCheater(player: number | string | IPlayer): boolean {
-    return NetworkPlayerIndexIsCheater(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkPlayerIndexIsCheater(_player);
 }
 
 /**
@@ -4692,7 +4776,8 @@ export function playerIsCheater(): boolean {
  * Hash: 0x544ABDDA3B409B6D | Since: 323
  */
 export function playerIsRockstarDev(player: number | string | IPlayer): boolean {
-    return NetworkPlayerIsRockstarDev(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkPlayerIsRockstarDev(_player);
 }
 
 /**
@@ -4737,7 +4822,8 @@ export function quitMpToDesktop(): void {
  * Hash: 0x06FAACD625D80CAA | Since: 323
  */
 export function registerEntityAsNetworked(entity: number | IEntity): void {
-    NetworkRegisterEntityAsNetworked(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    NetworkRegisterEntityAsNetworked(_entity);
 }
 
 /**
@@ -4900,7 +4986,8 @@ export function requestControlOfDoor(doorID: number): boolean {
  * Hash: 0xB69317BF5E782347 | Since: 323
  */
 export function requestControlOfEntity(entity: number | IEntity): boolean {
-    return NetworkRequestControlOfEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return NetworkRequestControlOfEntity(_entity);
 }
 
 /**
@@ -5134,7 +5221,8 @@ export function sessionGetInviter(): any {
  * Hash: 0xD6D09A6F32F49EF1 | Since: 323
  */
 export function sessionGetKickVote(player: number | string | IPlayer): boolean {
-    return NetworkSessionGetKickVote(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkSessionGetKickVote(_player);
 }
 
 /**
@@ -5309,7 +5397,8 @@ export function sessionJoinInvite(): void {
  * Hash: 0xFA8904DC5F304220 | Since: 323
  */
 export function sessionKickPlayer(player: number | string | IPlayer): void {
-    NetworkSessionKickPlayer(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    NetworkSessionKickPlayer(_player);
 }
 
 /**
@@ -5545,7 +5634,8 @@ export function setActivitySpectatorMax(maxSpectators: number): void {
  * Hash: 0x5C707A667DF8B9FA | Since: 323
  */
 export function setAntagonisticToPlayer(toggle: boolean, player: number | string | IPlayer): void {
-    NetworkSetChoiceMigrateOptions(toggle, player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    NetworkSetChoiceMigrateOptions(toggle, _player);
 }
 
 /**
@@ -5554,7 +5644,9 @@ export function setAntagonisticToPlayer(toggle: boolean, player: number | string
  * Hash: 0x0EDE326D47CD0F3E | Since: 323
  */
 export function setAttributeDamageToPlayer(ped: number | IPed, player: number | string | IPlayer): boolean {
-    return Citizen.invokeNative('0x0EDE326D47CD0F3E', ped, player);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return Citizen.invokeNative('0x0EDE326D47CD0F3E', _ped, _player);
 }
 
 /**
@@ -5661,7 +5753,8 @@ export function setDoNotLaunchFromJoinAsMigratedHost(toggle: boolean): void {
  * Hash: 0xD830567D88A1E873 | Since: 323
  */
 export function setEntityCanBlend(entity: number | IEntity, toggle: boolean): void {
-    NetworkSetEntityCanBlend(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    NetworkSetEntityCanBlend(_entity, toggle);
 }
 
 /**
@@ -5677,7 +5770,8 @@ export function setEntityCanBlend(entity: number | IEntity, toggle: boolean): vo
  * Hash: 0xF1CA12B18AEF5298 | Since: 323
  */
 export function setEntityOnlyExistsForParticipants(entity: number | IEntity, toggle: boolean): void {
-    NetworkSetEntityInvisibleToNetwork(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    NetworkSetEntityInvisibleToNetwork(_entity, toggle);
 }
 
 /**
@@ -5758,7 +5852,8 @@ export function setInProgressFinishTime(): void {
  * Hash: 0x423DE3854BB50894 | Since: 323
  */
 export function setInSpectatorMode(toggle: boolean, playerPed: number | IPed): void {
-    NetworkSetInSpectatorMode(toggle, playerPed);
+    const _playerPed = playerPed instanceof IPed ? playerPed.handle() : playerPed;
+    NetworkSetInSpectatorMode(toggle, _playerPed);
 }
 
 /**
@@ -5767,7 +5862,8 @@ export function setInSpectatorMode(toggle: boolean, playerPed: number | IPed): v
  * Hash: 0x419594E137637120 | Since: 323
  */
 export function setInSpectatorModeExtended(toggle: boolean, playerPed: number | IPed): void {
-    NetworkSetInSpectatorModeExtended(toggle, playerPed, false);
+    const _playerPed = playerPed instanceof IPed ? playerPed.handle() : playerPed;
+    NetworkSetInSpectatorModeExtended(toggle, _playerPed, false);
 }
 
 /**
@@ -5821,7 +5917,8 @@ export function setMissionFinished(): void {
  * Hash: 0x3FC795691834481D | Since: 1868
  */
 export function setNoLongerNeeded(entity: number | IEntity, toggle: boolean): void {
-    Citizen.invokeNative('0x3FC795691834481D', entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    Citizen.invokeNative('0x3FC795691834481D', _entity, toggle);
 }
 
 /**
@@ -5839,7 +5936,8 @@ export function setNoSpectatorChat(toggle: boolean): void {
  * Hash: 0x0379DAF89BA09AA5 | Since: 944
  */
 export function setObjectCanBlendWhenFixed(_object: number | IObject, toggle: boolean): void {
-    NetworkSetObjectForceStaticBlend(_object, toggle);
+    const __object = _object instanceof IObject ? _object.handle() : _object;
+    NetworkSetObjectForceStaticBlend(__object, toggle);
 }
 
 /**
@@ -5848,7 +5946,8 @@ export function setObjectCanBlendWhenFixed(_object: number | IObject, toggle: bo
  * Hash: 0xBA7F0B77D80A4EB7 | Since: 372
  */
 export function setObjectScopeDistance(_object: number | IObject, range: number): void {
-    Citizen.invokeNative('0xBA7F0B77D80A4EB7', _object, range);
+    const __object = _object instanceof IObject ? _object.handle() : _object;
+    Citizen.invokeNative('0xBA7F0B77D80A4EB7', __object, range);
 }
 
 /**
@@ -6110,7 +6209,8 @@ export function showAccountUpgradeUi(): void {
  * Hash: 0x6BFF5F84102DF80A | Since: 323
  */
 export function showChatRestrictionMsc(player: number | string | IPlayer): void {
-    Citizen.invokeNative('0x6BFF5F84102DF80A', player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0x6BFF5F84102DF80A', _player);
 }
 
 /**
@@ -6167,7 +6267,8 @@ export function skipRadioWarning(): boolean {
  * Hash: 0x5A6FFA2433E2F14C | Since: 323
  */
 export function startRespawnSearchForPlayer(player: number | string | IPlayer, pos: Vector3, radius: number, flags: number): boolean {
-    return NetworkStartRespawnSearchForPlayer(player, pos.x, pos.y, pos.z, radius, 0, 0, 0, flags);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkStartRespawnSearchForPlayer(_player, pos.x, pos.y, pos.z, radius, 0, 0, 0, flags);
 }
 
 /**
@@ -6176,7 +6277,8 @@ export function startRespawnSearchForPlayer(player: number | string | IPlayer, p
  * Hash: 0x4BA92A18502BCA61 | Since: 323
  */
 export function startRespawnSearchInAngledAreaForPlayer(player: number | string | IPlayer, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, width: number, flags: number): boolean {
-    return NetworkStartRespawnSearchInAngledAreaForPlayer(player, x1, y1, z1, x2, y2, z2, width, 0, 0, 0, flags);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return NetworkStartRespawnSearchInAngledAreaForPlayer(_player, x1, y1, z1, x2, y2, z2, width, 0, 0, 0, flags);
 }
 
 /**
@@ -6321,7 +6423,8 @@ export function transitionStart(): boolean {
  * Hash: 0x890E2C5ABED7236D | Since: 1365
  */
 export function triggerDamageEventForZeroDamage(entity: number | IEntity, toggle: boolean): void {
-    NetworkSetVehicleWheelsDestructible(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    NetworkSetVehicleWheelsDestructible(_entity, toggle);
 }
 
 /**
@@ -6330,7 +6433,8 @@ export function triggerDamageEventForZeroDamage(entity: number | IEntity, toggle
  * Hash: 0x38B7C51AB1EDC7D8 | Since: 1734
  */
 export function triggerDamageEventForZeroWeaponHash(entity: number | IEntity, toggle: boolean): void {
-    Citizen.invokeNative('0x38B7C51AB1EDC7D8', entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    Citizen.invokeNative('0x38B7C51AB1EDC7D8', _entity, toggle);
 }
 
 /**
@@ -6368,7 +6472,8 @@ export function ugcNav(): void {
  * Hash: 0x7368E683BB9038D6 | Since: 323
  */
 export function unregisterNetworkedEntity(entity: number | IEntity): void {
-    NetworkUnregisterNetworkedEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    NetworkUnregisterNetworkedEntity(_entity);
 }
 
 /**
@@ -6386,7 +6491,8 @@ export function useHighPrecisionBlending(netID: number, toggle: boolean): void {
  * Hash: 0xCD71A4ECAB22709E | Since: 323
  */
 export function useLogarithmicBlendingThisFrame(entity: number | IEntity): void {
-    NetworkUseLogarithmicBlendingThisFrame(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    NetworkUseLogarithmicBlendingThisFrame(_entity);
 }
 
 /**
@@ -6451,7 +6557,8 @@ export function netToVeh(netHandle: number): number {
  * Hash: 0x99BFDC94A603E541 | Since: 323
  */
 export function objToNet(_object: number | IObject): number {
-    return ObjToNet(_object);
+    const __object = _object instanceof IObject ? _object.handle() : _object;
+    return ObjToNet(__object);
 }
 
 /**
@@ -6489,7 +6596,8 @@ export function participantIdToInt(): number {
  * Hash: 0x0EDEC3C276198689 | Since: 323
  */
 export function pedToNet(ped: number | IPed): number {
-    return PedToNet(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return PedToNet(_ped);
 }
 
 /**
@@ -6516,7 +6624,8 @@ export function releaseAllCommerceItemImages(): void {
  * Hash: 0x472841A026D26D8B | Since: 1103
  */
 export function remoteCheaterPlayerDetected(player: number | string | IPlayer, a: number, b: number): boolean {
-    return RemoteCheatDetected(player, a, b);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return RemoteCheatDetected(_player, a, b);
 }
 
 /**
@@ -6525,7 +6634,9 @@ export function remoteCheaterPlayerDetected(player: number | string | IPlayer, a
  * Hash: 0x715135F4B82AC90D | Since: 323
  */
 export function removeAllStickyBombsFromEntity(entity: number | IEntity, ped: number | IPed): void {
-    RemoveAllStickyBombsFromEntity(entity, ped);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    RemoveAllStickyBombsFromEntity(_entity, _ped);
 }
 
 /**
@@ -6615,7 +6726,8 @@ export function resetStoreGameTracking(): void {
  * Hash: 0x4BA166079D658ED4 | Since: 944
  */
 export function setEntityGhostedForGhostPlayers(entity: number | IEntity, toggle: boolean): void {
-    NetworkSetEntityGhostedWithOwner(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    NetworkSetEntityGhostedWithOwner(_entity, toggle);
 }
 
 /**
@@ -6624,7 +6736,8 @@ export function setEntityGhostedForGhostPlayers(entity: number | IEntity, toggle
  * Hash: 0xE135A9FF3F5D05D8 | Since: 323
  */
 export function setEntityLocallyInvisible(entity: number | IEntity): void {
-    SetEntityLocallyInvisible(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityLocallyInvisible(_entity);
 }
 
 /**
@@ -6633,7 +6746,8 @@ export function setEntityLocallyInvisible(entity: number | IEntity): void {
  * Hash: 0x241E289B5C059EDC | Since: 323
  */
 export function setEntityLocallyVisible(entity: number | IEntity): void {
-    SetEntityLocallyVisible(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityLocallyVisible(_entity);
 }
 
 /**
@@ -6725,7 +6839,8 @@ export function setCutsceneEntities(toggle: boolean): void {
  * Hash: 0x838DA0936A24ED4D | Since: 944
  */
 export function setEnableHighSpeedEdgeFallDetection(vehicle: number | IVehicle, toggle: boolean): void {
-    SetNetworkEnableVehiclePositionCorrection(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetNetworkEnableVehiclePositionCorrection(_vehicle, toggle);
 }
 
 /**
@@ -6734,7 +6849,8 @@ export function setEnableHighSpeedEdgeFallDetection(vehicle: number | IVehicle, 
  * Hash: 0xA8A024587329F36A | Since: 323
  */
 export function setIdAlwaysExistsForPlayer(netId: number, player: number | string | IPlayer, toggle: boolean): void {
-    SetNetworkIdAlwaysExistsForPlayer(netId, player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetNetworkIdAlwaysExistsForPlayer(netId, _player, toggle);
 }
 
 /**
@@ -6806,7 +6922,8 @@ export function setIdVisibleInCutsceneRemainHack(): void {
  * Hash: 0x6274C4712850841E | Since: 323
  */
 export function setVehicleAsGhost(vehicle: number | IVehicle, toggle: boolean): void {
-    SetNetworkVehicleAsGhost(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetNetworkVehicleAsGhost(_vehicle, toggle);
 }
 
 /**
@@ -6815,7 +6932,8 @@ export function setVehicleAsGhost(vehicle: number | IVehicle, toggle: boolean): 
  * Hash: 0xA2A707979FE754DC | Since: 877
  */
 export function setVehicleMaxPositionDeltaMultiplier(vehicle: number | IVehicle, multiplier: number): void {
-    SetNetworkVehiclePositionUpdateMultiplier(vehicle, multiplier);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetNetworkVehiclePositionUpdateMultiplier(_vehicle, multiplier);
 }
 
 /**
@@ -6842,7 +6960,8 @@ export function setNonParticipantsOfThisScriptAsGhosts(): void {
  * Hash: 0x12B37D54667DB0B8 | Since: 323
  */
 export function setPlayerInvisibleLocally(player: number | string | IPlayer, bIncludePlayersVehicle: boolean): void {
-    SetPlayerInvisibleLocally(player, bIncludePlayersVehicle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerInvisibleLocally(_player, bIncludePlayersVehicle);
 }
 
 /**
@@ -6851,7 +6970,8 @@ export function setPlayerInvisibleLocally(player: number | string | IPlayer, bIn
  * Hash: 0xFAA10F1FAFB11AF2 | Since: 323
  */
 export function setPlayerVisibleLocally(player: number | string | IPlayer, bIncludePlayersVehicle: boolean): void {
-    SetPlayerVisibleLocally(player, bIncludePlayersVehicle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerVisibleLocally(_player, bIncludePlayersVehicle);
 }
 
 /**
@@ -6860,7 +6980,8 @@ export function setPlayerVisibleLocally(player: number | string | IPlayer, bIncl
  * Hash: 0xA7C511FA1C5BDA38 | Since: 463
  */
 export function setRemotePlayerAsGhost(player: number | string | IPlayer): void {
-    SetRelationshipToPlayer(player, false);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetRelationshipToPlayer(_player, false);
 }
 
 /**
@@ -6869,7 +6990,8 @@ export function setRemotePlayerAsGhost(player: number | string | IPlayer): void 
  * Hash: 0x96320E6549DAE7B4 | Since: 2802
  */
 export function setRemotePlayerVisibleInCutscene(player: number | string | IPlayer, locallyVisible: boolean): void {
-    Citizen.invokeNative('0x96320E6549DAE7B4', player, locallyVisible);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0x96320E6549DAE7B4', _player, locallyVisible);
 }
 
 /**
@@ -7740,7 +7862,8 @@ export function usePlayerColourInsteadOfTeamColour(toggle: boolean): void {
  * Hash: 0xB4C94523F023419C | Since: 323
  */
 export function vehToNet(vehicle: number | IVehicle): number {
-    return VehToNet(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return VehToNet(_vehicle);
 }
 
 /**
@@ -8161,7 +8284,8 @@ export function setTutorialSpecialSession(toggle: boolean): void {
  * Hash: 0xE9D0244ACBEE1BC4 | Since: 3258
  */
 export function triggerDamageEventForZeroPedDamage(entity: number | IEntity, trigger: boolean): void {
-    Citizen.invokeNative('0xE9D0244ACBEE1BC4', entity, trigger);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    Citizen.invokeNative('0xE9D0244ACBEE1BC4', _entity, trigger);
 }
 
 /**

@@ -1,11 +1,12 @@
-import { Vector3 } from '@risinglife/fivem-shared';
+import { Vector3, IVehicle } from '@risinglife/fivem-shared';
 /**
  * Break off vehicle wheel by index. The `leaveDebrisTrail` flag requires `putOnFire` to be true.
  *
  * Hash: 0xA274CADB
  */
 export function breakOffWheel(vehicle, wheelIndex, leaveDebrisTrail, deleteWheel, unknownFlag, putOnFire) {
-    BreakOffVehicleWheel(vehicle, wheelIndex, leaveDebrisTrail, deleteWheel, unknownFlag, putOnFire);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    BreakOffVehicleWheel(_vehicle, wheelIndex, leaveDebrisTrail, deleteWheel, unknownFlag, putOnFire);
 }
 /**
  * Removes vehicle xenon lights custom RGB color.
@@ -13,7 +14,8 @@ export function breakOffWheel(vehicle, wheelIndex, leaveDebrisTrail, deleteWheel
  * Hash: 0x2867ED8C
  */
 export function clearXenonLightsCustomColor(vehicle) {
-    ClearVehicleXenonLightsCustomColor(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    ClearVehicleXenonLightsCustomColor(_vehicle);
 }
 /**
  * Disables the game's afk camera that starts panning around after 30 seconds of inactivity(While riding in a car as a passenger)
@@ -31,7 +33,8 @@ export function disablePassengerIdleCamera(state) {
  * Hash: 0xEF30A696
  */
 export function doesUseFuel(vehicle) {
-    return DoesVehicleUseFuel(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return DoesVehicleUseFuel(_vehicle);
 }
 /**
  * Returns all registered vehicle model names, including non-dlc vehicles and custom vehicles in no particular order.
@@ -63,7 +66,8 @@ export function getAmbientRangeMultiplier() {
  * Hash: 0xE015E854
  */
 export function getTrainCurrentTrackNode(train) {
-    return GetTrainCurrentTrackNode(train);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return GetTrainCurrentTrackNode(_train);
 }
 /**
  * Gets the door count for the specified train.
@@ -71,7 +75,8 @@ export function getTrainCurrentTrackNode(train) {
  * Hash: 0x99974721
  */
 export function getTrainDoorCount(train) {
-    return GetTrainDoorCount(train);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return GetTrainDoorCount(_train);
 }
 /**
  * Gets the ratio that a door is open for on a train.
@@ -79,7 +84,8 @@ export function getTrainDoorCount(train) {
  * Hash: 0x40B16551
  */
 export function getTrainDoorOpenRatio(train, doorIndex) {
-    return GetTrainDoorOpenRatio(train, doorIndex);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return GetTrainDoorOpenRatio(_train, doorIndex);
 }
 /**
  * Gets the speed the train is currently going.
@@ -87,7 +93,8 @@ export function getTrainDoorOpenRatio(train, doorIndex) {
  * Hash: 0x428668B7
  */
 export function getTrainSpeed(train) {
-    return GetTrainSpeed(train);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return GetTrainSpeed(_train);
 }
 /**
  * No comment provided
@@ -95,7 +102,8 @@ export function getTrainSpeed(train) {
  * Hash: 0xC62AAC98
  */
 export function getAlarmTimeLeft(vehicle) {
-    return GetVehicleAlarmTimeLeft(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleAlarmTimeLeft(_vehicle);
 }
 /**
  * A getter for [SET_VEHICLE_CHEAT_POWER_INCREASE](#\_0xB59E4BD37AE292DB).
@@ -103,7 +111,8 @@ export function getAlarmTimeLeft(vehicle) {
  * Hash: 0xC3C93F28
  */
 export function getCheatPowerIncrease(vehicle) {
-    return GetVehicleCheatPowerIncrease(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleCheatPowerIncrease(_vehicle);
 }
 /**
  * No comment provided
@@ -111,7 +120,8 @@ export function getCheatPowerIncrease(vehicle) {
  * Hash: 0x1DAD4583
  */
 export function getClutch(vehicle) {
-    return GetVehicleClutch(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleClutch(_vehicle);
 }
 /**
  * No comment provided
@@ -119,7 +129,8 @@ export function getClutch(vehicle) {
  * Hash: 0xB4F4E566
  */
 export function getCurrentGear(vehicle) {
-    return GetVehicleCurrentGear(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleCurrentGear(_vehicle);
 }
 /**
  * No comment provided
@@ -127,7 +138,8 @@ export function getCurrentGear(vehicle) {
  * Hash: 0xE7B12B54
  */
 export function getCurrentRpm(vehicle) {
-    return GetVehicleCurrentRpm(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleCurrentRpm(_vehicle);
 }
 /**
  * No comment provided
@@ -201,7 +213,8 @@ export function getDashboardRpm() {
  * Hash: 0x9AAD420E
  */
 export function getDashboardSpeed(vehicle) {
-    return GetVehicleDashboardSpeed(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleDashboardSpeed(_vehicle);
 }
 /**
  * No comment provided
@@ -233,7 +246,8 @@ export function getDensityMultiplier() {
  * Hash: 0x21C1DA8E
  */
 export function getDrawnWheelAngleMult(vehicle) {
-    return GetVehicleDrawnWheelAngleMult(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleDrawnWheelAngleMult(_vehicle);
 }
 /**
  * No comment provided
@@ -241,7 +255,8 @@ export function getDrawnWheelAngleMult(vehicle) {
  * Hash: 0xF4F495CB
  */
 export function getEngineTemperature(vehicle) {
-    return GetVehicleEngineTemperature(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleEngineTemperature(_vehicle);
 }
 /**
  * No comment provided
@@ -249,7 +264,8 @@ export function getEngineTemperature(vehicle) {
  * Hash: 0x5F739BB8
  */
 export function getFuelLevel(vehicle) {
-    return GetVehicleFuelLevel(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleFuelLevel(_vehicle);
 }
 /**
  * Gets vehicles gear ratio on choosen gear.
@@ -257,7 +273,8 @@ export function getFuelLevel(vehicle) {
  * Hash: 0x82E794B7
  */
 export function getGearRatio(vehicle, gear) {
-    return GetVehicleGearRatio(vehicle, gear);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleGearRatio(_vehicle, gear);
 }
 /**
  * No comment provided
@@ -265,7 +282,8 @@ export function getGearRatio(vehicle, gear) {
  * Hash: 0xB48A1292
  */
 export function getGravityAmount(vehicle) {
-    return GetVehicleGravityAmount(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleGravityAmount(_vehicle);
 }
 /**
  * Returns the effective handling data of a vehicle as a floating-point value.
@@ -274,7 +292,8 @@ export function getGravityAmount(vehicle) {
  * Hash: 0x642FC12F
  */
 export function getHandlingFloat(vehicle, class_, fieldName) {
-    return GetVehicleHandlingFloat(vehicle, class_, fieldName);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleHandlingFloat(_vehicle, class_, fieldName);
 }
 /**
  * Returns the effective handling data of a vehicle as an integer value.
@@ -283,7 +302,8 @@ export function getHandlingFloat(vehicle, class_, fieldName) {
  * Hash: 0x27396C75
  */
 export function getHandlingInt(vehicle, class_, fieldName) {
-    return GetVehicleHandlingInt(vehicle, class_, fieldName);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleHandlingInt(_vehicle, class_, fieldName);
 }
 /**
  * Returns the effective handling data of a vehicle as a vector value.
@@ -292,7 +312,8 @@ export function getHandlingInt(vehicle, class_, fieldName) {
  * Hash: 0xFB341304
  */
 export function getHandlingVector(vehicle, class_, fieldName) {
-    return new Vector3(GetVehicleHandlingVector(vehicle, class_, fieldName));
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return new Vector3(GetVehicleHandlingVector(_vehicle, class_, fieldName));
 }
 /**
  * No comment provided
@@ -300,7 +321,8 @@ export function getHandlingVector(vehicle, class_, fieldName) {
  * Hash: 0xF1D1D689
  */
 export function getHighGear(vehicle) {
-    return GetVehicleHighGear(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleHighGear(_vehicle);
 }
 /**
  * Gets the vehicle indicator light state. 0 = off, 1 = left, 2 = right, 3 = both
@@ -308,7 +330,8 @@ export function getHighGear(vehicle) {
  * Hash: 0x83070354
  */
 export function getIndicatorLights(vehicle) {
-    return GetVehicleIndicatorLights(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleIndicatorLights(_vehicle);
 }
 /**
  * No comment provided
@@ -316,7 +339,8 @@ export function getIndicatorLights(vehicle) {
  * Hash: 0x7E6E219C
  */
 export function getLightMultiplier(vehicle) {
-    return GetVehicleLightMultiplier(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleLightMultiplier(_vehicle);
 }
 /**
  * No comment provided
@@ -324,7 +348,8 @@ export function getLightMultiplier(vehicle) {
  * Hash: 0xDDB298AE
  */
 export function getNextGear(vehicle) {
-    return GetVehicleNextGear(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleNextGear(_vehicle);
 }
 /**
  * No comment provided
@@ -332,7 +357,8 @@ export function getNextGear(vehicle) {
  * Hash: 0xEDF4B0FC
  */
 export function getNumberOfWheels(vehicle) {
-    return GetVehicleNumberOfWheels(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleNumberOfWheels(_vehicle);
 }
 /**
  * No comment provided
@@ -340,7 +366,8 @@ export function getNumberOfWheels(vehicle) {
  * Hash: 0xFC7F8EF4
  */
 export function getOilLevel(vehicle) {
-    return GetVehicleOilLevel(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleOilLevel(_vehicle);
 }
 /**
  * No comment provided
@@ -348,7 +375,8 @@ export function getOilLevel(vehicle) {
  * Hash: 0x954465DE
  */
 export function getSteeringScale(vehicle) {
-    return GetVehicleSteeringScale(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleSteeringScale(_vehicle);
 }
 /**
  * No comment provided
@@ -356,7 +384,8 @@ export function getSteeringScale(vehicle) {
  * Hash: 0xD1D07351
  */
 export function getThrottleOffset(vehicle) {
-    return GetVehicleThrottleOffset(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleThrottleOffset(_vehicle);
 }
 /**
  * A getter for [MODIFY_VEHICLE_TOP_SPEED](#\_0x93A3996368C94158). Returns -1.0 if a modifier is not set.
@@ -364,7 +393,8 @@ export function getThrottleOffset(vehicle) {
  * Hash: 0x998B7FEE
  */
 export function getTopSpeedModifier(vehicle) {
-    return GetVehicleTopSpeedModifier(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleTopSpeedModifier(_vehicle);
 }
 /**
  * No comment provided
@@ -372,7 +402,8 @@ export function getTopSpeedModifier(vehicle) {
  * Hash: 0xE02B51D7
  */
 export function getTurboPressure(vehicle) {
-    return GetVehicleTurboPressure(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleTurboPressure(_vehicle);
 }
 /**
  * List of known states:
@@ -386,7 +417,8 @@ export function getTurboPressure(vehicle) {
  * Hash: 0x137260D1
  */
 export function getWheelieState(vehicle) {
-    return GetVehicleWheelieState(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelieState(_vehicle);
 }
 /**
  * Gets brake pressure of a wheel.
@@ -396,7 +428,8 @@ export function getWheelieState(vehicle) {
  * Hash: 0x70FE2EFF
  */
 export function getWheelBrakePressure(vehicle, wheelIndex) {
-    return GetVehicleWheelBrakePressure(vehicle, wheelIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelBrakePressure(_vehicle, wheelIndex);
 }
 /**
  * Gets the flags of a wheel.
@@ -405,7 +438,8 @@ export function getWheelBrakePressure(vehicle, wheelIndex) {
  * Hash: 0xC70FA0C7
  */
 export function getWheelFlags(vehicle, wheelIndex) {
-    return GetVehicleWheelFlags(vehicle, wheelIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelFlags(_vehicle, wheelIndex);
 }
 /**
  * No comment provided
@@ -413,7 +447,8 @@ export function getWheelFlags(vehicle, wheelIndex) {
  * Hash: 0x54A677F5
  */
 export function getWheelHealth(vehicle, wheelIndex) {
-    return GetVehicleWheelHealth(vehicle, wheelIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelHealth(_vehicle, wheelIndex);
 }
 /**
  * Gets whether the wheel is powered.
@@ -423,7 +458,8 @@ export function getWheelHealth(vehicle, wheelIndex) {
  * Hash: 0x3CCF1B49
  */
 export function getWheelIsPowered(vehicle, wheelIndex) {
-    return GetVehicleWheelIsPowered(vehicle, wheelIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelIsPowered(_vehicle, wheelIndex);
 }
 /**
  * Gets power being sent to a wheel.
@@ -432,7 +468,8 @@ export function getWheelIsPowered(vehicle, wheelIndex) {
  * Hash: 0xD203287
  */
 export function getWheelPower(vehicle, wheelIndex) {
-    return GetVehicleWheelPower(vehicle, wheelIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelPower(_vehicle, wheelIndex);
 }
 /**
  * No comment provided
@@ -440,7 +477,8 @@ export function getWheelPower(vehicle, wheelIndex) {
  * Hash: 0xCEE21AB2
  */
 export function getWheelRimColliderSize(vehicle, wheelIndex) {
-    return GetVehicleWheelRimColliderSize(vehicle, wheelIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelRimColliderSize(_vehicle, wheelIndex);
 }
 /**
  * Gets the rotation speed of a wheel.
@@ -450,7 +488,8 @@ export function getWheelRimColliderSize(vehicle, wheelIndex) {
  * Hash: 0xEA1859E5
  */
 export function getWheelRotationSpeed(vehicle, wheelIndex) {
-    return GetVehicleWheelRotationSpeed(vehicle, wheelIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelRotationSpeed(_vehicle, wheelIndex);
 }
 /**
  * Returns vehicle's wheels' size (size is the same for all the wheels, cannot get/set specific wheel of vehicle).
@@ -459,7 +498,8 @@ export function getWheelRotationSpeed(vehicle, wheelIndex) {
  * Hash: 0x4046B66
  */
 export function getWheelSize(vehicle) {
-    return GetVehicleWheelSize(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelSize(_vehicle);
 }
 /**
  * Gets speed of a wheel at the tyre.
@@ -468,7 +508,8 @@ export function getWheelSize(vehicle) {
  * Hash: 0x149C9DA0
  */
 export function getWheelSpeed(vehicle, wheelIndex) {
-    return GetVehicleWheelSpeed(vehicle, wheelIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelSpeed(_vehicle, wheelIndex);
 }
 /**
  * Gets steering angle of a wheel.
@@ -477,7 +518,8 @@ export function getWheelSpeed(vehicle, wheelIndex) {
  * Hash: 0xA0867448
  */
 export function getWheelSteeringAngle(vehicle, wheelIndex) {
-    return GetVehicleWheelSteeringAngle(vehicle, wheelIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelSteeringAngle(_vehicle, wheelIndex);
 }
 /**
  * No comment provided
@@ -485,7 +527,8 @@ export function getWheelSteeringAngle(vehicle, wheelIndex) {
  * Hash: 0xA7F04022
  */
 export function getWheelSurfaceMaterial(vehicle, wheelIndex) {
-    return GetVehicleWheelSurfaceMaterial(vehicle, wheelIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelSurfaceMaterial(_vehicle, wheelIndex);
 }
 /**
  * Gets the current suspension compression of a wheel.
@@ -495,7 +538,8 @@ export function getWheelSurfaceMaterial(vehicle, wheelIndex) {
  * Hash: 0x2B48175B
  */
 export function getWheelSuspensionCompression(vehicle, wheelIndex) {
-    return GetVehicleWheelSuspensionCompression(vehicle, wheelIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelSuspensionCompression(_vehicle, wheelIndex);
 }
 /**
  * No comment provided
@@ -503,7 +547,8 @@ export function getWheelSuspensionCompression(vehicle, wheelIndex) {
  * Hash: 0xE0BA9FE6
  */
 export function getWheelTireColliderSize(vehicle, wheelIndex) {
-    return GetVehicleWheelTireColliderSize(vehicle, wheelIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelTireColliderSize(_vehicle, wheelIndex);
 }
 /**
  * No comment provided
@@ -511,7 +556,8 @@ export function getWheelTireColliderSize(vehicle, wheelIndex) {
  * Hash: 0xEF65929C
  */
 export function getWheelTireColliderWidth(vehicle, wheelIndex) {
-    return GetVehicleWheelTireColliderWidth(vehicle, wheelIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelTireColliderWidth(_vehicle, wheelIndex);
 }
 /**
  * Gets the traction vector length of a wheel.
@@ -520,7 +566,8 @@ export function getWheelTireColliderWidth(vehicle, wheelIndex) {
  * Hash: 0x3BCFEE14
  */
 export function getWheelTractionVectorLength(vehicle, wheelIndex) {
-    return GetVehicleWheelTractionVectorLength(vehicle, wheelIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelTractionVectorLength(_vehicle, wheelIndex);
 }
 /**
  * Returns vehicle's wheels' width (width is the same for all the wheels, cannot get/set specific wheel of vehicle).
@@ -529,7 +576,8 @@ export function getWheelTractionVectorLength(vehicle, wheelIndex) {
  * Hash: 0x9C7B59F9
  */
 export function getWheelWidth(vehicle) {
-    return GetVehicleWheelWidth(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelWidth(_vehicle);
 }
 /**
  * Returns the offset of the specified wheel relative to the wheel's axle center.
@@ -537,7 +585,8 @@ export function getWheelWidth(vehicle) {
  * Hash: 0xCC90CBCA
  */
 export function getWheelXOffset(vehicle, wheelIndex) {
-    return GetVehicleWheelXOffset(vehicle, wheelIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelXOffset(_vehicle, wheelIndex);
 }
 /**
  * No comment provided
@@ -545,7 +594,8 @@ export function getWheelXOffset(vehicle, wheelIndex) {
  * Hash: 0x2EA4AFFE
  */
 export function getWheelYRotation(vehicle, wheelIndex) {
-    return GetVehicleWheelYRotation(vehicle, wheelIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleWheelYRotation(_vehicle, wheelIndex);
 }
 /**
  * Returns vehicle xenon lights custom RGB color values. Do note this native doesn't return non-RGB colors that was set with [\_SET_VEHICLE_XENON_LIGHTS_COLOR](#\_0xE41033B25D003A07).
@@ -553,7 +603,8 @@ export function getWheelYRotation(vehicle, wheelIndex) {
  * Hash: 0xC715F730
  */
 export function getXenonLightsCustomColor(vehicle) {
-    return GetVehicleXenonLightsCustomColor(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleXenonLightsCustomColor(_vehicle);
 }
 /**
  * A getter for [SET_VEHICLE_XMAS_SNOW_FACTOR](#\_0x80CC4C9E).
@@ -569,7 +620,8 @@ export function getXmasSnowFactor() {
  * Hash: 0xDC921211
  */
 export function isAlarmSet(vehicle) {
-    return IsVehicleAlarmSet(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsVehicleAlarmSet(_vehicle);
 }
 /**
  * No comment provided
@@ -577,7 +629,8 @@ export function isAlarmSet(vehicle) {
  * Hash: 0xA411F72C
  */
 export function isInteriorLightOn(vehicle) {
-    return IsVehicleInteriorLightOn(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsVehicleInteriorLightOn(_vehicle);
 }
 /**
  * No comment provided
@@ -585,7 +638,8 @@ export function isInteriorLightOn(vehicle) {
  * Hash: 0xF9933BF4
  */
 export function isNeedsToBeHotwired(vehicle) {
-    return IsVehicleNeedsToBeHotwired(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsVehicleNeedsToBeHotwired(_vehicle);
 }
 /**
  * No comment provided
@@ -593,7 +647,8 @@ export function isNeedsToBeHotwired(vehicle) {
  * Hash: 0xF849ED67
  */
 export function isPreviouslyOwnedByPlayer(vehicle) {
-    return IsVehiclePreviouslyOwnedByPlayer(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsVehiclePreviouslyOwnedByPlayer(_vehicle);
 }
 /**
  * No comment provided
@@ -601,7 +656,8 @@ export function isPreviouslyOwnedByPlayer(vehicle) {
  * Hash: 0xA7DAF7C
  */
 export function isWanted(vehicle) {
-    return IsVehicleWanted(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsVehicleWanted(_vehicle);
 }
 /**
  * Setting the state to true and a value between 0 and 2 will cause pedestrian vehicles to react accordingly to sirens.
@@ -627,7 +683,8 @@ export function overrideReactionToSiren(state, reaction) {
  * Hash: 0x7FA03E76
  */
 export function overridePedsCanStandOnTopFlag(vehicle, can) {
-    OverrideVehiclePedsCanStandOnTopFlag(vehicle, can);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    OverrideVehiclePedsCanStandOnTopFlag(_vehicle, can);
 }
 /**
  * Resets whether or not peds can stand on top of the specified vehicle.
@@ -637,7 +694,8 @@ export function overridePedsCanStandOnTopFlag(vehicle, can) {
  * Hash: 0xDF62CFE2
  */
 export function resetPedsCanStandOnTopFlag(vehicle) {
-    ResetVehiclePedsCanStandOnTopFlag(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    ResetVehiclePedsCanStandOnTopFlag(_vehicle);
 }
 /**
  * Sets the default number plate text pattern for vehicles seen on the local client with the specified plate index as their *default* index (`plateProbabilities` from carvariations).
@@ -718,7 +776,8 @@ export function setTrainsForceDoorsOpen(forceOpen) {
  * Hash: 0x2468DBE8
  */
 export function setTrainDoorOpenRatio(train, doorIndex, ratio) {
-    SetTrainDoorOpenRatio(train, doorIndex, ratio);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    SetTrainDoorOpenRatio(_train, doorIndex, ratio);
 }
 /**
  * No comment provided
@@ -726,7 +785,8 @@ export function setTrainDoorOpenRatio(train, doorIndex, ratio) {
  * Hash: 0x61CB74A0
  */
 export function setTrainState(train, state) {
-    SetTrainState(train, state);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    SetTrainState(_train, state);
 }
 /**
  * Toggles a train's ability to stop at stations
@@ -734,7 +794,8 @@ export function setTrainState(train, state) {
  * Hash: 0xECB8B577
  */
 export function setTrainStopAtStations(train, state) {
-    SetTrainStopAtStations(train, state);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    SetTrainStopAtStations(_train, state);
 }
 /**
  * No comment provided
@@ -742,7 +803,8 @@ export function setTrainStopAtStations(train, state) {
  * Hash: 0xC108EE6F
  */
 export function setAlarmTimeLeft(vehicle, time) {
-    SetVehicleAlarmTimeLeft(vehicle, time);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleAlarmTimeLeft(_vehicle, time);
 }
 /**
  * Disables the vehicle from being repaired when a vehicle extra is enabled.
@@ -750,7 +812,8 @@ export function setAlarmTimeLeft(vehicle, time) {
  * Hash: 0x5F3A3574
  */
 export function setAutoRepairDisabled(vehicle, value) {
-    SetVehicleAutoRepairDisabled(vehicle, value);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleAutoRepairDisabled(_vehicle, value);
 }
 /**
  * No comment provided
@@ -758,7 +821,8 @@ export function setAutoRepairDisabled(vehicle, value) {
  * Hash: 0x2F70ACED
  */
 export function setClutch(vehicle, clutch) {
-    SetVehicleClutch(vehicle, clutch);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleClutch(_vehicle, clutch);
 }
 /**
  * No comment provided
@@ -766,7 +830,8 @@ export function setClutch(vehicle, clutch) {
  * Hash: 0x2A01A8FC
  */
 export function setCurrentRpm(vehicle, rpm) {
-    SetVehicleCurrentRpm(vehicle, rpm);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleCurrentRpm(_vehicle, rpm);
 }
 /**
  * No comment provided
@@ -774,7 +839,8 @@ export function setCurrentRpm(vehicle, rpm) {
  * Hash: 0x6C93C4A9
  */
 export function setEngineTemperature(vehicle, temperature) {
-    SetVehicleEngineTemperature(vehicle, temperature);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleEngineTemperature(_vehicle, temperature);
 }
 /**
  * No comment provided
@@ -782,7 +848,8 @@ export function setEngineTemperature(vehicle, temperature) {
  * Hash: 0xBA970511
  */
 export function setFuelLevel(vehicle, level) {
-    SetVehicleFuelLevel(vehicle, level);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleFuelLevel(_vehicle, level);
 }
 /**
  * Sets the vehicles gear ratio on choosen gear, reverse gear needs to be a negative float and forward moving gear needs to be a positive float. Refer to the examples if confused.
@@ -790,7 +857,8 @@ export function setFuelLevel(vehicle, level) {
  * Hash: 0x496EF2F2
  */
 export function setGearRatio(vehicle, gear, ratio) {
-    SetVehicleGearRatio(vehicle, gear, ratio);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleGearRatio(_vehicle, gear, ratio);
 }
 /**
  * No comment provided
@@ -798,7 +866,8 @@ export function setGearRatio(vehicle, gear, ratio) {
  * Hash: 0x1A963E58
  */
 export function setGravityAmount(vehicle, gravity) {
-    SetVehicleGravityAmount(vehicle, gravity);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleGravityAmount(_vehicle, gravity);
 }
 /**
  * Sets a handling override for a specific vehicle. Certain handling flags can only be set globally using `SET_HANDLING_FIELD`, this might require some experimentation.
@@ -807,7 +876,8 @@ export function setGravityAmount(vehicle, gravity) {
  * Hash: 0x2BA40795
  */
 export function setVehicleHandlingField(vehicle, class_, fieldName, value) {
-    SetVehicleHandlingField(vehicle, class_, fieldName, value);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleHandlingField(_vehicle, class_, fieldName, value);
 }
 /**
  * Sets a handling override for a specific vehicle. Certain handling flags can only be set globally using `SET_HANDLING_FLOAT`, this might require some experimentation.
@@ -816,7 +886,8 @@ export function setVehicleHandlingField(vehicle, class_, fieldName, value) {
  * Hash: 0x488C86D2
  */
 export function setVehicleHandlingFloat(vehicle, class_, fieldName, value) {
-    SetVehicleHandlingFloat(vehicle, class_, fieldName, value);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleHandlingFloat(_vehicle, class_, fieldName, value);
 }
 /**
  * Sets a handling override for a specific vehicle. Certain handling flags can only be set globally using `SET_HANDLING_INT`, this might require some experimentation.
@@ -824,7 +895,8 @@ export function setVehicleHandlingFloat(vehicle, class_, fieldName, value) {
  * Hash: 0xC37F4CF9
  */
 export function setVehicleHandlingInt(vehicle, class_, fieldName, value) {
-    SetVehicleHandlingInt(vehicle, class_, fieldName, value);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleHandlingInt(_vehicle, class_, fieldName, value);
 }
 /**
  * Sets a handling override for a specific vehicle. Certain handling flags can only be set globally using `SET_HANDLING_VECTOR`, this might require some experimentation.
@@ -832,7 +904,8 @@ export function setVehicleHandlingInt(vehicle, class_, fieldName, value) {
  * Hash: 0x12497890
  */
 export function setVehicleHandlingVector(vehicle, class_, fieldName, value) {
-    SetVehicleHandlingVector(vehicle, class_, fieldName, value);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleHandlingVector(_vehicle, class_, fieldName, value);
 }
 /**
  * No comment provided
@@ -840,7 +913,8 @@ export function setVehicleHandlingVector(vehicle, class_, fieldName, value) {
  * Hash: 0x20B1B3E6
  */
 export function setHighGear(vehicle, gear) {
-    SetVehicleHighGear(vehicle, gear);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleHighGear(_vehicle, gear);
 }
 /**
  * Sets the maximum distance in which [\_SET_VEHICLE_NITRO_ENABLED](#\_0xC8E9B6B71B8E660D) PTFX are rendered. Distance is measured from the camera position.
@@ -856,7 +930,8 @@ export function setNitroPtfxRange(range) {
  * Hash: 0x90D1CAD1
  */
 export function setOilLevel(vehicle, level) {
-    SetVehicleOilLevel(vehicle, level);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleOilLevel(_vehicle, level);
 }
 /**
  * Set the vehicle's pitch bias. Only works on planes.
@@ -864,7 +939,8 @@ export function setOilLevel(vehicle, level) {
  * Hash: 0x2A6CC9F2
  */
 export function setPitchBias(vehicle, value) {
-    SetVehiclePitchBias(vehicle, value);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehiclePitchBias(_vehicle, value);
 }
 /**
  * Set the vehicle's roll bias. Only works on planes.
@@ -872,7 +948,8 @@ export function setPitchBias(vehicle, value) {
  * Hash: 0x264B45DE
  */
 export function setRollBias(vehicle, value) {
-    SetVehicleRollBias(vehicle, value);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleRollBias(_vehicle, value);
 }
 /**
  * No comment provided
@@ -880,7 +957,8 @@ export function setRollBias(vehicle, value) {
  * Hash: 0xFFCCC2EA
  */
 export function setSteeringAngle(vehicle, angle) {
-    SetVehicleSteeringAngle(vehicle, angle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleSteeringAngle(_vehicle, angle);
 }
 /**
  * No comment provided
@@ -888,7 +966,8 @@ export function setSteeringAngle(vehicle, angle) {
  * Hash: 0xEB46596F
  */
 export function setSteeringScale(vehicle, scale) {
-    SetVehicleSteeringScale(vehicle, scale);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleSteeringScale(_vehicle, scale);
 }
 /**
  * Sets the height of the vehicle's suspension.
@@ -900,7 +979,8 @@ export function setSteeringScale(vehicle, scale) {
  * Hash: 0xB3439A01
  */
 export function setSuspensionHeight(vehicle, newHeight) {
-    SetVehicleSuspensionHeight(vehicle, newHeight);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleSuspensionHeight(_vehicle, newHeight);
 }
 /**
  * No comment provided
@@ -908,7 +988,8 @@ export function setSuspensionHeight(vehicle, newHeight) {
  * Hash: 0x6485615E
  */
 export function setTurboPressure(vehicle, pressure) {
-    SetVehicleTurboPressure(vehicle, pressure);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleTurboPressure(_vehicle, pressure);
 }
 /**
  * Example script: https://pastebin.com/J6XGbkCW
@@ -924,7 +1005,8 @@ export function setTurboPressure(vehicle, pressure) {
  * Hash: 0xEAB8DB65
  */
 export function setWheelieState(vehicle, state) {
-    SetVehicleWheelieState(vehicle, state);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleWheelieState(_vehicle, state);
 }
 /**
  * Sets brake pressure of a wheel.
@@ -934,7 +1016,8 @@ export function setWheelieState(vehicle, state) {
  * Hash: 0xE80F4E31
  */
 export function setWheelBrakePressure(vehicle, wheelIndex, pressure) {
-    SetVehicleWheelBrakePressure(vehicle, wheelIndex, pressure);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleWheelBrakePressure(_vehicle, wheelIndex, pressure);
 }
 /**
  * Sets the flags of a wheel.
@@ -943,7 +1026,8 @@ export function setWheelBrakePressure(vehicle, wheelIndex, pressure) {
  * Hash: 0xD2B9E90D
  */
 export function setWheelFlags(vehicle, wheelIndex, flags) {
-    SetVehicleWheelFlags(vehicle, wheelIndex, flags);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleWheelFlags(_vehicle, wheelIndex, flags);
 }
 /**
  * No comment provided
@@ -951,7 +1035,8 @@ export function setWheelFlags(vehicle, wheelIndex, flags) {
  * Hash: 0xB22ECEFD
  */
 export function setWheelHealth(vehicle, wheelIndex, health) {
-    SetVehicleWheelHealth(vehicle, wheelIndex, health);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleWheelHealth(_vehicle, wheelIndex, health);
 }
 /**
  * Sets whether the wheel is powered.
@@ -962,7 +1047,8 @@ export function setWheelHealth(vehicle, wheelIndex, health) {
  * Hash: 0xBD5291A0
  */
 export function setWheelIsPowered(vehicle, wheelIndex, powered) {
-    SetVehicleWheelIsPowered(vehicle, wheelIndex, powered);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleWheelIsPowered(_vehicle, wheelIndex, powered);
 }
 /**
  * Sets power being sent to a wheel.
@@ -971,7 +1057,8 @@ export function setWheelIsPowered(vehicle, wheelIndex, powered) {
  * Hash: 0xC6146043
  */
 export function setWheelPower(vehicle, wheelIndex, power) {
-    SetVehicleWheelPower(vehicle, wheelIndex, power);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleWheelPower(_vehicle, wheelIndex, power);
 }
 /**
  * Not sure what this changes, probably determines physical rim size in case the tire is blown.
@@ -979,7 +1066,8 @@ export function setWheelPower(vehicle, wheelIndex, power) {
  * Hash: 0xF380E184
  */
 export function setWheelRimColliderSize(vehicle, wheelIndex, value) {
-    SetVehicleWheelRimColliderSize(vehicle, wheelIndex, value);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleWheelRimColliderSize(_vehicle, wheelIndex, value);
 }
 /**
  * Sets the rotation speed of a wheel.
@@ -988,7 +1076,8 @@ export function setWheelRimColliderSize(vehicle, wheelIndex, value) {
  * Hash: 0x35ED100D
  */
 export function setWheelRotationSpeed(vehicle, wheelIndex, speed) {
-    SetVehicleWheelRotationSpeed(vehicle, wheelIndex, speed);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleWheelRotationSpeed(_vehicle, wheelIndex, speed);
 }
 /**
  * Sets vehicle's wheels' size (size is the same for all the wheels, cannot get/set specific wheel of vehicle).
@@ -998,7 +1087,8 @@ export function setWheelRotationSpeed(vehicle, wheelIndex, speed) {
  * Hash: 0x53AB5C35
  */
 export function setWheelSize(vehicle, size) {
-    return SetVehicleWheelSize(vehicle, size);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return SetVehicleWheelSize(_vehicle, size);
 }
 /**
  * Use along with SetVehicleWheelSize to resize the wheels (this native sets the collider size affecting physics while SetVehicleWheelSize will change visual size).
@@ -1006,7 +1096,8 @@ export function setWheelSize(vehicle, size) {
  * Hash: 0xB962D05C
  */
 export function setWheelTireColliderSize(vehicle, wheelIndex, value) {
-    SetVehicleWheelTireColliderSize(vehicle, wheelIndex, value);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleWheelTireColliderSize(_vehicle, wheelIndex, value);
 }
 /**
  * Use along with SetVehicleWheelWidth to resize the wheels (this native sets the collider width affecting physics while SetVehicleWheelWidth will change visual width).
@@ -1014,7 +1105,8 @@ export function setWheelTireColliderSize(vehicle, wheelIndex, value) {
  * Hash: 0x47BD0270
  */
 export function setWheelTireColliderWidth(vehicle, wheelIndex, value) {
-    SetVehicleWheelTireColliderWidth(vehicle, wheelIndex, value);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleWheelTireColliderWidth(_vehicle, wheelIndex, value);
 }
 /**
  * Sets the traction vector length of a wheel.
@@ -1023,7 +1115,8 @@ export function setWheelTireColliderWidth(vehicle, wheelIndex, value) {
  * Hash: 0x85C85A3A
  */
 export function setWheelTractionVectorLength(vehicle, wheelIndex, length) {
-    SetVehicleWheelTractionVectorLength(vehicle, wheelIndex, length);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleWheelTractionVectorLength(_vehicle, wheelIndex, length);
 }
 /**
  * Sets vehicle's wheels' width (width is the same for all the wheels, cannot get/set specific wheel of vehicle).
@@ -1033,7 +1126,8 @@ export function setWheelTractionVectorLength(vehicle, wheelIndex, length) {
  * Hash: 0x64C3F1C0
  */
 export function setWheelWidth(vehicle, width) {
-    return SetVehicleWheelWidth(vehicle, width);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return SetVehicleWheelWidth(_vehicle, width);
 }
 /**
  * Adjusts the offset of the specified wheel relative to the wheel's axle center.
@@ -1050,7 +1144,8 @@ export function setWheelWidth(vehicle, width) {
  * Hash: 0xBD6357D
  */
 export function setWheelXOffset(vehicle, wheelIndex, offset) {
-    SetVehicleWheelXOffset(vehicle, wheelIndex, offset);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleWheelXOffset(_vehicle, wheelIndex, offset);
 }
 /**
  * No comment provided
@@ -1058,7 +1153,8 @@ export function setWheelXOffset(vehicle, wheelIndex, offset) {
  * Hash: 0xC6C2171F
  */
 export function setWheelYRotation(vehicle, wheelIndex, value) {
-    SetVehicleWheelYRotation(vehicle, wheelIndex, value);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleWheelYRotation(_vehicle, wheelIndex, value);
 }
 /**
  * Sets custom vehicle xenon lights color, allowing to use RGB palette. The game will ignore lights color set by [\_SET_VEHICLE_XENON_LIGHTS_COLOR](#\_0xE41033B25D003A07) when custom color is active. This native is not synced between players. Requires xenon lights mod to be set on vehicle.
@@ -1066,7 +1162,8 @@ export function setWheelYRotation(vehicle, wheelIndex, value) {
  * Hash: 0x1683E7F0
  */
 export function setXenonLightsCustomColor(vehicle, red, green, blue) {
-    SetVehicleXenonLightsCustomColor(vehicle, red, green, blue);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleXenonLightsCustomColor(_vehicle, red, green, blue);
 }
 /**
  * No comment provided
@@ -1082,7 +1179,8 @@ export function setXmasSnowFactor(gripFactor) {
  * Hash: 0x77CC80DC
  */
 export function doesTrainStopAtStations(train) {
-    return DoesTrainStopAtStations(train);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return DoesTrainStopAtStations(_train);
 }
 /**
  * Gets the trains desired speed.
@@ -1090,7 +1188,8 @@ export function doesTrainStopAtStations(train) {
  * Hash: 0xA4921EF5
  */
 export function getTrainCruiseSpeed(train) {
-    return GetTrainCruiseSpeed(train);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return GetTrainCruiseSpeed(_train);
 }
 /**
  * Gets the direction the train is facing
@@ -1098,7 +1197,8 @@ export function getTrainCruiseSpeed(train) {
  * Hash: 0x8DAF79B6
  */
 export function getTrainDirection(train) {
-    return GetTrainDirection(train);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return GetTrainDirection(_train);
 }
 /**
  * No comment provided
@@ -1106,7 +1206,8 @@ export function getTrainDirection(train) {
  * Hash: 0x81B50033
  */
 export function getTrainState(train) {
-    return GetTrainState(train);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return GetTrainState(_train);
 }
 /**
  * No comment provided
@@ -1114,7 +1215,8 @@ export function getTrainState(train) {
  * Hash: 0x9AA339D
  */
 export function getTrainTrackIndex(train) {
-    return GetTrainTrackIndex(train);
+    const _train = train instanceof IVehicle ? train.localId() : train;
+    return GetTrainTrackIndex(_train);
 }
 /**
  * No comment provided
@@ -1122,7 +1224,8 @@ export function getTrainTrackIndex(train) {
  * Hash: 0x483B013C
  */
 export function getHandbrake(vehicle) {
-    return GetVehicleHandbrake(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleHandbrake(_vehicle);
 }
 /**
  * No comment provided
@@ -1130,7 +1233,8 @@ export function getHandbrake(vehicle) {
  * Hash: 0x1382FCEA
  */
 export function getSteeringAngle(vehicle) {
-    return GetVehicleSteeringAngle(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleSteeringAngle(_vehicle);
 }
 /**
  * No comment provided
@@ -1138,7 +1242,8 @@ export function getSteeringAngle(vehicle) {
  * Hash: 0xBB340D04
  */
 export function isEngineStarting(vehicle) {
-    return IsVehicleEngineStarting(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsVehicleEngineStarting(_vehicle);
 }
 /**
  * **Note**: Flags are not the same based on your `gamebuild`. Please see [here](https://docs.fivem.net/docs/game-references/vehicle-references/vehicle-flags) to see a complete list of all vehicle flags.
@@ -1148,7 +1253,8 @@ export function isEngineStarting(vehicle) {
  * Hash: 0xD85C9F57
  */
 export function getHasFlag(vehicle, flagIndex) {
-    return GetVehicleHasFlag(vehicle, flagIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleHasFlag(_vehicle, flagIndex);
 }
 /**
  * Returns the model type of the vehicle as defined by:
@@ -1179,7 +1285,8 @@ export function getHasFlag(vehicle, flagIndex) {
  * Hash: 0xDE73BC10
  */
 export function getTypeRaw(vehicle) {
-    return GetVehicleTypeRaw(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleTypeRaw(_vehicle);
 }
 /**
  * Getter for [BREAK_OFF_VEHICLE_WHEEL](?\_0xA274CADB).
@@ -1187,7 +1294,8 @@ export function getTypeRaw(vehicle) {
  * Hash: 0xCF1BC668
  */
 export function isWheelBrokenOff(vehicle, wheelIndex) {
-    return IsVehicleWheelBrokenOff(vehicle, wheelIndex);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsVehicleWheelBrokenOff(_vehicle, wheelIndex);
 }
 /**
  * No comment provided
@@ -1195,7 +1303,8 @@ export function isWheelBrokenOff(vehicle, wheelIndex) {
  * Hash: 0x8923DD42
  */
 export function setCurrentGear(vehicle, gear) {
-    SetVehicleCurrentGear(vehicle, gear);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleCurrentGear(_vehicle, gear);
 }
 /**
  * This native is a setter for [`GET_VEHICLE_HAS_FLAG`](#\_0xD85C9F57).
@@ -1203,7 +1312,8 @@ export function setCurrentGear(vehicle, gear) {
  * Hash: 0x63AE1A34
  */
 export function setFlag(vehicle, flagIndex, value) {
-    return SetVehicleFlag(vehicle, flagIndex, value);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return SetVehicleFlag(_vehicle, flagIndex, value);
 }
 /**
  * No comment provided
@@ -1211,7 +1321,8 @@ export function setFlag(vehicle, flagIndex, value) {
  * Hash: 0x3A4566F4
  */
 export function setNextGear(vehicle, nextGear) {
-    SetVehicleNextGear(vehicle, nextGear);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleNextGear(_vehicle, nextGear);
 }
 /**
  * Returns the type of the passed vehicle.
@@ -1232,5 +1343,6 @@ export function setNextGear(vehicle, nextGear) {
  * Hash: 0xA273060E
  */
 export function getType(vehicle) {
-    return GetVehicleType(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleType(_vehicle);
 }

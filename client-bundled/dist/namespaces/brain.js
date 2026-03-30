@@ -1,3 +1,4 @@
+import { IObject } from '@risinglife/fivem-shared';
 /**
  * `BRAIN::ADD_SCRIPT_TO_RANDOM_PED("pb_prostitute", ${s_f_y_hooker_01}, 100, 0);`
  *
@@ -36,7 +37,8 @@ export function enableScriptSet(brainSet) {
  * Hash: 0xCCBA154209823057 | Since: 323 | API-Set: unknown
  */
 export function isObjectWithinActivationRange(_object) {
-    return IsObjectWithinBrainActivationRange(_object);
+    const __object = _object instanceof IObject ? _object.handle() : _object;
+    return IsObjectWithinBrainActivationRange(__object);
 }
 /**
  * Gets whether the world point the calling script is registered to is within desired range of the player.

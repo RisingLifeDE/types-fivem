@@ -6,7 +6,8 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0x5BA652A0CD14DF2F | Since: 323
  */
 export function addArmourTo(ped: number | IPed, amount: number): void {
-    AddArmourToPed(ped, amount);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    AddArmourToPed(_ped, amount);
 }
 
 /**
@@ -41,9 +42,10 @@ export function addArmourTo(ped: number | IPed, amount: number): void {
  * Hash: 0x5F5D1665E352A839 | Since: 323
  */
 export function addDecorationFromHashes(ped: number | IPed, collection: number | string, overlay: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof collection === 'string') collection = GetHashKey(collection)
     if (typeof overlay === 'string') overlay = GetHashKey(overlay)
-    AddPedDecorationFromHashes(ped, collection, overlay);
+    AddPedDecorationFromHashes(_ped, collection, overlay);
 }
 
 /**
@@ -52,9 +54,10 @@ export function addDecorationFromHashes(ped: number | IPed, collection: number |
  * Hash: 0x5619BFA07CFD7833 | Since: 323
  */
 export function addDecorationFromHashesInCorona(ped: number | IPed, collection: number | string, overlay: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof collection === 'string') collection = GetHashKey(collection)
     if (typeof overlay === 'string') overlay = GetHashKey(overlay)
-    AddPedDecorationFromHashesInCorona(ped, collection, overlay);
+    AddPedDecorationFromHashesInCorona(_ped, collection, overlay);
 }
 
 /**
@@ -81,8 +84,9 @@ export function addScenarioBlockingArea(x1: number, y1: number, z1: number, x2: 
  * Hash: 0x697157CED63F18D4 | Since: 323
  */
 export function applyDamageTo(ped: number | IPed, damageAmount: number, weaponType: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponType === 'string') weaponType = GetHashKey(weaponType)
-    ApplyDamageToPed(ped, damageAmount, false, undefined, weaponType);
+    ApplyDamageToPed(_ped, damageAmount, false, undefined, weaponType);
 }
 
 /**
@@ -104,7 +108,8 @@ export function applyDamageTo(ped: number | IPed, damageAmount: number, weaponTy
  * Hash: 0x83F7E01C7B769A26 | Since: 323
  */
 export function applyBlood(ped: number | IPed, boneIndex: number, rot: Vector3, woundType: string): void {
-    ApplyPedBlood(ped, boneIndex, rot.x, rot.y, rot.z, woundType);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ApplyPedBlood(_ped, boneIndex, rot.x, rot.y, rot.z, woundType);
 }
 
 /**
@@ -113,7 +118,8 @@ export function applyBlood(ped: number | IPed, boneIndex: number, rot: Vector3, 
  * Hash: 0x3311E47B91EDCBBC | Since: 323
  */
 export function applyBloodByZone(ped: number | IPed): void {
-    ApplyPedBloodByZone(ped, 0, 0, 0, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ApplyPedBloodByZone(_ped, 0, 0, 0, undefined);
 }
 
 /**
@@ -122,7 +128,8 @@ export function applyBloodByZone(ped: number | IPed): void {
  * Hash: 0x816F6981C60BF53B | Since: 323
  */
 export function applyBloodDamageByZone(ped: number | IPed): void {
-    ApplyPedBloodDamageByZone(ped, undefined, 0, 0, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ApplyPedBloodDamageByZone(_ped, undefined, 0, 0, undefined);
 }
 
 /**
@@ -131,7 +138,8 @@ export function applyBloodDamageByZone(ped: number | IPed): void {
  * Hash: 0xEF0D582CBF2D9B0F | Since: 323
  */
 export function applyBloodSpecific(ped: number | IPed): void {
-    ApplyPedBloodSpecific(ped, 0, 0, 0, 0, 0, 0, 0, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ApplyPedBloodSpecific(_ped, 0, 0, 0, 0, 0, 0, 0, undefined);
 }
 
 /**
@@ -163,7 +171,8 @@ export function applyBloodSpecific(ped: number | IPed): void {
  * Hash: 0x397C38AA7B4A5F83 | Since: 323
  */
 export function applyDamageDecal(ped: number | IPed, damageZone: number, xOffset: number, yOffset: number, heading: number, scale: number, alpha: number, variation: number, fadeIn: boolean, decalName: string): void {
-    ApplyPedDamageDecal(ped, damageZone, xOffset, yOffset, heading, scale, alpha, variation, fadeIn, decalName);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ApplyPedDamageDecal(_ped, damageZone, xOffset, yOffset, heading, scale, alpha, variation, fadeIn, decalName);
 }
 
 /**
@@ -199,7 +208,8 @@ export function applyDamageDecal(ped: number | IPed, damageZone: number, xOffset
  * Hash: 0x46DF918788CB093F | Since: 323
  */
 export function applyDamagePack(ped: number | IPed, damagePack: string, damage: number, mult: number): void {
-    ApplyPedDamagePack(ped, damagePack, damage, mult);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ApplyPedDamagePack(_ped, damagePack, damage, mult);
 }
 
 /**
@@ -208,7 +218,8 @@ export function applyDamagePack(ped: number | IPed, damagePack: string, damage: 
  * Hash: 0x272E4723B56A3B96 | Since: 323
  */
 export function attachSynchronizedSceneToEntity(sceneID: number, entity: number | IEntity, boneIndex: number): void {
-    AttachSynchronizedSceneToEntity(sceneID, entity, boneIndex);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    AttachSynchronizedSceneToEntity(sceneID, _entity, boneIndex);
 }
 
 /**
@@ -217,7 +228,8 @@ export function attachSynchronizedSceneToEntity(sceneID: number, entity: number 
  * Hash: 0xE43A13C9E4CCCBCF | Since: 323
  */
 export function blockFromGeneratingDeadBodyEventsWhenDead(ped: number | IPed, toggle: boolean): void {
-    BlockPedDeadBodyShockingEvents(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    BlockPedDeadBodyShockingEvents(_ped, toggle);
 }
 
 /**
@@ -262,7 +274,8 @@ export function canCreateRandom(): boolean {
  * Hash: 0x51AC07A44D4F5B8A | Since: 323
  */
 export function canKnockOffVehicle(ped: number | IPed): boolean {
-    return CanKnockPedOffVehicle(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return CanKnockPedOffVehicle(_ped);
 }
 
 /**
@@ -271,7 +284,9 @@ export function canKnockOffVehicle(ped: number | IPed): boolean {
  * Hash: 0xEAD42DE3610D0721 | Since: 323
  */
 export function canInCombatSeeTarget(ped: number | IPed, target: number | IPed): boolean {
-    return CanPedInCombatSeeTarget(ped, target);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    return CanPedInCombatSeeTarget(_ped, _target);
 }
 
 /**
@@ -282,7 +297,8 @@ export function canInCombatSeeTarget(ped: number | IPed, target: number | IPed):
  * Hash: 0x128F79EDCECE4FD5 | Since: 323
  */
 export function canRagdoll(ped: number | IPed): boolean {
-    return CanPedRagdoll(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return CanPedRagdoll(_ped);
 }
 
 /**
@@ -291,7 +307,9 @@ export function canRagdoll(ped: number | IPed): boolean {
  * Hash: 0x6CD5A433374D4CFB | Since: 323
  */
 export function canSeeHatedPed(ped1: number | IPed, ped2: number | IPed): boolean {
-    return CanPedSeeHatedPed(ped1, ped2);
+    const _ped1 = ped1 instanceof IPed ? ped1.handle() : ped1;
+    const _ped2 = ped2 instanceof IPed ? ped2.handle() : ped2;
+    return CanPedSeeHatedPed(_ped1, _ped2);
 }
 
 /**
@@ -300,7 +318,8 @@ export function canSeeHatedPed(ped1: number | IPed, ped2: number | IPed): boolea
  * Hash: 0x2DFC81C9B9608549 | Since: 944
  */
 export function canShuffleToOrFromExtraSeat(ped: number | IPed): [boolean, number] {
-    return Citizen.invokeNative('0x2DFC81C9B9608549', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x2DFC81C9B9608549', _ped);
 }
 
 /**
@@ -309,7 +328,8 @@ export function canShuffleToOrFromExtraSeat(ped: number | IPed): [boolean, numbe
  * Hash: 0x9C6A6C19B6C0C496 | Since: 323
  */
 export function canShuffleToOrFromTurretSeat(ped: number | IPed): [boolean, number] {
-    return Citizen.invokeNative('0x9C6A6C19B6C0C496', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x9C6A6C19B6C0C496', _ped);
 }
 
 /**
@@ -319,7 +339,8 @@ export function canShuffleToOrFromTurretSeat(ped: number | IPed): [boolean, numb
  * Hash: 0xCD8A7537A9B52F06 | Since: 323
  */
 export function clearAllProps(ped: number | IPed): void {
-    ClearAllPedProps(ped, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearAllPedProps(_ped, undefined);
 }
 
 /**
@@ -328,7 +349,8 @@ export function clearAllProps(ped: number | IPed): void {
  * Hash: 0xE6CA85E7259CE16B | Since: 323
  */
 export function clearAllVehicleForcedSeatUsage(ped: number | IPed): void {
-    ClearAllPedVehicleForcedSeatUsage(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearAllPedVehicleForcedSeatUsage(_ped);
 }
 
 /**
@@ -337,7 +359,8 @@ export function clearAllVehicleForcedSeatUsage(ped: number | IPed): void {
  * Hash: 0x637822DC2AFEEBF8 | Since: 1493
  */
 export function clearCoverPointFor(ped: number | IPed): void {
-    ClearFacialClipsetOverride(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearFacialClipsetOverride(_ped);
 }
 
 /**
@@ -346,7 +369,8 @@ export function clearCoverPointFor(ped: number | IPed): void {
  * Hash: 0x726256CC1EEB182F | Since: 323
  */
 export function clearFacialIdleAnimOverride(ped: number | IPed): void {
-    ClearFacialIdleAnimOverride(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearFacialIdleAnimOverride(_ped);
 }
 
 /**
@@ -355,7 +379,8 @@ export function clearFacialIdleAnimOverride(ped: number | IPed): void {
  * Hash: 0xD8D19675ED5FBDCE | Since: 323
  */
 export function clearAlternateMovementAnim(ped: number | IPed, stance: number): void {
-    ClearPedAlternateMovementAnim(ped, stance, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedAlternateMovementAnim(_ped, stance, 0);
 }
 
 /**
@@ -364,7 +389,8 @@ export function clearAlternateMovementAnim(ped: number | IPed, stance: number): 
  * Hash: 0x8844BBFCE30AA9E9 | Since: 323
  */
 export function clearAlternateWalkAnim(ped: number | IPed): void {
-    ClearPedAlternateWalkAnim(ped, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedAlternateWalkAnim(_ped, 0);
 }
 
 /**
@@ -373,7 +399,8 @@ export function clearAlternateWalkAnim(ped: number | IPed): void {
  * Hash: 0x8FE22675A5A45817 | Since: 323
  */
 export function clearBloodDamage(ped: number | IPed): void {
-    ClearPedBloodDamage(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedBloodDamage(_ped);
 }
 
 /**
@@ -382,7 +409,8 @@ export function clearBloodDamage(ped: number | IPed): void {
  * Hash: 0x56E3B78C5408D9F4 | Since: 323
  */
 export function clearBloodDamageByZone(ped: number | IPed): void {
-    ClearPedBloodDamageByZone(ped, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedBloodDamageByZone(_ped, 0);
 }
 
 /**
@@ -392,7 +420,8 @@ export function clearBloodDamageByZone(ped: number | IPed): void {
  * Hash: 0x523C79AEEFCC4A2A | Since: 323
  */
 export function clearDamageDecalByZone(ped: number | IPed): void {
-    ClearPedDamageDecalByZone(ped, 0, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedDamageDecalByZone(_ped, 0, undefined);
 }
 
 /**
@@ -401,7 +430,8 @@ export function clearDamageDecalByZone(ped: number | IPed): void {
  * Hash: 0x0E5173C163976E38 | Since: 323
  */
 export function clearDecorations(ped: number | IPed): void {
-    ClearPedDecorations(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedDecorations(_ped);
 }
 
 /**
@@ -410,7 +440,8 @@ export function clearDecorations(ped: number | IPed): void {
  * Hash: 0xE3B27E70CEAB9F0C | Since: 323
  */
 export function clearDecorationsLeaveScars(ped: number | IPed): void {
-    ClearPedDecorationsLeaveScars(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedDecorationsLeaveScars(_ped);
 }
 
 /**
@@ -419,7 +450,8 @@ export function clearDecorationsLeaveScars(ped: number | IPed): void {
  * Hash: 0x4AFE3690D7E0B5AC | Since: 323
  */
 export function clearDriveByClipsetOverride(ped: number | IPed): void {
-    ClearPedDriveByClipsetOverride(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedDriveByClipsetOverride(_ped);
 }
 
 /**
@@ -428,7 +460,8 @@ export function clearDriveByClipsetOverride(ped: number | IPed): void {
  * Hash: 0x6585D955A68452A5 | Since: 323
  */
 export function clearEnvDirt(ped: number | IPed): void {
-    ClearPedEnvDirt(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedEnvDirt(_ped);
 }
 
 /**
@@ -437,7 +470,8 @@ export function clearEnvDirt(ped: number | IPed): void {
  * Hash: 0x80054D7FCC70EEC6 | Since: 323
  */
 export function clearFallUpperBodyClipsetOverride(ped: number | IPed): void {
-    Citizen.invokeNative('0x80054D7FCC70EEC6', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x80054D7FCC70EEC6', _ped);
 }
 
 /**
@@ -446,7 +480,8 @@ export function clearFallUpperBodyClipsetOverride(ped: number | IPed): void {
  * Hash: 0x8EF6B7AC68E2F01B | Since: 323
  */
 export function clearLastDamageBone(ped: number | IPed): void {
-    ClearPedLastDamageBone(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedLastDamageBone(_ped);
 }
 
 /**
@@ -455,7 +490,8 @@ export function clearLastDamageBone(ped: number | IPed): void {
  * Hash: 0xC79196DCB36F6121 | Since: 323
  */
 export function clearMotionInCoverClipsetOverride(ped: number | IPed): void {
-    ClearPedCoverClipsetOverride(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedCoverClipsetOverride(_ped);
 }
 
 /**
@@ -473,7 +509,8 @@ export function clearNonCreationArea(): void {
  * Hash: 0x1280804F7CFD2D6C | Since: 323
  */
 export function clearParachutePackVariation(ped: number | IPed): void {
-    ClearPedParachutePackVariation(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedParachutePackVariation(_ped);
 }
 
 /**
@@ -483,7 +520,8 @@ export function clearParachutePackVariation(ped: number | IPed): void {
  * Hash: 0x0943E5B8E078E76E | Since: 323
  */
 export function clearProp(ped: number | IPed, propId: number): void {
-    ClearPedProp(ped, propId, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedProp(_ped, propId, undefined);
 }
 
 /**
@@ -492,7 +530,8 @@ export function clearProp(ped: number | IPed, propId: number): void {
  * Hash: 0xB50EB4CCB29704AC | Since: 323
  */
 export function clearScubaGearVariation(ped: number | IPed): void {
-    ClearPedScubaGearVariation(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedScubaGearVariation(_ped);
 }
 
 /**
@@ -501,7 +540,8 @@ export function clearScubaGearVariation(ped: number | IPed): void {
  * Hash: 0x687C0B594907D2E8 | Since: 323
  */
 export function clearStoredHatProp(ped: number | IPed): void {
-    ClearPedStoredHatProp(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedStoredHatProp(_ped);
 }
 
 /**
@@ -510,7 +550,8 @@ export function clearStoredHatProp(ped: number | IPed): void {
  * Hash: 0x9C720776DAA43E7E | Since: 323
  */
 export function clearWetness(ped: number | IPed): void {
-    ClearPedWetness(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearPedWetness(_ped);
 }
 
 /**
@@ -519,7 +560,8 @@ export function clearWetness(ped: number | IPed): void {
  * Hash: 0xD86D101FCFD00A4B | Since: 323
  */
 export function clearRagdollBlockingFlags(ped: number | IPed, blockingFlag: number): void {
-    ClearRagdollBlockingFlags(ped, blockingFlag);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ClearRagdollBlockingFlags(_ped, blockingFlag);
 }
 
 /**
@@ -553,7 +595,8 @@ export function clearRelationshipBetweenGroups(relationship: number, group1: num
  * Hash: 0xEF29A16337FACADB | Since: 323
  */
 export function clone(ped: number | IPed, isNetwork: boolean, bScriptHostPed: boolean, copyHeadBlendFlag: boolean): number {
-    return ClonePed(ped, isNetwork, bScriptHostPed, copyHeadBlendFlag);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return ClonePed(_ped, isNetwork, bScriptHostPed, copyHeadBlendFlag);
 }
 
 /**
@@ -562,7 +605,8 @@ export function clone(ped: number | IPed, isNetwork: boolean, bScriptHostPed: bo
  * Hash: 0x668FD40BCBA5DE48 | Since: 463
  */
 export function cloneAlt(ped: number | IPed, isNetwork: boolean, bScriptHostPed: boolean, copyHeadBlendFlag: boolean): number {
-    return ClonePedEx(ped, isNetwork, bScriptHostPed, copyHeadBlendFlag, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return ClonePedEx(_ped, isNetwork, bScriptHostPed, copyHeadBlendFlag, false);
 }
 
 /**
@@ -571,7 +615,9 @@ export function cloneAlt(ped: number | IPed, isNetwork: boolean, bScriptHostPed:
  * Hash: 0xE952D6431689AD9A | Since: 323
  */
 export function cloneToTarget(ped: number | IPed, targetPed: number | IPed): void {
-    ClonePedToTarget(ped, targetPed);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    ClonePedToTarget(_ped, _targetPed);
 }
 
 /**
@@ -580,7 +626,9 @@ export function cloneToTarget(ped: number | IPed, targetPed: number | IPed): voi
  * Hash: 0x148B08C2D2ACB884 | Since: 463
  */
 export function cloneToTargetAlt(ped: number | IPed, targetPed: number | IPed): void {
-    ClonePedToTargetEx(ped, targetPed, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    ClonePedToTargetEx(_ped, _targetPed, false);
 }
 
 /**
@@ -589,7 +637,8 @@ export function cloneToTargetAlt(ped: number | IPed, targetPed: number | IPed): 
  * Hash: 0x5407B7288D0478B7 | Since: 323
  */
 export function countsInCombatWithTarget(ped: number | IPed): number {
-    return Citizen.invokeNative('0x5407B7288D0478B7', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x5407B7288D0478B7', _ped);
 }
 
 /**
@@ -598,7 +647,8 @@ export function countsInCombatWithTarget(ped: number | IPed): number {
  * Hash: 0x336B3D200AB007CB | Since: 323
  */
 export function countsInCombatWithTargetWithinRadius(ped: number | IPed, pos: Vector3, radius: number): number {
-    return Citizen.invokeNative('0x336B3D200AB007CB', ped, pos.x, pos.y, pos.z, radius);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x336B3D200AB007CB', _ped, pos.x, pos.y, pos.z, radius);
 }
 
 /**
@@ -635,7 +685,8 @@ export function createNmMessage(startImmediately: boolean, messageId: number): v
  * Hash: 0x8C4F3BF23B6237DB | Since: 323
  */
 export function createParachuteBagObject(ped: number | IPed): number {
-    return CreateParachuteBagObject(ped, false, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return CreateParachuteBagObject(_ped, false, false);
 }
 
 /**
@@ -658,8 +709,9 @@ export function create(pedType: number, modelHash: number | string, pos: Vector3
  * Hash: 0x7DD959874C1FD534 | Since: 323
  */
 export function createInsideVehicle(vehicle: number | IVehicle, pedType: number, modelHash: number | string, seat: number, isNetwork: boolean, bScriptHostPed: boolean): number {
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
-    return CreatePedInsideVehicle(vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed);
+    return CreatePedInsideVehicle(_vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed);
 }
 
 /**
@@ -685,7 +737,8 @@ export function createRandom(pos: Vector3): number {
  * Hash: 0x9B62392B474F44A0 | Since: 323
  */
 export function createRandomAsDriver(vehicle: number | IVehicle, returnHandle: boolean): number {
-    return CreateRandomPedAsDriver(vehicle, returnHandle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return CreateRandomPedAsDriver(_vehicle, returnHandle);
 }
 
 /**
@@ -716,7 +769,8 @@ export function createSynchronizedSceneAtMapObject(pos: Vector3, radius: number,
  * Hash: 0x9614299DCB53E54B | Since: 323
  */
 export function deletePed(ped: number | IPed): void {
-    DeletePed(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    DeletePed(_ped);
 }
 
 /**
@@ -734,7 +788,8 @@ export function detachSynchronizedScene(sceneID: number): void {
  * Hash: 0xA21C118553BBDF02 | Since: 323
  */
 export function disableHeadBlendPaletteColor(ped: number | IPed): void {
-    DisableHeadBlendPaletteColor(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    DisableHeadBlendPaletteColor(_ped);
 }
 
 /**
@@ -743,7 +798,8 @@ export function disableHeadBlendPaletteColor(ped: number | IPed): void {
  * Hash: 0x600048C60D5C2C51 | Since: 323
  */
 export function disableHeatscaleOverride(ped: number | IPed): void {
-    DisablePedHeatscaleOverride(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    DisablePedHeatscaleOverride(_ped);
 }
 
 /**
@@ -752,7 +808,8 @@ export function disableHeatscaleOverride(ped: number | IPed): void {
  * Hash: 0x733C87D4CE22BEA2 | Since: 323
  */
 export function disableInjuredOnGroundBehaviour(ped: number | IPed): void {
-    Citizen.invokeNative('0x733C87D4CE22BEA2', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x733C87D4CE22BEA2', _ped);
 }
 
 /**
@@ -789,7 +846,8 @@ export function doesScenarioBlockingAreaExists(x1: number, y1: number, z1: numbe
  * Hash: 0xAFF4710E2A0A6C12 | Since: 323
  */
 export function dropAmbientProp(ped: number | IPed): void {
-    DropAmbientProp(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    DropAmbientProp(_ped);
 }
 
 /**
@@ -798,7 +856,8 @@ export function dropAmbientProp(ped: number | IPed): void {
  * Hash: 0xEE2476B9EE4A094F | Since: 1493
  */
 export function enableMpLight(ped: number | IPed, toggle: boolean): void {
-    SetEnableScubaGearLight(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetEnableScubaGearLight(_ped, toggle);
 }
 
 /**
@@ -809,8 +868,9 @@ export function enableMpLight(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x2D05CED3A38D0F3A | Since: 323
  */
 export function explodeHead(ped: number | IPed, weaponHash: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
-    ExplodePedHead(ped, weaponHash);
+    ExplodePedHead(_ped, weaponHash);
 }
 
 /**
@@ -819,7 +879,8 @@ export function explodeHead(ped: number | IPed, weaponHash: number | string): vo
  * Hash: 0x4668D80430D6C299 | Since: 323
  */
 export function finalizeHeadBlend(ped: number | IPed): void {
-    FinalizeHeadBlend(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    FinalizeHeadBlend(_ped);
 }
 
 /**
@@ -828,7 +889,8 @@ export function finalizeHeadBlend(ped: number | IPed): void {
  * Hash: 0xFF287323B0E2C69A | Since: 323
  */
 export function forceAllHeadingValuesToAlign(ped: number | IPed): void {
-    FreezePedCameraRotation(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    FreezePedCameraRotation(_ped);
 }
 
 /**
@@ -837,7 +899,8 @@ export function forceAllHeadingValuesToAlign(ped: number | IPed): void {
  * Hash: 0xED3C76ADFA6D07C4 | Since: 323
  */
 export function forceInstantLegIkSetup(ped: number | IPed): void {
-    Citizen.invokeNative('0xED3C76ADFA6D07C4', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0xED3C76ADFA6D07C4', _ped);
 }
 
 /**
@@ -846,7 +909,8 @@ export function forceInstantLegIkSetup(ped: number | IPed): void {
  * Hash: 0x2208438012482A1A | Since: 323
  */
 export function forceAiAndAnimationUpdate(ped: number | IPed): void {
-    ForcePedAiAndAnimationUpdate(ped, false, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ForcePedAiAndAnimationUpdate(_ped, false, false);
 }
 
 /**
@@ -883,8 +947,9 @@ export function forceAiAndAnimationUpdate(ped: number | IPed): void {
  * Hash: 0xF28965D04F570DCA | Since: 323
  */
 export function forceMotionState(ped: number | IPed, motionStateHash: number | string): boolean {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof motionStateHash === 'string') motionStateHash = GetHashKey(motionStateHash)
-    return ForcePedMotionState(ped, motionStateHash, false, 0, false);
+    return ForcePedMotionState(_ped, motionStateHash, false, 0, false);
 }
 
 /**
@@ -893,7 +958,8 @@ export function forceMotionState(ped: number | IPed, motionStateHash: number | s
  * Hash: 0x16E42E800B472221 | Since: 323
  */
 export function forceToOpenParachute(ped: number | IPed): void {
-    ForcePedToOpenParachute(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ForcePedToOpenParachute(_ped);
 }
 
 /**
@@ -902,7 +968,8 @@ export function forceToOpenParachute(ped: number | IPed): void {
  * Hash: 0xD33DAA36272177C4 | Since: 323
  */
 export function forceZeroMassInCollisions(ped: number | IPed): void {
-    Citizen.invokeNative('0xD33DAA36272177C4', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0xD33DAA36272177C4', _ped);
 }
 
 /**
@@ -929,7 +996,8 @@ export function getAnimInitialOffsetRotation(animDict: string, animName: string,
  * Hash: 0x03EA03AF85A85CB7 | Since: 323
  */
 export function getCanBeGrabbedByScript(ped: number | IPed): boolean {
-    return Citizen.invokeNative('0x03EA03AF85A85CB7', ped, false, false, false, false, false, false, false, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x03EA03AF85A85CB7', _ped, false, false, false, false, false, false, false, undefined);
 }
 
 /**
@@ -1010,7 +1078,8 @@ export function getClosest(pos: Vector3, radius: number, pedType: number): [bool
  * Hash: 0x52DFF8A10508090A | Since: 323
  */
 export function getCombatFloat(ped: number | IPed): number {
-    return GetCombatFloat(ped, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetCombatFloat(_ped, 0);
 }
 
 /**
@@ -1019,7 +1088,8 @@ export function getCombatFloat(ped: number | IPed): number {
  * Hash: 0xCD5003B097200F36 | Since: 323
  */
 export function getDeadPickupCoords(ped: number | IPed): Vector3 {
-    return new Vector3(GetDeadPedPickupCoords(ped, 0, 0));
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return new Vector3(GetDeadPedPickupCoords(_ped, 0, 0));
 }
 
 /**
@@ -1073,7 +1143,8 @@ export function getGroupSize(groupID: number): [any, number] {
  * Hash: 0x76BBA2CEE66D47E9 | Since: 1011
  */
 export function getHeadBlendEyeColor(ped: number | IPed): number {
-    return GetPedEyeColor(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedEyeColor(_ped);
 }
 
 /**
@@ -1082,7 +1153,8 @@ export function getHeadBlendEyeColor(ped: number | IPed): number {
  * Hash: 0x5486A79D9FBD342D | Since: 323
  */
 export function getJackTarget(ped: number | IPed): number {
-    return GetJackTarget(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetJackTarget(_ped);
 }
 
 /**
@@ -1091,7 +1163,8 @@ export function getJackTarget(ped: number | IPed): number {
  * Hash: 0x18A3E9EE1297FD39 | Since: 323
  */
 export function getMeleeTargetFor(ped: number | IPed): number {
-    return GetMeleeTargetForPed(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetMeleeTargetForPed(_ped);
 }
 
 /**
@@ -1109,7 +1182,8 @@ export function getMeleeTargetFor(ped: number | IPed): number {
  * Hash: 0xE7E11B8DCBED1058 | Since: 323
  */
 export function getMount(ped: number | IPed): number {
-    return GetMount(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetMount(_ped);
 }
 
 /**
@@ -1118,7 +1192,8 @@ export function getMount(ped: number | IPed): number {
  * Hash: 0x88274C11CF0D866D | Since: 1493
  */
 export function getMpLightEnabled(ped: number | IPed): boolean {
-    return IsScubaGearLightEnabled(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsScubaGearLightEnabled(_ped);
 }
 
 /**
@@ -1137,7 +1212,8 @@ export function getMpOutfitDataFromMetadata(): [boolean, any, any] {
  * Hash: 0x27561561732A7842 | Since: 323
  */
 export function getNumberOfDrawableVariations(ped: number | IPed, componentId: number): number {
-    return GetNumberOfPedDrawableVariations(ped, componentId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetNumberOfPedDrawableVariations(_ped, componentId);
 }
 
 /**
@@ -1147,7 +1223,8 @@ export function getNumberOfDrawableVariations(ped: number | IPed, componentId: n
  * Hash: 0x5FAF9754E789FB47 | Since: 323
  */
 export function getNumberOfPropDrawableVariations(ped: number | IPed, propId: number): number {
-    return GetNumberOfPedPropDrawableVariations(ped, propId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetNumberOfPedPropDrawableVariations(_ped, propId);
 }
 
 /**
@@ -1166,7 +1243,8 @@ export function getNumberOfPropDrawableVariations(ped: number | IPed, propId: nu
  * Hash: 0xA6E7F1CEB523E171 | Since: 323
  */
 export function getNumberOfPropTextureVariations(ped: number | IPed, propId: number, drawableId: number): number {
-    return GetNumberOfPedPropTextureVariations(ped, propId, drawableId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetNumberOfPedPropTextureVariations(_ped, propId, drawableId);
 }
 
 /**
@@ -1176,7 +1254,8 @@ export function getNumberOfPropTextureVariations(ped: number | IPed, propId: num
  * Hash: 0x8F7156A3142A6BAD | Since: 323
  */
 export function getNumberOfTextureVariations(ped: number | IPed, componentId: number, drawableId: number): number {
-    return GetNumberOfPedTextureVariations(ped, componentId, drawableId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetNumberOfPedTextureVariations(_ped, componentId, drawableId);
 }
 
 /**
@@ -1212,7 +1291,8 @@ export function getheadshotTxdString(id: number): string {
  * Hash: 0x9B128DC36C1E04CF | Since: 323
  */
 export function getsJacker(ped: number | IPed): number {
-    return GetPedsJacker(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedsJacker(_ped);
 }
 
 /**
@@ -1221,7 +1301,8 @@ export function getsJacker(ped: number | IPed): number {
  * Hash: 0x37F4AD56ECBC0CD6 | Since: 323
  */
 export function getAccuracy(ped: number | IPed): number {
-    return GetPedAccuracy(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedAccuracy(_ped);
 }
 
 /**
@@ -1239,7 +1320,8 @@ export function getAccuracy(ped: number | IPed): number {
  * Hash: 0xF6AA118530443FD2 | Since: 323
  */
 export function getAlertness(ped: number | IPed): number {
-    return GetPedAlertness(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedAlertness(_ped);
 }
 
 /**
@@ -1248,7 +1330,8 @@ export function getAlertness(ped: number | IPed): number {
  * Hash: 0x9483AF821605B1D8 | Since: 323
  */
 export function getArmour(ped: number | IPed): number {
-    return GetPedArmour(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedArmour(_ped);
 }
 
 /**
@@ -1288,7 +1371,8 @@ export function getAsGroupMember(groupID: number, memberNumber: number): number 
  * Hash: 0x17C07FC640E86B4E | Since: 323
  */
 export function getBoneCoords(ped: number | IPed, boneId: number, offsetX: number, offsetY: number, offsetZ: number): Vector3 {
-    return new Vector3(GetPedBoneCoords(ped, boneId, offsetX, offsetY, offsetZ));
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return new Vector3(GetPedBoneCoords(_ped, boneId, offsetX, offsetY, offsetZ));
 }
 
 /**
@@ -1397,7 +1481,8 @@ export function getBoneCoords(ped: number | IPed, boneId: number, offsetX: numbe
  * Hash: 0x3F428D08BE5AAE31 | Since: 323
  */
 export function getBoneIndex(ped: number | IPed, boneId: number): number {
-    return GetPedBoneIndex(ped, boneId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedBoneIndex(_ped, boneId);
 }
 
 /**
@@ -1406,7 +1491,8 @@ export function getBoneIndex(ped: number | IPed, boneId: number): number {
  * Hash: 0x16FFE42AB2D2DC59 | Since: 323
  */
 export function getCauseOfDeath(ped: number | IPed): number {
-    return GetPedCauseOfDeath(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedCauseOfDeath(_ped);
 }
 
 /**
@@ -1415,7 +1501,8 @@ export function getCauseOfDeath(ped: number | IPed): number {
  * Hash: 0xDEA92412FCAEB3F5 | Since: 323
  */
 export function getCombatMovement(ped: number | IPed): number {
-    return GetPedCombatMovement(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedCombatMovement(_ped);
 }
 
 /**
@@ -1424,7 +1511,8 @@ export function getCombatMovement(ped: number | IPed): number {
  * Hash: 0xF9D9F7F2DB8E2FA0 | Since: 323
  */
 export function getCombatRange(ped: number | IPed): number {
-    return GetPedCombatRange(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedCombatRange(_ped);
 }
 
 /**
@@ -1433,7 +1521,8 @@ export function getCombatRange(ped: number | IPed): number {
  * Hash: 0x7EE53118C892B513 | Since: 323
  */
 export function getConfigFlag(ped: number | IPed, flagId: number): boolean {
-    return GetPedConfigFlag(ped, flagId, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedConfigFlag(_ped, flagId, false);
 }
 
 /**
@@ -1442,7 +1531,8 @@ export function getConfigFlag(ped: number | IPed, flagId: number): boolean {
  * Hash: 0xF60165E1D2C5370B | Since: 323
  */
 export function getCurrentMoveBlendRatio(ped: number | IPed): [boolean, number, number] {
-    return GetPedCurrentMovementSpeed(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedCurrentMovementSpeed(_ped);
 }
 
 /**
@@ -1451,7 +1541,8 @@ export function getCurrentMoveBlendRatio(ped: number | IPed): [boolean, number, 
  * Hash: 0x71EAB450D86954A1 | Since: 323
  */
 export function getDecorationsState(ped: number | IPed): number {
-    return GetPedDecorationsState(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedDecorationsState(_ped);
 }
 
 /**
@@ -1484,7 +1575,8 @@ export function getDecorationZoneFromHashes(collection: number | string, overlay
  * Hash: 0x3C06B8786DD94CD1 | Since: 323
  */
 export function getDefensiveAreaPosition(ped: number | IPed): Vector3 {
-    return new Vector3(GetPedDefensiveAreaPosition(ped, false));
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return new Vector3(GetPedDefensiveAreaPosition(_ped, false));
 }
 
 /**
@@ -1493,7 +1585,8 @@ export function getDefensiveAreaPosition(ped: number | IPed): Vector3 {
  * Hash: 0x65671A4FB8218930 | Since: 2699
  */
 export function getDiesInWater(ped: number | IPed): boolean {
-    return GetPedDiesInWater(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedDiesInWater(_ped);
 }
 
 /**
@@ -1514,7 +1607,8 @@ export function getDiesInWater(ped: number | IPed): boolean {
  * Hash: 0x67F3780DD425D4FC | Since: 323
  */
 export function getDrawableVariation(ped: number | IPed, componentId: number): number {
-    return GetPedDrawableVariation(ped, componentId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedDrawableVariation(_ped, componentId);
 }
 
 /**
@@ -1524,7 +1618,8 @@ export function getDrawableVariation(ped: number | IPed, componentId: number): n
  * Hash: 0x1461B28A06717D68 | Since: 944
  */
 export function getEmissiveScale(ped: number | IPed): number {
-    return GetPedEmissiveIntensity(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedEmissiveIntensity(_ped);
 }
 
 /**
@@ -1533,7 +1628,8 @@ export function getEmissiveScale(ped: number | IPed): number {
  * Hash: 0x9C14D30395A51A3C | Since: 323
  */
 export function getEnveffScale(ped: number | IPed): number {
-    return GetPedEnveffScale(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedEnveffScale(_ped);
 }
 
 /**
@@ -1546,7 +1642,8 @@ export function getEnveffScale(ped: number | IPed): number {
  * Hash: 0xE0AF41401ADF87E3 | Since: 323
  */
 export function getExtractedDisplacement(ped: number | IPed, worldSpace: boolean): Vector3 {
-    return new Vector3(GetPedExtractedDisplacement(ped, worldSpace));
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return new Vector3(GetPedExtractedDisplacement(_ped, worldSpace));
 }
 
 /**
@@ -1555,7 +1652,8 @@ export function getExtractedDisplacement(ped: number | IPed, worldSpace: boolean
  * Hash: 0xF162E133B4E7A675 | Since: 323
  */
 export function getGroupIndex(ped: number | IPed): number {
-    return GetPedGroupIndex(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedGroupIndex(_ped);
 }
 
 /**
@@ -1600,7 +1698,8 @@ export function getHairTintColor(hairColorIndex: number): [number, number, numbe
  * Hash: 0x2746BD9D88C5C5D0 | Since: 323
  */
 export function getHeadBlendData(ped: number | IPed): [boolean, any] {
-    return GetPedHeadBlendData(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedHeadBlendData(_ped);
 }
 
 /**
@@ -1631,7 +1730,8 @@ export function getHeadBlendNumHeads(_type: number): number {
  * Hash: 0xA60EF3B6461A4D43 | Since: 323
  */
 export function getHeadOverlay(ped: number | IPed, overlayID: number): number {
-    return GetPedHeadOverlayValue(ped, overlayID);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedHeadOverlayValue(_ped, overlayID);
 }
 
 /**
@@ -1649,7 +1749,8 @@ export function getHeadOverlayNum(overlayID: number): number {
  * Hash: 0x451294E859ECC018 | Since: 323
  */
 export function getHelmetStoredHatPropIndex(ped: number | IPed): number {
-    return GetPedHelmetStoredHatPropIndex(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedHelmetStoredHatPropIndex(_ped);
 }
 
 /**
@@ -1658,7 +1759,8 @@ export function getHelmetStoredHatPropIndex(ped: number | IPed): number {
  * Hash: 0x9D728C1E12BF5518 | Since: 323
  */
 export function getHelmetStoredHatTexIndex(ped: number | IPed): number {
-    return GetPedHelmetStoredHatTexIndex(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedHelmetStoredHatTexIndex(_ped);
 }
 
 /**
@@ -1667,7 +1769,8 @@ export function getHelmetStoredHatTexIndex(ped: number | IPed): number {
  * Hash: 0xD75960F6BD9EA49C | Since: 323
  */
 export function getLastDamageBone(ped: number | IPed): [boolean, number] {
-    return GetPedLastDamageBone(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedLastDamageBone(_ped);
 }
 
 /**
@@ -1689,7 +1792,8 @@ export function getMakeupTintColor(makeupColorIndex: number): [number, number, n
  * Hash: 0x4700A416E8324EF3 | Since: 323
  */
 export function getMaxHealth(ped: number | IPed): number {
-    return GetPedMaxHealth(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedMaxHealth(_ped);
 }
 
 /**
@@ -1698,7 +1802,8 @@ export function getMaxHealth(ped: number | IPed): number {
  * Hash: 0x3F69145BBA87BAE7 | Since: 323
  */
 export function getMoney(ped: number | IPed): number {
-    return GetPedMoney(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedMoney(_ped);
 }
 
 /**
@@ -1720,7 +1825,8 @@ export function getMoney(ped: number | IPed): number {
  * Hash: 0x23F8F5FC7E8C4A6B | Since: 323
  */
 export function getNearbyPeds(ped: number | IPed, ignore: number): [number, any] {
-    return GetPedNearbyPeds(ped, ignore);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedNearbyPeds(_ped, ignore);
 }
 
 /**
@@ -1756,7 +1862,8 @@ export function getNearbyPeds(ped: number | IPed, ignore: number): [number, any]
  * Hash: 0xCFF869CBFA210D82 | Since: 323
  */
 export function getNearbyVehicles(ped: number | IPed): [number, any] {
-    return GetPedNearbyVehicles(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedNearbyVehicles(_ped);
 }
 
 /**
@@ -1766,7 +1873,8 @@ export function getNearbyVehicles(ped: number | IPed): [number, any] {
  * Hash: 0xE3DD5F2A84B42281 | Since: 323
  */
 export function getPaletteVariation(ped: number | IPed, componentId: number): number {
-    return GetPedPaletteVariation(ped, componentId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedPaletteVariation(_ped, componentId);
 }
 
 /**
@@ -1779,7 +1887,8 @@ export function getPaletteVariation(ped: number | IPed, componentId: number): nu
  * Hash: 0x8B9F1FC6AE8166C0 | Since: 323
  */
 export function getParachuteLandingType(ped: number | IPed): number {
-    return GetPedParachuteLandingType(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedParachuteLandingType(_ped);
 }
 
 /**
@@ -1796,7 +1905,8 @@ export function getParachuteLandingType(ped: number | IPed): number {
  * Hash: 0x79CFD9827CC979B6 | Since: 323
  */
 export function getParachuteState(ped: number | IPed): number {
-    return GetPedParachuteState(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedParachuteState(_ped);
 }
 
 /**
@@ -1805,7 +1915,8 @@ export function getParachuteState(ped: number | IPed): number {
  * Hash: 0xEAF5F7E5AE7C6C9D | Since: 323
  */
 export function getParachuteTintIndex(ped: number | IPed): number {
-    return GetPedParachuteTintIndex(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedParachuteTintIndex(_ped);
 }
 
 /**
@@ -1815,7 +1926,8 @@ export function getParachuteTintIndex(ped: number | IPed): number {
  * Hash: 0x898CC20EA75BACD8 | Since: 323
  */
 export function getPropIndex(ped: number | IPed, componentId: number): number {
-    return GetPedPropIndex(ped, componentId, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedPropIndex(_ped, componentId, undefined);
 }
 
 /**
@@ -1825,7 +1937,8 @@ export function getPropIndex(ped: number | IPed, componentId: number): number {
  * Hash: 0xE131A28626F81AB2 | Since: 323
  */
 export function getPropTextureIndex(ped: number | IPed, componentId: number): number {
-    return GetPedPropTextureIndex(ped, componentId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedPropTextureIndex(_ped, componentId);
 }
 
 /**
@@ -1834,7 +1947,8 @@ export function getPropTextureIndex(ped: number | IPed, componentId: number): nu
  * Hash: 0x2057EF813397A772 | Since: 323
  */
 export function getRagdollBoneIndex(ped: number | IPed, bone: number): number {
-    return GetPedRagdollBoneIndex(ped, bone);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedRagdollBoneIndex(_ped, bone);
 }
 
 /**
@@ -1843,7 +1957,8 @@ export function getRagdollBoneIndex(ped: number | IPed, bone: number): number {
  * Hash: 0x42FDD0F017B1E38E | Since: 323
  */
 export function getRelationshipGroupDefaultHash(ped: number | IPed): number {
-    return GetPedRelationshipGroupDefaultHash(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedRelationshipGroupDefaultHash(_ped);
 }
 
 /**
@@ -1852,7 +1967,8 @@ export function getRelationshipGroupDefaultHash(ped: number | IPed): number {
  * Hash: 0x7DBDD04862D95F04 | Since: 323
  */
 export function getRelationshipGroupHash(ped: number | IPed): number {
-    return GetPedRelationshipGroupHash(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedRelationshipGroupHash(_ped);
 }
 
 /**
@@ -1861,7 +1977,8 @@ export function getRelationshipGroupHash(ped: number | IPed): number {
  * Hash: 0xAF9E59B1B1FBF2A0 | Since: 323
  */
 export function getResetFlag(ped: number | IPed, flagId: number): boolean {
-    return GetPedResetFlag(ped, flagId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedResetFlag(_ped, flagId);
 }
 
 /**
@@ -1872,7 +1989,8 @@ export function getResetFlag(ped: number | IPed, flagId: number): boolean {
  * Hash: 0x93C8B64DEB84728C | Since: 323
  */
 export function getSourceOfDeath(ped: number | IPed): number {
-    return GetPedSourceOfDeath(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedSourceOfDeath(_ped);
 }
 
 /**
@@ -1881,7 +1999,8 @@ export function getSourceOfDeath(ped: number | IPed): number {
  * Hash: 0x7C2AC9CA66575FBF | Since: 323
  */
 export function getStealthMovement(ped: number | IPed): boolean {
-    return GetPedStealthMovement(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedStealthMovement(_ped);
 }
 
 /**
@@ -1890,7 +2009,8 @@ export function getStealthMovement(ped: number | IPed): boolean {
  * Hash: 0x32C27A11307B01CC | Since: 2372
  */
 export function getTargetFromCombatPed(ped: number | IPed): number {
-    return GetPedTaskCombatTarget(ped, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedTaskCombatTarget(_ped, undefined);
 }
 
 /**
@@ -1900,7 +2020,8 @@ export function getTargetFromCombatPed(ped: number | IPed): number {
  * Hash: 0x04A355E041E004E6 | Since: 323
  */
 export function getTextureVariation(ped: number | IPed, componentId: number): number {
-    return GetPedTextureVariation(ped, componentId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedTextureVariation(_ped, componentId);
 }
 
 /**
@@ -1909,7 +2030,8 @@ export function getTextureVariation(ped: number | IPed, componentId: number): nu
  * Hash: 0x1E98817B311AE98A | Since: 323
  */
 export function getTimeOfDeath(ped: number | IPed): number {
-    return GetPedTimeOfDeath(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedTimeOfDeath(_ped);
 }
 
 /**
@@ -1918,7 +2040,8 @@ export function getTimeOfDeath(ped: number | IPed): number {
  * Hash: 0xFF059E1E4C01E63C | Since: 323
  */
 export function getType(ped: number | IPed): number {
-    return GetPedType(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedType(_ped);
 }
 
 /**
@@ -1927,7 +2050,8 @@ export function getType(ped: number | IPed): number {
  * Hash: 0xEF2C71A32CAD5FBD | Since: 1493
  */
 export function getVisualFieldCenterAngle(ped: number | IPed): number {
-    return GetPedVisualFieldCenterAngle(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedVisualFieldCenterAngle(_ped);
 }
 
 /**
@@ -1936,7 +2060,8 @@ export function getVisualFieldCenterAngle(ped: number | IPed): number {
  * Hash: 0x6A3975DEA89F9A17 | Since: 323
  */
 export function getPlayerIsFollowing(ped: number | IPed): number | string {
-    return GetPlayerPedIsFollowing(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPlayerPedIsFollowing(_ped);
 }
 
 /**
@@ -1945,7 +2070,8 @@ export function getPlayerIsFollowing(ped: number | IPed): number | string {
  * Hash: 0xBA656A3BB01BDEA3 | Since: 2189
  */
 export function getPosFromFiredEvent(ped: number | IPed, eventType: number): [boolean, any] {
-    return GetPedEventData(ped, eventType);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetPedEventData(_ped, eventType);
 }
 
 /**
@@ -2012,7 +2138,9 @@ export function getRelationshipBetweenGroups(group1: number | string, group2: nu
  * Hash: 0xEBA5AD3A0EAF7121 | Since: 323
  */
 export function getRelationshipBetweens(ped1: number | IPed, ped2: number | IPed): number {
-    return GetRelationshipBetweenPeds(ped1, ped2);
+    const _ped1 = ped1 instanceof IPed ? ped1.handle() : ped1;
+    const _ped2 = ped2 instanceof IPed ? ped2.handle() : ped2;
+    return GetRelationshipBetweenPeds(_ped1, _ped2);
 }
 
 /**
@@ -2021,7 +2149,8 @@ export function getRelationshipBetweens(ped1: number | IPed, ped2: number | IPed
  * Hash: 0x6F4C85ACD641BCD2 | Since: 323
  */
 export function getSeatIsTryingToEnter(ped: number | IPed): number {
-    return GetSeatPedIsTryingToEnter(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetSeatPedIsTryingToEnter(_ped);
 }
 
 /**
@@ -2048,8 +2177,9 @@ export function getSynchronizedSceneRate(sceneID: number): number {
  * Hash: 0x36B77BB84687C318 | Since: 323
  */
 export function getTimeDamagedByWeapon(ped: number | IPed, weaponHash: number | string): number {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
-    return GetTimeOfLastPedWeaponDamage(ped, weaponHash);
+    return GetTimeOfLastPedWeaponDamage(_ped, weaponHash);
 }
 
 /**
@@ -2068,7 +2198,8 @@ export function getTintIndexForLastGenHairTexture(modelHash: number | string, dr
  * Hash: 0x511F1A683387C7E2 | Since: 323
  */
 export function getTrackedPixelcount(ped: number | IPed): number {
-    return Citizen.invokeNative('0x511F1A683387C7E2', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x511F1A683387C7E2', _ped);
 }
 
 /**
@@ -2077,7 +2208,8 @@ export function getTrackedPixelcount(ped: number | IPed): number {
  * Hash: 0xF92691AED837A5FC | Since: 323
  */
 export function getVehicleIsEntering(ped: number | IPed): number {
-    return GetVehiclePedIsEntering(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetVehiclePedIsEntering(_ped);
 }
 
 /**
@@ -2086,7 +2218,8 @@ export function getVehicleIsEntering(ped: number | IPed): number {
  * Hash: 0x9A9112A0FE9A4713 | Since: 323
  */
 export function getVehicleIsIn(ped: number | IPed, includeEntering: boolean): number {
-    return GetVehiclePedIsIn(ped, includeEntering);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetVehiclePedIsIn(_ped, includeEntering);
 }
 
 /**
@@ -2095,7 +2228,8 @@ export function getVehicleIsIn(ped: number | IPed, includeEntering: boolean): nu
  * Hash: 0x814FA8BE5449445D | Since: 323
  */
 export function getVehicleIsTryingToEnter(ped: number | IPed): number {
-    return GetVehiclePedIsTryingToEnter(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetVehiclePedIsTryingToEnter(_ped);
 }
 
 /**
@@ -2104,7 +2238,8 @@ export function getVehicleIsTryingToEnter(ped: number | IPed): number {
  * Hash: 0x6094AD011A2EA87D | Since: 323
  */
 export function getVehicleIsUsing(ped: number | IPed): number {
-    return GetVehiclePedIsUsing(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetVehiclePedIsUsing(_ped);
 }
 
 /**
@@ -2119,7 +2254,8 @@ export function getVehicleIsUsing(ped: number | IPed): number {
  * Hash: 0x54C7C4A94367717E | Since: 323
  */
 export function giveHelmet(ped: number | IPed, cannotRemove: boolean, helmetFlag: number, textureIndex: number): void {
-    GivePedHelmet(ped, cannotRemove, helmetFlag, textureIndex);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    GivePedHelmet(_ped, cannotRemove, helmetFlag, textureIndex);
 }
 
 /**
@@ -2146,7 +2282,8 @@ export function giveHelmet(ped: number | IPed, cannotRemove: boolean, helmetFlag
  * Hash: 0xB158DFCCC56E5C5B | Since: 323
  */
 export function giveNmMessage(ped: number | IPed): void {
-    GivePedNmMessage(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    GivePedNmMessage(_ped);
 }
 
 /**
@@ -2182,7 +2319,8 @@ export function hasheadshotImgUploadSucceeded(): boolean {
  * Hash: 0x654CD0A825161131 | Since: 323
  */
 export function hasHeadBlendFinished(ped: number | IPed): boolean {
-    return HasPedHeadBlendFinished(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return HasPedHeadBlendFinished(_ped);
 }
 
 /**
@@ -2191,7 +2329,8 @@ export function hasHeadBlendFinished(ped: number | IPed): boolean {
  * Hash: 0x784002A632822099 | Since: 323
  */
 export function hasPreloadPropDataFinished(ped: number | IPed): boolean {
-    return HasPedPreloadPropDataFinished(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return HasPedPreloadPropDataFinished(_ped);
 }
 
 /**
@@ -2200,7 +2339,8 @@ export function hasPreloadPropDataFinished(ped: number | IPed): boolean {
  * Hash: 0x66680A92700F43DF | Since: 323
  */
 export function hasPreloadVariationDataFinished(ped: number | IPed): boolean {
-    return HasPedPreloadVariationDataFinished(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return HasPedPreloadVariationDataFinished(_ped);
 }
 
 /**
@@ -2209,7 +2349,8 @@ export function hasPreloadVariationDataFinished(ped: number | IPed): boolean {
  * Hash: 0x8507BCB710FA6DC0 | Since: 323
  */
 export function hasReceivedEvent(ped: number | IPed, eventId: number): boolean {
-    return HasPedReceivedEvent(ped, eventId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return HasPedReceivedEvent(_ped, eventId);
 }
 
 /**
@@ -2227,7 +2368,8 @@ export function hasStealthModeAssetLoaded(asset: string): boolean {
  * Hash: 0x7350823473013C02 | Since: 323
  */
 export function haveAllStreamingRequestsCompleted(ped: number | IPed): boolean {
-    return HaveAllStreamingRequestsCompleted(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return HaveAllStreamingRequestsCompleted(_ped);
 }
 
 /**
@@ -2236,7 +2378,8 @@ export function haveAllStreamingRequestsCompleted(ped: number | IPed): boolean {
  * Hash: 0x62AB793144DE75DC | Since: 323
  */
 export function hideBloodDamageByZone(ped: number | IPed): void {
-    HidePedBloodDamageByZone(ped, undefined, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    HidePedBloodDamageByZone(_ped, undefined, false);
 }
 
 /**
@@ -2254,7 +2397,8 @@ export function instantlyFillPopulation(): void {
  * Hash: 0x68772DB2B2526F9F | Since: 323
  */
 export function isAnyHostileNearPoint(ped: number | IPed, pos: Vector3, radius: number): boolean {
-    return IsAnyHostilePedNearPoint(ped, pos.x, pos.y, pos.z, radius);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsAnyHostilePedNearPoint(_ped, pos.x, pos.y, pos.z, radius);
 }
 
 /**
@@ -2281,7 +2425,8 @@ export function isAnyShootingInArea(x1: number, y1: number, z1: number, x2: numb
  * Hash: 0xE0A0AEC214B1FABA | Since: 323
  */
 export function isConversationDead(ped: number | IPed): boolean {
-    return IsConversationPedDead(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsConversationPedDead(_ped);
 }
 
 /**
@@ -2308,7 +2453,8 @@ export function isCurrentHeadPropAHelmet(): boolean {
  * Hash: 0xA3F3564A5B3646C0 | Since: 323
  */
 export function isMobilePhoneToEar(ped: number | IPed): boolean {
-    return Citizen.invokeNative('0xA3F3564A5B3646C0', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0xA3F3564A5B3646C0', _ped);
 }
 
 /**
@@ -2344,7 +2490,8 @@ export function isheadshotValid(id: number): boolean {
  * Hash: 0x3998B1276A3300E5 | Since: 323
  */
 export function isAimingFromCover(ped: number | IPed): boolean {
-    return IsPedAimingFromCover(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedAimingFromCover(_ped);
 }
 
 /**
@@ -2353,7 +2500,8 @@ export function isAimingFromCover(ped: number | IPed): boolean {
  * Hash: 0x12534C348C6CB68B | Since: 323
  */
 export function isAPlayer(ped: number | IPed): boolean {
-    return IsPedAPlayer(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedAPlayer(_ped);
 }
 
 /**
@@ -2362,7 +2510,8 @@ export function isAPlayer(ped: number | IPed): boolean {
  * Hash: 0x9A497FE2DF198913 | Since: 323
  */
 export function isBeingJacked(ped: number | IPed): boolean {
-    return IsPedBeingJacked(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedBeingJacked(_ped);
 }
 
 /**
@@ -2371,7 +2520,8 @@ export function isBeingJacked(ped: number | IPed): boolean {
  * Hash: 0x863B23EFDE9C5DF2 | Since: 323
  */
 export function isBeingStealthKilled(ped: number | IPed): boolean {
-    return IsPedBeingStealthKilled(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedBeingStealthKilled(_ped);
 }
 
 /**
@@ -2380,7 +2530,8 @@ export function isBeingStealthKilled(ped: number | IPed): boolean {
  * Hash: 0x4FBACCE3B4138EE8 | Since: 323
  */
 export function isBeingStunned(ped: number | IPed): boolean {
-    return IsPedBeingStunned(ped, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedBeingStunned(_ped, 0);
 }
 
 /**
@@ -2416,7 +2567,8 @@ export function isBlushTintForCreator(colorId: number): boolean {
  * Hash: 0x53E8CB4F48BFE623 | Since: 323
  */
 export function isClimbing(ped: number | IPed): boolean {
-    return IsPedClimbing(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedClimbing(_ped);
 }
 
 /**
@@ -2430,7 +2582,8 @@ export function isClimbing(ped: number | IPed): boolean {
  * Hash: 0xE825F6B6CEA7671D | Since: 323
  */
 export function isComponentVariationValid(ped: number | IPed, componentId: number, drawableId: number, textureId: number): boolean {
-    return IsPedComponentVariationValid(ped, componentId, drawableId, textureId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedComponentVariationValid(_ped, componentId, drawableId, textureId);
 }
 
 /**
@@ -2447,7 +2600,8 @@ export function isComponentVariationValid(ped: number | IPed, componentId: numbe
  * Hash: 0x3317DEDB88C95038 | Since: 323
  */
 export function isDeadOrDying(ped: number | IPed): boolean {
-    return IsPedDeadOrDying(ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedDeadOrDying(_ped, false);
 }
 
 /**
@@ -2456,7 +2610,8 @@ export function isDeadOrDying(ped: number | IPed): boolean {
  * Hash: 0xBA63D9FE45412247 | Since: 323
  */
 export function isDefensiveAreaActive(ped: number | IPed): boolean {
-    return IsPedDefensiveAreaActive(ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedDefensiveAreaActive(_ped, false);
 }
 
 /**
@@ -2465,7 +2620,8 @@ export function isDefensiveAreaActive(ped: number | IPed): boolean {
  * Hash: 0x5527B8246FEF9B11 | Since: 323
  */
 export function isDiving(ped: number | IPed): boolean {
-    return IsPedDiving(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedDiving(_ped);
 }
 
 /**
@@ -2483,7 +2639,8 @@ export function isDoingABeastJump(): boolean {
  * Hash: 0xB2C086CC1BF8F2BF | Since: 323
  */
 export function isDoingDriveby(ped: number | IPed): boolean {
-    return IsPedDoingDriveby(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedDoingDriveby(_ped);
 }
 
 /**
@@ -2492,7 +2649,8 @@ export function isDoingDriveby(ped: number | IPed): boolean {
  * Hash: 0xD125AE748725C6BC | Since: 323
  */
 export function isDucking(ped: number | IPed): boolean {
-    return IsPedDucking(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedDucking(_ped);
 }
 
 /**
@@ -2505,7 +2663,8 @@ export function isDucking(ped: number | IPed): boolean {
  * Hash: 0x414641C26E105898 | Since: 323
  */
 export function isEvasiveDiving(ped: number | IPed): [boolean, number] {
-    return IsPedEvasiveDiving(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedEvasiveDiving(_ped);
 }
 
 /**
@@ -2514,7 +2673,9 @@ export function isEvasiveDiving(ped: number | IPed): [boolean, number] {
  * Hash: 0xD71649DB0A545AA3 | Since: 323
  */
 export function isFacingPed(ped: number | IPed, otherPed: number | IPed, angle: number): boolean {
-    return IsPedFacingPed(ped, otherPed, angle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _otherPed = otherPed instanceof IPed ? otherPed.handle() : otherPed;
+    return IsPedFacingPed(_ped, _otherPed, angle);
 }
 
 /**
@@ -2523,7 +2684,8 @@ export function isFacingPed(ped: number | IPed, otherPed: number | IPed, angle: 
  * Hash: 0xFB92A102F1C4DFA3 | Since: 323
  */
 export function isFalling(ped: number | IPed): boolean {
-    return IsPedFalling(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedFalling(_ped);
 }
 
 /**
@@ -2533,7 +2695,8 @@ export function isFalling(ped: number | IPed): boolean {
  * Hash: 0xD839450756ED5A80 | Since: 323
  */
 export function isFatallyInjured(ped: number | IPed): boolean {
-    return IsPedFatallyInjured(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedFatallyInjured(_ped);
 }
 
 /**
@@ -2542,7 +2705,8 @@ export function isFatallyInjured(ped: number | IPed): boolean {
  * Hash: 0xBBCCE00B381F8482 | Since: 323
  */
 export function isFleeing(ped: number | IPed): boolean {
-    return IsPedFleeing(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedFleeing(_ped);
 }
 
 /**
@@ -2560,7 +2724,8 @@ export function isGesturing(): boolean {
  * Hash: 0xBB062B2B5722478E | Since: 323
  */
 export function isGettingIntoAVehicle(ped: number | IPed): boolean {
-    return IsPedGettingIntoAVehicle(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedGettingIntoAVehicle(_ped);
 }
 
 /**
@@ -2569,7 +2734,8 @@ export function isGettingIntoAVehicle(ped: number | IPed): boolean {
  * Hash: 0x9F65DBC537E59AD5 | Since: 323
  */
 export function isGoingIntoCover(ped: number | IPed): boolean {
-    return IsPedGoingIntoCover(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedGoingIntoCover(_ped);
 }
 
 /**
@@ -2578,7 +2744,8 @@ export function isGoingIntoCover(ped: number | IPed): boolean {
  * Hash: 0x9BB01E3834671191 | Since: 323
  */
 export function isGroupMember(ped: number | IPed, groupId: number): boolean {
-    return IsPedGroupMember(ped, groupId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedGroupMember(_ped, groupId);
 }
 
 /**
@@ -2605,7 +2772,8 @@ export function isHairTintForCreator(colorId: number): boolean {
  * Hash: 0x1C86D8AEF8254B78 | Since: 323
  */
 export function isHangingOnToVehicle(ped: number | IPed): boolean {
-    return IsPedHangingOnToVehicle(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedHangingOnToVehicle(_ped);
 }
 
 /**
@@ -2614,7 +2782,8 @@ export function isHangingOnToVehicle(ped: number | IPed): boolean {
  * Hash: 0xFCF37A457CB96DC0 | Since: 323
  */
 export function isHeadingTowardsPosition(ped: number | IPed, pos: Vector3): boolean {
-    return IsPedHeadingTowardsPosition(ped, pos.x, pos.y, pos.z, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedHeadingTowardsPosition(_ped, pos.x, pos.y, pos.z, 0);
 }
 
 /**
@@ -2623,7 +2792,9 @@ export function isHeadingTowardsPosition(ped: number | IPed, pos: Vector3): bool
  * Hash: 0x813A0A7C9D2E831F | Since: 323
  */
 export function isHeadtrackingEntity(ped: number | IPed, entity: number | IEntity): boolean {
-    return IsPedHeadtrackingEntity(ped, entity);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsPedHeadtrackingEntity(_ped, _entity);
 }
 
 /**
@@ -2632,7 +2803,9 @@ export function isHeadtrackingEntity(ped: number | IPed, entity: number | IEntit
  * Hash: 0x5CD3CB88A7F8850D | Since: 323
  */
 export function isHeadtrackingPed(ped1: number | IPed, ped2: number | IPed): boolean {
-    return IsPedHeadtrackingPed(ped1, ped2);
+    const _ped1 = ped1 instanceof IPed ? ped1.handle() : ped1;
+    const _ped2 = ped2 instanceof IPed ? ped2.handle() : ped2;
+    return IsPedHeadtrackingPed(_ped1, _ped2);
 }
 
 /**
@@ -2641,7 +2814,8 @@ export function isHeadtrackingPed(ped1: number | IPed, ped2: number | IPed): boo
  * Hash: 0xB9496CE47546DB2C | Since: 791
  */
 export function isHelmetVisorUp(ped: number | IPed): boolean {
-    return IsPedHelmetUnk(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedHelmetUnk(_ped);
 }
 
 /**
@@ -2650,7 +2824,8 @@ export function isHelmetVisorUp(ped: number | IPed): boolean {
  * Hash: 0xB980061DA992779D | Since: 323
  */
 export function isHuman(ped: number | IPed): boolean {
-    return IsPedHuman(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedHuman(_ped);
 }
 
 /**
@@ -2659,7 +2834,8 @@ export function isHuman(ped: number | IPed): boolean {
  * Hash: 0x5983BB449D7FDB12 | Since: 323
  */
 export function isHurt(ped: number | IPed): boolean {
-    return IsPedHurt(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedHurt(_ped);
 }
 
 /**
@@ -2670,7 +2846,8 @@ export function isHurt(ped: number | IPed): boolean {
  * Hash: 0x84A2DD9AC37C35C1 | Since: 323
  */
 export function isInjured(ped: number | IPed): boolean {
-    return IsPedInjured(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInjured(_ped);
 }
 
 /**
@@ -2679,7 +2856,8 @@ export function isInjured(ped: number | IPed): boolean {
  * Hash: 0x2E0E1C2B4F6CB339 | Since: 323
  */
 export function isInAnyBoat(ped: number | IPed): boolean {
-    return IsPedInAnyBoat(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInAnyBoat(_ped);
 }
 
 /**
@@ -2688,7 +2866,8 @@ export function isInAnyBoat(ped: number | IPed): boolean {
  * Hash: 0x298B91AE825E5705 | Since: 323
  */
 export function isInAnyHeli(ped: number | IPed): boolean {
-    return IsPedInAnyHeli(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInAnyHeli(_ped);
 }
 
 /**
@@ -2697,7 +2876,8 @@ export function isInAnyHeli(ped: number | IPed): boolean {
  * Hash: 0x5FFF4CFC74D8FB80 | Since: 323
  */
 export function isInAnyPlane(ped: number | IPed): boolean {
-    return IsPedInAnyPlane(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInAnyPlane(_ped);
 }
 
 /**
@@ -2706,7 +2886,8 @@ export function isInAnyPlane(ped: number | IPed): boolean {
  * Hash: 0x0BD04E29640C9C12 | Since: 323
  */
 export function isInAnyPoliceVehicle(ped: number | IPed): boolean {
-    return IsPedInAnyPoliceVehicle(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInAnyPoliceVehicle(_ped);
 }
 
 /**
@@ -2715,7 +2896,8 @@ export function isInAnyPoliceVehicle(ped: number | IPed): boolean {
  * Hash: 0xFBFC01CCFB35D99E | Since: 323
  */
 export function isInAnySub(ped: number | IPed): boolean {
-    return IsPedInAnySub(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInAnySub(_ped);
 }
 
 /**
@@ -2724,7 +2906,8 @@ export function isInAnySub(ped: number | IPed): boolean {
  * Hash: 0x6E575D6A898AB852 | Since: 323
  */
 export function isInAnyTaxi(ped: number | IPed): boolean {
-    return IsPedInAnyTaxi(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInAnyTaxi(_ped);
 }
 
 /**
@@ -2733,7 +2916,8 @@ export function isInAnyTaxi(ped: number | IPed): boolean {
  * Hash: 0x6F972C1AB75A1ED0 | Since: 323
  */
 export function isInAnyTrain(ped: number | IPed): boolean {
-    return IsPedInAnyTrain(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInAnyTrain(_ped);
 }
 
 /**
@@ -2744,7 +2928,8 @@ export function isInAnyTrain(ped: number | IPed): boolean {
  * Hash: 0x997ABD671D25CA0B | Since: 323
  */
 export function isInAnyVehicle(ped: number | IPed, atGetIn: boolean): boolean {
-    return IsPedInAnyVehicle(ped, atGetIn);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInAnyVehicle(_ped, atGetIn);
 }
 
 /**
@@ -2755,7 +2940,9 @@ export function isInAnyVehicle(ped: number | IPed, atGetIn: boolean): boolean {
  * Hash: 0x4859F1FC66A6278E | Since: 323
  */
 export function isInCombat(ped: number | IPed, target: number | IPed): boolean {
-    return IsPedInCombat(ped, target);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    return IsPedInCombat(_ped, _target);
 }
 
 /**
@@ -2764,7 +2951,8 @@ export function isInCombat(ped: number | IPed, target: number | IPed): boolean {
  * Hash: 0x60DFD0691A170B88 | Since: 323
  */
 export function isInCover(ped: number | IPed, exceptUseWeapon: boolean): boolean {
-    return IsPedInCover(ped, exceptUseWeapon);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInCover(_ped, exceptUseWeapon);
 }
 
 /**
@@ -2773,7 +2961,8 @@ export function isInCover(ped: number | IPed, exceptUseWeapon: boolean): boolean
  * Hash: 0x845333B3150583AB | Since: 323
  */
 export function isInCoverFacingLeft(ped: number | IPed): boolean {
-    return IsPedInCoverFacingLeft(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInCoverFacingLeft(_ped);
 }
 
 /**
@@ -2782,7 +2971,8 @@ export function isInCoverFacingLeft(ped: number | IPed): boolean {
  * Hash: 0x9134873537FA419C | Since: 323
  */
 export function isInFlyingVehicle(ped: number | IPed): boolean {
-    return IsPedInFlyingVehicle(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInFlyingVehicle(_ped);
 }
 
 /**
@@ -2791,7 +2981,8 @@ export function isInFlyingVehicle(ped: number | IPed): boolean {
  * Hash: 0x5891CAC5D4ACFF74 | Since: 323
  */
 export function isInGroup(ped: number | IPed): boolean {
-    return IsPedInGroup(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInGroup(_ped);
 }
 
 /**
@@ -2800,7 +2991,8 @@ export function isInGroup(ped: number | IPed): boolean {
  * Hash: 0x6A03BF943D767C93 | Since: 323
  */
 export function isInHighCover(ped: number | IPed): boolean {
-    return IsPedInHighCover(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInHighCover(_ped);
 }
 
 /**
@@ -2816,7 +3008,8 @@ export function isInHighCover(ped: number | IPed): boolean {
  * Hash: 0x4E209B2C1EAD5159 | Since: 323
  */
 export function isInMeleeCombat(ped: number | IPed): boolean {
-    return IsPedInMeleeCombat(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInMeleeCombat(_ped);
 }
 
 /**
@@ -2825,8 +3018,9 @@ export function isInMeleeCombat(ped: number | IPed): boolean {
  * Hash: 0x796D90EFB19AA332 | Since: 323
  */
 export function isInModel(ped: number | IPed, modelHash: number | string): boolean {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
-    return IsPedInModel(ped, modelHash);
+    return IsPedInModel(_ped, modelHash);
 }
 
 /**
@@ -2835,7 +3029,8 @@ export function isInModel(ped: number | IPed, modelHash: number | string): boole
  * Hash: 0x7DCE8BDA0F1C1200 | Since: 323
  */
 export function isInParachuteFreeFall(ped: number | IPed): boolean {
-    return IsPedInParachuteFreeFall(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInParachuteFreeFall(_ped);
 }
 
 /**
@@ -2846,7 +3041,9 @@ export function isInParachuteFreeFall(ped: number | IPed): boolean {
  * Hash: 0xA3EE4A07279BB9DB | Since: 323
  */
 export function isInVehicle(ped: number | IPed, vehicle: number | IVehicle, atGetIn: boolean): boolean {
-    return IsPedInVehicle(ped, vehicle, atGetIn);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsPedInVehicle(_ped, _vehicle, atGetIn);
 }
 
 /**
@@ -2855,7 +3052,8 @@ export function isInVehicle(ped: number | IPed, vehicle: number | IVehicle, atGe
  * Hash: 0x4AE4FF911DFB61DA | Since: 323
  */
 export function isJacking(ped: number | IPed): boolean {
-    return IsPedJacking(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedJacking(_ped);
 }
 
 /**
@@ -2864,7 +3062,8 @@ export function isJacking(ped: number | IPed): boolean {
  * Hash: 0xCEDABC5900A0BF97 | Since: 323
  */
 export function isJumping(ped: number | IPed): boolean {
-    return IsPedJumping(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedJumping(_ped);
 }
 
 /**
@@ -2873,7 +3072,8 @@ export function isJumping(ped: number | IPed): boolean {
  * Hash: 0x433DDFFE2044B636 | Since: 323
  */
 export function isJumpingOutOfVehicle(ped: number | IPed): boolean {
-    return IsPedJumpingOutOfVehicle(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedJumpingOutOfVehicle(_ped);
 }
 
 /**
@@ -2909,7 +3109,8 @@ export function isLipstickTintForCreator(colorId: number): boolean {
  * Hash: 0x6D9F5FAA7488BA46 | Since: 323
  */
 export function isMale(ped: number | IPed): boolean {
-    return IsPedMale(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedMale(_ped);
 }
 
 /**
@@ -2918,8 +3119,9 @@ export function isMale(ped: number | IPed): boolean {
  * Hash: 0xC9D55B1A358A5BF7 | Since: 323
  */
 export function isModel(ped: number | IPed, modelHash: number | string): boolean {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
-    return IsPedModel(ped, modelHash);
+    return IsPedModel(_ped, modelHash);
 }
 
 /**
@@ -2928,7 +3130,8 @@ export function isModel(ped: number | IPed, modelHash: number | string): boolean
  * Hash: 0x94495889E22C6479 | Since: 323
  */
 export function isOnAnyBike(ped: number | IPed): boolean {
-    return IsPedOnAnyBike(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedOnAnyBike(_ped);
 }
 
 /**
@@ -2937,7 +3140,8 @@ export function isOnAnyBike(ped: number | IPed): boolean {
  * Hash: 0x01FEE67DB37F59B2 | Since: 323
  */
 export function isOnFoot(ped: number | IPed): boolean {
-    return IsPedOnFoot(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedOnFoot(_ped);
 }
 
 /**
@@ -2946,7 +3150,8 @@ export function isOnFoot(ped: number | IPed): boolean {
  * Hash: 0x460BC76A0E10655E | Since: 323
  */
 export function isOnMount(ped: number | IPed): boolean {
-    return IsPedOnMount(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedOnMount(_ped);
 }
 
 /**
@@ -2955,7 +3160,9 @@ export function isOnMount(ped: number | IPed): boolean {
  * Hash: 0xEC5F66E459AF3BB2 | Since: 323
  */
 export function isOnSpecificVehicle(ped: number | IPed, vehicle: number | IVehicle): boolean {
-    return IsPedOnSpecificVehicle(ped, vehicle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsPedOnSpecificVehicle(_ped, _vehicle);
 }
 
 /**
@@ -2968,7 +3175,8 @@ export function isOnSpecificVehicle(ped: number | IPed, vehicle: number | IVehic
  * Hash: 0x67722AEB798E5FAB | Since: 323
  */
 export function isOnVehicle(ped: number | IPed): boolean {
-    return IsPedOnVehicle(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedOnVehicle(_ped);
 }
 
 /**
@@ -2977,7 +3185,8 @@ export function isOnVehicle(ped: number | IPed): boolean {
  * Hash: 0x26AF0E8E30BD2A2C | Since: 323
  */
 export function isOpeningDoor(ped: number | IPed): boolean {
-    return IsPedOpeningADoor(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedOpeningADoor(_ped);
 }
 
 /**
@@ -2986,7 +3195,8 @@ export function isOpeningDoor(ped: number | IPed): boolean {
  * Hash: 0xEBD0EDBA5BE957CF | Since: 323
  */
 export function isPerformingACounterAttack(ped: number | IPed): boolean {
-    return IsPedPerformingDependentComboLimit(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedPerformingDependentComboLimit(_ped);
 }
 
 /**
@@ -2995,7 +3205,8 @@ export function isPerformingACounterAttack(ped: number | IPed): boolean {
  * Hash: 0xDCCA191DF9980FD7 | Since: 323
  */
 export function isPerformingMeleeAction(ped: number | IPed): boolean {
-    return IsPedPerformingMeleeAction(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedPerformingMeleeAction(_ped);
 }
 
 /**
@@ -3004,7 +3215,8 @@ export function isPerformingMeleeAction(ped: number | IPed): boolean {
  * Hash: 0xFD4CCDBCC59941B7 | Since: 323
  */
 export function isPerformingStealthKill(ped: number | IPed): boolean {
-    return IsPedPerformingStealthKill(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedPerformingStealthKill(_ped);
 }
 
 /**
@@ -3013,7 +3225,8 @@ export function isPerformingStealthKill(ped: number | IPed): boolean {
  * Hash: 0xC70B5FAE151982D8 | Since: 323
  */
 export function isPlantingBomb(ped: number | IPed): boolean {
-    return IsPedPlantingBomb(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedPlantingBomb(_ped);
 }
 
 /**
@@ -3022,7 +3235,8 @@ export function isPlantingBomb(ped: number | IPed): boolean {
  * Hash: 0xD6A86331A537A7B9 | Since: 323
  */
 export function isProne(ped: number | IPed): boolean {
-    return IsPedProne(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedProne(_ped);
 }
 
 /**
@@ -3031,7 +3245,8 @@ export function isProne(ped: number | IPed): boolean {
  * Hash: 0x47E4E977581C5B55 | Since: 323
  */
 export function isRagdoll(ped: number | IPed): boolean {
-    return IsPedRagdoll(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedRagdoll(_ped);
 }
 
 /**
@@ -3040,7 +3255,8 @@ export function isRagdoll(ped: number | IPed): boolean {
  * Hash: 0x24B100C68C645951 | Since: 323
  */
 export function isReloading(ped: number | IPed): boolean {
-    return IsPedReloading(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedReloading(_ped);
 }
 
 /**
@@ -3049,7 +3265,8 @@ export function isReloading(ped: number | IPed): boolean {
  * Hash: 0x625B774D75C87068 | Since: 323
  */
 export function isRespondingToEvent(ped: number | IPed, event: any): boolean {
-    return IsPedRespondingToEvent(ped, event);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedRespondingToEvent(_ped, event);
 }
 
 /**
@@ -3058,7 +3275,8 @@ export function isRespondingToEvent(ped: number | IPed, event: any): boolean {
  * Hash: 0xD1871251F3B5ACD7 | Since: 323
  */
 export function isRunningMeleeTask(ped: number | IPed): boolean {
-    return IsPedRunningMeleeTask(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedRunningMeleeTask(_ped);
 }
 
 /**
@@ -3067,7 +3285,8 @@ export function isRunningMeleeTask(ped: number | IPed): boolean {
  * Hash: 0x2AFE52F782F25775 | Since: 323
  */
 export function isRunningMobilePhoneTask(ped: number | IPed): boolean {
-    return IsPedRunningMobilePhoneTask(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedRunningMobilePhoneTask(_ped);
 }
 
 /**
@@ -3076,7 +3295,8 @@ export function isRunningMobilePhoneTask(ped: number | IPed): boolean {
  * Hash: 0xE3B6097CC25AA69E | Since: 323
  */
 export function isRunningRagdollTask(ped: number | IPed): boolean {
-    return IsPedRunningRagdollTask(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedRunningRagdollTask(_ped);
 }
 
 /**
@@ -3085,7 +3305,8 @@ export function isRunningRagdollTask(ped: number | IPed): boolean {
  * Hash: 0x81AA517FBBA05D39 | Since: 944
  */
 export function isShaderReady(ped: number | IPed): boolean {
-    return IsPedShaderEffectValid(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedShaderEffectValid(_ped);
 }
 
 /**
@@ -3094,7 +3315,8 @@ export function isShaderReady(ped: number | IPed): boolean {
  * Hash: 0xB8B52E498014F5B0 | Since: 323
  */
 export function isSheltered(ped: number | IPed): boolean {
-    return Citizen.invokeNative('0xB8B52E498014F5B0', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0xB8B52E498014F5B0', _ped);
 }
 
 /**
@@ -3103,7 +3325,8 @@ export function isSheltered(ped: number | IPed): boolean {
  * Hash: 0x34616828CD07F1A1 | Since: 323
  */
 export function isShooting(ped: number | IPed): boolean {
-    return IsPedShooting(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedShooting(_ped);
 }
 
 /**
@@ -3112,7 +3335,8 @@ export function isShooting(ped: number | IPed): boolean {
  * Hash: 0x7E9DFE24AC1E58EF | Since: 323
  */
 export function isShootingInArea(ped: number | IPed, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): boolean {
-    return IsPedShootingInArea(ped, x1, y1, z1, x2, y2, z2, false, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedShootingInArea(_ped, x1, y1, z1, x2, y2, z2, false, false);
 }
 
 /**
@@ -3122,7 +3346,8 @@ export function isShootingInArea(ped: number | IPed, x1: number, y1: number, z1:
  * Hash: 0x826AA586EDB9FEF8 | Since: 323
  */
 export function isSittingInAnyVehicle(ped: number | IPed): boolean {
-    return IsPedSittingInAnyVehicle(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedSittingInAnyVehicle(_ped);
 }
 
 /**
@@ -3132,7 +3357,9 @@ export function isSittingInAnyVehicle(ped: number | IPed): boolean {
  * Hash: 0xA808AA1D79230FC2 | Since: 323
  */
 export function isSittingInVehicle(ped: number | IPed, vehicle: number | IVehicle): boolean {
-    return IsPedSittingInVehicle(ped, vehicle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsPedSittingInVehicle(_ped, _vehicle);
 }
 
 /**
@@ -3141,7 +3368,8 @@ export function isSittingInVehicle(ped: number | IPed, vehicle: number | IVehicl
  * Hash: 0x530944F6F4B8A214 | Since: 323
  */
 export function isStopped(ped: number | IPed): boolean {
-    return IsPedStopped(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedStopped(_ped);
 }
 
 /**
@@ -3150,7 +3378,8 @@ export function isStopped(ped: number | IPed): boolean {
  * Hash: 0x9DE327631295B4C2 | Since: 323
  */
 export function isSwimming(ped: number | IPed): boolean {
-    return IsPedSwimming(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedSwimming(_ped);
 }
 
 /**
@@ -3159,7 +3388,8 @@ export function isSwimming(ped: number | IPed): boolean {
  * Hash: 0xC024869A53992F34 | Since: 323
  */
 export function isSwimmingUnderWater(ped: number | IPed): boolean {
-    return IsPedSwimmingUnderWater(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedSwimmingUnderWater(_ped);
 }
 
 /**
@@ -3168,7 +3398,8 @@ export function isSwimmingUnderWater(ped: number | IPed): boolean {
  * Hash: 0x3795688A307E1EB6 | Since: 505
  */
 export function isSwitchingWeapon(Ped: number | IPed): boolean {
-    return IsPedSwappingWeapon(Ped);
+    const _Ped = Ped instanceof IPed ? Ped.handle() : Ped;
+    return IsPedSwappingWeapon(_Ped);
 }
 
 /**
@@ -3177,7 +3408,8 @@ export function isSwitchingWeapon(Ped: number | IPed): boolean {
  * Hash: 0x14590DDBEDB1EC85 | Since: 323
  */
 export function isTakingOffHelmet(ped: number | IPed): boolean {
-    return IsPedTakingOffHelmet(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedTakingOffHelmet(_ped);
 }
 
 /**
@@ -3186,7 +3418,8 @@ export function isTakingOffHelmet(ped: number | IPed): boolean {
  * Hash: 0x4C5E1F087CD10BB7 | Since: 323
  */
 export function isTracked(ped: number | IPed): boolean {
-    return IsPedTracked(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedTracked(_ped);
 }
 
 /**
@@ -3195,7 +3428,8 @@ export function isTracked(ped: number | IPed): boolean {
  * Hash: 0x44D28D5DDFE5F68C | Since: 323
  */
 export function isTryingToEnterALockedVehicle(ped: number | IPed): boolean {
-    return IsPedTryingToEnterALockedVehicle(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedTryingToEnterALockedVehicle(_ped);
 }
 
 /**
@@ -3204,7 +3438,8 @@ export function isTryingToEnterALockedVehicle(ped: number | IPed): boolean {
  * Hash: 0x00E73468D085F745 | Since: 323
  */
 export function isUsingActionMode(ped: number | IPed): boolean {
-    return IsPedUsingActionMode(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedUsingActionMode(_ped);
 }
 
 /**
@@ -3213,7 +3448,8 @@ export function isUsingActionMode(ped: number | IPed): boolean {
  * Hash: 0x57AB4A3080F85143 | Since: 323
  */
 export function isUsingAnyScenario(ped: number | IPed): boolean {
-    return IsPedUsingAnyScenario(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedUsingAnyScenario(_ped);
 }
 
 /**
@@ -3222,7 +3458,8 @@ export function isUsingAnyScenario(ped: number | IPed): boolean {
  * Hash: 0x1BF094736DD62C2E | Since: 323
  */
 export function isUsingScenario(ped: number | IPed, scenario: string): boolean {
-    return IsPedUsingScenario(ped, scenario);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedUsingScenario(_ped, scenario);
 }
 
 /**
@@ -3231,7 +3468,8 @@ export function isUsingScenario(ped: number | IPed, scenario: string): boolean {
  * Hash: 0x117C70D1F5730B5E | Since: 323
  */
 export function isVaulting(ped: number | IPed): boolean {
-    return IsPedVaulting(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedVaulting(_ped);
 }
 
 /**
@@ -3240,7 +3478,8 @@ export function isVaulting(ped: number | IPed): boolean {
  * Hash: 0xF33BDFE19B309B19 | Since: 323
  */
 export function isWearingHelmet(ped: number | IPed): boolean {
-    return IsPedWearingHelmet(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedWearingHelmet(_ped);
 }
 
 /**
@@ -3249,7 +3488,8 @@ export function isWearingHelmet(ped: number | IPed): boolean {
  * Hash: 0x6EC47A344923E1ED | Since: 323
  */
 export function isScriptedScenarioUsingConditionalAnim(ped: number | IPed, animDict: string, anim: string): boolean {
-    return IsScriptedScenarioPedUsingConditionalAnim(ped, animDict, anim);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsScriptedScenarioPedUsingConditionalAnim(_ped, animDict, anim);
 }
 
 /**
@@ -3285,7 +3525,9 @@ export function isSynchronizedSceneRunning(sceneId: number): boolean {
  * Hash: 0x06087579E7AA85A9 | Since: 323
  */
 export function isTargetInPerceptionArea(ped: number | IPed, targetPed: number | IPed): boolean {
-    return Citizen.invokeNative('0x06087579E7AA85A9', ped, targetPed, 0, 0, 0, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    return Citizen.invokeNative('0x06087579E7AA85A9', _ped, _targetPed, 0, 0, 0, 0);
 }
 
 /**
@@ -3297,7 +3539,8 @@ export function isTargetInPerceptionArea(ped: number | IPed, targetPed: number |
  * Hash: 0x91C8E617F64188AC | Since: 323
  */
 export function isTrackedVisible(ped: number | IPed): boolean {
-    return IsTrackedPedVisible(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsTrackedPedVisible(_ped);
 }
 
 /**
@@ -3316,7 +3559,8 @@ export function isUsingScubaGearVariation(): boolean {
  * Hash: 0x6FD7816A36615F48 | Since: 323
  */
 export function knockOffProp(ped: number | IPed): void {
-    KnockOffPedProp(ped, false, false, false, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    KnockOffPedProp(_ped, false, false, false, false);
 }
 
 /**
@@ -3325,7 +3569,8 @@ export function knockOffProp(ped: number | IPed): void {
  * Hash: 0x45BBCBA77C29A841 | Since: 323
  */
 export function knockOffVehicle(ped: number | IPed): void {
-    KnockPedOffVehicle(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    KnockPedOffVehicle(_ped);
 }
 
 /**
@@ -3334,7 +3579,8 @@ export function knockOffVehicle(ped: number | IPed): void {
  * Hash: 0x2B694AFCF64E6994 | Since: 323
  */
 export function markDecorationsAsClonedFromLocalPlayer(ped: number | IPed): void {
-    Citizen.invokeNative('0x2B694AFCF64E6994', ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x2B694AFCF64E6994', _ped, false);
 }
 
 /**
@@ -3350,7 +3596,8 @@ export function markDecorationsAsClonedFromLocalPlayer(ped: number | IPed): void
  * Hash: 0x46B05BCAE43856B0 | Since: 323
  */
 export function hasSexinessFlagSet(ped: number | IPed, sexinessFlag: number): boolean {
-    return Citizen.invokeNative('0x46B05BCAE43856B0', ped, sexinessFlag);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x46B05BCAE43856B0', _ped, sexinessFlag);
 }
 
 /**
@@ -3359,7 +3606,8 @@ export function hasSexinessFlagSet(ped: number | IPed, sexinessFlag: number): bo
  * Hash: 0xE1E65CA8AC9C00ED | Since: 323
  */
 export function playFacialAnim(ped: number | IPed, animName: string, animDict: string): void {
-    PlayFacialAnim(ped, animName, animDict);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayFacialAnim(_ped, animName, animDict);
 }
 
 /**
@@ -3368,7 +3616,8 @@ export function playFacialAnim(ped: number | IPed, animName: string, animDict: s
  * Hash: 0x9222F300BF8354FE | Since: 323
  */
 export function registerHatedTargetsAround(ped: number | IPed, radius: number): void {
-    RegisterHatedTargetsAroundPed(ped, radius);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    RegisterHatedTargetsAroundPed(_ped, radius);
 }
 
 /**
@@ -3377,7 +3626,8 @@ export function registerHatedTargetsAround(ped: number | IPed, radius: number): 
  * Hash: 0x4462658788425076 | Since: 323
  */
 export function registerheadshot(ped: number | IPed): number {
-    return RegisterPedheadshot(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return RegisterPedheadshot(_ped);
 }
 
 /**
@@ -3386,7 +3636,8 @@ export function registerheadshot(ped: number | IPed): number {
  * Hash: 0xBA8805A1108A2515 | Since: 877
  */
 export function registerheadshotHires(ped: number | IPed): number {
-    return RegisterPedheadshot3(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return RegisterPedheadshot3(_ped);
 }
 
 /**
@@ -3395,7 +3646,8 @@ export function registerheadshotHires(ped: number | IPed): number {
  * Hash: 0x953563CE563143AF | Since: 323
  */
 export function registerheadshotTransparent(ped: number | IPed): number {
-    return RegisterPedheadshotTransparent(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return RegisterPedheadshotTransparent(_ped);
 }
 
 /**
@@ -3406,7 +3658,9 @@ export function registerheadshotTransparent(ped: number | IPed): number {
  * Hash: 0x2F25D9AEFA34FBA2 | Since: 323
  */
 export function registerTarget(ped: number | IPed, target: number | IPed): void {
-    RegisterTarget(ped, target);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    RegisterTarget(_ped, _target);
 }
 
 /**
@@ -3424,7 +3678,8 @@ export function releaseheadshotImgUpload(id: number): void {
  * Hash: 0xF79F9DEF0AADE61A | Since: 323
  */
 export function releasePreloadPropData(ped: number | IPed): void {
-    ReleasePedPreloadPropData(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ReleasePedPreloadPropData(_ped);
 }
 
 /**
@@ -3433,7 +3688,8 @@ export function releasePreloadPropData(ped: number | IPed): void {
  * Hash: 0x5AAB586FFEC0FD96 | Since: 323
  */
 export function releasePreloadVariationData(ped: number | IPed): void {
-    ReleasePedPreloadVariationData(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ReleasePedPreloadVariationData(_ped);
 }
 
 /**
@@ -3460,7 +3716,8 @@ export function removeGroup(groupId: number): void {
  * Hash: 0x74D4E028107450A9 | Since: 323
  */
 export function removeDefensiveArea(ped: number | IPed, toggle: boolean): void {
-    RemovePedDefensiveArea(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    RemovePedDefensiveArea(_ped, toggle);
 }
 
 /**
@@ -3469,7 +3726,8 @@ export function removeDefensiveArea(ped: number | IPed, toggle: boolean): void {
  * Hash: 0xAC6D445B994DF95E | Since: 323
  */
 export function removeElegantly(ped: number | IPed): void {
-    RemovePedElegantly(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    RemovePedElegantly(_ped);
 }
 
 /**
@@ -3478,7 +3736,8 @@ export function removeElegantly(ped: number | IPed): void {
  * Hash: 0xED74007FFB146BC2 | Since: 323
  */
 export function removeFromGroup(ped: number | IPed): void {
-    RemovePedFromGroup(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    RemovePedFromGroup(_ped);
 }
 
 /**
@@ -3487,7 +3746,8 @@ export function removeFromGroup(ped: number | IPed): void {
  * Hash: 0xA7B2458D0AD6DED8 | Since: 323
  */
 export function removeHelmet(ped: number | IPed, instantly: boolean): void {
-    RemovePedHelmet(ped, instantly);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    RemovePedHelmet(_ped, instantly);
 }
 
 /**
@@ -3496,7 +3756,8 @@ export function removeHelmet(ped: number | IPed, instantly: boolean): void {
  * Hash: 0xFDDB234CF74073D9 | Since: 323
  */
 export function removePreferredCoverSet(ped: number | IPed): void {
-    RemovePedPreferredCoverSet(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    RemovePedPreferredCoverSet(_ped);
 }
 
 /**
@@ -3560,7 +3821,8 @@ export function requestheadshotImgUpload(id: number): boolean {
  * Hash: 0xCD018C591F94CB43 | Since: 323
  */
 export function requestRestrictedVehicleVisibilityTracking(ped: number | IPed): void {
-    Citizen.invokeNative('0xCD018C591F94CB43', ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0xCD018C591F94CB43', _ped, false);
 }
 
 /**
@@ -3569,7 +3831,8 @@ export function requestRestrictedVehicleVisibilityTracking(ped: number | IPed): 
  * Hash: 0x75BA1CB3B7D40CAF | Since: 323
  */
 export function requestUseSmallBboxVisibilityTracking(ped: number | IPed): void {
-    Citizen.invokeNative('0x75BA1CB3B7D40CAF', ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x75BA1CB3B7D40CAF', _ped, false);
 }
 
 /**
@@ -3578,7 +3841,8 @@ export function requestUseSmallBboxVisibilityTracking(ped: number | IPed): void 
  * Hash: 0x2BC338A7B21F4608 | Since: 323
  */
 export function requestVehicleVisibilityTracking(ped: number | IPed): void {
-    RequestPedVehicleVisibilityTracking(ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    RequestPedVehicleVisibilityTracking(_ped, false);
 }
 
 /**
@@ -3587,7 +3851,8 @@ export function requestVehicleVisibilityTracking(ped: number | IPed): void {
  * Hash: 0x7D7A2E43E74E2EB8 | Since: 323
  */
 export function requestVisibilityTracking(ped: number | IPed): void {
-    RequestPedVisibilityTracking(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    RequestPedVisibilityTracking(_ped);
 }
 
 /**
@@ -3632,7 +3897,8 @@ export function resetAiWeaponDamageModifier(): void {
  * Hash: 0x007FDE5A7897E426 | Since: 2802
  */
 export function resetFacialIdleAnim(ped: number | IPed): void {
-    Citizen.invokeNative('0x007FDE5A7897E426', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x007FDE5A7897E426', _ped);
 }
 
 /**
@@ -3650,7 +3916,8 @@ export function resetGroupFormationDefaultSpacing(groupHandle: number): void {
  * Hash: 0x22EF8FF8778030EB | Since: 323
  */
 export function resetInVehicleContext(ped: number | IPed): void {
-    ResetPedInVehicleContext(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ResetPedInVehicleContext(_ped);
 }
 
 /**
@@ -3659,7 +3926,8 @@ export function resetInVehicleContext(ped: number | IPed): void {
  * Hash: 0xBB8DE8CF6A8DD8BB | Since: 323
  */
 export function resetLastVehicle(ped: number | IPed): void {
-    ResetPedLastVehicle(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ResetPedLastVehicle(_ped);
 }
 
 /**
@@ -3672,7 +3940,8 @@ export function resetLastVehicle(ped: number | IPed): void {
  * Hash: 0xAA74EC0CB0AAEA2C | Since: 323
  */
 export function resetMovementClipset(ped: number | IPed): void {
-    ResetPedMovementClipset(ped, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ResetPedMovementClipset(_ped, 0);
 }
 
 /**
@@ -3681,7 +3950,8 @@ export function resetMovementClipset(ped: number | IPed): void {
  * Hash: 0x9FA4664CF62E47E8 | Since: 323
  */
 export function resetRagdollTimer(ped: number | IPed): void {
-    ResetPedRagdollTimer(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ResetPedRagdollTimer(_ped);
 }
 
 /**
@@ -3690,7 +3960,8 @@ export function resetRagdollTimer(ped: number | IPed): void {
  * Hash: 0x20510814175EA477 | Since: 323
  */
 export function resetStrafeClipset(ped: number | IPed): void {
-    ResetPedStrafeClipset(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ResetPedStrafeClipset(_ped);
 }
 
 /**
@@ -3699,7 +3970,8 @@ export function resetStrafeClipset(ped: number | IPed): void {
  * Hash: 0x3AC1F7B898F30C05 | Since: 323
  */
 export function resetVisibleDamage(ped: number | IPed): void {
-    ResetPedVisibleDamage(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ResetPedVisibleDamage(_ped);
 }
 
 /**
@@ -3708,7 +3980,8 @@ export function resetVisibleDamage(ped: number | IPed): void {
  * Hash: 0x97B0DB5B4AA74E77 | Since: 323
  */
 export function resetWeaponMovementClipset(ped: number | IPed): void {
-    ResetPedWeaponMovementClipset(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ResetPedWeaponMovementClipset(_ped);
 }
 
 /**
@@ -3723,7 +3996,8 @@ export function resetWeaponMovementClipset(ped: number | IPed): void {
  * Hash: 0x71BC8E838B9C6035 | Since: 323
  */
 export function resurrect(ped: number | IPed): void {
-    ResurrectPed(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ResurrectPed(_ped);
 }
 
 /**
@@ -3736,7 +4010,8 @@ export function resurrect(ped: number | IPed): void {
  * Hash: 0x8D8ACD8388CD99CE | Since: 323
  */
 export function reviveInjured(ped: number | IPed): void {
-    ReviveInjuredPed(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ReviveInjuredPed(_ped);
 }
 
 /**
@@ -3763,7 +4038,8 @@ export function setAiWeaponDamageModifier(value: number): void {
  * Hash: 0x061CB768363D6424 | Since: 323
  */
 export function setAllowLockonToIfFriendly(ped: number | IPed, toggle: boolean): void {
-    Citizen.invokeNative('0x061CB768363D6424', ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x061CB768363D6424', _ped, toggle);
 }
 
 /**
@@ -3772,7 +4048,8 @@ export function setAllowLockonToIfFriendly(ped: number | IPed, toggle: boolean):
  * Hash: 0xFAB944D4D481ACCB | Since: 1734
  */
 export function setAllowStuntJumpCamera(ped: number | IPed, toggle: boolean): void {
-    Citizen.invokeNative('0xFAB944D4D481ACCB', ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0xFAB944D4D481ACCB', _ped, toggle);
 }
 
 /**
@@ -3799,7 +4076,8 @@ export function setAmbientsDropMoney(): void {
  * Hash: 0x9F8AA94D6D97DBF4 | Since: 323
  */
 export function setBlockingOfNonTemporaryEvents(ped: number | IPed, toggle: boolean): void {
-    SetBlockingOfNonTemporaryEvents(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetBlockingOfNonTemporaryEvents(_ped, toggle);
 }
 
 /**
@@ -3822,7 +4100,8 @@ export function setBlockingOfNonTemporaryEventsForAmbientsThisFrame(): void {
  * Hash: 0xB3B1CB349FF9C75D | Since: 323
  */
 export function setCanAttackFriendly(ped: number | IPed, toggle: boolean): void {
-    SetCanAttackFriendly(ped, toggle, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetCanAttackFriendly(_ped, toggle, false);
 }
 
 /**
@@ -3831,7 +4110,8 @@ export function setCanAttackFriendly(ped: number | IPed, toggle: boolean): void 
  * Hash: 0xFF41B4B141ED981C | Since: 323
  */
 export function setCombatFloat(ped: number | IPed, combatType: number): void {
-    SetCombatFloat(ped, combatType, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetCombatFloat(_ped, combatType, 0);
 }
 
 /**
@@ -3849,7 +4129,8 @@ export function setCopPerceptionOverrides(seeingRange: number, seeingRangePeriph
  * Hash: 0x2735233A786B1BEF | Since: 323
  */
 export function setCorpseRagdollFriction(ped: number | IPed): void {
-    Citizen.invokeNative('0x2735233A786B1BEF', ped, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x2735233A786B1BEF', _ped, 0);
 }
 
 /**
@@ -3885,7 +4166,8 @@ export function setCreateRandomCopsOnScenarios(toggle: boolean): void {
  * Hash: 0x711794453CFD692B | Since: 463
  */
 export function setDisableHighFallDeath(ped: number | IPed, toggle: boolean): void {
-    Citizen.invokeNative('0x711794453CFD692B', ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x711794453CFD692B', _ped, toggle);
 }
 
 /**
@@ -3894,7 +4176,8 @@ export function setDisableHighFallDeath(ped: number | IPed, toggle: boolean): vo
  * Hash: 0xDFE68C4B787E1BFB | Since: 1180
  */
 export function setDisableMapCollision(ped: number | IPed): void {
-    Citizen.invokeNative('0xDFE68C4B787E1BFB', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0xDFE68C4B787E1BFB', _ped);
 }
 
 /**
@@ -3903,7 +4186,8 @@ export function setDisableMapCollision(ped: number | IPed): void {
  * Hash: 0xB195FFA8042FC5C3 | Since: 323
  */
 export function setDriverAbility(driver: number | IPed, ability: number): void {
-    SetDriverAbility(driver, ability);
+    const _driver = driver instanceof IPed ? driver.handle() : driver;
+    SetDriverAbility(_driver, ability);
 }
 
 /**
@@ -3912,7 +4196,8 @@ export function setDriverAbility(driver: number | IPed, ability: number): void {
  * Hash: 0xA731F608CA104E3C | Since: 323
  */
 export function setDriverAggressiveness(driver: number | IPed, aggressiveness: number): void {
-    SetDriverAggressiveness(driver, aggressiveness);
+    const _driver = driver instanceof IPed ? driver.handle() : driver;
+    SetDriverAggressiveness(_driver, aggressiveness);
 }
 
 /**
@@ -3921,7 +4206,8 @@ export function setDriverAggressiveness(driver: number | IPed, aggressiveness: n
  * Hash: 0xDED5AF5A0EA4B297 | Since: 323
  */
 export function setDriverRacingModifier(driver: number | IPed, modifier: number): void {
-    SetDriverRacingModifier(driver, modifier);
+    const _driver = driver instanceof IPed ? driver.handle() : driver;
+    SetDriverRacingModifier(_driver, modifier);
 }
 
 /**
@@ -3930,7 +4216,8 @@ export function setDriverRacingModifier(driver: number | IPed, modifier: number)
  * Hash: 0xC52E0F855C58FC2E | Since: 323
  */
 export function setEnableBoundAnkles(ped: number | IPed, toggle: boolean): void {
-    SetEnableBoundAnkles(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetEnableBoundAnkles(_ped, toggle);
 }
 
 /**
@@ -3939,7 +4226,8 @@ export function setEnableBoundAnkles(ped: number | IPed, toggle: boolean): void 
  * Hash: 0xDF1AF8B5D56542FA | Since: 323
  */
 export function setEnableHandcuffs(ped: number | IPed, toggle: boolean): void {
-    SetEnableHandcuffs(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetEnableHandcuffs(_ped, toggle);
 }
 
 /**
@@ -3948,7 +4236,8 @@ export function setEnableHandcuffs(ped: number | IPed, toggle: boolean): void {
  * Hash: 0xD2C5AA0C0E8D0F1E | Since: 323
  */
 export function setEnableEnveffScale(ped: number | IPed, toggle: boolean): void {
-    SetEnablePedEnveffScale(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetEnablePedEnveffScale(_ped, toggle);
 }
 
 /**
@@ -3957,7 +4246,8 @@ export function setEnableEnveffScale(ped: number | IPed, toggle: boolean): void 
  * Hash: 0xF99F62004024D506 | Since: 323
  */
 export function setEnableScuba(ped: number | IPed, toggle: boolean): void {
-    SetEnableScuba(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetEnableScuba(_ped, toggle);
 }
 
 /**
@@ -3976,7 +4266,8 @@ export function setEnableScuba(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x5687C7F05B39E401 | Since: 1493
  */
 export function setFacialClipset(ped: number | IPed, animDict: string): void {
-    SetFacialClipsetOverride(ped, animDict);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetFacialClipsetOverride(_ped, animDict);
 }
 
 /**
@@ -3985,7 +4276,8 @@ export function setFacialClipset(ped: number | IPed, animDict: string): void {
  * Hash: 0xFFC24B988B938B38 | Since: 323
  */
 export function setFacialIdleAnimOverride(ped: number | IPed, animName: string, animDict: string): void {
-    SetFacialIdleAnimOverride(ped, animName, animDict);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetFacialIdleAnimOverride(_ped, animName, animDict);
 }
 
 /**
@@ -3994,7 +4286,8 @@ export function setFacialIdleAnimOverride(ped: number | IPed, animName: string, 
  * Hash: 0x129466ED55140F8D | Since: 323
  */
 export function setForceFootstepUpdate(ped: number | IPed, toggle: boolean): void {
-    SetForceFootstepUpdate(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetForceFootstepUpdate(_ped, toggle);
 }
 
 /**
@@ -4003,7 +4296,8 @@ export function setForceFootstepUpdate(ped: number | IPed, toggle: boolean): voi
  * Hash: 0xCB968B53FC7F916D | Since: 323
  */
 export function setForceStepType(ped: number | IPed, _type: number): void {
-    SetForceStepType(ped, false, _type, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetForceStepType(_ped, false, _type, 0);
 }
 
 /**
@@ -4075,7 +4369,8 @@ export function setGroupSeparationRange(groupHandle: number, separationRange: nu
  * Hash: 0x50B56988B170AFDF | Since: 323
  */
 export function setHeadBlendEyeColor(ped: number | IPed, index: number): void {
-    SetPedEyeColor(ped, index);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedEyeColor(_ped, index);
 }
 
 /**
@@ -4085,7 +4380,8 @@ export function setHeadBlendEyeColor(ped: number | IPed, index: number): void {
  * Hash: 0xCC9682B8951C5229 | Since: 323
  */
 export function setHeadBlendPaletteColor(ped: number | IPed, r: number, g: number, b: number, id: number): void {
-    SetHeadBlendPaletteColor(ped, r, g, b, id);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetHeadBlendPaletteColor(_ped, r, g, b, id);
 }
 
 /**
@@ -4103,7 +4399,9 @@ export function setHealthSnacksCarriedByAllNews(): void {
  * Hash: 0xC32779C16FCEECD9 | Since: 323
  */
 export function setIkTarget(ped: number | IPed, ikIndex: number, entityLookAt: number | IEntity, boneLookAt: number, offsetX: number, offsetY: number, offsetZ: number, blendInDuration: number, blendOutDuration: number): void {
-    SetIkTarget(ped, ikIndex, entityLookAt, boneLookAt, offsetX, offsetY, offsetZ, undefined, blendInDuration, blendOutDuration);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entityLookAt = entityLookAt instanceof IEntity ? entityLookAt.handle() : entityLookAt;
+    SetIkTarget(_ped, ikIndex, _entityLookAt, boneLookAt, offsetX, offsetY, offsetZ, undefined, blendInDuration, blendOutDuration);
 }
 
 /**
@@ -4112,7 +4410,8 @@ export function setIkTarget(ped: number | IPed, ikIndex: number, entityLookAt: n
  * Hash: 0x1A330D297AAC6BC1 | Since: 323
  */
 export function setLadderClimbInputState(ped: number | IPed): void {
-    Citizen.invokeNative('0x1A330D297AAC6BC1', ped, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x1A330D297AAC6BC1', _ped, 0);
 }
 
 /**
@@ -4121,7 +4420,8 @@ export function setLadderClimbInputState(ped: number | IPed): void {
  * Hash: 0x781DE8FA214E87D2 | Since: 323
  */
 export function setMovementModeOverride(ped: number | IPed, name: string): void {
-    SetMovementModeOverride(ped, name);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetMovementModeOverride(_ped, name);
 }
 
 /**
@@ -4130,7 +4430,8 @@ export function setMovementModeOverride(ped: number | IPed, name: string): void 
  * Hash: 0x7AEFB85C1D49DEB6 | Since: 323
  */
 export function setAccuracy(ped: number | IPed, accuracy: number): void {
-    SetPedAccuracy(ped, accuracy);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedAccuracy(_ped, accuracy);
 }
 
 /**
@@ -4139,7 +4440,8 @@ export function setAccuracy(ped: number | IPed, accuracy: number): void {
  * Hash: 0xDBA71115ED9941A6 | Since: 323
  */
 export function setAlertness(ped: number | IPed, value: number): void {
-    SetPedAlertness(ped, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedAlertness(_ped, value);
 }
 
 /**
@@ -4148,7 +4450,8 @@ export function setAlertness(ped: number | IPed, value: number): void {
  * Hash: 0xDA1F1B7BE1A8766F | Since: 323
  */
 export function setAllowedToDuck(ped: number | IPed, toggle: boolean): void {
-    SetPedAllowedToDuck(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedAllowedToDuck(_ped, toggle);
 }
 
 /**
@@ -4168,7 +4471,8 @@ export function setAllowHurtCombatForAllMissionPeds(toggle: boolean): void {
  * Hash: 0x49E50BDB8BA4DAB2 | Since: 323
  */
 export function setAllowMinorReactionsAsMissionPed(ped: number | IPed, toggle: boolean): void {
-    Citizen.invokeNative('0x49E50BDB8BA4DAB2', ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x49E50BDB8BA4DAB2', _ped, toggle);
 }
 
 /**
@@ -4177,7 +4481,8 @@ export function setAllowMinorReactionsAsMissionPed(ped: number | IPed, toggle: b
  * Hash: 0x3C028C636A414ED9 | Since: 323
  */
 export function setAllowVehiclesOverride(ped: number | IPed, toggle: boolean): void {
-    SetPedAllowVehiclesOverride(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedAllowVehiclesOverride(_ped, toggle);
 }
 
 /**
@@ -4195,7 +4500,8 @@ export function setAllowVehiclesOverride(ped: number | IPed, toggle: boolean): v
  * Hash: 0x90A43CC281FFAB46 | Since: 323
  */
 export function setAlternateMovementAnim(ped: number | IPed, stance: number, animDictionary: string, animationName: string): void {
-    SetPedAlternateMovementAnim(ped, stance, animDictionary, animationName, 0, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedAlternateMovementAnim(_ped, stance, animDictionary, animationName, 0, false);
 }
 
 /**
@@ -4206,7 +4512,8 @@ export function setAlternateMovementAnim(ped: number | IPed, stance: number, ani
  * Hash: 0x6C60394CB4F75E9A | Since: 323
  */
 export function setAlternateWalkAnim(ped: number | IPed, animDict: string, animName: string): void {
-    SetPedAlternateWalkAnim(ped, animDict, animName, 0, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedAlternateWalkAnim(_ped, animDict, animName, 0, false);
 }
 
 /**
@@ -4215,7 +4522,8 @@ export function setAlternateWalkAnim(ped: number | IPed, animDict: string, animN
  * Hash: 0xC7F76DF27A5045A1 | Since: 323
  */
 export function setAngledDefensiveArea(ped: number | IPed): void {
-    SetPedAngledDefensiveArea(ped, 0, 0, 0, 0, 0, 0, 0, false, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedAngledDefensiveArea(_ped, 0, 0, 0, 0, 0, 0, 0, false, false);
 }
 
 /**
@@ -4224,7 +4532,8 @@ export function setAngledDefensiveArea(ped: number | IPed): void {
  * Hash: 0x2B5AA717A181FB4C | Since: 323
  */
 export function setAoBlobRendering(ped: number | IPed, toggle: boolean): void {
-    SetPedAoBlobRendering(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedAoBlobRendering(_ped, toggle);
 }
 
 /**
@@ -4236,7 +4545,8 @@ export function setAoBlobRendering(ped: number | IPed, toggle: boolean): void {
  * Hash: 0xCEA04D83135264CC | Since: 323
  */
 export function setArmour(ped: number | IPed, amount: number): void {
-    SetPedArmour(ped, amount);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedArmour(_ped, amount);
 }
 
 /**
@@ -4245,7 +4555,8 @@ export function setArmour(ped: number | IPed, amount: number): void {
  * Hash: 0xBB03C38DD3FB7FFD | Since: 323
  */
 export function setAsCop(ped: number | IPed, toggle: boolean): void {
-    SetPedAsCop(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedAsCop(_ped, toggle);
 }
 
 /**
@@ -4254,7 +4565,8 @@ export function setAsCop(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x02A0C9720B854BFA | Since: 323
  */
 export function setAsEnemy(ped: number | IPed, toggle: boolean): void {
-    SetPedAsEnemy(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedAsEnemy(_ped, toggle);
 }
 
 /**
@@ -4263,7 +4575,8 @@ export function setAsEnemy(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x2A7819605465FBCE | Since: 323
  */
 export function setAsGroupLeader(ped: number | IPed, groupId: number): void {
-    SetPedAsGroupLeader(ped, groupId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedAsGroupLeader(_ped, groupId);
 }
 
 /**
@@ -4272,7 +4585,8 @@ export function setAsGroupLeader(ped: number | IPed, groupId: number): void {
  * Hash: 0x9F3480FE65DB31B5 | Since: 323
  */
 export function setAsGroupMember(ped: number | IPed, groupId: number): void {
-    SetPedAsGroupMember(ped, groupId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedAsGroupMember(_ped, groupId);
 }
 
 /**
@@ -4281,7 +4595,8 @@ export function setAsGroupMember(ped: number | IPed, groupId: number): void {
  * Hash: 0x137BBD05230DB22D | Since: 323
  */
 export function setBlendFromParents(ped: number | IPed): void {
-    SetPedBlendFromParents(ped, undefined, undefined, 0, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedBlendFromParents(_ped, undefined, undefined, 0, 0);
 }
 
 /**
@@ -4290,7 +4605,8 @@ export function setBlendFromParents(ped: number | IPed): void {
  * Hash: 0x576594E8D64375E2 | Since: 323
  */
 export function setBlocksPathingWhenDead(ped: number | IPed, toggle: boolean): void {
-    SetPedBlocksPathingWhenDead(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedBlocksPathingWhenDead(_ped, toggle);
 }
 
 /**
@@ -4299,7 +4615,8 @@ export function setBlocksPathingWhenDead(ped: number | IPed, toggle: boolean): v
  * Hash: 0x4F5F651ACCC9C4CF | Since: 323
  */
 export function setBoundsOrientation(ped: number | IPed, pos: Vector3): void {
-    SetPedBoundsOrientation(ped, 0, 0, pos.x, pos.y, pos.z);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedBoundsOrientation(_ped, 0, 0, pos.x, pos.y, pos.z);
 }
 
 /**
@@ -4308,7 +4625,8 @@ export function setBoundsOrientation(ped: number | IPed, pos: Vector3): void {
  * Hash: 0x6C3B4D6D13B4C841 | Since: 323
  */
 export function setCanArmIk(ped: number | IPed, toggle: boolean): void {
-    SetPedCanArmIk(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanArmIk(_ped, toggle);
 }
 
 /**
@@ -4317,7 +4635,8 @@ export function setCanArmIk(ped: number | IPed, toggle: boolean): void {
  * Hash: 0xC1670E958EEE24E5 | Since: 323
  */
 export function setCanBeDraggedOut(ped: number | IPed, toggle: boolean): void {
-    SetPedCanBeDraggedOut(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanBeDraggedOut(_ped, toggle);
 }
 
 /**
@@ -4335,7 +4654,8 @@ export function setCanBeKnockedOffBike(): void {
  * Hash: 0x7A6535691B477C48 | Since: 323
  */
 export function setCanBeKnockedOffVehicle(ped: number | IPed, state: number): void {
-    SetPedCanBeKnockedOffVehicle(ped, state);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanBeKnockedOffVehicle(_ped, state);
 }
 
 /**
@@ -4344,7 +4664,8 @@ export function setCanBeKnockedOffVehicle(ped: number | IPed, state: number): vo
  * Hash: 0xC7EF1BA83230BA07 | Since: 323
  */
 export function setCanBeShotInVehicle(ped: number | IPed, toggle: boolean): void {
-    SetPedCanBeShotInVehicle(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanBeShotInVehicle(_ped, toggle);
 }
 
 /**
@@ -4353,7 +4674,8 @@ export function setCanBeShotInVehicle(ped: number | IPed, toggle: boolean): void
  * Hash: 0x638C03B0F9878F57 | Since: 323
  */
 export function setCanBeTargetedWhenInjured(ped: number | IPed, toggle: boolean): void {
-    SetPedCanBeTargetedWhenInjured(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanBeTargetedWhenInjured(_ped, toggle);
 }
 
 /**
@@ -4362,7 +4684,8 @@ export function setCanBeTargetedWhenInjured(ped: number | IPed, toggle: boolean)
  * Hash: 0x4328652AE5769C71 | Since: 323
  */
 export function setCanBeTargetedWithoutLos(ped: number | IPed, toggle: boolean): void {
-    SetPedCanBeTargetedWithoutLos(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanBeTargetedWithoutLos(_ped, toggle);
 }
 
 /**
@@ -4371,7 +4694,8 @@ export function setCanBeTargetedWithoutLos(ped: number | IPed, toggle: boolean):
  * Hash: 0x63F58F7C80513AAD | Since: 323
  */
 export function setCanBeTargetted(ped: number | IPed, toggle: boolean): void {
-    SetPedCanBeTargetted(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanBeTargetted(_ped, toggle);
 }
 
 /**
@@ -4380,7 +4704,9 @@ export function setCanBeTargetted(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x66B57B72E0836A76 | Since: 323
  */
 export function setCanBeTargettedByPlayer(ped: number | IPed, player: number | string | IPlayer, toggle: boolean): void {
-    SetPedCanBeTargettedByPlayer(ped, player, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPedCanBeTargettedByPlayer(_ped, _player, toggle);
 }
 
 /**
@@ -4389,7 +4715,8 @@ export function setCanBeTargettedByPlayer(ped: number | IPed, player: number | s
  * Hash: 0xBF1CA77833E58F2C | Since: 323
  */
 export function setCanBeTargettedByTeam(ped: number | IPed, team: number, toggle: boolean): void {
-    SetPedCanBeTargettedByTeam(ped, team, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanBeTargettedByTeam(_ped, team, toggle);
 }
 
 /**
@@ -4398,7 +4725,8 @@ export function setCanBeTargettedByTeam(ped: number | IPed, team: number, toggle
  * Hash: 0xE84EC1735FB39663 | Since: 3717
  */
 export function setCanBodyRecoilIk(ped: number | IPed, toggle: boolean): void {
-    Citizen.invokeNative('0xE84EC1735FB39663', ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0xE84EC1735FB39663', _ped, toggle);
 }
 
 /**
@@ -4409,7 +4737,8 @@ export function setCanBodyRecoilIk(ped: number | IPed, toggle: boolean): void {
  * Hash: 0xCB7553CDCEF4A735 | Since: 323
  */
 export function setCanCowerInCover(ped: number | IPed, toggle: boolean): void {
-    SetPedCanCowerInCover(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanCowerInCover(_ped, toggle);
 }
 
 /**
@@ -4418,7 +4747,8 @@ export function setCanCowerInCover(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x6B7A646C242A7059 | Since: 323
  */
 export function setCanEvasiveDive(ped: number | IPed, toggle: boolean): void {
-    SetPedCanEvasiveDive(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanEvasiveDive(_ped, toggle);
 }
 
 /**
@@ -4427,7 +4757,8 @@ export function setCanEvasiveDive(ped: number | IPed, toggle: boolean): void {
  * Hash: 0xC11C18092C5530DC | Since: 323
  */
 export function setCanHeadIk(ped: number | IPed, toggle: boolean): void {
-    SetPedCanHeadIk(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanHeadIk(_ped, toggle);
 }
 
 /**
@@ -4436,7 +4767,8 @@ export function setCanHeadIk(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x73518ECE2485412B | Since: 323
  */
 export function setCanLegIk(ped: number | IPed, toggle: boolean): void {
-    SetPedCanLegIk(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanLegIk(_ped, toggle);
 }
 
 /**
@@ -4445,7 +4777,8 @@ export function setCanLegIk(ped: number | IPed, toggle: boolean): void {
  * Hash: 0xE861D0B05C7662B8 | Since: 323
  */
 export function setCanLosePropsOnDamage(ped: number | IPed, toggle: boolean): void {
-    SetPedCanLosePropsOnDamage(ped, toggle, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanLosePropsOnDamage(_ped, toggle, 0);
 }
 
 /**
@@ -4454,7 +4787,8 @@ export function setCanLosePropsOnDamage(ped: number | IPed, toggle: boolean): vo
  * Hash: 0xC514825C507E3736 | Since: 323
  */
 export function setCanPeekInCover(ped: number | IPed, toggle: boolean): void {
-    SetPedCanPeekInCover(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanPeekInCover(_ped, toggle);
 }
 
 /**
@@ -4463,7 +4797,8 @@ export function setCanPeekInCover(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x6373D1349925A70E | Since: 323
  */
 export function setCanPlayAmbientAnims(ped: number | IPed, toggle: boolean): void {
-    SetPedCanPlayAmbientAnims(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanPlayAmbientAnims(_ped, toggle);
 }
 
 /**
@@ -4472,7 +4807,8 @@ export function setCanPlayAmbientAnims(ped: number | IPed, toggle: boolean): voi
  * Hash: 0x0EB0585D15254740 | Since: 323
  */
 export function setCanPlayAmbientBaseAnims(ped: number | IPed, toggle: boolean): void {
-    SetPedCanPlayAmbientBaseAnims(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanPlayAmbientBaseAnims(_ped, toggle);
 }
 
 /**
@@ -4481,7 +4817,8 @@ export function setCanPlayAmbientBaseAnims(ped: number | IPed, toggle: boolean):
  * Hash: 0xBAF20C5432058024 | Since: 323
  */
 export function setCanPlayGestureAnims(ped: number | IPed, toggle: boolean): void {
-    SetPedCanPlayGestureAnims(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanPlayGestureAnims(_ped, toggle);
 }
 
 /**
@@ -4490,7 +4827,8 @@ export function setCanPlayGestureAnims(ped: number | IPed, toggle: boolean): voi
  * Hash: 0x820E9892A77E97CD | Since: 877
  */
 export function setCanPlayInCarIdles(ped: number | IPed, toggle: boolean): void {
-    Citizen.invokeNative('0x820E9892A77E97CD', ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x820E9892A77E97CD', _ped, toggle);
 }
 
 /**
@@ -4499,7 +4837,8 @@ export function setCanPlayInCarIdles(ped: number | IPed, toggle: boolean): void 
  * Hash: 0xF833DDBA3B104D43 | Since: 323
  */
 export function setCanPlayVisemeAnims(ped: number | IPed, toggle: boolean): void {
-    SetPedCanPlayVisemeAnims(ped, toggle, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanPlayVisemeAnims(_ped, toggle, false);
 }
 
 /**
@@ -4508,7 +4847,8 @@ export function setCanPlayVisemeAnims(ped: number | IPed, toggle: boolean): void
  * Hash: 0xB128377056A54E2A | Since: 323
  */
 export function setCanRagdoll(ped: number | IPed, toggle: boolean): void {
-    SetPedCanRagdoll(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanRagdoll(_ped, toggle);
 }
 
 /**
@@ -4517,7 +4857,8 @@ export function setCanRagdoll(ped: number | IPed, toggle: boolean): void {
  * Hash: 0xDF993EE5E90ABA25 | Since: 323
  */
 export function setCanRagdollFromPlayerImpact(ped: number | IPed, toggle: boolean): void {
-    SetPedCanRagdollFromPlayerImpact(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanRagdollFromPlayerImpact(_ped, toggle);
 }
 
 /**
@@ -4526,7 +4867,8 @@ export function setCanRagdollFromPlayerImpact(ped: number | IPed, toggle: boolea
  * Hash: 0x1CCE141467FF42A2 | Since: 323
  */
 export function setCanSmashGlass(ped: number | IPed): void {
-    SetPedCanSmashGlass(ped, false, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanSmashGlass(_ped, false, false);
 }
 
 /**
@@ -4535,7 +4877,8 @@ export function setCanSmashGlass(ped: number | IPed): void {
  * Hash: 0xED7F7EFE9FABF340 | Since: 323
  */
 export function setCanSwitchWeapon(ped: number | IPed, toggle: boolean): void {
-    SetPedCanSwitchWeapon(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanSwitchWeapon(_ped, toggle);
 }
 
 /**
@@ -4546,7 +4889,8 @@ export function setCanSwitchWeapon(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x2E2F4240B3F24647 | Since: 323
  */
 export function setCanTeleportToGroupLeader(pedHandle: number | IPed, groupHandle: number, toggle: boolean): void {
-    SetPedCanTeleportToGroupLeader(pedHandle, groupHandle, toggle);
+    const _pedHandle = pedHandle instanceof IPed ? pedHandle.handle() : pedHandle;
+    SetPedCanTeleportToGroupLeader(_pedHandle, groupHandle, toggle);
 }
 
 /**
@@ -4555,7 +4899,8 @@ export function setCanTeleportToGroupLeader(pedHandle: number | IPed, groupHandl
  * Hash: 0xF2B7106D37947CE0 | Since: 323
  */
 export function setCanTorsoIk(ped: number | IPed, toggle: boolean): void {
-    SetPedCanTorsoIk(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanTorsoIk(_ped, toggle);
 }
 
 /**
@@ -4564,7 +4909,8 @@ export function setCanTorsoIk(ped: number | IPed, toggle: boolean): void {
  * Hash: 0xF5846EDB26A98A24 | Since: 323
  */
 export function setCanTorsoReactIk(ped: number | IPed): void {
-    SetPedCanTorsoReactIk(ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanTorsoReactIk(_ped, false);
 }
 
 /**
@@ -4573,7 +4919,8 @@ export function setCanTorsoReactIk(ped: number | IPed): void {
  * Hash: 0x6647C5F6F5792496 | Since: 323
  */
 export function setCanTorsoVehicleIk(ped: number | IPed): void {
-    SetPedCanTorsoVehicleIk(ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanTorsoVehicleIk(_ped, false);
 }
 
 /**
@@ -4582,7 +4929,8 @@ export function setCanTorsoVehicleIk(ped: number | IPed): void {
  * Hash: 0xEC4686EC06434678 | Since: 323
  */
 export function setCanUseAutoConversationLookat(ped: number | IPed, toggle: boolean): void {
-    SetPedCanUseAutoConversationLookat(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanUseAutoConversationLookat(_ped, toggle);
 }
 
 /**
@@ -4594,7 +4942,8 @@ export function setCanUseAutoConversationLookat(ped: number | IPed, toggle: bool
  * Hash: 0x364DF566EC833DE2 | Since: 323
  */
 export function setCapsule(ped: number | IPed, value: number): void {
-    SetPedCapsule(ped, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCapsule(_ped, value);
 }
 
 /**
@@ -4636,7 +4985,8 @@ export function setClothProne(): void {
  * Hash: 0xC7622C0D36B2FDA8 | Since: 323
  */
 export function setCombatAbility(ped: number | IPed, abilityLevel: number): void {
-    SetPedCombatAbility(ped, abilityLevel);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCombatAbility(_ped, abilityLevel);
 }
 
 /**
@@ -4739,7 +5089,8 @@ export function setCombatAbility(ped: number | IPed, abilityLevel: number): void
  * Hash: 0x9F7794730795E019 | Since: 323
  */
 export function setCombatAttributes(ped: number | IPed, attributeId: number, enabled: boolean): void {
-    SetPedCombatAttributes(ped, attributeId, enabled);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCombatAttributes(_ped, attributeId, enabled);
 }
 
 /**
@@ -4754,7 +5105,8 @@ export function setCombatAttributes(ped: number | IPed, attributeId: number, ena
  * Hash: 0x4D9CA1009AFBD057 | Since: 323
  */
 export function setCombatMovement(ped: number | IPed, combatMovement: number): void {
-    SetPedCombatMovement(ped, combatMovement);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCombatMovement(_ped, combatMovement);
 }
 
 /**
@@ -4770,7 +5122,8 @@ export function setCombatMovement(ped: number | IPed, combatMovement: number): v
  * Hash: 0x3C606747B23E497B | Since: 323
  */
 export function setCombatRange(ped: number | IPed, combatRange: number): void {
-    SetPedCombatRange(ped, combatRange);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCombatRange(_ped, combatRange);
 }
 
 /**
@@ -4802,7 +5155,8 @@ export function setCombatRange(ped: number | IPed, combatRange: number): void {
  * Hash: 0x262B14F48D29DE80 | Since: 323
  */
 export function setComponentVariation(ped: number | IPed, componentId: number, drawableId: number, textureId: number, paletteId: number): void {
-    SetPedComponentVariation(ped, componentId, drawableId, textureId, paletteId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedComponentVariation(_ped, componentId, drawableId, textureId, paletteId);
 }
 
 /**
@@ -5271,7 +5625,8 @@ export function setComponentVariation(ped: number | IPed, componentId: number, d
  * Hash: 0x1913FE4CBF41C463 | Since: 323
  */
 export function setConfigFlag(ped: number | IPed, flagId: number, value: boolean): void {
-    SetPedConfigFlag(ped, flagId, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedConfigFlag(_ped, flagId, value);
 }
 
 /**
@@ -5280,7 +5635,8 @@ export function setConfigFlag(ped: number | IPed, flagId: number, value: boolean
  * Hash: 0x9AFEFF481A85AB2E | Since: 323
  */
 export function setCoordsKeepVehicle(ped: number | IPed, pos: Vector3): void {
-    SetPedCoordsKeepVehicle(ped, pos.x, pos.y, pos.z);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCoordsKeepVehicle(_ped, pos.x, pos.y, pos.z);
 }
 
 /**
@@ -5289,7 +5645,8 @@ export function setCoordsKeepVehicle(ped: number | IPed, pos: Vector3): void {
  * Hash: 0x87052FE446E07247 | Since: 323
  */
 export function setCoordsNoGang(ped: number | IPed, pos: Vector3): void {
-    SetPedCoordsNoGang(ped, pos.x, pos.y, pos.z);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCoordsNoGang(_ped, pos.x, pos.y, pos.z);
 }
 
 /**
@@ -5298,7 +5655,8 @@ export function setCoordsNoGang(ped: number | IPed, pos: Vector3): void {
  * Hash: 0xA549131166868ED3 | Since: 323
  */
 export function setCowerHash(ped: number | IPed): void {
-    SetPedCowerHash(ped, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCowerHash(_ped, undefined);
 }
 
 /**
@@ -5307,7 +5665,8 @@ export function setCowerHash(ped: number | IPed): void {
  * Hash: 0x45EEE61580806D63 | Since: 323
  */
 export function setDefaultComponentVariation(ped: number | IPed): void {
-    SetPedDefaultComponentVariation(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedDefaultComponentVariation(_ped);
 }
 
 /**
@@ -5316,7 +5675,9 @@ export function setDefaultComponentVariation(ped: number | IPed): void {
  * Hash: 0x4EF47FE21698A8B6 | Since: 323
  */
 export function setDefensiveAreaAttachedToPed(ped: number | IPed, attachPed: number | IPed): void {
-    SetPedDefensiveAreaAttachedToPed(ped, attachPed, 0, 0, 0, 0, 0, 0, 0, false, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _attachPed = attachPed instanceof IPed ? attachPed.handle() : attachPed;
+    SetPedDefensiveAreaAttachedToPed(_ped, _attachPed, 0, 0, 0, 0, 0, 0, 0, false, false);
 }
 
 /**
@@ -5325,7 +5686,8 @@ export function setDefensiveAreaAttachedToPed(ped: number | IPed, attachPed: num
  * Hash: 0x413C6C763A4AFFAD | Since: 323
  */
 export function setDefensiveAreaDirection(ped: number | IPed): void {
-    SetPedDefensiveAreaDirection(ped, 0, 0, 0, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedDefensiveAreaDirection(_ped, 0, 0, 0, false);
 }
 
 /**
@@ -5334,7 +5696,9 @@ export function setDefensiveAreaDirection(ped: number | IPed): void {
  * Hash: 0xF9B8F91AAD3B953E | Since: 323
  */
 export function setDefensiveSphereAttachedToPed(ped: number | IPed, target: number | IPed, xOffset: number, yOffset: number, zOffset: number, radius: number): void {
-    SetPedDefensiveSphereAttachedToPed(ped, target, xOffset, yOffset, zOffset, radius, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IPed ? target.handle() : target;
+    SetPedDefensiveSphereAttachedToPed(_ped, _target, xOffset, yOffset, zOffset, radius, false);
 }
 
 /**
@@ -5343,7 +5707,9 @@ export function setDefensiveSphereAttachedToPed(ped: number | IPed, target: numb
  * Hash: 0xE4723DB6E736CCFF | Since: 323
  */
 export function setDefensiveSphereAttachedToVehicle(ped: number | IPed, target: number | IVehicle, xOffset: number, yOffset: number, zOffset: number, radius: number): void {
-    SetPedDefensiveSphereAttachedToVehicle(ped, target, xOffset, yOffset, zOffset, radius, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _target = target instanceof IVehicle ? target.localId() : target;
+    SetPedDefensiveSphereAttachedToVehicle(_ped, _target, xOffset, yOffset, zOffset, radius, false);
 }
 
 /**
@@ -5361,7 +5727,8 @@ export function setDensityMultiplierThisFrame(multiplier: number): void {
  * Hash: 0xAA5A7ECE2AA8FE70 | Since: 323
  */
 export function setDesiredHeading(ped: number | IPed, heading: number): void {
-    SetPedDesiredHeading(ped, heading);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedDesiredHeading(_ped, heading);
 }
 
 /**
@@ -5370,7 +5737,8 @@ export function setDesiredHeading(ped: number | IPed, heading: number): void {
  * Hash: 0xEEB64139BA29A7CF | Since: 323
  */
 export function setDiesInstantlyInWater(ped: number | IPed, toggle: boolean): void {
-    SetPedDiesInstantlyInWater(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedDiesInstantlyInWater(_ped, toggle);
 }
 
 /**
@@ -5379,7 +5747,8 @@ export function setDiesInstantlyInWater(ped: number | IPed, toggle: boolean): vo
  * Hash: 0xD718A22995E2B4BC | Since: 323
  */
 export function setDiesInSinkingVehicle(ped: number | IPed, toggle: boolean): void {
-    SetPedDiesInSinkingVehicle(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedDiesInSinkingVehicle(_ped, toggle);
 }
 
 /**
@@ -5388,7 +5757,8 @@ export function setDiesInSinkingVehicle(ped: number | IPed, toggle: boolean): vo
  * Hash: 0x2A30922C90C9B42C | Since: 323
  */
 export function setDiesInVehicle(ped: number | IPed, toggle: boolean): void {
-    SetPedDiesInVehicle(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedDiesInVehicle(_ped, toggle);
 }
 
 /**
@@ -5397,7 +5767,8 @@ export function setDiesInVehicle(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x56CEF0AC79073BDE | Since: 323
  */
 export function setDiesInWater(ped: number | IPed, toggle: boolean): void {
-    SetPedDiesInWater(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedDiesInWater(_ped, toggle);
 }
 
 /**
@@ -5406,7 +5777,8 @@ export function setDiesInWater(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x5BA7919BED300023 | Since: 323
  */
 export function setDiesWhenInjured(ped: number | IPed, toggle: boolean): void {
-    SetPedDiesWhenInjured(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedDiesWhenInjured(_ped, toggle);
 }
 
 /**
@@ -5415,7 +5787,8 @@ export function setDiesWhenInjured(ped: number | IPed, toggle: boolean): void {
  * Hash: 0xED34AB6C5CB36520 | Since: 323
  */
 export function setDriveByClipsetOverride(ped: number | IPed, clipset: string): void {
-    SetPedDriveByClipsetOverride(ped, clipset);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedDriveByClipsetOverride(_ped, clipset);
 }
 
 /**
@@ -5424,7 +5797,8 @@ export function setDriveByClipsetOverride(ped: number | IPed, clipset: string): 
  * Hash: 0x030983CA930B692D | Since: 323
  */
 export function setDucking(ped: number | IPed, toggle: boolean): void {
-    SetPedDucking(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedDucking(_ped, toggle);
 }
 
 /**
@@ -5435,7 +5809,8 @@ export function setDucking(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x4E90D746056E273D | Since: 944
  */
 export function setEmissiveScale(ped: number | IPed, intensity: number): void {
-    SetPedEmissiveIntensity(ped, intensity);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedEmissiveIntensity(_ped, intensity);
 }
 
 /**
@@ -5444,7 +5819,8 @@ export function setEmissiveScale(ped: number | IPed, intensity: number): void {
  * Hash: 0xE906EC930F5FE7C8 | Since: 791
  */
 export function setEnableCrewEmblem(ped: number | IPed, toggle: boolean): void {
-    Citizen.invokeNative('0xE906EC930F5FE7C8', ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0xE906EC930F5FE7C8', _ped, toggle);
 }
 
 /**
@@ -5453,7 +5829,8 @@ export function setEnableCrewEmblem(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x97A790315D3831FD | Since: 323
  */
 export function setEnableWeaponBlocking(ped: number | IPed, toggle: boolean): void {
-    SetPedEnableWeaponBlocking(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedEnableWeaponBlocking(_ped, toggle);
 }
 
 /**
@@ -5463,7 +5840,8 @@ export function setEnableWeaponBlocking(ped: number | IPed, toggle: boolean): vo
  * Hash: 0xD69411AA0CEBF9E9 | Since: 323
  */
 export function setEnveffColorModulator(ped: number | IPed): void {
-    SetPedEnveffColorModulator(ped, 0, 0, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedEnveffColorModulator(_ped, 0, 0, 0);
 }
 
 /**
@@ -5484,7 +5862,8 @@ export function setEnveffColorModulator(ped: number | IPed): void {
  * Hash: 0x110F526AB784111F | Since: 323
  */
 export function setEnveffCpvAdd(ped: number | IPed): void {
-    Citizen.invokeNative('0x110F526AB784111F', ped, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x110F526AB784111F', _ped, 0);
 }
 
 /**
@@ -5496,7 +5875,8 @@ export function setEnveffCpvAdd(ped: number | IPed): void {
  * Hash: 0xBF29516833893561 | Since: 323
  */
 export function setEnveffScale(ped: number | IPed, value: number): void {
-    SetPedEnveffScale(ped, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedEnveffScale(_ped, value);
 }
 
 /**
@@ -5522,8 +5902,9 @@ export function setEnveffScale(ped: number | IPed, value: number): void {
  * Hash: 0x9AC577F5A12AD8A9 | Since: 323
  */
 export function setFiringPattern(ped: number | IPed, patternHash: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof patternHash === 'string') patternHash = GetHashKey(patternHash)
-    SetPedFiringPattern(ped, patternHash);
+    SetPedFiringPattern(_ped, patternHash);
 }
 
 /**
@@ -5533,7 +5914,8 @@ export function setFiringPattern(ped: number | IPed, patternHash: number | strin
  * Hash: 0x70A2D1137C8ED7C9 | Since: 323
  */
 export function setFleeAttributes(ped: number | IPed, attributeFlags: number, enable: boolean): void {
-    SetPedFleeAttributes(ped, attributeFlags, enable);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedFleeAttributes(_ped, attributeFlags, enable);
 }
 
 /**
@@ -5542,7 +5924,8 @@ export function setFleeAttributes(ped: number | IPed, attributeFlags: number, en
  * Hash: 0x7FB17BA2E7DECA5B | Since: 323
  */
 export function setGeneratesDeadBodyEvents(ped: number | IPed, toggle: boolean): void {
-    SetPedGeneratesDeadBodyEvents(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedGeneratesDeadBodyEvents(_ped, toggle);
 }
 
 /**
@@ -5555,7 +5938,8 @@ export function setGeneratesDeadBodyEvents(ped: number | IPed, toggle: boolean):
  * Hash: 0xDDF803377F94AAA8 | Since: 323
  */
 export function setGestureGroup(ped: number | IPed, animGroupGesture: string): void {
-    SetPedGestureGroup(ped, animGroupGesture);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedGestureGroup(_ped, animGroupGesture);
 }
 
 /**
@@ -5564,7 +5948,8 @@ export function setGestureGroup(ped: number | IPed, animGroupGesture: string): v
  * Hash: 0xBC0ED94165A48BC2 | Since: 323
  */
 export function setGetOutUpsideDownVehicle(ped: number | IPed, toggle: boolean): void {
-    SetPedGetOutUpsideDownVehicle(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedGetOutUpsideDownVehicle(_ped, toggle);
 }
 
 /**
@@ -5577,7 +5962,8 @@ export function setGetOutUpsideDownVehicle(ped: number | IPed, toggle: boolean):
  * Hash: 0x9FF447B6B6AD960A | Since: 323
  */
 export function setGravity(ped: number | IPed, toggle: boolean): void {
-    SetPedGravity(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedGravity(_ped, toggle);
 }
 
 /**
@@ -5586,7 +5972,8 @@ export function setGravity(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x0BDDB8D9EC6BCF3C | Since: 323
  */
 export function setGroupMemberPassengerIndex(ped: number | IPed, index: number): void {
-    SetPedGroupMemberPassengerIndex(ped, index);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedGroupMemberPassengerIndex(_ped, index);
 }
 
 /**
@@ -5595,7 +5982,8 @@ export function setGroupMemberPassengerIndex(ped: number | IPed, index: number):
  * Hash: 0x4CFFC65454C93A49 | Since: 323
  */
 export function setHairTint(ped: number | IPed, colorID: number, highlightColorID: number): void {
-    SetPedHairTint(ped, colorID, highlightColorID);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedHairTint(_ped, colorID, highlightColorID);
 }
 
 /**
@@ -5619,7 +6007,8 @@ export function setHairTint(ped: number | IPed, colorID: number, highlightColorI
  * Hash: 0x9414E18B9434C2FE | Since: 323
  */
 export function setHeadBlendData(ped: number | IPed, shapeFirstID: number, shapeSecondID: number, shapeThirdID: number, skinFirstID: number, skinSecondID: number, skinThirdID: number, shapeMix: number, skinMix: number, thirdMix: number, isParent: boolean): void {
-    SetPedHeadBlendData(ped, shapeFirstID, shapeSecondID, shapeThirdID, skinFirstID, skinSecondID, skinThirdID, shapeMix, skinMix, thirdMix, isParent);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedHeadBlendData(_ped, shapeFirstID, shapeSecondID, shapeThirdID, skinFirstID, skinSecondID, skinThirdID, shapeMix, skinMix, thirdMix, isParent);
 }
 
 /**
@@ -5643,7 +6032,8 @@ export function setHeadBlendData(ped: number | IPed, shapeFirstID: number, shape
  * Hash: 0x48F44967FA05CC1E | Since: 323
  */
 export function setHeadOverlay(ped: number | IPed, overlayID: number, index: number, opacity: number): void {
-    SetPedHeadOverlay(ped, overlayID, index, opacity);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedHeadOverlay(_ped, overlayID, index, opacity);
 }
 
 /**
@@ -5656,7 +6046,8 @@ export function setHeadOverlay(ped: number | IPed, overlayID: number, index: num
  * Hash: 0x497BF74A7B9CB952 | Since: 323
  */
 export function setHeadOverlayTint(ped: number | IPed, overlayID: number, colorType: number, colorID: number, secondColorID: number): void {
-    SetPedHeadOverlayColor(ped, overlayID, colorType, colorID, secondColorID);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedHeadOverlayColor(_ped, overlayID, colorType, colorID, secondColorID);
 }
 
 /**
@@ -5674,7 +6065,8 @@ export function setHealthPendingLastDamageEventOverrideFlag(toggle: boolean): vo
  * Hash: 0x33A8F7F7D5F7F33C | Since: 323
  */
 export function setHearingRange(ped: number | IPed, value: number): void {
-    SetPedHearingRange(ped, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedHearingRange(_ped, value);
 }
 
 /**
@@ -5683,7 +6075,8 @@ export function setHearingRange(ped: number | IPed, value: number): void {
  * Hash: 0xC1F6EBF9A3D55538 | Since: 323
  */
 export function setHeatscaleOverride(ped: number | IPed, heatScale: number): void {
-    SetPedHeatscaleOverride(ped, heatScale);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedHeatscaleOverride(_ped, heatScale);
 }
 
 /**
@@ -5692,7 +6085,8 @@ export function setHeatscaleOverride(ped: number | IPed, heatScale: number): voi
  * Hash: 0x560A43136EB58105 | Since: 323
  */
 export function setHelmet(ped: number | IPed, canWearHelmet: boolean): void {
-    SetPedHelmet(ped, canWearHelmet);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedHelmet(_ped, canWearHelmet);
 }
 
 /**
@@ -5701,7 +6095,8 @@ export function setHelmet(ped: number | IPed, canWearHelmet: boolean): void {
  * Hash: 0xC0E78D5C2CE3EB25 | Since: 323
  */
 export function setHelmetFlag(ped: number | IPed, helmetFlag: number): void {
-    SetPedHelmetFlag(ped, helmetFlag);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedHelmetFlag(_ped, helmetFlag);
 }
 
 /**
@@ -5711,7 +6106,8 @@ export function setHelmetFlag(ped: number | IPed, helmetFlag: number): void {
  * Hash: 0x26D83693ED99291C | Since: 323
  */
 export function setHelmetPropIndex(ped: number | IPed, propIndex: number): void {
-    SetPedHelmetPropIndex(ped, propIndex, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedHelmetPropIndex(_ped, propIndex, false);
 }
 
 /**
@@ -5720,7 +6116,8 @@ export function setHelmetPropIndex(ped: number | IPed, propIndex: number): void 
  * Hash: 0xF1550C4BD22582E2 | Since: 323
  */
 export function setHelmetTextureIndex(ped: number | IPed, textureIndex: number): void {
-    SetPedHelmetTextureIndex(ped, textureIndex);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedHelmetTextureIndex(_ped, textureIndex);
 }
 
 /**
@@ -5729,7 +6126,8 @@ export function setHelmetTextureIndex(ped: number | IPed, textureIndex: number):
  * Hash: 0x3F7325574E41B44D | Since: 791
  */
 export function setHelmetVisorPropIndices(ped: number | IPed): void {
-    SetPedHelmetUnk(ped, false, 0, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedHelmetUnk(_ped, false, 0, 0);
 }
 
 /**
@@ -5738,7 +6136,8 @@ export function setHelmetVisorPropIndices(ped: number | IPed): void {
  * Hash: 0x52D59AB61DDC05DD | Since: 323
  */
 export function setHighlyPerceptive(ped: number | IPed, toggle: boolean): void {
-    SetPedHighlyPerceptive(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedHighlyPerceptive(_ped, toggle);
 }
 
 /**
@@ -5747,7 +6146,8 @@ export function setHighlyPerceptive(ped: number | IPed, toggle: boolean): void {
  * Hash: 0xF107E836A70DCE05 | Since: 323
  */
 export function setIdRange(ped: number | IPed, value: number): void {
-    SetPedIdRange(ped, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedIdRange(_ped, value);
 }
 
 /**
@@ -5756,7 +6156,8 @@ export function setIdRange(ped: number | IPed, value: number): void {
  * Hash: 0x570389D1C3DE3C6B | Since: 323
  */
 export function setIncreasedAvoidanceRadius(ped: number | IPed): void {
-    SetPedIncreasedAvoidanceRadius(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedIncreasedAvoidanceRadius(_ped);
 }
 
 /**
@@ -5765,7 +6166,8 @@ export function setIncreasedAvoidanceRadius(ped: number | IPed): void {
  * Hash: 0xEC4B4B3B9908052A | Since: 323
  */
 export function setInjuredOnGroundBehaviour(ped: number | IPed): void {
-    Citizen.invokeNative('0xEC4B4B3B9908052A', ped, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0xEC4B4B3B9908052A', _ped, 0);
 }
 
 /**
@@ -5782,7 +6184,9 @@ export function setInjuredOnGroundBehaviour(ped: number | IPed): void {
  * Hash: 0xF75B0D629E1C063D | Since: 323
  */
 export function setIntoVehicle(ped: number | IPed, vehicle: number | IVehicle, seatIndex: number): void {
-    SetPedIntoVehicle(ped, vehicle, seatIndex);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetPedIntoVehicle(_ped, _vehicle, seatIndex);
 }
 
 /**
@@ -5798,8 +6202,9 @@ export function setIntoVehicle(ped: number | IPed, vehicle: number | IVehicle, s
  * Hash: 0x530071295899A8C6 | Since: 323
  */
 export function setInVehicleContext(ped: number | IPed, context: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof context === 'string') context = GetHashKey(context)
-    SetPedInVehicleContext(ped, context);
+    SetPedInVehicleContext(_ped, context);
 }
 
 /**
@@ -5817,7 +6222,8 @@ export function setIsAvoidedByOthers(): void {
  * Hash: 0x33A60D8BDD6E508C | Since: 323
  */
 export function setIsIgnoredByAutoOpenDoors(ped: number | IPed): void {
-    SetPedCanPlayInjuredAnims(ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCanPlayInjuredAnims(_ped, false);
 }
 
 /**
@@ -5826,7 +6232,8 @@ export function setIsIgnoredByAutoOpenDoors(ped: number | IPed): void {
  * Hash: 0x971D38760FBC02EF | Since: 323
  */
 export function setKeepTask(ped: number | IPed, toggle: boolean): void {
-    SetPedKeepTask(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedKeepTask(_ped, toggle);
 }
 
 /**
@@ -5835,7 +6242,8 @@ export function setKeepTask(ped: number | IPed, toggle: boolean): void {
  * Hash: 0xC396F5B86FF9FEBD | Since: 323
  */
 export function setLegIkMode(ped: number | IPed, mode: number): void {
-    SetPedLegIkMode(ped, mode);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedLegIkMode(_ped, mode);
 }
 
 /**
@@ -5844,7 +6252,8 @@ export function setLegIkMode(ped: number | IPed, mode: number): void {
  * Hash: 0xDC2C5C242AAC342B | Since: 323
  */
 export function setLodMultiplier(ped: number | IPed, multiplier: number): void {
-    SetPedLodMultiplier(ped, multiplier);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedLodMultiplier(_ped, multiplier);
 }
 
 /**
@@ -5853,7 +6262,8 @@ export function setLodMultiplier(ped: number | IPed, multiplier: number): void {
  * Hash: 0xF5F6378C4F3419D3 | Since: 323
  */
 export function setMaxHealth(ped: number | IPed, value: number): void {
-    SetPedMaxHealth(ped, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedMaxHealth(_ped, value);
 }
 
 /**
@@ -5862,7 +6272,8 @@ export function setMaxHealth(ped: number | IPed, value: number): void {
  * Hash: 0x433083750C5E064A | Since: 323
  */
 export function setMaxMoveBlendRatio(ped: number | IPed, value: number): void {
-    SetPedMaxMoveBlendRatio(ped, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedMaxMoveBlendRatio(_ped, value);
 }
 
 /**
@@ -5871,7 +6282,8 @@ export function setMaxMoveBlendRatio(ped: number | IPed, value: number): void {
  * Hash: 0x43C851690662113D | Since: 323
  */
 export function setMaxTimeInWater(ped: number | IPed, value: number): void {
-    SetPedMaxTimeInWater(ped, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedMaxTimeInWater(_ped, value);
 }
 
 /**
@@ -5880,7 +6292,8 @@ export function setMaxTimeInWater(ped: number | IPed, value: number): void {
  * Hash: 0x6BA428C528D9E522 | Since: 323
  */
 export function setMaxTimeUnderwater(ped: number | IPed, value: number): void {
-    SetPedMaxTimeUnderwater(ped, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedMaxTimeUnderwater(_ped, value);
 }
 
 /**
@@ -5931,7 +6344,8 @@ export function setMaxTimeUnderwater(ped: number | IPed, value: number): void {
  * Hash: 0x71A5C1DBA060049E | Since: 323
  */
 export function setMicroMorph(ped: number | IPed, index: number, scale: number): void {
-    SetPedFaceFeature(ped, index, scale);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedFaceFeature(_ped, index, scale);
 }
 
 /**
@@ -5940,7 +6354,8 @@ export function setMicroMorph(ped: number | IPed, index: number, scale: number):
  * Hash: 0xFA0675AB151073FA | Since: 323
  */
 export function setMinGroundTimeForStungun(ped: number | IPed, ms: number): void {
-    SetPedMinGroundTimeForStungun(ped, ms);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedMinGroundTimeForStungun(_ped, ms);
 }
 
 /**
@@ -5949,7 +6364,8 @@ export function setMinGroundTimeForStungun(ped: number | IPed, ms: number): void
  * Hash: 0x01A898D26E2333DD | Since: 323
  */
 export function setMinMoveBlendRatio(ped: number | IPed, value: number): void {
-    SetPedMinMoveBlendRatio(ped, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedMinMoveBlendRatio(_ped, value);
 }
 
 /**
@@ -5972,7 +6388,8 @@ export function setModelIsSuppressed(modelHash: number | string, toggle: boolean
  * Hash: 0xA9C8960E8684C1B5 | Since: 323
  */
 export function setMoney(ped: number | IPed, amount: number): void {
-    SetPedMoney(ped, amount);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedMoney(_ped, amount);
 }
 
 /**
@@ -5981,7 +6398,8 @@ export function setMoney(ped: number | IPed, amount: number): void {
  * Hash: 0x0A986918B102B448 | Since: 323
  */
 export function setMotionBlur(ped: number | IPed, toggle: boolean): void {
-    SetPedMotionBlur(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedMotionBlur(_ped, toggle);
 }
 
 /**
@@ -5991,7 +6409,8 @@ export function setMotionBlur(ped: number | IPed, toggle: boolean): void {
  * Hash: 0x9DBA107B4937F809 | Since: 323
  */
 export function setMotionInCoverClipsetOverride(ped: number | IPed): void {
-    SetPedCoverClipsetOverride(ped, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedCoverClipsetOverride(_ped, undefined);
 }
 
 /**
@@ -6053,7 +6472,8 @@ export function setMotionInCoverClipsetOverride(ped: number | IPed): void {
  * Hash: 0xAF8A94EDE7712BEF | Since: 323
  */
 export function setMovementClipset(ped: number | IPed, clipSet: string, transitionSpeed: number): void {
-    SetPedMovementClipset(ped, clipSet, transitionSpeed);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedMovementClipset(_ped, clipSet, transitionSpeed);
 }
 
 /**
@@ -6062,7 +6482,8 @@ export function setMovementClipset(ped: number | IPed, clipSet: string, transiti
  * Hash: 0x9E8C908F41584ECD | Since: 323
  */
 export function setMoveAnimsBlendOut(ped: number | IPed): void {
-    SetPedMoveAnimsBlendOut(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedMoveAnimsBlendOut(_ped);
 }
 
 /**
@@ -6071,7 +6492,8 @@ export function setMoveAnimsBlendOut(ped: number | IPed): void {
  * Hash: 0x0B3E35AC043707D9 | Since: 573
  */
 export function setMoveRateInWaterOverride(ped: number | IPed): void {
-    Citizen.invokeNative('0x0B3E35AC043707D9', ped, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x0B3E35AC043707D9', _ped, 0);
 }
 
 /**
@@ -6091,7 +6513,8 @@ export function setMoveRateInWaterOverride(ped: number | IPed): void {
  * Hash: 0x085BF80FA50A39D1 | Since: 323
  */
 export function setMoveRateOverride(ped: number | IPed, value: number): void {
-    SetPedMoveRateOverride(ped, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedMoveRateOverride(_ped, value);
 }
 
 /**
@@ -6102,7 +6525,8 @@ export function setMoveRateOverride(ped: number | IPed, value: number): void {
  * Hash: 0x98EFA132A4117BE1 | Since: 323
  */
 export function setNameDebug(ped: number | IPed, name: string): void {
-    SetPedNameDebug(ped, name);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedNameDebug(_ped, name);
 }
 
 /**
@@ -6111,7 +6535,8 @@ export function setNameDebug(ped: number | IPed, name: string): void {
  * Hash: 0x3DBFC55D5C9BB447 | Since: 323
  */
 export function setNeverLeavesGroup(ped: number | IPed, toggle: boolean): void {
-    SetPedNeverLeavesGroup(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedNeverLeavesGroup(_ped, toggle);
 }
 
 /**
@@ -6147,7 +6572,8 @@ export function setPanicExitScenario(): boolean {
  * Hash: 0x333FC8DB079B7186 | Since: 323
  */
 export function setParachuteTintIndex(ped: number | IPed, tintIndex: number): void {
-    SetPedParachuteTintIndex(ped, tintIndex);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedParachuteTintIndex(_ped, tintIndex);
 }
 
 /**
@@ -6165,7 +6591,8 @@ export function setPhonePaletteIdx(): void {
  * Hash: 0xAAD6D1ACF08F4612 | Since: 323
  */
 export function setPinnedDown(ped: number | IPed, pinned: boolean, i: number): boolean {
-    return SetPedPinnedDown(ped, pinned, i);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return SetPedPinnedDown(_ped, pinned, i);
 }
 
 /**
@@ -6174,7 +6601,8 @@ export function setPinnedDown(ped: number | IPed, pinned: boolean, i: number): b
  * Hash: 0x94D94BF1A75AED3D | Since: 323
  */
 export function setPlaysHeadOnHornAnimWhenDiesInVehicle(ped: number | IPed, toggle: boolean): void {
-    SetPedPlaysHeadOnHornAnimWhenDiesInVehicle(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedPlaysHeadOnHornAnimWhenDiesInVehicle(_ped, toggle);
 }
 
 /**
@@ -6183,7 +6611,8 @@ export function setPlaysHeadOnHornAnimWhenDiesInVehicle(ped: number | IPed, togg
  * Hash: 0x8421EB4DA7E391B9 | Since: 323
  */
 export function setPreferredCoverSet(ped: number | IPed, itemSet: any): void {
-    SetPedPreferredCoverSet(ped, itemSet);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedPreferredCoverSet(_ped, itemSet);
 }
 
 /**
@@ -6193,7 +6622,8 @@ export function setPreferredCoverSet(ped: number | IPed, itemSet: any): void {
  * Hash: 0x2B16A3BFF1FBCE49 | Since: 323
  */
 export function setPreloadPropData(ped: number | IPed, componentId: number, drawableId: number, TextureId: number): number {
-    return SetPedPreloadPropData(ped, componentId, drawableId, TextureId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return SetPedPreloadPropData(_ped, componentId, drawableId, TextureId);
 }
 
 /**
@@ -6205,7 +6635,8 @@ export function setPreloadPropData(ped: number | IPed, componentId: number, draw
  * Hash: 0x39D55A620FCB6A3A | Since: 323
  */
 export function setPreloadVariationData(ped: number | IPed, slot: number, drawableId: number, textureId: number): number {
-    return SetPedPreloadVariationData(ped, slot, drawableId, textureId);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return SetPedPreloadVariationData(_ped, slot, drawableId, textureId);
 }
 
 /**
@@ -6218,7 +6649,9 @@ export function setPreloadVariationData(ped: number | IPed, slot: number, drawab
  * Hash: 0xCD17B554996A8D9E | Since: 323
  */
 export function setPrimaryLookat(ped: number | IPed, lookAt: number | IPed): void {
-    SetPedPrimaryLookat(ped, lookAt);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _lookAt = lookAt instanceof IPed ? lookAt.handle() : lookAt;
+    SetPedPrimaryLookat(_ped, _lookAt);
 }
 
 /**
@@ -6238,7 +6671,8 @@ export function setPrimaryLookat(ped: number | IPed, lookAt: number | IPed): voi
  * Hash: 0x93376B65A266EB5F | Since: 323
  */
 export function setPropIndex(ped: number | IPed, componentId: number, drawableId: number, TextureId: number, attach: boolean): void {
-    SetPedPropIndex(ped, componentId, drawableId, TextureId, attach, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedPropIndex(_ped, componentId, drawableId, TextureId, attach, undefined);
 }
 
 /**
@@ -6247,7 +6681,8 @@ export function setPropIndex(ped: number | IPed, componentId: number, drawableId
  * Hash: 0x01F6594B923B9251 | Since: 323
  */
 export function setRagdollForceFall(ped: number | IPed): void {
-    SetPedRagdollForceFall(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedRagdollForceFall(_ped);
 }
 
 /**
@@ -6256,7 +6691,8 @@ export function setRagdollForceFall(ped: number | IPed): void {
  * Hash: 0xF0A4F1BBF4FA7497 | Since: 323
  */
 export function setRagdollOnCollision(ped: number | IPed, toggle: boolean): void {
-    SetPedRagdollOnCollision(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedRagdollOnCollision(_ped, toggle);
 }
 
 /**
@@ -6268,7 +6704,8 @@ export function setRagdollOnCollision(ped: number | IPed, toggle: boolean): void
  * Hash: 0xC8A9481A01E63C28 | Since: 323
  */
 export function setRandomComponentVariation(ped: number | IPed): void {
-    SetPedRandomComponentVariation(ped, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedRandomComponentVariation(_ped, 0);
 }
 
 /**
@@ -6278,7 +6715,8 @@ export function setRandomComponentVariation(ped: number | IPed): void {
  * Hash: 0xC44AA05345C992C6 | Since: 323
  */
 export function setRandomProps(ped: number | IPed): void {
-    SetPedRandomProps(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedRandomProps(_ped);
 }
 
 /**
@@ -6287,8 +6725,9 @@ export function setRandomProps(ped: number | IPed): void {
  * Hash: 0xADB3F206518799E8 | Since: 323
  */
 export function setRelationshipGroupDefaultHash(ped: number | IPed, hash: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof hash === 'string') hash = GetHashKey(hash)
-    SetPedRelationshipGroupDefaultHash(ped, hash);
+    SetPedRelationshipGroupDefaultHash(_ped, hash);
 }
 
 /**
@@ -6297,8 +6736,9 @@ export function setRelationshipGroupDefaultHash(ped: number | IPed, hash: number
  * Hash: 0xC80A74AC829DDD92 | Since: 323
  */
 export function setRelationshipGroupHash(ped: number | IPed, hash: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof hash === 'string') hash = GetHashKey(hash)
-    SetPedRelationshipGroupHash(ped, hash);
+    SetPedRelationshipGroupHash(_ped, hash);
 }
 
 /**
@@ -6307,7 +6747,8 @@ export function setRelationshipGroupHash(ped: number | IPed, hash: number | stri
  * Hash: 0xE88DA0751C22A2AD | Since: 323
  */
 export function setReserveParachuteTintIndex(ped: number | IPed): void {
-    SetPedReserveParachuteTintIndex(ped, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedReserveParachuteTintIndex(_ped, undefined);
 }
 
 /**
@@ -6318,7 +6759,8 @@ export function setReserveParachuteTintIndex(ped: number | IPed): void {
  * Hash: 0xC1E8A365BF3B29F2 | Since: 323
  */
 export function setResetFlag(ped: number | IPed, flagId: number, doReset: boolean): void {
-    SetPedResetFlag(ped, flagId, doReset);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedResetFlag(_ped, flagId, doReset);
 }
 
 /**
@@ -6327,7 +6769,8 @@ export function setResetFlag(ped: number | IPed, flagId: number, doReset: boolea
  * Hash: 0x36C6984C3ED0C911 | Since: 323
  */
 export function setScubaGearVariation(ped: number | IPed): void {
-    SetPedScubaGearVariation(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedScubaGearVariation(_ped);
 }
 
 /**
@@ -6336,7 +6779,8 @@ export function setScubaGearVariation(ped: number | IPed): void {
  * Hash: 0xF29CF591C4BF6CEE | Since: 323
  */
 export function setSeeingRange(ped: number | IPed, value: number): void {
-    SetPedSeeingRange(ped, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedSeeingRange(_ped, value);
 }
 
 /**
@@ -6345,7 +6789,8 @@ export function setSeeingRange(ped: number | IPed, value: number): void {
  * Hash: 0x96A05E4FB321B1BA | Since: 323
  */
 export function setShootsAtCoord(ped: number | IPed, pos: Vector3, toggle: boolean): void {
-    SetPedShootsAtCoord(ped, pos.x, pos.y, pos.z, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedShootsAtCoord(_ped, pos.x, pos.y, pos.z, toggle);
 }
 
 /**
@@ -6354,7 +6799,8 @@ export function setShootsAtCoord(ped: number | IPed, pos: Vector3, toggle: boole
  * Hash: 0x614DA022990752DC | Since: 323
  */
 export function setShootRate(ped: number | IPed, shootRate: number): void {
-    SetPedShootRate(ped, shootRate);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedShootRate(_ped, shootRate);
 }
 
 /**
@@ -6363,7 +6809,8 @@ export function setShootRate(ped: number | IPed, shootRate: number): void {
  * Hash: 0x425AECF167663F48 | Since: 323
  */
 export function setShouldIgnoreScenarioExitCollisionChecks(ped: number | IPed): void {
-    Citizen.invokeNative('0x425AECF167663F48', ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x425AECF167663F48', _ped, false);
 }
 
 /**
@@ -6390,7 +6837,8 @@ export function setShouldPlayDirectedNormalScenarioExit(): boolean {
  * Hash: 0xEEED8FAFEC331A70 | Since: 323
  */
 export function setShouldPlayFleeScenarioExit(ped: number | IPed): boolean {
-    return SetPedShouldPlayFleeScenarioExit(ped, undefined, undefined, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return SetPedShouldPlayFleeScenarioExit(_ped, undefined, undefined, undefined);
 }
 
 /**
@@ -6399,7 +6847,8 @@ export function setShouldPlayFleeScenarioExit(ped: number | IPed): boolean {
  * Hash: 0xF1C03A5352243A30 | Since: 323
  */
 export function setShouldPlayImmediateScenarioExit(ped: number | IPed): void {
-    SetPedShouldPlayImmediateScenarioExit(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedShouldPlayImmediateScenarioExit(_ped);
 }
 
 /**
@@ -6408,7 +6857,8 @@ export function setShouldPlayImmediateScenarioExit(ped: number | IPed): void {
  * Hash: 0xA3A9299C4F2ADB98 | Since: 323
  */
 export function setShouldPlayNormalScenarioExit(ped: number | IPed): void {
-    SetPedShouldPlayNormalScenarioExit(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedShouldPlayNormalScenarioExit(_ped);
 }
 
 /**
@@ -6426,7 +6876,8 @@ export function setShouldProbeForScenarioExitsInOneFrame(): void {
  * Hash: 0x9D3151A373974804 | Since: 323
  */
 export function setSphereDefensiveArea(ped: number | IPed, pos: Vector3, radius: number): void {
-    SetPedSphereDefensiveArea(ped, pos.x, pos.y, pos.z, radius, false, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedSphereDefensiveArea(_ped, pos.x, pos.y, pos.z, radius, false, false);
 }
 
 /**
@@ -6435,7 +6886,8 @@ export function setSphereDefensiveArea(ped: number | IPed, pos: Vector3, radius:
  * Hash: 0xEDF4079F9D54C9A1 | Since: 323
  */
 export function setStayInVehicleWhenJacked(ped: number | IPed, toggle: boolean): void {
-    SetPedStayInVehicleWhenJacked(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedStayInVehicleWhenJacked(_ped, toggle);
 }
 
 /**
@@ -6444,7 +6896,8 @@ export function setStayInVehicleWhenJacked(ped: number | IPed, toggle: boolean):
  * Hash: 0x88CBB5CEB96B7BD2 | Since: 323
  */
 export function setStealthMovement(ped: number | IPed, action: string): void {
-    SetPedStealthMovement(ped, false, action);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedStealthMovement(_ped, false, action);
 }
 
 /**
@@ -6453,7 +6906,8 @@ export function setStealthMovement(ped: number | IPed, action: string): void {
  * Hash: 0x2016C603D6B8987C | Since: 323
  */
 export function setSteersAroundDeadBodies(ped: number | IPed, toggle: boolean): void {
-    Citizen.invokeNative('0x2016C603D6B8987C', ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x2016C603D6B8987C', _ped, toggle);
 }
 
 /**
@@ -6462,7 +6916,8 @@ export function setSteersAroundDeadBodies(ped: number | IPed, toggle: boolean): 
  * Hash: 0x1509C089ADC208BF | Since: 323
  */
 export function setSteersAroundObjects(ped: number | IPed, toggle: boolean): void {
-    SetPedSteersAroundObjects(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedSteersAroundObjects(_ped, toggle);
 }
 
 /**
@@ -6471,7 +6926,8 @@ export function setSteersAroundObjects(ped: number | IPed, toggle: boolean): voi
  * Hash: 0x46F2193B3AD1D891 | Since: 323
  */
 export function setSteersAroundPeds(ped: number | IPed, toggle: boolean): void {
-    SetPedSteersAroundPeds(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedSteersAroundPeds(_ped, toggle);
 }
 
 /**
@@ -6480,7 +6936,8 @@ export function setSteersAroundPeds(ped: number | IPed, toggle: boolean): void {
  * Hash: 0xEB6FB9D48DDE23EC | Since: 323
  */
 export function setSteersAroundVehicles(ped: number | IPed, toggle: boolean): void {
-    SetPedSteersAroundVehicles(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedSteersAroundVehicles(_ped, toggle);
 }
 
 /**
@@ -6489,7 +6946,8 @@ export function setSteersAroundVehicles(ped: number | IPed, toggle: boolean): vo
  * Hash: 0x288DF530C92DAD6F | Since: 323
  */
 export function setSteerBias(ped: number | IPed, value: number): void {
-    Citizen.invokeNative('0x288DF530C92DAD6F', ped, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x288DF530C92DAD6F', _ped, value);
 }
 
 /**
@@ -6498,7 +6956,8 @@ export function setSteerBias(ped: number | IPed, value: number): void {
  * Hash: 0x29A28F3F8CF6D854 | Since: 323
  */
 export function setStrafeClipset(ped: number | IPed, clipSet: string): void {
-    SetPedStrafeClipset(ped, clipSet);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedStrafeClipset(_ped, clipSet);
 }
 
 /**
@@ -6508,7 +6967,8 @@ export function setStrafeClipset(ped: number | IPed, clipSet: string): void {
  * Hash: 0xEBD76F2359F190AC | Since: 323
  */
 export function setSuffersCriticalHits(ped: number | IPed, toggle: boolean): void {
-    SetPedSuffersCriticalHits(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedSuffersCriticalHits(_ped, toggle);
 }
 
 /**
@@ -6517,7 +6977,8 @@ export function setSuffersCriticalHits(ped: number | IPed, toggle: boolean): voi
  * Hash: 0x27B0405F59637D1F | Since: 323
  */
 export function setSweat(ped: number | IPed, sweat: number): void {
-    SetPedSweat(ped, sweat);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedSweat(_ped, sweat);
 }
 
 /**
@@ -6531,7 +6992,8 @@ export function setSweat(ped: number | IPed, sweat: number): void {
  * Hash: 0x0703B9079823DA4A | Since: 323
  */
 export function setTargetLossResponse(ped: number | IPed, responseType: number): void {
-    SetPedTargetLossResponse(ped, responseType);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedTargetLossResponse(_ped, responseType);
 }
 
 /**
@@ -6540,7 +7002,8 @@ export function setTargetLossResponse(ped: number | IPed, responseType: number):
  * Hash: 0x112942C6E708F70B | Since: 323
  */
 export function setToInformRespectedFriends(ped: number | IPed, radius: number, maxFriends: number): void {
-    SetPedToInformRespectedFriends(ped, radius, maxFriends);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedToInformRespectedFriends(_ped, radius, maxFriends);
 }
 
 /**
@@ -6549,7 +7012,8 @@ export function setToInformRespectedFriends(ped: number | IPed, radius: number, 
  * Hash: 0x332B562EEDA62399 | Since: 323
  */
 export function setToLoadCover(ped: number | IPed, toggle: boolean): void {
-    SetPedToLoadCover(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedToLoadCover(_ped, toggle);
 }
 
 /**
@@ -6580,7 +7044,8 @@ export function setToLoadCover(ped: number | IPed, toggle: boolean): void {
  * Hash: 0xAE99FB955581844A | Since: 323
  */
 export function setToRagdoll(ped: number | IPed, time1: number, time2: number, ragdollType: number): boolean {
-    return SetPedToRagdoll(ped, time1, time2, ragdollType, false, false, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return SetPedToRagdoll(_ped, time1, time2, ragdollType, false, false, false);
 }
 
 /**
@@ -6607,7 +7072,8 @@ export function setToRagdoll(ped: number | IPed, time1: number, time2: number, r
  * Hash: 0xD76632D99E4966C8 | Since: 323
  */
 export function setToRagdollWithFall(ped: number | IPed, time: number, ragdollType: number, pos: Vector3, velocity: number): boolean {
-    return SetPedToRagdollWithFall(ped, time, 0, ragdollType, pos.x, pos.y, pos.z, velocity, 0, 0, 0, 0, 0, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return SetPedToRagdollWithFall(_ped, time, 0, ragdollType, pos.x, pos.y, pos.z, velocity, 0, 0, 0, 0, 0, 0);
 }
 
 /**
@@ -6625,7 +7091,8 @@ export function setTreatedAsFriendly(): void {
  * Hash: 0xAFC976FD0580C7B3 | Since: 323
  */
 export function setUpperBodyDamageOnly(ped: number | IPed, toggle: boolean): void {
-    Citizen.invokeNative('0xAFC976FD0580C7B3', ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0xAFC976FD0580C7B3', _ped, toggle);
 }
 
 /**
@@ -6634,7 +7101,8 @@ export function setUpperBodyDamageOnly(ped: number | IPed, toggle: boolean): voi
  * Hash: 0xD75ACCF5E0FB5367 | Since: 323
  */
 export function setUsingActionMode(ped: number | IPed, action: string): void {
-    SetPedUsingActionMode(ped, false, 0, action);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedUsingActionMode(_ped, false, 0, action);
 }
 
 /**
@@ -6643,7 +7111,9 @@ export function setUsingActionMode(ped: number | IPed, action: string): void {
  * Hash: 0x952F06BEECD775CC | Since: 323
  */
 export function setVehicleForcedSeatUsage(ped: number | IPed, vehicle: number | IVehicle, seatIndex: number, flags: number): void {
-    SetPedVehicleForcedSeatUsage(ped, vehicle, seatIndex, flags, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetPedVehicleForcedSeatUsage(_ped, _vehicle, seatIndex, flags, undefined);
 }
 
 /**
@@ -6652,7 +7122,8 @@ export function setVehicleForcedSeatUsage(ped: number | IPed, vehicle: number | 
  * Hash: 0x3B6405E8AB34A907 | Since: 323
  */
 export function setVisualFieldCenterAngle(ped: number | IPed, angle: number): void {
-    SetPedVisualFieldCenterAngle(ped, angle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedVisualFieldCenterAngle(_ped, angle);
 }
 
 /**
@@ -6661,7 +7132,8 @@ export function setVisualFieldCenterAngle(ped: number | IPed, angle: number): vo
  * Hash: 0x70793BDCA1E854D4 | Since: 323
  */
 export function setVisualFieldMaxAngle(ped: number | IPed, value: number): void {
-    SetPedVisualFieldMaxAngle(ped, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedVisualFieldMaxAngle(_ped, value);
 }
 
 /**
@@ -6670,7 +7142,8 @@ export function setVisualFieldMaxAngle(ped: number | IPed, value: number): void 
  * Hash: 0x78D0B67629D75856 | Since: 323
  */
 export function setVisualFieldMaxElevationAngle(ped: number | IPed, angle: number): void {
-    SetPedVisualFieldMaxElevationAngle(ped, angle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedVisualFieldMaxElevationAngle(_ped, angle);
 }
 
 /**
@@ -6679,7 +7152,8 @@ export function setVisualFieldMaxElevationAngle(ped: number | IPed, angle: numbe
  * Hash: 0x2DB492222FB21E26 | Since: 323
  */
 export function setVisualFieldMinAngle(ped: number | IPed, value: number): void {
-    SetPedVisualFieldMinAngle(ped, value);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedVisualFieldMinAngle(_ped, value);
 }
 
 /**
@@ -6689,7 +7163,8 @@ export function setVisualFieldMinAngle(ped: number | IPed, value: number): void 
  * Hash: 0x7A276EB2C224D70F | Since: 323
  */
 export function setVisualFieldMinElevationAngle(ped: number | IPed, angle: number): void {
-    SetPedVisualFieldMinElevationAngle(ped, angle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedVisualFieldMinElevationAngle(_ped, angle);
 }
 
 /**
@@ -6698,7 +7173,8 @@ export function setVisualFieldMinElevationAngle(ped: number | IPed, angle: numbe
  * Hash: 0x9C74B0BC831B753A | Since: 323
  */
 export function setVisualFieldPeripheralRange(ped: number | IPed, range: number): void {
-    SetPedVisualFieldPeripheralRange(ped, range);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedVisualFieldPeripheralRange(_ped, range);
 }
 
 /**
@@ -6707,7 +7183,8 @@ export function setVisualFieldPeripheralRange(ped: number | IPed, range: number)
  * Hash: 0x2622E35B77D3ACA2 | Since: 323
  */
 export function setWeaponMovementClipset(ped: number | IPed, clipSet: string): void {
-    SetPedWeaponMovementClipset(ped, clipSet);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedWeaponMovementClipset(_ped, clipSet);
 }
 
 /**
@@ -6716,7 +7193,8 @@ export function setWeaponMovementClipset(ped: number | IPed, clipSet: string): v
  * Hash: 0xAC0BB4D87777CAE2 | Since: 2802
  */
 export function setWetness(ped: number | IPed, wetLevel: number): void {
-    Citizen.invokeNative('0xAC0BB4D87777CAE2', ped, wetLevel);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0xAC0BB4D87777CAE2', _ped, wetLevel);
 }
 
 /**
@@ -6725,7 +7203,8 @@ export function setWetness(ped: number | IPed, wetLevel: number): void {
  * Hash: 0xB5485E4907B53019 | Since: 323
  */
 export function setWetnessEnabledThisFrame(ped: number | IPed): void {
-    SetPedWetnessEnabledThisFrame(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedWetnessEnabledThisFrame(_ped);
 }
 
 /**
@@ -6736,7 +7215,8 @@ export function setWetnessEnabledThisFrame(ped: number | IPed): void {
  * Hash: 0x44CB6447D2571AA0 | Since: 323
  */
 export function setWetnessHeight(ped: number | IPed, height: number): void {
-    SetPedWetnessHeight(ped, height);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedWetnessHeight(_ped, height);
 }
 
 /**
@@ -6787,7 +7267,8 @@ export function setPopControlSphereThisFrame(pos: Vector3, min: number, max: num
  * Hash: 0x26695EC767728D84 | Since: 323
  */
 export function setRagdollBlockingFlags(ped: number | IPed, blockingFlag: number): void {
-    SetRagdollBlockingFlags(ped, blockingFlag);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetRagdollBlockingFlags(_ped, blockingFlag);
 }
 
 /**
@@ -6857,7 +7338,8 @@ export function setScenarioDensityMultiplierThisFrame(): void {
  * Hash: 0x5917BBA32D06C230 | Since: 323
  */
 export function setScriptedAnimSeatOffset(ped: number | IPed): void {
-    SetScriptedAnimSeatOffset(ped, 0);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetScriptedAnimSeatOffset(_ped, 0);
 }
 
 /**
@@ -6920,7 +7402,8 @@ export function setSynchronizedSceneRate(sceneID: number, rate: number): void {
  * Hash: 0x2F3C3D9F50681DE4 | Since: 323
  */
 export function setTreatAsAmbientForDriverLockon(ped: number | IPed): void {
-    Citizen.invokeNative('0x2F3C3D9F50681DE4', ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x2F3C3D9F50681DE4', _ped, false);
 }
 
 /**
@@ -6929,7 +7412,8 @@ export function setTreatAsAmbientForDriverLockon(ped: number | IPed): void {
  * Hash: 0xFD325494792302D7 | Since: 323
  */
 export function setUseCameraHeadingForDesiredDirectionLockOnTest(ped: number | IPed, toggle: boolean): void {
-    Citizen.invokeNative('0xFD325494792302D7', ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0xFD325494792302D7', _ped, toggle);
 }
 
 /**
@@ -7021,7 +7505,8 @@ export function spawnpointsStartSearchInAngledArea(x1: number, y1: number, z1: n
  * Hash: 0xF9ACF4A08098EA25 | Since: 323
  */
 export function specialFunctionDoNotUse(ped: number | IPed): void {
-    SpecialFunctionDoNotUse(ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SpecialFunctionDoNotUse(_ped, false);
 }
 
 /**
@@ -7039,7 +7524,8 @@ export function stopAnyModelBeingSuppressed(): void {
  * Hash: 0xC158D28142A34608 | Since: 323
  */
 export function stopWeaponFiringWhenDropped(ped: number | IPed): void {
-    StopPedWeaponFiringWhenDropped(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    StopPedWeaponFiringWhenDropped(_ped);
 }
 
 /**
@@ -7066,8 +7552,9 @@ export function takeOwnershipOfSynchronizedScene(scene: number): void {
  * Hash: 0xAD27D957598E49E9 | Since: 1290
  */
 export function tellGroupsInAreaToAttack(ped: number | IPed, hash: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof hash === 'string') hash = GetHashKey(hash)
-    Citizen.invokeNative('0xAD27D957598E49E9', ped, undefined, 0, hash, undefined, undefined);
+    Citizen.invokeNative('0xAD27D957598E49E9', _ped, undefined, 0, hash, undefined, undefined);
 }
 
 /**
@@ -7076,7 +7563,8 @@ export function tellGroupsInAreaToAttack(ped: number | IPed, hash: number | stri
  * Hash: 0x9A77DFD295E29B09 | Since: 323
  */
 export function toggleScenarioCowerInPlace(ped: number | IPed, toggle: boolean): void {
-    Citizen.invokeNative('0x9A77DFD295E29B09', ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0x9A77DFD295E29B09', _ped, toggle);
 }
 
 /**
@@ -7085,7 +7573,8 @@ export function toggleScenarioCowerInPlace(ped: number | IPed, toggle: boolean):
  * Hash: 0xC2EE020F5FB4DB53 | Since: 323
  */
 export function triggerIdleAnimationOn(ped: number | IPed): void {
-    Citizen.invokeNative('0xC2EE020F5FB4DB53', ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    Citizen.invokeNative('0xC2EE020F5FB4DB53', _ped);
 }
 
 /**
@@ -7112,7 +7601,8 @@ export function unregisterheadshot(id: number): void {
  * Hash: 0x723538F61C647C5A | Since: 323
  */
 export function updateHeadBlendData(ped: number | IPed, shapeMix: number, skinMix: number, thirdMix: number): void {
-    UpdatePedHeadBlendData(ped, shapeMix, skinMix, thirdMix);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    UpdatePedHeadBlendData(_ped, shapeMix, skinMix, thirdMix);
 }
 
 /**
@@ -7121,7 +7611,8 @@ export function updateHeadBlendData(ped: number | IPed, shapeMix: number, skinMi
  * Hash: 0xF9800AA1A771B000 | Since: 323
  */
 export function wasKilledByStealth(ped: number | IPed): boolean {
-    return WasPedKilledByStealth(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return WasPedKilledByStealth(_ped);
 }
 
 /**
@@ -7130,7 +7621,8 @@ export function wasKilledByStealth(ped: number | IPed): boolean {
  * Hash: 0x7F08E26039C7347C | Since: 323
  */
 export function wasKilledByTakedown(ped: number | IPed): boolean {
-    return WasPedKilledByTakedown(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return WasPedKilledByTakedown(_ped);
 }
 
 /**
@@ -7139,7 +7631,8 @@ export function wasKilledByTakedown(ped: number | IPed): boolean {
  * Hash: 0x61767F73EACEED21 | Since: 323
  */
 export function wasKnockedOut(ped: number | IPed): boolean {
-    return WasPedKnockedOut(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return WasPedKnockedOut(_ped);
 }
 
 /**
@@ -7148,7 +7641,8 @@ export function wasKnockedOut(ped: number | IPed): boolean {
  * Hash: 0x11B499C1E0FF8559 | Since: 323
  */
 export function wasSkeletonUpdated(ped: number | IPed): boolean {
-    return WasPedSkeletonUpdated(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return WasPedSkeletonUpdated(_ped);
 }
 
 /**
@@ -7157,7 +7651,9 @@ export function wasSkeletonUpdated(ped: number | IPed): boolean {
  * Hash: 0xA32ABFEB2A03B306 | Since: 3095
  */
 export function hasClearLosToEntity(ped: number | IPed, entity: number | IEntity, pos: Vector3): boolean {
-    return Citizen.invokeNative('0xA32ABFEB2A03B306', ped, entity, pos.x, pos.y, pos.z, 0, false, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return Citizen.invokeNative('0xA32ABFEB2A03B306', _ped, _entity, pos.x, pos.y, pos.z, 0, false, false);
 }
 
 /**
@@ -7175,6 +7671,7 @@ export function setBlockAmbientsFromDroppingWeaponsThisFrame(): void {
  * Hash: 0x100CD221F572F6E1 | Since: 3407
  */
 export function setSurvivesBeingOutOfWater(ped: number | IPed, toggle: boolean): boolean {
-    return Citizen.invokeNative('0x100CD221F572F6E1', ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return Citizen.invokeNative('0x100CD221F572F6E1', _ped, toggle);
 }
 

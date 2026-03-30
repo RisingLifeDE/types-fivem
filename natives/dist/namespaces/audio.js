@@ -1,3 +1,4 @@
+import { IEntity, IPed, IVehicle, IObject } from '@risinglife/fivem-shared';
 /**
  * mode can be any of these:
  * SLOWMO_T1_TRAILER_SMASH
@@ -24,7 +25,8 @@ export function activateSlowmoMode(mode) {
  * Hash: 0x153973AB99FE8980 | Since: 323
  */
 export function addEntityToMixGroup(entity, groupName) {
-    AddEntityToAudioMixGroup(entity, groupName, 0);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    AddEntityToAudioMixGroup(_entity, groupName, 0);
 }
 /**
  * NOTE: ones that are -1, 0 - 35 are determined by a function where it gets a TextLabel from a global then runs,
@@ -60,7 +62,8 @@ export function addLineToConversation(index) {
  * Hash: 0x95D9F4BC443956E7 | Since: 323
  */
 export function addPedToConversation(index, ped) {
-    AddPedToConversation(index, ped, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    AddPedToConversation(index, _ped, undefined);
 }
 /**
  * No comment provided
@@ -85,7 +88,8 @@ export function isScriptedMusicPlaying() {
  * Hash: 0x1B9025BDA76822B6 | Since: 323
  */
 export function blipSiren(vehicle) {
-    BlipSiren(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    BlipSiren(_vehicle);
 }
 /**
  * No comment provided
@@ -93,7 +97,8 @@ export function blipSiren(vehicle) {
  * Hash: 0xF8AD2EED7C47E8FE | Since: 1734
  */
 export function blockAllSpeechFromPed(ped) {
-    BlockAllSpeechFromPed(ped, false, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    BlockAllSpeechFromPed(_ped, false, false);
 }
 /**
  * No comment provided
@@ -134,7 +139,8 @@ export function cancelMusicEvent(eventName) {
  * Hash: 0x032A116663A4D5AC | Since: 323
  */
 export function canVehicleReceiveCbRadio(vehicle) {
-    return CanVehicleReceiveCbRadio(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return CanVehicleReceiveCbRadio(_vehicle);
 }
 /**
  * No comment provided
@@ -197,7 +203,8 @@ export function deactivateSlowmoMode(mode) {
  * Hash: 0xA9A41C1E940FB0E8 | Since: 323
  */
 export function disablePedPain(ped, toggle) {
-    DisablePedPainAudio(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    DisablePedPainAudio(_ped, toggle);
 }
 /**
  * If value is set to true, and ambient siren sound will be played.
@@ -214,7 +221,8 @@ export function distantCopCarSirens(value) {
  * Hash: 0x49B99BF3FDA89A7A | Since: 323
  */
 export function doesContextExistForThisPed(ped, speechName) {
-    return DoesContextExistForThisPed(ped, speechName, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return DoesContextExistForThisPed(_ped, speechName, false);
 }
 /**
  * No comment provided
@@ -230,7 +238,8 @@ export function doesPlayerVehHaveRadio() {
  * Hash: 0xC15907D667F7CFB2 | Since: 323
  */
 export function enableStallWarningSounds(vehicle, toggle) {
-    EnableStallWarningSounds(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    EnableStallWarningSounds(_vehicle, toggle);
 }
 /**
  * No comment provided
@@ -246,7 +255,8 @@ export function enableStuntJump() {
  * Hash: 0x2BE4BC731D039D5A | Since: 323
  */
 export function enableVehicleExhaustPops(vehicle, toggle) {
-    EnableVehicleExhaustPops(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    EnableVehicleExhaustPops(_vehicle, toggle);
 }
 /**
  * No comment provided
@@ -254,7 +264,8 @@ export function enableVehicleExhaustPops(vehicle, toggle) {
  * Hash: 0x1C073274E065C6D2 | Since: 323
  */
 export function enableVehicleFanbeltDamage(vehicle, toggle) {
-    EnableVehicleFanbeltDamage(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    EnableVehicleFanbeltDamage(_vehicle, toggle);
 }
 /**
  * No comment provided
@@ -295,7 +306,8 @@ export function forcePedPanicWalla() {
  * Hash: 0x4F0C413926060B38 | Since: 323
  */
 export function forceUseGameObject(vehicle, audioName) {
-    ForceUseAudioGameObject(vehicle, audioName);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    ForceUseAudioGameObject(_vehicle, audioName);
 }
 /**
  * No comment provided
@@ -319,7 +331,8 @@ export function freezeRadioStation(radioStation) {
  * Hash: 0x5E203DA2BA15D436 | Since: 463
  */
 export function getAmbientVoiceNameHash(ped) {
-    return GetAmbientVoiceNameHash(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return GetAmbientVoiceNameHash(_ped);
 }
 /**
  * No comment provided
@@ -482,7 +495,8 @@ export function getVariationChosenForScriptedLine() {
  * Hash: 0x02165D55000219AC | Since: 323
  */
 export function getVehicleDefaultHorn(vehicle) {
-    return GetVehicleDefaultHorn(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleDefaultHorn(_vehicle);
 }
 /**
  * No comment provided
@@ -490,7 +504,8 @@ export function getVehicleDefaultHorn(vehicle) {
  * Hash: 0xACB5DCCA1EC76840 | Since: 323
  */
 export function getVehicleDefaultHornIgnoreMods(vehicle) {
-    return GetVehicleDefaultHornIgnoreMods(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleDefaultHornIgnoreMods(_vehicle);
 }
 /**
  * No comment provided
@@ -498,7 +513,8 @@ export function getVehicleDefaultHornIgnoreMods(vehicle) {
  * Hash: 0xD53F3A29BCE2580E | Since: 1365
  */
 export function getVehicleHornSoundIndex(vehicle) {
-    return GetVehicleHornSoundIndex(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return GetVehicleHornSoundIndex(_vehicle);
 }
 /**
  * No comment provided
@@ -554,7 +570,8 @@ export function hintScriptBank(audioBank) {
  * Hash: 0x950A154B8DAB6185 | Since: 323
  */
 export function initSynchSceneWithEntity(audioEvent, entity) {
-    InitSynchSceneAudioWithEntity(audioEvent, entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    InitSynchSceneAudioWithEntity(audioEvent, _entity);
 }
 /**
  * No comment provided
@@ -571,7 +588,8 @@ export function initSynchSceneWithPosition(audioEvent, pos) {
  * Hash: 0xA018A12E5C5C2FA6 | Since: 323
  */
 export function interruptConversation(ped, voiceline, speaker) {
-    InterruptConversation(ped, voiceline, speaker);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    InterruptConversation(_ped, voiceline, speaker);
 }
 /**
  * One call found in the b617d scripts:
@@ -581,7 +599,8 @@ export function interruptConversation(ped, voiceline, speaker) {
  * Hash: 0x8A694D7A68F8DC38 | Since: 323
  */
 export function interruptConversationAndPause(ped, speaker) {
-    InterruptConversationAndPause(ped, undefined, speaker);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    InterruptConversationAndPause(_ped, undefined, speaker);
 }
 /**
  * Example:
@@ -601,7 +620,8 @@ export function isAlarmPlaying(alarmName) {
  * Hash: 0x932C2D096A2C3FFF | Since: 323
  */
 export function isAmbientSpeechDisabled(ped) {
-    return IsAmbientSpeechDisabled(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsAmbientSpeechDisabled(_ped);
 }
 /**
  * No comment provided
@@ -609,7 +629,8 @@ export function isAmbientSpeechDisabled(ped) {
  * Hash: 0x9072C8B49907BFAD | Since: 323
  */
 export function isAmbientSpeechPlaying(ped) {
-    return IsAmbientSpeechPlaying(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsAmbientSpeechPlaying(_ped);
 }
 /**
  * Full list of ambient zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientZones.json
@@ -625,7 +646,8 @@ export function isAmbientZoneEnabled(ambientZone) {
  * Hash: 0xC265DF9FB44A9FBD | Since: 323
  */
 export function isAnimalVocalizationPlaying(pedHandle) {
-    return IsAnimalVocalizationPlaying(pedHandle);
+    const _pedHandle = pedHandle instanceof IPed ? pedHandle.handle() : pedHandle;
+    return IsAnimalVocalizationPlaying(_pedHandle);
 }
 /**
  * No comment provided
@@ -641,7 +663,8 @@ export function isAnyPositionalSpeechPlaying() {
  * Hash: 0x729072355FA39EC9 | Since: 323
  */
 export function isAnySpeechPlaying(ped) {
-    return IsAnySpeechPlaying(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsAnySpeechPlaying(_ped);
 }
 /**
  * Full list of audio scene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/audioSceneNames.json
@@ -665,7 +688,8 @@ export function isGameInControlOfMusic() {
  * Hash: 0x9D6BFC12B05C6121 | Since: 323
  */
 export function isHornActive(vehicle) {
-    return IsHornActive(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsHornActive(_vehicle);
 }
 /**
  * No comment provided
@@ -729,7 +753,8 @@ export function isMusicOneshotPlaying() {
  * Hash: 0x049E937F18F4020C | Since: 323
  */
 export function isPedInCurrentConversation(ped) {
-    return IsPedInCurrentConversation(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedInCurrentConversation(_ped);
 }
 /**
  * No comment provided
@@ -737,7 +762,8 @@ export function isPedInCurrentConversation(ped) {
  * Hash: 0x1E8E5E20937E3137 | Since: 323
  */
 export function isPedRingtonePlaying(ped) {
-    return IsPedRingtonePlaying(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedRingtonePlaying(_ped);
 }
 /**
  * No comment provided
@@ -793,7 +819,8 @@ export function isScriptedConversationOngoing() {
  * Hash: 0xCC9AA18DCC7084F4 | Since: 323
  */
 export function isScriptedSpeechPlaying(p0) {
-    return IsScriptedSpeechPlaying(p0);
+    const _p0 = p0 instanceof IPed ? p0.handle() : p0;
+    return IsScriptedSpeechPlaying(_p0);
 }
 /**
  * No comment provided
@@ -809,7 +836,8 @@ export function isStreamPlaying() {
  * Hash: 0x5DB8010EE71FDEF2 | Since: 323
  */
 export function isVehicleAudiblyDamaged(vehicle) {
-    return IsVehicleAudiblyDamaged(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsVehicleAudiblyDamaged(_vehicle);
 }
 /**
  * No comment provided
@@ -817,7 +845,8 @@ export function isVehicleAudiblyDamaged(vehicle) {
  * Hash: 0x0BE4BE946463F917 | Since: 505
  */
 export function isVehicleRadioOn(vehicle) {
-    return IsVehicleRadioOn(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return IsVehicleRadioOn(_vehicle);
 }
 /**
  * Full list of static emitters by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/staticEmitters.json
@@ -825,7 +854,8 @@ export function isVehicleRadioOn(vehicle) {
  * Hash: 0x651D3228960D08AF | Since: 505
  */
 export function linkStaticEmitterToEntity(emitterName, entity) {
-    LinkStaticEmitterToEntity(emitterName, entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    LinkStaticEmitterToEntity(emitterName, _entity);
 }
 /**
  * Example:
@@ -918,7 +948,8 @@ export function overrideUnderwaterStream() {
  * Hash: 0x3CDC1E622CCE0356 | Since: 323
  */
 export function overrideVehHorn(vehicle, override, hornHash) {
-    OverrideVehHorn(vehicle, override, hornHash);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    OverrideVehHorn(_vehicle, override, hornHash);
 }
 /**
  * No comment provided
@@ -944,7 +975,8 @@ export function playAmbientSpeechFromPositionNative(speechName, voiceName, pos, 
  * Hash: 0xEE066C7006C49C0A | Since: 323
  */
 export function playAnimalVocalization(pedHandle, speechName) {
-    PlayAnimalVocalization(pedHandle, 0, speechName);
+    const _pedHandle = pedHandle instanceof IPed ? pedHandle.handle() : pedHandle;
+    PlayAnimalVocalization(_pedHandle, 0, speechName);
 }
 /**
  * Only call found in the b617d scripts:
@@ -999,7 +1031,8 @@ export function playMissionComplete(audioName) {
  * Hash: 0xBC9AE166038A5CEC | Since: 323
  */
 export function playPain(ped, painID) {
-    PlayPain(ped, painID, 0, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayPain(_ped, painID, 0, undefined);
 }
 /**
  * Plays ambient speech. See also _0x5C57B85D.
@@ -1011,7 +1044,8 @@ export function playPain(ped, painID) {
  * Hash: 0xC6941B4A3A8FBBB9 | Since: 323
  */
 export function playPedAmbientSpeechAndCloneNative(ped, speechName, speechParam) {
-    PlayPedAmbientSpeechAndCloneNative(ped, speechName, speechParam, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayPedAmbientSpeechAndCloneNative(_ped, speechName, speechParam, undefined);
 }
 /**
  * Plays ambient speech. See also _0x444180DB.
@@ -1064,7 +1098,8 @@ export function playPedAmbientSpeechAndCloneNative(ped, speechName, speechParam)
  * Hash: 0x8E04FEDD28D42462 | Since: 323
  */
 export function playPedAmbientSpeechNative(ped, speechName, speechParam) {
-    PlayPedAmbientSpeechNative(ped, speechName, speechParam, undefined);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayPedAmbientSpeechNative(_ped, speechName, speechParam, undefined);
 }
 /**
  * This is the same as PLAY_PED_AMBIENT_SPEECH_NATIVE and PLAY_PED_AMBIENT_SPEECH_AND_CLONE_NATIVE but it will allow you to play a speech file from a specific voice file. It works on players and all peds, even animals.
@@ -1079,7 +1114,8 @@ export function playPedAmbientSpeechNative(ped, speechName, speechParam) {
  * Hash: 0x3523634255FC3318 | Since: 323
  */
 export function playPedAmbientSpeechWithVoiceNative(ped, speechName, voiceName, speechParam) {
-    PlayPedAmbientSpeechWithVoiceNative(ped, speechName, voiceName, speechParam, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayPedAmbientSpeechWithVoiceNative(_ped, speechName, voiceName, speechParam, false);
 }
 /**
  * No comment provided
@@ -1087,7 +1123,8 @@ export function playPedAmbientSpeechWithVoiceNative(ped, speechName, voiceName, 
  * Hash: 0xAD2191A6E3543189 | Since: 3717
  */
 export function playPedEventAnim(pedHandle, audioEvent) {
-    Citizen.invokeNative('0xAD2191A6E3543189', pedHandle, audioEvent);
+    const _pedHandle = pedHandle instanceof IPed ? pedHandle.handle() : pedHandle;
+    Citizen.invokeNative('0xAD2191A6E3543189', _pedHandle, audioEvent);
 }
 /**
  * All found occurrences in b617d, sorted alphabetically and identical lines removed: https://pastebin.com/RFb4GTny
@@ -1099,7 +1136,8 @@ export function playPedEventAnim(pedHandle, audioEvent) {
  * Hash: 0xF9E56683CA8E11A5 | Since: 323
  */
 export function playPedRingtone(ringtoneName, ped) {
-    PlayPedRingtone(ringtoneName, ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayPedRingtone(ringtoneName, _ped, false);
 }
 /**
  * Plays the given police radio message.
@@ -1145,7 +1183,8 @@ export function playSoundFromCoord(soundId, audioName, pos, audioRef, isNetwork,
  * Hash: 0xE65F427EB70AB1ED | Since: 323
  */
 export function playSoundFromEntity(soundId, audioName, entity, audioRef, isNetwork) {
-    PlaySoundFromEntity(soundId, audioName, entity, audioRef, isNetwork, undefined);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    PlaySoundFromEntity(soundId, audioName, _entity, audioRef, isNetwork, undefined);
 }
 /**
  * Only used with "formation_flying_blips_soundset" and "biker_formation_blips_soundset".
@@ -1154,11 +1193,12 @@ export function playSoundFromEntity(soundId, audioName, entity, audioRef, isNetw
  * Hash: 0x5B9853296731E88D | Since: 877
  */
 export function playSoundFromEntityHash(soundId, model, entity, soundSetHash) {
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
     if (typeof model === 'string')
         model = GetHashKey(model);
     if (typeof soundSetHash === 'string')
         soundSetHash = GetHashKey(soundSetHash);
-    Citizen.invokeNative('0x5B9853296731E88D', soundId, model, entity, soundSetHash, undefined, undefined);
+    Citizen.invokeNative('0x5B9853296731E88D', soundId, model, _entity, soundSetHash, undefined, undefined);
 }
 /**
  * List: https://pastebin.com/DCeRiaLJ
@@ -1188,7 +1228,8 @@ export function playSoundFrontend(soundId, audioName, audioRef) {
  * Hash: 0xEBAA9B64D76356FD | Since: 323
  */
 export function playStreamFromObject(_object) {
-    PlayStreamFromObject(_object);
+    const __object = _object instanceof IObject ? _object.handle() : _object;
+    PlayStreamFromObject(__object);
 }
 /**
  * No comment provided
@@ -1196,7 +1237,8 @@ export function playStreamFromObject(_object) {
  * Hash: 0x89049DD63C08B5D1 | Since: 323
  */
 export function playStreamFromPed(ped) {
-    PlayStreamFromPed(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PlayStreamFromPed(_ped);
 }
 /**
  * No comment provided
@@ -1212,7 +1254,8 @@ export function playStreamFromPosition(pos) {
  * Hash: 0xB70374A758007DFA | Since: 323
  */
 export function playStreamFromVehicle(vehicle) {
-    PlayStreamFromVehicle(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    PlayStreamFromVehicle(_vehicle);
 }
 /**
  * No comment provided
@@ -1236,7 +1279,8 @@ export function playSynchronizedEvent(sceneID) {
  * Hash: 0x62A456AA4769EF34 | Since: 323
  */
 export function playVehicleDoorCloseSound(vehicle, doorId) {
-    PlayVehicleDoorCloseSound(vehicle, doorId);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    PlayVehicleDoorCloseSound(_vehicle, doorId);
 }
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
@@ -1244,7 +1288,8 @@ export function playVehicleDoorCloseSound(vehicle, doorId) {
  * Hash: 0x3A539D52857EA82D | Since: 323
  */
 export function playVehicleDoorOpenSound(vehicle, doorId) {
-    PlayVehicleDoorOpenSound(vehicle, doorId);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    PlayVehicleDoorOpenSound(_vehicle, doorId);
 }
 /**
  * No comment provided
@@ -1386,7 +1431,8 @@ export function releaseWeapon() {
  * Hash: 0x18EB48CFC41F2EA0 | Since: 323
  */
 export function removeEntityFromMixGroup(entity) {
-    RemoveEntityFromAudioMixGroup(entity, 0);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    RemoveEntityFromAudioMixGroup(_entity, 0);
 }
 /**
  * No comment provided
@@ -1448,7 +1494,8 @@ export function requestScriptBank(audioBank) {
  * Hash: 0x4ADA3F19BE4A6047 | Since: 323
  */
 export function requestTennisBanks(ped) {
-    RequestTennisBanks(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    RequestTennisBanks(_ped);
 }
 /**
  * No comment provided
@@ -1456,7 +1503,8 @@ export function requestTennisBanks(ped) {
  * Hash: 0xF54BB7B61036F335 | Since: 323
  */
 export function resetPedFlags(ped) {
-    ResetPedAudioFlags(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ResetPedAudioFlags(_ped);
 }
 /**
  * No comment provided
@@ -1472,7 +1520,8 @@ export function resetTrevorRage() {
  * Hash: 0xD2DCCD8E16E20997 | Since: 323
  */
 export function resetVehicleStartupRevSound(vehicle) {
-    ResetVehicleStartupRevSound(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    ResetVehicleStartupRevSound(_vehicle);
 }
 /**
  * No comment provided
@@ -1507,7 +1556,8 @@ export function setAggressiveHorns(toggle) {
  * Hash: 0x6C8065A3B780185B | Since: 323
  */
 export function setAmbientVoiceName(ped, name) {
-    SetAmbientVoiceName(ped, name);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetAmbientVoiceName(_ped, name);
 }
 /**
  * No comment provided
@@ -1515,9 +1565,10 @@ export function setAmbientVoiceName(ped, name) {
  * Hash: 0x9A53DED9921DE990 | Since: 463
  */
 export function setAmbientVoiceNameHash(ped, hash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof hash === 'string')
         hash = GetHashKey(hash);
-    SetAmbientVoiceNameHash(ped, hash);
+    SetAmbientVoiceNameHash(_ped, hash);
 }
 /**
  * No comment provided
@@ -1557,7 +1608,8 @@ export function setAmbientZoneStatePersistent(ambientZone) {
  * Hash: 0xCC97B29285B1DC3B | Since: 323
  */
 export function setAnimalMood(animal, mood) {
-    SetAnimalMood(animal, mood);
+    const _animal = animal instanceof IPed ? animal.handle() : animal;
+    SetAnimalMood(_animal, mood);
 }
 /**
  * Possible flag names:
@@ -1710,7 +1762,8 @@ export function setSpecialEffectMode(mode) {
  * Hash: 0xE5564483E407F914 | Since: 323
  */
 export function setVehiclePriority(vehicle) {
-    SetAudioVehiclePriority(vehicle, undefined);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetAudioVehiclePriority(_vehicle, undefined);
 }
 /**
  * No comment provided
@@ -1772,7 +1825,8 @@ export function setEmitterRadioStation(emitterName, radioStation) {
  * Hash: 0x892B6AB8F33606F5 | Since: 323
  */
 export function setEntityForNullConvPed(entity) {
-    SetEntityForNullConvPed(0, entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityForNullConvPed(0, _entity);
 }
 /**
  * No comment provided
@@ -1804,7 +1858,8 @@ export function setGpsActive(active) {
  * Hash: 0x76D683C108594D0E | Since: 323
  */
 export function setHornEnabled(vehicle, toggle) {
-    SetHornEnabled(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetHornEnabled(_vehicle, toggle);
 }
 /**
  * No comment provided
@@ -1812,7 +1867,8 @@ export function setHornEnabled(vehicle, toggle) {
  * Hash: 0x9C11908013EA4715 | Since: 323
  */
 export function setHornPermanentlyOn(vehicle) {
-    SoundVehicleHornThisFrame(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SoundVehicleHornThisFrame(_vehicle);
 }
 /**
  * No comment provided
@@ -1820,7 +1876,8 @@ export function setHornPermanentlyOn(vehicle) {
  * Hash: 0x9D3AF56E94C9AE98 | Since: 323
  */
 export function setHornPermanentlyOnTime(vehicle, time) {
-    Citizen.invokeNative('0x9D3AF56E94C9AE98', vehicle, time);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    Citizen.invokeNative('0x9D3AF56E94C9AE98', _vehicle, time);
 }
 /**
  * No comment provided
@@ -1890,7 +1947,8 @@ export function setNoDuckingForConversation() {
  * Hash: 0x29DA3CA8D8B2692D | Since: 1493
  */
 export function setPedClothEventsEnabled(ped, toggle) {
-    SetPedClothEventsEnabled(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedClothEventsEnabled(_ped, toggle);
 }
 /**
  * Enables/disables ped's "loud" footstep sound.
@@ -1898,7 +1956,8 @@ export function setPedClothEventsEnabled(ped, toggle) {
  * Hash: 0x0653B735BFBDFE87 | Since: 1493
  */
 export function setPedFootstepsEventsEnabled(ped, toggle) {
-    SetPedAudioFootstepLoud(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedAudioFootstepLoud(_ped, toggle);
 }
 /**
  * BOOL p1: 0 = Female; 1 = Male
@@ -1906,7 +1965,8 @@ export function setPedFootstepsEventsEnabled(ped, toggle) {
  * Hash: 0xA5342D390CDA41D6 | Since: 323
  */
 export function setPedGender(ped) {
-    SetPedAudioGender(ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedAudioGender(_ped, false);
 }
 /**
  * No comment provided
@@ -1941,7 +2001,8 @@ export function setPedInteriorWallaDensity() {
  * Hash: 0x95D2D383D5396B8A | Since: 323
  */
 export function setPedIsDrunk(ped, toggle) {
-    SetPedIsDrunk(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedIsDrunk(_ped, toggle);
 }
 /**
  * No comment provided
@@ -1949,9 +2010,10 @@ export function setPedIsDrunk(ped, toggle) {
  * Hash: 0x1B7ABE26CBCBF8C7 | Since: 372
  */
 export function setPedRaceAndVoiceGroup(ped, voiceGroup) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof voiceGroup === 'string')
         voiceGroup = GetHashKey(voiceGroup);
-    SetPedRaceAndVoiceGroup(ped, 0, voiceGroup);
+    SetPedRaceAndVoiceGroup(_ped, 0, voiceGroup);
 }
 /**
  * Assigns some ambient voice to the ped.
@@ -1959,7 +2021,8 @@ export function setPedRaceAndVoiceGroup(ped, voiceGroup) {
  * Hash: 0x40CF0D12D142A9E8 | Since: 323
  */
 export function setPedVoiceFull(ped) {
-    SetPedVoiceFull(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedVoiceFull(_ped);
 }
 /**
  * From the scripts:
@@ -1972,9 +2035,10 @@ export function setPedVoiceFull(ped) {
  * Hash: 0x7CDC8C3B89F661B3 | Since: 323
  */
 export function setPedVoiceGroup(ped, voiceGroupHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof voiceGroupHash === 'string')
         voiceGroupHash = GetHashKey(voiceGroupHash);
-    SetPedVoiceGroup(ped, voiceGroupHash);
+    SetPedVoiceGroup(_ped, voiceGroupHash);
 }
 /**
  * Dat151RelType == 29
@@ -1982,9 +2046,10 @@ export function setPedVoiceGroup(ped, voiceGroupHash) {
  * Hash: 0x0BABC1345ABBFB16 | Since: 2699
  */
 export function setPedVoiceGroupFromRaceToPvg(ped, voiceGroupHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof voiceGroupHash === 'string')
         voiceGroupHash = GetHashKey(voiceGroupHash);
-    SetPedVoiceGroupRace(ped, voiceGroupHash);
+    SetPedVoiceGroupRace(_ped, voiceGroupHash);
 }
 /**
  * No comment provided
@@ -2000,7 +2065,8 @@ export function setPedWallaDensity() {
  * Hash: 0xEA241BB04110F091 | Since: 323
  */
 export function setPlayerAngry(ped, toggle) {
-    SetPlayerAngry(ped, toggle);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPlayerAngry(_ped, toggle);
 }
 /**
  * No comment provided
@@ -2008,7 +2074,8 @@ export function setPlayerAngry(ped, toggle) {
  * Hash: 0x6FDDAD856E36988A | Since: 323
  */
 export function setPlayerVehicleAlarmActive(vehicle, toggle) {
-    SetPlayerVehicleAlarmAudioActive(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetPlayerVehicleAlarmAudioActive(_vehicle, toggle);
 }
 /**
  * Found in the b617d scripts, duplicates removed:
@@ -2156,7 +2223,8 @@ export function setScriptUpdateDoor(doorHash, toggle) {
  * Hash: 0xF584CF8529B51434 | Since: 2372
  */
 export function setSirenBypassMpDriverCheck(vehicle, toggle) {
-    SetSirenKeepOn(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetSirenKeepOn(_vehicle, toggle);
 }
 /**
  * No comment provided
@@ -2164,7 +2232,8 @@ export function setSirenBypassMpDriverCheck(vehicle, toggle) {
  * Hash: 0x43FA0DFC5DF87815 | Since: 323
  */
 export function setSirenCanBeControlledBy(vehicle) {
-    Citizen.invokeNative('0x43FA0DFC5DF87815', vehicle, false);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    Citizen.invokeNative('0x43FA0DFC5DF87815', _vehicle, false);
 }
 /**
  * No comment provided
@@ -2172,7 +2241,8 @@ export function setSirenCanBeControlledBy(vehicle) {
  * Hash: 0x1FEF0683B96EBCF2 | Since: 323
  */
 export function setSirenWithNoDriver(vehicle, toggle) {
-    SetSirenWithNoDriver(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetSirenWithNoDriver(_vehicle, toggle);
 }
 /**
  * No comment provided
@@ -2248,7 +2318,8 @@ export function setVariableOnUnderWaterStream(variableName, value) {
  * Hash: 0x01BB4D577D38BD9E | Since: 323
  */
 export function setVehicleBodyDamageFactor(vehicle, intensity) {
-    SetVehicleAudioBodyDamageFactor(vehicle, intensity);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleAudioBodyDamageFactor(_vehicle, intensity);
 }
 /**
  * No comment provided
@@ -2256,7 +2327,8 @@ export function setVehicleBodyDamageFactor(vehicle, intensity) {
  * Hash: 0x59E7B488451F4D3A | Since: 323
  */
 export function setVehicleEngineDamageFactor(vehicle, damageFactor) {
-    SetVehicleAudioEngineDamageFactor(vehicle, damageFactor);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleAudioEngineDamageFactor(_vehicle, damageFactor);
 }
 /**
  * SET_VEHICLE_BOOST_ACTIVE(vehicle, 1, 0);
@@ -2267,7 +2339,8 @@ export function setVehicleEngineDamageFactor(vehicle, damageFactor) {
  * Hash: 0x4A04DE7CAB2739A1 | Since: 323
  */
 export function setVehicleBoostActive(vehicle, toggle) {
-    SetVehicleBoostActive(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleBoostActive(_vehicle, toggle);
 }
 /**
  * No comment provided
@@ -2299,7 +2372,8 @@ export function setVehicleForceReverseWarning() {
  * Hash: 0x0350E7E17BA767D0 | Since: 1365
  */
 export function setVehicleHornSoundIndex(vehicle, value) {
-    SetVehicleHornVariation(vehicle, value);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleHornVariation(_vehicle, value);
 }
 /**
  * No comment provided
@@ -2307,7 +2381,8 @@ export function setVehicleHornSoundIndex(vehicle, value) {
  * Hash: 0xF3365489E0DD50F9 | Since: 323
  */
 export function setVehicleMissileWarningEnabled(vehicle, toggle) {
-    Citizen.invokeNative('0xF3365489E0DD50F9', vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    Citizen.invokeNative('0xF3365489E0DD50F9', _vehicle, toggle);
 }
 /**
  * can't seem to enable radio on cop cars etc
@@ -2315,7 +2390,8 @@ export function setVehicleMissileWarningEnabled(vehicle, toggle) {
  * Hash: 0x3B988190C0AA6C0B | Since: 323
  */
 export function setVehicleRadioEnabled(vehicle, toggle) {
-    SetVehicleRadioEnabled(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleRadioEnabled(_vehicle, toggle);
 }
 /**
  * No comment provided
@@ -2323,7 +2399,8 @@ export function setVehicleRadioEnabled(vehicle, toggle) {
  * Hash: 0xBB6F1CAEC68B0BCE | Since: 323
  */
 export function setVehicleRadioLoud(vehicle, toggle) {
-    SetVehicleRadioLoud(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleRadioLoud(_vehicle, toggle);
 }
 /**
  * No comment provided
@@ -2331,7 +2408,8 @@ export function setVehicleRadioLoud(vehicle, toggle) {
  * Hash: 0xF1F8157B8C3F171C | Since: 323
  */
 export function setVehicleStartupRevSound(vehicle) {
-    SetVehicleStartupRevSound(vehicle, undefined, undefined);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleStartupRevSound(_vehicle, undefined, undefined);
 }
 /**
  * No comment provided
@@ -2339,7 +2417,8 @@ export function setVehicleStartupRevSound(vehicle) {
  * Hash: 0xC1805D05E6D4FE10 | Since: 323
  */
 export function setVehForcedRadioThisFrame(vehicle) {
-    Citizen.invokeNative('0xC1805D05E6D4FE10', vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    Citizen.invokeNative('0xC1805D05E6D4FE10', _vehicle);
 }
 /**
  * No comment provided
@@ -2347,7 +2426,8 @@ export function setVehForcedRadioThisFrame(vehicle) {
  * Hash: 0x3E45765F3FBB582F | Since: 2372
  */
 export function setVehHasNormalRadio(vehicle) {
-    SetVehHasRadioOverride(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehHasRadioOverride(_vehicle);
 }
 /**
  * List of radio stations that are in the wheel, in clockwise order, as of LS Tuners DLC: https://git.io/J8a3k
@@ -2356,7 +2436,8 @@ export function setVehHasNormalRadio(vehicle) {
  * Hash: 0x1B9C0099CB942AC6 | Since: 323
  */
 export function setVehRadioStation(vehicle, radioStation) {
-    SetVehRadioStation(vehicle, radioStation);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehRadioStation(_vehicle, radioStation);
 }
 /**
  * No comment provided
@@ -2493,7 +2574,8 @@ export function stopScenes() {
  * Hash: 0xB8BEC0CA6F0EDB0F | Since: 323
  */
 export function stopCurrentPlayingAmbientSpeech(ped) {
-    StopCurrentPlayingAmbientSpeech(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    StopCurrentPlayingAmbientSpeech(_ped);
 }
 /**
  * No comment provided
@@ -2501,7 +2583,8 @@ export function stopCurrentPlayingAmbientSpeech(ped) {
  * Hash: 0x7A73D05A607734C7 | Since: 323
  */
 export function stopCurrentPlayingSpeech(ped) {
-    StopCurrentPlayingSpeech(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    StopCurrentPlayingSpeech(_ped);
 }
 /**
  * No comment provided
@@ -2517,7 +2600,8 @@ export function stopCutscene() {
  * Hash: 0x6C5AE23EFA885092 | Since: 323
  */
 export function stopPedRingtone(ped) {
-    StopPedRingtone(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    StopPedRingtone(_ped);
 }
 /**
  * No comment provided
@@ -2525,7 +2609,8 @@ export function stopPedRingtone(ped) {
  * Hash: 0x9D64D7405520E3D3 | Since: 323
  */
 export function stopPedSpeaking(ped, shaking) {
-    StopPedSpeaking(ped, shaking);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    StopPedSpeaking(_ped, shaking);
 }
 /**
  * No comment provided
@@ -2533,7 +2618,8 @@ export function stopPedSpeaking(ped, shaking) {
  * Hash: 0xAB6781A5F3101470 | Since: 1868
  */
 export function stopPedSpeakingSynced(ped) {
-    StopPedSpeakingSynced(ped, false);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    StopPedSpeakingSynced(_ped, false);
 }
 /**
  * No comment provided
@@ -2592,7 +2678,8 @@ export function triggerMusicEvent(eventName) {
  * Hash: 0x66C3FB05206041BA | Since: 1290
  */
 export function triggerSiren(vehicle) {
-    TriggerSiren(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    TriggerSiren(_vehicle);
 }
 /**
  * No comment provided
@@ -2688,9 +2775,10 @@ export function updateUnlockableDjRadioTracks(enableMixes) {
  * Hash: 0xBF4DC1784BE94DFA | Since: 323
  */
 export function useFootstepScriptSweeteners(ped, hash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof hash === 'string')
         hash = GetHashKey(hash);
-    UseFootstepScriptSweeteners(ped, false, hash);
+    UseFootstepScriptSweeteners(_ped, false, hash);
 }
 /**
  * No comment provided
@@ -2698,7 +2786,8 @@ export function useFootstepScriptSweeteners(ped, hash) {
  * Hash: 0xFA932DE350266EF8 | Since: 323
  */
 export function useSirenAsHorn(vehicle, toggle) {
-    UseSirenAsHorn(vehicle, toggle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    UseSirenAsHorn(_vehicle, toggle);
 }
 /**
  * No comment provided
@@ -2706,7 +2795,8 @@ export function useSirenAsHorn(vehicle, toggle) {
  * Hash: 0xBEFB80290414FD4F | Since: 3095
  */
 export function enableDragRaceStationaryWarningSounds(vehicle, enable) {
-    Citizen.invokeNative('0xBEFB80290414FD4F', vehicle, enable);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    Citizen.invokeNative('0xBEFB80290414FD4F', _vehicle, enable);
 }
 /**
  * Called together with SET_VEHICLE_TYRES_CAN_BURST
@@ -2714,5 +2804,6 @@ export function enableDragRaceStationaryWarningSounds(vehicle, enable) {
  * Hash: 0xEB7D0E1FCC8FE17A | Since: 3258
  */
 export function forceVehicleEngineSynth(vehicle, force) {
-    ForceVehicleEngineSynth(vehicle, force);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    ForceVehicleEngineSynth(_vehicle, force);
 }

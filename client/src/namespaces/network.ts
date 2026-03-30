@@ -33,6 +33,7 @@ export function doesEntityExistWithNetworkId(netId: number): boolean {
  * Hash: 0x526FEE31
  */
 export function getEntityOwner(entity: number | IEntity): number {
-    return NetworkGetEntityOwner(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return NetworkGetEntityOwner(_entity);
 }
 

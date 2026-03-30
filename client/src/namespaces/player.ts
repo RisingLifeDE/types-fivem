@@ -6,7 +6,8 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0xF2E3912B
  */
 export function getInvincible2(player: number | string | IPlayer): boolean {
-    return GetPlayerInvincible2(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerInvincible2(_player);
 }
 
 /**
@@ -15,7 +16,8 @@ export function getInvincible2(player: number | string | IPlayer): boolean {
  * Hash: 0xD014AB79
  */
 export function getMaxStamina(playerId: number | string | IPlayer): number {
-    return GetPlayerMaxStamina(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerMaxStamina(_playerId);
 }
 
 /**
@@ -24,7 +26,8 @@ export function getMaxStamina(playerId: number | string | IPlayer): number {
  * Hash: 0x27E94EF8
  */
 export function getMeleeWeaponDefenseModifier(playerId: number | string | IPlayer): number {
-    return GetPlayerMeleeWeaponDefenseModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerMeleeWeaponDefenseModifier(_playerId);
 }
 
 /**
@@ -33,7 +36,8 @@ export function getMeleeWeaponDefenseModifier(playerId: number | string | IPlaye
  * Hash: 0xE415EC5C
  */
 export function getStamina(playerId: number | string | IPlayer): number {
-    return GetPlayerStamina(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerStamina(_playerId);
 }
 
 /**
@@ -42,7 +46,8 @@ export function getStamina(playerId: number | string | IPlayer): number {
  * Hash: 0x78F27B1F
  */
 export function getVehicleDamageModifier(playerId: number | string | IPlayer): number {
-    return GetPlayerVehicleDamageModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerVehicleDamageModifier(_playerId);
 }
 
 /**
@@ -51,7 +56,8 @@ export function getVehicleDamageModifier(playerId: number | string | IPlayer): n
  * Hash: 0x8326E7CD
  */
 export function getVehicleDefenseModifier(playerId: number | string | IPlayer): number {
-    return GetPlayerVehicleDefenseModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerVehicleDefenseModifier(_playerId);
 }
 
 /**
@@ -60,7 +66,8 @@ export function getVehicleDefenseModifier(playerId: number | string | IPlayer): 
  * Hash: 0x35594F67
  */
 export function setMaxStamina(playerId: number | string | IPlayer, maxStamina: number): boolean {
-    return SetPlayerMaxStamina(playerId, maxStamina);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return SetPlayerMaxStamina(_playerId, maxStamina);
 }
 
 /**
@@ -69,7 +76,8 @@ export function setMaxStamina(playerId: number | string | IPlayer, maxStamina: n
  * Hash: 0xA9EC16C7
  */
 export function setStamina(playerId: number | string | IPlayer, stamina: number): boolean {
-    return SetPlayerStamina(playerId, stamina);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return SetPlayerStamina(_playerId, stamina);
 }
 
 /**
@@ -78,7 +86,8 @@ export function setStamina(playerId: number | string | IPlayer, stamina: number)
  * Hash: 0x8689A825
  */
 export function getMeleeWeaponDamageModifier(playerId: number | string | IPlayer): number {
-    return GetPlayerMeleeWeaponDamageModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerMeleeWeaponDamageModifier(_playerId);
 }
 
 /**
@@ -87,7 +96,8 @@ export function getMeleeWeaponDamageModifier(playerId: number | string | IPlayer
  * Hash: 0x2A3D7CDA
  */
 export function getWeaponDamageModifier(playerId: number | string | IPlayer): number {
-    return GetPlayerWeaponDamageModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerWeaponDamageModifier(_playerId);
 }
 
 /**
@@ -96,7 +106,8 @@ export function getWeaponDamageModifier(playerId: number | string | IPlayer): nu
  * Hash: 0xF1543251
  */
 export function getWeaponDefenseModifier(playerId: number | string | IPlayer): number {
-    return GetPlayerWeaponDefenseModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerWeaponDefenseModifier(_playerId);
 }
 
 /**
@@ -105,7 +116,8 @@ export function getWeaponDefenseModifier(playerId: number | string | IPlayer): n
  * Hash: 0x986B65FF
  */
 export function getWeaponDefenseModifier2(playerId: number | string | IPlayer): number {
-    return GetPlayerWeaponDefenseModifier2(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerWeaponDefenseModifier2(_playerId);
 }
 
 /**
@@ -118,7 +130,7 @@ export function getWeaponDefenseModifier2(playerId: number | string | IPlayer): 
  * 
  * Hash: 0xCF143FB9
  */
-export function getActives(): number[] {
+export function getActives(): number {
     return GetActivePlayers();
 }
 
@@ -141,7 +153,8 @@ export function getFromServerId(serverId: number): number | string {
  * Hash: 0x4D97BCC7
  */
 export function getServerId(player: number | string | IPlayer): number {
-    return GetPlayerServerId(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerServerId(_player);
 }
 
 /**
@@ -151,7 +164,8 @@ export function getServerId(player: number | string | IPlayer): number {
  * Hash: 0xFC02CAF6
  */
 export function setTalkingOverride(player: number | string | IPlayer, state: boolean): void {
-    SetPlayerTalkingOverride(player, state);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerTalkingOverride(_player, state);
 }
 
 /**

@@ -32,7 +32,8 @@ export function addExplosionWithUserVfx(pos: Vector3, explosionType: number, exp
  * Hash: 0x172AA1B624FA1013 | Since: 323
  */
 export function addOwnedExplosion(ped: number | IPed, pos: Vector3, explosionType: number, damageScale: number, isAudible: boolean, isInvisible: boolean, cameraShake: number): void {
-    AddOwnedExplosion(ped, pos.x, pos.y, pos.z, explosionType, damageScale, isAudible, isInvisible, cameraShake);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    AddOwnedExplosion(_ped, pos.x, pos.y, pos.z, explosionType, damageScale, isAudible, isInvisible, cameraShake);
 }
 
 /**
@@ -79,7 +80,8 @@ export function getOwnerOfExplosionInSphere(explosionType: number, pos: Vector3,
  * Hash: 0x28D3FED7190D3A0B | Since: 323
  */
 export function isEntityOn(entity: number | IEntity): boolean {
-    return IsEntityOnFire(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityOnFire(_entity);
 }
 
 /**
@@ -143,7 +145,8 @@ export function setFlammabilityMultiplier(): void {
  * Hash: 0xF6A9D9708F6F23DF | Since: 323
  */
 export function startEntity(entity: number | IEntity): number {
-    return StartEntityFire(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StartEntityFire(_entity);
 }
 
 /**
@@ -165,7 +168,8 @@ export function startScript(pos: Vector3, maxChildren: number, isGasFire: boolea
  * Hash: 0x7F0DD2EBBB651AFF | Since: 323
  */
 export function stopEntity(entity: number | IEntity): void {
-    StopEntityFire(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    StopEntityFire(_entity);
 }
 
 /**
@@ -201,6 +205,7 @@ export function getWaterCannonCoords(index: number): Vector3 {
  * Hash: 0x5241DB47A8B8AD54 | Since: 3570
  */
 export function networkExpectExplosionEventsForPlayer(expect: boolean, player: number | string | IPlayer): void {
-    Citizen.invokeNative('0x5241DB47A8B8AD54', expect, player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0x5241DB47A8B8AD54', expect, _player);
 }
 

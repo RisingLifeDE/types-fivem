@@ -6,7 +6,8 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0x91B38FB6
  */
 export function getRemoteSyncedScenesAllowed(entity: number | IEntity): boolean {
-    return GetEntityRemoteSyncedScenesAllowed(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityRemoteSyncedScenesAllowed(_entity);
 }
 
 /**
@@ -17,7 +18,8 @@ export function getRemoteSyncedScenesAllowed(entity: number | IEntity): boolean 
  * Hash: 0xD3FC9D88
  */
 export function setRemoteSyncedScenesAllowed(entity: number | IEntity, allow: boolean): void {
-    SetEntityRemoteSyncedScenesAllowed(entity, allow);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityRemoteSyncedScenesAllowed(_entity, allow);
 }
 
 /**
@@ -26,7 +28,8 @@ export function setRemoteSyncedScenesAllowed(entity: number | IEntity, allow: bo
  * Hash: 0xEDBE6ADD
  */
 export function isPositionFrozen(entity: number | IEntity): boolean {
-    return IsEntityPositionFrozen(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityPositionFrozen(_entity);
 }
 
 /**
@@ -46,7 +49,8 @@ export function isPositionFrozen(entity: number | IEntity): boolean {
  * Hash: 0xC1C0855A
  */
 export function applyForceTo(entity: number | IEntity, forceType: number, pos: Vector3, offX: number, offY: number, offZ: number, nComponent: number, bLocalForce: boolean, bLocalOffset: boolean, bScaleByMass: boolean, bPlayAudio: boolean, bScaleByTimeWarp: boolean): void {
-    ApplyForceToEntity(entity, forceType, pos.x, pos.y, pos.z, offX, offY, offZ, nComponent, bLocalForce, bLocalOffset, bScaleByMass, bPlayAudio, bScaleByTimeWarp);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    ApplyForceToEntity(_entity, forceType, pos.x, pos.y, pos.z, offX, offY, offZ, nComponent, bLocalForce, bLocalOffset, bScaleByMass, bPlayAudio, bScaleByTimeWarp);
 }
 
 /**
@@ -57,7 +61,8 @@ export function applyForceTo(entity: number | IEntity, forceType: number, pos: V
  * Hash: 0xFAA3D236
  */
 export function deleteEntity(entity: number | IEntity): void {
-    DeleteEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    DeleteEntity(_entity);
 }
 
 /**
@@ -66,7 +71,8 @@ export function deleteEntity(entity: number | IEntity): void {
  * Hash: 0x3AC90869
  */
 export function doesExist(entity: number | IObject): boolean {
-    return DoesEntityExist(entity);
+    const _entity = entity instanceof IObject ? entity.handle() : entity;
+    return DoesEntityExist(_entity);
 }
 
 /**
@@ -77,7 +83,8 @@ export function doesExist(entity: number | IObject): boolean {
  * Hash: 0x65C16D57
  */
 export function freezePosition(entity: number | IEntity, toggle: boolean): void {
-    FreezeEntityPosition(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    FreezeEntityPosition(_entity, toggle);
 }
 
 /**
@@ -86,7 +93,8 @@ export function freezePosition(entity: number | IEntity, toggle: boolean): void 
  * Hash: 0xFE1589F9
  */
 export function getAttachedTo(entity: number | IEntity): number {
-    return GetEntityAttachedTo(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityAttachedTo(_entity);
 }
 
 /**
@@ -95,7 +103,8 @@ export function getAttachedTo(entity: number | IEntity): number {
  * Hash: 0xE8C0C629
  */
 export function getCollisionDisabled(entity: number | IEntity): boolean {
-    return GetEntityCollisionDisabled(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityCollisionDisabled(_entity);
 }
 
 /**
@@ -106,7 +115,8 @@ export function getCollisionDisabled(entity: number | IEntity): boolean {
  * Hash: 0x1647F1CB
  */
 export function getCoords(entity: number | IEntity): Vector3 {
-    return new Vector3(GetEntityCoords(entity));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetEntityCoords(_entity));
 }
 
 /**
@@ -115,7 +125,8 @@ export function getCoords(entity: number | IEntity): Vector3 {
  * Hash: 0x972CC383
  */
 export function getHeading(entity: number | IEntity): number {
-    return GetEntityHeading(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityHeading(_entity);
 }
 
 /**
@@ -124,7 +135,8 @@ export function getHeading(entity: number | IEntity): number {
  * Hash: 0x8E3222B7
  */
 export function getHealth(entity: number | IEntity): number {
-    return GetEntityHealth(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityHealth(_entity);
 }
 
 /**
@@ -133,7 +145,8 @@ export function getHealth(entity: number | IEntity): number {
  * Hash: 0xC7AE6AA1
  */
 export function getMaxHealth(entity: number | IEntity): number {
-    return GetEntityMaxHealth(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityMaxHealth(_entity);
 }
 
 /**
@@ -142,7 +155,8 @@ export function getMaxHealth(entity: number | IEntity): number {
  * Hash: 0xDAFCB3EC
  */
 export function getModel(entity: number | IEntity): number {
-    return GetEntityModel(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityModel(_entity);
 }
 
 /**
@@ -151,7 +165,8 @@ export function getModel(entity: number | IEntity): number {
  * Hash: 0xD16EA02F
  */
 export function getOrphanMode(entity: number | IEntity): number {
-    return GetEntityOrphanMode(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityOrphanMode(_entity);
 }
 
 /**
@@ -160,7 +175,8 @@ export function getOrphanMode(entity: number | IEntity): number {
  * Hash: 0xFC30DDFF
  */
 export function getPopulationType(entity: number | IEntity): number {
-    return GetEntityPopulationType(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityPopulationType(_entity);
 }
 
 /**
@@ -169,7 +185,8 @@ export function getPopulationType(entity: number | IEntity): number {
  * Hash: 0x8FF45B04
  */
 export function getRotation(entity: number | IEntity): Vector3 {
-    return new Vector3(GetEntityRotation(entity));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetEntityRotation(_entity));
 }
 
 /**
@@ -178,7 +195,8 @@ export function getRotation(entity: number | IEntity): Vector3 {
  * Hash: 0x9BF8A73F
  */
 export function getRotationVelocity(entity: number | IEntity): Vector3 {
-    return new Vector3(GetEntityRotationVelocity(entity));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetEntityRotationVelocity(_entity));
 }
 
 /**
@@ -189,7 +207,8 @@ export function getRotationVelocity(entity: number | IEntity): Vector3 {
  * Hash: 0xED4B0486
  */
 export function getRoutingBucket(entity: number | IEntity): number {
-    return GetEntityRoutingBucket(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityRoutingBucket(_entity);
 }
 
 /**
@@ -198,7 +217,8 @@ export function getRoutingBucket(entity: number | IEntity): number {
  * Hash: 0xB7F70784
  */
 export function getScript(entity: number | IEntity): string {
-    return GetEntityScript(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityScript(_entity);
 }
 
 /**
@@ -212,7 +232,8 @@ export function getScript(entity: number | IEntity): string {
  * Hash: 0x9E1E4798
  */
 export function getSpeed(entity: number | IEntity): number {
-    return GetEntitySpeed(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntitySpeed(_entity);
 }
 
 /**
@@ -248,7 +269,8 @@ export function getSpeed(entity: number | IEntity): number {
  * Hash: 0xB1BD08D
  */
 export function getType(entity: number | IEntity): number {
-    return GetEntityType(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityType(_entity);
 }
 
 /**
@@ -257,7 +279,8 @@ export function getType(entity: number | IEntity): number {
  * Hash: 0xC14C9B6B
  */
 export function getVelocity(entity: number | IEntity): Vector3 {
-    return new Vector3(GetEntityVelocity(entity));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetEntityVelocity(_entity));
 }
 
 /**
@@ -326,7 +349,8 @@ export function getVelocity(entity: number | IEntity): Vector3 {
  * Hash: 0x23B2A641
  */
 export function getNetTypeFrom(entity: number | IEntity): number {
-    return GetNetTypeFromEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetNetTypeFromEntity(_entity);
 }
 
 /**
@@ -335,7 +359,8 @@ export function getNetTypeFrom(entity: number | IEntity): number {
  * Hash: 0x9C9A3BE0
  */
 export function hasBeenMarkedAsNoLongerNeeded(vehicle: number | IVehicle): boolean {
-    return HasEntityBeenMarkedAsNoLongerNeeded(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    return HasEntityBeenMarkedAsNoLongerNeeded(_vehicle);
 }
 
 /**
@@ -344,7 +369,8 @@ export function hasBeenMarkedAsNoLongerNeeded(vehicle: number | IVehicle): boole
  * Hash: 0x120B4ED5
  */
 export function isVisible(entity: number | IEntity): boolean {
-    return IsEntityVisible(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityVisible(_entity);
 }
 
 /**
@@ -355,7 +381,8 @@ export function isVisible(entity: number | IEntity): boolean {
  * Hash: 0xDF70B41B
  */
 export function setCoords(entity: number | IEntity, pos: Vector3, alive: boolean, deadFlag: boolean, ragdollFlag: boolean, clearArea: boolean): void {
-    SetEntityCoords(entity, pos.x, pos.y, pos.z, alive, deadFlag, ragdollFlag, clearArea);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityCoords(_entity, pos.x, pos.y, pos.z, alive, deadFlag, ragdollFlag, clearArea);
 }
 
 /**
@@ -367,7 +394,8 @@ export function setCoords(entity: number | IEntity, pos: Vector3, alive: boolean
  * Hash: 0xD3A183A3
  */
 export function setDistanceCullingRadius(entity: number | IEntity, radius: number): void {
-    SetEntityDistanceCullingRadius(entity, radius);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityDistanceCullingRadius(_entity, radius);
 }
 
 /**
@@ -378,7 +406,8 @@ export function setDistanceCullingRadius(entity: number | IEntity, radius: numbe
  * Hash: 0xE0FF064D
  */
 export function setHeading(entity: number | IEntity, heading: number): void {
-    SetEntityHeading(entity, heading);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityHeading(_entity, heading);
 }
 
 /**
@@ -387,7 +416,8 @@ export function setHeading(entity: number | IEntity, heading: number): void {
  * Hash: 0x9F7F8D36
  */
 export function setIgnoreRequestControlFilter(entity: number | IEntity, ignore: boolean): void {
-    SetEntityIgnoreRequestControlFilter(entity, ignore);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityIgnoreRequestControlFilter(_entity, ignore);
 }
 
 /**
@@ -415,7 +445,8 @@ export function setIgnoreRequestControlFilter(entity: number | IEntity, ignore: 
  * Hash: 0x489E9162
  */
 export function setOrphanMode(entity: number | IEntity, orphanMode: number): void {
-    SetEntityOrphanMode(entity, orphanMode);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityOrphanMode(_entity, orphanMode);
 }
 
 /**
@@ -430,7 +461,8 @@ export function setOrphanMode(entity: number | IEntity, orphanMode: number): voi
  * Hash: 0xA345EFE
  */
 export function setRotation(entity: number | IEntity, pitch: number, roll: number, yaw: number, rotationOrder: number, bDeadCheck: boolean): void {
-    SetEntityRotation(entity, pitch, roll, yaw, rotationOrder, bDeadCheck);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityRotation(_entity, pitch, roll, yaw, rotationOrder, bDeadCheck);
 }
 
 /**
@@ -441,7 +473,8 @@ export function setRotation(entity: number | IEntity, pitch: number, roll: numbe
  * Hash: 0x635E5289
  */
 export function setRoutingBucket(entity: number | IEntity, bucket: number): void {
-    SetEntityRoutingBucket(entity, bucket);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityRoutingBucket(_entity, bucket);
 }
 
 /**
@@ -454,7 +487,8 @@ export function setRoutingBucket(entity: number | IEntity, bucket: number): void
  * Hash: 0xFF5A1988
  */
 export function setVelocity(entity: number | IEntity, pos: Vector3): void {
-    SetEntityVelocity(entity, pos.x, pos.y, pos.z);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityVelocity(_entity, pos.x, pos.y, pos.z);
 }
 
 /**
@@ -463,7 +497,8 @@ export function setVelocity(entity: number | IEntity, pos: Vector3): void {
  * Hash: 0x3BB78F05
  */
 export function ensureStateBag(entity: number | IEntity): void {
-    EnsureEntityStateBag(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    EnsureEntityStateBag(_entity);
 }
 
 /**
@@ -499,7 +534,8 @@ export function ensureStateBag(entity: number | IEntity): void {
  * Hash: 0xDFFBA12F
  */
 export function getEntitiesInRadius(pos: Vector3, radius: number, entityType: number, sortByDistance: boolean, models: number | IObject): number {
-    return GetEntitiesInRadius(pos.x, pos.y, pos.z, radius, entityType, sortByDistance, models);
+    const _models = models instanceof IObject ? models.handle() : models;
+    return GetEntitiesInRadius(pos.x, pos.y, pos.z, radius, entityType, sortByDistance, _models);
 }
 
 /**

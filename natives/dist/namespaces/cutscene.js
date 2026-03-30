@@ -1,4 +1,4 @@
-import { Vector3 } from '@risinglife/fivem-shared';
+import { Vector3, IPed } from '@risinglife/fivem-shared';
 /**
  * No comment provided
  *
@@ -248,9 +248,10 @@ export function networkSetMocapCanBeSkipped(toggle) {
  * Hash: 0xE40C1C56DF95C2E8 | Since: 323
  */
 export function registerEntityFor(cutscenePed, cutsceneEntName, modelHash) {
+    const _cutscenePed = cutscenePed instanceof IPed ? cutscenePed.handle() : cutscenePed;
     if (typeof modelHash === 'string')
         modelHash = GetHashKey(modelHash);
-    RegisterEntityForCutscene(cutscenePed, cutsceneEntName, 0, modelHash, 0);
+    RegisterEntityForCutscene(_cutscenePed, cutsceneEntName, 0, modelHash, 0);
 }
 /**
  * No comment provided
@@ -387,9 +388,10 @@ export function setPedComponentVariation(cutsceneEntName, componentId, drawableI
  * Hash: 0x2A56C06EBEF2B0D9 | Since: 323
  */
 export function setPedComponentVariationFromPed(cutsceneEntName, ped, modelHash) {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof modelHash === 'string')
         modelHash = GetHashKey(modelHash);
-    SetCutscenePedComponentVariationFromPed(cutsceneEntName, ped, modelHash);
+    SetCutscenePedComponentVariationFromPed(cutsceneEntName, _ped, modelHash);
 }
 /**
  * Thanks R*! ;)

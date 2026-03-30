@@ -6,7 +6,8 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0x8F57A89D | Since: unknown | API-Set: client
  */
 export function getCamMatrix(camera: number | ICamera, rightVector: Vector3, forwardVector: Vector3, upVector: Vector3, position: Vector3): void {
-    GetCamMatrix(camera, rightVector, forwardVector, upVector, position);
+    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    GetCamMatrix(_camera, rightVector, forwardVector, upVector, position);
 }
 
 /**
@@ -21,7 +22,8 @@ export function getCamMatrix(camera: number | ICamera, rightVector: Vector3, for
  * Hash: 0x8609C75EC438FB3B | Since: 323 | API-Set: unknown
  */
 export function addCamSplineNode(camera: number | ICamera, pos: Vector3, rot: Vector3, length: number, smoothingStyle: number, rotationOrder: number): void {
-    AddCamSplineNode(camera, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, length, smoothingStyle, rotationOrder);
+    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    AddCamSplineNode(_camera, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, length, smoothingStyle, rotationOrder);
 }
 
 /**
@@ -32,7 +34,9 @@ export function addCamSplineNode(camera: number | ICamera, pos: Vector3, rot: Ve
  * Hash: 0x0FB82563989CF4FB | Since: 323 | API-Set: unknown
  */
 export function addCamSplineNodeUsing(cam: number | ICamera, cam2: number | ICamera, length: number): void {
-    AddCamSplineNodeUsingCamera(cam, cam2, length, 0);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam2 = cam2 instanceof ICamera ? cam2.handle() : cam2;
+    AddCamSplineNodeUsingCamera(_cam, _cam2, length, 0);
 }
 
 /**
@@ -43,7 +47,9 @@ export function addCamSplineNodeUsing(cam: number | ICamera, cam2: number | ICam
  * Hash: 0x0A9F2A468B328E74 | Since: 323 | API-Set: unknown
  */
 export function addCamSplineNodeUsingFrame(cam: number | ICamera, cam2: number | ICamera, length: number): void {
-    AddCamSplineNodeUsingCameraFrame(cam, cam2, length, 0);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam2 = cam2 instanceof ICamera ? cam2.handle() : cam2;
+    AddCamSplineNodeUsingCameraFrame(_cam, _cam2, length, 0);
 }
 
 /**
@@ -52,7 +58,8 @@ export function addCamSplineNodeUsingFrame(cam: number | ICamera, cam2: number |
  * Hash: 0x609278246A29CA34 | Since: 323 | API-Set: unknown
  */
 export function addCamSplineNodeUsingGameplayFrame(cam: number | ICamera, length: number): void {
-    AddCamSplineNodeUsingGameplayFrame(cam, length, 0);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    AddCamSplineNodeUsingGameplayFrame(_cam, length, 0);
 }
 
 /**
@@ -72,7 +79,8 @@ export function allowMotionBlurDecay(): void {
  * Hash: 0xA2746EEAE3E577CD | Since: 323 | API-Set: unknown
  */
 export function animatedShakeCam(cam: number | ICamera, amplitude: number): void {
-    AnimatedShakeCam(cam, undefined, undefined, undefined, amplitude);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    AnimatedShakeCam(_cam, undefined, undefined, undefined, amplitude);
 }
 
 /**
@@ -101,7 +109,9 @@ export function areWidescreenBordersActive(): boolean {
  * Hash: 0xFEDB7D269E8C60E3 | Since: 323 | API-Set: unknown
  */
 export function attachCamToEntity(cam: number | ICamera, entity: number | IEntity, xOffset: number, yOffset: number, zOffset: number, isRelative: boolean): void {
-    AttachCamToEntity(cam, entity, xOffset, yOffset, zOffset, isRelative);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    AttachCamToEntity(_cam, _entity, xOffset, yOffset, zOffset, isRelative);
 }
 
 /**
@@ -110,7 +120,9 @@ export function attachCamToEntity(cam: number | ICamera, entity: number | IEntit
  * Hash: 0x61A3DBA14AB7F411 | Since: 323 | API-Set: unknown
  */
 export function attachCamToPedBone(cam: number | ICamera, ped: number | IPed, boneIndex: number, pos: Vector3, heading: boolean): void {
-    AttachCamToPedBone(cam, ped, boneIndex, pos.x, pos.y, pos.z, heading);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    AttachCamToPedBone(_cam, _ped, boneIndex, pos.x, pos.y, pos.z, heading);
 }
 
 /**
@@ -119,7 +131,9 @@ export function attachCamToPedBone(cam: number | ICamera, ped: number | IPed, bo
  * Hash: 0x8DB3F12A02CAEF72 | Since: 1290 | API-Set: unknown
  */
 export function attachCamToVehicleBone(cam: number | ICamera, vehicle: number | IVehicle, boneIndex: number, relativeRotation: boolean, rot: Vector3, offsetX: number, offsetY: number, offsetZ: number, fixedDirection: boolean): void {
-    AttachCamToVehicleBone(cam, vehicle, boneIndex, relativeRotation, rot.x, rot.y, rot.z, offsetX, offsetY, offsetZ, fixedDirection);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    AttachCamToVehicleBone(_cam, _vehicle, boneIndex, relativeRotation, rot.x, rot.y, rot.z, offsetX, offsetY, offsetZ, fixedDirection);
 }
 
 /**
@@ -214,8 +228,9 @@ export function createCamWithParams(camName: string, pos: Vector3, rot: Vector3,
  * Hash: 0x741B0129D4560F31 | Since: 323 | API-Set: unknown
  */
 export function createCinematicShot(p0: number | string, time: number, entity: number | IEntity): void {
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
     if (typeof p0 === 'string') p0 = GetHashKey(p0)
-    CreateCinematicShot(p0, time, false, entity);
+    CreateCinematicShot(p0, time, false, _entity);
 }
 
 /**
@@ -233,7 +248,8 @@ export function destroyAllCams(bScriptHostCam: boolean): void {
  * Hash: 0x865908C81A2C22E9 | Since: 323 | API-Set: unknown
  */
 export function destroyCam(cam: number | ICamera, bScriptHostCam: boolean): void {
-    DestroyCam(cam, bScriptHostCam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    DestroyCam(_cam, bScriptHostCam);
 }
 
 /**
@@ -242,7 +258,8 @@ export function destroyCam(cam: number | ICamera, bScriptHostCam: boolean): void
  * Hash: 0xA2FABBE87F4BAD82 | Since: 323 | API-Set: unknown
  */
 export function detachCam(cam: number | ICamera): void {
-    DetachCam(cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    DetachCam(_cam);
 }
 
 /**
@@ -260,7 +277,8 @@ export function disableAimCamThisUpdate(): void {
  * Hash: 0x49482F9FCD825AAA | Since: 323 | API-Set: unknown
  */
 export function disableCamCollisionForObject(entity: number | IEntity): void {
-    DisableCamCollisionForObject(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    DisableCamCollisionForObject(_entity);
 }
 
 /**
@@ -345,7 +363,8 @@ export function disableOnFootFirstPersonViewThisUpdate(): void {
  * Hash: 0xA7A932170592B50E | Since: 323 | API-Set: unknown
  */
 export function doesCamExist(cam: number | ICamera): boolean {
-    return DoesCamExist(cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return DoesCamExist(_cam);
 }
 
 /**
@@ -394,7 +413,8 @@ export function forceRelativeHeadingAndPitch(roll: number, pitch: number, yaw: n
  * Hash: 0xAABD62873FFB1A33 | Since: 2189 | API-Set: unknown
  */
 export function forceCamFarClip(cam: number | ICamera): void {
-    Citizen.invokeNative('0xAABD62873FFB1A33', cam, 0);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    Citizen.invokeNative('0xAABD62873FFB1A33', _cam, 0);
 }
 
 /**
@@ -449,7 +469,8 @@ export function getCamActiveViewModeContext(): number {
  * Hash: 0xA10B2DB49E92A6B0 | Since: 323 | API-Set: unknown
  */
 export function getCamAnimCurrentPhase(cam: number | ICamera): number {
-    return GetCamAnimCurrentPhase(cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return GetCamAnimCurrentPhase(_cam);
 }
 
 /**
@@ -458,7 +479,8 @@ export function getCamAnimCurrentPhase(cam: number | ICamera): number {
  * Hash: 0xBAC038F7459AE5AE | Since: 323 | API-Set: unknown
  */
 export function getCamCoord(cam: number | ICamera): Vector3 {
-    return new Vector3(GetCamCoord(cam));
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return new Vector3(GetCamCoord(_cam));
 }
 
 /**
@@ -467,7 +489,8 @@ export function getCamCoord(cam: number | ICamera): Vector3 {
  * Hash: 0x06D153C0B99B6128 | Since: 2699 | API-Set: unknown
  */
 export function getCamDofStrength(cam: number | ICamera): number {
-    return GetCamDofStrength(cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return GetCamDofStrength(_cam);
 }
 
 /**
@@ -476,7 +499,8 @@ export function getCamDofStrength(cam: number | ICamera): number {
  * Hash: 0xB60A9CFEB21CA6AA | Since: 323 | API-Set: unknown
  */
 export function getCamFarClip(cam: number | ICamera): number {
-    return GetCamFarClip(cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return GetCamFarClip(_cam);
 }
 
 /**
@@ -485,7 +509,8 @@ export function getCamFarClip(cam: number | ICamera): number {
  * Hash: 0x255F8DAFD540D397 | Since: 323 | API-Set: unknown
  */
 export function getCamFarDof(cam: number | ICamera): number {
-    return GetCamFarDof(cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return GetCamFarDof(_cam);
 }
 
 /**
@@ -494,7 +519,8 @@ export function getCamFarDof(cam: number | ICamera): number {
  * Hash: 0xC3330A45CCCDB26A | Since: 323 | API-Set: unknown
  */
 export function getCamFov(cam: number | ICamera): number {
-    return GetCamFov(cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return GetCamFov(_cam);
 }
 
 /**
@@ -503,7 +529,8 @@ export function getCamFov(cam: number | ICamera): number {
  * Hash: 0xC520A34DAFBF24B1 | Since: 323 | API-Set: unknown
  */
 export function getCamNearClip(cam: number | ICamera): number {
-    return GetCamNearClip(cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return GetCamNearClip(_cam);
 }
 
 /**
@@ -512,7 +539,8 @@ export function getCamNearClip(cam: number | ICamera): number {
  * Hash: 0xC2612D223D915A1C | Since: 2699 | API-Set: unknown
  */
 export function getCamNearDof(cam: number | ICamera): number {
-    return GetCamNearDof(cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return GetCamNearDof(_cam);
 }
 
 /**
@@ -521,7 +549,8 @@ export function getCamNearDof(cam: number | ICamera): number {
  * Hash: 0x7D304C1C955E3E12 | Since: 323 | API-Set: unknown
  */
 export function getCamRot(cam: number | ICamera, rotationOrder: number): Vector3 {
-    return new Vector3(GetCamRot(cam, rotationOrder));
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return new Vector3(GetCamRot(_cam, rotationOrder));
 }
 
 /**
@@ -530,7 +559,8 @@ export function getCamRot(cam: number | ICamera, rotationOrder: number): Vector3
  * Hash: 0xB22B17DF858716A6 | Since: 323 | API-Set: unknown
  */
 export function getCamSplineNodeIndex(cam: number | ICamera): number {
-    return GetCamSplineNodeIndex(cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return GetCamSplineNodeIndex(_cam);
 }
 
 /**
@@ -539,7 +569,8 @@ export function getCamSplineNodeIndex(cam: number | ICamera): number {
  * Hash: 0xD9D0E694C8282C96 | Since: 323 | API-Set: unknown
  */
 export function getCamSplineNodePhase(cam: number | ICamera): number {
-    return GetCamSplineNodePhase(cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return GetCamSplineNodePhase(_cam);
 }
 
 /**
@@ -550,7 +581,8 @@ export function getCamSplineNodePhase(cam: number | ICamera): number {
  * Hash: 0xB5349E36C546509A | Since: 323 | API-Set: unknown
  */
 export function getCamSplinePhase(cam: number | ICamera): number {
-    return GetCamSplinePhase(cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return GetCamSplinePhase(_cam);
 }
 
 /**
@@ -651,7 +683,8 @@ export function getFinalRenderedCamRot(rotationOrder: number): Vector3 {
  * Hash: 0x5F35F6732C3FBBA0 | Since: 323 | API-Set: unknown
  */
 export function getFinalRenderedRemotePlayerCamFov(player: number | string | IPlayer): number {
-    return GetFinalRenderedInWhenFriendlyFov(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetFinalRenderedInWhenFriendlyFov(_player);
 }
 
 /**
@@ -660,7 +693,8 @@ export function getFinalRenderedRemotePlayerCamFov(player: number | string | IPl
  * Hash: 0x26903D9CD1175F2C | Since: 323 | API-Set: unknown
  */
 export function getFinalRenderedRemotePlayerCamRot(player: number | string | IPlayer, rotationOrder: number): Vector3 {
-    return new Vector3(GetFinalRenderedInWhenFriendlyRot(player, rotationOrder));
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return new Vector3(GetFinalRenderedInWhenFriendlyRot(_player, rotationOrder));
 }
 
 /**
@@ -797,7 +831,9 @@ export function getRenderingCam(): number {
  * Hash: 0x202A5ED9CE01D6E7 | Since: 2189 | API-Set: unknown
  */
 export function hardAttachCamToEntity(cam: number | ICamera, entity: number | IEntity, rot: Vector3, xOffset: number, yOffset: number, zOffset: number, isRelative: boolean): void {
-    HardAttachCamToEntity(cam, entity, rot.x, rot.y, rot.z, xOffset, yOffset, zOffset, isRelative);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    HardAttachCamToEntity(_cam, _entity, rot.x, rot.y, rot.z, xOffset, yOffset, zOffset, isRelative);
 }
 
 /**
@@ -806,7 +842,9 @@ export function hardAttachCamToEntity(cam: number | ICamera, entity: number | IE
  * Hash: 0x149916F50C34A40D | Since: 1180 | API-Set: unknown
  */
 export function hardAttachCamToPedBone(cam: number | ICamera, ped: number | IPed, boneIndex: number): void {
-    HardAttachCamToPedBone(cam, ped, boneIndex, 0, 0, 0, 0, 0, 0, false);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    HardAttachCamToPedBone(_cam, _ped, boneIndex, 0, 0, 0, 0, 0, 0, false);
 }
 
 /**
@@ -824,7 +862,8 @@ export function ignoreMenuPreferenceForBonnetThisUpdate(): void {
  * Hash: 0xDDA77EE33C005AAF | Since: 3258 | API-Set: unknown
  */
 export function interpolateWithParams(camera: number | ICamera, camPosX: number, camPosY: number, camPosZ: number, camRotX: number, camRotY: number, camRotZ: number, fov: number, duration: number, posCurveType: number, rotCurveType: number, rotOrder: number, fovCurveType: number): void {
-    InterpolateCamWithParams(camera, camPosX, camPosY, camPosZ, camRotX, camRotY, camRotZ, fov, duration, posCurveType, rotCurveType, rotOrder, fovCurveType);
+    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    InterpolateCamWithParams(_camera, camPosX, camPosY, camPosZ, camRotX, camRotY, camRotZ, fov, duration, posCurveType, rotCurveType, rotOrder, fovCurveType);
 }
 
 /**
@@ -887,7 +926,8 @@ export function isBonnetCinematicCamRendering(): boolean {
  * Hash: 0xDFB2B516207D3534 | Since: 323 | API-Set: unknown
  */
 export function isCamActive(cam: number | ICamera): boolean {
-    return IsCamActive(cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return IsCamActive(_cam);
 }
 
 /**
@@ -896,7 +936,8 @@ export function isCamActive(cam: number | ICamera): boolean {
  * Hash: 0x036F97C908C2B52C | Since: 323 | API-Set: unknown
  */
 export function isCamInterpolating(cam: number | ICamera): boolean {
-    return IsCamInterpolating(cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return IsCamInterpolating(_cam);
 }
 
 /**
@@ -905,7 +946,8 @@ export function isCamInterpolating(cam: number | ICamera): boolean {
  * Hash: 0xC90621D8A0CEECF2 | Since: 323 | API-Set: unknown
  */
 export function isCamPlayingAnim(cam: number | ICamera, animName: string, animDictionary: string): boolean {
-    return IsCamPlayingAnim(cam, animName, animDictionary);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return IsCamPlayingAnim(_cam, animName, animDictionary);
 }
 
 /**
@@ -914,7 +956,8 @@ export function isCamPlayingAnim(cam: number | ICamera, animName: string, animDi
  * Hash: 0x02EC0AF5C5A49B7A | Since: 323 | API-Set: unknown
  */
 export function isCamRendering(cam: number | ICamera): boolean {
-    return IsCamRendering(cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return IsCamRendering(_cam);
 }
 
 /**
@@ -923,7 +966,8 @@ export function isCamRendering(cam: number | ICamera): boolean {
  * Hash: 0x6B24BFE83A2BE47B | Since: 323 | API-Set: unknown
  */
 export function isCamShaking(cam: number | ICamera): boolean {
-    return IsCamShaking(cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return IsCamShaking(_cam);
 }
 
 /**
@@ -932,7 +976,8 @@ export function isCamShaking(cam: number | ICamera): boolean {
  * Hash: 0x0290F35C0AD97864 | Since: 323 | API-Set: unknown
  */
 export function isCamSplinePaused(cam: number | ICamera): boolean {
-    return IsCamSplinePaused(cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return IsCamSplinePaused(_cam);
 }
 
 /**
@@ -1156,7 +1201,8 @@ export function isSphereVisible(pos: Vector3, radius: number): boolean {
  * Hash: 0x7DCF7C708D292D55 | Since: 323 | API-Set: unknown
  */
 export function overrideCamSplineMotionBlur(cam: number | ICamera): void {
-    OverrideCamSplineMotionBlur(cam, 0, 0, 0);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    OverrideCamSplineMotionBlur(_cam, 0, 0, 0);
 }
 
 /**
@@ -1165,7 +1211,8 @@ export function overrideCamSplineMotionBlur(cam: number | ICamera): void {
  * Hash: 0x40B62FA033EB0346 | Since: 323 | API-Set: unknown
  */
 export function overrideCamSplineVelocity(cam: number | ICamera): void {
-    OverrideCamSplineVelocity(cam, 0, 0, 0);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    OverrideCamSplineVelocity(_cam, 0, 0, 0);
 }
 
 /**
@@ -1179,7 +1226,8 @@ export function overrideCamSplineVelocity(cam: number | ICamera): void {
  * Hash: 0x9A2D0FB2E7852392 | Since: 323 | API-Set: unknown
  */
 export function playCamAnim(cam: number | ICamera, animName: string, animDictionary: string, pos: Vector3, rot: Vector3): boolean {
-    return PlayCamAnim(cam, animName, animDictionary, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, false, 0);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return PlayCamAnim(_cam, animName, animDictionary, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, false, 0);
 }
 
 /**
@@ -1201,7 +1249,8 @@ export function playSynchronizedCamAnim(animName: string, animDictionary: string
  * Hash: 0xF75497BB865F0803 | Since: 323 | API-Set: unknown
  */
 export function pointCamAtCoord(cam: number | ICamera, pos: Vector3): void {
-    PointCamAtCoord(cam, pos.x, pos.y, pos.z);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    PointCamAtCoord(_cam, pos.x, pos.y, pos.z);
 }
 
 /**
@@ -1210,7 +1259,9 @@ export function pointCamAtCoord(cam: number | ICamera, pos: Vector3): void {
  * Hash: 0x5640BFF86B16E8DC | Since: 323 | API-Set: unknown
  */
 export function pointCamAtEntity(cam: number | ICamera, entity: number | IEntity): void {
-    PointCamAtEntity(cam, entity, 0, 0, 0, false);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    PointCamAtEntity(_cam, _entity, 0, 0, 0, false);
 }
 
 /**
@@ -1219,7 +1270,9 @@ export function pointCamAtEntity(cam: number | ICamera, entity: number | IEntity
  * Hash: 0x68B2B5F33BA63C41 | Since: 323 | API-Set: unknown
  */
 export function pointCamAtPedBone(cam: number | ICamera, ped: number | IPed, boneIndex: number, pos: Vector3): void {
-    PointCamAtPedBone(cam, ped, boneIndex, pos.x, pos.y, pos.z, false);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    PointCamAtPedBone(_cam, _ped, boneIndex, pos.x, pos.y, pos.z, false);
 }
 
 /**
@@ -1269,7 +1322,8 @@ export function setAllowCustomVehicleDriveByCamThisUpdate(): void {
  * Hash: 0x026FB97D0A425F84 | Since: 323 | API-Set: unknown
  */
 export function setCamActive(cam: number | ICamera, active: boolean): void {
-    SetCamActive(cam, active);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamActive(_cam, active);
 }
 
 /**
@@ -1279,7 +1333,9 @@ export function setCamActive(cam: number | ICamera, active: boolean): void {
  * Hash: 0x9FBDA379383A52A4 | Since: 323 | API-Set: unknown
  */
 export function setCamActiveWithInterp(camTo: number | ICamera, camFrom: number | ICamera, duration: number, easeLocation: number, easeRotation: number): void {
-    SetCamActiveWithInterp(camTo, camFrom, duration, easeLocation, easeRotation);
+    const _camTo = camTo instanceof ICamera ? camTo.handle() : camTo;
+    const _camFrom = camFrom instanceof ICamera ? camFrom.handle() : camFrom;
+    SetCamActiveWithInterp(_camTo, _camFrom, duration, easeLocation, easeRotation);
 }
 
 /**
@@ -1288,7 +1344,8 @@ export function setCamActiveWithInterp(camTo: number | ICamera, camFrom: number 
  * Hash: 0x8C1DC7770C51DC8D | Since: 323 | API-Set: unknown
  */
 export function setCamAffectsAiming(cam: number | ICamera, toggle: boolean): void {
-    SetCamAffectsAiming(cam, toggle);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamAffectsAiming(_cam, toggle);
 }
 
 /**
@@ -1297,7 +1354,8 @@ export function setCamAffectsAiming(cam: number | ICamera, toggle: boolean): voi
  * Hash: 0x4145A4C44FF3B5A6 | Since: 323 | API-Set: unknown
  */
 export function setCamAnimCurrentPhase(cam: number | ICamera, phase: number): void {
-    SetCamAnimCurrentPhase(cam, phase);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamAnimCurrentPhase(_cam, phase);
 }
 
 /**
@@ -1306,7 +1364,8 @@ export function setCamAnimCurrentPhase(cam: number | ICamera, phase: number): vo
  * Hash: 0x661B5C8654ADD825 | Since: 323 | API-Set: unknown
  */
 export function setCamControlsMiniMapHeading(cam: number | ICamera, toggle: boolean): void {
-    SetCamControlsMiniMapHeading(cam, toggle);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamControlsMiniMapHeading(_cam, toggle);
 }
 
 /**
@@ -1315,7 +1374,8 @@ export function setCamControlsMiniMapHeading(cam: number | ICamera, toggle: bool
  * Hash: 0x4D41783FB745E42E | Since: 323 | API-Set: unknown
  */
 export function setCamCoord(cam: number | ICamera, pos: Vector3): void {
-    SetCamCoord(cam, pos.x, pos.y, pos.z);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamCoord(_cam, pos.x, pos.y, pos.z);
 }
 
 /**
@@ -1337,7 +1397,8 @@ export function setCamDeathFailEffectState(): void {
  * Hash: 0x1B93E0107865DD40 | Since: 323 | API-Set: unknown
  */
 export function setCamDebugName(camera: number | ICamera, name: string): void {
-    SetCamDebugName(camera, name);
+    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    SetCamDebugName(_camera, name);
 }
 
 /**
@@ -1347,7 +1408,8 @@ export function setCamDebugName(camera: number | ICamera, name: string): void {
  * Hash: 0x7DD234D6F3914C5B | Since: 323 | API-Set: unknown
  */
 export function setCamDofFnumberOfLens(camera: number | ICamera): void {
-    SetCamDofFnumberOfLens(camera, 0);
+    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    SetCamDofFnumberOfLens(_camera, 0);
 }
 
 /**
@@ -1356,7 +1418,8 @@ export function setCamDofFnumberOfLens(camera: number | ICamera): void {
  * Hash: 0x47B595D60664CFFA | Since: 1011 | API-Set: unknown
  */
 export function setCamDofFocalLengthMultiplier(camera: number | ICamera, multiplier: number): void {
-    SetCamDofFocalLengthMultiplier(camera, multiplier);
+    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    SetCamDofFocalLengthMultiplier(_camera, multiplier);
 }
 
 /**
@@ -1365,7 +1428,8 @@ export function setCamDofFocalLengthMultiplier(camera: number | ICamera, multipl
  * Hash: 0xC669EEA5D031B7DE | Since: 323 | API-Set: unknown
  */
 export function setCamDofFocusDistanceBias(camera: number | ICamera): void {
-    SetCamDofFocusDistanceBias(camera, 0);
+    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    SetCamDofFocusDistanceBias(_camera, 0);
 }
 
 /**
@@ -1374,7 +1438,8 @@ export function setCamDofFocusDistanceBias(camera: number | ICamera): void {
  * Hash: 0xC3654A441402562D | Since: 323 | API-Set: unknown
  */
 export function setCamDofMaxNearInFocusDistance(camera: number | ICamera): void {
-    SetCamDofMaxNearInFocusDistance(camera, 0);
+    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    SetCamDofMaxNearInFocusDistance(_camera, 0);
 }
 
 /**
@@ -1383,7 +1448,8 @@ export function setCamDofMaxNearInFocusDistance(camera: number | ICamera): void 
  * Hash: 0x2C654B4943BDDF7C | Since: 323 | API-Set: unknown
  */
 export function setCamDofMaxNearInFocusDistanceBlendLevel(camera: number | ICamera): void {
-    SetCamDofMaxNearInFocusDistanceBlendLevel(camera, 0);
+    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    SetCamDofMaxNearInFocusDistanceBlendLevel(_camera, 0);
 }
 
 /**
@@ -1392,7 +1458,8 @@ export function setCamDofMaxNearInFocusDistanceBlendLevel(camera: number | ICame
  * Hash: 0xF55E4046F6F831DC | Since: 323 | API-Set: unknown
  */
 export function setCamDofOverriddenFocusDistance(camera: number | ICamera): void {
-    Citizen.invokeNative('0xF55E4046F6F831DC', camera, 0);
+    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    Citizen.invokeNative('0xF55E4046F6F831DC', _camera, 0);
 }
 
 /**
@@ -1410,7 +1477,8 @@ export function setCamDofOverriddenFocusDistanceBlendLevel(): void {
  * Hash: 0x3CF48F6F96E749DC | Since: 323 | API-Set: unknown
  */
 export function setCamDofPlanes(cam: number | ICamera): void {
-    SetCamDofPlanes(cam, 0, 0, 0, 0);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamDofPlanes(_cam, 0, 0, 0, 0);
 }
 
 /**
@@ -1419,7 +1487,8 @@ export function setCamDofPlanes(cam: number | ICamera): void {
  * Hash: 0x7CF3AF51DCFE4108 | Since: 2944 | API-Set: unknown
  */
 export function setCamDofShouldKeepLookAtTargetInFocus(camera: number | ICamera, state: boolean): void {
-    Citizen.invokeNative('0x7CF3AF51DCFE4108', camera, state);
+    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    Citizen.invokeNative('0x7CF3AF51DCFE4108', _camera, state);
 }
 
 /**
@@ -1428,7 +1497,8 @@ export function setCamDofShouldKeepLookAtTargetInFocus(camera: number | ICamera,
  * Hash: 0x5EE29B4D7D5DF897 | Since: 323 | API-Set: unknown
  */
 export function setCamDofStrength(cam: number | ICamera, dofStrength: number): void {
-    SetCamDofStrength(cam, dofStrength);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamDofStrength(_cam, dofStrength);
 }
 
 /**
@@ -1437,7 +1507,8 @@ export function setCamDofStrength(cam: number | ICamera, dofStrength: number): v
  * Hash: 0xAE306F2A904BF86E | Since: 323 | API-Set: unknown
  */
 export function setCamFarClip(cam: number | ICamera, farClip: number): void {
-    SetCamFarClip(cam, farClip);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamFarClip(_cam, farClip);
 }
 
 /**
@@ -1446,7 +1517,8 @@ export function setCamFarClip(cam: number | ICamera, farClip: number): void {
  * Hash: 0xEDD91296CD01AEE0 | Since: 323 | API-Set: unknown
  */
 export function setCamFarDof(cam: number | ICamera, farDOF: number): void {
-    SetCamFarDof(cam, farDOF);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamFarDof(_cam, farDOF);
 }
 
 /**
@@ -1458,7 +1530,8 @@ export function setCamFarDof(cam: number | ICamera, farDOF: number): void {
  * Hash: 0xB13C14F66A00D047 | Since: 323 | API-Set: unknown
  */
 export function setCamFov(cam: number | ICamera, fieldOfView: number): void {
-    SetCamFov(cam, fieldOfView);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamFov(_cam, fieldOfView);
 }
 
 /**
@@ -1471,7 +1544,8 @@ export function setCamFov(cam: number | ICamera, fieldOfView: number): void {
  * Hash: 0x45F1DE9C34B93AE6 | Since: 323 | API-Set: unknown
  */
 export function setCamInheritRollVehicle(cam: number | ICamera): void {
-    SetCamInheritRollVehicle(cam, false);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamInheritRollVehicle(_cam, false);
 }
 
 /**
@@ -1481,7 +1555,8 @@ export function setCamInheritRollVehicle(cam: number | ICamera): void {
  * Hash: 0xA2767257A320FC82 | Since: 323 | API-Set: unknown
  */
 export function setCamIsInsideVehicle(cam: number | ICamera, toggle: boolean): void {
-    Citizen.invokeNative('0xA2767257A320FC82', cam, toggle);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    Citizen.invokeNative('0xA2767257A320FC82', _cam, toggle);
 }
 
 /**
@@ -1490,7 +1565,8 @@ export function setCamIsInsideVehicle(cam: number | ICamera, toggle: boolean): v
  * Hash: 0x6F0F77FBA9A8F2E6 | Since: 323 | API-Set: unknown
  */
 export function setCamMotionBlurStrength(cam: number | ICamera, strength: number): void {
-    SetCamMotionBlurStrength(cam, strength);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamMotionBlurStrength(_cam, strength);
 }
 
 /**
@@ -1499,7 +1575,8 @@ export function setCamMotionBlurStrength(cam: number | ICamera, strength: number
  * Hash: 0xC7848EFCCC545182 | Since: 323 | API-Set: unknown
  */
 export function setCamNearClip(cam: number | ICamera, nearClip: number): void {
-    SetCamNearClip(cam, nearClip);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamNearClip(_cam, nearClip);
 }
 
 /**
@@ -1508,7 +1585,8 @@ export function setCamNearClip(cam: number | ICamera, nearClip: number): void {
  * Hash: 0x3FA4BF0A7AB7DE2C | Since: 323 | API-Set: unknown
  */
 export function setCamNearDof(cam: number | ICamera, nearDOF: number): void {
-    SetCamNearDof(cam, nearDOF);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamNearDof(_cam, nearDOF);
 }
 
 /**
@@ -1517,7 +1595,8 @@ export function setCamNearDof(cam: number | ICamera, nearDOF: number): void {
  * Hash: 0xBFD8727AEA3CCEBA | Since: 323 | API-Set: unknown
  */
 export function setCamParams(cam: number | ICamera, pos: Vector3, rot: Vector3, fieldOfView: number): void {
-    SetCamParams(cam, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, fieldOfView, undefined, 0, 0, 0);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamParams(_cam, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, fieldOfView, undefined, 0, 0, 0);
 }
 
 /**
@@ -1529,7 +1608,8 @@ export function setCamParams(cam: number | ICamera, pos: Vector3, rot: Vector3, 
  * Hash: 0x85973643155D0B07 | Since: 323 | API-Set: unknown
  */
 export function setCamRot(cam: number | ICamera, rot: Vector3, rotationOrder: number): void {
-    SetCamRot(cam, rot.x, rot.y, rot.z, rotationOrder);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamRot(_cam, rot.x, rot.y, rot.z, rotationOrder);
 }
 
 /**
@@ -1538,7 +1618,8 @@ export function setCamRot(cam: number | ICamera, rot: Vector3, rotationOrder: nu
  * Hash: 0xD93DB43B82BC0D00 | Since: 323 | API-Set: unknown
  */
 export function setCamShakeAmplitude(cam: number | ICamera, amplitude: number): void {
-    SetCamShakeAmplitude(cam, amplitude);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamShakeAmplitude(_cam, amplitude);
 }
 
 /**
@@ -1547,7 +1628,8 @@ export function setCamShakeAmplitude(cam: number | ICamera, amplitude: number): 
  * Hash: 0x1381539FEE034CDA | Since: 323 | API-Set: unknown
  */
 export function setCamSplineDuration(cam: number | ICamera, timeDuration: number): void {
-    SetCamSplineDuration(cam, timeDuration);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamSplineDuration(_cam, timeDuration);
 }
 
 /**
@@ -1556,7 +1638,8 @@ export function setCamSplineDuration(cam: number | ICamera, timeDuration: number
  * Hash: 0x83B8201ED82A9A2D | Since: 323 | API-Set: unknown
  */
 export function setCamSplineNodeEase(cam: number | ICamera, easingFunction: number): void {
-    SetCamSplineNodeEase(cam, easingFunction, 0, 0);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamSplineNodeEase(_cam, easingFunction, 0, 0);
 }
 
 /**
@@ -1565,7 +1648,8 @@ export function setCamSplineNodeEase(cam: number | ICamera, easingFunction: numb
  * Hash: 0x7BF1A54AE67AC070 | Since: 323 | API-Set: unknown
  */
 export function setCamSplineNodeExtraFlags(cam: number | ICamera, flags: number): void {
-    SetCamSplineNodeExtraFlags(cam, 0, flags);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamSplineNodeExtraFlags(_cam, 0, flags);
 }
 
 /**
@@ -1574,7 +1658,8 @@ export function setCamSplineNodeExtraFlags(cam: number | ICamera, flags: number)
  * Hash: 0xA6385DEB180F319F | Since: 323 | API-Set: unknown
  */
 export function setCamSplineNodeVelocityScale(cam: number | ICamera, scale: number): void {
-    SetCamSplineNodeVelocityScale(cam, 0, scale);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamSplineNodeVelocityScale(_cam, 0, scale);
 }
 
 /**
@@ -1583,7 +1668,8 @@ export function setCamSplineNodeVelocityScale(cam: number | ICamera, scale: numb
  * Hash: 0x242B5874F0A4E052 | Since: 323 | API-Set: unknown
  */
 export function setCamSplinePhase(cam: number | ICamera): void {
-    SetCamSplinePhase(cam, 0);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamSplinePhase(_cam, 0);
 }
 
 /**
@@ -1592,7 +1678,8 @@ export function setCamSplinePhase(cam: number | ICamera): void {
  * Hash: 0xD1B0F412F109EA5D | Since: 323 | API-Set: unknown
  */
 export function setCamSplineSmoothingStyle(cam: number | ICamera, smoothingStyle: number): void {
-    SetCamSplineSmoothingStyle(cam, smoothingStyle);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamSplineSmoothingStyle(_cam, smoothingStyle);
 }
 
 /**
@@ -1601,7 +1688,8 @@ export function setCamSplineSmoothingStyle(cam: number | ICamera, smoothingStyle
  * Hash: 0x16A96863A17552BB | Since: 323 | API-Set: unknown
  */
 export function setCamUseShallowDofMode(cam: number | ICamera, toggle: boolean): void {
-    SetCamUseShallowDofMode(cam, toggle);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetCamUseShallowDofMode(_cam, toggle);
 }
 
 /**
@@ -1759,7 +1847,8 @@ export function setFirstPersonShooterPitch(pitch: number): void {
  * Hash: 0xC91C6C55199308CA | Since: 323 | API-Set: unknown
  */
 export function setFlyCamCoordAndConstrain(cam: number | ICamera, pos: Vector3): void {
-    SetFlyCamCoordAndConstrain(cam, pos.x, pos.y, pos.z);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetFlyCamCoordAndConstrain(_cam, pos.x, pos.y, pos.z);
 }
 
 /**
@@ -1768,7 +1857,8 @@ export function setFlyCamCoordAndConstrain(cam: number | ICamera, pos: Vector3):
  * Hash: 0x503F5920162365B2 | Since: 323 | API-Set: unknown
  */
 export function setFlyCamHorizontalResponse(cam: number | ICamera): void {
-    SetFlyCamHorizontalResponse(cam, 0, 0, 0);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetFlyCamHorizontalResponse(_cam, 0, 0, 0);
 }
 
 /**
@@ -1777,7 +1867,8 @@ export function setFlyCamHorizontalResponse(cam: number | ICamera): void {
  * Hash: 0xF9D02130ECDD1D77 | Since: 323 | API-Set: unknown
  */
 export function setFlyCamMaxHeight(cam: number | ICamera, height: number): void {
-    SetFlyCamMaxHeight(cam, height);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetFlyCamMaxHeight(_cam, height);
 }
 
 /**
@@ -1786,7 +1877,8 @@ export function setFlyCamMaxHeight(cam: number | ICamera, height: number): void 
  * Hash: 0xC8B5C4A79CC18B94 | Since: 323 | API-Set: unknown
  */
 export function setFlyCamVerticalControlsThisUpdate(cam: number | ICamera): void {
-    Citizen.invokeNative('0xC8B5C4A79CC18B94', cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    Citizen.invokeNative('0xC8B5C4A79CC18B94', _cam);
 }
 
 /**
@@ -1795,7 +1887,8 @@ export function setFlyCamVerticalControlsThisUpdate(cam: number | ICamera): void
  * Hash: 0xE827B9382CFB41BA | Since: 791 | API-Set: unknown
  */
 export function setFlyCamVerticalResponse(cam: number | ICamera): void {
-    SetFlyCamVerticalSpeedMultiplier(cam, 0, 0, 0);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    SetFlyCamVerticalSpeedMultiplier(_cam, 0, 0, 0);
 }
 
 /**
@@ -1907,7 +2000,8 @@ export function setGameplayCamAltitudeFovScalingState(): void {
  * Hash: 0xFD3151CD37EA2245 | Since: 323 | API-Set: unknown
  */
 export function setGameplayCamEntityToLimitFocusOverBoundingSphereThisUpdate(entity: number | IEntity): void {
-    Citizen.invokeNative('0xFD3151CD37EA2245', entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    Citizen.invokeNative('0xFD3151CD37EA2245', _entity);
 }
 
 /**
@@ -1916,7 +2010,8 @@ export function setGameplayCamEntityToLimitFocusOverBoundingSphereThisUpdate(ent
  * Hash: 0x8BBACBF51DA047A8 | Since: 323 | API-Set: unknown
  */
 export function setGameplayCamFollowPedThisUpdate(ped: number | IPed): void {
-    SetGameplayCamFollowPedThisUpdate(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetGameplayCamFollowPedThisUpdate(_ped);
 }
 
 /**
@@ -1925,7 +2020,8 @@ export function setGameplayCamFollowPedThisUpdate(ped: number | IPed): void {
  * Hash: 0x2AED6301F67007D5 | Since: 323 | API-Set: unknown
  */
 export function setGameplayCamIgnoreEntityCollisionThisUpdate(entity: number | IEntity): void {
-    DisableCamCollisionForEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    DisableCamCollisionForEntity(_entity);
 }
 
 /**
@@ -1994,7 +2090,8 @@ export function setGameplayCoordHint(pos: Vector3, duration: number, blendOutDur
  * Hash: 0x189E955A8313E298 | Since: 323 | API-Set: unknown
  */
 export function setGameplayEntityHint(entity: number | IEntity, xOffset: number, yOffset: number, zOffset: number, time: number, easeInTime: number, easeOutTime: number): void {
-    SetGameplayEntityHint(entity, xOffset, yOffset, zOffset, false, time, easeInTime, easeOutTime, 0);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetGameplayEntityHint(_entity, xOffset, yOffset, zOffset, false, time, easeInTime, easeOutTime, 0);
 }
 
 /**
@@ -2057,7 +2154,8 @@ export function setGameplayHintFov(FOV: number): void {
  * Hash: 0x83E87508A2CA2AC6 | Since: 323 | API-Set: unknown
  */
 export function setGameplayObjectHint(_object: number | IObject, xOffset: number, yOffset: number, zOffset: number, time: number, easeInTime: number, easeOutTime: number): void {
-    SetGameplayObjectHint(_object, xOffset, yOffset, zOffset, false, time, easeInTime, easeOutTime);
+    const __object = _object instanceof IObject ? _object.handle() : _object;
+    SetGameplayObjectHint(__object, xOffset, yOffset, zOffset, false, time, easeInTime, easeOutTime);
 }
 
 /**
@@ -2066,7 +2164,8 @@ export function setGameplayObjectHint(_object: number | IObject, xOffset: number
  * Hash: 0x2B486269ACD548D3 | Since: 323 | API-Set: unknown
  */
 export function setGameplayPedHint(ped: number | IPed, x1: number, y1: number, z1: number, duration: number, blendOutDuration: number, blendInDuration: number): void {
-    SetGameplayPedHint(ped, x1, y1, z1, false, duration, blendOutDuration, blendInDuration);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetGameplayPedHint(_ped, x1, y1, z1, false, duration, blendOutDuration, blendInDuration);
 }
 
 /**
@@ -2075,7 +2174,8 @@ export function setGameplayPedHint(ped: number | IPed, x1: number, y1: number, z
  * Hash: 0xA2297E18F3E71C2E | Since: 323 | API-Set: unknown
  */
 export function setGameplayVehicleHint(vehicle: number | IVehicle, offsetX: number, offsetY: number, offsetZ: number, time: number, easeInTime: number, easeOutTime: number): void {
-    SetGameplayVehicleHint(vehicle, offsetX, offsetY, offsetZ, false, time, easeInTime, easeOutTime);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetGameplayVehicleHint(_vehicle, offsetX, offsetY, offsetZ, false, time, easeInTime, easeOutTime);
 }
 
 /**
@@ -2084,7 +2184,8 @@ export function setGameplayVehicleHint(vehicle: number | IVehicle, offsetX: numb
  * Hash: 0xE9EA16D6E54CDCA4 | Since: 323 | API-Set: unknown
  */
 export function setInVehicleCamStateThisUpdate(p0: number | IVehicle): void {
-    SetInVehicleCamStateThisUpdate(p0, 0);
+    const _p0 = p0 instanceof IVehicle ? p0.localId() : p0;
+    SetInVehicleCamStateThisUpdate(_p0, 0);
 }
 
 /**
@@ -2213,7 +2314,8 @@ export function setWidescreenBorders(): void {
  * Hash: 0x6A25241C340D3822 | Since: 323 | API-Set: unknown
  */
 export function shakeCam(cam: number | ICamera, _type: string, amplitude: number): void {
-    ShakeCam(cam, _type, amplitude);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    ShakeCam(_cam, _type, amplitude);
 }
 
 /**
@@ -2267,7 +2369,8 @@ export function shakeScriptGlobal(): void {
  * Hash: 0xF33AB75780BA57DE | Since: 323 | API-Set: unknown
  */
 export function stopCamPointing(cam: number | ICamera): void {
-    StopCamPointing(cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    StopCamPointing(_cam);
 }
 
 /**
@@ -2276,7 +2379,8 @@ export function stopCamPointing(cam: number | ICamera): void {
  * Hash: 0xBDECF64367884AC3 | Since: 323 | API-Set: unknown
  */
 export function stopCamShaking(cam: number | ICamera): void {
-    StopCamShaking(cam, false);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    StopCamShaking(_cam, false);
 }
 
 /**
@@ -2370,7 +2474,8 @@ export function stopScriptGlobalShaking(): void {
  * Hash: 0x5D96CFB59DA076A0 | Since: 2060 | API-Set: unknown
  */
 export function triggerVehiclePartBrokenShake(vehicle: number | IVehicle): void {
-    Citizen.invokeNative('0x5D96CFB59DA076A0', vehicle, 0, 0);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    Citizen.invokeNative('0x5D96CFB59DA076A0', _vehicle, 0, 0);
 }
 
 /**
@@ -2406,7 +2511,8 @@ export function useVehicleCamStuntSettingsThisUpdate(): void {
  * Hash: 0x5C48A1D6E3B33179 | Since: 323 | API-Set: unknown
  */
 export function wasFlyCamConstrainedOnPreviousUdpate(cam: number | ICamera): boolean {
-    return Citizen.invokeNative('0x5C48A1D6E3B33179', cam);
+    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    return Citizen.invokeNative('0x5C48A1D6E3B33179', _cam);
 }
 
 /**
@@ -2415,7 +2521,9 @@ export function wasFlyCamConstrainedOnPreviousUdpate(cam: number | ICamera): boo
  * Hash: 0x34CFC4C2A38E83E3 | Since: 3258 | API-Set: unknown
  */
 export function activateCamWithInterpAndFovCurve(camTo: number | ICamera, camFrom: number | ICamera, duration: number, easeLocation: number, easeRotation: number, easeFov: number): void {
-    ActivateCamWithInterpAndFovCurve(camTo, camFrom, duration, easeLocation, easeRotation, easeFov);
+    const _camTo = camTo instanceof ICamera ? camTo.handle() : camTo;
+    const _camFrom = camFrom instanceof ICamera ? camFrom.handle() : camFrom;
+    ActivateCamWithInterpAndFovCurve(_camTo, _camFrom, duration, easeLocation, easeRotation, easeFov);
 }
 
 /**

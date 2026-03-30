@@ -1,10 +1,12 @@
+import { IPlayer } from '@risinglife/fivem-shared';
 /**
  * Unlike [GET_PLAYER_INVINCIBLE](#\_0xB721981B2B939E07) this native gets both [SET_PLAYER_INVINCIBLE_KEEP_RAGDOLL_ENABLED](#\_0x6BC97F4F4BB3C04B) and [SET_PLAYER_INVINCIBLE](#\_0x239528EACDC3E7DE) invincibility state.
  *
  * Hash: 0xF2E3912B
  */
 export function getInvincible2(player) {
-    return GetPlayerInvincible2(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerInvincible2(_player);
 }
 /**
  * No comment provided
@@ -12,7 +14,8 @@ export function getInvincible2(player) {
  * Hash: 0xD014AB79
  */
 export function getMaxStamina(playerId) {
-    return GetPlayerMaxStamina(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerMaxStamina(_playerId);
 }
 /**
  * A getter for [SET_PLAYER_MELEE_WEAPON_DEFENSE_MODIFIER](#\_0xAE540335B4ABC4E2).
@@ -20,7 +23,8 @@ export function getMaxStamina(playerId) {
  * Hash: 0x27E94EF8
  */
 export function getMeleeWeaponDefenseModifier(playerId) {
-    return GetPlayerMeleeWeaponDefenseModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerMeleeWeaponDefenseModifier(_playerId);
 }
 /**
  * No comment provided
@@ -28,7 +32,8 @@ export function getMeleeWeaponDefenseModifier(playerId) {
  * Hash: 0xE415EC5C
  */
 export function getStamina(playerId) {
-    return GetPlayerStamina(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerStamina(_playerId);
 }
 /**
  * A getter for [SET_PLAYER_VEHICLE_DAMAGE_MODIFIER](#\_0xA50E117CDDF82F0C).
@@ -36,7 +41,8 @@ export function getStamina(playerId) {
  * Hash: 0x78F27B1F
  */
 export function getVehicleDamageModifier(playerId) {
-    return GetPlayerVehicleDamageModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerVehicleDamageModifier(_playerId);
 }
 /**
  * A getter for [SET_PLAYER_VEHICLE_DEFENSE_MODIFIER](#\_0x4C60E6EFDAFF2462).
@@ -44,7 +50,8 @@ export function getVehicleDamageModifier(playerId) {
  * Hash: 0x8326E7CD
  */
 export function getVehicleDefenseModifier(playerId) {
-    return GetPlayerVehicleDefenseModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerVehicleDefenseModifier(_playerId);
 }
 /**
  * No comment provided
@@ -52,7 +59,8 @@ export function getVehicleDefenseModifier(playerId) {
  * Hash: 0x35594F67
  */
 export function setMaxStamina(playerId, maxStamina) {
-    return SetPlayerMaxStamina(playerId, maxStamina);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return SetPlayerMaxStamina(_playerId, maxStamina);
 }
 /**
  * No comment provided
@@ -60,7 +68,8 @@ export function setMaxStamina(playerId, maxStamina) {
  * Hash: 0xA9EC16C7
  */
 export function setStamina(playerId, stamina) {
-    return SetPlayerStamina(playerId, stamina);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return SetPlayerStamina(_playerId, stamina);
 }
 /**
  * A getter for [SET_PLAYER_MELEE_WEAPON_DAMAGE_MODIFIER](#\_0x4A3DC7ECCC321032).
@@ -68,7 +77,8 @@ export function setStamina(playerId, stamina) {
  * Hash: 0x8689A825
  */
 export function getMeleeWeaponDamageModifier(playerId) {
-    return GetPlayerMeleeWeaponDamageModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerMeleeWeaponDamageModifier(_playerId);
 }
 /**
  * A getter for [SET_PLAYER_WEAPON_DAMAGE_MODIFIER](#\_0xCE07B9F7817AADA3).
@@ -76,7 +86,8 @@ export function getMeleeWeaponDamageModifier(playerId) {
  * Hash: 0x2A3D7CDA
  */
 export function getWeaponDamageModifier(playerId) {
-    return GetPlayerWeaponDamageModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerWeaponDamageModifier(_playerId);
 }
 /**
  * A getter for [SET_PLAYER_WEAPON_DEFENSE_MODIFIER](#\_0x2D83BC011CA14A3C).
@@ -84,7 +95,8 @@ export function getWeaponDamageModifier(playerId) {
  * Hash: 0xF1543251
  */
 export function getWeaponDefenseModifier(playerId) {
-    return GetPlayerWeaponDefenseModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerWeaponDefenseModifier(_playerId);
 }
 /**
  * A getter for [\_SET_PLAYER_WEAPON_DEFENSE_MODIFIER\_2](#\_0xBCFDE9EDE4CF27DC).
@@ -92,7 +104,8 @@ export function getWeaponDefenseModifier(playerId) {
  * Hash: 0x986B65FF
  */
 export function getWeaponDefenseModifier2(playerId) {
-    return GetPlayerWeaponDefenseModifier2(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerWeaponDefenseModifier2(_playerId);
 }
 /**
  * Returns all player indices for 'active' physical players known to the client.
@@ -125,7 +138,8 @@ export function getFromServerId(serverId) {
  * Hash: 0x4D97BCC7
  */
 export function getServerId(player) {
-    return GetPlayerServerId(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerServerId(_player);
 }
 /**
  * the status of default voip system. It affects on `NETWORK_IS_PLAYER_TALKING` and `mp_facial` animation.
@@ -134,7 +148,8 @@ export function getServerId(player) {
  * Hash: 0xFC02CAF6
  */
 export function setTalkingOverride(player, state) {
-    SetPlayerTalkingOverride(player, state);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerTalkingOverride(_player, state);
 }
 /**
  * On the server this will return the players source, on the client it will return the player handle.

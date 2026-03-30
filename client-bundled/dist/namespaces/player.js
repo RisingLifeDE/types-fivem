@@ -1,11 +1,12 @@
-import { Vector3 } from '@risinglife/fivem-shared';
+import { Vector3, IEntity, IPed, IPlayer, IVehicle } from '@risinglife/fivem-shared';
 /**
  * Unlike [GET_PLAYER_INVINCIBLE](#\_0xB721981B2B939E07) this native gets both [SET_PLAYER_INVINCIBLE_KEEP_RAGDOLL_ENABLED](#\_0x6BC97F4F4BB3C04B) and [SET_PLAYER_INVINCIBLE](#\_0x239528EACDC3E7DE) invincibility state.
  *
  * Hash: 0xF2E3912B | Since: unknown | API-Set: client
  */
 export function getInvincible2(player) {
-    return GetPlayerInvincible2(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerInvincible2(_player);
 }
 /**
  * No comment provided
@@ -13,7 +14,8 @@ export function getInvincible2(player) {
  * Hash: 0xD014AB79 | Since: unknown | API-Set: client
  */
 export function getMaxStamina(playerId) {
-    return GetPlayerMaxStamina(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerMaxStamina(_playerId);
 }
 /**
  * A getter for [SET_PLAYER_MELEE_WEAPON_DEFENSE_MODIFIER](#\_0xAE540335B4ABC4E2).
@@ -21,7 +23,8 @@ export function getMaxStamina(playerId) {
  * Hash: 0x27E94EF8 | Since: unknown | API-Set: client
  */
 export function getMeleeWeaponDefenseModifier(playerId) {
-    return GetPlayerMeleeWeaponDefenseModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerMeleeWeaponDefenseModifier(_playerId);
 }
 /**
  * No comment provided
@@ -29,7 +32,8 @@ export function getMeleeWeaponDefenseModifier(playerId) {
  * Hash: 0xE415EC5C | Since: unknown | API-Set: client
  */
 export function getStamina(playerId) {
-    return GetPlayerStamina(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerStamina(_playerId);
 }
 /**
  * A getter for [SET_PLAYER_VEHICLE_DAMAGE_MODIFIER](#\_0xA50E117CDDF82F0C).
@@ -37,7 +41,8 @@ export function getStamina(playerId) {
  * Hash: 0x78F27B1F | Since: unknown | API-Set: client
  */
 export function getVehicleDamageModifier(playerId) {
-    return GetPlayerVehicleDamageModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerVehicleDamageModifier(_playerId);
 }
 /**
  * A getter for [SET_PLAYER_VEHICLE_DEFENSE_MODIFIER](#\_0x4C60E6EFDAFF2462).
@@ -45,7 +50,8 @@ export function getVehicleDamageModifier(playerId) {
  * Hash: 0x8326E7CD | Since: unknown | API-Set: client
  */
 export function getVehicleDefenseModifier(playerId) {
-    return GetPlayerVehicleDefenseModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerVehicleDefenseModifier(_playerId);
 }
 /**
  * No comment provided
@@ -53,7 +59,8 @@ export function getVehicleDefenseModifier(playerId) {
  * Hash: 0x35594F67 | Since: unknown | API-Set: client
  */
 export function setMaxStamina(playerId, maxStamina) {
-    return SetPlayerMaxStamina(playerId, maxStamina);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return SetPlayerMaxStamina(_playerId, maxStamina);
 }
 /**
  * No comment provided
@@ -61,7 +68,8 @@ export function setMaxStamina(playerId, maxStamina) {
  * Hash: 0xA9EC16C7 | Since: unknown | API-Set: client
  */
 export function setStamina(playerId, stamina) {
-    return SetPlayerStamina(playerId, stamina);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return SetPlayerStamina(_playerId, stamina);
 }
 /**
  * A getter for [SET_PLAYER_MELEE_WEAPON_DAMAGE_MODIFIER](#\_0x4A3DC7ECCC321032).
@@ -69,7 +77,8 @@ export function setStamina(playerId, stamina) {
  * Hash: 0x8689A825 | Since: unknown | API-Set: shared
  */
 export function getMeleeWeaponDamageModifier(playerId) {
-    return GetPlayerMeleeWeaponDamageModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerMeleeWeaponDamageModifier(_playerId);
 }
 /**
  * A getter for [SET_PLAYER_WEAPON_DAMAGE_MODIFIER](#\_0xCE07B9F7817AADA3).
@@ -77,7 +86,8 @@ export function getMeleeWeaponDamageModifier(playerId) {
  * Hash: 0x2A3D7CDA | Since: unknown | API-Set: shared
  */
 export function getWeaponDamageModifier(playerId) {
-    return GetPlayerWeaponDamageModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerWeaponDamageModifier(_playerId);
 }
 /**
  * A getter for [SET_PLAYER_WEAPON_DEFENSE_MODIFIER](#\_0x2D83BC011CA14A3C).
@@ -85,7 +95,8 @@ export function getWeaponDamageModifier(playerId) {
  * Hash: 0xF1543251 | Since: unknown | API-Set: shared
  */
 export function getWeaponDefenseModifier(playerId) {
-    return GetPlayerWeaponDefenseModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerWeaponDefenseModifier(_playerId);
 }
 /**
  * A getter for [\_SET_PLAYER_WEAPON_DEFENSE_MODIFIER\_2](#\_0xBCFDE9EDE4CF27DC).
@@ -93,7 +104,8 @@ export function getWeaponDefenseModifier(playerId) {
  * Hash: 0x986B65FF | Since: unknown | API-Set: shared
  */
 export function getWeaponDefenseModifier2(playerId) {
-    return GetPlayerWeaponDefenseModifier2(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerWeaponDefenseModifier2(_playerId);
 }
 /**
  * Returns all player indices for 'active' physical players known to the client.
@@ -126,7 +138,8 @@ export function getFromServerId(serverId) {
  * Hash: 0x4D97BCC7 | Since: unknown | API-Set: client
  */
 export function getServerId(player) {
-    return GetPlayerServerId(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerServerId(_player);
 }
 /**
  * the status of default voip system. It affects on `NETWORK_IS_PLAYER_TALKING` and `mp_facial` animation.
@@ -135,7 +148,8 @@ export function getServerId(player) {
  * Hash: 0xFC02CAF6 | Since: unknown | API-Set: client
  */
 export function setTalkingOverride(player, state) {
-    SetPlayerTalkingOverride(player, state);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerTalkingOverride(_player, state);
 }
 /**
  * On the server this will return the players source, on the client it will return the player handle.
@@ -151,7 +165,9 @@ export function getFromStateBagName(bagName) {
  * Hash: 0x9097EB6D4BB9A12A | Since: 1868 | API-Set: unknown
  */
 export function addTargetableEntity(player, entity) {
-    Citizen.invokeNative('0x9097EB6D4BB9A12A', player, entity);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    Citizen.invokeNative('0x9097EB6D4BB9A12A', _player, _entity);
 }
 /**
  * No comment provided
@@ -159,7 +175,8 @@ export function addTargetableEntity(player, entity) {
  * Hash: 0x2F41A3BAE005E5FA | Since: 372 | API-Set: unknown
  */
 export function allowEvasionHudIfDisablingHiddenEvasionThisFrame(player) {
-    Citizen.invokeNative('0x2F41A3BAE005E5FA', player, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0x2F41A3BAE005E5FA', _player, undefined);
 }
 /**
  * No comment provided
@@ -167,7 +184,8 @@ export function allowEvasionHudIfDisablingHiddenEvasionThisFrame(player) {
  * Hash: 0xAFAF86043E5874E9 | Since: 323 | API-Set: unknown
  */
 export function areFlashingStarsAboutToDrop(player) {
-    return ArePlayerFlashingStarsAboutToDrop(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return ArePlayerFlashingStarsAboutToDrop(_player);
 }
 /**
  * No comment provided
@@ -175,7 +193,8 @@ export function areFlashingStarsAboutToDrop(player) {
  * Hash: 0x0A6EB355EE14A2DB | Since: 323 | API-Set: unknown
  */
 export function areStarsGreyedOut(player) {
-    return ArePlayerStarsGreyedOut(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return ArePlayerStarsGreyedOut(_player);
 }
 /**
  * No comment provided
@@ -199,7 +218,9 @@ export function assistedMovementFlushRoute() {
  * Hash: 0xF297383AA91DCA29 | Since: 323 | API-Set: unknown
  */
 export function canPedHear(player, ped) {
-    return CanPedHearPlayer(player, ped);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return CanPedHearPlayer(_player, _ped);
 }
 /**
  * No comment provided
@@ -207,7 +228,8 @@ export function canPedHear(player, ped) {
  * Hash: 0xDE7465A27D403C06 | Since: 323 | API-Set: unknown
  */
 export function canStartMission(player) {
-    return CanPlayerStartMission(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return CanPlayerStartMission(_player);
 }
 /**
  * No comment provided
@@ -215,7 +237,9 @@ export function canStartMission(player) {
  * Hash: 0x048189FAC643DEEE | Since: 323 | API-Set: unknown
  */
 export function changePed(player, ped, resetDamage) {
-    ChangePlayerPed(player, ped, false, resetDamage);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    ChangePlayerPed(_player, _ped, false, resetDamage);
 }
 /**
  * No comment provided
@@ -223,7 +247,8 @@ export function changePed(player, ped, resetDamage) {
  * Hash: 0x4AACB96203D11A31 | Since: 323 | API-Set: unknown
  */
 export function clearHasDamagedAtLeastOneNonAnimalPed(player) {
-    ClearPlayerHasDamagedAtLeastOneNonAnimalPed(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    ClearPlayerHasDamagedAtLeastOneNonAnimalPed(_player);
 }
 /**
  * No comment provided
@@ -231,7 +256,8 @@ export function clearHasDamagedAtLeastOneNonAnimalPed(player) {
  * Hash: 0xF0B67A4DE6AB5F98 | Since: 323 | API-Set: unknown
  */
 export function clearHasDamagedAtLeastOnePed(player) {
-    ClearPlayerHasDamagedAtLeastOnePed(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    ClearPlayerHasDamagedAtLeastOnePed(_player);
 }
 /**
  * No comment provided
@@ -239,7 +265,8 @@ export function clearHasDamagedAtLeastOnePed(player) {
  * Hash: 0x8753997EB5F6EE3F | Since: 323 | API-Set: unknown
  */
 export function clearParachuteModelOverride(player) {
-    ClearPlayerParachuteModelOverride(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    ClearPlayerParachuteModelOverride(_player);
 }
 /**
  * No comment provided
@@ -247,7 +274,8 @@ export function clearParachuteModelOverride(player) {
  * Hash: 0x10C54E4389C12B42 | Since: 323 | API-Set: unknown
  */
 export function clearParachutePackModelOverride(player) {
-    ClearPlayerParachutePackModelOverride(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    ClearPlayerParachutePackModelOverride(_player);
 }
 /**
  * No comment provided
@@ -255,7 +283,8 @@ export function clearParachutePackModelOverride(player) {
  * Hash: 0x0F4CC924CF8C7B21 | Since: 323 | API-Set: unknown
  */
 export function clearParachuteVariationOverride(player) {
-    ClearPlayerParachuteVariationOverride(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    ClearPlayerParachuteVariationOverride(_player);
 }
 /**
  * No comment provided
@@ -263,7 +292,8 @@ export function clearParachuteVariationOverride(player) {
  * Hash: 0x290D248E25815AE8 | Since: 2372 | API-Set: unknown
  */
 export function clearReserveParachuteModelOverride(player) {
-    ClearPlayerReserveParachuteModelOverride(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    ClearPlayerReserveParachuteModelOverride(_player);
 }
 /**
  * `This executes at the same as speed as PLAYER::SET_PLAYER_WANTED_LEVEL(player, 0, false);`
@@ -273,7 +303,8 @@ export function clearReserveParachuteModelOverride(player) {
  * Hash: 0xB302540597885499 | Since: 323 | API-Set: unknown
  */
 export function clearWantedLevel(player) {
-    ClearPlayerWantedLevel(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    ClearPlayerWantedLevel(_player);
 }
 /**
  * No comment provided
@@ -281,7 +312,8 @@ export function clearWantedLevel(player) {
  * Hash: 0x5501B7A5CDB79D37 | Since: 323 | API-Set: unknown
  */
 export function disableCameraViewModeCycle(player) {
-    Citizen.invokeNative('0x5501B7A5CDB79D37', player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0x5501B7A5CDB79D37', _player);
 }
 /**
  * Inhibits the player from using any method of combat including melee and firearms.
@@ -291,7 +323,8 @@ export function disableCameraViewModeCycle(player) {
  * Hash: 0x5E6CC07646BBEAB8 | Since: 323 | API-Set: unknown
  */
 export function disableFiring(player, toggle) {
-    DisablePlayerFiring(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    DisablePlayerFiring(_player, toggle);
 }
 /**
  * Needs to be called every frame.
@@ -299,7 +332,8 @@ export function disableFiring(player, toggle) {
  * Hash: 0xBCB06442F7E52666 | Since: 2802 | API-Set: unknown
  */
 export function disableHealthRecharge(player) {
-    Citizen.invokeNative('0xBCB06442F7E52666', player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0xBCB06442F7E52666', _player);
 }
 /**
  * Used only once in R* scripts (freemode.ysc).
@@ -315,7 +349,8 @@ export function disableThrowGrenadeWhileUsingGun() {
  * Hash: 0xC142BE3BB9CE125F | Since: 323 | API-Set: unknown
  */
 export function disableVehicleRewards(player) {
-    DisablePlayerVehicleRewards(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    DisablePlayerVehicleRewards(_player);
 }
 /**
  * Purpose of the BOOL currently unknown.
@@ -332,7 +367,8 @@ export function displaySystemSigninUi() {
  * Hash: 0x181EC197DAEFE121 | Since: 323 | API-Set: unknown
  */
 export function enableSpecialAbility(player, toggle) {
-    EnableSpecialAbility(player, toggle, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    EnableSpecialAbility(_player, toggle, undefined);
 }
 /**
  * Appears only 3 times in the scripts, more specifically in michael1.ysc
@@ -375,7 +411,8 @@ export function forceCleanupForThreadWithThisId(id, cleanupFlags) {
  * Hash: 0xAD73CE5A09E42D12 | Since: 323 | API-Set: unknown
  */
 export function forceStartHiddenEvasion(player) {
-    Citizen.invokeNative('0xAD73CE5A09E42D12', player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0xAD73CE5A09E42D12', _player);
 }
 /**
  * For Steam.
@@ -411,7 +448,8 @@ export function getCauseOfMostRecentForceCleanup() {
  * Hash: 0x2975C866E6713290 | Since: 323 | API-Set: unknown
  */
 export function getEntityIsFreeAimingAt(player) {
-    return GetEntityPlayerIsFreeAimingAt(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetEntityPlayerIsFreeAimingAt(_player);
 }
 /**
  * 2 occurrences in agency_heist3a. p1 was 0.7f then 0.4f.
@@ -419,7 +457,8 @@ export function getEntityIsFreeAimingAt(player) {
  * Hash: 0xDD2620B7B9D16FF1 | Since: 323 | API-Set: unknown
  */
 export function getIsMoppingAreaFreeInFrontOf(player) {
-    return Citizen.invokeNative('0xDD2620B7B9D16FF1', player, 0);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return Citizen.invokeNative('0xDD2620B7B9D16FF1', _player, 0);
 }
 /**
  * Appears once in "re_dealgonewrong"
@@ -427,7 +466,8 @@ export function getIsMoppingAreaFreeInFrontOf(player) {
  * Hash: 0x5FC472C501CCADB3 | Since: 323 | API-Set: unknown
  */
 export function getIsDrivingOnHighway(player) {
-    return GetIsPlayerDrivingOnHighway(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetIsPlayerDrivingOnHighway(_player);
 }
 /**
  * Only 1 occurrence. p1 was 2.
@@ -435,7 +475,8 @@ export function getIsDrivingOnHighway(player) {
  * Hash: 0xF10B44FD479D69F3 | Since: 323 | API-Set: unknown
  */
 export function getIsDrivingWreckless(player) {
-    return IsPlayerDrivingDangerously(player, 0);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsPlayerDrivingDangerously(_player, 0);
 }
 /**
  * Returns profile setting 237.
@@ -493,7 +534,8 @@ export function getsLastVehicle() {
  * Hash: 0x2F395D61F3A1F877 | Since: 323 | API-Set: unknown
  */
 export function getCurrentStealthNoise(player) {
-    return GetPlayerCurrentStealthNoise(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerCurrentStealthNoise(_player);
 }
 /**
  * Always returns false.
@@ -501,7 +543,8 @@ export function getCurrentStealthNoise(player) {
  * Hash: 0xDCC07526B8EC45AF | Since: 1868 | API-Set: unknown
  */
 export function getDebugInvincible(player) {
-    return Citizen.invokeNative('0xDCC07526B8EC45AF', player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return Citizen.invokeNative('0xDCC07526B8EC45AF', _player);
 }
 /**
  * No comment provided
@@ -509,7 +552,8 @@ export function getDebugInvincible(player) {
  * Hash: 0x56105E599CAB0EFA | Since: 323 | API-Set: unknown
  */
 export function getFakeWantedLevel(player) {
-    return GetPlayerFakeWantedLevel(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerFakeWantedLevel(_player);
 }
 /**
  * Returns the group ID the player is member of.
@@ -517,7 +561,8 @@ export function getFakeWantedLevel(player) {
  * Hash: 0x0D127585F77030AF | Since: 323 | API-Set: unknown
  */
 export function getGroup(player) {
-    return GetPlayerGroup(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerGroup(_player);
 }
 /**
  * No comment provided
@@ -525,7 +570,8 @@ export function getGroup(player) {
  * Hash: 0x5DDFE2FF727F3CA3 | Since: 323 | API-Set: unknown
  */
 export function getHasReserveParachute(player) {
-    return GetPlayerHasReserveParachute(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerHasReserveParachute(_player);
 }
 /**
  * No comment provided
@@ -533,7 +579,8 @@ export function getHasReserveParachute(player) {
  * Hash: 0x8BC515BAE4AAF8FF | Since: 617 | API-Set: unknown
  */
 export function getHealthRechargeMaxPercent(player) {
-    return GetPlayerHealthRechargeLimit(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerHealthRechargeLimit(_player);
 }
 /**
  * Returns the same as PLAYER_ID and NETWORK_PLAYER_ID_TO_INT
@@ -566,7 +613,8 @@ export function getIndex() {
  * Hash: 0xB721981B2B939E07 | Since: 323 | API-Set: unknown
  */
 export function getInvincible(player) {
-    return GetPlayerInvincible(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerInvincible(_player);
 }
 /**
  * No comment provided
@@ -574,7 +622,8 @@ export function getInvincible(player) {
  * Hash: 0x92659B4CE1863CB3 | Since: 323 | API-Set: unknown
  */
 export function getMaxArmour(player) {
-    return GetPlayerMaxArmour(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerMaxArmour(_player);
 }
 /**
  * No comment provided
@@ -582,7 +631,8 @@ export function getMaxArmour(player) {
  * Hash: 0x6D0DE6A7B5DA71F8 | Since: 323 | API-Set: unknown
  */
 export function getName(player) {
-    return GetPlayerName(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerName(_player);
 }
 /**
  * No comment provided
@@ -590,7 +640,8 @@ export function getName(player) {
  * Hash: 0xC219887CA3E65C41 | Since: 2372 | API-Set: unknown
  */
 export function getParachuteModelOverride(player) {
-    return GetPlayerParachuteModelOverride(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerParachuteModelOverride(_player);
 }
 /**
  * No comment provided
@@ -598,7 +649,8 @@ export function getParachuteModelOverride(player) {
  * Hash: 0x6E9C742F340CE5A2 | Since: 323 | API-Set: unknown
  */
 export function getParachutePackTintIndex(player) {
-    return GetPlayerParachutePackTintIndex(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerParachutePackTintIndex(_player);
 }
 /**
  * No comment provided
@@ -606,7 +658,8 @@ export function getParachutePackTintIndex(player) {
  * Hash: 0xEF56DBABD3CD4887 | Since: 323 | API-Set: unknown
  */
 export function getParachuteSmokeTrailColor(player) {
-    return GetPlayerParachuteSmokeTrailColor(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerParachuteSmokeTrailColor(_player);
 }
 /**
  * Tints:
@@ -629,7 +682,8 @@ export function getParachuteSmokeTrailColor(player) {
  * Hash: 0x75D3F7A1B0D9B145 | Since: 323 | API-Set: unknown
  */
 export function getParachuteTintIndex(player) {
-    return GetPlayerParachuteTintIndex(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerParachuteTintIndex(_player);
 }
 /**
  * Gets the ped for a specified player index.
@@ -637,7 +691,8 @@ export function getParachuteTintIndex(player) {
  * Hash: 0x43A66C31C68491C0 | Since: 323 | API-Set: unknown
  */
 export function getPed(player) {
-    return GetPlayerPed(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerPed(_player);
 }
 /**
  * `Does the same like PLAYER::GET_PLAYER_PED`
@@ -645,7 +700,8 @@ export function getPed(player) {
  * Hash: 0x50FAC3A3E030A6E1 | Since: 323 | API-Set: unknown
  */
 export function getPedScriptIndex(player) {
-    return GetPlayerPedScriptIndex(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerPedScriptIndex(_player);
 }
 /**
  * No comment provided
@@ -653,7 +709,8 @@ export function getPedScriptIndex(player) {
  * Hash: 0xBC0753C9CA14B506 | Since: 323 | API-Set: unknown
  */
 export function getReceivedBattleEventRecently(player) {
-    return HasPlayerBeenShotByCop(player, 0, false);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return HasPlayerBeenShotByCop(_player, 0, false);
 }
 /**
  * No comment provided
@@ -661,7 +718,8 @@ export function getReceivedBattleEventRecently(player) {
  * Hash: 0x37FAAA68DCA9D08D | Since: 2372 | API-Set: unknown
  */
 export function getReserveParachuteModelOverride(player) {
-    return GetPlayerReserveParachuteModelOverride(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerReserveParachuteModelOverride(_player);
 }
 /**
  * Tints:
@@ -684,7 +742,8 @@ export function getReserveParachuteModelOverride(player) {
  * Hash: 0xD5A016BC3C09CF40 | Since: 323 | API-Set: unknown
  */
 export function getReserveParachuteTintIndex(player) {
-    return GetPlayerReserveParachuteTintIndex(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerReserveParachuteTintIndex(_player);
 }
 /**
  * No comment provided
@@ -692,7 +751,8 @@ export function getReserveParachuteTintIndex(player) {
  * Hash: 0xE902EF951DCE178F | Since: 323 | API-Set: unknown
  */
 export function getRgbColour(player) {
-    return GetPlayerRgbColour(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerRgbColour(_player);
 }
 /**
  * No comment provided
@@ -700,7 +760,8 @@ export function getRgbColour(player) {
  * Hash: 0x3F9F16F8E65A7ED7 | Since: 323 | API-Set: unknown
  */
 export function getSprintStaminaRemaining(player) {
-    return GetPlayerSprintStaminaRemaining(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerSprintStaminaRemaining(_player);
 }
 /**
  * No comment provided
@@ -708,7 +769,8 @@ export function getSprintStaminaRemaining(player) {
  * Hash: 0x1885BC9B108B4C99 | Since: 323 | API-Set: unknown
  */
 export function getSprintTimeRemaining(player) {
-    return GetPlayerSprintTimeRemaining(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerSprintTimeRemaining(_player);
 }
 /**
  * No comment provided
@@ -725,7 +787,8 @@ export function getTargetingMode() {
  * Hash: 0x13EDE1A5DBF797C9 | Since: 323 | API-Set: unknown
  */
 export function getTargetEntity(player) {
-    return GetPlayerTargetEntity(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerTargetEntity(_player);
 }
 /**
  * Gets the player's team.
@@ -734,7 +797,8 @@ export function getTargetEntity(player) {
  * Hash: 0x37039302F4E0A008 | Since: 323 | API-Set: unknown
  */
 export function getTeam(player) {
-    return GetPlayerTeam(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerTeam(_player);
 }
 /**
  * No comment provided
@@ -742,7 +806,8 @@ export function getTeam(player) {
  * Hash: 0xA1FCF8E6AF40B731 | Since: 323 | API-Set: unknown
  */
 export function getUnderwaterTimeRemaining(player) {
-    return GetPlayerUnderwaterTimeRemaining(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerUnderwaterTimeRemaining(_player);
 }
 /**
  * No comment provided
@@ -750,7 +815,8 @@ export function getUnderwaterTimeRemaining(player) {
  * Hash: 0x0C92BA89F1AF26F8 | Since: 323 | API-Set: unknown
  */
 export function getWantedCentrePosition(player) {
-    return new Vector3(GetPlayerWantedCentrePosition(player));
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return new Vector3(GetPlayerWantedCentrePosition(_player));
 }
 /**
  * No comment provided
@@ -758,7 +824,8 @@ export function getWantedCentrePosition(player) {
  * Hash: 0xE28E54788CE8F12D | Since: 323 | API-Set: unknown
  */
 export function getWantedLevel(player) {
-    return GetPlayerWantedLevel(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetPlayerWantedLevel(_player);
 }
 /**
  * Returns the time since the character was arrested in (ms) milliseconds.
@@ -798,7 +865,8 @@ export function getTimeSinceLastDeath() {
  * Hash: 0xDB89591E290D9182 | Since: 323 | API-Set: unknown
  */
 export function getTimeSinceDroveAgainstTraffic(player) {
-    return GetTimeSincePlayerDroveAgainstTraffic(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetTimeSincePlayerDroveAgainstTraffic(_player);
 }
 /**
  * No comment provided
@@ -806,7 +874,8 @@ export function getTimeSinceDroveAgainstTraffic(player) {
  * Hash: 0xD559D2BE9E37853B | Since: 323 | API-Set: unknown
  */
 export function getTimeSinceDroveOnPavement(player) {
-    return GetTimeSincePlayerDroveOnPavement(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetTimeSincePlayerDroveOnPavement(_player);
 }
 /**
  * No comment provided
@@ -814,7 +883,8 @@ export function getTimeSinceDroveOnPavement(player) {
  * Hash: 0xE36A25322DC35F42 | Since: 323 | API-Set: unknown
  */
 export function getTimeSinceHitPed(player) {
-    return GetTimeSincePlayerHitPed(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetTimeSincePlayerHitPed(_player);
 }
 /**
  * No comment provided
@@ -822,7 +892,8 @@ export function getTimeSinceHitPed(player) {
  * Hash: 0x5D35ECF3A81A0EE0 | Since: 323 | API-Set: unknown
  */
 export function getTimeSinceHitVehicle(player) {
-    return GetTimeSincePlayerHitVehicle(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetTimeSincePlayerHitVehicle(_player);
 }
 /**
  * Remnant from GTA IV. Does nothing in GTA V.
@@ -830,7 +901,8 @@ export function getTimeSinceHitVehicle(player) {
  * Hash: 0x085DEB493BE80812 | Since: 323 | API-Set: unknown
  */
 export function getWantedLevelRadius(player) {
-    return GetWantedLevelRadius(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return GetWantedLevelRadius(_player);
 }
 /**
  * Drft
@@ -938,7 +1010,8 @@ export function giveAchievementTo(achievementId) {
  * Hash: 0x3C49C870E66F0A28 | Since: 323 | API-Set: unknown
  */
 export function giveRagdollControl(player, toggle) {
-    GivePlayerRagdollControl(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    GivePlayerRagdollControl(_player, toggle);
 }
 /**
  * See GIVE_ACHIEVEMENT_TO_PLAYER
@@ -962,7 +1035,8 @@ export function hasForceCleanupOccurred(cleanupFlags) {
  * Hash: 0xD705740BB0A1CF4C | Since: 323 | API-Set: unknown
  */
 export function hasBeenSpottedInStolenVehicle(player) {
-    return HasPlayerBeenSpottedInStolenVehicle(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return HasPlayerBeenSpottedInStolenVehicle(_player);
 }
 /**
  * No comment provided
@@ -970,7 +1044,8 @@ export function hasBeenSpottedInStolenVehicle(player) {
  * Hash: 0xE4B90F367BD81752 | Since: 323 | API-Set: unknown
  */
 export function hasDamagedAtLeastOneNonAnimalPed(player) {
-    return HasPlayerDamagedAtLeastOneNonAnimalPed(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return HasPlayerDamagedAtLeastOneNonAnimalPed(_player);
 }
 /**
  * No comment provided
@@ -978,7 +1053,8 @@ export function hasDamagedAtLeastOneNonAnimalPed(player) {
  * Hash: 0x20CE80B0C2BF4ACC | Since: 323 | API-Set: unknown
  */
 export function hasDamagedAtLeastOnePed(player) {
-    return HasPlayerDamagedAtLeastOnePed(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return HasPlayerDamagedAtLeastOnePed(_player);
 }
 /**
  * No comment provided
@@ -986,7 +1062,8 @@ export function hasDamagedAtLeastOnePed(player) {
  * Hash: 0xD55DDFB47991A294 | Since: 323 | API-Set: unknown
  */
 export function hasLeftTheWorld(player) {
-    return HasPlayerLeftTheWorld(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return HasPlayerLeftTheWorld(_player);
 }
 /**
  * No comment provided
@@ -994,7 +1071,8 @@ export function hasLeftTheWorld(player) {
  * Hash: 0x9EDD76E87D5D51BA | Since: 323 | API-Set: unknown
  */
 export function increaseJumpSuppressionRange(player) {
-    Citizen.invokeNative('0x9EDD76E87D5D51BA', player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0x9EDD76E87D5D51BA', _player);
 }
 /**
  * Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).
@@ -1021,7 +1099,8 @@ export function intToindex(value) {
  * Hash: 0x38D28DA81E4E9BF9 | Since: 323 | API-Set: unknown
  */
 export function isBattleAware(player) {
-    return IsPlayerBattleAware(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsPlayerBattleAware(_player);
 }
 /**
  * Return true while player is being arrested / busted.
@@ -1033,7 +1112,8 @@ export function isBattleAware(player) {
  * Hash: 0x388A47C51ABDAC8E | Since: 323 | API-Set: unknown
  */
 export function isBeingArrested(player, atArresting) {
-    return IsPlayerBeingArrested(player, atArresting);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsPlayerBeingArrested(_player, atArresting);
 }
 /**
  * No comment provided
@@ -1041,7 +1121,8 @@ export function isBeingArrested(player, atArresting) {
  * Hash: 0x65FAEE425DE637B0 | Since: 323 | API-Set: unknown
  */
 export function isBluetoothEnable(player) {
-    return IsPlayerBluetoothEnable(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsPlayerBluetoothEnable(_player);
 }
 /**
  * Returns TRUE if the player ('s ped) is climbing at the moment.
@@ -1049,7 +1130,8 @@ export function isBluetoothEnable(player) {
  * Hash: 0x95E8F73DC65EFB9C | Since: 323 | API-Set: unknown
  */
 export function isClimbing(player) {
-    return IsPlayerClimbing(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsPlayerClimbing(_player);
 }
 /**
  * Can the player control himself, used to disable controls for player for things like a cutscene.
@@ -1061,7 +1143,8 @@ export function isClimbing(player) {
  * Hash: 0x49C32D60007AFA47 | Since: 323 | API-Set: unknown
  */
 export function isControlOn(player) {
-    return IsPlayerControlOn(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsPlayerControlOn(_player);
 }
 /**
  * No comment provided
@@ -1069,7 +1152,8 @@ export function isControlOn(player) {
  * Hash: 0x424D4687FA1E5652 | Since: 323 | API-Set: unknown
  */
 export function isDead(player) {
-    return IsPlayerDead(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsPlayerDead(_player);
 }
 /**
  * Gets a value indicating whether the specified player is currently aiming freely.
@@ -1077,7 +1161,8 @@ export function isDead(player) {
  * Hash: 0x2E397FD2ECD37C87 | Since: 323 | API-Set: unknown
  */
 export function isFreeAiming(player) {
-    return IsPlayerFreeAiming(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsPlayerFreeAiming(_player);
 }
 /**
  * Gets a value indicating whether the specified player is currently aiming freely at the specified entity.
@@ -1085,7 +1170,9 @@ export function isFreeAiming(player) {
  * Hash: 0x3C06B5C839B38F7B | Since: 323 | API-Set: unknown
  */
 export function isFreeAimingAtEntity(player, entity) {
-    return IsPlayerFreeAimingAtEntity(player, entity);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsPlayerFreeAimingAtEntity(_player, _entity);
 }
 /**
  * No comment provided
@@ -1093,7 +1180,8 @@ export function isFreeAimingAtEntity(player, entity) {
  * Hash: 0xDCCFD3F106C36AB4 | Since: 323 | API-Set: unknown
  */
 export function isFreeForAmbientTask(player) {
-    return IsPlayerFreeForAmbientTask(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsPlayerFreeForAmbientTask(_player);
 }
 /**
  * this function is hard-coded to always return 0.
@@ -1119,7 +1207,8 @@ export function isOnline() {
  * Hash: 0x5E9564D8246B909A | Since: 323 | API-Set: unknown
  */
 export function isPlaying(player) {
-    return IsPlayerPlaying(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsPlayerPlaying(_player);
 }
 /**
  * No comment provided
@@ -1127,7 +1216,8 @@ export function isPlaying(player) {
  * Hash: 0xFA1E2BF8B10598F9 | Since: 323 | API-Set: unknown
  */
 export function isPressingHorn(player) {
-    return IsPlayerPressingHorn(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsPlayerPressingHorn(_player);
 }
 /**
  * No comment provided
@@ -1135,7 +1225,8 @@ export function isPressingHorn(player) {
  * Hash: 0x908CBECC2CAA3690 | Since: 323 | API-Set: unknown
  */
 export function isReadyForCutscene(player) {
-    return IsPlayerReadyForCutscene(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsPlayerReadyForCutscene(_player);
 }
 /**
  * Returns true if the player is riding a train.
@@ -1143,7 +1234,8 @@ export function isReadyForCutscene(player) {
  * Hash: 0x4EC12697209F2196 | Since: 323 | API-Set: unknown
  */
 export function isRidingTrain(player) {
-    return IsPlayerRidingTrain(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsPlayerRidingTrain(_player);
 }
 /**
  * No comment provided
@@ -1151,7 +1243,8 @@ export function isRidingTrain(player) {
  * Hash: 0x8A876A65283DD7D7 | Since: 323 | API-Set: unknown
  */
 export function isScriptControlOn(player) {
-    return IsPlayerScriptControlOn(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsPlayerScriptControlOn(_player);
 }
 /**
  * No comment provided
@@ -1159,7 +1252,8 @@ export function isScriptControlOn(player) {
  * Hash: 0x78CFE51896B6B8A4 | Since: 323 | API-Set: unknown
  */
 export function isTargettingAnything(player) {
-    return IsPlayerTargettingAnything(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsPlayerTargettingAnything(_player);
 }
 /**
  * No comment provided
@@ -1167,7 +1261,9 @@ export function isTargettingAnything(player) {
  * Hash: 0x7912F7FC4F6264B6 | Since: 323 | API-Set: unknown
  */
 export function isTargettingEntity(player, entity) {
-    return IsPlayerTargettingEntity(player, entity);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsPlayerTargettingEntity(_player, _entity);
 }
 /**
  * No comment provided
@@ -1191,7 +1287,8 @@ export function isVehicleWeaponToggledToNonHoming() {
  * Hash: 0x238DB2A2C23EE9EF | Since: 323 | API-Set: unknown
  */
 export function isWantedLevelGreater(player, wantedLevel) {
-    return IsPlayerWantedLevelGreater(player, wantedLevel);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsPlayerWantedLevelGreater(_player, wantedLevel);
 }
 /**
  * No comment provided
@@ -1199,7 +1296,8 @@ export function isWantedLevelGreater(player, wantedLevel) {
  * Hash: 0x690A61A6D13583F6 | Since: 323 | API-Set: unknown
  */
 export function isRemoteInNonClonedVehicle(player) {
-    return Citizen.invokeNative('0x690A61A6D13583F6', player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return Citizen.invokeNative('0x690A61A6D13583F6', _player);
 }
 /**
  * No comment provided
@@ -1207,7 +1305,8 @@ export function isRemoteInNonClonedVehicle(player) {
  * Hash: 0x3E5F7FC85D854E15 | Since: 323 | API-Set: unknown
  */
 export function isSpecialAbilityActive(player) {
-    return IsSpecialAbilityActive(player, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsSpecialAbilityActive(_player, undefined);
 }
 /**
  * No comment provided
@@ -1215,7 +1314,8 @@ export function isSpecialAbilityActive(player) {
  * Hash: 0xB1D200FE26AEF3CB | Since: 323 | API-Set: unknown
  */
 export function isSpecialAbilityEnabled(player) {
-    return IsSpecialAbilityEnabled(player, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsSpecialAbilityEnabled(_player, undefined);
 }
 /**
  * No comment provided
@@ -1223,7 +1323,8 @@ export function isSpecialAbilityEnabled(player) {
  * Hash: 0x05A1FE504B7F2587 | Since: 323 | API-Set: unknown
  */
 export function isSpecialAbilityMeterFull(player) {
-    return IsSpecialAbilityMeterFull(player, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return IsSpecialAbilityMeterFull(_player, undefined);
 }
 /**
  * No comment provided
@@ -1249,7 +1350,8 @@ export function isSystemUiBeingDisplayed() {
  * Hash: 0x7E07C78925D5FD96 | Since: 372 | API-Set: unknown
  */
 export function isWantedAndHasBeenSeenByCops(player) {
-    return Citizen.invokeNative('0x7E07C78925D5FD96', player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return Citizen.invokeNative('0x7E07C78925D5FD96', _player);
 }
 /**
  * Does exactly the same thing as PLAYER_ID()
@@ -1301,7 +1403,8 @@ export function pedId() {
  * Hash: 0xF3AC26D3CC576528 | Since: 323 | API-Set: unknown
  */
 export function removeHelmet(player) {
-    RemovePlayerHelmet(player, false);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    RemovePlayerHelmet(_player, false);
 }
 /**
  * No comment provided
@@ -1309,7 +1412,9 @@ export function removeHelmet(player) {
  * Hash: 0x9F260BFB59ADBCA3 | Since: 1868 | API-Set: unknown
  */
 export function removeTargetableEntity(player, entity) {
-    Citizen.invokeNative('0x9F260BFB59ADBCA3', player, entity);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    Citizen.invokeNative('0x9F260BFB59ADBCA3', _player, _entity);
 }
 /**
  * Resets values set by SET_SCRIPT_FIRE_POSITION
@@ -1382,7 +1487,8 @@ export function removeScriptFirePosition() {
  * Hash: 0xE9B09589827545E7 | Since: 323 | API-Set: unknown
  */
 export function reportCrime(player, crimeType, wantedLvlThresh) {
-    ReportCrime(player, crimeType, wantedLvlThresh);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    ReportCrime(_player, crimeType, wantedLvlThresh);
 }
 /**
  * No comment provided
@@ -1390,7 +1496,8 @@ export function reportCrime(player, crimeType, wantedLvlThresh) {
  * Hash: 0xDC64D2C53493ED12 | Since: 323 | API-Set: unknown
  */
 export function reportPoliceSpotted(player) {
-    ReportPoliceSpottedPlayer(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    ReportPoliceSpottedPlayer(_player);
 }
 /**
  * No comment provided
@@ -1406,7 +1513,8 @@ export function resetLawResponseDelayOverride() {
  * Hash: 0x2D03E13C460760D6 | Since: 323 | API-Set: unknown
  */
 export function resetArrestState(player) {
-    ResetPlayerArrestState(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    ResetPlayerArrestState(_player);
 }
 /**
  * No comment provided
@@ -1414,7 +1522,8 @@ export function resetArrestState(player) {
  * Hash: 0x19531C47A2ABD691 | Since: 323 | API-Set: unknown
  */
 export function resetInputGait(player) {
-    ResetPlayerInputGait(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    ResetPlayerInputGait(_player);
 }
 /**
  * No comment provided
@@ -1422,7 +1531,8 @@ export function resetInputGait(player) {
  * Hash: 0xA6F312FCCE9C1DFE | Since: 323 | API-Set: unknown
  */
 export function resetStamina(player) {
-    ResetPlayerStamina(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    ResetPlayerStamina(_player);
 }
 /**
  * No comment provided
@@ -1430,7 +1540,8 @@ export function resetStamina(player) {
  * Hash: 0xB9D0DD990DC141DD | Since: 323 | API-Set: unknown
  */
 export function resetWantedLevelDifficulty(player) {
-    ResetWantedLevelDifficulty(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    ResetWantedLevelDifficulty(_player);
 }
 /**
  * No comment provided
@@ -1438,7 +1549,8 @@ export function resetWantedLevelDifficulty(player) {
  * Hash: 0x823EC8E82BA45986 | Since: 2060 | API-Set: unknown
  */
 export function resetWantedLevelHiddenEscapeTime(player) {
-    Citizen.invokeNative('0x823EC8E82BA45986', player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0x823EC8E82BA45986', _player);
 }
 /**
  * No comment provided
@@ -1454,7 +1566,8 @@ export function resetWorldBoundaryFor() {
  * Hash: 0xA352C1B864CAFD33 | Since: 323 | API-Set: unknown
  */
 export function restoreStamina(player) {
-    RestorePlayerStamina(player, 0);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    RestorePlayerStamina(_player, 0);
 }
 /**
  * For Steam.
@@ -1475,7 +1588,8 @@ export function setAchievementProgress(achievementId, progress) {
  * Hash: 0xCA7DC8329F0A1E9E | Since: 323 | API-Set: unknown
  */
 export function setAirDragMultiplierForsVehicle(player, multiplier) {
-    SetAirDragMultiplierForPlayersVehicle(player, multiplier);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetAirDragMultiplierForPlayersVehicle(_player, multiplier);
 }
 /**
  * No comment provided
@@ -1483,7 +1597,8 @@ export function setAirDragMultiplierForsVehicle(player, multiplier) {
  * Hash: 0xDE45D1A1EF45EE61 | Since: 323 | API-Set: unknown
  */
 export function setAllNeutralRandomPedsFlee(player, toggle) {
-    Citizen.invokeNative('0xDE45D1A1EF45EE61', player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0xDE45D1A1EF45EE61', _player, toggle);
 }
 /**
  * - This is called after SET_ALL_RANDOM_PEDS_FLEE_THIS_FRAME
@@ -1492,7 +1607,8 @@ export function setAllNeutralRandomPedsFlee(player, toggle) {
  * Hash: 0xC3376F42B1FACCC6 | Since: 323 | API-Set: unknown
  */
 export function setAllNeutralRandomPedsFleeThisFrame(player) {
-    Citizen.invokeNative('0xC3376F42B1FACCC6', player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0xC3376F42B1FACCC6', _player);
 }
 /**
  * No comment provided
@@ -1500,7 +1616,8 @@ export function setAllNeutralRandomPedsFleeThisFrame(player) {
  * Hash: 0x056E0FE8534C2949 | Since: 323 | API-Set: unknown
  */
 export function setAllRandomPedsFlee(player, toggle) {
-    SetAllRandomPedsFlee(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetAllRandomPedsFlee(_player, toggle);
 }
 /**
  * No comment provided
@@ -1508,7 +1625,8 @@ export function setAllRandomPedsFlee(player, toggle) {
  * Hash: 0x471D2FF42A94B4F2 | Since: 323 | API-Set: unknown
  */
 export function setAllRandomPedsFleeThisFrame(player) {
-    SetAllRandomPedsFleeThisFrame(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetAllRandomPedsFleeThisFrame(_player);
 }
 /**
  * No comment provided
@@ -1516,7 +1634,8 @@ export function setAllRandomPedsFleeThisFrame(player) {
  * Hash: 0x2382AB11450AE7BA | Since: 877 | API-Set: unknown
  */
 export function setApplyWaypointOf(player, hudColor) {
-    Citizen.invokeNative('0x2382AB11450AE7BA', player, hudColor);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0x2382AB11450AE7BA', _player, hudColor);
 }
 /**
  * No comment provided
@@ -1524,7 +1643,8 @@ export function setApplyWaypointOf(player, hudColor) {
  * Hash: 0x9F343285A00B4BB6 | Since: 323 | API-Set: unknown
  */
 export function setAutoGiveParachuteWhenEnterPlane(player, toggle) {
-    SetAutoGiveParachuteWhenEnterPlane(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetAutoGiveParachuteWhenEnterPlane(_player, toggle);
 }
 /**
  * No comment provided
@@ -1532,7 +1652,8 @@ export function setAutoGiveParachuteWhenEnterPlane(player, toggle) {
  * Hash: 0xD2B315B6689D537D | Since: 323 | API-Set: unknown
  */
 export function setAutoGiveScubaGearWhenExitVehicle(player, toggle) {
-    SetAutoGiveScubaGearWhenExitVehicle(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetAutoGiveScubaGearWhenExitVehicle(_player, toggle);
 }
 /**
  * No comment provided
@@ -1540,7 +1661,8 @@ export function setAutoGiveScubaGearWhenExitVehicle(player, toggle) {
  * Hash: 0x2E8AABFA40A84F8C | Since: 323 | API-Set: unknown
  */
 export function setDisableAmbientMeleeMove(player, toggle) {
-    SetDisableAmbientMeleeMove(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetDisableAmbientMeleeMove(_player, toggle);
 }
 /**
  * No comment provided
@@ -1548,7 +1670,8 @@ export function setDisableAmbientMeleeMove(player, toggle) {
  * Hash: 0xDB172424876553F4 | Since: 323 | API-Set: unknown
  */
 export function setDispatchCopsFor(player, toggle) {
-    SetDispatchCopsForPlayer(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetDispatchCopsForPlayer(_player, toggle);
 }
 /**
  * No comment provided
@@ -1556,7 +1679,8 @@ export function setDispatchCopsFor(player, toggle) {
  * Hash: 0x8EEDA153AD141BA4 | Since: 323 | API-Set: unknown
  */
 export function setEveryoneIgnore(player, toggle) {
-    SetEveryoneIgnorePlayer(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetEveryoneIgnorePlayer(_player, toggle);
 }
 /**
  * No comment provided
@@ -1564,7 +1688,8 @@ export function setEveryoneIgnore(player, toggle) {
  * Hash: 0x596976B02B6B5700 | Since: 323 | API-Set: unknown
  */
 export function setIgnoreLowPriorityShockingEvents(player, toggle) {
-    SetIgnoreLowPriorityShockingEvents(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetIgnoreLowPriorityShockingEvents(_player, toggle);
 }
 /**
  * No comment provided
@@ -1572,7 +1697,8 @@ export function setIgnoreLowPriorityShockingEvents(player, toggle) {
  * Hash: 0xFAC75988A7D078D3 | Since: 463 | API-Set: unknown
  */
 export function setLawPedsCanAttackNonWantedThisFrame(player) {
-    Citizen.invokeNative('0xFAC75988A7D078D3', player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0xFAC75988A7D078D3', _player);
 }
 /**
  * `PLAYER::SET_LAW_RESPONSE_DELAY_OVERRIDE(rPtr((&l_122) + 71)); // Found in decompilation`
@@ -1603,7 +1729,8 @@ export function setMaxWantedLevel(maxWantedLevel) {
  * Hash: 0x5DC40A8869C22141 | Since: 323 | API-Set: unknown
  */
 export function setBluetoothState(player, state) {
-    SetPlayerBluetoothState(player, state);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerBluetoothState(_player, state);
 }
 /**
  * Sets whether this player can be hassled by gangs.
@@ -1611,7 +1738,8 @@ export function setBluetoothState(player, state) {
  * Hash: 0xD5E460AD7020A246 | Since: 323 | API-Set: unknown
  */
 export function setCanBeHassledByGangs(player, toggle) {
-    SetPlayerCanBeHassledByGangs(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerCanBeHassledByGangs(_player, toggle);
 }
 /**
  * No comment provided
@@ -1619,7 +1747,8 @@ export function setCanBeHassledByGangs(player, toggle) {
  * Hash: 0xCAC57395B151135F | Since: 323 | API-Set: unknown
  */
 export function setCanCollectDroppedMoney(player) {
-    Citizen.invokeNative('0xCAC57395B151135F', player, false);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0xCAC57395B151135F', _player, false);
 }
 /**
  * No comment provided
@@ -1627,7 +1756,9 @@ export function setCanCollectDroppedMoney(player) {
  * Hash: 0x55FCC0C390620314 | Since: 573 | API-Set: unknown
  */
 export function setCanDamagePlayer(player1, player2, toggle) {
-    Citizen.invokeNative('0x55FCC0C390620314', player1, player2, toggle);
+    const _player1 = player1 instanceof IPlayer ? player1.playerId() : player1;
+    const _player2 = player2 instanceof IPlayer ? player2.playerId() : player2;
+    Citizen.invokeNative('0x55FCC0C390620314', _player1, _player2, toggle);
 }
 /**
  * Set whether this player should be able to do drive-bys.
@@ -1638,7 +1769,8 @@ export function setCanDamagePlayer(player1, player2, toggle) {
  * Hash: 0x6E8834B52EC20C77 | Since: 323 | API-Set: unknown
  */
 export function setCanDoDriveBy(player, toggle) {
-    SetPlayerCanDoDriveBy(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerCanDoDriveBy(_player, toggle);
 }
 /**
  * No comment provided
@@ -1646,7 +1778,8 @@ export function setCanDoDriveBy(player, toggle) {
  * Hash: 0xF401B182DBA8AF53 | Since: 323 | API-Set: unknown
  */
 export function setCanLeaveParachuteSmokeTrail(player, enabled) {
-    SetPlayerCanLeaveParachuteSmokeTrail(player, enabled);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerCanLeaveParachuteSmokeTrail(_player, enabled);
 }
 /**
  * Sets whether this player can take cover.
@@ -1654,7 +1787,8 @@ export function setCanLeaveParachuteSmokeTrail(player, enabled) {
  * Hash: 0xD465A8599DFF6814 | Since: 323 | API-Set: unknown
  */
 export function setCanUseCover(player, toggle) {
-    SetPlayerCanUseCover(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerCanUseCover(_player, toggle);
 }
 /**
  * 6 matches across 4 scripts. 5 occurrences were 240. The other was 255.
@@ -1678,7 +1812,8 @@ export function setClothPackageIndex(index) {
  * Hash: 0x749FADDF97DFE930 | Since: 323 | API-Set: unknown
  */
 export function setClothPinFrames(player) {
-    SetPlayerClothPinFrames(player, 0);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerClothPinFrames(_player, 0);
 }
 /**
  * Flags:
@@ -1700,7 +1835,8 @@ export function setClothPinFrames(player) {
  * Hash: 0x8D32347D6D4C40A2 | Since: 323 | API-Set: unknown
  */
 export function setControl(player, bHasControl, flags) {
-    SetPlayerControl(player, bHasControl, flags);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerControl(_player, bHasControl, flags);
 }
 /**
  * No comment provided
@@ -1708,7 +1844,8 @@ export function setControl(player, bHasControl, flags) {
  * Hash: 0xD821056B9ACF8052 | Since: 1011 | API-Set: unknown
  */
 export function setExplosiveDamageModifier(player) {
-    Citizen.invokeNative('0xD821056B9ACF8052', player, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0xD821056B9ACF8052', _player, undefined);
 }
 /**
  * No comment provided
@@ -1716,7 +1853,8 @@ export function setExplosiveDamageModifier(player) {
  * Hash: 0xEFD79FA81DFBA9CB | Since: 573 | API-Set: unknown
  */
 export function setFallDistanceToTriggerRagdollOverride(player) {
-    SetPlayerFallDistance(player, 0);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerFallDistance(_player, 0);
 }
 /**
  * No comment provided
@@ -1724,7 +1862,8 @@ export function setFallDistanceToTriggerRagdollOverride(player) {
  * Hash: 0x0FEE4F80AC44A726 | Since: 323 | API-Set: unknown
  */
 export function setForcedAim(player, toggle) {
-    SetPlayerForcedAim(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerForcedAim(_player, toggle);
 }
 /**
  * No comment provided
@@ -1732,7 +1871,8 @@ export function setForcedAim(player, toggle) {
  * Hash: 0x75E7D505F2B15902 | Since: 323 | API-Set: unknown
  */
 export function setForcedZoom(player, toggle) {
-    SetPlayerForcedZoom(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerForcedZoom(_player, toggle);
 }
 /**
  * No comment provided
@@ -1740,7 +1880,8 @@ export function setForcedZoom(player, toggle) {
  * Hash: 0x7651BC64AE59E128 | Since: 323 | API-Set: unknown
  */
 export function setForceSkipAimIntro(player, toggle) {
-    SetPlayerForceSkipAimIntro(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerForceSkipAimIntro(_player, toggle);
 }
 /**
  * No comment provided
@@ -1748,7 +1889,8 @@ export function setForceSkipAimIntro(player, toggle) {
  * Hash: 0x7DDAB28D31FAC363 | Since: 323 | API-Set: unknown
  */
 export function setHasReserveParachute(player) {
-    SetPlayerHasReserveParachute(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerHasReserveParachute(_player);
 }
 /**
  * No comment provided
@@ -1756,7 +1898,8 @@ export function setHasReserveParachute(player) {
  * Hash: 0xC388A0F065F5BC34 | Since: 573 | API-Set: unknown
  */
 export function setHealthRechargeMaxPercent(player, limit) {
-    SetPlayerHealthRechargeLimit(player, limit);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerHealthRechargeLimit(_player, limit);
 }
 /**
  * `regenRate`: The recharge multiplier, a value between 0.0 and 1.0.
@@ -1765,7 +1908,8 @@ export function setHealthRechargeMaxPercent(player, limit) {
  * Hash: 0x5DB660B38DD98A31 | Since: 323 | API-Set: unknown
  */
 export function setHealthRechargeMultiplier(player, regenRate) {
-    SetPlayerHealthRechargeMultiplier(player, regenRate);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerHealthRechargeMultiplier(_player, regenRate);
 }
 /**
  * No comment provided
@@ -1784,7 +1928,8 @@ export function setHomingDisabledForAllVehicleWeapons() {
  * Hash: 0x239528EACDC3E7DE | Since: 323 | API-Set: unknown
  */
 export function setInvincible(player, toggle) {
-    SetPlayerInvincible(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerInvincible(_player, toggle);
 }
 /**
  * No comment provided
@@ -1792,7 +1937,8 @@ export function setInvincible(player, toggle) {
  * Hash: 0x6BC97F4F4BB3C04B | Since: 463 | API-Set: unknown
  */
 export function setInvincibleButHasReactions(player, toggle) {
-    SetPlayerInvincibleKeepRagdollEnabled(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerInvincibleKeepRagdollEnabled(_player, toggle);
 }
 /**
  * No comment provided
@@ -1800,7 +1946,8 @@ export function setInvincibleButHasReactions(player, toggle) {
  * Hash: 0xFF300C7649724A0B | Since: 323 | API-Set: unknown
  */
 export function setLeavePedBehind(player, toggle) {
-    SetPlayerLeavePedBehind(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerLeavePedBehind(_player, toggle);
 }
 /**
  * Example from fm_mission_controler.ysc.c4:
@@ -1814,7 +1961,8 @@ export function setLeavePedBehind(player, toggle) {
  * Hash: 0x5C8B2F450EE4328E | Since: 323 | API-Set: unknown
  */
 export function setLockon(player, toggle) {
-    SetPlayerLockon(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerLockon(_player, toggle);
 }
 /**
  * Affects the range of auto aim target.
@@ -1822,7 +1970,8 @@ export function setLockon(player, toggle) {
  * Hash: 0x29961D490E5814FD | Since: 323 | API-Set: unknown
  */
 export function setLockonRangeOverride(player, range) {
-    SetPlayerLockonRangeOverride(player, range);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerLockonRangeOverride(_player, range);
 }
 /**
  * `Default is 100. Use player id and not ped id. For instance: PLAYER::SET_PLAYER_MAX_ARMOUR(PLAYER::PLAYER_ID(), 100); // main_persistent.ct4`
@@ -1830,7 +1979,8 @@ export function setLockonRangeOverride(player, range) {
  * Hash: 0x77DFCCF5948B8C71 | Since: 323 | API-Set: unknown
  */
 export function setMaxArmour(player, value) {
-    SetPlayerMaxArmour(player, value);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerMaxArmour(_player, value);
 }
 /**
  * No comment provided
@@ -1838,7 +1988,8 @@ export function setMaxArmour(player, value) {
  * Hash: 0x8D768602ADEF2245 | Since: 463 | API-Set: unknown
  */
 export function setMaxExplosiveDamage(player) {
-    Citizen.invokeNative('0x8D768602ADEF2245', player, 0);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0x8D768602ADEF2245', _player, 0);
 }
 /**
  * No comment provided
@@ -1846,7 +1997,8 @@ export function setMaxExplosiveDamage(player) {
  * Hash: 0x1DE37BBF9E9CC14A | Since: 323 | API-Set: unknown
  */
 export function setMayNotEnterAnyVehicle(player) {
-    SetPlayerMayNotEnterAnyVehicle(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerMayNotEnterAnyVehicle(_player);
 }
 /**
  * No comment provided
@@ -1854,7 +2006,9 @@ export function setMayNotEnterAnyVehicle(player) {
  * Hash: 0x8026FF78F208978A | Since: 323 | API-Set: unknown
  */
 export function setMayOnlyEnterThisVehicle(player, vehicle) {
-    SetPlayerMayOnlyEnterThisVehicle(player, vehicle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetPlayerMayOnlyEnterThisVehicle(_player, _vehicle);
 }
 /**
  * modifier's min value is 0.1
@@ -1862,7 +2016,8 @@ export function setMayOnlyEnterThisVehicle(player, vehicle) {
  * Hash: 0x4A3DC7ECCC321032 | Since: 323 | API-Set: unknown
  */
 export function setMeleeWeaponDamageModifier(player, modifier) {
-    SetPlayerMeleeWeaponDamageModifier(player, modifier, false);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerMeleeWeaponDamageModifier(_player, modifier, false);
 }
 /**
  * modifier's min value is 0.1
@@ -1870,7 +2025,8 @@ export function setMeleeWeaponDamageModifier(player, modifier) {
  * Hash: 0xAE540335B4ABC4E2 | Since: 323 | API-Set: unknown
  */
 export function setMeleeWeaponDefenseModifier(player, modifier) {
-    SetPlayerMeleeWeaponDefenseModifier(player, modifier);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerMeleeWeaponDefenseModifier(_player, modifier);
 }
 /**
  * Set the model for a specific Player. Be aware that this will destroy the current Ped for the Player and create a new one, any reference to the old ped should be reset
@@ -1879,9 +2035,10 @@ export function setMeleeWeaponDefenseModifier(player, modifier) {
  * Hash: 0x00A1CADD00108836 | Since: 323 | API-Set: unknown
  */
 export function setModel(player, model) {
+    const _player = player instanceof IPlayer ? player.playerId() : player;
     if (typeof model === 'string')
         model = GetHashKey(model);
-    SetPlayerModel(player, model);
+    SetPlayerModel(_player, model);
 }
 /**
  * No comment provided
@@ -1889,7 +2046,8 @@ export function setModel(player, model) {
  * Hash: 0xDB89EF50FF25FCE9 | Since: 323 | API-Set: unknown
  */
 export function setNoiseMultiplier(player, multiplier) {
-    SetPlayerNoiseMultiplier(player, multiplier);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerNoiseMultiplier(_player, multiplier);
 }
 /**
  * No comment provided
@@ -1897,9 +2055,10 @@ export function setNoiseMultiplier(player, multiplier) {
  * Hash: 0x977DB4641F6FC3DB | Since: 323 | API-Set: unknown
  */
 export function setParachuteModelOverride(player, model) {
+    const _player = player instanceof IPlayer ? player.playerId() : player;
     if (typeof model === 'string')
         model = GetHashKey(model);
-    SetPlayerParachuteModelOverride(player, model);
+    SetPlayerParachuteModelOverride(_player, model);
 }
 /**
  * No comment provided
@@ -1907,9 +2066,10 @@ export function setParachuteModelOverride(player, model) {
  * Hash: 0xDC80A4C2F18A2B64 | Since: 323 | API-Set: unknown
  */
 export function setParachutePackModelOverride(player, model) {
+    const _player = player instanceof IPlayer ? player.playerId() : player;
     if (typeof model === 'string')
         model = GetHashKey(model);
-    SetPlayerParachutePackModelOverride(player, model);
+    SetPlayerParachutePackModelOverride(_player, model);
 }
 /**
  * tints 0- 13
@@ -1922,7 +2082,8 @@ export function setParachutePackModelOverride(player, model) {
  * Hash: 0x93B0FB27C9A04060 | Since: 323 | API-Set: unknown
  */
 export function setParachutePackTintIndex(player, tintIndex) {
-    SetPlayerParachutePackTintIndex(player, tintIndex);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerParachutePackTintIndex(_player, tintIndex);
 }
 /**
  * No comment provided
@@ -1930,7 +2091,8 @@ export function setParachutePackTintIndex(player, tintIndex) {
  * Hash: 0x8217FD371A4625CF | Since: 323 | API-Set: unknown
  */
 export function setParachuteSmokeTrailColor(player, r, g, b) {
-    SetPlayerParachuteSmokeTrailColor(player, r, g, b);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerParachuteSmokeTrailColor(_player, r, g, b);
 }
 /**
  * Tints:
@@ -1954,7 +2116,8 @@ export function setParachuteSmokeTrailColor(player, r, g, b) {
  * Hash: 0xA3D0E54541D9A5E5 | Since: 323 | API-Set: unknown
  */
 export function setParachuteTintIndex(player, tintIndex) {
-    SetPlayerParachuteTintIndex(player, tintIndex);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerParachuteTintIndex(_player, tintIndex);
 }
 /**
  * p1 was always 5.
@@ -1963,7 +2126,8 @@ export function setParachuteTintIndex(player, tintIndex) {
  * Hash: 0xD9284A8C0D48352C | Since: 323 | API-Set: unknown
  */
 export function setParachuteVariationOverride(player) {
-    SetPlayerParachuteVariationOverride(player, 0, undefined, undefined, false);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerParachuteVariationOverride(_player, 0, undefined, undefined, false);
 }
 /**
  * No comment provided
@@ -1971,7 +2135,8 @@ export function setParachuteVariationOverride(player) {
  * Hash: 0x11D5F725F0E780E0 | Since: 323 | API-Set: unknown
  */
 export function setPhonePaletteIdx(player, idx) {
-    SetPlayerResetFlagPreferRearSeats(player, idx);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerResetFlagPreferRearSeats(_player, idx);
 }
 /**
  * No comment provided
@@ -1979,7 +2144,8 @@ export function setPhonePaletteIdx(player, idx) {
  * Hash: 0x7BAE68775557AE0B | Since: 1290 | API-Set: unknown
  */
 export function setPreviousVariationData(player) {
-    Citizen.invokeNative('0x7BAE68775557AE0B', player, 0, 0, undefined, undefined, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0x7BAE68775557AE0B', _player, 0, 0, undefined, undefined, undefined);
 }
 /**
  * No comment provided
@@ -1987,9 +2153,10 @@ export function setPreviousVariationData(player) {
  * Hash: 0x0764486AEDE748DB | Since: 2372 | API-Set: unknown
  */
 export function setReserveParachuteModelOverride(player, model) {
+    const _player = player instanceof IPlayer ? player.playerId() : player;
     if (typeof model === 'string')
         model = GetHashKey(model);
-    SetPlayerReserveParachuteModelOverride(player, model);
+    SetPlayerReserveParachuteModelOverride(_player, model);
 }
 /**
  * Tints:
@@ -2012,7 +2179,8 @@ export function setReserveParachuteModelOverride(player, model) {
  * Hash: 0xAF04C87F5DC1DF38 | Since: 323 | API-Set: unknown
  */
 export function setReserveParachuteTintIndex(player, index) {
-    SetPlayerReserveParachuteTintIndex(player, index);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerReserveParachuteTintIndex(_player, index);
 }
 /**
  * No comment provided
@@ -2020,7 +2188,8 @@ export function setReserveParachuteTintIndex(player, index) {
  * Hash: 0xC54C95DA968EC5B5 | Since: 323 | API-Set: unknown
  */
 export function setSimulateAiming(player, toggle) {
-    SetPlayerSimulateAiming(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerSimulateAiming(_player, toggle);
 }
 /**
  * Values around 1.0f to 2.0f used in game scripts.
@@ -2028,7 +2197,8 @@ export function setSimulateAiming(player, toggle) {
  * Hash: 0xB2C1A29588A9F47C | Since: 323 | API-Set: unknown
  */
 export function setSneakingNoiseMultiplier(player, multiplier) {
-    SetPlayerSneakingNoiseMultiplier(player, multiplier);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerSneakingNoiseMultiplier(_player, multiplier);
 }
 /**
  * No comment provided
@@ -2044,7 +2214,8 @@ export function setSpectatedVehicleRadioOverride() {
  * Hash: 0xA01B8075D8B92DF4 | Since: 323 | API-Set: unknown
  */
 export function setSprint(player, toggle) {
-    SetPlayerSprint(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerSprint(_player, toggle);
 }
 /**
  * No comment provided
@@ -2052,7 +2223,8 @@ export function setSprint(player, toggle) {
  * Hash: 0x4E9021C1FCDD507A | Since: 323 | API-Set: unknown
  */
 export function setStealthPerceptionModifier(player, value) {
-    SetPlayerStealthPerceptionModifier(player, value);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerStealthPerceptionModifier(_player, value);
 }
 /**
  * Sets your targeting mode.
@@ -2080,7 +2252,8 @@ export function setTargetLevel(targetLevel) {
  * Hash: 0x0299FA38396A4940 | Since: 323 | API-Set: unknown
  */
 export function setTeam(player, team) {
-    SetPlayerTeam(player, team);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerTeam(_player, team);
 }
 /**
  * No comment provided
@@ -2088,7 +2261,8 @@ export function setTeam(player, team) {
  * Hash: 0xA0D3E4F7AAFB7E78 | Since: 757 | API-Set: unknown
  */
 export function setUnderwaterBreathPercentRemaining(player, time) {
-    return SetPlayerUnderwaterTimeRemaining(player, time);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return SetPlayerUnderwaterTimeRemaining(_player, time);
 }
 /**
  * modifier's min value is 0.1
@@ -2096,7 +2270,8 @@ export function setUnderwaterBreathPercentRemaining(player, time) {
  * Hash: 0xA50E117CDDF82F0C | Since: 323 | API-Set: unknown
  */
 export function setVehicleDamageModifier(player, modifier) {
-    SetPlayerVehicleDamageModifier(player, modifier);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerVehicleDamageModifier(_player, modifier);
 }
 /**
  * modifier's min value is 0.1
@@ -2104,7 +2279,8 @@ export function setVehicleDamageModifier(player, modifier) {
  * Hash: 0x4C60E6EFDAFF2462 | Since: 323 | API-Set: unknown
  */
 export function setVehicleDefenseModifier(player, modifier) {
-    SetPlayerVehicleDefenseModifier(player, modifier);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerVehicleDefenseModifier(_player, modifier);
 }
 /**
  * Unsets playerPed+330 if the current weapon has certain flags.
@@ -2126,7 +2302,8 @@ export function setVehicleWeaponToNonHoming() {
  * Hash: 0x520E541A97A13354 | Since: 323 | API-Set: unknown
  */
 export function setWantedCentrePosition(player) {
-    return SetPlayerWantedCentrePosition(player, false, false);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return SetPlayerWantedCentrePosition(_player, false, false);
 }
 /**
  * Call SET_PLAYER_WANTED_LEVEL_NOW for immediate effect
@@ -2139,7 +2316,8 @@ export function setWantedCentrePosition(player) {
  * Hash: 0x39FF19C64EF7DA5B | Since: 323 | API-Set: unknown
  */
 export function setWantedLevel(player, wantedLevel, disableNoMission) {
-    SetPlayerWantedLevel(player, wantedLevel, disableNoMission);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerWantedLevel(_player, wantedLevel, disableNoMission);
 }
 /**
  * Forces any pending wanted level to be applied to the specified player immediately.
@@ -2151,7 +2329,8 @@ export function setWantedLevel(player, wantedLevel, disableNoMission) {
  * Hash: 0xE0A7D1E497FFCD6F | Since: 323 | API-Set: unknown
  */
 export function setWantedLevelNow(player) {
-    SetPlayerWantedLevelNow(player, false);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerWantedLevelNow(_player, false);
 }
 /**
  * p2 is always false in R* scripts
@@ -2159,7 +2338,8 @@ export function setWantedLevelNow(player) {
  * Hash: 0x340E61DE7F471565 | Since: 323 | API-Set: unknown
  */
 export function setWantedLevelNoDrop(player, wantedLevel) {
-    SetPlayerWantedLevelNoDrop(player, wantedLevel, false);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerWantedLevelNoDrop(_player, wantedLevel, false);
 }
 /**
  * This modifies the damage value of your weapon. Whether it is a multiplier or base damage is unknown.
@@ -2171,7 +2351,8 @@ export function setWantedLevelNoDrop(player, wantedLevel) {
  * Hash: 0xCE07B9F7817AADA3 | Since: 323 | API-Set: unknown
  */
 export function setWeaponDamageModifier(player, modifier) {
-    SetPlayerWeaponDamageModifier(player, modifier);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerWeaponDamageModifier(_player, modifier);
 }
 /**
  * modifier's min value is 0.1
@@ -2179,7 +2360,8 @@ export function setWeaponDamageModifier(player, modifier) {
  * Hash: 0x2D83BC011CA14A3C | Since: 323 | API-Set: unknown
  */
 export function setWeaponDefenseModifier(player, modifier) {
-    SetPlayerWeaponDefenseModifier(player, modifier);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerWeaponDefenseModifier(_player, modifier);
 }
 /**
  * modifier's min value is 0.1
@@ -2187,7 +2369,8 @@ export function setWeaponDefenseModifier(player, modifier) {
  * Hash: 0xBCFDE9EDE4CF27DC | Since: 944 | API-Set: unknown
  */
 export function setWeaponMinigunDefenseModifier(player, modifier) {
-    SetPlayerWeaponDefenseModifier2(player, modifier);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerWeaponDefenseModifier2(_player, modifier);
 }
 /**
  * No comment provided
@@ -2195,7 +2378,8 @@ export function setWeaponMinigunDefenseModifier(player, modifier) {
  * Hash: 0x31E90B8873A4CD3B | Since: 617 | API-Set: unknown
  */
 export function setWeaponTakedownDefenseModifier(player) {
-    Citizen.invokeNative('0x31E90B8873A4CD3B', player, 0);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0x31E90B8873A4CD3B', _player, 0);
 }
 /**
  * The player will be ignored by the police if toggle is set to true
@@ -2203,7 +2387,8 @@ export function setWeaponTakedownDefenseModifier(player) {
  * Hash: 0x32C62AA929C2DA6A | Since: 323 | API-Set: unknown
  */
 export function setPoliceIgnore(player, toggle) {
-    SetPoliceIgnorePlayer(player, toggle);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPoliceIgnorePlayer(_player, toggle);
 }
 /**
  * If toggle is set to false:
@@ -2227,7 +2412,8 @@ export function setPoliceRadarBlips(toggle) {
  * Hash: 0x6DB47AA77FD94E09 | Since: 323 | API-Set: unknown
  */
 export function setRunSprintMultiplierFor(player, multiplier) {
-    SetRunSprintMultiplierForPlayer(player, multiplier);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetRunSprintMultiplierForPlayer(_player, multiplier);
 }
 /**
  * No comment provided
@@ -2243,7 +2429,8 @@ export function setScriptFirePosition(coordX, coordY, coordZ) {
  * Hash: 0xB214D570EAD7F81A | Since: 678 | API-Set: unknown
  */
 export function setSpecialAbilityMp(player) {
-    SetSpecialAbility(player, 0, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetSpecialAbility(_player, 0, undefined);
 }
 /**
  * No comment provided
@@ -2264,7 +2451,8 @@ export function setSpecialAbilityMultiplier(multiplier) {
  * Hash: 0xA91C6F0FF7D16A13 | Since: 323 | API-Set: unknown
  */
 export function setSwimMultiplierFor(player, multiplier) {
-    SetSwimMultiplierForPlayer(player, multiplier);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetSwimMultiplierForPlayer(_player, multiplier);
 }
 /**
  * Max value is 1.0
@@ -2272,7 +2460,8 @@ export function setSwimMultiplierFor(player, multiplier) {
  * Hash: 0x9B0BB33B04405E7A | Since: 323 | API-Set: unknown
  */
 export function setWantedLevelDifficulty(player, difficulty) {
-    SetWantedLevelDifficulty(player, difficulty);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetWantedLevelDifficulty(_player, difficulty);
 }
 /**
  * No comment provided
@@ -2280,7 +2469,8 @@ export function setWantedLevelDifficulty(player, difficulty) {
  * Hash: 0x49B856B1360C47C7 | Since: 2060 | API-Set: unknown
  */
 export function setWantedLevelHiddenEscapeTime(player, wantedLevel, lossTime) {
-    SetWantedLevelHiddenEvasionTime(player, wantedLevel, lossTime);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetWantedLevelHiddenEvasionTime(_player, wantedLevel, lossTime);
 }
 /**
  * No comment provided
@@ -2304,7 +2494,8 @@ export function setWantedLevelMultiplier(multiplier) {
  * Hash: 0x477D5D63E63ECA5D | Since: 323 | API-Set: unknown
  */
 export function simulateInputGait(player, amount, gaitType, speed) {
-    SimulatePlayerInputGait(player, amount, gaitType, speed, false, false, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SimulatePlayerInputGait(_player, amount, gaitType, speed, false, false, undefined);
 }
 /**
  * p1 is always 0 in the scripts
@@ -2312,7 +2503,8 @@ export function simulateInputGait(player, amount, gaitType, speed) {
  * Hash: 0x821FDC827D6F4090 | Since: 678 | API-Set: unknown
  */
 export function specialAbilityActivate(player) {
-    SpecialAbilityActivate(player, 0);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SpecialAbilityActivate(_player, 0);
 }
 /**
  * p1 appears as 5, 10, 15, 25, or 30. p2 is always true.
@@ -2320,7 +2512,8 @@ export function specialAbilityActivate(player) {
  * Hash: 0xB7B0870EB531D08D | Since: 323 | API-Set: unknown
  */
 export function specialAbilityChargeAbsolute(player) {
-    SpecialAbilityChargeAbsolute(player, 0, false, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SpecialAbilityChargeAbsolute(_player, 0, false, undefined);
 }
 /**
  * p1 appears to always be 1 (only comes up twice)
@@ -2328,7 +2521,9 @@ export function specialAbilityChargeAbsolute(player) {
  * Hash: 0xED481732DFF7E997 | Since: 323 | API-Set: unknown
  */
 export function specialAbilityChargeContinuous(player, p1) {
-    SpecialAbilityChargeContinuous(player, p1, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _p1 = p1 instanceof IPed ? p1.handle() : p1;
+    SpecialAbilityChargeContinuous(_player, _p1, undefined);
 }
 /**
  * 2 matches. p1 was always true.
@@ -2336,7 +2531,8 @@ export function specialAbilityChargeContinuous(player, p1) {
  * Hash: 0xF733F45FA4497D93 | Since: 323 | API-Set: unknown
  */
 export function specialAbilityChargeLarge(player) {
-    SpecialAbilityChargeLarge(player, false, false, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SpecialAbilityChargeLarge(_player, false, false, undefined);
 }
 /**
  * Only 1 match. Both p1 & p2 were true.
@@ -2344,7 +2540,8 @@ export function specialAbilityChargeLarge(player) {
  * Hash: 0xF113E3AA9BC54613 | Since: 323 | API-Set: unknown
  */
 export function specialAbilityChargeMedium(player) {
-    SpecialAbilityChargeMedium(player, false, false, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SpecialAbilityChargeMedium(_player, false, false, undefined);
 }
 /**
  *
@@ -2354,7 +2551,8 @@ export function specialAbilityChargeMedium(player) {
  * Hash: 0xA0696A65F009EE18 | Since: 323 | API-Set: unknown
  */
 export function specialAbilityChargeNormalized(player, normalizedValue) {
-    SpecialAbilityChargeNormalized(player, normalizedValue, false, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SpecialAbilityChargeNormalized(_player, normalizedValue, false, undefined);
 }
 /**
  * No comment provided
@@ -2362,7 +2560,8 @@ export function specialAbilityChargeNormalized(player, normalizedValue) {
  * Hash: 0xC9A763D8FE87436A | Since: 323 | API-Set: unknown
  */
 export function specialAbilityChargeOnMissionFailed(player) {
-    SpecialAbilityChargeOnMissionFailed(player, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SpecialAbilityChargeOnMissionFailed(_player, undefined);
 }
 /**
  * Every occurrence of p1 & p2 were both true.
@@ -2370,7 +2569,8 @@ export function specialAbilityChargeOnMissionFailed(player) {
  * Hash: 0x2E7B9B683481687D | Since: 323 | API-Set: unknown
  */
 export function specialAbilityChargeSmall(player) {
-    SpecialAbilityChargeSmall(player, false, false, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SpecialAbilityChargeSmall(_player, false, false, undefined);
 }
 /**
  * No comment provided
@@ -2378,7 +2578,8 @@ export function specialAbilityChargeSmall(player) {
  * Hash: 0xD6A953C6D1492057 | Since: 323 | API-Set: unknown
  */
 export function specialAbilityDeactivate(player) {
-    SpecialAbilityDeactivate(player, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SpecialAbilityDeactivate(_player, undefined);
 }
 /**
  * No comment provided
@@ -2386,7 +2587,8 @@ export function specialAbilityDeactivate(player) {
  * Hash: 0x9CB5CE07A3968D5A | Since: 323 | API-Set: unknown
  */
 export function specialAbilityDeactivateFast(player) {
-    SpecialAbilityDeactivateFast(player, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SpecialAbilityDeactivateFast(_player, undefined);
 }
 /**
  * p1 is always 0 in the scripts
@@ -2394,7 +2596,8 @@ export function specialAbilityDeactivateFast(player) {
  * Hash: 0x17F7471EACA78290 | Since: 678 | API-Set: unknown
  */
 export function specialAbilityDeactivateMp(player) {
-    SpecialAbilityDeplete(player, 0);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SpecialAbilityDeplete(_player, 0);
 }
 /**
  * p1 was always true.
@@ -2402,7 +2605,8 @@ export function specialAbilityDeactivateMp(player) {
  * Hash: 0x1D506DBBBC51E64B | Since: 323 | API-Set: unknown
  */
 export function specialAbilityDepleteMeter(player) {
-    SpecialAbilityDepleteMeter(player, false, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SpecialAbilityDepleteMeter(_player, false, undefined);
 }
 /**
  * Also known as _RECHARGE_SPECIAL_ABILITY
@@ -2410,7 +2614,8 @@ export function specialAbilityDepleteMeter(player) {
  * Hash: 0x3DACA8DDC6FD4980 | Since: 323 | API-Set: unknown
  */
 export function specialAbilityFillMeter(player) {
-    SpecialAbilityFillMeter(player, false, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SpecialAbilityFillMeter(_player, false, undefined);
 }
 /**
  * No comment provided
@@ -2428,7 +2633,8 @@ export function specialAbilityLock(playerModel) {
  * Hash: 0x375F0E738F861A94 | Since: 323 | API-Set: unknown
  */
 export function specialAbilityReset(player) {
-    SpecialAbilityReset(player, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SpecialAbilityReset(_player, undefined);
 }
 /**
  * No comment provided
@@ -2454,7 +2660,8 @@ export function startFiringAmnesty(duration) {
  * Hash: 0xAD15F075A4DA0FDE | Since: 323 | API-Set: unknown
  */
 export function startTeleport(player, pos, heading, findCollisionLand) {
-    StartPlayerTeleport(player, pos.x, pos.y, pos.z, heading, false, findCollisionLand, false);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    StartPlayerTeleport(_player, pos.x, pos.y, pos.z, heading, false, findCollisionLand, false);
 }
 /**
  * Disables the player's teleportation
@@ -2470,7 +2677,8 @@ export function stopTeleport() {
  * Hash: 0x9A987297ED8BD838 | Since: 323 | API-Set: unknown
  */
 export function suppressCrimeThisFrame(player, crimeType) {
-    SuppressCrimeThisFrame(player, crimeType);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SuppressCrimeThisFrame(_player, crimeType);
 }
 /**
  * This has been found in use in the decompiled files.
@@ -2478,7 +2686,8 @@ export function suppressCrimeThisFrame(player, crimeType) {
  * Hash: 0x4669B3ED80F24B4E | Since: 323 | API-Set: unknown
  */
 export function suppressLosingWantedLevelIfHiddenThisFrame(player) {
-    Citizen.invokeNative('0x4669B3ED80F24B4E', player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0x4669B3ED80F24B4E', _player);
 }
 /**
  * No comment provided
@@ -2486,7 +2695,8 @@ export function suppressLosingWantedLevelIfHiddenThisFrame(player) {
  * Hash: 0x36F1B38855F2A8DF | Since: 323 | API-Set: unknown
  */
 export function suppressWitnessesCallingPoliceThisFrame(player) {
-    Citizen.invokeNative('0x36F1B38855F2A8DF', player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0x36F1B38855F2A8DF', _player);
 }
 /**
  * No comment provided
@@ -2494,7 +2704,8 @@ export function suppressWitnessesCallingPoliceThisFrame(player) {
  * Hash: 0xE23D5873C2394C61 | Since: 323 | API-Set: unknown
  */
 export function updateTeleport(player) {
-    return UpdatePlayerTeleport(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    return UpdatePlayerTeleport(_player);
 }
 /**
  * No comment provided
@@ -2502,7 +2713,8 @@ export function updateTeleport(player) {
  * Hash: 0xFFEE8FA29AB9A18E | Since: 323 | API-Set: unknown
  */
 export function updateSpecialAbilityFromStat(player) {
-    Citizen.invokeNative('0xFFEE8FA29AB9A18E', player, undefined);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0xFFEE8FA29AB9A18E', _player, undefined);
 }
 /**
  * This native is used in both singleplayer and multiplayer scripts.
@@ -2513,5 +2725,6 @@ export function updateSpecialAbilityFromStat(player) {
  * Hash: 0xBC9490CA15AEA8FB | Since: 323 | API-Set: unknown
  */
 export function updateWantedPositionThisFrame(player) {
-    Citizen.invokeNative('0xBC9490CA15AEA8FB', player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0xBC9490CA15AEA8FB', _player);
 }

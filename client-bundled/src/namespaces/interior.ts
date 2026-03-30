@@ -44,7 +44,8 @@ export function cap(interior: number, toggle: boolean): void {
  * Hash: 0x85D5422B2039A70D | Since: 2189 | API-Set: unknown
  */
 export function clearStateOfEntity(entity: number | IEntity): void {
-    ClearInteriorForEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    ClearInteriorForEntity(_entity);
 }
 
 /**
@@ -53,7 +54,8 @@ export function clearStateOfEntity(entity: number | IEntity): void {
  * Hash: 0xB365FC0C4E27FFA7 | Since: 323 | API-Set: unknown
  */
 export function clearRoomForEntity(entity: number | IEntity): void {
-    ClearRoomForEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    ClearRoomForEntity(_entity);
 }
 
 /**
@@ -141,8 +143,9 @@ export function forceActivatingTrackingOnEntity(): void {
  * Hash: 0x52923C4710DD9907 | Since: 323 | API-Set: unknown
  */
 export function forceRoomForEntity(entity: number | IEntity, interior: number, roomHashKey: number | string): void {
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
     if (typeof roomHashKey === 'string') roomHashKey = GetHashKey(roomHashKey)
-    ForceRoomForEntity(entity, interior, roomHashKey);
+    ForceRoomForEntity(_entity, interior, roomHashKey);
 }
 
 /**
@@ -207,7 +210,8 @@ export function getFromCollision(pos: Vector3): number {
  * Hash: 0x2107BA504071A6BB | Since: 323 | API-Set: unknown
  */
 export function getFromEntity(entity: number | IEntity): number {
-    return GetInteriorFromEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetInteriorFromEntity(_entity);
 }
 
 /**
@@ -266,7 +270,8 @@ export function getLocationAndNamehash(interior: number): [Vector3, number] {
  * Hash: 0x399685DB942336BC | Since: 323 | API-Set: unknown
  */
 export function getKeyForEntityInRoom(entity: number | IEntity): number {
-    return GetKeyForEntityInRoom(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetKeyForEntityInRoom(_entity);
 }
 
 /**
@@ -293,7 +298,8 @@ export function getRoomKeyForGameViewport(): number {
  * Hash: 0x47C2A06D4F5F424B | Since: 323 | API-Set: unknown
  */
 export function getRoomKeyFromEntity(entity: number | IEntity): number {
-    return GetRoomKeyFromEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetRoomKeyFromEntity(_entity);
 }
 
 /**
@@ -383,7 +389,8 @@ export function refresh(interior: number): void {
  * Hash: 0x82EBB79E258FA2B7 | Since: 323 | API-Set: unknown
  */
 export function retainEntityIn(entity: number | IEntity, interior: number): void {
-    Citizen.invokeNative('0x82EBB79E258FA2B7', entity, interior);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    Citizen.invokeNative('0x82EBB79E258FA2B7', _entity, interior);
 }
 
 /**
@@ -411,7 +418,8 @@ export function setInUse(interior: number): boolean {
  * Hash: 0x7241CCB7D020DB69 | Since: 791 | API-Set: unknown
  */
 export function setIsExteriorOnly(entity: number | IEntity, toggle: boolean): void {
-    Citizen.invokeNative('0x7241CCB7D020DB69', entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    Citizen.invokeNative('0x7241CCB7D020DB69', _entity, toggle);
 }
 
 /**

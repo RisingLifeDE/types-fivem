@@ -15,7 +15,8 @@ export function addShockingAtPosition(eventType: number, pos: Vector3, duration:
  * Hash: 0x7FD8F3BE76F89422 | Since: 323 | API-Set: unknown
  */
 export function addShockingForEntity(eventType: number, entity: number | IEntity, duration: number): number {
-    return AddShockingEventForEntity(eventType, entity, duration);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return AddShockingEventForEntity(eventType, _entity, duration);
 }
 
 /**
@@ -82,8 +83,9 @@ export function removeShockingSpawnBlockingAreas(): void {
  * Hash: 0xB604A2942ADED0EE | Since: 323 | API-Set: unknown
  */
 export function setDecisionMaker(ped: number | IPed, name: number | string): void {
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
     if (typeof name === 'string') name = GetHashKey(name)
-    SetDecisionMaker(ped, name);
+    SetDecisionMaker(_ped, name);
 }
 
 /**

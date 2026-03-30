@@ -1,11 +1,12 @@
-import { Vector3 } from '@risinglife/fivem-shared';
+import { Vector3, IPed, IPlayer } from '@risinglife/fivem-shared';
 /**
  * A getter for [SET_PLAYER_MELEE_WEAPON_DAMAGE_MODIFIER](#\_0x4A3DC7ECCC321032).
  *
  * Hash: 0x8689A825
  */
 export function getMeleeWeaponDamageModifier(playerId) {
-    return GetPlayerMeleeWeaponDamageModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerMeleeWeaponDamageModifier(_playerId);
 }
 /**
  * A getter for [SET_PLAYER_WEAPON_DAMAGE_MODIFIER](#\_0xCE07B9F7817AADA3).
@@ -13,7 +14,8 @@ export function getMeleeWeaponDamageModifier(playerId) {
  * Hash: 0x2A3D7CDA
  */
 export function getWeaponDamageModifier(playerId) {
-    return GetPlayerWeaponDamageModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerWeaponDamageModifier(_playerId);
 }
 /**
  * A getter for [SET_PLAYER_WEAPON_DEFENSE_MODIFIER](#\_0x2D83BC011CA14A3C).
@@ -21,7 +23,8 @@ export function getWeaponDamageModifier(playerId) {
  * Hash: 0xF1543251
  */
 export function getWeaponDefenseModifier(playerId) {
-    return GetPlayerWeaponDefenseModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerWeaponDefenseModifier(_playerId);
 }
 /**
  * A getter for [\_SET_PLAYER_WEAPON_DEFENSE_MODIFIER\_2](#\_0xBCFDE9EDE4CF27DC).
@@ -29,7 +32,8 @@ export function getWeaponDefenseModifier(playerId) {
  * Hash: 0x986B65FF
  */
 export function getWeaponDefenseModifier2(playerId) {
-    return GetPlayerWeaponDefenseModifier2(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerWeaponDefenseModifier2(_playerId);
 }
 /**
  * Returns whether or not the specified player has enough information to start a commerce session for.
@@ -50,7 +54,8 @@ export function canStartCommerceSession(playerSrc) {
  * Hash: 0x54EA5BCC
  */
 export function clearWantedLevel(player) {
-    ClearPlayerWantedLevel(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    ClearPlayerWantedLevel(_player);
 }
 /**
  * Returns whether or not the player exists
@@ -345,7 +350,8 @@ export function getWantedLevel(playerSrc) {
  * Hash: 0x404794CA
  */
 export function isPedA(ped) {
-    return IsPedAPlayer(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedAPlayer(_ped);
 }
 /**
  * No comment provided
@@ -454,7 +460,8 @@ export function requestCommerceSession(playerSrc, skuId) {
  * Hash: 0xD17AFCD8
  */
 export function setControl(player, bHasControl, flags) {
-    SetPlayerControl(player, bHasControl, flags);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerControl(_player, bHasControl, flags);
 }
 /**
  * Sets the culling radius for the specified player.
@@ -475,7 +482,8 @@ export function setCullingRadius(playerSrc, radius) {
  * Hash: 0xDFB9A2A2
  */
 export function setInvincible(player, bInvincible) {
-    SetPlayerInvincible(player, bInvincible);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerInvincible(_player, bInvincible);
 }
 /**
  * Set the model for a specific Player. Note that this will destroy the current Ped for the Player and create a new one, any reference to the old ped will be invalid after calling this.
@@ -486,9 +494,10 @@ export function setInvincible(player, bInvincible) {
  * Hash: 0x774A4C54
  */
 export function setModel(player, model) {
+    const _player = player instanceof IPlayer ? player.playerId() : player;
     if (typeof model === 'string')
         model = GetHashKey(model);
-    SetPlayerModel(player, model);
+    SetPlayerModel(_player, model);
 }
 /**
  * Sets the routing bucket for the specified player.
@@ -508,7 +517,8 @@ export function setRoutingBucket(playerSrc, bucket) {
  * Hash: 0xB7A0914B
  */
 export function setWantedLevel(player, wantedLevel, delayedResponse) {
-    SetPlayerWantedLevel(player, wantedLevel, delayedResponse);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerWantedLevel(_player, wantedLevel, delayedResponse);
 }
 /**
  * No comment provided

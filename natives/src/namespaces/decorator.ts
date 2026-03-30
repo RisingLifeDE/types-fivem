@@ -6,7 +6,8 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0x05661B80A8C9165F | Since: 323
  */
 export function decorExistOn(entity: number | IEntity, propertyName: string): boolean {
-    return DecorExistOn(entity, propertyName);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return DecorExistOn(_entity, propertyName);
 }
 
 /**
@@ -15,7 +16,8 @@ export function decorExistOn(entity: number | IEntity, propertyName: string): bo
  * Hash: 0xDACE671663F2F5DB | Since: 323
  */
 export function decorGetBool(entity: number | IEntity, propertyName: string): boolean {
-    return DecorGetBool(entity, propertyName);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return DecorGetBool(_entity, propertyName);
 }
 
 /**
@@ -24,7 +26,8 @@ export function decorGetBool(entity: number | IEntity, propertyName: string): bo
  * Hash: 0x6524A2F114706F43 | Since: 323
  */
 export function decorGetFloat(entity: number | IEntity, propertyName: string): number {
-    return DecorGetFloat(entity, propertyName);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return DecorGetFloat(_entity, propertyName);
 }
 
 /**
@@ -33,7 +36,8 @@ export function decorGetFloat(entity: number | IEntity, propertyName: string): n
  * Hash: 0xA06C969B02A97298 | Since: 323
  */
 export function decorGetInt(entity: number | IEntity, propertyName: string): number {
-    return DecorGetInt(entity, propertyName);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return DecorGetInt(_entity, propertyName);
 }
 
 /**
@@ -69,7 +73,8 @@ export function decorRegisterLock(): void {
  * Hash: 0x00EE9F297C738720 | Since: 323
  */
 export function decorRemove(entity: number | IEntity, propertyName: string): boolean {
-    return DecorRemove(entity, propertyName);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return DecorRemove(_entity, propertyName);
 }
 
 /**
@@ -79,7 +84,8 @@ export function decorRemove(entity: number | IEntity, propertyName: string): boo
  * Hash: 0x6B1E8E2ED1335B71 | Since: 323
  */
 export function decorSetBool(entity: number | IEntity, propertyName: string, value: boolean): boolean {
-    return DecorSetBool(entity, propertyName, value);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return DecorSetBool(_entity, propertyName, value);
 }
 
 /**
@@ -88,7 +94,8 @@ export function decorSetBool(entity: number | IEntity, propertyName: string, val
  * Hash: 0x211AB1DD8D0F363A | Since: 323
  */
 export function decorSetFloat(entity: number | IEntity, propertyName: string, value: number): boolean {
-    return DecorSetFloat(entity, propertyName, value);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return DecorSetFloat(_entity, propertyName, value);
 }
 
 /**
@@ -97,7 +104,8 @@ export function decorSetFloat(entity: number | IEntity, propertyName: string, va
  * Hash: 0x0CE3AA5E1CA19E10 | Since: 323
  */
 export function decorSetInt(entity: number | IEntity, propertyName: string, value: number): boolean {
-    return DecorSetInt(entity, propertyName, value);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return DecorSetInt(_entity, propertyName, value);
 }
 
 /**
@@ -106,6 +114,7 @@ export function decorSetInt(entity: number | IEntity, propertyName: string, valu
  * Hash: 0x95AED7B8E39ECAA4 | Since: 323
  */
 export function decorSetTime(entity: number | IEntity, propertyName: string, timestamp: number): boolean {
-    return DecorSetTime(entity, propertyName, timestamp);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return DecorSetTime(_entity, propertyName, timestamp);
 }
 

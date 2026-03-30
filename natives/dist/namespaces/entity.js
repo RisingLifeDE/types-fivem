@@ -1,4 +1,4 @@
-import { Vector3 } from '@risinglife/fivem-shared';
+import { Vector3, IEntity, IPed, IVehicle, IObject } from '@risinglife/fivem-shared';
 /**
  * Documented here:
  * gtaforums.com/topic/885669-precisely-define-object-physics/
@@ -28,7 +28,8 @@ import { Vector3 } from '@risinglife/fivem-shared';
  * Hash: 0xC5F68BE9613E2D18 | Since: 323
  */
 export function applyForceTo(entity, forceFlags, pos, offX, offY, offZ, boneIndex, isDirectionRel, ignoreUpVec, isForceRel) {
-    ApplyForceToEntity(entity, forceFlags, pos.x, pos.y, pos.z, offX, offY, offZ, boneIndex, isDirectionRel, ignoreUpVec, isForceRel, false, false);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    ApplyForceToEntity(_entity, forceFlags, pos.x, pos.y, pos.z, offX, offY, offZ, boneIndex, isDirectionRel, ignoreUpVec, isForceRel, false, false);
 }
 /**
  * Applies a force to the specified entity.
@@ -51,7 +52,8 @@ export function applyForceTo(entity, forceFlags, pos, offX, offY, offZ, boneInde
  * Hash: 0x18FF00FC7EFF559E | Since: 323
  */
 export function applyForceToCenterOfMass(entity, forceType, pos, isDirectionRel, isForceRel) {
-    ApplyForceToEntityCenterOfMass(entity, forceType, pos.x, pos.y, pos.z, false, isDirectionRel, isForceRel, false);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    ApplyForceToEntityCenterOfMass(_entity, forceType, pos.x, pos.y, pos.z, false, isDirectionRel, isForceRel, false);
 }
 /**
  * No comment provided
@@ -59,7 +61,9 @@ export function applyForceToCenterOfMass(entity, forceType, pos, isDirectionRel,
  * Hash: 0x5C48B75732C8456C | Since: 791
  */
 export function attachBoneToEntityBone(entity1, entity2, boneIndex1, boneIndex2) {
-    AttachEntityBoneToEntityBone(entity1, entity2, boneIndex1, boneIndex2, false, false);
+    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
+    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    AttachEntityBoneToEntityBone(_entity1, _entity2, boneIndex1, boneIndex2, false, false);
 }
 /**
  * No comment provided
@@ -67,7 +71,9 @@ export function attachBoneToEntityBone(entity1, entity2, boneIndex1, boneIndex2)
  * Hash: 0xFD1695C5D3B05439 | Since: 791
  */
 export function attachBoneToEntityBoneYForward(entity1, entity2, boneIndex1, boneIndex2) {
-    AttachEntityBoneToEntityBonePhysically(entity1, entity2, boneIndex1, boneIndex2, false, false);
+    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
+    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    AttachEntityBoneToEntityBonePhysically(_entity1, _entity2, boneIndex1, boneIndex2, false, false);
 }
 /**
  * Attaches entity1 to bone (boneIndex) of entity2.
@@ -84,7 +90,9 @@ export function attachBoneToEntityBoneYForward(entity1, entity2, boneIndex1, bon
  * Hash: 0x6B9BBD38AB0796DF | Since: 323
  */
 export function attachToEntity(entity1, entity2, boneIndex, pos, rot, useSoftPinning, collision, isPed, vertexIndex, fixedRot) {
-    AttachEntityToEntity(entity1, entity2, boneIndex, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, false, useSoftPinning, collision, isPed, vertexIndex, fixedRot, undefined);
+    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
+    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    AttachEntityToEntity(_entity1, _entity2, boneIndex, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, false, useSoftPinning, collision, isPed, vertexIndex, fixedRot, undefined);
 }
 /**
  * breakForce is the amount of force required to break the bond.
@@ -99,7 +107,9 @@ export function attachToEntity(entity1, entity2, boneIndex, pos, rot, useSoftPin
  * Hash: 0xC3675780C92F90F9 | Since: 323
  */
 export function attachToEntityPhysically(entity1, entity2, boneIndex1, boneIndex2, xPos1, yPos1, zPos1, xPos2, yPos2, zPos2, rot, breakForce, fixedRot, collision) {
-    AttachEntityToEntityPhysically(entity1, entity2, boneIndex1, boneIndex2, xPos1, yPos1, zPos1, xPos2, yPos2, zPos2, rot.x, rot.y, rot.z, breakForce, fixedRot, false, collision, false, 0);
+    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
+    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    AttachEntityToEntityPhysically(_entity1, _entity2, boneIndex1, boneIndex2, xPos1, yPos1, zPos1, xPos2, yPos2, zPos2, rot.x, rot.y, rot.z, breakForce, fixedRot, false, collision, false, 0);
 }
 /**
  * No comment provided
@@ -107,7 +117,9 @@ export function attachToEntityPhysically(entity1, entity2, boneIndex1, boneIndex
  * Hash: 0x168A09D1B25B0BA4 | Since: 2944
  */
 export function attachToEntityPhysicallyOverrideInverseMass(firstEntityIndex, secondEntityIndex, firstEntityBoneIndex, secondEntityBoneIndex, secondEntityOffsetX, secondEntityOffsetY, secondEntityOffsetZ, firstEntityOffsetX, firstEntityOffsetY, firstEntityOffsetZ, vecRotationX, vecRotationY, vecRotationZ, physicalStrength, constrainRotation, doInitialWarp, collideWithEntity, addInitialSeperation, rotOrder, invMassScaleA, invMassScaleB) {
-    Citizen.invokeNative('0x168A09D1B25B0BA4', firstEntityIndex, secondEntityIndex, firstEntityBoneIndex, secondEntityBoneIndex, secondEntityOffsetX, secondEntityOffsetY, secondEntityOffsetZ, firstEntityOffsetX, firstEntityOffsetY, firstEntityOffsetZ, vecRotationX, vecRotationY, vecRotationZ, physicalStrength, constrainRotation, doInitialWarp, collideWithEntity, addInitialSeperation, rotOrder, invMassScaleA, invMassScaleB);
+    const _firstEntityIndex = firstEntityIndex instanceof IEntity ? firstEntityIndex.handle() : firstEntityIndex;
+    const _secondEntityIndex = secondEntityIndex instanceof IEntity ? secondEntityIndex.handle() : secondEntityIndex;
+    Citizen.invokeNative('0x168A09D1B25B0BA4', _firstEntityIndex, _secondEntityIndex, firstEntityBoneIndex, secondEntityBoneIndex, secondEntityOffsetX, secondEntityOffsetY, secondEntityOffsetZ, firstEntityOffsetX, firstEntityOffsetY, firstEntityOffsetZ, vecRotationX, vecRotationY, vecRotationZ, physicalStrength, constrainRotation, doInitialWarp, collideWithEntity, addInitialSeperation, rotOrder, invMassScaleA, invMassScaleB);
 }
 /**
  * No comment provided
@@ -115,7 +127,8 @@ export function attachToEntityPhysicallyOverrideInverseMass(firstEntityIndex, se
  * Hash: 0xA72CD9CA74A5ECBA | Since: 323
  */
 export function clearLastDamageEntity(entity) {
-    ClearEntityLastDamageEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    ClearEntityLastDamageEntity(_entity);
 }
 /**
  * No comment provided
@@ -168,7 +181,8 @@ export function createModelSwap(pos, radius, originalModel, newModel) {
  * Hash: 0xAE3CBE5BF394C9C9 | Since: 323
  */
 export function deleteEntity(entity) {
-    DeleteEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    DeleteEntity(_entity);
 }
 /**
  * If `collision` is set to true, both entities won't collide with the other until the distance between them is above 4 meters.
@@ -177,7 +191,8 @@ export function deleteEntity(entity) {
  * Hash: 0x961AC54BF0613F5D | Since: 323
  */
 export function detach(entity, dynamic, collision) {
-    DetachEntity(entity, dynamic, collision);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    DetachEntity(_entity, dynamic, collision);
 }
 /**
  * No comment provided
@@ -185,7 +200,8 @@ export function detach(entity, dynamic, collision) {
  * Hash: 0xDDE6DF5AE89981D2 | Since: 323
  */
 export function doesBelongToThisScript(entity) {
-    return DoesEntityBelongToThisScript(entity, false);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return DoesEntityBelongToThisScript(_entity, false);
 }
 /**
  * Checks whether an entity exists in the game world.
@@ -193,7 +209,8 @@ export function doesBelongToThisScript(entity) {
  * Hash: 0x7239B21A38F536BA | Since: 323
  */
 export function doesExist(entity) {
-    return DoesEntityExist(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return DoesEntityExist(_entity);
 }
 /**
  * No comment provided
@@ -201,7 +218,8 @@ export function doesExist(entity) {
  * Hash: 0x2158E81A6AF65EA9 | Since: 2699
  */
 export function doesHaveAnimDirector(entity) {
-    return DoesEntityHaveAnimDirector(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return DoesEntityHaveAnimDirector(_entity);
 }
 /**
  * No comment provided
@@ -209,7 +227,8 @@ export function doesHaveAnimDirector(entity) {
  * Hash: 0x060D6E96F8B8E48D | Since: 323
  */
 export function doesHaveDrawable(entity) {
-    return DoesEntityHaveDrawable(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return DoesEntityHaveDrawable(_entity);
 }
 /**
  * No comment provided
@@ -217,7 +236,8 @@ export function doesHaveDrawable(entity) {
  * Hash: 0xDA95EA3317CC5064 | Since: 323
  */
 export function doesHavePhysics(entity) {
-    return DoesEntityHavePhysics(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return DoesEntityHavePhysics(_entity);
 }
 /**
  * No comment provided
@@ -225,7 +245,8 @@ export function doesHavePhysics(entity) {
  * Hash: 0x764EB96874EFFDC1 | Since: 2699
  */
 export function doesHaveSkeleton(entity) {
-    return DoesEntityHaveSkeletonData(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return DoesEntityHaveSkeletonData(_entity);
 }
 /**
  * No comment provided
@@ -233,7 +254,8 @@ export function doesHaveSkeleton(entity) {
  * Hash: 0x6CE177D014502E8A | Since: 877
  */
 export function enableBulletCollision(entity) {
-    EnableEntityUnk(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    EnableEntityUnk(_entity);
 }
 /**
  * In the script "player_scene_t_bbfight.c4":
@@ -258,7 +280,8 @@ export function findAnimEventPhase(animDictionary, animName) {
  * Hash: 0x40FDEDB72F8293B2 | Since: 323
  */
 export function forceAiAndAnimationUpdate(entity) {
-    ForceEntityAiAndAnimationUpdate(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    ForceEntityAiAndAnimationUpdate(_entity);
 }
 /**
  * Freezes or unfreezes an entity preventing its coordinates to change by the player if set to `true`. You can still change the entity position using SET_ENTITY_COORDS.
@@ -266,7 +289,8 @@ export function forceAiAndAnimationUpdate(entity) {
  * Hash: 0x428CA6DBD1094446 | Since: 323
  */
 export function freezePosition(entity, toggle) {
-    FreezeEntityPosition(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    FreezeEntityPosition(_entity, toggle);
 }
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
@@ -282,7 +306,8 @@ export function getAnimDuration(animDict, animName) {
  * Hash: 0xE465D4AB7CA6AE72 | Since: 323
  */
 export function getCollisionNormalOfLastHitFor(entity) {
-    return new Vector3(GetCollisionNormalOfLastHitForEntity(entity));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetCollisionNormalOfLastHitForEntity(_entity));
 }
 /**
  * No comment provided
@@ -290,7 +315,8 @@ export function getCollisionNormalOfLastHitFor(entity) {
  * Hash: 0x5A47B3B5E63E94C6 | Since: 323
  */
 export function getAlpha(entity) {
-    return GetEntityAlpha(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityAlpha(_entity);
 }
 /**
  * Returns a float value representing animation's current playtime with respect to its total playtime. This value increasing in a range from [0 to 1] and wrap back to 0 when it reach 1.
@@ -305,7 +331,8 @@ export function getAlpha(entity) {
  * Hash: 0x346D81500D088F42 | Since: 323
  */
 export function getAnimCurrentTime(entity, animDict, animName) {
-    return GetEntityAnimCurrentTime(entity, animDict, animName);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityAnimCurrentTime(_entity, animDict, animName);
 }
 /**
  * Returns a float value representing animation's total playtime in milliseconds.
@@ -319,7 +346,8 @@ export function getAnimCurrentTime(entity, animDict, animName) {
  * Hash: 0x50BD2730B191E360 | Since: 323
  */
 export function getAnimTotalTime(entity, animDict, animName) {
-    return GetEntityAnimTotalTime(entity, animDict, animName);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityAnimTotalTime(_entity, animDict, animName);
 }
 /**
  * No comment provided
@@ -327,7 +355,8 @@ export function getAnimTotalTime(entity, animDict, animName) {
  * Hash: 0x48C2BED9180FE123 | Since: 323
  */
 export function getAttachedTo(entity) {
-    return GetEntityAttachedTo(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityAttachedTo(_entity);
 }
 /**
  * No comment provided
@@ -335,7 +364,8 @@ export function getAttachedTo(entity) {
  * Hash: 0xB328DCC3A3AA401B | Since: 791
  */
 export function getBoneCount(entity) {
-    return GetEntityBoneCount(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityBoneCount(_entity);
 }
 /**
  * Returns the index of the bone. If the bone was not found, -1 will be returned.
@@ -392,7 +422,8 @@ export function getBoneCount(entity) {
  * Hash: 0xFB71170B7E76ACBA | Since: 323
  */
 export function getBoneIndexByName(entity, boneName) {
-    return GetEntityBoneIndexByName(entity, boneName);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityBoneIndexByName(_entity, boneName);
 }
 /**
  * No comment provided
@@ -400,7 +431,8 @@ export function getBoneIndexByName(entity, boneName) {
  * Hash: 0xCF1247CC86961FD6 | Since: 2802
  */
 export function getBoneObjectPostion(entity, boneIndex) {
-    return new Vector3(Citizen.invokeNative('0xCF1247CC86961FD6', entity, boneIndex));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(Citizen.invokeNative('0xCF1247CC86961FD6', _entity, boneIndex));
 }
 /**
  * Gets the local rotation of the specified bone of the specified entity.
@@ -408,7 +440,8 @@ export function getBoneObjectPostion(entity, boneIndex) {
  * Hash: 0xBD8D32550E5CEBFE | Since: 1734
  */
 export function getBoneObjectRotation(entity, boneIndex) {
-    return new Vector3(GetEntityBoneRotationLocal(entity, boneIndex));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetEntityBoneRotationLocal(_entity, boneIndex));
 }
 /**
  * Gets the world position of the specified bone of the specified entity.
@@ -416,7 +449,8 @@ export function getBoneObjectRotation(entity, boneIndex) {
  * Hash: 0x46F8696933A63C9B | Since: 877
  */
 export function getBonePostion(entity, boneIndex) {
-    return new Vector3(GetEntityBonePosition2(entity, boneIndex));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetEntityBonePosition2(_entity, boneIndex));
 }
 /**
  * Gets the world rotation of the specified bone of the specified entity.
@@ -424,7 +458,8 @@ export function getBonePostion(entity, boneIndex) {
  * Hash: 0xCE6294A232D03786 | Since: 791
  */
 export function getBoneRotation(entity, boneIndex) {
-    return new Vector3(GetEntityBoneRotation(entity, boneIndex));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetEntityBoneRotation(_entity, boneIndex));
 }
 /**
  * No comment provided
@@ -432,7 +467,8 @@ export function getBoneRotation(entity, boneIndex) {
  * Hash: 0xD95CC5D2AB15A09F | Since: 757
  */
 export function getCanBeDamaged(entity) {
-    return GetEntityCanBeDamaged(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityCanBeDamaged(_entity);
 }
 /**
  * No comment provided
@@ -440,7 +476,8 @@ export function getCanBeDamaged(entity) {
  * Hash: 0xCCF1E97BEFDAE480 | Since: 323
  */
 export function getCollisionDisabled(entity) {
-    return GetEntityCollisionDisabled(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityCollisionDisabled(_entity);
 }
 /**
  * Gets the current coordinates for a specified entity.
@@ -450,7 +487,8 @@ export function getCollisionDisabled(entity) {
  * Hash: 0x3FEF770D40960D5A | Since: 323
  */
 export function getCoords(entity, alive) {
-    return new Vector3(GetEntityCoords(entity, alive));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetEntityCoords(_entity, alive));
 }
 /**
  * Gets the entity's forward vector.
@@ -458,7 +496,8 @@ export function getCoords(entity, alive) {
  * Hash: 0x0A794A5A57F8DF91 | Since: 323
  */
 export function getForwardVector(entity) {
-    return new Vector3(GetEntityForwardVector(entity));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetEntityForwardVector(_entity));
 }
 /**
  * Gets the X-component of the entity's forward vector.
@@ -466,7 +505,8 @@ export function getForwardVector(entity) {
  * Hash: 0x8BB4EF4214E0E6D5 | Since: 323
  */
 export function getForwardX(entity) {
-    return GetEntityForwardX(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityForwardX(_entity);
 }
 /**
  * Gets the Y-component of the entity's forward vector.
@@ -474,7 +514,8 @@ export function getForwardX(entity) {
  * Hash: 0x866A4A5FAE349510 | Since: 323
  */
 export function getForwardY(entity) {
-    return GetEntityForwardY(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityForwardY(_entity);
 }
 /**
  * Returns the heading of the entity in degrees. Also know as the "Yaw" of an entity.
@@ -482,7 +523,8 @@ export function getForwardY(entity) {
  * Hash: 0xE83D4F9BA2A38914 | Since: 323
  */
 export function getHeading(entity) {
-    return GetEntityHeading(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityHeading(_entity);
 }
 /**
  * Gets the heading of the entity physics in degrees, which tends to be more accurate than just "GET_ENTITY_HEADING". This can be clearly seen while, for example, ragdolling a ped/player.
@@ -492,7 +534,8 @@ export function getHeading(entity) {
  * Hash: 0x846BF6291198A71E | Since: 323
  */
 export function getHeadingFromEulers(entity) {
-    return GetEntityHeadingFromEulers(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityHeadingFromEulers(_entity);
 }
 /**
  * Returns an integer value of entity's current health.
@@ -510,7 +553,8 @@ export function getHeadingFromEulers(entity) {
  * Hash: 0xEEF059FAD016D209 | Since: 323
  */
 export function getHealth(entity) {
-    return GetEntityHealth(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityHealth(_entity);
 }
 /**
  * No comment provided
@@ -518,7 +562,8 @@ export function getHealth(entity) {
  * Hash: 0x5A504562485944DD | Since: 323
  */
 export function getHeight(entity, pos, atTop, inWorldCoords) {
-    return GetEntityHeight(entity, pos.x, pos.y, pos.z, atTop, inWorldCoords);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityHeight(_entity, pos.x, pos.y, pos.z, atTop, inWorldCoords);
 }
 /**
  * Return height (z-dimension) above ground.
@@ -530,7 +575,8 @@ export function getHeight(entity, pos, atTop, inWorldCoords) {
  * Hash: 0x1DD55701034110E5 | Since: 323
  */
 export function getHeightAboveGround(entity) {
-    return GetEntityHeightAboveGround(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityHeightAboveGround(_entity);
 }
 /**
  * Returns the LOD distance of an entity.
@@ -538,7 +584,8 @@ export function getHeightAboveGround(entity) {
  * Hash: 0x4159C2762B5791D6 | Since: 323
  */
 export function getLodDist(entity) {
-    return GetEntityLodDist(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityLodDist(_entity);
 }
 /**
  * No comment provided
@@ -546,7 +593,8 @@ export function getLodDist(entity) {
  * Hash: 0xECB2FC7235A7D137 | Since: 323
  */
 export function getMatrix(entity) {
-    return GetEntityMatrix(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityMatrix(_entity);
 }
 /**
  * Return an integer value of entity's maximum health.
@@ -558,7 +606,8 @@ export function getMatrix(entity) {
  * Hash: 0x15D757606D170C3C | Since: 323
  */
 export function getMaxHealth(entity) {
-    return GetEntityMaxHealth(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityMaxHealth(_entity);
 }
 /**
  * Returns the model hash from the entity
@@ -566,7 +615,8 @@ export function getMaxHealth(entity) {
  * Hash: 0x9F47B058362C84B5 | Since: 323
  */
 export function getModel(entity) {
-    return GetEntityModel(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityModel(_entity);
 }
 /**
  * Gets the handle of an entity with a specific model hash attached to another entity, such as an object attached to a ped.
@@ -579,9 +629,10 @@ export function getModel(entity) {
  * Hash: 0x1F922734E259BD26 | Since: 1180
  */
 export function getOfTypeAttachedToEntity(entity, modelHash) {
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
     if (typeof modelHash === 'string')
         modelHash = GetHashKey(modelHash);
-    return GetEntityPickup(entity, modelHash);
+    return GetEntityPickup(_entity, modelHash);
 }
 /**
  * No comment provided
@@ -589,7 +640,8 @@ export function getOfTypeAttachedToEntity(entity, modelHash) {
  * Hash: 0xD45DC2893621E1FE | Since: 323
  */
 export function getPitch(entity) {
-    return GetEntityPitch(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityPitch(_entity);
 }
 /**
  * A population type, from the following enum: https://alloc8or.re/gta5/doc/enums/ePopulationType.txt
@@ -597,7 +649,8 @@ export function getPitch(entity) {
  * Hash: 0xF6F5161F4534EDFF | Since: 323
  */
 export function getPopulationType(entity) {
-    return GetEntityPopulationType(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityPopulationType(_entity);
 }
 /**
  * No comment provided
@@ -605,7 +658,8 @@ export function getPopulationType(entity) {
  * Hash: 0xBE8CD9BE829BBEBF | Since: 1604
  */
 export function getProofs(entity) {
-    return GetEntityProofs(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityProofs(_entity);
 }
 /**
  * w is the correct parameter name!
@@ -613,7 +667,8 @@ export function getProofs(entity) {
  * Hash: 0x7B3703D2D32DFA18 | Since: 323
  */
 export function getQuaternion(entity) {
-    return GetEntityQuaternion(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityQuaternion(_entity);
 }
 /**
  * Displays the current ROLL axis of the entity [-180.0000/180.0000+]
@@ -622,7 +677,8 @@ export function getQuaternion(entity) {
  * Hash: 0x831E0242595560DF | Since: 323
  */
 export function getRoll(entity) {
-    return GetEntityRoll(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityRoll(_entity);
 }
 /**
  * rotationOrder is the order yaw, pitch and roll is applied. Usually 2. Returns a vector where the Z coordinate is the yaw.
@@ -643,7 +699,8 @@ export function getRoll(entity) {
  * Hash: 0xAFBD61CC738D9EB9 | Since: 323
  */
 export function getRotation(entity, rotationOrder) {
-    return new Vector3(GetEntityRotation(entity, rotationOrder));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetEntityRotation(_entity, rotationOrder));
 }
 /**
  * No comment provided
@@ -651,7 +708,8 @@ export function getRotation(entity, rotationOrder) {
  * Hash: 0x213B91045D09B983 | Since: 323
  */
 export function getRotationVelocity(entity) {
-    return new Vector3(GetEntityRotationVelocity(entity));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetEntityRotationVelocity(_entity));
 }
 /**
  * Returns the name of the script that owns/created the entity or nullptr. Second parameter is unused, can just be a nullptr.
@@ -659,7 +717,8 @@ export function getRotationVelocity(entity) {
  * Hash: 0xA6E9C38DB51D7748 | Since: 323
  */
 export function getScript(entity) {
-    return GetEntityScript(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityScript(_entity);
 }
 /**
  * result is in meters per second
@@ -675,7 +734,8 @@ export function getScript(entity) {
  * Hash: 0xD5037BA82E12416F | Since: 323
  */
 export function getSpeed(entity) {
-    return GetEntitySpeed(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntitySpeed(_entity);
 }
 /**
  * Relative can be used for getting speed relative to the frame of the vehicle, to determine for example, if you are going in reverse (-y speed) or not (+y speed).
@@ -683,7 +743,8 @@ export function getSpeed(entity) {
  * Hash: 0x9A8D700A51CB7B0D | Since: 323
  */
 export function getSpeedVector(entity, relative) {
-    return new Vector3(GetEntitySpeedVector(entity, relative));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetEntitySpeedVector(_entity, relative));
 }
 /**
  * Get how much of the entity is submerged.  1.0f is whole entity.
@@ -691,7 +752,8 @@ export function getSpeedVector(entity, relative) {
  * Hash: 0xE81AFC1BC4CC41CE | Since: 323
  */
 export function getSubmergedLevel(entity) {
-    return GetEntitySubmergedLevel(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntitySubmergedLevel(_entity);
 }
 /**
  * Returns:
@@ -703,7 +765,8 @@ export function getSubmergedLevel(entity) {
  * Hash: 0x8ACD366038D14505 | Since: 323
  */
 export function getType(entity) {
-    return GetEntityType(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityType(_entity);
 }
 /**
  * No comment provided
@@ -711,7 +774,8 @@ export function getType(entity) {
  * Hash: 0x95EED5A694951F9F | Since: 323
  */
 export function getUprightValue(entity) {
-    return GetEntityUprightValue(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetEntityUprightValue(_entity);
 }
 /**
  * No comment provided
@@ -719,7 +783,8 @@ export function getUprightValue(entity) {
  * Hash: 0x4805D2B1D8CF94A9 | Since: 323
  */
 export function getVelocity(entity) {
-    return new Vector3(GetEntityVelocity(entity));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetEntityVelocity(_entity));
 }
 /**
  * No comment provided
@@ -727,7 +792,8 @@ export function getVelocity(entity) {
  * Hash: 0x5C3D0A935F535C4C | Since: 323
  */
 export function getLastMaterialHitBy(entity) {
-    return GetLastMaterialHitByEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetLastMaterialHitByEntity(_entity);
 }
 /**
  * No comment provided
@@ -735,7 +801,8 @@ export function getLastMaterialHitBy(entity) {
  * Hash: 0xFFBD7052D65BE0FF | Since: 2944
  */
 export function getNearestParticipantTo(entity) {
-    return Citizen.invokeNative('0xFFBD7052D65BE0FF', entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return Citizen.invokeNative('0xFFBD7052D65BE0FF', _entity);
 }
 /**
  * No comment provided
@@ -743,7 +810,8 @@ export function getNearestParticipantTo(entity) {
  * Hash: 0x7196842CB375CDB3 | Since: 323
  */
 export function getNearestPlayerTo(entity) {
-    return GetNearestPlayerToEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetNearestPlayerToEntity(_entity);
 }
 /**
  * No comment provided
@@ -751,7 +819,8 @@ export function getNearestPlayerTo(entity) {
  * Hash: 0x4DC9A62F844D9337 | Since: 323
  */
 export function getNearestPlayerToOnTeam(entity, team) {
-    return GetNearestPlayerToEntityOnTeam(entity, team);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetNearestPlayerToEntityOnTeam(_entity, team);
 }
 /**
  * Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).
@@ -759,7 +828,8 @@ export function getNearestPlayerToOnTeam(entity, team) {
  * Hash: 0xD7E3B9735C0F89D6 | Since: 323
  */
 export function getObjectIndexFromIndex(entity) {
-    return GetObjectIndexFromEntityIndex(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetObjectIndexFromEntityIndex(_entity);
 }
 /**
  * Converts world coords (posX - Z) to coords relative to the entity
@@ -772,7 +842,8 @@ export function getObjectIndexFromIndex(entity) {
  * Hash: 0x2274BC1C4885E333 | Since: 323
  */
 export function getOffsetFromGivenWorldCoords(entity, pos) {
-    return new Vector3(GetOffsetFromEntityGivenWorldCoords(entity, pos.x, pos.y, pos.z));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetOffsetFromEntityGivenWorldCoords(_entity, pos.x, pos.y, pos.z));
 }
 /**
  * Offset values are relative to the entity.
@@ -784,7 +855,8 @@ export function getOffsetFromGivenWorldCoords(entity, pos) {
  * Hash: 0x1899F328B0E12848 | Since: 323
  */
 export function getOffsetFromInWorldCoords(entity, offsetX, offsetY, offsetZ) {
-    return new Vector3(GetOffsetFromEntityInWorldCoords(entity, offsetX, offsetY, offsetZ));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetOffsetFromEntityInWorldCoords(_entity, offsetX, offsetY, offsetZ));
 }
 /**
  * Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).
@@ -792,7 +864,8 @@ export function getOffsetFromInWorldCoords(entity, offsetX, offsetY, offsetZ) {
  * Hash: 0x04A2A40C73395041 | Since: 323
  */
 export function getPedIndexFromIndex(entity) {
-    return GetPedIndexFromEntityIndex(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetPedIndexFromEntityIndex(_entity);
 }
 /**
  * Simply returns whatever is passed to it (Regardless of whether the handle is valid or not).
@@ -800,7 +873,8 @@ export function getPedIndexFromIndex(entity) {
  * Hash: 0x4B53F92932ADFAC0 | Since: 323
  */
 export function getVehicleIndexFromIndex(entity) {
-    return GetVehicleIndexFromEntityIndex(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetVehicleIndexFromEntityIndex(_entity);
 }
 /**
  * Returns the coordinates of an entity-bone.
@@ -808,7 +882,8 @@ export function getVehicleIndexFromIndex(entity) {
  * Hash: 0x44A8FCB8ED227738 | Since: 323
  */
 export function getWorldPositionOfBone(entity, boneIndex) {
-    return new Vector3(GetWorldPositionOfEntityBone(entity, boneIndex));
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return new Vector3(GetWorldPositionOfEntityBone(_entity, boneIndex));
 }
 /**
  * `if (ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY("CreateObject")))`
@@ -816,9 +891,10 @@ export function getWorldPositionOfBone(entity, boneIndex) {
  * Hash: 0xEAF4CD9EA3E7E922 | Since: 323
  */
 export function hasAnimEventFired(entity, actionHash) {
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
     if (typeof actionHash === 'string')
         actionHash = GetHashKey(actionHash);
-    return HasAnimEventFired(entity, actionHash);
+    return HasAnimEventFired(_entity, actionHash);
 }
 /**
  * No comment provided
@@ -826,7 +902,8 @@ export function hasAnimEventFired(entity, actionHash) {
  * Hash: 0xE9676F61BC0B3321 | Since: 323
  */
 export function hasCollisionLoadedAround(entity) {
-    return HasCollisionLoadedAroundEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return HasCollisionLoadedAroundEntity(_entity);
 }
 /**
  * P3 is always 3 as far as i cant tell
@@ -836,7 +913,8 @@ export function hasCollisionLoadedAround(entity) {
  * Hash: 0x20B711662962B472 | Since: 323
  */
 export function hasAnimFinished(entity, animDict, animName) {
-    return HasEntityAnimFinished(entity, animDict, animName, 0);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return HasEntityAnimFinished(_entity, animDict, animName, 0);
 }
 /**
  * No comment provided
@@ -844,7 +922,8 @@ export function hasAnimFinished(entity, animDict, animName) {
  * Hash: 0x95EB9964FF5C5C65 | Since: 323
  */
 export function hasBeenDamagedByAnyObject(entity) {
-    return HasEntityBeenDamagedByAnyObject(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return HasEntityBeenDamagedByAnyObject(_entity);
 }
 /**
  * No comment provided
@@ -852,7 +931,8 @@ export function hasBeenDamagedByAnyObject(entity) {
  * Hash: 0x605F5A140F202491 | Since: 323
  */
 export function hasBeenDamagedByAnyPed(entity) {
-    return HasEntityBeenDamagedByAnyPed(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return HasEntityBeenDamagedByAnyPed(_entity);
 }
 /**
  * No comment provided
@@ -860,7 +940,8 @@ export function hasBeenDamagedByAnyPed(entity) {
  * Hash: 0xDFD5033FDBA0A9C8 | Since: 323
  */
 export function hasBeenDamagedByAnyVehicle(entity) {
-    return HasEntityBeenDamagedByAnyVehicle(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return HasEntityBeenDamagedByAnyVehicle(_entity);
 }
 /**
  * Entity 1 = Victim
@@ -871,7 +952,9 @@ export function hasBeenDamagedByAnyVehicle(entity) {
  * Hash: 0xC86D67D52A707CF8 | Since: 323
  */
 export function hasBeenDamagedByEntity(entity1, entity2) {
-    return HasEntityBeenDamagedByEntity(entity1, entity2, false);
+    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
+    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    return HasEntityBeenDamagedByEntity(_entity1, _entity2, false);
 }
 /**
  * traceType is always 17 in the scripts.
@@ -884,7 +967,9 @@ export function hasBeenDamagedByEntity(entity1, entity2) {
  * Hash: 0xFCDFF7B72D23A1AC | Since: 323
  */
 export function hasClearLosToEntity(entity1, entity2, traceType) {
-    return HasEntityClearLosToEntity(entity1, entity2, traceType);
+    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
+    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    return HasEntityClearLosToEntity(_entity1, _entity2, traceType);
 }
 /**
  * No comment provided
@@ -892,7 +977,9 @@ export function hasClearLosToEntity(entity1, entity2, traceType) {
  * Hash: 0x394BDE2A7BBA031E | Since: 1868
  */
 export function hasClearLosToEntityAdjustForCover(entity1, entity2, traceType) {
-    return HasEntityClearLosToEntity2(entity1, entity2, traceType);
+    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
+    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    return HasEntityClearLosToEntity2(_entity1, _entity2, traceType);
 }
 /**
  * Has the entity1 got a clear line of sight to the other entity2 from the direction entity1 is facing.
@@ -901,7 +988,9 @@ export function hasClearLosToEntityAdjustForCover(entity1, entity2, traceType) {
  * Hash: 0x0267D00AF114F17A | Since: 323
  */
 export function hasClearLosToEntityInFront(entity1, entity2) {
-    return HasEntityClearLosToEntityInFront(entity1, entity2);
+    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
+    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    return HasEntityClearLosToEntityInFront(_entity1, _entity2);
 }
 /**
  * Called on tick.
@@ -912,7 +1001,8 @@ export function hasClearLosToEntityInFront(entity1, entity2) {
  * Hash: 0x8BAD02F0368D9E14 | Since: 323
  */
 export function hasCollidedWithAnything(entity) {
-    return HasEntityCollidedWithAnything(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return HasEntityCollidedWithAnything(_entity);
 }
 /**
  * No comment provided
@@ -928,7 +1018,8 @@ export function isAn(handle) {
  * Hash: 0x8D68C8FD0FACA94E | Since: 323
  */
 export function isAnObject(entity) {
-    return IsEntityAnObject(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityAnObject(_entity);
 }
 /**
  * Whether the entity is attached to any other entity.
@@ -936,7 +1027,8 @@ export function isAnObject(entity) {
  * Hash: 0xB346476EF1A64897 | Since: 323
  */
 export function isAttached(entity) {
-    return IsEntityAttached(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityAttached(_entity);
 }
 /**
  * No comment provided
@@ -944,7 +1036,8 @@ export function isAttached(entity) {
  * Hash: 0xCF511840CEEDE0CC | Since: 323
  */
 export function isAttachedToAnyObject(entity) {
-    return IsEntityAttachedToAnyObject(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityAttachedToAnyObject(_entity);
 }
 /**
  * No comment provided
@@ -952,7 +1045,8 @@ export function isAttachedToAnyObject(entity) {
  * Hash: 0xB1632E9A5F988D11 | Since: 323
  */
 export function isAttachedToAnyPed(entity) {
-    return IsEntityAttachedToAnyPed(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityAttachedToAnyPed(_entity);
 }
 /**
  * No comment provided
@@ -960,7 +1054,8 @@ export function isAttachedToAnyPed(entity) {
  * Hash: 0x26AA915AD89BFB4B | Since: 323
  */
 export function isAttachedToAnyVehicle(entity) {
-    return IsEntityAttachedToAnyVehicle(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityAttachedToAnyVehicle(_entity);
 }
 /**
  * No comment provided
@@ -968,7 +1063,9 @@ export function isAttachedToAnyVehicle(entity) {
  * Hash: 0xEFBE71898A993728 | Since: 323
  */
 export function isAttachedToEntity(_from, to) {
-    return IsEntityAttachedToEntity(_from, to);
+    const __from = _from instanceof IEntity ? _from.handle() : _from;
+    const _to = to instanceof IEntity ? to.handle() : to;
+    return IsEntityAttachedToEntity(__from, _to);
 }
 /**
  * Checks if entity is within x/y/zSize distance of x/y/z.
@@ -978,7 +1075,8 @@ export function isAttachedToEntity(_from, to) {
  * Hash: 0x20B60995556D004F | Since: 323
  */
 export function isAtCoord(entity, pos, xSize, ySize, zSize) {
-    return IsEntityAtCoord(entity, pos.x, pos.y, pos.z, xSize, ySize, zSize, false, false, 0);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityAtCoord(_entity, pos.x, pos.y, pos.z, xSize, ySize, zSize, false, false, 0);
 }
 /**
  * Checks if entity1 is within the box defined by x/y/zSize of entity2.
@@ -988,7 +1086,9 @@ export function isAtCoord(entity, pos, xSize, ySize, zSize) {
  * Hash: 0x751B70C3D034E187 | Since: 323
  */
 export function isAtEntity(entity1, entity2, xSize, ySize, zSize) {
-    return IsEntityAtEntity(entity1, entity2, xSize, ySize, zSize, false, false, 0);
+    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
+    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    return IsEntityAtEntity(_entity1, _entity2, xSize, ySize, zSize, false, false, 0);
 }
 /**
  * No comment provided
@@ -996,7 +1096,8 @@ export function isAtEntity(entity1, entity2, xSize, ySize, zSize) {
  * Hash: 0x0A7B270912999B3C | Since: 323
  */
 export function isAMissionEntity(entity) {
-    return IsEntityAMissionEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityAMissionEntity(_entity);
 }
 /**
  * No comment provided
@@ -1004,7 +1105,8 @@ export function isAMissionEntity(entity) {
  * Hash: 0x524AC5ECEA15343E | Since: 323
  */
 export function isAPed(entity) {
-    return IsEntityAPed(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityAPed(_entity);
 }
 /**
  * No comment provided
@@ -1012,7 +1114,8 @@ export function isAPed(entity) {
  * Hash: 0x6AC7003FA6E5575E | Since: 323
  */
 export function isAVehicle(entity) {
-    return IsEntityAVehicle(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityAVehicle(_entity);
 }
 /**
  * No comment provided
@@ -1020,7 +1123,8 @@ export function isAVehicle(entity) {
  * Hash: 0x5F9532F3B5CC2551 | Since: 323
  */
 export function isDead(entity) {
-    return IsEntityDead(entity, false);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityDead(_entity, false);
 }
 /**
  * No comment provided
@@ -1028,7 +1132,8 @@ export function isDead(entity) {
  * Hash: 0x886E37EC497200B6 | Since: 323
  */
 export function isInAir(entity) {
-    return IsEntityInAir(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityInAir(_entity);
 }
 /**
  * `p8` is a debug flag invoking functions in the same path as ``DRAW_MARKER``
@@ -1038,7 +1143,8 @@ export function isInAir(entity) {
  * Hash: 0x51210CED3DA1C78A | Since: 323
  */
 export function isInAngledArea(entity, x1, y1, z1, x2, y2, z2, width, debug, includeZ) {
-    return IsEntityInAngledArea(entity, x1, y1, z1, x2, y2, z2, width, debug, includeZ, undefined);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityInAngledArea(_entity, x1, y1, z1, x2, y2, z2, width, debug, includeZ, undefined);
 }
 /**
  * No comment provided
@@ -1046,7 +1152,8 @@ export function isInAngledArea(entity, x1, y1, z1, x2, y2, z2, width, debug, inc
  * Hash: 0x54736AA40E271165 | Since: 323
  */
 export function isInArea(entity, x1, y1, z1, x2, y2, z2) {
-    return IsEntityInArea(entity, x1, y1, z1, x2, y2, z2, false, false, undefined);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityInArea(_entity, x1, y1, z1, x2, y2, z2, false, false, undefined);
 }
 /**
  * No comment provided
@@ -1054,7 +1161,8 @@ export function isInArea(entity, x1, y1, z1, x2, y2, z2) {
  * Hash: 0xCFB0A0D8EDD145A3 | Since: 323
  */
 export function isInWater(entity) {
-    return IsEntityInWater(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityInWater(_entity);
 }
 /**
  * Full list of zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/zones.json
@@ -1062,7 +1170,8 @@ export function isInWater(entity) {
  * Hash: 0xB6463CF6AF527071 | Since: 323
  */
 export function isInZone(entity, zone) {
-    return IsEntityInZone(entity, zone);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityInZone(_entity, zone);
 }
 /**
  * No comment provided
@@ -1070,7 +1179,8 @@ export function isInZone(entity, zone) {
  * Hash: 0xE31C2C72B8692B64 | Since: 323
  */
 export function isOccluded(entity) {
-    return IsEntityOccluded(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityOccluded(_entity);
 }
 /**
  * Returns true if the entity is in between the minimum and maximum values for the 2d screen coords.
@@ -1080,7 +1190,8 @@ export function isOccluded(entity) {
  * Hash: 0xE659E47AF827484B | Since: 323
  */
 export function isOnScreen(entity) {
-    return IsEntityOnScreen(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityOnScreen(_entity);
 }
 /**
  * `See also PED::IS_SCRIPTED_SCENARIO_PED_USING_CONDITIONAL_ANIM 0x6EC47A344923E1ED 0x3C30B447`
@@ -1094,7 +1205,8 @@ export function isOnScreen(entity) {
  * Hash: 0x1F0B79228E461EC9 | Since: 323
  */
 export function isPlayingAnim(entity, animDict, animName, taskFlag) {
-    return IsEntityPlayingAnim(entity, animDict, animName, taskFlag);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityPlayingAnim(_entity, animDict, animName, taskFlag);
 }
 /**
  * `a static ped will not react to natives like "APPLY_FORCE_TO_ENTITY" or "SET_ENTITY_VELOCITY" and oftentimes will not react to task-natives like "TASK::TASK_COMBAT_PED". The only way I know of to make one of these peds react is to ragdoll them (or sometimes to use CLEAR_PED_TASKS_IMMEDIATELY(). Static peds include almost all far-away peds, beach-combers, peds in certain scenarios, peds crossing a crosswalk, peds walking to get back into their cars, and others. If anyone knows how to make a ped non-static without ragdolling them, please edit this with the solution.`
@@ -1102,7 +1214,8 @@ export function isPlayingAnim(entity, animDict, animName, taskFlag) {
  * Hash: 0x1218E6886D3D8327 | Since: 323
  */
 export function isStatic(entity) {
-    return IsEntityStatic(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityStatic(_entity);
 }
 /**
  * No comment provided
@@ -1110,7 +1223,9 @@ export function isStatic(entity) {
  * Hash: 0x17FFC1B2BA35A494 | Since: 323
  */
 export function isTouchingEntity(entity, targetEntity) {
-    return IsEntityTouchingEntity(entity, targetEntity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _targetEntity = targetEntity instanceof IEntity ? targetEntity.handle() : targetEntity;
+    return IsEntityTouchingEntity(_entity, _targetEntity);
 }
 /**
  * No comment provided
@@ -1118,9 +1233,10 @@ export function isTouchingEntity(entity, targetEntity) {
  * Hash: 0x0F42323798A58C8C | Since: 323
  */
 export function isTouchingModel(entity, modelHash) {
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
     if (typeof modelHash === 'string')
         modelHash = GetHashKey(modelHash);
-    return IsEntityTouchingModel(entity, modelHash);
+    return IsEntityTouchingModel(_entity, modelHash);
 }
 /**
  * No comment provided
@@ -1128,7 +1244,8 @@ export function isTouchingModel(entity, modelHash) {
  * Hash: 0x5333F526F6AB19AA | Since: 323
  */
 export function isUpright(entity, angle) {
-    return IsEntityUpright(entity, angle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityUpright(_entity, angle);
 }
 /**
  * No comment provided
@@ -1136,7 +1253,8 @@ export function isUpright(entity, angle) {
  * Hash: 0x1DBD58820FA61D71 | Since: 323
  */
 export function isUpsidedown(entity) {
-    return IsEntityUpsidedown(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityUpsidedown(_entity);
 }
 /**
  * No comment provided
@@ -1144,7 +1262,8 @@ export function isUpsidedown(entity) {
  * Hash: 0x47D6F43D77935C75 | Since: 323
  */
 export function isVisible(entity) {
-    return IsEntityVisible(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityVisible(_entity);
 }
 /**
  * No comment provided
@@ -1152,7 +1271,8 @@ export function isVisible(entity) {
  * Hash: 0xD796CB5BA8F20E32 | Since: 323
  */
 export function isVisibleToScript(entity) {
-    return IsEntityVisibleToScript(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityVisibleToScript(_entity);
 }
 /**
  * No comment provided
@@ -1160,7 +1280,8 @@ export function isVisibleToScript(entity) {
  * Hash: 0xD05BFF0C0A12C68F | Since: 323
  */
 export function isWaitingForWorldCollision(entity) {
-    return IsEntityWaitingForWorldCollision(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityWaitingForWorldCollision(_entity);
 }
 /**
  * delta and bitset are guessed fields. They are based on the fact that most of the calls have 0 or nil field types passed in.
@@ -1172,7 +1293,8 @@ export function isWaitingForWorldCollision(entity) {
  * Hash: 0x7FB218262B810701 | Since: 323
  */
 export function playAnim(entity, animName, animDict, loop, stayInAnim, delta, bitset) {
-    return PlayEntityAnim(entity, animName, animDict, 0, loop, stayInAnim, false, delta, bitset);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return PlayEntityAnim(_entity, animName, animDict, 0, loop, stayInAnim, false, delta, bitset);
 }
 /**
  * p4 and p7 are usually 1000.0f.
@@ -1182,7 +1304,8 @@ export function playAnim(entity, animName, animDict, loop, stayInAnim, delta, bi
  * Hash: 0xC77720A12FE14A86 | Since: 323
  */
 export function playSynchronizedAnim(entity, syncedScene, animation, propName) {
-    return PlaySynchronizedEntityAnim(entity, syncedScene, animation, propName, 0, 0, undefined, 0);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return PlaySynchronizedEntityAnim(_entity, syncedScene, animation, propName, 0, 0, undefined, 0);
 }
 /**
  * p6,p7 probably animname and animdict
@@ -1200,7 +1323,8 @@ export function playSynchronizedMapAnim(x1, y1, z1, x2, y2, z2) {
  * Hash: 0xF4080490ADC51C6F | Since: 323
  */
 export function processAttachments(entity) {
-    ProcessEntityAttachments(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    ProcessEntityAttachments(_entity);
 }
 /**
  * No comment provided
@@ -1241,7 +1365,8 @@ export function removeModelSwap(pos, radius, originalModel, newModel) {
  * Hash: 0x9B1E824FFBB7027A | Since: 323
  */
 export function resetAlpha(entity) {
-    ResetEntityAlpha(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    ResetEntityAlpha(_entity);
 }
 /**
  * Similar to RESET_ENTITY_ALPHA
@@ -1249,7 +1374,8 @@ export function resetAlpha(entity) {
  * Hash: 0x490861B88F4FD846 | Since: 944
  */
 export function resetPickupGlow(entity) {
-    Citizen.invokeNative('0x490861B88F4FD846', entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    Citizen.invokeNative('0x490861B88F4FD846', _entity);
 }
 /**
  * p1 is always set to 1
@@ -1257,7 +1383,8 @@ export function resetPickupGlow(entity) {
  * Hash: 0x36F32DE87082343E | Since: 1011
  */
 export function setAllowMigrateToSpectator(entity) {
-    Citizen.invokeNative('0x36F32DE87082343E', entity, undefined);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    Citizen.invokeNative('0x36F32DE87082343E', _entity, undefined);
 }
 /**
  * p1 always false.
@@ -1265,7 +1392,8 @@ export function setAllowMigrateToSpectator(entity) {
  * Hash: 0xE12ABE5E3A389A6C | Since: 323
  */
 export function setCanAutoVaultOn(entity, toggle) {
-    SetCanAutoVaultOnEntity(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetCanAutoVaultOnEntity(_entity, toggle);
 }
 /**
  * p1 always false.
@@ -1273,7 +1401,8 @@ export function setCanAutoVaultOn(entity, toggle) {
  * Hash: 0xA80AE305E0A3044F | Since: 323
  */
 export function setCanClimbOn(entity, toggle) {
-    SetCanClimbOnEntity(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetCanClimbOnEntity(_entity, toggle);
 }
 /**
  * skin - everything alpha except skin
@@ -1282,7 +1411,8 @@ export function setCanClimbOn(entity, toggle) {
  * Hash: 0x44A0870B7E92D7C0 | Since: 323
  */
 export function setAlpha(entity, alphaLevel, skin) {
-    SetEntityAlpha(entity, alphaLevel, skin);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityAlpha(_entity, alphaLevel, skin);
 }
 /**
  * No comment provided
@@ -1290,7 +1420,8 @@ export function setAlpha(entity, alphaLevel, skin) {
  * Hash: 0xACAD101E1FB66689 | Since: 323
  */
 export function setAlwaysPrerender(entity, toggle) {
-    SetEntityAlwaysPrerender(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityAlwaysPrerender(_entity, toggle);
 }
 /**
  * No comment provided
@@ -1298,7 +1429,8 @@ export function setAlwaysPrerender(entity, toggle) {
  * Hash: 0x8339643499D1222E | Since: 2372
  */
 export function setAngularVelocity(entity, pos) {
-    SetEntityAngularVelocity(entity, pos.x, pos.y, pos.z);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityAngularVelocity(_entity, pos.x, pos.y, pos.z);
 }
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
@@ -1306,7 +1438,8 @@ export function setAngularVelocity(entity, pos) {
  * Hash: 0x4487C259F0F70977 | Since: 323
  */
 export function setAnimCurrentTime(entity, animDictionary, animName, time) {
-    SetEntityAnimCurrentTime(entity, animDictionary, animName, time);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityAnimCurrentTime(_entity, animDictionary, animName, time);
 }
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
@@ -1314,7 +1447,8 @@ export function setAnimCurrentTime(entity, animDictionary, animName, time) {
  * Hash: 0x28D1A16553C51776 | Since: 323
  */
 export function setAnimSpeed(entity, animDictionary, animName, speedMultiplier) {
-    SetEntityAnimSpeed(entity, animDictionary, animName, speedMultiplier);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityAnimSpeed(_entity, animDictionary, animName, speedMultiplier);
 }
 /**
  * Makes the specified entity (ped, vehicle or object) persistent. Persistent entities will not automatically be removed by the engine.
@@ -1328,7 +1462,8 @@ export function setAnimSpeed(entity, animDictionary, animName, speedMultiplier) 
  * Hash: 0xAD738C3085FE7E11 | Since: 323
  */
 export function setAsMissionEntity(entity) {
-    SetEntityAsMissionEntity(entity, false, false);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityAsMissionEntity(_entity, false, false);
 }
 /**
  * Marks the specified entity (ped, vehicle or object) as no longer needed if its population type is set to the mission type.
@@ -1350,7 +1485,8 @@ export function setAsMissionEntity(entity) {
  * Hash: 0xB736A491E64A32CF | Since: 323
  */
 export function setAsNoLongerNeeded(entity) {
-    SetEntityAsNoLongerNeeded(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityAsNoLongerNeeded(_entity);
 }
 /**
  * No comment provided
@@ -1358,7 +1494,9 @@ export function setAsNoLongerNeeded(entity) {
  * Hash: 0x68B562E124CC0AEF | Since: 1180
  */
 export function setCantCauseCollisionDamagedEntity(entity1, entity2) {
-    Citizen.invokeNative('0x68B562E124CC0AEF', entity1, entity2);
+    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
+    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    Citizen.invokeNative('0x68B562E124CC0AEF', _entity1, _entity2);
 }
 /**
  * No comment provided
@@ -1366,7 +1504,8 @@ export function setCantCauseCollisionDamagedEntity(entity1, entity2) {
  * Hash: 0x1760FFA8AB074D66 | Since: 323
  */
 export function setCanBeDamaged(entity, toggle) {
-    SetEntityCanBeDamaged(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityCanBeDamaged(_entity, toggle);
 }
 /**
  * No comment provided
@@ -1374,7 +1513,8 @@ export function setCanBeDamaged(entity, toggle) {
  * Hash: 0xE22D8FDE858B8119 | Since: 323
  */
 export function setCanBeDamagedByRelationshipGroup(entity, bCanBeDamaged, relGroup) {
-    SetEntityCanBeDamagedByRelationshipGroup(entity, bCanBeDamaged, relGroup);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityCanBeDamagedByRelationshipGroup(_entity, bCanBeDamaged, relGroup);
 }
 /**
  * Sets whether the entity can be targeted without being in line-of-sight.
@@ -1382,7 +1522,8 @@ export function setCanBeDamagedByRelationshipGroup(entity, bCanBeDamaged, relGro
  * Hash: 0xD3997889736FD899 | Since: 323
  */
 export function setCanBeTargetedWithoutLos(entity, toggle) {
-    SetEntityCanBeTargetedWithoutLos(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityCanBeTargetedWithoutLos(_entity, toggle);
 }
 /**
  * No comment provided
@@ -1390,7 +1531,9 @@ export function setCanBeTargetedWithoutLos(entity, toggle) {
  * Hash: 0xB17BC6453F6CF5AC | Since: 944
  */
 export function setCanOnlyBeDamagedByEntity(entity1, entity2) {
-    Citizen.invokeNative('0xB17BC6453F6CF5AC', entity1, entity2);
+    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
+    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    Citizen.invokeNative('0xB17BC6453F6CF5AC', _entity1, _entity2);
 }
 /**
  * No comment provided
@@ -1398,7 +1541,8 @@ export function setCanOnlyBeDamagedByEntity(entity1, entity2) {
  * Hash: 0x352E2B5CF420BF3B | Since: 573
  */
 export function setCanOnlyBeDamagedByScriptParticipants(entity, toggle) {
-    Citizen.invokeNative('0x352E2B5CF420BF3B', entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    Citizen.invokeNative('0x352E2B5CF420BF3B', _entity, toggle);
 }
 /**
  * No comment provided
@@ -1406,7 +1550,8 @@ export function setCanOnlyBeDamagedByScriptParticipants(entity, toggle) {
  * Hash: 0x1A9205C1B9EE827F | Since: 323
  */
 export function setCollision(entity, toggle, keepPhysics) {
-    SetEntityCollision(entity, toggle, keepPhysics);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityCollision(_entity, toggle, keepPhysics);
 }
 /**
  * No comment provided
@@ -1414,7 +1559,8 @@ export function setCollision(entity, toggle, keepPhysics) {
  * Hash: 0x9EBC85ED0FFFE51C | Since: 323
  */
 export function setCompletelyDisableCollision(entity, toggle, keepPhysics) {
-    SetEntityCompletelyDisableCollision(entity, toggle, keepPhysics);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityCompletelyDisableCollision(_entity, toggle, keepPhysics);
 }
 /**
  * p7 is always 1 in the scripts. Set to 1, an area around the destination coords for the moved entity is cleared from other entities.
@@ -1426,7 +1572,8 @@ export function setCompletelyDisableCollision(entity, toggle, keepPhysics) {
  * Hash: 0x06843DA7060A026B | Since: 323
  */
 export function setCoords(entity, pos, xAxis, yAxis, zAxis, clearArea) {
-    SetEntityCoords(entity, pos.x, pos.y, pos.z, xAxis, yAxis, zAxis, clearArea);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityCoords(_entity, pos.x, pos.y, pos.z, xAxis, yAxis, zAxis, clearArea);
 }
 /**
  * Axis - Invert Axis Flags
@@ -1434,7 +1581,8 @@ export function setCoords(entity, pos, xAxis, yAxis, zAxis, clearArea) {
  * Hash: 0x239A3351AC1DA385 | Since: 323
  */
 export function setCoordsNoOffset(entity, pos, xAxis, yAxis, zAxis) {
-    SetEntityCoordsNoOffset(entity, pos.x, pos.y, pos.z, xAxis, yAxis, zAxis);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityCoordsNoOffset(_entity, pos.x, pos.y, pos.z, xAxis, yAxis, zAxis);
 }
 /**
  * No comment provided
@@ -1442,7 +1590,8 @@ export function setCoordsNoOffset(entity, pos, xAxis, yAxis, zAxis) {
  * Hash: 0x621873ECE1178967 | Since: 323
  */
 export function setCoordsWithoutPlantsReset(entity, pos, alive, deadFlag, ragdollFlag, clearArea) {
-    SetEntityCoordsWithoutPlantsReset(entity, pos.x, pos.y, pos.z, alive, deadFlag, ragdollFlag, clearArea);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityCoordsWithoutPlantsReset(_entity, pos.x, pos.y, pos.z, alive, deadFlag, ragdollFlag, clearArea);
 }
 /**
  * No comment provided
@@ -1450,7 +1599,8 @@ export function setCoordsWithoutPlantsReset(entity, pos, alive, deadFlag, ragdol
  * Hash: 0x1718DE8E3F2823CA | Since: 323
  */
 export function setDynamic(entity, toggle) {
-    SetEntityDynamic(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityDynamic(_entity, toggle);
 }
 /**
  * No comment provided
@@ -1458,7 +1608,8 @@ export function setDynamic(entity, toggle) {
  * Hash: 0x4A4722448F18EEF5 | Since: 323
  */
 export function setHasGravity(entity, toggle) {
-    SetEntityHasGravity(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityHasGravity(_entity, toggle);
 }
 /**
  * Set the heading of an entity in degrees also known as "Yaw".
@@ -1466,7 +1617,8 @@ export function setHasGravity(entity, toggle) {
  * Hash: 0x8E2530AA8ADA980E | Since: 323
  */
 export function setHeading(entity, heading) {
-    SetEntityHeading(entity, heading);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityHeading(_entity, heading);
 }
 /**
  * health >= 0
@@ -1476,9 +1628,11 @@ export function setHeading(entity, heading) {
  * Hash: 0x6B76DC1F3AE6E6A3 | Since: 323
  */
 export function setHealth(entity, health, instigator, weaponType) {
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _instigator = instigator instanceof IEntity ? instigator.handle() : instigator;
     if (typeof weaponType === 'string')
         weaponType = GetHashKey(weaponType);
-    SetEntityHealth(entity, health, instigator, weaponType);
+    SetEntityHealth(_entity, health, _instigator, weaponType);
 }
 /**
  * Sets a ped or an object totally invincible. It doesn't take any kind of damage. Peds will not ragdoll on explosions and the tazer animation won't apply either.
@@ -1503,7 +1657,8 @@ export function setHealth(entity, health, instigator, weaponType) {
  * Hash: 0x3882114BDE571AD4 | Since: 323
  */
 export function setInvincible(entity, toggle, dontResetOnCleanup) {
-    SetEntityInvincible(entity, toggle, dontResetOnCleanup);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityInvincible(_entity, toggle, dontResetOnCleanup);
 }
 /**
  * No comment provided
@@ -1511,7 +1666,8 @@ export function setInvincible(entity, toggle, dontResetOnCleanup) {
  * Hash: 0x78E8E3A640178255 | Since: 323
  */
 export function setIsInVehicle(entity) {
-    Citizen.invokeNative('0x78E8E3A640178255', entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    Citizen.invokeNative('0x78E8E3A640178255', _entity);
 }
 /**
  * No comment provided
@@ -1519,7 +1675,8 @@ export function setIsInVehicle(entity) {
  * Hash: 0xEA02E132F5C68722 | Since: 323
  */
 export function setIsTargetPriority(entity) {
-    SetEntityIsTargetPriority(entity, false, 0);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityIsTargetPriority(_entity, false, 0);
 }
 /**
  * No comment provided
@@ -1527,7 +1684,8 @@ export function setIsTargetPriority(entity) {
  * Hash: 0x7CFBA6A80BDF3874 | Since: 323
  */
 export function setLights(entity, toggle) {
-    SetEntityLights(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityLights(_entity, toggle);
 }
 /**
  * Loads collision grid for an entity spawned outside of a player's loaded area. This allows peds to execute tasks rather than sit dormant because of a lack of a physics grid.
@@ -1536,7 +1694,8 @@ export function setLights(entity, toggle) {
  * Hash: 0x0DC7CABAB1E9B67E | Since: 323
  */
 export function setLoadCollisionFlag(entity, toggle) {
-    SetEntityLoadCollisionFlag(entity, toggle, undefined);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityLoadCollisionFlag(_entity, toggle, undefined);
 }
 /**
  * LOD distance can be 0 to 0xFFFF (higher values will result in 0xFFFF) as it is actually stored as a 16-bit value (aka uint16_t).
@@ -1544,7 +1703,8 @@ export function setLoadCollisionFlag(entity, toggle) {
  * Hash: 0x5927F96A78577363 | Since: 323
  */
 export function setLodDist(entity, value) {
-    SetEntityLodDist(entity, value);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityLodDist(_entity, value);
 }
 /**
  * `For instance: ENTITY::SET_ENTITY_MAX_HEALTH(PLAYER::PLAYER_PED_ID(), 200); // director_mode.c4: 67849`
@@ -1552,7 +1712,8 @@ export function setLodDist(entity, value) {
  * Hash: 0x166E7CF68597D8B5 | Since: 323
  */
 export function setMaxHealth(entity, value) {
-    SetEntityMaxHealth(entity, value);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityMaxHealth(_entity, value);
 }
 /**
  * No comment provided
@@ -1560,7 +1721,8 @@ export function setMaxHealth(entity, value) {
  * Hash: 0x0E46A3FCBDE2A1B1 | Since: 323
  */
 export function setMaxSpeed(entity, speed) {
-    SetEntityMaxSpeed(entity, speed);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityMaxSpeed(_entity, speed);
 }
 /**
  * No comment provided
@@ -1568,7 +1730,8 @@ export function setMaxSpeed(entity, speed) {
  * Hash: 0xE66377CDDADA4810 | Since: 1734
  */
 export function setMirrorReflectionFlag(entity) {
-    Citizen.invokeNative('0xE66377CDDADA4810', entity, false);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    Citizen.invokeNative('0xE66377CDDADA4810', _entity, false);
 }
 /**
  * No comment provided
@@ -1576,7 +1739,8 @@ export function setMirrorReflectionFlag(entity) {
  * Hash: 0x295D82A8559F9150 | Since: 323
  */
 export function setMotionBlur(entity, toggle) {
-    SetEntityMotionBlur(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityMotionBlur(_entity, toggle);
 }
 /**
  * No comment provided
@@ -1584,7 +1748,8 @@ export function setMotionBlur(entity, toggle) {
  * Hash: 0x2C2E3DC128F44309 | Since: 323
  */
 export function setNoweapondecals(entity) {
-    SetEntityDecalsDisabled(entity, false);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityDecalsDisabled(_entity, false);
 }
 /**
  * Calling this function disables collision between two entities.
@@ -1594,7 +1759,9 @@ export function setNoweapondecals(entity) {
  * Hash: 0xA53ED5520C07654A | Since: 323
  */
 export function setNoCollisionEntity(entity1, entity2, thisFrameOnly) {
-    SetEntityNoCollisionEntity(entity1, entity2, thisFrameOnly);
+    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
+    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    SetEntityNoCollisionEntity(_entity1, _entity2, thisFrameOnly);
 }
 /**
  * No comment provided
@@ -1602,7 +1769,8 @@ export function setNoCollisionEntity(entity1, entity2, thisFrameOnly) {
  * Hash: 0x79F020FF9EDC0748 | Since: 323
  */
 export function setOnlyDamagedByPlayer(entity, toggle) {
-    SetEntityOnlyDamagedByPlayer(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityOnlyDamagedByPlayer(_entity, toggle);
 }
 /**
  * No comment provided
@@ -1610,7 +1778,8 @@ export function setOnlyDamagedByPlayer(entity, toggle) {
  * Hash: 0x7022BD828FA0B082 | Since: 323
  */
 export function setOnlyDamagedByRelationshipGroup(entity) {
-    SetEntityOnlyDamagedByRelationshipGroup(entity, false, undefined);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityOnlyDamagedByRelationshipGroup(_entity, false, undefined);
 }
 /**
  * Enable / disable each type of damage.
@@ -1623,7 +1792,8 @@ export function setOnlyDamagedByRelationshipGroup(entity) {
  * Hash: 0xFAEE099C6F890BB8 | Since: 323
  */
 export function setProofs(entity, bulletProof, fireProof, explosionProof, collisionProof, meleeProof, steamProof, dontResetOnCleanup, waterProof) {
-    SetEntityProofs(entity, bulletProof, fireProof, explosionProof, collisionProof, meleeProof, steamProof, dontResetOnCleanup, waterProof);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityProofs(_entity, bulletProof, fireProof, explosionProof, collisionProof, meleeProof, steamProof, dontResetOnCleanup, waterProof);
 }
 /**
  * w is the correct parameter name!
@@ -1631,7 +1801,8 @@ export function setProofs(entity, bulletProof, fireProof, explosionProof, collis
  * Hash: 0x77B21BE7AC540F07 | Since: 323
  */
 export function setQuaternion(entity, pos, w) {
-    SetEntityQuaternion(entity, pos.x, pos.y, pos.z, w);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityQuaternion(_entity, pos.x, pos.y, pos.z, w);
 }
 /**
  * No comment provided
@@ -1639,7 +1810,8 @@ export function setQuaternion(entity, pos, w) {
  * Hash: 0x0A50A1EEDAD01E65 | Since: 323
  */
 export function setRecordsCollisions(entity, toggle) {
-    SetEntityRecordsCollisions(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityRecordsCollisions(_entity, toggle);
 }
 /**
  * No comment provided
@@ -1647,7 +1819,8 @@ export function setRecordsCollisions(entity, toggle) {
  * Hash: 0x730F5F8D3F0F2050 | Since: 323
  */
 export function setRenderScorched(entity, toggle) {
-    SetEntityRenderScorched(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityRenderScorched(_entity, toggle);
 }
 /**
  * No comment provided
@@ -1655,7 +1828,8 @@ export function setRenderScorched(entity, toggle) {
  * Hash: 0x694E00132F2823ED | Since: 323
  */
 export function setRequiresMoreExpensiveRiverCheck(entity, toggle) {
-    SetEntityRequiresMoreExpensiveRiverCheck(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityRequiresMoreExpensiveRiverCheck(_entity, toggle);
 }
 /**
  * rotationOrder refers to the order yaw pitch roll is applied
@@ -1668,7 +1842,8 @@ export function setRequiresMoreExpensiveRiverCheck(entity, toggle) {
  * Hash: 0x8524A8B0171D5E07 | Since: 323
  */
 export function setRotation(entity, pitch, roll, yaw, rotationOrder) {
-    SetEntityRotation(entity, pitch, roll, yaw, rotationOrder, false);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityRotation(_entity, pitch, roll, yaw, rotationOrder, false);
 }
 /**
  * True means it can be deleted by the engine when switching lobbies/missions/etc, false means the script is expected to clean it up.
@@ -1678,7 +1853,8 @@ export function setRotation(entity, pitch, roll, yaw, rotationOrder) {
  * Hash: 0x3910051CCECDB00C | Since: 323
  */
 export function setShouldFreezeWaitingOnCollision(entity, toggle) {
-    SetEntityCleanupByEngine(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityCleanupByEngine(_entity, toggle);
 }
 /**
  * Only called once in the scripts.
@@ -1689,7 +1865,8 @@ export function setShouldFreezeWaitingOnCollision(entity, toggle) {
  * Hash: 0x5C3B791D580E0BC2 | Since: 323
  */
 export function setSortBias(entity) {
-    Citizen.invokeNative('0x5C3B791D580E0BC2', entity, 0);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    Citizen.invokeNative('0x5C3B791D580E0BC2', _entity, 0);
 }
 /**
  * Example here: www.gtaforums.com/topic/830463-help-with-turning-lights-green-and-causing-peds-to-crash-into-each-other/#entry1068211340
@@ -1703,7 +1880,8 @@ export function setSortBias(entity) {
  * Hash: 0x57C5DB656185EAC4 | Since: 323
  */
 export function setTrafficlightOverride(entity, state) {
-    SetEntityTrafficlightOverride(entity, state);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityTrafficlightOverride(_entity, state);
 }
 /**
  * No comment provided
@@ -1711,7 +1889,8 @@ export function setTrafficlightOverride(entity, state) {
  * Hash: 0x1A092BB0C3808B96 | Since: 323
  */
 export function setUseMaxDistanceForWaterReflection(entity) {
-    Citizen.invokeNative('0x1A092BB0C3808B96', entity, false);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    Citizen.invokeNative('0x1A092BB0C3808B96', _entity, false);
 }
 /**
  * Note that the third parameter(denoted as z) is "up and down" with positive numbers encouraging upwards movement.
@@ -1719,7 +1898,8 @@ export function setUseMaxDistanceForWaterReflection(entity) {
  * Hash: 0x1C99BB7B6E96D16F | Since: 323
  */
 export function setVelocity(entity, pos) {
-    SetEntityVelocity(entity, pos.x, pos.y, pos.z);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityVelocity(_entity, pos.x, pos.y, pos.z);
 }
 /**
  * p2 is always 0.
@@ -1727,7 +1907,8 @@ export function setVelocity(entity, pos) {
  * Hash: 0xEA1C610A04DB6BBB | Since: 323
  */
 export function setVisible(entity, toggle) {
-    SetEntityVisible(entity, toggle, false);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetEntityVisible(_entity, toggle, false);
 }
 /**
  * No comment provided
@@ -1735,7 +1916,8 @@ export function setVisible(entity, toggle) {
  * Hash: 0xC34BC448DA29F5E9 | Since: 573
  */
 export function setWaterReflectionFlag(entity, toggle) {
-    Citizen.invokeNative('0xC34BC448DA29F5E9', entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    Citizen.invokeNative('0xC34BC448DA29F5E9', _entity, toggle);
 }
 /**
  * This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
@@ -1743,7 +1925,8 @@ export function setWaterReflectionFlag(entity, toggle) {
  * Hash: 0x3AE22DEB5BA5A3E6 | Since: 323
  */
 export function setObjectAsNoLongerNeeded(_object) {
-    SetObjectAsNoLongerNeeded(_object);
+    const __object = _object instanceof IObject ? _object.handle() : _object;
+    SetObjectAsNoLongerNeeded(__object);
 }
 /**
  * This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
@@ -1751,7 +1934,8 @@ export function setObjectAsNoLongerNeeded(_object) {
  * Hash: 0x2595DD4236549CE3 | Since: 323
  */
 export function setPedAsNoLongerNeeded(ped) {
-    SetPedAsNoLongerNeeded(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SetPedAsNoLongerNeeded(_ped);
 }
 /**
  * No comment provided
@@ -1767,7 +1951,8 @@ export function setPickupCollidesWithProjectiles() {
  * Hash: 0xD7B80E7C3BEFC396 | Since: 1180
  */
 export function setPickUpByCargobobDisabled(entity, toggle) {
-    SetPickUpByCargobobDisabled(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetPickUpByCargobobDisabled(_entity, toggle);
 }
 /**
  * This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
@@ -1775,7 +1960,8 @@ export function setPickUpByCargobobDisabled(entity, toggle) {
  * Hash: 0x629BFA74418D6239 | Since: 323
  */
 export function setVehicleAsNoLongerNeeded(vehicle) {
-    SetVehicleAsNoLongerNeeded(vehicle);
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    SetVehicleAsNoLongerNeeded(_vehicle);
 }
 /**
  * Only called within 1 script for x360. 'fm_mission_controller' and it used on an object.
@@ -1787,7 +1973,8 @@ export function setVehicleAsNoLongerNeeded(vehicle) {
  * Hash: 0xDC6F8601FAF2E893 | Since: 323
  */
 export function setWaitForCollisionsBeforeProbe(entity, toggle) {
-    SetWaitForCollisionsBeforeProbe(entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetWaitForCollisionsBeforeProbe(_entity, toggle);
 }
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
@@ -1797,7 +1984,8 @@ export function setWaitForCollisionsBeforeProbe(entity, toggle) {
  * Hash: 0x28004F88151E03E0 | Since: 323
  */
 export function stopAnim(entity, animation, animGroup) {
-    return StopEntityAnim(entity, animation, animGroup, 0);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StopEntityAnim(_entity, animation, animGroup, 0);
 }
 /**
  * No comment provided
@@ -1805,7 +1993,8 @@ export function stopAnim(entity, animation, animGroup) {
  * Hash: 0x43D3807C077261E3 | Since: 323
  */
 export function stopSynchronizedAnim(entity) {
-    return StopSynchronizedEntityAnim(entity, 0, false);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StopSynchronizedEntityAnim(_entity, 0, false);
 }
 /**
  * No comment provided
@@ -1831,7 +2020,8 @@ export function wouldBeOccluded(entityModelHash, pos) {
  * Hash: 0xA75EE4F689B85391 | Since: 2802
  */
 export function getLastHitByEntity(entity) {
-    return Citizen.invokeNative('0xA75EE4F689B85391', entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return Citizen.invokeNative('0xA75EE4F689B85391', _entity);
 }
 /**
  * No comment provided
@@ -1839,5 +2029,7 @@ export function getLastHitByEntity(entity) {
  * Hash: 0x0A27A7827347B3B1 | Since: 3407
  */
 export function setNoCollisionWithNetworkedEntity(entity1, entity2) {
-    Citizen.invokeNative('0x0A27A7827347B3B1', entity1, entity2);
+    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
+    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    Citizen.invokeNative('0x0A27A7827347B3B1', _entity1, _entity2);
 }

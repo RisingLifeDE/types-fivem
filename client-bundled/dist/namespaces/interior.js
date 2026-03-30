@@ -1,4 +1,4 @@
-import { Vector3 } from '@risinglife/fivem-shared';
+import { Vector3, IEntity } from '@risinglife/fivem-shared';
 /**
  * More info: http://gtaforums.com/topic/836367-adding-props-to-interiors/
  *
@@ -39,7 +39,8 @@ export function cap(interior, toggle) {
  * Hash: 0x85D5422B2039A70D | Since: 2189 | API-Set: unknown
  */
 export function clearStateOfEntity(entity) {
-    ClearInteriorForEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    ClearInteriorForEntity(_entity);
 }
 /**
  * No comment provided
@@ -47,7 +48,8 @@ export function clearStateOfEntity(entity) {
  * Hash: 0xB365FC0C4E27FFA7 | Since: 323 | API-Set: unknown
  */
 export function clearRoomForEntity(entity) {
-    ClearRoomForEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    ClearRoomForEntity(_entity);
 }
 /**
  * No comment provided
@@ -128,9 +130,10 @@ export function forceActivatingTrackingOnEntity() {
  * Hash: 0x52923C4710DD9907 | Since: 323 | API-Set: unknown
  */
 export function forceRoomForEntity(entity, interior, roomHashKey) {
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
     if (typeof roomHashKey === 'string')
         roomHashKey = GetHashKey(roomHashKey);
-    ForceRoomForEntity(entity, interior, roomHashKey);
+    ForceRoomForEntity(_entity, interior, roomHashKey);
 }
 /**
  * No comment provided
@@ -191,7 +194,8 @@ export function getFromCollision(pos) {
  * Hash: 0x2107BA504071A6BB | Since: 323 | API-Set: unknown
  */
 export function getFromEntity(entity) {
-    return GetInteriorFromEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetInteriorFromEntity(_entity);
 }
 /**
  * Returns the current interior id from gameplay camera
@@ -245,7 +249,8 @@ export function getLocationAndNamehash(interior) {
  * Hash: 0x399685DB942336BC | Since: 323 | API-Set: unknown
  */
 export function getKeyForEntityInRoom(entity) {
-    return GetKeyForEntityInRoom(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetKeyForEntityInRoom(_entity);
 }
 /**
  * No comment provided
@@ -269,7 +274,8 @@ export function getRoomKeyForGameViewport() {
  * Hash: 0x47C2A06D4F5F424B | Since: 323 | API-Set: unknown
  */
 export function getRoomKeyFromEntity(entity) {
-    return GetRoomKeyFromEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return GetRoomKeyFromEntity(_entity);
 }
 /**
  * Returns true if the collision at the specified coords is marked as being outside (false if there's an interior)
@@ -349,7 +355,8 @@ export function refresh(interior) {
  * Hash: 0x82EBB79E258FA2B7 | Since: 323 | API-Set: unknown
  */
 export function retainEntityIn(entity, interior) {
-    Citizen.invokeNative('0x82EBB79E258FA2B7', entity, interior);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    Citizen.invokeNative('0x82EBB79E258FA2B7', _entity, interior);
 }
 /**
  * Full list of IPLs and interior entity sets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ipls.json
@@ -374,7 +381,8 @@ export function setInUse(interior) {
  * Hash: 0x7241CCB7D020DB69 | Since: 791 | API-Set: unknown
  */
 export function setIsExteriorOnly(entity, toggle) {
-    Citizen.invokeNative('0x7241CCB7D020DB69', entity, toggle);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    Citizen.invokeNative('0x7241CCB7D020DB69', _entity, toggle);
 }
 /**
  * `Usage: INTERIOR::SET_ROOM_FOR_GAME_VIEWPORT_BY_KEY(INTERIOR::GET_KEY_FOR_ENTITY_IN_ROOM(PLAYER::PLAYER_PED_ID()));`

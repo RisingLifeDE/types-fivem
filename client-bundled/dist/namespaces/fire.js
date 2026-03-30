@@ -1,4 +1,4 @@
-import { Vector3 } from '@risinglife/fivem-shared';
+import { Vector3, IEntity, IPed, IPlayer } from '@risinglife/fivem-shared';
 /**
  * BOOL isAudible = If explosion makes a sound.
  * BOOL isInvisible = If the explosion is invisible or not.
@@ -30,7 +30,8 @@ export function addExplosionWithUserVfx(pos, explosionType, explosionFx, damageS
  * Hash: 0x172AA1B624FA1013 | Since: 323 | API-Set: unknown
  */
 export function addOwnedExplosion(ped, pos, explosionType, damageScale, isAudible, isInvisible, cameraShake) {
-    AddOwnedExplosion(ped, pos.x, pos.y, pos.z, explosionType, damageScale, isAudible, isInvisible, cameraShake);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    AddOwnedExplosion(_ped, pos.x, pos.y, pos.z, explosionType, damageScale, isAudible, isInvisible, cameraShake);
 }
 /**
  * Returns TRUE if it found something. FALSE if not.
@@ -72,7 +73,8 @@ export function getOwnerOfExplosionInSphere(explosionType, pos, radius) {
  * Hash: 0x28D3FED7190D3A0B | Since: 323 | API-Set: unknown
  */
 export function isEntityOn(entity) {
-    return IsEntityOnFire(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityOnFire(_entity);
 }
 /**
  * explosionType: See ADD_EXPLOSION.
@@ -129,7 +131,8 @@ export function setFlammabilityMultiplier() {
  * Hash: 0xF6A9D9708F6F23DF | Since: 323 | API-Set: unknown
  */
 export function startEntity(entity) {
-    return StartEntityFire(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StartEntityFire(_entity);
 }
 /**
  * Starts a fire:
@@ -149,7 +152,8 @@ export function startScript(pos, maxChildren, isGasFire) {
  * Hash: 0x7F0DD2EBBB651AFF | Since: 323 | API-Set: unknown
  */
 export function stopEntity(entity) {
-    StopEntityFire(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    StopEntityFire(_entity);
 }
 /**
  * No comment provided
@@ -181,5 +185,6 @@ export function getWaterCannonCoords(index) {
  * Hash: 0x5241DB47A8B8AD54 | Since: 3570 | API-Set: unknown
  */
 export function networkExpectExplosionEventsForPlayer(expect, player) {
-    Citizen.invokeNative('0x5241DB47A8B8AD54', expect, player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    Citizen.invokeNative('0x5241DB47A8B8AD54', expect, _player);
 }

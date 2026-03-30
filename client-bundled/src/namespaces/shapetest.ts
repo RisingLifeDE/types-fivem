@@ -30,7 +30,8 @@ export function getResult(shapeTestHandle: number): [number, boolean, Vector3, V
  * Hash: 0x2B3334BCA57CD799 | Since: 323 | API-Set: unknown
  */
 export function releaseScriptGuidFromEntity(entityHit: number | IEntity): void {
-    ReleaseScriptGuidFromEntity(entityHit);
+    const _entityHit = entityHit instanceof IEntity ? entityHit.handle() : entityHit;
+    ReleaseScriptGuidFromEntity(_entityHit);
 }
 
 /**
@@ -39,7 +40,8 @@ export function releaseScriptGuidFromEntity(entityHit: number | IEntity): void {
  * Hash: 0x377906D8A31E5586 | Since: 323 | API-Set: unknown
  */
 export function startExpensiveSynchronousLosProbe(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, flags: number, entity: number | IEntity): number {
-    return StartExpensiveSynchronousShapeTestLosProbe(x1, y1, z1, x2, y2, z2, flags, entity, 0);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StartExpensiveSynchronousShapeTestLosProbe(x1, y1, z1, x2, y2, z2, flags, _entity, 0);
 }
 
 /**
@@ -48,7 +50,8 @@ export function startExpensiveSynchronousLosProbe(x1: number, y1: number, z1: nu
  * Hash: 0x37181417CE7C8900 | Since: 323 | API-Set: unknown
  */
 export function startBound(entity: number | IEntity, flags1: number, flags2: number): number {
-    return StartShapeTestBound(entity, flags1, flags2);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StartShapeTestBound(_entity, flags1, flags2);
 }
 
 /**
@@ -57,7 +60,8 @@ export function startBound(entity: number | IEntity, flags1: number, flags2: num
  * Hash: 0x052837721A854EC7 | Since: 323 | API-Set: unknown
  */
 export function startBoundingBox(entity: number | IEntity, flags1: number, flags2: number): number {
-    return StartShapeTestBoundingBox(entity, flags1, flags2);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StartShapeTestBoundingBox(_entity, flags1, flags2);
 }
 
 /**
@@ -66,7 +70,8 @@ export function startBoundingBox(entity: number | IEntity, flags1: number, flags
  * Hash: 0xFE466162C4401D18 | Since: 323 | API-Set: unknown
  */
 export function startBox(pos: Vector3, dimX: number, dimY: number, dimZ: number, rot: Vector3, flags: number, entity: number | IEntity): number {
-    return StartShapeTestBox(pos.x, pos.y, pos.z, dimX, dimY, dimZ, rot.x, rot.y, rot.z, undefined, flags, entity, undefined);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StartShapeTestBox(pos.x, pos.y, pos.z, dimX, dimY, dimZ, rot.x, rot.y, rot.z, undefined, flags, _entity, undefined);
 }
 
 /**
@@ -85,7 +90,8 @@ export function startBox(pos: Vector3, dimX: number, dimY: number, dimZ: number,
  * Hash: 0x28579D1B8F8AAC80 | Since: 323 | API-Set: unknown
  */
 export function startCapsule(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, radius: number, flags: number, entity: number | IEntity): number {
-    return StartShapeTestCapsule(x1, y1, z1, x2, y2, z2, radius, flags, entity, 0);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StartShapeTestCapsule(x1, y1, z1, x2, y2, z2, radius, flags, _entity, 0);
 }
 
 /**
@@ -98,7 +104,8 @@ export function startCapsule(x1: number, y1: number, z1: number, x2: number, y2:
  * Hash: 0x7EE9F5D83DD4F90E | Since: 323 | API-Set: unknown
  */
 export function startLosProbe(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, flags: number, entity: number | IEntity): number {
-    return StartShapeTestLosProbe(x1, y1, z1, x2, y2, z2, flags, entity, 0);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StartShapeTestLosProbe(x1, y1, z1, x2, y2, z2, flags, _entity, 0);
 }
 
 /**
@@ -109,7 +116,8 @@ export function startLosProbe(x1: number, y1: number, z1: number, x2: number, y2
  * Hash: 0xFF6BE494C7987F34 | Since: 323 | API-Set: unknown
  */
 export function startMouseCursorLosProbe(flag: number, entity: number | IEntity, flag2: number): [number, Vector3, Vector3] {
-    return StartShapeTestSurroundingCoords(flag, entity, flag2);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StartShapeTestSurroundingCoords(flag, _entity, flag2);
 }
 
 /**
@@ -118,6 +126,7 @@ export function startMouseCursorLosProbe(flag: number, entity: number | IEntity,
  * Hash: 0xE6AC6C45FBE83004 | Since: 323 | API-Set: unknown
  */
 export function startSweptSphere(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, radius: number, flags: number, entity: number | IEntity): number {
-    return StartShapeTestSweptSphere(x1, y1, z1, x2, y2, z2, radius, flags, entity, undefined);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return StartShapeTestSweptSphere(x1, y1, z1, x2, y2, z2, radius, flags, _entity, undefined);
 }
 

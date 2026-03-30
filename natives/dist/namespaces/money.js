@@ -1,3 +1,4 @@
+import { IPlayer } from '@risinglife/fivem-shared';
 /**
  * No comment provided
  *
@@ -45,7 +46,8 @@ export function networkBuyBackupGang(npcProvider) {
  * Hash: 0x7B718E197453F2D9 | Since: 323
  */
 export function networkBuyBounty(amount, victim) {
-    NetworkBuyBounty(amount, victim, false, false, undefined);
+    const _victim = victim instanceof IPlayer ? victim.playerId() : victim;
+    NetworkBuyBounty(amount, _victim, false, false, undefined);
 }
 /**
  * No comment provided
@@ -2199,7 +2201,8 @@ export function networkSpentMoveYacht(amount) {
  * Hash: 0x876056684281655D | Since: 1493
  */
 export function networkSpentNightclubEntryFee(player, amount) {
-    NetworkSpentNightclubEntryFee(player, amount, undefined, false, false);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    NetworkSpentNightclubEntryFee(_player, amount, undefined, false, false);
 }
 /**
  * No comment provided

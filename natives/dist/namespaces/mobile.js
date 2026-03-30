@@ -1,3 +1,4 @@
+import { IEntity, IVehicle } from '@risinglife/fivem-shared';
 /**
  * This one is weird and seems to return a TRUE state regardless of whether the phone is visible on screen or tucked away.
  *
@@ -39,7 +40,8 @@ export function cellCamActivateShallowDofMode(toggle) {
  * Hash: 0x439E9BC95B7E7FBE | Since: 323
  */
 export function cellCamIsCharVisibleNoFaceCheck(entity) {
-    return CellCamIsCharVisibleNoFaceCheck(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return CellCamIsCharVisibleNoFaceCheck(_entity);
 }
 /**
  * No comment provided
@@ -170,7 +172,8 @@ export function getPhoneRenderId() {
  * Hash: 0x1CEFB61F193070AE | Since: 323
  */
 export function getPhoneRotation(p1) {
-    return GetMobilePhoneRotation(p1);
+    const _p1 = p1 instanceof IVehicle ? p1.localId() : p1;
+    return GetMobilePhoneRotation(_p1);
 }
 /**
  * If bool Toggle = true so the mobile is hide to screen.

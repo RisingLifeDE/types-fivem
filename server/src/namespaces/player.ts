@@ -6,7 +6,8 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0x8689A825
  */
 export function getMeleeWeaponDamageModifier(playerId: number | string | IPlayer): number {
-    return GetPlayerMeleeWeaponDamageModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerMeleeWeaponDamageModifier(_playerId);
 }
 
 /**
@@ -15,7 +16,8 @@ export function getMeleeWeaponDamageModifier(playerId: number | string | IPlayer
  * Hash: 0x2A3D7CDA
  */
 export function getWeaponDamageModifier(playerId: number | string | IPlayer): number {
-    return GetPlayerWeaponDamageModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerWeaponDamageModifier(_playerId);
 }
 
 /**
@@ -24,7 +26,8 @@ export function getWeaponDamageModifier(playerId: number | string | IPlayer): nu
  * Hash: 0xF1543251
  */
 export function getWeaponDefenseModifier(playerId: number | string | IPlayer): number {
-    return GetPlayerWeaponDefenseModifier(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerWeaponDefenseModifier(_playerId);
 }
 
 /**
@@ -33,7 +36,8 @@ export function getWeaponDefenseModifier(playerId: number | string | IPlayer): n
  * Hash: 0x986B65FF
  */
 export function getWeaponDefenseModifier2(playerId: number | string | IPlayer): number {
-    return GetPlayerWeaponDefenseModifier2(playerId);
+    const _playerId = playerId instanceof IPlayer ? playerId.playerId() : playerId;
+    return GetPlayerWeaponDefenseModifier2(_playerId);
 }
 
 /**
@@ -56,7 +60,8 @@ export function canStartCommerceSession(playerSrc: string): boolean {
  * Hash: 0x54EA5BCC
  */
 export function clearWantedLevel(player: number | string | IPlayer): void {
-    ClearPlayerWantedLevel(player);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    ClearPlayerWantedLevel(_player);
 }
 
 /**
@@ -383,7 +388,8 @@ export function getWantedLevel(playerSrc: string): number {
  * Hash: 0x404794CA
  */
 export function isPedA(ped: number | IPed): boolean {
-    return IsPedAPlayer(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    return IsPedAPlayer(_ped);
 }
 
 /**
@@ -502,7 +508,8 @@ export function requestCommerceSession(playerSrc: string, skuId: number): void {
  * Hash: 0xD17AFCD8
  */
 export function setControl(player: number | string | IPlayer, bHasControl: boolean, flags: number): void {
-    SetPlayerControl(player, bHasControl, flags);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerControl(_player, bHasControl, flags);
 }
 
 /**
@@ -525,7 +532,8 @@ export function setCullingRadius(playerSrc: string, radius: number): void {
  * Hash: 0xDFB9A2A2
  */
 export function setInvincible(player: number | string | IPlayer, bInvincible: boolean): void {
-    SetPlayerInvincible(player, bInvincible);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerInvincible(_player, bInvincible);
 }
 
 /**
@@ -537,8 +545,9 @@ export function setInvincible(player: number | string | IPlayer, bInvincible: bo
  * Hash: 0x774A4C54
  */
 export function setModel(player: number | string | IPlayer, model: number | string): void {
+    const _player = player instanceof IPlayer ? player.playerId() : player;
     if (typeof model === 'string') model = GetHashKey(model)
-    SetPlayerModel(player, model);
+    SetPlayerModel(_player, model);
 }
 
 /**
@@ -560,7 +569,8 @@ export function setRoutingBucket(playerSrc: string, bucket: number): void {
  * Hash: 0xB7A0914B
  */
 export function setWantedLevel(player: number | string | IPlayer, wantedLevel: number, delayedResponse: boolean): void {
-    SetPlayerWantedLevel(player, wantedLevel, delayedResponse);
+    const _player = player instanceof IPlayer ? player.playerId() : player;
+    SetPlayerWantedLevel(_player, wantedLevel, delayedResponse);
 }
 
 /**

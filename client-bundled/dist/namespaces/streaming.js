@@ -1,3 +1,4 @@
+import { IEntity, IPed, IObject } from '@risinglife/fivem-shared';
 /**
  * No comment provided
  *
@@ -237,7 +238,8 @@ export function setInteriorRoomTimecycle(interiorId, roomIndex, timecycleHash) {
  * Hash: 0xFC52CB91 | Since: unknown | API-Set: client
  */
 export function updateMapdataEntity(mapdata, entity, entityDef) {
-    UpdateMapdataEntity(mapdata, entity, entityDef);
+    const _entityDef = entityDef instanceof IObject ? entityDef.handle() : entityDef;
+    UpdateMapdataEntity(mapdata, entity, _entityDef);
 }
 /**
  * No comment provided
@@ -579,7 +581,8 @@ export function iplGroupSwapStart(iplName1, iplName2) {
  * Hash: 0x2DDFF3FB9075D747 | Since: 323 | API-Set: unknown
  */
 export function isEntityFocus(entity) {
-    return IsEntityFocus(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    return IsEntityFocus(_entity);
 }
 /**
  * Full list of IPLs and interior entity sets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ipls.json
@@ -1029,7 +1032,8 @@ export function setDitchPoliceModels(toggle) {
  * Hash: 0x198F77705FA0931D | Since: 323 | API-Set: unknown
  */
 export function setFocusEntity(entity) {
-    SetFocusEntity(entity);
+    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    SetFocusEntity(_entity);
 }
 /**
  * Override the area where the camera will render the terrain.
@@ -1157,7 +1161,8 @@ export function setRenderHdOnly(toggle) {
  * Hash: 0x0811381EF5062FEC | Since: 323 | API-Set: unknown
  */
 export function setRestoreFocusEntity(p0) {
-    Citizen.invokeNative('0x0811381EF5062FEC', p0);
+    const _p0 = p0 instanceof IEntity ? p0.handle() : p0;
+    Citizen.invokeNative('0x0811381EF5062FEC', _p0);
 }
 /**
  * No comment provided
@@ -1260,7 +1265,9 @@ export function shutdownCreatorBudget() {
  * Hash: 0xFAA23F2CBA159D67 | Since: 323 | API-Set: unknown
  */
 export function startPlayerSwitch(_from, to, flags, switchType) {
-    StartPlayerSwitch(_from, to, flags, switchType);
+    const __from = _from instanceof IPed ? _from.handle() : _from;
+    const _to = to instanceof IPed ? to.handle() : to;
+    StartPlayerSwitch(__from, _to, flags, switchType);
 }
 /**
  * No comment provided
@@ -1344,7 +1351,8 @@ export function suppressHdMapThisFrame() {
  * Hash: 0xAAB3200ED59016BC | Since: 323 | API-Set: unknown
  */
 export function switchToMultiFirstpart(ped, flags, switchType) {
-    SwitchToMultiFirstpart(ped, flags, switchType);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SwitchToMultiFirstpart(_ped, flags, switchType);
 }
 /**
  * No comment provided
@@ -1352,7 +1360,8 @@ export function switchToMultiFirstpart(ped, flags, switchType) {
  * Hash: 0xD8295AF639FD9CB8 | Since: 323 | API-Set: unknown
  */
 export function switchToMultiSecondpart(ped) {
-    SwitchToMultiSecondpart(ped);
+    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    SwitchToMultiSecondpart(_ped);
 }
 /**
  * No comment provided
