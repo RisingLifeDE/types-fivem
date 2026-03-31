@@ -2179,7 +2179,7 @@ export function getGroundZExcludingObjectsFor3dCoord(pos) {
  * Hash: 0xC906A7DAB05C8D2B | Since: 323 | API-Set: unknown
  */
 export function getGroundZFor3dCoord(pos, ignoreWater) {
-    return GetGroundZFor3dCoord(pos.x, pos.y, pos.z, ignoreWater, false);
+    return GetGroundZFor_3dCoord(pos.x, pos.y, pos.z, ignoreWater, false);
 }
 /**
  * This native converts its past string to hash. It is hashed using jenkins one at a time method.
