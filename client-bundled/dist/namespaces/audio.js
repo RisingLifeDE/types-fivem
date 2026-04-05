@@ -163,7 +163,7 @@ export function isScriptedMusicPlaying() {
  * Hash: 0x1B9025BDA76822B6 | Since: 323 | API-Set: unknown
  */
 export function blipSiren(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     BlipSiren(_vehicle);
 }
 /**
@@ -214,7 +214,7 @@ export function cancelMusicEvent(eventName) {
  * Hash: 0x032A116663A4D5AC | Since: 323 | API-Set: unknown
  */
 export function canVehicleReceiveCbRadio(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return CanVehicleReceiveCbRadio(_vehicle);
 }
 /**
@@ -313,7 +313,7 @@ export function doesPlayerVehHaveRadio() {
  * Hash: 0xC15907D667F7CFB2 | Since: 323 | API-Set: unknown
  */
 export function enableStallWarningSounds(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     EnableStallWarningSounds(_vehicle, toggle);
 }
 /**
@@ -330,7 +330,7 @@ export function enableStuntJump() {
  * Hash: 0x2BE4BC731D039D5A | Since: 323 | API-Set: unknown
  */
 export function enableVehicleExhaustPops(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     EnableVehicleExhaustPops(_vehicle, toggle);
 }
 /**
@@ -339,7 +339,7 @@ export function enableVehicleExhaustPops(vehicle, toggle) {
  * Hash: 0x1C073274E065C6D2 | Since: 323 | API-Set: unknown
  */
 export function enableVehicleFanbeltDamage(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     EnableVehicleFanbeltDamage(_vehicle, toggle);
 }
 /**
@@ -381,7 +381,7 @@ export function forcePedPanicWalla() {
  * Hash: 0x4F0C413926060B38 | Since: 323 | API-Set: unknown
  */
 export function forceUseGameObject(vehicle, audioName) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     ForceUseAudioGameObject(_vehicle, audioName);
 }
 /**
@@ -570,7 +570,7 @@ export function getVariationChosenForScriptedLine() {
  * Hash: 0x02165D55000219AC | Since: 323 | API-Set: unknown
  */
 export function getVehicleDefaultHorn(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleDefaultHorn(_vehicle);
 }
 /**
@@ -579,7 +579,7 @@ export function getVehicleDefaultHorn(vehicle) {
  * Hash: 0xACB5DCCA1EC76840 | Since: 323 | API-Set: unknown
  */
 export function getVehicleDefaultHornIgnoreMods(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleDefaultHornIgnoreMods(_vehicle);
 }
 /**
@@ -588,7 +588,7 @@ export function getVehicleDefaultHornIgnoreMods(vehicle) {
  * Hash: 0xD53F3A29BCE2580E | Since: 1365 | API-Set: unknown
  */
 export function getVehicleHornSoundIndex(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleHornSoundIndex(_vehicle);
 }
 /**
@@ -763,7 +763,7 @@ export function isGameInControlOfMusic() {
  * Hash: 0x9D6BFC12B05C6121 | Since: 323 | API-Set: unknown
  */
 export function isHornActive(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return IsHornActive(_vehicle);
 }
 /**
@@ -911,7 +911,7 @@ export function isStreamPlaying() {
  * Hash: 0x5DB8010EE71FDEF2 | Since: 323 | API-Set: unknown
  */
 export function isVehicleAudiblyDamaged(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return IsVehicleAudiblyDamaged(_vehicle);
 }
 /**
@@ -920,7 +920,7 @@ export function isVehicleAudiblyDamaged(vehicle) {
  * Hash: 0x0BE4BE946463F917 | Since: 505 | API-Set: unknown
  */
 export function isVehicleRadioOn(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return IsVehicleRadioOn(_vehicle);
 }
 /**
@@ -1023,7 +1023,7 @@ export function overrideUnderwaterStream() {
  * Hash: 0x3CDC1E622CCE0356 | Since: 323 | API-Set: unknown
  */
 export function overrideVehHorn(vehicle, override, hornHash) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     OverrideVehHorn(_vehicle, override, hornHash);
 }
 /**
@@ -1329,7 +1329,7 @@ export function playStreamFromPosition(pos) {
  * Hash: 0xB70374A758007DFA | Since: 323 | API-Set: unknown
  */
 export function playStreamFromVehicle(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     PlayStreamFromVehicle(_vehicle);
 }
 /**
@@ -1354,7 +1354,7 @@ export function playSynchronizedEvent(sceneID) {
  * Hash: 0x62A456AA4769EF34 | Since: 323 | API-Set: unknown
  */
 export function playVehicleDoorCloseSound(vehicle, doorId) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     PlayVehicleDoorCloseSound(_vehicle, doorId);
 }
 /**
@@ -1363,7 +1363,7 @@ export function playVehicleDoorCloseSound(vehicle, doorId) {
  * Hash: 0x3A539D52857EA82D | Since: 323 | API-Set: unknown
  */
 export function playVehicleDoorOpenSound(vehicle, doorId) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     PlayVehicleDoorOpenSound(_vehicle, doorId);
 }
 /**
@@ -1595,7 +1595,7 @@ export function resetTrevorRage() {
  * Hash: 0xD2DCCD8E16E20997 | Since: 323 | API-Set: unknown
  */
 export function resetVehicleStartupRevSound(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     ResetVehicleStartupRevSound(_vehicle);
 }
 /**
@@ -1837,7 +1837,7 @@ export function setSpecialEffectMode(mode) {
  * Hash: 0xE5564483E407F914 | Since: 323 | API-Set: unknown
  */
 export function setVehiclePriority(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetAudioVehiclePriority(_vehicle, undefined);
 }
 /**
@@ -1933,7 +1933,7 @@ export function setGpsActive(active) {
  * Hash: 0x76D683C108594D0E | Since: 323 | API-Set: unknown
  */
 export function setHornEnabled(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetHornEnabled(_vehicle, toggle);
 }
 /**
@@ -1942,7 +1942,7 @@ export function setHornEnabled(vehicle, toggle) {
  * Hash: 0x9C11908013EA4715 | Since: 323 | API-Set: unknown
  */
 export function setHornPermanentlyOn(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SoundVehicleHornThisFrame(_vehicle);
 }
 /**
@@ -1951,7 +1951,7 @@ export function setHornPermanentlyOn(vehicle) {
  * Hash: 0x9D3AF56E94C9AE98 | Since: 323 | API-Set: unknown
  */
 export function setHornPermanentlyOnTime(vehicle, time) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     Citizen.invokeNative('0x9D3AF56E94C9AE98', _vehicle, time);
 }
 /**
@@ -2149,7 +2149,7 @@ export function setPlayerAngry(ped, toggle) {
  * Hash: 0x6FDDAD856E36988A | Since: 323 | API-Set: unknown
  */
 export function setPlayerVehicleAlarmActive(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetPlayerVehicleAlarmAudioActive(_vehicle, toggle);
 }
 /**
@@ -2298,7 +2298,7 @@ export function setScriptUpdateDoor(doorHash, toggle) {
  * Hash: 0xF584CF8529B51434 | Since: 2372 | API-Set: unknown
  */
 export function setSirenBypassMpDriverCheck(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetSirenKeepOn(_vehicle, toggle);
 }
 /**
@@ -2307,7 +2307,7 @@ export function setSirenBypassMpDriverCheck(vehicle, toggle) {
  * Hash: 0x43FA0DFC5DF87815 | Since: 323 | API-Set: unknown
  */
 export function setSirenCanBeControlledBy(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     Citizen.invokeNative('0x43FA0DFC5DF87815', _vehicle, false);
 }
 /**
@@ -2316,7 +2316,7 @@ export function setSirenCanBeControlledBy(vehicle) {
  * Hash: 0x1FEF0683B96EBCF2 | Since: 323 | API-Set: unknown
  */
 export function setSirenWithNoDriver(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetSirenWithNoDriver(_vehicle, toggle);
 }
 /**
@@ -2393,7 +2393,7 @@ export function setVariableOnUnderWaterStream(variableName, value) {
  * Hash: 0x01BB4D577D38BD9E | Since: 323 | API-Set: unknown
  */
 export function setVehicleBodyDamageFactor(vehicle, intensity) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehicleAudioBodyDamageFactor(_vehicle, intensity);
 }
 /**
@@ -2402,7 +2402,7 @@ export function setVehicleBodyDamageFactor(vehicle, intensity) {
  * Hash: 0x59E7B488451F4D3A | Since: 323 | API-Set: unknown
  */
 export function setVehicleEngineDamageFactor(vehicle, damageFactor) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehicleAudioEngineDamageFactor(_vehicle, damageFactor);
 }
 /**
@@ -2414,7 +2414,7 @@ export function setVehicleEngineDamageFactor(vehicle, damageFactor) {
  * Hash: 0x4A04DE7CAB2739A1 | Since: 323 | API-Set: unknown
  */
 export function setVehicleBoostActive(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehicleBoostActive(_vehicle, toggle);
 }
 /**
@@ -2447,7 +2447,7 @@ export function setVehicleForceReverseWarning() {
  * Hash: 0x0350E7E17BA767D0 | Since: 1365 | API-Set: unknown
  */
 export function setVehicleHornSoundIndex(vehicle, value) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehicleHornVariation(_vehicle, value);
 }
 /**
@@ -2456,7 +2456,7 @@ export function setVehicleHornSoundIndex(vehicle, value) {
  * Hash: 0xF3365489E0DD50F9 | Since: 323 | API-Set: unknown
  */
 export function setVehicleMissileWarningEnabled(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     Citizen.invokeNative('0xF3365489E0DD50F9', _vehicle, toggle);
 }
 /**
@@ -2465,7 +2465,7 @@ export function setVehicleMissileWarningEnabled(vehicle, toggle) {
  * Hash: 0x3B988190C0AA6C0B | Since: 323 | API-Set: unknown
  */
 export function setVehicleRadioEnabled(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehicleRadioEnabled(_vehicle, toggle);
 }
 /**
@@ -2474,7 +2474,7 @@ export function setVehicleRadioEnabled(vehicle, toggle) {
  * Hash: 0xBB6F1CAEC68B0BCE | Since: 323 | API-Set: unknown
  */
 export function setVehicleRadioLoud(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehicleRadioLoud(_vehicle, toggle);
 }
 /**
@@ -2483,7 +2483,7 @@ export function setVehicleRadioLoud(vehicle, toggle) {
  * Hash: 0xF1F8157B8C3F171C | Since: 323 | API-Set: unknown
  */
 export function setVehicleStartupRevSound(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehicleStartupRevSound(_vehicle, undefined, undefined);
 }
 /**
@@ -2492,7 +2492,7 @@ export function setVehicleStartupRevSound(vehicle) {
  * Hash: 0xC1805D05E6D4FE10 | Since: 323 | API-Set: unknown
  */
 export function setVehForcedRadioThisFrame(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     Citizen.invokeNative('0xC1805D05E6D4FE10', _vehicle);
 }
 /**
@@ -2501,7 +2501,7 @@ export function setVehForcedRadioThisFrame(vehicle) {
  * Hash: 0x3E45765F3FBB582F | Since: 2372 | API-Set: unknown
  */
 export function setVehHasNormalRadio(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehHasRadioOverride(_vehicle);
 }
 /**
@@ -2511,7 +2511,7 @@ export function setVehHasNormalRadio(vehicle) {
  * Hash: 0x1B9C0099CB942AC6 | Since: 323 | API-Set: unknown
  */
 export function setVehRadioStation(vehicle, radioStation) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehRadioStation(_vehicle, radioStation);
 }
 /**
@@ -2753,7 +2753,7 @@ export function triggerMusicEvent(eventName) {
  * Hash: 0x66C3FB05206041BA | Since: 1290 | API-Set: unknown
  */
 export function triggerSiren(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     TriggerSiren(_vehicle);
 }
 /**
@@ -2861,7 +2861,7 @@ export function useFootstepScriptSweeteners(ped, hash) {
  * Hash: 0xFA932DE350266EF8 | Since: 323 | API-Set: unknown
  */
 export function useSirenAsHorn(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     UseSirenAsHorn(_vehicle, toggle);
 }
 /**
@@ -2870,7 +2870,7 @@ export function useSirenAsHorn(vehicle, toggle) {
  * Hash: 0xBEFB80290414FD4F | Since: 3095 | API-Set: unknown
  */
 export function enableDragRaceStationaryWarningSounds(vehicle, enable) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     Citizen.invokeNative('0xBEFB80290414FD4F', _vehicle, enable);
 }
 /**
@@ -2879,6 +2879,6 @@ export function enableDragRaceStationaryWarningSounds(vehicle, enable) {
  * Hash: 0xEB7D0E1FCC8FE17A | Since: 3258 | API-Set: unknown
  */
 export function forceVehicleEngineSynth(vehicle, force) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     ForceVehicleEngineSynth(_vehicle, force);
 }

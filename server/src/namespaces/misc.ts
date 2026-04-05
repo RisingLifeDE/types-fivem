@@ -51,7 +51,7 @@ export function getHashKey(model: string): number {
  * Hash: 0xF01E2AAB
  */
 export function getHeliMainRotorHealth(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetHeliMainRotorHealth(_vehicle);
 }
 

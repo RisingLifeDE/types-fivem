@@ -662,7 +662,7 @@ export function addTcmodifierOverride(modifierName1: string, modifierName2: stri
  * Hash: 0x428BDCB9DA58DA53 | Since: 323 | API-Set: unknown
  */
 export function addVehicleCrewEmblem(vehicle: number | IVehicle, ped: number | IPed, boneIndex: number, x1: number, x2: number, x3: number, y1: number, y2: number, y3: number, z1: number, z2: number, z3: number, scale: number, alpha: number): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     const _ped = ped instanceof IPed ? ped.handle() : ped;
     return AddVehicleCrewEmblem(_vehicle, _ped, boneIndex, x1, x2, x3, y1, y2, y3, z1, z2, z3, scale, undefined, alpha);
 }
@@ -1323,7 +1323,7 @@ export function doesThisPhotoSlotContainAValidPhoto(): boolean {
  * Hash: 0x060D935D3981A275 | Since: 323 | API-Set: unknown
  */
 export function doesVehicleHaveCrewEmblem(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return DoesVehicleHaveCrewEmblem(_vehicle, 0);
 }
 
@@ -2364,7 +2364,7 @@ export function getUsingseethrough(): boolean {
  * Hash: 0xFE26117A5841B2FF | Since: 323 | API-Set: unknown
  */
 export function getVehicleCrewEmblemRequestState(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleCrewEmblemRequestState(_vehicle, 0);
 }
 
@@ -2932,7 +2932,7 @@ export function removeDecalsFromObjectFacing(obj: number | IObject, pos: Vector3
  * Hash: 0xE91F1B65F2B48D57 | Since: 323 | API-Set: unknown
  */
 export function removeDecalsFromVehicle(vehicle: number | IVehicle): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     RemoveDecalsFromVehicle(_vehicle);
 }
 
@@ -2997,7 +2997,7 @@ export function removeScaleformScriptHudMovie(hudComponent: number): void {
  * Hash: 0xD2300034310557E4 | Since: 323 | API-Set: unknown
  */
 export function removeVehicleCrewEmblem(vehicle: number | IVehicle): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     RemoveVehicleCrewEmblem(_vehicle, 0);
 }
 
@@ -3762,7 +3762,7 @@ export function setParticleFxBulletTraceNoAngleReject(): void {
  * Hash: 0xACEE6F360FC1F6B6 | Since: 323 | API-Set: unknown
  */
 export function setParticleFxCamInsideNonplayerVehicle(vehicle: number | IVehicle): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetParticleFxCamInsideNonplayerVehicle(_vehicle, false);
 }
 
@@ -4598,7 +4598,7 @@ export function useSnowWheelVfxWhenUnsheltered(toggle: boolean): void {
  * Hash: 0x5B712761429DBC14 | Since: 323 | API-Set: unknown
  */
 export function washDecalsFromVehicle(vehicle: number | IVehicle): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     WashDecalsFromVehicle(_vehicle, 0);
 }
 
@@ -4681,7 +4681,7 @@ export function setTvChannelPlaylistDirty(tvChannel: number): any {
  * Hash: 0xDF269BE2909E181A | Since: 3095 | API-Set: unknown
  */
 export function startVehicleParticleFxLooped(vehicle: number | IVehicle, effectName: string, frontBack: boolean, leftRight: boolean, localOnly: boolean): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return Citizen.invokeNative('0xDF269BE2909E181A', _vehicle, effectName, frontBack, leftRight, localOnly);
 }
 

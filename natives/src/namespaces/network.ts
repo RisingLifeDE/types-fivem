@@ -2054,7 +2054,7 @@ export function entityUseHighPrecisionRotation(netId: number, toggle: boolean): 
  * Hash: 0x2A5E0621DD815A9A | Since: 463
  */
 export function explodeHeli(vehicle: number | IVehicle, isAudible: boolean, isInvisible: boolean, netId: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     NetworkExplodeHeli(_vehicle, isAudible, isInvisible, netId);
 }
 
@@ -2084,7 +2084,7 @@ export function explodeHeli(vehicle: number | IVehicle, isAudible: boolean, isIn
  * Hash: 0x301A42153C9AD707 | Since: 323
  */
 export function explodeVehicle(vehicle: number | IVehicle, isAudible: boolean, isInvisible: boolean, netId: number): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return NetworkExplodeVehicle(_vehicle, isAudible, isInvisible, netId);
 }
 
@@ -6839,7 +6839,7 @@ export function setCutsceneEntities(toggle: boolean): void {
  * Hash: 0x838DA0936A24ED4D | Since: 944
  */
 export function setEnableHighSpeedEdgeFallDetection(vehicle: number | IVehicle, toggle: boolean): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetNetworkEnableVehiclePositionCorrection(_vehicle, toggle);
 }
 
@@ -6922,7 +6922,7 @@ export function setIdVisibleInCutsceneRemainHack(): void {
  * Hash: 0x6274C4712850841E | Since: 323
  */
 export function setVehicleAsGhost(vehicle: number | IVehicle, toggle: boolean): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetNetworkVehicleAsGhost(_vehicle, toggle);
 }
 
@@ -6932,7 +6932,7 @@ export function setVehicleAsGhost(vehicle: number | IVehicle, toggle: boolean): 
  * Hash: 0xA2A707979FE754DC | Since: 877
  */
 export function setVehicleMaxPositionDeltaMultiplier(vehicle: number | IVehicle, multiplier: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetNetworkVehiclePositionUpdateMultiplier(_vehicle, multiplier);
 }
 
@@ -7862,7 +7862,7 @@ export function usePlayerColourInsteadOfTeamColour(toggle: boolean): void {
  * Hash: 0xB4C94523F023419C | Since: 323
  */
 export function vehToNet(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return VehToNet(_vehicle);
 }
 

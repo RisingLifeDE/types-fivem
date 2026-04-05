@@ -709,7 +709,7 @@ export function create(pedType: number, modelHash: number | string, pos: Vector3
  * Hash: 0x7DD959874C1FD534 | Since: 323
  */
 export function createInsideVehicle(vehicle: number | IVehicle, pedType: number, modelHash: number | string, seat: number, isNetwork: boolean, bScriptHostPed: boolean): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CreatePedInsideVehicle(_vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed);
 }
@@ -737,7 +737,7 @@ export function createRandom(pos: Vector3): number {
  * Hash: 0x9B62392B474F44A0 | Since: 323
  */
 export function createRandomAsDriver(vehicle: number | IVehicle, returnHandle: boolean): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return CreateRandomPedAsDriver(_vehicle, returnHandle);
 }
 
@@ -3042,7 +3042,7 @@ export function isInParachuteFreeFall(ped: number | IPed): boolean {
  */
 export function isInVehicle(ped: number | IPed, vehicle: number | IVehicle, atGetIn: boolean): boolean {
     const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return IsPedInVehicle(_ped, _vehicle, atGetIn);
 }
 
@@ -3161,7 +3161,7 @@ export function isOnMount(ped: number | IPed): boolean {
  */
 export function isOnSpecificVehicle(ped: number | IPed, vehicle: number | IVehicle): boolean {
     const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return IsPedOnSpecificVehicle(_ped, _vehicle);
 }
 
@@ -3358,7 +3358,7 @@ export function isSittingInAnyVehicle(ped: number | IPed): boolean {
  */
 export function isSittingInVehicle(ped: number | IPed, vehicle: number | IVehicle): boolean {
     const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return IsPedSittingInVehicle(_ped, _vehicle);
 }
 
@@ -5708,7 +5708,7 @@ export function setDefensiveSphereAttachedToPed(ped: number | IPed, target: numb
  */
 export function setDefensiveSphereAttachedToVehicle(ped: number | IPed, target: number | IVehicle, xOffset: number, yOffset: number, zOffset: number, radius: number): void {
     const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _target = target instanceof IVehicle ? target.localId() : target;
+    const _target = target instanceof IVehicle ? target.handle() : target;
     SetPedDefensiveSphereAttachedToVehicle(_ped, _target, xOffset, yOffset, zOffset, radius, false);
 }
 
@@ -6185,7 +6185,7 @@ export function setInjuredOnGroundBehaviour(ped: number | IPed): void {
  */
 export function setIntoVehicle(ped: number | IPed, vehicle: number | IVehicle, seatIndex: number): void {
     const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetPedIntoVehicle(_ped, _vehicle, seatIndex);
 }
 
@@ -7112,7 +7112,7 @@ export function setUsingActionMode(ped: number | IPed, action: string): void {
  */
 export function setVehicleForcedSeatUsage(ped: number | IPed, vehicle: number | IVehicle, seatIndex: number, flags: number): void {
     const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetPedVehicleForcedSeatUsage(_ped, _vehicle, seatIndex, flags, undefined);
 }
 

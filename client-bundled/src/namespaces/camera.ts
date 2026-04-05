@@ -132,7 +132,7 @@ export function attachCamToPedBone(cam: number | ICamera, ped: number | IPed, bo
  */
 export function attachCamToVehicleBone(cam: number | ICamera, vehicle: number | IVehicle, boneIndex: number, relativeRotation: boolean, rot: Vector3, offsetX: number, offsetY: number, offsetZ: number, fixedDirection: boolean): void {
     const _cam = cam instanceof ICamera ? cam.handle() : cam;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     AttachCamToVehicleBone(_cam, _vehicle, boneIndex, relativeRotation, rot.x, rot.y, rot.z, offsetX, offsetY, offsetZ, fixedDirection);
 }
 
@@ -2174,7 +2174,7 @@ export function setGameplayPedHint(ped: number | IPed, x1: number, y1: number, z
  * Hash: 0xA2297E18F3E71C2E | Since: 323 | API-Set: unknown
  */
 export function setGameplayVehicleHint(vehicle: number | IVehicle, offsetX: number, offsetY: number, offsetZ: number, time: number, easeInTime: number, easeOutTime: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetGameplayVehicleHint(_vehicle, offsetX, offsetY, offsetZ, false, time, easeInTime, easeOutTime);
 }
 
@@ -2184,7 +2184,7 @@ export function setGameplayVehicleHint(vehicle: number | IVehicle, offsetX: numb
  * Hash: 0xE9EA16D6E54CDCA4 | Since: 323 | API-Set: unknown
  */
 export function setInVehicleCamStateThisUpdate(p0: number | IVehicle): void {
-    const _p0 = p0 instanceof IVehicle ? p0.localId() : p0;
+    const _p0 = p0 instanceof IVehicle ? p0.handle() : p0;
     SetInVehicleCamStateThisUpdate(_p0, 0);
 }
 
@@ -2474,7 +2474,7 @@ export function stopScriptGlobalShaking(): void {
  * Hash: 0x5D96CFB59DA076A0 | Since: 2060 | API-Set: unknown
  */
 export function triggerVehiclePartBrokenShake(vehicle: number | IVehicle): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     Citizen.invokeNative('0x5D96CFB59DA076A0', _vehicle, 0, 0);
 }
 

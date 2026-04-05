@@ -192,7 +192,7 @@ export function getPhoneRenderId(): number {
  * Hash: 0x1CEFB61F193070AE | Since: 323 | API-Set: unknown
  */
 export function getPhoneRotation(p1: number | IVehicle): Vector3 {
-    const _p1 = p1 instanceof IVehicle ? p1.localId() : p1;
+    const _p1 = p1 instanceof IVehicle ? p1.handle() : p1;
     return GetMobilePhoneRotation(_p1);
 }
 

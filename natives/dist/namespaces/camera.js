@@ -111,7 +111,7 @@ export function attachCamToPedBone(cam, ped, boneIndex, pos, heading) {
  */
 export function attachCamToVehicleBone(cam, vehicle, boneIndex, relativeRotation, rot, offsetX, offsetY, offsetZ, fixedDirection) {
     const _cam = cam instanceof ICamera ? cam.handle() : cam;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     AttachCamToVehicleBone(_cam, _vehicle, boneIndex, relativeRotation, rot.x, rot.y, rot.z, offsetX, offsetY, offsetZ, fixedDirection);
 }
 /**
@@ -1954,7 +1954,7 @@ export function setGameplayPedHint(ped, x1, y1, z1, duration, blendOutDuration, 
  * Hash: 0xA2297E18F3E71C2E | Since: 323
  */
 export function setGameplayVehicleHint(vehicle, offsetX, offsetY, offsetZ, time, easeInTime, easeOutTime) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetGameplayVehicleHint(_vehicle, offsetX, offsetY, offsetZ, false, time, easeInTime, easeOutTime);
 }
 /**
@@ -1963,7 +1963,7 @@ export function setGameplayVehicleHint(vehicle, offsetX, offsetY, offsetZ, time,
  * Hash: 0xE9EA16D6E54CDCA4 | Since: 323
  */
 export function setInVehicleCamStateThisUpdate(p0) {
-    const _p0 = p0 instanceof IVehicle ? p0.localId() : p0;
+    const _p0 = p0 instanceof IVehicle ? p0.handle() : p0;
     SetInVehicleCamStateThisUpdate(_p0, 0);
 }
 /**
@@ -2230,7 +2230,7 @@ export function stopScriptGlobalShaking() {
  * Hash: 0x5D96CFB59DA076A0 | Since: 2060
  */
 export function triggerVehiclePartBrokenShake(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     Citizen.invokeNative('0x5D96CFB59DA076A0', _vehicle, 0, 0);
 }
 /**

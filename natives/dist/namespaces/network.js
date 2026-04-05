@@ -1850,7 +1850,7 @@ export function entityUseHighPrecisionRotation(netId, toggle) {
  * Hash: 0x2A5E0621DD815A9A | Since: 463
  */
 export function explodeHeli(vehicle, isAudible, isInvisible, netId) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     NetworkExplodeHeli(_vehicle, isAudible, isInvisible, netId);
 }
 /**
@@ -1879,7 +1879,7 @@ export function explodeHeli(vehicle, isAudible, isInvisible, netId) {
  * Hash: 0x301A42153C9AD707 | Since: 323
  */
 export function explodeVehicle(vehicle, isAudible, isInvisible, netId) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return NetworkExplodeVehicle(_vehicle, isAudible, isInvisible, netId);
 }
 /**
@@ -6143,7 +6143,7 @@ export function setCutsceneEntities(toggle) {
  * Hash: 0x838DA0936A24ED4D | Since: 944
  */
 export function setEnableHighSpeedEdgeFallDetection(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetNetworkEnableVehiclePositionCorrection(_vehicle, toggle);
 }
 /**
@@ -6217,7 +6217,7 @@ export function setIdVisibleInCutsceneRemainHack() {
  * Hash: 0x6274C4712850841E | Since: 323
  */
 export function setVehicleAsGhost(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetNetworkVehicleAsGhost(_vehicle, toggle);
 }
 /**
@@ -6226,7 +6226,7 @@ export function setVehicleAsGhost(vehicle, toggle) {
  * Hash: 0xA2A707979FE754DC | Since: 877
  */
 export function setVehicleMaxPositionDeltaMultiplier(vehicle, multiplier) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetNetworkVehiclePositionUpdateMultiplier(_vehicle, multiplier);
 }
 /**
@@ -7054,7 +7054,7 @@ export function usePlayerColourInsteadOfTeamColour(toggle) {
  * Hash: 0xB4C94523F023419C | Since: 323
  */
 export function vehToNet(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return VehToNet(_vehicle);
 }
 /**

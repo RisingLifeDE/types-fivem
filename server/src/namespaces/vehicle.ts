@@ -6,7 +6,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0xA886495D
  */
 export function getHeliBodyHealth(heli: number | IVehicle): number {
-    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    const _heli = heli instanceof IVehicle ? heli.handle() : heli;
     return GetHeliBodyHealth(_heli);
 }
 
@@ -16,7 +16,7 @@ export function getHeliBodyHealth(heli: number | IVehicle): number {
  * Hash: 0x82AFC0A3
  */
 export function getHeliDisableExplodeFromBodyDamage(heli: number | IVehicle): boolean {
-    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    const _heli = heli instanceof IVehicle ? heli.handle() : heli;
     return GetHeliDisableExplodeFromBodyDamage(_heli);
 }
 
@@ -26,7 +26,7 @@ export function getHeliDisableExplodeFromBodyDamage(heli: number | IVehicle): bo
  * Hash: 0xA0FA0354
  */
 export function getHeliEngineHealth(heli: number | IVehicle): number {
-    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    const _heli = heli instanceof IVehicle ? heli.handle() : heli;
     return GetHeliEngineHealth(_heli);
 }
 
@@ -36,7 +36,7 @@ export function getHeliEngineHealth(heli: number | IVehicle): number {
  * Hash: 0xD4EC7858
  */
 export function getHeliGasTankHealth(heli: number | IVehicle): number {
-    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    const _heli = heli instanceof IVehicle ? heli.handle() : heli;
     return GetHeliGasTankHealth(_heli);
 }
 
@@ -46,7 +46,7 @@ export function getHeliGasTankHealth(heli: number | IVehicle): number {
  * Hash: 0xC37D668
  */
 export function getHeliMainRotorDamageScale(heli: number | IVehicle): number {
-    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    const _heli = heli instanceof IVehicle ? heli.handle() : heli;
     return GetHeliMainRotorDamageScale(_heli);
 }
 
@@ -56,7 +56,7 @@ export function getHeliMainRotorDamageScale(heli: number | IVehicle): number {
  * Hash: 0x1944AC95
  */
 export function getHeliPitchControl(heli: number | IVehicle): number {
-    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    const _heli = heli instanceof IVehicle ? heli.handle() : heli;
     return GetHeliPitchControl(_heli);
 }
 
@@ -66,7 +66,7 @@ export function getHeliPitchControl(heli: number | IVehicle): number {
  * Hash: 0xC40161E2
  */
 export function getHeliRearRotorDamageScale(heli: number | IVehicle): number {
-    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    const _heli = heli instanceof IVehicle ? heli.handle() : heli;
     return GetHeliRearRotorDamageScale(_heli);
 }
 
@@ -76,7 +76,7 @@ export function getHeliRearRotorDamageScale(heli: number | IVehicle): number {
  * Hash: 0x33EE6E2B
  */
 export function getHeliRearRotorHealth(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetHeliRearRotorHealth(_vehicle);
 }
 
@@ -86,7 +86,7 @@ export function getHeliRearRotorHealth(vehicle: number | IVehicle): number {
  * Hash: 0x12948DE9
  */
 export function getHeliRollControl(heli: number | IVehicle): number {
-    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    const _heli = heli instanceof IVehicle ? heli.handle() : heli;
     return GetHeliRollControl(_heli);
 }
 
@@ -96,7 +96,7 @@ export function getHeliRollControl(heli: number | IVehicle): number {
  * Hash: 0x22239130
  */
 export function getHeliTailRotorDamageScale(heli: number | IVehicle): number {
-    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    const _heli = heli instanceof IVehicle ? heli.handle() : heli;
     return GetHeliTailRotorDamageScale(_heli);
 }
 
@@ -106,7 +106,7 @@ export function getHeliTailRotorDamageScale(heli: number | IVehicle): number {
  * Hash: 0xA41BC13D
  */
 export function getHeliTailRotorHealth(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetHeliTailRotorHealth(_vehicle);
 }
 
@@ -116,7 +116,7 @@ export function getHeliTailRotorHealth(vehicle: number | IVehicle): number {
  * Hash: 0x8E86238D
  */
 export function getHeliThrottleControl(heli: number | IVehicle): number {
-    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    const _heli = heli instanceof IVehicle ? heli.handle() : heli;
     return GetHeliThrottleControl(_heli);
 }
 
@@ -126,7 +126,7 @@ export function getHeliThrottleControl(heli: number | IVehicle): number {
  * Hash: 0x8FDC0768
  */
 export function getHeliYawControl(heli: number | IVehicle): number {
-    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    const _heli = heli instanceof IVehicle ? heli.handle() : heli;
     return GetHeliYawControl(_heli);
 }
 
@@ -136,7 +136,7 @@ export function getHeliYawControl(heli: number | IVehicle): number {
  * Hash: 0x3EFE38D1
  */
 export function getIsHeliEngineRunning(heli: number | IVehicle): boolean {
-    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    const _heli = heli instanceof IVehicle ? heli.handle() : heli;
     return GetIsHeliEngineRunning(_heli);
 }
 
@@ -146,7 +146,7 @@ export function getIsHeliEngineRunning(heli: number | IVehicle): boolean {
  * Hash: 0x1C939E87
  */
 export function getThrusterSideRcsThrottle(jetpack: number | IVehicle): number {
-    const _jetpack = jetpack instanceof IVehicle ? jetpack.localId() : jetpack;
+    const _jetpack = jetpack instanceof IVehicle ? jetpack.handle() : jetpack;
     return GetThrusterSideRcsThrottle(_jetpack);
 }
 
@@ -156,7 +156,7 @@ export function getThrusterSideRcsThrottle(jetpack: number | IVehicle): number {
  * Hash: 0x94E24C96
  */
 export function getThrusterThrottle(jetpack: number | IVehicle): number {
-    const _jetpack = jetpack instanceof IVehicle ? jetpack.localId() : jetpack;
+    const _jetpack = jetpack instanceof IVehicle ? jetpack.handle() : jetpack;
     return GetThrusterThrottle(_jetpack);
 }
 
@@ -166,7 +166,7 @@ export function getThrusterThrottle(jetpack: number | IVehicle): number {
  * Hash: 0x456E34A
  */
 export function getTrainBackwardCarriage(train: number | IVehicle): number {
-    const _train = train instanceof IVehicle ? train.localId() : train;
+    const _train = train instanceof IVehicle ? train.handle() : train;
     return GetTrainBackwardCarriage(_train);
 }
 
@@ -176,7 +176,7 @@ export function getTrainBackwardCarriage(train: number | IVehicle): number {
  * Hash: 0x24DC88D9
  */
 export function getTrainForwardCarriage(train: number | IVehicle): number {
-    const _train = train instanceof IVehicle ? train.localId() : train;
+    const _train = train instanceof IVehicle ? train.handle() : train;
     return GetTrainForwardCarriage(_train);
 }
 
@@ -197,7 +197,7 @@ export function getTrainForwardCarriage(train: number | IVehicle): number {
  * Hash: 0xDEA49773
  */
 export function getHornType(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleHornType(_vehicle);
 }
 
@@ -207,7 +207,7 @@ export function getHornType(vehicle: number | IVehicle): number {
  * Hash: 0x23E46BD7
  */
 export function isHeliTailBoomBreakable(heli: number | IVehicle): boolean {
-    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    const _heli = heli instanceof IVehicle ? heli.handle() : heli;
     return IsHeliTailBoomBreakable(_heli);
 }
 
@@ -217,7 +217,7 @@ export function isHeliTailBoomBreakable(heli: number | IVehicle): boolean {
  * Hash: 0x2C59F987
  */
 export function isHeliTailBoomBroken(heli: number | IVehicle): boolean {
-    const _heli = heli instanceof IVehicle ? heli.localId() : heli;
+    const _heli = heli instanceof IVehicle ? heli.handle() : heli;
     return IsHeliTailBoomBroken(_heli);
 }
 
@@ -227,7 +227,7 @@ export function isHeliTailBoomBroken(heli: number | IVehicle): boolean {
  * Hash: 0xFA9336E5
  */
 export function isTrainCaboose(train: number | IVehicle): boolean {
-    const _train = train instanceof IVehicle ? train.localId() : train;
+    const _train = train instanceof IVehicle ? train.handle() : train;
     return IsTrainCaboose(_train);
 }
 
@@ -237,7 +237,7 @@ export function isTrainCaboose(train: number | IVehicle): boolean {
  * Hash: 0x77CC80DC
  */
 export function doesTrainStopAtStations(train: number | IVehicle): boolean {
-    const _train = train instanceof IVehicle ? train.localId() : train;
+    const _train = train instanceof IVehicle ? train.handle() : train;
     return DoesTrainStopAtStations(_train);
 }
 
@@ -247,7 +247,7 @@ export function doesTrainStopAtStations(train: number | IVehicle): boolean {
  * Hash: 0xA4921EF5
  */
 export function getTrainCruiseSpeed(train: number | IVehicle): number {
-    const _train = train instanceof IVehicle ? train.localId() : train;
+    const _train = train instanceof IVehicle ? train.handle() : train;
     return GetTrainCruiseSpeed(_train);
 }
 
@@ -257,7 +257,7 @@ export function getTrainCruiseSpeed(train: number | IVehicle): number {
  * Hash: 0x8DAF79B6
  */
 export function getTrainDirection(train: number | IVehicle): boolean {
-    const _train = train instanceof IVehicle ? train.localId() : train;
+    const _train = train instanceof IVehicle ? train.handle() : train;
     return GetTrainDirection(_train);
 }
 
@@ -267,7 +267,7 @@ export function getTrainDirection(train: number | IVehicle): boolean {
  * Hash: 0x81B50033
  */
 export function getTrainState(train: number | IVehicle): number {
-    const _train = train instanceof IVehicle ? train.localId() : train;
+    const _train = train instanceof IVehicle ? train.handle() : train;
     return GetTrainState(_train);
 }
 
@@ -277,7 +277,7 @@ export function getTrainState(train: number | IVehicle): number {
  * Hash: 0x9AA339D
  */
 export function getTrainTrackIndex(train: number | IVehicle): number {
-    const _train = train instanceof IVehicle ? train.localId() : train;
+    const _train = train instanceof IVehicle ? train.handle() : train;
     return GetTrainTrackIndex(_train);
 }
 
@@ -287,7 +287,7 @@ export function getTrainTrackIndex(train: number | IVehicle): number {
  * Hash: 0x483B013C
  */
 export function getHandbrake(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleHandbrake(_vehicle);
 }
 
@@ -297,7 +297,7 @@ export function getHandbrake(vehicle: number | IVehicle): boolean {
  * Hash: 0x1382FCEA
  */
 export function getSteeringAngle(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleSteeringAngle(_vehicle);
 }
 
@@ -307,7 +307,7 @@ export function getSteeringAngle(vehicle: number | IVehicle): number {
  * Hash: 0xBB340D04
  */
 export function isEngineStarting(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return IsVehicleEngineStarting(_vehicle);
 }
 
@@ -357,7 +357,7 @@ export function deleteTrain(entity: number | IEntity): void {
  * Hash: 0x43F15989
  */
 export function doesBoatSinkWhenWrecked(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return DoesBoatSinkWhenWrecked(_vehicle);
 }
 
@@ -381,7 +381,7 @@ export function getAlls(): number {
  * Hash: 0x7DC6D022
  */
 export function getIsEngineRunning(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetIsVehicleEngineRunning(_vehicle);
 }
 
@@ -391,7 +391,7 @@ export function getIsEngineRunning(vehicle: number | IVehicle): boolean {
  * Hash: 0xD7EC8760
  */
 export function getIsPrimaryColourCustom(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetIsVehiclePrimaryColourCustom(_vehicle);
 }
 
@@ -401,7 +401,7 @@ export function getIsPrimaryColourCustom(vehicle: number | IVehicle): boolean {
  * Hash: 0x288AD228
  */
 export function getIsSecondaryColourCustom(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetIsVehicleSecondaryColourCustom(_vehicle);
 }
 
@@ -411,7 +411,7 @@ export function getIsSecondaryColourCustom(vehicle: number | IVehicle): boolean 
  * Hash: 0xA6F02670
  */
 export function getLandingGearState(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetLandingGearState(_vehicle);
 }
 
@@ -421,7 +421,7 @@ export function getLandingGearState(vehicle: number | IVehicle): number {
  * Hash: 0x95070FA
  */
 export function getTrainCarriageEngine(train: number | IVehicle): number {
-    const _train = train instanceof IVehicle ? train.localId() : train;
+    const _train = train instanceof IVehicle ? train.handle() : train;
     return GetTrainCarriageEngine(_train);
 }
 
@@ -431,7 +431,7 @@ export function getTrainCarriageEngine(train: number | IVehicle): number {
  * Hash: 0x4B8285CF
  */
 export function getTrainCarriageIndex(train: number | IVehicle): number {
-    const _train = train instanceof IVehicle ? train.localId() : train;
+    const _train = train instanceof IVehicle ? train.handle() : train;
     return GetTrainCarriageIndex(_train);
 }
 
@@ -441,7 +441,7 @@ export function getTrainCarriageIndex(train: number | IVehicle): number {
  * Hash: 0x2B2FCC28
  */
 export function getBodyHealth(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleBodyHealth(_vehicle);
 }
 
@@ -451,7 +451,7 @@ export function getBodyHealth(vehicle: number | IVehicle): number {
  * Hash: 0x40D82D88
  */
 export function getColours(vehicle: number | IVehicle): [number, number] {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleColours(_vehicle);
 }
 
@@ -461,7 +461,7 @@ export function getColours(vehicle: number | IVehicle): [number, number] {
  * Hash: 0x1C2B9FEF
  */
 export function getCustomPrimaryColour(vehicle: number | IVehicle): [number, number, number] {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleCustomPrimaryColour(_vehicle);
 }
 
@@ -471,7 +471,7 @@ export function getCustomPrimaryColour(vehicle: number | IVehicle): [number, num
  * Hash: 0x3FF247A2
  */
 export function getCustomSecondaryColour(vehicle: number | IVehicle): [number, number, number] {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleCustomSecondaryColour(_vehicle);
 }
 
@@ -481,7 +481,7 @@ export function getCustomSecondaryColour(vehicle: number | IVehicle): [number, n
  * Hash: 0xA0DBD08D
  */
 export function getDashboardColour(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleDashboardColour(_vehicle);
 }
 
@@ -491,7 +491,7 @@ export function getDashboardColour(vehicle: number | IVehicle): number {
  * Hash: 0xFD15C065
  */
 export function getDirtLevel(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleDirtLevel(_vehicle);
 }
 
@@ -501,7 +501,7 @@ export function getDirtLevel(vehicle: number | IVehicle): number {
  * Hash: 0x1DC50247
  */
 export function getDoorsLockedForPlayer(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleDoorsLockedForPlayer(_vehicle);
 }
 
@@ -525,7 +525,7 @@ export function getDoorsLockedForPlayer(vehicle: number | IVehicle): number {
  * Hash: 0xD72CEF2
  */
 export function getDoorLockStatus(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleDoorLockStatus(_vehicle);
 }
 
@@ -535,7 +535,7 @@ export function getDoorLockStatus(vehicle: number | IVehicle): number {
  * Hash: 0x6E35C49C
  */
 export function getDoorStatus(vehicle: number | IVehicle, doorIndex: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleDoorStatus(_vehicle, doorIndex);
 }
 
@@ -545,7 +545,7 @@ export function getDoorStatus(vehicle: number | IVehicle, doorIndex: number): nu
  * Hash: 0x8880038A
  */
 export function getEngineHealth(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleEngineHealth(_vehicle);
 }
 
@@ -555,7 +555,7 @@ export function getEngineHealth(vehicle: number | IVehicle): number {
  * Hash: 0x80E4659B
  */
 export function getExtraColours(vehicle: number | IVehicle): [number, number] {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleExtraColours(_vehicle);
 }
 
@@ -565,7 +565,7 @@ export function getExtraColours(vehicle: number | IVehicle): [number, number] {
  * Hash: 0xAD40AD55
  */
 export function getFlightNozzlePosition(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleFlightNozzlePosition(_vehicle);
 }
 
@@ -575,7 +575,7 @@ export function getFlightNozzlePosition(vehicle: number | IVehicle): number {
  * Hash: 0xD7147656
  */
 export function getHeadlightsColour(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleHeadlightsColour(_vehicle);
 }
 
@@ -585,7 +585,7 @@ export function getHeadlightsColour(vehicle: number | IVehicle): number {
  * Hash: 0xFBDE9FD8
  */
 export function getHomingLockonState(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleHomingLockonState(_vehicle);
 }
 
@@ -595,7 +595,7 @@ export function getHomingLockonState(vehicle: number | IVehicle): number {
  * Hash: 0xCCFF3B6E
  */
 export function getInteriorColour(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleInteriorColour(_vehicle);
 }
 
@@ -605,7 +605,7 @@ export function getInteriorColour(vehicle: number | IVehicle): number {
  * Hash: 0x7C278621
  */
 export function getLightsState(vehicle: number | IVehicle): [boolean, boolean, boolean] {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleLightsState(_vehicle);
 }
 
@@ -615,7 +615,7 @@ export function getLightsState(vehicle: number | IVehicle): [boolean, boolean, b
  * Hash: 0xEC82A51D
  */
 export function getLivery(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleLivery(_vehicle);
 }
 
@@ -625,7 +625,7 @@ export function getLivery(vehicle: number | IVehicle): number {
  * Hash: 0x4A557117
  */
 export function getLockOnTarget(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleLockOnTarget(_vehicle);
 }
 
@@ -635,7 +635,7 @@ export function getLockOnTarget(vehicle: number | IVehicle): number {
  * Hash: 0xD9319DCB
  */
 export function getNeonColour(vehicle: number | IVehicle): [number, number, number] {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleNeonColour(_vehicle);
 }
 
@@ -655,7 +655,7 @@ export function getNeonColour(vehicle: number | IVehicle): [number, number, numb
  * Hash: 0x684BDBF2
  */
 export function getNeonEnabled(vehicle: number | IVehicle, neonIndex: number): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleNeonEnabled(_vehicle, neonIndex);
 }
 
@@ -665,7 +665,7 @@ export function getNeonEnabled(vehicle: number | IVehicle, neonIndex: number): b
  * Hash: 0xE8522D58
  */
 export function getNumberPlateText(vehicle: number | IVehicle): string {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleNumberPlateText(_vehicle);
 }
 
@@ -675,7 +675,7 @@ export function getNumberPlateText(vehicle: number | IVehicle): string {
  * Hash: 0x499747B6
  */
 export function getNumberPlateTextIndex(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleNumberPlateTextIndex(_vehicle);
 }
 
@@ -695,7 +695,7 @@ export function getPedIsIn(ped: number | IPed, lastVehicle: boolean): number {
  * Hash: 0xE41595CE
  */
 export function getPetrolTankHealth(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehiclePetrolTankHealth(_vehicle);
 }
 
@@ -705,7 +705,7 @@ export function getPetrolTankHealth(vehicle: number | IVehicle): number {
  * Hash: 0x57037960
  */
 export function getRadioStationIndex(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleRadioStationIndex(_vehicle);
 }
 
@@ -715,7 +715,7 @@ export function getRadioStationIndex(vehicle: number | IVehicle): number {
  * Hash: 0x872CF42
  */
 export function getRoofLivery(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleRoofLivery(_vehicle);
 }
 
@@ -725,7 +725,7 @@ export function getRoofLivery(vehicle: number | IVehicle): number {
  * Hash: 0x9963D5F9
  */
 export function getTotalRepairs(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleTotalRepairs(_vehicle);
 }
 
@@ -735,7 +735,7 @@ export function getTotalRepairs(vehicle: number | IVehicle): number {
  * Hash: 0x75280015
  */
 export function getTyreSmokeColor(vehicle: number | IVehicle): [number, number, number] {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleTyreSmokeColor(_vehicle);
 }
 
@@ -745,7 +745,7 @@ export function getTyreSmokeColor(vehicle: number | IVehicle): [number, number, 
  * Hash: 0xDA58D7AE
  */
 export function getWheelType(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleWheelType(_vehicle);
 }
 
@@ -755,7 +755,7 @@ export function getWheelType(vehicle: number | IVehicle): number {
  * Hash: 0x13D53892
  */
 export function getWindowTint(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleWindowTint(_vehicle);
 }
 
@@ -765,7 +765,7 @@ export function getWindowTint(vehicle: number | IVehicle): number {
  * Hash: 0xB8AF3137
  */
 export function hasBeenDamagedByBullets(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return HasVehicleBeenDamagedByBullets(_vehicle);
 }
 
@@ -775,7 +775,7 @@ export function hasBeenDamagedByBullets(vehicle: number | IVehicle): boolean {
  * Hash: 0xE4E83A5B
  */
 export function hasBeenOwnedByPlayer(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return HasVehicleBeenOwnedByPlayer(_vehicle);
 }
 
@@ -785,7 +785,7 @@ export function hasBeenOwnedByPlayer(vehicle: number | IVehicle): boolean {
  * Hash: 0xD5C39EE6
  */
 export function isBoatAnchoredAndFrozen(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return IsBoatAnchoredAndFrozen(_vehicle);
 }
 
@@ -795,7 +795,7 @@ export function isBoatAnchoredAndFrozen(vehicle: number | IVehicle): boolean {
  * Hash: 0x9049DB44
  */
 export function isBoatWrecked(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return IsBoatWrecked(_vehicle);
 }
 
@@ -805,7 +805,7 @@ export function isBoatWrecked(vehicle: number | IVehicle): boolean {
  * Hash: 0x42098B5
  */
 export function isExtraTurnedOn(vehicle: number | IVehicle, extraId: number): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return IsVehicleExtraTurnedOn(_vehicle, extraId);
 }
 
@@ -815,7 +815,7 @@ export function isExtraTurnedOn(vehicle: number | IVehicle, extraId: number): bo
  * Hash: 0x25EB5873
  */
 export function isSirenOn(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return IsVehicleSirenOn(_vehicle);
 }
 
@@ -825,7 +825,7 @@ export function isSirenOn(vehicle: number | IVehicle): boolean {
  * Hash: 0x48C80210
  */
 export function isTyreBurst(vehicle: number | IVehicle, wheelID: number, completely: boolean): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return IsVehicleTyreBurst(_vehicle, wheelID, completely);
 }
 
@@ -835,7 +835,7 @@ export function isTyreBurst(vehicle: number | IVehicle, wheelID: number, complet
  * Hash: 0xAC4EF23D
  */
 export function isWindowIntact(vehicle: number | IVehicle, windowIndex: number): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return IsVehicleWindowIntact(_vehicle, windowIndex);
 }
 
@@ -847,7 +847,7 @@ export function isWindowIntact(vehicle: number | IVehicle, windowIndex: number):
  * Hash: 0x24877D84
  */
 export function setAlarm(vehicle: number | IVehicle, state: boolean): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehicleAlarm(_vehicle, state);
 }
 
@@ -861,7 +861,7 @@ export function setAlarm(vehicle: number | IVehicle, state: boolean): void {
  * Hash: 0x920C2517
  */
 export function setBodyHealth(vehicle: number | IVehicle, value: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehicleBodyHealth(_vehicle, value);
 }
 
@@ -874,7 +874,7 @@ export function setBodyHealth(vehicle: number | IVehicle, value: number): void {
  * Hash: 0x57F24253
  */
 export function setColours(vehicle: number | IVehicle, colorPrimary: number, colorSecondary: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehicleColours(_vehicle, colorPrimary, colorSecondary);
 }
 
@@ -887,7 +887,7 @@ export function setColours(vehicle: number | IVehicle, colorPrimary: number, col
  * Hash: 0xA557AEAD
  */
 export function setColourCombination(vehicle: number | IVehicle, colorCombination: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehicleColourCombination(_vehicle, colorCombination);
 }
 
@@ -901,7 +901,7 @@ export function setColourCombination(vehicle: number | IVehicle, colorCombinatio
  * Hash: 0x8DF9F9BC
  */
 export function setCustomPrimaryColour(vehicle: number | IVehicle, r: number, g: number, b: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehicleCustomPrimaryColour(_vehicle, r, g, b);
 }
 
@@ -915,7 +915,7 @@ export function setCustomPrimaryColour(vehicle: number | IVehicle, r: number, g:
  * Hash: 0x9D77259E
  */
 export function setCustomSecondaryColour(vehicle: number | IVehicle, r: number, g: number, b: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehicleCustomSecondaryColour(_vehicle, r, g, b);
 }
 
@@ -927,7 +927,7 @@ export function setCustomSecondaryColour(vehicle: number | IVehicle, r: number, 
  * Hash: 0x2B39128B
  */
 export function setDirtLevel(vehicle: number | IVehicle, dirtLevel: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehicleDirtLevel(_vehicle, dirtLevel);
 }
 
@@ -970,7 +970,7 @@ export function setDirtLevel(vehicle: number | IVehicle, dirtLevel: number): voi
  * Hash: 0x4CDD35D0
  */
 export function setDoorsLocked(vehicle: number | IVehicle, doorLockStatus: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehicleDoorsLocked(_vehicle, doorLockStatus);
 }
 
@@ -982,7 +982,7 @@ export function setDoorsLocked(vehicle: number | IVehicle, doorLockStatus: numbe
  * Hash: 0x8147FEA7
  */
 export function setDoorBroken(vehicle: number | IVehicle, doorIndex: number, deleteDoor: boolean): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehicleDoorBroken(_vehicle, doorIndex, deleteDoor);
 }
 
@@ -994,7 +994,7 @@ export function setDoorBroken(vehicle: number | IVehicle, doorIndex: number, del
  * Hash: 0x400F9556
  */
 export function setNumberPlateText(vehicle: number | IVehicle, plateText: string): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehicleNumberPlateText(_vehicle, plateText);
 }
 
@@ -1017,7 +1017,7 @@ export function setNumberPlateText(vehicle: number | IVehicle, plateText: string
  * Hash: 0xA273060E
  */
 export function getType(vehicle: number | IVehicle): string {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetVehicleType(_vehicle);
 }
 

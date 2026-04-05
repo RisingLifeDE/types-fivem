@@ -758,7 +758,7 @@ export function hasPedGotComponent(ped, weaponHash, componentHash) {
  */
 export function hasVehicleGotProjectileAttached(driver, vehicle, weaponHash) {
     const _driver = driver instanceof IPed ? driver.handle() : driver;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     return HasVehicleGotProjectileAttached(_driver, _vehicle, weaponHash, undefined);
@@ -1452,7 +1452,7 @@ export function setObjectTintIndex(weapon, tintIndex) {
  * Hash: 0x2857938C5D407AFA | Since: 3407
  */
 export function getAmmoInVehicleClip(vehicle, seat) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return Citizen.invokeNative('0x2857938C5D407AFA', _vehicle, seat);
 }
 /**
@@ -1461,7 +1461,7 @@ export function getAmmoInVehicleClip(vehicle, seat) {
  * Hash: 0xC8C6F4B1CDEB40EF | Since: 3407
  */
 export function getTimeBeforeVehicleReloadFinishes(vehicle, seat) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return Citizen.invokeNative('0xC8C6F4B1CDEB40EF', _vehicle, seat);
 }
 /**
@@ -1470,7 +1470,7 @@ export function getTimeBeforeVehicleReloadFinishes(vehicle, seat) {
  * Hash: 0xD0AD348FFD7A6868 | Since: 3407
  */
 export function getVehicleReloadTime(vehicle, seat) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return Citizen.invokeNative('0xD0AD348FFD7A6868', _vehicle, seat);
 }
 /**
@@ -1479,7 +1479,7 @@ export function getVehicleReloadTime(vehicle, seat) {
  * Hash: 0x8062F07153F4446F | Since: 3407
  */
 export function hasReloadingInVehicle(vehicle, seat) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return Citizen.invokeNative('0x8062F07153F4446F', _vehicle, seat);
 }
 /**
@@ -1488,7 +1488,7 @@ export function hasReloadingInVehicle(vehicle, seat) {
  * Hash: 0x873906720EE842C3 | Since: 3407
  */
 export function setAmmoInVehicleClip(vehicle, seat, ammo) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return Citizen.invokeNative('0x873906720EE842C3', _vehicle, seat, ammo);
 }
 /**
@@ -1507,7 +1507,7 @@ export function setPedDamageModifier(weapon, damageModifier) {
  * Hash: 0x5B1513F27F279A44 | Since: 3407
  */
 export function triggerVehicleReload(vehicle, seat, ped) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     const _ped = ped instanceof IPed ? ped.handle() : ped;
     return Citizen.invokeNative('0x5B1513F27F279A44', _vehicle, seat, _ped);
 }

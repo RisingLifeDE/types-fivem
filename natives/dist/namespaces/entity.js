@@ -1960,7 +1960,7 @@ export function setPickUpByCargobobDisabled(entity, toggle) {
  * Hash: 0x629BFA74418D6239 | Since: 323
  */
 export function setVehicleAsNoLongerNeeded(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetVehicleAsNoLongerNeeded(_vehicle);
 }
 /**

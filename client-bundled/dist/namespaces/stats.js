@@ -1471,7 +1471,7 @@ export function playQuitMode() {
  * Hash: 0x9C375C315099DDE4 | Since: 323 | API-Set: unknown
  */
 export function playRaceCheckpoint(p0) {
-    const _p0 = p0 instanceof IVehicle ? p0.localId() : p0;
+    const _p0 = p0 instanceof IVehicle ? p0.handle() : p0;
     PlaystatsRaceCheckpoint(_p0, undefined, 0, 0, undefined);
 }
 /**

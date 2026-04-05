@@ -2026,7 +2026,7 @@ export function setMayNotEnterAnyVehicle(player: number | string | IPlayer): voi
  */
 export function setMayOnlyEnterThisVehicle(player: number | string | IPlayer, vehicle: number | IVehicle): void {
     const _player = player instanceof IPlayer ? player.playerId() : player;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetPlayerMayOnlyEnterThisVehicle(_player, _vehicle);
 }
 

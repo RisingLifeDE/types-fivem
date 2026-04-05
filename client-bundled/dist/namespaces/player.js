@@ -2007,7 +2007,7 @@ export function setMayNotEnterAnyVehicle(player) {
  */
 export function setMayOnlyEnterThisVehicle(player, vehicle) {
     const _player = player instanceof IPlayer ? player.playerId() : player;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetPlayerMayOnlyEnterThisVehicle(_player, _vehicle);
 }
 /**

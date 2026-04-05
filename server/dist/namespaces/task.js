@@ -54,7 +54,7 @@ export function combatPed(ped, targetPed) {
 export function driveBy(driverPed, targetPed, targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, firingPattern) {
     const _driverPed = driverPed instanceof IPed ? driverPed.handle() : driverPed;
     const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
-    const _targetVehicle = targetVehicle instanceof IVehicle ? targetVehicle.localId() : targetVehicle;
+    const _targetVehicle = targetVehicle instanceof IVehicle ? targetVehicle.handle() : targetVehicle;
     if (typeof firingPattern === 'string')
         firingPattern = GetHashKey(firingPattern);
     TaskDriveBy(_driverPed, _targetPed, _targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, false, firingPattern);
@@ -72,7 +72,7 @@ export function driveBy(driverPed, targetPed, targetVehicle, targetX, targetY, t
  */
 export function enterVehicle(ped, vehicle, timeout, seatIndex, speed, flag) {
     const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     TaskEnterVehicle(_ped, _vehicle, timeout, seatIndex, speed, flag, undefined);
 }
 /**
@@ -83,7 +83,7 @@ export function enterVehicle(ped, vehicle, timeout, seatIndex, speed, flag) {
  * Hash: 0xC1971F30
  */
 export function everyoneLeaveVehicle(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     TaskEveryoneLeaveVehicle(_vehicle);
 }
 /**
@@ -156,7 +156,7 @@ export function goStraightToCoord(ped, pos, speed, timeout, targetHeading, dista
  */
 export function goToCoordAnyMeans(ped, pos, fMoveBlendRatio, vehicle, bUseLongRangeVehiclePathing, drivingFlags, fMaxRangeToShootTargets) {
     const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     TaskGoToCoordAnyMeans(_ped, pos.x, pos.y, pos.z, fMoveBlendRatio, _vehicle, bUseLongRangeVehiclePathing, drivingFlags, fMaxRangeToShootTargets);
 }
 /**
@@ -222,7 +222,7 @@ export function leaveAnyVehicle(ped, flags) {
  */
 export function leaveVehicle(ped, vehicle, flags) {
     const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     TaskLeaveVehicle(_ped, _vehicle, flags);
 }
 /**
@@ -349,6 +349,6 @@ export function shootAtEntity(entity, target, duration, firingPattern) {
  */
 export function warpPedIntoVehicle(ped, vehicle, seatIndex) {
     const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     TaskWarpPedIntoVehicle(_ped, _vehicle, seatIndex);
 }

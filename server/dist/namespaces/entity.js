@@ -334,7 +334,7 @@ export function getNetTypeFrom(entity) {
  * Hash: 0x9C9A3BE0
  */
 export function hasBeenMarkedAsNoLongerNeeded(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return HasEntityBeenMarkedAsNoLongerNeeded(_vehicle);
 }
 /**

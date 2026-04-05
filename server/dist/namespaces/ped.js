@@ -81,7 +81,7 @@ export function create(pedType, modelHash, pos, heading, isNetwork, bScriptHostP
  * Hash: 0x3000F092
  */
 export function createInsideVehicle(vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     if (typeof modelHash === 'string')
         modelHash = GetHashKey(modelHash);
     return CreatePedInsideVehicle(_vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed);
@@ -114,7 +114,7 @@ export function getCurrentWeapon(ped) {
  * Hash: 0xF7C6792D
  */
 export function getLastInVehicleSeat(vehicle, seatIndex) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetLastPedInVehicleSeat(_vehicle, seatIndex);
 }
 /**
@@ -150,7 +150,7 @@ export function getDesiredHeading(ped) {
  * Hash: 0x388FDE9A
  */
 export function getInVehicleSeat(vehicle, seatIndex) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     return GetPedInVehicleSeat(_vehicle, seatIndex);
 }
 /**
@@ -940,7 +940,7 @@ export function setHeadOverlay(ped, overlayID, index, opacity) {
  */
 export function setIntoVehicle(ped, vehicle, seatIndex) {
     const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.localId() : vehicle;
+    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
     SetPedIntoVehicle(_ped, _vehicle, seatIndex);
 }
 /**
