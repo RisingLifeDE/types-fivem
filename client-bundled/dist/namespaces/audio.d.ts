@@ -1246,25 +1246,25 @@ export declare function setAmbientVoiceNameHash(ped: number | IPed, hash: number
  *
  * Hash: 0x9748FA4DE50CCE3E | Since: 323 | API-Set: unknown
  */
-export declare function setAmbientZoneListState(ambientZone: string): void;
+export declare function setAmbientZoneListState(ambientZone: string, enabled: boolean, forceUpdate: boolean): void;
 /**
  * Full list of ambient zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientZones.json
  *
  * Hash: 0xF3638DAE8C4045E1 | Since: 323 | API-Set: unknown
  */
-export declare function setAmbientZoneListStatePersistent(ambientZone: string): void;
+export declare function setAmbientZoneListStatePersistent(ambientZone: string, enabled: boolean, forceUpdate: boolean): void;
 /**
  * Full list of ambient zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientZones.json
  *
  * Hash: 0xBDA07E5950085E46 | Since: 323 | API-Set: unknown
  */
-export declare function setAmbientZoneState(zoneName: string): void;
+export declare function setAmbientZoneState(zoneName: string, enabled: boolean, forceUpdate: boolean): void;
 /**
  * Full list of ambient zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientZones.json
  *
  * Hash: 0x1D6650420CEC9D3B | Since: 323 | API-Set: unknown
  */
-export declare function setAmbientZoneStatePersistent(ambientZone: string): void;
+export declare function setAmbientZoneStatePersistent(ambientZone: string, enabled: boolean, forceUpdate: boolean): void;
 /**
  * mood can be 0 or 1 (it's not a boolean value!). Effects audio of the animal.
  *

@@ -1650,32 +1650,32 @@ export function setAmbientVoiceNameHash(ped, hash) {
  *
  * Hash: 0x9748FA4DE50CCE3E | Since: 323 | API-Set: unknown
  */
-export function setAmbientZoneListState(ambientZone) {
-    SetAmbientZoneListState(ambientZone, false, false);
+export function setAmbientZoneListState(ambientZone, enabled, forceUpdate) {
+    SetAmbientZoneListState(ambientZone, enabled, forceUpdate);
 }
 /**
  * Full list of ambient zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientZones.json
  *
  * Hash: 0xF3638DAE8C4045E1 | Since: 323 | API-Set: unknown
  */
-export function setAmbientZoneListStatePersistent(ambientZone) {
-    SetAmbientZoneListStatePersistent(ambientZone, false, false);
+export function setAmbientZoneListStatePersistent(ambientZone, enabled, forceUpdate) {
+    SetAmbientZoneListStatePersistent(ambientZone, enabled, forceUpdate);
 }
 /**
  * Full list of ambient zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientZones.json
  *
  * Hash: 0xBDA07E5950085E46 | Since: 323 | API-Set: unknown
  */
-export function setAmbientZoneState(zoneName) {
-    SetAmbientZoneState(zoneName, false, false);
+export function setAmbientZoneState(zoneName, enabled, forceUpdate) {
+    SetAmbientZoneState(zoneName, enabled, forceUpdate);
 }
 /**
  * Full list of ambient zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientZones.json
  *
  * Hash: 0x1D6650420CEC9D3B | Since: 323 | API-Set: unknown
  */
-export function setAmbientZoneStatePersistent(ambientZone) {
-    SetAmbientZoneStatePersistent(ambientZone, false, false);
+export function setAmbientZoneStatePersistent(ambientZone, enabled, forceUpdate) {
+    SetAmbientZoneStatePersistent(ambientZone, enabled, forceUpdate);
 }
 /**
  * mood can be 0 or 1 (it's not a boolean value!). Effects audio of the animal.
