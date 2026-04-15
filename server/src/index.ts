@@ -1,4 +1,4 @@
-import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} from '@risinglife/fivem-shared'
+import {IEntity} from '@risinglife/fivem-shared'
 import * as entity from './namespaces/entity';
 import * as hud from './namespaces/hud';
 import * as misc from './namespaces/misc';
@@ -32,50 +32,52 @@ export namespace events {
         on: (eventName: string, handler: Function) => void;
         emit: (eventName: string, ...args: any[]) => void;
     }
+
     class EventEmitter {
-    private listeners: Map<string, Set<(...args: any[]) => void>> = new Map();
+        private listeners: Map<string, Set<(...args: any[]) => void>> = new Map();
 
-    on(eventName: string, callback: (...args: any[]) => void): void {
-        let callbacks = this.listeners.get(eventName);
-        if (!callbacks) {
-            callbacks = new Set();
-            this.listeners.set(eventName, callbacks);
+        on(eventName: string, callback: (...args: any[]) => void): void {
+            let callbacks = this.listeners.get(eventName);
+            if (!callbacks) {
+                callbacks = new Set();
+                this.listeners.set(eventName, callbacks);
+            }
+            callbacks.add(callback);
         }
-        callbacks.add(callback);
-    }
 
-    once(eventName: string, callback: (...args: any[]) => void): void {
-        const onceWrapper = (...args: any[]) => {
-            this.listeners.get(eventName)?.delete(onceWrapper);
-            callback(...args);
-        };
-        this.on(eventName, onceWrapper);
-    }
-
-    emit(eventName: string, ...args: any[]): void {
-        const callbacks = this.listeners.get(eventName);
-        if (!callbacks) return;
-        for (const callback of callbacks) {
-            try {
+        once(eventName: string, callback: (...args: any[]) => void): void {
+            const onceWrapper = (...args: any[]) => {
+                this.listeners.get(eventName)?.delete(onceWrapper);
                 callback(...args);
-            } catch (error) {
-                EventLogger.logError(eventName, error);
+            };
+            this.on(eventName, onceWrapper);
+        }
+
+        emit(eventName: string, ...args: any[]): void {
+            const callbacks = this.listeners.get(eventName);
+            if (!callbacks) return;
+            for (const callback of callbacks) {
+                try {
+                    callback(...args);
+                } catch (error) {
+                    EventLogger.logError(eventName, error);
+                }
+            }
+        }
+
+        off(eventName: string, callback: (...args: any[]) => void): void {
+            this.listeners.get(eventName)?.delete(callback);
+        }
+
+        removeAllListeners(eventName?: string): void {
+            if (eventName) {
+                this.listeners.delete(eventName);
+            } else {
+                this.listeners.clear();
             }
         }
     }
 
-    off(eventName: string, callback: (...args: any[]) => void): void {
-        this.listeners.get(eventName)?.delete(callback);
-    }
-
-    removeAllListeners(eventName?: string): void {
-        if (eventName) {
-            this.listeners.delete(eventName);
-        } else {
-            this.listeners.clear();
-        }
-    }
-}
     class EventParsingUtils {
         private static parseArgument(arg: any): any {
             if (typeof arg === 'string') {
@@ -105,6 +107,7 @@ export namespace events {
             return args.map((arg) => this.parseArgument(arg));
         }
     }
+
     class EventRegistry {
         private static networkEvents = new Set<string>();
         private static localEvents = new Set<string>();
@@ -125,6 +128,7 @@ export namespace events {
             };
         }
     }
+
     class EventLogger {
 
         static logErrors: boolean = true;
@@ -207,6 +211,7 @@ export namespace events {
             this.api.emitNet(networkEventName, ...parsedArgs);
         }
     }
+
     class LocalEventUtils {
         private static api: api = {
             // @ts-ignore
@@ -305,6 +310,7 @@ export namespace events {
     export function on(key: string, callback: (...args: any[]) => void): void {
         LocalEventUtils.registerEvent(key, callback);
     }
+
     /**
      * Registers a onetime listener for a local emitted event
      * @param key The event key which should be listened on
@@ -313,6 +319,7 @@ export namespace events {
     export function once(key: string, callback: (...args: any[]) => void): void {
         LocalEventUtils.registerEventOnce(key, callback);
     }
+
     /**
      * Removes a listener for a local emitted event
      * @param key The event key which should be removed
@@ -330,6 +337,7 @@ export namespace events {
     export function onClient(key: string, callback: (...args: any[]) => void): void {
         RemoteEventUtils.registerEvent(key, callback);
     }
+
     /**
      * Registers a onetime listener for a client emitted event
      * @param key The event key which should be listened on
@@ -338,6 +346,7 @@ export namespace events {
     export function onceClient(key: string, callback: (...args: any[]) => void): void {
         RemoteEventUtils.registerEventOnce(key, callback);
     }
+
     /**
      * Removes a listener for a client emitted event
      * @param key The event key which should be removed
@@ -355,6 +364,7 @@ export namespace events {
     export function emit(key: string, ...args: any[]): void {
         LocalEventUtils.send(key, ...args)
     }
+
     /**
      * Sends data to a client, which can be listened by any resource
      * @param key The event key
@@ -437,8 +447,20 @@ export namespace events {
     /**
      * Will be triggered when a player connects
      */
-    export function onPlayerConnecting(callback: (playerName: string, setKickReason: (reason: string) => void, deferrals: { defer: any; done: any; handover: any; presentCard: any; update: any }, source: string) => void) {
-        on("playerConnecting", (playerName: string, setKickReason: (reason: string) => void, deferrals: { defer: any; done: any; handover: any; presentCard: any; update: any }, source: string) => {
+    export function onPlayerConnecting(callback: (playerName: string, setKickReason: (reason: string) => void, deferrals: {
+        defer: any;
+        done: any;
+        handover: any;
+        presentCard: any;
+        update: any
+    }, source: string) => void) {
+        on("playerConnecting", (playerName: string, setKickReason: (reason: string) => void, deferrals: {
+            defer: any;
+            done: any;
+            handover: any;
+            presentCard: any;
+            update: any
+        }, source: string) => {
             callback(playerName, setKickReason, deferrals, source)
         });
     }
@@ -473,8 +495,56 @@ export namespace events {
     /**
      * Will be triggered when a particle fx (ptFx) is created.
      */
-    export function onPtFxEvent(callback: (sender: number, data: { assetHash: number; axisBitset: number; effectHash: number; entityNetId: number; f100: number; f105: number; f106: number; f107: number; f109: boolean; f110: boolean; f111: boolean; f92: number; isOnEntity: boolean; offsetX: number; offsetY: number; offsetZ: number; posX: number; posY: number; posZ: number; rotX: number; rotY: number; rotZ: number; scale: number }) => void) {
-        on("ptFxEvent", (sender: number, data: { assetHash: number; axisBitset: number; effectHash: number; entityNetId: number; f100: number; f105: number; f106: number; f107: number; f109: boolean; f110: boolean; f111: boolean; f92: number; isOnEntity: boolean; offsetX: number; offsetY: number; offsetZ: number; posX: number; posY: number; posZ: number; rotX: number; rotY: number; rotZ: number; scale: number }) => {
+    export function onPtFxEvent(callback: (sender: number, data: {
+        assetHash: number;
+        axisBitset: number;
+        effectHash: number;
+        entityNetId: number;
+        f100: number;
+        f105: number;
+        f106: number;
+        f107: number;
+        f109: boolean;
+        f110: boolean;
+        f111: boolean;
+        f92: number;
+        isOnEntity: boolean;
+        offsetX: number;
+        offsetY: number;
+        offsetZ: number;
+        posX: number;
+        posY: number;
+        posZ: number;
+        rotX: number;
+        rotY: number;
+        rotZ: number;
+        scale: number
+    }) => void) {
+        on("ptFxEvent", (sender: number, data: {
+            assetHash: number;
+            axisBitset: number;
+            effectHash: number;
+            entityNetId: number;
+            f100: number;
+            f105: number;
+            f106: number;
+            f107: number;
+            f109: boolean;
+            f110: boolean;
+            f111: boolean;
+            f92: number;
+            isOnEntity: boolean;
+            offsetX: number;
+            offsetY: number;
+            offsetZ: number;
+            posX: number;
+            posY: number;
+            posZ: number;
+            rotX: number;
+            rotY: number;
+            rotZ: number;
+            scale: number
+        }) => {
             callback(sender, data)
         });
     }
@@ -491,8 +561,68 @@ export namespace events {
     /**
      * Will be triggered when a projectile is created.
      */
-    export function onStartProjectileEvent(callback: (sender: number, data: { commandFireSingleBullet: boolean; effectGroup: number; firePositionX: number; firePositionY: number; firePositionZ: number; initialPositionX: number; initialPositionY: number; initialPositionZ: number; ownerId: number; projectileHash: number; targetEntity: number; throwTaskSequence: number; unk10: number; unk11: number; unk12: number; unk13: number; unk14: number; unk15: number; unk16: number; unk3: number; unk4: number; unk5: number; unk6: number; unk7: number; unk9: number; unkX8: number; unkY8: number; unkZ8: number; weaponHash: number }) => void) {
-        on("startProjectileEvent", (sender: number, data: { commandFireSingleBullet: boolean; effectGroup: number; firePositionX: number; firePositionY: number; firePositionZ: number; initialPositionX: number; initialPositionY: number; initialPositionZ: number; ownerId: number; projectileHash: number; targetEntity: number; throwTaskSequence: number; unk10: number; unk11: number; unk12: number; unk13: number; unk14: number; unk15: number; unk16: number; unk3: number; unk4: number; unk5: number; unk6: number; unk7: number; unk9: number; unkX8: number; unkY8: number; unkZ8: number; weaponHash: number }) => {
+    export function onStartProjectileEvent(callback: (sender: number, data: {
+        commandFireSingleBullet: boolean;
+        effectGroup: number;
+        firePositionX: number;
+        firePositionY: number;
+        firePositionZ: number;
+        initialPositionX: number;
+        initialPositionY: number;
+        initialPositionZ: number;
+        ownerId: number;
+        projectileHash: number;
+        targetEntity: number;
+        throwTaskSequence: number;
+        unk10: number;
+        unk11: number;
+        unk12: number;
+        unk13: number;
+        unk14: number;
+        unk15: number;
+        unk16: number;
+        unk3: number;
+        unk4: number;
+        unk5: number;
+        unk6: number;
+        unk7: number;
+        unk9: number;
+        unkX8: number;
+        unkY8: number;
+        unkZ8: number;
+        weaponHash: number
+    }) => void) {
+        on("startProjectileEvent", (sender: number, data: {
+            commandFireSingleBullet: boolean;
+            effectGroup: number;
+            firePositionX: number;
+            firePositionY: number;
+            firePositionZ: number;
+            initialPositionX: number;
+            initialPositionY: number;
+            initialPositionZ: number;
+            ownerId: number;
+            projectileHash: number;
+            targetEntity: number;
+            throwTaskSequence: number;
+            unk10: number;
+            unk11: number;
+            unk12: number;
+            unk13: number;
+            unk14: number;
+            unk15: number;
+            unk16: number;
+            unk3: number;
+            unk4: number;
+            unk5: number;
+            unk6: number;
+            unk7: number;
+            unk9: number;
+            unkX8: number;
+            unkY8: number;
+            unkZ8: number;
+            weaponHash: number
+        }) => {
             callback(sender, data)
         });
     }
@@ -501,8 +631,76 @@ export namespace events {
      * Will be triggered when a client wants to apply damage to a remotely-owned entity.
      * You can use {@link misc.cancelEvent()} to cancel the start
      */
-    export function onWeaponDamageEvent(callback: (sender: number, data: { actionResultId: number; actionResultName: number; damageFlags: number; damageTime: number; damageType: number; f104: number; f112: boolean; f112_1: number; f120: number; f133: boolean; hasActionResult: boolean; hasImpactDir: boolean; hasVehicleData: boolean; hitComponent: number; hitEntityWeapon: boolean; hitGlobalId: number; hitGlobalIds: number[]; hitWeaponAmmoAttachment: boolean; impactDirX: number; impactDirY: number; impactDirZ: number; isNetTargetPos: boolean; localPosX: number; localPosY: number; localPosZ: number; overrideDefaultDamage: boolean; parentGlobalId: number; silenced: boolean; suspensionIndex: number; tyreIndex: number; weaponDamage: number; weaponType: number; willKill: boolean }) => void) {
-        on("weaponDamageEvent", (sender: number, data: { actionResultId: number; actionResultName: number; damageFlags: number; damageTime: number; damageType: number; f104: number; f112: boolean; f112_1: number; f120: number; f133: boolean; hasActionResult: boolean; hasImpactDir: boolean; hasVehicleData: boolean; hitComponent: number; hitEntityWeapon: boolean; hitGlobalId: number; hitGlobalIds: number[]; hitWeaponAmmoAttachment: boolean; impactDirX: number; impactDirY: number; impactDirZ: number; isNetTargetPos: boolean; localPosX: number; localPosY: number; localPosZ: number; overrideDefaultDamage: boolean; parentGlobalId: number; silenced: boolean; suspensionIndex: number; tyreIndex: number; weaponDamage: number; weaponType: number; willKill: boolean }) => {
+    export function onWeaponDamageEvent(callback: (sender: number, data: {
+        actionResultId: number;
+        actionResultName: number;
+        damageFlags: number;
+        damageTime: number;
+        damageType: number;
+        f104: number;
+        f112: boolean;
+        f112_1: number;
+        f120: number;
+        f133: boolean;
+        hasActionResult: boolean;
+        hasImpactDir: boolean;
+        hasVehicleData: boolean;
+        hitComponent: number;
+        hitEntityWeapon: boolean;
+        hitGlobalId: number;
+        hitGlobalIds: number[];
+        hitWeaponAmmoAttachment: boolean;
+        impactDirX: number;
+        impactDirY: number;
+        impactDirZ: number;
+        isNetTargetPos: boolean;
+        localPosX: number;
+        localPosY: number;
+        localPosZ: number;
+        overrideDefaultDamage: boolean;
+        parentGlobalId: number;
+        silenced: boolean;
+        suspensionIndex: number;
+        tyreIndex: number;
+        weaponDamage: number;
+        weaponType: number;
+        willKill: boolean
+    }) => void) {
+        on("weaponDamageEvent", (sender: number, data: {
+            actionResultId: number;
+            actionResultName: number;
+            damageFlags: number;
+            damageTime: number;
+            damageType: number;
+            f104: number;
+            f112: boolean;
+            f112_1: number;
+            f120: number;
+            f133: boolean;
+            hasActionResult: boolean;
+            hasImpactDir: boolean;
+            hasVehicleData: boolean;
+            hitComponent: number;
+            hitEntityWeapon: boolean;
+            hitGlobalId: number;
+            hitGlobalIds: number[];
+            hitWeaponAmmoAttachment: boolean;
+            impactDirX: number;
+            impactDirY: number;
+            impactDirZ: number;
+            isNetTargetPos: boolean;
+            localPosX: number;
+            localPosY: number;
+            localPosZ: number;
+            overrideDefaultDamage: boolean;
+            parentGlobalId: number;
+            silenced: boolean;
+            suspensionIndex: number;
+            tyreIndex: number;
+            weaponDamage: number;
+            weaponType: number;
+            willKill: boolean
+        }) => {
             callback(sender, data)
         });
     }
@@ -510,6 +708,6 @@ export namespace events {
 
 // All below is auto-generated code
 
-export { entity, hud, misc, ped, player, vehicle, weapon, network, mumble, object, resource, task, profiler };
+export {entity, hud, misc, ped, player, vehicle, weapon, network, mumble, object, resource, task, profiler};
 
 export * from '@risinglife/fivem-shared';

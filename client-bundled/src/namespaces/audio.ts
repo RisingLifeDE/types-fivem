@@ -1812,8 +1812,8 @@ export function setAmbientVoiceNameHash(ped: number | IPed, hash: number | strin
  * 
  * Hash: 0x9748FA4DE50CCE3E | Since: 323 | API-Set: unknown
  */
-export function setAmbientZoneListState(ambientZone: string): void {
-    SetAmbientZoneListState(ambientZone, false, false);
+export function setAmbientZoneListState(ambientZone: string, enabled: boolean, forceUpdate: boolean): void {
+    SetAmbientZoneListState(ambientZone, enabled, forceUpdate);
 }
 
 /**
@@ -1821,8 +1821,8 @@ export function setAmbientZoneListState(ambientZone: string): void {
  * 
  * Hash: 0xF3638DAE8C4045E1 | Since: 323 | API-Set: unknown
  */
-export function setAmbientZoneListStatePersistent(ambientZone: string): void {
-    SetAmbientZoneListStatePersistent(ambientZone, false, false);
+export function setAmbientZoneListStatePersistent(ambientZone: string, enabled: boolean, forceUpdate: boolean): void {
+    SetAmbientZoneListStatePersistent(ambientZone, enabled, forceUpdate);
 }
 
 /**
@@ -1830,8 +1830,8 @@ export function setAmbientZoneListStatePersistent(ambientZone: string): void {
  * 
  * Hash: 0xBDA07E5950085E46 | Since: 323 | API-Set: unknown
  */
-export function setAmbientZoneState(zoneName: string): void {
-    SetAmbientZoneState(zoneName, false, false);
+export function setAmbientZoneState(zoneName: string, enabled: boolean, forceUpdate: boolean): void {
+    SetAmbientZoneState(zoneName, enabled, forceUpdate);
 }
 
 /**
@@ -1839,8 +1839,8 @@ export function setAmbientZoneState(zoneName: string): void {
  * 
  * Hash: 0x1D6650420CEC9D3B | Since: 323 | API-Set: unknown
  */
-export function setAmbientZoneStatePersistent(ambientZone: string): void {
-    SetAmbientZoneStatePersistent(ambientZone, false, false);
+export function setAmbientZoneStatePersistent(ambientZone: string, enabled: boolean, forceUpdate: boolean): void {
+    SetAmbientZoneStatePersistent(ambientZone, enabled, forceUpdate);
 }
 
 /**

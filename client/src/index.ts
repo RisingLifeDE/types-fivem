@@ -1,4 +1,4 @@
-import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} from '@risinglife/fivem-shared'
+import {IEntity, Vector3} from '@risinglife/fivem-shared'
 import * as audio from './namespaces/audio';
 import * as entity from './namespaces/entity';
 import * as graphics from './namespaces/graphics';
@@ -43,50 +43,52 @@ export namespace events {
         on: (eventName: string, handler: Function) => void;
         emit: (eventName: string, ...args: any[]) => void;
     }
+
     class EventEmitter {
-    private listeners: Map<string, Set<(...args: any[]) => void>> = new Map();
+        private listeners: Map<string, Set<(...args: any[]) => void>> = new Map();
 
-    on(eventName: string, callback: (...args: any[]) => void): void {
-        let callbacks = this.listeners.get(eventName);
-        if (!callbacks) {
-            callbacks = new Set();
-            this.listeners.set(eventName, callbacks);
+        on(eventName: string, callback: (...args: any[]) => void): void {
+            let callbacks = this.listeners.get(eventName);
+            if (!callbacks) {
+                callbacks = new Set();
+                this.listeners.set(eventName, callbacks);
+            }
+            callbacks.add(callback);
         }
-        callbacks.add(callback);
-    }
 
-    once(eventName: string, callback: (...args: any[]) => void): void {
-        const onceWrapper = (...args: any[]) => {
-            this.listeners.get(eventName)?.delete(onceWrapper);
-            callback(...args);
-        };
-        this.on(eventName, onceWrapper);
-    }
-
-    emit(eventName: string, ...args: any[]): void {
-        const callbacks = this.listeners.get(eventName);
-        if (!callbacks) return;
-        for (const callback of callbacks) {
-            try {
+        once(eventName: string, callback: (...args: any[]) => void): void {
+            const onceWrapper = (...args: any[]) => {
+                this.listeners.get(eventName)?.delete(onceWrapper);
                 callback(...args);
-            } catch (error) {
-                EventLogger.logError(eventName, error);
+            };
+            this.on(eventName, onceWrapper);
+        }
+
+        emit(eventName: string, ...args: any[]): void {
+            const callbacks = this.listeners.get(eventName);
+            if (!callbacks) return;
+            for (const callback of callbacks) {
+                try {
+                    callback(...args);
+                } catch (error) {
+                    EventLogger.logError(eventName, error);
+                }
+            }
+        }
+
+        off(eventName: string, callback: (...args: any[]) => void): void {
+            this.listeners.get(eventName)?.delete(callback);
+        }
+
+        removeAllListeners(eventName?: string): void {
+            if (eventName) {
+                this.listeners.delete(eventName);
+            } else {
+                this.listeners.clear();
             }
         }
     }
 
-    off(eventName: string, callback: (...args: any[]) => void): void {
-        this.listeners.get(eventName)?.delete(callback);
-    }
-
-    removeAllListeners(eventName?: string): void {
-        if (eventName) {
-            this.listeners.delete(eventName);
-        } else {
-            this.listeners.clear();
-        }
-    }
-}
     class EventParsingUtils {
         static parseArgument(arg: any): any {
             if (typeof arg === 'string') {
@@ -123,6 +125,7 @@ export namespace events {
             return source;
         }
     }
+
     class EventRegistry {
         private static networkEvents = new Set<string>();
         private static localEvents = new Set<string>();
@@ -143,6 +146,7 @@ export namespace events {
             };
         }
     }
+
     class EventLogger {
 
         static logErrors: boolean = true;
@@ -225,6 +229,7 @@ export namespace events {
             this.api.emitNet(networkEventName, ...parsedArgs);
         }
     }
+
     class LocalEventUtils {
         private static api: api = {
             // @ts-ignore
@@ -323,6 +328,7 @@ export namespace events {
     export function on(key: string, callback: (...args: any[]) => void): void {
         LocalEventUtils.registerEvent(key, callback);
     }
+
     /**
      * Registers a onetime listener for a local emitted event
      * @param key The event key which should be listened on
@@ -331,6 +337,7 @@ export namespace events {
     export function once(key: string, callback: (...args: any[]) => void): void {
         LocalEventUtils.registerEventOnce(key, callback);
     }
+
     /**
      * Removes a listener for a local emitted event
      * @param key The event key which should be removed
@@ -348,6 +355,7 @@ export namespace events {
     export function onServer(key: string, callback: (...args: any[]) => void): void {
         RemoteEventUtils.registerEvent(key, callback);
     }
+
     /**
      * Registers a onetime listener for the server emitted event
      * @param key The event key which should be listened on
@@ -356,6 +364,7 @@ export namespace events {
     export function onceServer(key: string, callback: (...args: any[]) => void): void {
         RemoteEventUtils.registerEventOnce(key, callback);
     }
+
     /**
      * Removes a listener for the server emitted event
      * @param key The event key which should be removed
@@ -373,6 +382,7 @@ export namespace events {
     export function emit(key: string, ...args: any[]): void {
         LocalEventUtils.send(key, ...args)
     }
+
     /**
      * Sends data to the server, which can be listened by any resource
      * @param key The event key
@@ -433,7 +443,10 @@ export namespace events {
      * Will be triggered when a population ped is being creating.
      * You can use {@link misc.cancelEvent()} to cancel this event.
      */
-    export function onPopulationPedCreating(callback: (position: Vector3,  model: number,  setters: { setModel: (model: string) => void, setPosition: (x: number, y: number, z: number) => void }) => void) {
+    export function onPopulationPedCreating(callback: (position: Vector3, model: number, setters: {
+        setModel: (model: string) => void,
+        setPosition: (x: number, y: number, z: number) => void
+    }) => void) {
         on('populationPedCreating', (x, y, z, model, setters) => {
             callback(new Vector3(x, y, z), model, setters)
         })
@@ -469,6 +482,31 @@ export namespace events {
 
 // All below is auto-generated code
 
-export { audio, entity, graphics, hud, misc, ped, physics, player, streaming, track, vehicle, water, weapon, network, shapetest, camera, discord, dui, mumble, nui, object, pad, resource, profiler };
+export {
+    audio,
+    entity,
+    graphics,
+    hud,
+    misc,
+    ped,
+    physics,
+    player,
+    streaming,
+    track,
+    vehicle,
+    water,
+    weapon,
+    network,
+    shapetest,
+    camera,
+    discord,
+    dui,
+    mumble,
+    nui,
+    object,
+    pad,
+    resource,
+    profiler
+};
 
 export * from '@risinglife/fivem-shared';
