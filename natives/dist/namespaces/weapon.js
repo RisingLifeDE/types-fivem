@@ -1,11 +1,10 @@
-import { IEntity, IPed, IPlayer, IVehicle, IObject } from '@risinglife/fivem-shared';
 /**
  * Full list of weapons by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
  *
  * Hash: 0x78F0424C34306220 | Since: 323
  */
 export function addAmmoToPed(ped, weaponHash, ammo) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     AddAmmoToPed(_ped, weaponHash, ammo);
@@ -16,7 +15,7 @@ export function addAmmoToPed(ped, weaponHash, ammo) {
  * Hash: 0x2472622CE1F2D45F | Since: 1103
  */
 export function addPedAmmoByType(ped, ammoTypeHash, ammo) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof ammoTypeHash === 'string')
         ammoTypeHash = GetHashKey(ammoTypeHash);
     AddAmmoToPedByType(_ped, ammoTypeHash, ammo);
@@ -38,7 +37,7 @@ export function canUseOnParachute(weaponHash) {
  * Hash: 0xAC678E40BE7C74D2 | Since: 323
  */
 export function clearEntityLastDamage(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     ClearEntityLastWeaponDamage(_entity);
 }
 /**
@@ -47,7 +46,7 @@ export function clearEntityLastDamage(entity) {
  * Hash: 0x0E98F88A24C5F4B8 | Since: 323
  */
 export function clearPedLastDamage(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     ClearPedLastWeaponDamage(_ped);
 }
 /**
@@ -116,7 +115,7 @@ export function enableLaserSightRendering(toggle) {
  * Hash: 0xFC4BD125DE7611E4 | Since: 323
  */
 export function explodeProjectiles(ped, weaponHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     ExplodeProjectiles(_ped, weaponHash, false);
@@ -135,7 +134,7 @@ export function fireAirDefenceSphereAtPosition(zoneId, pos) {
  * Hash: 0x2E1202248937775C | Since: 323
  */
 export function getAmmoInClip(ped, weaponHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     return GetAmmoInClip(_ped, weaponHash);
@@ -153,7 +152,7 @@ export function getAmmoInClip(ped, weaponHash) {
  * Hash: 0x015A522136D7F951 | Since: 323
  */
 export function getAmmoInPed(ped, weaponhash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponhash === 'string')
         weaponhash = GetHashKey(weaponhash);
     return GetAmmoInPedWeapon(_ped, weaponhash);
@@ -164,7 +163,7 @@ export function getAmmoInPed(ped, weaponhash) {
  * Hash: 0x8483E98E8B888AE2 | Since: 323
  */
 export function getBestPed(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetBestPedWeapon(_ped, false);
 }
 /**
@@ -183,7 +182,7 @@ export function getBestPed(ped) {
  * Hash: 0x1017582BCD3832DC | Since: 323
  */
 export function getCurrentPedVehicle(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetCurrentPedVehicleWeapon(_ped);
 }
 /**
@@ -202,7 +201,7 @@ export function getCurrentPedVehicle(ped) {
  * Hash: 0x3A87E44BB9A01D54 | Since: 323
  */
 export function getCurrentPed(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetCurrentPedWeapon(_ped, false);
 }
 /**
@@ -211,7 +210,7 @@ export function getCurrentPed(ped) {
  * Hash: 0x3B390A939AF0B5FC | Since: 323
  */
 export function getCurrentPedEntityIndex(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetCurrentPedWeaponEntityIndex(_ped, undefined);
 }
 /**
@@ -220,7 +219,7 @@ export function getCurrentPedEntityIndex(ped) {
  * Hash: 0xF731332072F5156C | Since: 323
  */
 export function getIsPedGadgetEquipped(ped, gadgetHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof gadgetHash === 'string')
         gadgetHash = GetHashKey(gadgetHash);
     return GetIsPedGadgetEquipped(_ped, gadgetHash);
@@ -231,7 +230,7 @@ export function getIsPedGadgetEquipped(ped, gadgetHash) {
  * Hash: 0x840F03E9041E2C9C | Since: 323
  */
 export function getLockonDistanceOfCurrentPed(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetLockonDistanceOfCurrentPedWeapon(_ped);
 }
 /**
@@ -240,7 +239,7 @@ export function getLockonDistanceOfCurrentPed(ped) {
  * Hash: 0xDC16122C7A20C933 | Since: 323
  */
 export function getMaxAmmo(ped, weaponHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     return GetMaxAmmo(_ped, weaponHash);
@@ -251,7 +250,7 @@ export function getMaxAmmo(ped, weaponHash) {
  * Hash: 0x585847C5E4E11709 | Since: 1103
  */
 export function getMaxAmmoByType(ped, ammoTypeHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof ammoTypeHash === 'string')
         ammoTypeHash = GetHashKey(ammoTypeHash);
     return GetMaxAmmoByType(_ped, ammoTypeHash);
@@ -263,7 +262,7 @@ export function getMaxAmmoByType(ped, ammoTypeHash) {
  * Hash: 0xA38DCFFCEA8962FA | Since: 323
  */
 export function getMaxAmmoInClip(ped, weaponHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     return GetMaxAmmoInClip(_ped, weaponHash, false);
@@ -274,7 +273,7 @@ export function getMaxAmmoInClip(ped, weaponHash) {
  * Hash: 0x814C9D19DFD69679 | Since: 323
  */
 export function getMaxRangeOfCurrentPed(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetMaxRangeOfCurrentPedWeapon(_ped);
 }
 /**
@@ -283,7 +282,7 @@ export function getMaxRangeOfCurrentPed(ped) {
  * Hash: 0x39D22031557946C1 | Since: 323
  */
 export function getPedAmmoByType(ped, ammoTypeHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof ammoTypeHash === 'string')
         ammoTypeHash = GetHashKey(ammoTypeHash);
     return GetPedAmmoByType(_ped, ammoTypeHash);
@@ -297,7 +296,7 @@ export function getPedAmmoByType(ped, ammoTypeHash) {
  * Hash: 0x7FEAD38B326B9F74 | Since: 323
  */
 export function getPedAmmoTypeFrom(ped, weaponHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     return GetPedAmmoTypeFromWeapon(_ped, weaponHash);
@@ -310,7 +309,7 @@ export function getPedAmmoTypeFrom(ped, weaponHash) {
  * Hash: 0x6C4D0409BA1A2BC2 | Since: 323
  */
 export function getPedLastImpactCoord(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedLastWeaponImpactCoord(_ped);
 }
 /**
@@ -321,7 +320,7 @@ export function getPedLastImpactCoord(ped) {
  * Hash: 0xF489B44DD5AF4BD9 | Since: 1103
  */
 export function getPedOriginalAmmoTypeFrom(ped, weaponHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     return GetPedAmmoTypeFromWeapon2(_ped, weaponHash);
@@ -332,7 +331,7 @@ export function getPedOriginalAmmoTypeFrom(ped, weaponHash) {
  * Hash: 0xEFFED78E9011134D | Since: 323
  */
 export function getPedtypeInSlot(ped, weaponSlot) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponSlot === 'string')
         weaponSlot = GetHashKey(weaponSlot);
     return GetPedWeapontypeInSlot(_ped, weaponSlot);
@@ -343,7 +342,7 @@ export function getPedtypeInSlot(ped, weaponSlot) {
  * Hash: 0xA2C9AC24B4061285 | Since: 1103
  */
 export function getPedCamoIndex(ped, weaponHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     return Citizen.invokeNative('0xA2C9AC24B4061285', _ped, weaponHash);
@@ -355,7 +354,7 @@ export function getPedCamoIndex(ped, weaponHash) {
  * Hash: 0xF0A60040BE558F2D | Since: 1103
  */
 export function getPedComponentTintIndex(ped, weaponHash, camoComponentHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     if (typeof camoComponentHash === 'string')
@@ -368,7 +367,7 @@ export function getPedComponentTintIndex(ped, weaponHash, camoComponentHash) {
  * Hash: 0x2B9EEDC07BD06B9F | Since: 323
  */
 export function getPedTintIndex(ped, weaponHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     return GetPedWeaponTintIndex(_ped, weaponHash);
@@ -392,7 +391,7 @@ export function getPedTintIndex(ped, weaponHash) {
  * Hash: 0x0A6DB4965674D243 | Since: 323
  */
 export function getSelectedPed(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetSelectedPedWeapon(_ped);
 }
 /**
@@ -574,7 +573,7 @@ export function getHudStats(weaponHash) {
  * Hash: 0xB3EA4FEABF41464B | Since: 1103
  */
 export function getObjectComponentTintIndex(weaponObject, camoComponentHash) {
-    const _weaponObject = weaponObject instanceof IObject ? weaponObject.handle() : weaponObject;
+    const _weaponObject = typeof weaponObject == 'object' ? weaponObject.handle() : weaponObject;
     if (typeof camoComponentHash === 'string')
         camoComponentHash = GetHashKey(camoComponentHash);
     return GetWeaponObjectLiveryColor(_weaponObject, camoComponentHash);
@@ -587,7 +586,7 @@ export function getObjectComponentTintIndex(weaponObject, camoComponentHash) {
  * Hash: 0xCAE1DC9A0E22A16D | Since: 323
  */
 export function getObjectFromPed(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetWeaponObjectFromPed(_ped, false);
 }
 /**
@@ -596,7 +595,7 @@ export function getObjectFromPed(ped) {
  * Hash: 0xCD183314F7CD2E57 | Since: 323
  */
 export function getObjectTintIndex(weapon) {
-    const _weapon = weapon instanceof IObject ? weapon.handle() : weapon;
+    const _weapon = typeof weapon == 'object' ? weapon.handle() : weapon;
     return GetWeaponObjectTintIndex(_weapon);
 }
 /**
@@ -628,7 +627,7 @@ export function getTintCount(weaponHash) {
  * Hash: 0xB282DC6EBD803C75 | Since: 323
  */
 export function giveDelayedToPed(ped, weaponHash, ammoCount, bForceInHand) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     GiveDelayedWeaponToPed(_ped, weaponHash, ammoCount, bForceInHand);
@@ -640,7 +639,7 @@ export function giveDelayedToPed(ped, weaponHash, ammoCount, bForceInHand) {
  * Hash: 0x68F8BE6AF5CDF8A6 | Since: 505
  */
 export function giveLoadoutToPed(ped, loadoutHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof loadoutHash === 'string')
         loadoutHash = GetHashKey(loadoutHash);
     GiveLoadoutToPed(_ped, loadoutHash);
@@ -651,7 +650,7 @@ export function giveLoadoutToPed(ped, loadoutHash) {
  * Hash: 0xD966D51AA5B28BB9 | Since: 323
  */
 export function giveComponentToPed(ped, weaponHash, componentHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
@@ -666,7 +665,7 @@ export function giveComponentToPed(ped, weaponHash, componentHash) {
  * Hash: 0x33E179436C0B31DB | Since: 323
  */
 export function giveComponentToWeaponObject(weaponObject, componentHash) {
-    const _weaponObject = weaponObject instanceof IObject ? weaponObject.handle() : weaponObject;
+    const _weaponObject = typeof weaponObject == 'object' ? weaponObject.handle() : weaponObject;
     if (typeof componentHash === 'string')
         componentHash = GetHashKey(componentHash);
     GiveWeaponComponentToWeaponObject(_weaponObject, componentHash);
@@ -677,8 +676,8 @@ export function giveComponentToWeaponObject(weaponObject, componentHash) {
  * Hash: 0xB1FA61371AF7C4B7 | Since: 323
  */
 export function giveObjectToPed(weaponObject, ped) {
-    const _weaponObject = weaponObject instanceof IObject ? weaponObject.handle() : weaponObject;
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _weaponObject = typeof weaponObject == 'object' ? weaponObject.handle() : weaponObject;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     GiveWeaponObjectToPed(_weaponObject, _ped);
 }
 /**
@@ -687,7 +686,7 @@ export function giveObjectToPed(weaponObject, ped) {
  * Hash: 0xBF0FD6E56C964FCB | Since: 323
  */
 export function giveToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     GiveWeaponToPed(_ped, weaponHash, ammoCount, isHidden, bForceInHand);
@@ -703,7 +702,7 @@ export function giveToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand) {
  * Hash: 0x131D401334815E94 | Since: 323
  */
 export function hasEntityBeenDamagedBy(entity, weaponHash, weaponType) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     return HasEntityBeenDamagedByWeapon(_entity, weaponHash, weaponType);
@@ -719,7 +718,7 @@ export function hasEntityBeenDamagedBy(entity, weaponHash, weaponType) {
  * Hash: 0x2D343D2219CD027A | Since: 323
  */
 export function hasPedBeenDamagedBy(ped, weaponHash, weaponType) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     return HasPedBeenDamagedByWeapon(_ped, weaponHash, weaponType);
@@ -733,7 +732,7 @@ export function hasPedBeenDamagedBy(ped, weaponHash, weaponType) {
  * Hash: 0x8DECB02F88F428BC | Since: 323
  */
 export function hasPedGot(ped, weaponHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     return HasPedGotWeapon(_ped, weaponHash, false);
@@ -744,7 +743,7 @@ export function hasPedGot(ped, weaponHash) {
  * Hash: 0xC593212475FAE340 | Since: 323
  */
 export function hasPedGotComponent(ped, weaponHash, componentHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
@@ -757,8 +756,8 @@ export function hasPedGotComponent(ped, weaponHash, componentHash) {
  * Hash: 0x717C8481234E3B88 | Since: 323
  */
 export function hasVehicleGotProjectileAttached(driver, vehicle, weaponHash) {
-    const _driver = driver instanceof IPed ? driver.handle() : driver;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _driver = typeof driver == 'object' ? driver.handle() : driver;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     return HasVehicleGotProjectileAttached(_driver, _vehicle, weaponHash, undefined);
@@ -779,7 +778,7 @@ export function hasAssetLoaded(weaponHash) {
  * Hash: 0x76A18844E743BF91 | Since: 323
  */
 export function hasGotWeaponComponent(weapon, componentHash) {
-    const _weapon = weapon instanceof IObject ? weapon.handle() : weapon;
+    const _weapon = typeof weapon == 'object' ? weapon.handle() : weapon;
     if (typeof componentHash === 'string')
         componentHash = GetHashKey(componentHash);
     return HasWeaponGotWeaponComponent(_weapon, componentHash);
@@ -790,7 +789,7 @@ export function hasGotWeaponComponent(weapon, componentHash) {
  * Hash: 0x6F6981D2253C208F | Since: 323
  */
 export function hidePedForScriptedCutscene(ped, toggle) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     HidePedWeaponForScriptedCutscene(_ped, toggle);
 }
 /**
@@ -807,7 +806,7 @@ export function isAirDefenceSphereInArea(pos, radius) {
  * Hash: 0x4B7620C47217126C | Since: 323
  */
 export function isFlashLightOn(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return IsFlashLightOn(_ped);
 }
 /**
@@ -833,7 +832,7 @@ export function isFlashLightOn(ped) {
  * Hash: 0x475768A975D5AD17 | Since: 323
  */
 export function isPedArmed(ped, typeFlags) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return IsPedArmed(_ped, typeFlags);
 }
 /**
@@ -844,7 +843,7 @@ export function isPedArmed(ped, typeFlags) {
  * Hash: 0x65F0C5AE05943EC7 | Since: 323
  */
 export function isPedCurrentSilenced(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return IsPedCurrentWeaponSilenced(_ped);
 }
 /**
@@ -853,7 +852,7 @@ export function isPedCurrentSilenced(ped) {
  * Hash: 0x0D78DE0572D3969E | Since: 323
  */
 export function isPedComponentActive(ped, weaponHash, componentHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
@@ -866,7 +865,7 @@ export function isPedComponentActive(ped, weaponHash, componentHash) {
  * Hash: 0xB80CA294F2F26749 | Since: 323
  */
 export function isPedReadyToShoot(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return IsPedWeaponReadyToShoot(_ped);
 }
 /**
@@ -885,7 +884,7 @@ export function isValid(weaponHash) {
  * Hash: 0x20AE33F3AC9C0033 | Since: 323
  */
 export function makePedReload(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return MakePedReload(_ped);
 }
 /**
@@ -894,7 +893,7 @@ export function makePedReload(ped) {
  * Hash: 0x8C0D57EA686FAD87 | Since: 323
  */
 export function refillAmmoInstantly(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return RefillAmmoInstantly(_ped);
 }
 /**
@@ -919,7 +918,7 @@ export function removeAllAirDefenceSpheres() {
  * Hash: 0xF25DF915FA38C5F3 | Since: 323
  */
 export function removeAllPeds(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     RemoveAllPedWeapons(_ped, false);
 }
 /**
@@ -948,7 +947,7 @@ export function removeAsset(weaponHash) {
  * Hash: 0x1E8BE90C74FB4C09 | Since: 323
  */
 export function removeComponentFromPed(ped, weaponHash, componentHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
@@ -961,7 +960,7 @@ export function removeComponentFromPed(ped, weaponHash, componentHash) {
  * Hash: 0xF7D82B0D66777611 | Since: 323
  */
 export function removeComponentFromWeaponObject(_object, componentHash) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     if (typeof componentHash === 'string')
         componentHash = GetHashKey(componentHash);
     RemoveWeaponComponentFromWeaponObject(__object, componentHash);
@@ -982,7 +981,7 @@ export function removeComponentFromWeaponObject(_object, componentHash) {
  * Hash: 0x4899CB088EDF59B8 | Since: 323
  */
 export function removeFromPed(ped, weaponHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     RemoveWeaponFromPed(_ped, weaponHash);
@@ -1005,7 +1004,7 @@ export function requestAsset(weaponHash) {
  * Hash: 0x48164DBB970AC3F0 | Since: 323
  */
 export function requestHighDetailModel(weaponObject) {
-    const _weaponObject = weaponObject instanceof IEntity ? weaponObject.handle() : weaponObject;
+    const _weaponObject = typeof weaponObject == 'object' ? weaponObject.handle() : weaponObject;
     RequestWeaponHighDetailModel(_weaponObject);
 }
 /**
@@ -1014,7 +1013,7 @@ export function requestHighDetailModel(weaponObject) {
  * Hash: 0xDCD2A934D65CB497 | Since: 323
  */
 export function setAmmoInClip(ped, weaponHash, ammo) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     return SetAmmoInClip(_ped, weaponHash, ammo);
@@ -1025,7 +1024,7 @@ export function setAmmoInClip(ped, weaponHash, ammo) {
  * Hash: 0xEFF296097FF1E509 | Since: 1103
  */
 export function setCanPedSelectAlls(ped, toggle) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetCanPedEquipAllWeapons(_ped, toggle);
 }
 /**
@@ -1035,7 +1034,7 @@ export function setCanPedSelectAlls(ped, toggle) {
  * Hash: 0xB4771B9AAF4E68E4 | Since: 1103
  */
 export function setCanPedSelectInventory(ped, weaponHash, toggle) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     SetCanPedEquipWeapon(_ped, weaponHash, toggle);
@@ -1046,7 +1045,7 @@ export function setCanPedSelectInventory(ped, weaponHash, toggle) {
  * Hash: 0x75C55983C2C39DAA | Since: 323
  */
 export function setCurrentPedVehicle(ped, weaponHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     return SetCurrentPedVehicleWeapon(_ped, weaponHash);
@@ -1057,7 +1056,7 @@ export function setCurrentPedVehicle(ped, weaponHash) {
  * Hash: 0xADF692B254977C0C | Since: 323
  */
 export function setCurrentPed(ped, weaponHash, bForceInHand) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     SetCurrentPedWeapon(_ped, weaponHash, bForceInHand);
@@ -1068,7 +1067,7 @@ export function setCurrentPed(ped, weaponHash, bForceInHand) {
  * Hash: 0xE4DCEC7FD5B739A5 | Since: 323
  */
 export function setEqippedStartSpinningAtFullSpeed(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     Citizen.invokeNative('0xE4DCEC7FD5B739A5', _ped);
 }
 /**
@@ -1077,7 +1076,7 @@ export function setEqippedStartSpinningAtFullSpeed(ped) {
  * Hash: 0x988DB6FE9B3AC000 | Since: 2060
  */
 export function setFlashLightActiveHistory(ped, toggle) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetFlashLightEnabled(_ped, toggle);
 }
 /**
@@ -1094,7 +1093,7 @@ export function setFlashLightFadeDistance(distance) {
  * Hash: 0x14E56BC5B5DB6A19 | Since: 323
  */
 export function setPedAmmo(ped, weaponHash, ammo) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     SetPedAmmo(_ped, weaponHash, ammo, false);
@@ -1105,7 +1104,7 @@ export function setPedAmmo(ped, weaponHash, ammo) {
  * Hash: 0x5FD1E1F011E76D7E | Since: 323
  */
 export function setPedAmmoByType(ped, ammoTypeHash, ammo) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof ammoTypeHash === 'string')
         ammoTypeHash = GetHashKey(ammoTypeHash);
     SetPedAmmoByType(_ped, ammoTypeHash, ammo);
@@ -1116,7 +1115,7 @@ export function setPedAmmoByType(ped, ammoTypeHash, ammo) {
  * Hash: 0xA4EFEF9440A5B0EF | Since: 323
  */
 export function setPedAmmoToDrop(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedAmmoToDrop(_ped, 0);
 }
 /**
@@ -1125,7 +1124,7 @@ export function setPedAmmoToDrop(ped) {
  * Hash: 0x8378627201D5497D | Since: 323
  */
 export function setPedChanceOfFiringBlanks(ped, xBias, yBias) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedChanceOfFiringBlanks(_ped, xBias, yBias);
 }
 /**
@@ -1134,7 +1133,7 @@ export function setPedChanceOfFiringBlanks(ped, xBias, yBias) {
  * Hash: 0x0725A4CCFDED9A70 | Since: 323
  */
 export function setPedCurrentVisible(ped, visible, deselectWeapon) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedCurrentWeaponVisible(_ped, visible, deselectWeapon, false, false);
 }
 /**
@@ -1143,7 +1142,7 @@ export function setPedCurrentVisible(ped, visible, deselectWeapon) {
  * Hash: 0x50276EF8172F5F12 | Since: 1734
  */
 export function setPedCycleVehiclesOnly(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     Citizen.invokeNative('0x50276EF8172F5F12', _ped);
 }
 /**
@@ -1152,7 +1151,7 @@ export function setPedCycleVehiclesOnly(ped) {
  * Hash: 0x208A1888007FC0E6 | Since: 323
  */
 export function setPedDropsInventory(ped, weaponHash, xOffset, yOffset, zOffset, ammoCount) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     SetPedDropsInventoryWeapon(_ped, weaponHash, xOffset, yOffset, zOffset, ammoCount);
@@ -1163,7 +1162,7 @@ export function setPedDropsInventory(ped, weaponHash, xOffset, yOffset, zOffset,
  * Hash: 0x6B7513D9966FBEC0 | Since: 323
  */
 export function setPedDrops(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedDropsWeapon(_ped);
 }
 /**
@@ -1172,7 +1171,7 @@ export function setPedDrops(ped) {
  * Hash: 0x476AE72C1D19D1A8 | Since: 323
  */
 export function setPedDropssWhenDead(ped, toggle) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedDropsWeaponsWhenDead(_ped, toggle);
 }
 /**
@@ -1182,7 +1181,7 @@ export function setPedDropssWhenDead(ped, toggle) {
  * Hash: 0xD0D7B1E680ED4A1A | Since: 323
  */
 export function setPedGadget(ped, gadgetHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof gadgetHash === 'string')
         gadgetHash = GetHashKey(gadgetHash);
     SetPedGadget(_ped, gadgetHash, false);
@@ -1193,7 +1192,7 @@ export function setPedGadget(ped, gadgetHash) {
  * Hash: 0x3EDCB0505123623B | Since: 323
  */
 export function setPedInfiniteAmmo(ped, toggle, weaponHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     SetPedInfiniteAmmo(_ped, toggle, weaponHash);
@@ -1204,7 +1203,7 @@ export function setPedInfiniteAmmo(ped, toggle, weaponHash) {
  * Hash: 0x183DADC6AA953186 | Since: 323
  */
 export function setPedInfiniteAmmoClip(ped, toggle) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedInfiniteAmmoClip(_ped, toggle);
 }
 /**
@@ -1213,7 +1212,7 @@ export function setPedInfiniteAmmoClip(ped, toggle) {
  * Hash: 0xB4C8D77C80C0421E | Since: 323
  */
 export function setPedShootOrdnance(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return SetPedShootOrdnanceWeapon(_ped, 0);
 }
 /**
@@ -1263,7 +1262,7 @@ export function setPedStunGunFiniteAmmo() {
  * Hash: 0x9FE5633880ECD8ED | Since: 1103
  */
 export function setPedComponentTintIndex(ped, weaponHash, camoComponentHash, colorIndex) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     if (typeof camoComponentHash === 'string')
@@ -1286,7 +1285,7 @@ export function setPedComponentTintIndex(ped, weaponHash, camoComponentHash, col
  * Hash: 0x50969B9B89ED5738 | Since: 323
  */
 export function setPedTintIndex(ped, weaponHash, tintIndex) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     SetPedWeaponTintIndex(_ped, weaponHash, tintIndex);
@@ -1305,7 +1304,7 @@ export function setPickupAmmoAmountScaler() {
  * Hash: 0xECDC202B25E5CF48 | Since: 573
  */
 export function setPlayerTargettableForAirDefenceSphere(player, zoneId, enable) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     SetPlayerAirDefenseZoneFlag(_player, zoneId, enable);
 }
 /**
@@ -1348,7 +1347,7 @@ export function setPlayerTargettableForAirDefenceSphere(player, zoneId, enable) 
  * Hash: 0x1055AC3A667F09D9 | Since: 323
  */
 export function setAnimationOverride(ped, animStyle) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof animStyle === 'string')
         animStyle = GetHashKey(animStyle);
     SetWeaponAnimationOverride(_ped, animStyle);
@@ -1390,7 +1389,7 @@ export function setEffectDurationModifier(p0) {
  * Hash: 0x977CA98939E82E4B | Since: 1103
  */
 export function setObjectCamoIndex(weaponObject) {
-    const _weaponObject = weaponObject instanceof IObject ? weaponObject.handle() : weaponObject;
+    const _weaponObject = typeof weaponObject == 'object' ? weaponObject.handle() : weaponObject;
     Citizen.invokeNative('0x977CA98939E82E4B', _weaponObject, 0);
 }
 /**
@@ -1432,7 +1431,7 @@ export function setObjectCamoIndex(weaponObject) {
  * Hash: 0x5DA825A85D0EA6E6 | Since: 1103
  */
 export function setObjectComponentTintIndex(weaponObject, camoComponentHash, colorIndex) {
-    const _weaponObject = weaponObject instanceof IObject ? weaponObject.handle() : weaponObject;
+    const _weaponObject = typeof weaponObject == 'object' ? weaponObject.handle() : weaponObject;
     if (typeof camoComponentHash === 'string')
         camoComponentHash = GetHashKey(camoComponentHash);
     SetWeaponObjectLiveryColor(_weaponObject, camoComponentHash, colorIndex);
@@ -1443,7 +1442,7 @@ export function setObjectComponentTintIndex(weaponObject, camoComponentHash, col
  * Hash: 0xF827589017D4E4A9 | Since: 323
  */
 export function setObjectTintIndex(weapon, tintIndex) {
-    const _weapon = weapon instanceof IObject ? weapon.handle() : weapon;
+    const _weapon = typeof weapon == 'object' ? weapon.handle() : weapon;
     SetWeaponObjectTintIndex(_weapon, tintIndex);
 }
 /**
@@ -1452,7 +1451,7 @@ export function setObjectTintIndex(weapon, tintIndex) {
  * Hash: 0x2857938C5D407AFA | Since: 3407
  */
 export function getAmmoInVehicleClip(vehicle, seat) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return Citizen.invokeNative('0x2857938C5D407AFA', _vehicle, seat);
 }
 /**
@@ -1461,7 +1460,7 @@ export function getAmmoInVehicleClip(vehicle, seat) {
  * Hash: 0xC8C6F4B1CDEB40EF | Since: 3407
  */
 export function getTimeBeforeVehicleReloadFinishes(vehicle, seat) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return Citizen.invokeNative('0xC8C6F4B1CDEB40EF', _vehicle, seat);
 }
 /**
@@ -1470,7 +1469,7 @@ export function getTimeBeforeVehicleReloadFinishes(vehicle, seat) {
  * Hash: 0xD0AD348FFD7A6868 | Since: 3407
  */
 export function getVehicleReloadTime(vehicle, seat) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return Citizen.invokeNative('0xD0AD348FFD7A6868', _vehicle, seat);
 }
 /**
@@ -1479,7 +1478,7 @@ export function getVehicleReloadTime(vehicle, seat) {
  * Hash: 0x8062F07153F4446F | Since: 3407
  */
 export function hasReloadingInVehicle(vehicle, seat) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return Citizen.invokeNative('0x8062F07153F4446F', _vehicle, seat);
 }
 /**
@@ -1488,7 +1487,7 @@ export function hasReloadingInVehicle(vehicle, seat) {
  * Hash: 0x873906720EE842C3 | Since: 3407
  */
 export function setAmmoInVehicleClip(vehicle, seat, ammo) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return Citizen.invokeNative('0x873906720EE842C3', _vehicle, seat, ammo);
 }
 /**
@@ -1507,7 +1506,7 @@ export function setPedDamageModifier(weapon, damageModifier) {
  * Hash: 0x5B1513F27F279A44 | Since: 3407
  */
 export function triggerVehicleReload(vehicle, seat, ped) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return Citizen.invokeNative('0x5B1513F27F279A44', _vehicle, seat, _ped);
 }

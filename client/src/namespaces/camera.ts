@@ -6,7 +6,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0x8F57A89D
  */
 export function getCamMatrix(camera: number | ICamera, rightVector: Vector3, forwardVector: Vector3, upVector: Vector3, position: Vector3): void {
-    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    const _camera = typeof camera == 'object' ? camera.handle() : camera;
     GetCamMatrix(_camera, rightVector, forwardVector, upVector, position);
 }
 

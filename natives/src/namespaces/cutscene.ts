@@ -273,7 +273,7 @@ export function networkSetMocapCanBeSkipped(toggle: boolean): void {
  * Hash: 0xE40C1C56DF95C2E8 | Since: 323
  */
 export function registerEntityFor(cutscenePed: number | IPed, cutsceneEntName: string, modelHash: number | string): void {
-    const _cutscenePed = cutscenePed instanceof IPed ? cutscenePed.handle() : cutscenePed;
+    const _cutscenePed = typeof cutscenePed == 'object' ? cutscenePed.handle() : cutscenePed;
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     RegisterEntityForCutscene(_cutscenePed, cutsceneEntName, 0, modelHash, 0);
 }
@@ -427,7 +427,7 @@ export function setPedComponentVariation(cutsceneEntName: string, componentId: n
  * Hash: 0x2A56C06EBEF2B0D9 | Since: 323
  */
 export function setPedComponentVariationFromPed(cutsceneEntName: string, ped: number | IPed, modelHash: number | string): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     SetCutscenePedComponentVariationFromPed(cutsceneEntName, _ped, modelHash);
 }

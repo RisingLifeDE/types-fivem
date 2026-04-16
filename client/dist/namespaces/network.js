@@ -1,4 +1,3 @@
-import { IEntity } from '@risinglife/fivem-shared';
 /**
  * No comment provided
  *
@@ -29,6 +28,6 @@ export function doesEntityExistWithNetworkId(netId) {
  * Hash: 0x526FEE31
  */
 export function getEntityOwner(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return NetworkGetEntityOwner(_entity);
 }

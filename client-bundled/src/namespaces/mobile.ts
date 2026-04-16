@@ -45,7 +45,7 @@ export function cellCamActivateShallowDofMode(toggle: boolean): void {
  * Hash: 0x439E9BC95B7E7FBE | Since: 323 | API-Set: unknown
  */
 export function cellCamIsCharVisibleNoFaceCheck(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return CellCamIsCharVisibleNoFaceCheck(_entity);
 }
 
@@ -192,7 +192,7 @@ export function getPhoneRenderId(): number {
  * Hash: 0x1CEFB61F193070AE | Since: 323 | API-Set: unknown
  */
 export function getPhoneRotation(p1: number | IVehicle): Vector3 {
-    const _p1 = p1 instanceof IVehicle ? p1.handle() : p1;
+    const _p1 = typeof p1 == 'object' ? p1.handle() : p1;
     return GetMobilePhoneRotation(_p1);
 }
 

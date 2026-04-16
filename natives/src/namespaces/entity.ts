@@ -29,7 +29,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0xC5F68BE9613E2D18 | Since: 323
  */
 export function applyForceTo(entity: number | IEntity, forceFlags: number, pos: Vector3, offX: number, offY: number, offZ: number, boneIndex: number, isDirectionRel: boolean, ignoreUpVec: boolean, isForceRel: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     ApplyForceToEntity(_entity, forceFlags, pos.x, pos.y, pos.z, offX, offY, offZ, boneIndex, isDirectionRel, ignoreUpVec, isForceRel, false, false);
 }
 
@@ -54,7 +54,7 @@ export function applyForceTo(entity: number | IEntity, forceFlags: number, pos: 
  * Hash: 0x18FF00FC7EFF559E | Since: 323
  */
 export function applyForceToCenterOfMass(entity: number | IEntity, forceType: number, pos: Vector3, isDirectionRel: boolean, isForceRel: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     ApplyForceToEntityCenterOfMass(_entity, forceType, pos.x, pos.y, pos.z, false, isDirectionRel, isForceRel, false);
 }
 
@@ -64,8 +64,8 @@ export function applyForceToCenterOfMass(entity: number | IEntity, forceType: nu
  * Hash: 0x5C48B75732C8456C | Since: 791
  */
 export function attachBoneToEntityBone(entity1: number | IEntity, entity2: number | IEntity, boneIndex1: number, boneIndex2: number): void {
-    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
-    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    const _entity1 = typeof entity1 == 'object' ? entity1.handle() : entity1;
+    const _entity2 = typeof entity2 == 'object' ? entity2.handle() : entity2;
     AttachEntityBoneToEntityBone(_entity1, _entity2, boneIndex1, boneIndex2, false, false);
 }
 
@@ -75,8 +75,8 @@ export function attachBoneToEntityBone(entity1: number | IEntity, entity2: numbe
  * Hash: 0xFD1695C5D3B05439 | Since: 791
  */
 export function attachBoneToEntityBoneYForward(entity1: number | IEntity, entity2: number | IEntity, boneIndex1: number, boneIndex2: number): void {
-    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
-    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    const _entity1 = typeof entity1 == 'object' ? entity1.handle() : entity1;
+    const _entity2 = typeof entity2 == 'object' ? entity2.handle() : entity2;
     AttachEntityBoneToEntityBonePhysically(_entity1, _entity2, boneIndex1, boneIndex2, false, false);
 }
 
@@ -95,8 +95,8 @@ export function attachBoneToEntityBoneYForward(entity1: number | IEntity, entity
  * Hash: 0x6B9BBD38AB0796DF | Since: 323
  */
 export function attachToEntity(entity1: number | IEntity, entity2: number | IEntity, boneIndex: number, pos: Vector3, rot: Vector3, useSoftPinning: boolean, collision: boolean, isPed: boolean, vertexIndex: number, fixedRot: boolean): void {
-    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
-    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    const _entity1 = typeof entity1 == 'object' ? entity1.handle() : entity1;
+    const _entity2 = typeof entity2 == 'object' ? entity2.handle() : entity2;
     AttachEntityToEntity(_entity1, _entity2, boneIndex, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, false, useSoftPinning, collision, isPed, vertexIndex, fixedRot, undefined);
 }
 
@@ -113,8 +113,8 @@ export function attachToEntity(entity1: number | IEntity, entity2: number | IEnt
  * Hash: 0xC3675780C92F90F9 | Since: 323
  */
 export function attachToEntityPhysically(entity1: number | IEntity, entity2: number | IEntity, boneIndex1: number, boneIndex2: number, xPos1: number, yPos1: number, zPos1: number, xPos2: number, yPos2: number, zPos2: number, rot: Vector3, breakForce: number, fixedRot: boolean, collision: boolean): void {
-    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
-    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    const _entity1 = typeof entity1 == 'object' ? entity1.handle() : entity1;
+    const _entity2 = typeof entity2 == 'object' ? entity2.handle() : entity2;
     AttachEntityToEntityPhysically(_entity1, _entity2, boneIndex1, boneIndex2, xPos1, yPos1, zPos1, xPos2, yPos2, zPos2, rot.x, rot.y, rot.z, breakForce, fixedRot, false, collision, false, 0);
 }
 
@@ -124,8 +124,8 @@ export function attachToEntityPhysically(entity1: number | IEntity, entity2: num
  * Hash: 0x168A09D1B25B0BA4 | Since: 2944
  */
 export function attachToEntityPhysicallyOverrideInverseMass(firstEntityIndex: number | IEntity, secondEntityIndex: number | IEntity, firstEntityBoneIndex: number, secondEntityBoneIndex: number, secondEntityOffsetX: number, secondEntityOffsetY: number, secondEntityOffsetZ: number, firstEntityOffsetX: number, firstEntityOffsetY: number, firstEntityOffsetZ: number, vecRotationX: number, vecRotationY: number, vecRotationZ: number, physicalStrength: number, constrainRotation: boolean, doInitialWarp: boolean, collideWithEntity: boolean, addInitialSeperation: boolean, rotOrder: number, invMassScaleA: number, invMassScaleB: number): void {
-    const _firstEntityIndex = firstEntityIndex instanceof IEntity ? firstEntityIndex.handle() : firstEntityIndex;
-    const _secondEntityIndex = secondEntityIndex instanceof IEntity ? secondEntityIndex.handle() : secondEntityIndex;
+    const _firstEntityIndex = typeof firstEntityIndex == 'object' ? firstEntityIndex.handle() : firstEntityIndex;
+    const _secondEntityIndex = typeof secondEntityIndex == 'object' ? secondEntityIndex.handle() : secondEntityIndex;
     Citizen.invokeNative('0x168A09D1B25B0BA4', _firstEntityIndex, _secondEntityIndex, firstEntityBoneIndex, secondEntityBoneIndex, secondEntityOffsetX, secondEntityOffsetY, secondEntityOffsetZ, firstEntityOffsetX, firstEntityOffsetY, firstEntityOffsetZ, vecRotationX, vecRotationY, vecRotationZ, physicalStrength, constrainRotation, doInitialWarp, collideWithEntity, addInitialSeperation, rotOrder, invMassScaleA, invMassScaleB);
 }
 
@@ -135,7 +135,7 @@ export function attachToEntityPhysicallyOverrideInverseMass(firstEntityIndex: nu
  * Hash: 0xA72CD9CA74A5ECBA | Since: 323
  */
 export function clearLastDamageEntity(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     ClearEntityLastDamageEntity(_entity);
 }
 
@@ -189,7 +189,7 @@ export function createModelSwap(pos: Vector3, radius: number, originalModel: num
  * Hash: 0xAE3CBE5BF394C9C9 | Since: 323
  */
 export function deleteEntity(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     DeleteEntity(_entity);
 }
 
@@ -200,7 +200,7 @@ export function deleteEntity(entity: number | IEntity): void {
  * Hash: 0x961AC54BF0613F5D | Since: 323
  */
 export function detach(entity: number | IEntity, dynamic: boolean, collision: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     DetachEntity(_entity, dynamic, collision);
 }
 
@@ -210,7 +210,7 @@ export function detach(entity: number | IEntity, dynamic: boolean, collision: bo
  * Hash: 0xDDE6DF5AE89981D2 | Since: 323
  */
 export function doesBelongToThisScript(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return DoesEntityBelongToThisScript(_entity, false);
 }
 
@@ -220,7 +220,7 @@ export function doesBelongToThisScript(entity: number | IEntity): boolean {
  * Hash: 0x7239B21A38F536BA | Since: 323
  */
 export function doesExist(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return DoesEntityExist(_entity);
 }
 
@@ -230,7 +230,7 @@ export function doesExist(entity: number | IEntity): boolean {
  * Hash: 0x2158E81A6AF65EA9 | Since: 2699
  */
 export function doesHaveAnimDirector(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return DoesEntityHaveAnimDirector(_entity);
 }
 
@@ -240,7 +240,7 @@ export function doesHaveAnimDirector(entity: number | IEntity): boolean {
  * Hash: 0x060D6E96F8B8E48D | Since: 323
  */
 export function doesHaveDrawable(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return DoesEntityHaveDrawable(_entity);
 }
 
@@ -250,7 +250,7 @@ export function doesHaveDrawable(entity: number | IEntity): boolean {
  * Hash: 0xDA95EA3317CC5064 | Since: 323
  */
 export function doesHavePhysics(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return DoesEntityHavePhysics(_entity);
 }
 
@@ -260,7 +260,7 @@ export function doesHavePhysics(entity: number | IEntity): boolean {
  * Hash: 0x764EB96874EFFDC1 | Since: 2699
  */
 export function doesHaveSkeleton(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return DoesEntityHaveSkeletonData(_entity);
 }
 
@@ -270,7 +270,7 @@ export function doesHaveSkeleton(entity: number | IEntity): boolean {
  * Hash: 0x6CE177D014502E8A | Since: 877
  */
 export function enableBulletCollision(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     EnableEntityUnk(_entity);
 }
 
@@ -298,7 +298,7 @@ export function findAnimEventPhase(animDictionary: string, animName: string): [b
  * Hash: 0x40FDEDB72F8293B2 | Since: 323
  */
 export function forceAiAndAnimationUpdate(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     ForceEntityAiAndAnimationUpdate(_entity);
 }
 
@@ -308,7 +308,7 @@ export function forceAiAndAnimationUpdate(entity: number | IEntity): void {
  * Hash: 0x428CA6DBD1094446 | Since: 323
  */
 export function freezePosition(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     FreezeEntityPosition(_entity, toggle);
 }
 
@@ -327,7 +327,7 @@ export function getAnimDuration(animDict: string, animName: string): number {
  * Hash: 0xE465D4AB7CA6AE72 | Since: 323
  */
 export function getCollisionNormalOfLastHitFor(entity: number | IEntity): Vector3 {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return new Vector3(GetCollisionNormalOfLastHitForEntity(_entity));
 }
 
@@ -337,7 +337,7 @@ export function getCollisionNormalOfLastHitFor(entity: number | IEntity): Vector
  * Hash: 0x5A47B3B5E63E94C6 | Since: 323
  */
 export function getAlpha(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityAlpha(_entity);
 }
 
@@ -354,7 +354,7 @@ export function getAlpha(entity: number | IEntity): number {
  * Hash: 0x346D81500D088F42 | Since: 323
  */
 export function getAnimCurrentTime(entity: number | IEntity, animDict: string, animName: string): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityAnimCurrentTime(_entity, animDict, animName);
 }
 
@@ -370,7 +370,7 @@ export function getAnimCurrentTime(entity: number | IEntity, animDict: string, a
  * Hash: 0x50BD2730B191E360 | Since: 323
  */
 export function getAnimTotalTime(entity: number | IEntity, animDict: string, animName: string): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityAnimTotalTime(_entity, animDict, animName);
 }
 
@@ -380,7 +380,7 @@ export function getAnimTotalTime(entity: number | IEntity, animDict: string, ani
  * Hash: 0x48C2BED9180FE123 | Since: 323
  */
 export function getAttachedTo(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityAttachedTo(_entity);
 }
 
@@ -390,7 +390,7 @@ export function getAttachedTo(entity: number | IEntity): number {
  * Hash: 0xB328DCC3A3AA401B | Since: 791
  */
 export function getBoneCount(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityBoneCount(_entity);
 }
 
@@ -449,7 +449,7 @@ export function getBoneCount(entity: number | IEntity): number {
  * Hash: 0xFB71170B7E76ACBA | Since: 323
  */
 export function getBoneIndexByName(entity: number | IEntity, boneName: string): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityBoneIndexByName(_entity, boneName);
 }
 
@@ -459,7 +459,7 @@ export function getBoneIndexByName(entity: number | IEntity, boneName: string): 
  * Hash: 0xCF1247CC86961FD6 | Since: 2802
  */
 export function getBoneObjectPostion(entity: number | IEntity, boneIndex: number): Vector3 {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return new Vector3(Citizen.invokeNative('0xCF1247CC86961FD6', _entity, boneIndex));
 }
 
@@ -469,7 +469,7 @@ export function getBoneObjectPostion(entity: number | IEntity, boneIndex: number
  * Hash: 0xBD8D32550E5CEBFE | Since: 1734
  */
 export function getBoneObjectRotation(entity: number | IEntity, boneIndex: number): Vector3 {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return new Vector3(GetEntityBoneRotationLocal(_entity, boneIndex));
 }
 
@@ -479,7 +479,7 @@ export function getBoneObjectRotation(entity: number | IEntity, boneIndex: numbe
  * Hash: 0x46F8696933A63C9B | Since: 877
  */
 export function getBonePostion(entity: number | IEntity, boneIndex: number): Vector3 {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return new Vector3(GetEntityBonePosition2(_entity, boneIndex));
 }
 
@@ -489,7 +489,7 @@ export function getBonePostion(entity: number | IEntity, boneIndex: number): Vec
  * Hash: 0xCE6294A232D03786 | Since: 791
  */
 export function getBoneRotation(entity: number | IEntity, boneIndex: number): Vector3 {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return new Vector3(GetEntityBoneRotation(_entity, boneIndex));
 }
 
@@ -499,7 +499,7 @@ export function getBoneRotation(entity: number | IEntity, boneIndex: number): Ve
  * Hash: 0xD95CC5D2AB15A09F | Since: 757
  */
 export function getCanBeDamaged(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityCanBeDamaged(_entity);
 }
 
@@ -509,7 +509,7 @@ export function getCanBeDamaged(entity: number | IEntity): boolean {
  * Hash: 0xCCF1E97BEFDAE480 | Since: 323
  */
 export function getCollisionDisabled(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityCollisionDisabled(_entity);
 }
 
@@ -521,7 +521,7 @@ export function getCollisionDisabled(entity: number | IEntity): boolean {
  * Hash: 0x3FEF770D40960D5A | Since: 323
  */
 export function getCoords(entity: number | IEntity, alive: boolean): Vector3 {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return new Vector3(GetEntityCoords(_entity, alive));
 }
 
@@ -531,7 +531,7 @@ export function getCoords(entity: number | IEntity, alive: boolean): Vector3 {
  * Hash: 0x0A794A5A57F8DF91 | Since: 323
  */
 export function getForwardVector(entity: number | IEntity): Vector3 {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return new Vector3(GetEntityForwardVector(_entity));
 }
 
@@ -541,7 +541,7 @@ export function getForwardVector(entity: number | IEntity): Vector3 {
  * Hash: 0x8BB4EF4214E0E6D5 | Since: 323
  */
 export function getForwardX(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityForwardX(_entity);
 }
 
@@ -551,7 +551,7 @@ export function getForwardX(entity: number | IEntity): number {
  * Hash: 0x866A4A5FAE349510 | Since: 323
  */
 export function getForwardY(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityForwardY(_entity);
 }
 
@@ -561,7 +561,7 @@ export function getForwardY(entity: number | IEntity): number {
  * Hash: 0xE83D4F9BA2A38914 | Since: 323
  */
 export function getHeading(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityHeading(_entity);
 }
 
@@ -573,7 +573,7 @@ export function getHeading(entity: number | IEntity): number {
  * Hash: 0x846BF6291198A71E | Since: 323
  */
 export function getHeadingFromEulers(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityHeadingFromEulers(_entity);
 }
 
@@ -593,7 +593,7 @@ export function getHeadingFromEulers(entity: number | IEntity): number {
  * Hash: 0xEEF059FAD016D209 | Since: 323
  */
 export function getHealth(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityHealth(_entity);
 }
 
@@ -603,7 +603,7 @@ export function getHealth(entity: number | IEntity): number {
  * Hash: 0x5A504562485944DD | Since: 323
  */
 export function getHeight(entity: number | IEntity, pos: Vector3, atTop: boolean, inWorldCoords: boolean): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityHeight(_entity, pos.x, pos.y, pos.z, atTop, inWorldCoords);
 }
 
@@ -617,7 +617,7 @@ export function getHeight(entity: number | IEntity, pos: Vector3, atTop: boolean
  * Hash: 0x1DD55701034110E5 | Since: 323
  */
 export function getHeightAboveGround(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityHeightAboveGround(_entity);
 }
 
@@ -627,7 +627,7 @@ export function getHeightAboveGround(entity: number | IEntity): number {
  * Hash: 0x4159C2762B5791D6 | Since: 323
  */
 export function getLodDist(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityLodDist(_entity);
 }
 
@@ -637,7 +637,7 @@ export function getLodDist(entity: number | IEntity): number {
  * Hash: 0xECB2FC7235A7D137 | Since: 323
  */
 export function getMatrix(entity: number | IEntity): [Vector3, Vector3, Vector3, Vector3] {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityMatrix(_entity);
 }
 
@@ -651,7 +651,7 @@ export function getMatrix(entity: number | IEntity): [Vector3, Vector3, Vector3,
  * Hash: 0x15D757606D170C3C | Since: 323
  */
 export function getMaxHealth(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityMaxHealth(_entity);
 }
 
@@ -661,7 +661,7 @@ export function getMaxHealth(entity: number | IEntity): number {
  * Hash: 0x9F47B058362C84B5 | Since: 323
  */
 export function getModel(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityModel(_entity);
 }
 
@@ -676,7 +676,7 @@ export function getModel(entity: number | IEntity): number {
  * Hash: 0x1F922734E259BD26 | Since: 1180
  */
 export function getOfTypeAttachedToEntity(entity: number | IEntity, modelHash: number | string): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return GetEntityPickup(_entity, modelHash);
 }
@@ -687,7 +687,7 @@ export function getOfTypeAttachedToEntity(entity: number | IEntity, modelHash: n
  * Hash: 0xD45DC2893621E1FE | Since: 323
  */
 export function getPitch(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityPitch(_entity);
 }
 
@@ -697,7 +697,7 @@ export function getPitch(entity: number | IEntity): number {
  * Hash: 0xF6F5161F4534EDFF | Since: 323
  */
 export function getPopulationType(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityPopulationType(_entity);
 }
 
@@ -707,7 +707,7 @@ export function getPopulationType(entity: number | IEntity): number {
  * Hash: 0xBE8CD9BE829BBEBF | Since: 1604
  */
 export function getProofs(entity: number | IEntity): [boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean] {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityProofs(_entity);
 }
 
@@ -717,7 +717,7 @@ export function getProofs(entity: number | IEntity): [boolean, boolean, boolean,
  * Hash: 0x7B3703D2D32DFA18 | Since: 323
  */
 export function getQuaternion(entity: number | IEntity): [number, number, number, number] {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityQuaternion(_entity);
 }
 
@@ -728,7 +728,7 @@ export function getQuaternion(entity: number | IEntity): [number, number, number
  * Hash: 0x831E0242595560DF | Since: 323
  */
 export function getRoll(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityRoll(_entity);
 }
 
@@ -751,7 +751,7 @@ export function getRoll(entity: number | IEntity): number {
  * Hash: 0xAFBD61CC738D9EB9 | Since: 323
  */
 export function getRotation(entity: number | IEntity, rotationOrder: number): Vector3 {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return new Vector3(GetEntityRotation(_entity, rotationOrder));
 }
 
@@ -761,7 +761,7 @@ export function getRotation(entity: number | IEntity, rotationOrder: number): Ve
  * Hash: 0x213B91045D09B983 | Since: 323
  */
 export function getRotationVelocity(entity: number | IEntity): Vector3 {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return new Vector3(GetEntityRotationVelocity(_entity));
 }
 
@@ -771,7 +771,7 @@ export function getRotationVelocity(entity: number | IEntity): Vector3 {
  * Hash: 0xA6E9C38DB51D7748 | Since: 323
  */
 export function getScript(entity: number | IEntity): [string, number] {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityScript(_entity);
 }
 
@@ -789,7 +789,7 @@ export function getScript(entity: number | IEntity): [string, number] {
  * Hash: 0xD5037BA82E12416F | Since: 323
  */
 export function getSpeed(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntitySpeed(_entity);
 }
 
@@ -799,7 +799,7 @@ export function getSpeed(entity: number | IEntity): number {
  * Hash: 0x9A8D700A51CB7B0D | Since: 323
  */
 export function getSpeedVector(entity: number | IEntity, relative: boolean): Vector3 {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return new Vector3(GetEntitySpeedVector(_entity, relative));
 }
 
@@ -809,7 +809,7 @@ export function getSpeedVector(entity: number | IEntity, relative: boolean): Vec
  * Hash: 0xE81AFC1BC4CC41CE | Since: 323
  */
 export function getSubmergedLevel(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntitySubmergedLevel(_entity);
 }
 
@@ -823,7 +823,7 @@ export function getSubmergedLevel(entity: number | IEntity): number {
  * Hash: 0x8ACD366038D14505 | Since: 323
  */
 export function getType(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityType(_entity);
 }
 
@@ -833,7 +833,7 @@ export function getType(entity: number | IEntity): number {
  * Hash: 0x95EED5A694951F9F | Since: 323
  */
 export function getUprightValue(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityUprightValue(_entity);
 }
 
@@ -843,7 +843,7 @@ export function getUprightValue(entity: number | IEntity): number {
  * Hash: 0x4805D2B1D8CF94A9 | Since: 323
  */
 export function getVelocity(entity: number | IEntity): Vector3 {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return new Vector3(GetEntityVelocity(_entity));
 }
 
@@ -853,7 +853,7 @@ export function getVelocity(entity: number | IEntity): Vector3 {
  * Hash: 0x5C3D0A935F535C4C | Since: 323
  */
 export function getLastMaterialHitBy(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetLastMaterialHitByEntity(_entity);
 }
 
@@ -863,7 +863,7 @@ export function getLastMaterialHitBy(entity: number | IEntity): number {
  * Hash: 0xFFBD7052D65BE0FF | Since: 2944
  */
 export function getNearestParticipantTo(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return Citizen.invokeNative('0xFFBD7052D65BE0FF', _entity);
 }
 
@@ -873,7 +873,7 @@ export function getNearestParticipantTo(entity: number | IEntity): number {
  * Hash: 0x7196842CB375CDB3 | Since: 323
  */
 export function getNearestPlayerTo(entity: number | IEntity): number | string {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetNearestPlayerToEntity(_entity);
 }
 
@@ -883,7 +883,7 @@ export function getNearestPlayerTo(entity: number | IEntity): number | string {
  * Hash: 0x4DC9A62F844D9337 | Since: 323
  */
 export function getNearestPlayerToOnTeam(entity: number | IEntity, team: number): number | string {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetNearestPlayerToEntityOnTeam(_entity, team);
 }
 
@@ -893,7 +893,7 @@ export function getNearestPlayerToOnTeam(entity: number | IEntity, team: number)
  * Hash: 0xD7E3B9735C0F89D6 | Since: 323
  */
 export function getObjectIndexFromIndex(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetObjectIndexFromEntityIndex(_entity);
 }
 
@@ -908,7 +908,7 @@ export function getObjectIndexFromIndex(entity: number | IEntity): number {
  * Hash: 0x2274BC1C4885E333 | Since: 323
  */
 export function getOffsetFromGivenWorldCoords(entity: number | IEntity, pos: Vector3): Vector3 {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return new Vector3(GetOffsetFromEntityGivenWorldCoords(_entity, pos.x, pos.y, pos.z));
 }
 
@@ -922,7 +922,7 @@ export function getOffsetFromGivenWorldCoords(entity: number | IEntity, pos: Vec
  * Hash: 0x1899F328B0E12848 | Since: 323
  */
 export function getOffsetFromInWorldCoords(entity: number | IEntity, offsetX: number, offsetY: number, offsetZ: number): Vector3 {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return new Vector3(GetOffsetFromEntityInWorldCoords(_entity, offsetX, offsetY, offsetZ));
 }
 
@@ -932,7 +932,7 @@ export function getOffsetFromInWorldCoords(entity: number | IEntity, offsetX: nu
  * Hash: 0x04A2A40C73395041 | Since: 323
  */
 export function getPedIndexFromIndex(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetPedIndexFromEntityIndex(_entity);
 }
 
@@ -942,7 +942,7 @@ export function getPedIndexFromIndex(entity: number | IEntity): number {
  * Hash: 0x4B53F92932ADFAC0 | Since: 323
  */
 export function getVehicleIndexFromIndex(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetVehicleIndexFromEntityIndex(_entity);
 }
 
@@ -952,7 +952,7 @@ export function getVehicleIndexFromIndex(entity: number | IEntity): number {
  * Hash: 0x44A8FCB8ED227738 | Since: 323
  */
 export function getWorldPositionOfBone(entity: number | IEntity, boneIndex: number): Vector3 {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return new Vector3(GetWorldPositionOfEntityBone(_entity, boneIndex));
 }
 
@@ -962,7 +962,7 @@ export function getWorldPositionOfBone(entity: number | IEntity, boneIndex: numb
  * Hash: 0xEAF4CD9EA3E7E922 | Since: 323
  */
 export function hasAnimEventFired(entity: number | IEntity, actionHash: number | string): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     if (typeof actionHash === 'string') actionHash = GetHashKey(actionHash)
     return HasAnimEventFired(_entity, actionHash);
 }
@@ -973,7 +973,7 @@ export function hasAnimEventFired(entity: number | IEntity, actionHash: number |
  * Hash: 0xE9676F61BC0B3321 | Since: 323
  */
 export function hasCollisionLoadedAround(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return HasCollisionLoadedAroundEntity(_entity);
 }
 
@@ -985,7 +985,7 @@ export function hasCollisionLoadedAround(entity: number | IEntity): boolean {
  * Hash: 0x20B711662962B472 | Since: 323
  */
 export function hasAnimFinished(entity: number | IEntity, animDict: string, animName: string): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return HasEntityAnimFinished(_entity, animDict, animName, 0);
 }
 
@@ -995,7 +995,7 @@ export function hasAnimFinished(entity: number | IEntity, animDict: string, anim
  * Hash: 0x95EB9964FF5C5C65 | Since: 323
  */
 export function hasBeenDamagedByAnyObject(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return HasEntityBeenDamagedByAnyObject(_entity);
 }
 
@@ -1005,7 +1005,7 @@ export function hasBeenDamagedByAnyObject(entity: number | IEntity): boolean {
  * Hash: 0x605F5A140F202491 | Since: 323
  */
 export function hasBeenDamagedByAnyPed(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return HasEntityBeenDamagedByAnyPed(_entity);
 }
 
@@ -1015,7 +1015,7 @@ export function hasBeenDamagedByAnyPed(entity: number | IEntity): boolean {
  * Hash: 0xDFD5033FDBA0A9C8 | Since: 323
  */
 export function hasBeenDamagedByAnyVehicle(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return HasEntityBeenDamagedByAnyVehicle(_entity);
 }
 
@@ -1028,8 +1028,8 @@ export function hasBeenDamagedByAnyVehicle(entity: number | IEntity): boolean {
  * Hash: 0xC86D67D52A707CF8 | Since: 323
  */
 export function hasBeenDamagedByEntity(entity1: number | IEntity, entity2: number | IEntity): boolean {
-    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
-    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    const _entity1 = typeof entity1 == 'object' ? entity1.handle() : entity1;
+    const _entity2 = typeof entity2 == 'object' ? entity2.handle() : entity2;
     return HasEntityBeenDamagedByEntity(_entity1, _entity2, false);
 }
 
@@ -1044,8 +1044,8 @@ export function hasBeenDamagedByEntity(entity1: number | IEntity, entity2: numbe
  * Hash: 0xFCDFF7B72D23A1AC | Since: 323
  */
 export function hasClearLosToEntity(entity1: number | IEntity, entity2: number | IEntity, traceType: number): boolean {
-    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
-    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    const _entity1 = typeof entity1 == 'object' ? entity1.handle() : entity1;
+    const _entity2 = typeof entity2 == 'object' ? entity2.handle() : entity2;
     return HasEntityClearLosToEntity(_entity1, _entity2, traceType);
 }
 
@@ -1055,8 +1055,8 @@ export function hasClearLosToEntity(entity1: number | IEntity, entity2: number |
  * Hash: 0x394BDE2A7BBA031E | Since: 1868
  */
 export function hasClearLosToEntityAdjustForCover(entity1: number | IEntity, entity2: number | IEntity, traceType: number): boolean {
-    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
-    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    const _entity1 = typeof entity1 == 'object' ? entity1.handle() : entity1;
+    const _entity2 = typeof entity2 == 'object' ? entity2.handle() : entity2;
     return HasEntityClearLosToEntity2(_entity1, _entity2, traceType);
 }
 
@@ -1067,8 +1067,8 @@ export function hasClearLosToEntityAdjustForCover(entity1: number | IEntity, ent
  * Hash: 0x0267D00AF114F17A | Since: 323
  */
 export function hasClearLosToEntityInFront(entity1: number | IEntity, entity2: number | IEntity): boolean {
-    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
-    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    const _entity1 = typeof entity1 == 'object' ? entity1.handle() : entity1;
+    const _entity2 = typeof entity2 == 'object' ? entity2.handle() : entity2;
     return HasEntityClearLosToEntityInFront(_entity1, _entity2);
 }
 
@@ -1081,7 +1081,7 @@ export function hasClearLosToEntityInFront(entity1: number | IEntity, entity2: n
  * Hash: 0x8BAD02F0368D9E14 | Since: 323
  */
 export function hasCollidedWithAnything(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return HasEntityCollidedWithAnything(_entity);
 }
 
@@ -1100,7 +1100,7 @@ export function isAn(handle: number): boolean {
  * Hash: 0x8D68C8FD0FACA94E | Since: 323
  */
 export function isAnObject(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityAnObject(_entity);
 }
 
@@ -1110,7 +1110,7 @@ export function isAnObject(entity: number | IEntity): boolean {
  * Hash: 0xB346476EF1A64897 | Since: 323
  */
 export function isAttached(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityAttached(_entity);
 }
 
@@ -1120,7 +1120,7 @@ export function isAttached(entity: number | IEntity): boolean {
  * Hash: 0xCF511840CEEDE0CC | Since: 323
  */
 export function isAttachedToAnyObject(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityAttachedToAnyObject(_entity);
 }
 
@@ -1130,7 +1130,7 @@ export function isAttachedToAnyObject(entity: number | IEntity): boolean {
  * Hash: 0xB1632E9A5F988D11 | Since: 323
  */
 export function isAttachedToAnyPed(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityAttachedToAnyPed(_entity);
 }
 
@@ -1140,7 +1140,7 @@ export function isAttachedToAnyPed(entity: number | IEntity): boolean {
  * Hash: 0x26AA915AD89BFB4B | Since: 323
  */
 export function isAttachedToAnyVehicle(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityAttachedToAnyVehicle(_entity);
 }
 
@@ -1150,8 +1150,8 @@ export function isAttachedToAnyVehicle(entity: number | IEntity): boolean {
  * Hash: 0xEFBE71898A993728 | Since: 323
  */
 export function isAttachedToEntity(_from: number | IEntity, to: number | IEntity): boolean {
-    const __from = _from instanceof IEntity ? _from.handle() : _from;
-    const _to = to instanceof IEntity ? to.handle() : to;
+    const __from = typeof _from == 'object' ? _from.handle() : _from;
+    const _to = typeof to == 'object' ? to.handle() : to;
     return IsEntityAttachedToEntity(__from, _to);
 }
 
@@ -1163,7 +1163,7 @@ export function isAttachedToEntity(_from: number | IEntity, to: number | IEntity
  * Hash: 0x20B60995556D004F | Since: 323
  */
 export function isAtCoord(entity: number | IEntity, pos: Vector3, xSize: number, ySize: number, zSize: number): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityAtCoord(_entity, pos.x, pos.y, pos.z, xSize, ySize, zSize, false, false, 0);
 }
 
@@ -1175,8 +1175,8 @@ export function isAtCoord(entity: number | IEntity, pos: Vector3, xSize: number,
  * Hash: 0x751B70C3D034E187 | Since: 323
  */
 export function isAtEntity(entity1: number | IEntity, entity2: number | IEntity, xSize: number, ySize: number, zSize: number): boolean {
-    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
-    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    const _entity1 = typeof entity1 == 'object' ? entity1.handle() : entity1;
+    const _entity2 = typeof entity2 == 'object' ? entity2.handle() : entity2;
     return IsEntityAtEntity(_entity1, _entity2, xSize, ySize, zSize, false, false, 0);
 }
 
@@ -1186,7 +1186,7 @@ export function isAtEntity(entity1: number | IEntity, entity2: number | IEntity,
  * Hash: 0x0A7B270912999B3C | Since: 323
  */
 export function isAMissionEntity(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityAMissionEntity(_entity);
 }
 
@@ -1196,7 +1196,7 @@ export function isAMissionEntity(entity: number | IEntity): boolean {
  * Hash: 0x524AC5ECEA15343E | Since: 323
  */
 export function isAPed(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityAPed(_entity);
 }
 
@@ -1206,7 +1206,7 @@ export function isAPed(entity: number | IEntity): boolean {
  * Hash: 0x6AC7003FA6E5575E | Since: 323
  */
 export function isAVehicle(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityAVehicle(_entity);
 }
 
@@ -1216,7 +1216,7 @@ export function isAVehicle(entity: number | IEntity): boolean {
  * Hash: 0x5F9532F3B5CC2551 | Since: 323
  */
 export function isDead(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityDead(_entity, false);
 }
 
@@ -1226,7 +1226,7 @@ export function isDead(entity: number | IEntity): boolean {
  * Hash: 0x886E37EC497200B6 | Since: 323
  */
 export function isInAir(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityInAir(_entity);
 }
 
@@ -1238,7 +1238,7 @@ export function isInAir(entity: number | IEntity): boolean {
  * Hash: 0x51210CED3DA1C78A | Since: 323
  */
 export function isInAngledArea(entity: number | IEntity, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, width: number, debug: boolean, includeZ: boolean): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityInAngledArea(_entity, x1, y1, z1, x2, y2, z2, width, debug, includeZ, undefined);
 }
 
@@ -1248,7 +1248,7 @@ export function isInAngledArea(entity: number | IEntity, x1: number, y1: number,
  * Hash: 0x54736AA40E271165 | Since: 323
  */
 export function isInArea(entity: number | IEntity, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityInArea(_entity, x1, y1, z1, x2, y2, z2, false, false, undefined);
 }
 
@@ -1258,7 +1258,7 @@ export function isInArea(entity: number | IEntity, x1: number, y1: number, z1: n
  * Hash: 0xCFB0A0D8EDD145A3 | Since: 323
  */
 export function isInWater(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityInWater(_entity);
 }
 
@@ -1268,7 +1268,7 @@ export function isInWater(entity: number | IEntity): boolean {
  * Hash: 0xB6463CF6AF527071 | Since: 323
  */
 export function isInZone(entity: number | IEntity, zone: string): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityInZone(_entity, zone);
 }
 
@@ -1278,7 +1278,7 @@ export function isInZone(entity: number | IEntity, zone: string): boolean {
  * Hash: 0xE31C2C72B8692B64 | Since: 323
  */
 export function isOccluded(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityOccluded(_entity);
 }
 
@@ -1290,7 +1290,7 @@ export function isOccluded(entity: number | IEntity): boolean {
  * Hash: 0xE659E47AF827484B | Since: 323
  */
 export function isOnScreen(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityOnScreen(_entity);
 }
 
@@ -1306,7 +1306,7 @@ export function isOnScreen(entity: number | IEntity): boolean {
  * Hash: 0x1F0B79228E461EC9 | Since: 323
  */
 export function isPlayingAnim(entity: number | IEntity, animDict: string, animName: string, taskFlag: number): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityPlayingAnim(_entity, animDict, animName, taskFlag);
 }
 
@@ -1316,7 +1316,7 @@ export function isPlayingAnim(entity: number | IEntity, animDict: string, animNa
  * Hash: 0x1218E6886D3D8327 | Since: 323
  */
 export function isStatic(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityStatic(_entity);
 }
 
@@ -1326,8 +1326,8 @@ export function isStatic(entity: number | IEntity): boolean {
  * Hash: 0x17FFC1B2BA35A494 | Since: 323
  */
 export function isTouchingEntity(entity: number | IEntity, targetEntity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
-    const _targetEntity = targetEntity instanceof IEntity ? targetEntity.handle() : targetEntity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
+    const _targetEntity = typeof targetEntity == 'object' ? targetEntity.handle() : targetEntity;
     return IsEntityTouchingEntity(_entity, _targetEntity);
 }
 
@@ -1337,7 +1337,7 @@ export function isTouchingEntity(entity: number | IEntity, targetEntity: number 
  * Hash: 0x0F42323798A58C8C | Since: 323
  */
 export function isTouchingModel(entity: number | IEntity, modelHash: number | string): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return IsEntityTouchingModel(_entity, modelHash);
 }
@@ -1348,7 +1348,7 @@ export function isTouchingModel(entity: number | IEntity, modelHash: number | st
  * Hash: 0x5333F526F6AB19AA | Since: 323
  */
 export function isUpright(entity: number | IEntity, angle: number): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityUpright(_entity, angle);
 }
 
@@ -1358,7 +1358,7 @@ export function isUpright(entity: number | IEntity, angle: number): boolean {
  * Hash: 0x1DBD58820FA61D71 | Since: 323
  */
 export function isUpsidedown(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityUpsidedown(_entity);
 }
 
@@ -1368,7 +1368,7 @@ export function isUpsidedown(entity: number | IEntity): boolean {
  * Hash: 0x47D6F43D77935C75 | Since: 323
  */
 export function isVisible(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityVisible(_entity);
 }
 
@@ -1378,7 +1378,7 @@ export function isVisible(entity: number | IEntity): boolean {
  * Hash: 0xD796CB5BA8F20E32 | Since: 323
  */
 export function isVisibleToScript(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityVisibleToScript(_entity);
 }
 
@@ -1388,7 +1388,7 @@ export function isVisibleToScript(entity: number | IEntity): boolean {
  * Hash: 0xD05BFF0C0A12C68F | Since: 323
  */
 export function isWaitingForWorldCollision(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityWaitingForWorldCollision(_entity);
 }
 
@@ -1402,7 +1402,7 @@ export function isWaitingForWorldCollision(entity: number | IEntity): boolean {
  * Hash: 0x7FB218262B810701 | Since: 323
  */
 export function playAnim(entity: number | IEntity, animName: string, animDict: string, loop: boolean, stayInAnim: boolean, delta: number, bitset: any): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return PlayEntityAnim(_entity, animName, animDict, 0, loop, stayInAnim, false, delta, bitset);
 }
 
@@ -1414,7 +1414,7 @@ export function playAnim(entity: number | IEntity, animName: string, animDict: s
  * Hash: 0xC77720A12FE14A86 | Since: 323
  */
 export function playSynchronizedAnim(entity: number | IEntity, syncedScene: number, animation: string, propName: string): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return PlaySynchronizedEntityAnim(_entity, syncedScene, animation, propName, 0, 0, undefined, 0);
 }
 
@@ -1435,7 +1435,7 @@ export function playSynchronizedMapAnim(x1: number, y1: number, z1: number, x2: 
  * Hash: 0xF4080490ADC51C6F | Since: 323
  */
 export function processAttachments(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     ProcessEntityAttachments(_entity);
 }
 
@@ -1477,7 +1477,7 @@ export function removeModelSwap(pos: Vector3, radius: number, originalModel: num
  * Hash: 0x9B1E824FFBB7027A | Since: 323
  */
 export function resetAlpha(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     ResetEntityAlpha(_entity);
 }
 
@@ -1487,7 +1487,7 @@ export function resetAlpha(entity: number | IEntity): void {
  * Hash: 0x490861B88F4FD846 | Since: 944
  */
 export function resetPickupGlow(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     Citizen.invokeNative('0x490861B88F4FD846', _entity);
 }
 
@@ -1497,7 +1497,7 @@ export function resetPickupGlow(entity: number | IEntity): void {
  * Hash: 0x36F32DE87082343E | Since: 1011
  */
 export function setAllowMigrateToSpectator(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     Citizen.invokeNative('0x36F32DE87082343E', _entity, undefined);
 }
 
@@ -1507,7 +1507,7 @@ export function setAllowMigrateToSpectator(entity: number | IEntity): void {
  * Hash: 0xE12ABE5E3A389A6C | Since: 323
  */
 export function setCanAutoVaultOn(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetCanAutoVaultOnEntity(_entity, toggle);
 }
 
@@ -1517,7 +1517,7 @@ export function setCanAutoVaultOn(entity: number | IEntity, toggle: boolean): vo
  * Hash: 0xA80AE305E0A3044F | Since: 323
  */
 export function setCanClimbOn(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetCanClimbOnEntity(_entity, toggle);
 }
 
@@ -1528,7 +1528,7 @@ export function setCanClimbOn(entity: number | IEntity, toggle: boolean): void {
  * Hash: 0x44A0870B7E92D7C0 | Since: 323
  */
 export function setAlpha(entity: number | IEntity, alphaLevel: number, skin: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityAlpha(_entity, alphaLevel, skin);
 }
 
@@ -1538,7 +1538,7 @@ export function setAlpha(entity: number | IEntity, alphaLevel: number, skin: boo
  * Hash: 0xACAD101E1FB66689 | Since: 323
  */
 export function setAlwaysPrerender(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityAlwaysPrerender(_entity, toggle);
 }
 
@@ -1548,7 +1548,7 @@ export function setAlwaysPrerender(entity: number | IEntity, toggle: boolean): v
  * Hash: 0x8339643499D1222E | Since: 2372
  */
 export function setAngularVelocity(entity: number | IEntity, pos: Vector3): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityAngularVelocity(_entity, pos.x, pos.y, pos.z);
 }
 
@@ -1558,7 +1558,7 @@ export function setAngularVelocity(entity: number | IEntity, pos: Vector3): void
  * Hash: 0x4487C259F0F70977 | Since: 323
  */
 export function setAnimCurrentTime(entity: number | IEntity, animDictionary: string, animName: string, time: number): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityAnimCurrentTime(_entity, animDictionary, animName, time);
 }
 
@@ -1568,7 +1568,7 @@ export function setAnimCurrentTime(entity: number | IEntity, animDictionary: str
  * Hash: 0x28D1A16553C51776 | Since: 323
  */
 export function setAnimSpeed(entity: number | IEntity, animDictionary: string, animName: string, speedMultiplier: number): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityAnimSpeed(_entity, animDictionary, animName, speedMultiplier);
 }
 
@@ -1584,7 +1584,7 @@ export function setAnimSpeed(entity: number | IEntity, animDictionary: string, a
  * Hash: 0xAD738C3085FE7E11 | Since: 323
  */
 export function setAsMissionEntity(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityAsMissionEntity(_entity, false, false);
 }
 
@@ -1608,7 +1608,7 @@ export function setAsMissionEntity(entity: number | IEntity): void {
  * Hash: 0xB736A491E64A32CF | Since: 323
  */
 export function setAsNoLongerNeeded(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityAsNoLongerNeeded(_entity);
 }
 
@@ -1618,8 +1618,8 @@ export function setAsNoLongerNeeded(entity: number | IEntity): void {
  * Hash: 0x68B562E124CC0AEF | Since: 1180
  */
 export function setCantCauseCollisionDamagedEntity(entity1: number | IEntity, entity2: number | IEntity): void {
-    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
-    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    const _entity1 = typeof entity1 == 'object' ? entity1.handle() : entity1;
+    const _entity2 = typeof entity2 == 'object' ? entity2.handle() : entity2;
     Citizen.invokeNative('0x68B562E124CC0AEF', _entity1, _entity2);
 }
 
@@ -1629,7 +1629,7 @@ export function setCantCauseCollisionDamagedEntity(entity1: number | IEntity, en
  * Hash: 0x1760FFA8AB074D66 | Since: 323
  */
 export function setCanBeDamaged(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityCanBeDamaged(_entity, toggle);
 }
 
@@ -1639,7 +1639,7 @@ export function setCanBeDamaged(entity: number | IEntity, toggle: boolean): void
  * Hash: 0xE22D8FDE858B8119 | Since: 323
  */
 export function setCanBeDamagedByRelationshipGroup(entity: number | IEntity, bCanBeDamaged: boolean, relGroup: number): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityCanBeDamagedByRelationshipGroup(_entity, bCanBeDamaged, relGroup);
 }
 
@@ -1649,7 +1649,7 @@ export function setCanBeDamagedByRelationshipGroup(entity: number | IEntity, bCa
  * Hash: 0xD3997889736FD899 | Since: 323
  */
 export function setCanBeTargetedWithoutLos(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityCanBeTargetedWithoutLos(_entity, toggle);
 }
 
@@ -1659,8 +1659,8 @@ export function setCanBeTargetedWithoutLos(entity: number | IEntity, toggle: boo
  * Hash: 0xB17BC6453F6CF5AC | Since: 944
  */
 export function setCanOnlyBeDamagedByEntity(entity1: number | IEntity, entity2: number | IEntity): void {
-    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
-    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    const _entity1 = typeof entity1 == 'object' ? entity1.handle() : entity1;
+    const _entity2 = typeof entity2 == 'object' ? entity2.handle() : entity2;
     Citizen.invokeNative('0xB17BC6453F6CF5AC', _entity1, _entity2);
 }
 
@@ -1670,7 +1670,7 @@ export function setCanOnlyBeDamagedByEntity(entity1: number | IEntity, entity2: 
  * Hash: 0x352E2B5CF420BF3B | Since: 573
  */
 export function setCanOnlyBeDamagedByScriptParticipants(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     Citizen.invokeNative('0x352E2B5CF420BF3B', _entity, toggle);
 }
 
@@ -1680,7 +1680,7 @@ export function setCanOnlyBeDamagedByScriptParticipants(entity: number | IEntity
  * Hash: 0x1A9205C1B9EE827F | Since: 323
  */
 export function setCollision(entity: number | IEntity, toggle: boolean, keepPhysics: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityCollision(_entity, toggle, keepPhysics);
 }
 
@@ -1690,7 +1690,7 @@ export function setCollision(entity: number | IEntity, toggle: boolean, keepPhys
  * Hash: 0x9EBC85ED0FFFE51C | Since: 323
  */
 export function setCompletelyDisableCollision(entity: number | IEntity, toggle: boolean, keepPhysics: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityCompletelyDisableCollision(_entity, toggle, keepPhysics);
 }
 
@@ -1704,7 +1704,7 @@ export function setCompletelyDisableCollision(entity: number | IEntity, toggle: 
  * Hash: 0x06843DA7060A026B | Since: 323
  */
 export function setCoords(entity: number | IEntity, pos: Vector3, xAxis: boolean, yAxis: boolean, zAxis: boolean, clearArea: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityCoords(_entity, pos.x, pos.y, pos.z, xAxis, yAxis, zAxis, clearArea);
 }
 
@@ -1714,7 +1714,7 @@ export function setCoords(entity: number | IEntity, pos: Vector3, xAxis: boolean
  * Hash: 0x239A3351AC1DA385 | Since: 323
  */
 export function setCoordsNoOffset(entity: number | IEntity, pos: Vector3, xAxis: boolean, yAxis: boolean, zAxis: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityCoordsNoOffset(_entity, pos.x, pos.y, pos.z, xAxis, yAxis, zAxis);
 }
 
@@ -1724,7 +1724,7 @@ export function setCoordsNoOffset(entity: number | IEntity, pos: Vector3, xAxis:
  * Hash: 0x621873ECE1178967 | Since: 323
  */
 export function setCoordsWithoutPlantsReset(entity: number | IEntity, pos: Vector3, alive: boolean, deadFlag: boolean, ragdollFlag: boolean, clearArea: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityCoordsWithoutPlantsReset(_entity, pos.x, pos.y, pos.z, alive, deadFlag, ragdollFlag, clearArea);
 }
 
@@ -1734,7 +1734,7 @@ export function setCoordsWithoutPlantsReset(entity: number | IEntity, pos: Vecto
  * Hash: 0x1718DE8E3F2823CA | Since: 323
  */
 export function setDynamic(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityDynamic(_entity, toggle);
 }
 
@@ -1744,7 +1744,7 @@ export function setDynamic(entity: number | IEntity, toggle: boolean): void {
  * Hash: 0x4A4722448F18EEF5 | Since: 323
  */
 export function setHasGravity(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityHasGravity(_entity, toggle);
 }
 
@@ -1754,7 +1754,7 @@ export function setHasGravity(entity: number | IEntity, toggle: boolean): void {
  * Hash: 0x8E2530AA8ADA980E | Since: 323
  */
 export function setHeading(entity: number | IEntity, heading: number): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityHeading(_entity, heading);
 }
 
@@ -1766,8 +1766,8 @@ export function setHeading(entity: number | IEntity, heading: number): void {
  * Hash: 0x6B76DC1F3AE6E6A3 | Since: 323
  */
 export function setHealth(entity: number | IEntity, health: number, instigator: number | IEntity, weaponType: number | string): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
-    const _instigator = instigator instanceof IEntity ? instigator.handle() : instigator;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
+    const _instigator = typeof instigator == 'object' ? instigator.handle() : instigator;
     if (typeof weaponType === 'string') weaponType = GetHashKey(weaponType)
     SetEntityHealth(_entity, health, _instigator, weaponType);
 }
@@ -1795,7 +1795,7 @@ export function setHealth(entity: number | IEntity, health: number, instigator: 
  * Hash: 0x3882114BDE571AD4 | Since: 323
  */
 export function setInvincible(entity: number | IEntity, toggle: boolean, dontResetOnCleanup: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityInvincible(_entity, toggle, dontResetOnCleanup);
 }
 
@@ -1805,7 +1805,7 @@ export function setInvincible(entity: number | IEntity, toggle: boolean, dontRes
  * Hash: 0x78E8E3A640178255 | Since: 323
  */
 export function setIsInVehicle(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     Citizen.invokeNative('0x78E8E3A640178255', _entity);
 }
 
@@ -1815,7 +1815,7 @@ export function setIsInVehicle(entity: number | IEntity): void {
  * Hash: 0xEA02E132F5C68722 | Since: 323
  */
 export function setIsTargetPriority(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityIsTargetPriority(_entity, false, 0);
 }
 
@@ -1825,7 +1825,7 @@ export function setIsTargetPriority(entity: number | IEntity): void {
  * Hash: 0x7CFBA6A80BDF3874 | Since: 323
  */
 export function setLights(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityLights(_entity, toggle);
 }
 
@@ -1836,7 +1836,7 @@ export function setLights(entity: number | IEntity, toggle: boolean): void {
  * Hash: 0x0DC7CABAB1E9B67E | Since: 323
  */
 export function setLoadCollisionFlag(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityLoadCollisionFlag(_entity, toggle, undefined);
 }
 
@@ -1846,7 +1846,7 @@ export function setLoadCollisionFlag(entity: number | IEntity, toggle: boolean):
  * Hash: 0x5927F96A78577363 | Since: 323
  */
 export function setLodDist(entity: number | IEntity, value: number): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityLodDist(_entity, value);
 }
 
@@ -1856,7 +1856,7 @@ export function setLodDist(entity: number | IEntity, value: number): void {
  * Hash: 0x166E7CF68597D8B5 | Since: 323
  */
 export function setMaxHealth(entity: number | IEntity, value: number): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityMaxHealth(_entity, value);
 }
 
@@ -1866,7 +1866,7 @@ export function setMaxHealth(entity: number | IEntity, value: number): void {
  * Hash: 0x0E46A3FCBDE2A1B1 | Since: 323
  */
 export function setMaxSpeed(entity: number | IEntity, speed: number): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityMaxSpeed(_entity, speed);
 }
 
@@ -1876,7 +1876,7 @@ export function setMaxSpeed(entity: number | IEntity, speed: number): void {
  * Hash: 0xE66377CDDADA4810 | Since: 1734
  */
 export function setMirrorReflectionFlag(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     Citizen.invokeNative('0xE66377CDDADA4810', _entity, false);
 }
 
@@ -1886,7 +1886,7 @@ export function setMirrorReflectionFlag(entity: number | IEntity): void {
  * Hash: 0x295D82A8559F9150 | Since: 323
  */
 export function setMotionBlur(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityMotionBlur(_entity, toggle);
 }
 
@@ -1896,7 +1896,7 @@ export function setMotionBlur(entity: number | IEntity, toggle: boolean): void {
  * Hash: 0x2C2E3DC128F44309 | Since: 323
  */
 export function setNoweapondecals(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityDecalsDisabled(_entity, false);
 }
 
@@ -1908,8 +1908,8 @@ export function setNoweapondecals(entity: number | IEntity): void {
  * Hash: 0xA53ED5520C07654A | Since: 323
  */
 export function setNoCollisionEntity(entity1: number | IEntity, entity2: number | IEntity, thisFrameOnly: boolean): void {
-    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
-    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    const _entity1 = typeof entity1 == 'object' ? entity1.handle() : entity1;
+    const _entity2 = typeof entity2 == 'object' ? entity2.handle() : entity2;
     SetEntityNoCollisionEntity(_entity1, _entity2, thisFrameOnly);
 }
 
@@ -1919,7 +1919,7 @@ export function setNoCollisionEntity(entity1: number | IEntity, entity2: number 
  * Hash: 0x79F020FF9EDC0748 | Since: 323
  */
 export function setOnlyDamagedByPlayer(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityOnlyDamagedByPlayer(_entity, toggle);
 }
 
@@ -1929,7 +1929,7 @@ export function setOnlyDamagedByPlayer(entity: number | IEntity, toggle: boolean
  * Hash: 0x7022BD828FA0B082 | Since: 323
  */
 export function setOnlyDamagedByRelationshipGroup(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityOnlyDamagedByRelationshipGroup(_entity, false, undefined);
 }
 
@@ -1944,7 +1944,7 @@ export function setOnlyDamagedByRelationshipGroup(entity: number | IEntity): voi
  * Hash: 0xFAEE099C6F890BB8 | Since: 323
  */
 export function setProofs(entity: number | IEntity, bulletProof: boolean, fireProof: boolean, explosionProof: boolean, collisionProof: boolean, meleeProof: boolean, steamProof: boolean, dontResetOnCleanup: boolean, waterProof: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityProofs(_entity, bulletProof, fireProof, explosionProof, collisionProof, meleeProof, steamProof, dontResetOnCleanup, waterProof);
 }
 
@@ -1954,7 +1954,7 @@ export function setProofs(entity: number | IEntity, bulletProof: boolean, firePr
  * Hash: 0x77B21BE7AC540F07 | Since: 323
  */
 export function setQuaternion(entity: number | IEntity, pos: Vector3, w: number): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityQuaternion(_entity, pos.x, pos.y, pos.z, w);
 }
 
@@ -1964,7 +1964,7 @@ export function setQuaternion(entity: number | IEntity, pos: Vector3, w: number)
  * Hash: 0x0A50A1EEDAD01E65 | Since: 323
  */
 export function setRecordsCollisions(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityRecordsCollisions(_entity, toggle);
 }
 
@@ -1974,7 +1974,7 @@ export function setRecordsCollisions(entity: number | IEntity, toggle: boolean):
  * Hash: 0x730F5F8D3F0F2050 | Since: 323
  */
 export function setRenderScorched(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityRenderScorched(_entity, toggle);
 }
 
@@ -1984,7 +1984,7 @@ export function setRenderScorched(entity: number | IEntity, toggle: boolean): vo
  * Hash: 0x694E00132F2823ED | Since: 323
  */
 export function setRequiresMoreExpensiveRiverCheck(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityRequiresMoreExpensiveRiverCheck(_entity, toggle);
 }
 
@@ -1999,7 +1999,7 @@ export function setRequiresMoreExpensiveRiverCheck(entity: number | IEntity, tog
  * Hash: 0x8524A8B0171D5E07 | Since: 323
  */
 export function setRotation(entity: number | IEntity, pitch: number, roll: number, yaw: number, rotationOrder: number): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityRotation(_entity, pitch, roll, yaw, rotationOrder, false);
 }
 
@@ -2011,7 +2011,7 @@ export function setRotation(entity: number | IEntity, pitch: number, roll: numbe
  * Hash: 0x3910051CCECDB00C | Since: 323
  */
 export function setShouldFreezeWaitingOnCollision(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityCleanupByEngine(_entity, toggle);
 }
 
@@ -2024,7 +2024,7 @@ export function setShouldFreezeWaitingOnCollision(entity: number | IEntity, togg
  * Hash: 0x5C3B791D580E0BC2 | Since: 323
  */
 export function setSortBias(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     Citizen.invokeNative('0x5C3B791D580E0BC2', _entity, 0);
 }
 
@@ -2040,7 +2040,7 @@ export function setSortBias(entity: number | IEntity): void {
  * Hash: 0x57C5DB656185EAC4 | Since: 323
  */
 export function setTrafficlightOverride(entity: number | IEntity, state: number): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityTrafficlightOverride(_entity, state);
 }
 
@@ -2050,7 +2050,7 @@ export function setTrafficlightOverride(entity: number | IEntity, state: number)
  * Hash: 0x1A092BB0C3808B96 | Since: 323
  */
 export function setUseMaxDistanceForWaterReflection(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     Citizen.invokeNative('0x1A092BB0C3808B96', _entity, false);
 }
 
@@ -2060,7 +2060,7 @@ export function setUseMaxDistanceForWaterReflection(entity: number | IEntity): v
  * Hash: 0x1C99BB7B6E96D16F | Since: 323
  */
 export function setVelocity(entity: number | IEntity, pos: Vector3): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityVelocity(_entity, pos.x, pos.y, pos.z);
 }
 
@@ -2070,7 +2070,7 @@ export function setVelocity(entity: number | IEntity, pos: Vector3): void {
  * Hash: 0xEA1C610A04DB6BBB | Since: 323
  */
 export function setVisible(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityVisible(_entity, toggle, false);
 }
 
@@ -2080,7 +2080,7 @@ export function setVisible(entity: number | IEntity, toggle: boolean): void {
  * Hash: 0xC34BC448DA29F5E9 | Since: 573
  */
 export function setWaterReflectionFlag(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     Citizen.invokeNative('0xC34BC448DA29F5E9', _entity, toggle);
 }
 
@@ -2090,7 +2090,7 @@ export function setWaterReflectionFlag(entity: number | IEntity, toggle: boolean
  * Hash: 0x3AE22DEB5BA5A3E6 | Since: 323
  */
 export function setObjectAsNoLongerNeeded(_object: number | IObject): void {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     SetObjectAsNoLongerNeeded(__object);
 }
 
@@ -2100,7 +2100,7 @@ export function setObjectAsNoLongerNeeded(_object: number | IObject): void {
  * Hash: 0x2595DD4236549CE3 | Since: 323
  */
 export function setPedAsNoLongerNeeded(ped: number | IPed): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedAsNoLongerNeeded(_ped);
 }
 
@@ -2119,7 +2119,7 @@ export function setPickupCollidesWithProjectiles(): void {
  * Hash: 0xD7B80E7C3BEFC396 | Since: 1180
  */
 export function setPickUpByCargobobDisabled(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetPickUpByCargobobDisabled(_entity, toggle);
 }
 
@@ -2129,7 +2129,7 @@ export function setPickUpByCargobobDisabled(entity: number | IEntity, toggle: bo
  * Hash: 0x629BFA74418D6239 | Since: 323
  */
 export function setVehicleAsNoLongerNeeded(vehicle: number | IVehicle): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleAsNoLongerNeeded(_vehicle);
 }
 
@@ -2143,7 +2143,7 @@ export function setVehicleAsNoLongerNeeded(vehicle: number | IVehicle): void {
  * Hash: 0xDC6F8601FAF2E893 | Since: 323
  */
 export function setWaitForCollisionsBeforeProbe(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetWaitForCollisionsBeforeProbe(_entity, toggle);
 }
 
@@ -2155,7 +2155,7 @@ export function setWaitForCollisionsBeforeProbe(entity: number | IEntity, toggle
  * Hash: 0x28004F88151E03E0 | Since: 323
  */
 export function stopAnim(entity: number | IEntity, animation: string, animGroup: string): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StopEntityAnim(_entity, animation, animGroup, 0);
 }
 
@@ -2165,7 +2165,7 @@ export function stopAnim(entity: number | IEntity, animation: string, animGroup:
  * Hash: 0x43D3807C077261E3 | Since: 323
  */
 export function stopSynchronizedAnim(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StopSynchronizedEntityAnim(_entity, 0, false);
 }
 
@@ -2194,7 +2194,7 @@ export function wouldBeOccluded(entityModelHash: number | string, pos: Vector3):
  * Hash: 0xA75EE4F689B85391 | Since: 2802
  */
 export function getLastHitByEntity(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return Citizen.invokeNative('0xA75EE4F689B85391', _entity);
 }
 
@@ -2204,8 +2204,8 @@ export function getLastHitByEntity(entity: number | IEntity): number {
  * Hash: 0x0A27A7827347B3B1 | Since: 3407
  */
 export function setNoCollisionWithNetworkedEntity(entity1: number | IEntity, entity2: number | IEntity): void {
-    const _entity1 = entity1 instanceof IEntity ? entity1.handle() : entity1;
-    const _entity2 = entity2 instanceof IEntity ? entity2.handle() : entity2;
+    const _entity1 = typeof entity1 == 'object' ? entity1.handle() : entity1;
+    const _entity2 = typeof entity2 == 'object' ? entity2.handle() : entity2;
     Citizen.invokeNative('0x0A27A7827347B3B1', _entity1, _entity2);
 }
 

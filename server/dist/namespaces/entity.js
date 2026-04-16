@@ -1,11 +1,11 @@
-import { Vector3, IEntity, IVehicle, IObject } from '@risinglife/fivem-shared';
+import { Vector3 } from '@risinglife/fivem-shared';
 /**
  * No comment provided
  *
  * Hash: 0x91B38FB6
  */
 export function getRemoteSyncedScenesAllowed(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityRemoteSyncedScenesAllowed(_entity);
 }
 /**
@@ -16,7 +16,7 @@ export function getRemoteSyncedScenesAllowed(entity) {
  * Hash: 0xD3FC9D88
  */
 export function setRemoteSyncedScenesAllowed(entity, allow) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityRemoteSyncedScenesAllowed(_entity, allow);
 }
 /**
@@ -25,7 +25,7 @@ export function setRemoteSyncedScenesAllowed(entity, allow) {
  * Hash: 0xEDBE6ADD
  */
 export function isPositionFrozen(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityPositionFrozen(_entity);
 }
 /**
@@ -45,7 +45,7 @@ export function isPositionFrozen(entity) {
  * Hash: 0xC1C0855A
  */
 export function applyForceTo(entity, forceType, pos, offX, offY, offZ, nComponent, bLocalForce, bLocalOffset, bScaleByMass, bPlayAudio, bScaleByTimeWarp) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     ApplyForceToEntity(_entity, forceType, pos.x, pos.y, pos.z, offX, offY, offZ, nComponent, bLocalForce, bLocalOffset, bScaleByMass, bPlayAudio, bScaleByTimeWarp);
 }
 /**
@@ -56,7 +56,7 @@ export function applyForceTo(entity, forceType, pos, offX, offY, offZ, nComponen
  * Hash: 0xFAA3D236
  */
 export function deleteEntity(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     DeleteEntity(_entity);
 }
 /**
@@ -65,7 +65,7 @@ export function deleteEntity(entity) {
  * Hash: 0x3AC90869
  */
 export function doesExist(entity) {
-    const _entity = entity instanceof IObject ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return DoesEntityExist(_entity);
 }
 /**
@@ -76,7 +76,7 @@ export function doesExist(entity) {
  * Hash: 0x65C16D57
  */
 export function freezePosition(entity, toggle) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     FreezeEntityPosition(_entity, toggle);
 }
 /**
@@ -85,7 +85,7 @@ export function freezePosition(entity, toggle) {
  * Hash: 0xFE1589F9
  */
 export function getAttachedTo(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityAttachedTo(_entity);
 }
 /**
@@ -94,7 +94,7 @@ export function getAttachedTo(entity) {
  * Hash: 0xE8C0C629
  */
 export function getCollisionDisabled(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityCollisionDisabled(_entity);
 }
 /**
@@ -105,7 +105,7 @@ export function getCollisionDisabled(entity) {
  * Hash: 0x1647F1CB
  */
 export function getCoords(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return new Vector3(GetEntityCoords(_entity));
 }
 /**
@@ -114,7 +114,7 @@ export function getCoords(entity) {
  * Hash: 0x972CC383
  */
 export function getHeading(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityHeading(_entity);
 }
 /**
@@ -123,7 +123,7 @@ export function getHeading(entity) {
  * Hash: 0x8E3222B7
  */
 export function getHealth(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityHealth(_entity);
 }
 /**
@@ -132,7 +132,7 @@ export function getHealth(entity) {
  * Hash: 0xC7AE6AA1
  */
 export function getMaxHealth(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityMaxHealth(_entity);
 }
 /**
@@ -141,7 +141,7 @@ export function getMaxHealth(entity) {
  * Hash: 0xDAFCB3EC
  */
 export function getModel(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityModel(_entity);
 }
 /**
@@ -150,7 +150,7 @@ export function getModel(entity) {
  * Hash: 0xD16EA02F
  */
 export function getOrphanMode(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityOrphanMode(_entity);
 }
 /**
@@ -159,7 +159,7 @@ export function getOrphanMode(entity) {
  * Hash: 0xFC30DDFF
  */
 export function getPopulationType(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityPopulationType(_entity);
 }
 /**
@@ -168,7 +168,7 @@ export function getPopulationType(entity) {
  * Hash: 0x8FF45B04
  */
 export function getRotation(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return new Vector3(GetEntityRotation(_entity));
 }
 /**
@@ -177,7 +177,7 @@ export function getRotation(entity) {
  * Hash: 0x9BF8A73F
  */
 export function getRotationVelocity(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return new Vector3(GetEntityRotationVelocity(_entity));
 }
 /**
@@ -188,7 +188,7 @@ export function getRotationVelocity(entity) {
  * Hash: 0xED4B0486
  */
 export function getRoutingBucket(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityRoutingBucket(_entity);
 }
 /**
@@ -197,7 +197,7 @@ export function getRoutingBucket(entity) {
  * Hash: 0xB7F70784
  */
 export function getScript(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityScript(_entity);
 }
 /**
@@ -211,7 +211,7 @@ export function getScript(entity) {
  * Hash: 0x9E1E4798
  */
 export function getSpeed(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntitySpeed(_entity);
 }
 /**
@@ -247,7 +247,7 @@ export function getSpeed(entity) {
  * Hash: 0xB1BD08D
  */
 export function getType(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityType(_entity);
 }
 /**
@@ -256,7 +256,7 @@ export function getType(entity) {
  * Hash: 0xC14C9B6B
  */
 export function getVelocity(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return new Vector3(GetEntityVelocity(_entity));
 }
 /**
@@ -325,7 +325,7 @@ export function getVelocity(entity) {
  * Hash: 0x23B2A641
  */
 export function getNetTypeFrom(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetNetTypeFromEntity(_entity);
 }
 /**
@@ -334,7 +334,7 @@ export function getNetTypeFrom(entity) {
  * Hash: 0x9C9A3BE0
  */
 export function hasBeenMarkedAsNoLongerNeeded(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return HasEntityBeenMarkedAsNoLongerNeeded(_vehicle);
 }
 /**
@@ -343,7 +343,7 @@ export function hasBeenMarkedAsNoLongerNeeded(vehicle) {
  * Hash: 0x120B4ED5
  */
 export function isVisible(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityVisible(_entity);
 }
 /**
@@ -354,7 +354,7 @@ export function isVisible(entity) {
  * Hash: 0xDF70B41B
  */
 export function setCoords(entity, pos, alive, deadFlag, ragdollFlag, clearArea) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityCoords(_entity, pos.x, pos.y, pos.z, alive, deadFlag, ragdollFlag, clearArea);
 }
 /**
@@ -366,7 +366,7 @@ export function setCoords(entity, pos, alive, deadFlag, ragdollFlag, clearArea) 
  * Hash: 0xD3A183A3
  */
 export function setDistanceCullingRadius(entity, radius) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityDistanceCullingRadius(_entity, radius);
 }
 /**
@@ -377,7 +377,7 @@ export function setDistanceCullingRadius(entity, radius) {
  * Hash: 0xE0FF064D
  */
 export function setHeading(entity, heading) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityHeading(_entity, heading);
 }
 /**
@@ -386,7 +386,7 @@ export function setHeading(entity, heading) {
  * Hash: 0x9F7F8D36
  */
 export function setIgnoreRequestControlFilter(entity, ignore) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityIgnoreRequestControlFilter(_entity, ignore);
 }
 /**
@@ -414,7 +414,7 @@ export function setIgnoreRequestControlFilter(entity, ignore) {
  * Hash: 0x489E9162
  */
 export function setOrphanMode(entity, orphanMode) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityOrphanMode(_entity, orphanMode);
 }
 /**
@@ -429,7 +429,7 @@ export function setOrphanMode(entity, orphanMode) {
  * Hash: 0xA345EFE
  */
 export function setRotation(entity, pitch, roll, yaw, rotationOrder, bDeadCheck) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityRotation(_entity, pitch, roll, yaw, rotationOrder, bDeadCheck);
 }
 /**
@@ -440,7 +440,7 @@ export function setRotation(entity, pitch, roll, yaw, rotationOrder, bDeadCheck)
  * Hash: 0x635E5289
  */
 export function setRoutingBucket(entity, bucket) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityRoutingBucket(_entity, bucket);
 }
 /**
@@ -453,7 +453,7 @@ export function setRoutingBucket(entity, bucket) {
  * Hash: 0xFF5A1988
  */
 export function setVelocity(entity, pos) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityVelocity(_entity, pos.x, pos.y, pos.z);
 }
 /**
@@ -462,7 +462,7 @@ export function setVelocity(entity, pos) {
  * Hash: 0x3BB78F05
  */
 export function ensureStateBag(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     EnsureEntityStateBag(_entity);
 }
 /**
@@ -498,7 +498,7 @@ export function ensureStateBag(entity) {
  * Hash: 0xDFFBA12F
  */
 export function getEntitiesInRadius(pos, radius, entityType, sortByDistance, models) {
-    const _models = models instanceof IObject ? models.handle() : models;
+    const _models = typeof models == 'object' ? models.handle() : models;
     return GetEntitiesInRadius(pos.x, pos.y, pos.z, radius, entityType, sortByDistance, _models);
 }
 /**

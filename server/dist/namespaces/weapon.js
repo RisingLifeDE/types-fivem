@@ -1,4 +1,3 @@
-import { IPed } from '@risinglife/fivem-shared';
 /**
  * GIVE_WEAPON_COMPONENT_TO_PED
  *
@@ -7,7 +6,7 @@ import { IPed } from '@risinglife/fivem-shared';
  * Hash: 0x3E1E286D
  */
 export function giveComponentToPed(ped, weaponHash, componentHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
@@ -22,7 +21,7 @@ export function giveComponentToPed(ped, weaponHash, componentHash) {
  * Hash: 0xC4D88A85
  */
 export function giveToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     GiveWeaponToPed(_ped, weaponHash, ammoCount, isHidden, bForceInHand);
@@ -36,7 +35,7 @@ export function giveToPed(ped, weaponHash, ammoCount, isHidden, bForceInHand) {
  * Hash: 0xA44CE817
  */
 export function removeAllPeds(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     RemoveAllPedWeapons(_ped, false);
 }
 /**
@@ -47,7 +46,7 @@ export function removeAllPeds(ped) {
  * Hash: 0x412AA00D
  */
 export function removeComponentFromPed(ped, weaponHash, componentHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     if (typeof componentHash === 'string')
@@ -71,7 +70,7 @@ export function removeComponentFromPed(ped, weaponHash, componentHash) {
  * Hash: 0x9C37F220
  */
 export function removeFromPed(ped, weaponHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     RemoveWeaponFromPed(_ped, weaponHash);

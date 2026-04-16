@@ -1,4 +1,3 @@
-import { IEntity, IPed, IVehicle, IObject } from '@risinglife/fivem-shared';
 /**
  * mode can be any of these:
  * SLOWMO_T1_TRAILER_SMASH
@@ -25,7 +24,7 @@ export function activateSlowmoMode(mode) {
  * Hash: 0x153973AB99FE8980 | Since: 323
  */
 export function addEntityToMixGroup(entity, groupName) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     AddEntityToAudioMixGroup(_entity, groupName, 0);
 }
 /**
@@ -62,7 +61,7 @@ export function addLineToConversation(index) {
  * Hash: 0x95D9F4BC443956E7 | Since: 323
  */
 export function addPedToConversation(index, ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     AddPedToConversation(index, _ped, undefined);
 }
 /**
@@ -88,7 +87,7 @@ export function isScriptedMusicPlaying() {
  * Hash: 0x1B9025BDA76822B6 | Since: 323
  */
 export function blipSiren(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     BlipSiren(_vehicle);
 }
 /**
@@ -97,7 +96,7 @@ export function blipSiren(vehicle) {
  * Hash: 0xF8AD2EED7C47E8FE | Since: 1734
  */
 export function blockAllSpeechFromPed(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     BlockAllSpeechFromPed(_ped, false, false);
 }
 /**
@@ -139,7 +138,7 @@ export function cancelMusicEvent(eventName) {
  * Hash: 0x032A116663A4D5AC | Since: 323
  */
 export function canVehicleReceiveCbRadio(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return CanVehicleReceiveCbRadio(_vehicle);
 }
 /**
@@ -203,7 +202,7 @@ export function deactivateSlowmoMode(mode) {
  * Hash: 0xA9A41C1E940FB0E8 | Since: 323
  */
 export function disablePedPain(ped, toggle) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     DisablePedPainAudio(_ped, toggle);
 }
 /**
@@ -221,7 +220,7 @@ export function distantCopCarSirens(value) {
  * Hash: 0x49B99BF3FDA89A7A | Since: 323
  */
 export function doesContextExistForThisPed(ped, speechName) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return DoesContextExistForThisPed(_ped, speechName, false);
 }
 /**
@@ -238,7 +237,7 @@ export function doesPlayerVehHaveRadio() {
  * Hash: 0xC15907D667F7CFB2 | Since: 323
  */
 export function enableStallWarningSounds(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     EnableStallWarningSounds(_vehicle, toggle);
 }
 /**
@@ -255,7 +254,7 @@ export function enableStuntJump() {
  * Hash: 0x2BE4BC731D039D5A | Since: 323
  */
 export function enableVehicleExhaustPops(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     EnableVehicleExhaustPops(_vehicle, toggle);
 }
 /**
@@ -264,7 +263,7 @@ export function enableVehicleExhaustPops(vehicle, toggle) {
  * Hash: 0x1C073274E065C6D2 | Since: 323
  */
 export function enableVehicleFanbeltDamage(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     EnableVehicleFanbeltDamage(_vehicle, toggle);
 }
 /**
@@ -306,7 +305,7 @@ export function forcePedPanicWalla() {
  * Hash: 0x4F0C413926060B38 | Since: 323
  */
 export function forceUseGameObject(vehicle, audioName) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     ForceUseAudioGameObject(_vehicle, audioName);
 }
 /**
@@ -331,7 +330,7 @@ export function freezeRadioStation(radioStation) {
  * Hash: 0x5E203DA2BA15D436 | Since: 463
  */
 export function getAmbientVoiceNameHash(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetAmbientVoiceNameHash(_ped);
 }
 /**
@@ -495,7 +494,7 @@ export function getVariationChosenForScriptedLine() {
  * Hash: 0x02165D55000219AC | Since: 323
  */
 export function getVehicleDefaultHorn(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleDefaultHorn(_vehicle);
 }
 /**
@@ -504,7 +503,7 @@ export function getVehicleDefaultHorn(vehicle) {
  * Hash: 0xACB5DCCA1EC76840 | Since: 323
  */
 export function getVehicleDefaultHornIgnoreMods(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleDefaultHornIgnoreMods(_vehicle);
 }
 /**
@@ -513,7 +512,7 @@ export function getVehicleDefaultHornIgnoreMods(vehicle) {
  * Hash: 0xD53F3A29BCE2580E | Since: 1365
  */
 export function getVehicleHornSoundIndex(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleHornSoundIndex(_vehicle);
 }
 /**
@@ -570,7 +569,7 @@ export function hintScriptBank(audioBank) {
  * Hash: 0x950A154B8DAB6185 | Since: 323
  */
 export function initSynchSceneWithEntity(audioEvent, entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     InitSynchSceneAudioWithEntity(audioEvent, _entity);
 }
 /**
@@ -588,7 +587,7 @@ export function initSynchSceneWithPosition(audioEvent, pos) {
  * Hash: 0xA018A12E5C5C2FA6 | Since: 323
  */
 export function interruptConversation(ped, voiceline, speaker) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     InterruptConversation(_ped, voiceline, speaker);
 }
 /**
@@ -599,7 +598,7 @@ export function interruptConversation(ped, voiceline, speaker) {
  * Hash: 0x8A694D7A68F8DC38 | Since: 323
  */
 export function interruptConversationAndPause(ped, speaker) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     InterruptConversationAndPause(_ped, undefined, speaker);
 }
 /**
@@ -620,7 +619,7 @@ export function isAlarmPlaying(alarmName) {
  * Hash: 0x932C2D096A2C3FFF | Since: 323
  */
 export function isAmbientSpeechDisabled(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return IsAmbientSpeechDisabled(_ped);
 }
 /**
@@ -629,7 +628,7 @@ export function isAmbientSpeechDisabled(ped) {
  * Hash: 0x9072C8B49907BFAD | Since: 323
  */
 export function isAmbientSpeechPlaying(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return IsAmbientSpeechPlaying(_ped);
 }
 /**
@@ -646,7 +645,7 @@ export function isAmbientZoneEnabled(ambientZone) {
  * Hash: 0xC265DF9FB44A9FBD | Since: 323
  */
 export function isAnimalVocalizationPlaying(pedHandle) {
-    const _pedHandle = pedHandle instanceof IPed ? pedHandle.handle() : pedHandle;
+    const _pedHandle = typeof pedHandle == 'object' ? pedHandle.handle() : pedHandle;
     return IsAnimalVocalizationPlaying(_pedHandle);
 }
 /**
@@ -663,7 +662,7 @@ export function isAnyPositionalSpeechPlaying() {
  * Hash: 0x729072355FA39EC9 | Since: 323
  */
 export function isAnySpeechPlaying(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return IsAnySpeechPlaying(_ped);
 }
 /**
@@ -688,7 +687,7 @@ export function isGameInControlOfMusic() {
  * Hash: 0x9D6BFC12B05C6121 | Since: 323
  */
 export function isHornActive(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return IsHornActive(_vehicle);
 }
 /**
@@ -753,7 +752,7 @@ export function isMusicOneshotPlaying() {
  * Hash: 0x049E937F18F4020C | Since: 323
  */
 export function isPedInCurrentConversation(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return IsPedInCurrentConversation(_ped);
 }
 /**
@@ -762,7 +761,7 @@ export function isPedInCurrentConversation(ped) {
  * Hash: 0x1E8E5E20937E3137 | Since: 323
  */
 export function isPedRingtonePlaying(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return IsPedRingtonePlaying(_ped);
 }
 /**
@@ -819,7 +818,7 @@ export function isScriptedConversationOngoing() {
  * Hash: 0xCC9AA18DCC7084F4 | Since: 323
  */
 export function isScriptedSpeechPlaying(p0) {
-    const _p0 = p0 instanceof IPed ? p0.handle() : p0;
+    const _p0 = typeof p0 == 'object' ? p0.handle() : p0;
     return IsScriptedSpeechPlaying(_p0);
 }
 /**
@@ -836,7 +835,7 @@ export function isStreamPlaying() {
  * Hash: 0x5DB8010EE71FDEF2 | Since: 323
  */
 export function isVehicleAudiblyDamaged(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return IsVehicleAudiblyDamaged(_vehicle);
 }
 /**
@@ -845,7 +844,7 @@ export function isVehicleAudiblyDamaged(vehicle) {
  * Hash: 0x0BE4BE946463F917 | Since: 505
  */
 export function isVehicleRadioOn(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return IsVehicleRadioOn(_vehicle);
 }
 /**
@@ -854,7 +853,7 @@ export function isVehicleRadioOn(vehicle) {
  * Hash: 0x651D3228960D08AF | Since: 505
  */
 export function linkStaticEmitterToEntity(emitterName, entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     LinkStaticEmitterToEntity(emitterName, _entity);
 }
 /**
@@ -948,7 +947,7 @@ export function overrideUnderwaterStream() {
  * Hash: 0x3CDC1E622CCE0356 | Since: 323
  */
 export function overrideVehHorn(vehicle, override, hornHash) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     OverrideVehHorn(_vehicle, override, hornHash);
 }
 /**
@@ -975,7 +974,7 @@ export function playAmbientSpeechFromPositionNative(speechName, voiceName, pos, 
  * Hash: 0xEE066C7006C49C0A | Since: 323
  */
 export function playAnimalVocalization(pedHandle, speechName) {
-    const _pedHandle = pedHandle instanceof IPed ? pedHandle.handle() : pedHandle;
+    const _pedHandle = typeof pedHandle == 'object' ? pedHandle.handle() : pedHandle;
     PlayAnimalVocalization(_pedHandle, 0, speechName);
 }
 /**
@@ -1031,7 +1030,7 @@ export function playMissionComplete(audioName) {
  * Hash: 0xBC9AE166038A5CEC | Since: 323
  */
 export function playPain(ped, painID) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     PlayPain(_ped, painID, 0, undefined);
 }
 /**
@@ -1044,7 +1043,7 @@ export function playPain(ped, painID) {
  * Hash: 0xC6941B4A3A8FBBB9 | Since: 323
  */
 export function playPedAmbientSpeechAndCloneNative(ped, speechName, speechParam) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     PlayPedAmbientSpeechAndCloneNative(_ped, speechName, speechParam, undefined);
 }
 /**
@@ -1098,7 +1097,7 @@ export function playPedAmbientSpeechAndCloneNative(ped, speechName, speechParam)
  * Hash: 0x8E04FEDD28D42462 | Since: 323
  */
 export function playPedAmbientSpeechNative(ped, speechName, speechParam) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     PlayPedAmbientSpeechNative(_ped, speechName, speechParam, undefined);
 }
 /**
@@ -1114,7 +1113,7 @@ export function playPedAmbientSpeechNative(ped, speechName, speechParam) {
  * Hash: 0x3523634255FC3318 | Since: 323
  */
 export function playPedAmbientSpeechWithVoiceNative(ped, speechName, voiceName, speechParam) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     PlayPedAmbientSpeechWithVoiceNative(_ped, speechName, voiceName, speechParam, false);
 }
 /**
@@ -1123,7 +1122,7 @@ export function playPedAmbientSpeechWithVoiceNative(ped, speechName, voiceName, 
  * Hash: 0xAD2191A6E3543189 | Since: 3717
  */
 export function playPedEventAnim(pedHandle, audioEvent) {
-    const _pedHandle = pedHandle instanceof IPed ? pedHandle.handle() : pedHandle;
+    const _pedHandle = typeof pedHandle == 'object' ? pedHandle.handle() : pedHandle;
     Citizen.invokeNative('0xAD2191A6E3543189', _pedHandle, audioEvent);
 }
 /**
@@ -1136,7 +1135,7 @@ export function playPedEventAnim(pedHandle, audioEvent) {
  * Hash: 0xF9E56683CA8E11A5 | Since: 323
  */
 export function playPedRingtone(ringtoneName, ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     PlayPedRingtone(ringtoneName, _ped, false);
 }
 /**
@@ -1183,7 +1182,7 @@ export function playSoundFromCoord(soundId, audioName, pos, audioRef, isNetwork,
  * Hash: 0xE65F427EB70AB1ED | Since: 323
  */
 export function playSoundFromEntity(soundId, audioName, entity, audioRef, isNetwork) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     PlaySoundFromEntity(soundId, audioName, _entity, audioRef, isNetwork, undefined);
 }
 /**
@@ -1193,7 +1192,7 @@ export function playSoundFromEntity(soundId, audioName, entity, audioRef, isNetw
  * Hash: 0x5B9853296731E88D | Since: 877
  */
 export function playSoundFromEntityHash(soundId, model, entity, soundSetHash) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     if (typeof model === 'string')
         model = GetHashKey(model);
     if (typeof soundSetHash === 'string')
@@ -1228,7 +1227,7 @@ export function playSoundFrontend(soundId, audioName, audioRef) {
  * Hash: 0xEBAA9B64D76356FD | Since: 323
  */
 export function playStreamFromObject(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     PlayStreamFromObject(__object);
 }
 /**
@@ -1237,7 +1236,7 @@ export function playStreamFromObject(_object) {
  * Hash: 0x89049DD63C08B5D1 | Since: 323
  */
 export function playStreamFromPed(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     PlayStreamFromPed(_ped);
 }
 /**
@@ -1254,7 +1253,7 @@ export function playStreamFromPosition(pos) {
  * Hash: 0xB70374A758007DFA | Since: 323
  */
 export function playStreamFromVehicle(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     PlayStreamFromVehicle(_vehicle);
 }
 /**
@@ -1279,7 +1278,7 @@ export function playSynchronizedEvent(sceneID) {
  * Hash: 0x62A456AA4769EF34 | Since: 323
  */
 export function playVehicleDoorCloseSound(vehicle, doorId) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     PlayVehicleDoorCloseSound(_vehicle, doorId);
 }
 /**
@@ -1288,7 +1287,7 @@ export function playVehicleDoorCloseSound(vehicle, doorId) {
  * Hash: 0x3A539D52857EA82D | Since: 323
  */
 export function playVehicleDoorOpenSound(vehicle, doorId) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     PlayVehicleDoorOpenSound(_vehicle, doorId);
 }
 /**
@@ -1431,7 +1430,7 @@ export function releaseWeapon() {
  * Hash: 0x18EB48CFC41F2EA0 | Since: 323
  */
 export function removeEntityFromMixGroup(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     RemoveEntityFromAudioMixGroup(_entity, 0);
 }
 /**
@@ -1494,7 +1493,7 @@ export function requestScriptBank(audioBank) {
  * Hash: 0x4ADA3F19BE4A6047 | Since: 323
  */
 export function requestTennisBanks(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     RequestTennisBanks(_ped);
 }
 /**
@@ -1503,7 +1502,7 @@ export function requestTennisBanks(ped) {
  * Hash: 0xF54BB7B61036F335 | Since: 323
  */
 export function resetPedFlags(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     ResetPedAudioFlags(_ped);
 }
 /**
@@ -1520,7 +1519,7 @@ export function resetTrevorRage() {
  * Hash: 0xD2DCCD8E16E20997 | Since: 323
  */
 export function resetVehicleStartupRevSound(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     ResetVehicleStartupRevSound(_vehicle);
 }
 /**
@@ -1556,7 +1555,7 @@ export function setAggressiveHorns(toggle) {
  * Hash: 0x6C8065A3B780185B | Since: 323
  */
 export function setAmbientVoiceName(ped, name) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetAmbientVoiceName(_ped, name);
 }
 /**
@@ -1565,7 +1564,7 @@ export function setAmbientVoiceName(ped, name) {
  * Hash: 0x9A53DED9921DE990 | Since: 463
  */
 export function setAmbientVoiceNameHash(ped, hash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof hash === 'string')
         hash = GetHashKey(hash);
     SetAmbientVoiceNameHash(_ped, hash);
@@ -1608,7 +1607,7 @@ export function setAmbientZoneStatePersistent(ambientZone, enabled, forceUpdate)
  * Hash: 0xCC97B29285B1DC3B | Since: 323
  */
 export function setAnimalMood(animal, mood) {
-    const _animal = animal instanceof IPed ? animal.handle() : animal;
+    const _animal = typeof animal == 'object' ? animal.handle() : animal;
     SetAnimalMood(_animal, mood);
 }
 /**
@@ -1762,7 +1761,7 @@ export function setSpecialEffectMode(mode) {
  * Hash: 0xE5564483E407F914 | Since: 323
  */
 export function setVehiclePriority(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetAudioVehiclePriority(_vehicle, undefined);
 }
 /**
@@ -1825,7 +1824,7 @@ export function setEmitterRadioStation(emitterName, radioStation) {
  * Hash: 0x892B6AB8F33606F5 | Since: 323
  */
 export function setEntityForNullConvPed(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityForNullConvPed(0, _entity);
 }
 /**
@@ -1858,7 +1857,7 @@ export function setGpsActive(active) {
  * Hash: 0x76D683C108594D0E | Since: 323
  */
 export function setHornEnabled(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetHornEnabled(_vehicle, toggle);
 }
 /**
@@ -1867,7 +1866,7 @@ export function setHornEnabled(vehicle, toggle) {
  * Hash: 0x9C11908013EA4715 | Since: 323
  */
 export function setHornPermanentlyOn(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SoundVehicleHornThisFrame(_vehicle);
 }
 /**
@@ -1876,7 +1875,7 @@ export function setHornPermanentlyOn(vehicle) {
  * Hash: 0x9D3AF56E94C9AE98 | Since: 323
  */
 export function setHornPermanentlyOnTime(vehicle, time) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     Citizen.invokeNative('0x9D3AF56E94C9AE98', _vehicle, time);
 }
 /**
@@ -1947,7 +1946,7 @@ export function setNoDuckingForConversation() {
  * Hash: 0x29DA3CA8D8B2692D | Since: 1493
  */
 export function setPedClothEventsEnabled(ped, toggle) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedClothEventsEnabled(_ped, toggle);
 }
 /**
@@ -1956,7 +1955,7 @@ export function setPedClothEventsEnabled(ped, toggle) {
  * Hash: 0x0653B735BFBDFE87 | Since: 1493
  */
 export function setPedFootstepsEventsEnabled(ped, toggle) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedAudioFootstepLoud(_ped, toggle);
 }
 /**
@@ -1965,7 +1964,7 @@ export function setPedFootstepsEventsEnabled(ped, toggle) {
  * Hash: 0xA5342D390CDA41D6 | Since: 323
  */
 export function setPedGender(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedAudioGender(_ped, false);
 }
 /**
@@ -2001,7 +2000,7 @@ export function setPedInteriorWallaDensity() {
  * Hash: 0x95D2D383D5396B8A | Since: 323
  */
 export function setPedIsDrunk(ped, toggle) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedIsDrunk(_ped, toggle);
 }
 /**
@@ -2010,7 +2009,7 @@ export function setPedIsDrunk(ped, toggle) {
  * Hash: 0x1B7ABE26CBCBF8C7 | Since: 372
  */
 export function setPedRaceAndVoiceGroup(ped, voiceGroup) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof voiceGroup === 'string')
         voiceGroup = GetHashKey(voiceGroup);
     SetPedRaceAndVoiceGroup(_ped, 0, voiceGroup);
@@ -2021,7 +2020,7 @@ export function setPedRaceAndVoiceGroup(ped, voiceGroup) {
  * Hash: 0x40CF0D12D142A9E8 | Since: 323
  */
 export function setPedVoiceFull(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedVoiceFull(_ped);
 }
 /**
@@ -2035,7 +2034,7 @@ export function setPedVoiceFull(ped) {
  * Hash: 0x7CDC8C3B89F661B3 | Since: 323
  */
 export function setPedVoiceGroup(ped, voiceGroupHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof voiceGroupHash === 'string')
         voiceGroupHash = GetHashKey(voiceGroupHash);
     SetPedVoiceGroup(_ped, voiceGroupHash);
@@ -2046,7 +2045,7 @@ export function setPedVoiceGroup(ped, voiceGroupHash) {
  * Hash: 0x0BABC1345ABBFB16 | Since: 2699
  */
 export function setPedVoiceGroupFromRaceToPvg(ped, voiceGroupHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof voiceGroupHash === 'string')
         voiceGroupHash = GetHashKey(voiceGroupHash);
     SetPedVoiceGroupRace(_ped, voiceGroupHash);
@@ -2065,7 +2064,7 @@ export function setPedWallaDensity() {
  * Hash: 0xEA241BB04110F091 | Since: 323
  */
 export function setPlayerAngry(ped, toggle) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPlayerAngry(_ped, toggle);
 }
 /**
@@ -2074,7 +2073,7 @@ export function setPlayerAngry(ped, toggle) {
  * Hash: 0x6FDDAD856E36988A | Since: 323
  */
 export function setPlayerVehicleAlarmActive(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetPlayerVehicleAlarmAudioActive(_vehicle, toggle);
 }
 /**
@@ -2223,7 +2222,7 @@ export function setScriptUpdateDoor(doorHash, toggle) {
  * Hash: 0xF584CF8529B51434 | Since: 2372
  */
 export function setSirenBypassMpDriverCheck(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetSirenKeepOn(_vehicle, toggle);
 }
 /**
@@ -2232,7 +2231,7 @@ export function setSirenBypassMpDriverCheck(vehicle, toggle) {
  * Hash: 0x43FA0DFC5DF87815 | Since: 323
  */
 export function setSirenCanBeControlledBy(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     Citizen.invokeNative('0x43FA0DFC5DF87815', _vehicle, false);
 }
 /**
@@ -2241,7 +2240,7 @@ export function setSirenCanBeControlledBy(vehicle) {
  * Hash: 0x1FEF0683B96EBCF2 | Since: 323
  */
 export function setSirenWithNoDriver(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetSirenWithNoDriver(_vehicle, toggle);
 }
 /**
@@ -2318,7 +2317,7 @@ export function setVariableOnUnderWaterStream(variableName, value) {
  * Hash: 0x01BB4D577D38BD9E | Since: 323
  */
 export function setVehicleBodyDamageFactor(vehicle, intensity) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleAudioBodyDamageFactor(_vehicle, intensity);
 }
 /**
@@ -2327,7 +2326,7 @@ export function setVehicleBodyDamageFactor(vehicle, intensity) {
  * Hash: 0x59E7B488451F4D3A | Since: 323
  */
 export function setVehicleEngineDamageFactor(vehicle, damageFactor) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleAudioEngineDamageFactor(_vehicle, damageFactor);
 }
 /**
@@ -2339,7 +2338,7 @@ export function setVehicleEngineDamageFactor(vehicle, damageFactor) {
  * Hash: 0x4A04DE7CAB2739A1 | Since: 323
  */
 export function setVehicleBoostActive(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleBoostActive(_vehicle, toggle);
 }
 /**
@@ -2372,7 +2371,7 @@ export function setVehicleForceReverseWarning() {
  * Hash: 0x0350E7E17BA767D0 | Since: 1365
  */
 export function setVehicleHornSoundIndex(vehicle, value) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleHornVariation(_vehicle, value);
 }
 /**
@@ -2381,7 +2380,7 @@ export function setVehicleHornSoundIndex(vehicle, value) {
  * Hash: 0xF3365489E0DD50F9 | Since: 323
  */
 export function setVehicleMissileWarningEnabled(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     Citizen.invokeNative('0xF3365489E0DD50F9', _vehicle, toggle);
 }
 /**
@@ -2390,7 +2389,7 @@ export function setVehicleMissileWarningEnabled(vehicle, toggle) {
  * Hash: 0x3B988190C0AA6C0B | Since: 323
  */
 export function setVehicleRadioEnabled(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleRadioEnabled(_vehicle, toggle);
 }
 /**
@@ -2399,7 +2398,7 @@ export function setVehicleRadioEnabled(vehicle, toggle) {
  * Hash: 0xBB6F1CAEC68B0BCE | Since: 323
  */
 export function setVehicleRadioLoud(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleRadioLoud(_vehicle, toggle);
 }
 /**
@@ -2408,7 +2407,7 @@ export function setVehicleRadioLoud(vehicle, toggle) {
  * Hash: 0xF1F8157B8C3F171C | Since: 323
  */
 export function setVehicleStartupRevSound(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleStartupRevSound(_vehicle, undefined, undefined);
 }
 /**
@@ -2417,7 +2416,7 @@ export function setVehicleStartupRevSound(vehicle) {
  * Hash: 0xC1805D05E6D4FE10 | Since: 323
  */
 export function setVehForcedRadioThisFrame(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     Citizen.invokeNative('0xC1805D05E6D4FE10', _vehicle);
 }
 /**
@@ -2426,7 +2425,7 @@ export function setVehForcedRadioThisFrame(vehicle) {
  * Hash: 0x3E45765F3FBB582F | Since: 2372
  */
 export function setVehHasNormalRadio(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehHasRadioOverride(_vehicle);
 }
 /**
@@ -2436,7 +2435,7 @@ export function setVehHasNormalRadio(vehicle) {
  * Hash: 0x1B9C0099CB942AC6 | Since: 323
  */
 export function setVehRadioStation(vehicle, radioStation) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehRadioStation(_vehicle, radioStation);
 }
 /**
@@ -2574,7 +2573,7 @@ export function stopScenes() {
  * Hash: 0xB8BEC0CA6F0EDB0F | Since: 323
  */
 export function stopCurrentPlayingAmbientSpeech(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     StopCurrentPlayingAmbientSpeech(_ped);
 }
 /**
@@ -2583,7 +2582,7 @@ export function stopCurrentPlayingAmbientSpeech(ped) {
  * Hash: 0x7A73D05A607734C7 | Since: 323
  */
 export function stopCurrentPlayingSpeech(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     StopCurrentPlayingSpeech(_ped);
 }
 /**
@@ -2600,7 +2599,7 @@ export function stopCutscene() {
  * Hash: 0x6C5AE23EFA885092 | Since: 323
  */
 export function stopPedRingtone(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     StopPedRingtone(_ped);
 }
 /**
@@ -2609,7 +2608,7 @@ export function stopPedRingtone(ped) {
  * Hash: 0x9D64D7405520E3D3 | Since: 323
  */
 export function stopPedSpeaking(ped, shaking) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     StopPedSpeaking(_ped, shaking);
 }
 /**
@@ -2618,7 +2617,7 @@ export function stopPedSpeaking(ped, shaking) {
  * Hash: 0xAB6781A5F3101470 | Since: 1868
  */
 export function stopPedSpeakingSynced(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     StopPedSpeakingSynced(_ped, false);
 }
 /**
@@ -2678,7 +2677,7 @@ export function triggerMusicEvent(eventName) {
  * Hash: 0x66C3FB05206041BA | Since: 1290
  */
 export function triggerSiren(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     TriggerSiren(_vehicle);
 }
 /**
@@ -2775,7 +2774,7 @@ export function updateUnlockableDjRadioTracks(enableMixes) {
  * Hash: 0xBF4DC1784BE94DFA | Since: 323
  */
 export function useFootstepScriptSweeteners(ped, hash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof hash === 'string')
         hash = GetHashKey(hash);
     UseFootstepScriptSweeteners(_ped, false, hash);
@@ -2786,7 +2785,7 @@ export function useFootstepScriptSweeteners(ped, hash) {
  * Hash: 0xFA932DE350266EF8 | Since: 323
  */
 export function useSirenAsHorn(vehicle, toggle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     UseSirenAsHorn(_vehicle, toggle);
 }
 /**
@@ -2795,7 +2794,7 @@ export function useSirenAsHorn(vehicle, toggle) {
  * Hash: 0xBEFB80290414FD4F | Since: 3095
  */
 export function enableDragRaceStationaryWarningSounds(vehicle, enable) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     Citizen.invokeNative('0xBEFB80290414FD4F', _vehicle, enable);
 }
 /**
@@ -2804,6 +2803,6 @@ export function enableDragRaceStationaryWarningSounds(vehicle, enable) {
  * Hash: 0xEB7D0E1FCC8FE17A | Since: 3258
  */
 export function forceVehicleEngineSynth(vehicle, force) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     ForceVehicleEngineSynth(_vehicle, force);
 }

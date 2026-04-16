@@ -1,4 +1,3 @@
-import { IObject } from '@risinglife/fivem-shared';
 /**
  * No comment provided
  *
@@ -238,7 +237,7 @@ export function setInteriorRoomTimecycle(interiorId, roomIndex, timecycleHash) {
  * Hash: 0xFC52CB91
  */
 export function updateMapdataEntity(mapdata, entity, entityDef) {
-    const _entityDef = entityDef instanceof IObject ? entityDef.handle() : entityDef;
+    const _entityDef = typeof entityDef == 'object' ? entityDef.handle() : entityDef;
     UpdateMapdataEntity(mapdata, entity, _entityDef);
 }
 /**

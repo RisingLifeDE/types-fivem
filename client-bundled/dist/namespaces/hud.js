@@ -1,4 +1,4 @@
-import { Vector3, IEntity, IPed, IPlayer, IBlip } from '@risinglife/fivem-shared';
+import { Vector3 } from '@risinglife/fivem-shared';
 /**
  * See [SET_SCRIPT_GFX_ALIGN](#\_0xB8A850F20A067EB6) for details about how gfx align works.
  *
@@ -197,7 +197,7 @@ export function addBlipForCoord(pos) {
  * Hash: 0x5CDE92C702A8FCE7 | Since: 323 | API-Set: unknown
  */
 export function addBlipForEntity(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return AddBlipForEntity(_entity);
 }
 /**
@@ -270,7 +270,7 @@ export function addTextComponentInteger(value) {
  * Hash: 0x80EAD8E2E1D5D52E | Since: 323 | API-Set: unknown
  */
 export function addTextComponentSubstringBlipName(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     AddTextComponentSubstringBlipName(_blip);
 }
 /**
@@ -766,7 +766,7 @@ export function codeWantsScriptToTakeControl() {
  * Hash: 0xBFEFE3321A3F5015 | Since: 323 | API-Set: unknown
  */
 export function createFakeMpGamerTag(ped, username, pointedClanTag, isRockstarClan, clanTag, clanFlag) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return CreateFakeMpGamerTag(_ped, username, pointedClanTag, isRockstarClan, clanTag, clanFlag);
 }
 /**
@@ -775,7 +775,7 @@ export function createFakeMpGamerTag(ped, username, pointedClanTag, isRockstarCl
  * Hash: 0x6DD05E9D83EFA4C9 | Since: 323 | API-Set: unknown
  */
 export function createMpGamerTagWithCrewColor(player, username, pointedClanTag, isRockstarClan, clanTag, clanFlag, r, g, b) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     CreateMpGamerTagWithCrewColor(_player, username, pointedClanTag, isRockstarClan, clanTag, clanFlag, r, g, b);
 }
 /**
@@ -939,7 +939,7 @@ export function displaySniperScopeThisFrame() {
  * Hash: 0xA6DB27D19ECBB7DA | Since: 323 | API-Set: unknown
  */
 export function doesBlipExist(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     return DoesBlipExist(_blip);
 }
 /**
@@ -948,7 +948,7 @@ export function doesBlipExist(blip) {
  * Hash: 0xDD2238F57B977751 | Since: 323 | API-Set: unknown
  */
 export function doesBlipHaveGpsRoute(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     return DoesBlipHaveGpsRoute(_blip);
 }
 /**
@@ -957,7 +957,7 @@ export function doesBlipHaveGpsRoute(blip) {
  * Hash: 0x15B8ECF844EE67ED | Since: 323 | API-Set: unknown
  */
 export function doesPedHaveAiBlip(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return DoesPedHaveAiBlip(_ped);
 }
 /**
@@ -1143,7 +1143,7 @@ export function endTextCommandPrint(duration, drawImmediately) {
  * Hash: 0xBC38B49BCB83BC9B | Since: 323 | API-Set: unknown
  */
 export function endTextCommandSetBlipName(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     EndTextCommandSetBlipName(_blip);
 }
 /**
@@ -1509,7 +1509,7 @@ export function forceSonarBlipsThisFrame() {
  * Hash: 0x7CD934010E115C2C | Since: 323 | API-Set: unknown
  */
 export function getAiPedPedBlipIndex(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetAiBlip2(_ped);
 }
 /**
@@ -1518,7 +1518,7 @@ export function getAiPedPedBlipIndex(ped) {
  * Hash: 0x56176892826A4FE8 | Since: 323 | API-Set: unknown
  */
 export function getAiPedVehicleBlipIndex(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetAiBlip(_ped);
 }
 /**
@@ -1527,7 +1527,7 @@ export function getAiPedVehicleBlipIndex(ped) {
  * Hash: 0x970F608F0EE6C885 | Since: 323 | API-Set: unknown
  */
 export function getBlipAlpha(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     return GetBlipAlpha(_blip);
 }
 /**
@@ -1536,7 +1536,7 @@ export function getBlipAlpha(blip) {
  * Hash: 0xDF729E8D20CF7327 | Since: 323 | API-Set: unknown
  */
 export function getBlipColour(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     return GetBlipColour(_blip);
 }
 /**
@@ -1545,7 +1545,7 @@ export function getBlipColour(blip) {
  * Hash: 0x586AFE3FF72D996E | Since: 323 | API-Set: unknown
  */
 export function getBlipCoords(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     return new Vector3(GetBlipCoords(_blip));
 }
 /**
@@ -1554,7 +1554,7 @@ export function getBlipCoords(blip) {
  * Hash: 0x2C173AE2BDB9385E | Since: 463 | API-Set: unknown
  */
 export function getBlipFadeDirection(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     return Citizen.invokeNative('0x2C173AE2BDB9385E', _blip);
 }
 /**
@@ -1563,7 +1563,7 @@ export function getBlipFadeDirection(blip) {
  * Hash: 0xBC8DBDCA2436F7E8 | Since: 323 | API-Set: unknown
  */
 export function getBlipFromEntity(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetBlipFromEntity(_entity);
 }
 /**
@@ -1572,7 +1572,7 @@ export function getBlipFromEntity(entity) {
  * Hash: 0x729B5F1EFBC0AAEE | Since: 323 | API-Set: unknown
  */
 export function getBlipHudColour(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     return GetBlipHudColour(_blip);
 }
 /**
@@ -1581,7 +1581,7 @@ export function getBlipHudColour(blip) {
  * Hash: 0xFA7C7F0AADF25D09 | Since: 323 | API-Set: unknown
  */
 export function getBlipInfoIdCoord(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     return new Vector3(GetBlipInfoIdCoord(_blip));
 }
 /**
@@ -1590,7 +1590,7 @@ export function getBlipInfoIdCoord(blip) {
  * Hash: 0x1E314167F701DC3B | Since: 323 | API-Set: unknown
  */
 export function getBlipInfoIdDisplay(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     return GetBlipInfoIdDisplay(_blip);
 }
 /**
@@ -1599,7 +1599,7 @@ export function getBlipInfoIdDisplay(blip) {
  * Hash: 0x4BA4E2553AFEDC2C | Since: 323 | API-Set: unknown
  */
 export function getBlipInfoIdEntityIndex(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     return GetBlipInfoIdEntityIndex(_blip);
 }
 /**
@@ -1608,7 +1608,7 @@ export function getBlipInfoIdEntityIndex(blip) {
  * Hash: 0x9B6786E4C03DD382 | Since: 323 | API-Set: unknown
  */
 export function getBlipInfoIdPickupIndex(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     return GetBlipInfoIdPickupIndex(_blip);
 }
 /**
@@ -1624,7 +1624,7 @@ export function getBlipInfoIdPickupIndex(blip) {
  * Hash: 0xBE9B0959FFD0779B | Since: 323 | API-Set: unknown
  */
 export function getBlipInfoIdType(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     return GetBlipInfoIdType(_blip);
 }
 /**
@@ -1633,7 +1633,7 @@ export function getBlipInfoIdType(blip) {
  * Hash: 0x003E92BA477F9D7F | Since: 2060 | API-Set: unknown
  */
 export function getBlipRotation(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     return GetBlipRotation(_blip);
 }
 /**
@@ -1643,7 +1643,7 @@ export function getBlipRotation(blip) {
  * Hash: 0x1FC877464A04FC4F | Since: 323 | API-Set: unknown
  */
 export function getBlipSprite(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     return GetBlipSprite(_blip);
 }
 /**
@@ -2105,7 +2105,7 @@ export function getWaypointClearOnArrivalMode() {
  * Hash: 0xAC0BFBDC3BE00E14 | Since: 323 | API-Set: unknown
  */
 export function givePedToPauseMenu(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     GivePedToPauseMenu(_ped, 0);
 }
 /**
@@ -2243,7 +2243,7 @@ export function hideMinimapInteriorMapThisFrame() {
  * Hash: 0x532CFF637EF80148 | Since: 323 | API-Set: unknown
  */
 export function hideNumberOnBlip(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     HideNumberOnBlip(_blip);
 }
 /**
@@ -2326,7 +2326,7 @@ export function suppressWeaponWheelResultsThisFrame() {
  * Hash: 0xA5E41FD83AD6CEF0 | Since: 323 | API-Set: unknown
  */
 export function isBlipFlashing(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     return IsBlipFlashing(_blip);
 }
 /**
@@ -2335,7 +2335,7 @@ export function isBlipFlashing(blip) {
  * Hash: 0xE41CA53051197A27 | Since: 323 | API-Set: unknown
  */
 export function isBlipOnMinimap(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     return IsBlipOnMinimap(_blip);
 }
 /**
@@ -2344,7 +2344,7 @@ export function isBlipOnMinimap(blip) {
  * Hash: 0xDA5F8727EB75B926 | Since: 323 | API-Set: unknown
  */
 export function isBlipShortRange(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     return IsBlipShortRange(_blip);
 }
 /**
@@ -2482,7 +2482,7 @@ export function isMinimapRendering() {
  * Hash: 0x26F49BF3381D933D | Since: 323 | API-Set: unknown
  */
 export function isMissionCreatorBlip(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     return IsMissionCreatorBlip(_blip);
 }
 /**
@@ -2912,7 +2912,7 @@ export function preloadBusyspinner() {
  * Hash: 0x742D6FD43115AF73 | Since: 323 | API-Set: unknown
  */
 export function pulseBlip(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     PulseBlip(_blip);
 }
 /**
@@ -2987,7 +2987,7 @@ export function reloadMapMenu() {
  * Hash: 0x86A652570E5F25DD | Since: 323 | API-Set: unknown
  */
 export function removeBlip(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     RemoveBlip(_blip);
 }
 /**
@@ -2996,7 +2996,7 @@ export function removeBlip(blip) {
  * Hash: 0xC594B315EDF2D4AF | Since: 323 | API-Set: unknown
  */
 export function removeCopBlipFromPed(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     Citizen.invokeNative('0xC594B315EDF2D4AF', _ped);
 }
 /**
@@ -3005,7 +3005,7 @@ export function removeCopBlipFromPed(ped) {
  * Hash: 0x35A3CD97B2C0A6D2 | Since: 1290 | API-Set: unknown
  */
 export function removeFakeConeData(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     Citizen.invokeNative('0x35A3CD97B2C0A6D2', _blip);
 }
 /**
@@ -3130,7 +3130,7 @@ export function restartFrontendMenu(menuHash) {
  * Hash: 0xF83D0FEBE75E62C9 | Since: 1290 | API-Set: unknown
  */
 export function setupFakeConeData(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     Citizen.invokeNative('0xF83D0FEBE75E62C9', _blip, 0, 0, 0, 0, 0, 0, undefined, 0);
 }
 /**
@@ -3194,7 +3194,7 @@ export function setBigmapActive(toggleBigMap, showFullMap) {
  * Hash: 0x45FF974EEE1C8734 | Since: 323 | API-Set: unknown
  */
 export function setBlipAlpha(blip, alpha) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipAlpha(_blip, alpha);
 }
 /**
@@ -3204,7 +3204,7 @@ export function setBlipAlpha(blip, alpha) {
  * Hash: 0x6F6F290102C02AB4 | Since: 323 | API-Set: unknown
  */
 export function setBlipAsFriendly(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipAsFriendly(_blip, toggle);
 }
 /**
@@ -3213,7 +3213,7 @@ export function setBlipAsFriendly(blip, toggle) {
  * Hash: 0x2B6D467DAB714E8D | Since: 323 | API-Set: unknown
  */
 export function setBlipAsMinimalOnEdge(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipShrink(_blip, toggle);
 }
 /**
@@ -3222,7 +3222,7 @@ export function setBlipAsMinimalOnEdge(blip, toggle) {
  * Hash: 0x24AC0137444F9FD5 | Since: 323 | API-Set: unknown
  */
 export function setBlipAsMissionCreatorBlip(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipAsMissionCreatorBlip(_blip, toggle);
 }
 /**
@@ -3231,7 +3231,7 @@ export function setBlipAsMissionCreatorBlip(blip, toggle) {
  * Hash: 0xBE8BE4FE60E27B72 | Since: 323 | API-Set: unknown
  */
 export function setBlipAsShortRange(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipAsShortRange(_blip, toggle);
 }
 /**
@@ -3240,7 +3240,7 @@ export function setBlipAsShortRange(blip, toggle) {
  * Hash: 0xB203913733F27884 | Since: 323 | API-Set: unknown
  */
 export function setBlipBright(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipBright(_blip, toggle);
 }
 /**
@@ -3265,7 +3265,7 @@ export function setBlipBright(blip, toggle) {
  * Hash: 0x234CDD44D996FD9A | Since: 323 | API-Set: unknown
  */
 export function setBlipCategory(blip, index) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipCategory(_blip, index);
 }
 /**
@@ -3274,7 +3274,7 @@ export function setBlipCategory(blip, index) {
  * Hash: 0x03D7FB09E75D6B7E | Since: 323 | API-Set: unknown
  */
 export function setBlipColour(blip, color) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipColour(_blip, color);
 }
 /**
@@ -3283,7 +3283,7 @@ export function setBlipColour(blip, color) {
  * Hash: 0xAE2AF67E9D9AF65D | Since: 323 | API-Set: unknown
  */
 export function setBlipCoords(blip, pos) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipCoords(_blip, pos.x, pos.y, pos.z);
 }
 /**
@@ -3305,7 +3305,7 @@ export function setBlipCoords(blip, pos) {
  * Hash: 0x9029B2F3DA924928 | Since: 323 | API-Set: unknown
  */
 export function setBlipDisplay(blip, displayId) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipDisplay(_blip, displayId);
 }
 /**
@@ -3314,7 +3314,7 @@ export function setBlipDisplay(blip, displayId) {
  * Hash: 0xC4278F70131BAA6D | Since: 323 | API-Set: unknown
  */
 export function setBlipExtendedHeightThreshold(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipDisplayIndicatorOnBlip(_blip, toggle);
 }
 /**
@@ -3323,7 +3323,7 @@ export function setBlipExtendedHeightThreshold(blip, toggle) {
  * Hash: 0x2AEE8F8390D2298C | Since: 323 | API-Set: unknown
  */
 export function setBlipFade(blip, opacity, duration) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipFade(_blip, opacity, duration);
 }
 /**
@@ -3332,7 +3332,7 @@ export function setBlipFade(blip, opacity, duration) {
  * Hash: 0xB14552383D39CE3E | Since: 323 | API-Set: unknown
  */
 export function setBlipFlashes(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipFlashes(_blip, toggle);
 }
 /**
@@ -3341,7 +3341,7 @@ export function setBlipFlashes(blip, toggle) {
  * Hash: 0x2E8D9498C56DD0D1 | Since: 323 | API-Set: unknown
  */
 export function setBlipFlashesAlternate(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipFlashesAlternate(_blip, toggle);
 }
 /**
@@ -3350,7 +3350,7 @@ export function setBlipFlashesAlternate(blip, toggle) {
  * Hash: 0xAA51DB313C010A7E | Since: 323 | API-Set: unknown
  */
 export function setBlipFlashInterval(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipFlashInterval(_blip, undefined);
 }
 /**
@@ -3359,7 +3359,7 @@ export function setBlipFlashInterval(blip) {
  * Hash: 0xD3CD6FD297AE87CC | Since: 323 | API-Set: unknown
  */
 export function setBlipFlashTimer(blip, duration) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipFlashTimer(_blip, duration);
 }
 /**
@@ -3368,7 +3368,7 @@ export function setBlipFlashTimer(blip, duration) {
  * Hash: 0x54318C915D27E4CE | Since: 323 | API-Set: unknown
  */
 export function setBlipHiddenOnLegend(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipHiddenOnLegend(_blip, toggle);
 }
 /**
@@ -3377,7 +3377,7 @@ export function setBlipHiddenOnLegend(blip, toggle) {
  * Hash: 0xE2590BC29220CEBB | Since: 323 | API-Set: unknown
  */
 export function setBlipHighDetail(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipHighDetail(_blip, toggle);
 }
 /**
@@ -3394,7 +3394,7 @@ export function setBlipMarkerLongDistance() {
  * Hash: 0xEAA0FFE120D92784 | Since: 323 | API-Set: unknown
  */
 export function setBlipNameFromTextFile(blip, gxtEntry) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipNameFromTextFile(_blip, gxtEntry);
 }
 /**
@@ -3403,8 +3403,8 @@ export function setBlipNameFromTextFile(blip, gxtEntry) {
  * Hash: 0x127DE7B20C60A6A3 | Since: 323 | API-Set: unknown
  */
 export function setBlipNameToPlayerName(blip, player) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     SetBlipNameToPlayerName(_blip, _player);
 }
 /**
@@ -3413,7 +3413,7 @@ export function setBlipNameToPlayerName(blip, player) {
  * Hash: 0xAE9FC9EF6A9FAC79 | Since: 323 | API-Set: unknown
  */
 export function setBlipPriority(blip, priority) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipPriority(_blip, priority);
 }
 /**
@@ -3422,7 +3422,7 @@ export function setBlipPriority(blip, priority) {
  * Hash: 0xF87683CDF73C3F6E | Since: 323 | API-Set: unknown
  */
 export function setBlipRotation(blip, rotation) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipRotation(_blip, rotation);
 }
 /**
@@ -3431,7 +3431,7 @@ export function setBlipRotation(blip, rotation) {
  * Hash: 0xA8B6AFDAC320AC87 | Since: 877 | API-Set: unknown
  */
 export function setBlipRotationWithFloat(blip, heading) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipSquaredRotation(_blip, heading);
 }
 /**
@@ -3440,7 +3440,7 @@ export function setBlipRotationWithFloat(blip, heading) {
  * Hash: 0x4F7D8A9BFB0B43E9 | Since: 323 | API-Set: unknown
  */
 export function setBlipRoute(blip, enabled) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipRoute(_blip, enabled);
 }
 /**
@@ -3449,7 +3449,7 @@ export function setBlipRoute(blip, enabled) {
  * Hash: 0x837155CD2F63DA09 | Since: 323 | API-Set: unknown
  */
 export function setBlipRouteColour(blip, colour) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipRouteColour(_blip, colour);
 }
 /**
@@ -3458,7 +3458,7 @@ export function setBlipRouteColour(blip, colour) {
  * Hash: 0xD38744167B2FA257 | Since: 323 | API-Set: unknown
  */
 export function setBlipScale(blip, scale) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipScale(_blip, scale);
 }
 /**
@@ -3467,7 +3467,7 @@ export function setBlipScale(blip, scale) {
  * Hash: 0xCD6524439909C979 | Since: 1734 | API-Set: unknown
  */
 export function setBlipScale2d(blip, xScale, yScale) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipScaleTransformation(_blip, xScale, yScale);
 }
 /**
@@ -3476,7 +3476,7 @@ export function setBlipScale2d(blip, xScale, yScale) {
  * Hash: 0x14892474891E09EB | Since: 323 | API-Set: unknown
  */
 export function setBlipSecondaryColour(blip, r, g, b) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipSecondaryColour(_blip, r, g, b);
 }
 /**
@@ -3493,7 +3493,7 @@ export function setBlipShortHeightThreshold() {
  * Hash: 0x13127EC3665E8EE1 | Since: 323 | API-Set: unknown
  */
 export function setBlipShowCone(blip, toggle, hudColorIndex) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipShowCone(_blip, toggle, hudColorIndex);
 }
 /**
@@ -3508,7 +3508,7 @@ export function setBlipShowCone(blip, toggle, hudColorIndex) {
  * Hash: 0xDF735600A4696DAF | Since: 323 | API-Set: unknown
  */
 export function setBlipSprite(blip, spriteId) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipSprite(_blip, spriteId);
 }
 /**
@@ -3517,7 +3517,7 @@ export function setBlipSprite(blip, spriteId) {
  * Hash: 0x2C9F302398E13141 | Since: 1103 | API-Set: unknown
  */
 export function setBlipUseHeightIndicatorOnEdge(blip) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     Citizen.invokeNative('0x2C9F302398E13141', _blip, undefined);
 }
 /**
@@ -3640,7 +3640,7 @@ export function setFloatingHelpTextStyle(hudIndex) {
  * Hash: 0xB094BC1DB4018240 | Since: 323 | API-Set: unknown
  */
 export function setFloatingHelpTextToEntity(hudIndex, entity, offsetX, offsetY) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetFloatingHelpTextToEntity(hudIndex, _entity, offsetX, offsetY);
 }
 /**
@@ -3843,7 +3843,7 @@ export function setMinimapInPrologue(toggle) {
  * Hash: 0x1A5CD7752DD28CD3 | Since: 323 | API-Set: unknown
  */
 export function setMinimapInSpectatorMode(toggle, ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetMinimapInSpectatorMode(toggle, _ped);
 }
 /**
@@ -4098,7 +4098,7 @@ export function setPauseMenuPedSleepState(state) {
  * Hash: 0x0C4BBF625CA98C4E | Since: 323 | API-Set: unknown
  */
 export function setPedAiBlipForcedOn(ped, toggle) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedAiBlipForcedOn(_ped, toggle);
 }
 /**
@@ -4107,7 +4107,7 @@ export function setPedAiBlipForcedOn(ped, toggle) {
  * Hash: 0xE52B8E7F85D39A08 | Since: 323 | API-Set: unknown
  */
 export function setPedAiBlipGangId(ped, gangId) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedAiBlipGangId(_ped, gangId);
 }
 /**
@@ -4116,7 +4116,7 @@ export function setPedAiBlipGangId(ped, gangId) {
  * Hash: 0x3EED80DFF7325CAA | Since: 323 | API-Set: unknown
  */
 export function setPedAiBlipHasCone(ped, toggle) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedAiBlipHasCone(_ped, toggle);
 }
 /**
@@ -4125,7 +4125,7 @@ export function setPedAiBlipHasCone(ped, toggle) {
  * Hash: 0x97C65887D4B37FA9 | Since: 323 | API-Set: unknown
  */
 export function setPedAiBlipNoticeRange(ped, range) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedAiBlipNoticeRange(_ped, range);
 }
 /**
@@ -4134,7 +4134,7 @@ export function setPedAiBlipNoticeRange(ped, range) {
  * Hash: 0xFCFACD0DB9D7A57D | Since: 877 | API-Set: unknown
  */
 export function setPedAiBlipSprite(ped, spriteId) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedAiBlipSprite(_ped, spriteId);
 }
 /**
@@ -4145,7 +4145,7 @@ export function setPedAiBlipSprite(ped, spriteId) {
  * Hash: 0xD30C50DF888D58B5 | Since: 323 | API-Set: unknown
  */
 export function setPedHasAiBlip(ped, hasCone) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedHasAiBlip(_ped, hasCone);
 }
 /**
@@ -4154,7 +4154,7 @@ export function setPedHasAiBlip(ped, hasCone) {
  * Hash: 0xB13DCB4C6FAAD238 | Since: 505 | API-Set: unknown
  */
 export function setPedHasAiBlipWithColour(ped, hasCone, color) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedHasAiBlipWithColor(_ped, hasCone, color);
 }
 /**
@@ -4231,7 +4231,7 @@ export function setRadarZoomPrecise(zoom) {
  * Hash: 0xF98E4B3E56AFC7B1 | Since: 323 | API-Set: unknown
  */
 export function setRadarZoomToBlip(blip, zoom) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetRadarZoomToBlip(_blip, zoom);
 }
 /**
@@ -4248,7 +4248,7 @@ export function setRadarZoomToDistance(zoom) {
  * Hash: 0x25615540D894B814 | Since: 323 | API-Set: unknown
  */
 export function setRadiusBlipEdge(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetRadiusBlipEdge(_blip, toggle);
 }
 /**
@@ -4627,7 +4627,7 @@ export function showContactInstructionalButton(toggle) {
  * Hash: 0xDCFB5D4DB8BF367E | Since: 323 | API-Set: unknown
  */
 export function showCrewIndicatorOnBlip(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     ShowCrewIndicatorOnBlip(_blip, toggle);
 }
 /**
@@ -4636,7 +4636,7 @@ export function showCrewIndicatorOnBlip(blip, toggle) {
  * Hash: 0x19BD6E3C0E16A8FA | Since: 2802 | API-Set: unknown
  */
 export function showForSaleIconOnBlip(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     Citizen.invokeNative('0x19BD6E3C0E16A8FA', _blip, toggle);
 }
 /**
@@ -4647,7 +4647,7 @@ export function showForSaleIconOnBlip(blip, toggle) {
  * Hash: 0x23C3EB807312F01A | Since: 323 | API-Set: unknown
  */
 export function showFriendIndicatorOnBlip(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     ShowFriendIndicatorOnBlip(_blip, toggle);
 }
 /**
@@ -4657,7 +4657,7 @@ export function showFriendIndicatorOnBlip(blip, toggle) {
  * Hash: 0xCAC2031EBF79B1A8 | Since: 2699 | API-Set: unknown
  */
 export function showGoldTickOnBlip(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     ShowHasCompletedIndicatorOnBlip(_blip, toggle);
 }
 /**
@@ -4666,7 +4666,7 @@ export function showGoldTickOnBlip(blip, toggle) {
  * Hash: 0x5FBCA48327B914DF | Since: 323 | API-Set: unknown
  */
 export function showHeadingIndicatorOnBlip(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     ShowHeadingIndicatorOnBlip(_blip, toggle);
 }
 /**
@@ -4675,7 +4675,7 @@ export function showHeadingIndicatorOnBlip(blip, toggle) {
  * Hash: 0x75A16C3DA34F1245 | Since: 323 | API-Set: unknown
  */
 export function showHeightOnBlip(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     ShowHeightOnBlip(_blip, toggle);
 }
 /**
@@ -4717,7 +4717,7 @@ export function showComponentThisFrame(id) {
  * Hash: 0xA3C0B359DCB848B6 | Since: 323 | API-Set: unknown
  */
 export function showNumberOnBlip(blip, _number) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     ShowNumberOnBlip(_blip, _number);
 }
 /**
@@ -4728,7 +4728,7 @@ export function showNumberOnBlip(blip, _number) {
  * Hash: 0xB81656BC81FE24D1 | Since: 323 | API-Set: unknown
  */
 export function showOutlineIndicatorOnBlip(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     ShowOutlineIndicatorOnBlip(_blip, toggle);
 }
 /**
@@ -4753,7 +4753,7 @@ export function showStartMissionInstructionalButton(toggle) {
  * Hash: 0x74513EA3E505181E | Since: 323 | API-Set: unknown
  */
 export function showTickOnBlip(blip, toggle) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     ShowTickOnBlip(_blip, toggle);
 }
 /**
@@ -5085,7 +5085,7 @@ export function useVehicleTargetingReticule() {
  * Hash: 0x25D984CFB64ED6DE | Since: 3095 | API-Set: unknown
  */
 export function setBlipGpsRouteDisplayDistance(blip, blipChangeParam46, blipChangeParam47) {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     Citizen.invokeNative('0x25D984CFB64ED6DE', _blip, blipChangeParam46, blipChangeParam47);
 }
 /**

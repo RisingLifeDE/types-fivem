@@ -1,11 +1,10 @@
-import { IEntity, IObject } from '@risinglife/fivem-shared';
 /**
  * Returns entity's archetype name, if available.
  *
  * Hash: 0x47B870F5
  */
 export function getArchetypeName(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityArchetypeName(_entity);
 }
 /**
@@ -24,7 +23,7 @@ export function getIndexFromMapdata(mapdata, entity) {
  * Hash: 0xF6B815C5
  */
 export function getMapdataOwner(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityMapdataOwner(_entity);
 }
 /**
@@ -58,7 +57,7 @@ export function selectAtPos(fracX, fracY, hitFlags, precise) {
  * Hash: 0xFB0639B
  */
 export function setMatrix(entity, forwardX, forwardY, forwardZ, rightX, rightY, rightZ, upX, upY, upZ, atX, atY, atZ) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityMatrix(_entity, forwardX, forwardY, forwardZ, rightX, rightY, rightZ, upX, upY, upZ, atX, atY, atZ);
 }
 /**
@@ -67,7 +66,7 @@ export function setMatrix(entity, forwardX, forwardY, forwardZ, rightX, rightY, 
  * Hash: 0xEDBE6ADD
  */
 export function isPositionFrozen(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityPositionFrozen(_entity);
 }
 /**
@@ -80,7 +79,7 @@ export function isPositionFrozen(entity) {
  * Hash: 0x9A3144BC
  */
 export function getAddress(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetEntityAddress(_entity);
 }
 /**
@@ -89,7 +88,7 @@ export function getAddress(entity) {
  * Hash: 0x3BB78F05
  */
 export function ensureStateBag(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     EnsureEntityStateBag(_entity);
 }
 /**
@@ -125,7 +124,7 @@ export function ensureStateBag(entity) {
  * Hash: 0xDFFBA12F
  */
 export function getEntitiesInRadius(pos, radius, entityType, sortByDistance, models) {
-    const _models = models instanceof IObject ? models.handle() : models;
+    const _models = typeof models == 'object' ? models.handle() : models;
     return GetEntitiesInRadius(pos.x, pos.y, pos.z, radius, entityType, sortByDistance, _models);
 }
 /**

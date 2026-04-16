@@ -1,4 +1,3 @@
-import { IPed } from '@risinglife/fivem-shared';
 /**
  * A getter for the accuracy spread of a weapon.
  *
@@ -15,7 +14,7 @@ export function getAccuracySpread(weaponHash) {
  * Hash: 0x63ED2E7
  */
 export function getAnimationOverride(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetWeaponAnimationOverride(_ped);
 }
 /**

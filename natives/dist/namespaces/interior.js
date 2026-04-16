@@ -1,4 +1,4 @@
-import { Vector3, IEntity } from '@risinglife/fivem-shared';
+import { Vector3 } from '@risinglife/fivem-shared';
 /**
  * More info: http://gtaforums.com/topic/836367-adding-props-to-interiors/
  *
@@ -39,7 +39,7 @@ export function cap(interior, toggle) {
  * Hash: 0x85D5422B2039A70D | Since: 2189
  */
 export function clearStateOfEntity(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     ClearInteriorForEntity(_entity);
 }
 /**
@@ -48,7 +48,7 @@ export function clearStateOfEntity(entity) {
  * Hash: 0xB365FC0C4E27FFA7 | Since: 323
  */
 export function clearRoomForEntity(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     ClearRoomForEntity(_entity);
 }
 /**
@@ -130,7 +130,7 @@ export function forceActivatingTrackingOnEntity() {
  * Hash: 0x52923C4710DD9907 | Since: 323
  */
 export function forceRoomForEntity(entity, interior, roomHashKey) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     if (typeof roomHashKey === 'string')
         roomHashKey = GetHashKey(roomHashKey);
     ForceRoomForEntity(_entity, interior, roomHashKey);
@@ -194,7 +194,7 @@ export function getFromCollision(pos) {
  * Hash: 0x2107BA504071A6BB | Since: 323
  */
 export function getFromEntity(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetInteriorFromEntity(_entity);
 }
 /**
@@ -249,7 +249,7 @@ export function getLocationAndNamehash(interior) {
  * Hash: 0x399685DB942336BC | Since: 323
  */
 export function getKeyForEntityInRoom(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetKeyForEntityInRoom(_entity);
 }
 /**
@@ -274,7 +274,7 @@ export function getRoomKeyForGameViewport() {
  * Hash: 0x47C2A06D4F5F424B | Since: 323
  */
 export function getRoomKeyFromEntity(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetRoomKeyFromEntity(_entity);
 }
 /**
@@ -355,7 +355,7 @@ export function refresh(interior) {
  * Hash: 0x82EBB79E258FA2B7 | Since: 323
  */
 export function retainEntityIn(entity, interior) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     Citizen.invokeNative('0x82EBB79E258FA2B7', _entity, interior);
 }
 /**
@@ -381,7 +381,7 @@ export function setInUse(interior) {
  * Hash: 0x7241CCB7D020DB69 | Since: 791
  */
 export function setIsExteriorOnly(entity, toggle) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     Citizen.invokeNative('0x7241CCB7D020DB69', _entity, toggle);
 }
 /**

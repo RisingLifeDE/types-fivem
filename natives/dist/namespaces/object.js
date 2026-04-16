@@ -1,4 +1,4 @@
-import { Vector3, IEntity, IPed, IPlayer, IObject } from '@risinglife/fivem-shared';
+import { Vector3 } from '@risinglife/fivem-shared';
 /**
  * doorHash has to be unique. scriptDoor false; relies upon getNetworkGameScriptHandler. isLocal On true disables the creation CRequestDoorEvent's in DOOR_SYSTEM_SET_DOOR_STATE.
  * p5 only set to true in single player native scripts.
@@ -85,8 +85,8 @@ export function areEntitiesEntirelyInsideGarage(garageHash) {
  * Hash: 0x8DC39368BDD57755 | Since: 323
  */
 export function attachPortablePickupToPed(pickupObject, ped) {
-    const _pickupObject = pickupObject instanceof IObject ? pickupObject.handle() : pickupObject;
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _pickupObject = typeof pickupObject == 'object' ? pickupObject.handle() : pickupObject;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     AttachPortablePickupToPed(_pickupObject, _ped);
 }
 /**
@@ -103,7 +103,7 @@ export function blockPlayersForAmbientPickup() {
  * Hash: 0xE7E4C198B0185900 | Since: 323
  */
 export function breakFragmentChild(p0) {
-    const _p0 = p0 instanceof IObject ? p0.handle() : p0;
+    const _p0 = typeof p0 == 'object' ? p0.handle() : p0;
     BreakObjectFragmentChild(_p0, undefined, false);
 }
 /**
@@ -315,7 +315,7 @@ export function damageFragmentChild() {
  * Hash: 0x539E0AE3E6634B9F | Since: 323
  */
 export function deleteObject(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     DeleteObject(__object);
 }
 /**
@@ -324,7 +324,7 @@ export function deleteObject(_object) {
  * Hash: 0xCF463D1E9A0AECB1 | Since: 323
  */
 export function detachPortablePickupFromPed(pickupObject) {
-    const _pickupObject = pickupObject instanceof IObject ? pickupObject.handle() : pickupObject;
+    const _pickupObject = typeof pickupObject == 'object' ? pickupObject.handle() : pickupObject;
     DetachPortablePickupFromPed(_pickupObject);
 }
 /**
@@ -359,7 +359,7 @@ export function doesPickupExist(pickup) {
  * Hash: 0xD9EFB6DBF7DAAEA3 | Since: 323
  */
 export function doesPickupObjectExist(pickupObject) {
-    const _pickupObject = pickupObject instanceof IObject ? pickupObject.handle() : pickupObject;
+    const _pickupObject = typeof pickupObject == 'object' ? pickupObject.handle() : pickupObject;
     return DoesPickupObjectExist(_pickupObject);
 }
 /**
@@ -378,7 +378,7 @@ export function doesPickupOfTypeExistInArea(pickupHash, pos, radius) {
  * Hash: 0x52AF537A0C5B8AAD | Since: 323
  */
 export function doesRayfireMapExist(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     return DoesRayfireMapObjectExist(__object);
 }
 /**
@@ -549,7 +549,7 @@ export function enableSavingInGarage(garageHash, toggle) {
  * Hash: 0xF9C1681347C8BD15 | Since: 323
  */
 export function fixFragment(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     FixObjectFragment(__object);
 }
 /**
@@ -582,7 +582,7 @@ export function forcePickupRotateFaceUp() {
  * Hash: 0x5CE2E45A5CE2E45A | Since: 2545
  */
 export function forcePortablePickupLastAccessiblePositionSetting(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     Citizen.invokeNative('0x5CE2E45A5CE2E45A', __object);
 }
 /**
@@ -639,7 +639,7 @@ export function getIsArticulatedJointAtMaxAngle() {
  * Hash: 0x43C677F1E1158005 | Since: 1604
  */
 export function getIsArticulatedJointAtMinAngle(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     return GetIsArenaPropPhysicsDisabled(__object, undefined);
 }
 /**
@@ -656,7 +656,7 @@ export function getFragmentDamageHealth() {
  * Hash: 0xE84EB93729C5F36A | Since: 757
  */
 export function getTintIndex(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     return GetObjectTextureVariation(__object);
 }
 /**
@@ -717,7 +717,7 @@ export function getRayfireMap(pos, radius, name) {
  * Hash: 0x260EE4FDBDF4DB01 | Since: 323
  */
 export function getRayfireMapAnimPhase(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     return GetRayfireMapObjectAnimPhase(__object);
 }
 /**
@@ -752,7 +752,7 @@ export function getStateOfClosestDoorOfType(_type, pos) {
  * Hash: 0x899BA936634A322E | Since: 323
  */
 export function getStateOfRayfireMap(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     return GetStateOfRayfireMapObject(__object);
 }
 /**
@@ -791,7 +791,7 @@ export function hasClosestOfTypeBeenCompletelyDestroyed(pos, radius, modelHash) 
  * Hash: 0x8ABFB70C49CC43E2 | Since: 323
  */
 export function hasBeenBroken(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     return HasObjectBeenBroken(__object, undefined);
 }
 /**
@@ -808,7 +808,7 @@ export function hasPickupBeenCollected(pickup) {
  * Hash: 0x867458251D47CCB2 | Since: 463
  */
 export function hidePortablePickupWhenDetached(pickupObject, toggle) {
-    const _pickupObject = pickupObject instanceof IObject ? pickupObject.handle() : pickupObject;
+    const _pickupObject = typeof pickupObject == 'object' ? pickupObject.handle() : pickupObject;
     HidePortablePickupWhenDetached(_pickupObject, toggle);
 }
 /**
@@ -868,7 +868,7 @@ export function isGarageEmpty(garageHash) {
  * Hash: 0xFC481C641EBBD27D | Since: 1365
  */
 export function isAPickup(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     return IsObjectAPickup(__object);
 }
 /**
@@ -877,7 +877,7 @@ export function isAPickup(_object) {
  * Hash: 0x0378C08504160D0D | Since: 323
  */
 export function isAPortablePickup(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     return IsObjectAPortablePickup(__object);
 }
 /**
@@ -886,7 +886,7 @@ export function isAPortablePickup(_object) {
  * Hash: 0x372EF6699146A1E4 | Since: 323
  */
 export function isEntirelyInsideGarage(garageHash, entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     if (typeof garageHash === 'string')
         garageHash = GetHashKey(garageHash);
     return IsObjectEntirelyInsideGarage(garageHash, _entity, 0, 0);
@@ -907,7 +907,7 @@ export function isNearPoint(objectHash, pos, range) {
  * Hash: 0xF0EED5A6BC7B237A | Since: 323
  */
 export function isPartiallyInsideGarage(garageHash, entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     if (typeof garageHash === 'string')
         garageHash = GetHashKey(garageHash);
     return IsObjectPartiallyInsideGarage(garageHash, _entity, 0);
@@ -918,7 +918,7 @@ export function isPartiallyInsideGarage(garageHash, entity) {
  * Hash: 0x8B32ACE6326A7546 | Since: 323
  */
 export function isVisible(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     return IsObjectVisible(__object);
 }
 /**
@@ -927,7 +927,7 @@ export function isVisible(_object) {
  * Hash: 0x11D1E53A726891FE | Since: 323
  */
 export function isPickupWeaponValid(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     return IsPickupWeaponObjectValid(__object);
 }
 /**
@@ -936,7 +936,7 @@ export function isPickupWeaponValid(_object) {
  * Hash: 0x024A60DEB0EA69F0 | Since: 323
  */
 export function isPlayerEntirelyInsideGarage(garageHash, player) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     if (typeof garageHash === 'string')
         garageHash = GetHashKey(garageHash);
     return IsPlayerEntirelyInsideGarage(garageHash, _player, 0, 0);
@@ -947,7 +947,7 @@ export function isPlayerEntirelyInsideGarage(garageHash, player) {
  * Hash: 0x1761DC5D8471CBAA | Since: 323
  */
 export function isPlayerPartiallyInsideGarage(garageHash, player) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     if (typeof garageHash === 'string')
         garageHash = GetHashKey(garageHash);
     return IsPlayerPartiallyInsideGarage(garageHash, _player, 0);
@@ -973,7 +973,7 @@ export function isPointInAngledArea(pos, x1, y1, z1, x2, y2, z2, width, debug, i
  * Hash: 0xADF084FB8F075D06 | Since: 1604
  */
 export function isPropLightOverriden(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     return Citizen.invokeNative('0xADF084FB8F075D06', __object);
 }
 /**
@@ -982,7 +982,7 @@ export function isPropLightOverriden(_object) {
  * Hash: 0xADBE4809F19F927A | Since: 323
  */
 export function onlyCleanUpWhenOutOfRange(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     MarkObjectForDeletion(__object);
 }
 /**
@@ -999,7 +999,7 @@ export function openAllBarriersForRace() {
  * Hash: 0xD76EEEF746057FD6 | Since: 505
  */
 export function placeOnGroundOrObjectProperly(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     return PlaceObjectOnGroundProperly2(__object);
 }
 /**
@@ -1008,7 +1008,7 @@ export function placeOnGroundOrObjectProperly(_object) {
  * Hash: 0x58A850EAEE20FAA3 | Since: 323
  */
 export function placeOnGroundProperly(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     return PlaceObjectOnGroundProperly(__object);
 }
 /**
@@ -1025,7 +1025,7 @@ export function playAutoStartAnim() {
  * Hash: 0x92AEFB5F6E294023 | Since: 323
  */
 export function preventCollectionOfPortablePickup(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     PreventCollectionOfPortablePickup(__object, false, false);
 }
 /**
@@ -1055,7 +1055,7 @@ export function removeDoorFromSystem(doorHash) {
  * Hash: 0x4A39DB43E47CF3AA | Since: 323
  */
 export function removeHighDetailModel(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     RemoveObjectHighDetailModel(__object);
 }
 /**
@@ -1087,7 +1087,7 @@ export function renderFakePickupGlow(pos, colorIndex) {
  * Hash: 0xAFE24E4D29249E4A | Since: 1734
  */
 export function rotate(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     return Citizen.invokeNative('0xAFE24E4D29249E4A', __object, 0, 0, false);
 }
 /**
@@ -1096,7 +1096,7 @@ export function rotate(_object) {
  * Hash: 0x406137F8EF90EAF5 | Since: 323
  */
 export function setActivatePhysicsAsSoonAsItIsUnfrozen(_object, toggle) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     SetActivateObjectPhysicsAsSoonAsItIsUnfrozen(__object, toggle);
 }
 /**
@@ -1115,7 +1115,7 @@ export function setCustomPickupWeaponHash(pickupHash, pickup) {
  * Hash: 0xBCE595371A5FBAAF | Since: 323
  */
 export function setCutscenesWeaponFlashlightOnThisFrame(_object, toggle) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     SetCreateWeaponObjectLightSource(__object, toggle);
 }
 /**
@@ -1132,7 +1132,7 @@ export function setDisableCollisionsBetweenCarsAndCarParachute() {
  * Hash: 0x911024442F4898F0 | Since: 1604
  */
 export function setDriveArticulatedJoint(_object, toggle) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     SetEnableArenaPropPhysics(__object, toggle, 0);
 }
 /**
@@ -1141,8 +1141,8 @@ export function setDriveArticulatedJoint(_object, toggle) {
  * Hash: 0xB20834A7DD3D8896 | Since: 1604
  */
 export function setDriveArticulatedJointWithInflictor(_object, toggle, ped) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetEnableArenaPropPhysicsOnPed(__object, toggle, 0, _ped);
 }
 /**
@@ -1151,7 +1151,7 @@ export function setDriveArticulatedJointWithInflictor(_object, toggle, ped) {
  * Hash: 0xB2D0BDE54F0E8E5A | Since: 323
  */
 export function setEntityFlagRenderSmallShadow(_object, toggle) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     Citizen.invokeNative('0xB2D0BDE54F0E8E5A', __object, toggle);
 }
 /**
@@ -1160,7 +1160,7 @@ export function setEntityFlagRenderSmallShadow(_object, toggle) {
  * Hash: 0xD05A3241B9A86F19 | Since: 1180
  */
 export function setEntityFlagSuppressShadow(entity, toggle) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     Citizen.invokeNative('0xD05A3241B9A86F19', _entity, toggle);
 }
 /**
@@ -1177,7 +1177,7 @@ export function setForceThisFrame(pos) {
  * Hash: 0x1C57C94A6446492A | Since: 1604
  */
 export function setIsArticulated(_object, toggle) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     Citizen.invokeNative('0x1C57C94A6446492A', __object, toggle);
 }
 /**
@@ -1186,7 +1186,7 @@ export function setIsArticulated(_object, toggle) {
  * Hash: 0xB5B7742424BD4445 | Since: 1604
  */
 export function setIsBall(_object, toggle) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     Citizen.invokeNative('0xB5B7742424BD4445', __object, toggle);
 }
 /**
@@ -1237,7 +1237,7 @@ export function setMaxNumPortablePickupsCarriedByPlayer(modelHash, _number) {
  * Hash: 0x4D89D607CB3DD1D2 | Since: 323
  */
 export function setAllowLowLodBuoyancy(_object, toggle) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     SetObjectAllowLowLodBuoyancy(__object, toggle);
 }
 /**
@@ -1246,7 +1246,7 @@ export function setAllowLowLodBuoyancy(_object, toggle) {
  * Hash: 0x77F33F2CCF64B3AA | Since: 323
  */
 export function setForceVehiclesToAvoid(_object, toggle) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     SetObjectForceVehiclesToAvoid(__object, toggle);
 }
 /**
@@ -1263,7 +1263,7 @@ export function setGlowInSameTeam(pickup) {
  * Hash: 0x734E1714D077DA9A | Since: 1604
  */
 export function setIsAPressurePlate(_object, toggle) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     Citizen.invokeNative('0x734E1714D077DA9A', __object, toggle);
 }
 /**
@@ -1272,7 +1272,7 @@ export function setIsAPressurePlate(_object, toggle) {
  * Hash: 0xC6033D32241F6FB5 | Since: 323
  */
 export function setIsSpecialGolfball(_object, toggle) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     Citizen.invokeNative('0xC6033D32241F6FB5', __object, toggle);
 }
 /**
@@ -1281,7 +1281,7 @@ export function setIsSpecialGolfball(_object, toggle) {
  * Hash: 0x3B2FD68DB5F8331C | Since: 757
  */
 export function setIsVisibleInMirrors(_object, toggle) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     Citizen.invokeNative('0x3B2FD68DB5F8331C', __object, toggle);
 }
 /**
@@ -1297,7 +1297,7 @@ export function setIsVisibleInMirrors(_object, toggle) {
  * Hash: 0xF6DF6E90DE7DF90F | Since: 323
  */
 export function setPhysicsParams(_object, weight, gravity, buoyancy) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     SetObjectPhysicsParams(__object, weight, 0, 0, 0, 0, gravity, 0, 0, 0, 0, buoyancy);
 }
 /**
@@ -1306,7 +1306,7 @@ export function setPhysicsParams(_object, weight, gravity, buoyancy) {
  * Hash: 0x96EE0EBA0163DF80 | Since: 791
  */
 export function setSpeedBoostAmount(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     SetObjectStuntPropSpeedup(__object, undefined);
 }
 /**
@@ -1315,7 +1315,7 @@ export function setSpeedBoostAmount(_object) {
  * Hash: 0xDF6CA0330F2E737B | Since: 791
  */
 export function setSpeedBoostDuration(_object, duration) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     SetObjectStuntPropDuration(__object, duration);
 }
 /**
@@ -1332,7 +1332,7 @@ export function setTakesDamageFromCollidingWithBuildings() {
  * Hash: 0x8A7391690F5AFD81 | Since: 323
  */
 export function setTargettable(_object, targettable) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     SetObjectTargettable(__object, targettable, undefined);
 }
 /**
@@ -1359,7 +1359,7 @@ export function setTargettable(_object, targettable) {
  * Hash: 0x971DA0055324D033 | Since: 323
  */
 export function setTintIndex(_object, textureVariation) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     SetObjectTextureVariation(__object, textureVariation);
 }
 /**
@@ -1489,7 +1489,7 @@ export function setPickupUncollectable(pickup, toggle) {
  * Hash: 0x616093EC6B139DD9 | Since: 323
  */
 export function setPlayerPermittedToCollectPickupsOfType(player, pickupHash, toggle) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     if (typeof pickupHash === 'string')
         pickupHash = GetHashKey(pickupHash);
     ToggleUsePickupsForPlayer(_player, pickupHash, toggle);
@@ -1508,7 +1508,7 @@ export function setPortablePickupPersist(pickup, toggle) {
  * Hash: 0x63ECF581BC70E363 | Since: 1365
  */
 export function setProjectilesShouldExplodeOnContact(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     Citizen.invokeNative('0x63ECF581BC70E363', _entity, undefined);
 }
 /**
@@ -1517,7 +1517,7 @@ export function setProjectilesShouldExplodeOnContact(entity) {
  * Hash: 0x5F048334B4A4E774 | Since: 1493
  */
 export function setPropLightColor(_object, r, g, b) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     return SetObjectLightColor(__object, false, r, g, b);
 }
 /**
@@ -1565,7 +1565,7 @@ export function setStateOfClosestDoorOfType(_type, pos, locked, heading) {
  * Hash: 0x5C29F698D404C5E1 | Since: 323
  */
 export function setStateOfRayfireMap(_object, state) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     SetStateOfRayfireMapObject(__object, state);
 }
 /**
@@ -1574,7 +1574,7 @@ export function setStateOfRayfireMap(_object, state) {
  * Hash: 0x53E0DF1A2A3CF0CA | Since: 323
  */
 export function setTeamPickup(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     SetTeamPickupObject(__object, undefined, false);
 }
 /**
@@ -1593,7 +1593,7 @@ export function setTintIndexClosestBuildingOfType(pos, radius, modelHash, textur
  * Hash: 0x1A6CBB06E2D0D79D | Since: 1604
  */
 export function setWeaponImpactsApplyGreaterForce(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     Citizen.invokeNative('0x1A6CBB06E2D0D79D', __object, false);
 }
 /**
@@ -1607,7 +1607,7 @@ export function setWeaponImpactsApplyGreaterForce(_object) {
  * Hash: 0x2FDFF4107B8C1147 | Since: 323
  */
 export function slide(_object, toX, toY, toZ, speedX, speedY, speedZ, collision) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     return SlideObject(__object, toX, toY, toZ, speedX, speedY, speedZ, collision);
 }
 /**
@@ -1648,7 +1648,7 @@ export function suppressPickupSoundForPickup() {
  * Hash: 0xB252BC036B525623 | Since: 323
  */
 export function trackVisibility(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     TrackObjectVisibility(__object);
 }
 /**
@@ -1657,7 +1657,7 @@ export function trackVisibility(_object) {
  * Hash: 0xB39F03368DB0CAA2 | Since: 3258
  */
 export function setTargettableByPlayer(_object, setFlag34, setFlag35) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     SetObjectTargettableByPlayer(__object, setFlag34, setFlag35);
 }
 /**

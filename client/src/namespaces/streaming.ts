@@ -267,7 +267,7 @@ export function setInteriorRoomTimecycle(interiorId: number, roomIndex: number, 
  * Hash: 0xFC52CB91
  */
 export function updateMapdataEntity(mapdata: number, entity: number, entityDef: number | IObject): void {
-    const _entityDef = entityDef instanceof IObject ? entityDef.handle() : entityDef;
+    const _entityDef = typeof entityDef == 'object' ? entityDef.handle() : entityDef;
     UpdateMapdataEntity(mapdata, entity, _entityDef);
 }
 

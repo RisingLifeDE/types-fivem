@@ -8,7 +8,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0xDE3316AB
  */
 export function clearPeds(ped: number | IPed): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     ClearPedTasks(_ped);
 }
 
@@ -20,7 +20,7 @@ export function clearPeds(ped: number | IPed): void {
  * Hash: 0xBC045625
  */
 export function clearPedsImmediately(ped: number | IPed): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     ClearPedTasksImmediately(_ped);
 }
 
@@ -36,8 +36,8 @@ export function clearPedsImmediately(ped: number | IPed): void {
  * Hash: 0xCB0D8932
  */
 export function combatPed(ped: number | IPed, targetPed: number | IPed): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    const _targetPed = typeof targetPed == 'object' ? targetPed.handle() : targetPed;
     TaskCombatPed(_ped, _targetPed, 0, 0);
 }
 
@@ -56,9 +56,9 @@ export function combatPed(ped: number | IPed, targetPed: number | IPed): void {
  * Hash: 0x2B84D1C4
  */
 export function driveBy(driverPed: number | IPed, targetPed: number | IPed, targetVehicle: number | IVehicle, targetX: number, targetY: number, targetZ: number, distanceToShoot: number, pedAccuracy: number, firingPattern: number | string): void {
-    const _driverPed = driverPed instanceof IPed ? driverPed.handle() : driverPed;
-    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
-    const _targetVehicle = targetVehicle instanceof IVehicle ? targetVehicle.handle() : targetVehicle;
+    const _driverPed = typeof driverPed == 'object' ? driverPed.handle() : driverPed;
+    const _targetPed = typeof targetPed == 'object' ? targetPed.handle() : targetPed;
+    const _targetVehicle = typeof targetVehicle == 'object' ? targetVehicle.handle() : targetVehicle;
     if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
     TaskDriveBy(_driverPed, _targetPed, _targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, false, firingPattern);
 }
@@ -75,8 +75,8 @@ export function driveBy(driverPed: number | IPed, targetPed: number | IPed, targ
  * Hash: 0xB8689B4E
  */
 export function enterVehicle(ped: number | IPed, vehicle: number | IVehicle, timeout: number, seatIndex: number, speed: number, flag: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     TaskEnterVehicle(_ped, _vehicle, timeout, seatIndex, speed, flag, undefined);
 }
 
@@ -88,7 +88,7 @@ export function enterVehicle(ped: number | IPed, vehicle: number | IVehicle, tim
  * Hash: 0xC1971F30
  */
 export function everyoneLeaveVehicle(vehicle: number | IVehicle): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     TaskEveryoneLeaveVehicle(_vehicle);
 }
 
@@ -100,7 +100,7 @@ export function everyoneLeaveVehicle(vehicle: number | IVehicle): void {
  * Hash: 0x80A9E7A7
  */
 export function goStraightToCoord(ped: number | IPed, pos: Vector3, speed: number, timeout: number, targetHeading: number, distanceToSlide: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     TaskGoStraightToCoord(_ped, pos.x, pos.y, pos.z, speed, timeout, targetHeading, distanceToSlide);
 }
 
@@ -162,8 +162,8 @@ export function goStraightToCoord(ped: number | IPed, pos: Vector3, speed: numbe
  * Hash: 0xF91DF93B
  */
 export function goToCoordAnyMeans(ped: number | IPed, pos: Vector3, fMoveBlendRatio: number, vehicle: number | IVehicle, bUseLongRangeVehiclePathing: boolean, drivingFlags: number, fMaxRangeToShootTargets: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     TaskGoToCoordAnyMeans(_ped, pos.x, pos.y, pos.z, fMoveBlendRatio, _vehicle, bUseLongRangeVehiclePathing, drivingFlags, fMaxRangeToShootTargets);
 }
 
@@ -180,8 +180,8 @@ export function goToCoordAnyMeans(ped: number | IPed, pos: Vector3, fMoveBlendRa
  * Hash: 0x374827C2
  */
 export function goToEntity(entity: number | IEntity, target: number | IEntity, duration: number, distance: number, speed: number): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
-    const _target = target instanceof IEntity ? target.handle() : target;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
+    const _target = typeof target == 'object' ? target.handle() : target;
     TaskGoToEntity(_entity, _target, duration, distance, speed, 0, 0);
 }
 
@@ -197,8 +197,8 @@ export function goToEntity(entity: number | IEntity, target: number | IEntity, d
  * Hash: 0x8DCC19C5
  */
 export function handsUp(ped: number | IPed, duration: number, facingPed: number | IPed): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _facingPed = facingPed instanceof IPed ? facingPed.handle() : facingPed;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    const _facingPed = typeof facingPed == 'object' ? facingPed.handle() : facingPed;
     TaskHandsUp(_ped, duration, _facingPed, 0, false);
 }
 
@@ -210,7 +210,7 @@ export function handsUp(ped: number | IPed, duration: number, facingPed: number 
  * Hash: 0xDBDD79FA
  */
 export function leaveAnyVehicle(ped: number | IPed, flags: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     TaskLeaveAnyVehicle(_ped, 0, flags);
 }
 
@@ -232,8 +232,8 @@ export function leaveAnyVehicle(ped: number | IPed, flags: number): void {
  * Hash: 0x7B1141C6
  */
 export function leaveVehicle(ped: number | IPed, vehicle: number | IVehicle, flags: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     TaskLeaveVehicle(_ped, _vehicle, flags);
 }
 
@@ -282,7 +282,7 @@ export function leaveVehicle(ped: number | IPed, vehicle: number | IVehicle, fla
  * Hash: 0x5AB552C6
  */
 export function playAnim(ped: number | IPed, animDictionary: string, animationName: string, blendInSpeed: number, blendOutSpeed: number, duration: number, flag: number, playbackRate: number, lockX: boolean, lockY: boolean, lockZ: boolean): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     TaskPlayAnim(_ped, animDictionary, animationName, blendInSpeed, blendOutSpeed, duration, flag, playbackRate, lockX, lockY, lockZ);
 }
 
@@ -295,7 +295,7 @@ export function playAnim(ped: number | IPed, animDictionary: string, animationNa
  * Hash: 0x3DDEB0E6
  */
 export function playAnimAdvanced(ped: number | IPed, animDictionary: string, animationName: string, pos: Vector3, rot: Vector3, blendInSpeed: number, blendOutSpeed: number, duration: number, flag: any, animTime: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     TaskPlayAnimAdvanced(_ped, animDictionary, animationName, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, blendInSpeed, blendOutSpeed, duration, flag, animTime, undefined, undefined);
 }
 
@@ -307,8 +307,8 @@ export function playAnimAdvanced(ped: number | IPed, animDictionary: string, ani
  * Hash: 0x8A632BD8
  */
 export function reactAndFleePed(ped: number | IPed, fleeTarget: number | IPed): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _fleeTarget = fleeTarget instanceof IPed ? fleeTarget.handle() : fleeTarget;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    const _fleeTarget = typeof fleeTarget == 'object' ? fleeTarget.handle() : fleeTarget;
     TaskReactAndFleePed(_ped, _fleeTarget);
 }
 
@@ -322,7 +322,7 @@ export function reactAndFleePed(ped: number | IPed, fleeTarget: number | IPed): 
  * Hash: 0x601C22E3
  */
 export function shootAtCoord(ped: number | IPed, pos: Vector3, duration: number, firingPattern: number | string): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
     TaskShootAtCoord(_ped, pos.x, pos.y, pos.z, duration, firingPattern);
 }
@@ -344,8 +344,8 @@ export function shootAtCoord(ped: number | IPed, pos: Vector3, duration: number,
  * Hash: 0xAC0631C9
  */
 export function shootAtEntity(entity: number | IEntity, target: number | IEntity, duration: number, firingPattern: number | string): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
-    const _target = target instanceof IEntity ? target.handle() : target;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
+    const _target = typeof target == 'object' ? target.handle() : target;
     if (typeof firingPattern === 'string') firingPattern = GetHashKey(firingPattern)
     TaskShootAtEntity(_entity, _target, duration, firingPattern);
 }
@@ -363,8 +363,8 @@ export function shootAtEntity(entity: number | IEntity, target: number | IEntity
  * Hash: 0x65D4A35D
  */
 export function warpPedIntoVehicle(ped: number | IPed, vehicle: number | IVehicle, seatIndex: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     TaskWarpPedIntoVehicle(_ped, _vehicle, seatIndex);
 }
 

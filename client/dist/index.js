@@ -1,4 +1,4 @@
-import { Vector3, IEntity } from '@risinglife/fivem-shared';
+import { IEntity, Vector3 } from '@risinglife/fivem-shared';
 import * as audio from './namespaces/audio';
 import * as entity from './namespaces/entity';
 import * as graphics from './namespaces/graphics';

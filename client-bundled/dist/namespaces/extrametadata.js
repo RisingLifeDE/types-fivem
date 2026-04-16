@@ -1,11 +1,10 @@
-import { IEntity, IPed } from '@risinglife/fivem-shared';
 /**
  * No comment provided
  *
  * Hash: 0x7796B21B76221BC5 | Since: 2612 | API-Set: unknown
  */
 export function doesCurrentPedComponentHaveRestrictionTag(ped, componentId, restrictionTagHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof restrictionTagHash === 'string')
         restrictionTagHash = GetHashKey(restrictionTagHash);
     return Citizen.invokeNative('0x7796B21B76221BC5', _ped, componentId, restrictionTagHash);
@@ -16,7 +15,7 @@ export function doesCurrentPedComponentHaveRestrictionTag(ped, componentId, rest
  * Hash: 0xD726BAB4554DA580 | Since: 2612 | API-Set: unknown
  */
 export function doesCurrentPedPropHaveRestrictionTag(ped, componentId, restrictionTagHash) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof restrictionTagHash === 'string')
         restrictionTagHash = GetHashKey(restrictionTagHash);
     return Citizen.invokeNative('0xD726BAB4554DA580', _ped, componentId, restrictionTagHash);
@@ -182,7 +181,7 @@ export function getForcedProp(componentHash, forcedPropIndex) {
  * Hash: 0x0368B3A838070348 | Since: 323 | API-Set: unknown
  */
 export function getHashNameForComponent(entity, componentId, drawableVariant, textureVariant) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetHashNameForComponent(_entity, componentId, drawableVariant, textureVariant);
 }
 /**
@@ -191,7 +190,7 @@ export function getHashNameForComponent(entity, componentId, drawableVariant, te
  * Hash: 0x5D6160275CAEC8DD | Since: 323 | API-Set: unknown
  */
 export function getHashNameForProp(entity, componentId, propIndex, propTextureIndex) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return GetHashNameForProp(_entity, componentId, propIndex, propTextureIndex);
 }
 /**

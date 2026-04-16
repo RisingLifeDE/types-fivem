@@ -1,4 +1,3 @@
-import { IEntity, IPed } from '@risinglife/fivem-shared';
 /**
  * No comment provided
  *
@@ -321,7 +320,7 @@ export function iplGroupSwapStart(iplName1, iplName2) {
  * Hash: 0x2DDFF3FB9075D747 | Since: 323
  */
 export function isEntityFocus(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityFocus(_entity);
 }
 /**
@@ -772,7 +771,7 @@ export function setDitchPoliceModels(toggle) {
  * Hash: 0x198F77705FA0931D | Since: 323
  */
 export function setFocusEntity(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetFocusEntity(_entity);
 }
 /**
@@ -901,7 +900,7 @@ export function setRenderHdOnly(toggle) {
  * Hash: 0x0811381EF5062FEC | Since: 323
  */
 export function setRestoreFocusEntity(p0) {
-    const _p0 = p0 instanceof IEntity ? p0.handle() : p0;
+    const _p0 = typeof p0 == 'object' ? p0.handle() : p0;
     Citizen.invokeNative('0x0811381EF5062FEC', _p0);
 }
 /**
@@ -1005,8 +1004,8 @@ export function shutdownCreatorBudget() {
  * Hash: 0xFAA23F2CBA159D67 | Since: 323
  */
 export function startPlayerSwitch(_from, to, flags, switchType) {
-    const __from = _from instanceof IPed ? _from.handle() : _from;
-    const _to = to instanceof IPed ? to.handle() : to;
+    const __from = typeof _from == 'object' ? _from.handle() : _from;
+    const _to = typeof to == 'object' ? to.handle() : to;
     StartPlayerSwitch(__from, _to, flags, switchType);
 }
 /**
@@ -1091,7 +1090,7 @@ export function suppressHdMapThisFrame() {
  * Hash: 0xAAB3200ED59016BC | Since: 323
  */
 export function switchToMultiFirstpart(ped, flags, switchType) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SwitchToMultiFirstpart(_ped, flags, switchType);
 }
 /**
@@ -1100,7 +1099,7 @@ export function switchToMultiFirstpart(ped, flags, switchType) {
  * Hash: 0xD8295AF639FD9CB8 | Since: 323
  */
 export function switchToMultiSecondpart(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SwitchToMultiSecondpart(_ped);
 }
 /**

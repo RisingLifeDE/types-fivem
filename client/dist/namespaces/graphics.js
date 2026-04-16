@@ -1,4 +1,4 @@
-import { Vector3, IEntity } from '@risinglife/fivem-shared';
+import { Vector3 } from '@risinglife/fivem-shared';
 /**
  * Loads a minimap overlay from a GFx file in the current resource.
  *
@@ -198,7 +198,7 @@ export function resetEntityDrawOutlineRenderTechnique() {
  * Hash: 0x76180407
  */
 export function setEntityDrawOutline(entity, enabled) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityDrawOutline(_entity, enabled);
 }
 /**

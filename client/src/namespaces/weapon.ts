@@ -16,7 +16,7 @@ export function getAccuracySpread(weaponHash: number | string): number {
  * Hash: 0x63ED2E7
  */
 export function getAnimationOverride(ped: number | IPed): number {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetWeaponAnimationOverride(_ped);
 }
 

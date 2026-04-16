@@ -52,7 +52,7 @@ export function networkBuyBackupGang(npcProvider: number): void {
  * Hash: 0x7B718E197453F2D9 | Since: 323
  */
 export function networkBuyBounty(amount: number, victim: number | string | IPlayer): void {
-    const _victim = victim instanceof IPlayer ? victim.playerId() : victim;
+    const _victim = typeof victim == 'object' ? victim.playerId() : victim;
     NetworkBuyBounty(amount, _victim, false, false, undefined);
 }
 
@@ -2457,7 +2457,7 @@ export function networkSpentMoveYacht(amount: number): void {
  * Hash: 0x876056684281655D | Since: 1493
  */
 export function networkSpentNightclubEntryFee(player: number | string | IPlayer, amount: number): void {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     NetworkSpentNightclubEntryFee(_player, amount, undefined, false, false);
 }
 

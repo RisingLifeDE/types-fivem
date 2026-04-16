@@ -1,4 +1,3 @@
-import { IPed, IPlayer, IVehicle } from '@risinglife/fivem-shared';
 /**
  * No comment provided
  *
@@ -823,7 +822,7 @@ export function playCheatApplied(cheat) {
  * Hash: 0x34B973047A2268B9 | Since: 323 | API-Set: unknown
  */
 export function playClothChange(p0) {
-    const _p0 = p0 instanceof IPed ? p0.handle() : p0;
+    const _p0 = typeof p0 == 'object' ? p0.handle() : p0;
     PlaystatsClothChange(_p0, undefined, undefined, undefined, undefined);
 }
 /**
@@ -1446,7 +1445,7 @@ export function playPimenuHideOptions() {
  * Hash: 0xBA739D6D5A05D6E7 | Since: 323 | API-Set: unknown
  */
 export function playPropChange(p0) {
-    const _p0 = p0 instanceof IPed ? p0.handle() : p0;
+    const _p0 = typeof p0 == 'object' ? p0.handle() : p0;
     PlaystatsPropChange(_p0, 0, 0, 0);
 }
 /**
@@ -1471,7 +1470,7 @@ export function playQuitMode() {
  * Hash: 0x9C375C315099DDE4 | Since: 323 | API-Set: unknown
  */
 export function playRaceCheckpoint(p0) {
-    const _p0 = p0 instanceof IVehicle ? p0.handle() : p0;
+    const _p0 = typeof p0 == 'object' ? p0.handle() : p0;
     PlaystatsRaceCheckpoint(_p0, undefined, 0, 0, undefined);
 }
 /**
@@ -1536,7 +1535,7 @@ export function playRobberyPrep() {
  * Hash: 0x121FB4DDDC2D5291 | Since: 323 | API-Set: unknown
  */
 export function playRosBet(amount, act, player, cm) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     PlaystatsRosBet(amount, act, _player, cm);
 }
 /**
@@ -2762,8 +2761,8 @@ export function playCreatorEnd() {
  * Hash: 0x01D8B04D02F1217F | Since: 3570 | API-Set: unknown
  */
 export function playDeathInfo(victimPed, killerPed, mentalState, revengeKill, victimKvK, killerKvK) {
-    const _victimPed = victimPed instanceof IPed ? victimPed.handle() : victimPed;
-    const _killerPed = killerPed instanceof IPed ? killerPed.handle() : killerPed;
+    const _victimPed = typeof victimPed == 'object' ? victimPed.handle() : victimPed;
+    const _killerPed = typeof killerPed == 'object' ? killerPed.handle() : killerPed;
     Citizen.invokeNative('0x01D8B04D02F1217F', _victimPed, _killerPed, mentalState, revengeKill, victimKvK, killerKvK);
 }
 /**

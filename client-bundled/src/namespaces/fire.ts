@@ -32,7 +32,7 @@ export function addExplosionWithUserVfx(pos: Vector3, explosionType: number, exp
  * Hash: 0x172AA1B624FA1013 | Since: 323 | API-Set: unknown
  */
 export function addOwnedExplosion(ped: number | IPed, pos: Vector3, explosionType: number, damageScale: number, isAudible: boolean, isInvisible: boolean, cameraShake: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     AddOwnedExplosion(_ped, pos.x, pos.y, pos.z, explosionType, damageScale, isAudible, isInvisible, cameraShake);
 }
 
@@ -80,7 +80,7 @@ export function getOwnerOfExplosionInSphere(explosionType: number, pos: Vector3,
  * Hash: 0x28D3FED7190D3A0B | Since: 323 | API-Set: unknown
  */
 export function isEntityOn(entity: number | IEntity): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityOnFire(_entity);
 }
 
@@ -145,7 +145,7 @@ export function setFlammabilityMultiplier(): void {
  * Hash: 0xF6A9D9708F6F23DF | Since: 323 | API-Set: unknown
  */
 export function startEntity(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StartEntityFire(_entity);
 }
 
@@ -168,7 +168,7 @@ export function startScript(pos: Vector3, maxChildren: number, isGasFire: boolea
  * Hash: 0x7F0DD2EBBB651AFF | Since: 323 | API-Set: unknown
  */
 export function stopEntity(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     StopEntityFire(_entity);
 }
 
@@ -205,7 +205,7 @@ export function getWaterCannonCoords(index: number): Vector3 {
  * Hash: 0x5241DB47A8B8AD54 | Since: 3570 | API-Set: unknown
  */
 export function networkExpectExplosionEventsForPlayer(expect: boolean, player: number | string | IPlayer): void {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     Citizen.invokeNative('0x5241DB47A8B8AD54', expect, _player);
 }
 

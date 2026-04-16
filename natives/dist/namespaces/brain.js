@@ -1,4 +1,3 @@
-import { IObject } from '@risinglife/fivem-shared';
 /**
  * `BRAIN::ADD_SCRIPT_TO_RANDOM_PED("pb_prostitute", ${s_f_y_hooker_01}, 100, 0);`
  *
@@ -37,7 +36,7 @@ export function enableScriptSet(brainSet) {
  * Hash: 0xCCBA154209823057 | Since: 323
  */
 export function isObjectWithinActivationRange(_object) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     return IsObjectWithinBrainActivationRange(__object);
 }
 /**

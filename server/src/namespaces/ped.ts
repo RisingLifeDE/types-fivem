@@ -31,7 +31,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0x70559AC7
  */
 export function addDecorationFromHashes(ped: number | IPed, collection: number | string, overlay: number | string): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof collection === 'string') collection = GetHashKey(collection)
     if (typeof overlay === 'string') overlay = GetHashKey(overlay)
     AddPedDecorationFromHashes(_ped, collection, overlay);
@@ -45,7 +45,7 @@ export function addDecorationFromHashes(ped: number | IPed, collection: number |
  * Hash: 0x2D23D743
  */
 export function clearProp(ped: number | IPed, propId: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     ClearPedProp(_ped, propId);
 }
 
@@ -57,7 +57,7 @@ export function clearProp(ped: number | IPed, propId: number): void {
  * Hash: 0xA635F451
  */
 export function clearSecondaryTask(ped: number | IPed): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     ClearPedSecondaryTask(_ped);
 }
 
@@ -83,7 +83,7 @@ export function create(pedType: number, modelHash: number | string, pos: Vector3
  * Hash: 0x3000F092
  */
 export function createInsideVehicle(vehicle: number | IVehicle, pedType: number, modelHash: number | string, seat: number, isNetwork: boolean, bScriptHostPed: boolean): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
     return CreatePedInsideVehicle(_vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed);
 }
@@ -108,7 +108,7 @@ export function getAlls(): number {
  * Hash: 0xB0237302
  */
 export function getCurrentWeapon(ped: number | IPed): number {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetCurrentPedWeapon(_ped);
 }
 
@@ -118,7 +118,7 @@ export function getCurrentWeapon(ped: number | IPed): number {
  * Hash: 0xF7C6792D
  */
 export function getLastInVehicleSeat(vehicle: number | IVehicle, seatIndex: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetLastPedInVehicleSeat(_vehicle, seatIndex);
 }
 
@@ -128,7 +128,7 @@ export function getLastInVehicleSeat(vehicle: number | IVehicle, seatIndex: numb
  * Hash: 0x2CE311A7
  */
 export function getArmour(ped: number | IPed): number {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedArmour(_ped);
 }
 
@@ -138,7 +138,7 @@ export function getArmour(ped: number | IPed): number {
  * Hash: 0x63458C27
  */
 export function getCauseOfDeath(ped: number | IPed): number {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedCauseOfDeath(_ped);
 }
 
@@ -148,7 +148,7 @@ export function getCauseOfDeath(ped: number | IPed): number {
  * Hash: 0xC182F76E
  */
 export function getDesiredHeading(ped: number | IPed): number {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedDesiredHeading(_ped);
 }
 
@@ -158,7 +158,7 @@ export function getDesiredHeading(ped: number | IPed): number {
  * Hash: 0x388FDE9A
  */
 export function getInVehicleSeat(vehicle: number | IVehicle, seatIndex: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetPedInVehicleSeat(_vehicle, seatIndex);
 }
 
@@ -168,7 +168,7 @@ export function getInVehicleSeat(vehicle: number | IVehicle, seatIndex: number):
  * Hash: 0xA45B6C8D
  */
 export function getMaxHealth(ped: number | IPed): number {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedMaxHealth(_ped);
 }
 
@@ -178,7 +178,7 @@ export function getMaxHealth(ped: number | IPed): number {
  * Hash: 0x354F283C
  */
 export function getRelationshipGroupHash(ped: number | IPed): number {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedRelationshipGroupHash(_ped);
 }
 
@@ -188,7 +188,7 @@ export function getRelationshipGroupHash(ped: number | IPed): number {
  * Hash: 0x84FE084
  */
 export function getScriptTaskCommand(ped: number | IPed): number {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedScriptTaskCommand(_ped);
 }
 
@@ -198,7 +198,7 @@ export function getScriptTaskCommand(ped: number | IPed): number {
  * Hash: 0x44B0E5E2
  */
 export function getScriptTaskStage(ped: number | IPed): number {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedScriptTaskStage(_ped);
 }
 
@@ -208,7 +208,7 @@ export function getScriptTaskStage(ped: number | IPed): number {
  * Hash: 0x535DB43F
  */
 export function getSourceOfDamage(ped: number | IPed): number {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedSourceOfDamage(_ped);
 }
 
@@ -218,7 +218,7 @@ export function getSourceOfDamage(ped: number | IPed): number {
  * Hash: 0x84ADF9EB
  */
 export function getSourceOfDeath(ped: number | IPed): number {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedSourceOfDeath(_ped);
 }
 
@@ -229,7 +229,7 @@ export function getSourceOfDeath(ped: number | IPed): number {
  * Hash: 0x7F4563D3
  */
 export function getSpecificTaskType(ped: number | IPed, index: number): number {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedSpecificTaskType(_ped, index);
 }
 
@@ -239,7 +239,7 @@ export function getSpecificTaskType(ped: number | IPed, index: number): number {
  * Hash: 0x40321B83
  */
 export function getStealthMovement(ped: number | IPed): boolean {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedStealthMovement(_ped);
 }
 
@@ -251,7 +251,7 @@ export function getStealthMovement(ped: number | IPed): boolean {
  * Hash: 0xD240123E
  */
 export function getSelectedWeapon(ped: number | IPed): number {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetSelectedPedWeapon(_ped);
 }
 
@@ -261,7 +261,7 @@ export function getSelectedWeapon(ped: number | IPed): number {
  * Hash: 0x25865633
  */
 export function isHandcuffed(ped: number | IPed): boolean {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return IsPedHandcuffed(_ped);
 }
 
@@ -271,7 +271,7 @@ export function isHandcuffed(ped: number | IPed): boolean {
  * Hash: 0xC833BBE1
  */
 export function isRagdoll(ped: number | IPed): boolean {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return IsPedRagdoll(_ped);
 }
 
@@ -281,7 +281,7 @@ export function isRagdoll(ped: number | IPed): boolean {
  * Hash: 0xEFEED13C
  */
 export function isStrafing(ped: number | IPed): boolean {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return IsPedStrafing(_ped);
 }
 
@@ -291,7 +291,7 @@ export function isStrafing(ped: number | IPed): boolean {
  * Hash: 0x5AE7EDA2
  */
 export function isUsingActionMode(ped: number | IPed): boolean {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return IsPedUsingActionMode(_ped);
 }
 
@@ -303,7 +303,7 @@ export function isUsingActionMode(ped: number | IPed): boolean {
  * Hash: 0xB8278882
  */
 export function setCurrentWeapon(ped: number | IPed, weaponHash: number | string, bForceInHand: boolean): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     SetCurrentPedWeapon(_ped, weaponHash, bForceInHand);
 }
@@ -318,7 +318,7 @@ export function setCurrentWeapon(ped: number | IPed, weaponHash: number | string
  * Hash: 0xBF90DF1A
  */
 export function setAmmo(ped: number | IPed, weaponHash: number | string, ammo: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
     SetPedAmmo(_ped, weaponHash, ammo);
 }
@@ -335,7 +335,7 @@ export function setAmmo(ped: number | IPed, weaponHash: number | string, ammo: n
  * Hash: 0x4E3A0CC4
  */
 export function setArmour(ped: number | IPed, amount: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedArmour(_ped, amount);
 }
 
@@ -347,7 +347,7 @@ export function setArmour(ped: number | IPed, amount: number): void {
  * Hash: 0xCF1384C4
  */
 export function setCanRagdoll(ped: number | IPed, toggle: boolean): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedCanRagdoll(_ped, toggle);
 }
 
@@ -396,7 +396,7 @@ export function setCanRagdoll(ped: number | IPed, toggle: boolean): void {
  * Hash: 0xD4F7B05C
  */
 export function setComponentVariation(ped: number | IPed, componentId: number, drawableId: number, textureId: number, paletteId: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedComponentVariation(_ped, componentId, drawableId, textureId, paletteId);
 }
 
@@ -876,7 +876,7 @@ export function setComponentVariation(ped: number | IPed, componentId: number, d
  * Hash: 0x9CFBE10D
  */
 export function setConfigFlag(ped: number | IPed, flagId: number, value: boolean): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedConfigFlag(_ped, flagId, value);
 }
 
@@ -890,7 +890,7 @@ export function setConfigFlag(ped: number | IPed, flagId: number, value: boolean
  * Hash: 0xC866A984
  */
 export function setDefaultComponentVariation(ped: number | IPed): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedDefaultComponentVariation(_ped);
 }
 
@@ -906,7 +906,7 @@ export function setDefaultComponentVariation(ped: number | IPed): void {
  * Hash: 0xA23FE32C
  */
 export function setHairTint(ped: number | IPed, colorID: number, highlightColorID: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedHairTint(_ped, colorID, highlightColorID);
 }
 
@@ -926,7 +926,7 @@ export function setHairTint(ped: number | IPed, colorID: number, highlightColorI
  * Hash: 0x60746B88
  */
 export function setHeadBlendData(ped: number | IPed, shapeFirstID: number, shapeSecondID: number, shapeThirdID: number, skinFirstID: number, skinSecondID: number, skinThirdID: number, shapeMix: number, skinMix: number, thirdMix: number, isParent: boolean): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedHeadBlendData(_ped, shapeFirstID, shapeSecondID, shapeThirdID, skinFirstID, skinSecondID, skinThirdID, shapeMix, skinMix, thirdMix, isParent);
 }
 
@@ -957,7 +957,7 @@ export function setHeadBlendData(ped: number | IPed, shapeFirstID: number, shape
  * Hash: 0xD28DBA90
  */
 export function setHeadOverlay(ped: number | IPed, overlayID: number, index: number, opacity: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedHeadOverlay(_ped, overlayID, index, opacity);
 }
 
@@ -969,8 +969,8 @@ export function setHeadOverlay(ped: number | IPed, overlayID: number, index: num
  * Hash: 0x7500C79
  */
 export function setIntoVehicle(ped: number | IPed, vehicle: number | IVehicle, seatIndex: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetPedIntoVehicle(_ped, _vehicle, seatIndex);
 }
 
@@ -1011,7 +1011,7 @@ export function setIntoVehicle(ped: number | IPed, vehicle: number | IVehicle, s
  * Hash: 0x829F2E2
  */
 export function setPropIndex(ped: number | IPed, componentId: number, drawableId: number, textureId: number, attach: boolean): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedPropIndex(_ped, componentId, drawableId, textureId, attach);
 }
 
@@ -1025,7 +1025,7 @@ export function setPropIndex(ped: number | IPed, componentId: number, drawableId
  * Hash: 0x4111BA46
  */
 export function setRandomComponentVariation(ped: number | IPed): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedRandomComponentVariation(_ped, 0);
 }
 
@@ -1037,7 +1037,7 @@ export function setRandomComponentVariation(ped: number | IPed): void {
  * Hash: 0xE3318E0E
  */
 export function setRandomProps(ped: number | IPed): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedRandomProps(_ped);
 }
 
@@ -1050,7 +1050,7 @@ export function setRandomProps(ped: number | IPed): void {
  * Hash: 0xCFF6FF66
  */
 export function setResetFlag(ped: number | IPed, flagId: number, doReset: boolean): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedResetFlag(_ped, flagId, doReset);
 }
 
@@ -1068,7 +1068,7 @@ export function setResetFlag(ped: number | IPed, flagId: number, doReset: boolea
  * Hash: 0x83CB5052
  */
 export function setToRagdoll(ped: number | IPed, minTime: number, maxTime: number, ragdollType: number, bAbortIfInjured: boolean, bAbortIfDead: boolean, bForceScriptControl: boolean): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedToRagdoll(_ped, minTime, maxTime, ragdollType, bAbortIfInjured, bAbortIfDead, bForceScriptControl);
 }
 
@@ -1100,7 +1100,7 @@ export function setToRagdoll(ped: number | IPed, minTime: number, maxTime: numbe
  * Hash: 0xFA12E286
  */
 export function setToRagdollWithFall(ped: number | IPed, minTime: number, maxTime: number, nFallType: number, dirX: number, dirY: number, dirZ: number, fGroundHeight: number, grab1X: number, grab1Y: number, grab1Z: number, grab2X: number, grab2Y: number, grab2Z: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedToRagdollWithFall(_ped, minTime, maxTime, nFallType, dirX, dirY, dirZ, fGroundHeight, grab1X, grab1Y, grab1Z, grab2X, grab2Y, grab2Z);
 }
 
@@ -1144,7 +1144,7 @@ export function setToRagdollWithFall(ped: number | IPed, minTime: number, maxTim
  * Hash: 0xEC09DB1B
  */
 export function setEyeColor(ped: number | IPed, index: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedEyeColor(_ped, index);
 }
 
@@ -1181,7 +1181,7 @@ export function setEyeColor(ped: number | IPed, index: number): void {
  * Hash: 0x6C8D4458
  */
 export function setFaceFeature(ped: number | IPed, index: number, scale: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedFaceFeature(_ped, index, scale);
 }
 
@@ -1199,7 +1199,7 @@ export function setFaceFeature(ped: number | IPed, index: number, scale: number)
  * Hash: 0x78935A27
  */
 export function setHeadOverlayColor(ped: number | IPed, overlayID: number, colorType: number, colorID: number, secondColorID: number): void {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedHeadOverlayColor(_ped, overlayID, colorType, colorID, secondColorID);
 }
 

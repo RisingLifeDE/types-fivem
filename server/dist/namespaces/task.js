@@ -1,4 +1,3 @@
-import { IEntity, IPed, IVehicle } from '@risinglife/fivem-shared';
 /**
  * Clear a ped's tasks. Stop animations and other tasks created by scripts.
  *
@@ -7,7 +6,7 @@ import { IEntity, IPed, IVehicle } from '@risinglife/fivem-shared';
  * Hash: 0xDE3316AB
  */
 export function clearPeds(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     ClearPedTasks(_ped);
 }
 /**
@@ -18,7 +17,7 @@ export function clearPeds(ped) {
  * Hash: 0xBC045625
  */
 export function clearPedsImmediately(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     ClearPedTasksImmediately(_ped);
 }
 /**
@@ -33,8 +32,8 @@ export function clearPedsImmediately(ped) {
  * Hash: 0xCB0D8932
  */
 export function combatPed(ped, targetPed) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    const _targetPed = typeof targetPed == 'object' ? targetPed.handle() : targetPed;
     TaskCombatPed(_ped, _targetPed, 0, 0);
 }
 /**
@@ -52,9 +51,9 @@ export function combatPed(ped, targetPed) {
  * Hash: 0x2B84D1C4
  */
 export function driveBy(driverPed, targetPed, targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, firingPattern) {
-    const _driverPed = driverPed instanceof IPed ? driverPed.handle() : driverPed;
-    const _targetPed = targetPed instanceof IPed ? targetPed.handle() : targetPed;
-    const _targetVehicle = targetVehicle instanceof IVehicle ? targetVehicle.handle() : targetVehicle;
+    const _driverPed = typeof driverPed == 'object' ? driverPed.handle() : driverPed;
+    const _targetPed = typeof targetPed == 'object' ? targetPed.handle() : targetPed;
+    const _targetVehicle = typeof targetVehicle == 'object' ? targetVehicle.handle() : targetVehicle;
     if (typeof firingPattern === 'string')
         firingPattern = GetHashKey(firingPattern);
     TaskDriveBy(_driverPed, _targetPed, _targetVehicle, targetX, targetY, targetZ, distanceToShoot, pedAccuracy, false, firingPattern);
@@ -71,8 +70,8 @@ export function driveBy(driverPed, targetPed, targetVehicle, targetX, targetY, t
  * Hash: 0xB8689B4E
  */
 export function enterVehicle(ped, vehicle, timeout, seatIndex, speed, flag) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     TaskEnterVehicle(_ped, _vehicle, timeout, seatIndex, speed, flag, undefined);
 }
 /**
@@ -83,7 +82,7 @@ export function enterVehicle(ped, vehicle, timeout, seatIndex, speed, flag) {
  * Hash: 0xC1971F30
  */
 export function everyoneLeaveVehicle(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     TaskEveryoneLeaveVehicle(_vehicle);
 }
 /**
@@ -94,7 +93,7 @@ export function everyoneLeaveVehicle(vehicle) {
  * Hash: 0x80A9E7A7
  */
 export function goStraightToCoord(ped, pos, speed, timeout, targetHeading, distanceToSlide) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     TaskGoStraightToCoord(_ped, pos.x, pos.y, pos.z, speed, timeout, targetHeading, distanceToSlide);
 }
 /**
@@ -155,8 +154,8 @@ export function goStraightToCoord(ped, pos, speed, timeout, targetHeading, dista
  * Hash: 0xF91DF93B
  */
 export function goToCoordAnyMeans(ped, pos, fMoveBlendRatio, vehicle, bUseLongRangeVehiclePathing, drivingFlags, fMaxRangeToShootTargets) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     TaskGoToCoordAnyMeans(_ped, pos.x, pos.y, pos.z, fMoveBlendRatio, _vehicle, bUseLongRangeVehiclePathing, drivingFlags, fMaxRangeToShootTargets);
 }
 /**
@@ -172,8 +171,8 @@ export function goToCoordAnyMeans(ped, pos, fMoveBlendRatio, vehicle, bUseLongRa
  * Hash: 0x374827C2
  */
 export function goToEntity(entity, target, duration, distance, speed) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
-    const _target = target instanceof IEntity ? target.handle() : target;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
+    const _target = typeof target == 'object' ? target.handle() : target;
     TaskGoToEntity(_entity, _target, duration, distance, speed, 0, 0);
 }
 /**
@@ -188,8 +187,8 @@ export function goToEntity(entity, target, duration, distance, speed) {
  * Hash: 0x8DCC19C5
  */
 export function handsUp(ped, duration, facingPed) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _facingPed = facingPed instanceof IPed ? facingPed.handle() : facingPed;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    const _facingPed = typeof facingPed == 'object' ? facingPed.handle() : facingPed;
     TaskHandsUp(_ped, duration, _facingPed, 0, false);
 }
 /**
@@ -200,7 +199,7 @@ export function handsUp(ped, duration, facingPed) {
  * Hash: 0xDBDD79FA
  */
 export function leaveAnyVehicle(ped, flags) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     TaskLeaveAnyVehicle(_ped, 0, flags);
 }
 /**
@@ -221,8 +220,8 @@ export function leaveAnyVehicle(ped, flags) {
  * Hash: 0x7B1141C6
  */
 export function leaveVehicle(ped, vehicle, flags) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     TaskLeaveVehicle(_ped, _vehicle, flags);
 }
 /**
@@ -270,7 +269,7 @@ export function leaveVehicle(ped, vehicle, flags) {
  * Hash: 0x5AB552C6
  */
 export function playAnim(ped, animDictionary, animationName, blendInSpeed, blendOutSpeed, duration, flag, playbackRate, lockX, lockY, lockZ) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     TaskPlayAnim(_ped, animDictionary, animationName, blendInSpeed, blendOutSpeed, duration, flag, playbackRate, lockX, lockY, lockZ);
 }
 /**
@@ -282,7 +281,7 @@ export function playAnim(ped, animDictionary, animationName, blendInSpeed, blend
  * Hash: 0x3DDEB0E6
  */
 export function playAnimAdvanced(ped, animDictionary, animationName, pos, rot, blendInSpeed, blendOutSpeed, duration, flag, animTime) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     TaskPlayAnimAdvanced(_ped, animDictionary, animationName, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, blendInSpeed, blendOutSpeed, duration, flag, animTime, undefined, undefined);
 }
 /**
@@ -293,8 +292,8 @@ export function playAnimAdvanced(ped, animDictionary, animationName, pos, rot, b
  * Hash: 0x8A632BD8
  */
 export function reactAndFleePed(ped, fleeTarget) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _fleeTarget = fleeTarget instanceof IPed ? fleeTarget.handle() : fleeTarget;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    const _fleeTarget = typeof fleeTarget == 'object' ? fleeTarget.handle() : fleeTarget;
     TaskReactAndFleePed(_ped, _fleeTarget);
 }
 /**
@@ -307,7 +306,7 @@ export function reactAndFleePed(ped, fleeTarget) {
  * Hash: 0x601C22E3
  */
 export function shootAtCoord(ped, pos, duration, firingPattern) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof firingPattern === 'string')
         firingPattern = GetHashKey(firingPattern);
     TaskShootAtCoord(_ped, pos.x, pos.y, pos.z, duration, firingPattern);
@@ -329,8 +328,8 @@ export function shootAtCoord(ped, pos, duration, firingPattern) {
  * Hash: 0xAC0631C9
  */
 export function shootAtEntity(entity, target, duration, firingPattern) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
-    const _target = target instanceof IEntity ? target.handle() : target;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
+    const _target = typeof target == 'object' ? target.handle() : target;
     if (typeof firingPattern === 'string')
         firingPattern = GetHashKey(firingPattern);
     TaskShootAtEntity(_entity, _target, duration, firingPattern);
@@ -348,7 +347,7 @@ export function shootAtEntity(entity, target, duration, firingPattern) {
  * Hash: 0x65D4A35D
  */
 export function warpPedIntoVehicle(ped, vehicle, seatIndex) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     TaskWarpPedIntoVehicle(_ped, _vehicle, seatIndex);
 }

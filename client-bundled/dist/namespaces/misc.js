@@ -1,4 +1,4 @@
-import { Vector3, IEntity, IPed, IPlayer, IObject } from '@risinglife/fivem-shared';
+import { Vector3 } from '@risinglife/fivem-shared';
 /**
  * Adds the given model name hash to the list of valid models for the player ped's parachute.
  *
@@ -628,7 +628,7 @@ export function experimentalLoadCloneCreate(data, objectId, tree) {
  * Hash: 0x6BC189AC | Since: unknown | API-Set: client
  */
 export function experimentalLoadCloneSync(entity, data) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     ExperimentalLoadCloneSync(_entity, data);
 }
 /**
@@ -637,7 +637,7 @@ export function experimentalLoadCloneSync(entity, data) {
  * Hash: 0x9D65CAD2 | Since: unknown | API-Set: client
  */
 export function experimentalSaveCloneCreate(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return ExperimentalSaveCloneCreate(_entity);
 }
 /**
@@ -646,7 +646,7 @@ export function experimentalSaveCloneCreate(entity) {
  * Hash: 0x38D19210 | Since: unknown | API-Set: client
  */
 export function experimentalSaveCloneSync(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return ExperimentalSaveCloneSync(_entity);
 }
 /**
@@ -1007,7 +1007,7 @@ export function executeCommand(commandString) {
  * Hash: 0xD70C3BCA | Since: unknown | API-Set: shared
  */
 export function formatStackTrace(traceData) {
-    const _traceData = traceData instanceof IObject ? traceData.handle() : traceData;
+    const _traceData = typeof traceData == 'object' ? traceData.handle() : traceData;
     return FormatStackTrace(_traceData);
 }
 /**
@@ -1775,7 +1775,7 @@ export function createIncident(dispatchService, pos, numUnits, radius) {
  * Hash: 0x05983472F0494E60 | Since: 323 | API-Set: unknown
  */
 export function createIncidentWithEntity(dispatchService, ped, numUnits, radius) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return CreateIncidentWithEntity(dispatchService, _ped, numUnits, radius, undefined, undefined);
 }
 /**
@@ -1930,7 +1930,7 @@ export function enableStuntJumpSet() {
  * Hash: 0x28A04B411933F8A6 | Since: 323 | API-Set: unknown
  */
 export function enableTennisMode(ped, toggle) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     EnableTennisMode(_ped, toggle, false);
 }
 /**
@@ -2093,7 +2093,7 @@ export function getCoordsOfProjectileTypeInArea(x1, y1, z1, x2, y2, z2, projecti
  * Hash: 0xDFB4138EEFED7B81 | Since: 323 | API-Set: unknown
  */
 export function getCoordsOfProjectileTypeWithinDistance(ped, weaponHash, distance) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     return GetCoordsOfProjectileTypeWithinDistance(_ped, weaponHash, distance, false);
@@ -2179,7 +2179,7 @@ export function getGroundZExcludingObjectsFor3dCoord(pos) {
  * Hash: 0xC906A7DAB05C8D2B | Since: 323 | API-Set: unknown
  */
 export function getGroundZFor3dCoord(pos, ignoreWater) {
-    return GetGroundZFor_3dCoord(pos.x, pos.y, pos.z, ignoreWater, false);
+    return GetGroundZFor3dCoord(pos.x, pos.y, pos.z, ignoreWater, false);
 }
 /**
  * This native converts its past string to hash. It is hashed using jenkins one at a time method.
@@ -2322,7 +2322,7 @@ export function getProfileSetting(profileSetting) {
  * Hash: 0x82FDE6A57EE4EE44 | Since: 323 | API-Set: unknown
  */
 export function getProjectileOfProjectileTypeWithinDistance(ped, weaponHash, distance) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     return GetProjectileNearPed(_ped, weaponHash, distance, false);
@@ -2469,7 +2469,7 @@ export function getSystemTimeStep() {
  * Hash: 0x19BFED045C647C49 | Since: 323 | API-Set: unknown
  */
 export function getTennisSwingAnimCanBeInterrupted(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return Citizen.invokeNative('0x19BFED045C647C49', _ped);
 }
 /**
@@ -2478,7 +2478,7 @@ export function getTennisSwingAnimCanBeInterrupted(ped) {
  * Hash: 0x17DF68D720AA77F8 | Since: 323 | API-Set: unknown
  */
 export function getTennisSwingAnimComplete(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetTennisSwingAnimComplete(_ped);
 }
 /**
@@ -2487,7 +2487,7 @@ export function getTennisSwingAnimComplete(ped) {
  * Hash: 0xE95B0C7D5BA3B96B | Since: 323 | API-Set: unknown
  */
 export function getTennisSwingAnimSwung(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return Citizen.invokeNative('0xE95B0C7D5BA3B96B', _ped);
 }
 /**
@@ -2799,7 +2799,7 @@ export function isPopMultiplierAreaNetworked(id) {
  * Hash: 0xADCDE75E1C60F32D | Since: 323 | API-Set: unknown
  */
 export function isPositionOccupied(pos, range, checkVehicles, checkPeds, ignoreEntity) {
-    const _ignoreEntity = ignoreEntity instanceof IEntity ? ignoreEntity.handle() : ignoreEntity;
+    const _ignoreEntity = typeof ignoreEntity == 'object' ? ignoreEntity.handle() : ignoreEntity;
     return IsPositionOccupied(pos.x, pos.y, pos.z, range, false, checkVehicles, checkPeds, false, false, _ignoreEntity, false);
 }
 /**
@@ -2943,7 +2943,7 @@ export function isStuntJumpMessageShowing() {
  * Hash: 0x5D5479D115290C3F | Since: 323 | API-Set: unknown
  */
 export function isTennisMode(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return IsTennisMode(_ped);
 }
 /**
@@ -3054,7 +3054,7 @@ export function pauseDeathArrestRestart(toggle) {
  * Hash: 0x8FA9C42FC5D7C64B | Since: 323 | API-Set: unknown
  */
 export function playTennisDiveAnim(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     PlayTennisDiveAnim(_ped, 0, 0, 0, 0, false);
 }
 /**
@@ -3063,7 +3063,7 @@ export function playTennisDiveAnim(ped) {
  * Hash: 0xE266ED23311F24D4 | Since: 323 | API-Set: unknown
  */
 export function playTennisSwingAnim(ped, animDict, animName) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     PlayTennisSwingAnim(_ped, animDict, animName, 0, 0, false);
 }
 /**
@@ -3339,7 +3339,7 @@ export function saveEndUserBenchmark() {
  * Hash: 0x8EF5573A1F801A5C | Since: 323 | API-Set: unknown
  */
 export function scriptRaceGetPlayerSplitTime(player) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     return ScriptRaceGetPlayerSplitTime(_player);
 }
 /**
@@ -3356,7 +3356,7 @@ export function scriptRaceInit() {
  * Hash: 0x1BB299305C3E8C13 | Since: 323 | API-Set: unknown
  */
 export function scriptRacePlayerHitCheckpoint(player) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     ScriptRacePlayerHitCheckpoint(_player, undefined, undefined, undefined);
 }
 /**
@@ -3373,7 +3373,7 @@ export function scriptRaceShutdown() {
  * Hash: 0x438822C279B73B93 | Since: 573 | API-Set: unknown
  */
 export function setBeastJumpThisFrame(player) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     SetBeastModeActive(_player);
 }
 /**
@@ -3522,7 +3522,7 @@ export function setDispatchTimeBetweenSpawnAttemptsMultiplier() {
  * Hash: 0xA66C71C98D5F2CFB | Since: 323 | API-Set: unknown
  */
 export function setExplosiveAmmoThisFrame(player) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     SetExplosiveAmmoThisFrame(_player);
 }
 /**
@@ -3531,7 +3531,7 @@ export function setExplosiveAmmoThisFrame(player) {
  * Hash: 0xFF1BED81BFDC0FE0 | Since: 323 | API-Set: unknown
  */
 export function setExplosiveMeleeThisFrame(player) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     SetExplosiveMeleeThisFrame(_player);
 }
 /**
@@ -3582,7 +3582,7 @@ export function setFakeWantedLevel(fakeWantedLevel) {
  * Hash: 0x11879CDD803D30F4 | Since: 323 | API-Set: unknown
  */
 export function setFireAmmoThisFrame(player) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     SetFireAmmoThisFrame(_player);
 }
 /**
@@ -3591,7 +3591,7 @@ export function setFireAmmoThisFrame(player) {
  * Hash: 0xA1183BCFEE0F93D1 | Since: 1180 | API-Set: unknown
  */
 export function setForcedJumpThisFrame(player) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     SetForcePlayerToJump(_player);
 }
 /**
@@ -3802,7 +3802,7 @@ export function setStuntJumpsCanTrigger(toggle) {
  * Hash: 0x57FFF03E423A4C0B | Since: 323 | API-Set: unknown
  */
 export function setSuperJumpThisFrame(player) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     SetSuperJumpThisFrame(_player);
 }
 /**
@@ -3815,7 +3815,7 @@ export function setSuperJumpThisFrame(player) {
  * Hash: 0x54F157E0336A3822 | Since: 323 | API-Set: unknown
  */
 export function setTennisMoveNetworkSignalFloat(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     Citizen.invokeNative('0x54F157E0336A3822', _ped, undefined, 0);
 }
 /**
@@ -3979,7 +3979,7 @@ export function setWindSpeed(speed) {
  * Hash: 0x867654CBC7606F2C | Since: 323 | API-Set: unknown
  */
 export function shootSingleBulletBetweenCoords(x1, y1, z1, x2, y2, z2, damage, weaponHash, ownerPed, isAudible, isInvisible, speed) {
-    const _ownerPed = ownerPed instanceof IPed ? ownerPed.handle() : ownerPed;
+    const _ownerPed = typeof ownerPed == 'object' ? ownerPed.handle() : ownerPed;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     ShootSingleBulletBetweenCoords(x1, y1, z1, x2, y2, z2, damage, false, weaponHash, _ownerPed, isAudible, isInvisible, speed);
@@ -3990,8 +3990,8 @@ export function shootSingleBulletBetweenCoords(x1, y1, z1, x2, y2, z2, damage, w
  * Hash: 0xE3A7742E0B7A2F8B | Since: 323 | API-Set: unknown
  */
 export function shootSingleBulletBetweenCoordsIgnoreEntity(x1, y1, z1, x2, y2, z2, damage, weaponHash, ownerPed, isAudible, isInvisible, speed, entity) {
-    const _ownerPed = ownerPed instanceof IPed ? ownerPed.handle() : ownerPed;
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _ownerPed = typeof ownerPed == 'object' ? ownerPed.handle() : ownerPed;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     ShootSingleBulletBetweenCoordsIgnoreEntity(x1, y1, z1, x2, y2, z2, damage, false, weaponHash, _ownerPed, isAudible, isInvisible, speed, _entity, undefined);
@@ -4003,9 +4003,9 @@ export function shootSingleBulletBetweenCoordsIgnoreEntity(x1, y1, z1, x2, y2, z
  * Hash: 0xBFE5756E7407064A | Since: 323 | API-Set: unknown
  */
 export function shootSingleBulletBetweenCoordsIgnoreEntityNew(x1, y1, z1, x2, y2, z2, damage, weaponHash, ownerPed, isAudible, isInvisible, speed, entity, targetEntity) {
-    const _ownerPed = ownerPed instanceof IPed ? ownerPed.handle() : ownerPed;
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
-    const _targetEntity = targetEntity instanceof IEntity ? targetEntity.handle() : targetEntity;
+    const _ownerPed = typeof ownerPed == 'object' ? ownerPed.handle() : ownerPed;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
+    const _targetEntity = typeof targetEntity == 'object' ? targetEntity.handle() : targetEntity;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
     ShootSingleBulletBetweenCoordsIgnoreEntityNew(x1, y1, z1, x2, y2, z2, damage, false, weaponHash, _ownerPed, isAudible, isInvisible, speed, _entity, false, false, _targetEntity, false, undefined, undefined, undefined);

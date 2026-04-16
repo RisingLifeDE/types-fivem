@@ -40,7 +40,7 @@ export function enableScriptSet(brainSet: number): void {
  * Hash: 0xCCBA154209823057 | Since: 323
  */
 export function isObjectWithinActivationRange(_object: number | IObject): boolean {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     return IsObjectWithinBrainActivationRange(__object);
 }
 

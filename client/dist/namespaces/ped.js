@@ -1,11 +1,10 @@
-import { IPed } from '@risinglife/fivem-shared';
 /**
  * An analogue of [GET_NUMBER_OF_PED_DRAWABLE_VARIATIONS](#\_0x27561561732A7842) that returns number of drawable variations inside a single collection instead of the total number across all collections.
  *
  * Hash: 0x310D0271
  */
 export function getNumberOfCollectionDrawableVariations(ped, componentId, collection) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetNumberOfPedCollectionDrawableVariations(_ped, componentId, collection);
 }
 /**
@@ -14,7 +13,7 @@ export function getNumberOfCollectionDrawableVariations(ped, componentId, collec
  * Hash: 0x3B6A13E1
  */
 export function getNumberOfCollectionPropDrawableVariations(ped, anchorPoint, collection) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetNumberOfPedCollectionPropDrawableVariations(_ped, anchorPoint, collection);
 }
 /**
@@ -23,7 +22,7 @@ export function getNumberOfCollectionPropDrawableVariations(ped, anchorPoint, co
  * Hash: 0x75CAF9CC
  */
 export function getNumberOfCollectionPropTextureVariations(ped, anchorPoint, collection, propIndex) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetNumberOfPedCollectionPropTextureVariations(_ped, anchorPoint, collection, propIndex);
 }
 /**
@@ -32,7 +31,7 @@ export function getNumberOfCollectionPropTextureVariations(ped, anchorPoint, col
  * Hash: 0xD2C15D7
  */
 export function getNumberOfCollectionTextureVariations(ped, componentId, collection, drawableId) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetNumberOfPedCollectionTextureVariations(_ped, componentId, collection, drawableId);
 }
 /**
@@ -45,7 +44,7 @@ export function getNumberOfCollectionTextureVariations(ped, componentId, collect
  * Hash: 0x45946359
  */
 export function getCollectionsCount(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedCollectionsCount(_ped);
 }
 /**
@@ -54,7 +53,7 @@ export function getCollectionsCount(ped) {
  * Hash: 0x94EB1FE4
  */
 export function getCollectionLocalIndexFromDrawable(ped, componentId, drawableId) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedCollectionLocalIndexFromDrawable(_ped, componentId, drawableId);
 }
 /**
@@ -63,7 +62,7 @@ export function getCollectionLocalIndexFromDrawable(ped, componentId, drawableId
  * Hash: 0xFBDB885F
  */
 export function getCollectionLocalIndexFromProp(ped, anchorPoint, propIndex) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedCollectionLocalIndexFromProp(_ped, anchorPoint, propIndex);
 }
 /**
@@ -76,7 +75,7 @@ export function getCollectionLocalIndexFromProp(ped, anchorPoint, propIndex) {
  * Hash: 0xFED5D83A
  */
 export function getCollectionName(ped, index) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedCollectionName(_ped, index);
 }
 /**
@@ -85,7 +84,7 @@ export function getCollectionName(ped, index) {
  * Hash: 0xD6BBA48B
  */
 export function getCollectionNameFromDrawable(ped, componentId, drawableId) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedCollectionNameFromDrawable(_ped, componentId, drawableId);
 }
 /**
@@ -94,7 +93,7 @@ export function getCollectionNameFromDrawable(ped, componentId, drawableId) {
  * Hash: 0x8ED0C17
  */
 export function getCollectionNameFromProp(ped, anchorPoint, propIndex) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedCollectionNameFromProp(_ped, anchorPoint, propIndex);
 }
 /**
@@ -111,7 +110,7 @@ export function getCollectionNameFromProp(ped, anchorPoint, propIndex) {
  * Hash: 0x7CCE1163
  */
 export function getDecorations(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedDecorations(_ped);
 }
 /**
@@ -132,7 +131,7 @@ export function getDensityMultiplier() {
  * Hash: 0x280F1FC3
  */
 export function getDrawableGlobalIndexFromCollection(ped, componentId, collection, drawableId) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedDrawableGlobalIndexFromCollection(_ped, componentId, collection, drawableId);
 }
 /**
@@ -141,7 +140,7 @@ export function getDrawableGlobalIndexFromCollection(ped, componentId, collectio
  * Hash: 0x9970386F
  */
 export function getDrawableVariationCollectionLocalIndex(ped, componentId) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedDrawableVariationCollectionLocalIndex(_ped, componentId);
 }
 /**
@@ -152,7 +151,7 @@ export function getDrawableVariationCollectionLocalIndex(ped, componentId) {
  * Hash: 0xBCE0AB63
  */
 export function getDrawableVariationCollectionName(ped, componentId) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedDrawableVariationCollectionName(_ped, componentId);
 }
 /**
@@ -161,7 +160,7 @@ export function getDrawableVariationCollectionName(ped, componentId) {
  * Hash: 0xA47B860F
  */
 export function getEyeColor(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedEyeColor(_ped);
 }
 /**
@@ -170,7 +169,7 @@ export function getEyeColor(ped) {
  * Hash: 0xBA352ADD
  */
 export function getFaceFeature(ped, index) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedFaceFeature(_ped, index);
 }
 /**
@@ -179,7 +178,7 @@ export function getFaceFeature(ped, index) {
  * Hash: 0xA3EA2893
  */
 export function getHairColor(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedHairColor(_ped);
 }
 /**
@@ -188,7 +187,7 @@ export function getHairColor(ped) {
  * Hash: 0x4B087305
  */
 export function getHairHighlightColor(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedHairHighlightColor(_ped);
 }
 /**
@@ -197,7 +196,7 @@ export function getHairHighlightColor(ped) {
  * Hash: 0xC46EE605
  */
 export function getHeadOverlayData(ped, index) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedHeadOverlayData(_ped, index);
 }
 /**
@@ -226,7 +225,7 @@ export function getModelPersonality(modelHash) {
  * Hash: 0x69E81E3D
  */
 export function getMovementClipset(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedMovementClipset(_ped);
 }
 /**
@@ -235,7 +234,7 @@ export function getMovementClipset(ped) {
  * Hash: 0xCD420AD1
  */
 export function getPropCollectionLocalIndex(ped, anchorPoint) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedPropCollectionLocalIndex(_ped, anchorPoint);
 }
 /**
@@ -246,7 +245,7 @@ export function getPropCollectionLocalIndex(ped, anchorPoint) {
  * Hash: 0x6B5653E4
  */
 export function getPropCollectionName(ped, anchorPoint) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedPropCollectionName(_ped, anchorPoint);
 }
 /**
@@ -259,7 +258,7 @@ export function getPropCollectionName(ped, anchorPoint) {
  * Hash: 0x2CB45CDC
  */
 export function getPropGlobalIndexFromCollection(ped, anchorPoint, collection, propIndex) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedPropGlobalIndexFromCollection(_ped, anchorPoint, collection, propIndex);
 }
 /**
@@ -268,7 +267,7 @@ export function getPropGlobalIndexFromCollection(ped, anchorPoint, collection, p
  * Hash: 0x44B91E94
  */
 export function getSweat(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedSweat(_ped);
 }
 /**
@@ -281,7 +280,7 @@ export function getSweat(ped) {
  * Hash: 0x33B2AFA2
  */
 export function isCollectionComponentVariationGen9Exclusive(ped, componentId, collection, drawableId) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return IsPedCollectionComponentVariationGen9Exclusive(_ped, componentId, collection, drawableId);
 }
 /**
@@ -294,7 +293,7 @@ export function isCollectionComponentVariationGen9Exclusive(ped, componentId, co
  * Hash: 0xCA63A52A
  */
 export function isCollectionComponentVariationValid(ped, componentId, collection, drawableId, textureId) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return IsPedCollectionComponentVariationValid(_ped, componentId, collection, drawableId, textureId);
 }
 /**
@@ -303,7 +302,7 @@ export function isCollectionComponentVariationValid(ped, componentId, collection
  * Hash: 0xC767B581
  */
 export function isComponentVariationGen9Exclusive(ped, componentId, drawableId) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return IsPedComponentVariationGen9Exclusive(_ped, componentId, drawableId);
 }
 /**
@@ -346,7 +345,7 @@ export function resetModelPersonality(modelHash) {
  * Hash: 0x88711BBA
  */
 export function setCollectionComponentVariation(ped, componentId, collection, drawableId, textureId, paletteId) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedCollectionComponentVariation(_ped, componentId, collection, drawableId, textureId, paletteId);
 }
 /**
@@ -359,7 +358,7 @@ export function setCollectionComponentVariation(ped, componentId, collection, dr
  * Hash: 0x14B5BBE0
  */
 export function setCollectionPreloadPropData(ped, anchorPoint, collection, propIndex, textureId) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedCollectionPreloadPropData(_ped, anchorPoint, collection, propIndex, textureId);
 }
 /**
@@ -372,7 +371,7 @@ export function setCollectionPreloadPropData(ped, anchorPoint, collection, propI
  * Hash: 0x3EC75558
  */
 export function setCollectionPreloadVariationData(ped, componentId, collection, drawableId, textureId) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedCollectionPreloadVariationData(_ped, componentId, collection, drawableId, textureId);
 }
 /**
@@ -385,7 +384,7 @@ export function setCollectionPreloadVariationData(ped, componentId, collection, 
  * Hash: 0x75240BCB
  */
 export function setCollectionPropIndex(ped, anchorPoint, collection, propIndex, textureId, attach) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetPedCollectionPropIndex(_ped, anchorPoint, collection, propIndex, textureId, attach);
 }
 /**
@@ -461,6 +460,6 @@ export function setTurningThresholds(min, max) {
  * Hash: 0x9C5E7C9C
  */
 export function getBoneMatrix(ped, boneId) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return GetPedBoneMatrix(_ped, boneId);
 }

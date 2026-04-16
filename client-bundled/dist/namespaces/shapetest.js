@@ -1,4 +1,3 @@
-import { IEntity } from '@risinglife/fivem-shared';
 /**
  * Returns the result of a shape test, also returning the material of any touched surface.
  *
@@ -27,7 +26,7 @@ export function getResult(shapeTestHandle) {
  * Hash: 0x2B3334BCA57CD799 | Since: 323 | API-Set: unknown
  */
 export function releaseScriptGuidFromEntity(entityHit) {
-    const _entityHit = entityHit instanceof IEntity ? entityHit.handle() : entityHit;
+    const _entityHit = typeof entityHit == 'object' ? entityHit.handle() : entityHit;
     ReleaseScriptGuidFromEntity(_entityHit);
 }
 /**
@@ -36,7 +35,7 @@ export function releaseScriptGuidFromEntity(entityHit) {
  * Hash: 0x377906D8A31E5586 | Since: 323 | API-Set: unknown
  */
 export function startExpensiveSynchronousLosProbe(x1, y1, z1, x2, y2, z2, flags, entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StartExpensiveSynchronousShapeTestLosProbe(x1, y1, z1, x2, y2, z2, flags, _entity, 0);
 }
 /**
@@ -45,7 +44,7 @@ export function startExpensiveSynchronousLosProbe(x1, y1, z1, x2, y2, z2, flags,
  * Hash: 0x37181417CE7C8900 | Since: 323 | API-Set: unknown
  */
 export function startBound(entity, flags1, flags2) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StartShapeTestBound(_entity, flags1, flags2);
 }
 /**
@@ -54,7 +53,7 @@ export function startBound(entity, flags1, flags2) {
  * Hash: 0x052837721A854EC7 | Since: 323 | API-Set: unknown
  */
 export function startBoundingBox(entity, flags1, flags2) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StartShapeTestBoundingBox(_entity, flags1, flags2);
 }
 /**
@@ -63,7 +62,7 @@ export function startBoundingBox(entity, flags1, flags2) {
  * Hash: 0xFE466162C4401D18 | Since: 323 | API-Set: unknown
  */
 export function startBox(pos, dimX, dimY, dimZ, rot, flags, entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StartShapeTestBox(pos.x, pos.y, pos.z, dimX, dimY, dimZ, rot.x, rot.y, rot.z, undefined, flags, _entity, undefined);
 }
 /**
@@ -82,7 +81,7 @@ export function startBox(pos, dimX, dimY, dimZ, rot, flags, entity) {
  * Hash: 0x28579D1B8F8AAC80 | Since: 323 | API-Set: unknown
  */
 export function startCapsule(x1, y1, z1, x2, y2, z2, radius, flags, entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StartShapeTestCapsule(x1, y1, z1, x2, y2, z2, radius, flags, _entity, 0);
 }
 /**
@@ -95,7 +94,7 @@ export function startCapsule(x1, y1, z1, x2, y2, z2, radius, flags, entity) {
  * Hash: 0x7EE9F5D83DD4F90E | Since: 323 | API-Set: unknown
  */
 export function startLosProbe(x1, y1, z1, x2, y2, z2, flags, entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StartShapeTestLosProbe(x1, y1, z1, x2, y2, z2, flags, _entity, 0);
 }
 /**
@@ -106,7 +105,7 @@ export function startLosProbe(x1, y1, z1, x2, y2, z2, flags, entity) {
  * Hash: 0xFF6BE494C7987F34 | Since: 323 | API-Set: unknown
  */
 export function startMouseCursorLosProbe(flag, entity, flag2) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StartShapeTestSurroundingCoords(flag, _entity, flag2);
 }
 /**
@@ -115,6 +114,6 @@ export function startMouseCursorLosProbe(flag, entity, flag2) {
  * Hash: 0xE6AC6C45FBE83004 | Since: 323 | API-Set: unknown
  */
 export function startSweptSphere(x1, y1, z1, x2, y2, z2, radius, flags, entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StartShapeTestSweptSphere(x1, y1, z1, x2, y2, z2, radius, flags, _entity, undefined);
 }

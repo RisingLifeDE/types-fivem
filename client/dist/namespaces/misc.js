@@ -1,4 +1,3 @@
-import { IEntity, IObject } from '@risinglife/fivem-shared';
 /**
  * Adds the given model name hash to the list of valid models for the player ped's parachute.
  *
@@ -628,7 +627,7 @@ export function experimentalLoadCloneCreate(data, objectId, tree) {
  * Hash: 0x6BC189AC
  */
 export function experimentalLoadCloneSync(entity, data) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     ExperimentalLoadCloneSync(_entity, data);
 }
 /**
@@ -637,7 +636,7 @@ export function experimentalLoadCloneSync(entity, data) {
  * Hash: 0x9D65CAD2
  */
 export function experimentalSaveCloneCreate(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return ExperimentalSaveCloneCreate(_entity);
 }
 /**
@@ -646,7 +645,7 @@ export function experimentalSaveCloneCreate(entity) {
  * Hash: 0x38D19210
  */
 export function experimentalSaveCloneSync(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return ExperimentalSaveCloneSync(_entity);
 }
 /**
@@ -1007,7 +1006,7 @@ export function executeCommand(commandString) {
  * Hash: 0xD70C3BCA
  */
 export function formatStackTrace(traceData) {
-    const _traceData = traceData instanceof IObject ? traceData.handle() : traceData;
+    const _traceData = typeof traceData == 'object' ? traceData.handle() : traceData;
     return FormatStackTrace(_traceData);
 }
 /**

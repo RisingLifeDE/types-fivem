@@ -1,4 +1,3 @@
-import { IPed, IVehicle, IObject } from '@risinglife/fivem-shared';
 /**
  * No comment provided
  *
@@ -45,7 +44,7 @@ export function getHashKey(model) {
  * Hash: 0xF01E2AAB
  */
 export function getHeliMainRotorHealth(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetHeliMainRotorHealth(_vehicle);
 }
 /**
@@ -70,7 +69,7 @@ export function getPasswordHash(password) {
  * Hash: 0x76876154
  */
 export function isFlashLightOn(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return IsFlashLightOn(_ped);
 }
 /**
@@ -87,7 +86,7 @@ export function performHttpRequestInternal(requestData, requestDataLength) {
  * Hash: 0x6B171E87
  */
 export function performHttpRequestInternalEx(requestData) {
-    const _requestData = requestData instanceof IObject ? requestData.handle() : requestData;
+    const _requestData = typeof requestData == 'object' ? requestData.handle() : requestData;
     return PerformHttpRequestInternalEx(_requestData);
 }
 /**
@@ -319,7 +318,7 @@ export function executeCommand(commandString) {
  * Hash: 0xD70C3BCA
  */
 export function formatStackTrace(traceData) {
-    const _traceData = traceData instanceof IObject ? traceData.handle() : traceData;
+    const _traceData = typeof traceData == 'object' ? traceData.handle() : traceData;
     return FormatStackTrace(_traceData);
 }
 /**

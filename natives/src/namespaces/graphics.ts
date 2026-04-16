@@ -83,7 +83,7 @@ export function addDecal(decalType: number, pos: Vector3, width: number, height:
  * Hash: 0x9CD43EEE12BF4DD0 | Since: 323
  */
 export function addEntityIcon(entity: number | IEntity, icon: string): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return AddEntityIcon(_entity, icon);
 }
 
@@ -129,8 +129,8 @@ export function addTcmodifierOverride(modifierName1: string, modifierName2: stri
  * Hash: 0x428BDCB9DA58DA53 | Since: 323
  */
 export function addVehicleCrewEmblem(vehicle: number | IVehicle, ped: number | IPed, boneIndex: number, x1: number, x2: number, x3: number, y1: number, y2: number, y3: number, z1: number, z2: number, z3: number, scale: number, alpha: number): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return AddVehicleCrewEmblem(_vehicle, _ped, boneIndex, x1, x2, x3, y1, y2, y3, z1, z2, z3, scale, undefined, alpha);
 }
 
@@ -216,7 +216,7 @@ export function animpostfxStopAndFlushRequests(effectName: string): void {
  * Hash: 0x845BAD77CC770633 | Since: 323
  */
 export function attachTvAudioToEntity(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     AttachTvAudioToEntity(_entity);
 }
 
@@ -801,7 +801,7 @@ export function doesThisPhotoSlotContainAValidPhoto(): boolean {
  * Hash: 0x060D935D3981A275 | Since: 323
  */
 export function doesVehicleHaveCrewEmblem(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return DoesVehicleHaveCrewEmblem(_vehicle, 0);
 }
 
@@ -1929,7 +1929,7 @@ export function getUsingseethrough(): boolean {
  * Hash: 0xFE26117A5841B2FF | Since: 323
  */
 export function getVehicleCrewEmblemRequestState(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleCrewEmblemRequestState(_vehicle, 0);
 }
 
@@ -2276,7 +2276,7 @@ export function overrideNightvisionLightRange(): void {
  * Hash: 0x95EB5E34F821BABE | Since: 877
  */
 export function overridePedCrewLogoTexture(ped: number | IPed, txd: string, txn: string): boolean {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return OverridePedBadgeTexture(_ped, txd, txn);
 }
 
@@ -2477,7 +2477,7 @@ export function removeDecal(decal: number): void {
  * Hash: 0xCCF71CBDDF5B6CB9 | Since: 323
  */
 export function removeDecalsFromObject(obj: number | IObject): void {
-    const _obj = obj instanceof IObject ? obj.handle() : obj;
+    const _obj = typeof obj == 'object' ? obj.handle() : obj;
     RemoveDecalsFromObject(_obj);
 }
 
@@ -2487,7 +2487,7 @@ export function removeDecalsFromObject(obj: number | IObject): void {
  * Hash: 0xA6F6F70FDC6D144C | Since: 323
  */
 export function removeDecalsFromObjectFacing(obj: number | IObject, pos: Vector3): void {
-    const _obj = obj instanceof IObject ? obj.handle() : obj;
+    const _obj = typeof obj == 'object' ? obj.handle() : obj;
     RemoveDecalsFromObjectFacing(_obj, pos.x, pos.y, pos.z);
 }
 
@@ -2497,7 +2497,7 @@ export function removeDecalsFromObjectFacing(obj: number | IObject, pos: Vector3
  * Hash: 0xE91F1B65F2B48D57 | Since: 323
  */
 export function removeDecalsFromVehicle(vehicle: number | IVehicle): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     RemoveDecalsFromVehicle(_vehicle);
 }
 
@@ -2534,7 +2534,7 @@ export function removeParticleFx(ptfxHandle: number): void {
  * Hash: 0xB8FEAEEBCC127425 | Since: 323
  */
 export function removeParticleFxFromEntity(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     RemoveParticleFxFromEntity(_entity);
 }
 
@@ -2562,7 +2562,7 @@ export function removeScaleformScriptHudMovie(hudComponent: number): void {
  * Hash: 0xD2300034310557E4 | Since: 323
  */
 export function removeVehicleCrewEmblem(vehicle: number | IVehicle): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     RemoveVehicleCrewEmblem(_vehicle, 0);
 }
 
@@ -3153,7 +3153,7 @@ export function setDrawOrigin(pos: Vector3): void {
  * Hash: 0x1D5F595CCAE2E238 | Since: 323
  */
 export function setEntityIconColor(entity: number | IEntity, red: number, green: number, blue: number, alpha: number): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityIconColor(_entity, red, green, blue, alpha);
 }
 
@@ -3163,7 +3163,7 @@ export function setEntityIconColor(entity: number | IEntity, red: number, green:
  * Hash: 0xE0E8BEECCA96BA31 | Since: 323
  */
 export function setEntityIconVisibility(entity: number | IEntity, toggle: boolean): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetEntityIconVisibility(_entity, toggle);
 }
 
@@ -3352,7 +3352,7 @@ export function setParticleFxBulletTraceNoAngleReject(): void {
  * Hash: 0xACEE6F360FC1F6B6 | Since: 323
  */
 export function setParticleFxCamInsideNonplayerVehicle(vehicle: number | IVehicle): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetParticleFxCamInsideNonplayerVehicle(_vehicle, false);
 }
 
@@ -3811,7 +3811,7 @@ export function setWeatherPtfxUseOverrideSettings(): void {
  * Hash: 0x6F60E89A7B64EE1D | Since: 323
  */
 export function startNetworkedParticleFxLoopedOnEntity(effectName: string, entity: number | IEntity, xOffset: number, yOffset: number, zOffset: number, rot: Vector3, scale: number, xAxis: boolean, yAxis: boolean, zAxis: boolean, r: number, g: number, b: number, a: number): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StartNetworkedParticleFxLoopedOnEntity(effectName, _entity, xOffset, yOffset, zOffset, rot.x, rot.y, rot.z, scale, xAxis, yAxis, zAxis, r, g, b, a);
 }
 
@@ -3821,7 +3821,7 @@ export function startNetworkedParticleFxLoopedOnEntity(effectName: string, entit
  * Hash: 0xDDE23F30CC5A0F03 | Since: 323
  */
 export function startNetworkedParticleFxLoopedOnEntityBone(effectName: string, entity: number | IEntity, xOffset: number, yOffset: number, zOffset: number, rot: Vector3, boneIndex: number, scale: number, xAxis: boolean, yAxis: boolean, zAxis: boolean, r: number, g: number, b: number, a: number): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StartNetworkedParticleFxLoopedOnEntityBone(effectName, _entity, xOffset, yOffset, zOffset, rot.x, rot.y, rot.z, boneIndex, scale, xAxis, yAxis, zAxis, r, g, b, a);
 }
 
@@ -3840,7 +3840,7 @@ export function startNetworkedParticleFxNonLoopedAtCoord(effectName: string, pos
  * Hash: 0xC95EB1DB6E92113D | Since: 323
  */
 export function startNetworkedParticleFxNonLoopedOnEntity(effectName: string, entity: number | IEntity, offsetX: number, offsetY: number, offsetZ: number, rot: Vector3, scale: number, axisX: boolean, axisY: boolean, axisZ: boolean): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StartNetworkedParticleFxNonLoopedOnEntity(effectName, _entity, offsetX, offsetY, offsetZ, rot.x, rot.y, rot.z, scale, axisX, axisY, axisZ);
 }
 
@@ -3850,7 +3850,7 @@ export function startNetworkedParticleFxNonLoopedOnEntity(effectName: string, en
  * Hash: 0xA41B6A43642AC2CF | Since: 323
  */
 export function startNetworkedParticleFxNonLoopedOnPedBone(effectName: string, ped: number | IPed, offsetX: number, offsetY: number, offsetZ: number, rot: Vector3, boneIndex: number, scale: number, axisX: boolean, axisY: boolean, axisZ: boolean): boolean {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return StartNetworkedParticleFxNonLoopedOnPedBone(effectName, _ped, offsetX, offsetY, offsetZ, rot.x, rot.y, rot.z, boneIndex, scale, axisX, axisY, axisZ);
 }
 
@@ -3874,7 +3874,7 @@ export function startParticleFxLoopedAtCoord(effectName: string, pos: Vector3, r
  * Hash: 0x1AE42C1660FD6517 | Since: 323
  */
 export function startParticleFxLoopedOnEntity(effectName: string, entity: number | IEntity, xOffset: number, yOffset: number, zOffset: number, rot: Vector3, scale: number, xAxis: boolean, yAxis: boolean, zAxis: boolean): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StartParticleFxLoopedOnEntity(effectName, _entity, xOffset, yOffset, zOffset, rot.x, rot.y, rot.z, scale, xAxis, yAxis, zAxis);
 }
 
@@ -3884,7 +3884,7 @@ export function startParticleFxLoopedOnEntity(effectName: string, entity: number
  * Hash: 0xC6EB449E33977F0B | Since: 323
  */
 export function startParticleFxLoopedOnEntityBone(effectName: string, entity: number | IEntity, xOffset: number, yOffset: number, zOffset: number, rot: Vector3, boneIndex: number, scale: number, xAxis: boolean, yAxis: boolean, zAxis: boolean): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StartParticleFxLoopedOnEntityBone(effectName, _entity, xOffset, yOffset, zOffset, rot.x, rot.y, rot.z, boneIndex, scale, xAxis, yAxis, zAxis);
 }
 
@@ -3894,7 +3894,7 @@ export function startParticleFxLoopedOnEntityBone(effectName: string, entity: nu
  * Hash: 0xF28DA9F38CD1787C | Since: 323
  */
 export function startParticleFxLoopedOnPedBone(effectName: string, ped: number | IPed, xOffset: number, yOffset: number, zOffset: number, rot: Vector3, boneIndex: number, scale: number, xAxis: boolean, yAxis: boolean, zAxis: boolean): number {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return StartParticleFxLoopedOnPedBone(effectName, _ped, xOffset, yOffset, zOffset, rot.x, rot.y, rot.z, boneIndex, scale, xAxis, yAxis, zAxis);
 }
 
@@ -3947,7 +3947,7 @@ export function startParticleFxNonLoopedAtCoord(effectName: string, pos: Vector3
  * Hash: 0x0D53A3B8DA0809D2 | Since: 323
  */
 export function startParticleFxNonLoopedOnEntity(effectName: string, entity: number | IEntity, offsetX: number, offsetY: number, offsetZ: number, rot: Vector3, scale: number, axisX: boolean, axisY: boolean, axisZ: boolean): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StartParticleFxNonLoopedOnEntity(effectName, _entity, offsetX, offsetY, offsetZ, rot.x, rot.y, rot.z, scale, axisX, axisY, axisZ);
 }
 
@@ -3957,7 +3957,7 @@ export function startParticleFxNonLoopedOnEntity(effectName: string, entity: num
  * Hash: 0x02B1F2A72E0F5325 | Since: 2189
  */
 export function startParticleFxNonLoopedOnEntityBone(effectName: string, entity: number | IEntity, offsetX: number, offsetY: number, offsetZ: number, rot: Vector3, boneIndex: number, scale: number, axisX: boolean, axisY: boolean, axisZ: boolean): boolean {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StartNetworkedParticleFxNonLoopedOnEntityBone(effectName, _entity, offsetX, offsetY, offsetZ, rot.x, rot.y, rot.z, boneIndex, scale, axisX, axisY, axisZ);
 }
 
@@ -3971,7 +3971,7 @@ export function startParticleFxNonLoopedOnEntityBone(effectName: string, entity:
  * Hash: 0x0E7E72961BA18619 | Since: 323
  */
 export function startParticleFxNonLoopedOnPedBone(effectName: string, ped: number | IPed, offsetX: number, offsetY: number, offsetZ: number, rot: Vector3, boneIndex: number, scale: number, axisX: boolean, axisY: boolean, axisZ: boolean): boolean {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return StartParticleFxNonLoopedOnPedBone(effectName, _ped, offsetX, offsetY, offsetZ, rot.x, rot.y, rot.z, boneIndex, scale, axisX, axisY, axisZ);
 }
 
@@ -4086,7 +4086,7 @@ export function triggerScreenblurFadeOut(transitionTime: number): boolean {
  * Hash: 0x98C4FE6EC34154CA | Since: 323
  */
 export function ui3dsceneAssignPedToSlot(presetName: string, ped: number | IPed, slot: number, pos: Vector3): boolean {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     return DrawShowroom(presetName, _ped, slot, pos.x, pos.y, pos.z);
 }
 
@@ -4141,7 +4141,7 @@ export function unpatchDecalDiffuseMap(decalType: number): void {
  * Hash: 0xDEADC0DEDEADC0DE | Since: 323
  */
 export function updateLightsOnEntity(entity: number | IEntity): void {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     UpdateLightsOnEntity(_entity);
 }
 
@@ -4188,7 +4188,7 @@ export function useSnowWheelVfxWhenUnsheltered(toggle: boolean): void {
  * Hash: 0x5B712761429DBC14 | Since: 323
  */
 export function washDecalsFromVehicle(vehicle: number | IVehicle): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     WashDecalsFromVehicle(_vehicle, 0);
 }
 
@@ -4271,7 +4271,7 @@ export function setTvChannelPlaylistDirty(tvChannel: number): any {
  * Hash: 0xDF269BE2909E181A | Since: 3095
  */
 export function startVehicleParticleFxLooped(vehicle: number | IVehicle, effectName: string, frontBack: boolean, leftRight: boolean, localOnly: boolean): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return Citizen.invokeNative('0xDF269BE2909E181A', _vehicle, effectName, frontBack, leftRight, localOnly);
 }
 

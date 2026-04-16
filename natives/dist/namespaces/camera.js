@@ -1,4 +1,4 @@
-import { Vector3, IEntity, IPed, IPlayer, IVehicle, IObject, ICamera } from '@risinglife/fivem-shared';
+import { Vector3 } from '@risinglife/fivem-shared';
 /**
  * I filled p1-p6 (the floats) as they are as other natives with 6 floats in a row are similar and I see no other method. So if a test from anyone proves them wrong please correct.
  *
@@ -11,7 +11,7 @@ import { Vector3, IEntity, IPed, IPlayer, IVehicle, IObject, ICamera } from '@ri
  * Hash: 0x8609C75EC438FB3B | Since: 323
  */
 export function addCamSplineNode(camera, pos, rot, length, smoothingStyle, rotationOrder) {
-    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    const _camera = typeof camera == 'object' ? camera.handle() : camera;
     AddCamSplineNode(_camera, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, length, smoothingStyle, rotationOrder);
 }
 /**
@@ -22,8 +22,8 @@ export function addCamSplineNode(camera, pos, rot, length, smoothingStyle, rotat
  * Hash: 0x0FB82563989CF4FB | Since: 323
  */
 export function addCamSplineNodeUsing(cam, cam2, length) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
-    const _cam2 = cam2 instanceof ICamera ? cam2.handle() : cam2;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
+    const _cam2 = typeof cam2 == 'object' ? cam2.handle() : cam2;
     AddCamSplineNodeUsingCamera(_cam, _cam2, length, 0);
 }
 /**
@@ -34,8 +34,8 @@ export function addCamSplineNodeUsing(cam, cam2, length) {
  * Hash: 0x0A9F2A468B328E74 | Since: 323
  */
 export function addCamSplineNodeUsingFrame(cam, cam2, length) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
-    const _cam2 = cam2 instanceof ICamera ? cam2.handle() : cam2;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
+    const _cam2 = typeof cam2 == 'object' ? cam2.handle() : cam2;
     AddCamSplineNodeUsingCameraFrame(_cam, _cam2, length, 0);
 }
 /**
@@ -44,7 +44,7 @@ export function addCamSplineNodeUsingFrame(cam, cam2, length) {
  * Hash: 0x609278246A29CA34 | Since: 323
  */
 export function addCamSplineNodeUsingGameplayFrame(cam, length) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     AddCamSplineNodeUsingGameplayFrame(_cam, length, 0);
 }
 /**
@@ -63,7 +63,7 @@ export function allowMotionBlurDecay() {
  * Hash: 0xA2746EEAE3E577CD | Since: 323
  */
 export function animatedShakeCam(cam, amplitude) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     AnimatedShakeCam(_cam, undefined, undefined, undefined, amplitude);
 }
 /**
@@ -90,8 +90,8 @@ export function areWidescreenBordersActive() {
  * Hash: 0xFEDB7D269E8C60E3 | Since: 323
  */
 export function attachCamToEntity(cam, entity, xOffset, yOffset, zOffset, isRelative) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     AttachCamToEntity(_cam, _entity, xOffset, yOffset, zOffset, isRelative);
 }
 /**
@@ -100,8 +100,8 @@ export function attachCamToEntity(cam, entity, xOffset, yOffset, zOffset, isRela
  * Hash: 0x61A3DBA14AB7F411 | Since: 323
  */
 export function attachCamToPedBone(cam, ped, boneIndex, pos, heading) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     AttachCamToPedBone(_cam, _ped, boneIndex, pos.x, pos.y, pos.z, heading);
 }
 /**
@@ -110,8 +110,8 @@ export function attachCamToPedBone(cam, ped, boneIndex, pos, heading) {
  * Hash: 0x8DB3F12A02CAEF72 | Since: 1290
  */
 export function attachCamToVehicleBone(cam, vehicle, boneIndex, relativeRotation, rot, offsetX, offsetY, offsetZ, fixedDirection) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     AttachCamToVehicleBone(_cam, _vehicle, boneIndex, relativeRotation, rot.x, rot.y, rot.z, offsetX, offsetY, offsetZ, fixedDirection);
 }
 /**
@@ -200,7 +200,7 @@ export function createCamWithParams(camName, pos, rot, fov) {
  * Hash: 0x741B0129D4560F31 | Since: 323
  */
 export function createCinematicShot(p0, time, entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     if (typeof p0 === 'string')
         p0 = GetHashKey(p0);
     CreateCinematicShot(p0, time, false, _entity);
@@ -219,7 +219,7 @@ export function destroyAllCams(bScriptHostCam) {
  * Hash: 0x865908C81A2C22E9 | Since: 323
  */
 export function destroyCam(cam, bScriptHostCam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     DestroyCam(_cam, bScriptHostCam);
 }
 /**
@@ -228,7 +228,7 @@ export function destroyCam(cam, bScriptHostCam) {
  * Hash: 0xA2FABBE87F4BAD82 | Since: 323
  */
 export function detachCam(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     DetachCam(_cam);
 }
 /**
@@ -245,7 +245,7 @@ export function disableAimCamThisUpdate() {
  * Hash: 0x49482F9FCD825AAA | Since: 323
  */
 export function disableCamCollisionForObject(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     DisableCamCollisionForObject(_entity);
 }
 /**
@@ -322,7 +322,7 @@ export function disableOnFootFirstPersonViewThisUpdate() {
  * Hash: 0xA7A932170592B50E | Since: 323
  */
 export function doesCamExist(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return DoesCamExist(_cam);
 }
 /**
@@ -367,7 +367,7 @@ export function forceRelativeHeadingAndPitch(roll, pitch, yaw) {
  * Hash: 0xAABD62873FFB1A33 | Since: 2189
  */
 export function forceCamFarClip(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     Citizen.invokeNative('0xAABD62873FFB1A33', _cam, 0);
 }
 /**
@@ -418,7 +418,7 @@ export function getCamActiveViewModeContext() {
  * Hash: 0xA10B2DB49E92A6B0 | Since: 323
  */
 export function getCamAnimCurrentPhase(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return GetCamAnimCurrentPhase(_cam);
 }
 /**
@@ -427,7 +427,7 @@ export function getCamAnimCurrentPhase(cam) {
  * Hash: 0xBAC038F7459AE5AE | Since: 323
  */
 export function getCamCoord(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return new Vector3(GetCamCoord(_cam));
 }
 /**
@@ -436,7 +436,7 @@ export function getCamCoord(cam) {
  * Hash: 0x06D153C0B99B6128 | Since: 2699
  */
 export function getCamDofStrength(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return GetCamDofStrength(_cam);
 }
 /**
@@ -445,7 +445,7 @@ export function getCamDofStrength(cam) {
  * Hash: 0xB60A9CFEB21CA6AA | Since: 323
  */
 export function getCamFarClip(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return GetCamFarClip(_cam);
 }
 /**
@@ -454,7 +454,7 @@ export function getCamFarClip(cam) {
  * Hash: 0x255F8DAFD540D397 | Since: 323
  */
 export function getCamFarDof(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return GetCamFarDof(_cam);
 }
 /**
@@ -463,7 +463,7 @@ export function getCamFarDof(cam) {
  * Hash: 0xC3330A45CCCDB26A | Since: 323
  */
 export function getCamFov(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return GetCamFov(_cam);
 }
 /**
@@ -472,7 +472,7 @@ export function getCamFov(cam) {
  * Hash: 0xC520A34DAFBF24B1 | Since: 323
  */
 export function getCamNearClip(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return GetCamNearClip(_cam);
 }
 /**
@@ -481,7 +481,7 @@ export function getCamNearClip(cam) {
  * Hash: 0xC2612D223D915A1C | Since: 2699
  */
 export function getCamNearDof(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return GetCamNearDof(_cam);
 }
 /**
@@ -490,7 +490,7 @@ export function getCamNearDof(cam) {
  * Hash: 0x7D304C1C955E3E12 | Since: 323
  */
 export function getCamRot(cam, rotationOrder) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return new Vector3(GetCamRot(_cam, rotationOrder));
 }
 /**
@@ -499,7 +499,7 @@ export function getCamRot(cam, rotationOrder) {
  * Hash: 0xB22B17DF858716A6 | Since: 323
  */
 export function getCamSplineNodeIndex(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return GetCamSplineNodeIndex(_cam);
 }
 /**
@@ -508,7 +508,7 @@ export function getCamSplineNodeIndex(cam) {
  * Hash: 0xD9D0E694C8282C96 | Since: 323
  */
 export function getCamSplineNodePhase(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return GetCamSplineNodePhase(_cam);
 }
 /**
@@ -519,7 +519,7 @@ export function getCamSplineNodePhase(cam) {
  * Hash: 0xB5349E36C546509A | Since: 323
  */
 export function getCamSplinePhase(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return GetCamSplinePhase(_cam);
 }
 /**
@@ -610,7 +610,7 @@ export function getFinalRenderedCamRot(rotationOrder) {
  * Hash: 0x5F35F6732C3FBBA0 | Since: 323
  */
 export function getFinalRenderedRemotePlayerCamFov(player) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     return GetFinalRenderedInWhenFriendlyFov(_player);
 }
 /**
@@ -619,7 +619,7 @@ export function getFinalRenderedRemotePlayerCamFov(player) {
  * Hash: 0x26903D9CD1175F2C | Since: 323
  */
 export function getFinalRenderedRemotePlayerCamRot(player, rotationOrder) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     return new Vector3(GetFinalRenderedInWhenFriendlyRot(_player, rotationOrder));
 }
 /**
@@ -744,8 +744,8 @@ export function getRenderingCam() {
  * Hash: 0x202A5ED9CE01D6E7 | Since: 2189
  */
 export function hardAttachCamToEntity(cam, entity, rot, xOffset, yOffset, zOffset, isRelative) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     HardAttachCamToEntity(_cam, _entity, rot.x, rot.y, rot.z, xOffset, yOffset, zOffset, isRelative);
 }
 /**
@@ -754,8 +754,8 @@ export function hardAttachCamToEntity(cam, entity, rot, xOffset, yOffset, zOffse
  * Hash: 0x149916F50C34A40D | Since: 1180
  */
 export function hardAttachCamToPedBone(cam, ped, boneIndex) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     HardAttachCamToPedBone(_cam, _ped, boneIndex, 0, 0, 0, 0, 0, 0, false);
 }
 /**
@@ -772,7 +772,7 @@ export function ignoreMenuPreferenceForBonnetThisUpdate() {
  * Hash: 0xDDA77EE33C005AAF | Since: 3258
  */
 export function interpolateWithParams(camera, camPosX, camPosY, camPosZ, camRotX, camRotY, camRotZ, fov, duration, posCurveType, rotCurveType, rotOrder, fovCurveType) {
-    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    const _camera = typeof camera == 'object' ? camera.handle() : camera;
     InterpolateCamWithParams(_camera, camPosX, camPosY, camPosZ, camRotX, camRotY, camRotZ, fov, duration, posCurveType, rotCurveType, rotOrder, fovCurveType);
 }
 /**
@@ -829,7 +829,7 @@ export function isBonnetCinematicCamRendering() {
  * Hash: 0xDFB2B516207D3534 | Since: 323
  */
 export function isCamActive(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return IsCamActive(_cam);
 }
 /**
@@ -838,7 +838,7 @@ export function isCamActive(cam) {
  * Hash: 0x036F97C908C2B52C | Since: 323
  */
 export function isCamInterpolating(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return IsCamInterpolating(_cam);
 }
 /**
@@ -847,7 +847,7 @@ export function isCamInterpolating(cam) {
  * Hash: 0xC90621D8A0CEECF2 | Since: 323
  */
 export function isCamPlayingAnim(cam, animName, animDictionary) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return IsCamPlayingAnim(_cam, animName, animDictionary);
 }
 /**
@@ -856,7 +856,7 @@ export function isCamPlayingAnim(cam, animName, animDictionary) {
  * Hash: 0x02EC0AF5C5A49B7A | Since: 323
  */
 export function isCamRendering(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return IsCamRendering(_cam);
 }
 /**
@@ -865,7 +865,7 @@ export function isCamRendering(cam) {
  * Hash: 0x6B24BFE83A2BE47B | Since: 323
  */
 export function isCamShaking(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return IsCamShaking(_cam);
 }
 /**
@@ -874,7 +874,7 @@ export function isCamShaking(cam) {
  * Hash: 0x0290F35C0AD97864 | Since: 323
  */
 export function isCamSplinePaused(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return IsCamSplinePaused(_cam);
 }
 /**
@@ -1076,7 +1076,7 @@ export function isSphereVisible(pos, radius) {
  * Hash: 0x7DCF7C708D292D55 | Since: 323
  */
 export function overrideCamSplineMotionBlur(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     OverrideCamSplineMotionBlur(_cam, 0, 0, 0);
 }
 /**
@@ -1085,7 +1085,7 @@ export function overrideCamSplineMotionBlur(cam) {
  * Hash: 0x40B62FA033EB0346 | Since: 323
  */
 export function overrideCamSplineVelocity(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     OverrideCamSplineVelocity(_cam, 0, 0, 0);
 }
 /**
@@ -1099,7 +1099,7 @@ export function overrideCamSplineVelocity(cam) {
  * Hash: 0x9A2D0FB2E7852392 | Since: 323
  */
 export function playCamAnim(cam, animName, animDictionary, pos, rot) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return PlayCamAnim(_cam, animName, animDictionary, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, false, 0);
 }
 /**
@@ -1120,7 +1120,7 @@ export function playSynchronizedCamAnim(animName, animDictionary) {
  * Hash: 0xF75497BB865F0803 | Since: 323
  */
 export function pointCamAtCoord(cam, pos) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     PointCamAtCoord(_cam, pos.x, pos.y, pos.z);
 }
 /**
@@ -1129,8 +1129,8 @@ export function pointCamAtCoord(cam, pos) {
  * Hash: 0x5640BFF86B16E8DC | Since: 323
  */
 export function pointCamAtEntity(cam, entity) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     PointCamAtEntity(_cam, _entity, 0, 0, 0, false);
 }
 /**
@@ -1139,8 +1139,8 @@ export function pointCamAtEntity(cam, entity) {
  * Hash: 0x68B2B5F33BA63C41 | Since: 323
  */
 export function pointCamAtPedBone(cam, ped, boneIndex, pos) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     PointCamAtPedBone(_cam, _ped, boneIndex, pos.x, pos.y, pos.z, false);
 }
 /**
@@ -1186,7 +1186,7 @@ export function setAllowCustomVehicleDriveByCamThisUpdate() {
  * Hash: 0x026FB97D0A425F84 | Since: 323
  */
 export function setCamActive(cam, active) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamActive(_cam, active);
 }
 /**
@@ -1196,8 +1196,8 @@ export function setCamActive(cam, active) {
  * Hash: 0x9FBDA379383A52A4 | Since: 323
  */
 export function setCamActiveWithInterp(camTo, camFrom, duration, easeLocation, easeRotation) {
-    const _camTo = camTo instanceof ICamera ? camTo.handle() : camTo;
-    const _camFrom = camFrom instanceof ICamera ? camFrom.handle() : camFrom;
+    const _camTo = typeof camTo == 'object' ? camTo.handle() : camTo;
+    const _camFrom = typeof camFrom == 'object' ? camFrom.handle() : camFrom;
     SetCamActiveWithInterp(_camTo, _camFrom, duration, easeLocation, easeRotation);
 }
 /**
@@ -1206,7 +1206,7 @@ export function setCamActiveWithInterp(camTo, camFrom, duration, easeLocation, e
  * Hash: 0x8C1DC7770C51DC8D | Since: 323
  */
 export function setCamAffectsAiming(cam, toggle) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamAffectsAiming(_cam, toggle);
 }
 /**
@@ -1215,7 +1215,7 @@ export function setCamAffectsAiming(cam, toggle) {
  * Hash: 0x4145A4C44FF3B5A6 | Since: 323
  */
 export function setCamAnimCurrentPhase(cam, phase) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamAnimCurrentPhase(_cam, phase);
 }
 /**
@@ -1224,7 +1224,7 @@ export function setCamAnimCurrentPhase(cam, phase) {
  * Hash: 0x661B5C8654ADD825 | Since: 323
  */
 export function setCamControlsMiniMapHeading(cam, toggle) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamControlsMiniMapHeading(_cam, toggle);
 }
 /**
@@ -1233,7 +1233,7 @@ export function setCamControlsMiniMapHeading(cam, toggle) {
  * Hash: 0x4D41783FB745E42E | Since: 323
  */
 export function setCamCoord(cam, pos) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamCoord(_cam, pos.x, pos.y, pos.z);
 }
 /**
@@ -1254,7 +1254,7 @@ export function setCamDeathFailEffectState() {
  * Hash: 0x1B93E0107865DD40 | Since: 323
  */
 export function setCamDebugName(camera, name) {
-    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    const _camera = typeof camera == 'object' ? camera.handle() : camera;
     SetCamDebugName(_camera, name);
 }
 /**
@@ -1264,7 +1264,7 @@ export function setCamDebugName(camera, name) {
  * Hash: 0x7DD234D6F3914C5B | Since: 323
  */
 export function setCamDofFnumberOfLens(camera) {
-    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    const _camera = typeof camera == 'object' ? camera.handle() : camera;
     SetCamDofFnumberOfLens(_camera, 0);
 }
 /**
@@ -1273,7 +1273,7 @@ export function setCamDofFnumberOfLens(camera) {
  * Hash: 0x47B595D60664CFFA | Since: 1011
  */
 export function setCamDofFocalLengthMultiplier(camera, multiplier) {
-    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    const _camera = typeof camera == 'object' ? camera.handle() : camera;
     SetCamDofFocalLengthMultiplier(_camera, multiplier);
 }
 /**
@@ -1282,7 +1282,7 @@ export function setCamDofFocalLengthMultiplier(camera, multiplier) {
  * Hash: 0xC669EEA5D031B7DE | Since: 323
  */
 export function setCamDofFocusDistanceBias(camera) {
-    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    const _camera = typeof camera == 'object' ? camera.handle() : camera;
     SetCamDofFocusDistanceBias(_camera, 0);
 }
 /**
@@ -1291,7 +1291,7 @@ export function setCamDofFocusDistanceBias(camera) {
  * Hash: 0xC3654A441402562D | Since: 323
  */
 export function setCamDofMaxNearInFocusDistance(camera) {
-    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    const _camera = typeof camera == 'object' ? camera.handle() : camera;
     SetCamDofMaxNearInFocusDistance(_camera, 0);
 }
 /**
@@ -1300,7 +1300,7 @@ export function setCamDofMaxNearInFocusDistance(camera) {
  * Hash: 0x2C654B4943BDDF7C | Since: 323
  */
 export function setCamDofMaxNearInFocusDistanceBlendLevel(camera) {
-    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    const _camera = typeof camera == 'object' ? camera.handle() : camera;
     SetCamDofMaxNearInFocusDistanceBlendLevel(_camera, 0);
 }
 /**
@@ -1309,7 +1309,7 @@ export function setCamDofMaxNearInFocusDistanceBlendLevel(camera) {
  * Hash: 0xF55E4046F6F831DC | Since: 323
  */
 export function setCamDofOverriddenFocusDistance(camera) {
-    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    const _camera = typeof camera == 'object' ? camera.handle() : camera;
     Citizen.invokeNative('0xF55E4046F6F831DC', _camera, 0);
 }
 /**
@@ -1326,7 +1326,7 @@ export function setCamDofOverriddenFocusDistanceBlendLevel() {
  * Hash: 0x3CF48F6F96E749DC | Since: 323
  */
 export function setCamDofPlanes(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamDofPlanes(_cam, 0, 0, 0, 0);
 }
 /**
@@ -1335,7 +1335,7 @@ export function setCamDofPlanes(cam) {
  * Hash: 0x7CF3AF51DCFE4108 | Since: 2944
  */
 export function setCamDofShouldKeepLookAtTargetInFocus(camera, state) {
-    const _camera = camera instanceof ICamera ? camera.handle() : camera;
+    const _camera = typeof camera == 'object' ? camera.handle() : camera;
     Citizen.invokeNative('0x7CF3AF51DCFE4108', _camera, state);
 }
 /**
@@ -1344,7 +1344,7 @@ export function setCamDofShouldKeepLookAtTargetInFocus(camera, state) {
  * Hash: 0x5EE29B4D7D5DF897 | Since: 323
  */
 export function setCamDofStrength(cam, dofStrength) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamDofStrength(_cam, dofStrength);
 }
 /**
@@ -1353,7 +1353,7 @@ export function setCamDofStrength(cam, dofStrength) {
  * Hash: 0xAE306F2A904BF86E | Since: 323
  */
 export function setCamFarClip(cam, farClip) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamFarClip(_cam, farClip);
 }
 /**
@@ -1362,7 +1362,7 @@ export function setCamFarClip(cam, farClip) {
  * Hash: 0xEDD91296CD01AEE0 | Since: 323
  */
 export function setCamFarDof(cam, farDOF) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamFarDof(_cam, farDOF);
 }
 /**
@@ -1374,7 +1374,7 @@ export function setCamFarDof(cam, farDOF) {
  * Hash: 0xB13C14F66A00D047 | Since: 323
  */
 export function setCamFov(cam, fieldOfView) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamFov(_cam, fieldOfView);
 }
 /**
@@ -1387,7 +1387,7 @@ export function setCamFov(cam, fieldOfView) {
  * Hash: 0x45F1DE9C34B93AE6 | Since: 323
  */
 export function setCamInheritRollVehicle(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamInheritRollVehicle(_cam, false);
 }
 /**
@@ -1397,7 +1397,7 @@ export function setCamInheritRollVehicle(cam) {
  * Hash: 0xA2767257A320FC82 | Since: 323
  */
 export function setCamIsInsideVehicle(cam, toggle) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     Citizen.invokeNative('0xA2767257A320FC82', _cam, toggle);
 }
 /**
@@ -1406,7 +1406,7 @@ export function setCamIsInsideVehicle(cam, toggle) {
  * Hash: 0x6F0F77FBA9A8F2E6 | Since: 323
  */
 export function setCamMotionBlurStrength(cam, strength) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamMotionBlurStrength(_cam, strength);
 }
 /**
@@ -1415,7 +1415,7 @@ export function setCamMotionBlurStrength(cam, strength) {
  * Hash: 0xC7848EFCCC545182 | Since: 323
  */
 export function setCamNearClip(cam, nearClip) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamNearClip(_cam, nearClip);
 }
 /**
@@ -1424,7 +1424,7 @@ export function setCamNearClip(cam, nearClip) {
  * Hash: 0x3FA4BF0A7AB7DE2C | Since: 323
  */
 export function setCamNearDof(cam, nearDOF) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamNearDof(_cam, nearDOF);
 }
 /**
@@ -1433,7 +1433,7 @@ export function setCamNearDof(cam, nearDOF) {
  * Hash: 0xBFD8727AEA3CCEBA | Since: 323
  */
 export function setCamParams(cam, pos, rot, fieldOfView) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamParams(_cam, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, fieldOfView, undefined, 0, 0, 0);
 }
 /**
@@ -1445,7 +1445,7 @@ export function setCamParams(cam, pos, rot, fieldOfView) {
  * Hash: 0x85973643155D0B07 | Since: 323
  */
 export function setCamRot(cam, rot, rotationOrder) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamRot(_cam, rot.x, rot.y, rot.z, rotationOrder);
 }
 /**
@@ -1454,7 +1454,7 @@ export function setCamRot(cam, rot, rotationOrder) {
  * Hash: 0xD93DB43B82BC0D00 | Since: 323
  */
 export function setCamShakeAmplitude(cam, amplitude) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamShakeAmplitude(_cam, amplitude);
 }
 /**
@@ -1463,7 +1463,7 @@ export function setCamShakeAmplitude(cam, amplitude) {
  * Hash: 0x1381539FEE034CDA | Since: 323
  */
 export function setCamSplineDuration(cam, timeDuration) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamSplineDuration(_cam, timeDuration);
 }
 /**
@@ -1472,7 +1472,7 @@ export function setCamSplineDuration(cam, timeDuration) {
  * Hash: 0x83B8201ED82A9A2D | Since: 323
  */
 export function setCamSplineNodeEase(cam, easingFunction) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamSplineNodeEase(_cam, easingFunction, 0, 0);
 }
 /**
@@ -1481,7 +1481,7 @@ export function setCamSplineNodeEase(cam, easingFunction) {
  * Hash: 0x7BF1A54AE67AC070 | Since: 323
  */
 export function setCamSplineNodeExtraFlags(cam, flags) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamSplineNodeExtraFlags(_cam, 0, flags);
 }
 /**
@@ -1490,7 +1490,7 @@ export function setCamSplineNodeExtraFlags(cam, flags) {
  * Hash: 0xA6385DEB180F319F | Since: 323
  */
 export function setCamSplineNodeVelocityScale(cam, scale) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamSplineNodeVelocityScale(_cam, 0, scale);
 }
 /**
@@ -1499,7 +1499,7 @@ export function setCamSplineNodeVelocityScale(cam, scale) {
  * Hash: 0x242B5874F0A4E052 | Since: 323
  */
 export function setCamSplinePhase(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamSplinePhase(_cam, 0);
 }
 /**
@@ -1508,7 +1508,7 @@ export function setCamSplinePhase(cam) {
  * Hash: 0xD1B0F412F109EA5D | Since: 323
  */
 export function setCamSplineSmoothingStyle(cam, smoothingStyle) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamSplineSmoothingStyle(_cam, smoothingStyle);
 }
 /**
@@ -1517,7 +1517,7 @@ export function setCamSplineSmoothingStyle(cam, smoothingStyle) {
  * Hash: 0x16A96863A17552BB | Since: 323
  */
 export function setCamUseShallowDofMode(cam, toggle) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetCamUseShallowDofMode(_cam, toggle);
 }
 /**
@@ -1660,7 +1660,7 @@ export function setFirstPersonShooterPitch(pitch) {
  * Hash: 0xC91C6C55199308CA | Since: 323
  */
 export function setFlyCamCoordAndConstrain(cam, pos) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetFlyCamCoordAndConstrain(_cam, pos.x, pos.y, pos.z);
 }
 /**
@@ -1669,7 +1669,7 @@ export function setFlyCamCoordAndConstrain(cam, pos) {
  * Hash: 0x503F5920162365B2 | Since: 323
  */
 export function setFlyCamHorizontalResponse(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetFlyCamHorizontalResponse(_cam, 0, 0, 0);
 }
 /**
@@ -1678,7 +1678,7 @@ export function setFlyCamHorizontalResponse(cam) {
  * Hash: 0xF9D02130ECDD1D77 | Since: 323
  */
 export function setFlyCamMaxHeight(cam, height) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetFlyCamMaxHeight(_cam, height);
 }
 /**
@@ -1687,7 +1687,7 @@ export function setFlyCamMaxHeight(cam, height) {
  * Hash: 0xC8B5C4A79CC18B94 | Since: 323
  */
 export function setFlyCamVerticalControlsThisUpdate(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     Citizen.invokeNative('0xC8B5C4A79CC18B94', _cam);
 }
 /**
@@ -1696,7 +1696,7 @@ export function setFlyCamVerticalControlsThisUpdate(cam) {
  * Hash: 0xE827B9382CFB41BA | Since: 791
  */
 export function setFlyCamVerticalResponse(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     SetFlyCamVerticalSpeedMultiplier(_cam, 0, 0, 0);
 }
 /**
@@ -1798,7 +1798,7 @@ export function setGameplayCamAltitudeFovScalingState() {
  * Hash: 0xFD3151CD37EA2245 | Since: 323
  */
 export function setGameplayCamEntityToLimitFocusOverBoundingSphereThisUpdate(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     Citizen.invokeNative('0xFD3151CD37EA2245', _entity);
 }
 /**
@@ -1807,7 +1807,7 @@ export function setGameplayCamEntityToLimitFocusOverBoundingSphereThisUpdate(ent
  * Hash: 0x8BBACBF51DA047A8 | Since: 323
  */
 export function setGameplayCamFollowPedThisUpdate(ped) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetGameplayCamFollowPedThisUpdate(_ped);
 }
 /**
@@ -1816,7 +1816,7 @@ export function setGameplayCamFollowPedThisUpdate(ped) {
  * Hash: 0x2AED6301F67007D5 | Since: 323
  */
 export function setGameplayCamIgnoreEntityCollisionThisUpdate(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     DisableCamCollisionForEntity(_entity);
 }
 /**
@@ -1879,7 +1879,7 @@ export function setGameplayCoordHint(pos, duration, blendOutDuration, blendInDur
  * Hash: 0x189E955A8313E298 | Since: 323
  */
 export function setGameplayEntityHint(entity, xOffset, yOffset, zOffset, time, easeInTime, easeOutTime) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     SetGameplayEntityHint(_entity, xOffset, yOffset, zOffset, false, time, easeInTime, easeOutTime, 0);
 }
 /**
@@ -1936,7 +1936,7 @@ export function setGameplayHintFov(FOV) {
  * Hash: 0x83E87508A2CA2AC6 | Since: 323
  */
 export function setGameplayObjectHint(_object, xOffset, yOffset, zOffset, time, easeInTime, easeOutTime) {
-    const __object = _object instanceof IObject ? _object.handle() : _object;
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
     SetGameplayObjectHint(__object, xOffset, yOffset, zOffset, false, time, easeInTime, easeOutTime);
 }
 /**
@@ -1945,7 +1945,7 @@ export function setGameplayObjectHint(_object, xOffset, yOffset, zOffset, time, 
  * Hash: 0x2B486269ACD548D3 | Since: 323
  */
 export function setGameplayPedHint(ped, x1, y1, z1, duration, blendOutDuration, blendInDuration) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     SetGameplayPedHint(_ped, x1, y1, z1, false, duration, blendOutDuration, blendInDuration);
 }
 /**
@@ -1954,7 +1954,7 @@ export function setGameplayPedHint(ped, x1, y1, z1, duration, blendOutDuration, 
  * Hash: 0xA2297E18F3E71C2E | Since: 323
  */
 export function setGameplayVehicleHint(vehicle, offsetX, offsetY, offsetZ, time, easeInTime, easeOutTime) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetGameplayVehicleHint(_vehicle, offsetX, offsetY, offsetZ, false, time, easeInTime, easeOutTime);
 }
 /**
@@ -1963,7 +1963,7 @@ export function setGameplayVehicleHint(vehicle, offsetX, offsetY, offsetZ, time,
  * Hash: 0xE9EA16D6E54CDCA4 | Since: 323
  */
 export function setInVehicleCamStateThisUpdate(p0) {
-    const _p0 = p0 instanceof IVehicle ? p0.handle() : p0;
+    const _p0 = typeof p0 == 'object' ? p0.handle() : p0;
     SetInVehicleCamStateThisUpdate(_p0, 0);
 }
 /**
@@ -2084,7 +2084,7 @@ export function setWidescreenBorders() {
  * Hash: 0x6A25241C340D3822 | Since: 323
  */
 export function shakeCam(cam, _type, amplitude) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     ShakeCam(_cam, _type, amplitude);
 }
 /**
@@ -2135,7 +2135,7 @@ export function shakeScriptGlobal() {
  * Hash: 0xF33AB75780BA57DE | Since: 323
  */
 export function stopCamPointing(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     StopCamPointing(_cam);
 }
 /**
@@ -2144,7 +2144,7 @@ export function stopCamPointing(cam) {
  * Hash: 0xBDECF64367884AC3 | Since: 323
  */
 export function stopCamShaking(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     StopCamShaking(_cam, false);
 }
 /**
@@ -2230,7 +2230,7 @@ export function stopScriptGlobalShaking() {
  * Hash: 0x5D96CFB59DA076A0 | Since: 2060
  */
 export function triggerVehiclePartBrokenShake(vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     Citizen.invokeNative('0x5D96CFB59DA076A0', _vehicle, 0, 0);
 }
 /**
@@ -2263,7 +2263,7 @@ export function useVehicleCamStuntSettingsThisUpdate() {
  * Hash: 0x5C48A1D6E3B33179 | Since: 323
  */
 export function wasFlyCamConstrainedOnPreviousUdpate(cam) {
-    const _cam = cam instanceof ICamera ? cam.handle() : cam;
+    const _cam = typeof cam == 'object' ? cam.handle() : cam;
     return Citizen.invokeNative('0x5C48A1D6E3B33179', _cam);
 }
 /**
@@ -2272,8 +2272,8 @@ export function wasFlyCamConstrainedOnPreviousUdpate(cam) {
  * Hash: 0x34CFC4C2A38E83E3 | Since: 3258
  */
 export function activateCamWithInterpAndFovCurve(camTo, camFrom, duration, easeLocation, easeRotation, easeFov) {
-    const _camTo = camTo instanceof ICamera ? camTo.handle() : camTo;
-    const _camFrom = camFrom instanceof ICamera ? camFrom.handle() : camFrom;
+    const _camTo = typeof camTo == 'object' ? camTo.handle() : camTo;
+    const _camFrom = typeof camFrom == 'object' ? camFrom.handle() : camFrom;
     ActivateCamWithInterpAndFovCurve(_camTo, _camFrom, duration, easeLocation, easeRotation, easeFov);
 }
 /**

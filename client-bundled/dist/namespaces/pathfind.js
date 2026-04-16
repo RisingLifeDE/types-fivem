@@ -1,4 +1,3 @@
-import { IVehicle } from '@risinglife/fivem-shared';
 /**
  * No comment provided
  *
@@ -393,7 +392,7 @@ export function isNavmeshRequiredRegionInUse() {
  * Hash: 0x125BF4ABFC536B09 | Since: 323 | API-Set: unknown
  */
 export function isPointOnRoad(pos, vehicle) {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return IsPointOnRoad(pos.x, pos.y, pos.z, _vehicle);
 }
 /**

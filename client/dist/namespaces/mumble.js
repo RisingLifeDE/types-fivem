@@ -1,4 +1,3 @@
-import { IPlayer } from '@risinglife/fivem-shared';
 /**
  * Starts listening to the specified channel, when available.
  *
@@ -21,7 +20,7 @@ export function addVoiceTargetChannel(targetId, channel) {
  * Hash: 0x32C5355A
  */
 export function addVoiceTargetPlayer(targetId, player) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     MumbleAddVoiceTargetPlayer(targetId, _player);
 }
 /**
@@ -111,7 +110,7 @@ export function isConnected() {
  * Hash: 0x33EEF97F
  */
 export function isPlayerTalking(player) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     return MumbleIsPlayerTalking(_player);
 }
 /**
@@ -140,7 +139,7 @@ export function removeVoiceTargetChannel(targetId, channel) {
  * Hash: 0x88CD646F
  */
 export function removeVoiceTargetPlayer(targetId, player) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     MumbleRemoveVoiceTargetPlayer(targetId, _player);
 }
 /**
@@ -244,7 +243,7 @@ export function setVoiceTarget(targetId) {
  * Hash: 0x61C309E3
  */
 export function setVolumeOverride(player, volume) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     MumbleSetVolumeOverride(_player, volume);
 }
 /**

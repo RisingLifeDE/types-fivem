@@ -1,4 +1,4 @@
-import { Vector3, IEntity } from '@risinglife/fivem-shared';
+import { Vector3 } from '@risinglife/fivem-shared';
 /**
  * No comment provided
  *
@@ -13,7 +13,7 @@ export function getEntityFromNetworkId(netId) {
  * Hash: 0x1E546224
  */
 export function getFirstEntityOwner(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return NetworkGetFirstEntityOwner(_entity);
 }
 /**
@@ -22,7 +22,7 @@ export function getFirstEntityOwner(entity) {
  * Hash: 0x9E35DAB6
  */
 export function getNetworkIdFromEntity(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return NetworkGetNetworkIdFromEntity(_entity);
 }
 /**
@@ -39,6 +39,6 @@ export function getVoiceProximityOverrideForPlayer(playerSrc) {
  * Hash: 0x526FEE31
  */
 export function getEntityOwner(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return NetworkGetEntityOwner(_entity);
 }

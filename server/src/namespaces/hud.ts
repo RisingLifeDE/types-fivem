@@ -24,7 +24,7 @@ export function addBlipForCoord(pos: Vector3): number {
  * Hash: 0x30822554
  */
 export function addBlipForEntity(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return AddBlipForEntity(_entity);
 }
 
@@ -50,7 +50,7 @@ export function addBlipForRadius(pos: Vector3, radius: number): number {
  * Hash: 0xD8C3C1CD
  */
 export function removeBlip(blip: number | IBlip): void {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     RemoveBlip(_blip);
 }
 
@@ -63,7 +63,7 @@ export function removeBlip(blip: number | IBlip): void {
  * Hash: 0x8DBBB0B9
  */
 export function setBlipSprite(blip: number | IBlip, spriteId: number): void {
-    const _blip = blip instanceof IBlip ? blip.handle() : blip;
+    const _blip = typeof blip == 'object' ? blip.handle() : blip;
     SetBlipSprite(_blip, spriteId);
 }
 

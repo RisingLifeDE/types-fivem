@@ -81,7 +81,7 @@ export declare function getWeaponDefenseModifier2(playerId: number | string | IP
  *
  * Hash: 0xCF143FB9 | Since: unknown | API-Set: client
  */
-export declare function getActives(): number[];
+export declare function getActives(): number;
 /**
  * Gets a local client's Player ID from its server ID counterpart, assuming the passed `serverId` exists on the client.
  *

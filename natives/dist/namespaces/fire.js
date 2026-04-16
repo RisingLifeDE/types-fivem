@@ -1,4 +1,4 @@
-import { Vector3, IEntity, IPed, IPlayer } from '@risinglife/fivem-shared';
+import { Vector3 } from '@risinglife/fivem-shared';
 /**
  * BOOL isAudible = If explosion makes a sound.
  * BOOL isInvisible = If the explosion is invisible or not.
@@ -30,7 +30,7 @@ export function addExplosionWithUserVfx(pos, explosionType, explosionFx, damageS
  * Hash: 0x172AA1B624FA1013 | Since: 323
  */
 export function addOwnedExplosion(ped, pos, explosionType, damageScale, isAudible, isInvisible, cameraShake) {
-    const _ped = ped instanceof IPed ? ped.handle() : ped;
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
     AddOwnedExplosion(_ped, pos.x, pos.y, pos.z, explosionType, damageScale, isAudible, isInvisible, cameraShake);
 }
 /**
@@ -73,7 +73,7 @@ export function getOwnerOfExplosionInSphere(explosionType, pos, radius) {
  * Hash: 0x28D3FED7190D3A0B | Since: 323
  */
 export function isEntityOn(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityOnFire(_entity);
 }
 /**
@@ -131,7 +131,7 @@ export function setFlammabilityMultiplier() {
  * Hash: 0xF6A9D9708F6F23DF | Since: 323
  */
 export function startEntity(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return StartEntityFire(_entity);
 }
 /**
@@ -152,7 +152,7 @@ export function startScript(pos, maxChildren, isGasFire) {
  * Hash: 0x7F0DD2EBBB651AFF | Since: 323
  */
 export function stopEntity(entity) {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     StopEntityFire(_entity);
 }
 /**
@@ -185,6 +185,6 @@ export function getWaterCannonCoords(index) {
  * Hash: 0x5241DB47A8B8AD54 | Since: 3570
  */
 export function networkExpectExplosionEventsForPlayer(expect, player) {
-    const _player = player instanceof IPlayer ? player.playerId() : player;
+    const _player = typeof player == 'object' ? player.playerId() : player;
     Citizen.invokeNative('0x5241DB47A8B8AD54', expect, _player);
 }

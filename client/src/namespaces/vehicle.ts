@@ -6,7 +6,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0xA274CADB
  */
 export function breakOffWheel(vehicle: number | IVehicle, wheelIndex: number, leaveDebrisTrail: boolean, deleteWheel: boolean, unknownFlag: boolean, putOnFire: boolean): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     BreakOffVehicleWheel(_vehicle, wheelIndex, leaveDebrisTrail, deleteWheel, unknownFlag, putOnFire);
 }
 
@@ -16,7 +16,7 @@ export function breakOffWheel(vehicle: number | IVehicle, wheelIndex: number, le
  * Hash: 0x2867ED8C
  */
 export function clearXenonLightsCustomColor(vehicle: number | IVehicle): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     ClearVehicleXenonLightsCustomColor(_vehicle);
 }
 
@@ -37,7 +37,7 @@ export function disablePassengerIdleCamera(state: boolean): void {
  * Hash: 0xEF30A696
  */
 export function doesUseFuel(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return DoesVehicleUseFuel(_vehicle);
 }
 
@@ -73,7 +73,7 @@ export function getAmbientRangeMultiplier(): number {
  * Hash: 0xE015E854
  */
 export function getTrainCurrentTrackNode(train: number | IVehicle): number {
-    const _train = train instanceof IVehicle ? train.handle() : train;
+    const _train = typeof train == 'object' ? train.handle() : train;
     return GetTrainCurrentTrackNode(_train);
 }
 
@@ -83,7 +83,7 @@ export function getTrainCurrentTrackNode(train: number | IVehicle): number {
  * Hash: 0x99974721
  */
 export function getTrainDoorCount(train: number | IVehicle): number {
-    const _train = train instanceof IVehicle ? train.handle() : train;
+    const _train = typeof train == 'object' ? train.handle() : train;
     return GetTrainDoorCount(_train);
 }
 
@@ -93,7 +93,7 @@ export function getTrainDoorCount(train: number | IVehicle): number {
  * Hash: 0x40B16551
  */
 export function getTrainDoorOpenRatio(train: number | IVehicle, doorIndex: number): number {
-    const _train = train instanceof IVehicle ? train.handle() : train;
+    const _train = typeof train == 'object' ? train.handle() : train;
     return GetTrainDoorOpenRatio(_train, doorIndex);
 }
 
@@ -103,7 +103,7 @@ export function getTrainDoorOpenRatio(train: number | IVehicle, doorIndex: numbe
  * Hash: 0x428668B7
  */
 export function getTrainSpeed(train: number | IVehicle): number {
-    const _train = train instanceof IVehicle ? train.handle() : train;
+    const _train = typeof train == 'object' ? train.handle() : train;
     return GetTrainSpeed(_train);
 }
 
@@ -113,7 +113,7 @@ export function getTrainSpeed(train: number | IVehicle): number {
  * Hash: 0xC62AAC98
  */
 export function getAlarmTimeLeft(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleAlarmTimeLeft(_vehicle);
 }
 
@@ -123,7 +123,7 @@ export function getAlarmTimeLeft(vehicle: number | IVehicle): number {
  * Hash: 0xC3C93F28
  */
 export function getCheatPowerIncrease(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleCheatPowerIncrease(_vehicle);
 }
 
@@ -133,7 +133,7 @@ export function getCheatPowerIncrease(vehicle: number | IVehicle): number {
  * Hash: 0x1DAD4583
  */
 export function getClutch(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleClutch(_vehicle);
 }
 
@@ -143,7 +143,7 @@ export function getClutch(vehicle: number | IVehicle): number {
  * Hash: 0xB4F4E566
  */
 export function getCurrentGear(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleCurrentGear(_vehicle);
 }
 
@@ -153,7 +153,7 @@ export function getCurrentGear(vehicle: number | IVehicle): number {
  * Hash: 0xE7B12B54
  */
 export function getCurrentRpm(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleCurrentRpm(_vehicle);
 }
 
@@ -236,7 +236,7 @@ export function getDashboardRpm(): number {
  * Hash: 0x9AAD420E
  */
 export function getDashboardSpeed(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleDashboardSpeed(_vehicle);
 }
 
@@ -273,7 +273,7 @@ export function getDensityMultiplier(): number {
  * Hash: 0x21C1DA8E
  */
 export function getDrawnWheelAngleMult(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleDrawnWheelAngleMult(_vehicle);
 }
 
@@ -283,7 +283,7 @@ export function getDrawnWheelAngleMult(vehicle: number | IVehicle): number {
  * Hash: 0xF4F495CB
  */
 export function getEngineTemperature(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleEngineTemperature(_vehicle);
 }
 
@@ -293,7 +293,7 @@ export function getEngineTemperature(vehicle: number | IVehicle): number {
  * Hash: 0x5F739BB8
  */
 export function getFuelLevel(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleFuelLevel(_vehicle);
 }
 
@@ -303,7 +303,7 @@ export function getFuelLevel(vehicle: number | IVehicle): number {
  * Hash: 0x82E794B7
  */
 export function getGearRatio(vehicle: number | IVehicle, gear: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleGearRatio(_vehicle, gear);
 }
 
@@ -313,7 +313,7 @@ export function getGearRatio(vehicle: number | IVehicle, gear: number): number {
  * Hash: 0xB48A1292
  */
 export function getGravityAmount(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleGravityAmount(_vehicle);
 }
 
@@ -324,7 +324,7 @@ export function getGravityAmount(vehicle: number | IVehicle): number {
  * Hash: 0x642FC12F
  */
 export function getHandlingFloat(vehicle: number | IVehicle, class_: string, fieldName: string): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleHandlingFloat(_vehicle, class_, fieldName);
 }
 
@@ -335,7 +335,7 @@ export function getHandlingFloat(vehicle: number | IVehicle, class_: string, fie
  * Hash: 0x27396C75
  */
 export function getHandlingInt(vehicle: number | IVehicle, class_: string, fieldName: string): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleHandlingInt(_vehicle, class_, fieldName);
 }
 
@@ -346,7 +346,7 @@ export function getHandlingInt(vehicle: number | IVehicle, class_: string, field
  * Hash: 0xFB341304
  */
 export function getHandlingVector(vehicle: number | IVehicle, class_: string, fieldName: string): Vector3 {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return new Vector3(GetVehicleHandlingVector(_vehicle, class_, fieldName));
 }
 
@@ -356,7 +356,7 @@ export function getHandlingVector(vehicle: number | IVehicle, class_: string, fi
  * Hash: 0xF1D1D689
  */
 export function getHighGear(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleHighGear(_vehicle);
 }
 
@@ -366,7 +366,7 @@ export function getHighGear(vehicle: number | IVehicle): number {
  * Hash: 0x83070354
  */
 export function getIndicatorLights(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleIndicatorLights(_vehicle);
 }
 
@@ -376,7 +376,7 @@ export function getIndicatorLights(vehicle: number | IVehicle): number {
  * Hash: 0x7E6E219C
  */
 export function getLightMultiplier(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleLightMultiplier(_vehicle);
 }
 
@@ -386,7 +386,7 @@ export function getLightMultiplier(vehicle: number | IVehicle): number {
  * Hash: 0xDDB298AE
  */
 export function getNextGear(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleNextGear(_vehicle);
 }
 
@@ -396,7 +396,7 @@ export function getNextGear(vehicle: number | IVehicle): number {
  * Hash: 0xEDF4B0FC
  */
 export function getNumberOfWheels(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleNumberOfWheels(_vehicle);
 }
 
@@ -406,7 +406,7 @@ export function getNumberOfWheels(vehicle: number | IVehicle): number {
  * Hash: 0xFC7F8EF4
  */
 export function getOilLevel(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleOilLevel(_vehicle);
 }
 
@@ -416,7 +416,7 @@ export function getOilLevel(vehicle: number | IVehicle): number {
  * Hash: 0x954465DE
  */
 export function getSteeringScale(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleSteeringScale(_vehicle);
 }
 
@@ -426,7 +426,7 @@ export function getSteeringScale(vehicle: number | IVehicle): number {
  * Hash: 0xD1D07351
  */
 export function getThrottleOffset(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleThrottleOffset(_vehicle);
 }
 
@@ -436,7 +436,7 @@ export function getThrottleOffset(vehicle: number | IVehicle): number {
  * Hash: 0x998B7FEE
  */
 export function getTopSpeedModifier(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleTopSpeedModifier(_vehicle);
 }
 
@@ -446,7 +446,7 @@ export function getTopSpeedModifier(vehicle: number | IVehicle): number {
  * Hash: 0xE02B51D7
  */
 export function getTurboPressure(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleTurboPressure(_vehicle);
 }
 
@@ -462,7 +462,7 @@ export function getTurboPressure(vehicle: number | IVehicle): number {
  * Hash: 0x137260D1
  */
 export function getWheelieState(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelieState(_vehicle);
 }
 
@@ -474,7 +474,7 @@ export function getWheelieState(vehicle: number | IVehicle): number {
  * Hash: 0x70FE2EFF
  */
 export function getWheelBrakePressure(vehicle: number | IVehicle, wheelIndex: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelBrakePressure(_vehicle, wheelIndex);
 }
 
@@ -485,7 +485,7 @@ export function getWheelBrakePressure(vehicle: number | IVehicle, wheelIndex: nu
  * Hash: 0xC70FA0C7
  */
 export function getWheelFlags(vehicle: number | IVehicle, wheelIndex: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelFlags(_vehicle, wheelIndex);
 }
 
@@ -495,7 +495,7 @@ export function getWheelFlags(vehicle: number | IVehicle, wheelIndex: number): n
  * Hash: 0x54A677F5
  */
 export function getWheelHealth(vehicle: number | IVehicle, wheelIndex: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelHealth(_vehicle, wheelIndex);
 }
 
@@ -507,7 +507,7 @@ export function getWheelHealth(vehicle: number | IVehicle, wheelIndex: number): 
  * Hash: 0x3CCF1B49
  */
 export function getWheelIsPowered(vehicle: number | IVehicle, wheelIndex: number): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelIsPowered(_vehicle, wheelIndex);
 }
 
@@ -518,7 +518,7 @@ export function getWheelIsPowered(vehicle: number | IVehicle, wheelIndex: number
  * Hash: 0xD203287
  */
 export function getWheelPower(vehicle: number | IVehicle, wheelIndex: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelPower(_vehicle, wheelIndex);
 }
 
@@ -528,7 +528,7 @@ export function getWheelPower(vehicle: number | IVehicle, wheelIndex: number): n
  * Hash: 0xCEE21AB2
  */
 export function getWheelRimColliderSize(vehicle: number | IVehicle, wheelIndex: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelRimColliderSize(_vehicle, wheelIndex);
 }
 
@@ -540,7 +540,7 @@ export function getWheelRimColliderSize(vehicle: number | IVehicle, wheelIndex: 
  * Hash: 0xEA1859E5
  */
 export function getWheelRotationSpeed(vehicle: number | IVehicle, wheelIndex: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelRotationSpeed(_vehicle, wheelIndex);
 }
 
@@ -551,7 +551,7 @@ export function getWheelRotationSpeed(vehicle: number | IVehicle, wheelIndex: nu
  * Hash: 0x4046B66
  */
 export function getWheelSize(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelSize(_vehicle);
 }
 
@@ -562,7 +562,7 @@ export function getWheelSize(vehicle: number | IVehicle): number {
  * Hash: 0x149C9DA0
  */
 export function getWheelSpeed(vehicle: number | IVehicle, wheelIndex: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelSpeed(_vehicle, wheelIndex);
 }
 
@@ -573,7 +573,7 @@ export function getWheelSpeed(vehicle: number | IVehicle, wheelIndex: number): n
  * Hash: 0xA0867448
  */
 export function getWheelSteeringAngle(vehicle: number | IVehicle, wheelIndex: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelSteeringAngle(_vehicle, wheelIndex);
 }
 
@@ -583,7 +583,7 @@ export function getWheelSteeringAngle(vehicle: number | IVehicle, wheelIndex: nu
  * Hash: 0xA7F04022
  */
 export function getWheelSurfaceMaterial(vehicle: number | IVehicle, wheelIndex: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelSurfaceMaterial(_vehicle, wheelIndex);
 }
 
@@ -595,7 +595,7 @@ export function getWheelSurfaceMaterial(vehicle: number | IVehicle, wheelIndex: 
  * Hash: 0x2B48175B
  */
 export function getWheelSuspensionCompression(vehicle: number | IVehicle, wheelIndex: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelSuspensionCompression(_vehicle, wheelIndex);
 }
 
@@ -605,7 +605,7 @@ export function getWheelSuspensionCompression(vehicle: number | IVehicle, wheelI
  * Hash: 0xE0BA9FE6
  */
 export function getWheelTireColliderSize(vehicle: number | IVehicle, wheelIndex: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelTireColliderSize(_vehicle, wheelIndex);
 }
 
@@ -615,7 +615,7 @@ export function getWheelTireColliderSize(vehicle: number | IVehicle, wheelIndex:
  * Hash: 0xEF65929C
  */
 export function getWheelTireColliderWidth(vehicle: number | IVehicle, wheelIndex: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelTireColliderWidth(_vehicle, wheelIndex);
 }
 
@@ -626,7 +626,7 @@ export function getWheelTireColliderWidth(vehicle: number | IVehicle, wheelIndex
  * Hash: 0x3BCFEE14
  */
 export function getWheelTractionVectorLength(vehicle: number | IVehicle, wheelIndex: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelTractionVectorLength(_vehicle, wheelIndex);
 }
 
@@ -637,7 +637,7 @@ export function getWheelTractionVectorLength(vehicle: number | IVehicle, wheelIn
  * Hash: 0x9C7B59F9
  */
 export function getWheelWidth(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelWidth(_vehicle);
 }
 
@@ -647,7 +647,7 @@ export function getWheelWidth(vehicle: number | IVehicle): number {
  * Hash: 0xCC90CBCA
  */
 export function getWheelXOffset(vehicle: number | IVehicle, wheelIndex: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelXOffset(_vehicle, wheelIndex);
 }
 
@@ -657,7 +657,7 @@ export function getWheelXOffset(vehicle: number | IVehicle, wheelIndex: number):
  * Hash: 0x2EA4AFFE
  */
 export function getWheelYRotation(vehicle: number | IVehicle, wheelIndex: number): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleWheelYRotation(_vehicle, wheelIndex);
 }
 
@@ -667,7 +667,7 @@ export function getWheelYRotation(vehicle: number | IVehicle, wheelIndex: number
  * Hash: 0xC715F730
  */
 export function getXenonLightsCustomColor(vehicle: number | IVehicle): [boolean, number, number, number] {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleXenonLightsCustomColor(_vehicle);
 }
 
@@ -686,7 +686,7 @@ export function getXmasSnowFactor(): number {
  * Hash: 0xDC921211
  */
 export function isAlarmSet(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return IsVehicleAlarmSet(_vehicle);
 }
 
@@ -696,7 +696,7 @@ export function isAlarmSet(vehicle: number | IVehicle): boolean {
  * Hash: 0xA411F72C
  */
 export function isInteriorLightOn(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return IsVehicleInteriorLightOn(_vehicle);
 }
 
@@ -706,7 +706,7 @@ export function isInteriorLightOn(vehicle: number | IVehicle): boolean {
  * Hash: 0xF9933BF4
  */
 export function isNeedsToBeHotwired(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return IsVehicleNeedsToBeHotwired(_vehicle);
 }
 
@@ -716,7 +716,7 @@ export function isNeedsToBeHotwired(vehicle: number | IVehicle): boolean {
  * Hash: 0xF849ED67
  */
 export function isPreviouslyOwnedByPlayer(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return IsVehiclePreviouslyOwnedByPlayer(_vehicle);
 }
 
@@ -726,7 +726,7 @@ export function isPreviouslyOwnedByPlayer(vehicle: number | IVehicle): boolean {
  * Hash: 0xA7DAF7C
  */
 export function isWanted(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return IsVehicleWanted(_vehicle);
 }
 
@@ -755,7 +755,7 @@ export function overrideReactionToSiren(state: boolean, reaction: number): void 
  * Hash: 0x7FA03E76
  */
 export function overridePedsCanStandOnTopFlag(vehicle: number | IVehicle, can: boolean): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     OverrideVehiclePedsCanStandOnTopFlag(_vehicle, can);
 }
 
@@ -767,7 +767,7 @@ export function overridePedsCanStandOnTopFlag(vehicle: number | IVehicle, can: b
  * Hash: 0xDF62CFE2
  */
 export function resetPedsCanStandOnTopFlag(vehicle: number | IVehicle): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     ResetVehiclePedsCanStandOnTopFlag(_vehicle);
 }
 
@@ -857,7 +857,7 @@ export function setTrainsForceDoorsOpen(forceOpen: boolean): void {
  * Hash: 0x2468DBE8
  */
 export function setTrainDoorOpenRatio(train: number | IVehicle, doorIndex: number, ratio: number): void {
-    const _train = train instanceof IVehicle ? train.handle() : train;
+    const _train = typeof train == 'object' ? train.handle() : train;
     SetTrainDoorOpenRatio(_train, doorIndex, ratio);
 }
 
@@ -867,7 +867,7 @@ export function setTrainDoorOpenRatio(train: number | IVehicle, doorIndex: numbe
  * Hash: 0x61CB74A0
  */
 export function setTrainState(train: number | IVehicle, state: number): void {
-    const _train = train instanceof IVehicle ? train.handle() : train;
+    const _train = typeof train == 'object' ? train.handle() : train;
     SetTrainState(_train, state);
 }
 
@@ -877,7 +877,7 @@ export function setTrainState(train: number | IVehicle, state: number): void {
  * Hash: 0xECB8B577
  */
 export function setTrainStopAtStations(train: number | IVehicle, state: boolean): void {
-    const _train = train instanceof IVehicle ? train.handle() : train;
+    const _train = typeof train == 'object' ? train.handle() : train;
     SetTrainStopAtStations(_train, state);
 }
 
@@ -887,7 +887,7 @@ export function setTrainStopAtStations(train: number | IVehicle, state: boolean)
  * Hash: 0xC108EE6F
  */
 export function setAlarmTimeLeft(vehicle: number | IVehicle, time: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleAlarmTimeLeft(_vehicle, time);
 }
 
@@ -897,7 +897,7 @@ export function setAlarmTimeLeft(vehicle: number | IVehicle, time: number): void
  * Hash: 0x5F3A3574
  */
 export function setAutoRepairDisabled(vehicle: number | IVehicle, value: boolean): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleAutoRepairDisabled(_vehicle, value);
 }
 
@@ -907,7 +907,7 @@ export function setAutoRepairDisabled(vehicle: number | IVehicle, value: boolean
  * Hash: 0x2F70ACED
  */
 export function setClutch(vehicle: number | IVehicle, clutch: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleClutch(_vehicle, clutch);
 }
 
@@ -917,7 +917,7 @@ export function setClutch(vehicle: number | IVehicle, clutch: number): void {
  * Hash: 0x2A01A8FC
  */
 export function setCurrentRpm(vehicle: number | IVehicle, rpm: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleCurrentRpm(_vehicle, rpm);
 }
 
@@ -927,7 +927,7 @@ export function setCurrentRpm(vehicle: number | IVehicle, rpm: number): void {
  * Hash: 0x6C93C4A9
  */
 export function setEngineTemperature(vehicle: number | IVehicle, temperature: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleEngineTemperature(_vehicle, temperature);
 }
 
@@ -937,7 +937,7 @@ export function setEngineTemperature(vehicle: number | IVehicle, temperature: nu
  * Hash: 0xBA970511
  */
 export function setFuelLevel(vehicle: number | IVehicle, level: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleFuelLevel(_vehicle, level);
 }
 
@@ -947,7 +947,7 @@ export function setFuelLevel(vehicle: number | IVehicle, level: number): void {
  * Hash: 0x496EF2F2
  */
 export function setGearRatio(vehicle: number | IVehicle, gear: number, ratio: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleGearRatio(_vehicle, gear, ratio);
 }
 
@@ -957,7 +957,7 @@ export function setGearRatio(vehicle: number | IVehicle, gear: number, ratio: nu
  * Hash: 0x1A963E58
  */
 export function setGravityAmount(vehicle: number | IVehicle, gravity: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleGravityAmount(_vehicle, gravity);
 }
 
@@ -968,7 +968,7 @@ export function setGravityAmount(vehicle: number | IVehicle, gravity: number): v
  * Hash: 0x2BA40795
  */
 export function setVehicleHandlingField(vehicle: number | IVehicle, class_: string, fieldName: string, value: any): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleHandlingField(_vehicle, class_, fieldName, value);
 }
 
@@ -979,7 +979,7 @@ export function setVehicleHandlingField(vehicle: number | IVehicle, class_: stri
  * Hash: 0x488C86D2
  */
 export function setVehicleHandlingFloat(vehicle: number | IVehicle, class_: string, fieldName: string, value: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleHandlingFloat(_vehicle, class_, fieldName, value);
 }
 
@@ -989,7 +989,7 @@ export function setVehicleHandlingFloat(vehicle: number | IVehicle, class_: stri
  * Hash: 0xC37F4CF9
  */
 export function setVehicleHandlingInt(vehicle: number | IVehicle, class_: string, fieldName: string, value: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleHandlingInt(_vehicle, class_, fieldName, value);
 }
 
@@ -999,7 +999,7 @@ export function setVehicleHandlingInt(vehicle: number | IVehicle, class_: string
  * Hash: 0x12497890
  */
 export function setVehicleHandlingVector(vehicle: number | IVehicle, class_: string, fieldName: string, value: Vector3): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleHandlingVector(_vehicle, class_, fieldName, value);
 }
 
@@ -1009,7 +1009,7 @@ export function setVehicleHandlingVector(vehicle: number | IVehicle, class_: str
  * Hash: 0x20B1B3E6
  */
 export function setHighGear(vehicle: number | IVehicle, gear: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleHighGear(_vehicle, gear);
 }
 
@@ -1028,7 +1028,7 @@ export function setNitroPtfxRange(range: number): void {
  * Hash: 0x90D1CAD1
  */
 export function setOilLevel(vehicle: number | IVehicle, level: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleOilLevel(_vehicle, level);
 }
 
@@ -1038,7 +1038,7 @@ export function setOilLevel(vehicle: number | IVehicle, level: number): void {
  * Hash: 0x2A6CC9F2
  */
 export function setPitchBias(vehicle: number | IVehicle, value: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehiclePitchBias(_vehicle, value);
 }
 
@@ -1048,7 +1048,7 @@ export function setPitchBias(vehicle: number | IVehicle, value: number): void {
  * Hash: 0x264B45DE
  */
 export function setRollBias(vehicle: number | IVehicle, value: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleRollBias(_vehicle, value);
 }
 
@@ -1058,7 +1058,7 @@ export function setRollBias(vehicle: number | IVehicle, value: number): void {
  * Hash: 0xFFCCC2EA
  */
 export function setSteeringAngle(vehicle: number | IVehicle, angle: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleSteeringAngle(_vehicle, angle);
 }
 
@@ -1068,7 +1068,7 @@ export function setSteeringAngle(vehicle: number | IVehicle, angle: number): voi
  * Hash: 0xEB46596F
  */
 export function setSteeringScale(vehicle: number | IVehicle, scale: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleSteeringScale(_vehicle, scale);
 }
 
@@ -1082,7 +1082,7 @@ export function setSteeringScale(vehicle: number | IVehicle, scale: number): voi
  * Hash: 0xB3439A01
  */
 export function setSuspensionHeight(vehicle: number | IVehicle, newHeight: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleSuspensionHeight(_vehicle, newHeight);
 }
 
@@ -1092,7 +1092,7 @@ export function setSuspensionHeight(vehicle: number | IVehicle, newHeight: numbe
  * Hash: 0x6485615E
  */
 export function setTurboPressure(vehicle: number | IVehicle, pressure: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleTurboPressure(_vehicle, pressure);
 }
 
@@ -1110,7 +1110,7 @@ export function setTurboPressure(vehicle: number | IVehicle, pressure: number): 
  * Hash: 0xEAB8DB65
  */
 export function setWheelieState(vehicle: number | IVehicle, state: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleWheelieState(_vehicle, state);
 }
 
@@ -1122,7 +1122,7 @@ export function setWheelieState(vehicle: number | IVehicle, state: number): void
  * Hash: 0xE80F4E31
  */
 export function setWheelBrakePressure(vehicle: number | IVehicle, wheelIndex: number, pressure: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleWheelBrakePressure(_vehicle, wheelIndex, pressure);
 }
 
@@ -1133,7 +1133,7 @@ export function setWheelBrakePressure(vehicle: number | IVehicle, wheelIndex: nu
  * Hash: 0xD2B9E90D
  */
 export function setWheelFlags(vehicle: number | IVehicle, wheelIndex: number, flags: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleWheelFlags(_vehicle, wheelIndex, flags);
 }
 
@@ -1143,7 +1143,7 @@ export function setWheelFlags(vehicle: number | IVehicle, wheelIndex: number, fl
  * Hash: 0xB22ECEFD
  */
 export function setWheelHealth(vehicle: number | IVehicle, wheelIndex: number, health: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleWheelHealth(_vehicle, wheelIndex, health);
 }
 
@@ -1156,7 +1156,7 @@ export function setWheelHealth(vehicle: number | IVehicle, wheelIndex: number, h
  * Hash: 0xBD5291A0
  */
 export function setWheelIsPowered(vehicle: number | IVehicle, wheelIndex: number, powered: boolean): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleWheelIsPowered(_vehicle, wheelIndex, powered);
 }
 
@@ -1167,7 +1167,7 @@ export function setWheelIsPowered(vehicle: number | IVehicle, wheelIndex: number
  * Hash: 0xC6146043
  */
 export function setWheelPower(vehicle: number | IVehicle, wheelIndex: number, power: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleWheelPower(_vehicle, wheelIndex, power);
 }
 
@@ -1177,7 +1177,7 @@ export function setWheelPower(vehicle: number | IVehicle, wheelIndex: number, po
  * Hash: 0xF380E184
  */
 export function setWheelRimColliderSize(vehicle: number | IVehicle, wheelIndex: number, value: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleWheelRimColliderSize(_vehicle, wheelIndex, value);
 }
 
@@ -1188,7 +1188,7 @@ export function setWheelRimColliderSize(vehicle: number | IVehicle, wheelIndex: 
  * Hash: 0x35ED100D
  */
 export function setWheelRotationSpeed(vehicle: number | IVehicle, wheelIndex: number, speed: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleWheelRotationSpeed(_vehicle, wheelIndex, speed);
 }
 
@@ -1200,7 +1200,7 @@ export function setWheelRotationSpeed(vehicle: number | IVehicle, wheelIndex: nu
  * Hash: 0x53AB5C35
  */
 export function setWheelSize(vehicle: number | IVehicle, size: number): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return SetVehicleWheelSize(_vehicle, size);
 }
 
@@ -1210,7 +1210,7 @@ export function setWheelSize(vehicle: number | IVehicle, size: number): boolean 
  * Hash: 0xB962D05C
  */
 export function setWheelTireColliderSize(vehicle: number | IVehicle, wheelIndex: number, value: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleWheelTireColliderSize(_vehicle, wheelIndex, value);
 }
 
@@ -1220,7 +1220,7 @@ export function setWheelTireColliderSize(vehicle: number | IVehicle, wheelIndex:
  * Hash: 0x47BD0270
  */
 export function setWheelTireColliderWidth(vehicle: number | IVehicle, wheelIndex: number, value: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleWheelTireColliderWidth(_vehicle, wheelIndex, value);
 }
 
@@ -1231,7 +1231,7 @@ export function setWheelTireColliderWidth(vehicle: number | IVehicle, wheelIndex
  * Hash: 0x85C85A3A
  */
 export function setWheelTractionVectorLength(vehicle: number | IVehicle, wheelIndex: number, length: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleWheelTractionVectorLength(_vehicle, wheelIndex, length);
 }
 
@@ -1243,7 +1243,7 @@ export function setWheelTractionVectorLength(vehicle: number | IVehicle, wheelIn
  * Hash: 0x64C3F1C0
  */
 export function setWheelWidth(vehicle: number | IVehicle, width: number): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return SetVehicleWheelWidth(_vehicle, width);
 }
 
@@ -1262,7 +1262,7 @@ export function setWheelWidth(vehicle: number | IVehicle, width: number): boolea
  * Hash: 0xBD6357D
  */
 export function setWheelXOffset(vehicle: number | IVehicle, wheelIndex: number, offset: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleWheelXOffset(_vehicle, wheelIndex, offset);
 }
 
@@ -1272,7 +1272,7 @@ export function setWheelXOffset(vehicle: number | IVehicle, wheelIndex: number, 
  * Hash: 0xC6C2171F
  */
 export function setWheelYRotation(vehicle: number | IVehicle, wheelIndex: number, value: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleWheelYRotation(_vehicle, wheelIndex, value);
 }
 
@@ -1282,7 +1282,7 @@ export function setWheelYRotation(vehicle: number | IVehicle, wheelIndex: number
  * Hash: 0x1683E7F0
  */
 export function setXenonLightsCustomColor(vehicle: number | IVehicle, red: number, green: number, blue: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleXenonLightsCustomColor(_vehicle, red, green, blue);
 }
 
@@ -1301,7 +1301,7 @@ export function setXmasSnowFactor(gripFactor: number): void {
  * Hash: 0x77CC80DC
  */
 export function doesTrainStopAtStations(train: number | IVehicle): boolean {
-    const _train = train instanceof IVehicle ? train.handle() : train;
+    const _train = typeof train == 'object' ? train.handle() : train;
     return DoesTrainStopAtStations(_train);
 }
 
@@ -1311,7 +1311,7 @@ export function doesTrainStopAtStations(train: number | IVehicle): boolean {
  * Hash: 0xA4921EF5
  */
 export function getTrainCruiseSpeed(train: number | IVehicle): number {
-    const _train = train instanceof IVehicle ? train.handle() : train;
+    const _train = typeof train == 'object' ? train.handle() : train;
     return GetTrainCruiseSpeed(_train);
 }
 
@@ -1321,7 +1321,7 @@ export function getTrainCruiseSpeed(train: number | IVehicle): number {
  * Hash: 0x8DAF79B6
  */
 export function getTrainDirection(train: number | IVehicle): boolean {
-    const _train = train instanceof IVehicle ? train.handle() : train;
+    const _train = typeof train == 'object' ? train.handle() : train;
     return GetTrainDirection(_train);
 }
 
@@ -1331,7 +1331,7 @@ export function getTrainDirection(train: number | IVehicle): boolean {
  * Hash: 0x81B50033
  */
 export function getTrainState(train: number | IVehicle): number {
-    const _train = train instanceof IVehicle ? train.handle() : train;
+    const _train = typeof train == 'object' ? train.handle() : train;
     return GetTrainState(_train);
 }
 
@@ -1341,7 +1341,7 @@ export function getTrainState(train: number | IVehicle): number {
  * Hash: 0x9AA339D
  */
 export function getTrainTrackIndex(train: number | IVehicle): number {
-    const _train = train instanceof IVehicle ? train.handle() : train;
+    const _train = typeof train == 'object' ? train.handle() : train;
     return GetTrainTrackIndex(_train);
 }
 
@@ -1351,7 +1351,7 @@ export function getTrainTrackIndex(train: number | IVehicle): number {
  * Hash: 0x483B013C
  */
 export function getHandbrake(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleHandbrake(_vehicle);
 }
 
@@ -1361,7 +1361,7 @@ export function getHandbrake(vehicle: number | IVehicle): boolean {
  * Hash: 0x1382FCEA
  */
 export function getSteeringAngle(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleSteeringAngle(_vehicle);
 }
 
@@ -1371,7 +1371,7 @@ export function getSteeringAngle(vehicle: number | IVehicle): number {
  * Hash: 0xBB340D04
  */
 export function isEngineStarting(vehicle: number | IVehicle): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return IsVehicleEngineStarting(_vehicle);
 }
 
@@ -1383,7 +1383,7 @@ export function isEngineStarting(vehicle: number | IVehicle): boolean {
  * Hash: 0xD85C9F57
  */
 export function getHasFlag(vehicle: number | IVehicle, flagIndex: number): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleHasFlag(_vehicle, flagIndex);
 }
 
@@ -1416,7 +1416,7 @@ export function getHasFlag(vehicle: number | IVehicle, flagIndex: number): boole
  * Hash: 0xDE73BC10
  */
 export function getTypeRaw(vehicle: number | IVehicle): number {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleTypeRaw(_vehicle);
 }
 
@@ -1426,7 +1426,7 @@ export function getTypeRaw(vehicle: number | IVehicle): number {
  * Hash: 0xCF1BC668
  */
 export function isWheelBrokenOff(vehicle: number | IVehicle, wheelIndex: number): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return IsVehicleWheelBrokenOff(_vehicle, wheelIndex);
 }
 
@@ -1436,7 +1436,7 @@ export function isWheelBrokenOff(vehicle: number | IVehicle, wheelIndex: number)
  * Hash: 0x8923DD42
  */
 export function setCurrentGear(vehicle: number | IVehicle, gear: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleCurrentGear(_vehicle, gear);
 }
 
@@ -1446,7 +1446,7 @@ export function setCurrentGear(vehicle: number | IVehicle, gear: number): void {
  * Hash: 0x63AE1A34
  */
 export function setFlag(vehicle: number | IVehicle, flagIndex: number, value: boolean): boolean {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return SetVehicleFlag(_vehicle, flagIndex, value);
 }
 
@@ -1456,7 +1456,7 @@ export function setFlag(vehicle: number | IVehicle, flagIndex: number, value: bo
  * Hash: 0x3A4566F4
  */
 export function setNextGear(vehicle: number | IVehicle, nextGear: number): void {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     SetVehicleNextGear(_vehicle, nextGear);
 }
 
@@ -1479,7 +1479,7 @@ export function setNextGear(vehicle: number | IVehicle, nextGear: number): void 
  * Hash: 0xA273060E
  */
 export function getType(vehicle: number | IVehicle): string {
-    const _vehicle = vehicle instanceof IVehicle ? vehicle.handle() : vehicle;
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
     return GetVehicleType(_vehicle);
 }
 

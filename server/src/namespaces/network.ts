@@ -15,7 +15,7 @@ export function getEntityFromNetworkId(netId: number): number {
  * Hash: 0x1E546224
  */
 export function getFirstEntityOwner(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return NetworkGetFirstEntityOwner(_entity);
 }
 
@@ -25,7 +25,7 @@ export function getFirstEntityOwner(entity: number | IEntity): number {
  * Hash: 0x9E35DAB6
  */
 export function getNetworkIdFromEntity(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return NetworkGetNetworkIdFromEntity(_entity);
 }
 
@@ -44,7 +44,7 @@ export function getVoiceProximityOverrideForPlayer(playerSrc: string): Vector3 {
  * Hash: 0x526FEE31
  */
 export function getEntityOwner(entity: number | IEntity): number {
-    const _entity = entity instanceof IEntity ? entity.handle() : entity;
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return NetworkGetEntityOwner(_entity);
 }
 
