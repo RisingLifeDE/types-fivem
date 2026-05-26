@@ -1070,18 +1070,17 @@ export declare function addDispatchSpawnAngledBlockingArea(x1: number, y1: numbe
 export declare function addDispatchSpawnSphereBlockingArea(x1: number, y1: number, x2: number, y2: number): number;
 /**
  * Returns the index of the newly created hospital spawn point.
- *
- * p3 might be radius?
+ * whenToUse: must be 0
  *
  * Hash: 0x1F464EF988465A81 | Since: 323 | API-Set: unknown
  */
-export declare function addHospitalRestart(pos: Vector3): number;
+export declare function addHospitalRestart(pos: Vector3, heading: number, whenToUse: number): number;
 /**
- * No comment provided
+ * whenToUse: must be 0
  *
  * Hash: 0x452736765B31FC4B | Since: 323 | API-Set: unknown
  */
-export declare function addPoliceRestart(): number;
+export declare function addPoliceRestart(pos: Vector3, heading: number, whenToUse: number): number;
 /**
  * No comment provided
  *
@@ -1948,11 +1947,12 @@ export declare function getWindSpeed(): number;
  */
 export declare function hasAsyncInstallFinished(): boolean;
 /**
- * p3 - possibly radius?
+ * bIsPlayer: checks if the player fired the bullet
+ * bEntryOnly: only find entry impacts
  *
  * Hash: 0x9870ACFB89A90995 | Since: 323 | API-Set: unknown
  */
-export declare function hasBulletImpactedInArea(pos: Vector3): boolean;
+export declare function hasBulletImpactedInArea(pos: Vector3, radius: number, bIsPlayer: boolean, bIsEntry: boolean): boolean;
 /**
  * No comment provided
  *

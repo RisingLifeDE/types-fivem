@@ -1563,11 +1563,11 @@ export declare function hasScaleformScriptHudMovieLoaded(hudComponent: number): 
  */
 export declare function hasStreamedTextureDictLoaded(textureDict: string): boolean;
 /**
- * val is 1-20 (0 will return false)
+ * No comment provided
  *
  * Hash: 0x2FCB133CA50A49EB | Since: 1290
  */
-export declare function isActiveScaleformMovieDeleting(val: number): boolean;
+export declare function isActiveScaleformMovieDeleting(scaleformHandle: number): boolean;
 /**
  * No comment provided
  *
@@ -1581,11 +1581,11 @@ export declare function isDecalAlive(decal: number): boolean;
  */
 export declare function isPlaylistOnChannel(tvChannel: number): boolean;
 /**
- * val is 1-20. Return is related to INSTRUCTIONAL_BUTTONS, COLOUR_SWITCHER_02, etc?
+ * No comment provided
  *
  * Hash: 0x86255B1FC929E33E | Since: 1290
  */
-export declare function isScaleformMovieDeleting(val: number): boolean;
+export declare function isScaleformMovieDeleting(scaleformHandle: number): boolean;
 /**
  * methodReturn: The return value of this native: END_SCALEFORM_MOVIE_METHOD_RETURN_VALUE
  * Returns true if the return value of a scaleform function is ready to be collected (using GET_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_STRING or GET_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_INT).
@@ -2111,7 +2111,7 @@ export declare function setBinkMovieAudioFrontend(binkMovie: number): void;
  */
 export declare function setBinkMovieTime(binkMovie: number, progress: number): void;
 /**
- * `binkMovie: Is return value from _SET_BINK_MOVIE. Has something to do with bink volume? (audRequestedSettings::SetVolumeCurveScale)`
+ * binkMovie: Is return value from SET_BINK_MOVIE.
  *
  * Hash: 0xAFF33B1178172223 | Since: 1290
  */

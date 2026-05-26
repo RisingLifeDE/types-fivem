@@ -1939,12 +1939,12 @@ export function hasStreamedTextureDictLoaded(textureDict) {
     return HasStreamedTextureDictLoaded(textureDict);
 }
 /**
- * val is 1-20 (0 will return false)
+ * No comment provided
  *
  * Hash: 0x2FCB133CA50A49EB | Since: 1290
  */
-export function isActiveScaleformMovieDeleting(val) {
-    return Citizen.invokeNative('0x2FCB133CA50A49EB', val);
+export function isActiveScaleformMovieDeleting(scaleformHandle) {
+    return Citizen.invokeNative('0x2FCB133CA50A49EB', scaleformHandle);
 }
 /**
  * No comment provided
@@ -1963,12 +1963,12 @@ export function isPlaylistOnChannel(tvChannel) {
     return IsPlaylistUnk(tvChannel, undefined);
 }
 /**
- * val is 1-20. Return is related to INSTRUCTIONAL_BUTTONS, COLOUR_SWITCHER_02, etc?
+ * No comment provided
  *
  * Hash: 0x86255B1FC929E33E | Since: 1290
  */
-export function isScaleformMovieDeleting(val) {
-    return IsScaleformMovieDeleting(val);
+export function isScaleformMovieDeleting(scaleformHandle) {
+    return IsScaleformMovieDeleting(scaleformHandle);
 }
 /**
  * methodReturn: The return value of this native: END_SCALEFORM_MOVIE_METHOD_RETURN_VALUE
@@ -2667,7 +2667,7 @@ export function setBinkMovieTime(binkMovie, progress) {
     SetBinkMovieTime(binkMovie, progress);
 }
 /**
- * `binkMovie: Is return value from _SET_BINK_MOVIE. Has something to do with bink volume? (audRequestedSettings::SetVolumeCurveScale)`
+ * binkMovie: Is return value from SET_BINK_MOVIE.
  *
  * Hash: 0xAFF33B1178172223 | Since: 1290
  */

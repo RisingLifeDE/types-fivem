@@ -264,15 +264,15 @@ export function enableLaserSightRendering(toggle) {
     EnableLaserSightRendering(toggle);
 }
 /**
- * `WEAPON::EXPLODE_PROJECTILES(PLAYER::PLAYER_PED_ID(), func_221(0x00000003), 0x00000001);`
+ * No comment provided
  *
  * Hash: 0xFC4BD125DE7611E4 | Since: 323 | API-Set: unknown
  */
-export function explodeProjectiles(ped, weaponHash) {
+export function explodeProjectiles(ped, weaponHash, instant) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof weaponHash === 'string')
         weaponHash = GetHashKey(weaponHash);
-    ExplodeProjectiles(_ped, weaponHash, false);
+    ExplodeProjectiles(_ped, weaponHash, instant);
 }
 /**
  * No comment provided
@@ -312,13 +312,13 @@ export function getAmmoInPed(ped, weaponhash) {
     return GetAmmoInPedWeapon(_ped, weaponhash);
 }
 /**
- * p1 is always 0 in the scripts.
+ * bIgnoreAmmoCheck is always false in the scripts.
  *
  * Hash: 0x8483E98E8B888AE2 | Since: 323 | API-Set: unknown
  */
-export function getBestPed(ped) {
+export function getBestPed(ped, bIgnoreAmmoCheck) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
-    return GetBestPedWeapon(_ped, false);
+    return GetBestPedWeapon(_ped, bIgnoreAmmoCheck);
 }
 /**
  * Example in VB
@@ -340,32 +340,23 @@ export function getCurrentPedVehicle(ped) {
     return GetCurrentPedVehicleWeapon(_ped);
 }
 /**
- * The return value seems to indicate returns true if the hash of the weapon object weapon equals the weapon hash.
- * p2 seems to be 1 most of the time.
- *
- *
- *
- *
- *
- * p2 is not implemented
- *
- * disassembly said that?
- *
+ * Returns true if the hash of the equipped weapon object equals the weapon hash.
+ * doDeadCheck does nothing in release builds.
  *
  * Hash: 0x3A87E44BB9A01D54 | Since: 323 | API-Set: unknown
  */
-export function getCurrentPed(ped) {
+export function getCurrentPed(ped, doDeadCheck) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
-    return GetCurrentPedWeapon(_ped, false);
+    return GetCurrentPedWeapon(_ped, doDeadCheck);
 }
 /**
- * No comment provided
+ * doDeadCheck does nothing in release builds.
  *
  * Hash: 0x3B390A939AF0B5FC | Since: 323 | API-Set: unknown
  */
-export function getCurrentPedEntityIndex(ped) {
+export function getCurrentPedEntityIndex(ped, doDeadCheck) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
-    return GetCurrentPedWeaponEntityIndex(_ped, undefined);
+    return GetCurrentPedWeaponEntityIndex(_ped, doDeadCheck);
 }
 /**
  * gadgetHash - was always 0xFBAB5776 ("GADGET_PARACHUTE").
@@ -560,9 +551,6 @@ export function gettypeGroup(weaponHash) {
 }
 /**
  * Returns the model of any weapon.
- *
- * Can also take an ammo hash?
- * `sub_6663a(&l_115B, WEAPON::GET_WEAPONTYPE_MODEL(${ammo_rpg}));`
  *
  * Hash: 0xF46CDC33180FDA94 | Since: 323 | API-Set: unknown
  */

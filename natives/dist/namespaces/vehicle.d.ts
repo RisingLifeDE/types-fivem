@@ -1253,7 +1253,7 @@ export declare function getClassMaxBraking(vehicleClass: number): number;
  */
 export declare function getClassMaxTraction(vehicleClass: number): number;
 /**
- * What's this for? Primary and Secondary RGB have their own natives and this one doesn't seem specific.
+ * No comment provided
  *
  * Hash: 0xF3CC740D36221548 | Since: 323
  */
@@ -1422,8 +1422,6 @@ export declare function getHasParachute(vehicle: number | IVehicle): boolean;
  * Front of vehicle when damaged goes from 100-50 and stops at 50.
  * Rear can be damaged from 100-0
  * Only tested with two cars.
- *
- * any idea how this differs from the first one?
  *
  * --
  * May return the vehicle health on a scale of 0.0 - 100.0 (needs to be confirmed)
@@ -2850,7 +2848,7 @@ export declare function setCargobobPickupRopeType(): void;
  */
 export declare function setCarjackMissionRemovalParameters(): void;
 /**
- * Initially used in Max Payne 3, that's why we know the name.
+ * No comment provided
  *
  * Hash: 0xFC40CBF7B90CA77C | Since: 877
  */

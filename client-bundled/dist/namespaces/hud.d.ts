@@ -683,18 +683,13 @@ export declare function displayCash(toggle: boolean): void;
  * "Enter_bus"
  * "Tour_help"
  * "LETTERS_HELP2"
- * "Dummy"
+ * "Dummy""
  *
- * <strong>The bool appears to always be false (if it even is a bool, as it's represented by a zero)</strong>
- * --------
- * p1 doesn't seem to make a difference, regardless of the state it's in.
- *
- *
- * picture of where on the screen this is displayed?
+ * curvedWindow is unused.
  *
  * Hash: 0x960C9FF8F616E41C | Since: 323 | API-Set: unknown
  */
-export declare function displayHelpTextThisFrame(message: string): void;
+export declare function displayHelpTextThisFrame(message: string, curvedWindow: boolean): void;
 /**
  * If Hud should be displayed
  *
@@ -3286,8 +3281,7 @@ export declare function setSocialClubTour(name: string): void;
  */
 export declare function setTextCentre(align: boolean): void;
 /**
- * colors you input not same as you think?
- * A: for some reason its R B G A
+ * No comment provided
  *
  * Hash: 0xBE6B23FFA53FB442 | Since: 323 | API-Set: unknown
  */

@@ -1528,22 +1528,21 @@ export function addDispatchSpawnSphereBlockingArea(x1: number, y1: number, x2: n
 
 /**
  * Returns the index of the newly created hospital spawn point.
- * 
- * p3 might be radius?
+ * whenToUse: must be 0
  * 
  * Hash: 0x1F464EF988465A81 | Since: 323 | API-Set: unknown
  */
-export function addHospitalRestart(pos: Vector3): number {
-    return AddHospitalRestart(pos.x, pos.y, pos.z, 0, undefined);
+export function addHospitalRestart(pos: Vector3, heading: number, whenToUse: number): number {
+    return AddHospitalRestart(pos.x, pos.y, pos.z, heading, whenToUse);
 }
 
 /**
- * No comment provided
+ * whenToUse: must be 0
  * 
  * Hash: 0x452736765B31FC4B | Since: 323 | API-Set: unknown
  */
-export function addPoliceRestart(): number {
-    return AddPoliceRestart(0, 0, 0, 0, undefined);
+export function addPoliceRestart(pos: Vector3, heading: number, whenToUse: number): number {
+    return AddPoliceRestart(pos.x, pos.y, pos.z, heading, whenToUse);
 }
 
 /**
@@ -2404,7 +2403,7 @@ export function getGroundZExcludingObjectsFor3dCoord(pos: Vector3): [boolean, nu
  * Hash: 0xC906A7DAB05C8D2B | Since: 323 | API-Set: unknown
  */
 export function getGroundZFor3dCoord(pos: Vector3, ignoreWater: boolean): [boolean, number] {
-    return GetGroundZFor_3dCoord(pos.x, pos.y, pos.z, ignoreWater, false);
+    return GetGroundZFor3dCoord(pos.x, pos.y, pos.z, ignoreWater, false);
 }
 
 /**
@@ -2788,12 +2787,13 @@ export function hasAsyncInstallFinished(): boolean {
 }
 
 /**
- * p3 - possibly radius?
+ * bIsPlayer: checks if the player fired the bullet
+ * bEntryOnly: only find entry impacts
  * 
  * Hash: 0x9870ACFB89A90995 | Since: 323 | API-Set: unknown
  */
-export function hasBulletImpactedInArea(pos: Vector3): boolean {
-    return HasBulletImpactedInArea(pos.x, pos.y, pos.z, 0, false, false);
+export function hasBulletImpactedInArea(pos: Vector3, radius: number, bIsPlayer: boolean, bIsEntry: boolean): boolean {
+    return HasBulletImpactedInArea(pos.x, pos.y, pos.z, radius, bIsPlayer, bIsEntry);
 }
 
 /**

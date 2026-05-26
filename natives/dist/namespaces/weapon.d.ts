@@ -69,11 +69,11 @@ export declare function doesTakeWeaponComponent(weaponHash: number | string, com
  */
 export declare function enableLaserSightRendering(toggle: boolean): void;
 /**
- * `WEAPON::EXPLODE_PROJECTILES(PLAYER::PLAYER_PED_ID(), func_221(0x00000003), 0x00000001);`
+ * No comment provided
  *
  * Hash: 0xFC4BD125DE7611E4 | Since: 323
  */
-export declare function explodeProjectiles(ped: number | IPed, weaponHash: number | string): void;
+export declare function explodeProjectiles(ped: number | IPed, weaponHash: number | string, instant: boolean): void;
 /**
  * No comment provided
  *
@@ -100,11 +100,11 @@ export declare function getAmmoInClip(ped: number | IPed, weaponHash: number | s
  */
 export declare function getAmmoInPed(ped: number | IPed, weaponhash: number | string): number;
 /**
- * p1 is always 0 in the scripts.
+ * bIgnoreAmmoCheck is always false in the scripts.
  *
  * Hash: 0x8483E98E8B888AE2 | Since: 323
  */
-export declare function getBestPed(ped: number | IPed): number;
+export declare function getBestPed(ped: number | IPed, bIgnoreAmmoCheck: boolean): number;
 /**
  * Example in VB
  *
@@ -122,27 +122,18 @@ export declare function getBestPed(ped: number | IPed): number;
  */
 export declare function getCurrentPedVehicle(ped: number | IPed): [boolean, number];
 /**
- * The return value seems to indicate returns true if the hash of the weapon object weapon equals the weapon hash.
- * p2 seems to be 1 most of the time.
- *
- *
- *
- *
- *
- * p2 is not implemented
- *
- * disassembly said that?
- *
+ * Returns true if the hash of the equipped weapon object equals the weapon hash.
+ * doDeadCheck does nothing in release builds.
  *
  * Hash: 0x3A87E44BB9A01D54 | Since: 323
  */
-export declare function getCurrentPed(ped: number | IPed): [boolean, number];
+export declare function getCurrentPed(ped: number | IPed, doDeadCheck: boolean): [boolean, number];
 /**
- * No comment provided
+ * doDeadCheck does nothing in release builds.
  *
  * Hash: 0x3B390A939AF0B5FC | Since: 323
  */
-export declare function getCurrentPedEntityIndex(ped: number | IPed): number;
+export declare function getCurrentPedEntityIndex(ped: number | IPed, doDeadCheck: boolean): number;
 /**
  * gadgetHash - was always 0xFBAB5776 ("GADGET_PARACHUTE").
  *
@@ -263,9 +254,6 @@ export declare function getSelectedPed(ped: number | IPed): number;
 export declare function gettypeGroup(weaponHash: number | string): number;
 /**
  * Returns the model of any weapon.
- *
- * Can also take an ammo hash?
- * `sub_6663a(&l_115B, WEAPON::GET_WEAPONTYPE_MODEL(${ammo_rpg}));`
  *
  * Hash: 0xF46CDC33180FDA94 | Since: 323
  */

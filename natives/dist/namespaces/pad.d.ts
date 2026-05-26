@@ -213,22 +213,7 @@ export declare function isDisabledControlReleased(control: number, action: numbe
  */
 export declare function isLookInverted(): boolean;
 /**
- * Used with IS_LOOK_INVERTED() and negates its affect.
- *
- * --
- *
- * Not sure how the person above got that description, but here's an actual example:
- *
- * `if (PAD::IS_USING_KEYBOARD_AND_MOUSE(2)) {`
- * if (a_5) {
- * `if (PAD::IS_LOOK_INVERTED()) {`
- * a_3 *= -1;
- * }
- * `if (PAD::IS_MOUSE_LOOK_INVERTED()) {`
- * a_3 *= -1;
- * }
- * }
- * }
+ * No comment provided
  *
  * Hash: 0xE1615EC03B3BB4FD | Since: 323
  */

@@ -404,7 +404,7 @@ export function clearBloodDamage(ped: number | IPed): void {
 }
 
 /**
- * Somehow related to changing ped's clothes.
+ * No comment provided
  * 
  * Hash: 0x56E3B78C5408D9F4 | Since: 323
  */
@@ -1228,15 +1228,6 @@ export function getNumberOfPropDrawableVariations(ped: number | IPed, propId: nu
 }
 
 /**
- * Need to check behavior when drawableId = -1
- * 
- * - Doofy.Ass
- * Why this function doesn't work and return nill value?
- * GET_NUMBER_OF_PED_PROP_TEXTURE_VARIATIONS(PLAYER.PLAYER_PED_ID(), 0, 5)
- * 
- * tick: scripts/addins/menu_execute.lua:51: attempt to call field 'GET_NUMBER_OF_PED_PROP_TEXTURE_VARIATIONS' (a nil value)
- * 
- * 
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  * 
@@ -2587,21 +2578,13 @@ export function isComponentVariationValid(ped: number | IPed, componentId: numbe
 }
 
 /**
- * Seems to consistently return true if the ped is dead.
- * 
- * p1 is always passed 1 in the scripts.
- * 
- * I suggest to remove "OR_DYING" part, because it does not detect dying phase.
- * 
- * That's what the devs call it, cry about it.
- * 
- * lol
+ * No comment provided
  * 
  * Hash: 0x3317DEDB88C95038 | Since: 323
  */
-export function isDeadOrDying(ped: number | IPed): boolean {
+export function isDeadOrDying(ped: number | IPed, checkMeleeDeathFlags: boolean): boolean {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
-    return IsPedDeadOrDying(_ped, false);
+    return IsPedDeadOrDying(_ped, checkMeleeDeathFlags);
 }
 
 /**
@@ -5990,10 +5973,6 @@ export function setHairTint(ped: number | IPed, colorID: number, highlightColorI
  * The "shape" parameters control the shape of the ped's face. The "skin" parameters control the skin tone. ShapeMix and skinMix control how much the first and second IDs contribute,(typically mother and father.) ThirdMix overrides the others in favor of the third IDs. IsParent is set for "children" of the player character's grandparents during old-gen character creation. It has unknown effect otherwise.
  * 
  * The IDs start at zero and go Male Non-DLC, Female Non-DLC, Male DLC, and Female DLC.
- * 
- * !!!Can someone add working example for this???
- * 
- * try this:
  * headBlendData headData;
  * GET_PED_HEAD_BLEND_DATA(PLAYER_PED_ID(), &headData);
  * 

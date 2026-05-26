@@ -1380,21 +1380,20 @@ export function addDispatchSpawnSphereBlockingArea(x1, y1, x2, y2) {
 }
 /**
  * Returns the index of the newly created hospital spawn point.
- *
- * p3 might be radius?
+ * whenToUse: must be 0
  *
  * Hash: 0x1F464EF988465A81 | Since: 323 | API-Set: unknown
  */
-export function addHospitalRestart(pos) {
-    return AddHospitalRestart(pos.x, pos.y, pos.z, 0, undefined);
+export function addHospitalRestart(pos, heading, whenToUse) {
+    return AddHospitalRestart(pos.x, pos.y, pos.z, heading, whenToUse);
 }
 /**
- * No comment provided
+ * whenToUse: must be 0
  *
  * Hash: 0x452736765B31FC4B | Since: 323 | API-Set: unknown
  */
-export function addPoliceRestart() {
-    return AddPoliceRestart(0, 0, 0, 0, undefined);
+export function addPoliceRestart(pos, heading, whenToUse) {
+    return AddPoliceRestart(pos.x, pos.y, pos.z, heading, whenToUse);
 }
 /**
  * No comment provided
@@ -2179,7 +2178,7 @@ export function getGroundZExcludingObjectsFor3dCoord(pos) {
  * Hash: 0xC906A7DAB05C8D2B | Since: 323 | API-Set: unknown
  */
 export function getGroundZFor3dCoord(pos, ignoreWater) {
-    return GetGroundZFor_3dCoord(pos.x, pos.y, pos.z, ignoreWater, false);
+    return GetGroundZFor3dCoord(pos.x, pos.y, pos.z, ignoreWater, false);
 }
 /**
  * This native converts its past string to hash. It is hashed using jenkins one at a time method.
@@ -2523,12 +2522,13 @@ export function hasAsyncInstallFinished() {
     return HasAsyncInstallFinished();
 }
 /**
- * p3 - possibly radius?
+ * bIsPlayer: checks if the player fired the bullet
+ * bEntryOnly: only find entry impacts
  *
  * Hash: 0x9870ACFB89A90995 | Since: 323 | API-Set: unknown
  */
-export function hasBulletImpactedInArea(pos) {
-    return HasBulletImpactedInArea(pos.x, pos.y, pos.z, 0, false, false);
+export function hasBulletImpactedInArea(pos, radius, bIsPlayer, bIsEntry) {
+    return HasBulletImpactedInArea(pos.x, pos.y, pos.z, radius, bIsPlayer, bIsEntry);
 }
 /**
  * No comment provided

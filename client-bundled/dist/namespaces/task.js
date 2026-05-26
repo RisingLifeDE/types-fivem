@@ -2533,15 +2533,7 @@ export function playAnimAdvanced(ped, animDict, animName, pos, rot, animEnterSpe
     TaskPlayAnimAdvanced(_ped, animDict, animName, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, animEnterSpeed, animExitSpeed, duration, flag, animTime, rotOrder, ikFlags);
 }
 /**
- * Example from the scripts:
- * `TASK::TASK_PLAY_PHONE_GESTURE_ANIMATION(PLAYER::PLAYER_PED_ID(), v_3, v_2, v_4, 0.25, 0.25, 0, 0);`
- *
- * =========================================================
- * ^^ No offense, but Idk how that would really help anyone.
- *
- * As for the animDict & animation, they're both store in a global in all 5 scripts. So if anyone would be so kind as to read that global and comment what strings they use. Thanks.
- *
- * Known boneMaskTypes'
+ * Known boneMaskTypes
  * "BONEMASK_HEADONLY"
  * "BONEMASK_HEAD_NECK_AND_ARMS"
  * "BONEMASK_HEAD_NECK_AND_L_ARM"
@@ -3081,11 +3073,7 @@ export function turnPedToFaceEntity(ped, entity, duration) {
     TaskTurnPedToFaceEntity(_ped, _entity, duration);
 }
 /**
- * Actually has 3 params, not 2.
- *
- * p0: Ped
- * p1: int (or bool?)
- * p2: int
+ * No comment provided
  *
  * Hash: 0xBD2A8EC3AF4DE7DB | Since: 323 | API-Set: unknown
  */

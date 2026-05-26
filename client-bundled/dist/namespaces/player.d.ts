@@ -1158,11 +1158,7 @@ export declare function restoreStamina(player: number | string | IPlayer): void;
  */
 export declare function setAchievementProgress(achievementId: number, progress: number): boolean;
 /**
- * This can be between 1.0f - 14.9f
- *
- * You can change the max in IDA from 15.0. I say 15.0 as the function blrs if what you input is greater than or equal to 15.0 hence why it's 14.9 max default.
- *
- *
+ * This can be between 1.0f - 50.0f
  *
  * Hash: 0xCA7DC8329F0A1E9E | Since: 323 | API-Set: unknown
  */
@@ -1742,11 +1738,9 @@ export declare function setPoliceIgnore(player: number | string | IPlayer, toggl
  */
 export declare function setPoliceRadarBlips(toggle: boolean): void;
 /**
- * Multiplier goes up to 1.49 any value above will be completely overruled by the game and the multiplier will not take effect, this can be edited in memory however.
+ * Multiplier goes up to 1.49 any value above will be completely overruled by the game and the multiplier will not take effect.
  *
  * Just call it one time, it is not required to be called once every tick.
- *
- * Note: At least the IDA method if you change the max float multiplier from 1.5 it will change it for both this and SWIM above. I say 1.5 as the function blrs if what you input is greater than or equal to 1.5 hence why it's 1.49 max default.
  *
  * Hash: 0x6DB47AA77FD94E09 | Since: 323 | API-Set: unknown
  */
@@ -1774,8 +1768,6 @@ export declare function setSpecialAbilityMultiplier(multiplier: number): void;
  * Multiplier goes up to 1.49
  *
  * Just call it one time, it is not required to be called once every tick. - Note copied from below native.
- *
- * Note: At least the IDA method if you change the max float multiplier from 1.5 it will change it for both this and RUN_SPRINT below. I say 1.5 as the function blrs if what you input is greater than or equal to 1.5 hence why it's 1.49 max default.
  *
  * Hash: 0xA91C6F0FF7D16A13 | Since: 323 | API-Set: unknown
  */

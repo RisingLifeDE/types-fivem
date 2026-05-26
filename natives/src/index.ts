@@ -26,7 +26,7 @@ import * as netshopping from './namespaces/netshopping';
 import * as network from './namespaces/network';
 import * as object from './namespaces/object';
 import * as pad from './namespaces/pad';
-import * as pathfind from './namespaces/pathfind';
+import * as path from './namespaces/path';
 import * as ped from './namespaces/ped';
 import * as physics from './namespaces/physics';
 import * as player from './namespaces/player';
@@ -45,6 +45,6 @@ import * as water from './namespaces/water';
 import * as weapon from './namespaces/weapon';
 import * as zone from './namespaces/zone';
 
-export { app, audio, brain, builtin, camera, clock, cutscene, datafile, decorator, dlc, entity, event, extrametadata, fire, graphics, hud, interior, itemset, lobby, localization, misc, mobile, money, netshopping, network, object, pad, pathfind, ped, physics, player, recording, replay, savemigration, script, security, shapetest, socialclub, stats, streaming, task, vehicle, water, weapon, zone };
+export { app, audio, brain, builtin, camera, clock, cutscene, datafile, decorator, dlc, entity, event, extrametadata, fire, graphics, hud, interior, itemset, lobby, localization, misc, mobile, money, netshopping, network, object, pad, path, ped, physics, player, recording, replay, savemigration, script, security, shapetest, socialclub, stats, streaming, task, vehicle, water, weapon, zone };
 
 export * from '@risinglife/fivem-shared';

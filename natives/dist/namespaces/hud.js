@@ -756,19 +756,14 @@ export function displayCash(toggle) {
  * "Enter_bus"
  * "Tour_help"
  * "LETTERS_HELP2"
- * "Dummy"
+ * "Dummy""
  *
- * <strong>The bool appears to always be false (if it even is a bool, as it's represented by a zero)</strong>
- * --------
- * p1 doesn't seem to make a difference, regardless of the state it's in.
- *
- *
- * picture of where on the screen this is displayed?
+ * curvedWindow is unused.
  *
  * Hash: 0x960C9FF8F616E41C | Since: 323
  */
-export function displayHelpTextThisFrame(message) {
-    DisplayHelpTextThisFrame(message, false);
+export function displayHelpTextThisFrame(message, curvedWindow) {
+    DisplayHelpTextThisFrame(message, curvedWindow);
 }
 /**
  * If Hud should be displayed
@@ -4184,8 +4179,7 @@ export function setTextCentre(align) {
     SetTextCentre(align);
 }
 /**
- * colors you input not same as you think?
- * A: for some reason its R B G A
+ * No comment provided
  *
  * Hash: 0xBE6B23FFA53FB442 | Since: 323
  */

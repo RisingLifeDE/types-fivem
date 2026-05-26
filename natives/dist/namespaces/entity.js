@@ -23,8 +23,6 @@ import { Vector3 } from '@risinglife/fivem-shared';
  * isLocal: vector defined in local (body-fixed) coordinate frame
  * isMassRel: if true the force gets multiplied with the objects mass (this is why it was known as highForce) and different objects will have the same acceleration.
  *
- * p8 !!! Whenever I set this !=0, my script stopped.
- *
  * Hash: 0xC5F68BE9613E2D18 | Since: 323
  */
 export function applyForceTo(entity, forceFlags, pos, offX, offY, offZ, boneIndex, isDirectionRel, ignoreUpVec, isForceRel) {
@@ -568,9 +566,6 @@ export function getHeight(entity, pos, atTop, inWorldCoords) {
 /**
  * Return height (z-dimension) above ground.
  * Example: The pilot in a titan plane is 1.844176 above ground.
- *
- * How can i convert it to meters?
- * Everything seems to be in meters, probably this too.
  *
  * Hash: 0x1DD55701034110E5 | Since: 323
  */
@@ -1453,17 +1448,11 @@ export function setAnimSpeed(entity, animDictionary, animName, speedMultiplier) 
 /**
  * Makes the specified entity (ped, vehicle or object) persistent. Persistent entities will not automatically be removed by the engine.
  *
- * p1 has no effect when either its on or off
- * maybe a quick disassembly will tell us what it does
- *
- * p2 has no effect when either its on or off
- * maybe a quick disassembly will tell us what it does
- *
  * Hash: 0xAD738C3085FE7E11 | Since: 323
  */
-export function setAsMissionEntity(entity) {
+export function setAsMissionEntity(entity, bScriptHostObject, bGrabFromOtherScript) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
-    SetEntityAsMissionEntity(_entity, false, false);
+    SetEntityAsMissionEntity(_entity, bScriptHostObject, bGrabFromOtherScript);
 }
 /**
  * Marks the specified entity (ped, vehicle or object) as no longer needed if its population type is set to the mission type.
