@@ -1,7 +1,7 @@
 /**
  * Stops recording and discards the recorded clip.
  *
- * Hash: 0x88BB3507ED41A240 | Since: 323 | API-Set: unknown
+ * Hash: 0x88BB3507ED41A240 | Since: unknown | API-Set: unknown
  */
 export function cancelReplay() {
     StopRecordingAndDiscardClip();
@@ -9,7 +9,7 @@ export function cancelReplay() {
 /**
  * No comment provided
  *
- * Hash: 0x4282E08174868BE3 | Since: 323 | API-Set: unknown
+ * Hash: 0x4282E08174868BE3 | Since: unknown | API-Set: unknown
  */
 export function isReplayAvailable() {
     return Citizen.invokeNative('0x4282E08174868BE3');
@@ -17,7 +17,7 @@ export function isReplayAvailable() {
 /**
  * No comment provided
  *
- * Hash: 0xDF4B952F7D381B95 | Since: 323 | API-Set: unknown
+ * Hash: 0xDF4B952F7D381B95 | Since: unknown | API-Set: unknown
  */
 export function isReplayInitialized() {
     return Citizen.invokeNative('0xDF4B952F7D381B95');
@@ -28,7 +28,7 @@ export function isReplayInitialized() {
  * mov al, cs:g_bIsRecordingGameplay // byte_141DD0CD0 in b944
  * retn
  *
- * Hash: 0x1897CA71995A90B4 | Since: 323 | API-Set: unknown
+ * Hash: 0x1897CA71995A90B4 | Since: unknown | API-Set: unknown
  */
 export function isReplay() {
     return IsRecording();
@@ -36,7 +36,7 @@ export function isReplay() {
 /**
  * No comment provided
  *
- * Hash: 0x33D47E85B476ABCD | Since: 323 | API-Set: unknown
+ * Hash: 0x33D47E85B476ABCD | Since: unknown | API-Set: unknown
  */
 export function isReplayRecordSpaceAvailable() {
     return Citizen.invokeNative('0x33D47E85B476ABCD', false);
@@ -44,7 +44,7 @@ export function isReplayRecordSpaceAvailable() {
 /**
  * Does nothing (it's a nullsub).
  *
- * Hash: 0x66972397E0757E7A | Since: 323 | API-Set: unknown
+ * Hash: 0x66972397E0757E7A | Since: unknown | API-Set: unknown
  */
 export function recordGreatestMoment() {
     Citizen.invokeNative('0x66972397E0757E7A', 0, 0, 0);
@@ -52,7 +52,7 @@ export function recordGreatestMoment() {
 /**
  * No comment provided
  *
- * Hash: 0x13B350B8AD0EEE10 | Since: 323 | API-Set: unknown
+ * Hash: 0x13B350B8AD0EEE10 | Since: unknown | API-Set: unknown
  */
 export function replayCancelEvent() {
     Citizen.invokeNative('0x13B350B8AD0EEE10');
@@ -65,7 +65,7 @@ export function replayCancelEvent() {
  * p1 was always 0.
  *
  *
- * Hash: 0x208784099002BC30 | Since: 323 | API-Set: unknown
+ * Hash: 0x208784099002BC30 | Since: unknown | API-Set: unknown
  */
 export function replayCheckForEventThisFrame(missionNameLabel) {
     Citizen.invokeNative('0x208784099002BC30', missionNameLabel, undefined);
@@ -73,7 +73,7 @@ export function replayCheckForEventThisFrame(missionNameLabel) {
 /**
  * This will disable the ability to make camera changes in R* Editor.
  *
- * Hash: 0xAF66DCEE6609B148 | Since: 323 | API-Set: unknown
+ * Hash: 0xAF66DCEE6609B148 | Since: unknown | API-Set: unknown
  */
 export function replayDisableCameraMovementThisFrame() {
     DisableRockstarEditorCameraChanges();
@@ -81,7 +81,7 @@ export function replayDisableCameraMovementThisFrame() {
 /**
  * This disable the recording feature and has to be called every frame.
  *
- * Hash: 0xEB2D525B57F42B40 | Since: 323 | API-Set: unknown
+ * Hash: 0xEB2D525B57F42B40 | Since: unknown | API-Set: unknown
  */
 export function replayPreventThisFrame() {
     StopRecordingThisFrame();
@@ -89,7 +89,7 @@ export function replayPreventThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0x293220DA1B46CEBC | Since: 323 | API-Set: unknown
+ * Hash: 0x293220DA1B46CEBC | Since: unknown | API-Set: unknown
  */
 export function replayRecordBackForTime() {
     Citizen.invokeNative('0x293220DA1B46CEBC', 0, 0, 0);
@@ -97,7 +97,7 @@ export function replayRecordBackForTime() {
 /**
  * No comment provided
  *
- * Hash: 0xF854439EFBB3B583 | Since: 323 | API-Set: unknown
+ * Hash: 0xF854439EFBB3B583 | Since: unknown | API-Set: unknown
  */
 export function replayResetEventInfo() {
     Citizen.invokeNative('0xF854439EFBB3B583');
@@ -105,7 +105,7 @@ export function replayResetEventInfo() {
 /**
  * No comment provided
  *
- * Hash: 0x48621C9FCA3EBD28 | Since: 323 | API-Set: unknown
+ * Hash: 0x48621C9FCA3EBD28 | Since: unknown | API-Set: unknown
  */
 export function replayStartEvent() {
     Citizen.invokeNative('0x48621C9FCA3EBD28', 0);
@@ -113,7 +113,7 @@ export function replayStartEvent() {
 /**
  * No comment provided
  *
- * Hash: 0x81CBAE94390F9F89 | Since: 323 | API-Set: unknown
+ * Hash: 0x81CBAE94390F9F89 | Since: unknown | API-Set: unknown
  */
 export function replayStopEvent() {
     Citizen.invokeNative('0x81CBAE94390F9F89');
@@ -121,7 +121,7 @@ export function replayStopEvent() {
 /**
  * No comment provided
  *
- * Hash: 0x644546EC5287471B | Since: 323 | API-Set: unknown
+ * Hash: 0x644546EC5287471B | Since: unknown | API-Set: unknown
  */
 export function saveReplay() {
     return SaveRecordingClip();
@@ -132,7 +132,7 @@ export function saveReplay() {
  * If mode is 1, starts recording.
  * If already recording a replay, does nothing.
  *
- * Hash: 0xC3AC2FFF9612AC81 | Since: 323 | API-Set: unknown
+ * Hash: 0xC3AC2FFF9612AC81 | Since: unknown | API-Set: unknown
  */
 export function startReplay(mode) {
     StartRecording(mode);
@@ -140,7 +140,7 @@ export function startReplay(mode) {
 /**
  * Stops recording and saves the recorded clip.
  *
- * Hash: 0x071A5197D6AFC8B3 | Since: 323 | API-Set: unknown
+ * Hash: 0x071A5197D6AFC8B3 | Since: unknown | API-Set: unknown
  */
 export function stopReplay() {
     StopRecordingAndSaveClip();

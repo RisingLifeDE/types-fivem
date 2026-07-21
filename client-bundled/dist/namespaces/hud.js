@@ -153,7 +153,7 @@ export function setMinimapType(_type) {
  * - FE_MENU_VERSION_LANDING_MENU
  * - FE_MENU_VERSION_LANDING_KEYMAPPING_MENU
  *
- * Hash: 0xEF01D36B9C9D0C7B | Since: 323 | API-Set: unknown
+ * Hash: 0xEF01D36B9C9D0C7B | Since: unknown | API-Set: unknown
  */
 export function activateFrontendMenu(menuhash, togglePause, component) {
     if (typeof menuhash === 'string')
@@ -173,7 +173,7 @@ export function activateFrontendMenu(menuhash, togglePause, component) {
  *
  * (Native name is _likely_ to actually be ADD_BLIP_FOR_AREA, but due to the usual reasons this can't be confirmed)
  *
- * Hash: 0xCE5D0E5E315DB238 | Since: 463 | API-Set: unknown
+ * Hash: 0xCE5D0E5E315DB238 | Since: unknown | API-Set: unknown
  */
 export function addBlipForArea(pos, width, height) {
     return AddBlipForArea(pos.x, pos.y, pos.z, width, height);
@@ -181,7 +181,7 @@ export function addBlipForArea(pos, width, height) {
 /**
  * Creates an orange ( default ) Blip-object. Returns a Blip-object which can then be modified.
  *
- * Hash: 0x5A039BB0BCA604B6 | Since: 323 | API-Set: unknown
+ * Hash: 0x5A039BB0BCA604B6 | Since: unknown | API-Set: unknown
  */
 export function addBlipForCoord(pos) {
     return AddBlipForCoord(pos.x, pos.y, pos.z);
@@ -194,7 +194,7 @@ export function addBlipForCoord(pos) {
  * `blip = HUD::ADD_BLIP_FOR_ENTITY(YourPedOrBodyguardName);`
  * `HUD::SET_BLIP_AS_FRIENDLY(blip, true);`
  *
- * Hash: 0x5CDE92C702A8FCE7 | Since: 323 | API-Set: unknown
+ * Hash: 0x5CDE92C702A8FCE7 | Since: unknown | API-Set: unknown
  */
 export function addBlipForEntity(entity) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -203,7 +203,7 @@ export function addBlipForEntity(entity) {
 /**
  * No comment provided
  *
- * Hash: 0xBE339365C863BD36 | Since: 323 | API-Set: unknown
+ * Hash: 0xBE339365C863BD36 | Since: unknown | API-Set: unknown
  */
 export function addBlipForPickup(pickup) {
     return AddBlipForPickup(pickup);
@@ -211,7 +211,7 @@ export function addBlipForPickup(pickup) {
 /**
  * No comment provided
  *
- * Hash: 0x46818D79B1F7499A | Since: 323 | API-Set: unknown
+ * Hash: 0x46818D79B1F7499A | Since: unknown | API-Set: unknown
  */
 export function addBlipForRadius(pos, radius) {
     return AddBlipForRadius(pos.x, pos.y, pos.z, radius);
@@ -219,7 +219,7 @@ export function addBlipForRadius(pos, radius) {
 /**
  * No comment provided
  *
- * Hash: 0x60296AF4BA14ABC5 | Since: 323 | API-Set: unknown
+ * Hash: 0x60296AF4BA14ABC5 | Since: unknown | API-Set: unknown
  */
 export function addNextMessageToPreviousBriefs() {
     AddNextMessageToPreviousBriefs(false);
@@ -227,7 +227,7 @@ export function addNextMessageToPreviousBriefs() {
 /**
  * No comment provided
  *
- * Hash: 0x311438A071DD9B1A | Since: 323 | API-Set: unknown
+ * Hash: 0x311438A071DD9B1A | Since: unknown | API-Set: unknown
  */
 export function addPointToGpsCustomRoute(pos) {
     AddPointToGpsCustomRoute(pos.x, pos.y, pos.z);
@@ -235,7 +235,7 @@ export function addPointToGpsCustomRoute(pos) {
 /**
  * No comment provided
  *
- * Hash: 0xA905192A6781C41B | Since: 323 | API-Set: unknown
+ * Hash: 0xA905192A6781C41B | Since: unknown | API-Set: unknown
  */
 export function addPointToGpsMultiRoute(pos) {
     AddPointToGpsMultiRoute(pos.x, pos.y, pos.z);
@@ -243,7 +243,7 @@ export function addPointToGpsMultiRoute(pos) {
 /**
  * No comment provided
  *
- * Hash: 0xE7DCB5B874BCD96E | Since: 323 | API-Set: unknown
+ * Hash: 0xE7DCB5B874BCD96E | Since: unknown | API-Set: unknown
  */
 export function addTextComponentFloat(value, decimalPlaces) {
     AddTextComponentFloat(value, decimalPlaces);
@@ -251,7 +251,7 @@ export function addTextComponentFloat(value, decimalPlaces) {
 /**
  * No comment provided
  *
- * Hash: 0x0E4C749FF9DE9CC4 | Since: 323 | API-Set: unknown
+ * Hash: 0x0E4C749FF9DE9CC4 | Since: unknown | API-Set: unknown
  */
 export function addTextComponentFormattedInteger(value, commaSeparated) {
     AddTextComponentFormattedInteger(value, commaSeparated);
@@ -259,7 +259,7 @@ export function addTextComponentFormattedInteger(value, commaSeparated) {
 /**
  * No comment provided
  *
- * Hash: 0x03B504CF259931BC | Since: 323 | API-Set: unknown
+ * Hash: 0x03B504CF259931BC | Since: unknown | API-Set: unknown
  */
 export function addTextComponentInteger(value) {
     AddTextComponentInteger(value);
@@ -267,7 +267,7 @@ export function addTextComponentInteger(value) {
 /**
  * No comment provided
  *
- * Hash: 0x80EAD8E2E1D5D52E | Since: 323 | API-Set: unknown
+ * Hash: 0x80EAD8E2E1D5D52E | Since: unknown | API-Set: unknown
  */
 export function addTextComponentSubstringBlipName(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -276,7 +276,7 @@ export function addTextComponentSubstringBlipName(blip) {
 /**
  * No comment provided
  *
- * Hash: 0x5F68520888E69014 | Since: 323 | API-Set: unknown
+ * Hash: 0x5F68520888E69014 | Since: unknown | API-Set: unknown
  */
 export function addTextComponentSubstringKeyboardDisplay(_string) {
     AddTextComponentSubstringKeyboardDisplay(_string);
@@ -284,7 +284,7 @@ export function addTextComponentSubstringKeyboardDisplay(_string) {
 /**
  * p1 was always -1
  *
- * Hash: 0x761B77454205A61D | Since: 323 | API-Set: unknown
+ * Hash: 0x761B77454205A61D | Since: unknown | API-Set: unknown
  */
 export function addTextComponentSubstringPhoneNumber() {
     AddTextComponentSubstringPhoneNumber(undefined, 0);
@@ -292,7 +292,7 @@ export function addTextComponentSubstringPhoneNumber() {
 /**
  * No comment provided
  *
- * Hash: 0x6C188BE134E074AA | Since: 323 | API-Set: unknown
+ * Hash: 0x6C188BE134E074AA | Since: unknown | API-Set: unknown
  */
 export function addTextComponentSubstringPlayerName(text) {
     AddTextComponentSubstringPlayerName(text);
@@ -300,7 +300,7 @@ export function addTextComponentSubstringPlayerName(text) {
 /**
  * No comment provided
  *
- * Hash: 0xC63CD5D2920ACBE7 | Since: 323 | API-Set: unknown
+ * Hash: 0xC63CD5D2920ACBE7 | Since: unknown | API-Set: unknown
  */
 export function addTextComponentSubstringTextLabel(labelName) {
     AddTextComponentSubstringTextLabel(labelName);
@@ -308,7 +308,7 @@ export function addTextComponentSubstringTextLabel(labelName) {
 /**
  * It adds the localized text of the specified GXT entry name. Eg. if the argument is GET_HASH_KEY("ES_HELP"), adds "Continue". Just uses a text labels hash key
  *
- * Hash: 0x17299B63C7683A2B | Since: 323 | API-Set: unknown
+ * Hash: 0x17299B63C7683A2B | Since: unknown | API-Set: unknown
  */
 export function addTextComponentSubstringTextLabelHashKey(gxtEntryHash) {
     if (typeof gxtEntryHash === 'string')
@@ -318,7 +318,7 @@ export function addTextComponentSubstringTextLabelHashKey(gxtEntryHash) {
 /**
  * Adds a timer (e.g. "00:00:00:000"). The appearance of the timer depends on the flags, which needs more research.
  *
- * Hash: 0x1115F16B8AB9E8BF | Since: 323 | API-Set: unknown
+ * Hash: 0x1115F16B8AB9E8BF | Since: unknown | API-Set: unknown
  */
 export function addTextComponentSubstringTime(timestamp, flags) {
     AddTextComponentSubstringTime(timestamp, flags);
@@ -326,7 +326,7 @@ export function addTextComponentSubstringTime(timestamp, flags) {
 /**
  * This native (along with ADD_TEXT_COMPONENT_SUBSTRING_KEYBOARD_DISPLAY and ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME) do not actually filter anything. They simply add the provided text (as of 944)
  *
- * Hash: 0x94CF4AC034C9C986 | Since: 323 | API-Set: unknown
+ * Hash: 0x94CF4AC034C9C986 | Since: unknown | API-Set: unknown
  */
 export function addTextComponentSubstringWebsite(website) {
     AddTextComponentSubstringWebsite(website);
@@ -334,7 +334,7 @@ export function addTextComponentSubstringWebsite(website) {
 /**
  * No comment provided
  *
- * Hash: 0xE4C3B169876D33D7 | Since: 1290 | API-Set: unknown
+ * Hash: 0xE4C3B169876D33D7 | Since: unknown | API-Set: unknown
  */
 export function addValidVehicleHitHash() {
     Citizen.invokeNative('0xE4C3B169876D33D7', undefined);
@@ -342,7 +342,7 @@ export function addValidVehicleHitHash() {
 /**
  * Controls whether to display 'Cash'/'Bank' next to the money balance HUD in Multiplayer (https://i.imgur.com/MiYUtNl.png)
  *
- * Hash: 0xE67C6DFD386EA5E7 | Since: 323 | API-Set: unknown
+ * Hash: 0xE67C6DFD386EA5E7 | Since: unknown | API-Set: unknown
  */
 export function allowDisplayOfMultiplayerCashText(allow) {
     Citizen.invokeNative('0xE67C6DFD386EA5E7', allow);
@@ -350,7 +350,7 @@ export function allowDisplayOfMultiplayerCashText(allow) {
 /**
  * Allows opening the pause menu this frame, when the player is dead.
  *
- * Hash: 0xCC3FDDED67BCFC63 | Since: 323 | API-Set: unknown
+ * Hash: 0xCC3FDDED67BCFC63 | Since: unknown | API-Set: unknown
  */
 export function allowPauseWhenNotInStateOfPlayThisFrame() {
     AllowPauseMenuWhenDeadThisFrame();
@@ -358,7 +358,7 @@ export function allowPauseWhenNotInStateOfPlayThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0x60734CC207C9833C | Since: 323 | API-Set: unknown
+ * Hash: 0x60734CC207C9833C | Since: unknown | API-Set: unknown
  */
 export function allowSonarBlips(toggle) {
     AllowSonarBlips(toggle);
@@ -366,7 +366,7 @@ export function allowSonarBlips(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xF13FE2A80C05C561 | Since: 323 | API-Set: unknown
+ * Hash: 0xF13FE2A80C05C561 | Since: unknown | API-Set: unknown
  */
 export function areOnlinePoliciesUpToDate() {
     return Citizen.invokeNative('0xF13FE2A80C05C561');
@@ -374,7 +374,7 @@ export function areOnlinePoliciesUpToDate() {
 /**
  * No comment provided
  *
- * Hash: 0x23D69E0465570028 | Since: 323 | API-Set: unknown
+ * Hash: 0x23D69E0465570028 | Since: unknown | API-Set: unknown
  */
 export function beginTextCommandAddDirectlyToPreviousBriefs() {
     BeginTextCommandObjective(undefined);
@@ -417,7 +417,7 @@ export function beginTextCommandAddDirectlyToPreviousBriefs() {
  * "KILL_STRIP_IDM"                         = Waiting for to accept
  * "MP_SPINLOADING"                      = Loading
  *
- * Hash: 0xABA17D7CE615ADBF | Since: 323 | API-Set: unknown
+ * Hash: 0xABA17D7CE615ADBF | Since: unknown | API-Set: unknown
  */
 export function beginTextCommandBusyspinnerOn(_string) {
     BeginTextCommandBusyspinnerOn(_string);
@@ -425,7 +425,7 @@ export function beginTextCommandBusyspinnerOn(_string) {
 /**
  * clears a print text command with this text
  *
- * Hash: 0xE124FA80A759019C | Since: 323 | API-Set: unknown
+ * Hash: 0xE124FA80A759019C | Since: unknown | API-Set: unknown
  */
 export function beginTextCommandClearPrint(text) {
     BeginTextCommandClearPrint(text);
@@ -433,7 +433,7 @@ export function beginTextCommandClearPrint(text) {
 /**
  * Used to be known as _SET_TEXT_COMPONENT_FORMAT
  *
- * Hash: 0x8509B634FBE7DA11 | Since: 323 | API-Set: unknown
+ * Hash: 0x8509B634FBE7DA11 | Since: unknown | API-Set: unknown
  */
 export function beginTextCommandDisplayHelp(inputType) {
     BeginTextCommandDisplayHelp(inputType);
@@ -447,7 +447,7 @@ export function beginTextCommandDisplayHelp(inputType) {
  *
  * Used to be known as _SET_TEXT_ENTRY
  *
- * Hash: 0x25FBB336DF1804CB | Since: 323 | API-Set: unknown
+ * Hash: 0x25FBB336DF1804CB | Since: unknown | API-Set: unknown
  */
 export function beginTextCommandDisplayText(text) {
     BeginTextCommandDisplayText(text);
@@ -460,7 +460,7 @@ export function beginTextCommandDisplayText(text) {
  * return BEGIN_TEXT_COMMAND_GET_NUMBER_OF_LINES_FOR_STRING(x, y);
  * }
  *
- * Hash: 0x521FB041D93DD0E4 | Since: 323 | API-Set: unknown
+ * Hash: 0x521FB041D93DD0E4 | Since: unknown | API-Set: unknown
  */
 export function beginTextCommandGetNumberOfLinesForString(entry) {
     BeginTextCommandLineCount(entry);
@@ -468,7 +468,7 @@ export function beginTextCommandGetNumberOfLinesForString(entry) {
 /**
  * No comment provided
  *
- * Hash: 0x54CE8AC98E120CAB | Since: 323 | API-Set: unknown
+ * Hash: 0x54CE8AC98E120CAB | Since: unknown | API-Set: unknown
  */
 export function beginTextCommandGetScreenWidthOfDisplayText(text) {
     BeginTextCommandGetWidth(text);
@@ -483,7 +483,7 @@ export function beginTextCommandGetScreenWidthOfDisplayText(text) {
  * return END_TEXT_COMMAND_IS_MESSAGE_DISPLAYED();
  * }
  *
- * Hash: 0x853648FD1063A213 | Since: 323 | API-Set: unknown
+ * Hash: 0x853648FD1063A213 | Since: unknown | API-Set: unknown
  */
 export function beginTextCommandIsMessageDisplayed(text) {
     BeginTextCommandIsMessageDisplayed(text);
@@ -495,7 +495,7 @@ export function beginTextCommandIsMessageDisplayed(text) {
  * return END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
  * }
  *
- * Hash: 0x0A24DA3A41B718F5 | Since: 323 | API-Set: unknown
+ * Hash: 0x0A24DA3A41B718F5 | Since: unknown | API-Set: unknown
  */
 export function beginTextCommandIsThisHelpMessageBeingDisplayed(labelName) {
     BeginTextCommandIsThisHelpMessageBeingDisplayed(labelName);
@@ -503,7 +503,7 @@ export function beginTextCommandIsThisHelpMessageBeingDisplayed(labelName) {
 /**
  * No comment provided
  *
- * Hash: 0x8F9EE5687F8EECCD | Since: 323 | API-Set: unknown
+ * Hash: 0x8F9EE5687F8EECCD | Since: unknown | API-Set: unknown
  */
 export function beginTextCommandOverrideButtonText(gxtEntry) {
     BeginTextCommandOverrideButtonText(gxtEntry);
@@ -516,7 +516,7 @@ export function beginTextCommandOverrideButtonText(gxtEntry) {
  * END_TEXT_COMMAND_PRINT(2000, true);
  * }
  *
- * Hash: 0xB87A37EEB7FAA67D | Since: 323 | API-Set: unknown
+ * Hash: 0xB87A37EEB7FAA67D | Since: unknown | API-Set: unknown
  */
 export function beginTextCommandPrint(GxtEntry) {
     BeginTextCommandPrint(GxtEntry);
@@ -530,7 +530,7 @@ export function beginTextCommandPrint(GxtEntry) {
  * `HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME("Name");`
  * `HUD::END_TEXT_COMMAND_SET_BLIP_NAME(blip);`
  *
- * Hash: 0xF9113A30DE5C6670 | Since: 323 | API-Set: unknown
+ * Hash: 0xF9113A30DE5C6670 | Since: unknown | API-Set: unknown
  */
 export function beginTextCommandSetBlipName(textLabel) {
     BeginTextCommandSetBlipName(textLabel);
@@ -545,7 +545,7 @@ export function beginTextCommandSetBlipName(textLabel) {
  * return END_TEXT_COMMAND_THEFEED_POST_TICKER(1, 1);
  * }
  *
- * Hash: 0x202709F4C58A0424 | Since: 323 | API-Set: unknown
+ * Hash: 0x202709F4C58A0424 | Since: unknown | API-Set: unknown
  */
 export function beginTextCommandThefeedPost(text) {
     BeginTextCommandThefeedPost(text);
@@ -553,7 +553,7 @@ export function beginTextCommandThefeedPost(text) {
 /**
  * No comment provided
  *
- * Hash: 0xB2A592B04648A9CB | Since: 323 | API-Set: unknown
+ * Hash: 0xB2A592B04648A9CB | Since: unknown | API-Set: unknown
  */
 export function busyspinnerIsDisplaying() {
     return BusyspinnerIsDisplaying();
@@ -561,7 +561,7 @@ export function busyspinnerIsDisplaying() {
 /**
  * No comment provided
  *
- * Hash: 0xD422FCC5F239A915 | Since: 323 | API-Set: unknown
+ * Hash: 0xD422FCC5F239A915 | Since: unknown | API-Set: unknown
  */
 export function busyspinnerIsOn() {
     return BusyspinnerIsOn();
@@ -569,7 +569,7 @@ export function busyspinnerIsOn() {
 /**
  * Removes the loading prompt at the bottom right of the screen.
  *
- * Hash: 0x10D373323E5B9C0D | Since: 323 | API-Set: unknown
+ * Hash: 0x10D373323E5B9C0D | Since: unknown | API-Set: unknown
  */
 export function busyspinnerOff() {
     BusyspinnerOff();
@@ -577,7 +577,7 @@ export function busyspinnerOff() {
 /**
  * Displays cash change notifications on HUD.
  *
- * Hash: 0x0772DF77852C2E30 | Since: 323 | API-Set: unknown
+ * Hash: 0x0772DF77852C2E30 | Since: unknown | API-Set: unknown
  */
 export function changeFakeMpCash(cash, bank) {
     ChangeFakeMpCash(cash, bank);
@@ -585,7 +585,7 @@ export function changeFakeMpCash(cash, bank) {
 /**
  * No comment provided
  *
- * Hash: 0x2A179DF17CCF04CD | Since: 323 | API-Set: unknown
+ * Hash: 0x2A179DF17CCF04CD | Since: unknown | API-Set: unknown
  */
 export function clearAdditionalText() {
     ClearAdditionalText(0, false);
@@ -593,7 +593,7 @@ export function clearAdditionalText() {
 /**
  * No comment provided
  *
- * Hash: 0xD12882D3FF82BF11 | Since: 877 | API-Set: unknown
+ * Hash: 0xD12882D3FF82BF11 | Since: unknown | API-Set: unknown
  */
 export function clearAllBlipRoutes() {
     ClearAllBlipRoutes();
@@ -601,7 +601,7 @@ export function clearAllBlipRoutes() {
 /**
  * No comment provided
  *
- * Hash: 0x6178F68A87A4D3A0 | Since: 323 | API-Set: unknown
+ * Hash: 0x6178F68A87A4D3A0 | Since: unknown | API-Set: unknown
  */
 export function clearAllHelpMessages() {
     ClearAllHelpMessages();
@@ -609,7 +609,7 @@ export function clearAllHelpMessages() {
 /**
  * No comment provided
  *
- * Hash: 0x9D292F73ADBD9313 | Since: 323 | API-Set: unknown
+ * Hash: 0x9D292F73ADBD9313 | Since: unknown | API-Set: unknown
  */
 export function clearBrief() {
     ClearBrief();
@@ -617,7 +617,7 @@ export function clearBrief() {
 /**
  * No comment provided
  *
- * Hash: 0x7792424AA0EAC32E | Since: 323 | API-Set: unknown
+ * Hash: 0x7792424AA0EAC32E | Since: unknown | API-Set: unknown
  */
 export function clearDynamicPauseMenuErrorMessage() {
     ClearDynamicPauseMenuErrorMessage();
@@ -625,7 +625,7 @@ export function clearDynamicPauseMenuErrorMessage() {
 /**
  * No comment provided
  *
- * Hash: 0x8410C5E0CD847B9D | Since: 1290 | API-Set: unknown
+ * Hash: 0x8410C5E0CD847B9D | Since: unknown | API-Set: unknown
  */
 export function clearFakeConeArray() {
     Citizen.invokeNative('0x8410C5E0CD847B9D');
@@ -633,7 +633,7 @@ export function clearFakeConeArray() {
 /**
  * No comment provided
  *
- * Hash: 0x50085246ABD3FEFA | Since: 323 | API-Set: unknown
+ * Hash: 0x50085246ABD3FEFA | Since: unknown | API-Set: unknown
  */
 export function clearFloatingHelp(hudIndex) {
     ClearFloatingHelp(hudIndex, false);
@@ -641,7 +641,7 @@ export function clearFloatingHelp(hudIndex) {
 /**
  * No comment provided
  *
- * Hash: 0xE6DE0561D9232A64 | Since: 323 | API-Set: unknown
+ * Hash: 0xE6DE0561D9232A64 | Since: unknown | API-Set: unknown
  */
 export function clearGpsCustomRoute() {
     ClearGpsCustomRoute();
@@ -651,7 +651,7 @@ export function clearGpsCustomRoute() {
  *
  * Doesn't seem like the flags are actually read by the game at all.
  *
- * Hash: 0x21986729D6A3A830 | Since: 323 | API-Set: unknown
+ * Hash: 0x21986729D6A3A830 | Since: unknown | API-Set: unknown
  */
 export function clearGpsFlags() {
     ClearGpsFlags();
@@ -659,7 +659,7 @@ export function clearGpsFlags() {
 /**
  * Does the same as SET_GPS_MULTI_ROUTE_RENDER(false);
  *
- * Hash: 0x67EEDEA1B9BAFD94 | Since: 323 | API-Set: unknown
+ * Hash: 0x67EEDEA1B9BAFD94 | Since: unknown | API-Set: unknown
  */
 export function clearGpsMultiRoute() {
     ClearGpsMultiRoute();
@@ -667,7 +667,7 @@ export function clearGpsMultiRoute() {
 /**
  * No comment provided
  *
- * Hash: 0xFF4FB7C8CDFA3DA7 | Since: 323 | API-Set: unknown
+ * Hash: 0xFF4FB7C8CDFA3DA7 | Since: unknown | API-Set: unknown
  */
 export function clearGpsPlayerWaypoint() {
     ClearGpsPlayerWaypoint();
@@ -675,7 +675,7 @@ export function clearGpsPlayerWaypoint() {
 /**
  * Does the same as SET_RACE_TRACK_RENDER(false);
  *
- * Hash: 0x7AA5B4CE533C858B | Since: 323 | API-Set: unknown
+ * Hash: 0x7AA5B4CE533C858B | Since: unknown | API-Set: unknown
  */
 export function clearGpsRaceTrack() {
     ClearGpsRaceTrack();
@@ -683,7 +683,7 @@ export function clearGpsRaceTrack() {
 /**
  * No comment provided
  *
- * Hash: 0x8DFCED7A656F8802 | Since: 323 | API-Set: unknown
+ * Hash: 0x8DFCED7A656F8802 | Since: unknown | API-Set: unknown
  */
 export function clearHelp(toggle) {
     ClearHelp(toggle);
@@ -691,7 +691,7 @@ export function clearHelp(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x5E62BE5DC58E9E06 | Since: 323 | API-Set: unknown
+ * Hash: 0x5E62BE5DC58E9E06 | Since: unknown | API-Set: unknown
  */
 export function clearPedInPauseMenu() {
     ClearPedInPauseMenu();
@@ -699,7 +699,7 @@ export function clearPedInPauseMenu() {
 /**
  * No comment provided
  *
- * Hash: 0xCC33FA791322B9D9 | Since: 323 | API-Set: unknown
+ * Hash: 0xCC33FA791322B9D9 | Since: unknown | API-Set: unknown
  */
 export function clearPrints() {
     ClearPrints();
@@ -707,7 +707,7 @@ export function clearPrints() {
 /**
  * This native does absolutely nothing, just a nullsub
  *
- * Hash: 0xB57D8DD645CFA2CF | Since: 323 | API-Set: unknown
+ * Hash: 0xB57D8DD645CFA2CF | Since: unknown | API-Set: unknown
  */
 export function clearReminderMessage() {
     ClearReminderMessage();
@@ -715,7 +715,7 @@ export function clearReminderMessage() {
 /**
  * No comment provided
  *
- * Hash: 0x2CEA2839313C09AC | Since: 323 | API-Set: unknown
+ * Hash: 0x2CEA2839313C09AC | Since: unknown | API-Set: unknown
  */
 export function clearSmallPrints() {
     ClearSmallPrints();
@@ -723,7 +723,7 @@ export function clearSmallPrints() {
 /**
  * p0: found arguments in the b617d scripts: https://pastebin.com/X5akCN7z
  *
- * Hash: 0xCF708001E1E536DD | Since: 323 | API-Set: unknown
+ * Hash: 0xCF708001E1E536DD | Since: unknown | API-Set: unknown
  */
 export function clearThisPrint() {
     ClearThisPrint(undefined);
@@ -731,7 +731,7 @@ export function clearThisPrint() {
 /**
  * No comment provided
  *
- * Hash: 0xEB81A3DADD503187 | Since: 1290 | API-Set: unknown
+ * Hash: 0xEB81A3DADD503187 | Since: unknown | API-Set: unknown
  */
 export function clearValidVehicleHitHashes() {
     Citizen.invokeNative('0xEB81A3DADD503187');
@@ -739,7 +739,7 @@ export function clearValidVehicleHitHashes() {
 /**
  * No comment provided
  *
- * Hash: 0x1AC8F4AD40E22127 | Since: 323 | API-Set: unknown
+ * Hash: 0x1AC8F4AD40E22127 | Since: unknown | API-Set: unknown
  */
 export function closeMpTextChat() {
     CloseMultiplayerChat();
@@ -747,7 +747,7 @@ export function closeMpTextChat() {
 /**
  * No comment provided
  *
- * Hash: 0xD2B32BE3FC1626C6 | Since: 323 | API-Set: unknown
+ * Hash: 0xD2B32BE3FC1626C6 | Since: unknown | API-Set: unknown
  */
 export function closeSocialClubMenu() {
     CloseSocialClubMenu();
@@ -755,7 +755,7 @@ export function closeSocialClubMenu() {
 /**
  * No comment provided
  *
- * Hash: 0x66E7CB63C97B7D20 | Since: 323 | API-Set: unknown
+ * Hash: 0x66E7CB63C97B7D20 | Since: unknown | API-Set: unknown
  */
 export function codeWantsScriptToTakeControl() {
     return Citizen.invokeNative('0x66E7CB63C97B7D20');
@@ -763,7 +763,7 @@ export function codeWantsScriptToTakeControl() {
 /**
  * clanFlag: takes a number 0-5
  *
- * Hash: 0xBFEFE3321A3F5015 | Since: 323 | API-Set: unknown
+ * Hash: 0xBFEFE3321A3F5015 | Since: unknown | API-Set: unknown
  */
 export function createFakeMpGamerTag(ped, username, pointedClanTag, isRockstarClan, clanTag, clanFlag) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -772,7 +772,7 @@ export function createFakeMpGamerTag(ped, username, pointedClanTag, isRockstarCl
 /**
  * clanFlag: takes a number 0-5
  *
- * Hash: 0x6DD05E9D83EFA4C9 | Since: 323 | API-Set: unknown
+ * Hash: 0x6DD05E9D83EFA4C9 | Since: unknown | API-Set: unknown
  */
 export function createMpGamerTagWithCrewColor(player, username, pointedClanTag, isRockstarClan, clanTag, clanFlag, r, g, b) {
     const _player = typeof player == 'object' ? player.playerId() : player;
@@ -781,7 +781,7 @@ export function createMpGamerTagWithCrewColor(player, username, pointedClanTag, 
 /**
  * No comment provided
  *
- * Hash: 0x2708FC083123F9FF | Since: 323 | API-Set: unknown
+ * Hash: 0x2708FC083123F9FF | Since: unknown | API-Set: unknown
  */
 export function customMinimapClearBlips() {
     ClearRaceGalleryBlips();
@@ -789,7 +789,7 @@ export function customMinimapClearBlips() {
 /**
  * Add a BLIP_GALLERY at the specific coordinate. Used in fm_maintain_transition_players to display race track points.
  *
- * Hash: 0x551DF99658DB6EE8 | Since: 323 | API-Set: unknown
+ * Hash: 0x551DF99658DB6EE8 | Since: unknown | API-Set: unknown
  */
 export function customMinimapCreateBlip(pos) {
     return RaceGalleryAddBlip(pos.x, pos.y, pos.z);
@@ -798,7 +798,7 @@ export function customMinimapCreateBlip(pos) {
  * If toggle is true, the map is shown in full screen
  * If toggle is false, the map is shown in normal mode
  *
- * Hash: 0x5354C5BA2EA868A4 | Since: 323 | API-Set: unknown
+ * Hash: 0x5354C5BA2EA868A4 | Since: unknown | API-Set: unknown
  */
 export function customMinimapSetActive(toggle) {
     RaceGalleryFullscreen(toggle);
@@ -806,7 +806,7 @@ export function customMinimapSetActive(toggle) {
 /**
  * Sets the sprite of the next BLIP_GALLERY blip, values used in the native scripts: 143 (ObjectiveBlue), 144 (ObjectiveGreen), 145 (ObjectiveRed), 146 (ObjectiveYellow).
  *
- * Hash: 0x1EAE6DD17B7A5EFA | Since: 323 | API-Set: unknown
+ * Hash: 0x1EAE6DD17B7A5EFA | Since: unknown | API-Set: unknown
  */
 export function customMinimapSetBlipObject(spriteId) {
     RaceGalleryNextBlipSprite(spriteId);
@@ -814,7 +814,7 @@ export function customMinimapSetBlipObject(spriteId) {
 /**
  * No comment provided
  *
- * Hash: 0xD8E694757BCEA8E9 | Since: 323 | API-Set: unknown
+ * Hash: 0xD8E694757BCEA8E9 | Since: unknown | API-Set: unknown
  */
 export function deleteWaypointsFromThisPlayer() {
     DeleteWaypoint();
@@ -822,7 +822,7 @@ export function deleteWaypointsFromThisPlayer() {
 /**
  * No comment provided
  *
- * Hash: 0x6D3465A73092F0E6 | Since: 323 | API-Set: unknown
+ * Hash: 0x6D3465A73092F0E6 | Since: unknown | API-Set: unknown
  */
 export function disableFrontendThisFrame() {
     DisableFrontendThisFrame();
@@ -830,7 +830,7 @@ export function disableFrontendThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0x9245E81072704B8A | Since: 323 | API-Set: unknown
+ * Hash: 0x9245E81072704B8A | Since: unknown | API-Set: unknown
  */
 export function disablePausemenuSpinner() {
     PauseMenuDisableBusyspinner(false);
@@ -838,7 +838,7 @@ export function disablePausemenuSpinner() {
 /**
  * No comment provided
  *
- * Hash: 0xA5E78BA2B1331C55 | Since: 323 | API-Set: unknown
+ * Hash: 0xA5E78BA2B1331C55 | Since: unknown | API-Set: unknown
  */
 export function displayAmmoThisFrame(display) {
     DisplayAmmoThisFrame(display);
@@ -846,7 +846,7 @@ export function displayAmmoThisFrame(display) {
 /**
  * No comment provided
  *
- * Hash: 0x276B6CE369C33678 | Since: 323 | API-Set: unknown
+ * Hash: 0x276B6CE369C33678 | Since: unknown | API-Set: unknown
  */
 export function displayAreaName(toggle) {
     DisplayAreaName(toggle);
@@ -855,7 +855,7 @@ export function displayAreaName(toggle) {
  * "DISPLAY_CASH(false);" makes the cash amount render on the screen when appropriate
  * "DISPLAY_CASH(true);" disables cash amount rendering
  *
- * Hash: 0x96DEC8D5430208B7 | Since: 323 | API-Set: unknown
+ * Hash: 0x96DEC8D5430208B7 | Since: unknown | API-Set: unknown
  */
 export function displayCash(toggle) {
     DisplayCash(toggle);
@@ -871,7 +871,7 @@ export function displayCash(toggle) {
  *
  * curvedWindow is unused.
  *
- * Hash: 0x960C9FF8F616E41C | Since: 323 | API-Set: unknown
+ * Hash: 0x960C9FF8F616E41C | Since: unknown | API-Set: unknown
  */
 export function displayHelpTextThisFrame(message, curvedWindow) {
     DisplayHelpTextThisFrame(message, curvedWindow);
@@ -879,7 +879,7 @@ export function displayHelpTextThisFrame(message, curvedWindow) {
 /**
  * If Hud should be displayed
  *
- * Hash: 0xA6294919E56FF02A | Since: 323 | API-Set: unknown
+ * Hash: 0xA6294919E56FF02A | Since: unknown | API-Set: unknown
  */
 export function display(toggle) {
     DisplayHud(toggle);
@@ -887,7 +887,7 @@ export function display(toggle) {
 /**
  * Enables drawing some hud components, such as help labels, this frame, when the player is dead.
  *
- * Hash: 0x7669F9E39DC17063 | Since: 323 | API-Set: unknown
+ * Hash: 0x7669F9E39DC17063 | Since: unknown | API-Set: unknown
  */
 export function displayWhenNotInStateOfPlayThisFrame() {
     DisplayHudWhenDeadThisFrame();
@@ -895,7 +895,7 @@ export function displayWhenNotInStateOfPlayThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0x402F9ED62087E898 | Since: 323 | API-Set: unknown
+ * Hash: 0x402F9ED62087E898 | Since: unknown | API-Set: unknown
  */
 export function displayWhenPausedThisFrame() {
     DisplayHudWhenPausedThisFrame();
@@ -907,7 +907,7 @@ export function displayWhenPausedThisFrame() {
  *
  * Make sure to call SET_BLIP_CATEGORY with index 7 for this to work on the desired blip.
  *
- * Hash: 0x82CEDC33687E1F50 | Since: 323 | API-Set: unknown
+ * Hash: 0x82CEDC33687E1F50 | Since: unknown | API-Set: unknown
  */
 export function displayPlayerNameTagsOnBlips(toggle) {
     DisplayPlayerNameTagsOnBlips(toggle);
@@ -915,7 +915,7 @@ export function displayPlayerNameTagsOnBlips(toggle) {
 /**
  * If Minimap / Radar should be displayed.
  *
- * Hash: 0xA0EBB943C300E693 | Since: 323 | API-Set: unknown
+ * Hash: 0xA0EBB943C300E693 | Since: unknown | API-Set: unknown
  */
 export function displayRadar(toggle) {
     DisplayRadar(toggle);
@@ -923,7 +923,7 @@ export function displayRadar(toggle) {
 /**
  * Displays the crosshair for this frame.
  *
- * Hash: 0x73115226F4814E62 | Since: 323 | API-Set: unknown
+ * Hash: 0x73115226F4814E62 | Since: unknown | API-Set: unknown
  */
 export function displaySniperScopeThisFrame() {
     DisplaySniperScopeThisFrame();
@@ -931,7 +931,7 @@ export function displaySniperScopeThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0xA6DB27D19ECBB7DA | Since: 323 | API-Set: unknown
+ * Hash: 0xA6DB27D19ECBB7DA | Since: unknown | API-Set: unknown
  */
 export function doesBlipExist(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -940,7 +940,7 @@ export function doesBlipExist(blip) {
 /**
  * No comment provided
  *
- * Hash: 0xDD2238F57B977751 | Since: 323 | API-Set: unknown
+ * Hash: 0xDD2238F57B977751 | Since: unknown | API-Set: unknown
  */
 export function doesBlipHaveGpsRoute(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -949,7 +949,7 @@ export function doesBlipHaveGpsRoute(blip) {
 /**
  * No comment provided
  *
- * Hash: 0x15B8ECF844EE67ED | Since: 323 | API-Set: unknown
+ * Hash: 0x15B8ECF844EE67ED | Since: unknown | API-Set: unknown
  */
 export function doesPedHaveAiBlip(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -958,7 +958,7 @@ export function doesPedHaveAiBlip(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x1C7302E725259789 | Since: 323 | API-Set: unknown
+ * Hash: 0x1C7302E725259789 | Since: unknown | API-Set: unknown
  */
 export function doesTextBlockExist(gxt) {
     return DoesTextBlockExist(gxt);
@@ -966,7 +966,7 @@ export function doesTextBlockExist(gxt) {
 /**
  * Checks if the passed gxt name exists in the game files.
  *
- * Hash: 0xAC09CA973C564252 | Since: 323 | API-Set: unknown
+ * Hash: 0xAC09CA973C564252 | Since: unknown | API-Set: unknown
  */
 export function doesTextLabelExist(gxt) {
     return DoesTextLabelExist(gxt);
@@ -974,7 +974,7 @@ export function doesTextLabelExist(gxt) {
 /**
  * When calling this, the current frame will have the players "arrow icon" be focused on the dead center of the radar.
  *
- * Hash: 0x6D14BFDC33B34F55 | Since: 323 | API-Set: unknown
+ * Hash: 0x6D14BFDC33B34F55 | Since: unknown | API-Set: unknown
  */
 export function dontTiltMinimapThisFrame() {
     DontTiltMinimapThisFrame();
@@ -982,7 +982,7 @@ export function dontTiltMinimapThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0x89DA85D949CE57A0 | Since: 2802 | API-Set: unknown
+ * Hash: 0x89DA85D949CE57A0 | Since: unknown | API-Set: unknown
  */
 export function dontZoomMinimapWhenRunningThisFrame() {
     Citizen.invokeNative('0x89DA85D949CE57A0');
@@ -990,7 +990,7 @@ export function dontZoomMinimapWhenRunningThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0x55F5A5F07134DE60 | Since: 1180 | API-Set: unknown
+ * Hash: 0x55F5A5F07134DE60 | Since: unknown | API-Set: unknown
  */
 export function dontZoomMinimapWhenSnipingThisFrame() {
     Citizen.invokeNative('0x55F5A5F07134DE60');
@@ -998,7 +998,7 @@ export function dontZoomMinimapWhenSnipingThisFrame() {
 /**
  * This native does absolutely nothing, just a nullsub
  *
- * Hash: 0x211C4EF450086857 | Since: 323 | API-Set: unknown
+ * Hash: 0x211C4EF450086857 | Since: unknown | API-Set: unknown
  */
 export function drawFrontendBackgroundThisFrame() {
     Citizen.invokeNative('0x211C4EF450086857');
@@ -1006,7 +1006,7 @@ export function drawFrontendBackgroundThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0xBF4F34A85CA2970C | Since: 323 | API-Set: unknown
+ * Hash: 0xBF4F34A85CA2970C | Since: unknown | API-Set: unknown
  */
 export function drawOverFadeThisFrame() {
     Citizen.invokeNative('0xBF4F34A85CA2970C');
@@ -1014,7 +1014,7 @@ export function drawOverFadeThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0xCFDBDF5AE59BA0F4 | Since: 323 | API-Set: unknown
+ * Hash: 0xCFDBDF5AE59BA0F4 | Since: unknown | API-Set: unknown
  */
 export function endTextCommandAddDirectlyToPreviousBriefs() {
     EndTextCommandObjective(false);
@@ -1029,7 +1029,7 @@ export function endTextCommandAddDirectlyToPreviousBriefs() {
  * BUSY_SPINNER_RIGHT,
  * };
  *
- * Hash: 0xBD12F8228410D9B4 | Since: 323 | API-Set: unknown
+ * Hash: 0xBD12F8228410D9B4 | Since: unknown | API-Set: unknown
  */
 export function endTextCommandBusyspinnerOn(busySpinnerType) {
     EndTextCommandBusyspinnerOn(busySpinnerType);
@@ -1037,7 +1037,7 @@ export function endTextCommandBusyspinnerOn(busySpinnerType) {
 /**
  * No comment provided
  *
- * Hash: 0xFCC75460ABA29378 | Since: 323 | API-Set: unknown
+ * Hash: 0xFCC75460ABA29378 | Since: unknown | API-Set: unknown
  */
 export function endTextCommandClearPrint() {
     EndTextCommandClearPrint();
@@ -1062,7 +1062,7 @@ export function endTextCommandClearPrint() {
  *
  * Used to be known as _DISPLAY_HELP_TEXT_FROM_STRING_LABEL
  *
- * Hash: 0x238FFE5C7B0498A6 | Since: 323 | API-Set: unknown
+ * Hash: 0x238FFE5C7B0498A6 | Since: unknown | API-Set: unknown
  */
 export function endTextCommandDisplayHelp(loop, beep, shape) {
     EndTextCommandDisplayHelp(0, loop, beep, shape);
@@ -1072,7 +1072,7 @@ export function endTextCommandDisplayHelp(loop, beep, shape) {
  *
  * Used to be known as _DRAW_TEXT
  *
- * Hash: 0xCD015E5BB0D96A57 | Since: 323 | API-Set: unknown
+ * Hash: 0xCD015E5BB0D96A57 | Since: unknown | API-Set: unknown
  */
 export function endTextCommandDisplayText(x, y) {
     EndTextCommandDisplayText(x, y, 0);
@@ -1081,7 +1081,7 @@ export function endTextCommandDisplayText(x, y) {
  * Determines how many lines the text string will use when drawn on screen.
  * Must use 0x521FB041D93DD0E4 for setting up
  *
- * Hash: 0x9040DFB09BE75706 | Since: 323 | API-Set: unknown
+ * Hash: 0x9040DFB09BE75706 | Since: unknown | API-Set: unknown
  */
 export function endTextCommandGetNumberOfLinesForString(x, y) {
     return EndTextCommandLineCount(x, y);
@@ -1089,7 +1089,7 @@ export function endTextCommandGetNumberOfLinesForString(x, y) {
 /**
  * No comment provided
  *
- * Hash: 0x85F061DA64ED2F67 | Since: 323 | API-Set: unknown
+ * Hash: 0x85F061DA64ED2F67 | Since: unknown | API-Set: unknown
  */
 export function endTextCommandGetScreenWidthOfDisplayText() {
     return EndTextCommandGetWidth(false);
@@ -1097,7 +1097,7 @@ export function endTextCommandGetScreenWidthOfDisplayText() {
 /**
  * No comment provided
  *
- * Hash: 0x8A9BA1AB3E237613 | Since: 323 | API-Set: unknown
+ * Hash: 0x8A9BA1AB3E237613 | Since: unknown | API-Set: unknown
  */
 export function endTextCommandIsMessageDisplayed() {
     return EndTextCommandIsMessageDisplayed();
@@ -1105,7 +1105,7 @@ export function endTextCommandIsMessageDisplayed() {
 /**
  * No comment provided
  *
- * Hash: 0x10BDDBFC529428DD | Since: 323 | API-Set: unknown
+ * Hash: 0x10BDDBFC529428DD | Since: unknown | API-Set: unknown
  */
 export function endTextCommandIsThisHelpMessageBeingDisplayed() {
     return EndTextCommandIsThisHelpMessageBeingDisplayed(0);
@@ -1113,7 +1113,7 @@ export function endTextCommandIsThisHelpMessageBeingDisplayed() {
 /**
  * No comment provided
  *
- * Hash: 0xA86911979638106F | Since: 323 | API-Set: unknown
+ * Hash: 0xA86911979638106F | Since: unknown | API-Set: unknown
  */
 export function endTextCommandOverrideButtonText() {
     EndTextCommandOverrideButtonText(0);
@@ -1127,7 +1127,7 @@ export function endTextCommandOverrideButtonText() {
  *
  * Used to be known as _DRAW_SUBTITLE_TIMED
  *
- * Hash: 0x9D77056A530643F6 | Since: 323 | API-Set: unknown
+ * Hash: 0x9D77056A530643F6 | Since: unknown | API-Set: unknown
  */
 export function endTextCommandPrint(duration, drawImmediately) {
     EndTextCommandPrint(duration, drawImmediately);
@@ -1135,7 +1135,7 @@ export function endTextCommandPrint(duration, drawImmediately) {
 /**
  * Finalizes a text command started with BEGIN_TEXT_COMMAND_SET_BLIP_NAME, setting the name of the specified blip.
  *
- * Hash: 0xBC38B49BCB83BC9B | Since: 323 | API-Set: unknown
+ * Hash: 0xBC38B49BCB83BC9B | Since: unknown | API-Set: unknown
  */
 export function endTextCommandSetBlipName(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1148,7 +1148,7 @@ export function endTextCommandSetBlipName(blip) {
  * `HUD::BEGIN_TEXT_COMMAND_THEFEED_POST("HUNT");`
  * `HUD::END_TEXT_COMMAND_THEFEED_POST_AWARD("Hunting", "Hunting_Gold_128", 0, 109, "HUD_MED_UNLKED");`
  *
- * Hash: 0xAA295B6F28BD587D | Since: 323 | API-Set: unknown
+ * Hash: 0xAA295B6F28BD587D | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostAward(textureDict, textureName, rpBonus, colorOverlay, titleLabel) {
     return EndTextCommandThefeedPostAward(textureDict, textureName, rpBonus, colorOverlay, titleLabel);
@@ -1156,7 +1156,7 @@ export function endTextCommandThefeedPostAward(textureDict, textureName, rpBonus
 /**
  * No comment provided
  *
- * Hash: 0x97C9E4E7024A8F2C | Since: 323 | API-Set: unknown
+ * Hash: 0x97C9E4E7024A8F2C | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostCrewtag(isLeader, unk0, clanDesc, R, G, B) {
     return EndTextCommandThefeedPostCrewtag(false, false, 0, isLeader, unk0, clanDesc, R, G, B);
@@ -1164,7 +1164,7 @@ export function endTextCommandThefeedPostCrewtag(isLeader, unk0, clanDesc, R, G,
 /**
  * No comment provided
  *
- * Hash: 0x137BC35589E34E1E | Since: 323 | API-Set: unknown
+ * Hash: 0x137BC35589E34E1E | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostCrewtagWithGameName(isLeader, unk0, clanDesc, playerName, R, G, B) {
     return EndTextCommandThefeedPostCrewtagWithGameName(false, false, 0, isLeader, unk0, clanDesc, playerName, R, G, B);
@@ -1172,7 +1172,7 @@ export function endTextCommandThefeedPostCrewtagWithGameName(isLeader, unk0, cla
 /**
  * No comment provided
  *
- * Hash: 0x8EFCCF6EC66D85E4 | Since: 323 | API-Set: unknown
+ * Hash: 0x8EFCCF6EC66D85E4 | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostCrewRankupWithLiteralFlag() {
     return EndTextCommandThefeedPostCrewRankup(undefined, undefined, undefined, false, false);
@@ -1198,7 +1198,7 @@ export function endTextCommandThefeedPostCrewRankupWithLiteralFlag() {
  * "sender" is the very top header. This can be any old string.
  * "subject" is the header under the sender.
  *
- * Hash: 0x1CCD9A37359072CF | Since: 323 | API-Set: unknown
+ * Hash: 0x1CCD9A37359072CF | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostMessagetext(txdName, textureName, flash, iconType, sender, subject) {
     return EndTextCommandThefeedPostMessagetext(txdName, textureName, flash, iconType, sender, subject);
@@ -1212,7 +1212,7 @@ export function endTextCommandThefeedPostMessagetext(txdName, textureName, flash
  *
  * `HUD::END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT_SUBTITLE_LABEL("CHAR_ACTING_UP", "CHAR_ACTING_UP", 0, 0, "DI_FEED_CHAR", a_0);`
  *
- * Hash: 0xC6F580E4C94926AC | Since: 323 | API-Set: unknown
+ * Hash: 0xC6F580E4C94926AC | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostMessagetextSubtitleLabel(txdName, textureName, flash, iconType, sender, subject) {
     return EndTextCommandThefeedPostMessagetextGxtEntry(txdName, textureName, flash, iconType, sender, subject);
@@ -1225,7 +1225,7 @@ export function endTextCommandThefeedPostMessagetextSubtitleLabel(txdName, textu
  * Example, only occurrence in the scripts:
  * `v_8 = HUD::END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT_TU("CHAR_SOCIAL_CLUB", "CHAR_SOCIAL_CLUB", 0, 0, &v_9, "", a_5);`
  *
- * Hash: 0x1E6611149DB3DB6B | Since: 323 | API-Set: unknown
+ * Hash: 0x1E6611149DB3DB6B | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostMessagetextTu(txdName, textureName, flash, iconType, sender, subject, duration) {
     return EndTextCommandThefeedPostMessagetextTu(txdName, textureName, flash, iconType, sender, subject, duration);
@@ -1252,7 +1252,7 @@ export function endTextCommandThefeedPostMessagetextTu(txdName, textureName, fla
  * "duration" is a multiplier, so 1.0 is normal, 2.0 is twice as long (very slow), and 0.5 is half as long.
  * "clanTag" shows a crew tag in the "sender" header, after the text. You need to use 3 underscores as padding. Maximum length of this field seems to be 7. (e.g. "MK" becomes "___MK", "ACE" becomes "___ACE", etc.)
  *
- * Hash: 0x5CBF7BADE20DB93E | Since: 323 | API-Set: unknown
+ * Hash: 0x5CBF7BADE20DB93E | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostMessagetextWithCrewTag(txdName, textureName, flash, iconType, sender, subject, duration, clanTag) {
     return EndTextCommandThefeedPostMessagetextWithCrewTag(txdName, textureName, flash, iconType, sender, subject, duration, clanTag);
@@ -1289,7 +1289,7 @@ export function endTextCommandThefeedPostMessagetextWithCrewTag(txdName, texture
  * return END_TEXT_COMMAND_THEFEED_POST_TICKER(1, 1);
  * }
  *
- * Hash: 0x531B84E7DA981FB6 | Since: 323 | API-Set: unknown
+ * Hash: 0x531B84E7DA981FB6 | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostMessagetextWithCrewTagAndAdditionalIcon(txdName, textureName, flash, iconType1, sender, subject, duration, clanTag, iconType2) {
     return EndTextCommandThefeedPostMessagetextWithCrewTagAndAdditionalIcon(txdName, textureName, flash, iconType1, sender, subject, duration, clanTag, iconType2, 0);
@@ -1297,7 +1297,7 @@ export function endTextCommandThefeedPostMessagetextWithCrewTagAndAdditionalIcon
 /**
  * No comment provided
  *
- * Hash: 0xF020C96915705B3A | Since: 323 | API-Set: unknown
+ * Hash: 0xF020C96915705B3A | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostMpticker(blink) {
     return EndTextCommandThefeedPostMpticker(blink, false);
@@ -1311,7 +1311,7 @@ export function endTextCommandThefeedPostMpticker(blink) {
  * `HUD::END_TEXT_COMMAND_THEFEED_POST_REPLAY_INPUT(1, 20, "Who you trynna get crazy with, ese? Don't you know I'm LOCO?!");`
  * - https://imgur.com/lGBPCz3
  *
- * Hash: 0xD202B92CBF1D816F | Since: 323 | API-Set: unknown
+ * Hash: 0xD202B92CBF1D816F | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostReplay(_type, image, text) {
     return EndTextCommandThefeedPostReplayIcon(_type, image, text);
@@ -1333,7 +1333,7 @@ export function endTextCommandThefeedPostReplay(_type, image, text) {
  * `l_D1[2\/\*1\*\/]=HUD::END_TEXT_COMMAND_THEFEED_POST_REPLAY_INPUT(1,"~INPUT_REPLAY_START_STOP_RECORDING_SECONDARY~","");`
  *
  *
- * Hash: 0xDD6CB2CCE7C2735C | Since: 323 | API-Set: unknown
+ * Hash: 0xDD6CB2CCE7C2735C | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostReplayInput(_type, button, text) {
     return EndTextCommandThefeedPostReplayInput(_type, button, text);
@@ -1342,7 +1342,7 @@ export function endTextCommandThefeedPostReplayInput(_type, button, text) {
  * List of picture names: https://pastebin.com/XdpJVbHz
  * Example result: https://i.imgur.com/SdEZ22m.png
  *
- * Hash: 0x2B7E9A4EAAA93C89 | Since: 323 | API-Set: unknown
+ * Hash: 0x2B7E9A4EAAA93C89 | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostStats(statTitle, iconEnum, stepVal, barValue, isImportant, pictureTextureDict, pictureTextureName) {
     return EndTextCommandThefeedPostStats(statTitle, iconEnum, stepVal, barValue, isImportant, pictureTextureDict, pictureTextureName);
@@ -1350,7 +1350,7 @@ export function endTextCommandThefeedPostStats(statTitle, iconEnum, stepVal, bar
 /**
  * No comment provided
  *
- * Hash: 0x2ED7843F8F801023 | Since: 323 | API-Set: unknown
+ * Hash: 0x2ED7843F8F801023 | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostTicker(blink) {
     return EndTextCommandThefeedPostTicker(blink, false);
@@ -1358,7 +1358,7 @@ export function endTextCommandThefeedPostTicker(blink) {
 /**
  * No comment provided
  *
- * Hash: 0x44FA03975424A0EE | Since: 323 | API-Set: unknown
+ * Hash: 0x44FA03975424A0EE | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostTickerForced(blink) {
     return EndTextCommandThefeedPostTickerForced(blink, false);
@@ -1366,7 +1366,7 @@ export function endTextCommandThefeedPostTickerForced(blink) {
 /**
  * No comment provided
  *
- * Hash: 0x378E809BF61EC840 | Since: 323 | API-Set: unknown
+ * Hash: 0x378E809BF61EC840 | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostTickerWithTokens(blink) {
     return EndTextCommandThefeedPostTickerWithTokens(blink, false);
@@ -1374,7 +1374,7 @@ export function endTextCommandThefeedPostTickerWithTokens(blink) {
 /**
  * No comment provided
  *
- * Hash: 0x33EE12743CCD6343 | Since: 323 | API-Set: unknown
+ * Hash: 0x33EE12743CCD6343 | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostUnlock(gxtLabel1, gxtLabel2) {
     return EndTextCommandThefeedPostUnlock(gxtLabel1, 0, gxtLabel2);
@@ -1382,7 +1382,7 @@ export function endTextCommandThefeedPostUnlock(gxtLabel1, gxtLabel2) {
 /**
  * No comment provided
  *
- * Hash: 0xC8F3AAF93D0600BF | Since: 323 | API-Set: unknown
+ * Hash: 0xC8F3AAF93D0600BF | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostUnlockTu(gxtLabel1, gxtLabel2) {
     return EndTextCommandThefeedPostUnlockTu(gxtLabel1, 0, gxtLabel2, 0);
@@ -1390,7 +1390,7 @@ export function endTextCommandThefeedPostUnlockTu(gxtLabel1, gxtLabel2) {
 /**
  * No comment provided
  *
- * Hash: 0x7AE0589093A2E088 | Since: 323 | API-Set: unknown
+ * Hash: 0x7AE0589093A2E088 | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostUnlockTuWithColor() {
     return EndTextCommandThefeedPostUnlockTuWithColor(undefined, undefined, undefined, undefined, undefined, undefined);
@@ -1403,7 +1403,7 @@ export function endTextCommandThefeedPostUnlockTuWithColor() {
  *
  * Shows a deathmatch score above the minimap, example: https://i.imgur.com/YmoMklG.png
  *
- * Hash: 0xB6871B0555B02996 | Since: 323 | API-Set: unknown
+ * Hash: 0xB6871B0555B02996 | Since: unknown | API-Set: unknown
  */
 export function endTextCommandThefeedPostVersusTu(txdName1, textureName1, count1, txdName2, textureName2, count2, hudColor1, hudColor2) {
     return EndTextCommandThefeedPostVersusTu(txdName1, textureName1, count1, txdName2, textureName2, count2, hudColor1, hudColor2);
@@ -1411,7 +1411,7 @@ export function endTextCommandThefeedPostVersusTu(txdName1, textureName1, count1
 /**
  * No comment provided
  *
- * Hash: 0xCEF214315D276FD1 | Since: 323 | API-Set: unknown
+ * Hash: 0xCEF214315D276FD1 | Since: unknown | API-Set: unknown
  */
 export function flagPlayerContextInTournament(toggle) {
     FlagPlayerContextInTournament(toggle);
@@ -1419,7 +1419,7 @@ export function flagPlayerContextInTournament(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x02CFBA0C9E9275CE | Since: 323 | API-Set: unknown
+ * Hash: 0x02CFBA0C9E9275CE | Since: unknown | API-Set: unknown
  */
 export function flashAbilityBar(millisecondsToFlash) {
     FlashAbilityBar(millisecondsToFlash);
@@ -1428,7 +1428,7 @@ export function flashAbilityBar(millisecondsToFlash) {
  * adds a short flash to the Radar/Minimap
  * Usage: UI.FLASH_MINIMAP_DISPLAY
  *
- * Hash: 0xF2DD778C22B15BDA | Since: 323 | API-Set: unknown
+ * Hash: 0xF2DD778C22B15BDA | Since: unknown | API-Set: unknown
  */
 export function flashMinimapDisplay() {
     FlashMinimapDisplay();
@@ -1436,7 +1436,7 @@ export function flashMinimapDisplay() {
 /**
  * No comment provided
  *
- * Hash: 0x6B1DE27EE78E6A19 | Since: 323 | API-Set: unknown
+ * Hash: 0x6B1DE27EE78E6A19 | Since: unknown | API-Set: unknown
  */
 export function flashMinimapDisplayWithColor(hudColorIndex) {
     FlashMinimapDisplayWithColor(hudColorIndex);
@@ -1444,7 +1444,7 @@ export function flashMinimapDisplayWithColor(hudColorIndex) {
 /**
  * No comment provided
  *
- * Hash: 0xA18AFB39081B6A1F | Since: 323 | API-Set: unknown
+ * Hash: 0xA18AFB39081B6A1F | Since: unknown | API-Set: unknown
  */
 export function flashWantedDisplay() {
     FlashWantedDisplay(false);
@@ -1452,7 +1452,7 @@ export function flashWantedDisplay() {
 /**
  * No comment provided
  *
- * Hash: 0xEE4C0E6DBC6F2C6F | Since: 323 | API-Set: unknown
+ * Hash: 0xEE4C0E6DBC6F2C6F | Since: unknown | API-Set: unknown
  */
 export function forceCloseReportugcMenu() {
     ForceCloseReportugcMenu();
@@ -1460,7 +1460,7 @@ export function forceCloseReportugcMenu() {
 /**
  * No comment provided
  *
- * Hash: 0x8817605C2BA76200 | Since: 323 | API-Set: unknown
+ * Hash: 0x8817605C2BA76200 | Since: unknown | API-Set: unknown
  */
 export function forceCloseTextInputBox() {
     ForceCloseTextInputBox();
@@ -1468,7 +1468,7 @@ export function forceCloseTextInputBox() {
 /**
  * No comment provided
  *
- * Hash: 0x57D760D55F54E071 | Since: 323 | API-Set: unknown
+ * Hash: 0x57D760D55F54E071 | Since: unknown | API-Set: unknown
  */
 export function forceNextMessageToPreviousBriefsList() {
     Citizen.invokeNative('0x57D760D55F54E071', 0);
@@ -1476,7 +1476,7 @@ export function forceNextMessageToPreviousBriefsList() {
 /**
  * No comment provided
  *
- * Hash: 0xBA8D65C1C65702E5 | Since: 323 | API-Set: unknown
+ * Hash: 0xBA8D65C1C65702E5 | Since: unknown | API-Set: unknown
  */
 export function forceOffWantedStarFlash(toggle) {
     Citizen.invokeNative('0xBA8D65C1C65702E5', toggle);
@@ -1485,7 +1485,7 @@ export function forceOffWantedStarFlash(toggle) {
  * Not present in retail version of the game, actual definiton seems to be
  * _LOG_DEBUG_INFO(const char* category, const char* debugText);
  *
- * Hash: 0x2162C446DFDF38FD | Since: 323 | API-Set: unknown
+ * Hash: 0x2162C446DFDF38FD | Since: unknown | API-Set: unknown
  */
 export function forceScriptedGfxWhenFrontendActive() {
     LogDebugInfo(undefined);
@@ -1493,7 +1493,7 @@ export function forceScriptedGfxWhenFrontendActive() {
 /**
  * Doesn't actually return anything.
  *
- * Hash: 0x1121BFA1A1A522A8 | Since: 323 | API-Set: unknown
+ * Hash: 0x1121BFA1A1A522A8 | Since: unknown | API-Set: unknown
  */
 export function forceSonarBlipsThisFrame() {
     return ForceSonarBlipsThisFrame();
@@ -1501,7 +1501,7 @@ export function forceSonarBlipsThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0x7CD934010E115C2C | Since: 323 | API-Set: unknown
+ * Hash: 0x7CD934010E115C2C | Since: unknown | API-Set: unknown
  */
 export function getAiPedPedBlipIndex(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1510,7 +1510,7 @@ export function getAiPedPedBlipIndex(ped) {
 /**
  * Returns the current AI BLIP for the specified ped
  *
- * Hash: 0x56176892826A4FE8 | Since: 323 | API-Set: unknown
+ * Hash: 0x56176892826A4FE8 | Since: unknown | API-Set: unknown
  */
 export function getAiPedVehicleBlipIndex(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1519,7 +1519,7 @@ export function getAiPedVehicleBlipIndex(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x970F608F0EE6C885 | Since: 323 | API-Set: unknown
+ * Hash: 0x970F608F0EE6C885 | Since: unknown | API-Set: unknown
  */
 export function getBlipAlpha(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1528,7 +1528,7 @@ export function getBlipAlpha(blip) {
 /**
  * No comment provided
  *
- * Hash: 0xDF729E8D20CF7327 | Since: 323 | API-Set: unknown
+ * Hash: 0xDF729E8D20CF7327 | Since: unknown | API-Set: unknown
  */
 export function getBlipColour(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1537,7 +1537,7 @@ export function getBlipColour(blip) {
 /**
  * No comment provided
  *
- * Hash: 0x586AFE3FF72D996E | Since: 323 | API-Set: unknown
+ * Hash: 0x586AFE3FF72D996E | Since: unknown | API-Set: unknown
  */
 export function getBlipCoords(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1546,7 +1546,7 @@ export function getBlipCoords(blip) {
 /**
  * Returns -1, 0, +1, depending on if the blip is fading out, doing nothing, or fading in respectively.
  *
- * Hash: 0x2C173AE2BDB9385E | Since: 463 | API-Set: unknown
+ * Hash: 0x2C173AE2BDB9385E | Since: unknown | API-Set: unknown
  */
 export function getBlipFadeDirection(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1555,7 +1555,7 @@ export function getBlipFadeDirection(blip) {
 /**
  * Returns the Blip handle of given Entity.
  *
- * Hash: 0xBC8DBDCA2436F7E8 | Since: 323 | API-Set: unknown
+ * Hash: 0xBC8DBDCA2436F7E8 | Since: unknown | API-Set: unknown
  */
 export function getBlipFromEntity(entity) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -1564,7 +1564,7 @@ export function getBlipFromEntity(entity) {
 /**
  * No comment provided
  *
- * Hash: 0x729B5F1EFBC0AAEE | Since: 323 | API-Set: unknown
+ * Hash: 0x729B5F1EFBC0AAEE | Since: unknown | API-Set: unknown
  */
 export function getBlipHudColour(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1573,7 +1573,7 @@ export function getBlipHudColour(blip) {
 /**
  * No comment provided
  *
- * Hash: 0xFA7C7F0AADF25D09 | Since: 323 | API-Set: unknown
+ * Hash: 0xFA7C7F0AADF25D09 | Since: unknown | API-Set: unknown
  */
 export function getBlipInfoIdCoord(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1582,7 +1582,7 @@ export function getBlipInfoIdCoord(blip) {
 /**
  * No comment provided
  *
- * Hash: 0x1E314167F701DC3B | Since: 323 | API-Set: unknown
+ * Hash: 0x1E314167F701DC3B | Since: unknown | API-Set: unknown
  */
 export function getBlipInfoIdDisplay(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1591,7 +1591,7 @@ export function getBlipInfoIdDisplay(blip) {
 /**
  * No comment provided
  *
- * Hash: 0x4BA4E2553AFEDC2C | Since: 323 | API-Set: unknown
+ * Hash: 0x4BA4E2553AFEDC2C | Since: unknown | API-Set: unknown
  */
 export function getBlipInfoIdEntityIndex(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1600,7 +1600,7 @@ export function getBlipInfoIdEntityIndex(blip) {
 /**
  * This function is hard-coded to always return 0.
  *
- * Hash: 0x9B6786E4C03DD382 | Since: 323 | API-Set: unknown
+ * Hash: 0x9B6786E4C03DD382 | Since: unknown | API-Set: unknown
  */
 export function getBlipInfoIdPickupIndex(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1616,7 +1616,7 @@ export function getBlipInfoIdPickupIndex(blip) {
  * 6 - Pickup
  * 7 - Radius
  *
- * Hash: 0xBE9B0959FFD0779B | Since: 323 | API-Set: unknown
+ * Hash: 0xBE9B0959FFD0779B | Since: unknown | API-Set: unknown
  */
 export function getBlipInfoIdType(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1625,7 +1625,7 @@ export function getBlipInfoIdType(blip) {
 /**
  * No comment provided
  *
- * Hash: 0x003E92BA477F9D7F | Since: 2060 | API-Set: unknown
+ * Hash: 0x003E92BA477F9D7F | Since: unknown | API-Set: unknown
  */
 export function getBlipRotation(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1635,7 +1635,7 @@ export function getBlipRotation(blip) {
  * Blips Images + IDs:
  * gtaxscripting.blogspot.com/2016/05/gta-v-blips-id-and-image.html
  *
- * Hash: 0x1FC877464A04FC4F | Since: 323 | API-Set: unknown
+ * Hash: 0x1FC877464A04FC4F | Since: unknown | API-Set: unknown
  */
 export function getBlipSprite(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1648,7 +1648,7 @@ export function getBlipSprite(blip) {
  * // Get "STRING" text from "MY_STRING"
  * `subStr = HUD::GET_CHARACTER_FROM_AUDIO_CONVERSATION_FILENAME("MY_STRING", 3, 6);`
  *
- * Hash: 0x169BD9382084C8C0 | Since: 323 | API-Set: unknown
+ * Hash: 0x169BD9382084C8C0 | Since: unknown | API-Set: unknown
  */
 export function getCharacterFromAudioConversationFilename(text, position, length) {
     return GetTextSubstring(text, position, length);
@@ -1662,7 +1662,7 @@ export function getCharacterFromAudioConversationFilename(text, position, length
  * // Overflows are possibly replaced with underscores (needs verification)
  * `subStr = HUD::GET_CHARACTER_FROM_AUDIO_CONVERSATION_FILENAME_BYTES("MY_STRING", 3, 10); // "STRING_"?`
  *
- * Hash: 0xCE94AEBA5D82908A | Since: 323 | API-Set: unknown
+ * Hash: 0xCE94AEBA5D82908A | Since: unknown | API-Set: unknown
  */
 export function getCharacterFromAudioConversationFilenameBytes(text, startPosition, endPosition) {
     return GetTextSubstringSlice(text, startPosition, endPosition);
@@ -1690,7 +1690,7 @@ export function getCharacterFromAudioConversationFilenameBytes(text, startPositi
  * return TRUE;
  * }
  *
- * Hash: 0xB2798643312205C5 | Since: 323 | API-Set: unknown
+ * Hash: 0xB2798643312205C5 | Since: unknown | API-Set: unknown
  */
 export function getCharacterFromAudioConversationFilenameWithByteLimit(text, position, length, maxLength) {
     return GetTextSubstringSafe(text, position, length, maxLength);
@@ -1698,7 +1698,7 @@ export function getCharacterFromAudioConversationFilenameWithByteLimit(text, pos
 /**
  * No comment provided
  *
- * Hash: 0x8F08017F9D7C47BD | Since: 323 | API-Set: unknown
+ * Hash: 0x8F08017F9D7C47BD | Since: unknown | API-Set: unknown
  */
 export function getCharacterMenuPedFloatStat(statHash) {
     return Citizen.invokeNative('0x8F08017F9D7C47BD', statHash, false);
@@ -1706,7 +1706,7 @@ export function getCharacterMenuPedFloatStat(statHash) {
 /**
  * No comment provided
  *
- * Hash: 0xCA6B2F7CE32AB653 | Since: 323 | API-Set: unknown
+ * Hash: 0xCA6B2F7CE32AB653 | Since: unknown | API-Set: unknown
  */
 export function getCharacterMenuPedIntStat() {
     return Citizen.invokeNative('0xCA6B2F7CE32AB653', undefined, undefined);
@@ -1714,7 +1714,7 @@ export function getCharacterMenuPedIntStat() {
 /**
  * No comment provided
  *
- * Hash: 0x24A49BEAF468DC90 | Since: 323 | API-Set: unknown
+ * Hash: 0x24A49BEAF468DC90 | Since: unknown | API-Set: unknown
  */
 export function getCharacterMenuPedMaskedIntStat(statHash, mask) {
     if (typeof statHash === 'string')
@@ -1724,7 +1724,7 @@ export function getCharacterMenuPedMaskedIntStat(statHash, mask) {
 /**
  * No comment provided
  *
- * Hash: 0xD484BF71050CA1EE | Since: 1180 | API-Set: unknown
+ * Hash: 0xD484BF71050CA1EE | Since: unknown | API-Set: unknown
  */
 export function getClosestBlipInfoId(blipSprite) {
     return GetClosestBlipOfType(blipSprite);
@@ -1732,7 +1732,7 @@ export function getClosestBlipInfoId(blipSprite) {
 /**
  * `if (HUD::GET_CURRENT_FRONTEND_MENU_VERSION() == joaat("fe_menu_version_empty_no_background"))`
  *
- * Hash: 0x2309595AD6145265 | Since: 323 | API-Set: unknown
+ * Hash: 0x2309595AD6145265 | Since: unknown | API-Set: unknown
  */
 export function getCurrentFrontendMenuVersion() {
     return GetCurrentFrontendMenuVersion();
@@ -1740,7 +1740,7 @@ export function getCurrentFrontendMenuVersion() {
 /**
  * No comment provided
  *
- * Hash: 0x01A358D9128B7A86 | Since: 323 | API-Set: unknown
+ * Hash: 0x01A358D9128B7A86 | Since: unknown | API-Set: unknown
  */
 export function getCurrentWebpageId() {
     return GetCurrentWebpageId();
@@ -1748,7 +1748,7 @@ export function getCurrentWebpageId() {
 /**
  * No comment provided
  *
- * Hash: 0x97D47996FC48CBAD | Since: 323 | API-Set: unknown
+ * Hash: 0x97D47996FC48CBAD | Since: unknown | API-Set: unknown
  */
 export function getCurrentWebsiteId() {
     return GetCurrentWebsiteId();
@@ -1756,7 +1756,7 @@ export function getCurrentWebsiteId() {
 /**
  * This function is hard-coded to always return 1.
  *
- * Hash: 0x52F0982D7FD156B6 | Since: 323 | API-Set: unknown
+ * Hash: 0x52F0982D7FD156B6 | Since: unknown | API-Set: unknown
  */
 export function getDefaultScriptRendertargetRenderId() {
     return GetDefaultScriptRendertargetRenderId();
@@ -1764,7 +1764,7 @@ export function getDefaultScriptRendertargetRenderId() {
 /**
  * Getter for SET_FAKE_SPECTATOR_MODE
  *
- * Hash: 0xC2D2AD9EAAE265B8 | Since: 505 | API-Set: unknown
+ * Hash: 0xC2D2AD9EAAE265B8 | Since: unknown | API-Set: unknown
  */
 export function getFakeSpectatorMode() {
     return Citizen.invokeNative('0xC2D2AD9EAAE265B8');
@@ -1772,7 +1772,7 @@ export function getFakeSpectatorMode() {
 /**
  * `Gets a localized string literal from a label name. Can be used for output of e.g. VEHICLE::GET_LIVERY_NAME. To check if a GXT label can be localized with this, HUD::DOES_TEXT_LABEL_EXIST can be used.`
  *
- * Hash: 0x7B5280EBA9840C72 | Since: 323 | API-Set: unknown
+ * Hash: 0x7B5280EBA9840C72 | Since: unknown | API-Set: unknown
  */
 export function getFilenameForAudioConversation(labelName) {
     return GetFilenameForAudioConversation(labelName);
@@ -1780,7 +1780,7 @@ export function getFilenameForAudioConversation(labelName) {
 /**
  * No comment provided
  *
- * Hash: 0x1BEDE233E6CD2A1F | Since: 323 | API-Set: unknown
+ * Hash: 0x1BEDE233E6CD2A1F | Since: unknown | API-Set: unknown
  */
 export function getFirstBlipInfoId(blipSprite) {
     return GetFirstBlipInfoId(blipSprite);
@@ -1788,7 +1788,7 @@ export function getFirstBlipInfoId(blipSprite) {
 /**
  * No comment provided
  *
- * Hash: 0x98C3CF913D895111 | Since: 505 | API-Set: unknown
+ * Hash: 0x98C3CF913D895111 | Since: unknown | API-Set: unknown
  */
 export function getFirstNCharactersOfLiteralString(_string, length) {
     return Citizen.invokeNative('0x98C3CF913D895111', _string, length);
@@ -1804,7 +1804,7 @@ export function getFirstNCharactersOfLiteralString(_string, length) {
  *
  * There are 20 flags in total.
  *
- * Hash: 0xE3B05614DCE1D014 | Since: 323 | API-Set: unknown
+ * Hash: 0xE3B05614DCE1D014 | Since: unknown | API-Set: unknown
  */
 export function getGlobalActionscriptFlag(flagIndex) {
     return GetGlobalActionscriptFlag(flagIndex);
@@ -1812,7 +1812,7 @@ export function getGlobalActionscriptFlag(flagIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x7C9C91AB74A0360F | Since: 323 | API-Set: unknown
+ * Hash: 0x7C9C91AB74A0360F | Since: unknown | API-Set: unknown
  */
 export function getColour(hudColorIndex) {
     return GetHudColour(hudColorIndex);
@@ -1820,7 +1820,7 @@ export function getColour(hudColorIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x223CA69A8C4417FD | Since: 323 | API-Set: unknown
+ * Hash: 0x223CA69A8C4417FD | Since: unknown | API-Set: unknown
  */
 export function getComponentPosition(id) {
     return new Vector3(GetHudComponentPosition(id));
@@ -1828,7 +1828,7 @@ export function getComponentPosition(id) {
 /**
  * World to relative screen coords, this world to screen will keep the text on screen. Was named _GET_SCREEN_COORD_FROM_WORLD_COORD, but this conflicts with 0x34E82F05DF2974F5. As that hash actually matches GET_SCREEN_COORD_FROM_WORLD_COORD that one supercedes and this one was renamed to _GET_2D_COORD_FROM_3D_COORD
  *
- * Hash: 0xF9904D11F1ACBEC3 | Since: 323 | API-Set: unknown
+ * Hash: 0xF9904D11F1ACBEC3 | Since: unknown | API-Set: unknown
  */
 export function getScreenPositionFromWorldPosition(worldPos) {
     return GetHudScreenPositionFromWorldPosition(worldPos.x, worldPos.y, worldPos.z);
@@ -1836,7 +1836,7 @@ export function getScreenPositionFromWorldPosition(worldPos) {
 /**
  * Returns the length of the string passed (much like strlen).
  *
- * Hash: 0xF030907CCBB8A9FD | Since: 323 | API-Set: unknown
+ * Hash: 0xF030907CCBB8A9FD | Since: unknown | API-Set: unknown
  */
 export function getLengthOfLiteralString(_string) {
     return GetLengthOfLiteralString(_string);
@@ -1844,7 +1844,7 @@ export function getLengthOfLiteralString(_string) {
 /**
  * No comment provided
  *
- * Hash: 0x43E4111189E54F0E | Since: 323 | API-Set: unknown
+ * Hash: 0x43E4111189E54F0E | Since: unknown | API-Set: unknown
  */
 export function getLengthOfLiteralStringInBytes(_string) {
     return GetLengthOfLiteralStringInBytes(_string);
@@ -1852,7 +1852,7 @@ export function getLengthOfLiteralStringInBytes(_string) {
 /**
  * Returns the string length of the string from the gxt string .
  *
- * Hash: 0x801BD273D3A23F74 | Since: 323 | API-Set: unknown
+ * Hash: 0x801BD273D3A23F74 | Since: unknown | API-Set: unknown
  */
 export function getLengthOfStringWithThisTextLabel(gxt) {
     return GetLengthOfStringWithThisTextLabel(gxt);
@@ -1860,7 +1860,7 @@ export function getLengthOfStringWithThisTextLabel(gxt) {
 /**
  * No comment provided
  *
- * Hash: 0xDCD4EC3F419D02FA | Since: 323 | API-Set: unknown
+ * Hash: 0xDCD4EC3F419D02FA | Since: unknown | API-Set: unknown
  */
 export function getMainPlayerBlipId() {
     return GetMainPlayerBlipId();
@@ -1885,7 +1885,7 @@ export function getMainPlayerBlipId() {
  * selectedItemMenuId = -1
  * selectedItemUniqueId updates as normal
  *
- * Hash: 0x7E17BE53E1AAABAF | Since: 323 | API-Set: unknown
+ * Hash: 0x7E17BE53E1AAABAF | Since: unknown | API-Set: unknown
  */
 export function getMenuLayoutChangedEventDetails() {
     return GetPauseMenuSelectionData();
@@ -1893,7 +1893,7 @@ export function getMenuLayoutChangedEventDetails() {
 /**
  * p0 was always 0xAE2602A3.
  *
- * Hash: 0x052991E59076E4E4 | Since: 323 | API-Set: unknown
+ * Hash: 0x052991E59076E4E4 | Since: unknown | API-Set: unknown
  */
 export function getMenuPedBoolStat(statHash) {
     if (typeof statHash === 'string')
@@ -1903,7 +1903,7 @@ export function getMenuPedBoolStat(statHash) {
 /**
  * No comment provided
  *
- * Hash: 0x5FBD7095FE7AE57F | Since: 323 | API-Set: unknown
+ * Hash: 0x5FBD7095FE7AE57F | Since: unknown | API-Set: unknown
  */
 export function getMenuPedFloatStat(statHash) {
     if (typeof statHash === 'string')
@@ -1913,7 +1913,7 @@ export function getMenuPedFloatStat(statHash) {
 /**
  * No comment provided
  *
- * Hash: 0xEF4CED81CEBEDC6D | Since: 323 | API-Set: unknown
+ * Hash: 0xEF4CED81CEBEDC6D | Since: unknown | API-Set: unknown
  */
 export function getMenuPedIntStat() {
     return GetMenuPedIntStat(undefined);
@@ -1921,7 +1921,7 @@ export function getMenuPedIntStat() {
 /**
  * No comment provided
  *
- * Hash: 0x90A6526CF0381030 | Since: 323 | API-Set: unknown
+ * Hash: 0x90A6526CF0381030 | Since: unknown | API-Set: unknown
  */
 export function getMenuPedMaskedIntStat(statHash, mask) {
     if (typeof statHash === 'string')
@@ -1931,7 +1931,7 @@ export function getMenuPedMaskedIntStat(statHash, mask) {
 /**
  * No comment provided
  *
- * Hash: 0x36C1451A88A09630 | Since: 323 | API-Set: unknown
+ * Hash: 0x36C1451A88A09630 | Since: unknown | API-Set: unknown
  */
 export function getMenuTriggerEventDetails() {
     return GetPauseMenuSelection();
@@ -1939,7 +1939,7 @@ export function getMenuTriggerEventDetails() {
 /**
  * No comment provided
  *
- * Hash: 0x6E31B91145873922 | Since: 323 | API-Set: unknown
+ * Hash: 0x6E31B91145873922 | Since: unknown | API-Set: unknown
  */
 export function getMinimapFowCoordinateIsRevealed(pos) {
     return GetMinimapFowCoordinateIsRevealed(pos.x, pos.y, pos.z);
@@ -1947,7 +1947,7 @@ export function getMinimapFowCoordinateIsRevealed(pos) {
 /**
  * No comment provided
  *
- * Hash: 0xE0130B41D3CF4574 | Since: 323 | API-Set: unknown
+ * Hash: 0xE0130B41D3CF4574 | Since: unknown | API-Set: unknown
  */
 export function getMinimapFowDiscoveryRatio() {
     return GetMinimapFowDiscoveryRatio();
@@ -1955,7 +1955,7 @@ export function getMinimapFowDiscoveryRatio() {
 /**
  * No comment provided
  *
- * Hash: 0x632B2940C67F4EA9 | Since: 323 | API-Set: unknown
+ * Hash: 0x632B2940C67F4EA9 | Since: unknown | API-Set: unknown
  */
 export function getMouseEvent(scaleformHandle) {
     return GetScaleformMovieCursorSelection(scaleformHandle);
@@ -1963,7 +1963,7 @@ export function getMouseEvent(scaleformHandle) {
 /**
  * No comment provided
  *
- * Hash: 0x1A6478B61C6BDC3B | Since: 323 | API-Set: unknown
+ * Hash: 0x1A6478B61C6BDC3B | Since: unknown | API-Set: unknown
  */
 export function getNamedRendertargetRenderId(name) {
     return GetNamedRendertargetRenderId(name);
@@ -1971,7 +1971,7 @@ export function getNamedRendertargetRenderId(name) {
 /**
  * No comment provided
  *
- * Hash: 0x5C90988E7C8E1AF4 | Since: 323 | API-Set: unknown
+ * Hash: 0x5C90988E7C8E1AF4 | Since: unknown | API-Set: unknown
  */
 export function getNewSelectedMissionCreatorBlip() {
     return GetNewSelectedMissionCreatorBlip();
@@ -1979,7 +1979,7 @@ export function getNewSelectedMissionCreatorBlip() {
 /**
  * No comment provided
  *
- * Hash: 0x14F96AA50D6FBEA7 | Since: 323 | API-Set: unknown
+ * Hash: 0x14F96AA50D6FBEA7 | Since: unknown | API-Set: unknown
  */
 export function getNextBlipInfoId(blipSprite) {
     return GetNextBlipInfoId(blipSprite);
@@ -1987,7 +1987,7 @@ export function getNextBlipInfoId(blipSprite) {
 /**
  * No comment provided
  *
- * Hash: 0x3F0CF9CB7E589B88 | Since: 463 | API-Set: unknown
+ * Hash: 0x3F0CF9CB7E589B88 | Since: unknown | API-Set: unknown
  */
 export function getNorthBlidIndex() {
     return GetNorthRadarBlip();
@@ -1995,7 +1995,7 @@ export function getNorthBlidIndex() {
 /**
  * No comment provided
  *
- * Hash: 0x9A3FF3DE163034E8 | Since: 323 | API-Set: unknown
+ * Hash: 0x9A3FF3DE163034E8 | Since: unknown | API-Set: unknown
  */
 export function getNumberOfActiveBlips() {
     return GetNumberOfActiveBlips();
@@ -2003,7 +2003,7 @@ export function getNumberOfActiveBlips() {
 /**
  * No comment provided
  *
- * Hash: 0x5BFF36D6ED83E0AE | Since: 323 | API-Set: unknown
+ * Hash: 0x5BFF36D6ED83E0AE | Since: unknown | API-Set: unknown
  */
 export function getPauseMenuPosition() {
     return new Vector3(GetPauseMenuCursorPosition());
@@ -2021,7 +2021,7 @@ export function getPauseMenuPosition() {
  * 35
  *
  *
- * Hash: 0x272ACD84970869C5 | Since: 323 | API-Set: unknown
+ * Hash: 0x272ACD84970869C5 | Since: unknown | API-Set: unknown
  */
 export function getPauseMenuState() {
     return GetPauseMenuState();
@@ -2029,7 +2029,7 @@ export function getPauseMenuState() {
 /**
  * No comment provided
  *
- * Hash: 0xA238192F33110615 | Since: 323 | API-Set: unknown
+ * Hash: 0xA238192F33110615 | Since: unknown | API-Set: unknown
  */
 export function getPmPlayerCrewColor() {
     return Citizen.invokeNative('0xA238192F33110615');
@@ -2037,7 +2037,7 @@ export function getPmPlayerCrewColor() {
 /**
  * This gets the height of the FONT and not the total text. You need to get the number of lines your text uses, and get the height of a newline (I'm using a smaller value) to get the total text height.
  *
- * Hash: 0xDB88A37483346780 | Since: 323 | API-Set: unknown
+ * Hash: 0xDB88A37483346780 | Since: unknown | API-Set: unknown
  */
 export function getRenderedCharacterHeight(size, font) {
     return GetRenderedCharacterHeight(size, font);
@@ -2045,7 +2045,15 @@ export function getRenderedCharacterHeight(size, font) {
 /**
  * No comment provided
  *
- * Hash: 0x593FEAE1F73392D4 | Since: 323 | API-Set: unknown
+ * Hash: 0xD6FAD05D855AF80F | Since: unknown | API-Set: unknown
+ */
+export function getRenderedTextPaddingSize() {
+    return Citizen.invokeNative('0xD6FAD05D855AF80F');
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0x593FEAE1F73392D4 | Since: unknown | API-Set: unknown
  */
 export function getScreenCodeWantsScriptToControl() {
     return Citizen.invokeNative('0x593FEAE1F73392D4');
@@ -2053,7 +2061,7 @@ export function getScreenCodeWantsScriptToControl() {
 /**
  * No comment provided
  *
- * Hash: 0x4A9923385BDB9DAD | Since: 323 | API-Set: unknown
+ * Hash: 0x4A9923385BDB9DAD | Since: unknown | API-Set: unknown
  */
 export function getStandardBlipEnumId() {
     return GetStandardBlipEnumId();
@@ -2063,7 +2071,7 @@ export function getStandardBlipEnumId() {
  *
  * `For how to get the hashes, see PATHFIND::GET_STREET_NAME_AT_COORD.`
  *
- * Hash: 0xD0EF8A959B8A4CB9 | Since: 323 | API-Set: unknown
+ * Hash: 0xD0EF8A959B8A4CB9 | Since: unknown | API-Set: unknown
  */
 export function getStreetNameFromHashKey(hash) {
     if (typeof hash === 'string')
@@ -2073,7 +2081,7 @@ export function getStreetNameFromHashKey(hash) {
 /**
  * Has to do with the confirmation overlay (E.g. confirm exit)
  *
- * Hash: 0x81DF9ABA6C83DFF9 | Since: 1290 | API-Set: unknown
+ * Hash: 0x81DF9ABA6C83DFF9 | Since: unknown | API-Set: unknown
  */
 export function getWarningScreenMessageHash() {
     return GetWarningMessageTitleHash();
@@ -2081,7 +2089,7 @@ export function getWarningScreenMessageHash() {
 /**
  * No comment provided
  *
- * Hash: 0x186E5D252FA50E7D | Since: 323 | API-Set: unknown
+ * Hash: 0x186E5D252FA50E7D | Since: unknown | API-Set: unknown
  */
 export function getWaypointBlipEnumId() {
     return GetWaypointBlipEnumId();
@@ -2089,7 +2097,7 @@ export function getWaypointBlipEnumId() {
 /**
  * No comment provided
  *
- * Hash: 0xF46851AB8B02EF40 | Since: 3717 | API-Set: unknown
+ * Hash: 0xF46851AB8B02EF40 | Since: unknown | API-Set: unknown
  */
 export function getWaypointClearOnArrivalMode() {
     return Citizen.invokeNative('0xF46851AB8B02EF40');
@@ -2097,7 +2105,7 @@ export function getWaypointClearOnArrivalMode() {
 /**
  * p1 is either 1 or 2 in the PC scripts.
  *
- * Hash: 0xAC0BFBDC3BE00E14 | Since: 323 | API-Set: unknown
+ * Hash: 0xAC0BFBDC3BE00E14 | Since: unknown | API-Set: unknown
  */
 export function givePedToPauseMenu(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2106,7 +2114,7 @@ export function givePedToPauseMenu(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x02245FE4BED318B8 | Since: 323 | API-Set: unknown
+ * Hash: 0x02245FE4BED318B8 | Since: unknown | API-Set: unknown
  */
 export function hasAdditionalTextLoaded(slot) {
     return HasAdditionalTextLoaded(slot);
@@ -2114,7 +2122,7 @@ export function hasAdditionalTextLoaded(slot) {
 /**
  * No comment provided
  *
- * Hash: 0xA277800A9EAE340E | Since: 323 | API-Set: unknown
+ * Hash: 0xA277800A9EAE340E | Since: unknown | API-Set: unknown
  */
 export function hasDirectorModeBeenLaunchedByCode() {
     return HasDirectorModeBeenTriggered();
@@ -2122,7 +2130,7 @@ export function hasDirectorModeBeenLaunchedByCode() {
 /**
  * No comment provided
  *
- * Hash: 0x2E22FEFA0100275E | Since: 323 | API-Set: unknown
+ * Hash: 0x2E22FEFA0100275E | Since: unknown | API-Set: unknown
  */
 export function hasMenuLayoutChangedEventOccurred() {
     return Citizen.invokeNative('0x2E22FEFA0100275E');
@@ -2130,7 +2138,7 @@ export function hasMenuLayoutChangedEventOccurred() {
 /**
  * No comment provided
  *
- * Hash: 0xF284AC67940C6812 | Since: 323 | API-Set: unknown
+ * Hash: 0xF284AC67940C6812 | Since: unknown | API-Set: unknown
  */
 export function hasMenuTriggerEventOccurred() {
     return Citizen.invokeNative('0xF284AC67940C6812');
@@ -2138,7 +2146,7 @@ export function hasMenuTriggerEventOccurred() {
 /**
  * No comment provided
  *
- * Hash: 0x214CD562A939246A | Since: 323 | API-Set: unknown
+ * Hash: 0x214CD562A939246A | Since: unknown | API-Set: unknown
  */
 export function hasScriptHiddenHelpThisFrame() {
     return Citizen.invokeNative('0x214CD562A939246A');
@@ -2146,7 +2154,7 @@ export function hasScriptHiddenHelpThisFrame() {
 /**
  * Checks if the specified gxt has loaded into the passed slot.
  *
- * Hash: 0xADBF060E2B30C5BC | Since: 323 | API-Set: unknown
+ * Hash: 0xADBF060E2B30C5BC | Since: unknown | API-Set: unknown
  */
 export function hasThisAdditionalTextLoaded(gxt, slot) {
     return HasThisAdditionalTextLoaded(gxt, slot);
@@ -2154,7 +2162,7 @@ export function hasThisAdditionalTextLoaded(gxt, slot) {
 /**
  * No comment provided
  *
- * Hash: 0xD46923FC481CA285 | Since: 323 | API-Set: unknown
+ * Hash: 0xD46923FC481CA285 | Since: unknown | API-Set: unknown
  */
 export function hideHelpTextThisFrame() {
     HideHelpTextThisFrame();
@@ -2162,7 +2170,7 @@ export function hideHelpTextThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0x243296A510B562B6 | Since: 2060 | API-Set: unknown
+ * Hash: 0x243296A510B562B6 | Since: unknown | API-Set: unknown
  */
 export function hidemarkersThisFrame() {
     Citizen.invokeNative('0x243296A510B562B6');
@@ -2170,7 +2178,7 @@ export function hidemarkersThisFrame() {
 /**
  * Hides HUD and radar this frame and prohibits switching to other weapons (or accessing the weapon wheel)
  *
- * Hash: 0x719FF505F097FD20 | Since: 323 | API-Set: unknown
+ * Hash: 0x719FF505F097FD20 | Since: unknown | API-Set: unknown
  */
 export function hideAndRadarThisFrame() {
     HideHudAndRadarThisFrame();
@@ -2203,7 +2211,7 @@ export function hideAndRadarThisFrame() {
  *
  * These integers also work for the `SHOW_HUD_COMPONENT_THIS_FRAME` native, but instead shows the HUD Component.
  *
- * Hash: 0x6806C51AD12B83B8 | Since: 323 | API-Set: unknown
+ * Hash: 0x6806C51AD12B83B8 | Since: unknown | API-Set: unknown
  */
 export function hideComponentThisFrame(id) {
     HideHudComponentThisFrame(id);
@@ -2211,7 +2219,7 @@ export function hideComponentThisFrame(id) {
 /**
  * No comment provided
  *
- * Hash: 0x4B0311D3CDC4648F | Since: 323 | API-Set: unknown
+ * Hash: 0x4B0311D3CDC4648F | Since: unknown | API-Set: unknown
  */
 export function hideLoadingOnFadeThisFrame() {
     HideLoadingOnFadeThisFrame();
@@ -2219,7 +2227,7 @@ export function hideLoadingOnFadeThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0x5FBAE526203990C9 | Since: 323 | API-Set: unknown
+ * Hash: 0x5FBAE526203990C9 | Since: unknown | API-Set: unknown
  */
 export function hideMinimapExteriorMapThisFrame() {
     HideMinimapExteriorMapThisFrame();
@@ -2227,7 +2235,7 @@ export function hideMinimapExteriorMapThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0x20FE7FDFEEAD38C0 | Since: 323 | API-Set: unknown
+ * Hash: 0x20FE7FDFEEAD38C0 | Since: unknown | API-Set: unknown
  */
 export function hideMinimapInteriorMapThisFrame() {
     HideMinimapInteriorMapThisFrame();
@@ -2235,7 +2243,7 @@ export function hideMinimapInteriorMapThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0x532CFF637EF80148 | Since: 323 | API-Set: unknown
+ * Hash: 0x532CFF637EF80148 | Since: unknown | API-Set: unknown
  */
 export function hideNumberOnBlip(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -2244,7 +2252,7 @@ export function hideNumberOnBlip(blip) {
 /**
  * No comment provided
  *
- * Hash: 0xE374C498D8BADC14 | Since: 323 | API-Set: unknown
+ * Hash: 0xE374C498D8BADC14 | Since: unknown | API-Set: unknown
  */
 export function hideScriptedComponentThisFrame(id) {
     HideScriptedHudComponentThisFrame(id);
@@ -2252,7 +2260,7 @@ export function hideScriptedComponentThisFrame(id) {
 /**
  * Hides area and vehicle name HUD components for one frame.
  *
- * Hash: 0xA4DEDE28B1814289 | Since: 323 | API-Set: unknown
+ * Hash: 0xA4DEDE28B1814289 | Since: unknown | API-Set: unknown
  */
 export function hideStreetAndCarNamesThisFrame() {
     HideAreaAndVehicleNameThisFrame();
@@ -2260,7 +2268,7 @@ export function hideStreetAndCarNamesThisFrame() {
 /**
  * Displays "blazer_wheels_up" and "blazer_wheels_down" "weapon" icons when switching between jetski and quadbike modes. Works only on vehicles using "VEHICLE_TYPE_AMPHIBIOUS_QUADBIKE" vehicle type. Needs to be called every time prior to switching modes, otherwise the icon will only appear when switching modes once.
  *
- * Hash: 0x488043841BBE156F | Since: 1011 | API-Set: unknown
+ * Hash: 0x488043841BBE156F | Since: unknown | API-Set: unknown
  */
 export function forceSpecialVehicleWeaponWheel() {
     HudDisplayLoadingScreenTips();
@@ -2268,7 +2276,7 @@ export function forceSpecialVehicleWeaponWheel() {
 /**
  * Forces the weapon wheel to show/hide.
  *
- * Hash: 0xEB354E5376BC81A7 | Since: 323 | API-Set: unknown
+ * Hash: 0xEB354E5376BC81A7 | Since: unknown | API-Set: unknown
  */
 export function forceWeaponWheel(show) {
     HudForceWeaponWheel(show);
@@ -2276,7 +2284,7 @@ export function forceWeaponWheel(show) {
 /**
  * Returns the weapon hash to the selected/highlighted weapon in the wheel
  *
- * Hash: 0xA48931185F0536FE | Since: 323 | API-Set: unknown
+ * Hash: 0xA48931185F0536FE | Since: unknown | API-Set: unknown
  */
 export function getWeaponWheelCurrentlyHighlighted() {
     return HudWeaponWheelGetSelectedHash();
@@ -2284,7 +2292,7 @@ export function getWeaponWheelCurrentlyHighlighted() {
 /**
  * Returns the weapon hash active in a specific weapon wheel slotList
  *
- * Hash: 0xA13E93403F26C812 | Since: 323 | API-Set: unknown
+ * Hash: 0xA13E93403F26C812 | Since: unknown | API-Set: unknown
  */
 export function getWeaponWheelTopSlot(weaponTypeIndex) {
     return HudWeaponWheelGetSlotHash(weaponTypeIndex);
@@ -2292,7 +2300,7 @@ export function getWeaponWheelTopSlot(weaponTypeIndex) {
 /**
  * Set the active slotIndex in the wheel weapon to the slot associated with the provided Weapon hash
  *
- * Hash: 0x72C1056D678BB7D8 | Since: 323 | API-Set: unknown
+ * Hash: 0x72C1056D678BB7D8 | Since: unknown | API-Set: unknown
  */
 export function setWeaponWheelTopSlot(weaponHash) {
     if (typeof weaponHash === 'string')
@@ -2302,7 +2310,7 @@ export function setWeaponWheelTopSlot(weaponHash) {
 /**
  * Sets a global that disables many weapon input tasks (shooting, aiming, etc.). Does not work with vehicle weapons, only used in selector.ysc
  *
- * Hash: 0x14C9FDCC41F81F63 | Since: 323 | API-Set: unknown
+ * Hash: 0x14C9FDCC41F81F63 | Since: unknown | API-Set: unknown
  */
 export function showingCharacterSwitchSelection(toggle) {
     HudWeaponWheelIgnoreControlInput(toggle);
@@ -2310,7 +2318,7 @@ export function showingCharacterSwitchSelection(toggle) {
 /**
  * Calling this each frame, stops the player from receiving a weapon via the weapon wheel.
  *
- * Hash: 0x0AFC4AF510774B47 | Since: 323 | API-Set: unknown
+ * Hash: 0x0AFC4AF510774B47 | Since: unknown | API-Set: unknown
  */
 export function suppressWeaponWheelResultsThisFrame() {
     HudWeaponWheelIgnoreSelection();
@@ -2318,7 +2326,7 @@ export function suppressWeaponWheelResultsThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0xA5E41FD83AD6CEF0 | Since: 323 | API-Set: unknown
+ * Hash: 0xA5E41FD83AD6CEF0 | Since: unknown | API-Set: unknown
  */
 export function isBlipFlashing(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -2327,7 +2335,7 @@ export function isBlipFlashing(blip) {
 /**
  * No comment provided
  *
- * Hash: 0xE41CA53051197A27 | Since: 323 | API-Set: unknown
+ * Hash: 0xE41CA53051197A27 | Since: unknown | API-Set: unknown
  */
 export function isBlipOnMinimap(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -2336,7 +2344,7 @@ export function isBlipOnMinimap(blip) {
 /**
  * No comment provided
  *
- * Hash: 0xDA5F8727EB75B926 | Since: 323 | API-Set: unknown
+ * Hash: 0xDA5F8727EB75B926 | Since: unknown | API-Set: unknown
  */
 export function isBlipShortRange(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -2345,7 +2353,7 @@ export function isBlipShortRange(blip) {
 /**
  * No comment provided
  *
- * Hash: 0x2432784ACA090DA4 | Since: 323 | API-Set: unknown
+ * Hash: 0x2432784ACA090DA4 | Since: unknown | API-Set: unknown
  */
 export function isFloatingHelpTextOnScreen(hudIndex) {
     return IsFloatingHelpTextOnScreen(hudIndex);
@@ -2353,7 +2361,7 @@ export function isFloatingHelpTextOnScreen(hudIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x3BAB9A4E4F2FF5C7 | Since: 323 | API-Set: unknown
+ * Hash: 0x3BAB9A4E4F2FF5C7 | Since: unknown | API-Set: unknown
  */
 export function isFrontendReadyForControl() {
     return IsFrontendReadyForControl();
@@ -2361,7 +2369,7 @@ export function isFrontendReadyForControl() {
 /**
  * No comment provided
  *
- * Hash: 0x4D79439A6B55AC67 | Since: 323 | API-Set: unknown
+ * Hash: 0x4D79439A6B55AC67 | Since: unknown | API-Set: unknown
  */
 export function isHelpMessageBeingDisplayed() {
     return IsHelpMessageBeingDisplayed();
@@ -2369,7 +2377,7 @@ export function isHelpMessageBeingDisplayed() {
 /**
  * No comment provided
  *
- * Hash: 0x327EDEEEAC55C369 | Since: 323 | API-Set: unknown
+ * Hash: 0x327EDEEEAC55C369 | Since: unknown | API-Set: unknown
  */
 export function isHelpMessageFadingOut() {
     return IsHelpMessageFadingOut();
@@ -2377,7 +2385,7 @@ export function isHelpMessageFadingOut() {
 /**
  * No comment provided
  *
- * Hash: 0xDAD37F45428801AE | Since: 323 | API-Set: unknown
+ * Hash: 0xDAD37F45428801AE | Since: unknown | API-Set: unknown
  */
 export function isHelpMessageOnScreen() {
     return IsHelpMessageOnScreen();
@@ -2385,7 +2393,7 @@ export function isHelpMessageOnScreen() {
 /**
  * No comment provided
  *
- * Hash: 0x4167EFE0527D706E | Since: 323 | API-Set: unknown
+ * Hash: 0x4167EFE0527D706E | Since: unknown | API-Set: unknown
  */
 export function isHoveringOverMissionCreatorBlip() {
     return IsHoveringOverMissionCreatorBlip();
@@ -2418,7 +2426,7 @@ export function isHoveringOverMissionCreatorBlip() {
  * MAX_HUD_WEAPONS = 22;
  * MAX_SCRIPTED_HUD_COMPONENTS = 141;
  *
- * Hash: 0xBC4C9EA5391ECC0D | Since: 323 | API-Set: unknown
+ * Hash: 0xBC4C9EA5391ECC0D | Since: unknown | API-Set: unknown
  */
 export function isComponentActive(id) {
     return IsHudComponentActive(id);
@@ -2426,7 +2434,7 @@ export function isComponentActive(id) {
 /**
  * No comment provided
  *
- * Hash: 0x8EDC335C943465C8 | Since: 3717 | API-Set: unknown
+ * Hash: 0x8EDC335C943465C8 | Since: unknown | API-Set: unknown
  */
 export function isComponentHiddenThisFrame(id) {
     return Citizen.invokeNative('0x8EDC335C943465C8', id);
@@ -2434,7 +2442,7 @@ export function isComponentHiddenThisFrame(id) {
 /**
  * No comment provided
  *
- * Hash: 0xA86478C6958735C5 | Since: 323 | API-Set: unknown
+ * Hash: 0xA86478C6958735C5 | Since: unknown | API-Set: unknown
  */
 export function isHidden() {
     return IsHudHidden();
@@ -2442,7 +2450,7 @@ export function isHidden() {
 /**
  * No comment provided
  *
- * Hash: 0x1930DFA731813EC4 | Since: 323 | API-Set: unknown
+ * Hash: 0x1930DFA731813EC4 | Since: unknown | API-Set: unknown
  */
 export function isPreferenceSwitchedOn() {
     return IsHudPreferenceSwitchedOn();
@@ -2450,7 +2458,7 @@ export function isPreferenceSwitchedOn() {
 /**
  * No comment provided
  *
- * Hash: 0x801879A9B4F4B2FB | Since: 372 | API-Set: unknown
+ * Hash: 0x801879A9B4F4B2FB | Since: unknown | API-Set: unknown
  */
 export function isImeInProgress() {
     return Citizen.invokeNative('0x801879A9B4F4B2FB');
@@ -2458,7 +2466,7 @@ export function isImeInProgress() {
 /**
  * No comment provided
  *
- * Hash: 0x7984C03AA5CC2F41 | Since: 323 | API-Set: unknown
+ * Hash: 0x7984C03AA5CC2F41 | Since: unknown | API-Set: unknown
  */
 export function isMessageBeingDisplayed() {
     return IsMessageBeingDisplayed();
@@ -2466,7 +2474,7 @@ export function isMessageBeingDisplayed() {
 /**
  * No comment provided
  *
- * Hash: 0xAF754F20EB5CD51A | Since: 323 | API-Set: unknown
+ * Hash: 0xAF754F20EB5CD51A | Since: unknown | API-Set: unknown
  */
 export function isMinimapRendering() {
     return IsMinimapRendering();
@@ -2474,7 +2482,7 @@ export function isMinimapRendering() {
 /**
  * No comment provided
  *
- * Hash: 0x26F49BF3381D933D | Since: 323 | API-Set: unknown
+ * Hash: 0x26F49BF3381D933D | Since: unknown | API-Set: unknown
  */
 export function isMissionCreatorBlip(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -2483,7 +2491,7 @@ export function isMissionCreatorBlip(blip) {
 /**
  * Returns TRUE if mouse is hovering above instructional buttons. Works with all buttons gfx, such as popup_warning, pause_menu_instructional_buttons, instructional_buttons, etc. Note: You have to call TOGGLE_MOUSE_BUTTONS on the scaleform if you want this native to work.
  *
- * Hash: 0x3D9ACB1EB139E702 | Since: 323 | API-Set: unknown
+ * Hash: 0x3D9ACB1EB139E702 | Since: unknown | API-Set: unknown
  */
 export function isMouseRolledOverInstructionalButtons() {
     return IsMouseRolledOverInstructionalButtons();
@@ -2491,7 +2499,7 @@ export function isMouseRolledOverInstructionalButtons() {
 /**
  * No comment provided
  *
- * Hash: 0x4E929E7A5796FD26 | Since: 323 | API-Set: unknown
+ * Hash: 0x4E929E7A5796FD26 | Since: unknown | API-Set: unknown
  */
 export function isMpGamerTagActive(gamerTagId) {
     return IsMpGamerTagActive(gamerTagId);
@@ -2499,7 +2507,7 @@ export function isMpGamerTagActive(gamerTagId) {
 /**
  * No comment provided
  *
- * Hash: 0x595B5178E412E199 | Since: 323 | API-Set: unknown
+ * Hash: 0x595B5178E412E199 | Since: unknown | API-Set: unknown
  */
 export function isMpGamerTagFree(gamerTagId) {
     return IsMpGamerTagFree(gamerTagId);
@@ -2507,7 +2515,7 @@ export function isMpGamerTagFree(gamerTagId) {
 /**
  * No comment provided
  *
- * Hash: 0x6E0EB3EB47C8D7AA | Since: 323 | API-Set: unknown
+ * Hash: 0x6E0EB3EB47C8D7AA | Since: unknown | API-Set: unknown
  */
 export function isMpGamerTagMovieActive() {
     return IsMpGamerTagMovieActive();
@@ -2515,7 +2523,7 @@ export function isMpGamerTagMovieActive() {
 /**
  * Returns whether or not the text chat (MULTIPLAYER_CHAT Scaleform component) is active.
  *
- * Hash: 0xB118AF58B5F332A1 | Since: 323 | API-Set: unknown
+ * Hash: 0xB118AF58B5F332A1 | Since: unknown | API-Set: unknown
  */
 export function isMpTextChatTyping() {
     return IsMultiplayerChatActive();
@@ -2523,7 +2531,7 @@ export function isMpTextChatTyping() {
 /**
  * No comment provided
  *
- * Hash: 0x113750538FA31298 | Since: 323 | API-Set: unknown
+ * Hash: 0x113750538FA31298 | Since: unknown | API-Set: unknown
  */
 export function isNamedRendertargetLinked(modelHash) {
     if (typeof modelHash === 'string')
@@ -2533,7 +2541,7 @@ export function isNamedRendertargetLinked(modelHash) {
 /**
  * No comment provided
  *
- * Hash: 0x78DCDC15C9F116B4 | Since: 323 | API-Set: unknown
+ * Hash: 0x78DCDC15C9F116B4 | Since: unknown | API-Set: unknown
  */
 export function isNamedRendertargetRegistered(name) {
     return IsNamedRendertargetRegistered(name);
@@ -2541,7 +2549,7 @@ export function isNamedRendertargetRegistered(name) {
 /**
  * No comment provided
  *
- * Hash: 0x4E3CD0EF8A489541 | Since: 323 | API-Set: unknown
+ * Hash: 0x4E3CD0EF8A489541 | Since: unknown | API-Set: unknown
  */
 export function isNavigatingMenuContent() {
     return IsNavigatingMenuContent();
@@ -2549,7 +2557,7 @@ export function isNavigatingMenuContent() {
 /**
  * Returns the same as IS_SOCIAL_CLUB_ACTIVE
  *
- * Hash: 0x6F72CD94F7B5B68C | Since: 323 | API-Set: unknown
+ * Hash: 0x6F72CD94F7B5B68C | Since: unknown | API-Set: unknown
  */
 export function isOnlinePoliciesMenuActive() {
     return IsOnlinePoliciesMenuActive();
@@ -2557,7 +2565,7 @@ export function isOnlinePoliciesMenuActive() {
 /**
  * No comment provided
  *
- * Hash: 0x9049FE339D5F6F6F | Since: 323 | API-Set: unknown
+ * Hash: 0x9049FE339D5F6F6F | Since: unknown | API-Set: unknown
  */
 export function isPausemapInInteriorMode() {
     return IsPausemapInInteriorMode();
@@ -2565,7 +2573,7 @@ export function isPausemapInInteriorMode() {
 /**
  * No comment provided
  *
- * Hash: 0xB0034A223497FFCB | Since: 323 | API-Set: unknown
+ * Hash: 0xB0034A223497FFCB | Since: unknown | API-Set: unknown
  */
 export function isPauseMenuActive() {
     return IsPauseMenuActive();
@@ -2573,7 +2581,7 @@ export function isPauseMenuActive() {
 /**
  * No comment provided
  *
- * Hash: 0x1C491717107431C7 | Since: 323 | API-Set: unknown
+ * Hash: 0x1C491717107431C7 | Since: unknown | API-Set: unknown
  */
 export function isPauseMenuRestarting() {
     return IsPauseMenuRestarting();
@@ -2581,7 +2589,7 @@ export function isPauseMenuRestarting() {
 /**
  * No comment provided
  *
- * Hash: 0x157F93B036700462 | Since: 323 | API-Set: unknown
+ * Hash: 0x157F93B036700462 | Since: unknown | API-Set: unknown
  */
 export function isRadarHidden() {
     return IsRadarHidden();
@@ -2589,7 +2597,7 @@ export function isRadarHidden() {
 /**
  * No comment provided
  *
- * Hash: 0x9EB6522EA68F22FE | Since: 323 | API-Set: unknown
+ * Hash: 0x9EB6522EA68F22FE | Since: unknown | API-Set: unknown
  */
 export function isRadarPreferenceSwitchedOn() {
     return IsRadarPreferenceSwitchedOn();
@@ -2597,7 +2605,7 @@ export function isRadarPreferenceSwitchedOn() {
 /**
  * No comment provided
  *
- * Hash: 0x9135584D09A3437E | Since: 323 | API-Set: unknown
+ * Hash: 0x9135584D09A3437E | Since: unknown | API-Set: unknown
  */
 export function isReportugcMenuOpen() {
     return IsReportugcMenuOpen();
@@ -2605,7 +2613,7 @@ export function isReportugcMenuOpen() {
 /**
  * No comment provided
  *
- * Hash: 0xDD100EB17A94FF65 | Since: 323 | API-Set: unknown
+ * Hash: 0xDD100EB17A94FF65 | Since: unknown | API-Set: unknown
  */
 export function isScriptedComponentActive(id) {
     return IsScriptedHudComponentActive(id);
@@ -2613,7 +2621,7 @@ export function isScriptedComponentActive(id) {
 /**
  * No comment provided
  *
- * Hash: 0x09C0403ED9A751C2 | Since: 323 | API-Set: unknown
+ * Hash: 0x09C0403ED9A751C2 | Since: unknown | API-Set: unknown
  */
 export function isScriptedComponentHiddenThisFrame(id) {
     return IsScriptedHudComponentHiddenThisFrame(id);
@@ -2621,7 +2629,7 @@ export function isScriptedComponentHiddenThisFrame(id) {
 /**
  * No comment provided
  *
- * Hash: 0xC406BE343FC4B9AF | Since: 323 | API-Set: unknown
+ * Hash: 0xC406BE343FC4B9AF | Since: unknown | API-Set: unknown
  */
 export function isSocialClubActive() {
     return IsSocialClubActive();
@@ -2629,7 +2637,7 @@ export function isSocialClubActive() {
 /**
  * No comment provided
  *
- * Hash: 0x2F057596F2BD0061 | Since: 323 | API-Set: unknown
+ * Hash: 0x2F057596F2BD0061 | Since: unknown | API-Set: unknown
  */
 export function isStorePendingNetworkShutdownToOpen() {
     return Citizen.invokeNative('0x2F057596F2BD0061');
@@ -2637,7 +2645,7 @@ export function isStorePendingNetworkShutdownToOpen() {
 /**
  * No comment provided
  *
- * Hash: 0x8B6817B71B85EBF0 | Since: 323 | API-Set: unknown
+ * Hash: 0x8B6817B71B85EBF0 | Since: unknown | API-Set: unknown
  */
 export function isStreamingAdditionalText() {
     return IsStreamingAdditionalText(0);
@@ -2645,7 +2653,7 @@ export function isStreamingAdditionalText() {
 /**
  * No comment provided
  *
- * Hash: 0xAD6DACA4BA53E0A4 | Since: 323 | API-Set: unknown
+ * Hash: 0xAD6DACA4BA53E0A4 | Since: unknown | API-Set: unknown
  */
 export function isSubtitlePreferenceSwitchedOn() {
     return IsSubtitlePreferenceSwitchedOn();
@@ -2653,7 +2661,7 @@ export function isSubtitlePreferenceSwitchedOn() {
 /**
  * No comment provided
  *
- * Hash: 0xEB709A36958ABE0D | Since: 323 | API-Set: unknown
+ * Hash: 0xEB709A36958ABE0D | Since: unknown | API-Set: unknown
  */
 export function isUpdatingMpGamerTagNameAndCrewDetails(gamerTagId) {
     return IsValidMpGamerTagMovie(gamerTagId);
@@ -2661,7 +2669,7 @@ export function isUpdatingMpGamerTagNameAndCrewDetails(gamerTagId) {
 /**
  * No comment provided
  *
- * Hash: 0xE18B138FABC53103 | Since: 323 | API-Set: unknown
+ * Hash: 0xE18B138FABC53103 | Since: unknown | API-Set: unknown
  */
 export function isWarningMessageActive() {
     return IsWarningMessageActive();
@@ -2669,7 +2677,7 @@ export function isWarningMessageActive() {
 /**
  * No comment provided
  *
- * Hash: 0xAF42195A42C63BBA | Since: 323 | API-Set: unknown
+ * Hash: 0xAF42195A42C63BBA | Since: unknown | API-Set: unknown
  */
 export function isWarningMessageReadyForControl() {
     return IsWarningMessageActive2();
@@ -2677,7 +2685,7 @@ export function isWarningMessageReadyForControl() {
 /**
  * No comment provided
  *
- * Hash: 0x1DD1F58F493F1DA5 | Since: 323 | API-Set: unknown
+ * Hash: 0x1DD1F58F493F1DA5 | Since: unknown | API-Set: unknown
  */
 export function isWaypointActive() {
     return IsWaypointActive();
@@ -2685,7 +2693,7 @@ export function isWaypointActive() {
 /**
  * No comment provided
  *
- * Hash: 0xF6C09E276AEB3F2D | Since: 323 | API-Set: unknown
+ * Hash: 0xF6C09E276AEB3F2D | Since: unknown | API-Set: unknown
  */
 export function linkNamedRendertarget(modelHash) {
     if (typeof modelHash === 'string')
@@ -2697,7 +2705,7 @@ export function linkNamedRendertarget(modelHash) {
  *
  * angle: The angle in whole degrees. If less than 0 or greater than 360, unlocks the angle.
  *
- * Hash: 0x299FAEBB108AE05B | Since: 323 | API-Set: unknown
+ * Hash: 0x299FAEBB108AE05B | Since: unknown | API-Set: unknown
  */
 export function lockMinimapAngle(angle) {
     LockMinimapAngle(angle);
@@ -2705,7 +2713,7 @@ export function lockMinimapAngle(angle) {
 /**
  * Locks the minimap to the specified world position.
  *
- * Hash: 0x1279E861A329E73F | Since: 323 | API-Set: unknown
+ * Hash: 0x1279E861A329E73F | Since: unknown | API-Set: unknown
  */
 export function lockMinimapPosition(x, y) {
     LockMinimapPosition(x, y);
@@ -2713,7 +2721,7 @@ export function lockMinimapPosition(x, y) {
 /**
  * Hides the chat history, closes the input box and makes it unable to be opened unless called again with FALSE.
  *
- * Hash: 0x1DB21A44B09E8BA3 | Since: 323 | API-Set: unknown
+ * Hash: 0x1DB21A44B09E8BA3 | Since: unknown | API-Set: unknown
  */
 export function mpTextChatDisable(toggle) {
     DisableMultiplayerChat(toggle);
@@ -2721,7 +2729,7 @@ export function mpTextChatDisable(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x7C226D5346D4D10A | Since: 372 | API-Set: unknown
+ * Hash: 0x7C226D5346D4D10A | Since: unknown | API-Set: unknown
  */
 export function mpTextChatIsTeamJob() {
     Citizen.invokeNative('0x7C226D5346D4D10A', undefined);
@@ -2729,7 +2737,7 @@ export function mpTextChatIsTeamJob() {
 /**
  * No comment provided
  *
- * Hash: 0x805D7CBB36FD6C4C | Since: 323 | API-Set: unknown
+ * Hash: 0x805D7CBB36FD6C4C | Since: unknown | API-Set: unknown
  */
 export function openOnlinePoliciesMenu() {
     OpenOnlinePoliciesMenu();
@@ -2737,7 +2745,7 @@ export function openOnlinePoliciesMenu() {
 /**
  * Shows a menu for reporting UGC content.
  *
- * Hash: 0x523A590C1A3CC0D3 | Since: 323 | API-Set: unknown
+ * Hash: 0x523A590C1A3CC0D3 | Since: unknown | API-Set: unknown
  */
 export function openReportugcMenu() {
     OpenReportugcMenu();
@@ -2746,7 +2754,7 @@ export function openReportugcMenu() {
  * Uses the `SOCIAL_CLUB2` scaleform.
  * menu: GALLERY, MISSIONS, CREWS, MIGRATE, PLAYLISTS, JOBS
  *
- * Hash: 0x75D3691713C3B05A | Since: 323 | API-Set: unknown
+ * Hash: 0x75D3691713C3B05A | Since: unknown | API-Set: unknown
  */
 export function openSocialClubMenu(menu) {
     if (typeof menu === 'string')
@@ -2756,7 +2764,7 @@ export function openSocialClubMenu(menu) {
 /**
  * No comment provided
  *
- * Hash: 0xF47E567B3630DD12 | Since: 678 | API-Set: unknown
+ * Hash: 0xF47E567B3630DD12 | Since: unknown | API-Set: unknown
  */
 export function overrideMpTextChatColor(hudColor) {
     OverrideMultiplayerChatColour(0, hudColor);
@@ -2764,7 +2772,7 @@ export function overrideMpTextChatColor(hudColor) {
 /**
  * No comment provided
  *
- * Hash: 0x6A1738B4323FE2D9 | Since: 573 | API-Set: unknown
+ * Hash: 0x6A1738B4323FE2D9 | Since: unknown | API-Set: unknown
  */
 export function overrideMpTextChatTeamString(gxtEntryHash) {
     if (typeof gxtEntryHash === 'string')
@@ -2774,7 +2782,7 @@ export function overrideMpTextChatTeamString(gxtEntryHash) {
 /**
  * No comment provided
  *
- * Hash: 0x77F16B447824DA6C | Since: 323 | API-Set: unknown
+ * Hash: 0x77F16B447824DA6C | Since: unknown | API-Set: unknown
  */
 export function pauseMenuceptionGoDeeper(page) {
     PauseMenuceptionGoDeeper(page);
@@ -2782,7 +2790,7 @@ export function pauseMenuceptionGoDeeper(page) {
 /**
  * No comment provided
  *
- * Hash: 0xCDCA26E80FAECB8F | Since: 323 | API-Set: unknown
+ * Hash: 0xCDCA26E80FAECB8F | Since: unknown | API-Set: unknown
  */
 export function pauseMenuceptionTheKick() {
     PauseMenuceptionTheKick();
@@ -2794,7 +2802,7 @@ export function pauseMenuceptionTheKick() {
  * The `*NONE*` part of the context section means that whatever is being defined, will NOT be active if any or all of the conditions after `*NONE*` are met.
  * This basically allows you to hide certain menu sections, or things like instructional buttons.
  *
- * Hash: 0xDD564BDD0472C936 | Since: 323 | API-Set: unknown
+ * Hash: 0xDD564BDD0472C936 | Since: unknown | API-Set: unknown
  */
 export function pauseMenuActivateContext(contextHash) {
     if (typeof contextHash === 'string')
@@ -2804,7 +2812,18 @@ export function pauseMenuActivateContext(contextHash) {
 /**
  * No comment provided
  *
- * Hash: 0x444D8CF241EC25C5 | Since: 323 | API-Set: unknown
+ * Hash: 0x4947F58BB3AB76D2 | Since: unknown | API-Set: unknown
+ */
+export function pauseMenuClearCloudBusySpinner() {
+    if (!IsGameEnhancedVersion())
+        console.error('This native is not supported on legacy (0x4947F58BB3AB76D2)');
+    return;
+    Citizen.invokeNative('0x4947F58BB3AB76D2');
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0x444D8CF241EC25C5 | Since: unknown | API-Set: unknown
  */
 export function pauseMenuDeactivateContext(contextHash) {
     if (typeof contextHash === 'string')
@@ -2814,7 +2833,7 @@ export function pauseMenuDeactivateContext(contextHash) {
 /**
  * No comment provided
  *
- * Hash: 0xDE03620F8703A9DF | Since: 323 | API-Set: unknown
+ * Hash: 0xDE03620F8703A9DF | Since: unknown | API-Set: unknown
  */
 export function pauseMenuGetHairColourIndex() {
     return Citizen.invokeNative('0xDE03620F8703A9DF');
@@ -2822,7 +2841,7 @@ export function pauseMenuGetHairColourIndex() {
 /**
  * No comment provided
  *
- * Hash: 0xC8E1071177A23BE5 | Since: 323 | API-Set: unknown
+ * Hash: 0xC8E1071177A23BE5 | Since: unknown | API-Set: unknown
  */
 export function pauseMenuGetMouseClickEvent() {
     return Citizen.invokeNative('0xC8E1071177A23BE5');
@@ -2830,7 +2849,7 @@ export function pauseMenuGetMouseClickEvent() {
 /**
  * No comment provided
  *
- * Hash: 0x359AF31A4B52F5ED | Since: 323 | API-Set: unknown
+ * Hash: 0x359AF31A4B52F5ED | Since: unknown | API-Set: unknown
  */
 export function pauseMenuGetMouseHoverIndex() {
     return PauseMenuGetIndexOfMouseHoveredSlot();
@@ -2838,7 +2857,7 @@ export function pauseMenuGetMouseHoverIndex() {
 /**
  * No comment provided
  *
- * Hash: 0x13C4B962653A5280 | Since: 323 | API-Set: unknown
+ * Hash: 0x13C4B962653A5280 | Since: unknown | API-Set: unknown
  */
 export function pauseMenuGetMouseHoverUniqueId() {
     return PauseMenuGetUniqueIdOfMouseHoveredSlot();
@@ -2846,7 +2865,7 @@ export function pauseMenuGetMouseHoverUniqueId() {
 /**
  * No comment provided
  *
- * Hash: 0x84698AB38D0C6636 | Since: 323 | API-Set: unknown
+ * Hash: 0x84698AB38D0C6636 | Since: unknown | API-Set: unknown
  */
 export function pauseMenuIsContextActive(contextHash) {
     if (typeof contextHash === 'string')
@@ -2856,7 +2875,7 @@ export function pauseMenuIsContextActive(contextHash) {
 /**
  * No comment provided
  *
- * Hash: 0x2A25ADC48F87841F | Since: 323 | API-Set: unknown
+ * Hash: 0x2A25ADC48F87841F | Since: unknown | API-Set: unknown
  */
 export function pauseMenuIsContextMenuActive() {
     return PauseMenuIsContextMenuActive();
@@ -2864,7 +2883,7 @@ export function pauseMenuIsContextMenuActive() {
 /**
  * No comment provided
  *
- * Hash: 0x4895BDEA16E7C080 | Since: 323 | API-Set: unknown
+ * Hash: 0x4895BDEA16E7C080 | Since: unknown | API-Set: unknown
  */
 export function pauseMenuRedrawInstructionalButtons() {
     PauseMenuRedrawInstructionalButtons(0);
@@ -2872,7 +2891,7 @@ export function pauseMenuRedrawInstructionalButtons() {
 /**
  * No comment provided
  *
- * Hash: 0xC78E239AC5B2DDB9 | Since: 323 | API-Set: unknown
+ * Hash: 0xC78E239AC5B2DDB9 | Since: unknown | API-Set: unknown
  */
 export function pauseMenuSetBusySpinner(position, spinnerIndex) {
     PauseMenuSetBusySpinner(false, position, spinnerIndex);
@@ -2880,7 +2899,18 @@ export function pauseMenuSetBusySpinner(position, spinnerIndex) {
 /**
  * No comment provided
  *
- * Hash: 0xF06EBB91A81E09E3 | Since: 323 | API-Set: unknown
+ * Hash: 0x640B4FB20A104099 | Since: unknown | API-Set: unknown
+ */
+export function pauseMenuSetCloudBusySpinner(TextLabel, bNoMenu, bBlackBackground) {
+    if (!IsGameEnhancedVersion())
+        console.error('This native is not supported on legacy (0x640B4FB20A104099)');
+    return;
+    Citizen.invokeNative('0x640B4FB20A104099', TextLabel, bNoMenu, bBlackBackground);
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0xF06EBB91A81E09E3 | Since: unknown | API-Set: unknown
  */
 export function pauseMenuSetWarnOnTabChange() {
     PauseMenuSetWarnOnTabChange(false);
@@ -2888,7 +2918,7 @@ export function pauseMenuSetWarnOnTabChange() {
 /**
  * No comment provided
  *
- * Hash: 0x2DE6C5E2E996F178 | Since: 372 | API-Set: unknown
+ * Hash: 0x2DE6C5E2E996F178 | Since: unknown | API-Set: unknown
  */
 export function pauseToggleFullscreenMap() {
     PauseToggleFullscreenMap(undefined);
@@ -2896,7 +2926,7 @@ export function pauseToggleFullscreenMap() {
 /**
  * No comment provided
  *
- * Hash: 0xC65AB383CD91DF98 | Since: 323 | API-Set: unknown
+ * Hash: 0xC65AB383CD91DF98 | Since: unknown | API-Set: unknown
  */
 export function preloadBusyspinner() {
     PreloadBusyspinner();
@@ -2904,7 +2934,7 @@ export function preloadBusyspinner() {
 /**
  * No comment provided
  *
- * Hash: 0x742D6FD43115AF73 | Since: 323 | API-Set: unknown
+ * Hash: 0x742D6FD43115AF73 | Since: unknown | API-Set: unknown
  */
 export function pulseBlip(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -2913,7 +2943,7 @@ export function pulseBlip(blip) {
 /**
  * No comment provided
  *
- * Hash: 0x81FA173F170560D1 | Since: 323 | API-Set: unknown
+ * Hash: 0x81FA173F170560D1 | Since: unknown | API-Set: unknown
  */
 export function refreshWaypoint() {
     RefreshWaypoint();
@@ -2921,7 +2951,7 @@ export function refreshWaypoint() {
 /**
  * No comment provided
  *
- * Hash: 0x57D9C12635E25CE3 | Since: 323 | API-Set: unknown
+ * Hash: 0x57D9C12635E25CE3 | Since: unknown | API-Set: unknown
  */
 export function registerNamedRendertarget(name) {
     return RegisterNamedRendertarget(name, false);
@@ -2930,7 +2960,7 @@ export function registerNamedRendertarget(name) {
  * Enables frontend (works in custom frontends, not sure about regular pause menu) navigation keys on keyboard if they were disabled using the native below.
  * To disable the keys, use `0xEC9264727EEC0F28`
  *
- * Hash: 0x14621BB1DF14E2B2 | Since: 323 | API-Set: unknown
+ * Hash: 0x14621BB1DF14E2B2 | Since: unknown | API-Set: unknown
  */
 export function releaseControlOfFrontend() {
     ReleaseControlOfFrontend();
@@ -2938,7 +2968,7 @@ export function releaseControlOfFrontend() {
 /**
  * No comment provided
  *
- * Hash: 0xE9F6FFE837354DD4 | Since: 323 | API-Set: unknown
+ * Hash: 0xE9F6FFE837354DD4 | Since: unknown | API-Set: unknown
  */
 export function releaseNamedRendertarget(name) {
     return ReleaseNamedRendertarget(name);
@@ -2946,7 +2976,7 @@ export function releaseNamedRendertarget(name) {
 /**
  * No comment provided
  *
- * Hash: 0x2916A928514C9827 | Since: 573 | API-Set: unknown
+ * Hash: 0x2916A928514C9827 | Since: unknown | API-Set: unknown
  */
 export function reloadMapMenu() {
     ReloadMapMenu();
@@ -2979,16 +3009,15 @@ export function reloadMapMenu() {
  *
  * Remove blip will currently crash your game, just artificially remove the blip by setting the sprite to a id that is 'invisible'.
  *
- * Hash: 0x86A652570E5F25DD | Since: 323 | API-Set: unknown
+ * Hash: 0x86A652570E5F25DD | Since: unknown | API-Set: unknown
  */
-export function removeBlip(blip) {
-    const _blip = typeof blip == 'object' ? blip.handle() : blip;
-    RemoveBlip(_blip);
+export function removeBlip() {
+    return RemoveBlip();
 }
 /**
  * Interesting fact: A hash collision for this is RESET_JETPACK_MODEL_SETTINGS
  *
- * Hash: 0xC594B315EDF2D4AF | Since: 323 | API-Set: unknown
+ * Hash: 0xC594B315EDF2D4AF | Since: unknown | API-Set: unknown
  */
 export function removeCopBlipFromPed(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2997,7 +3026,7 @@ export function removeCopBlipFromPed(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x35A3CD97B2C0A6D2 | Since: 1290 | API-Set: unknown
+ * Hash: 0x35A3CD97B2C0A6D2 | Since: unknown | API-Set: unknown
  */
 export function removeFakeConeData(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3006,7 +3035,7 @@ export function removeFakeConeData(blip) {
 /**
  * No comment provided
  *
- * Hash: 0x31698AA80E0223F8 | Since: 323 | API-Set: unknown
+ * Hash: 0x31698AA80E0223F8 | Since: unknown | API-Set: unknown
  */
 export function removeMpGamerTag(gamerTagId) {
     RemoveMpGamerTag(gamerTagId);
@@ -3014,7 +3043,7 @@ export function removeMpGamerTag(gamerTagId) {
 /**
  * No comment provided
  *
- * Hash: 0xC7C6789AA1CFEDD0 | Since: 323 | API-Set: unknown
+ * Hash: 0xC7C6789AA1CFEDD0 | Since: unknown | API-Set: unknown
  */
 export function removeMultiplayerBankCash() {
     RemoveMultiplayerBankCash();
@@ -3022,7 +3051,7 @@ export function removeMultiplayerBankCash() {
 /**
  * Removes multiplayer cash hud each frame
  *
- * Hash: 0x968F270E39141ECA | Since: 323 | API-Set: unknown
+ * Hash: 0x968F270E39141ECA | Since: unknown | API-Set: unknown
  */
 export function removeMultiplayerCash() {
     RemoveMultiplayerHudCash();
@@ -3030,7 +3059,7 @@ export function removeMultiplayerCash() {
 /**
  * No comment provided
  *
- * Hash: 0x95CF81BD06EE1887 | Since: 323 | API-Set: unknown
+ * Hash: 0x95CF81BD06EE1887 | Since: unknown | API-Set: unknown
  */
 export function removeMultiplayerWalletCash() {
     RemoveMultiplayerWalletCash();
@@ -3038,7 +3067,7 @@ export function removeMultiplayerWalletCash() {
 /**
  * No comment provided
  *
- * Hash: 0x6EF54AB721DC6242 | Since: 323 | API-Set: unknown
+ * Hash: 0x6EF54AB721DC6242 | Since: unknown | API-Set: unknown
  */
 export function removeWarningMessageOptionItems() {
     RemoveWarningMessageListItems();
@@ -3046,7 +3075,7 @@ export function removeWarningMessageOptionItems() {
 /**
  * makes hudColorIndex2 color into hudColorIndex color
  *
- * Hash: 0x1CCC708F0F850613 | Since: 323 | API-Set: unknown
+ * Hash: 0x1CCC708F0F850613 | Since: unknown | API-Set: unknown
  */
 export function replaceColour(hudColorIndex, hudColorIndex2) {
     ReplaceHudColour(hudColorIndex, hudColorIndex2);
@@ -3054,7 +3083,7 @@ export function replaceColour(hudColorIndex, hudColorIndex2) {
 /**
  * No comment provided
  *
- * Hash: 0xF314CF4F0211894E | Since: 323 | API-Set: unknown
+ * Hash: 0xF314CF4F0211894E | Since: unknown | API-Set: unknown
  */
 export function replaceColourWithRgba(hudColorIndex, r, g, b, a) {
     ReplaceHudColourWithRgba(hudColorIndex, r, g, b, a);
@@ -3062,7 +3091,7 @@ export function replaceColourWithRgba(hudColorIndex, r, g, b, a) {
 /**
  * Request a gxt into the passed slot.
  *
- * Hash: 0x71A78003C8E71424 | Since: 323 | API-Set: unknown
+ * Hash: 0x71A78003C8E71424 | Since: unknown | API-Set: unknown
  */
 export function requestAdditionalText(gxt, slot) {
     RequestAdditionalText(gxt, slot);
@@ -3070,7 +3099,7 @@ export function requestAdditionalText(gxt, slot) {
 /**
  * No comment provided
  *
- * Hash: 0x6009F9F1AE90D8A6 | Since: 323 | API-Set: unknown
+ * Hash: 0x6009F9F1AE90D8A6 | Since: unknown | API-Set: unknown
  */
 export function requestAdditionalTextForDlc(gxt, slot) {
     RequestAdditionalTextForDlc(gxt, slot);
@@ -3078,7 +3107,7 @@ export function requestAdditionalTextForDlc(gxt, slot) {
 /**
  * No comment provided
  *
- * Hash: 0xB99C4E4D9499DF29 | Since: 323 | API-Set: unknown
+ * Hash: 0xB99C4E4D9499DF29 | Since: unknown | API-Set: unknown
  */
 export function resetGlobalActionscriptFlag(flagIndex) {
     ResetGlobalActionscriptFlag(flagIndex);
@@ -3086,7 +3115,7 @@ export function resetGlobalActionscriptFlag(flagIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x450930E616475D0D | Since: 323 | API-Set: unknown
+ * Hash: 0x450930E616475D0D | Since: unknown | API-Set: unknown
  */
 export function resetComponentValues(id) {
     ResetHudComponentValues(id);
@@ -3094,7 +3123,7 @@ export function resetComponentValues(id) {
 /**
  * No comment provided
  *
- * Hash: 0x12782CE0A636E9F0 | Since: 323 | API-Set: unknown
+ * Hash: 0x12782CE0A636E9F0 | Since: unknown | API-Set: unknown
  */
 export function resetReticuleValues() {
     ResetReticuleValues();
@@ -3112,7 +3141,7 @@ export function resetReticuleValues() {
  * p1 = Hash of Menu
  * p2 = Unknown but always works with -1.
  *
- * Hash: 0x10706DC6AD2D49C0 | Since: 323 | API-Set: unknown
+ * Hash: 0x10706DC6AD2D49C0 | Since: unknown | API-Set: unknown
  */
 export function restartFrontendMenu(menuHash) {
     if (typeof menuHash === 'string')
@@ -3122,7 +3151,7 @@ export function restartFrontendMenu(menuHash) {
 /**
  * No comment provided
  *
- * Hash: 0xF83D0FEBE75E62C9 | Since: 1290 | API-Set: unknown
+ * Hash: 0xF83D0FEBE75E62C9 | Since: unknown | API-Set: unknown
  */
 export function setupFakeConeData(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3131,7 +3160,7 @@ export function setupFakeConeData(blip) {
 /**
  * No comment provided
  *
- * Hash: 0x9969599CCFF5D85E | Since: 323 | API-Set: unknown
+ * Hash: 0x9969599CCFF5D85E | Since: unknown | API-Set: unknown
  */
 export function setAbilityBarValue() {
     SetAbilityBarValue(0, 0);
@@ -3139,7 +3168,7 @@ export function setAbilityBarValue() {
 /**
  * No comment provided
  *
- * Hash: 0x1DFEDD15019315A9 | Since: 1493 | API-Set: unknown
+ * Hash: 0x1DFEDD15019315A9 | Since: unknown | API-Set: unknown
  */
 export function setAbilityBarVisibility(visible) {
     SetAbilityBarVisibilityInMultiplayer(visible);
@@ -3147,7 +3176,7 @@ export function setAbilityBarVisibility(visible) {
 /**
  * No comment provided
  *
- * Hash: 0x889329C80FE5963C | Since: 1868 | API-Set: unknown
+ * Hash: 0x889329C80FE5963C | Since: unknown | API-Set: unknown
  */
 export function setAllowAbilityBar(toggle) {
     SetAllowAbilityBarInMultiplayer(toggle);
@@ -3155,7 +3184,7 @@ export function setAllowAbilityBar(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x577599CCED639CA2 | Since: 505 | API-Set: unknown
+ * Hash: 0x577599CCED639CA2 | Since: unknown | API-Set: unknown
  */
 export function setAllowCommaOnTextInput() {
     SetAllowCommaOnTextInput(undefined);
@@ -3163,7 +3192,7 @@ export function setAllowCommaOnTextInput() {
 /**
  * No comment provided
  *
- * Hash: 0xEE76FF7E6A0166B0 | Since: 323 | API-Set: unknown
+ * Hash: 0xEE76FF7E6A0166B0 | Since: unknown | API-Set: unknown
  */
 export function setAllMpGamerTagsVisibility(gamerTagId, toggle) {
     SetMpGamerTagVisibilityAll(gamerTagId, toggle);
@@ -3171,7 +3200,7 @@ export function setAllMpGamerTagsVisibility(gamerTagId, toggle) {
 /**
  * Toggles the big minimap state like in GTA:Online.
  *
- * Hash: 0x231C8F89D0539D8F | Since: 323 | API-Set: unknown
+ * Hash: 0x231C8F89D0539D8F | Since: unknown | API-Set: unknown
  */
 export function setBigmapActive(toggleBigMap, showFullMap) {
     SetBigmapActive(toggleBigMap, showFullMap);
@@ -3186,7 +3215,7 @@ export function setBigmapActive(toggleBigMap, showFullMap) {
  * `HUD::SET_BLIP_ALPHA(blip , 64);`
  *
  *
- * Hash: 0x45FF974EEE1C8734 | Since: 323 | API-Set: unknown
+ * Hash: 0x45FF974EEE1C8734 | Since: unknown | API-Set: unknown
  */
 export function setBlipAlpha(blip, alpha) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3196,7 +3225,7 @@ export function setBlipAlpha(blip, alpha) {
  * false for enemy
  * true for friendly
  *
- * Hash: 0x6F6F290102C02AB4 | Since: 323 | API-Set: unknown
+ * Hash: 0x6F6F290102C02AB4 | Since: unknown | API-Set: unknown
  */
 export function setBlipAsFriendly(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3205,7 +3234,7 @@ export function setBlipAsFriendly(blip, toggle) {
 /**
  * Makes a blip go small when off the minimap.
  *
- * Hash: 0x2B6D467DAB714E8D | Since: 323 | API-Set: unknown
+ * Hash: 0x2B6D467DAB714E8D | Since: unknown | API-Set: unknown
  */
 export function setBlipAsMinimalOnEdge(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3214,7 +3243,7 @@ export function setBlipAsMinimalOnEdge(blip, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x24AC0137444F9FD5 | Since: 323 | API-Set: unknown
+ * Hash: 0x24AC0137444F9FD5 | Since: unknown | API-Set: unknown
  */
 export function setBlipAsMissionCreatorBlip(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3223,7 +3252,7 @@ export function setBlipAsMissionCreatorBlip(blip, toggle) {
 /**
  * Sets whether or not the specified blip should only be displayed when nearby, or on the minimap.
  *
- * Hash: 0xBE8BE4FE60E27B72 | Since: 323 | API-Set: unknown
+ * Hash: 0xBE8BE4FE60E27B72 | Since: unknown | API-Set: unknown
  */
 export function setBlipAsShortRange(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3232,7 +3261,7 @@ export function setBlipAsShortRange(blip, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xB203913733F27884 | Since: 323 | API-Set: unknown
+ * Hash: 0xB203913733F27884 | Since: unknown | API-Set: unknown
  */
 export function setBlipBright(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3257,7 +3286,7 @@ export function setBlipBright(blip, toggle) {
  *
  * Category needs to be `7` in order for blip names to show on the expanded minimap when using DISPLAY_PLAYER_NAME_TAGS_ON_BLIPS.
  *
- * Hash: 0x234CDD44D996FD9A | Since: 323 | API-Set: unknown
+ * Hash: 0x234CDD44D996FD9A | Since: unknown | API-Set: unknown
  */
 export function setBlipCategory(blip, index) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3266,7 +3295,7 @@ export function setBlipCategory(blip, index) {
 /**
  * https://gtaforums.com/topic/864881-all-blip-color-ids-pictured/
  *
- * Hash: 0x03D7FB09E75D6B7E | Since: 323 | API-Set: unknown
+ * Hash: 0x03D7FB09E75D6B7E | Since: unknown | API-Set: unknown
  */
 export function setBlipColour(blip, color) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3275,7 +3304,7 @@ export function setBlipColour(blip, color) {
 /**
  * No comment provided
  *
- * Hash: 0xAE2AF67E9D9AF65D | Since: 323 | API-Set: unknown
+ * Hash: 0xAE2AF67E9D9AF65D | Since: unknown | API-Set: unknown
  */
 export function setBlipCoords(blip, pos) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3297,7 +3326,7 @@ export function setBlipCoords(blip, pos) {
  *
  * Anything higher than 10 seems to be exactly the same as 10.
  *
- * Hash: 0x9029B2F3DA924928 | Since: 323 | API-Set: unknown
+ * Hash: 0x9029B2F3DA924928 | Since: unknown | API-Set: unknown
  */
 export function setBlipDisplay(blip, displayId) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3306,7 +3335,7 @@ export function setBlipDisplay(blip, displayId) {
 /**
  * Must be toggled before being queued for animation
  *
- * Hash: 0xC4278F70131BAA6D | Since: 323 | API-Set: unknown
+ * Hash: 0xC4278F70131BAA6D | Since: unknown | API-Set: unknown
  */
 export function setBlipExtendedHeightThreshold(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3315,7 +3344,7 @@ export function setBlipExtendedHeightThreshold(blip, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x2AEE8F8390D2298C | Since: 323 | API-Set: unknown
+ * Hash: 0x2AEE8F8390D2298C | Since: unknown | API-Set: unknown
  */
 export function setBlipFade(blip, opacity, duration) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3324,7 +3353,7 @@ export function setBlipFade(blip, opacity, duration) {
 /**
  * No comment provided
  *
- * Hash: 0xB14552383D39CE3E | Since: 323 | API-Set: unknown
+ * Hash: 0xB14552383D39CE3E | Since: unknown | API-Set: unknown
  */
 export function setBlipFlashes(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3333,7 +3362,7 @@ export function setBlipFlashes(blip, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x2E8D9498C56DD0D1 | Since: 323 | API-Set: unknown
+ * Hash: 0x2E8D9498C56DD0D1 | Since: unknown | API-Set: unknown
  */
 export function setBlipFlashesAlternate(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3342,7 +3371,7 @@ export function setBlipFlashesAlternate(blip, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xAA51DB313C010A7E | Since: 323 | API-Set: unknown
+ * Hash: 0xAA51DB313C010A7E | Since: unknown | API-Set: unknown
  */
 export function setBlipFlashInterval(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3351,7 +3380,7 @@ export function setBlipFlashInterval(blip) {
 /**
  * Adds up after viewing multiple R* scripts. I believe that the duration is in miliseconds.
  *
- * Hash: 0xD3CD6FD297AE87CC | Since: 323 | API-Set: unknown
+ * Hash: 0xD3CD6FD297AE87CC | Since: unknown | API-Set: unknown
  */
 export function setBlipFlashTimer(blip, duration) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3360,7 +3389,7 @@ export function setBlipFlashTimer(blip, duration) {
 /**
  * No comment provided
  *
- * Hash: 0x54318C915D27E4CE | Since: 323 | API-Set: unknown
+ * Hash: 0x54318C915D27E4CE | Since: unknown | API-Set: unknown
  */
 export function setBlipHiddenOnLegend(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3369,7 +3398,7 @@ export function setBlipHiddenOnLegend(blip, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xE2590BC29220CEBB | Since: 323 | API-Set: unknown
+ * Hash: 0xE2590BC29220CEBB | Since: unknown | API-Set: unknown
  */
 export function setBlipHighDetail(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3378,7 +3407,7 @@ export function setBlipHighDetail(blip, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xB552929B85FC27EC | Since: 573 | API-Set: unknown
+ * Hash: 0xB552929B85FC27EC | Since: unknown | API-Set: unknown
  */
 export function setBlipMarkerLongDistance() {
     Citizen.invokeNative('0xB552929B85FC27EC', undefined, undefined);
@@ -3386,7 +3415,7 @@ export function setBlipMarkerLongDistance() {
 /**
  * Doesn't work if the label text of gxtEntry is >= 80.
  *
- * Hash: 0xEAA0FFE120D92784 | Since: 323 | API-Set: unknown
+ * Hash: 0xEAA0FFE120D92784 | Since: unknown | API-Set: unknown
  */
 export function setBlipNameFromTextFile(blip, gxtEntry) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3395,7 +3424,7 @@ export function setBlipNameFromTextFile(blip, gxtEntry) {
 /**
  * No comment provided
  *
- * Hash: 0x127DE7B20C60A6A3 | Since: 323 | API-Set: unknown
+ * Hash: 0x127DE7B20C60A6A3 | Since: unknown | API-Set: unknown
  */
 export function setBlipNameToPlayerName(blip, player) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3405,7 +3434,7 @@ export function setBlipNameToPlayerName(blip, player) {
 /**
  * See this topic for more details : gtaforums.com/topic/717612-v-scriptnative-documentation-and-research/page-35?p=1069477935
  *
- * Hash: 0xAE9FC9EF6A9FAC79 | Since: 323 | API-Set: unknown
+ * Hash: 0xAE9FC9EF6A9FAC79 | Since: unknown | API-Set: unknown
  */
 export function setBlipPriority(blip, priority) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3414,7 +3443,7 @@ export function setBlipPriority(blip, priority) {
 /**
  * After some testing, looks like you need to use CEIL() on the rotation (vehicle/ped heading) before using it there.
  *
- * Hash: 0xF87683CDF73C3F6E | Since: 323 | API-Set: unknown
+ * Hash: 0xF87683CDF73C3F6E | Since: unknown | API-Set: unknown
  */
 export function setBlipRotation(blip, rotation) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3423,7 +3452,7 @@ export function setBlipRotation(blip, rotation) {
 /**
  * Does not require whole number/integer rotations.
  *
- * Hash: 0xA8B6AFDAC320AC87 | Since: 877 | API-Set: unknown
+ * Hash: 0xA8B6AFDAC320AC87 | Since: unknown | API-Set: unknown
  */
 export function setBlipRotationWithFloat(blip, heading) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3432,7 +3461,7 @@ export function setBlipRotationWithFloat(blip, heading) {
 /**
  * Enable / disable showing route for the Blip-object.
  *
- * Hash: 0x4F7D8A9BFB0B43E9 | Since: 323 | API-Set: unknown
+ * Hash: 0x4F7D8A9BFB0B43E9 | Since: unknown | API-Set: unknown
  */
 export function setBlipRoute(blip, enabled) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3441,7 +3470,7 @@ export function setBlipRoute(blip, enabled) {
 /**
  * No comment provided
  *
- * Hash: 0x837155CD2F63DA09 | Since: 323 | API-Set: unknown
+ * Hash: 0x837155CD2F63DA09 | Since: unknown | API-Set: unknown
  */
 export function setBlipRouteColour(blip, colour) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3450,7 +3479,7 @@ export function setBlipRouteColour(blip, colour) {
 /**
  * No comment provided
  *
- * Hash: 0xD38744167B2FA257 | Since: 323 | API-Set: unknown
+ * Hash: 0xD38744167B2FA257 | Since: unknown | API-Set: unknown
  */
 export function setBlipScale(blip, scale) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3459,7 +3488,7 @@ export function setBlipScale(blip, scale) {
 /**
  * See https://imgur.com/a/lLkEsMN
  *
- * Hash: 0xCD6524439909C979 | Since: 1734 | API-Set: unknown
+ * Hash: 0xCD6524439909C979 | Since: unknown | API-Set: unknown
  */
 export function setBlipScale2d(blip, xScale, yScale) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3468,7 +3497,7 @@ export function setBlipScale2d(blip, xScale, yScale) {
 /**
  * Can be used to give blips any RGB colour with SET_BLIP_COLOUR(blip, 84).
  *
- * Hash: 0x14892474891E09EB | Since: 323 | API-Set: unknown
+ * Hash: 0x14892474891E09EB | Since: unknown | API-Set: unknown
  */
 export function setBlipSecondaryColour(blip, r, g, b) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3477,7 +3506,7 @@ export function setBlipSecondaryColour(blip, r, g, b) {
 /**
  * No comment provided
  *
- * Hash: 0x4B5B620C9B59ED34 | Since: 678 | API-Set: unknown
+ * Hash: 0x4B5B620C9B59ED34 | Since: unknown | API-Set: unknown
  */
 export function setBlipShortHeightThreshold() {
     Citizen.invokeNative('0x4B5B620C9B59ED34', undefined, undefined);
@@ -3485,7 +3514,7 @@ export function setBlipShortHeightThreshold() {
 /**
  * As of b2189, the third parameter sets the color of the cone (before b2189 it was ignored). Note that it uses HUD colors, not blip colors.
  *
- * Hash: 0x13127EC3665E8EE1 | Since: 323 | API-Set: unknown
+ * Hash: 0x13127EC3665E8EE1 | Since: unknown | API-Set: unknown
  */
 export function setBlipShowCone(blip, toggle, hudColorIndex) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3500,7 +3529,7 @@ export function setBlipShowCone(blip, toggle, hudColorIndex) {
  * Blips Images + IDs:
  * https://gtaxscripting.blogspot.com/2016/05/gta-v-blips-id-and-image.html
  *
- * Hash: 0xDF735600A4696DAF | Since: 323 | API-Set: unknown
+ * Hash: 0xDF735600A4696DAF | Since: unknown | API-Set: unknown
  */
 export function setBlipSprite(blip, spriteId) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3509,7 +3538,7 @@ export function setBlipSprite(blip, spriteId) {
 /**
  * No comment provided
  *
- * Hash: 0x2C9F302398E13141 | Since: 1103 | API-Set: unknown
+ * Hash: 0x2C9F302398E13141 | Since: unknown | API-Set: unknown
  */
 export function setBlipUseHeightIndicatorOnEdge(blip) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3518,7 +3547,7 @@ export function setBlipUseHeightIndicatorOnEdge(blip) {
 /**
  * No comment provided
  *
- * Hash: 0xD1942374085C8469 | Since: 505 | API-Set: unknown
+ * Hash: 0xD1942374085C8469 | Since: unknown | API-Set: unknown
  */
 export function setBlockWantedFlash(disabled) {
     Citizen.invokeNative('0xD1942374085C8469', disabled);
@@ -3526,7 +3555,7 @@ export function setBlockWantedFlash(disabled) {
 /**
  * No comment provided
  *
- * Hash: 0x39BBF623FC803EAC | Since: 323 | API-Set: unknown
+ * Hash: 0x39BBF623FC803EAC | Since: unknown | API-Set: unknown
  */
 export function setColourOfNextTextComponent(hudColor) {
     SetColourOfNextTextComponent(hudColor);
@@ -3534,7 +3563,7 @@ export function setColourOfNextTextComponent(hudColor) {
 /**
  * No comment provided
  *
- * Hash: 0x9FCB3CBFB3EAD69A | Since: 1734 | API-Set: unknown
+ * Hash: 0x9FCB3CBFB3EAD69A | Since: unknown | API-Set: unknown
  */
 export function setCopBlipSprite() {
     Citizen.invokeNative('0x9FCB3CBFB3EAD69A', 0, 0);
@@ -3542,7 +3571,7 @@ export function setCopBlipSprite() {
 /**
  * No comment provided
  *
- * Hash: 0xB7B873520C84C118 | Since: 1734 | API-Set: unknown
+ * Hash: 0xB7B873520C84C118 | Since: unknown | API-Set: unknown
  */
 export function setCopBlipSpriteAsStandard() {
     Citizen.invokeNative('0xB7B873520C84C118');
@@ -3550,7 +3579,7 @@ export function setCopBlipSpriteAsStandard() {
 /**
  * No comment provided
  *
- * Hash: 0x2ACCB195F3CCD9DE | Since: 2545 | API-Set: unknown
+ * Hash: 0x2ACCB195F3CCD9DE | Since: unknown | API-Set: unknown
  */
 export function setCustomMpColor(hudColorId) {
     SetCustomMpHudColor(hudColorId);
@@ -3558,7 +3587,7 @@ export function setCustomMpColor(hudColorId) {
 /**
  * No comment provided
  *
- * Hash: 0x817B86108EB94E51 | Since: 323 | API-Set: unknown
+ * Hash: 0x817B86108EB94E51 | Since: unknown | API-Set: unknown
  */
 export function setDescriptionForUgcMissionEightStrings() {
     Citizen.invokeNative('0x817B86108EB94E51', false, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined);
@@ -3566,7 +3595,7 @@ export function setDescriptionForUgcMissionEightStrings() {
 /**
  * No comment provided
  *
- * Hash: 0x04655F9D075D0AE5 | Since: 323 | API-Set: unknown
+ * Hash: 0x04655F9D075D0AE5 | Since: unknown | API-Set: unknown
  */
 export function setDirectorModeAvailable(toggle) {
     Citizen.invokeNative('0x04655F9D075D0AE5', toggle);
@@ -3574,7 +3603,7 @@ export function setDirectorModeAvailable(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x2632482FD6B9AB87 | Since: 323 | API-Set: unknown
+ * Hash: 0x2632482FD6B9AB87 | Since: unknown | API-Set: unknown
  */
 export function setDirectorModeLaunchedByScript() {
     SetDirectorModeClearTriggeredFlag();
@@ -3582,7 +3611,7 @@ export function setDirectorModeLaunchedByScript() {
 /**
  * No comment provided
  *
- * Hash: 0xA17784FCA9548D15 | Since: 877 | API-Set: unknown
+ * Hash: 0xA17784FCA9548D15 | Since: unknown | API-Set: unknown
  */
 export function setFakeGpsPlayerPositionThisFrame(pos) {
     Citizen.invokeNative('0xA17784FCA9548D15', pos.x, pos.y, pos.z);
@@ -3590,7 +3619,7 @@ export function setFakeGpsPlayerPositionThisFrame(pos) {
 /**
  * Argument must be 0.0f or above 38.0f, or it will be ignored.
  *
- * Hash: 0xD201F3FF917A506D | Since: 323 | API-Set: unknown
+ * Hash: 0xD201F3FF917A506D | Since: unknown | API-Set: unknown
  */
 export function setFakeMinimapMaxAltimeterHeight(altitude) {
     SetMinimapAltitudeIndicatorLevel(altitude, false, undefined);
@@ -3600,7 +3629,7 @@ export function setFakeMinimapMaxAltimeterHeight(altitude) {
  *
  * Too bad this wouldn't work over the network (obviously not). Could spoof where we would be.
  *
- * Hash: 0x77E2DD177910E1CF | Since: 323 | API-Set: unknown
+ * Hash: 0x77E2DD177910E1CF | Since: unknown | API-Set: unknown
  */
 export function setFakePausemapPlayerPositionThisFrame(x, y) {
     SetFakePausemapPlayerPositionThisFrame(x, y);
@@ -3608,7 +3637,7 @@ export function setFakePausemapPlayerPositionThisFrame(x, y) {
 /**
  * Setter for GET_FAKE_SPECTATOR_MODE
  *
- * Hash: 0xCD74233600C4EA6B | Since: 505 | API-Set: unknown
+ * Hash: 0xCD74233600C4EA6B | Since: unknown | API-Set: unknown
  */
 export function setFakeSpectatorMode(toggle) {
     Citizen.invokeNative('0xCD74233600C4EA6B', toggle);
@@ -3616,7 +3645,7 @@ export function setFakeSpectatorMode(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x7679CC1BCEBE3D4C | Since: 323 | API-Set: unknown
+ * Hash: 0x7679CC1BCEBE3D4C | Since: unknown | API-Set: unknown
  */
 export function setFloatingHelpTextScreenPosition(hudIndex, x, y) {
     SetFloatingHelpTextScreenPosition(hudIndex, x, y);
@@ -3624,7 +3653,7 @@ export function setFloatingHelpTextScreenPosition(hudIndex, x, y) {
 /**
  * No comment provided
  *
- * Hash: 0x788E7FD431BD67F1 | Since: 323 | API-Set: unknown
+ * Hash: 0x788E7FD431BD67F1 | Since: unknown | API-Set: unknown
  */
 export function setFloatingHelpTextStyle(hudIndex) {
     SetFloatingHelpTextStyle(hudIndex, 0, 0, 0, 0, 0);
@@ -3632,7 +3661,7 @@ export function setFloatingHelpTextStyle(hudIndex) {
 /**
  * No comment provided
  *
- * Hash: 0xB094BC1DB4018240 | Since: 323 | API-Set: unknown
+ * Hash: 0xB094BC1DB4018240 | Since: unknown | API-Set: unknown
  */
 export function setFloatingHelpTextToEntity(hudIndex, entity, offsetX, offsetY) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -3641,7 +3670,7 @@ export function setFloatingHelpTextToEntity(hudIndex, entity, offsetX, offsetY) 
 /**
  * No comment provided
  *
- * Hash: 0x784BA7E0ECEB4178 | Since: 323 | API-Set: unknown
+ * Hash: 0x784BA7E0ECEB4178 | Since: unknown | API-Set: unknown
  */
 export function setFloatingHelpTextWorldPosition(hudIndex, pos) {
     SetFloatingHelpTextWorldPosition(hudIndex, pos.x, pos.y, pos.z);
@@ -3649,7 +3678,7 @@ export function setFloatingHelpTextWorldPosition(hudIndex, pos) {
 /**
  * No comment provided
  *
- * Hash: 0x2790F4B17D098E26 | Since: 573 | API-Set: unknown
+ * Hash: 0x2790F4B17D098E26 | Since: unknown | API-Set: unknown
  */
 export function setForceShowGps(toggle) {
     Citizen.invokeNative('0x2790F4B17D098E26', toggle);
@@ -3657,7 +3686,7 @@ export function setForceShowGps(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x745711A75AB09277 | Since: 323 | API-Set: unknown
+ * Hash: 0x745711A75AB09277 | Since: unknown | API-Set: unknown
  */
 export function setFrontendActive(active) {
     SetFrontendActive(active);
@@ -3666,7 +3695,7 @@ export function setFrontendActive(active) {
  * radarThickness: The width of the GPS route on the radar
  * mapThickness: The width of the GPS route on the map
  *
- * Hash: 0x900086F371220B6F | Since: 323 | API-Set: unknown
+ * Hash: 0x900086F371220B6F | Since: unknown | API-Set: unknown
  */
 export function setGpsCustomRouteRender(toggle, radarThickness, mapThickness) {
     SetGpsCustomRouteRender(toggle, radarThickness, mapThickness);
@@ -3676,7 +3705,7 @@ export function setGpsCustomRouteRender(toggle, radarThickness, mapThickness) {
  *
  * Doesn't seem like the flags are actually read by the game at all.
  *
- * Hash: 0x5B440763A4C8D15B | Since: 323 | API-Set: unknown
+ * Hash: 0x5B440763A4C8D15B | Since: unknown | API-Set: unknown
  */
 export function setGpsFlags() {
     SetGpsFlags(0, 0);
@@ -3684,7 +3713,7 @@ export function setGpsFlags() {
 /**
  * No comment provided
  *
- * Hash: 0x320D0E0D936A0E9B | Since: 323 | API-Set: unknown
+ * Hash: 0x320D0E0D936A0E9B | Since: unknown | API-Set: unknown
  */
 export function setGpsFlashes(toggle) {
     SetGpsFlashes(toggle);
@@ -3692,7 +3721,7 @@ export function setGpsFlashes(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x3DDA37128DD1ACA8 | Since: 323 | API-Set: unknown
+ * Hash: 0x3DDA37128DD1ACA8 | Since: unknown | API-Set: unknown
  */
 export function setGpsMultiRouteRender(toggle) {
     SetGpsMultiRouteRender(toggle);
@@ -3700,7 +3729,7 @@ export function setGpsMultiRouteRender(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x3F5CC444DCAAA8F2 | Since: 323 | API-Set: unknown
+ * Hash: 0x3F5CC444DCAAA8F2 | Since: unknown | API-Set: unknown
  */
 export function setHealthDisplayValues(health, capacity, wasAdded) {
     SetHealthHudDisplayValues(health, capacity, wasAdded);
@@ -3708,7 +3737,7 @@ export function setHealthDisplayValues(health, capacity, wasAdded) {
 /**
  * No comment provided
  *
- * Hash: 0xB9C362BABECDDC7A | Since: 463 | API-Set: unknown
+ * Hash: 0xB9C362BABECDDC7A | Since: unknown | API-Set: unknown
  */
 export function setHelpMessageStyle(style, hudColor, alpha) {
     SetHelpMessageTextStyle(style, hudColor, alpha, 0, 0);
@@ -3716,7 +3745,7 @@ export function setHelpMessageStyle(style, hudColor, alpha) {
 /**
  * No comment provided
  *
- * Hash: 0xAABB1F56E2A17CED | Since: 323 | API-Set: unknown
+ * Hash: 0xAABB1F56E2A17CED | Since: unknown | API-Set: unknown
  */
 export function setComponentPosition(id, x, y) {
     SetHudComponentPosition(id, x, y);
@@ -3724,7 +3753,7 @@ export function setComponentPosition(id, x, y) {
 /**
  * No comment provided
  *
- * Hash: 0x7EC8ABA5E74B3D7A | Since: 2372 | API-Set: unknown
+ * Hash: 0x7EC8ABA5E74B3D7A | Since: unknown | API-Set: unknown
  */
 export function setInsideVeryLargeInterior(toggle) {
     SetInteriorZoomLevelDecreased(toggle);
@@ -3732,7 +3761,7 @@ export function setInsideVeryLargeInterior(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x504DFE62A1692296 | Since: 1493 | API-Set: unknown
+ * Hash: 0x504DFE62A1692296 | Since: unknown | API-Set: unknown
  */
 export function setInsideVerySmallInterior(toggle) {
     SetInteriorZoomLevelIncreased(toggle);
@@ -3740,7 +3769,7 @@ export function setInsideVerySmallInterior(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x06A320535F5F0248 | Since: 323 | API-Set: unknown
+ * Hash: 0x06A320535F5F0248 | Since: unknown | API-Set: unknown
  */
 export function setMaxArmourDisplay(maximumValue) {
     SetMaxArmourHudDisplay(maximumValue);
@@ -3748,7 +3777,7 @@ export function setMaxArmourDisplay(maximumValue) {
 /**
  * No comment provided
  *
- * Hash: 0x975D66A0BC17064C | Since: 323 | API-Set: unknown
+ * Hash: 0x975D66A0BC17064C | Since: unknown | API-Set: unknown
  */
 export function setMaxHealthDisplay(maximumValue) {
     SetMaxHealthHudDisplay(maximumValue);
@@ -3756,7 +3785,7 @@ export function setMaxHealthDisplay(maximumValue) {
 /**
  * This native does absolutely nothing on PC master builds, just a nullsub.
  *
- * Hash: 0xB09D42557C45EBA1 | Since: 3258 | API-Set: unknown
+ * Hash: 0xB09D42557C45EBA1 | Since: unknown | API-Set: unknown
  */
 export function setMinimapBackgroundHidden(toggle) {
     Citizen.invokeNative('0xB09D42557C45EBA1', toggle);
@@ -3764,7 +3793,7 @@ export function setMinimapBackgroundHidden(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x58FADDED207897DC | Since: 323 | API-Set: unknown
+ * Hash: 0x58FADDED207897DC | Since: unknown | API-Set: unknown
  */
 export function setMinimapBlockWaypoint(toggle) {
     SetMinimapBlockWaypoint(toggle);
@@ -3773,7 +3802,7 @@ export function setMinimapBlockWaypoint(toggle) {
  * This native is used to colorize certain map components like the army base at the top of the map.
  * p2 appears to be always -1. If p2 is -1 then native wouldn't change the color. See https://gfycat.com/SkinnyPinkChupacabra
  *
- * Hash: 0x75A9A10948D1DEA6 | Since: 323 | API-Set: unknown
+ * Hash: 0x75A9A10948D1DEA6 | Since: unknown | API-Set: unknown
  */
 export function setMinimapComponent(componentId, toggle, overrideColor) {
     return SetMinimapComponent(componentId, toggle, overrideColor);
@@ -3781,7 +3810,7 @@ export function setMinimapComponent(componentId, toggle, overrideColor) {
 /**
  * No comment provided
  *
- * Hash: 0x62E849B7EB28E770 | Since: 323 | API-Set: unknown
+ * Hash: 0x62E849B7EB28E770 | Since: unknown | API-Set: unknown
  */
 export function setMinimapFowDoNotUpdate() {
     Citizen.invokeNative('0x62E849B7EB28E770', false);
@@ -3789,7 +3818,7 @@ export function setMinimapFowDoNotUpdate() {
 /**
  * Up to eight coordinates may be revealed per frame
  *
- * Hash: 0x0923DBF87DFF735E | Since: 323 | API-Set: unknown
+ * Hash: 0x0923DBF87DFF735E | Since: unknown | API-Set: unknown
  */
 export function setMinimapFowRevealCoordinate(pos) {
     SetMinimapFowRevealCoordinate(pos.x, pos.y, pos.z);
@@ -3801,7 +3830,7 @@ export function setMinimapFowRevealCoordinate(pos) {
  * You'll also need to use the `GOLF` scaleform in order to get the correct minmap border to show up.
  * Use `0x35edd5b2e3ff01c0` to reset the map when you no longer want to display any golf holes (you still need to unlock zoom, position and angle of the radar manually after calling this).
  *
- * Hash: 0x71BDB63DBAF8DA59 | Since: 323 | API-Set: unknown
+ * Hash: 0x71BDB63DBAF8DA59 | Since: unknown | API-Set: unknown
  */
 export function setMinimapGolfCourse(hole) {
     SetMinimapGolfCourse(hole);
@@ -3809,7 +3838,7 @@ export function setMinimapGolfCourse(hole) {
 /**
  * No comment provided
  *
- * Hash: 0x35EDD5B2E3FF01C0 | Since: 323 | API-Set: unknown
+ * Hash: 0x35EDD5B2E3FF01C0 | Since: unknown | API-Set: unknown
  */
 export function setMinimapGolfCourseOff() {
     SetMinimapGolfCourseOff();
@@ -3819,7 +3848,7 @@ export function setMinimapGolfCourseOff() {
  *
  * FOW = Fog of War
  *
- * Hash: 0xF8DEE0A5600CBB93 | Since: 323 | API-Set: unknown
+ * Hash: 0xF8DEE0A5600CBB93 | Since: unknown | API-Set: unknown
  */
 export function setMinimapHideFow(toggle) {
     SetMinimapHideFow(toggle);
@@ -3827,7 +3856,7 @@ export function setMinimapHideFow(toggle) {
 /**
  * Toggles the North Yankton map
  *
- * Hash: 0x9133955F1A2DA957 | Since: 323 | API-Set: unknown
+ * Hash: 0x9133955F1A2DA957 | Since: unknown | API-Set: unknown
  */
 export function setMinimapInPrologue(toggle) {
     SetMinimapInPrologue(toggle);
@@ -3835,7 +3864,7 @@ export function setMinimapInPrologue(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x1A5CD7752DD28CD3 | Since: 323 | API-Set: unknown
+ * Hash: 0x1A5CD7752DD28CD3 | Since: unknown | API-Set: unknown
  */
 export function setMinimapInSpectatorMode(toggle, ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3844,7 +3873,7 @@ export function setMinimapInSpectatorMode(toggle, ped) {
 /**
  * No comment provided
  *
- * Hash: 0x6B50FC8749632EC1 | Since: 2189 | API-Set: unknown
+ * Hash: 0x6B50FC8749632EC1 | Since: unknown | API-Set: unknown
  */
 export function setMinimapSonarSweep(toggle) {
     SetMinimapSonarSweep(toggle);
@@ -3852,7 +3881,7 @@ export function setMinimapSonarSweep(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x5F28ECF5FC84772F | Since: 323 | API-Set: unknown
+ * Hash: 0x5F28ECF5FC84772F | Since: unknown | API-Set: unknown
  */
 export function setMissionName(name) {
     SetMissionName(false, name);
@@ -3860,7 +3889,7 @@ export function setMissionName(name) {
 /**
  * No comment provided
  *
- * Hash: 0xE45087D85F468BC2 | Since: 323 | API-Set: unknown
+ * Hash: 0xE45087D85F468BC2 | Since: unknown | API-Set: unknown
  */
 export function setMissionNameForUgcMission(name) {
     SetMissionName2(false, name);
@@ -3871,7 +3900,7 @@ export function setMissionNameForUgcMission(name) {
  * 6 = Left Arrow
  * 7 = Right Arrow
  *
- * Hash: 0x8DB8CFFD58B62552 | Since: 323 | API-Set: unknown
+ * Hash: 0x8DB8CFFD58B62552 | Since: unknown | API-Set: unknown
  */
 export function setMouseCursorStyle(spriteId) {
     SetMouseCursorStyle(spriteId);
@@ -3879,7 +3908,7 @@ export function setMouseCursorStyle(spriteId) {
 /**
  * Shows the cursor on screen for one frame.
  *
- * Hash: 0xAAE7CE1D63167423 | Since: 323 | API-Set: unknown
+ * Hash: 0xAAE7CE1D63167423 | Since: unknown | API-Set: unknown
  */
 export function setMouseCursorThisFrame() {
     SetMouseCursorThisFrame();
@@ -3888,7 +3917,7 @@ export function setMouseCursorThisFrame() {
  * Shows/hides the frontend cursor on the pause menu or similar menus.
  * Clicking off and then on the game window will show it again.
  *
- * Hash: 0x98215325A695E78A | Since: 323 | API-Set: unknown
+ * Hash: 0x98215325A695E78A | Since: unknown | API-Set: unknown
  */
 export function setMouseCursorVisible(toggle) {
     SetMouseCursorVisible(toggle);
@@ -3896,7 +3925,7 @@ export function setMouseCursorVisible(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x1563FE35E9928E67 | Since: 1365 | API-Set: unknown
+ * Hash: 0x1563FE35E9928E67 | Since: unknown | API-Set: unknown
  */
 export function setMpGamerTagsPointHealth(gamerTagId, value, maximumValue) {
     SetMpGamerTagOverridePlayerHealth(gamerTagId, value, maximumValue);
@@ -3904,7 +3933,7 @@ export function setMpGamerTagsPointHealth(gamerTagId, value, maximumValue) {
 /**
  * No comment provided
  *
- * Hash: 0xD29EC58C2F6B5014 | Since: 1365 | API-Set: unknown
+ * Hash: 0xD29EC58C2F6B5014 | Since: unknown | API-Set: unknown
  */
 export function setMpGamerTagsShouldUsePointsHealth(gamerTagId, toggle) {
     SetMpGamerTagDisablePlayerHealthSync(gamerTagId, toggle);
@@ -3912,7 +3941,7 @@ export function setMpGamerTagsShouldUsePointsHealth(gamerTagId, toggle) {
 /**
  * Displays a bunch of icons above the players name, and level, and their name twice
  *
- * Hash: 0xA67F9C46D612B6F1 | Since: 323 | API-Set: unknown
+ * Hash: 0xA67F9C46D612B6F1 | Since: unknown | API-Set: unknown
  */
 export function setMpGamerTagsShouldUseVehicleHealth(gamerTagId, toggle) {
     SetMpGamerTagUseVehicleHealth(gamerTagId, toggle);
@@ -3920,7 +3949,7 @@ export function setMpGamerTagsShouldUseVehicleHealth(gamerTagId, toggle) {
 /**
  * Sets flag's sprite transparency. 0-255.
  *
- * Hash: 0xD48FE545CD46F857 | Since: 323 | API-Set: unknown
+ * Hash: 0xD48FE545CD46F857 | Since: unknown | API-Set: unknown
  */
 export function setMpGamerTagAlpha(gamerTagId, component, alpha) {
     SetMpGamerTagAlpha(gamerTagId, component, alpha);
@@ -3928,7 +3957,7 @@ export function setMpGamerTagAlpha(gamerTagId, component, alpha) {
 /**
  * No comment provided
  *
- * Hash: 0x7B7723747CCB55B6 | Since: 323 | API-Set: unknown
+ * Hash: 0x7B7723747CCB55B6 | Since: unknown | API-Set: unknown
  */
 export function setMpGamerTagBigText(gamerTagId, _string) {
     SetMpGamerTagBigText(gamerTagId, _string);
@@ -3939,7 +3968,7 @@ export function setMpGamerTagBigText(gamerTagId, _string) {
  * gamerTagId is obtained using for example CREATE_FAKE_MP_GAMER_TAG
  * Ranges from 0 to 255. 0 is grey health bar, ~50 yellow, 200 purple.
  *
- * Hash: 0x613ED644950626AE | Since: 323 | API-Set: unknown
+ * Hash: 0x613ED644950626AE | Since: unknown | API-Set: unknown
  */
 export function setMpGamerTagColour(gamerTagId, component, hudColorIndex) {
     SetMpGamerTagColour(gamerTagId, component, hudColorIndex);
@@ -3951,7 +3980,7 @@ export function setMpGamerTagColour(gamerTagId, component, hudColorIndex) {
  * - This was _SET_MP_GAMER_TAG_HEALTH_BAR_COLOR,
  * -> Rockstar use the EU spelling of 'color' so I hashed the same name with COLOUR and it came back as the correct hash, so it has been corrected above.
  *
- * Hash: 0x3158C77A7E888AB4 | Since: 323 | API-Set: unknown
+ * Hash: 0x3158C77A7E888AB4 | Since: unknown | API-Set: unknown
  */
 export function setMpGamerTagHealthBarColour(gamerTagId, hudColorIndex) {
     SetMpGamerTagHealthBarColour(gamerTagId, hudColorIndex);
@@ -3959,7 +3988,7 @@ export function setMpGamerTagHealthBarColour(gamerTagId, hudColorIndex) {
 /**
  * No comment provided
  *
- * Hash: 0xDEA2B8283BAA3944 | Since: 323 | API-Set: unknown
+ * Hash: 0xDEA2B8283BAA3944 | Since: unknown | API-Set: unknown
  */
 export function setMpGamerTagName(gamerTagId, _string) {
     SetMpGamerTagName(gamerTagId, _string);
@@ -3967,7 +3996,7 @@ export function setMpGamerTagName(gamerTagId, _string) {
 /**
  * No comment provided
  *
- * Hash: 0x9C16459B2324B2CF | Since: 877 | API-Set: unknown
+ * Hash: 0x9C16459B2324B2CF | Since: unknown | API-Set: unknown
  */
 export function setMpGamerTagNumPackages(gamerTagId) {
     SetMpGamerTagMpBagLargeCount(gamerTagId, 0);
@@ -4007,7 +4036,7 @@ export function setMpGamerTagNumPackages(gamerTagId) {
  * MP_TAG_BOMB
  * };
  *
- * Hash: 0x63BB75ABEDC1F6A0 | Since: 323 | API-Set: unknown
+ * Hash: 0x63BB75ABEDC1F6A0 | Since: unknown | API-Set: unknown
  */
 export function setMpGamerTagVisibility(gamerTagId, component, toggle) {
     SetMpGamerTagVisibility(gamerTagId, component, toggle, undefined);
@@ -4015,7 +4044,7 @@ export function setMpGamerTagVisibility(gamerTagId, component, toggle) {
 /**
  * displays wanted star above head
  *
- * Hash: 0xCF228E2AA03099C3 | Since: 323 | API-Set: unknown
+ * Hash: 0xCF228E2AA03099C3 | Since: unknown | API-Set: unknown
  */
 export function setMpGamerTagWantedLevel(gamerTagId, wantedlvl) {
     SetMpGamerTagWantedLevel(gamerTagId, wantedlvl);
@@ -4023,7 +4052,7 @@ export function setMpGamerTagWantedLevel(gamerTagId, wantedlvl) {
 /**
  * No comment provided
  *
- * Hash: 0xDD21B55DF695CD0A | Since: 323 | API-Set: unknown
+ * Hash: 0xDD21B55DF695CD0A | Since: unknown | API-Set: unknown
  */
 export function setMultiplayerBankCash() {
     SetMultiplayerBankCash();
@@ -4031,7 +4060,7 @@ export function setMultiplayerBankCash() {
 /**
  * This native does absolutely nothing, just a nullsub
  *
- * Hash: 0xFD1D220394BCB824 | Since: 323 | API-Set: unknown
+ * Hash: 0xFD1D220394BCB824 | Since: unknown | API-Set: unknown
  */
 export function setMultiplayerCash() {
     SetMultiplayerHudCash(0, false);
@@ -4039,7 +4068,7 @@ export function setMultiplayerCash() {
 /**
  * No comment provided
  *
- * Hash: 0xC2D15BEF167E27BC | Since: 323 | API-Set: unknown
+ * Hash: 0xC2D15BEF167E27BC | Since: unknown | API-Set: unknown
  */
 export function setMultiplayerWalletCash() {
     SetMultiplayerWalletCash();
@@ -4047,7 +4076,7 @@ export function setMultiplayerWalletCash() {
 /**
  * No comment provided
  *
- * Hash: 0xFE43368D2AA4F2FC | Since: 323 | API-Set: unknown
+ * Hash: 0xFE43368D2AA4F2FC | Since: unknown | API-Set: unknown
  */
 export function setNewWaypoint(x, y) {
     SetNewWaypoint(x, y);
@@ -4055,7 +4084,7 @@ export function setNewWaypoint(x, y) {
 /**
  * No comment provided
  *
- * Hash: 0xDF47FC56C71569CF | Since: 323 | API-Set: unknown
+ * Hash: 0xDF47FC56C71569CF | Since: unknown | API-Set: unknown
  */
 export function setPauseMenuActive(toggle) {
     SetPauseMenuActive(toggle);
@@ -4070,7 +4099,7 @@ export function setPauseMenuActive(toggle) {
  * Lights On: https://vespura.com/hi/i/2019-04-01_16-09_540ee_1015.png
  * Lights Off: https://vespura.com/hi/i/2019-04-01_16-10_8b5e7_1016.png
  *
- * Hash: 0x3CA6050692BC61B0 | Since: 323 | API-Set: unknown
+ * Hash: 0x3CA6050692BC61B0 | Since: unknown | API-Set: unknown
  */
 export function setPauseMenuPedLighting(state) {
     SetPauseMenuPedLighting(state);
@@ -4082,7 +4111,7 @@ export function setPauseMenuPedLighting(state) {
  *
  * `state` 0 will make the ped slowly fall asleep, 1 will slowly wake the ped up.
  *
- * Hash: 0xECF128344E9FF9F1 | Since: 323 | API-Set: unknown
+ * Hash: 0xECF128344E9FF9F1 | Since: unknown | API-Set: unknown
  */
 export function setPauseMenuPedSleepState(state) {
     SetPauseMenuPedSleepState(state);
@@ -4090,7 +4119,7 @@ export function setPauseMenuPedSleepState(state) {
 /**
  * No comment provided
  *
- * Hash: 0x0C4BBF625CA98C4E | Since: 323 | API-Set: unknown
+ * Hash: 0x0C4BBF625CA98C4E | Since: unknown | API-Set: unknown
  */
 export function setPedAiBlipForcedOn(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4099,7 +4128,7 @@ export function setPedAiBlipForcedOn(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xE52B8E7F85D39A08 | Since: 323 | API-Set: unknown
+ * Hash: 0xE52B8E7F85D39A08 | Since: unknown | API-Set: unknown
  */
 export function setPedAiBlipGangId(ped, gangId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4108,7 +4137,7 @@ export function setPedAiBlipGangId(ped, gangId) {
 /**
  * No comment provided
  *
- * Hash: 0x3EED80DFF7325CAA | Since: 323 | API-Set: unknown
+ * Hash: 0x3EED80DFF7325CAA | Since: unknown | API-Set: unknown
  */
 export function setPedAiBlipHasCone(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4117,7 +4146,7 @@ export function setPedAiBlipHasCone(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x97C65887D4B37FA9 | Since: 323 | API-Set: unknown
+ * Hash: 0x97C65887D4B37FA9 | Since: unknown | API-Set: unknown
  */
 export function setPedAiBlipNoticeRange(ped, range) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4126,7 +4155,7 @@ export function setPedAiBlipNoticeRange(ped, range) {
 /**
  * No comment provided
  *
- * Hash: 0xFCFACD0DB9D7A57D | Since: 877 | API-Set: unknown
+ * Hash: 0xFCFACD0DB9D7A57D | Since: unknown | API-Set: unknown
  */
 export function setPedAiBlipSprite(ped, spriteId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4137,7 +4166,7 @@ export function setPedAiBlipSprite(ped, spriteId) {
  *
  * See gtaforums.com/topic/884370-native-research-ai-blips for further information.
  *
- * Hash: 0xD30C50DF888D58B5 | Since: 323 | API-Set: unknown
+ * Hash: 0xD30C50DF888D58B5 | Since: unknown | API-Set: unknown
  */
 export function setPedHasAiBlip(ped, hasCone) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4146,7 +4175,7 @@ export function setPedHasAiBlip(ped, hasCone) {
 /**
  * color: see SET_BLIP_COLOUR
  *
- * Hash: 0xB13DCB4C6FAAD238 | Since: 505 | API-Set: unknown
+ * Hash: 0xB13DCB4C6FAAD238 | Since: unknown | API-Set: unknown
  */
 export function setPedHasAiBlipWithColour(ped, hasCone, color) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4155,7 +4184,7 @@ export function setPedHasAiBlipWithColour(ped, hasCone, color) {
 /**
  * No comment provided
  *
- * Hash: 0x7B21E0BB01E8224A | Since: 323 | API-Set: unknown
+ * Hash: 0x7B21E0BB01E8224A | Since: unknown | API-Set: unknown
  */
 export function setPlayerIconColour(color) {
     SetMainPlayerBlipColour(color);
@@ -4164,7 +4193,7 @@ export function setPlayerIconColour(color) {
  * If toggle is true, hides special ability bar / character name in the pause menu
  * If toggle is false, shows special ability bar / character name in the pause menu
  *
- * Hash: 0x808519373FD336A3 | Since: 323 | API-Set: unknown
+ * Hash: 0x808519373FD336A3 | Since: unknown | API-Set: unknown
  */
 export function setPlayerIsInDirectorMode(toggle) {
     SetPlayerIsInDirectorMode(toggle);
@@ -4172,7 +4201,7 @@ export function setPlayerIsInDirectorMode(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x41350B4FC28E3941 | Since: 323 | API-Set: unknown
+ * Hash: 0x41350B4FC28E3941 | Since: unknown | API-Set: unknown
  */
 export function setPmWarningscreenActive() {
     Citizen.invokeNative('0x41350B4FC28E3941', false);
@@ -4180,7 +4209,7 @@ export function setPmWarningscreenActive() {
 /**
  * No comment provided
  *
- * Hash: 0x1EAC5F91BCBC5073 | Since: 323 | API-Set: unknown
+ * Hash: 0x1EAC5F91BCBC5073 | Since: unknown | API-Set: unknown
  */
 export function setRaceTrackRender(toggle) {
     SetRaceTrackRender(toggle);
@@ -4188,7 +4217,7 @@ export function setRaceTrackRender(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xE81B7D2A3DAB2D81 | Since: 323 | API-Set: unknown
+ * Hash: 0xE81B7D2A3DAB2D81 | Since: unknown | API-Set: unknown
  */
 export function setRadarAsExteriorThisFrame() {
     SetRadarAsExteriorThisFrame();
@@ -4197,7 +4226,7 @@ export function setRadarAsExteriorThisFrame() {
  * List of interior hashes: https://pastebin.com/1FUyXNqY
  * Not for every interior zoom > 0 available.
  *
- * Hash: 0x59E727A1C9D3E31A | Since: 323 | API-Set: unknown
+ * Hash: 0x59E727A1C9D3E31A | Since: unknown | API-Set: unknown
  */
 export function setRadarAsInteriorThisFrame(interior, pos, zoom) {
     if (typeof interior === 'string')
@@ -4207,7 +4236,7 @@ export function setRadarAsInteriorThisFrame(interior, pos, zoom) {
 /**
  * zoomLevel ranges from 0 to 1400 in R* Scripts
  *
- * Hash: 0x096EF57A0C999BBA | Since: 323 | API-Set: unknown
+ * Hash: 0x096EF57A0C999BBA | Since: unknown | API-Set: unknown
  */
 export function setRadarZoom(zoomLevel) {
     SetRadarZoom(zoomLevel);
@@ -4215,7 +4244,7 @@ export function setRadarZoom(zoomLevel) {
 /**
  * zoom ranges from 0 to 90f in R* Scripts
  *
- * Hash: 0xBD12C5EEE184C337 | Since: 323 | API-Set: unknown
+ * Hash: 0xBD12C5EEE184C337 | Since: unknown | API-Set: unknown
  */
 export function setRadarZoomPrecise(zoom) {
     SetRadarZoomPrecise(zoom);
@@ -4223,7 +4252,7 @@ export function setRadarZoomPrecise(zoom) {
 /**
  * No comment provided
  *
- * Hash: 0xF98E4B3E56AFC7B1 | Since: 323 | API-Set: unknown
+ * Hash: 0xF98E4B3E56AFC7B1 | Since: unknown | API-Set: unknown
  */
 export function setRadarZoomToBlip(blip, zoom) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -4232,7 +4261,7 @@ export function setRadarZoomToBlip(blip, zoom) {
 /**
  * No comment provided
  *
- * Hash: 0xCB7CC0D58405AD41 | Since: 323 | API-Set: unknown
+ * Hash: 0xCB7CC0D58405AD41 | Since: unknown | API-Set: unknown
  */
 export function setRadarZoomToDistance(zoom) {
     SetRadarZoomToDistance(zoom);
@@ -4240,7 +4269,7 @@ export function setRadarZoomToDistance(zoom) {
 /**
  * Enabling this on a radius blip will make it outline only. See https://cdn.discordapp.com/attachments/553235301632573459/575132227935928330/unknown.png
  *
- * Hash: 0x25615540D894B814 | Since: 323 | API-Set: unknown
+ * Hash: 0x25615540D894B814 | Since: unknown | API-Set: unknown
  */
 export function setRadiusBlipEdge(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -4249,7 +4278,7 @@ export function setRadiusBlipEdge(blip, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x0CF54F20DE43879C | Since: 323 | API-Set: unknown
+ * Hash: 0x0CF54F20DE43879C | Since: unknown | API-Set: unknown
  */
 export function setSavegameListUniqueId() {
     Citizen.invokeNative('0x0CF54F20DE43879C', undefined);
@@ -4257,7 +4286,7 @@ export function setSavegameListUniqueId() {
 /**
  * Sets the color of HUD_COLOUR_SCRIPT_VARIABLE
  *
- * Hash: 0xD68A5FF8A3A89874 | Since: 323 | API-Set: unknown
+ * Hash: 0xD68A5FF8A3A89874 | Since: unknown | API-Set: unknown
  */
 export function setScriptVariableColour(r, g, b, a) {
     SetScriptVariableHudColour(r, g, b, a);
@@ -4265,7 +4294,7 @@ export function setScriptVariableColour(r, g, b, a) {
 /**
  * Sets the color of HUD_COLOUR_SCRIPT_VARIABLE_2
  *
- * Hash: 0x16A304E6CB2BFAB9 | Since: 323 | API-Set: unknown
+ * Hash: 0x16A304E6CB2BFAB9 | Since: unknown | API-Set: unknown
  */
 export function setSecondScriptVariableColour(r, g, b, a) {
     SetScriptVariable2HudColour(r, g, b, a);
@@ -4276,7 +4305,7 @@ export function setSecondScriptVariableColour(r, g, b, a) {
  * `HUD::SET_SOCIAL_CLUB_TOUR("General");`
  * `HUD::SET_SOCIAL_CLUB_TOUR("Playlists");`
  *
- * Hash: 0x9E778248D6685FE0 | Since: 323 | API-Set: unknown
+ * Hash: 0x9E778248D6685FE0 | Since: unknown | API-Set: unknown
  */
 export function setSocialClubTour(name) {
     SetSocialClubTour(name);
@@ -4284,7 +4313,7 @@ export function setSocialClubTour(name) {
 /**
  * No comment provided
  *
- * Hash: 0xC02F4DBFB51D988B | Since: 323 | API-Set: unknown
+ * Hash: 0xC02F4DBFB51D988B | Since: unknown | API-Set: unknown
  */
 export function setTextCentre(align) {
     SetTextCentre(align);
@@ -4292,7 +4321,7 @@ export function setTextCentre(align) {
 /**
  * No comment provided
  *
- * Hash: 0xBE6B23FFA53FB442 | Since: 323 | API-Set: unknown
+ * Hash: 0xBE6B23FFA53FB442 | Since: unknown | API-Set: unknown
  */
 export function setTextColour(red, green, blue, alpha) {
     SetTextColour(red, green, blue, alpha);
@@ -4301,7 +4330,7 @@ export function setTextColour(red, green, blue, alpha) {
  * distance - shadow distance in pixels, both horizontal and vertical
  * r, g, b, a - color
  *
- * Hash: 0x465C84BC39F1C351 | Since: 323 | API-Set: unknown
+ * Hash: 0x465C84BC39F1C351 | Since: unknown | API-Set: unknown
  */
 export function setTextDropshadow(distance, r, g, b, a) {
     SetTextDropshadow(distance, r, g, b, a);
@@ -4309,7 +4338,7 @@ export function setTextDropshadow(distance, r, g, b, a) {
 /**
  * No comment provided
  *
- * Hash: 0x1CA3E9EAC9D93E5E | Since: 323 | API-Set: unknown
+ * Hash: 0x1CA3E9EAC9D93E5E | Since: unknown | API-Set: unknown
  */
 export function setTextDropShadow() {
     SetTextDropShadow();
@@ -4317,7 +4346,7 @@ export function setTextDropShadow() {
 /**
  * This native does absolutely nothing, just a nullsub
  *
- * Hash: 0x441603240D202FA6 | Since: 323 | API-Set: unknown
+ * Hash: 0x441603240D202FA6 | Since: unknown | API-Set: unknown
  */
 export function setTextEdge(r, g, b, a) {
     SetTextEdge(0, r, g, b, a);
@@ -4325,7 +4354,7 @@ export function setTextEdge(r, g, b, a) {
 /**
  * fonts that mess up your text where made for number values/misc stuff
  *
- * Hash: 0x66E0276CC5F6B9DA | Since: 323 | API-Set: unknown
+ * Hash: 0x66E0276CC5F6B9DA | Since: unknown | API-Set: unknown
  */
 export function setTextFont(fontType) {
     SetTextFont(fontType);
@@ -4333,7 +4362,7 @@ export function setTextFont(fontType) {
 /**
  * No comment provided
  *
- * Hash: 0x1185A8087587322C | Since: 323 | API-Set: unknown
+ * Hash: 0x1185A8087587322C | Since: unknown | API-Set: unknown
  */
 export function setTextInputBoxEnabled() {
     SetTextInputBoxEnabled(false);
@@ -4346,7 +4375,7 @@ export function setTextInputBoxEnabled() {
  *
  * Right-Justify requires SET_TEXT_WRAP, otherwise it will draw to the far right of the screen
  *
- * Hash: 0x4E096588B13FFECA | Since: 323 | API-Set: unknown
+ * Hash: 0x4E096588B13FFECA | Since: unknown | API-Set: unknown
  */
 export function setTextJustification(justifyType) {
     SetTextJustification(justifyType);
@@ -4354,7 +4383,7 @@ export function setTextJustification(justifyType) {
 /**
  * No comment provided
  *
- * Hash: 0xA50ABC31E3CDFAFF | Since: 323 | API-Set: unknown
+ * Hash: 0xA50ABC31E3CDFAFF | Since: unknown | API-Set: unknown
  */
 export function setTextLeading() {
     SetTextLeading(0);
@@ -4362,7 +4391,7 @@ export function setTextLeading() {
 /**
  * No comment provided
  *
- * Hash: 0x9F4624F76E6953D1 | Since: 3095 | API-Set: unknown
+ * Hash: 0x9F4624F76E6953D1 | Since: unknown | API-Set: unknown
  */
 export function setTextLineHeightMult(lineHeightMult) {
     Citizen.invokeNative('0x9F4624F76E6953D1', lineHeightMult);
@@ -4370,7 +4399,7 @@ export function setTextLineHeightMult(lineHeightMult) {
 /**
  * No comment provided
  *
- * Hash: 0x2513DFB0FB8400FE | Since: 323 | API-Set: unknown
+ * Hash: 0x2513DFB0FB8400FE | Since: unknown | API-Set: unknown
  */
 export function setTextOutline() {
     SetTextOutline();
@@ -4378,7 +4407,7 @@ export function setTextOutline() {
 /**
  * This native does absolutely nothing, just a nullsub
  *
- * Hash: 0x038C1F517D7FDCF8 | Since: 323 | API-Set: unknown
+ * Hash: 0x038C1F517D7FDCF8 | Since: unknown | API-Set: unknown
  */
 export function setTextProportional() {
     SetTextProportional(false);
@@ -4386,7 +4415,7 @@ export function setTextProportional() {
 /**
  * No comment provided
  *
- * Hash: 0x5F15302936E07111 | Since: 323 | API-Set: unknown
+ * Hash: 0x5F15302936E07111 | Since: unknown | API-Set: unknown
  */
 export function setTextRenderId(renderId) {
     SetTextRenderId(renderId);
@@ -4394,7 +4423,7 @@ export function setTextRenderId(renderId) {
 /**
  * No comment provided
  *
- * Hash: 0x6B3C4650BC8BEE47 | Since: 323 | API-Set: unknown
+ * Hash: 0x6B3C4650BC8BEE47 | Since: unknown | API-Set: unknown
  */
 export function setTextRightJustify(toggle) {
     SetTextRightJustify(toggle);
@@ -4403,7 +4432,7 @@ export function setTextRightJustify(toggle) {
  * Size range : 0F to 1.0F
  * p0 is unknown and doesn't seem to have an effect, yet in the game scripts it changes to 1.0F sometimes.
  *
- * Hash: 0x07C837F9A01C34C9 | Since: 323 | API-Set: unknown
+ * Hash: 0x07C837F9A01C34C9 | Since: unknown | API-Set: unknown
  */
 export function setTextScale(scale, size) {
     SetTextScale(scale, size);
@@ -4414,7 +4443,7 @@ export function setTextScale(scale, size) {
  * start - left boundry on screen position (0.0 - 1.0)
  * end - right boundry on screen position (0.0 - 1.0)
  *
- * Hash: 0x63145D9C883A1A70 | Since: 323 | API-Set: unknown
+ * Hash: 0x63145D9C883A1A70 | Since: unknown | API-Set: unknown
  */
 export function setTextWrap(start, end) {
     SetTextWrap(start, end);
@@ -4422,7 +4451,7 @@ export function setTextWrap(start, end) {
 /**
  * Toggles the Cayo Perico map.
  *
- * Hash: 0x5E1460624D194A38 | Since: 2189 | API-Set: unknown
+ * Hash: 0x5E1460624D194A38 | Since: unknown | API-Set: unknown
  */
 export function setUseIslandMap(toggle) {
     SetUseIslandMap(toggle);
@@ -4430,7 +4459,7 @@ export function setUseIslandMap(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x6CDD58146A436083 | Since: 573 | API-Set: unknown
+ * Hash: 0x6CDD58146A436083 | Since: unknown | API-Set: unknown
  */
 export function setUseSetDestinationInPauseMap(toggle) {
     SetUseWaypointAsDestination(toggle);
@@ -4441,7 +4470,7 @@ export function setUseSetDestinationInPauseMap(toggle) {
  * Example: SET_WARNING_MESSAGE("t20", 3, "adder", false, -1, 0, 0, true);
  * errorCode: shows an error code at the bottom left if nonzero
  *
- * Hash: 0x7B1776B3B53F8D74 | Since: 323 | API-Set: unknown
+ * Hash: 0x7B1776B3B53F8D74 | Since: unknown | API-Set: unknown
  */
 export function setWarningMessage(titleMsg, flags, promptMsg, showBackground, errorCode) {
     SetWarningMessage(titleMsg, flags, promptMsg, false, 0, undefined, undefined, showBackground, errorCode);
@@ -4449,7 +4478,7 @@ export function setWarningMessage(titleMsg, flags, promptMsg, showBackground, er
 /**
  * No comment provided
  *
- * Hash: 0xDAF87174BE7454FF | Since: 323 | API-Set: unknown
+ * Hash: 0xDAF87174BE7454FF | Since: unknown | API-Set: unknown
  */
 export function setWarningMessageOptionHighlight() {
     return Citizen.invokeNative('0xDAF87174BE7454FF', undefined);
@@ -4459,7 +4488,7 @@ export function setWarningMessageOptionHighlight() {
  * Param names copied from the corresponding scaleform function "SET_LIST_ROW".
  * Example: https://i.imgur.com/arKvOYx.png
  *
- * Hash: 0x0C5A80A9E096D529 | Since: 323 | API-Set: unknown
+ * Hash: 0x0C5A80A9E096D529 | Since: unknown | API-Set: unknown
  */
 export function setWarningMessageOptionItems(index, name, cash, rp, lvl, colour) {
     return SetWarningMessageListRow(index, name, cash, rp, lvl, colour);
@@ -4469,7 +4498,7 @@ export function setWarningMessageOptionItems(index, name, cash, rp, lvl, colour)
  * Note: You can only use text entries. No custom text. You can recreate this easily with scaleforms.
  * Example: https://i.imgur.com/ITJt8bJ.png
  *
- * Hash: 0xDC38CC1E35B6A5D7 | Since: 323 | API-Set: unknown
+ * Hash: 0xDC38CC1E35B6A5D7 | Since: unknown | API-Set: unknown
  */
 export function setWarningMessageWithHeader(entryHeader, entryLine1, instructionalKey, entryLine2) {
     return SetWarningMessageWithHeader(entryHeader, entryLine1, instructionalKey, entryLine2, false, undefined, false, undefined);
@@ -4490,7 +4519,7 @@ export function setWarningMessageWithHeader(entryHeader, entryLine1, instruction
  * Screenshot:
  * https://imgur.com/a/IYA7vJ8
  *
- * Hash: 0x701919482C74B5AB | Since: 323 | API-Set: unknown
+ * Hash: 0x701919482C74B5AB | Since: unknown | API-Set: unknown
  */
 export function setWarningMessageWithHeaderAndSubstringFlags(entryHeader, entryLine1, instructionalKey, entryLine2, additionalIntInfo, additionalTextInfoLine1, additionalTextInfoLine2, showBackground, errorCode) {
     SetWarningMessageWithHeaderAndSubstringFlags(entryHeader, entryLine1, instructionalKey, entryLine2, false, undefined, additionalIntInfo, additionalTextInfoLine1, additionalTextInfoLine2, showBackground, errorCode);
@@ -4555,7 +4584,7 @@ export function setWarningMessageWithHeaderAndSubstringFlags(entryHeader, entryL
  *
  * Example: https://i.imgur.com/TvmNF4k.png
  *
- * Hash: 0x15803FEC3B9A872B | Since: 573 | API-Set: unknown
+ * Hash: 0x15803FEC3B9A872B | Since: unknown | API-Set: unknown
  */
 export function setWarningMessageWithHeaderAndSubstringFlagsExtended(labelTitle, labelMessage, labelMessage2, background, errorCode) {
     SetWarningMessageWithAlert(labelTitle, labelMessage, 0, 0, labelMessage2, false, 0, 0, undefined, undefined, background, errorCode);
@@ -4563,7 +4592,7 @@ export function setWarningMessageWithHeaderAndSubstringFlagsExtended(labelTitle,
 /**
  * No comment provided
  *
- * Hash: 0x38B55259C2E078ED | Since: 1493 | API-Set: unknown
+ * Hash: 0x38B55259C2E078ED | Since: unknown | API-Set: unknown
  */
 export function setWarningMessageWithHeaderExtended(entryHeader, entryLine1, flags, entryLine2, showBg) {
     return SetWarningMessageWithHeaderExtended(entryHeader, entryLine1, flags, entryLine2, false, undefined, showBg, undefined, undefined);
@@ -4571,7 +4600,7 @@ export function setWarningMessageWithHeaderExtended(entryHeader, entryLine1, fla
 /**
  * No comment provided
  *
- * Hash: 0x3FFC556B62146F75 | Since: 3717 | API-Set: unknown
+ * Hash: 0x3FFC556B62146F75 | Since: unknown | API-Set: unknown
  */
 export function setWaypointClearOnArrivalMode(mode) {
     Citizen.invokeNative('0x3FFC556B62146F75', mode);
@@ -4586,7 +4615,7 @@ export function setWaypointClearOnArrivalMode(mode) {
  * C++:
  * `HUD::SET_WAYPOINT_OFF();`
  *
- * Hash: 0xA7E4E2D361C2627F | Since: 323 | API-Set: unknown
+ * Hash: 0xA7E4E2D361C2627F | Since: unknown | API-Set: unknown
  */
 export function setWaypointOff() {
     SetWaypointOff();
@@ -4594,7 +4623,7 @@ export function setWaypointOff() {
 /**
  * No comment provided
  *
- * Hash: 0xC3B07BA00A83B0F1 | Since: 323 | API-Set: unknown
+ * Hash: 0xC3B07BA00A83B0F1 | Since: unknown | API-Set: unknown
  */
 export function setWidescreenFormat() {
     SetWidescreenFormat(undefined);
@@ -4602,7 +4631,7 @@ export function setWidescreenFormat() {
 /**
  * No comment provided
  *
- * Hash: 0x60E892BA4F5BDCA4 | Since: 323 | API-Set: unknown
+ * Hash: 0x60E892BA4F5BDCA4 | Since: unknown | API-Set: unknown
  */
 export function showAccountPicker() {
     ShowSigninUi();
@@ -4610,7 +4639,7 @@ export function showAccountPicker() {
 /**
  * No comment provided
  *
- * Hash: 0xC772A904CDE1186F | Since: 2545 | API-Set: unknown
+ * Hash: 0xC772A904CDE1186F | Since: unknown | API-Set: unknown
  */
 export function showContactInstructionalButton(toggle) {
     ShowContactInstructionalButton(toggle);
@@ -4618,7 +4647,7 @@ export function showContactInstructionalButton(toggle) {
 /**
  * Enables or disables the blue half circle https://i.imgur.com/iZes9Ec.png around the specified blip on the left side of the blip. This is used to indicate that the player is in your crew in GTA:O. Color is changeable by using `SET_BLIP_SECONDARY_COLOUR`.
  *
- * Hash: 0xDCFB5D4DB8BF367E | Since: 323 | API-Set: unknown
+ * Hash: 0xDCFB5D4DB8BF367E | Since: unknown | API-Set: unknown
  */
 export function showCrewIndicatorOnBlip(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -4627,7 +4656,7 @@ export function showCrewIndicatorOnBlip(blip, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x19BD6E3C0E16A8FA | Since: 2802 | API-Set: unknown
+ * Hash: 0x19BD6E3C0E16A8FA | Since: unknown | API-Set: unknown
  */
 export function showForSaleIconOnBlip(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -4638,7 +4667,7 @@ export function showForSaleIconOnBlip(blip, toggle) {
  * .Indicating that that player is a friend (in GTA:O). This color can not be changed.
  * To toggle the left side (crew member indicator) of the half circle around the blip, use: `SHOW_CREW_INDICATOR_ON_BLIP`
  *
- * Hash: 0x23C3EB807312F01A | Since: 323 | API-Set: unknown
+ * Hash: 0x23C3EB807312F01A | Since: unknown | API-Set: unknown
  */
 export function showFriendIndicatorOnBlip(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -4648,7 +4677,7 @@ export function showFriendIndicatorOnBlip(blip, toggle) {
  * Adds a orange checkmark on top of a given blip handle: https://imgur.com/a/aw5OTMF
  * _SHOW_FRIEND_INDICATOR_ON_BLIP* - _SHOW_HEADING_INDICATOR_ON_BLIP*
  *
- * Hash: 0xCAC2031EBF79B1A8 | Since: 2699 | API-Set: unknown
+ * Hash: 0xCAC2031EBF79B1A8 | Since: unknown | API-Set: unknown
  */
 export function showGoldTickOnBlip(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -4657,7 +4686,7 @@ export function showGoldTickOnBlip(blip, toggle) {
 /**
  * Adds the GTA: Online player heading indicator to a blip.
  *
- * Hash: 0x5FBCA48327B914DF | Since: 323 | API-Set: unknown
+ * Hash: 0x5FBCA48327B914DF | Since: unknown | API-Set: unknown
  */
 export function showHeadingIndicatorOnBlip(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -4666,7 +4695,7 @@ export function showHeadingIndicatorOnBlip(blip, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x75A16C3DA34F1245 | Since: 323 | API-Set: unknown
+ * Hash: 0x75A16C3DA34F1245 | Since: unknown | API-Set: unknown
  */
 export function showHeightOnBlip(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -4700,7 +4729,7 @@ export function showHeightOnBlip(blip, toggle) {
  *
  * These integers also work for the `HIDE_HUD_COMPONENT_THIS_FRAME` native, but instead hides the HUD Component.
  *
- * Hash: 0x0B4DF1FA60C0E664 | Since: 323 | API-Set: unknown
+ * Hash: 0x0B4DF1FA60C0E664 | Since: unknown | API-Set: unknown
  */
 export function showComponentThisFrame(id) {
     ShowHudComponentThisFrame(id);
@@ -4708,7 +4737,7 @@ export function showComponentThisFrame(id) {
 /**
  * No comment provided
  *
- * Hash: 0xA3C0B359DCB848B6 | Since: 323 | API-Set: unknown
+ * Hash: 0xA3C0B359DCB848B6 | Since: unknown | API-Set: unknown
  */
 export function showNumberOnBlip(blip, _number) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -4719,7 +4748,7 @@ export function showNumberOnBlip(blip, _number) {
  *
  * Color can be changed with SET_BLIP_SECONDARY_COLOUR
  *
- * Hash: 0xB81656BC81FE24D1 | Since: 323 | API-Set: unknown
+ * Hash: 0xB81656BC81FE24D1 | Since: unknown | API-Set: unknown
  */
 export function showOutlineIndicatorOnBlip(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -4728,7 +4757,7 @@ export function showOutlineIndicatorOnBlip(blip, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x4F38DCA127DAAEA2 | Since: 1734 | API-Set: unknown
+ * Hash: 0x4F38DCA127DAAEA2 | Since: unknown | API-Set: unknown
  */
 export function showScriptedComponentThisFrame(id) {
     ShowScriptedHudComponentThisFrame(id);
@@ -4736,7 +4765,7 @@ export function showScriptedComponentThisFrame(id) {
 /**
  * No comment provided
  *
- * Hash: 0xF1A6C18B35BCADE6 | Since: 323 | API-Set: unknown
+ * Hash: 0xF1A6C18B35BCADE6 | Since: unknown | API-Set: unknown
  */
 export function showStartMissionInstructionalButton(toggle) {
     ShowStartMissionInstructionalButton(toggle);
@@ -4744,7 +4773,7 @@ export function showStartMissionInstructionalButton(toggle) {
 /**
  * Adds a green checkmark on top of a blip.
  *
- * Hash: 0x74513EA3E505181E | Since: 323 | API-Set: unknown
+ * Hash: 0x74513EA3E505181E | Since: unknown | API-Set: unknown
  */
 export function showTickOnBlip(blip, toggle) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -4759,7 +4788,7 @@ export function showTickOnBlip(blip, toggle) {
  * displayOnFoot: Draws the path regardless if the player is in a vehicle or not.
  * followPlayer: Draw the path partially between the previous and next point based on the players position between them. When false, the GPS appears to not disappear after the last leg is completed.
  *
- * Hash: 0xDB34E8D56FC13B08 | Since: 323 | API-Set: unknown
+ * Hash: 0xDB34E8D56FC13B08 | Since: unknown | API-Set: unknown
  */
 export function startGpsCustomRoute(hudColor, displayOnFoot, followPlayer) {
     StartGpsCustomRoute(hudColor, displayOnFoot, followPlayer);
@@ -4775,7 +4804,7 @@ export function startGpsCustomRoute(hudColor, displayOnFoot, followPlayer) {
  * routeFromPlayer: Makes the GPS draw a path from the player to the next point, rather than the original path from the previous point.
  * displayOnFoot: Draws the GPS path regardless if the player is in a vehicle or not.
  *
- * Hash: 0x3D3D15AF7BCAAF83 | Since: 323 | API-Set: unknown
+ * Hash: 0x3D3D15AF7BCAAF83 | Since: unknown | API-Set: unknown
  */
 export function startGpsMultiRoute(hudColor, routeFromPlayer, displayOnFoot) {
     StartGpsMultiRoute(hudColor, routeFromPlayer, displayOnFoot);
@@ -4783,7 +4812,7 @@ export function startGpsMultiRoute(hudColor, routeFromPlayer, displayOnFoot) {
 /**
  * No comment provided
  *
- * Hash: 0xBA751764F0821256 | Since: 323 | API-Set: unknown
+ * Hash: 0xBA751764F0821256 | Since: unknown | API-Set: unknown
  */
 export function suppressFrontendRenderingThisFrame() {
     SuppressFrontendRenderingThisFrame();
@@ -4793,7 +4822,7 @@ export function suppressFrontendRenderingThisFrame() {
  *
  * To enable the keys again, use `0x14621BB1DF14E2B2`.
  *
- * Hash: 0xEC9264727EEC0F28 | Since: 323 | API-Set: unknown
+ * Hash: 0xEC9264727EEC0F28 | Since: unknown | API-Set: unknown
  */
 export function takeControlOfFrontend() {
     TakeControlOfFrontend();
@@ -4801,7 +4830,7 @@ export function takeControlOfFrontend() {
 /**
  * Displays "normal" notifications again after calling `THEFEED_AUTO_POST_GAMETIPS_ON` (those that were drawn before calling this native too), though those will have a weird offset and stay on screen forever (tested with notifications created from same script).
  *
- * Hash: 0xADED7F5748ACAFE6 | Since: 323 | API-Set: unknown
+ * Hash: 0xADED7F5748ACAFE6 | Since: unknown | API-Set: unknown
  */
 export function thefeedAutoPostGametipsOff() {
     ThefeedCommentTeleportPoolOff();
@@ -4809,7 +4838,7 @@ export function thefeedAutoPostGametipsOff() {
 /**
  * Enables loading screen tips to be be shown (`THEFEED_SHOW`), blocks other kinds of notifications from being displayed (at least from current script). Call `THEFEED_AUTO_POST_GAMETIPS_OFF` to display those again.
  *
- * Hash: 0x56C8B608CFD49854 | Since: 323 | API-Set: unknown
+ * Hash: 0x56C8B608CFD49854 | Since: unknown | API-Set: unknown
  */
 export function thefeedAutoPostGametipsOn() {
     ThefeedCommentTeleportPoolOn();
@@ -4817,7 +4846,7 @@ export function thefeedAutoPostGametipsOn() {
 /**
  * No comment provided
  *
- * Hash: 0x80FE4F3AB4E1B62A | Since: 323 | API-Set: unknown
+ * Hash: 0x80FE4F3AB4E1B62A | Since: unknown | API-Set: unknown
  */
 export function thefeedClearFrozenPost() {
     ThefeedClearFrozenPost();
@@ -4825,7 +4854,7 @@ export function thefeedClearFrozenPost() {
 /**
  * No comment provided
  *
- * Hash: 0xA8FDB297A8D25FBA | Since: 323 | API-Set: unknown
+ * Hash: 0xA8FDB297A8D25FBA | Since: unknown | API-Set: unknown
  */
 export function thefeedFlushQueue() {
     ThefeedFlushQueue();
@@ -4833,7 +4862,7 @@ export function thefeedFlushQueue() {
 /**
  * Enables loading screen tips to be be shown (`THEFEED_SHOW`), blocks other kinds of notifications from being displayed (at least from current script). Call `0xADED7F5748ACAFE6` to display those again.
  *
- * Hash: 0x583049884A2EEE3C | Since: 323 | API-Set: unknown
+ * Hash: 0x583049884A2EEE3C | Since: unknown | API-Set: unknown
  */
 export function thefeedForceRenderOff() {
     ThefeedForceRenderOff();
@@ -4841,7 +4870,7 @@ export function thefeedForceRenderOff() {
 /**
  * No comment provided
  *
- * Hash: 0xA13C11E1B5C06BFC | Since: 323 | API-Set: unknown
+ * Hash: 0xA13C11E1B5C06BFC | Since: unknown | API-Set: unknown
  */
 export function thefeedForceRenderOn() {
     ThefeedForceRenderOn();
@@ -4849,7 +4878,7 @@ export function thefeedForceRenderOn() {
 /**
  * Requires manual management of game stream handles (i.e., 0xBE4390CB40B3E627).
  *
- * Hash: 0xFDEC055AB549E328 | Since: 323 | API-Set: unknown
+ * Hash: 0xFDEC055AB549E328 | Since: unknown | API-Set: unknown
  */
 export function thefeedFreezeNextPost() {
     ThefeedFreezeNextPost();
@@ -4857,7 +4886,7 @@ export function thefeedFreezeNextPost() {
 /**
  * Returns the handle for the notification currently displayed on the screen. Name may be a hash collision, but describes the function accurately.
  *
- * Hash: 0x82352748437638CA | Since: 323 | API-Set: unknown
+ * Hash: 0x82352748437638CA | Since: unknown | API-Set: unknown
  */
 export function thefeedGetLastShownPhoneActivatableFeedId() {
     return ThefeedGetFirstVisibleDeleteRemaining();
@@ -4865,7 +4894,7 @@ export function thefeedGetLastShownPhoneActivatableFeedId() {
 /**
  * Stops loading screen tips shown by invoking `THEFEED_SHOW`
  *
- * Hash: 0x32888337579A5970 | Since: 463 | API-Set: unknown
+ * Hash: 0x32888337579A5970 | Since: unknown | API-Set: unknown
  */
 export function thefeedHide() {
     ThefeedDisableLoadingScreenTips();
@@ -4873,7 +4902,7 @@ export function thefeedHide() {
 /**
  * Once called each frame hides all above radar notifications.
  *
- * Hash: 0x25F87B30C382FCA7 | Since: 323 | API-Set: unknown
+ * Hash: 0x25F87B30C382FCA7 | Since: unknown | API-Set: unknown
  */
 export function thefeedHideThisFrame() {
     ThefeedHideThisFrame();
@@ -4881,7 +4910,7 @@ export function thefeedHideThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0xA9CBFD40B3FA3010 | Since: 323 | API-Set: unknown
+ * Hash: 0xA9CBFD40B3FA3010 | Since: unknown | API-Set: unknown
  */
 export function thefeedIsPaused() {
     return ThefeedIsPaused();
@@ -4889,7 +4918,7 @@ export function thefeedIsPaused() {
 /**
  * No comment provided
  *
- * Hash: 0x6F1554B0CC2089FA | Since: 323 | API-Set: unknown
+ * Hash: 0x6F1554B0CC2089FA | Since: unknown | API-Set: unknown
  */
 export function thefeedOnlyShowTooltips(toggle) {
     ThefeedOnlyShowTooltips(toggle);
@@ -4897,7 +4926,7 @@ export function thefeedOnlyShowTooltips(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xFDB423997FA30340 | Since: 323 | API-Set: unknown
+ * Hash: 0xFDB423997FA30340 | Since: unknown | API-Set: unknown
  */
 export function thefeedPause() {
     ThefeedPause();
@@ -4905,7 +4934,7 @@ export function thefeedPause() {
 /**
  * Removes a notification instantly instead of waiting for it to disappear
  *
- * Hash: 0xBE4390CB40B3E627 | Since: 323 | API-Set: unknown
+ * Hash: 0xBE4390CB40B3E627 | Since: unknown | API-Set: unknown
  */
 export function thefeedRemoveItem(notificationId) {
     ThefeedRemoveItem(notificationId);
@@ -4913,7 +4942,7 @@ export function thefeedRemoveItem(notificationId) {
 /**
  * No comment provided
  *
- * Hash: 0xB695E2CD0A2DA9EE | Since: 323 | API-Set: unknown
+ * Hash: 0xB695E2CD0A2DA9EE | Since: unknown | API-Set: unknown
  */
 export function thefeedReportLogoOff() {
     ThefeedSpsExtendWidescreenOff();
@@ -4921,7 +4950,7 @@ export function thefeedReportLogoOff() {
 /**
  * No comment provided
  *
- * Hash: 0xD4438C0564490E63 | Since: 323 | API-Set: unknown
+ * Hash: 0xD4438C0564490E63 | Since: unknown | API-Set: unknown
  */
 export function thefeedReportLogoOn() {
     ThefeedSpsExtendWidescreenOn();
@@ -4929,7 +4958,7 @@ export function thefeedReportLogoOn() {
 /**
  * No comment provided
  *
- * Hash: 0xFDD85225B2DEA55E | Since: 323 | API-Set: unknown
+ * Hash: 0xFDD85225B2DEA55E | Since: unknown | API-Set: unknown
  */
 export function thefeedResetAllParameters() {
     ThefeedResetAllParameters();
@@ -4937,7 +4966,7 @@ export function thefeedResetAllParameters() {
 /**
  * No comment provided
  *
- * Hash: 0xE1CD1E48E025E661 | Since: 323 | API-Set: unknown
+ * Hash: 0xE1CD1E48E025E661 | Since: unknown | API-Set: unknown
  */
 export function thefeedResume() {
     ThefeedResume();
@@ -4955,7 +4984,7 @@ export function thefeedResume() {
  *
  * Here is a list of some colors that can be used: https://gyazo.com/68bd384455fceb0a85a8729e48216e15
  *
- * Hash: 0x92F0DA1E27DB96DC | Since: 323 | API-Set: unknown
+ * Hash: 0x92F0DA1E27DB96DC | Since: unknown | API-Set: unknown
  */
 export function thefeedSetBackgroundColorForNextPost(hudColorIndex) {
     ThefeedSetNextPostBackgroundColor(hudColorIndex);
@@ -4963,7 +4992,7 @@ export function thefeedSetBackgroundColorForNextPost(hudColorIndex) {
 /**
  * Related to notification color flashing, setting count to 0 invalidates a `THEFEED_SET_RGBA_PARAMETER_FOR_NEXT_MESSAGE` call for the target notification.
  *
- * Hash: 0x17AD8C9706BDD88A | Since: 323 | API-Set: unknown
+ * Hash: 0x17AD8C9706BDD88A | Since: unknown | API-Set: unknown
  */
 export function thefeedSetFlashDurationParameterForNextMessage(count) {
     ThefeedSetAnimpostfxCount(count);
@@ -4971,7 +5000,7 @@ export function thefeedSetFlashDurationParameterForNextMessage(count) {
 /**
  * No comment provided
  *
- * Hash: 0x17430B918701C342 | Since: 323 | API-Set: unknown
+ * Hash: 0x17430B918701C342 | Since: unknown | API-Set: unknown
  */
 export function thefeedSetRgbaParameterForNextMessage(red, green, blue, alpha) {
     ThefeedSetAnimpostfxColor(red, green, blue, alpha);
@@ -4979,7 +5008,7 @@ export function thefeedSetRgbaParameterForNextMessage(red, green, blue, alpha) {
 /**
  * No comment provided
  *
- * Hash: 0x55598D21339CB998 | Since: 323 | API-Set: unknown
+ * Hash: 0x55598D21339CB998 | Since: unknown | API-Set: unknown
  */
 export function thefeedSetScriptedMenuHeight(pos) {
     ThefeedSetScriptedMenuHeight(pos);
@@ -4987,7 +5016,7 @@ export function thefeedSetScriptedMenuHeight(pos) {
 /**
  * No comment provided
  *
- * Hash: 0xBAE4F9B97CD43B30 | Since: 323 | API-Set: unknown
+ * Hash: 0xBAE4F9B97CD43B30 | Since: unknown | API-Set: unknown
  */
 export function thefeedSetSnapFeedItemPositions() {
     ThefeedSetFlushAnimpostfx(false);
@@ -4995,7 +5024,7 @@ export function thefeedSetSnapFeedItemPositions() {
 /**
  * No comment provided
  *
- * Hash: 0x4A0C7C9BB10ABB36 | Since: 323 | API-Set: unknown
+ * Hash: 0x4A0C7C9BB10ABB36 | Since: unknown | API-Set: unknown
  */
 export function thefeedSetVibrateParameterForNextMessage(toggle) {
     ThefeedSetAnimpostfxSound(toggle);
@@ -5003,7 +5032,7 @@ export function thefeedSetVibrateParameterForNextMessage(toggle) {
 /**
  * Displays loading screen tips, requires `THEFEED_AUTO_POST_GAMETIPS_ON` to be called beforehand.
  *
- * Hash: 0x15CFA549788D35EF | Since: 463 | API-Set: unknown
+ * Hash: 0x15CFA549788D35EF | Since: unknown | API-Set: unknown
  */
 export function thefeedShow() {
     ThefeedDisplayLoadingScreenTips();
@@ -5011,7 +5040,7 @@ export function thefeedShow() {
 /**
  * Used in the native scripts to reference "GET_PEDHEADSHOT_TXD_STRING" and "CHAR_DEFAULT".
  *
- * Hash: 0x317EBA71D7543F52 | Since: 323 | API-Set: unknown
+ * Hash: 0x317EBA71D7543F52 | Since: unknown | API-Set: unknown
  */
 export function thefeedUpdateItemTexture(txdString1, txnString1, txdString2, txnString2) {
     ThefeedUpdateItemTexture(txdString1, txnString1, txdString2, txnString2);
@@ -5019,7 +5048,7 @@ export function thefeedUpdateItemTexture(txdString1, txnString1, txdString2, txn
 /**
  * No comment provided
  *
- * Hash: 0x6AFDFB93754950C7 | Since: 323 | API-Set: unknown
+ * Hash: 0x6AFDFB93754950C7 | Since: unknown | API-Set: unknown
  */
 export function toggleStealthRadar(toggle) {
     ToggleStealthRadar(toggle);
@@ -5027,7 +5056,7 @@ export function toggleStealthRadar(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x72DD432F3CDFC0EE | Since: 323 | API-Set: unknown
+ * Hash: 0x72DD432F3CDFC0EE | Since: unknown | API-Set: unknown
  */
 export function triggerSonarBlip(pos, radius) {
     TriggerSonarBlip(pos.x, pos.y, pos.z, radius, 0);
@@ -5035,7 +5064,7 @@ export function triggerSonarBlip(pos, radius) {
 /**
  * No comment provided
  *
- * Hash: 0x8183455E16C42E3A | Since: 323 | API-Set: unknown
+ * Hash: 0x8183455E16C42E3A | Since: unknown | API-Set: unknown
  */
 export function unlockMinimapAngle() {
     UnlockMinimapAngle();
@@ -5043,7 +5072,7 @@ export function unlockMinimapAngle() {
 /**
  * No comment provided
  *
- * Hash: 0x3E93E06DB8EF1F30 | Since: 323 | API-Set: unknown
+ * Hash: 0x3E93E06DB8EF1F30 | Since: unknown | API-Set: unknown
  */
 export function unlockMinimapPosition() {
     UnlockMinimapPosition();
@@ -5051,7 +5080,7 @@ export function unlockMinimapPosition() {
 /**
  * Does nothing (it's a nullsub).
  *
- * Hash: 0xD2049635DEB9C375 | Since: 323 | API-Set: unknown
+ * Hash: 0xD2049635DEB9C375 | Since: unknown | API-Set: unknown
  */
 export function updateRadarZoomToBlip() {
     Citizen.invokeNative('0xD2049635DEB9C375');
@@ -5060,7 +5089,7 @@ export function updateRadarZoomToBlip() {
  * Related to displaying cash on the HUD
  * `Always called before HUD::CHANGE_FAKE_MP_CASH in decompiled scripts`
  *
- * Hash: 0x170F541E1CADD1DE | Since: 323 | API-Set: unknown
+ * Hash: 0x170F541E1CADD1DE | Since: unknown | API-Set: unknown
  */
 export function useFakeMpCash(toggle) {
     UseFakeMpCash(toggle);
@@ -5068,15 +5097,31 @@ export function useFakeMpCash(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x0C698D8F099174C7 | Since: 1180 | API-Set: unknown
+ * Hash: 0x0C698D8F099174C7 | Since: unknown | API-Set: unknown
  */
 export function useVehicleTargetingReticule() {
     Citizen.invokeNative('0x0C698D8F099174C7', undefined);
 }
 /**
+ * No comment provided
+ *
+ * Hash: 0xA3C8062CAB30E8A9 | Since: unknown | API-Set: unknown
+ */
+export function getNominatedJobReportStatus(index) {
+    return Citizen.invokeNative('0xA3C8062CAB30E8A9', index);
+}
+/**
+ * p1 is unused
+ *
+ * Hash: 0x764EED2568508F13 | Since: unknown | API-Set: unknown
+ */
+export function reportNominatedJob(jobNominated) {
+    return Citizen.invokeNative('0x764EED2568508F13', jobNominated);
+}
+/**
  * Applies to new eBlipParams _BLIP_CHANGE_46* and _BLIP_CHANGE_47*
  *
- * Hash: 0x25D984CFB64ED6DE | Since: 3095 | API-Set: unknown
+ * Hash: 0x25D984CFB64ED6DE | Since: unknown | API-Set: unknown
  */
 export function setBlipGpsRouteDisplayDistance(blip, blipChangeParam46, blipChangeParam47) {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -5085,7 +5130,7 @@ export function setBlipGpsRouteDisplayDistance(blip, blipChangeParam46, blipChan
 /**
  * No comment provided
  *
- * Hash: 0x35CCE12EAECB4A51 | Since: 2944 | API-Set: unknown
+ * Hash: 0x35CCE12EAECB4A51 | Since: unknown | API-Set: unknown
  */
 export function setPauseExteriorRenderingWhileInInterior() {
     Citizen.invokeNative('0x35CCE12EAECB4A51');
@@ -5093,7 +5138,7 @@ export function setPauseExteriorRenderingWhileInInterior() {
 /**
  * No comment provided
  *
- * Hash: 0xF6865E26067B708C | Since: 3407 | API-Set: unknown
+ * Hash: 0xF6865E26067B708C | Since: unknown | API-Set: unknown
  */
 export function showPurchaseInstructionalButton(toggle) {
     Citizen.invokeNative('0xF6865E26067B708C', toggle);
@@ -5101,7 +5146,7 @@ export function showPurchaseInstructionalButton(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x1BC0EA2912708625 | Since: 3095 | API-Set: unknown
+ * Hash: 0x1BC0EA2912708625 | Since: unknown | API-Set: unknown
  */
 export function useVehicleTargetingReticuleOnVehicles(enable) {
     Citizen.invokeNative('0x1BC0EA2912708625', enable);

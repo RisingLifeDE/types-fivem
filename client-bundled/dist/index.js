@@ -36,6 +36,7 @@ import * as extrametadata from './namespaces/extrametadata';
 import * as fire from './namespaces/fire';
 import * as interior from './namespaces/interior';
 import * as itemset from './namespaces/itemset';
+import * as landingpage from './namespaces/landingpage';
 import * as lobby from './namespaces/lobby';
 import * as localization from './namespaces/localization';
 import * as mobile from './namespaces/mobile';
@@ -458,5 +459,5 @@ export var events;
     }
     events_1.onMumbleDisconnected = onMumbleDisconnected;
 })(events || (events = {}));
-export { audio, entity, graphics, hud, misc, ped, physics, player, streaming, track, vehicle, water, weapon, network, shapetest, camera, discord, dui, mumble, nui, object, pad, resource, profiler, app, brain, builtin, clock, cutscene, datafile, decorator, dlc, event, extrametadata, fire, interior, itemset, lobby, localization, mobile, money, netshopping, path, recording, replay, savemigration, script, security, socialclub, stats, task, zone };
+export { audio, entity, graphics, hud, misc, ped, physics, player, streaming, track, vehicle, water, weapon, network, shapetest, camera, discord, dui, mumble, nui, object, pad, resource, profiler, app, brain, builtin, clock, cutscene, datafile, decorator, dlc, event, extrametadata, fire, interior, itemset, landingpage, lobby, localization, mobile, money, netshopping, path, recording, replay, savemigration, script, security, socialclub, stats, task, zone };
 export * from '@risinglife/fivem-shared';

@@ -17,6 +17,7 @@ import * as graphics from './namespaces/graphics';
 import * as hud from './namespaces/hud';
 import * as interior from './namespaces/interior';
 import * as itemset from './namespaces/itemset';
+import * as landingpage from './namespaces/landingpage';
 import * as lobby from './namespaces/lobby';
 import * as localization from './namespaces/localization';
 import * as misc from './namespaces/misc';
@@ -45,6 +46,6 @@ import * as water from './namespaces/water';
 import * as weapon from './namespaces/weapon';
 import * as zone from './namespaces/zone';
 
-export { app, audio, brain, builtin, camera, clock, cutscene, datafile, decorator, dlc, entity, event, extrametadata, fire, graphics, hud, interior, itemset, lobby, localization, misc, mobile, money, netshopping, network, object, pad, path, ped, physics, player, recording, replay, savemigration, script, security, shapetest, socialclub, stats, streaming, task, vehicle, water, weapon, zone };
+export { app, audio, brain, builtin, camera, clock, cutscene, datafile, decorator, dlc, entity, event, extrametadata, fire, graphics, hud, interior, itemset, landingpage, lobby, localization, misc, mobile, money, netshopping, network, object, pad, path, ped, physics, player, recording, replay, savemigration, script, security, shapetest, socialclub, stats, streaming, task, vehicle, water, weapon, zone };
 
 export * from '@risinglife/fivem-shared';

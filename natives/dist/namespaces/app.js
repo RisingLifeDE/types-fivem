@@ -1,7 +1,7 @@
 /**
  * No comment provided
  *
- * Hash: 0x5FE1DF3342DB7DBA | Since: 323
+ * Hash: 0x5FE1DF3342DB7DBA | Since: unknown
  */
 export function clearBlock() {
     AppClearBlock();
@@ -9,7 +9,7 @@ export function clearBlock() {
 /**
  * No comment provided
  *
- * Hash: 0xE41C65E07A5F05FC | Since: 323
+ * Hash: 0xE41C65E07A5F05FC | Since: unknown
  */
 export function closeApp() {
     AppCloseApp();
@@ -17,7 +17,7 @@ export function closeApp() {
 /**
  * No comment provided
  *
- * Hash: 0xE8E3FCF72EAC0EF8 | Since: 323
+ * Hash: 0xE8E3FCF72EAC0EF8 | Since: unknown
  */
 export function closeBlock() {
     AppCloseBlock();
@@ -25,7 +25,7 @@ export function closeBlock() {
 /**
  * No comment provided
  *
- * Hash: 0x846AA8E7D55EE5B6 | Since: 323
+ * Hash: 0x846AA8E7D55EE5B6 | Since: unknown
  */
 export function dataValid() {
     return AppDataValid();
@@ -33,7 +33,7 @@ export function dataValid() {
 /**
  * No comment provided
  *
- * Hash: 0x44151AEA95C8A003 | Since: 323
+ * Hash: 0x44151AEA95C8A003 | Since: unknown
  */
 export function deleteAppData(appName) {
     return AppDeleteAppData(appName);
@@ -41,7 +41,7 @@ export function deleteAppData(appName) {
 /**
  * No comment provided
  *
- * Hash: 0xC9853A2BE3DED1A6 | Since: 323
+ * Hash: 0xC9853A2BE3DED1A6 | Since: unknown
  */
 export function getDeletedFileStatus() {
     return AppGetDeletedFileStatus();
@@ -49,7 +49,7 @@ export function getDeletedFileStatus() {
 /**
  * No comment provided
  *
- * Hash: 0x1514FB24C02C2322 | Since: 323
+ * Hash: 0x1514FB24C02C2322 | Since: unknown
  */
 export function getFloat(property) {
     return AppGetFloat(property);
@@ -57,7 +57,7 @@ export function getFloat(property) {
 /**
  * No comment provided
  *
- * Hash: 0xD3A58A12C77D9D4B | Since: 323
+ * Hash: 0xD3A58A12C77D9D4B | Since: unknown
  */
 export function getInt(property) {
     return AppGetInt(property);
@@ -65,7 +65,7 @@ export function getInt(property) {
 /**
  * No comment provided
  *
- * Hash: 0x749B023950D2311C | Since: 323
+ * Hash: 0x749B023950D2311C | Since: unknown
  */
 export function getString(property) {
     return AppGetString(property);
@@ -73,7 +73,7 @@ export function getString(property) {
 /**
  * No comment provided
  *
- * Hash: 0x71EEE69745088DA0 | Since: 323
+ * Hash: 0x71EEE69745088DA0 | Since: unknown
  */
 export function hasLinkedSocialClubAccount() {
     return AppHasLinkedSocialClubAccount();
@@ -81,7 +81,7 @@ export function hasLinkedSocialClubAccount() {
 /**
  * No comment provided
  *
- * Hash: 0xCA52279A7271517F | Since: 323
+ * Hash: 0xCA52279A7271517F | Since: unknown
  */
 export function hasSyncedData(appName) {
     return AppHasSyncedData(appName);
@@ -89,7 +89,7 @@ export function hasSyncedData(appName) {
 /**
  * No comment provided
  *
- * Hash: 0x95C5D356CDA6E85F | Since: 323
+ * Hash: 0x95C5D356CDA6E85F | Since: unknown
  */
 export function saveData() {
     AppSaveData();
@@ -99,7 +99,7 @@ export function saveData() {
  * `APP::APP_SET_APP("car");`
  * `APP::APP_SET_APP("dog");`
  *
- * Hash: 0xCFD0406ADAF90D2B | Since: 323
+ * Hash: 0xCFD0406ADAF90D2B | Since: unknown
  */
 export function setApp(appName) {
     AppSetApp(appName);
@@ -107,7 +107,7 @@ export function setApp(appName) {
 /**
  * No comment provided
  *
- * Hash: 0x262AB456A3D21F93 | Since: 323
+ * Hash: 0x262AB456A3D21F93 | Since: unknown
  */
 export function setBlock(blockName) {
     AppSetBlock(blockName);
@@ -115,7 +115,7 @@ export function setBlock(blockName) {
 /**
  * No comment provided
  *
- * Hash: 0x25D7687C68E0DAA4 | Since: 323
+ * Hash: 0x25D7687C68E0DAA4 | Since: unknown
  */
 export function setFloat(property, value) {
     AppSetFloat(property, value);
@@ -123,7 +123,7 @@ export function setFloat(property, value) {
 /**
  * No comment provided
  *
- * Hash: 0x607E8E3D3E4F9611 | Since: 323
+ * Hash: 0x607E8E3D3E4F9611 | Since: unknown
  */
 export function setInt(property, value) {
     AppSetInt(property, value);
@@ -131,7 +131,7 @@ export function setInt(property, value) {
 /**
  * No comment provided
  *
- * Hash: 0x3FF2FCEC4B7721B4 | Since: 323
+ * Hash: 0x3FF2FCEC4B7721B4 | Since: unknown
  */
 export function setString(property, value) {
     AppSetString(property, value);

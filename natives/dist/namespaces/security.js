@@ -1,7 +1,7 @@
 /**
  * No comment provided
  *
- * Hash: 0x8E580AB902917360 | Since: 2545
+ * Hash: 0x8E580AB902917360 | Since: unknown
  */
 export function forceCheckScriptVariables() {
     Citizen.invokeNative('0x8E580AB902917360');
@@ -9,7 +9,7 @@ export function forceCheckScriptVariables() {
 /**
  * Registers a protected variable that will be checked for modifications by the anticheat
  *
- * Hash: 0x40EB1EFD921822BC | Since: 2545
+ * Hash: 0x40EB1EFD921822BC | Since: unknown
  */
 export function registerScriptVariable() {
     return Citizen.invokeNative('0x40EB1EFD921822BC');
@@ -17,7 +17,7 @@ export function registerScriptVariable() {
 /**
  * No comment provided
  *
- * Hash: 0x340A36A700E99699 | Since: 2545
+ * Hash: 0x340A36A700E99699 | Since: unknown
  */
 export function unregisterScriptVariable() {
     return Citizen.invokeNative('0x340A36A700E99699');

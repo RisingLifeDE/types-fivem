@@ -297,7 +297,7 @@ export function setWaveQuadDirection(waveQuad: number, directionX: number, direc
 /**
  * No comment provided
  * 
- * Hash: 0xFDBF4CDBC07E1706 | Since: 323 | API-Set: unknown
+ * Hash: 0xFDBF4CDBC07E1706 | Since: unknown | API-Set: unknown
  */
 export function addExtraCalmingQuad(xLow: number, yLow: number, xHigh: number, yHigh: number, height: number): number {
     return AddExtraCalmingQuad(xLow, yLow, xHigh, yHigh, height);
@@ -306,7 +306,7 @@ export function addExtraCalmingQuad(xLow: number, yLow: number, xHigh: number, y
 /**
  * Gets the aggressiveness factor of the ocean waves.
  * 
- * Hash: 0x2B2A2CC86778B619 | Since: 323 | API-Set: unknown
+ * Hash: 0x2B2A2CC86778B619 | Since: unknown | API-Set: unknown
  */
 export function getDeepOceanScaler(): number {
     return GetDeepOceanScaler();
@@ -319,7 +319,7 @@ export function getDeepOceanScaler(): number {
  * 
  * note: seems to return true when you are in water
  * 
- * Hash: 0xF6829842C06AE524 | Since: 323 | API-Set: unknown
+ * Hash: 0xF6829842C06AE524 | Since: unknown | API-Set: unknown
  */
 export function getHeight(pos: Vector3): [boolean, number] {
     return GetWaterHeight(pos.x, pos.y, pos.z);
@@ -328,7 +328,7 @@ export function getHeight(pos: Vector3): [boolean, number] {
 /**
  * No comment provided
  * 
- * Hash: 0x8EE6B53CE13A9794 | Since: 323 | API-Set: unknown
+ * Hash: 0x8EE6B53CE13A9794 | Since: unknown | API-Set: unknown
  */
 export function getHeightNoWaves(pos: Vector3): [boolean, number] {
     return GetWaterHeightNoWaves(pos.x, pos.y, pos.z);
@@ -338,7 +338,7 @@ export function getHeightNoWaves(pos: Vector3): [boolean, number] {
  * Sets the water height for a given position and radius.
  * 
  * 
- * Hash: 0xC443FD757C3BA637 | Since: 323 | API-Set: unknown
+ * Hash: 0xC443FD757C3BA637 | Since: unknown | API-Set: unknown
  */
 export function modify(x: number, y: number, radius: number, height: number): void {
     ModifyWater(x, y, radius, height);
@@ -347,7 +347,7 @@ export function modify(x: number, y: number, radius: number, height: number): vo
 /**
  * p0 is the handle returned from ADD_EXTRA_CALMING_QUAD
  * 
- * Hash: 0xB1252E3E59A82AAF | Since: 323 | API-Set: unknown
+ * Hash: 0xB1252E3E59A82AAF | Since: unknown | API-Set: unknown
  */
 export function removeExtraCalmingQuad(calmingQuad: number): void {
     RemoveCurrentRise(calmingQuad);
@@ -356,7 +356,7 @@ export function removeExtraCalmingQuad(calmingQuad: number): void {
 /**
  * Sets the waves intensity back to original (1.0 in most cases).
  * 
- * Hash: 0x5E5E99285AE812DB | Since: 323 | API-Set: unknown
+ * Hash: 0x5E5E99285AE812DB | Since: unknown | API-Set: unknown
  */
 export function resetDeepOceanScaler(): void {
     ResetDeepOceanScaler();
@@ -365,7 +365,7 @@ export function resetDeepOceanScaler(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x547237AA71AB44DE | Since: 573 | API-Set: unknown
+ * Hash: 0x547237AA71AB44DE | Since: unknown | API-Set: unknown
  */
 export function setCalmedWaveHeightScaler(height: number): void {
     Citizen.invokeNative('0x547237AA71AB44DE', height);
@@ -376,7 +376,7 @@ export function setCalmedWaveHeightScaler(height: number): void {
  * 
  * Works only ~200 meters around the player.
  * 
- * Hash: 0xB96B00E976BE977F | Since: 323 | API-Set: unknown
+ * Hash: 0xB96B00E976BE977F | Since: unknown | API-Set: unknown
  */
 export function setDeepOceanScaler(intensity: number): void {
     SetDeepOceanScaler(intensity);
@@ -390,7 +390,7 @@ export function setDeepOceanScaler(intensity: number): void {
  * SCRIPT_WATER_TEST_RESULT_BLOCKED,
  * };
  * 
- * Hash: 0x8974647ED222EA5F | Since: 323 | API-Set: unknown
+ * Hash: 0x8974647ED222EA5F | Since: unknown | API-Set: unknown
  */
 export function testProbeAgainstAll(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, flags: number): [number, number] {
     return TestProbeAgainstAllWater(x1, y1, z1, x2, y2, z2, flags);
@@ -399,7 +399,7 @@ export function testProbeAgainstAll(x1: number, y1: number, z1: number, x2: numb
 /**
  * No comment provided
  * 
- * Hash: 0xFFA5D878809819DB | Since: 323 | API-Set: unknown
+ * Hash: 0xFFA5D878809819DB | Since: unknown | API-Set: unknown
  */
 export function testProbeAgainst(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): [boolean, Vector3] {
     return TestProbeAgainstWater(x1, y1, z1, x2, y2, z2);
@@ -408,7 +408,7 @@ export function testProbeAgainst(x1: number, y1: number, z1: number, x2: number,
 /**
  * See TEST_PROBE_AGAINST_ALL_WATER.
  * 
- * Hash: 0x2B3451FA1E3142E2 | Since: 323 | API-Set: unknown
+ * Hash: 0x2B3451FA1E3142E2 | Since: unknown | API-Set: unknown
  */
 export function testVerticalProbeAgainstAll(pos: Vector3, flags: number): [number, number] {
     return TestVerticalProbeAgainstAllWater(pos.x, pos.y, pos.z, flags);

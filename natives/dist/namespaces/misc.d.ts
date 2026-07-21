@@ -2,67 +2,67 @@ import { Vector3, IEntity, IPed, IPlayer } from '@risinglife/fivem-shared';
 /**
  * No comment provided
  *
- * Hash: 0x73D57CFFDD12C355 | Since: 323
+ * Hash: 0x73D57CFFDD12C355 | Since: unknown
  */
 export declare function absf(value: number): number;
 /**
  * No comment provided
  *
- * Hash: 0xF0D31AD191A74F87 | Since: 323
+ * Hash: 0xF0D31AD191A74F87 | Since: unknown
  */
 export declare function absi(value: number): number;
 /**
  * No comment provided
  *
- * Hash: 0x1D08B970013C34B6 | Since: 323
+ * Hash: 0x1D08B970013C34B6 | Since: unknown
  */
 export declare function acos(): number;
 /**
  * Appears to remove stealth kill action from memory
  *
- * Hash: 0xA6A12939F16D85BE | Since: 323
+ * Hash: 0xA6A12939F16D85BE | Since: unknown
  */
 export declare function actionManagerEnableAction(hash: number | string, enable: boolean): void;
 /**
  * Does nothing (it's a nullsub). Seems to be PS4 specific.
  *
- * Hash: 0xEB078CA2B5E82ADD | Since: 323
+ * Hash: 0xEB078CA2B5E82ADD | Since: unknown
  */
 export declare function activityFeedActionStartWithCommandLine(): void;
 /**
  * Does nothing (it's a nullsub). Seems to be PS4 specific.
  *
- * Hash: 0x703CC7F60CBB2B57 | Since: 323
+ * Hash: 0x703CC7F60CBB2B57 | Since: unknown
  */
 export declare function activityFeedActionStartWithCommandLineAdd(): void;
 /**
  * Does nothing (it's a nullsub). Seems to be PS4 specific.
  *
- * Hash: 0x97E7E2C04245115B | Since: 323
+ * Hash: 0x97E7E2C04245115B | Since: unknown
  */
 export declare function activityFeedAddIntToCaption(): void;
 /**
  * Does nothing (it's a nullsub). Seems to be PS4 specific.
  *
- * Hash: 0xEBD3205A207939ED | Since: 323
+ * Hash: 0xEBD3205A207939ED | Since: unknown
  */
 export declare function activityFeedAddLiteralSubstringToCaption(): void;
 /**
  * Does nothing (it's a nullsub). Seems to be PS4 specific.
  *
- * Hash: 0x31125FD509D9043F | Since: 323
+ * Hash: 0x31125FD509D9043F | Since: unknown
  */
 export declare function activityFeedAddSubstringToCaption(): void;
 /**
  * Does nothing (it's a nullsub). Seems to be PS4 specific.
  *
- * Hash: 0x4DCDF92BF64236CD | Since: 323
+ * Hash: 0x4DCDF92BF64236CD | Since: unknown
  */
 export declare function activityFeedCreate(): void;
 /**
  * Does nothing (it's a nullsub). Seems to be PS4 specific.
  *
- * Hash: 0x916CA67D26FD1E37 | Since: 2060
+ * Hash: 0x916CA67D26FD1E37 | Since: unknown
  */
 export declare function activityFeedLargeImageUrl(): void;
 /**
@@ -70,63 +70,63 @@ export declare function activityFeedLargeImageUrl(): void;
  *
  * Used only once in the scripts (ingamehud) with p0 = "AF_GAMEMODE"
  *
- * Hash: 0xBA4B8D83BDC75551 | Since: 323
+ * Hash: 0xBA4B8D83BDC75551 | Since: unknown
  */
 export declare function activityFeedOnlinePlayedWithPost(): void;
 /**
  * Does nothing (it's a nullsub). Seems to be PS4 specific.
  *
- * Hash: 0x8951EB9C6906D3C8 | Since: 323
+ * Hash: 0x8951EB9C6906D3C8 | Since: unknown
  */
 export declare function activityFeedPost(): void;
 /**
  * To remove, see: REMOVE_DISPATCH_SPAWN_BLOCKING_AREA
  * See IS_POINT_IN_ANGLED_AREA for the definition of an angled area.
  *
- * Hash: 0x918C7B2D2FF3928B | Since: 323
+ * Hash: 0x918C7B2D2FF3928B | Since: unknown
  */
 export declare function addDispatchSpawnAngledBlockingArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, width: number): number;
 /**
  * No comment provided
  *
- * Hash: 0x2D4259F1FEB81DA9 | Since: 323
+ * Hash: 0x2D4259F1FEB81DA9 | Since: unknown
  */
 export declare function addDispatchSpawnSphereBlockingArea(x1: number, y1: number, x2: number, y2: number): number;
 /**
  * Returns the index of the newly created hospital spawn point.
  * whenToUse: must be 0
  *
- * Hash: 0x1F464EF988465A81 | Since: 323
+ * Hash: 0x1F464EF988465A81 | Since: unknown
  */
 export declare function addHospitalRestart(pos: Vector3, heading: number, whenToUse: number): number;
 /**
  * whenToUse: must be 0
  *
- * Hash: 0x452736765B31FC4B | Since: 323
+ * Hash: 0x452736765B31FC4B | Since: unknown
  */
 export declare function addPoliceRestart(pos: Vector3, heading: number, whenToUse: number): number;
 /**
  * No comment provided
  *
- * Hash: 0x67F6413D3220E18D | Since: 323
+ * Hash: 0x67F6413D3220E18D | Since: unknown
  */
 export declare function addPopMultiplierArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): number;
 /**
  * This native is adding a zone, where you can change density settings. For example, you can add a zone on 0.0, 0.0, 0.0 with radius 900.0 and vehicleMultiplier 0.0, and you will not see any new population vehicle spawned in a radius of 900.0 from 0.0, 0.0, 0.0. Returns the id. You can have only 15 zones at the same time. You can remove zone using REMOVE_POP_MULTIPLIER_SPHERE
  *
- * Hash: 0x32C7A7E8C43A1F80 | Since: 323
+ * Hash: 0x32C7A7E8C43A1F80 | Since: unknown
  */
 export declare function addPopMultiplierSphere(pos: Vector3, radius: number, pedMultiplier: number, vehicleMultiplier: number): number;
 /**
  * No comment provided
  *
- * Hash: 0x69FE6DC87BD2A5E9 | Since: 323
+ * Hash: 0x69FE6DC87BD2A5E9 | Since: unknown
  */
 export declare function addReplayStatValue(value: any): void;
 /**
  * See description of `ADD_STUNT_JUMP_ANGLED` for detailed info. The only difference really is this one does not have the radius (or angle, not sure) floats parameters for entry and landing zones.
  *
- * Hash: 0x1A992DA297A4630C | Since: 323
+ * Hash: 0x1A992DA297A4630C | Since: unknown
  */
 export declare function addStuntJump(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, x3: number, y3: number, z3: number, x4: number, y4: number, z4: number, camX: number, camY: number, camZ: number): number;
 /**
@@ -158,135 +158,135 @@ export declare function addStuntJump(x1: number, y1: number, z1: number, x2: num
  *
  * Here is a list of almost all of the stunt jumps from GTA V (taken from decompiled scripts): https://pastebin.com/EW1jBPkY
  *
- * Hash: 0xBBE5D803A5360CBF | Since: 323
+ * Hash: 0xBBE5D803A5360CBF | Since: unknown
  */
 export declare function addStuntJumpAngled(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, radius1: number, x3: number, y3: number, z3: number, x4: number, y4: number, z4: number, radius2: number, camX: number, camY: number, camZ: number): number;
 /**
  * No comment provided
  *
- * Hash: 0xB8721407EE9C3FF6 | Since: 323
+ * Hash: 0xB8721407EE9C3FF6 | Since: unknown
  */
 export declare function addTacticalNavMeshPoint(pos: Vector3): void;
 /**
  * No comment provided
  *
- * Hash: 0xDEA36202FC3382DF | Since: 323
+ * Hash: 0xDEA36202FC3382DF | Since: unknown
  */
 export declare function allowMissionCreatorWarp(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xD19C0826DC20CF1C | Since: 2802
+ * Hash: 0xD19C0826DC20CF1C | Since: unknown
  */
 export declare function areCreditsRunning(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x5AA3BEFA29F03AD4 | Since: 323
+ * Hash: 0x5AA3BEFA29F03AD4 | Since: unknown
  */
 export declare function areProfileSettingsValid(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x0C515FAB3FF9EA92 | Since: 323
+ * Hash: 0x0C515FAB3FF9EA92 | Since: unknown
  */
 export declare function areStringsEqual(string1: string, string2: string): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xC843060B5765DCE7 | Since: 323
+ * Hash: 0xC843060B5765DCE7 | Since: unknown
  */
 export declare function asin(): number;
 /**
  * No comment provided
  *
- * Hash: 0xA9D1795CD5043663 | Since: 323
+ * Hash: 0xA9D1795CD5043663 | Since: unknown
  */
 export declare function atan(): number;
 /**
  * No comment provided
  *
- * Hash: 0x8927CBF9D22261A4 | Since: 323
+ * Hash: 0x8927CBF9D22261A4 | Since: unknown
  */
 export declare function atan2(): number;
 /**
  * No comment provided
  *
- * Hash: 0xE0E500246FF73D66 | Since: 323
+ * Hash: 0xE0E500246FF73D66 | Since: unknown
  */
 export declare function beginReplayStats(): void;
 /**
  * No comment provided
  *
- * Hash: 0x9B2BD3773123EA2F | Since: 323
+ * Hash: 0x9B2BD3773123EA2F | Since: unknown
  */
 export declare function blockDispatchServiceResourceCreation(dispatchService: number, toggle: boolean): void;
 /**
  * DO NOT use this as it doesn't clean up the text input box properly and your script will get stuck in the UPDATE_ONSCREEN_KEYBOARD() loop.
  * Use FORCE_CLOSE_TEXT_INPUT_BOX instead.
  *
- * Hash: 0x58A39BE597CE99CD | Since: 757
+ * Hash: 0x58A39BE597CE99CD | Since: unknown
  */
 export declare function cancelOnscreenKeyboard(): void;
 /**
  * No comment provided
  *
- * Hash: 0xE6B7B0ACD4E4B75E | Since: 323
+ * Hash: 0xE6B7B0ACD4E4B75E | Since: unknown
  */
 export declare function cancelStuntJump(): void;
 /**
  * No comment provided
  *
- * Hash: 0xC79AE21974B01FB2 | Since: 323
+ * Hash: 0xC79AE21974B01FB2 | Since: unknown
  */
 export declare function cleanupAsyncInstall(): void;
 /**
  * No comment provided
  *
- * Hash: 0x11DB3500F042A8AA | Since: 323
+ * Hash: 0x11DB3500F042A8AA | Since: unknown
  */
 export declare function clearAngledAreaOfVehicles(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, width: number): void;
 /**
  * Example: CLEAR_AREA(0, 0, 0, 30, true, false, false, false);
  *
- * Hash: 0xA56F01F3765B93A0 | Since: 323
+ * Hash: 0xA56F01F3765B93A0 | Since: unknown
  */
 export declare function clearArea(pos: Vector3, radius: number, ignoreCopCars: boolean, ignoreObjects: boolean): void;
 /**
  * `MISC::CLEAR_AREA_LEAVE_VEHICLE_HEALTH(x, y, z, radius, false, false, false, false); seem to make all objects go away, peds, vehicles etc. All booleans set to true doesn't seem to change anything.`
  *
- * Hash: 0x957838AAF91BD12D | Since: 323
+ * Hash: 0x957838AAF91BD12D | Since: unknown
  */
 export declare function clearAreaLeaveVehicleHealth(pos: Vector3, radius: number): void;
 /**
  * flags appears to always be 0
  *
- * Hash: 0x04F8FC8FCF58F88D | Since: 323
+ * Hash: 0x04F8FC8FCF58F88D | Since: unknown
  */
 export declare function clearAreaOfCops(pos: Vector3, radius: number, flags: number): void;
 /**
  * I looked through the PC scripts that this site provides you with a link to find. It shows the last param mainly uses, (0, 2, 6, 16, and 17) so I am going to assume it is a type of flag.
  *
- * Hash: 0xDD9B9B385AAC7F5B | Since: 323
+ * Hash: 0xDD9B9B385AAC7F5B | Since: unknown
  */
 export declare function clearAreaOfObjects(pos: Vector3, radius: number, flags: number): void;
 /**
  * Example:       CLEAR_AREA_OF_PEDS(0, 0, 0, 10000, 1);
  *
- * Hash: 0xBE31FD6CE464AC59 | Since: 323
+ * Hash: 0xBE31FD6CE464AC59 | Since: unknown
  */
 export declare function clearAreaOfPeds(pos: Vector3, radius: number, flags: number): void;
 /**
  * flags is usually 0 in the scripts.
  *
- * Hash: 0x0A1CB9094635D1A6 | Since: 323
+ * Hash: 0x0A1CB9094635D1A6 | Since: unknown
  */
 export declare function clearAreaOfProjectiles(pos: Vector3, radius: number, flags: number): void;
 /**
  * Example:
  * CLEAR_AREA_OF_VEHICLES(0.0f, 0.0f, 0.0f, 10000.0f, false, false, false, false, false, false);
  *
- * Hash: 0x01C7B9B38428AEB6 | Since: 323
+ * Hash: 0x01C7B9B38428AEB6 | Since: unknown
  */
 export declare function clearAreaOfVehicles(pos: Vector3, radius: number): void;
 /**
@@ -298,55 +298,61 @@ export declare function clearAreaOfVehicles(pos: Vector3, radius: number): void;
  * To check if this bit has been enabled:
  * `MISC::IS_BIT_SET(bitAddress, 1); // will return 0 afterwards`
  *
- * Hash: 0xE80492A9AC099A93 | Since: 323
+ * Hash: 0xE80492A9AC099A93 | Since: unknown
  */
 export declare function clearBit(offset: number): number;
 /**
  * No comment provided
  *
- * Hash: 0x06462A961E94B67C | Since: 323
+ * Hash: 0x06462A961E94B67C | Since: unknown
  */
 export declare function clearCodeRequestedAutosave(): void;
 /**
  * No comment provided
  *
- * Hash: 0x338D2E3477711050 | Since: 323
+ * Hash: 0x338D2E3477711050 | Since: unknown
  */
 export declare function clearOverrideWeather(): void;
 /**
  * No comment provided
  *
- * Hash: 0x1B1AB132A16FDA55 | Since: 323
+ * Hash: 0x1B1AB132A16FDA55 | Since: unknown
  */
 export declare function clearReplayStats(): void;
 /**
  * No comment provided
  *
- * Hash: 0xA2716D40842EAF79 | Since: 323
+ * Hash: 0xA2716D40842EAF79 | Since: unknown
  */
 export declare function clearRestartCoordOverride(): void;
 /**
  * Possibly used to clear scenario points.
  *
- * Hash: 0x7EC6F9A478A6A512 | Since: 323
+ * Hash: 0x7EC6F9A478A6A512 | Since: unknown
  */
 export declare function clearScenarioSpawnHistory(): void;
 /**
  * No comment provided
  *
- * Hash: 0xB3CD58CCA6CDA852 | Since: 323
+ * Hash: 0xC3BCD7401198B284 | Since: unknown
+ */
+export declare function clearScriptRouterLink(): void;
+/**
+ * No comment provided
+ *
+ * Hash: 0xB3CD58CCA6CDA852 | Since: unknown
  */
 export declare function clearTacticalNavMeshPoints(): void;
 /**
  * No comment provided
  *
- * Hash: 0x0CF97F497FE7D048 | Since: 1103
+ * Hash: 0x0CF97F497FE7D048 | Since: unknown
  */
 export declare function clearWeatherTypeNowPersistNetwork(milliseconds: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xCCC39339BEF76CF5 | Since: 323
+ * Hash: 0xCCC39339BEF76CF5 | Since: unknown
  */
 export declare function clearWeatherTypePersist(): void;
 /**
@@ -375,13 +381,13 @@ export declare function clearWeatherTypePersist(): void;
  * `MISC::COMPARE_STRINGS("A", "a", true, 1); // -1; 'A' < 'a'`
  * `MISC::COMPARE_STRINGS("a", "A", true, 1); // 1; 'a' > 'A'`
  *
- * Hash: 0x1E34710ECD4AB0EB | Since: 323
+ * Hash: 0x1E34710ECD4AB0EB | Since: unknown
  */
 export declare function compareStrings(str1: string, str2: string, matchCase: boolean, maxLength: number): number;
 /**
  * No comment provided
  *
- * Hash: 0x213AEB2B90CBA7AC | Since: 877
+ * Hash: 0x213AEB2B90CBA7AC | Since: unknown
  */
 export declare function copyScriptStruct(size: number): [any, any];
 /**
@@ -393,7 +399,7 @@ export declare function copyScriptStruct(size: number): [any, any];
  * if(CREATE_INCIDENT) etc it will return false if you do as I said above.
  * =====================================================
  *
- * Hash: 0x3F892CAF67444AE7 | Since: 323
+ * Hash: 0x3F892CAF67444AE7 | Since: unknown
  */
 export declare function createIncident(dispatchService: number, pos: Vector3, numUnits: number, radius: number): [boolean, number];
 /**
@@ -405,7 +411,7 @@ export declare function createIncident(dispatchService: number, pos: Vector3, nu
  * if(CREATE_INCIDENT) etc it will return false if you do as I said above.
  * =====================================================
  *
- * Hash: 0x05983472F0494E60 | Since: 323
+ * Hash: 0x05983472F0494E60 | Since: unknown
  */
 export declare function createIncidentWithEntity(dispatchService: number, ped: number | IPed, numUnits: number, radius: number): [boolean, number];
 /**
@@ -417,19 +423,19 @@ export declare function createIncidentWithEntity(dispatchService: number, ped: n
  * If you try it you will crash (or) freeze.
  * =======================================================
  *
- * Hash: 0x556C1AA270D5A207 | Since: 323
+ * Hash: 0x556C1AA270D5A207 | Since: unknown
  */
 export declare function deleteIncident(incidentId: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xDC518000E39DAE1F | Since: 323
+ * Hash: 0xDC518000E39DAE1F | Since: unknown
  */
 export declare function deleteStuntJump(): void;
 /**
  * The game by default has 5 hospital respawn points. Disabling them all will cause the player to respawn at the last position they were.
  *
- * Hash: 0xC8535819C450EBA8 | Since: 323
+ * Hash: 0xC8535819C450EBA8 | Since: unknown
  */
 export declare function disableHospitalRestart(hospitalIndex: number, toggle: boolean): void;
 /**
@@ -440,19 +446,19 @@ export declare function disableHospitalRestart(hospitalIndex: number, toggle: bo
  *
  * - Nacorpio
  *
- * Hash: 0x23285DED6EBD7EA3 | Since: 323
+ * Hash: 0x23285DED6EBD7EA3 | Since: unknown
  */
 export declare function disablePoliceRestart(policeIndex: number, toggle: boolean): void;
 /**
  * Does nothing (it's a nullsub).
  *
- * Hash: 0x23227DF0B2115469 | Since: 323
+ * Hash: 0x23227DF0B2115469 | Since: unknown
  */
 export declare function disableScreenDimmingThisFrame(): void;
 /**
  * No comment provided
  *
- * Hash: 0xA5272EBEDD4747F6 | Since: 323
+ * Hash: 0xA5272EBEDD4747F6 | Since: unknown
  */
 export declare function disableStuntJumpSet(): void;
 /**
@@ -489,55 +495,55 @@ export declare function disableStuntJumpSet(): void;
  * FMMC_KEY_TIP9N  =   "Outfit Name"
  * PM_NAME_CHALL  =   "Enter Challenge Name"
  *
- * Hash: 0x00DC833F2568DBF6 | Since: 323
+ * Hash: 0x00DC833F2568DBF6 | Since: unknown
  */
 export declare function displayOnscreenKeyboard(windowTitle: string, defaultText: string, defaultConcat1: string, defaultConcat2: string, defaultConcat3: string, maxInputLength: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xCA78CFA0366592FE | Since: 323
+ * Hash: 0xCA78CFA0366592FE | Since: unknown
  */
 export declare function displayOnscreenKeyboardWithLongerInitialString(windowTitle: string, defaultText: string, defaultConcat1: string, defaultConcat2: string, defaultConcat3: string, defaultConcat4: string, defaultConcat5: string, defaultConcat6: string, defaultConcat7: string, maxInputLength: number): any;
 /**
  * No comment provided
  *
- * Hash: 0x1327E2FE9746BAEE | Since: 323
+ * Hash: 0x1327E2FE9746BAEE | Since: unknown
  */
 export declare function doesPopMultiplierAreaExist(id: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x171BAFB3C60389F4 | Since: 791
+ * Hash: 0x171BAFB3C60389F4 | Since: unknown
  */
 export declare function doesPopMultiplierSphereExist(id: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x50EEAAD86232EE55 | Since: 323
+ * Hash: 0x50EEAAD86232EE55 | Since: unknown
  */
 export declare function doAutoSave(): void;
 /**
  * https://alloc8or.re/gta5/doc/enums/DispatchType.txt
  *
- * Hash: 0xDC0F817884CDD856 | Since: 323
+ * Hash: 0xDC0F817884CDD856 | Since: unknown
  */
 export declare function enableDispatchService(dispatchService: number, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xE369A5783B866016 | Since: 323
+ * Hash: 0xE369A5783B866016 | Since: unknown
  */
 export declare function enableStuntJumpSet(): void;
 /**
  * Makes the ped jump around like they're in a tennis match
  *
- * Hash: 0x28A04B411933F8A6 | Since: 323
+ * Hash: 0x28A04B411933F8A6 | Since: unknown
  */
 export declare function enableTennisMode(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xA23E821FBDF8A5F2 | Since: 323
+ * Hash: 0xA23E821FBDF8A5F2 | Since: unknown
  */
 export declare function endReplayStats(): void;
 /**
@@ -545,7 +551,7 @@ export declare function endReplayStats(): void;
  * The positions match path finding node positions.
  * When roads diverge, the position may rapidly change between two or more positions. This is due to the engine not being certain of which path the player will take.
  *
- * Hash: 0x6874E2190B0C1972 | Since: 323
+ * Hash: 0x6874E2190B0C1972 | Since: unknown
  */
 export declare function findSpawnPointInDirection(pos: Vector3, fwdVecX: number, fwdVecY: number, fwdVecZ: number, distance: number): [boolean, Vector3];
 /**
@@ -561,103 +567,115 @@ export declare function findSpawnPointInDirection(pos: Vector3, fwdVecX: number,
  * 5: "Respawn"
  * 6: "In MP Cutscene"
  *
- * Hash: 0xC0AA53F866B3134D | Since: 323
+ * Hash: 0xC0AA53F866B3134D | Since: unknown
  */
 export declare function forceGameStatePlaying(): void;
 /**
  * creates single lightning+thunder at random position
  *
- * Hash: 0xF6062E089251C898 | Since: 323
+ * Hash: 0xF6062E089251C898 | Since: unknown
  */
 export declare function forceLightningFlash(): void;
 /**
  * No comment provided
  *
- * Hash: 0x8B3CA62B1EF19B62 | Since: 323
+ * Hash: 0x8B3CA62B1EF19B62 | Since: unknown
  */
 export declare function getAllocatedStackSize(): number;
 /**
  * No comment provided
  *
- * Hash: 0x186FC4BE848E1C92 | Since: 323
+ * Hash: 0x186FC4BE848E1C92 | Since: unknown
  */
 export declare function getAngleBetween2dVectors(x1: number, y1: number, x2: number, y2: number): number;
 /**
  * No comment provided
  *
- * Hash: 0xB335F761606DB47C | Since: 323
+ * Hash: 0xB335F761606DB47C | Since: unknown
  */
 export declare function getBaseElementLocationFromMetadataBlock(): [boolean, any, any];
 /**
  * Returns value of the '-benchmarkIterations' command line option.
  *
- * Hash: 0x4750FC27570311EC | Since: 323
+ * Hash: 0x4750FC27570311EC | Since: unknown
  */
 export declare function getBenchmarkIterations(): number;
 /**
  * Returns value of the '-benchmarkPass' command line option.
  *
- * Hash: 0x1B2366C3F2A5C8DF | Since: 323
+ * Hash: 0x1B2366C3F2A5C8DF | Since: unknown
  */
 export declare function getBenchmarkPass(): number;
 /**
  * No comment provided
  *
- * Hash: 0x53158863FCC0893A | Since: 323
+ * Hash: 0x53158863FCC0893A | Since: unknown
  */
 export declare function getBitsInRange(_var: number, rangeStart: number, rangeEnd: number): number;
 /**
  * No comment provided
  *
- * Hash: 0xD10282B6E3751BA0 | Since: 323
+ * Hash: 0xA0A0D77ECEDD4136 | Since: unknown
+ */
+export declare function getChosenCriminalCareer(): number;
+/**
+ * No comment provided
+ *
+ * Hash: 0xFBEF52A5C70F324F | Since: unknown
+ */
+export declare function getChosenMpCharacterSlot(): number;
+/**
+ * No comment provided
+ *
+ * Hash: 0xD10282B6E3751BA0 | Since: unknown
  */
 export declare function getCityDensity(): number;
 /**
  * clamp: sets whether the product should be clamped between the given coordinates
  *
- * Hash: 0x21C235BC64831E5A | Since: 323
+ * Hash: 0x21C235BC64831E5A | Since: unknown
  */
 export declare function getClosestPointOnLine(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, x3: number, y3: number, z3: number, clamp: boolean): Vector3;
 /**
  * No comment provided
  *
- * Hash: 0x20AC25E781AE4A84 | Since: 323
+ * Hash: 0x20AC25E781AE4A84 | Since: unknown
  */
 export declare function getCloudsAlpha(): number;
 /**
  * No comment provided
  *
- * Hash: 0xECF041186C5A94DC | Since: 2612
+ * Hash: 0xECF041186C5A94DC | Since: unknown
  */
 export declare function getContentIdIndex(contentId: number | string): number;
 /**
  * Returns pointer to an empty string.
  *
- * Hash: 0x24DA7D7667FD7B09 | Since: 323
+ * Hash: 0x24DA7D7667FD7B09 | Since: unknown
  */
 export declare function getContentToLoad(): string;
 /**
  * No comment provided
  *
- * Hash: 0x3DA8C28346B62CED | Since: 2802
+ * Hash: 0x3DA8C28346B62CED | Since: unknown
  */
 export declare function getCoordsOfProjectileTypeInAngledArea(vecAngledAreaPoint1X: number, vecAngledAreaPoint1Y: number, vecAngledAreaPoint1Z: number, vecAngledAreaPoint2X: number, vecAngledAreaPoint2Y: number, vecAngledAreaPoint2Z: number, distanceOfOppositeFace: number, weaponType: number | string, bIsPlayer: boolean): [boolean, Vector3];
 /**
  * No comment provided
  *
- * Hash: 0x8D7A43EC6A5FEA45 | Since: 323
+ * Hash: 0x8D7A43EC6A5FEA45 | Since: unknown
  */
 export declare function getCoordsOfProjectileTypeInArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, projectileHash: number | string, ownedByPlayer: boolean): [boolean, Vector3];
 /**
  * No comment provided
  *
- * Hash: 0xDFB4138EEFED7B81 | Since: 323
+ * Hash: 0xDFB4138EEFED7B81 | Since: unknown
  */
 export declare function getCoordsOfProjectileTypeWithinDistance(ped: number | IPed, weaponHash: number | string, distance: number): [boolean, Vector3];
 /**
  * No comment provided
  *
- * Hash: 0xF3BBE884A14BB413 | Since: 323
+ * Hash: 0xF3BBE884A14BB413 | Since: unknown
  */
 export declare function getCurrWeatherState(): [number, number, number];
 /**
@@ -666,43 +684,43 @@ export declare function getCurrWeatherState(): [number, number, number];
  *
  * `Consider using this faster native instead: SYSTEM::VDIST - DVIST always takes in consideration the 3D coordinates.`
  *
- * Hash: 0xF1B760881820C952 | Since: 323
+ * Hash: 0xF1B760881820C952 | Since: unknown
  */
 export declare function getDistanceBetweenCoords(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, useZ: boolean): number;
 /**
  * No comment provided
  *
- * Hash: 0x4C9296CBCD1B971E | Since: 323
+ * Hash: 0x4C9296CBCD1B971E | Since: unknown
  */
 export declare function getFakeWantedLevel(): number;
 /**
  * No comment provided
  *
- * Hash: 0xFC8202EFC642E6F2 | Since: 323
+ * Hash: 0xFC8202EFC642E6F2 | Since: unknown
  */
 export declare function getFrameCount(): number;
 /**
  * No comment provided
  *
- * Hash: 0x15C40837039FFAF7 | Since: 323
+ * Hash: 0x15C40837039FFAF7 | Since: unknown
  */
 export declare function getFrameTime(): number;
 /**
  * No comment provided
  *
- * Hash: 0x9CD27B0045628463 | Since: 323
+ * Hash: 0x9CD27B0045628463 | Since: unknown
  */
 export declare function getGameTimer(): number;
 /**
  * No comment provided
  *
- * Hash: 0x8BDC7BFC57A81E76 | Since: 323
+ * Hash: 0x8BDC7BFC57A81E76 | Since: unknown
  */
 export declare function getGroundZAndNormalFor3dCoord(pos: Vector3): [boolean, number, Vector3];
 /**
  * No comment provided
  *
- * Hash: 0x9E82F0F362881B29 | Since: 505
+ * Hash: 0x9E82F0F362881B29 | Since: unknown
  */
 export declare function getGroundZExcludingObjectsFor3dCoord(pos: Vector3): [boolean, number];
 /**
@@ -716,50 +734,50 @@ export declare function getGroundZExcludingObjectsFor3dCoord(pos: Vector3): [boo
  *
  * Bear in mind this native can only calculate the elevation when the coordinates are within the client's render distance.
  *
- * Hash: 0xC906A7DAB05C8D2B | Since: 323
+ * Hash: 0xC906A7DAB05C8D2B | Since: unknown
  */
 export declare function getGroundZFor3dCoord(pos: Vector3, ignoreWater: boolean): [boolean, number];
 /**
  * This native converts its past string to hash. It is hashed using jenkins one at a time method.
  *
- * Hash: 0xD24D37CC275948CC | Since: 323
+ * Hash: 0xD24D37CC275948CC | Since: unknown
  */
 export declare function getHashKey(_string: string): number;
 /**
  * dx = x1 - x2
  * dy = y1 - y2
  *
- * Hash: 0x2FFB6B224F4B2926 | Since: 323
+ * Hash: 0x2FFB6B224F4B2926 | Since: unknown
  */
 export declare function getHeadingFromVector2d(dx: number, dy: number): number;
 /**
  * No comment provided
  *
- * Hash: 0xCBAD6729F7B1F4FC | Since: 323
+ * Hash: 0xCBAD6729F7B1F4FC | Since: unknown
  */
 export declare function getIndexOfCurrentLevel(): number;
 /**
  * Returns true if profile setting 208 is equal to 0.
  *
- * Hash: 0x6E04F06094C87047 | Since: 323
+ * Hash: 0x6E04F06094C87047 | Since: unknown
  */
 export declare function getIsAutoSaveOff(): boolean;
 /**
  * Although we don't have a jenkins hash for this one, the name is 100% confirmed.
  *
- * Hash: 0x9689123E3F213AA5 | Since: 323
+ * Hash: 0x9689123E3F213AA5 | Since: unknown
  */
 export declare function getIsPlayerInAnimalForm(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xF56DFB7B61BE7276 | Since: 323
+ * Hash: 0xF56DFB7B61BE7276 | Since: unknown
  */
 export declare function getLinePlaneIntersection(): [boolean, number];
 /**
  * No comment provided
  *
- * Hash: 0xA33CDCCDA663159E | Since: 323
+ * Hash: 0xA33CDCCDA663159E | Since: unknown
  */
 export declare function getMissionFlag(): boolean;
 /**
@@ -769,218 +787,224 @@ export declare function getMissionFlag(): boolean;
  *
  * `Example from the scripts: MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()), &v_1A, &v_17);`
  *
- * Hash: 0x03E8D3D5F549087A | Since: 323
+ * Hash: 0x03E8D3D5F549087A | Since: unknown
  */
 export declare function getModelDimensions(modelHash: number | string): [Vector3, Vector3];
 /**
  * Returns weather name hash
  *
- * Hash: 0x711327CD09C8F162 | Since: 323
+ * Hash: 0x711327CD09C8F162 | Since: unknown
  */
 export declare function getNextWeatherTypeHashName(): number;
 /**
  * No comment provided
  *
- * Hash: 0xFEAD16FC8F9DFC0F | Since: 323
+ * Hash: 0xFEAD16FC8F9DFC0F | Since: unknown
  */
 export declare function getNumberOfFreeStacksOfThisSize(stackSize: number): number;
 /**
  * No comment provided
  *
- * Hash: 0xEB4A0C2D56441717 | Since: 323
+ * Hash: 0xEB4A0C2D56441717 | Since: unknown
  */
 export declare function getNumberResourcesAllocatedToWantedLevel(dispatchService: number): number;
 /**
  * No comment provided
  *
- * Hash: 0x996DD1E1E02F1008 | Since: 323
+ * Hash: 0x996DD1E1E02F1008 | Since: unknown
  */
 export declare function getNumSuccessfulStuntJumps(): number;
 /**
  * Returns NULL unless UPDATE_ONSCREEN_KEYBOARD() returns 1 in the same tick.
  *
- * Hash: 0x8362B09B91893647 | Since: 323
+ * Hash: 0x8362B09B91893647 | Since: unknown
  */
 export declare function getOnscreenKeyboardResult(): string;
 /**
  * No comment provided
  *
- * Hash: 0xA0AD167E4B39D9A2 | Since: 2189
+ * Hash: 0xA0AD167E4B39D9A2 | Since: unknown
  */
 export declare function getPointAreaOverlap(): boolean;
 /**
  * Returns current weather name hash
  *
- * Hash: 0x564B884A05EC45A3 | Since: 323
+ * Hash: 0x564B884A05EC45A3 | Since: unknown
  */
 export declare function getPrevWeatherTypeHashName(): number;
 /**
  * No comment provided
  *
- * Hash: 0xC488FF2356EA7791 | Since: 323
+ * Hash: 0xC488FF2356EA7791 | Since: unknown
  */
 export declare function getProfileSetting(profileSetting: number): number;
 /**
  * No comment provided
  *
- * Hash: 0x82FDE6A57EE4EE44 | Since: 323
+ * Hash: 0x82FDE6A57EE4EE44 | Since: unknown
  */
 export declare function getProjectileOfProjectileTypeWithinDistance(ped: number | IPed, weaponHash: number | string, distance: number): [boolean, Vector3, number];
 /**
  * No comment provided
  *
- * Hash: 0x96695E368AD855F3 | Since: 323
+ * Hash: 0x96695E368AD855F3 | Since: unknown
  */
 export declare function getRainLevel(): number;
 /**
  * No comment provided
  *
- * Hash: 0xD2D57F1D764117B1 | Since: 323
+ * Hash: 0xD2D57F1D764117B1 | Since: unknown
  */
 export declare function getRandomEventFlag(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x313CE5879CEB6FCD | Since: 323
+ * Hash: 0x313CE5879CEB6FCD | Since: unknown
  */
 export declare function getRandomFloatInRange(startRange: number, endRange: number): number;
 /**
  * No comment provided
  *
- * Hash: 0xD53343AA4FB7DD28 | Since: 323
+ * Hash: 0xD53343AA4FB7DD28 | Since: unknown
  */
 export declare function getRandomIntInRange(startRange: number, endRange: number): number;
 /**
  * No comment provided
  *
- * Hash: 0xF2D49816A804D134 | Since: 1734
+ * Hash: 0xF2D49816A804D134 | Since: unknown
  */
 export declare function getRandomMwcIntInRange(startRange: number, endRange: number): number;
 /**
  * returns a float between 0.0 and 1.0, clamp: sets whether the product should be clamped between the given coordinates
  *
- * Hash: 0x7F8F6405F4777AF6 | Since: 323
+ * Hash: 0x7F8F6405F4777AF6 | Since: unknown
  */
 export declare function getRatioOfClosestPointOnLine(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, x3: number, y3: number, z3: number, clamp: boolean): number;
 /**
  * GET_GAME_TIMER() / 1000
  *
- * Hash: 0x3F60413F5DF65748 | Since: 2612
+ * Hash: 0x3F60413F5DF65748 | Since: unknown
  */
 export declare function getRealWorldTime(): number;
 /**
  * No comment provided
  *
- * Hash: 0x8098C8D6597AAE18 | Since: 323
+ * Hash: 0x8098C8D6597AAE18 | Since: unknown
  */
 export declare function getReplayStatAtIndex(index: number): number;
 /**
  * No comment provided
  *
- * Hash: 0xDC9274A7EF6B2867 | Since: 323
+ * Hash: 0xDC9274A7EF6B2867 | Since: unknown
  */
 export declare function getReplayStatCount(): number;
 /**
  * No comment provided
  *
- * Hash: 0x5B1F2E327B6B6FE1 | Since: 323
+ * Hash: 0x5B1F2E327B6B6FE1 | Since: unknown
  */
 export declare function getReplayStatMissionId(): number;
 /**
  * No comment provided
  *
- * Hash: 0x2B626A0150E4D449 | Since: 323
+ * Hash: 0x2B626A0150E4D449 | Since: unknown
  */
 export declare function getReplayStatMissionType(): number;
 /**
  * No comment provided
  *
- * Hash: 0xA4A0065E39C9F25C | Since: 323
+ * Hash: 0xA4A0065E39C9F25C | Since: unknown
  */
 export declare function getSaveHouseDetailsAfterSuccessfulLoad(): [boolean, Vector3, number, boolean, boolean];
 /**
  * No comment provided
  *
- * Hash: 0xA09F896CE912481F | Since: 323
+ * Hash: 0x99BE65CCCBE09C71 | Since: unknown
+ */
+export declare function getScriptRouterContext(): [boolean, any];
+/**
+ * No comment provided
+ *
+ * Hash: 0xA09F896CE912481F | Since: unknown
  */
 export declare function getSizeOfSaveData(): number;
 /**
  * No comment provided
  *
- * Hash: 0xC5868A966E5BE3AE | Since: 323
+ * Hash: 0xC5868A966E5BE3AE | Since: unknown
  */
 export declare function getSnowLevel(): number;
 /**
  * No comment provided
  *
- * Hash: 0x397BAA01068BAA96 | Since: 323
+ * Hash: 0x397BAA01068BAA96 | Since: unknown
  */
 export declare function getStatusOfManualSave(): number;
 /**
  * No comment provided
  *
- * Hash: 0x2B5E102E4A42F2BF | Since: 323
+ * Hash: 0x2B5E102E4A42F2BF | Since: unknown
  */
 export declare function getStatusOfMissionRepeatSave(): number;
 /**
  * No comment provided
  *
- * Hash: 0xE599A503B3837E1B | Since: 323
+ * Hash: 0xE599A503B3837E1B | Since: unknown
  */
 export declare function getSystemTimeStep(): number;
 /**
  * No comment provided
  *
- * Hash: 0x19BFED045C647C49 | Since: 323
+ * Hash: 0x19BFED045C647C49 | Since: unknown
  */
 export declare function getTennisSwingAnimCanBeInterrupted(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x17DF68D720AA77F8 | Since: 323
+ * Hash: 0x17DF68D720AA77F8 | Since: unknown
  */
 export declare function getTennisSwingAnimComplete(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xE95B0C7D5BA3B96B | Since: 323
+ * Hash: 0xE95B0C7D5BA3B96B | Since: unknown
  */
 export declare function getTennisSwingAnimSwung(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x6856EC3D35C81EA4 | Since: 323
+ * Hash: 0x6856EC3D35C81EA4 | Since: unknown
  */
 export declare function getTotalSuccessfulStuntJumps(): number;
 /**
  * No comment provided
  *
- * Hash: 0x1F400FEF721170DA | Since: 323
+ * Hash: 0x1F400FEF721170DA | Since: unknown
  */
 export declare function getWindDirection(): Vector3;
 /**
  * No comment provided
  *
- * Hash: 0xA8CF1CC0AFCD3F12 | Since: 323
+ * Hash: 0xA8CF1CC0AFCD3F12 | Since: unknown
  */
 export declare function getWindSpeed(): number;
 /**
  * Hardcoded to always return true.
  *
- * Hash: 0x14832BF2ABA53FC5 | Since: 323
+ * Hash: 0x14832BF2ABA53FC5 | Since: unknown
  */
 export declare function hasAsyncInstallFinished(): boolean;
 /**
  * bIsPlayer: checks if the player fired the bullet
  * bEntryOnly: only find entry impacts
  *
- * Hash: 0x9870ACFB89A90995 | Since: 323
+ * Hash: 0x9870ACFB89A90995 | Since: unknown
  */
 export declare function hasBulletImpactedInArea(pos: Vector3, radius: number, bIsPlayer: boolean, bIsEntry: boolean): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xDC8C5D7CFEAB8394 | Since: 323
+ * Hash: 0xDC8C5D7CFEAB8394 | Since: unknown
  */
 export declare function hasBulletImpactedInBox(): boolean;
 /**
@@ -988,19 +1012,25 @@ export declare function hasBulletImpactedInBox(): boolean;
  *
  * INT_SCORES_SCORTED was a hash collision
  *
- * Hash: 0x071E2A839DE82D90 | Since: 323
+ * Hash: 0x071E2A839DE82D90 | Since: unknown
  */
 export declare function hasCheatWithHashBeenActivated(hash: number | string, amount: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x2107A3773771186D | Since: 323
+ * Hash: 0x2107A3773771186D | Since: unknown
  */
 export declare function hasCodeRequestedAutosave(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x6FDDF453C0C756EC | Since: 323
+ * Hash: 0xB233964AC562A357 | Since: unknown
+ */
+export declare function hasFinalizedChosenCriminalCareer(): boolean;
+/**
+ * No comment provided
+ *
+ * Hash: 0x6FDDF453C0C756EC | Since: unknown
  */
 export declare function hasGameInstalledThisSession(): boolean;
 /**
@@ -1018,61 +1048,67 @@ export declare function hasGameInstalledThisSession(): boolean;
  * Calling this will also set the last saved string hash to zero.
  *
  *
- * Hash: 0x557E43C447E700A8 | Since: 323
+ * Hash: 0x557E43C447E700A8 | Since: unknown
  */
 export declare function hasPcCheatWithHashBeenActivated(hash: number | string): boolean;
 /**
+ * No comment provided
+ *
+ * Hash: 0x776947A43CCD5328 | Since: unknown
+ */
+export declare function hasPendingScriptRouterLink(): boolean;
+/**
  * Hardcoded to return false.
  *
- * Hash: 0xE8B9C0EC9E183F35 | Since: 323
+ * Hash: 0xE8B9C0EC9E183F35 | Since: unknown
  */
 export declare function hasResumedFromSuspend(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x075F1D57402C93BA | Since: 323
+ * Hash: 0x075F1D57402C93BA | Since: unknown
  */
 export declare function haveCreditsReachedEnd(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xD642319C54AADEB6 | Since: 323
+ * Hash: 0xD642319C54AADEB6 | Since: unknown
  */
 export declare function haveReplayStatsBeenStored(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x21FFB63D8C615361 | Since: 323
+ * Hash: 0x21FFB63D8C615361 | Since: unknown
  */
 export declare function ignoreNextRestart(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x8D74E26F54B4E5C3 | Since: 323
+ * Hash: 0x8D74E26F54B4E5C3 | Since: unknown
  */
 export declare function informCodeOfContentIdOfCurrentUgcMission(): void;
 /**
  * No comment provided
  *
- * Hash: 0xA61B4DF533DCB56E | Since: 323
+ * Hash: 0xA61B4DF533DCB56E | Since: unknown
  */
 export declare function isAreaOccupied(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x39455BF4F4F55186 | Since: 1868
+ * Hash: 0x39455BF4F4F55186 | Since: unknown
  */
 export declare function isAreaOccupiedSlow(): boolean;
 /**
  * Used to block some of the prostitute stuff due to laws in Australia.
  *
- * Hash: 0x9F1935CA1F724008 | Since: 323
+ * Hash: 0x9F1935CA1F724008 | Since: unknown
  */
 export declare function isAussieVersion(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x69240733738C19A0 | Since: 323
+ * Hash: 0x69240733738C19A0 | Since: unknown
  */
 export declare function isAutoSaveInProgress(): boolean;
 /**
@@ -1080,37 +1116,37 @@ export declare function isAutoSaveInProgress(): boolean;
  * See IS_POINT_IN_ANGLED_AREA for the definition of an angled area.
  * Returns True if a bullet, as maintained by a pool within CWeaponManager, has been fired into the defined angled area.
  *
- * Hash: 0x1A8B5F3C01E2B477 | Since: 323
+ * Hash: 0x1A8B5F3C01E2B477 | Since: unknown
  */
 export declare function isBulletInAngledArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, width: number, ownedByPlayer: boolean): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x3F2023999AD51C1F | Since: 323
+ * Hash: 0x3F2023999AD51C1F | Since: unknown
  */
 export declare function isBulletInArea(pos: Vector3, radius: number, ownedByPlayer: boolean): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xDE0F6D7450D37351 | Since: 323
+ * Hash: 0xDE0F6D7450D37351 | Since: unknown
  */
 export declare function isBulletInBox(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, ownedByPlayer: boolean): boolean;
 /**
  * Returns true if command line option '-benchmark' is set.
  *
- * Hash: 0xA049A5BE0F04F2F8 | Since: 323
+ * Hash: 0xA049A5BE0F04F2F8 | Since: unknown
  */
 export declare function isCommandlineEndUserBenchmark(): boolean;
 /**
  * XBOX ONE
  *
- * Hash: 0x4D982ADB1978442D | Since: 323
+ * Hash: 0x4D982ADB1978442D | Since: unknown
  */
 export declare function isDurangoVersion(): boolean;
 /**
  * This function is hard-coded to always return 0.
  *
- * Hash: 0x7EA2B6AF97ECA6ED | Since: 323
+ * Hash: 0x7EA2B6AF97ECA6ED | Since: unknown
  */
 export declare function isFrontendFading(): boolean;
 /**
@@ -1120,55 +1156,55 @@ export declare function isFrontendFading(): boolean;
  * If you try it you will crash (or) freeze.
  * =======================================================
  *
- * Hash: 0xC8BC6461E629BEAA | Since: 323
+ * Hash: 0xC8BC6461E629BEAA | Since: unknown
  */
 export declare function isIncidentValid(incidentId: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xB8C0BB75D8A77DB3 | Since: 2545
+ * Hash: 0xB8C0BB75D8A77DB3 | Since: unknown
  */
 export declare function isJapaneseVersion(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x8A75CE2956274ADD | Since: 323
+ * Hash: 0x8A75CE2956274ADD | Since: unknown
  */
 export declare function isMemoryCardInUse(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x2B4A15E44DE0F478 | Since: 323
+ * Hash: 0x2B4A15E44DE0F478 | Since: unknown
  */
 export declare function isMinigameInProgress(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x2FAA3A30BEC0F25D | Since: 323
+ * Hash: 0x2FAA3A30BEC0F25D | Since: unknown
  */
 export declare function isNextWeatherType(weatherType: string): boolean;
 /**
  * PS4
  *
- * Hash: 0xA72BC0B675B1519E | Since: 323
+ * Hash: 0xA72BC0B675B1519E | Since: unknown
  */
 export declare function isOrbisVersion(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x48AF36444B965238 | Since: 323
+ * Hash: 0x48AF36444B965238 | Since: unknown
  */
 export declare function isPcVersion(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xE54E209C35FFA18D | Since: 323
+ * Hash: 0xE54E209C35FFA18D | Since: unknown
  */
 export declare function isPointObscuredByAMissionEntity(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x1312F4B242609CE3 | Since: 1290
+ * Hash: 0x1312F4B242609CE3 | Since: unknown
  */
 export declare function isPopMultiplierAreaNetworked(id: number): boolean;
 /**
@@ -1181,13 +1217,13 @@ export declare function isPopMultiplierAreaNetworked(id: number): boolean;
  *
  * Returns true if there is anything in that location matching the provided parameters.
  *
- * Hash: 0xADCDE75E1C60F32D | Since: 323
+ * Hash: 0xADCDE75E1C60F32D | Since: unknown
  */
 export declare function isPositionOccupied(pos: Vector3, range: number, checkVehicles: boolean, checkPeds: boolean, ignoreEntity: number | IEntity): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x44F28F86433B10A9 | Since: 323
+ * Hash: 0x44F28F86433B10A9 | Since: unknown
  */
 export declare function isPrevWeatherType(weatherType: string): boolean;
 /**
@@ -1198,121 +1234,127 @@ export declare function isPrevWeatherType(weatherType: string): boolean;
  *
  * ownedByPlayer = only projectiles fired by the player will be detected.
  *
- * Hash: 0x5270A8FBC098C3F8 | Since: 323
+ * Hash: 0x5270A8FBC098C3F8 | Since: unknown
  */
 export declare function isProjectileInArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, ownedByPlayer: boolean): boolean;
 /**
  * See IS_POINT_IN_ANGLED_AREA for the definition of an angled area.
  *
- * Hash: 0xF0BC12401061DEA0 | Since: 323
+ * Hash: 0xF0BC12401061DEA0 | Since: unknown
  */
 export declare function isProjectileTypeInAngledArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, width: number, ownedByPlayer: boolean): boolean;
 /**
  * Determines whether there is a projectile of a specific type within the specified coordinates. The coordinates form a axis-aligned bounding box.
  *
- * Hash: 0x2E0DC353342C4A6D | Since: 323
+ * Hash: 0x2E0DC353342C4A6D | Since: unknown
  */
 export declare function isProjectileTypeInArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, _type: number, ownedByPlayer: boolean): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x34318593248C8FB2 | Since: 323
+ * Hash: 0x34318593248C8FB2 | Since: unknown
  */
 export declare function isProjectileTypeWithinDistance(pos: Vector3, projectileHash: number | string, radius: number, ownedByPlayer: boolean): boolean;
 /**
  * PS5 (Prospero) version...
  *
- * Hash: 0x807ABE1AB65C24D2 | Since: 2612
+ * Hash: 0x807ABE1AB65C24D2 | Since: unknown
  */
 export declare function isProsperoVersion(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xCCA1072C29D096C2 | Since: 323
+ * Hash: 0xCCA1072C29D096C2 | Since: unknown
  */
 export declare function isPs3Version(): boolean;
 /**
  * Xbox Series (Scarlett) version...
  *
- * Hash: 0xC545AB1CF97ABB34 | Since: 2612
+ * Hash: 0xC545AB1CF97ABB34 | Since: unknown
  */
 export declare function isScarlettVersion(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xF911E695C1EB8518 | Since: 2612
+ * Hash: 0xF911E695C1EB8518 | Since: unknown
  */
 export declare function isScePlatform(): boolean;
 /**
+ * No comment provided
+ *
+ * Hash: 0x0E50FCE4525E3D72 | Since: unknown
+ */
+export declare function isSessionInitialized(): boolean;
+/**
  * Determines whether there is a sniper bullet within the specified coordinates. The coordinates form an axis-aligned bounding box.
  *
- * Hash: 0xFEFCF11B01287125 | Since: 323
+ * Hash: 0xFEFCF11B01287125 | Since: unknown
  */
 export declare function isSniperBulletInArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): boolean;
 /**
  * This function is hard-coded to always return 0.
  *
- * Hash: 0x61A23B7EDA9BDA24 | Since: 323
+ * Hash: 0x61A23B7EDA9BDA24 | Since: unknown
  */
 export declare function isSniperInverted(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x0A27B2B6282F7169 | Since: 2545
+ * Hash: 0x0A27B2B6282F7169 | Since: unknown
  */
 export declare function isSteamVersion(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xF22B6C47C6EAB066 | Since: 323
+ * Hash: 0xF22B6C47C6EAB066 | Since: unknown
  */
 export declare function isStringNull(_string: string): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xCA042B6957743895 | Since: 323
+ * Hash: 0xCA042B6957743895 | Since: unknown
  */
 export declare function isStringNullOrEmpty(_string: string): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x7A3F19700A4D0525 | Since: 323
+ * Hash: 0x7A3F19700A4D0525 | Since: unknown
  */
 export declare function isStuntJumpInProgress(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x2272B0A1343129F4 | Since: 323
+ * Hash: 0x2272B0A1343129F4 | Since: unknown
  */
 export declare function isStuntJumpMessageShowing(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x5D5479D115290C3F | Since: 323
+ * Hash: 0x5D5479D115290C3F | Since: unknown
  */
 export declare function isTennisMode(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x7B30F65D7B710098 | Since: 323
+ * Hash: 0x7B30F65D7B710098 | Since: unknown
  */
 export declare function isThisAMinigameScript(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xF6201B4DAF662A9D | Since: 323
+ * Hash: 0xF6201B4DAF662A9D | Since: unknown
  */
 export declare function isXbox360Version(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x138679CA01E21F53 | Since: 2612
+ * Hash: 0x138679CA01E21F53 | Since: unknown
  */
 export declare function isXboxPlatform(): boolean;
 /**
  * Returns true if the current frontend menu is FE_MENU_VERSION_LANDING_MENU
  *
- * Hash: 0x3BBBD13E5041A79E | Since: 323
+ * Hash: 0x3BBBD13E5041A79E | Since: unknown
  */
 export declare function landingScreenStartedEndUserBenchmark(): boolean;
 /**
@@ -1339,141 +1381,141 @@ export declare function landingScreenStartedEndUserBenchmark(): boolean;
  * Wispy
  *
  *
- * Hash: 0xFC4842A34657BFCB | Since: 323
+ * Hash: 0xFC4842A34657BFCB | Since: unknown
  */
 export declare function loadCloudHat(name: string, transitionTime: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x9243BAC96D64C050 | Since: 323
+ * Hash: 0x9243BAC96D64C050 | Since: unknown
  */
 export declare function networkSetScriptIsSafeForNetworkGame(): void;
 /**
  * p0 was always 2 in R* scripts.
  * Called before calling DISPLAY_ONSCREEN_KEYBOARD if the input needs to be saved.
  *
- * Hash: 0x3ED1438C1F5C6612 | Since: 323
+ * Hash: 0x3ED1438C1F5C6612 | Since: unknown
  */
 export declare function nextOnscreenKeyboardResultWillDisplayUsingTheseFonts(): void;
 /**
  * No comment provided
  *
- * Hash: 0xFA3FFB0EEBC288A3 | Since: 2060
+ * Hash: 0xFA3FFB0EEBC288A3 | Since: unknown
  */
 export declare function overrideFreezeFlags(): void;
 /**
  * No comment provided
  *
- * Hash: 0x1162EA8AE9D24EEA | Since: 323
+ * Hash: 0x1162EA8AE9D24EEA | Since: unknown
  */
 export declare function overrideSaveHouse(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x2C2B3493FBF51C71 | Since: 323
+ * Hash: 0x2C2B3493FBF51C71 | Since: unknown
  */
 export declare function pauseDeathArrestRestart(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x8FA9C42FC5D7C64B | Since: 323
+ * Hash: 0x8FA9C42FC5D7C64B | Since: unknown
  */
 export declare function playTennisDiveAnim(ped: number | IPed): void;
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
  *
- * Hash: 0xE266ED23311F24D4 | Since: 323
+ * Hash: 0xE266ED23311F24D4 | Since: unknown
  */
 export declare function playTennisSwingAnim(ped: number | IPed, animDict: string, animName: string): void;
 /**
  * Returns duration of how long the game has been in power-saving mode (aka "constrained") in milliseconds.
  *
- * Hash: 0xABB2FA71C83A1B72 | Since: 323
+ * Hash: 0xABB2FA71C83A1B72 | Since: unknown
  */
 export declare function plmGetConstrainedDurationMs(): number;
 /**
  * aka "constrained"
  *
- * Hash: 0x684A41975F077262 | Since: 323
+ * Hash: 0x684A41975F077262 | Since: unknown
  */
 export declare function plmIsInConstrainedMode(): boolean;
 /**
  * spawns a few distant/out-of-sight peds, vehicles, animals etc each time it is called
  *
- * Hash: 0x7472BB270D7B4F3E | Since: 323
+ * Hash: 0x7472BB270D7B4F3E | Since: unknown
  */
 export declare function populateNow(): void;
 /**
  * No comment provided
  *
- * Hash: 0x11B56FBBF7224868 | Since: 323
+ * Hash: 0x11B56FBBF7224868 | Since: unknown
  */
 export declare function preloadCloudHat(name: string): void;
 /**
  * No comment provided
  *
- * Hash: 0xE3D969D2785FFB5E | Since: 323
+ * Hash: 0xE3D969D2785FFB5E | Since: unknown
  */
 export declare function preventArrestStateThisFrame(): void;
 /**
  * No comment provided
  *
- * Hash: 0x72DE52178C291CB5 | Since: 323
+ * Hash: 0x72DE52178C291CB5 | Since: unknown
  */
 export declare function queueMissionRepeatLoad(): boolean;
 /**
  * Shows the screen which is visible before you redo a mission? The game will make a restoration point where you will cameback when the mission is over.
  * Returns 1 if the message isn't currently on screen
  *
- * Hash: 0x44A0BDC559B35F6E | Since: 323
+ * Hash: 0x44A0BDC559B35F6E | Since: unknown
  */
 export declare function queueMissionRepeatSave(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xEB2104E905C6F2E9 | Since: 323
+ * Hash: 0xEB2104E905C6F2E9 | Since: unknown
  */
 export declare function queueMissionRepeatSaveForBenchmarkTest(): boolean;
 /**
  * Exits the game and downloads a fresh social club update on next restart.
  *
- * Hash: 0xEB6891F03362FB12 | Since: 323
+ * Hash: 0xEB6891F03362FB12 | Since: unknown
  */
 export declare function quitGame(): void;
 /**
  * No comment provided
  *
- * Hash: 0xC8F4131414C835A1 | Since: 323
+ * Hash: 0xC8F4131414C835A1 | Since: unknown
  */
 export declare function registerBoolToSave(name: string): any;
 /**
  * No comment provided
  *
- * Hash: 0x10C2FA78D0E128A1 | Since: 323
+ * Hash: 0x10C2FA78D0E128A1 | Since: unknown
  */
 export declare function registerEnumToSave(name: string): any;
 /**
  * No comment provided
  *
- * Hash: 0x7CAEC29ECB5DFEBB | Since: 323
+ * Hash: 0x7CAEC29ECB5DFEBB | Since: unknown
  */
 export declare function registerFloatToSave(name: string): any;
 /**
  * No comment provided
  *
- * Hash: 0xA735353C77334EA0 | Since: 323
+ * Hash: 0xA735353C77334EA0 | Since: unknown
  */
 export declare function registerInt64ToSave(name: string): any;
 /**
  * No comment provided
  *
- * Hash: 0x34C9EE5986258415 | Since: 323
+ * Hash: 0x34C9EE5986258415 | Since: unknown
  */
 export declare function registerIntToSave(name: string): any;
 /**
  * returns savehouseHandle
  *
- * Hash: 0xC0714D0A7EEECA54 | Since: 323
+ * Hash: 0xC0714D0A7EEECA54 | Since: unknown
  */
 export declare function registerSaveHouse(pos: Vector3): number;
 /**
@@ -1481,7 +1523,7 @@ export declare function registerSaveHouse(pos: Vector3): number;
  * `MISC::REGISTER_TEXT_LABEL_15_TO_SAVE(&a_0._f1C, "tlPlateText_pending");`
  * `MISC::REGISTER_TEXT_LABEL_15_TO_SAVE(&a_0._f10B, "tlCarAppPlateText");`
  *
- * Hash: 0x6F7794F28C6B2535 | Since: 323
+ * Hash: 0x6F7794F28C6B2535 | Since: unknown
  */
 export declare function registerTextLabel15ToSave(name: string): any;
 /**
@@ -1491,7 +1533,7 @@ export declare function registerTextLabel15ToSave(name: string): any;
  * `MISC::REGISTER_TEXT_LABEL_23_TO_SAVE(&a_0._fB, "Ringtone_For_This_Player");`
  * `MISC::REGISTER_TEXT_LABEL_23_TO_SAVE(&a_0._f1EC4._f12[v_A\/\*6\*\/], &v_13); // where v_13 is "MPATMLOGSCRS0" thru "MPATMLOGSCRS15"`
  *
- * Hash: 0x48F069265A0E4BEC | Since: 323
+ * Hash: 0x48F069265A0E4BEC | Since: unknown
  */
 export declare function registerTextLabel23ToSave(name: string): any;
 /**
@@ -1500,7 +1542,7 @@ export declare function registerTextLabel23ToSave(name: string): any;
  * `MISC::REGISTER_TEXT_LABEL_31_TO_SAVE(&a_0._f1F5A._f6[0\/\*8\*\/], "TEMPSTAT_LABEL"); // gets saved in a struct called "g_SaveData_STRING_ScriptSaves"`
  * `MISC::REGISTER_TEXT_LABEL_31_TO_SAVE(&a_0._f4B4[v_1A\/\*8\*\/], &v_5); // where v_5 is "Name0" thru "Name9", gets saved in a struct called "OUTFIT_Name"`
  *
- * Hash: 0x8269816F6CFD40F8 | Since: 323
+ * Hash: 0x8269816F6CFD40F8 | Since: unknown
  */
 export declare function registerTextLabel31ToSave(name: string): any;
 /**
@@ -1515,109 +1557,127 @@ export declare function registerTextLabel31ToSave(name: string): any;
  * `MISC::REGISTER_TEXT_LABEL_63_TO_SAVE(&a_0._f4B, "PAID_PLAYER");`
  * `MISC::REGISTER_TEXT_LABEL_63_TO_SAVE(&a_0._f5B, "RADIO_STATION");`
  *
- * Hash: 0xFAA457EF263E8763 | Since: 323
+ * Hash: 0xFAA457EF263E8763 | Since: unknown
  */
 export declare function registerTextLabel63ToSave(name: string): any;
 /**
  * No comment provided
  *
- * Hash: 0xEDB1232C5BEAE62F | Since: 323
+ * Hash: 0xEDB1232C5BEAE62F | Since: unknown
  */
 export declare function registerTextLabelToSave(name: string): any;
 /**
  * No comment provided
  *
- * Hash: 0x264AC28B01B353A5 | Since: 323
+ * Hash: 0x264AC28B01B353A5 | Since: unknown
  */
 export declare function removeDispatchSpawnBlockingArea(): void;
 /**
  * No comment provided
  *
- * Hash: 0xB129E447A2EDA4BF | Since: 323
+ * Hash: 0xB129E447A2EDA4BF | Since: unknown
  */
 export declare function removePopMultiplierArea(id: number): void;
 /**
  * Removes population multiplier sphere
  *
- * Hash: 0xE6869BECDD8F2403 | Since: 323
+ * Hash: 0xE6869BECDD8F2403 | Since: unknown
  */
 export declare function removePopMultiplierSphere(id: number): void;
 /**
+ * Does nothing (it's a nullsub).
+ *
+ * Hash: 0x1997BABDBA01F72C | Since: unknown
+ */
+export declare function reportInvalidScriptRouterArgument(argument: string): void;
+/**
  * No comment provided
  *
- * Hash: 0x77A84429DD9F0A15 | Since: 323
+ * Hash: 0x54A2DDE8F751EEE5 | Since: unknown
+ */
+export declare function resetChosenMpCharacterSlot(): void;
+/**
+ * No comment provided
+ *
+ * Hash: 0x77A84429DD9F0A15 | Since: unknown
  */
 export declare function resetDispatchIdealSpawnDistance(): void;
 /**
  * No comment provided
  *
- * Hash: 0xAC7BFD5C1D83EA75 | Since: 323
+ * Hash: 0xAC7BFD5C1D83EA75 | Since: unknown
  */
 export declare function resetDispatchSpawnBlockingAreas(): void;
 /**
  * No comment provided
  *
- * Hash: 0x5896F2BD5683A4E1 | Since: 1868
+ * Hash: 0x5896F2BD5683A4E1 | Since: unknown
  */
 export declare function resetDispatchSpawnLocation(): void;
 /**
  * No comment provided
  *
- * Hash: 0xEB2DB0CAD13154B3 | Since: 323
+ * Hash: 0xEB2DB0CAD13154B3 | Since: unknown
  */
 export declare function resetDispatchTimeBetweenSpawnAttempts(): void;
 /**
  * No comment provided
  *
- * Hash: 0x437138B6A830166A | Since: 323
+ * Hash: 0x437138B6A830166A | Since: unknown
  */
 export declare function resetEndUserBenchmark(): void;
 /**
  * No comment provided
  *
- * Hash: 0xD9F692D349249528 | Since: 323
+ * Hash: 0xD9F692D349249528 | Since: unknown
  */
 export declare function resetWantedResponseNumPedsToSpawn(): void;
 /**
  * In singleplayer it does exactly what the name implies. In FiveM / GTA:Online it shows `Disconnecting from GTA Online` HUD and then quits the game.
  *
- * Hash: 0xE574A662ACAEFBB1 | Since: 372
+ * Hash: 0xE574A662ACAEFBB1 | Since: unknown
  */
 export declare function restartGame(): void;
 /**
  * Saves the benchmark recording to %USERPROFILE%\Documents\Rockstar Games\GTA V\Benchmarks and submits some metrics.
  *
- * Hash: 0x37DEB0AA183FB6D8 | Since: 323
+ * Hash: 0x37DEB0AA183FB6D8 | Since: unknown
  */
 export declare function saveEndUserBenchmark(): void;
 /**
  * No comment provided
  *
- * Hash: 0x8EF5573A1F801A5C | Since: 323
+ * Hash: 0x8EF5573A1F801A5C | Since: unknown
  */
 export declare function scriptRaceGetPlayerSplitTime(player: number | string | IPlayer): [boolean, number, number];
 /**
  * No comment provided
  *
- * Hash: 0x0A60017F841A54F2 | Since: 323
+ * Hash: 0x0A60017F841A54F2 | Since: unknown
  */
 export declare function scriptRaceInit(): void;
 /**
  * No comment provided
  *
- * Hash: 0x1BB299305C3E8C13 | Since: 323
+ * Hash: 0x1BB299305C3E8C13 | Since: unknown
  */
 export declare function scriptRacePlayerHitCheckpoint(player: number | string | IPlayer): void;
 /**
  * No comment provided
  *
- * Hash: 0x1FF6BF9A63E5757F | Since: 323
+ * Hash: 0x1FF6BF9A63E5757F | Since: unknown
  */
 export declare function scriptRaceShutdown(): void;
 /**
+ * Does nothing (it's a nullsub).
+ *
+ * Hash: 0xE8CABE94E8592520 | Since: unknown
+ */
+export declare function setActivityScriptRoutingEnabled(enabled: boolean): void;
+/**
  * No comment provided
  *
- * Hash: 0x438822C279B73B93 | Since: 573
+ * Hash: 0x438822C279B73B93 | Since: unknown
  */
 export declare function setBeastJumpThisFrame(player: number | string | IPlayer): void;
 /**
@@ -1633,43 +1693,43 @@ export declare function setBeastJumpThisFrame(player: number | string | IPlayer)
  *
  * Please note, this method may assign a value to [address] when used.
  *
- * Hash: 0x933D6A9EEC1BACD0 | Since: 323
+ * Hash: 0x933D6A9EEC1BACD0 | Since: unknown
  */
 export declare function setBit(offset: number): number;
 /**
  * No comment provided
  *
- * Hash: 0x8EF07E15701D61ED | Since: 323
+ * Hash: 0x8EF07E15701D61ED | Since: unknown
  */
 export declare function setBitsInRange(rangeStart: number, rangeEnd: number): number;
 /**
  * No comment provided
  *
- * Hash: 0xF36199225D6D8C86 | Since: 323
+ * Hash: 0xF36199225D6D8C86 | Since: unknown
  */
 export declare function setCloudsAlpha(opacity: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x02DEAAC8F8EA7FE7 | Since: 323
+ * Hash: 0x02DEAAC8F8EA7FE7 | Since: unknown
  */
 export declare function setCloudSettingsOverride(): void;
 /**
  * No comment provided
  *
- * Hash: 0x4B82FA6F2D624634 | Since: 2612
+ * Hash: 0x4B82FA6F2D624634 | Since: unknown
  */
 export declare function setContentIdIndex(contentId: number | string, index: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xB938B7E6D3C0620C | Since: 323
+ * Hash: 0xB938B7E6D3C0620C | Since: unknown
  */
 export declare function setCreditsActive(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xB51B9AB9EF81868C | Since: 323
+ * Hash: 0xB51B9AB9EF81868C | Since: unknown
  */
 export declare function setCreditsFadeOutWithScreen(toggle: boolean): void;
 /**
@@ -1703,67 +1763,67 @@ export declare function setCreditsFadeOutWithScreen(toggle: boolean): void;
  * If an invalid hash is specified for targetWeather, the next weather type will be used.
  * If an invalid hash is specified for both sourceWeather and targetWeather, the function just changes the transition time of the current transition.
  *
- * Hash: 0x578C752848ECFA0C | Since: 323
+ * Hash: 0x578C752848ECFA0C | Since: unknown
  */
 export declare function setCurrWeatherState(weatherType1: number | string, weatherType2: number | string, percentWeather2: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x6FE601A64180D423 | Since: 323
+ * Hash: 0x6FE601A64180D423 | Since: unknown
  */
 export declare function setDispatchIdealSpawnDistance(distance: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xD10F442036302D50 | Since: 323
+ * Hash: 0xD10F442036302D50 | Since: unknown
  */
 export declare function setDispatchSpawnLocation(pos: Vector3): void;
 /**
  * No comment provided
  *
- * Hash: 0x44F7CBC1BEB3327D | Since: 323
+ * Hash: 0x44F7CBC1BEB3327D | Since: unknown
  */
 export declare function setDispatchTimeBetweenSpawnAttempts(): void;
 /**
  * No comment provided
  *
- * Hash: 0x48838ED9937A15D1 | Since: 323
+ * Hash: 0x48838ED9937A15D1 | Since: unknown
  */
 export declare function setDispatchTimeBetweenSpawnAttemptsMultiplier(): void;
 /**
  * No comment provided
  *
- * Hash: 0xA66C71C98D5F2CFB | Since: 323
+ * Hash: 0xA66C71C98D5F2CFB | Since: unknown
  */
 export declare function setExplosiveAmmoThisFrame(player: number | string | IPlayer): void;
 /**
  * No comment provided
  *
- * Hash: 0xFF1BED81BFDC0FE0 | Since: 323
+ * Hash: 0xFF1BED81BFDC0FE0 | Since: unknown
  */
 export declare function setExplosiveMeleeThisFrame(player: number | string | IPlayer): void;
 /**
  * Sets whether the game should fade in after the player dies or is arrested.
  *
- * Hash: 0xDA66D2796BA33F12 | Since: 323
+ * Hash: 0xDA66D2796BA33F12 | Since: unknown
  */
 export declare function setFadeInAfterDeathArrest(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xF3D78F59DFE18D79 | Since: 323
+ * Hash: 0xF3D78F59DFE18D79 | Since: unknown
  */
 export declare function setFadeInAfterLoad(toggle: boolean): void;
 /**
  * Sets whether the game should fade out after the player is arrested.
  *
- * Hash: 0x1E0B4DC0D990A4E7 | Since: 323
+ * Hash: 0x1E0B4DC0D990A4E7 | Since: unknown
  */
 export declare function setFadeOutAfterArrest(toggle: boolean): void;
 /**
  * Sets whether the game should fade out after the player dies.
  *
- * Hash: 0x4A18E01DF2C87B86 | Since: 323
+ * Hash: 0x4A18E01DF2C87B86 | Since: unknown
  */
 export declare function setFadeOutAfterDeath(toggle: boolean): void;
 /**
@@ -1771,25 +1831,25 @@ export declare function setFadeOutAfterDeath(toggle: boolean): void;
  *
  * Max is 6, anything above this makes it just 6. Also the mini-map gets the red & blue flashing effect.
  *
- * Hash: 0x1454F2448DE30163 | Since: 323
+ * Hash: 0x1454F2448DE30163 | Since: unknown
  */
 export declare function setFakeWantedLevel(fakeWantedLevel: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x11879CDD803D30F4 | Since: 323
+ * Hash: 0x11879CDD803D30F4 | Since: unknown
  */
 export declare function setFireAmmoThisFrame(player: number | string | IPlayer): void;
 /**
  * No comment provided
  *
- * Hash: 0xA1183BCFEE0F93D1 | Since: 1180
+ * Hash: 0xA1183BCFEE0F93D1 | Since: unknown
  */
 export declare function setForcedJumpThisFrame(player: number | string | IPlayer): void;
 /**
  * Make sure to call this from the correct thread if you're using multiple threads because all other threads except the one which is calling SET_GAME_PAUSED will be paused which means you will lose control and the game remains in paused mode until you exit GTA5.exe
  *
- * Hash: 0x577D1284D6873711 | Since: 323
+ * Hash: 0x577D1284D6873711 | Since: unknown
  */
 export declare function setGamePaused(toggle: boolean): void;
 /**
@@ -1799,25 +1859,25 @@ export declare function setGamePaused(toggle: boolean): void;
  * 2: 0.1 - very low
  * 3: 0.0 - off
  *
- * Hash: 0x740E14FAD5842351 | Since: 323
+ * Hash: 0x740E14FAD5842351 | Since: unknown
  */
 export declare function setGravityLevel(level: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xD261BA3E7E998072 | Since: 323
+ * Hash: 0xD261BA3E7E998072 | Since: unknown
  */
 export declare function setIdealSpawnDistanceForIncident(incidentId: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xB08B85D860E7BA3C | Since: 323
+ * Hash: 0xB08B85D860E7BA3C | Since: unknown
  */
 export declare function setIncidentRequestedUnits(incidentId: number, dispatchService: number, numUnits: number): void;
 /**
  * Sets an unknown flag used by CScene in determining which entities from CMapData scene nodes to draw, similar to SET_INSTANCE_PRIORITY_MODE.
  *
- * Hash: 0xC5F0A8EBD3F361CE | Since: 323
+ * Hash: 0xC5F0A8EBD3F361CE | Since: unknown
  */
 export declare function setInstancePriorityHint(flag: number): void;
 /**
@@ -1826,13 +1886,13 @@ export declare function setInstancePriorityHint(flag: number): void;
  *
  * In fact, I doubt this changes the flag whatsoever, that's the OTHER native idiots use together with this that does so, this one only causes a loading screen to show as it reloads map data.
  *
- * Hash: 0x9BAE5AD2508DF078 | Since: 323
+ * Hash: 0x9BAE5AD2508DF078 | Since: unknown
  */
 export declare function setInstancePriorityMode(): void;
 /**
  * No comment provided
  *
- * Hash: 0x19E00D7322C6F85B | Since: 323
+ * Hash: 0x19E00D7322C6F85B | Since: unknown
  */
 export declare function setMinigameInProgress(toggle: boolean): void;
 /**
@@ -1843,7 +1903,7 @@ export declare function setMinigameInProgress(toggle: boolean): void;
  *
  * ^ also, if the mission flag is already set, the function does nothing at all
  *
- * Hash: 0xC4301E5121A0ED73 | Since: 323
+ * Hash: 0xC4301E5121A0ED73 | Since: unknown
  */
 export declare function setMissionFlag(toggle: boolean): void;
 /**
@@ -1851,26 +1911,26 @@ export declare function setMissionFlag(toggle: boolean): void;
  *
  * If you pass true, something will be set to zero.
  *
- * Hash: 0xA43D5C6FE51ADBEF | Since: 323
+ * Hash: 0xA43D5C6FE51ADBEF | Since: unknown
  */
 export declare function setOverrideWeather(weatherType: string): void;
 /**
  * Identical to SET_OVERRIDE_WEATHER but has an additional BOOL param that sets some weather var to 0 if true
  *
- * Hash: 0x1178E104409FE58C | Since: 2189
+ * Hash: 0x1178E104409FE58C | Since: unknown
  */
 export declare function setOverrideWeatherex(weatherType: string): void;
 /**
  * If toggle is true, the ped's head is shown in the pause menu
  * If toggle is false, the ped's head is not shown in the pause menu
  *
- * Hash: 0x4EBB7E87AA0DBED4 | Since: 323
+ * Hash: 0x4EBB7E87AA0DBED4 | Since: unknown
  */
 export declare function setPlayerIsInAnimalForm(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x9D8D44ADBBA61EF2 | Since: 323
+ * Hash: 0x9D8D44ADBBA61EF2 | Since: unknown
  */
 export declare function setPlayerIsRepeatingAMission(toggle: boolean): void;
 /**
@@ -1878,74 +1938,86 @@ export declare function setPlayerIsRepeatingAMission(toggle: boolean): void;
  * With an `intensity` of `0.0f` rain and rain sounds are disabled and there won't be any new puddles.
  * To use the rain intensity of the current weather, call this native with `-1f` as `intensity`.
  *
- * Hash: 0x643E26EA6E024D92 | Since: 323
+ * Hash: 0x643E26EA6E024D92 | Since: unknown
  */
 export declare function setRain(intensity: number): void;
 /**
  * If the parameter is true, sets the random event flag to true, if the parameter is false, the function does nothing at all.
  * Does nothing if the mission flag is set.
  *
- * Hash: 0x971927086CFD2158 | Since: 323
+ * Hash: 0x971927086CFD2158 | Since: unknown
  */
 export declare function setRandomEventFlag(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x444D98F98C11F3EC | Since: 323
+ * Hash: 0x444D98F98C11F3EC | Since: unknown
  */
 export declare function setRandomSeed(seed: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x8B05F884CF7E8020 | Since: 323
+ * Hash: 0x8B05F884CF7E8020 | Since: unknown
  */
 export declare function setRandomWeatherType(): void;
 /**
  * No comment provided
  *
- * Hash: 0x706B5EDCAA7FA663 | Since: 323
+ * Hash: 0x706B5EDCAA7FA663 | Since: unknown
  */
 export declare function setRestartCoordOverride(pos: Vector3, heading: number): void;
 /**
  * Activates (usused?) riot mode. All NPCs are being hostile to each other (including player). Also the game will give weapons (pistols, smgs) to random NPCs.
  *
- * Hash: 0x2587A48BC88DFADF | Since: 323
+ * Hash: 0x2587A48BC88DFADF | Since: unknown
  */
 export declare function setRiotModeEnabled(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x4F548CABEAE553BC | Since: 323
+ * Hash: 0x4F548CABEAE553BC | Since: unknown
  */
 export declare function setSaveHouse(savehouseHandle: number): void;
 /**
  * ignoreVehicle - bypasses vehicle check of the local player (it will not open if you are in a vehicle and this is set to false)
  *
- * Hash: 0xC9BF75D28165FF77 | Since: 323
+ * Hash: 0xC9BF75D28165FF77 | Since: unknown
  */
 export declare function setSaveMenuActive(ignoreVehicle: boolean): void;
 /**
  * Sets GtaThread+0x14A
  *
- * Hash: 0x65D2EBB47E1CEC21 | Since: 323
+ * Hash: 0x65D2EBB47E1CEC21 | Since: unknown
  */
 export declare function setScriptHighPrio(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x7F06937B0CDCBC1A | Since: 1868
+ * Hash: 0x317989BB72A2EBFB | Since: unknown
+ */
+export declare function setScriptRouterLink(): [boolean, any];
+/**
+ * Launches the Initial Interactive Screen
+ *
+ * Hash: 0x244A22A2DA85D8C8 | Since: unknown
+ */
+export declare function setShouldLaunchIis(): void;
+/**
+ * No comment provided
+ *
+ * Hash: 0x7F06937B0CDCBC1A | Since: unknown
  */
 export declare function setSnow(level: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xD79185689F8FD5DF | Since: 323
+ * Hash: 0xD79185689F8FD5DF | Since: unknown
  */
 export declare function setStuntJumpsCanTrigger(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x57FFF03E423A4C0B | Since: 323
+ * Hash: 0x57FFF03E423A4C0B | Since: unknown
  */
 export declare function setSuperJumpThisFrame(player: number | string | IPlayer): void;
 /**
@@ -1955,31 +2027,31 @@ export declare function setSuperJumpThisFrame(player: number | string | IPlayer)
  *
  * Related to tennis mode.
  *
- * Hash: 0x54F157E0336A3822 | Since: 323
+ * Hash: 0x54F157E0336A3822 | Since: unknown
  */
 export declare function setTennisMoveNetworkSignalFloat(ped: number | IPed): void;
 /**
  * Sets bit 3 in GtaThread+0x150
  *
- * Hash: 0x6F2135B6129620C1 | Since: 323
+ * Hash: 0x6F2135B6129620C1 | Since: unknown
  */
 export declare function setThisIsATriggerScript(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xAA391C728106F7AF | Since: 323
+ * Hash: 0xAA391C728106F7AF | Since: unknown
  */
 export declare function setThisScriptCanBePaused(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xB98236CAAECEF897 | Since: 323
+ * Hash: 0xB98236CAAECEF897 | Since: unknown
  */
 export declare function setThisScriptCanRemoveBlipsCreatedByAnyScript(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xFB00CA71DA386228 | Since: 323
+ * Hash: 0xFB00CA71DA386228 | Since: unknown
  */
 export declare function setTickerJohnmarstonIsDone(): void;
 /**
@@ -1990,13 +2062,13 @@ export declare function setTickerJohnmarstonIsDone(): void;
  * Slow Motion 2: 0.4
  * Slow Motion 3: 0.2
  *
- * Hash: 0x1D408577D440E81E | Since: 323
+ * Hash: 0x1D408577D440E81E | Since: unknown
  */
 export declare function setTimeScale(timeScale: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xE532EC1A63231B4F | Since: 323
+ * Hash: 0xE532EC1A63231B4F | Since: unknown
  */
 export declare function setWantedResponseNumPedsToSpawn(): void;
 /**
@@ -2017,7 +2089,7 @@ export declare function setWantedResponseNumPedsToSpawn(): void;
  * "HALLOWEEN"
  * "NEUTRAL"
  *
- * Hash: 0x29B487C359E19889 | Since: 323
+ * Hash: 0x29B487C359E19889 | Since: unknown
  */
 export declare function setWeatherTypeNow(weatherType: string): void;
 /**
@@ -2038,13 +2110,13 @@ export declare function setWeatherTypeNow(weatherType: string): void;
  * "HALLOWEEN"
  * "NEUTRAL"
  *
- * Hash: 0xED712CA327900C8A | Since: 323
+ * Hash: 0xED712CA327900C8A | Since: unknown
  */
 export declare function setWeatherTypeNowPersist(weatherType: string): void;
 /**
  * No comment provided
  *
- * Hash: 0xFB5045B7C42B75BF | Since: 323
+ * Hash: 0xFB5045B7C42B75BF | Since: unknown
  */
 export declare function setWeatherTypeOvertimePersist(weatherType: string, time: number): void;
 /**
@@ -2065,105 +2137,105 @@ export declare function setWeatherTypeOvertimePersist(weatherType: string, time:
  * "HALLOWEEN"
  * "NEUTRAL"
  *
- * Hash: 0x704983DF373B198F | Since: 323
+ * Hash: 0x704983DF373B198F | Since: unknown
  */
 export declare function setWeatherTypePersist(weatherType: string): void;
 /**
  * Sets the the normalized wind speed value. The wind speed clamps always at 12.0, SET_WIND sets the wind in a percentage, 0.0 is 0 and 1.0 is 12.0. Setting this value to a negative number resumes the random wind speed changes provided by the game.
  *
- * Hash: 0xAC3A74E8384A9919 | Since: 323
+ * Hash: 0xAC3A74E8384A9919 | Since: unknown
  */
 export declare function setWind(speed: number): void;
 /**
  * The wind direction in radians
  * 180 degrees (PI), wind will blow from the south. Setting this value to a negative number resumes the random wind direction changes provided by the game.
  *
- * Hash: 0xEB0F4468467B4528 | Since: 323
+ * Hash: 0xEB0F4468467B4528 | Since: unknown
  */
 export declare function setWindDirection(direction: number): void;
 /**
  * Using this native will set the absolute wind speed value. The wind speed clamps to a range of 0.0- 12.0. Setting this value to a negative number resumes the random wind speed changes provided by the game.
  *
- * Hash: 0xEE09ECEDBABE47FC | Since: 323
+ * Hash: 0xEE09ECEDBABE47FC | Since: unknown
  */
 export declare function setWindSpeed(speed: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x867654CBC7606F2C | Since: 323
+ * Hash: 0x867654CBC7606F2C | Since: unknown
  */
 export declare function shootSingleBulletBetweenCoords(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, damage: number, weaponHash: number | string, ownerPed: number | IPed, isAudible: boolean, isInvisible: boolean, speed: number): void;
 /**
  * entity - entity to ignore
  *
- * Hash: 0xE3A7742E0B7A2F8B | Since: 323
+ * Hash: 0xE3A7742E0B7A2F8B | Since: unknown
  */
 export declare function shootSingleBulletBetweenCoordsIgnoreEntity(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, damage: number, weaponHash: number | string, ownerPed: number | IPed, isAudible: boolean, isInvisible: boolean, speed: number, entity: number | IEntity): void;
 /**
  * entity - entity to ignore
  * targetEntity - entity to home in on, if the weapon hash provided supports homing
  *
- * Hash: 0xBFE5756E7407064A | Since: 323
+ * Hash: 0xBFE5756E7407064A | Since: unknown
  */
 export declare function shootSingleBulletBetweenCoordsIgnoreEntityNew(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, damage: number, weaponHash: number | string, ownerPed: number | IPed, isAudible: boolean, isInvisible: boolean, speed: number, entity: number | IEntity, targetEntity: number | IEntity): void;
 /**
  * Returns true if the game is using the metric measurement system (profile setting 227), false if imperial is used.
  *
- * Hash: 0xD3D15555431AB793 | Since: 323
+ * Hash: 0xD3D15555431AB793 | Since: unknown
  */
 export declare function shouldUseMetricMeasurements(): boolean;
 /**
  * This native always come right before SET_ENTITY_QUATERNION where its final 4 parameters are SLERP_NEAR_QUATERNION p9 to p12
  *
- * Hash: 0xF2F6A2FA49278625 | Since: 323
+ * Hash: 0xF2F6A2FA49278625 | Since: unknown
  */
 export declare function slerpNearQuaternion(t: number, pos: Vector3, w: number, x1: number, y1: number, z1: number, w1: number): [number, number, number, number];
 /**
  * No comment provided
  *
- * Hash: 0x92790862E36C2ADA | Since: 323
+ * Hash: 0x92790862E36C2ADA | Since: unknown
  */
 export declare function startEndUserBenchmark(): void;
 /**
  * No comment provided
  *
- * Hash: 0x60FE567DF1B1AF9D | Since: 323
+ * Hash: 0x60FE567DF1B1AF9D | Since: unknown
  */
 export declare function startSaveArrayWithSize(size: number, arrayName: string): any;
 /**
  * No comment provided
  *
- * Hash: 0xA9575F812C6A7997 | Since: 323
+ * Hash: 0xA9575F812C6A7997 | Since: unknown
  */
 export declare function startSaveData(): any;
 /**
  * No comment provided
  *
- * Hash: 0xBF737600CDDBEADD | Since: 323
+ * Hash: 0xBF737600CDDBEADD | Since: unknown
  */
 export declare function startSaveStructWithSize(size: number, structName: string): any;
 /**
  * No comment provided
  *
- * Hash: 0xC7DB36C24634F52B | Since: 323
+ * Hash: 0xC7DB36C24634F52B | Since: unknown
  */
 export declare function stopEndUserBenchmark(): void;
 /**
  * No comment provided
  *
- * Hash: 0x04456F95153C6BE4 | Since: 323
+ * Hash: 0x04456F95153C6BE4 | Since: unknown
  */
 export declare function stopSaveArray(): void;
 /**
  * No comment provided
  *
- * Hash: 0x74E20C9145FB66FD | Since: 323
+ * Hash: 0x74E20C9145FB66FD | Since: unknown
  */
 export declare function stopSaveData(): void;
 /**
  * No comment provided
  *
- * Hash: 0xEB1774DF12BB9F12 | Since: 323
+ * Hash: 0xEB1774DF12BB9F12 | Since: unknown
  */
 export declare function stopSaveStruct(): void;
 /**
@@ -2171,49 +2243,49 @@ export declare function stopSaveStruct(): void;
  *
  * If all checks have passed successfully, the return value will be set to whatever strtol(string, 0i64, 10); returns.
  *
- * Hash: 0x5A5F40FE637EB584 | Since: 323
+ * Hash: 0x5A5F40FE637EB584 | Since: unknown
  */
 export declare function stringToInt(_string: string): [boolean, number];
 /**
  * No comment provided
  *
- * Hash: 0x1EAE0A6E978894A2 | Since: 323
+ * Hash: 0x1EAE0A6E978894A2 | Since: unknown
  */
 export declare function supressRandomEventThisFrame(eventType: number, suppress: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x632106CC96E82E91 | Since: 323
+ * Hash: 0x632106CC96E82E91 | Since: unknown
  */
 export declare function tan(): number;
 /**
  * No comment provided
  *
- * Hash: 0x9DC711BC69C548DF | Since: 323
+ * Hash: 0x9DC711BC69C548DF | Since: unknown
  */
 export declare function terminateAllScriptsWithThisName(scriptName: string): void;
 /**
  * Toggles some stunt jump stuff.
  *
- * Hash: 0xFB80AB299D2EE1BD | Since: 757
+ * Hash: 0xFB80AB299D2EE1BD | Since: unknown
  */
 export declare function toggleShowOptionalStuntJumpCamera(toggle: boolean): void;
 /**
  * Returns true if the current frontend menu is FE_MENU_VERSION_SP_PAUSE
  *
- * Hash: 0xEA2F2061875EED90 | Since: 323
+ * Hash: 0xEA2F2061875EED90 | Since: unknown
  */
 export declare function uiStartedEndUserBenchmark(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x957E790EA1727B64 | Since: 323
+ * Hash: 0x957E790EA1727B64 | Since: unknown
  */
 export declare function unloadAllCloudHats(): void;
 /**
  * No comment provided
  *
- * Hash: 0xA74802FB8D0B7814 | Since: 323
+ * Hash: 0xA74802FB8D0B7814 | Since: unknown
  */
 export declare function unloadCloudHat(name: string): void;
 /**
@@ -2226,97 +2298,97 @@ export declare function unloadCloudHat(name: string): void;
  * 1: User has finished editing
  * 2: User has canceled editing
  *
- * Hash: 0x0CF2B696BBF945AE | Since: 323
+ * Hash: 0x0CF2B696BBF945AE | Since: unknown
  */
 export declare function updateOnscreenKeyboard(): number;
 /**
  * No comment provided
  *
- * Hash: 0x693478ACBD7F18E7 | Since: 1103
+ * Hash: 0x693478ACBD7F18E7 | Since: unknown
  */
 export declare function useActiveCameraForTimeslicingCentre(): void;
 /**
  * No comment provided
  *
- * Hash: 0xF14878FC50BEC6EE | Since: 323
+ * Hash: 0xF14878FC50BEC6EE | Since: unknown
  */
 export declare function usingMissionCreator(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xA8434F1DFF41D6E7 | Since: 323
+ * Hash: 0xA8434F1DFF41D6E7 | Since: unknown
  */
 export declare function waterOverrideFadeIn(): void;
 /**
  * No comment provided
  *
- * Hash: 0xC3C221ADDDE31A11 | Since: 323
+ * Hash: 0xC3C221ADDDE31A11 | Since: unknown
  */
 export declare function waterOverrideFadeOut(): void;
 /**
  * No comment provided
  *
- * Hash: 0x31727907B2C43C55 | Since: 323
+ * Hash: 0x31727907B2C43C55 | Since: unknown
  */
 export declare function waterOverrideSetOceannoiseminamplitude(minAmplitude: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x405591EC8FD9096D | Since: 323
+ * Hash: 0x405591EC8FD9096D | Since: unknown
  */
 export declare function waterOverrideSetOceanwaveamplitude(amplitude: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xB3E6360DDE733E82 | Since: 323
+ * Hash: 0xB3E6360DDE733E82 | Since: unknown
  */
 export declare function waterOverrideSetOceanwavemaxamplitude(maxAmplitude: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xF751B16FB32ABC1D | Since: 323
+ * Hash: 0xF751B16FB32ABC1D | Since: unknown
  */
 export declare function waterOverrideSetOceanwaveminamplitude(minAmplitude: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x7C9C0B1EEB1F9072 | Since: 323
+ * Hash: 0x7C9C0B1EEB1F9072 | Since: unknown
  */
 export declare function waterOverrideSetRipplebumpiness(bumpiness: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xB9854DFDE0D833D6 | Since: 323
+ * Hash: 0xB9854DFDE0D833D6 | Since: unknown
  */
 export declare function waterOverrideSetRippledisturb(disturb: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x9F5E6BB6B34540DA | Since: 323
+ * Hash: 0x9F5E6BB6B34540DA | Since: unknown
  */
 export declare function waterOverrideSetRipplemaxbumpiness(maxBumpiness: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x6216B116083A7CB4 | Since: 323
+ * Hash: 0x6216B116083A7CB4 | Since: unknown
  */
 export declare function waterOverrideSetRippleminbumpiness(minBumpiness: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xB8F87EAD7533B176 | Since: 323
+ * Hash: 0xB8F87EAD7533B176 | Since: unknown
  */
 export declare function waterOverrideSetShorewaveamplitude(amplitude: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xA7A1127490312C36 | Since: 323
+ * Hash: 0xA7A1127490312C36 | Since: unknown
  */
 export declare function waterOverrideSetShorewavemaxamplitude(maxAmplitude: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xC3EAD29AB273ECE8 | Since: 323
+ * Hash: 0xC3EAD29AB273ECE8 | Since: unknown
  */
 export declare function waterOverrideSetShorewaveminamplitude(minAmplitude: number): void;
 /**
@@ -2326,24 +2398,24 @@ export declare function waterOverrideSetShorewaveminamplitude(minAmplitude: numb
  * 1.0f = So Calm and Smooth, a boat will stay still.
  * 3.0f = Really Intense.
  *
- * Hash: 0xC54A08C85AE4D410 | Since: 323
+ * Hash: 0xC54A08C85AE4D410 | Since: unknown
  */
 export declare function waterOverrideSetStrength(strength: number): void;
 /**
  * Returns prop type for given model hash
  *
- * Hash: 0x8BAF8AD59F47AAFC | Since: 3095
+ * Hash: 0x8BAF8AD59F47AAFC | Since: unknown
  */
 export declare function getContentPropType(model: number | string): number;
 /**
  * No comment provided
  *
- * Hash: 0xE2BCD0EFAE90D1F4 | Since: 3504
+ * Hash: 0xE2BCD0EFAE90D1F4 | Since: unknown
  */
 export declare function isXboxpcVersion(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xBA4583AF4C678A9B | Since: 3095
+ * Hash: 0xBA4583AF4C678A9B | Since: unknown
  */
 export declare function setContentPropType(model: number | string, _type: number): void;

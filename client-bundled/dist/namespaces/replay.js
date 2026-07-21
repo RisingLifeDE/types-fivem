@@ -1,7 +1,7 @@
 /**
  * Please note that you will need to call DO_SCREEN_FADE_IN after exiting the Rockstar Editor when you call this.
  *
- * Hash: 0x49DA8145672B2725 | Since: 323 | API-Set: unknown
+ * Hash: 0x49DA8145672B2725 | Since: unknown | API-Set: unknown
  */
 export function activateRockstarEditor() {
     ActivateRockstarEditor(0);
@@ -9,7 +9,7 @@ export function activateRockstarEditor() {
 /**
  * Does nothing (it's a nullsub).
  *
- * Hash: 0x7E2BD3EF6C205F09 | Since: 323 | API-Set: unknown
+ * Hash: 0x7E2BD3EF6C205F09 | Since: unknown | API-Set: unknown
  */
 export function registerEffectForEditor() {
     Citizen.invokeNative('0x7E2BD3EF6C205F09', undefined, false);
@@ -17,7 +17,7 @@ export function registerEffectForEditor() {
 /**
  * Sets (almost, not sure) all Rockstar Editor values (bIsRecording etc) to 0.
  *
- * Hash: 0x3353D13F09307691 | Since: 323 | API-Set: unknown
+ * Hash: 0x3353D13F09307691 | Since: unknown | API-Set: unknown
  */
 export function controlShutdown() {
     ResetEditorValues();
@@ -25,7 +25,7 @@ export function controlShutdown() {
 /**
  * Returns a bool if interior rendering is disabled, if yes, all "normal" rendered interiors are invisible
  *
- * Hash: 0x95AB8B5C992C7B58 | Since: 323 | API-Set: unknown
+ * Hash: 0x95AB8B5C992C7B58 | Since: unknown | API-Set: unknown
  */
 export function systemHasRequestedAScriptCleanup() {
     return IsInteriorRenderingDisabled();
@@ -33,7 +33,7 @@ export function systemHasRequestedAScriptCleanup() {
 /**
  * No comment provided
  *
- * Hash: 0xE058175F8EAFE79A | Since: 323 | API-Set: unknown
+ * Hash: 0xE058175F8EAFE79A | Since: unknown | API-Set: unknown
  */
 export function setSystemPausedForSave() {
     Citizen.invokeNative('0xE058175F8EAFE79A', false);
@@ -41,7 +41,7 @@ export function setSystemPausedForSave() {
 /**
  * Disables some other rendering (internal)
  *
- * Hash: 0x5AD3932DAEB1E5D3 | Since: 323 | API-Set: unknown
+ * Hash: 0x5AD3932DAEB1E5D3 | Since: unknown | API-Set: unknown
  */
 export function setScriptsHaveCleanedUpForSystem() {
     Citizen.invokeNative('0x5AD3932DAEB1E5D3');

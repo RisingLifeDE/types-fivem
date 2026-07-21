@@ -17,7 +17,7 @@ export function getCamMatrix(camera, rightVector, forwardVector, upVector, posit
  *
  * p9 != 0 seems to override the rotation/pitch (bool?)
  *
- * Hash: 0x8609C75EC438FB3B | Since: 323 | API-Set: unknown
+ * Hash: 0x8609C75EC438FB3B | Since: unknown | API-Set: unknown
  */
 export function addCamSplineNode(camera, pos, rot, length, smoothingStyle, rotationOrder) {
     const _camera = typeof camera == 'object' ? camera.handle() : camera;
@@ -28,7 +28,7 @@ export function addCamSplineNode(camera, pos, rot, length, smoothingStyle, rotat
  * p1 is the camera used to create the node.
  * p3 is always 3 in scripts. It might be smoothing style or rotation order.
  *
- * Hash: 0x0FB82563989CF4FB | Since: 323 | API-Set: unknown
+ * Hash: 0x0FB82563989CF4FB | Since: unknown | API-Set: unknown
  */
 export function addCamSplineNodeUsing(cam, cam2, length) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -40,7 +40,7 @@ export function addCamSplineNodeUsing(cam, cam2, length) {
  * p1 is the camera used to create the node.
  * p3 is always 3 in scripts. It might be smoothing style or rotation order.
  *
- * Hash: 0x0A9F2A468B328E74 | Since: 323 | API-Set: unknown
+ * Hash: 0x0A9F2A468B328E74 | Since: unknown | API-Set: unknown
  */
 export function addCamSplineNodeUsingFrame(cam, cam2, length) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -50,7 +50,7 @@ export function addCamSplineNodeUsingFrame(cam, cam2, length) {
 /**
  * p2 is always 2 in scripts. It might be smoothing style or rotation order.
  *
- * Hash: 0x609278246A29CA34 | Since: 323 | API-Set: unknown
+ * Hash: 0x609278246A29CA34 | Since: unknown | API-Set: unknown
  */
 export function addCamSplineNodeUsingGameplayFrame(cam, length) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -59,7 +59,7 @@ export function addCamSplineNodeUsingGameplayFrame(cam, length) {
 /**
  * No comment provided
  *
- * Hash: 0x271017B9BA825366 | Since: 323 | API-Set: unknown
+ * Hash: 0x271017B9BA825366 | Since: unknown | API-Set: unknown
  */
 export function allowMotionBlurDecay() {
     Citizen.invokeNative('0x271017B9BA825366', undefined, false);
@@ -69,7 +69,7 @@ export function allowMotionBlurDecay() {
  *
  * `CAM::ANIMATED_SHAKE_CAM(l_5069, "shake_cam_all@", "light", "", 1f);`
  *
- * Hash: 0xA2746EEAE3E577CD | Since: 323 | API-Set: unknown
+ * Hash: 0xA2746EEAE3E577CD | Since: unknown | API-Set: unknown
  */
 export function animatedShakeCam(cam, amplitude) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -80,7 +80,7 @@ export function animatedShakeCam(cam, amplitude) {
  *
  * Full list of cam shake types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/camShakeTypesCompact.json
  *
- * Hash: 0xC2EAE3FB8CDBED31 | Since: 323 | API-Set: unknown
+ * Hash: 0xC2EAE3FB8CDBED31 | Since: unknown | API-Set: unknown
  */
 export function animatedShakeScriptGlobal() {
     AnimatedShakeScriptGlobal(undefined, undefined, undefined, 0);
@@ -88,7 +88,7 @@ export function animatedShakeScriptGlobal() {
 /**
  * No comment provided
  *
- * Hash: 0x4879E4FE39074CDF | Since: 372 | API-Set: unknown
+ * Hash: 0x4879E4FE39074CDF | Since: unknown | API-Set: unknown
  */
 export function areWidescreenBordersActive() {
     return Citizen.invokeNative('0x4879E4FE39074CDF');
@@ -96,7 +96,7 @@ export function areWidescreenBordersActive() {
 /**
  * Last param determines if its relative to the Entity
  *
- * Hash: 0xFEDB7D269E8C60E3 | Since: 323 | API-Set: unknown
+ * Hash: 0xFEDB7D269E8C60E3 | Since: unknown | API-Set: unknown
  */
 export function attachCamToEntity(cam, entity, xOffset, yOffset, zOffset, isRelative) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -106,7 +106,7 @@ export function attachCamToEntity(cam, entity, xOffset, yOffset, zOffset, isRela
 /**
  * No comment provided
  *
- * Hash: 0x61A3DBA14AB7F411 | Since: 323 | API-Set: unknown
+ * Hash: 0x61A3DBA14AB7F411 | Since: unknown | API-Set: unknown
  */
 export function attachCamToPedBone(cam, ped, boneIndex, pos, heading) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -116,7 +116,7 @@ export function attachCamToPedBone(cam, ped, boneIndex, pos, heading) {
 /**
  * This native works with vehicles only. Bone indexes are usually given by this native GET_ENTITY_BONE_INDEX_BY_NAME.
  *
- * Hash: 0x8DB3F12A02CAEF72 | Since: 1290 | API-Set: unknown
+ * Hash: 0x8DB3F12A02CAEF72 | Since: unknown | API-Set: unknown
  */
 export function attachCamToVehicleBone(cam, vehicle, boneIndex, relativeRotation, rot, offsetX, offsetY, offsetZ, fixedDirection) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -126,7 +126,7 @@ export function attachCamToVehicleBone(cam, vehicle, boneIndex, relativeRotation
 /**
  * No comment provided
  *
- * Hash: 0x9F97DA93681F87EA | Since: 1734 | API-Set: unknown
+ * Hash: 0x9F97DA93681F87EA | Since: unknown | API-Set: unknown
  */
 export function blockFirstPersonOrientationResetThisUpdate() {
     Citizen.invokeNative('0x9F97DA93681F87EA');
@@ -134,7 +134,7 @@ export function blockFirstPersonOrientationResetThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0xA7092AFE81944852 | Since: 2189 | API-Set: unknown
+ * Hash: 0xA7092AFE81944852 | Since: unknown | API-Set: unknown
  */
 export function bypassCollisionBuoyancyTestThisUpdate() {
     Citizen.invokeNative('0xA7092AFE81944852');
@@ -142,7 +142,7 @@ export function bypassCollisionBuoyancyTestThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0xDB629FFD9285FA06 | Since: 323 | API-Set: unknown
+ * Hash: 0xDB629FFD9285FA06 | Since: unknown | API-Set: unknown
  */
 export function bypassCutsceneCamRenderingThisUpdate() {
     StopCutsceneCamShaking();
@@ -150,7 +150,7 @@ export function bypassCutsceneCamRenderingThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0x62374889A4D59F72 | Since: 877 | API-Set: unknown
+ * Hash: 0x62374889A4D59F72 | Since: unknown | API-Set: unknown
  */
 export function preventCollisionSettingsForTripleheadInInteriorsThisUpdate() {
     Citizen.invokeNative('0x62374889A4D59F72');
@@ -162,7 +162,7 @@ export function preventCollisionSettingsForTripleheadInInteriorsThisUpdate() {
  * "DEFAULT_SCRIPTED_FLY_CAMERA"
  * "TIMED_SPLINE_CAMERA"
  *
- * Hash: 0xC3981DCE61D9E13F | Since: 323 | API-Set: unknown
+ * Hash: 0xC3981DCE61D9E13F | Since: unknown | API-Set: unknown
  */
 export function createCam(camName) {
     return CreateCam(camName, false);
@@ -170,7 +170,7 @@ export function createCam(camName) {
 /**
  * No comment provided
  *
- * Hash: 0x5E3CF89C6BCCA67D | Since: 323 | API-Set: unknown
+ * Hash: 0x5E3CF89C6BCCA67D | Since: unknown | API-Set: unknown
  */
 export function create(camHash) {
     if (typeof camHash === 'string')
@@ -180,7 +180,7 @@ export function create(camHash) {
 /**
  * p9 uses 2 by default
  *
- * Hash: 0x6ABFA3E16460F22D | Since: 323 | API-Set: unknown
+ * Hash: 0x6ABFA3E16460F22D | Since: unknown | API-Set: unknown
  */
 export function createWithParams(camHash, pos, rot, fov) {
     if (typeof camHash === 'string')
@@ -198,7 +198,7 @@ export function createWithParams(camHash, pos, rot, fov) {
  * ------------
  * Side Note: It seems p8 is basically to represent what would be the bool p1 within CREATE_CAM native. As well as the p9 since it's always 2 in scripts seems to represent what would be the last param within SET_CAM_ROT native which normally would be 2.
  *
- * Hash: 0xB51194800B257161 | Since: 323 | API-Set: unknown
+ * Hash: 0xB51194800B257161 | Since: unknown | API-Set: unknown
  */
 export function createCamWithParams(camName, pos, rot, fov) {
     return CreateCamWithParams(camName, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, fov, false, 0);
@@ -206,7 +206,7 @@ export function createCamWithParams(camName, pos, rot, fov) {
 /**
  * hash is always JOAAT("CAMERA_MAN_SHOT") in decompiled scripts
  *
- * Hash: 0x741B0129D4560F31 | Since: 323 | API-Set: unknown
+ * Hash: 0x741B0129D4560F31 | Since: unknown | API-Set: unknown
  */
 export function createCinematicShot(p0, time, entity) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -217,7 +217,7 @@ export function createCinematicShot(p0, time, entity) {
 /**
  * BOOL param indicates whether the cam should be destroyed if it belongs to the calling script.
  *
- * Hash: 0x8E5FB15663F79120 | Since: 323 | API-Set: unknown
+ * Hash: 0x8E5FB15663F79120 | Since: unknown | API-Set: unknown
  */
 export function destroyAllCams(bScriptHostCam) {
     DestroyAllCams(bScriptHostCam);
@@ -225,7 +225,7 @@ export function destroyAllCams(bScriptHostCam) {
 /**
  * BOOL param indicates whether the cam should be destroyed if it belongs to the calling script.
  *
- * Hash: 0x865908C81A2C22E9 | Since: 323 | API-Set: unknown
+ * Hash: 0x865908C81A2C22E9 | Since: unknown | API-Set: unknown
  */
 export function destroyCam(cam, bScriptHostCam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -234,7 +234,7 @@ export function destroyCam(cam, bScriptHostCam) {
 /**
  * No comment provided
  *
- * Hash: 0xA2FABBE87F4BAD82 | Since: 323 | API-Set: unknown
+ * Hash: 0xA2FABBE87F4BAD82 | Since: unknown | API-Set: unknown
  */
 export function detachCam(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -243,7 +243,7 @@ export function detachCam(cam) {
 /**
  * No comment provided
  *
- * Hash: 0x1A31FE0049E542F6 | Since: 323 | API-Set: unknown
+ * Hash: 0x1A31FE0049E542F6 | Since: unknown | API-Set: unknown
  */
 export function disableAimCamThisUpdate() {
     DisableAimCamThisUpdate();
@@ -251,7 +251,7 @@ export function disableAimCamThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0x49482F9FCD825AAA | Since: 323 | API-Set: unknown
+ * Hash: 0x49482F9FCD825AAA | Since: unknown | API-Set: unknown
  */
 export function disableCamCollisionForObject(entity) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -260,7 +260,7 @@ export function disableCamCollisionForObject(entity) {
 /**
  * No comment provided
  *
- * Hash: 0xADFF1B2A555F5FBA | Since: 323 | API-Set: unknown
+ * Hash: 0xADFF1B2A555F5FBA | Since: unknown | API-Set: unknown
  */
 export function disableCinematicBonnetThisUpdate() {
     DisableVehicleFirstPersonCamThisFrame();
@@ -268,7 +268,7 @@ export function disableCinematicBonnetThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0x17FCA7199A530203 | Since: 323 | API-Set: unknown
+ * Hash: 0x17FCA7199A530203 | Since: unknown | API-Set: unknown
  */
 export function disableCinematicSlowMoThisUpdate() {
     return Citizen.invokeNative('0x17FCA7199A530203');
@@ -276,7 +276,7 @@ export function disableCinematicSlowMoThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0x62ECFCFDEE7885D6 | Since: 323 | API-Set: unknown
+ * Hash: 0x62ECFCFDEE7885D6 | Since: unknown | API-Set: unknown
  */
 export function disableCinematicVehicleIdleModeThisUpdate() {
     Citizen.invokeNative('0x62ECFCFDEE7885D6');
@@ -284,7 +284,7 @@ export function disableCinematicVehicleIdleModeThisUpdate() {
 /**
  * Sets some flag on cinematic camera
  *
- * Hash: 0xB1381B97F70C7B30 | Since: 1180 | API-Set: unknown
+ * Hash: 0xB1381B97F70C7B30 | Since: unknown | API-Set: unknown
  */
 export function disableFirstPersonWaterClippingTestThisUpdate() {
     Citizen.invokeNative('0xB1381B97F70C7B30');
@@ -292,7 +292,7 @@ export function disableFirstPersonWaterClippingTestThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0x59424BD75174C9B1 | Since: 323 | API-Set: unknown
+ * Hash: 0x59424BD75174C9B1 | Since: unknown | API-Set: unknown
  */
 export function disableFirstPersonFlashEffectThisUpdate() {
     Citizen.invokeNative('0x59424BD75174C9B1');
@@ -300,7 +300,7 @@ export function disableFirstPersonFlashEffectThisUpdate() {
 /**
  * Shows the crosshair even if it wouldn't show normally. Only works for one frame, so make sure to call it repeatedly.
  *
- * Hash: 0xEA7F0AD7E9BA676F | Since: 323 | API-Set: unknown
+ * Hash: 0xEA7F0AD7E9BA676F | Since: unknown | API-Set: unknown
  */
 export function disableGameplayCamAltitudeFovScalingThisUpdate() {
     EnableCrosshairThisFrame();
@@ -308,7 +308,7 @@ export function disableGameplayCamAltitudeFovScalingThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0x5A43C76F7FC7BA5F | Since: 323 | API-Set: unknown
+ * Hash: 0x5A43C76F7FC7BA5F | Since: unknown | API-Set: unknown
  */
 export function disableNearClipScanThisUpdate() {
     Citizen.invokeNative('0x5A43C76F7FC7BA5F');
@@ -320,7 +320,7 @@ export function disableNearClipScanThisUpdate() {
  * `GRAPHICS::DRAW_DEBUG_TEXT_2D("Disabling First Person Cam", 0.5, 0.8, 0.0, 0, 0, 255, 255);`
  * `CAM::DISABLE_ON_FOOT_FIRST_PERSON_VIEW_THIS_UPDATE();`
  *
- * Hash: 0xDE2EF5DA284CC8DF | Since: 323 | API-Set: unknown
+ * Hash: 0xDE2EF5DA284CC8DF | Since: unknown | API-Set: unknown
  */
 export function disableOnFootFirstPersonViewThisUpdate() {
     DisableFirstPersonCamThisFrame();
@@ -328,7 +328,7 @@ export function disableOnFootFirstPersonViewThisUpdate() {
 /**
  * Returns whether or not the passed camera handle exists.
  *
- * Hash: 0xA7A932170592B50E | Since: 323 | API-Set: unknown
+ * Hash: 0xA7A932170592B50E | Since: unknown | API-Set: unknown
  */
 export function doesCamExist(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -339,7 +339,7 @@ export function doesCamExist(cam) {
  *
  * duration: The time the fade should take, in milliseconds.
  *
- * Hash: 0xD4E8E24955024033 | Since: 323 | API-Set: unknown
+ * Hash: 0xD4E8E24955024033 | Since: unknown | API-Set: unknown
  */
 export function doScreenFadeIn(duration) {
     DoScreenFadeIn(duration);
@@ -349,7 +349,7 @@ export function doScreenFadeIn(duration) {
  *
  * duration: The time the fade should take, in milliseconds.
  *
- * Hash: 0x891B5B39AC6302AF | Since: 323 | API-Set: unknown
+ * Hash: 0x891B5B39AC6302AF | Since: unknown | API-Set: unknown
  */
 export function doScreenFadeOut(duration) {
     DoScreenFadeOut(duration);
@@ -357,7 +357,7 @@ export function doScreenFadeOut(duration) {
 /**
  * No comment provided
  *
- * Hash: 0x28B022A17B068A3A | Since: 1734 | API-Set: unknown
+ * Hash: 0x28B022A17B068A3A | Since: unknown | API-Set: unknown
  */
 export function forceBonnetRelativeHeadingAndPitch() {
     Citizen.invokeNative('0x28B022A17B068A3A', 0, 0);
@@ -365,7 +365,7 @@ export function forceBonnetRelativeHeadingAndPitch() {
 /**
  * No comment provided
  *
- * Hash: 0x48608C3464F58AB4 | Since: 505 | API-Set: unknown
+ * Hash: 0x48608C3464F58AB4 | Since: unknown | API-Set: unknown
  */
 export function forceRelativeHeadingAndPitch(roll, pitch, yaw) {
     SetGameplayCamRelativeRotation(roll, pitch, yaw);
@@ -373,7 +373,7 @@ export function forceRelativeHeadingAndPitch(roll, pitch, yaw) {
 /**
  * No comment provided
  *
- * Hash: 0xAABD62873FFB1A33 | Since: 2189 | API-Set: unknown
+ * Hash: 0xAABD62873FFB1A33 | Since: unknown | API-Set: unknown
  */
 export function forceCamFarClip(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -382,7 +382,7 @@ export function forceCamFarClip(cam) {
 /**
  * No comment provided
  *
- * Hash: 0xA41BCD7213805AAC | Since: 323 | API-Set: unknown
+ * Hash: 0xA41BCD7213805AAC | Since: unknown | API-Set: unknown
  */
 export function forceCinematicRenderingThisUpdate(toggle) {
     ForceCinematicRenderingThisUpdate(toggle);
@@ -390,7 +390,7 @@ export function forceCinematicRenderingThisUpdate(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x380B4968D1E09E55 | Since: 1290 | API-Set: unknown
+ * Hash: 0x380B4968D1E09E55 | Since: unknown | API-Set: unknown
  */
 export function forceTightspaceCustomFramingThisUpdate() {
     Citizen.invokeNative('0x380B4968D1E09E55');
@@ -398,7 +398,7 @@ export function forceTightspaceCustomFramingThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0x0AA27680A0BD43FA | Since: 1103 | API-Set: unknown
+ * Hash: 0x0AA27680A0BD43FA | Since: unknown | API-Set: unknown
  */
 export function forceVehicleCamStuntSettingsThisUpdate() {
     Citizen.invokeNative('0x0AA27680A0BD43FA');
@@ -416,7 +416,7 @@ export function forceVehicleCamStuntSettingsThisUpdate() {
  * IN_TURRET
  * };
  *
- * Hash: 0x19CAFA3C87F7C2FF | Since: 323 | API-Set: unknown
+ * Hash: 0x19CAFA3C87F7C2FF | Since: unknown | API-Set: unknown
  */
 export function getCamActiveViewModeContext() {
     return GetCamActiveViewModeContext();
@@ -424,7 +424,7 @@ export function getCamActiveViewModeContext() {
 /**
  * No comment provided
  *
- * Hash: 0xA10B2DB49E92A6B0 | Since: 323 | API-Set: unknown
+ * Hash: 0xA10B2DB49E92A6B0 | Since: unknown | API-Set: unknown
  */
 export function getCamAnimCurrentPhase(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -433,7 +433,7 @@ export function getCamAnimCurrentPhase(cam) {
 /**
  * No comment provided
  *
- * Hash: 0xBAC038F7459AE5AE | Since: 323 | API-Set: unknown
+ * Hash: 0xBAC038F7459AE5AE | Since: unknown | API-Set: unknown
  */
 export function getCamCoord(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -442,7 +442,7 @@ export function getCamCoord(cam) {
 /**
  * No comment provided
  *
- * Hash: 0x06D153C0B99B6128 | Since: 2699 | API-Set: unknown
+ * Hash: 0x06D153C0B99B6128 | Since: unknown | API-Set: unknown
  */
 export function getCamDofStrength(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -451,7 +451,7 @@ export function getCamDofStrength(cam) {
 /**
  * No comment provided
  *
- * Hash: 0xB60A9CFEB21CA6AA | Since: 323 | API-Set: unknown
+ * Hash: 0xB60A9CFEB21CA6AA | Since: unknown | API-Set: unknown
  */
 export function getCamFarClip(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -460,7 +460,7 @@ export function getCamFarClip(cam) {
 /**
  * No comment provided
  *
- * Hash: 0x255F8DAFD540D397 | Since: 323 | API-Set: unknown
+ * Hash: 0x255F8DAFD540D397 | Since: unknown | API-Set: unknown
  */
 export function getCamFarDof(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -469,7 +469,7 @@ export function getCamFarDof(cam) {
 /**
  * No comment provided
  *
- * Hash: 0xC3330A45CCCDB26A | Since: 323 | API-Set: unknown
+ * Hash: 0xC3330A45CCCDB26A | Since: unknown | API-Set: unknown
  */
 export function getCamFov(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -478,7 +478,7 @@ export function getCamFov(cam) {
 /**
  * No comment provided
  *
- * Hash: 0xC520A34DAFBF24B1 | Since: 323 | API-Set: unknown
+ * Hash: 0xC520A34DAFBF24B1 | Since: unknown | API-Set: unknown
  */
 export function getCamNearClip(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -487,7 +487,7 @@ export function getCamNearClip(cam) {
 /**
  * No comment provided
  *
- * Hash: 0xC2612D223D915A1C | Since: 2699 | API-Set: unknown
+ * Hash: 0xC2612D223D915A1C | Since: unknown | API-Set: unknown
  */
 export function getCamNearDof(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -496,7 +496,7 @@ export function getCamNearDof(cam) {
 /**
  * The last parameter, as in other "ROT" methods, is usually 2.
  *
- * Hash: 0x7D304C1C955E3E12 | Since: 323 | API-Set: unknown
+ * Hash: 0x7D304C1C955E3E12 | Since: unknown | API-Set: unknown
  */
 export function getCamRot(cam, rotationOrder) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -505,7 +505,7 @@ export function getCamRot(cam, rotationOrder) {
 /**
  * No comment provided
  *
- * Hash: 0xB22B17DF858716A6 | Since: 323 | API-Set: unknown
+ * Hash: 0xB22B17DF858716A6 | Since: unknown | API-Set: unknown
  */
 export function getCamSplineNodeIndex(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -514,7 +514,7 @@ export function getCamSplineNodeIndex(cam) {
 /**
  * I'm pretty sure the parameter is the camera as usual, but I am not certain so I'm going to leave it as is.
  *
- * Hash: 0xD9D0E694C8282C96 | Since: 323 | API-Set: unknown
+ * Hash: 0xD9D0E694C8282C96 | Since: unknown | API-Set: unknown
  */
 export function getCamSplineNodePhase(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -525,7 +525,7 @@ export function getCamSplineNodePhase(cam) {
  *
  * (returns 1.0f when no nodes has been added, reached end of non existing spline)
  *
- * Hash: 0xB5349E36C546509A | Since: 323 | API-Set: unknown
+ * Hash: 0xB5349E36C546509A | Since: unknown | API-Set: unknown
  */
 export function getCamSplinePhase(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -534,7 +534,7 @@ export function getCamSplinePhase(cam) {
 /**
  * context: see _GET_CAM_ACTIVE_VIEW_MODE_CONTEXT
  *
- * Hash: 0xEE778F8C7E1142E2 | Since: 323 | API-Set: unknown
+ * Hash: 0xEE778F8C7E1142E2 | Since: unknown | API-Set: unknown
  */
 export function getCamViewModeForContext(context) {
     return GetCamViewModeForContext(context);
@@ -542,7 +542,7 @@ export function getCamViewModeForContext(context) {
 /**
  * No comment provided
  *
- * Hash: 0x77C3CEC46BE286F6 | Since: 2372 | API-Set: unknown
+ * Hash: 0x77C3CEC46BE286F6 | Since: unknown | API-Set: unknown
  */
 export function getDebugCam() {
     return GetDebugCamera();
@@ -550,7 +550,7 @@ export function getDebugCam() {
 /**
  * No comment provided
  *
- * Hash: 0xA200EB1EE790F448 | Since: 323 | API-Set: unknown
+ * Hash: 0xA200EB1EE790F448 | Since: unknown | API-Set: unknown
  */
 export function getFinalRenderedCamCoord() {
     return new Vector3(GetFinalRenderedCamCoord());
@@ -558,7 +558,7 @@ export function getFinalRenderedCamCoord() {
 /**
  * No comment provided
  *
- * Hash: 0xDFC8CBC606FDB0FC | Since: 323 | API-Set: unknown
+ * Hash: 0xDFC8CBC606FDB0FC | Since: unknown | API-Set: unknown
  */
 export function getFinalRenderedCamFarClip() {
     return GetFinalRenderedCamFarClip();
@@ -566,7 +566,7 @@ export function getFinalRenderedCamFarClip() {
 /**
  * No comment provided
  *
- * Hash: 0x9780F32BCAF72431 | Since: 323 | API-Set: unknown
+ * Hash: 0x9780F32BCAF72431 | Since: unknown | API-Set: unknown
  */
 export function getFinalRenderedCamFarDof() {
     return GetFinalRenderedCamFarDof();
@@ -574,7 +574,7 @@ export function getFinalRenderedCamFarDof() {
 /**
  * Gets some camera fov
  *
- * Hash: 0x80EC114669DAEFF4 | Since: 323 | API-Set: unknown
+ * Hash: 0x80EC114669DAEFF4 | Since: unknown | API-Set: unknown
  */
 export function getFinalRenderedCamFov() {
     return GetFinalRenderedCamFov();
@@ -582,7 +582,7 @@ export function getFinalRenderedCamFov() {
 /**
  * No comment provided
  *
- * Hash: 0x162F9D995753DC19 | Since: 323 | API-Set: unknown
+ * Hash: 0x162F9D995753DC19 | Since: unknown | API-Set: unknown
  */
 export function getFinalRenderedCamMotionBlurStrength() {
     return GetFinalRenderedCamMotionBlurStrength();
@@ -590,7 +590,7 @@ export function getFinalRenderedCamMotionBlurStrength() {
 /**
  * No comment provided
  *
- * Hash: 0xD0082607100D7193 | Since: 323 | API-Set: unknown
+ * Hash: 0xD0082607100D7193 | Since: unknown | API-Set: unknown
  */
 export function getFinalRenderedCamNearClip() {
     return GetFinalRenderedCamNearClip();
@@ -598,7 +598,7 @@ export function getFinalRenderedCamNearClip() {
 /**
  * No comment provided
  *
- * Hash: 0xA03502FC581F7D9B | Since: 323 | API-Set: unknown
+ * Hash: 0xA03502FC581F7D9B | Since: unknown | API-Set: unknown
  */
 export function getFinalRenderedCamNearDof() {
     return GetFinalRenderedCamNearDof();
@@ -608,7 +608,7 @@ export function getFinalRenderedCamNearDof() {
  *
  * `Function is called faily often by CAM::CREATE_CAM_WITH_PARAMS`
  *
- * Hash: 0x5B4E4C817FCC2DFB | Since: 323 | API-Set: unknown
+ * Hash: 0x5B4E4C817FCC2DFB | Since: unknown | API-Set: unknown
  */
 export function getFinalRenderedCamRot(rotationOrder) {
     return new Vector3(GetFinalRenderedCamRot(rotationOrder));
@@ -616,7 +616,7 @@ export function getFinalRenderedCamRot(rotationOrder) {
 /**
  * No comment provided
  *
- * Hash: 0x5F35F6732C3FBBA0 | Since: 323 | API-Set: unknown
+ * Hash: 0x5F35F6732C3FBBA0 | Since: unknown | API-Set: unknown
  */
 export function getFinalRenderedRemotePlayerCamFov(player) {
     const _player = typeof player == 'object' ? player.playerId() : player;
@@ -625,7 +625,7 @@ export function getFinalRenderedRemotePlayerCamFov(player) {
 /**
  * No comment provided
  *
- * Hash: 0x26903D9CD1175F2C | Since: 323 | API-Set: unknown
+ * Hash: 0x26903D9CD1175F2C | Since: unknown | API-Set: unknown
  */
 export function getFinalRenderedRemotePlayerCamRot(player, rotationOrder) {
     const _player = typeof player == 'object' ? player.playerId() : player;
@@ -634,7 +634,7 @@ export function getFinalRenderedRemotePlayerCamRot(player, rotationOrder) {
 /**
  * No comment provided
  *
- * Hash: 0x7EC52CC40597D170 | Since: 323 | API-Set: unknown
+ * Hash: 0x7EC52CC40597D170 | Since: unknown | API-Set: unknown
  */
 export function getFirstPersonAimCamZoomFactor() {
     return GetFirstPersonAimCamZoomFactor();
@@ -642,7 +642,7 @@ export function getFirstPersonAimCamZoomFactor() {
 /**
  * No comment provided
  *
- * Hash: 0x89215EC747DF244A | Since: 323 | API-Set: unknown
+ * Hash: 0x89215EC747DF244A | Since: unknown | API-Set: unknown
  */
 export function getFocusPedOnScreen() {
     return GetFocusPedOnScreen(0, 0, 0, 0, 0, 0, 0, 0, 0);
@@ -650,7 +650,7 @@ export function getFocusPedOnScreen() {
 /**
  * See viewmode enum in CAM.GET_FOLLOW_VEHICLE_CAM_VIEW_MODE for return value
  *
- * Hash: 0x8D4D46230B2C353A | Since: 323 | API-Set: unknown
+ * Hash: 0x8D4D46230B2C353A | Since: unknown | API-Set: unknown
  */
 export function getFollowPedCamViewMode() {
     return GetFollowPedCamViewMode();
@@ -658,7 +658,7 @@ export function getFollowPedCamViewMode() {
 /**
  * No comment provided
  *
- * Hash: 0x33E6C8EFD0CD93E9 | Since: 323 | API-Set: unknown
+ * Hash: 0x33E6C8EFD0CD93E9 | Since: unknown | API-Set: unknown
  */
 export function getFollowPedCamZoomLevel() {
     return GetFollowPedCamZoomLevel();
@@ -675,7 +675,7 @@ export function getFollowPedCamZoomLevel() {
  * FIRST_PERSON = 4
  * };
  *
- * Hash: 0xA4FF579AC0E3AAAE | Since: 323 | API-Set: unknown
+ * Hash: 0xA4FF579AC0E3AAAE | Since: unknown | API-Set: unknown
  */
 export function getFollowVehicleCamViewMode() {
     return GetFollowVehicleCamViewMode();
@@ -683,7 +683,7 @@ export function getFollowVehicleCamViewMode() {
 /**
  * No comment provided
  *
- * Hash: 0xEE82280AB767B690 | Since: 323 | API-Set: unknown
+ * Hash: 0xEE82280AB767B690 | Since: unknown | API-Set: unknown
  */
 export function getFollowVehicleCamZoomLevel() {
     return GetFollowVehicleCamZoomLevel();
@@ -691,7 +691,7 @@ export function getFollowVehicleCamZoomLevel() {
 /**
  * No comment provided
  *
- * Hash: 0x14D6F5678D8F1B37 | Since: 323 | API-Set: unknown
+ * Hash: 0x14D6F5678D8F1B37 | Since: unknown | API-Set: unknown
  */
 export function getGameplayCamCoord() {
     return new Vector3(GetGameplayCamCoord());
@@ -699,7 +699,7 @@ export function getGameplayCamCoord() {
 /**
  * No comment provided
  *
- * Hash: 0x65019750A0324133 | Since: 323 | API-Set: unknown
+ * Hash: 0x65019750A0324133 | Since: unknown | API-Set: unknown
  */
 export function getGameplayCamFov() {
     return GetGameplayCamFov();
@@ -707,7 +707,7 @@ export function getGameplayCamFov() {
 /**
  * No comment provided
  *
- * Hash: 0x743607648ADD4587 | Since: 323 | API-Set: unknown
+ * Hash: 0x743607648ADD4587 | Since: unknown | API-Set: unknown
  */
 export function getGameplayCamRelativeHeading() {
     return GetGameplayCamRelativeHeading();
@@ -715,7 +715,7 @@ export function getGameplayCamRelativeHeading() {
 /**
  * No comment provided
  *
- * Hash: 0x3A6867B4845BEDA2 | Since: 323 | API-Set: unknown
+ * Hash: 0x3A6867B4845BEDA2 | Since: unknown | API-Set: unknown
  */
 export function getGameplayCamRelativePitch() {
     return GetGameplayCamRelativePitch();
@@ -732,7 +732,7 @@ export function getGameplayCamRelativePitch() {
  * 2-Roll(Y): -0.000002
  * 2-Yaw(Z): -43.886467
  *
- * Hash: 0x837765A25378F0BB | Since: 323 | API-Set: unknown
+ * Hash: 0x837765A25378F0BB | Since: unknown | API-Set: unknown
  */
 export function getGameplayCamRot(rotationOrder) {
     return new Vector3(GetGameplayCamRot(rotationOrder));
@@ -740,7 +740,7 @@ export function getGameplayCamRot(rotationOrder) {
 /**
  * No comment provided
  *
- * Hash: 0x5234F9F10919EABA | Since: 323 | API-Set: unknown
+ * Hash: 0x5234F9F10919EABA | Since: unknown | API-Set: unknown
  */
 export function getRenderingCam() {
     return GetRenderingCam();
@@ -750,7 +750,7 @@ export function getRenderingCam() {
  *
  * `CAM::HARD_ATTACH_CAM_TO_ENTITY(Local_190.f_169, NETWORK::NET_TO_OBJ(Local_190.f_159), 0f, 0f, 180f, Var0, 1);`
  *
- * Hash: 0x202A5ED9CE01D6E7 | Since: 2189 | API-Set: unknown
+ * Hash: 0x202A5ED9CE01D6E7 | Since: unknown | API-Set: unknown
  */
 export function hardAttachCamToEntity(cam, entity, rot, xOffset, yOffset, zOffset, isRelative) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -760,7 +760,7 @@ export function hardAttachCamToEntity(cam, entity, rot, xOffset, yOffset, zOffse
 /**
  * No comment provided
  *
- * Hash: 0x149916F50C34A40D | Since: 1180 | API-Set: unknown
+ * Hash: 0x149916F50C34A40D | Since: unknown | API-Set: unknown
  */
 export function hardAttachCamToPedBone(cam, ped, boneIndex) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -770,7 +770,7 @@ export function hardAttachCamToPedBone(cam, ped, boneIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x7B8A361C1813FBEF | Since: 573 | API-Set: unknown
+ * Hash: 0x7B8A361C1813FBEF | Since: unknown | API-Set: unknown
  */
 export function ignoreMenuPreferenceForBonnetThisUpdate() {
     Citizen.invokeNative('0x7B8A361C1813FBEF');
@@ -778,7 +778,7 @@ export function ignoreMenuPreferenceForBonnetThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0xDDA77EE33C005AAF | Since: 3258 | API-Set: unknown
+ * Hash: 0xDDA77EE33C005AAF | Since: unknown | API-Set: unknown
  */
 export function interpolateWithParams(camera, camPosX, camPosY, camPosZ, camRotX, camRotY, camRotZ, fov, duration, posCurveType, rotCurveType, rotOrder, fovCurveType) {
     const _camera = typeof camera == 'object' ? camera.handle() : camera;
@@ -787,7 +787,7 @@ export function interpolateWithParams(camera, camPosX, camPosY, camPosZ, camRotX
 /**
  * Resets the vehicle idle camera timer. Calling this in a loop will disable the idle camera.
  *
- * Hash: 0x9E4CFFF989258472 | Since: 323 | API-Set: unknown
+ * Hash: 0x9E4CFFF989258472 | Since: unknown | API-Set: unknown
  */
 export function invalidateCinematicVehicleIdleMode() {
     InvalidateVehicleIdleCam();
@@ -795,7 +795,7 @@ export function invalidateCinematicVehicleIdleMode() {
 /**
  * Resets the idle camera timer. Calling that in a loop once every few seconds is enough to disable the idle cinematic camera.
  *
- * Hash: 0xF4F2C0D4EE209E20 | Since: 323 | API-Set: unknown
+ * Hash: 0xF4F2C0D4EE209E20 | Since: unknown | API-Set: unknown
  */
 export function invalidateIdleCam() {
     InvalidateIdleCam();
@@ -803,7 +803,7 @@ export function invalidateIdleCam() {
 /**
  * No comment provided
  *
- * Hash: 0x68EDDA28A5976D07 | Since: 323 | API-Set: unknown
+ * Hash: 0x68EDDA28A5976D07 | Since: unknown | API-Set: unknown
  */
 export function isAimCamActive() {
     return IsAimCamActive();
@@ -811,7 +811,7 @@ export function isAimCamActive() {
 /**
  * No comment provided
  *
- * Hash: 0x74BD83EA840F6BC9 | Since: 323 | API-Set: unknown
+ * Hash: 0x74BD83EA840F6BC9 | Since: unknown | API-Set: unknown
  */
 export function isAimCamActiveInAccurateMode() {
     return IsAimCamThirdPersonActive();
@@ -819,7 +819,7 @@ export function isAimCamActiveInAccurateMode() {
 /**
  * No comment provided
  *
- * Hash: 0xEAF0FA793D05C592 | Since: 323 | API-Set: unknown
+ * Hash: 0xEAF0FA793D05C592 | Since: unknown | API-Set: unknown
  */
 export function isAllowedIndependentModes() {
     return Citizen.invokeNative('0xEAF0FA793D05C592');
@@ -827,7 +827,7 @@ export function isAllowedIndependentModes() {
 /**
  * No comment provided
  *
- * Hash: 0xD7360051C885628B | Since: 372 | API-Set: unknown
+ * Hash: 0xD7360051C885628B | Since: unknown | API-Set: unknown
  */
 export function isBonnetCinematicCamRendering() {
     return IsBonnetCinematicCamRendering();
@@ -835,7 +835,7 @@ export function isBonnetCinematicCamRendering() {
 /**
  * Returns whether or not the passed camera handle is active.
  *
- * Hash: 0xDFB2B516207D3534 | Since: 323 | API-Set: unknown
+ * Hash: 0xDFB2B516207D3534 | Since: unknown | API-Set: unknown
  */
 export function isCamActive(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -844,7 +844,7 @@ export function isCamActive(cam) {
 /**
  * No comment provided
  *
- * Hash: 0x036F97C908C2B52C | Since: 323 | API-Set: unknown
+ * Hash: 0x036F97C908C2B52C | Since: unknown | API-Set: unknown
  */
 export function isCamInterpolating(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -853,7 +853,7 @@ export function isCamInterpolating(cam) {
 /**
  * No comment provided
  *
- * Hash: 0xC90621D8A0CEECF2 | Since: 323 | API-Set: unknown
+ * Hash: 0xC90621D8A0CEECF2 | Since: unknown | API-Set: unknown
  */
 export function isCamPlayingAnim(cam, animName, animDictionary) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -862,7 +862,7 @@ export function isCamPlayingAnim(cam, animName, animDictionary) {
 /**
  * No comment provided
  *
- * Hash: 0x02EC0AF5C5A49B7A | Since: 323 | API-Set: unknown
+ * Hash: 0x02EC0AF5C5A49B7A | Since: unknown | API-Set: unknown
  */
 export function isCamRendering(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -871,7 +871,7 @@ export function isCamRendering(cam) {
 /**
  * No comment provided
  *
- * Hash: 0x6B24BFE83A2BE47B | Since: 323 | API-Set: unknown
+ * Hash: 0x6B24BFE83A2BE47B | Since: unknown | API-Set: unknown
  */
 export function isCamShaking(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -880,7 +880,7 @@ export function isCamShaking(cam) {
 /**
  * No comment provided
  *
- * Hash: 0x0290F35C0AD97864 | Since: 323 | API-Set: unknown
+ * Hash: 0x0290F35C0AD97864 | Since: unknown | API-Set: unknown
  */
 export function isCamSplinePaused(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -889,7 +889,7 @@ export function isCamSplinePaused(cam) {
 /**
  * Tests some cinematic camera flags
  *
- * Hash: 0xF5F1E89A970B7796 | Since: 1493 | API-Set: unknown
+ * Hash: 0xF5F1E89A970B7796 | Since: unknown | API-Set: unknown
  */
 export function isCinematicCamInputActive() {
     return IsCinematicCamInputActive();
@@ -897,7 +897,7 @@ export function isCinematicCamInputActive() {
 /**
  * No comment provided
  *
- * Hash: 0xB15162CB5826E9E8 | Since: 323 | API-Set: unknown
+ * Hash: 0xB15162CB5826E9E8 | Since: unknown | API-Set: unknown
  */
 export function isCinematicCamRendering() {
     return IsCinematicCamRendering();
@@ -905,7 +905,7 @@ export function isCinematicCamRendering() {
 /**
  * No comment provided
  *
- * Hash: 0xBBC08F6B4CB8FF0A | Since: 323 | API-Set: unknown
+ * Hash: 0xBBC08F6B4CB8FF0A | Since: unknown | API-Set: unknown
  */
 export function isCinematicCamShaking() {
     return IsCinematicCamShaking();
@@ -913,7 +913,7 @@ export function isCinematicCamShaking() {
 /**
  * No comment provided
  *
- * Hash: 0x4F32C0D5A90A9B40 | Since: 323 | API-Set: unknown
+ * Hash: 0x4F32C0D5A90A9B40 | Since: unknown | API-Set: unknown
  */
 export function isCinematicFirstPersonVehicleInteriorCamRendering() {
     return IsInVehicleCamDisabled();
@@ -921,7 +921,7 @@ export function isCinematicFirstPersonVehicleInteriorCamRendering() {
 /**
  * No comment provided
  *
- * Hash: 0xCA9D2AA3E326D720 | Since: 323 | API-Set: unknown
+ * Hash: 0xCA9D2AA3E326D720 | Since: unknown | API-Set: unknown
  */
 export function isCinematicIdleCamRendering() {
     return IsCinematicIdleCamRendering();
@@ -929,7 +929,7 @@ export function isCinematicIdleCamRendering() {
 /**
  * Hash is always JOAAT("CAMERA_MAN_SHOT") in decompiled scripts
  *
- * Hash: 0xCC9F3371A7C28BC9 | Since: 323 | API-Set: unknown
+ * Hash: 0xCC9F3371A7C28BC9 | Since: unknown | API-Set: unknown
  */
 export function isCinematicShotActive(p0) {
     if (typeof p0 === 'string')
@@ -939,7 +939,7 @@ export function isCinematicShotActive(p0) {
 /**
  * No comment provided
  *
- * Hash: 0xBF72910D0F26F025 | Since: 323 | API-Set: unknown
+ * Hash: 0xBF72910D0F26F025 | Since: unknown | API-Set: unknown
  */
 export function isCodeGameplayHintActive() {
     return Citizen.invokeNative('0xBF72910D0F26F025');
@@ -947,7 +947,7 @@ export function isCodeGameplayHintActive() {
 /**
  * No comment provided
  *
- * Hash: 0x5E346D934122613F | Since: 323 | API-Set: unknown
+ * Hash: 0x5E346D934122613F | Since: unknown | API-Set: unknown
  */
 export function isFirstPersonAimCamActive() {
     return IsFirstPersonAimCamActive();
@@ -955,7 +955,7 @@ export function isFirstPersonAimCamActive() {
 /**
  * No comment provided
  *
- * Hash: 0xC6D3D26810C8E0F9 | Since: 323 | API-Set: unknown
+ * Hash: 0xC6D3D26810C8E0F9 | Since: unknown | API-Set: unknown
  */
 export function isFollowPedCamActive() {
     return IsFollowPedCamActive();
@@ -963,7 +963,7 @@ export function isFollowPedCamActive() {
 /**
  * No comment provided
  *
- * Hash: 0xCBBDE6D335D6D496 | Since: 323 | API-Set: unknown
+ * Hash: 0xCBBDE6D335D6D496 | Since: unknown | API-Set: unknown
  */
 export function isFollowVehicleCamActive() {
     return IsFollowVehicleCamActive();
@@ -971,7 +971,7 @@ export function isFollowVehicleCamActive() {
 /**
  * No comment provided
  *
- * Hash: 0x70FDA869F3317EA9 | Since: 323 | API-Set: unknown
+ * Hash: 0x70FDA869F3317EA9 | Since: unknown | API-Set: unknown
  */
 export function isGameplayCamLookingBehind() {
     return IsGameplayCamLookingBehind();
@@ -983,7 +983,7 @@ export function isGameplayCamLookingBehind() {
  * - When player is coming out from a police station.
  * - When player is buying gun from AmmuNation.
  *
- * Hash: 0x39B5D1B10383F0C8 | Since: 323 | API-Set: unknown
+ * Hash: 0x39B5D1B10383F0C8 | Since: unknown | API-Set: unknown
  */
 export function isGameplayCamRendering() {
     return IsGameplayCamRendering();
@@ -991,7 +991,7 @@ export function isGameplayCamRendering() {
 /**
  * No comment provided
  *
- * Hash: 0x016C090630DF1F89 | Since: 323 | API-Set: unknown
+ * Hash: 0x016C090630DF1F89 | Since: unknown | API-Set: unknown
  */
 export function isGameplayCamShaking() {
     return IsGameplayCamShaking();
@@ -999,7 +999,7 @@ export function isGameplayCamShaking() {
 /**
  * No comment provided
  *
- * Hash: 0xE520FF1AD2785B40 | Since: 323 | API-Set: unknown
+ * Hash: 0xE520FF1AD2785B40 | Since: unknown | API-Set: unknown
  */
 export function isGameplayHintActive() {
     return IsGameplayHintActive();
@@ -1007,7 +1007,7 @@ export function isGameplayHintActive() {
 /**
  * No comment provided
  *
- * Hash: 0x3044240D2E0FA842 | Since: 323 | API-Set: unknown
+ * Hash: 0x3044240D2E0FA842 | Since: unknown | API-Set: unknown
  */
 export function isInterpolatingFromScriptCams() {
     return Citizen.invokeNative('0x3044240D2E0FA842');
@@ -1015,7 +1015,7 @@ export function isInterpolatingFromScriptCams() {
 /**
  * No comment provided
  *
- * Hash: 0x705A276EBFF3133D | Since: 323 | API-Set: unknown
+ * Hash: 0x705A276EBFF3133D | Since: unknown | API-Set: unknown
  */
 export function isInterpolatingToScriptCams() {
     return Citizen.invokeNative('0x705A276EBFF3133D');
@@ -1023,7 +1023,7 @@ export function isInterpolatingToScriptCams() {
 /**
  * No comment provided
  *
- * Hash: 0x1F2300CB7FA7B7F6 | Since: 323 | API-Set: unknown
+ * Hash: 0x1F2300CB7FA7B7F6 | Since: unknown | API-Set: unknown
  */
 export function isInVehicleMobilePhoneRendering() {
     return Citizen.invokeNative('0x1F2300CB7FA7B7F6');
@@ -1031,7 +1031,7 @@ export function isInVehicleMobilePhoneRendering() {
 /**
  * No comment provided
  *
- * Hash: 0x5A859503B0C08678 | Since: 323 | API-Set: unknown
+ * Hash: 0x5A859503B0C08678 | Since: unknown | API-Set: unknown
  */
 export function isScreenFadedIn() {
     return IsScreenFadedIn();
@@ -1039,7 +1039,7 @@ export function isScreenFadedIn() {
 /**
  * No comment provided
  *
- * Hash: 0xB16FCE9DDC7BA182 | Since: 323 | API-Set: unknown
+ * Hash: 0xB16FCE9DDC7BA182 | Since: unknown | API-Set: unknown
  */
 export function isScreenFadedOut() {
     return IsScreenFadedOut();
@@ -1047,7 +1047,7 @@ export function isScreenFadedOut() {
 /**
  * No comment provided
  *
- * Hash: 0x5C544BC6C57AC575 | Since: 323 | API-Set: unknown
+ * Hash: 0x5C544BC6C57AC575 | Since: unknown | API-Set: unknown
  */
 export function isScreenFadingIn() {
     return IsScreenFadingIn();
@@ -1055,7 +1055,7 @@ export function isScreenFadingIn() {
 /**
  * No comment provided
  *
- * Hash: 0x797AC7CB535BA28F | Since: 323 | API-Set: unknown
+ * Hash: 0x797AC7CB535BA28F | Since: unknown | API-Set: unknown
  */
 export function isScreenFadingOut() {
     return IsScreenFadingOut();
@@ -1066,7 +1066,7 @@ export function isScreenFadingOut() {
  * `CAM::STOP_SCRIPT_GLOBAL_SHAKING(0);`
  * }
  *
- * Hash: 0xC912AF078AF19212 | Since: 323 | API-Set: unknown
+ * Hash: 0xC912AF078AF19212 | Since: unknown | API-Set: unknown
  */
 export function isScriptGlobalShaking() {
     return IsScriptGlobalShaking();
@@ -1074,7 +1074,7 @@ export function isScriptGlobalShaking() {
 /**
  * No comment provided
  *
- * Hash: 0xE33D59DA70B58FDF | Since: 323 | API-Set: unknown
+ * Hash: 0xE33D59DA70B58FDF | Since: unknown | API-Set: unknown
  */
 export function isSphereVisible(pos, radius) {
     return IsSphereVisible(pos.x, pos.y, pos.z, radius);
@@ -1082,7 +1082,7 @@ export function isSphereVisible(pos, radius) {
 /**
  * Max value for p1 is 15.
  *
- * Hash: 0x7DCF7C708D292D55 | Since: 323 | API-Set: unknown
+ * Hash: 0x7DCF7C708D292D55 | Since: unknown | API-Set: unknown
  */
 export function overrideCamSplineMotionBlur(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1091,7 +1091,7 @@ export function overrideCamSplineMotionBlur(cam) {
 /**
  * No comment provided
  *
- * Hash: 0x40B62FA033EB0346 | Since: 323 | API-Set: unknown
+ * Hash: 0x40B62FA033EB0346 | Since: unknown | API-Set: unknown
  */
 export function overrideCamSplineVelocity(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1105,7 +1105,7 @@ export function overrideCamSplineVelocity(cam) {
  *
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
  *
- * Hash: 0x9A2D0FB2E7852392 | Since: 323 | API-Set: unknown
+ * Hash: 0x9A2D0FB2E7852392 | Since: unknown | API-Set: unknown
  */
 export function playCamAnim(cam, animName, animDictionary, pos, rot) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1118,7 +1118,7 @@ export function playCamAnim(cam, animName, animDictionary, pos, rot) {
  *
  * `CAM::PLAY_SYNCHRONIZED_CAM_ANIM(l_F0D[7\/\*1\*\/], l_F4D[15\/\*1\*\/], "ah3b_attackheli_cam2", "missheistfbi3b_helicrash");`
  *
- * Hash: 0xE32EFE9AB4A9AA0C | Since: 323 | API-Set: unknown
+ * Hash: 0xE32EFE9AB4A9AA0C | Since: unknown | API-Set: unknown
  */
 export function playSynchronizedCamAnim(animName, animDictionary) {
     return PlaySynchronizedCamAnim(undefined, undefined, animName, animDictionary);
@@ -1126,7 +1126,7 @@ export function playSynchronizedCamAnim(animName, animDictionary) {
 /**
  * No comment provided
  *
- * Hash: 0xF75497BB865F0803 | Since: 323 | API-Set: unknown
+ * Hash: 0xF75497BB865F0803 | Since: unknown | API-Set: unknown
  */
 export function pointCamAtCoord(cam, pos) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1135,7 +1135,7 @@ export function pointCamAtCoord(cam, pos) {
 /**
  * p5 always seems to be 1 i.e TRUE
  *
- * Hash: 0x5640BFF86B16E8DC | Since: 323 | API-Set: unknown
+ * Hash: 0x5640BFF86B16E8DC | Since: unknown | API-Set: unknown
  */
 export function pointCamAtEntity(cam, entity) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1145,7 +1145,7 @@ export function pointCamAtEntity(cam, entity) {
 /**
  * Parameters p0-p5 seems correct. The bool p6 is unknown, but through every X360 script it's always 1. Please correct p0-p5 if any prove to be wrong.
  *
- * Hash: 0x68B2B5F33BA63C41 | Since: 323 | API-Set: unknown
+ * Hash: 0x68B2B5F33BA63C41 | Since: unknown | API-Set: unknown
  */
 export function pointCamAtPedBone(cam, ped, boneIndex, pos) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1160,7 +1160,7 @@ export function pointCamAtPedBone(cam, ped, boneIndex, pos) {
  * character (gameplay) camera, call this native with render set to 0.
  * Setting ease to 1 will smooth the transition.
  *
- * Hash: 0x07E5B515DB0636FC | Since: 323 | API-Set: unknown
+ * Hash: 0x07E5B515DB0636FC | Since: unknown | API-Set: unknown
  */
 export function renderScriptCams(render, ease, easeTime) {
     RenderScriptCams(render, ease, easeTime, false, false, undefined);
@@ -1168,7 +1168,7 @@ export function renderScriptCams(render, ease, easeTime) {
 /**
  * No comment provided
  *
- * Hash: 0x8BFCEB5EA1B161B6 | Since: 323 | API-Set: unknown
+ * Hash: 0x8BFCEB5EA1B161B6 | Since: unknown | API-Set: unknown
  */
 export function replayGetMaxDistanceAllowedFromPlayer() {
     return ReplayFreeCamGetMaxRange();
@@ -1176,7 +1176,7 @@ export function replayGetMaxDistanceAllowedFromPlayer() {
 /**
  * No comment provided
  *
- * Hash: 0x7295C203DD659DFE | Since: 2699 | API-Set: unknown
+ * Hash: 0x7295C203DD659DFE | Since: unknown | API-Set: unknown
  */
 export function resetGameplayCamFullAttachParentTransformTimer() {
     Citizen.invokeNative('0x7295C203DD659DFE');
@@ -1184,7 +1184,7 @@ export function resetGameplayCamFullAttachParentTransformTimer() {
 /**
  * No comment provided
  *
- * Hash: 0x4008EDF7D6E48175 | Since: 323 | API-Set: unknown
+ * Hash: 0x4008EDF7D6E48175 | Since: unknown | API-Set: unknown
  */
 export function setAllowCustomVehicleDriveByCamThisUpdate() {
     Citizen.invokeNative('0x4008EDF7D6E48175', false);
@@ -1192,7 +1192,7 @@ export function setAllowCustomVehicleDriveByCamThisUpdate() {
 /**
  * Set camera as active/inactive.
  *
- * Hash: 0x026FB97D0A425F84 | Since: 323 | API-Set: unknown
+ * Hash: 0x026FB97D0A425F84 | Since: unknown | API-Set: unknown
  */
 export function setCamActive(cam, active) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1202,7 +1202,7 @@ export function setCamActive(cam, active) {
  * Previous declaration void SET_CAM_ACTIVE_WITH_INTERP(Cam camTo, Cam camFrom, int duration, BOOL easeLocation, BOOL easeRotation) is completely wrong. The last two params are integers not BOOLs...
  *
  *
- * Hash: 0x9FBDA379383A52A4 | Since: 323 | API-Set: unknown
+ * Hash: 0x9FBDA379383A52A4 | Since: unknown | API-Set: unknown
  */
 export function setCamActiveWithInterp(camTo, camFrom, duration, easeLocation, easeRotation) {
     const _camTo = typeof camTo == 'object' ? camTo.handle() : camTo;
@@ -1212,7 +1212,7 @@ export function setCamActiveWithInterp(camTo, camFrom, duration, easeLocation, e
 /**
  * Allows you to aim and shoot at the direction the camera is facing.
  *
- * Hash: 0x8C1DC7770C51DC8D | Since: 323 | API-Set: unknown
+ * Hash: 0x8C1DC7770C51DC8D | Since: unknown | API-Set: unknown
  */
 export function setCamAffectsAiming(cam, toggle) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1221,7 +1221,7 @@ export function setCamAffectsAiming(cam, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x4145A4C44FF3B5A6 | Since: 323 | API-Set: unknown
+ * Hash: 0x4145A4C44FF3B5A6 | Since: unknown | API-Set: unknown
  */
 export function setCamAnimCurrentPhase(cam, phase) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1230,7 +1230,7 @@ export function setCamAnimCurrentPhase(cam, phase) {
 /**
  * Rotates the radar to match the camera's Z rotation
  *
- * Hash: 0x661B5C8654ADD825 | Since: 323 | API-Set: unknown
+ * Hash: 0x661B5C8654ADD825 | Since: unknown | API-Set: unknown
  */
 export function setCamControlsMiniMapHeading(cam, toggle) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1239,7 +1239,7 @@ export function setCamControlsMiniMapHeading(cam, toggle) {
 /**
  * Sets the position of the cam.
  *
- * Hash: 0x4D41783FB745E42E | Since: 323 | API-Set: unknown
+ * Hash: 0x4D41783FB745E42E | Since: unknown | API-Set: unknown
  */
 export function setCamCoord(cam, pos) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1252,7 +1252,7 @@ export function setCamCoord(cam, pos) {
  *
  * if p0 is 2, effect immediately tilts cam clockwise apx 30 degrees, begins to wobble slowly, then gradually tilts cam back to normal. The wobbling will continue until the effect is cancelled.
  *
- * Hash: 0x80C8B1846639BB19 | Since: 323 | API-Set: unknown
+ * Hash: 0x80C8B1846639BB19 | Since: unknown | API-Set: unknown
  */
 export function setCamDeathFailEffectState() {
     SetCamEffect(0);
@@ -1260,7 +1260,7 @@ export function setCamDeathFailEffectState() {
 /**
  * NOTE: Debugging functions are not present in the retail version of the game.
  *
- * Hash: 0x1B93E0107865DD40 | Since: 323 | API-Set: unknown
+ * Hash: 0x1B93E0107865DD40 | Since: unknown | API-Set: unknown
  */
 export function setCamDebugName(camera, name) {
     const _camera = typeof camera == 'object' ? camera.handle() : camera;
@@ -1270,7 +1270,7 @@ export function setCamDebugName(camera, name) {
  * This native has its name defined inside its codE
  *
  *
- * Hash: 0x7DD234D6F3914C5B | Since: 323 | API-Set: unknown
+ * Hash: 0x7DD234D6F3914C5B | Since: unknown | API-Set: unknown
  */
 export function setCamDofFnumberOfLens(camera) {
     const _camera = typeof camera == 'object' ? camera.handle() : camera;
@@ -1279,7 +1279,7 @@ export function setCamDofFnumberOfLens(camera) {
 /**
  * Native name labeled within its code
  *
- * Hash: 0x47B595D60664CFFA | Since: 1011 | API-Set: unknown
+ * Hash: 0x47B595D60664CFFA | Since: unknown | API-Set: unknown
  */
 export function setCamDofFocalLengthMultiplier(camera, multiplier) {
     const _camera = typeof camera == 'object' ? camera.handle() : camera;
@@ -1288,7 +1288,7 @@ export function setCamDofFocalLengthMultiplier(camera, multiplier) {
 /**
  * This native has a name defined inside its code
  *
- * Hash: 0xC669EEA5D031B7DE | Since: 323 | API-Set: unknown
+ * Hash: 0xC669EEA5D031B7DE | Since: unknown | API-Set: unknown
  */
 export function setCamDofFocusDistanceBias(camera) {
     const _camera = typeof camera == 'object' ? camera.handle() : camera;
@@ -1297,7 +1297,7 @@ export function setCamDofFocusDistanceBias(camera) {
 /**
  * This native has a name defined inside its code
  *
- * Hash: 0xC3654A441402562D | Since: 323 | API-Set: unknown
+ * Hash: 0xC3654A441402562D | Since: unknown | API-Set: unknown
  */
 export function setCamDofMaxNearInFocusDistance(camera) {
     const _camera = typeof camera == 'object' ? camera.handle() : camera;
@@ -1306,7 +1306,7 @@ export function setCamDofMaxNearInFocusDistance(camera) {
 /**
  * This native has a name defined inside its code
  *
- * Hash: 0x2C654B4943BDDF7C | Since: 323 | API-Set: unknown
+ * Hash: 0x2C654B4943BDDF7C | Since: unknown | API-Set: unknown
  */
 export function setCamDofMaxNearInFocusDistanceBlendLevel(camera) {
     const _camera = typeof camera == 'object' ? camera.handle() : camera;
@@ -1315,7 +1315,7 @@ export function setCamDofMaxNearInFocusDistanceBlendLevel(camera) {
 /**
  * No comment provided
  *
- * Hash: 0xF55E4046F6F831DC | Since: 323 | API-Set: unknown
+ * Hash: 0xF55E4046F6F831DC | Since: unknown | API-Set: unknown
  */
 export function setCamDofOverriddenFocusDistance(camera) {
     const _camera = typeof camera == 'object' ? camera.handle() : camera;
@@ -1324,7 +1324,7 @@ export function setCamDofOverriddenFocusDistance(camera) {
 /**
  * No comment provided
  *
- * Hash: 0xE111A7C0D200CBC5 | Since: 323 | API-Set: unknown
+ * Hash: 0xE111A7C0D200CBC5 | Since: unknown | API-Set: unknown
  */
 export function setCamDofOverriddenFocusDistanceBlendLevel() {
     Citizen.invokeNative('0xE111A7C0D200CBC5', undefined, 0);
@@ -1332,7 +1332,7 @@ export function setCamDofOverriddenFocusDistanceBlendLevel() {
 /**
  * No comment provided
  *
- * Hash: 0x3CF48F6F96E749DC | Since: 323 | API-Set: unknown
+ * Hash: 0x3CF48F6F96E749DC | Since: unknown | API-Set: unknown
  */
 export function setCamDofPlanes(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1341,7 +1341,7 @@ export function setCamDofPlanes(cam) {
 /**
  * This native has a name defined inside its code
  *
- * Hash: 0x7CF3AF51DCFE4108 | Since: 2944 | API-Set: unknown
+ * Hash: 0x7CF3AF51DCFE4108 | Since: unknown | API-Set: unknown
  */
 export function setCamDofShouldKeepLookAtTargetInFocus(camera, state) {
     const _camera = typeof camera == 'object' ? camera.handle() : camera;
@@ -1350,7 +1350,7 @@ export function setCamDofShouldKeepLookAtTargetInFocus(camera, state) {
 /**
  * No comment provided
  *
- * Hash: 0x5EE29B4D7D5DF897 | Since: 323 | API-Set: unknown
+ * Hash: 0x5EE29B4D7D5DF897 | Since: unknown | API-Set: unknown
  */
 export function setCamDofStrength(cam, dofStrength) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1359,7 +1359,7 @@ export function setCamDofStrength(cam, dofStrength) {
 /**
  * No comment provided
  *
- * Hash: 0xAE306F2A904BF86E | Since: 323 | API-Set: unknown
+ * Hash: 0xAE306F2A904BF86E | Since: unknown | API-Set: unknown
  */
 export function setCamFarClip(cam, farClip) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1368,7 +1368,7 @@ export function setCamFarClip(cam, farClip) {
 /**
  * No comment provided
  *
- * Hash: 0xEDD91296CD01AEE0 | Since: 323 | API-Set: unknown
+ * Hash: 0xEDD91296CD01AEE0 | Since: unknown | API-Set: unknown
  */
 export function setCamFarDof(cam, farDOF) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1380,7 +1380,7 @@ export function setCamFarDof(cam, farDOF) {
  * Min: 1.0f
  * Max: 130.0f
  *
- * Hash: 0xB13C14F66A00D047 | Since: 323 | API-Set: unknown
+ * Hash: 0xB13C14F66A00D047 | Since: unknown | API-Set: unknown
  */
 export function setCamFov(cam, fieldOfView) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1393,7 +1393,7 @@ export function setCamFov(cam, fieldOfView) {
  * `CAM::SET_CAM_INHERIT_ROLL_VEHICLE(l_544, getElem(2, &l_525, 4));`
  * In the exile1 script.
  *
- * Hash: 0x45F1DE9C34B93AE6 | Since: 323 | API-Set: unknown
+ * Hash: 0x45F1DE9C34B93AE6 | Since: unknown | API-Set: unknown
  */
 export function setCamInheritRollVehicle(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1403,7 +1403,7 @@ export function setCamInheritRollVehicle(cam) {
  * When set to true shadows appear more smooth but less detailed.
  * Set to false by default.
  *
- * Hash: 0xA2767257A320FC82 | Since: 323 | API-Set: unknown
+ * Hash: 0xA2767257A320FC82 | Since: unknown | API-Set: unknown
  */
 export function setCamIsInsideVehicle(cam, toggle) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1412,7 +1412,7 @@ export function setCamIsInsideVehicle(cam, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x6F0F77FBA9A8F2E6 | Since: 323 | API-Set: unknown
+ * Hash: 0x6F0F77FBA9A8F2E6 | Since: unknown | API-Set: unknown
  */
 export function setCamMotionBlurStrength(cam, strength) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1421,7 +1421,7 @@ export function setCamMotionBlurStrength(cam, strength) {
 /**
  * No comment provided
  *
- * Hash: 0xC7848EFCCC545182 | Since: 323 | API-Set: unknown
+ * Hash: 0xC7848EFCCC545182 | Since: unknown | API-Set: unknown
  */
 export function setCamNearClip(cam, nearClip) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1430,7 +1430,7 @@ export function setCamNearClip(cam, nearClip) {
 /**
  * No comment provided
  *
- * Hash: 0x3FA4BF0A7AB7DE2C | Since: 323 | API-Set: unknown
+ * Hash: 0x3FA4BF0A7AB7DE2C | Since: unknown | API-Set: unknown
  */
 export function setCamNearDof(cam, nearDOF) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1439,7 +1439,7 @@ export function setCamNearDof(cam, nearDOF) {
 /**
  * No comment provided
  *
- * Hash: 0xBFD8727AEA3CCEBA | Since: 323 | API-Set: unknown
+ * Hash: 0xBFD8727AEA3CCEBA | Since: unknown | API-Set: unknown
  */
 export function setCamParams(cam, pos, rot, fieldOfView) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1451,7 +1451,7 @@ export function setCamParams(cam, pos, rot, fieldOfView) {
  *
  * Last parameter seems to always be set to 2.
  *
- * Hash: 0x85973643155D0B07 | Since: 323 | API-Set: unknown
+ * Hash: 0x85973643155D0B07 | Since: unknown | API-Set: unknown
  */
 export function setCamRot(cam, rot, rotationOrder) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1460,7 +1460,7 @@ export function setCamRot(cam, rot, rotationOrder) {
 /**
  * No comment provided
  *
- * Hash: 0xD93DB43B82BC0D00 | Since: 323 | API-Set: unknown
+ * Hash: 0xD93DB43B82BC0D00 | Since: unknown | API-Set: unknown
  */
 export function setCamShakeAmplitude(cam, amplitude) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1469,7 +1469,7 @@ export function setCamShakeAmplitude(cam, amplitude) {
 /**
  * I named p1 as timeDuration as it is obvious. I'm assuming tho it is ran in ms(Milliseconds) as usual.
  *
- * Hash: 0x1381539FEE034CDA | Since: 323 | API-Set: unknown
+ * Hash: 0x1381539FEE034CDA | Since: unknown | API-Set: unknown
  */
 export function setCamSplineDuration(cam, timeDuration) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1478,7 +1478,7 @@ export function setCamSplineDuration(cam, timeDuration) {
 /**
  * No comment provided
  *
- * Hash: 0x83B8201ED82A9A2D | Since: 323 | API-Set: unknown
+ * Hash: 0x83B8201ED82A9A2D | Since: unknown | API-Set: unknown
  */
 export function setCamSplineNodeEase(cam, easingFunction) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1487,7 +1487,7 @@ export function setCamSplineNodeEase(cam, easingFunction) {
 /**
  * No comment provided
  *
- * Hash: 0x7BF1A54AE67AC070 | Since: 323 | API-Set: unknown
+ * Hash: 0x7BF1A54AE67AC070 | Since: unknown | API-Set: unknown
  */
 export function setCamSplineNodeExtraFlags(cam, flags) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1496,7 +1496,7 @@ export function setCamSplineNodeExtraFlags(cam, flags) {
 /**
  * No comment provided
  *
- * Hash: 0xA6385DEB180F319F | Since: 323 | API-Set: unknown
+ * Hash: 0xA6385DEB180F319F | Since: unknown | API-Set: unknown
  */
 export function setCamSplineNodeVelocityScale(cam, scale) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1505,7 +1505,7 @@ export function setCamSplineNodeVelocityScale(cam, scale) {
 /**
  * No comment provided
  *
- * Hash: 0x242B5874F0A4E052 | Since: 323 | API-Set: unknown
+ * Hash: 0x242B5874F0A4E052 | Since: unknown | API-Set: unknown
  */
 export function setCamSplinePhase(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1514,7 +1514,7 @@ export function setCamSplinePhase(cam) {
 /**
  * No comment provided
  *
- * Hash: 0xD1B0F412F109EA5D | Since: 323 | API-Set: unknown
+ * Hash: 0xD1B0F412F109EA5D | Since: unknown | API-Set: unknown
  */
 export function setCamSplineSmoothingStyle(cam, smoothingStyle) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1523,7 +1523,7 @@ export function setCamSplineSmoothingStyle(cam, smoothingStyle) {
 /**
  * No comment provided
  *
- * Hash: 0x16A96863A17552BB | Since: 323 | API-Set: unknown
+ * Hash: 0x16A96863A17552BB | Since: unknown | API-Set: unknown
  */
 export function setCamUseShallowDofMode(cam, toggle) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1532,7 +1532,7 @@ export function setCamUseShallowDofMode(cam, toggle) {
 /**
  * context: see _GET_CAM_ACTIVE_VIEW_MODE_CONTEXT, viewmode: see CAM.GET_FOLLOW_VEHICLE_CAM_VIEW_MODE
  *
- * Hash: 0x2A2173E46DAECD12 | Since: 323 | API-Set: unknown
+ * Hash: 0x2A2173E46DAECD12 | Since: unknown | API-Set: unknown
  */
 export function setCamViewModeForContext(context, viewMode) {
     SetCamViewModeForContext(context, viewMode);
@@ -1540,7 +1540,7 @@ export function setCamViewModeForContext(context, viewMode) {
 /**
  * No comment provided
  *
- * Hash: 0x51669F7D1FB53D9F | Since: 323 | API-Set: unknown
+ * Hash: 0x51669F7D1FB53D9F | Since: unknown | API-Set: unknown
  */
 export function setCinematicButtonActive() {
     SetCinematicButtonActive(false);
@@ -1548,7 +1548,7 @@ export function setCinematicButtonActive() {
 /**
  * No comment provided
  *
- * Hash: 0xC724C701C30B2FE7 | Since: 323 | API-Set: unknown
+ * Hash: 0xC724C701C30B2FE7 | Since: unknown | API-Set: unknown
  */
 export function setCinematicCamShakeAmplitude() {
     SetCinematicCamShakeAmplitude(0);
@@ -1556,7 +1556,7 @@ export function setCinematicCamShakeAmplitude() {
 /**
  * Toggles the vehicle cinematic cam; requires the player ped to be in a vehicle to work.
  *
- * Hash: 0xDCF0754AC3D6FD4E | Since: 323 | API-Set: unknown
+ * Hash: 0xDCF0754AC3D6FD4E | Since: unknown | API-Set: unknown
  */
 export function setCinematicModeActive(toggle) {
     SetCinematicModeActive(toggle);
@@ -1564,7 +1564,7 @@ export function setCinematicModeActive(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xDC9DA9E8789F5246 | Since: 323 | API-Set: unknown
+ * Hash: 0xDC9DA9E8789F5246 | Since: unknown | API-Set: unknown
  */
 export function setCinematicNewsChannelActiveThisUpdate() {
     SetCinematicNewsChannelActiveThisUpdate();
@@ -1572,7 +1572,7 @@ export function setCinematicNewsChannelActiveThisUpdate() {
 /**
  * Hardcoded to only work in multiplayer.
  *
- * Hash: 0x12DED8CA53D47EA5 | Since: 323 | API-Set: unknown
+ * Hash: 0x12DED8CA53D47EA5 | Since: unknown | API-Set: unknown
  */
 export function setCutsceneCamFarClipThisUpdate() {
     Citizen.invokeNative('0x12DED8CA53D47EA5', 0);
@@ -1580,7 +1580,7 @@ export function setCutsceneCamFarClipThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0x0AF7B437918103B3 | Since: 323 | API-Set: unknown
+ * Hash: 0x0AF7B437918103B3 | Since: unknown | API-Set: unknown
  */
 export function setFirstPersonAimCamNearClipThisUpdate() {
     SetFirstPersonAimCamNearClipThisUpdate(0);
@@ -1588,7 +1588,7 @@ export function setFirstPersonAimCamNearClipThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0x2F7F2B26DD3F18EE | Since: 323 | API-Set: unknown
+ * Hash: 0x2F7F2B26DD3F18EE | Since: unknown | API-Set: unknown
  */
 export function setFirstPersonAimCamRelativeHeadingLimitsThisUpdate() {
     Citizen.invokeNative('0x2F7F2B26DD3F18EE', 0, 0);
@@ -1596,7 +1596,7 @@ export function setFirstPersonAimCamRelativeHeadingLimitsThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0xBCFC632DB7673BF0 | Since: 323 | API-Set: unknown
+ * Hash: 0xBCFC632DB7673BF0 | Since: unknown | API-Set: unknown
  */
 export function setFirstPersonAimCamRelativePitchLimitsThisUpdate() {
     SetFirstPersonCamPitchRange(0, 0);
@@ -1604,7 +1604,7 @@ export function setFirstPersonAimCamRelativePitchLimitsThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0x70894BD0915C5BCA | Since: 323 | API-Set: unknown
+ * Hash: 0x70894BD0915C5BCA | Since: unknown | API-Set: unknown
  */
 export function setFirstPersonAimCamZoomFactor(zoomFactor) {
     SetFirstPersonAimCamZoomFactor(zoomFactor);
@@ -1612,7 +1612,7 @@ export function setFirstPersonAimCamZoomFactor(zoomFactor) {
 /**
  * No comment provided
  *
- * Hash: 0xCED08CBE8EBB97C7 | Since: 323 | API-Set: unknown
+ * Hash: 0xCED08CBE8EBB97C7 | Since: unknown | API-Set: unknown
  */
 export function setFirstPersonAimCamZoomFactorLimitsThisUpdate() {
     Citizen.invokeNative('0xCED08CBE8EBB97C7', 0, 0);
@@ -1620,7 +1620,7 @@ export function setFirstPersonAimCamZoomFactorLimitsThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0x5C41E6BABC9E2112 | Since: 323 | API-Set: unknown
+ * Hash: 0x5C41E6BABC9E2112 | Since: unknown | API-Set: unknown
  */
 export function setFirstPersonFlashEffectType() {
     Citizen.invokeNative('0x5C41E6BABC9E2112', undefined);
@@ -1628,7 +1628,7 @@ export function setFirstPersonFlashEffectType() {
 /**
  * No comment provided
  *
- * Hash: 0x11FA5D3479C7DD47 | Since: 323 | API-Set: unknown
+ * Hash: 0x11FA5D3479C7DD47 | Since: unknown | API-Set: unknown
  */
 export function setFirstPersonFlashEffectVehicleModelHash(vehicleModel) {
     if (typeof vehicleModel === 'string')
@@ -1642,7 +1642,7 @@ export function setFirstPersonFlashEffectVehicleModelHash(vehicleModel) {
  * `CAM::SET_FIRST_PERSON_FLASH_EFFECT_VEHICLE_MODEL_NAME("ISSI2");`
  * `CAM::SET_FIRST_PERSON_FLASH_EFFECT_VEHICLE_MODEL_NAME("SPEEDO");`
  *
- * Hash: 0x21E253A7F8DA5DFB | Since: 323 | API-Set: unknown
+ * Hash: 0x21E253A7F8DA5DFB | Since: unknown | API-Set: unknown
  */
 export function setFirstPersonFlashEffectVehicleModelName(vehicleName) {
     SetGameplayCamVehicleCamera(vehicleName);
@@ -1650,7 +1650,7 @@ export function setFirstPersonFlashEffectVehicleModelName(vehicleName) {
 /**
  * Does nothing
  *
- * Hash: 0x103991D4A307D472 | Since: 323 | API-Set: unknown
+ * Hash: 0x103991D4A307D472 | Since: unknown | API-Set: unknown
  */
 export function setFirstPersonShooterHeading(yaw) {
     SetGameplayCamRawYaw(yaw);
@@ -1658,7 +1658,7 @@ export function setFirstPersonShooterHeading(yaw) {
 /**
  * No comment provided
  *
- * Hash: 0x759E13EBC1C15C5A | Since: 323 | API-Set: unknown
+ * Hash: 0x759E13EBC1C15C5A | Since: unknown | API-Set: unknown
  */
 export function setFirstPersonShooterPitch(pitch) {
     SetGameplayCamRawPitch(pitch);
@@ -1666,7 +1666,7 @@ export function setFirstPersonShooterPitch(pitch) {
 /**
  * No comment provided
  *
- * Hash: 0xC91C6C55199308CA | Since: 323 | API-Set: unknown
+ * Hash: 0xC91C6C55199308CA | Since: unknown | API-Set: unknown
  */
 export function setFlyCamCoordAndConstrain(cam, pos) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1675,7 +1675,7 @@ export function setFlyCamCoordAndConstrain(cam, pos) {
 /**
  * No comment provided
  *
- * Hash: 0x503F5920162365B2 | Since: 323 | API-Set: unknown
+ * Hash: 0x503F5920162365B2 | Since: unknown | API-Set: unknown
  */
 export function setFlyCamHorizontalResponse(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1684,7 +1684,7 @@ export function setFlyCamHorizontalResponse(cam) {
 /**
  * No comment provided
  *
- * Hash: 0xF9D02130ECDD1D77 | Since: 323 | API-Set: unknown
+ * Hash: 0xF9D02130ECDD1D77 | Since: unknown | API-Set: unknown
  */
 export function setFlyCamMaxHeight(cam, height) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1693,7 +1693,7 @@ export function setFlyCamMaxHeight(cam, height) {
 /**
  * No comment provided
  *
- * Hash: 0xC8B5C4A79CC18B94 | Since: 323 | API-Set: unknown
+ * Hash: 0xC8B5C4A79CC18B94 | Since: unknown | API-Set: unknown
  */
 export function setFlyCamVerticalControlsThisUpdate(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1702,7 +1702,7 @@ export function setFlyCamVerticalControlsThisUpdate(cam) {
 /**
  * No comment provided
  *
- * Hash: 0xE827B9382CFB41BA | Since: 791 | API-Set: unknown
+ * Hash: 0xE827B9382CFB41BA | Since: unknown | API-Set: unknown
  */
 export function setFlyCamVerticalResponse(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -1711,7 +1711,7 @@ export function setFlyCamVerticalResponse(cam) {
 /**
  * No comment provided
  *
- * Hash: 0xDD79DF9F4D26E1C9 | Since: 323 | API-Set: unknown
+ * Hash: 0xDD79DF9F4D26E1C9 | Since: unknown | API-Set: unknown
  */
 export function setFollowCamIgnoreAttachParentMovementThisUpdate() {
     Citizen.invokeNative('0xDD79DF9F4D26E1C9');
@@ -1719,7 +1719,7 @@ export function setFollowCamIgnoreAttachParentMovementThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0xC8391C309684595A | Since: 323 | API-Set: unknown
+ * Hash: 0xC8391C309684595A | Since: unknown | API-Set: unknown
  */
 export function setFollowPedCamLadderAlignThisUpdate() {
     Citizen.invokeNative('0xC8391C309684595A');
@@ -1734,7 +1734,7 @@ export function setFollowPedCamLadderAlignThisUpdate() {
  * `CAM::SET_FOLLOW_PED_CAM_THIS_UPDATE("FOLLOW_PED_SKY_DIVING_FAMILY5_CAMERA", 0);`
  * `CAM::SET_FOLLOW_PED_CAM_THIS_UPDATE("FOLLOW_PED_SKY_DIVING_CAMERA", 0);`
  *
- * Hash: 0x44A113DD6FFC48D1 | Since: 323 | API-Set: unknown
+ * Hash: 0x44A113DD6FFC48D1 | Since: unknown | API-Set: unknown
  */
 export function setFollowPedCamThisUpdate(camName) {
     return SetFollowPedCamThisUpdate(camName, 0);
@@ -1747,7 +1747,7 @@ export function setFollowPedCamThisUpdate(camName) {
  * 2 - Third Person Far
  * 4 - First Person
  *
- * Hash: 0x5A4F9EDF1673F704 | Since: 323 | API-Set: unknown
+ * Hash: 0x5A4F9EDF1673F704 | Since: unknown | API-Set: unknown
  */
 export function setFollowPedCamViewMode(viewMode) {
     SetFollowPedCamViewMode(viewMode);
@@ -1755,7 +1755,7 @@ export function setFollowPedCamViewMode(viewMode) {
 /**
  * No comment provided
  *
- * Hash: 0x9DFE13ECDC1EC196 | Since: 323 | API-Set: unknown
+ * Hash: 0x9DFE13ECDC1EC196 | Since: unknown | API-Set: unknown
  */
 export function setFollowVehicleCamHighAngleModeEveryUpdate() {
     Citizen.invokeNative('0x9DFE13ECDC1EC196', false, false);
@@ -1763,7 +1763,7 @@ export function setFollowVehicleCamHighAngleModeEveryUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0x91EF6EE6419E5B97 | Since: 323 | API-Set: unknown
+ * Hash: 0x91EF6EE6419E5B97 | Since: unknown | API-Set: unknown
  */
 export function setFollowVehicleCamHighAngleModeThisUpdate() {
     Citizen.invokeNative('0x91EF6EE6419E5B97', false);
@@ -1771,7 +1771,7 @@ export function setFollowVehicleCamHighAngleModeThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0x5C90CAB09951A12F | Since: 1365 | API-Set: unknown
+ * Hash: 0x5C90CAB09951A12F | Since: unknown | API-Set: unknown
  */
 export function setFollowVehicleCamSeatThisUpdate(seatIndex) {
     SetFollowTurretSeatCam(seatIndex);
@@ -1780,7 +1780,7 @@ export function setFollowVehicleCamSeatThisUpdate(seatIndex) {
  * Sets the type of Player camera in vehicles:
  * viewmode: see CAM.GET_FOLLOW_VEHICLE_CAM_VIEW_MODE
  *
- * Hash: 0xAC253D7842768F48 | Since: 323 | API-Set: unknown
+ * Hash: 0xAC253D7842768F48 | Since: unknown | API-Set: unknown
  */
 export function setFollowVehicleCamViewMode(viewMode) {
     SetFollowVehicleCamViewMode(viewMode);
@@ -1788,7 +1788,7 @@ export function setFollowVehicleCamViewMode(viewMode) {
 /**
  * No comment provided
  *
- * Hash: 0x19464CB6E4078C8A | Since: 323 | API-Set: unknown
+ * Hash: 0x19464CB6E4078C8A | Since: unknown | API-Set: unknown
  */
 export function setFollowVehicleCamZoomLevel(zoomLevel) {
     SetFollowVehicleCamZoomLevel(zoomLevel);
@@ -1796,7 +1796,7 @@ export function setFollowVehicleCamZoomLevel(zoomLevel) {
 /**
  * No comment provided
  *
- * Hash: 0xDB90C6CCA48940F1 | Since: 323 | API-Set: unknown
+ * Hash: 0xDB90C6CCA48940F1 | Since: unknown | API-Set: unknown
  */
 export function setGameplayCamAltitudeFovScalingState() {
     Citizen.invokeNative('0xDB90C6CCA48940F1', false);
@@ -1804,7 +1804,7 @@ export function setGameplayCamAltitudeFovScalingState() {
 /**
  * No comment provided
  *
- * Hash: 0xFD3151CD37EA2245 | Since: 323 | API-Set: unknown
+ * Hash: 0xFD3151CD37EA2245 | Since: unknown | API-Set: unknown
  */
 export function setGameplayCamEntityToLimitFocusOverBoundingSphereThisUpdate(entity) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -1813,7 +1813,7 @@ export function setGameplayCamEntityToLimitFocusOverBoundingSphereThisUpdate(ent
 /**
  * Forces gameplay cam to specified ped as if you were the ped or spectating it
  *
- * Hash: 0x8BBACBF51DA047A8 | Since: 323 | API-Set: unknown
+ * Hash: 0x8BBACBF51DA047A8 | Since: unknown | API-Set: unknown
  */
 export function setGameplayCamFollowPedThisUpdate(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1822,7 +1822,7 @@ export function setGameplayCamFollowPedThisUpdate(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x2AED6301F67007D5 | Since: 323 | API-Set: unknown
+ * Hash: 0x2AED6301F67007D5 | Since: unknown | API-Set: unknown
  */
 export function setGameplayCamIgnoreEntityCollisionThisUpdate(entity) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -1831,7 +1831,7 @@ export function setGameplayCamIgnoreEntityCollisionThisUpdate(entity) {
 /**
  * some camera effect that is (also) used in the drunk-cheat, and turned off (by setting it to 0.0) along with the shaking effects once the drunk cheat is disabled.
  *
- * Hash: 0x0225778816FDC28C | Since: 323 | API-Set: unknown
+ * Hash: 0x0225778816FDC28C | Since: unknown | API-Set: unknown
  */
 export function setGameplayCamMaxMotionBlurStrengthThisUpdate() {
     Citizen.invokeNative('0x0225778816FDC28C', 0);
@@ -1839,7 +1839,7 @@ export function setGameplayCamMaxMotionBlurStrengthThisUpdate() {
 /**
  * some camera effect that is used in the drunk-cheat, and turned off (by setting it to 0.0) along with the shaking effects once the drunk cheat is disabled.
  *
- * Hash: 0x487A82C650EB7799 | Since: 323 | API-Set: unknown
+ * Hash: 0x487A82C650EB7799 | Since: unknown | API-Set: unknown
  */
 export function setGameplayCamMotionBlurScalingThisUpdate() {
     CustomMenuCoordinates(0);
@@ -1849,7 +1849,7 @@ export function setGameplayCamMotionBlurScalingThisUpdate() {
  *
  * Heading is alwyas 0 in aiming camera.
  *
- * Hash: 0xB4EC2312F4E5B1F1 | Since: 323 | API-Set: unknown
+ * Hash: 0xB4EC2312F4E5B1F1 | Since: unknown | API-Set: unknown
  */
 export function setGameplayCamRelativeHeading(heading) {
     SetGameplayCamRelativeHeading(heading);
@@ -1857,7 +1857,7 @@ export function setGameplayCamRelativeHeading(heading) {
 /**
  * This native sets the camera's pitch (rotation on the x-axis).
  *
- * Hash: 0x6D0858B8EDFD2B7D | Since: 323 | API-Set: unknown
+ * Hash: 0x6D0858B8EDFD2B7D | Since: unknown | API-Set: unknown
  */
 export function setGameplayCamRelativePitch(angle, scalingFactor) {
     SetGameplayCamRelativePitch(angle, scalingFactor);
@@ -1865,7 +1865,7 @@ export function setGameplayCamRelativePitch(angle, scalingFactor) {
 /**
  * Sets the amplitude for the gameplay (i.e. 3rd or 1st) camera to shake. Used in script "drunk_controller.ysc.c4" to simulate making the player drunk.
  *
- * Hash: 0xA87E00932DB4D85D | Since: 323 | API-Set: unknown
+ * Hash: 0xA87E00932DB4D85D | Since: unknown | API-Set: unknown
  */
 export function setGameplayCamShakeAmplitude(amplitude) {
     SetGameplayCamShakeAmplitude(amplitude);
@@ -1873,7 +1873,7 @@ export function setGameplayCamShakeAmplitude(amplitude) {
 /**
  * No comment provided
  *
- * Hash: 0xD51ADCD2D8BC0FB3 | Since: 323 | API-Set: unknown
+ * Hash: 0xD51ADCD2D8BC0FB3 | Since: unknown | API-Set: unknown
  */
 export function setGameplayCoordHint(pos, duration, blendOutDuration, blendInDuration) {
     SetGameplayCoordHint(pos.x, pos.y, pos.z, duration, blendOutDuration, blendInDuration, 0);
@@ -1885,7 +1885,7 @@ export function setGameplayCoordHint(pos, duration, blendOutDuration, blendInDur
  * 1726668277
  * 1844968929
  *
- * Hash: 0x189E955A8313E298 | Since: 323 | API-Set: unknown
+ * Hash: 0x189E955A8313E298 | Since: unknown | API-Set: unknown
  */
 export function setGameplayEntityHint(entity, xOffset, yOffset, zOffset, time, easeInTime, easeOutTime) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -1894,7 +1894,7 @@ export function setGameplayEntityHint(entity, xOffset, yOffset, zOffset, time, e
 /**
  * No comment provided
  *
- * Hash: 0xD1F8363DFAD03848 | Since: 323 | API-Set: unknown
+ * Hash: 0xD1F8363DFAD03848 | Since: unknown | API-Set: unknown
  */
 export function setGameplayHintBaseOrbitPitchOffset(value) {
     SetGameplayHintBaseOrbitPitchOffset(value);
@@ -1902,7 +1902,7 @@ export function setGameplayHintBaseOrbitPitchOffset(value) {
 /**
  * No comment provided
  *
- * Hash: 0xE3433EADAAF7EE40 | Since: 323 | API-Set: unknown
+ * Hash: 0xE3433EADAAF7EE40 | Since: unknown | API-Set: unknown
  */
 export function setGameplayHintBlendToFollowPedMediumViewMode(toggle) {
     SetGameplayHintAnimCloseup(toggle);
@@ -1910,7 +1910,7 @@ export function setGameplayHintBlendToFollowPedMediumViewMode(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x5D7B620DAE436138 | Since: 323 | API-Set: unknown
+ * Hash: 0x5D7B620DAE436138 | Since: unknown | API-Set: unknown
  */
 export function setGameplayHintRelativeSideOffset(xOffset) {
     SetGameplayHintAnimOffsetx(xOffset);
@@ -1918,7 +1918,7 @@ export function setGameplayHintRelativeSideOffset(xOffset) {
 /**
  * No comment provided
  *
- * Hash: 0xC92717EF615B6704 | Since: 323 | API-Set: unknown
+ * Hash: 0xC92717EF615B6704 | Since: unknown | API-Set: unknown
  */
 export function setGameplayHintRelativeVerticalOffset(yOffset) {
     SetGameplayHintAnimOffsety(yOffset);
@@ -1926,7 +1926,7 @@ export function setGameplayHintRelativeVerticalOffset(yOffset) {
 /**
  * No comment provided
  *
- * Hash: 0xF8BDBF3D573049A1 | Since: 323 | API-Set: unknown
+ * Hash: 0xF8BDBF3D573049A1 | Since: unknown | API-Set: unknown
  */
 export function setGameplayHintFollowDistanceScalar(value) {
     SetGameplayHintFollowDistanceScalar(value);
@@ -1934,7 +1934,7 @@ export function setGameplayHintFollowDistanceScalar(value) {
 /**
  * No comment provided
  *
- * Hash: 0x513403FB9C56211F | Since: 323 | API-Set: unknown
+ * Hash: 0x513403FB9C56211F | Since: unknown | API-Set: unknown
  */
 export function setGameplayHintFov(FOV) {
     SetGameplayHintFov(FOV);
@@ -1942,7 +1942,7 @@ export function setGameplayHintFov(FOV) {
 /**
  * No comment provided
  *
- * Hash: 0x83E87508A2CA2AC6 | Since: 323 | API-Set: unknown
+ * Hash: 0x83E87508A2CA2AC6 | Since: unknown | API-Set: unknown
  */
 export function setGameplayObjectHint(_object, xOffset, yOffset, zOffset, time, easeInTime, easeOutTime) {
     const __object = typeof _object == 'object' ? _object.handle() : _object;
@@ -1951,7 +1951,7 @@ export function setGameplayObjectHint(_object, xOffset, yOffset, zOffset, time, 
 /**
  * No comment provided
  *
- * Hash: 0x2B486269ACD548D3 | Since: 323 | API-Set: unknown
+ * Hash: 0x2B486269ACD548D3 | Since: unknown | API-Set: unknown
  */
 export function setGameplayPedHint(ped, x1, y1, z1, duration, blendOutDuration, blendInDuration) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1960,7 +1960,7 @@ export function setGameplayPedHint(ped, x1, y1, z1, duration, blendOutDuration, 
 /**
  * Focuses the camera on the specified vehicle.
  *
- * Hash: 0xA2297E18F3E71C2E | Since: 323 | API-Set: unknown
+ * Hash: 0xA2297E18F3E71C2E | Since: unknown | API-Set: unknown
  */
 export function setGameplayVehicleHint(vehicle, offsetX, offsetY, offsetZ, time, easeInTime, easeOutTime) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1969,7 +1969,7 @@ export function setGameplayVehicleHint(vehicle, offsetX, offsetY, offsetZ, time,
 /**
  * Forces gameplay cam to specified vehicle as if you were in it
  *
- * Hash: 0xE9EA16D6E54CDCA4 | Since: 323 | API-Set: unknown
+ * Hash: 0xE9EA16D6E54CDCA4 | Since: unknown | API-Set: unknown
  */
 export function setInVehicleCamStateThisUpdate(p0) {
     const _p0 = typeof p0 == 'object' ? p0.handle() : p0;
@@ -1978,7 +1978,7 @@ export function setInVehicleCamStateThisUpdate(p0) {
 /**
  * No comment provided
  *
- * Hash: 0x469F2ECDEC046337 | Since: 323 | API-Set: unknown
+ * Hash: 0x469F2ECDEC046337 | Since: unknown | API-Set: unknown
  */
 export function setScriptedIsFirstPersonThisFrame() {
     Citizen.invokeNative('0x469F2ECDEC046337', false);
@@ -1986,7 +1986,7 @@ export function setScriptedIsFirstPersonThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0x79C0E43EB9B944E2 | Since: 1734 | API-Set: unknown
+ * Hash: 0x79C0E43EB9B944E2 | Since: unknown | API-Set: unknown
  */
 export function setTableGamesThisUpdate(hash) {
     if (typeof hash === 'string')
@@ -1996,7 +1996,7 @@ export function setTableGamesThisUpdate(hash) {
 /**
  * No comment provided
  *
- * Hash: 0x42156508606DE65E | Since: 323 | API-Set: unknown
+ * Hash: 0x42156508606DE65E | Since: unknown | API-Set: unknown
  */
 export function setThirdPersonAimCamNearClipThisUpdate() {
     SetThirdPersonAimCamNearClipThisUpdate(0);
@@ -2018,7 +2018,7 @@ export function setThirdPersonAimCamNearClipThisUpdate() {
  *
  * `CAM::SET_THIRD_PERSON_CAM_ORBIT_DISTANCE_LIMITS_THIS_UPDATE(1f, 1f);`
  *
- * Hash: 0xDF2E1F7742402E81 | Since: 323 | API-Set: unknown
+ * Hash: 0xDF2E1F7742402E81 | Since: unknown | API-Set: unknown
  */
 export function setThirdPersonCamOrbitDistanceLimitsThisUpdate(distance) {
     AnimateGameplayCamZoom(0, distance);
@@ -2031,7 +2031,7 @@ export function setThirdPersonCamOrbitDistanceLimitsThisUpdate(distance) {
  *
  * Eg. SET_THIRD_PERSON_CAM_RELATIVE_HEADING_LIMITS_THIS_UPDATE(0.0f, 0.0f) will set the horizontal angle directly behind the player.
  *
- * Hash: 0x8F993D26E0CA5E8E | Since: 323 | API-Set: unknown
+ * Hash: 0x8F993D26E0CA5E8E | Since: unknown | API-Set: unknown
  */
 export function setThirdPersonCamRelativeHeadingLimitsThisUpdate(minimum, maximum) {
     ClampGameplayCamYaw(minimum, maximum);
@@ -2044,7 +2044,7 @@ export function setThirdPersonCamRelativeHeadingLimitsThisUpdate(minimum, maximu
  *
  * Eg. SET_THIRD_PERSON_CAM_RELATIVE_PITCH_LIMITS_THIS_UPDATE(0.0f, 0.0f) will set the vertical angle directly behind the player.
  *
- * Hash: 0xA516C198B7DCA1E1 | Since: 323 | API-Set: unknown
+ * Hash: 0xA516C198B7DCA1E1 | Since: unknown | API-Set: unknown
  */
 export function setThirdPersonCamRelativePitchLimitsThisUpdate(minimum, maximum) {
     ClampGameplayCamPitch(minimum, maximum);
@@ -2052,7 +2052,7 @@ export function setThirdPersonCamRelativePitchLimitsThisUpdate(minimum, maximum)
 /**
  * No comment provided
  *
- * Hash: 0xA13B0222F3D94A94 | Since: 323 | API-Set: unknown
+ * Hash: 0xA13B0222F3D94A94 | Since: unknown | API-Set: unknown
  */
 export function setUseHiDof() {
     SetUseHiDof();
@@ -2060,7 +2060,7 @@ export function setUseHiDof() {
 /**
  * Only used in R* Script fm_mission_controller_2020
  *
- * Hash: 0x731A880555DA3647 | Since: 2699 | API-Set: unknown
+ * Hash: 0x731A880555DA3647 | Since: unknown | API-Set: unknown
  */
 export function setUseHiDofOnSyncedSceneThisUpdate() {
     SetUseHiDofInCutscene();
@@ -2068,7 +2068,7 @@ export function setUseHiDofOnSyncedSceneThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0xDCD4EA924F42D01A | Since: 323 | API-Set: unknown
+ * Hash: 0xDCD4EA924F42D01A | Since: unknown | API-Set: unknown
  */
 export function setWidescreenBorders() {
     SetWidescreenBorders(false, 0);
@@ -2090,7 +2090,7 @@ export function setWidescreenBorders() {
  *
  * Full list of cam shake types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/camShakeTypesCompact.json
  *
- * Hash: 0x6A25241C340D3822 | Since: 323 | API-Set: unknown
+ * Hash: 0x6A25241C340D3822 | Since: unknown | API-Set: unknown
  */
 export function shakeCam(cam, _type, amplitude) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -2101,7 +2101,7 @@ export function shakeCam(cam, _type, amplitude) {
  *
  * Full list of cam shake types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/camShakeTypesCompact.json
  *
- * Hash: 0xDCE214D9ED58F3CF | Since: 323 | API-Set: unknown
+ * Hash: 0xDCE214D9ED58F3CF | Since: unknown | API-Set: unknown
  */
 export function shakeCinematicCam(shakeType, amount) {
     ShakeCinematicCam(shakeType, amount);
@@ -2123,7 +2123,7 @@ export function shakeCinematicCam(shakeType, amount) {
  *
  * Full list of cam shake types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/camShakeTypesCompact.json
  *
- * Hash: 0xFD55E49555E017CF | Since: 323 | API-Set: unknown
+ * Hash: 0xFD55E49555E017CF | Since: unknown | API-Set: unknown
  */
 export function shakeGameplayCam(shakeName, intensity) {
     ShakeGameplayCam(shakeName, intensity);
@@ -2133,7 +2133,7 @@ export function shakeGameplayCam(shakeName, intensity) {
  *
  * Full list of cam shake types by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/camShakeTypesCompact.json
  *
- * Hash: 0xF4C8CF9E353AFECA | Since: 323 | API-Set: unknown
+ * Hash: 0xF4C8CF9E353AFECA | Since: unknown | API-Set: unknown
  */
 export function shakeScriptGlobal() {
     ShakeScriptGlobal(undefined, 0);
@@ -2141,7 +2141,7 @@ export function shakeScriptGlobal() {
 /**
  * No comment provided
  *
- * Hash: 0xF33AB75780BA57DE | Since: 323 | API-Set: unknown
+ * Hash: 0xF33AB75780BA57DE | Since: unknown | API-Set: unknown
  */
 export function stopCamPointing(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -2150,7 +2150,7 @@ export function stopCamPointing(cam) {
 /**
  * No comment provided
  *
- * Hash: 0xBDECF64367884AC3 | Since: 323 | API-Set: unknown
+ * Hash: 0xBDECF64367884AC3 | Since: unknown | API-Set: unknown
  */
 export function stopCamShaking(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -2159,7 +2159,7 @@ export function stopCamShaking(cam) {
 /**
  * No comment provided
  *
- * Hash: 0x2238E588E588A6D7 | Since: 323 | API-Set: unknown
+ * Hash: 0x2238E588E588A6D7 | Since: unknown | API-Set: unknown
  */
 export function stopCinematicCamShaking() {
     StopCinematicCamShaking(false);
@@ -2167,7 +2167,7 @@ export function stopCinematicCamShaking() {
 /**
  * Only used once in carsteal3 with p0 set to -1096069633 (CAMERA_MAN_SHOT)
  *
- * Hash: 0x7660C6E75D3A078E | Since: 323 | API-Set: unknown
+ * Hash: 0x7660C6E75D3A078E | Since: unknown | API-Set: unknown
  */
 export function stopCinematicShot(p0) {
     if (typeof p0 === 'string')
@@ -2177,7 +2177,7 @@ export function stopCinematicShot(p0) {
 /**
  * No comment provided
  *
- * Hash: 0x247ACBC4ABBC9D1C | Since: 323 | API-Set: unknown
+ * Hash: 0x247ACBC4ABBC9D1C | Since: unknown | API-Set: unknown
  */
 export function stopCodeGameplayHint() {
     Citizen.invokeNative('0x247ACBC4ABBC9D1C', false);
@@ -2185,7 +2185,7 @@ export function stopCodeGameplayHint() {
 /**
  * No comment provided
  *
- * Hash: 0x324C5AA411DA7737 | Since: 323 | API-Set: unknown
+ * Hash: 0x324C5AA411DA7737 | Since: unknown | API-Set: unknown
  */
 export function stopCutsceneCamShaking() {
     Citizen.invokeNative('0x324C5AA411DA7737', undefined);
@@ -2193,7 +2193,7 @@ export function stopCutsceneCamShaking() {
 /**
  * No comment provided
  *
- * Hash: 0x0EF93E9F3D08C178 | Since: 323 | API-Set: unknown
+ * Hash: 0x0EF93E9F3D08C178 | Since: unknown | API-Set: unknown
  */
 export function stopGameplayCamShaking() {
     StopGameplayCamShaking(false);
@@ -2201,7 +2201,7 @@ export function stopGameplayCamShaking() {
 /**
  * No comment provided
  *
- * Hash: 0xF46C581C61718916 | Since: 323 | API-Set: unknown
+ * Hash: 0xF46C581C61718916 | Since: unknown | API-Set: unknown
  */
 export function stopGameplayHint() {
     StopGameplayHint(false);
@@ -2209,7 +2209,7 @@ export function stopGameplayHint() {
 /**
  * This native does absolutely nothing, just a nullsub
  *
- * Hash: 0xCCD078C2665D2973 | Since: 323 | API-Set: unknown
+ * Hash: 0xCCD078C2665D2973 | Since: unknown | API-Set: unknown
  */
 export function stopGameplayHintBeingCancelledThisUpdate() {
     Citizen.invokeNative('0xCCD078C2665D2973', false);
@@ -2217,7 +2217,7 @@ export function stopGameplayHintBeingCancelledThisUpdate() {
 /**
  * This native makes the gameplay camera zoom into first person/third person with a special effect.
  *
- * Hash: 0xC819F3CBB62BF692 | Since: 323 | API-Set: unknown
+ * Hash: 0xC819F3CBB62BF692 | Since: unknown | API-Set: unknown
  */
 export function stopRenderingScriptCamsUsingCatchUp(render) {
     StopRenderingScriptCamsUsingCatchUp(render, 0, 0, undefined);
@@ -2228,7 +2228,7 @@ export function stopRenderingScriptCamsUsingCatchUp(render) {
  * `CAM::STOP_SCRIPT_GLOBAL_SHAKING(0);`
  * }
  *
- * Hash: 0x1C9D7949FA533490 | Since: 323 | API-Set: unknown
+ * Hash: 0x1C9D7949FA533490 | Since: unknown | API-Set: unknown
  */
 export function stopScriptGlobalShaking() {
     StopScriptGlobalShaking(false);
@@ -2236,7 +2236,7 @@ export function stopScriptGlobalShaking() {
 /**
  * p1: 0..16
  *
- * Hash: 0x5D96CFB59DA076A0 | Since: 2060 | API-Set: unknown
+ * Hash: 0x5D96CFB59DA076A0 | Since: unknown | API-Set: unknown
  */
 export function triggerVehiclePartBrokenShake(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2245,7 +2245,7 @@ export function triggerVehiclePartBrokenShake(vehicle) {
 /**
  * Sets gameplay camera to hash
  *
- * Hash: 0x425A920FDB9A0DDA | Since: 1180 | API-Set: unknown
+ * Hash: 0x425A920FDB9A0DDA | Since: unknown | API-Set: unknown
  */
 export function useDedicatedStuntThisUpdate(camName) {
     SetGameplayCamHash(camName);
@@ -2253,7 +2253,7 @@ export function useDedicatedStuntThisUpdate(camName) {
 /**
  * No comment provided
  *
- * Hash: 0x271401846BD26E92 | Since: 323 | API-Set: unknown
+ * Hash: 0x271401846BD26E92 | Since: unknown | API-Set: unknown
  */
 export function useScriptCamForAmbientPopulationOriginThisFrame() {
     UseScriptCamForAmbientPopulationOriginThisFrame(false, false);
@@ -2261,7 +2261,7 @@ export function useScriptCamForAmbientPopulationOriginThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0x6493CF69859B116A | Since: 791 | API-Set: unknown
+ * Hash: 0x6493CF69859B116A | Since: unknown | API-Set: unknown
  */
 export function useVehicleCamStuntSettingsThisUpdate() {
     UseVehicleCamStuntSettingsThisUpdate();
@@ -2269,7 +2269,7 @@ export function useVehicleCamStuntSettingsThisUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0x5C48A1D6E3B33179 | Since: 323 | API-Set: unknown
+ * Hash: 0x5C48A1D6E3B33179 | Since: unknown | API-Set: unknown
  */
 export function wasFlyCamConstrainedOnPreviousUdpate(cam) {
     const _cam = typeof cam == 'object' ? cam.handle() : cam;
@@ -2278,7 +2278,7 @@ export function wasFlyCamConstrainedOnPreviousUdpate(cam) {
 /**
  * No comment provided
  *
- * Hash: 0x34CFC4C2A38E83E3 | Since: 3258 | API-Set: unknown
+ * Hash: 0x34CFC4C2A38E83E3 | Since: unknown | API-Set: unknown
  */
 export function activateCamWithInterpAndFovCurve(camTo, camFrom, duration, easeLocation, easeRotation, easeFov) {
     const _camTo = typeof camTo == 'object' ? camTo.handle() : camTo;
@@ -2288,7 +2288,7 @@ export function activateCamWithInterpAndFovCurve(camTo, camFrom, duration, easeL
 /**
  * No comment provided
  *
- * Hash: 0xD4592A16D36673ED | Since: 3095 | API-Set: unknown
+ * Hash: 0xD4592A16D36673ED | Since: unknown | API-Set: unknown
  */
 export function getThirdPersonCamMaxOrbitDistanceSpring() {
     return Citizen.invokeNative('0xD4592A16D36673ED');
@@ -2296,7 +2296,7 @@ export function getThirdPersonCamMaxOrbitDistanceSpring() {
 /**
  * No comment provided
  *
- * Hash: 0xBC456FB703431785 | Since: 3095 | API-Set: unknown
+ * Hash: 0xBC456FB703431785 | Since: unknown | API-Set: unknown
  */
 export function getThirdPersonCamMinOrbitDistanceSpring() {
     return Citizen.invokeNative('0xBC456FB703431785');

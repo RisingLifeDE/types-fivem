@@ -43,7 +43,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * - FE_MENU_VERSION_LANDING_MENU
  * - FE_MENU_VERSION_LANDING_KEYMAPPING_MENU
  * 
- * Hash: 0xEF01D36B9C9D0C7B | Since: 323
+ * Hash: 0xEF01D36B9C9D0C7B | Since: unknown
  */
 export function activateFrontendMenu(menuhash: number | string, togglePause: boolean, component: number): void {
     if (typeof menuhash === 'string') menuhash = GetHashKey(menuhash)
@@ -63,7 +63,7 @@ export function activateFrontendMenu(menuhash: number | string, togglePause: boo
  * 
  * (Native name is _likely_ to actually be ADD_BLIP_FOR_AREA, but due to the usual reasons this can't be confirmed)
  * 
- * Hash: 0xCE5D0E5E315DB238 | Since: 463
+ * Hash: 0xCE5D0E5E315DB238 | Since: unknown
  */
 export function addBlipForArea(pos: Vector3, width: number, height: number): number {
     return AddBlipForArea(pos.x, pos.y, pos.z, width, height);
@@ -72,7 +72,7 @@ export function addBlipForArea(pos: Vector3, width: number, height: number): num
 /**
  * Creates an orange ( default ) Blip-object. Returns a Blip-object which can then be modified.
  * 
- * Hash: 0x5A039BB0BCA604B6 | Since: 323
+ * Hash: 0x5A039BB0BCA604B6 | Since: unknown
  */
 export function addBlipForCoord(pos: Vector3): number {
     return AddBlipForCoord(pos.x, pos.y, pos.z);
@@ -86,7 +86,7 @@ export function addBlipForCoord(pos: Vector3): number {
  * `blip = HUD::ADD_BLIP_FOR_ENTITY(YourPedOrBodyguardName);`
  * `HUD::SET_BLIP_AS_FRIENDLY(blip, true);`
  * 
- * Hash: 0x5CDE92C702A8FCE7 | Since: 323
+ * Hash: 0x5CDE92C702A8FCE7 | Since: unknown
  */
 export function addBlipForEntity(entity: number | IEntity): number {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -96,7 +96,7 @@ export function addBlipForEntity(entity: number | IEntity): number {
 /**
  * No comment provided
  * 
- * Hash: 0xBE339365C863BD36 | Since: 323
+ * Hash: 0xBE339365C863BD36 | Since: unknown
  */
 export function addBlipForPickup(pickup: any): number {
     return AddBlipForPickup(pickup);
@@ -105,7 +105,7 @@ export function addBlipForPickup(pickup: any): number {
 /**
  * No comment provided
  * 
- * Hash: 0x46818D79B1F7499A | Since: 323
+ * Hash: 0x46818D79B1F7499A | Since: unknown
  */
 export function addBlipForRadius(pos: Vector3, radius: number): number {
     return AddBlipForRadius(pos.x, pos.y, pos.z, radius);
@@ -114,7 +114,7 @@ export function addBlipForRadius(pos: Vector3, radius: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0x60296AF4BA14ABC5 | Since: 323
+ * Hash: 0x60296AF4BA14ABC5 | Since: unknown
  */
 export function addNextMessageToPreviousBriefs(): void {
     AddNextMessageToPreviousBriefs(false);
@@ -123,7 +123,7 @@ export function addNextMessageToPreviousBriefs(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x311438A071DD9B1A | Since: 323
+ * Hash: 0x311438A071DD9B1A | Since: unknown
  */
 export function addPointToGpsCustomRoute(pos: Vector3): void {
     AddPointToGpsCustomRoute(pos.x, pos.y, pos.z);
@@ -132,7 +132,7 @@ export function addPointToGpsCustomRoute(pos: Vector3): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA905192A6781C41B | Since: 323
+ * Hash: 0xA905192A6781C41B | Since: unknown
  */
 export function addPointToGpsMultiRoute(pos: Vector3): void {
     AddPointToGpsMultiRoute(pos.x, pos.y, pos.z);
@@ -141,7 +141,7 @@ export function addPointToGpsMultiRoute(pos: Vector3): void {
 /**
  * No comment provided
  * 
- * Hash: 0xE7DCB5B874BCD96E | Since: 323
+ * Hash: 0xE7DCB5B874BCD96E | Since: unknown
  */
 export function addTextComponentFloat(value: number, decimalPlaces: number): void {
     AddTextComponentFloat(value, decimalPlaces);
@@ -150,7 +150,7 @@ export function addTextComponentFloat(value: number, decimalPlaces: number): voi
 /**
  * No comment provided
  * 
- * Hash: 0x0E4C749FF9DE9CC4 | Since: 323
+ * Hash: 0x0E4C749FF9DE9CC4 | Since: unknown
  */
 export function addTextComponentFormattedInteger(value: number, commaSeparated: boolean): void {
     AddTextComponentFormattedInteger(value, commaSeparated);
@@ -159,7 +159,7 @@ export function addTextComponentFormattedInteger(value: number, commaSeparated: 
 /**
  * No comment provided
  * 
- * Hash: 0x03B504CF259931BC | Since: 323
+ * Hash: 0x03B504CF259931BC | Since: unknown
  */
 export function addTextComponentInteger(value: number): void {
     AddTextComponentInteger(value);
@@ -168,7 +168,7 @@ export function addTextComponentInteger(value: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x80EAD8E2E1D5D52E | Since: 323
+ * Hash: 0x80EAD8E2E1D5D52E | Since: unknown
  */
 export function addTextComponentSubstringBlipName(blip: number | IBlip): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -178,7 +178,7 @@ export function addTextComponentSubstringBlipName(blip: number | IBlip): void {
 /**
  * No comment provided
  * 
- * Hash: 0x5F68520888E69014 | Since: 323
+ * Hash: 0x5F68520888E69014 | Since: unknown
  */
 export function addTextComponentSubstringKeyboardDisplay(_string: string): void {
     AddTextComponentSubstringKeyboardDisplay(_string);
@@ -187,7 +187,7 @@ export function addTextComponentSubstringKeyboardDisplay(_string: string): void 
 /**
  * p1 was always -1
  * 
- * Hash: 0x761B77454205A61D | Since: 323
+ * Hash: 0x761B77454205A61D | Since: unknown
  */
 export function addTextComponentSubstringPhoneNumber(): void {
     AddTextComponentSubstringPhoneNumber(undefined, 0);
@@ -196,7 +196,7 @@ export function addTextComponentSubstringPhoneNumber(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x6C188BE134E074AA | Since: 323
+ * Hash: 0x6C188BE134E074AA | Since: unknown
  */
 export function addTextComponentSubstringPlayerName(text: string): void {
     AddTextComponentSubstringPlayerName(text);
@@ -205,7 +205,7 @@ export function addTextComponentSubstringPlayerName(text: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0xC63CD5D2920ACBE7 | Since: 323
+ * Hash: 0xC63CD5D2920ACBE7 | Since: unknown
  */
 export function addTextComponentSubstringTextLabel(labelName: string): void {
     AddTextComponentSubstringTextLabel(labelName);
@@ -214,7 +214,7 @@ export function addTextComponentSubstringTextLabel(labelName: string): void {
 /**
  * It adds the localized text of the specified GXT entry name. Eg. if the argument is GET_HASH_KEY("ES_HELP"), adds "Continue". Just uses a text labels hash key
  * 
- * Hash: 0x17299B63C7683A2B | Since: 323
+ * Hash: 0x17299B63C7683A2B | Since: unknown
  */
 export function addTextComponentSubstringTextLabelHashKey(gxtEntryHash: number | string): void {
     if (typeof gxtEntryHash === 'string') gxtEntryHash = GetHashKey(gxtEntryHash)
@@ -224,7 +224,7 @@ export function addTextComponentSubstringTextLabelHashKey(gxtEntryHash: number |
 /**
  * Adds a timer (e.g. "00:00:00:000"). The appearance of the timer depends on the flags, which needs more research.
  * 
- * Hash: 0x1115F16B8AB9E8BF | Since: 323
+ * Hash: 0x1115F16B8AB9E8BF | Since: unknown
  */
 export function addTextComponentSubstringTime(timestamp: number, flags: number): void {
     AddTextComponentSubstringTime(timestamp, flags);
@@ -233,7 +233,7 @@ export function addTextComponentSubstringTime(timestamp: number, flags: number):
 /**
  * This native (along with ADD_TEXT_COMPONENT_SUBSTRING_KEYBOARD_DISPLAY and ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME) do not actually filter anything. They simply add the provided text (as of 944)
  * 
- * Hash: 0x94CF4AC034C9C986 | Since: 323
+ * Hash: 0x94CF4AC034C9C986 | Since: unknown
  */
 export function addTextComponentSubstringWebsite(website: string): void {
     AddTextComponentSubstringWebsite(website);
@@ -242,7 +242,7 @@ export function addTextComponentSubstringWebsite(website: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0xE4C3B169876D33D7 | Since: 1290
+ * Hash: 0xE4C3B169876D33D7 | Since: unknown
  */
 export function addValidVehicleHitHash(): void {
     Citizen.invokeNative('0xE4C3B169876D33D7', undefined);
@@ -251,7 +251,7 @@ export function addValidVehicleHitHash(): void {
 /**
  * Controls whether to display 'Cash'/'Bank' next to the money balance HUD in Multiplayer (https://i.imgur.com/MiYUtNl.png)
  * 
- * Hash: 0xE67C6DFD386EA5E7 | Since: 323
+ * Hash: 0xE67C6DFD386EA5E7 | Since: unknown
  */
 export function allowDisplayOfMultiplayerCashText(allow: boolean): void {
     Citizen.invokeNative('0xE67C6DFD386EA5E7', allow);
@@ -260,7 +260,7 @@ export function allowDisplayOfMultiplayerCashText(allow: boolean): void {
 /**
  * Allows opening the pause menu this frame, when the player is dead.
  * 
- * Hash: 0xCC3FDDED67BCFC63 | Since: 323
+ * Hash: 0xCC3FDDED67BCFC63 | Since: unknown
  */
 export function allowPauseWhenNotInStateOfPlayThisFrame(): void {
     AllowPauseMenuWhenDeadThisFrame();
@@ -269,7 +269,7 @@ export function allowPauseWhenNotInStateOfPlayThisFrame(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x60734CC207C9833C | Since: 323
+ * Hash: 0x60734CC207C9833C | Since: unknown
  */
 export function allowSonarBlips(toggle: boolean): void {
     AllowSonarBlips(toggle);
@@ -278,7 +278,7 @@ export function allowSonarBlips(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xF13FE2A80C05C561 | Since: 323
+ * Hash: 0xF13FE2A80C05C561 | Since: unknown
  */
 export function areOnlinePoliciesUpToDate(): boolean {
     return Citizen.invokeNative('0xF13FE2A80C05C561');
@@ -287,7 +287,7 @@ export function areOnlinePoliciesUpToDate(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x23D69E0465570028 | Since: 323
+ * Hash: 0x23D69E0465570028 | Since: unknown
  */
 export function beginTextCommandAddDirectlyToPreviousBriefs(): void {
     BeginTextCommandObjective(undefined);
@@ -331,7 +331,7 @@ export function beginTextCommandAddDirectlyToPreviousBriefs(): void {
  * "KILL_STRIP_IDM"                         = Waiting for to accept
  * "MP_SPINLOADING"                      = Loading
  * 
- * Hash: 0xABA17D7CE615ADBF | Since: 323
+ * Hash: 0xABA17D7CE615ADBF | Since: unknown
  */
 export function beginTextCommandBusyspinnerOn(_string: string): void {
     BeginTextCommandBusyspinnerOn(_string);
@@ -340,7 +340,7 @@ export function beginTextCommandBusyspinnerOn(_string: string): void {
 /**
  * clears a print text command with this text
  * 
- * Hash: 0xE124FA80A759019C | Since: 323
+ * Hash: 0xE124FA80A759019C | Since: unknown
  */
 export function beginTextCommandClearPrint(text: string): void {
     BeginTextCommandClearPrint(text);
@@ -349,7 +349,7 @@ export function beginTextCommandClearPrint(text: string): void {
 /**
  * Used to be known as _SET_TEXT_COMPONENT_FORMAT
  * 
- * Hash: 0x8509B634FBE7DA11 | Since: 323
+ * Hash: 0x8509B634FBE7DA11 | Since: unknown
  */
 export function beginTextCommandDisplayHelp(inputType: string): void {
     BeginTextCommandDisplayHelp(inputType);
@@ -364,7 +364,7 @@ export function beginTextCommandDisplayHelp(inputType: string): void {
  * 
  * Used to be known as _SET_TEXT_ENTRY
  * 
- * Hash: 0x25FBB336DF1804CB | Since: 323
+ * Hash: 0x25FBB336DF1804CB | Since: unknown
  */
 export function beginTextCommandDisplayText(text: string): void {
     BeginTextCommandDisplayText(text);
@@ -378,7 +378,7 @@ export function beginTextCommandDisplayText(text: string): void {
  * return BEGIN_TEXT_COMMAND_GET_NUMBER_OF_LINES_FOR_STRING(x, y);
  * }
  * 
- * Hash: 0x521FB041D93DD0E4 | Since: 323
+ * Hash: 0x521FB041D93DD0E4 | Since: unknown
  */
 export function beginTextCommandGetNumberOfLinesForString(entry: string): void {
     BeginTextCommandLineCount(entry);
@@ -387,7 +387,7 @@ export function beginTextCommandGetNumberOfLinesForString(entry: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0x54CE8AC98E120CAB | Since: 323
+ * Hash: 0x54CE8AC98E120CAB | Since: unknown
  */
 export function beginTextCommandGetScreenWidthOfDisplayText(text: string): void {
     BeginTextCommandGetWidth(text);
@@ -403,7 +403,7 @@ export function beginTextCommandGetScreenWidthOfDisplayText(text: string): void 
  * return END_TEXT_COMMAND_IS_MESSAGE_DISPLAYED();
  * }
  * 
- * Hash: 0x853648FD1063A213 | Since: 323
+ * Hash: 0x853648FD1063A213 | Since: unknown
  */
 export function beginTextCommandIsMessageDisplayed(text: string): void {
     BeginTextCommandIsMessageDisplayed(text);
@@ -416,7 +416,7 @@ export function beginTextCommandIsMessageDisplayed(text: string): void {
  * return END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
  * }
  * 
- * Hash: 0x0A24DA3A41B718F5 | Since: 323
+ * Hash: 0x0A24DA3A41B718F5 | Since: unknown
  */
 export function beginTextCommandIsThisHelpMessageBeingDisplayed(labelName: string): void {
     BeginTextCommandIsThisHelpMessageBeingDisplayed(labelName);
@@ -425,7 +425,7 @@ export function beginTextCommandIsThisHelpMessageBeingDisplayed(labelName: strin
 /**
  * No comment provided
  * 
- * Hash: 0x8F9EE5687F8EECCD | Since: 323
+ * Hash: 0x8F9EE5687F8EECCD | Since: unknown
  */
 export function beginTextCommandOverrideButtonText(gxtEntry: string): void {
     BeginTextCommandOverrideButtonText(gxtEntry);
@@ -439,7 +439,7 @@ export function beginTextCommandOverrideButtonText(gxtEntry: string): void {
  * END_TEXT_COMMAND_PRINT(2000, true);
  * }
  * 
- * Hash: 0xB87A37EEB7FAA67D | Since: 323
+ * Hash: 0xB87A37EEB7FAA67D | Since: unknown
  */
 export function beginTextCommandPrint(GxtEntry: string): void {
     BeginTextCommandPrint(GxtEntry);
@@ -454,7 +454,7 @@ export function beginTextCommandPrint(GxtEntry: string): void {
  * `HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME("Name");`
  * `HUD::END_TEXT_COMMAND_SET_BLIP_NAME(blip);`
  * 
- * Hash: 0xF9113A30DE5C6670 | Since: 323
+ * Hash: 0xF9113A30DE5C6670 | Since: unknown
  */
 export function beginTextCommandSetBlipName(textLabel: string): void {
     BeginTextCommandSetBlipName(textLabel);
@@ -470,7 +470,7 @@ export function beginTextCommandSetBlipName(textLabel: string): void {
  * return END_TEXT_COMMAND_THEFEED_POST_TICKER(1, 1);
  * }
  * 
- * Hash: 0x202709F4C58A0424 | Since: 323
+ * Hash: 0x202709F4C58A0424 | Since: unknown
  */
 export function beginTextCommandThefeedPost(text: string): void {
     BeginTextCommandThefeedPost(text);
@@ -479,7 +479,7 @@ export function beginTextCommandThefeedPost(text: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0xB2A592B04648A9CB | Since: 323
+ * Hash: 0xB2A592B04648A9CB | Since: unknown
  */
 export function busyspinnerIsDisplaying(): boolean {
     return BusyspinnerIsDisplaying();
@@ -488,7 +488,7 @@ export function busyspinnerIsDisplaying(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xD422FCC5F239A915 | Since: 323
+ * Hash: 0xD422FCC5F239A915 | Since: unknown
  */
 export function busyspinnerIsOn(): boolean {
     return BusyspinnerIsOn();
@@ -497,7 +497,7 @@ export function busyspinnerIsOn(): boolean {
 /**
  * Removes the loading prompt at the bottom right of the screen.
  * 
- * Hash: 0x10D373323E5B9C0D | Since: 323
+ * Hash: 0x10D373323E5B9C0D | Since: unknown
  */
 export function busyspinnerOff(): void {
     BusyspinnerOff();
@@ -506,7 +506,7 @@ export function busyspinnerOff(): void {
 /**
  * Displays cash change notifications on HUD.
  * 
- * Hash: 0x0772DF77852C2E30 | Since: 323
+ * Hash: 0x0772DF77852C2E30 | Since: unknown
  */
 export function changeFakeMpCash(cash: number, bank: number): void {
     ChangeFakeMpCash(cash, bank);
@@ -515,7 +515,7 @@ export function changeFakeMpCash(cash: number, bank: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2A179DF17CCF04CD | Since: 323
+ * Hash: 0x2A179DF17CCF04CD | Since: unknown
  */
 export function clearAdditionalText(): void {
     ClearAdditionalText(0, false);
@@ -524,7 +524,7 @@ export function clearAdditionalText(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xD12882D3FF82BF11 | Since: 877
+ * Hash: 0xD12882D3FF82BF11 | Since: unknown
  */
 export function clearAllBlipRoutes(): void {
     ClearAllBlipRoutes();
@@ -533,7 +533,7 @@ export function clearAllBlipRoutes(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x6178F68A87A4D3A0 | Since: 323
+ * Hash: 0x6178F68A87A4D3A0 | Since: unknown
  */
 export function clearAllHelpMessages(): void {
     ClearAllHelpMessages();
@@ -542,7 +542,7 @@ export function clearAllHelpMessages(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x9D292F73ADBD9313 | Since: 323
+ * Hash: 0x9D292F73ADBD9313 | Since: unknown
  */
 export function clearBrief(): void {
     ClearBrief();
@@ -551,7 +551,7 @@ export function clearBrief(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x7792424AA0EAC32E | Since: 323
+ * Hash: 0x7792424AA0EAC32E | Since: unknown
  */
 export function clearDynamicPauseMenuErrorMessage(): void {
     ClearDynamicPauseMenuErrorMessage();
@@ -560,7 +560,7 @@ export function clearDynamicPauseMenuErrorMessage(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x8410C5E0CD847B9D | Since: 1290
+ * Hash: 0x8410C5E0CD847B9D | Since: unknown
  */
 export function clearFakeConeArray(): void {
     Citizen.invokeNative('0x8410C5E0CD847B9D');
@@ -569,7 +569,7 @@ export function clearFakeConeArray(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x50085246ABD3FEFA | Since: 323
+ * Hash: 0x50085246ABD3FEFA | Since: unknown
  */
 export function clearFloatingHelp(hudIndex: number): void {
     ClearFloatingHelp(hudIndex, false);
@@ -578,7 +578,7 @@ export function clearFloatingHelp(hudIndex: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xE6DE0561D9232A64 | Since: 323
+ * Hash: 0xE6DE0561D9232A64 | Since: unknown
  */
 export function clearGpsCustomRoute(): void {
     ClearGpsCustomRoute();
@@ -589,7 +589,7 @@ export function clearGpsCustomRoute(): void {
  * 
  * Doesn't seem like the flags are actually read by the game at all.
  * 
- * Hash: 0x21986729D6A3A830 | Since: 323
+ * Hash: 0x21986729D6A3A830 | Since: unknown
  */
 export function clearGpsFlags(): void {
     ClearGpsFlags();
@@ -598,7 +598,7 @@ export function clearGpsFlags(): void {
 /**
  * Does the same as SET_GPS_MULTI_ROUTE_RENDER(false);
  * 
- * Hash: 0x67EEDEA1B9BAFD94 | Since: 323
+ * Hash: 0x67EEDEA1B9BAFD94 | Since: unknown
  */
 export function clearGpsMultiRoute(): void {
     ClearGpsMultiRoute();
@@ -607,7 +607,7 @@ export function clearGpsMultiRoute(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xFF4FB7C8CDFA3DA7 | Since: 323
+ * Hash: 0xFF4FB7C8CDFA3DA7 | Since: unknown
  */
 export function clearGpsPlayerWaypoint(): void {
     ClearGpsPlayerWaypoint();
@@ -616,7 +616,7 @@ export function clearGpsPlayerWaypoint(): void {
 /**
  * Does the same as SET_RACE_TRACK_RENDER(false);
  * 
- * Hash: 0x7AA5B4CE533C858B | Since: 323
+ * Hash: 0x7AA5B4CE533C858B | Since: unknown
  */
 export function clearGpsRaceTrack(): void {
     ClearGpsRaceTrack();
@@ -625,7 +625,7 @@ export function clearGpsRaceTrack(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x8DFCED7A656F8802 | Since: 323
+ * Hash: 0x8DFCED7A656F8802 | Since: unknown
  */
 export function clearHelp(toggle: boolean): void {
     ClearHelp(toggle);
@@ -634,7 +634,7 @@ export function clearHelp(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x5E62BE5DC58E9E06 | Since: 323
+ * Hash: 0x5E62BE5DC58E9E06 | Since: unknown
  */
 export function clearPedInPauseMenu(): void {
     ClearPedInPauseMenu();
@@ -643,7 +643,7 @@ export function clearPedInPauseMenu(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xCC33FA791322B9D9 | Since: 323
+ * Hash: 0xCC33FA791322B9D9 | Since: unknown
  */
 export function clearPrints(): void {
     ClearPrints();
@@ -652,7 +652,7 @@ export function clearPrints(): void {
 /**
  * This native does absolutely nothing, just a nullsub
  * 
- * Hash: 0xB57D8DD645CFA2CF | Since: 323
+ * Hash: 0xB57D8DD645CFA2CF | Since: unknown
  */
 export function clearReminderMessage(): void {
     ClearReminderMessage();
@@ -661,7 +661,7 @@ export function clearReminderMessage(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2CEA2839313C09AC | Since: 323
+ * Hash: 0x2CEA2839313C09AC | Since: unknown
  */
 export function clearSmallPrints(): void {
     ClearSmallPrints();
@@ -670,7 +670,7 @@ export function clearSmallPrints(): void {
 /**
  * p0: found arguments in the b617d scripts: https://pastebin.com/X5akCN7z
  * 
- * Hash: 0xCF708001E1E536DD | Since: 323
+ * Hash: 0xCF708001E1E536DD | Since: unknown
  */
 export function clearThisPrint(): void {
     ClearThisPrint(undefined);
@@ -679,7 +679,7 @@ export function clearThisPrint(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xEB81A3DADD503187 | Since: 1290
+ * Hash: 0xEB81A3DADD503187 | Since: unknown
  */
 export function clearValidVehicleHitHashes(): void {
     Citizen.invokeNative('0xEB81A3DADD503187');
@@ -688,7 +688,7 @@ export function clearValidVehicleHitHashes(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x1AC8F4AD40E22127 | Since: 323
+ * Hash: 0x1AC8F4AD40E22127 | Since: unknown
  */
 export function closeMpTextChat(): void {
     CloseMultiplayerChat();
@@ -697,7 +697,7 @@ export function closeMpTextChat(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xD2B32BE3FC1626C6 | Since: 323
+ * Hash: 0xD2B32BE3FC1626C6 | Since: unknown
  */
 export function closeSocialClubMenu(): void {
     CloseSocialClubMenu();
@@ -706,7 +706,7 @@ export function closeSocialClubMenu(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x66E7CB63C97B7D20 | Since: 323
+ * Hash: 0x66E7CB63C97B7D20 | Since: unknown
  */
 export function codeWantsScriptToTakeControl(): boolean {
     return Citizen.invokeNative('0x66E7CB63C97B7D20');
@@ -715,7 +715,7 @@ export function codeWantsScriptToTakeControl(): boolean {
 /**
  * clanFlag: takes a number 0-5
  * 
- * Hash: 0xBFEFE3321A3F5015 | Since: 323
+ * Hash: 0xBFEFE3321A3F5015 | Since: unknown
  */
 export function createFakeMpGamerTag(ped: number | IPed, username: string, pointedClanTag: boolean, isRockstarClan: boolean, clanTag: string, clanFlag: number): number {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -725,7 +725,7 @@ export function createFakeMpGamerTag(ped: number | IPed, username: string, point
 /**
  * clanFlag: takes a number 0-5
  * 
- * Hash: 0x6DD05E9D83EFA4C9 | Since: 323
+ * Hash: 0x6DD05E9D83EFA4C9 | Since: unknown
  */
 export function createMpGamerTagWithCrewColor(player: number | string | IPlayer, username: string, pointedClanTag: boolean, isRockstarClan: boolean, clanTag: string, clanFlag: number, r: number, g: number, b: number): void {
     const _player = typeof player == 'object' ? player.playerId() : player;
@@ -735,7 +735,7 @@ export function createMpGamerTagWithCrewColor(player: number | string | IPlayer,
 /**
  * No comment provided
  * 
- * Hash: 0x2708FC083123F9FF | Since: 323
+ * Hash: 0x2708FC083123F9FF | Since: unknown
  */
 export function customMinimapClearBlips(): void {
     ClearRaceGalleryBlips();
@@ -744,7 +744,7 @@ export function customMinimapClearBlips(): void {
 /**
  * Add a BLIP_GALLERY at the specific coordinate. Used in fm_maintain_transition_players to display race track points.
  * 
- * Hash: 0x551DF99658DB6EE8 | Since: 323
+ * Hash: 0x551DF99658DB6EE8 | Since: unknown
  */
 export function customMinimapCreateBlip(pos: Vector3): number {
     return RaceGalleryAddBlip(pos.x, pos.y, pos.z);
@@ -754,7 +754,7 @@ export function customMinimapCreateBlip(pos: Vector3): number {
  * If toggle is true, the map is shown in full screen
  * If toggle is false, the map is shown in normal mode
  * 
- * Hash: 0x5354C5BA2EA868A4 | Since: 323
+ * Hash: 0x5354C5BA2EA868A4 | Since: unknown
  */
 export function customMinimapSetActive(toggle: boolean): void {
     RaceGalleryFullscreen(toggle);
@@ -763,7 +763,7 @@ export function customMinimapSetActive(toggle: boolean): void {
 /**
  * Sets the sprite of the next BLIP_GALLERY blip, values used in the native scripts: 143 (ObjectiveBlue), 144 (ObjectiveGreen), 145 (ObjectiveRed), 146 (ObjectiveYellow).
  * 
- * Hash: 0x1EAE6DD17B7A5EFA | Since: 323
+ * Hash: 0x1EAE6DD17B7A5EFA | Since: unknown
  */
 export function customMinimapSetBlipObject(spriteId: number): void {
     RaceGalleryNextBlipSprite(spriteId);
@@ -772,7 +772,7 @@ export function customMinimapSetBlipObject(spriteId: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xD8E694757BCEA8E9 | Since: 323
+ * Hash: 0xD8E694757BCEA8E9 | Since: unknown
  */
 export function deleteWaypointsFromThisPlayer(): void {
     DeleteWaypoint();
@@ -781,7 +781,7 @@ export function deleteWaypointsFromThisPlayer(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x6D3465A73092F0E6 | Since: 323
+ * Hash: 0x6D3465A73092F0E6 | Since: unknown
  */
 export function disableFrontendThisFrame(): void {
     DisableFrontendThisFrame();
@@ -790,7 +790,7 @@ export function disableFrontendThisFrame(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x9245E81072704B8A | Since: 323
+ * Hash: 0x9245E81072704B8A | Since: unknown
  */
 export function disablePausemenuSpinner(): void {
     PauseMenuDisableBusyspinner(false);
@@ -799,7 +799,7 @@ export function disablePausemenuSpinner(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA5E78BA2B1331C55 | Since: 323
+ * Hash: 0xA5E78BA2B1331C55 | Since: unknown
  */
 export function displayAmmoThisFrame(display: boolean): void {
     DisplayAmmoThisFrame(display);
@@ -808,7 +808,7 @@ export function displayAmmoThisFrame(display: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x276B6CE369C33678 | Since: 323
+ * Hash: 0x276B6CE369C33678 | Since: unknown
  */
 export function displayAreaName(toggle: boolean): void {
     DisplayAreaName(toggle);
@@ -818,7 +818,7 @@ export function displayAreaName(toggle: boolean): void {
  * "DISPLAY_CASH(false);" makes the cash amount render on the screen when appropriate
  * "DISPLAY_CASH(true);" disables cash amount rendering
  * 
- * Hash: 0x96DEC8D5430208B7 | Since: 323
+ * Hash: 0x96DEC8D5430208B7 | Since: unknown
  */
 export function displayCash(toggle: boolean): void {
     DisplayCash(toggle);
@@ -835,7 +835,7 @@ export function displayCash(toggle: boolean): void {
  * 
  * curvedWindow is unused.
  * 
- * Hash: 0x960C9FF8F616E41C | Since: 323
+ * Hash: 0x960C9FF8F616E41C | Since: unknown
  */
 export function displayHelpTextThisFrame(message: string, curvedWindow: boolean): void {
     DisplayHelpTextThisFrame(message, curvedWindow);
@@ -844,7 +844,7 @@ export function displayHelpTextThisFrame(message: string, curvedWindow: boolean)
 /**
  * If Hud should be displayed
  * 
- * Hash: 0xA6294919E56FF02A | Since: 323
+ * Hash: 0xA6294919E56FF02A | Since: unknown
  */
 export function display(toggle: boolean): void {
     DisplayHud(toggle);
@@ -853,7 +853,7 @@ export function display(toggle: boolean): void {
 /**
  * Enables drawing some hud components, such as help labels, this frame, when the player is dead.
  * 
- * Hash: 0x7669F9E39DC17063 | Since: 323
+ * Hash: 0x7669F9E39DC17063 | Since: unknown
  */
 export function displayWhenNotInStateOfPlayThisFrame(): void {
     DisplayHudWhenDeadThisFrame();
@@ -862,7 +862,7 @@ export function displayWhenNotInStateOfPlayThisFrame(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x402F9ED62087E898 | Since: 323
+ * Hash: 0x402F9ED62087E898 | Since: unknown
  */
 export function displayWhenPausedThisFrame(): void {
     DisplayHudWhenPausedThisFrame();
@@ -875,7 +875,7 @@ export function displayWhenPausedThisFrame(): void {
  * 
  * Make sure to call SET_BLIP_CATEGORY with index 7 for this to work on the desired blip.
  * 
- * Hash: 0x82CEDC33687E1F50 | Since: 323
+ * Hash: 0x82CEDC33687E1F50 | Since: unknown
  */
 export function displayPlayerNameTagsOnBlips(toggle: boolean): void {
     DisplayPlayerNameTagsOnBlips(toggle);
@@ -884,7 +884,7 @@ export function displayPlayerNameTagsOnBlips(toggle: boolean): void {
 /**
  * If Minimap / Radar should be displayed.
  * 
- * Hash: 0xA0EBB943C300E693 | Since: 323
+ * Hash: 0xA0EBB943C300E693 | Since: unknown
  */
 export function displayRadar(toggle: boolean): void {
     DisplayRadar(toggle);
@@ -893,7 +893,7 @@ export function displayRadar(toggle: boolean): void {
 /**
  * Displays the crosshair for this frame.
  * 
- * Hash: 0x73115226F4814E62 | Since: 323
+ * Hash: 0x73115226F4814E62 | Since: unknown
  */
 export function displaySniperScopeThisFrame(): void {
     DisplaySniperScopeThisFrame();
@@ -902,7 +902,7 @@ export function displaySniperScopeThisFrame(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA6DB27D19ECBB7DA | Since: 323
+ * Hash: 0xA6DB27D19ECBB7DA | Since: unknown
  */
 export function doesBlipExist(blip: number | IBlip): boolean {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -912,7 +912,7 @@ export function doesBlipExist(blip: number | IBlip): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xDD2238F57B977751 | Since: 323
+ * Hash: 0xDD2238F57B977751 | Since: unknown
  */
 export function doesBlipHaveGpsRoute(blip: number | IBlip): boolean {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -922,7 +922,7 @@ export function doesBlipHaveGpsRoute(blip: number | IBlip): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x15B8ECF844EE67ED | Since: 323
+ * Hash: 0x15B8ECF844EE67ED | Since: unknown
  */
 export function doesPedHaveAiBlip(ped: number | IPed): boolean {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -932,7 +932,7 @@ export function doesPedHaveAiBlip(ped: number | IPed): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x1C7302E725259789 | Since: 323
+ * Hash: 0x1C7302E725259789 | Since: unknown
  */
 export function doesTextBlockExist(gxt: string): boolean {
     return DoesTextBlockExist(gxt);
@@ -941,7 +941,7 @@ export function doesTextBlockExist(gxt: string): boolean {
 /**
  * Checks if the passed gxt name exists in the game files.
  * 
- * Hash: 0xAC09CA973C564252 | Since: 323
+ * Hash: 0xAC09CA973C564252 | Since: unknown
  */
 export function doesTextLabelExist(gxt: string): boolean {
     return DoesTextLabelExist(gxt);
@@ -950,7 +950,7 @@ export function doesTextLabelExist(gxt: string): boolean {
 /**
  * When calling this, the current frame will have the players "arrow icon" be focused on the dead center of the radar.
  * 
- * Hash: 0x6D14BFDC33B34F55 | Since: 323
+ * Hash: 0x6D14BFDC33B34F55 | Since: unknown
  */
 export function dontTiltMinimapThisFrame(): void {
     DontTiltMinimapThisFrame();
@@ -959,7 +959,7 @@ export function dontTiltMinimapThisFrame(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x89DA85D949CE57A0 | Since: 2802
+ * Hash: 0x89DA85D949CE57A0 | Since: unknown
  */
 export function dontZoomMinimapWhenRunningThisFrame(): void {
     Citizen.invokeNative('0x89DA85D949CE57A0');
@@ -968,7 +968,7 @@ export function dontZoomMinimapWhenRunningThisFrame(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x55F5A5F07134DE60 | Since: 1180
+ * Hash: 0x55F5A5F07134DE60 | Since: unknown
  */
 export function dontZoomMinimapWhenSnipingThisFrame(): void {
     Citizen.invokeNative('0x55F5A5F07134DE60');
@@ -977,7 +977,7 @@ export function dontZoomMinimapWhenSnipingThisFrame(): void {
 /**
  * This native does absolutely nothing, just a nullsub
  * 
- * Hash: 0x211C4EF450086857 | Since: 323
+ * Hash: 0x211C4EF450086857 | Since: unknown
  */
 export function drawFrontendBackgroundThisFrame(): void {
     Citizen.invokeNative('0x211C4EF450086857');
@@ -986,7 +986,7 @@ export function drawFrontendBackgroundThisFrame(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xBF4F34A85CA2970C | Since: 323
+ * Hash: 0xBF4F34A85CA2970C | Since: unknown
  */
 export function drawOverFadeThisFrame(): void {
     Citizen.invokeNative('0xBF4F34A85CA2970C');
@@ -995,7 +995,7 @@ export function drawOverFadeThisFrame(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xCFDBDF5AE59BA0F4 | Since: 323
+ * Hash: 0xCFDBDF5AE59BA0F4 | Since: unknown
  */
 export function endTextCommandAddDirectlyToPreviousBriefs(): void {
     EndTextCommandObjective(false);
@@ -1011,7 +1011,7 @@ export function endTextCommandAddDirectlyToPreviousBriefs(): void {
  * BUSY_SPINNER_RIGHT,
  * };
  * 
- * Hash: 0xBD12F8228410D9B4 | Since: 323
+ * Hash: 0xBD12F8228410D9B4 | Since: unknown
  */
 export function endTextCommandBusyspinnerOn(busySpinnerType: number): void {
     EndTextCommandBusyspinnerOn(busySpinnerType);
@@ -1020,7 +1020,7 @@ export function endTextCommandBusyspinnerOn(busySpinnerType: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xFCC75460ABA29378 | Since: 323
+ * Hash: 0xFCC75460ABA29378 | Since: unknown
  */
 export function endTextCommandClearPrint(): void {
     EndTextCommandClearPrint();
@@ -1046,7 +1046,7 @@ export function endTextCommandClearPrint(): void {
  * 
  * Used to be known as _DISPLAY_HELP_TEXT_FROM_STRING_LABEL
  * 
- * Hash: 0x238FFE5C7B0498A6 | Since: 323
+ * Hash: 0x238FFE5C7B0498A6 | Since: unknown
  */
 export function endTextCommandDisplayHelp(loop: boolean, beep: boolean, shape: number): void {
     EndTextCommandDisplayHelp(0, loop, beep, shape);
@@ -1057,7 +1057,7 @@ export function endTextCommandDisplayHelp(loop: boolean, beep: boolean, shape: n
  * 
  * Used to be known as _DRAW_TEXT
  * 
- * Hash: 0xCD015E5BB0D96A57 | Since: 323
+ * Hash: 0xCD015E5BB0D96A57 | Since: unknown
  */
 export function endTextCommandDisplayText(x: number, y: number): void {
     EndTextCommandDisplayText(x, y, 0);
@@ -1067,7 +1067,7 @@ export function endTextCommandDisplayText(x: number, y: number): void {
  * Determines how many lines the text string will use when drawn on screen.
  * Must use 0x521FB041D93DD0E4 for setting up
  * 
- * Hash: 0x9040DFB09BE75706 | Since: 323
+ * Hash: 0x9040DFB09BE75706 | Since: unknown
  */
 export function endTextCommandGetNumberOfLinesForString(x: number, y: number): number {
     return EndTextCommandLineCount(x, y);
@@ -1076,7 +1076,7 @@ export function endTextCommandGetNumberOfLinesForString(x: number, y: number): n
 /**
  * No comment provided
  * 
- * Hash: 0x85F061DA64ED2F67 | Since: 323
+ * Hash: 0x85F061DA64ED2F67 | Since: unknown
  */
 export function endTextCommandGetScreenWidthOfDisplayText(): number {
     return EndTextCommandGetWidth(false);
@@ -1085,7 +1085,7 @@ export function endTextCommandGetScreenWidthOfDisplayText(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x8A9BA1AB3E237613 | Since: 323
+ * Hash: 0x8A9BA1AB3E237613 | Since: unknown
  */
 export function endTextCommandIsMessageDisplayed(): boolean {
     return EndTextCommandIsMessageDisplayed();
@@ -1094,7 +1094,7 @@ export function endTextCommandIsMessageDisplayed(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x10BDDBFC529428DD | Since: 323
+ * Hash: 0x10BDDBFC529428DD | Since: unknown
  */
 export function endTextCommandIsThisHelpMessageBeingDisplayed(): boolean {
     return EndTextCommandIsThisHelpMessageBeingDisplayed(0);
@@ -1103,7 +1103,7 @@ export function endTextCommandIsThisHelpMessageBeingDisplayed(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xA86911979638106F | Since: 323
+ * Hash: 0xA86911979638106F | Since: unknown
  */
 export function endTextCommandOverrideButtonText(): void {
     EndTextCommandOverrideButtonText(0);
@@ -1118,7 +1118,7 @@ export function endTextCommandOverrideButtonText(): void {
  * 
  * Used to be known as _DRAW_SUBTITLE_TIMED
  * 
- * Hash: 0x9D77056A530643F6 | Since: 323
+ * Hash: 0x9D77056A530643F6 | Since: unknown
  */
 export function endTextCommandPrint(duration: number, drawImmediately: boolean): void {
     EndTextCommandPrint(duration, drawImmediately);
@@ -1127,7 +1127,7 @@ export function endTextCommandPrint(duration: number, drawImmediately: boolean):
 /**
  * Finalizes a text command started with BEGIN_TEXT_COMMAND_SET_BLIP_NAME, setting the name of the specified blip.
  * 
- * Hash: 0xBC38B49BCB83BC9B | Since: 323
+ * Hash: 0xBC38B49BCB83BC9B | Since: unknown
  */
 export function endTextCommandSetBlipName(blip: number | IBlip): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1141,7 +1141,7 @@ export function endTextCommandSetBlipName(blip: number | IBlip): void {
  * `HUD::BEGIN_TEXT_COMMAND_THEFEED_POST("HUNT");`
  * `HUD::END_TEXT_COMMAND_THEFEED_POST_AWARD("Hunting", "Hunting_Gold_128", 0, 109, "HUD_MED_UNLKED");`
  * 
- * Hash: 0xAA295B6F28BD587D | Since: 323
+ * Hash: 0xAA295B6F28BD587D | Since: unknown
  */
 export function endTextCommandThefeedPostAward(textureDict: string, textureName: string, rpBonus: number, colorOverlay: number, titleLabel: string): number {
     return EndTextCommandThefeedPostAward(textureDict, textureName, rpBonus, colorOverlay, titleLabel);
@@ -1150,7 +1150,7 @@ export function endTextCommandThefeedPostAward(textureDict: string, textureName:
 /**
  * No comment provided
  * 
- * Hash: 0x97C9E4E7024A8F2C | Since: 323
+ * Hash: 0x97C9E4E7024A8F2C | Since: unknown
  */
 export function endTextCommandThefeedPostCrewtag(isLeader: boolean, unk0: boolean, clanDesc: number, R: number, G: number, B: number): [number, number] {
     return EndTextCommandThefeedPostCrewtag(false, false, 0, isLeader, unk0, clanDesc, R, G, B);
@@ -1159,7 +1159,7 @@ export function endTextCommandThefeedPostCrewtag(isLeader: boolean, unk0: boolea
 /**
  * No comment provided
  * 
- * Hash: 0x137BC35589E34E1E | Since: 323
+ * Hash: 0x137BC35589E34E1E | Since: unknown
  */
 export function endTextCommandThefeedPostCrewtagWithGameName(isLeader: boolean, unk0: boolean, clanDesc: number, playerName: string, R: number, G: number, B: number): [number, number] {
     return EndTextCommandThefeedPostCrewtagWithGameName(false, false, 0, isLeader, unk0, clanDesc, playerName, R, G, B);
@@ -1168,7 +1168,7 @@ export function endTextCommandThefeedPostCrewtagWithGameName(isLeader: boolean, 
 /**
  * No comment provided
  * 
- * Hash: 0x8EFCCF6EC66D85E4 | Since: 323
+ * Hash: 0x8EFCCF6EC66D85E4 | Since: unknown
  */
 export function endTextCommandThefeedPostCrewRankupWithLiteralFlag(): number {
     return EndTextCommandThefeedPostCrewRankup(undefined, undefined, undefined, false, false);
@@ -1195,7 +1195,7 @@ export function endTextCommandThefeedPostCrewRankupWithLiteralFlag(): number {
  * "sender" is the very top header. This can be any old string.
  * "subject" is the header under the sender.
  * 
- * Hash: 0x1CCD9A37359072CF | Since: 323
+ * Hash: 0x1CCD9A37359072CF | Since: unknown
  */
 export function endTextCommandThefeedPostMessagetext(txdName: string, textureName: string, flash: boolean, iconType: number, sender: string, subject: string): number {
     return EndTextCommandThefeedPostMessagetext(txdName, textureName, flash, iconType, sender, subject);
@@ -1210,7 +1210,7 @@ export function endTextCommandThefeedPostMessagetext(txdName: string, textureNam
  * 
  * `HUD::END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT_SUBTITLE_LABEL("CHAR_ACTING_UP", "CHAR_ACTING_UP", 0, 0, "DI_FEED_CHAR", a_0);`
  * 
- * Hash: 0xC6F580E4C94926AC | Since: 323
+ * Hash: 0xC6F580E4C94926AC | Since: unknown
  */
 export function endTextCommandThefeedPostMessagetextSubtitleLabel(txdName: string, textureName: string, flash: boolean, iconType: number, sender: string, subject: string): number {
     return EndTextCommandThefeedPostMessagetextGxtEntry(txdName, textureName, flash, iconType, sender, subject);
@@ -1224,7 +1224,7 @@ export function endTextCommandThefeedPostMessagetextSubtitleLabel(txdName: strin
  * Example, only occurrence in the scripts:
  * `v_8 = HUD::END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT_TU("CHAR_SOCIAL_CLUB", "CHAR_SOCIAL_CLUB", 0, 0, &v_9, "", a_5);`
  * 
- * Hash: 0x1E6611149DB3DB6B | Since: 323
+ * Hash: 0x1E6611149DB3DB6B | Since: unknown
  */
 export function endTextCommandThefeedPostMessagetextTu(txdName: string, textureName: string, flash: boolean, iconType: number, sender: string, subject: string, duration: number): number {
     return EndTextCommandThefeedPostMessagetextTu(txdName, textureName, flash, iconType, sender, subject, duration);
@@ -1252,7 +1252,7 @@ export function endTextCommandThefeedPostMessagetextTu(txdName: string, textureN
  * "duration" is a multiplier, so 1.0 is normal, 2.0 is twice as long (very slow), and 0.5 is half as long.
  * "clanTag" shows a crew tag in the "sender" header, after the text. You need to use 3 underscores as padding. Maximum length of this field seems to be 7. (e.g. "MK" becomes "___MK", "ACE" becomes "___ACE", etc.)
  * 
- * Hash: 0x5CBF7BADE20DB93E | Since: 323
+ * Hash: 0x5CBF7BADE20DB93E | Since: unknown
  */
 export function endTextCommandThefeedPostMessagetextWithCrewTag(txdName: string, textureName: string, flash: boolean, iconType: number, sender: string, subject: string, duration: number, clanTag: string): number {
     return EndTextCommandThefeedPostMessagetextWithCrewTag(txdName, textureName, flash, iconType, sender, subject, duration, clanTag);
@@ -1290,7 +1290,7 @@ export function endTextCommandThefeedPostMessagetextWithCrewTag(txdName: string,
  * return END_TEXT_COMMAND_THEFEED_POST_TICKER(1, 1);
  * }
  * 
- * Hash: 0x531B84E7DA981FB6 | Since: 323
+ * Hash: 0x531B84E7DA981FB6 | Since: unknown
  */
 export function endTextCommandThefeedPostMessagetextWithCrewTagAndAdditionalIcon(txdName: string, textureName: string, flash: boolean, iconType1: number, sender: string, subject: string, duration: number, clanTag: string, iconType2: number): number {
     return EndTextCommandThefeedPostMessagetextWithCrewTagAndAdditionalIcon(txdName, textureName, flash, iconType1, sender, subject, duration, clanTag, iconType2, 0);
@@ -1299,7 +1299,7 @@ export function endTextCommandThefeedPostMessagetextWithCrewTagAndAdditionalIcon
 /**
  * No comment provided
  * 
- * Hash: 0xF020C96915705B3A | Since: 323
+ * Hash: 0xF020C96915705B3A | Since: unknown
  */
 export function endTextCommandThefeedPostMpticker(blink: boolean): number {
     return EndTextCommandThefeedPostMpticker(blink, false);
@@ -1314,7 +1314,7 @@ export function endTextCommandThefeedPostMpticker(blink: boolean): number {
  * `HUD::END_TEXT_COMMAND_THEFEED_POST_REPLAY_INPUT(1, 20, "Who you trynna get crazy with, ese? Don't you know I'm LOCO?!");`
  * - https://imgur.com/lGBPCz3
  * 
- * Hash: 0xD202B92CBF1D816F | Since: 323
+ * Hash: 0xD202B92CBF1D816F | Since: unknown
  */
 export function endTextCommandThefeedPostReplay(_type: number, image: number, text: string): number {
     return EndTextCommandThefeedPostReplayIcon(_type, image, text);
@@ -1337,7 +1337,7 @@ export function endTextCommandThefeedPostReplay(_type: number, image: number, te
  * `l_D1[2\/\*1\*\/]=HUD::END_TEXT_COMMAND_THEFEED_POST_REPLAY_INPUT(1,"~INPUT_REPLAY_START_STOP_RECORDING_SECONDARY~","");`
  * 
  * 
- * Hash: 0xDD6CB2CCE7C2735C | Since: 323
+ * Hash: 0xDD6CB2CCE7C2735C | Since: unknown
  */
 export function endTextCommandThefeedPostReplayInput(_type: number, button: string, text: string): number {
     return EndTextCommandThefeedPostReplayInput(_type, button, text);
@@ -1347,7 +1347,7 @@ export function endTextCommandThefeedPostReplayInput(_type: number, button: stri
  * List of picture names: https://pastebin.com/XdpJVbHz
  * Example result: https://i.imgur.com/SdEZ22m.png
  * 
- * Hash: 0x2B7E9A4EAAA93C89 | Since: 323
+ * Hash: 0x2B7E9A4EAAA93C89 | Since: unknown
  */
 export function endTextCommandThefeedPostStats(statTitle: string, iconEnum: number, stepVal: boolean, barValue: number, isImportant: boolean, pictureTextureDict: string, pictureTextureName: string): number {
     return EndTextCommandThefeedPostStats(statTitle, iconEnum, stepVal, barValue, isImportant, pictureTextureDict, pictureTextureName);
@@ -1356,7 +1356,7 @@ export function endTextCommandThefeedPostStats(statTitle: string, iconEnum: numb
 /**
  * No comment provided
  * 
- * Hash: 0x2ED7843F8F801023 | Since: 323
+ * Hash: 0x2ED7843F8F801023 | Since: unknown
  */
 export function endTextCommandThefeedPostTicker(blink: boolean): number {
     return EndTextCommandThefeedPostTicker(blink, false);
@@ -1365,7 +1365,7 @@ export function endTextCommandThefeedPostTicker(blink: boolean): number {
 /**
  * No comment provided
  * 
- * Hash: 0x44FA03975424A0EE | Since: 323
+ * Hash: 0x44FA03975424A0EE | Since: unknown
  */
 export function endTextCommandThefeedPostTickerForced(blink: boolean): number {
     return EndTextCommandThefeedPostTickerForced(blink, false);
@@ -1374,7 +1374,7 @@ export function endTextCommandThefeedPostTickerForced(blink: boolean): number {
 /**
  * No comment provided
  * 
- * Hash: 0x378E809BF61EC840 | Since: 323
+ * Hash: 0x378E809BF61EC840 | Since: unknown
  */
 export function endTextCommandThefeedPostTickerWithTokens(blink: boolean): number {
     return EndTextCommandThefeedPostTickerWithTokens(blink, false);
@@ -1383,7 +1383,7 @@ export function endTextCommandThefeedPostTickerWithTokens(blink: boolean): numbe
 /**
  * No comment provided
  * 
- * Hash: 0x33EE12743CCD6343 | Since: 323
+ * Hash: 0x33EE12743CCD6343 | Since: unknown
  */
 export function endTextCommandThefeedPostUnlock(gxtLabel1: string, gxtLabel2: string): number {
     return EndTextCommandThefeedPostUnlock(gxtLabel1, 0, gxtLabel2);
@@ -1392,7 +1392,7 @@ export function endTextCommandThefeedPostUnlock(gxtLabel1: string, gxtLabel2: st
 /**
  * No comment provided
  * 
- * Hash: 0xC8F3AAF93D0600BF | Since: 323
+ * Hash: 0xC8F3AAF93D0600BF | Since: unknown
  */
 export function endTextCommandThefeedPostUnlockTu(gxtLabel1: string, gxtLabel2: string): number {
     return EndTextCommandThefeedPostUnlockTu(gxtLabel1, 0, gxtLabel2, 0);
@@ -1401,7 +1401,7 @@ export function endTextCommandThefeedPostUnlockTu(gxtLabel1: string, gxtLabel2: 
 /**
  * No comment provided
  * 
- * Hash: 0x7AE0589093A2E088 | Since: 323
+ * Hash: 0x7AE0589093A2E088 | Since: unknown
  */
 export function endTextCommandThefeedPostUnlockTuWithColor(): number {
     return EndTextCommandThefeedPostUnlockTuWithColor(undefined, undefined, undefined, undefined, undefined, undefined);
@@ -1415,7 +1415,7 @@ export function endTextCommandThefeedPostUnlockTuWithColor(): number {
  * 
  * Shows a deathmatch score above the minimap, example: https://i.imgur.com/YmoMklG.png
  * 
- * Hash: 0xB6871B0555B02996 | Since: 323
+ * Hash: 0xB6871B0555B02996 | Since: unknown
  */
 export function endTextCommandThefeedPostVersusTu(txdName1: string, textureName1: string, count1: number, txdName2: string, textureName2: string, count2: number, hudColor1: number, hudColor2: number): number {
     return EndTextCommandThefeedPostVersusTu(txdName1, textureName1, count1, txdName2, textureName2, count2, hudColor1, hudColor2);
@@ -1424,7 +1424,7 @@ export function endTextCommandThefeedPostVersusTu(txdName1: string, textureName1
 /**
  * No comment provided
  * 
- * Hash: 0xCEF214315D276FD1 | Since: 323
+ * Hash: 0xCEF214315D276FD1 | Since: unknown
  */
 export function flagPlayerContextInTournament(toggle: boolean): void {
     FlagPlayerContextInTournament(toggle);
@@ -1433,7 +1433,7 @@ export function flagPlayerContextInTournament(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x02CFBA0C9E9275CE | Since: 323
+ * Hash: 0x02CFBA0C9E9275CE | Since: unknown
  */
 export function flashAbilityBar(millisecondsToFlash: number): void {
     FlashAbilityBar(millisecondsToFlash);
@@ -1443,7 +1443,7 @@ export function flashAbilityBar(millisecondsToFlash: number): void {
  * adds a short flash to the Radar/Minimap
  * Usage: UI.FLASH_MINIMAP_DISPLAY
  * 
- * Hash: 0xF2DD778C22B15BDA | Since: 323
+ * Hash: 0xF2DD778C22B15BDA | Since: unknown
  */
 export function flashMinimapDisplay(): void {
     FlashMinimapDisplay();
@@ -1452,7 +1452,7 @@ export function flashMinimapDisplay(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x6B1DE27EE78E6A19 | Since: 323
+ * Hash: 0x6B1DE27EE78E6A19 | Since: unknown
  */
 export function flashMinimapDisplayWithColor(hudColorIndex: number): void {
     FlashMinimapDisplayWithColor(hudColorIndex);
@@ -1461,7 +1461,7 @@ export function flashMinimapDisplayWithColor(hudColorIndex: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA18AFB39081B6A1F | Since: 323
+ * Hash: 0xA18AFB39081B6A1F | Since: unknown
  */
 export function flashWantedDisplay(): void {
     FlashWantedDisplay(false);
@@ -1470,7 +1470,7 @@ export function flashWantedDisplay(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xEE4C0E6DBC6F2C6F | Since: 323
+ * Hash: 0xEE4C0E6DBC6F2C6F | Since: unknown
  */
 export function forceCloseReportugcMenu(): void {
     ForceCloseReportugcMenu();
@@ -1479,7 +1479,7 @@ export function forceCloseReportugcMenu(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x8817605C2BA76200 | Since: 323
+ * Hash: 0x8817605C2BA76200 | Since: unknown
  */
 export function forceCloseTextInputBox(): void {
     ForceCloseTextInputBox();
@@ -1488,7 +1488,7 @@ export function forceCloseTextInputBox(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x57D760D55F54E071 | Since: 323
+ * Hash: 0x57D760D55F54E071 | Since: unknown
  */
 export function forceNextMessageToPreviousBriefsList(): void {
     Citizen.invokeNative('0x57D760D55F54E071', 0);
@@ -1497,7 +1497,7 @@ export function forceNextMessageToPreviousBriefsList(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xBA8D65C1C65702E5 | Since: 323
+ * Hash: 0xBA8D65C1C65702E5 | Since: unknown
  */
 export function forceOffWantedStarFlash(toggle: boolean): void {
     Citizen.invokeNative('0xBA8D65C1C65702E5', toggle);
@@ -1507,7 +1507,7 @@ export function forceOffWantedStarFlash(toggle: boolean): void {
  * Not present in retail version of the game, actual definiton seems to be
  * _LOG_DEBUG_INFO(const char* category, const char* debugText);
  * 
- * Hash: 0x2162C446DFDF38FD | Since: 323
+ * Hash: 0x2162C446DFDF38FD | Since: unknown
  */
 export function forceScriptedGfxWhenFrontendActive(): void {
     LogDebugInfo(undefined);
@@ -1516,7 +1516,7 @@ export function forceScriptedGfxWhenFrontendActive(): void {
 /**
  * Doesn't actually return anything.
  * 
- * Hash: 0x1121BFA1A1A522A8 | Since: 323
+ * Hash: 0x1121BFA1A1A522A8 | Since: unknown
  */
 export function forceSonarBlipsThisFrame(): boolean {
     return ForceSonarBlipsThisFrame();
@@ -1525,7 +1525,7 @@ export function forceSonarBlipsThisFrame(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x7CD934010E115C2C | Since: 323
+ * Hash: 0x7CD934010E115C2C | Since: unknown
  */
 export function getAiPedPedBlipIndex(ped: number | IPed): number {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1535,7 +1535,7 @@ export function getAiPedPedBlipIndex(ped: number | IPed): number {
 /**
  * Returns the current AI BLIP for the specified ped
  * 
- * Hash: 0x56176892826A4FE8 | Since: 323
+ * Hash: 0x56176892826A4FE8 | Since: unknown
  */
 export function getAiPedVehicleBlipIndex(ped: number | IPed): number {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1545,7 +1545,7 @@ export function getAiPedVehicleBlipIndex(ped: number | IPed): number {
 /**
  * No comment provided
  * 
- * Hash: 0x970F608F0EE6C885 | Since: 323
+ * Hash: 0x970F608F0EE6C885 | Since: unknown
  */
 export function getBlipAlpha(blip: number | IBlip): number {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1555,7 +1555,7 @@ export function getBlipAlpha(blip: number | IBlip): number {
 /**
  * No comment provided
  * 
- * Hash: 0xDF729E8D20CF7327 | Since: 323
+ * Hash: 0xDF729E8D20CF7327 | Since: unknown
  */
 export function getBlipColour(blip: number | IBlip): number {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1565,7 +1565,7 @@ export function getBlipColour(blip: number | IBlip): number {
 /**
  * No comment provided
  * 
- * Hash: 0x586AFE3FF72D996E | Since: 323
+ * Hash: 0x586AFE3FF72D996E | Since: unknown
  */
 export function getBlipCoords(blip: number | IBlip): Vector3 {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1575,7 +1575,7 @@ export function getBlipCoords(blip: number | IBlip): Vector3 {
 /**
  * Returns -1, 0, +1, depending on if the blip is fading out, doing nothing, or fading in respectively.
  * 
- * Hash: 0x2C173AE2BDB9385E | Since: 463
+ * Hash: 0x2C173AE2BDB9385E | Since: unknown
  */
 export function getBlipFadeDirection(blip: number | IBlip): number {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1585,7 +1585,7 @@ export function getBlipFadeDirection(blip: number | IBlip): number {
 /**
  * Returns the Blip handle of given Entity.
  * 
- * Hash: 0xBC8DBDCA2436F7E8 | Since: 323
+ * Hash: 0xBC8DBDCA2436F7E8 | Since: unknown
  */
 export function getBlipFromEntity(entity: number | IEntity): number {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -1595,7 +1595,7 @@ export function getBlipFromEntity(entity: number | IEntity): number {
 /**
  * No comment provided
  * 
- * Hash: 0x729B5F1EFBC0AAEE | Since: 323
+ * Hash: 0x729B5F1EFBC0AAEE | Since: unknown
  */
 export function getBlipHudColour(blip: number | IBlip): number {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1605,7 +1605,7 @@ export function getBlipHudColour(blip: number | IBlip): number {
 /**
  * No comment provided
  * 
- * Hash: 0xFA7C7F0AADF25D09 | Since: 323
+ * Hash: 0xFA7C7F0AADF25D09 | Since: unknown
  */
 export function getBlipInfoIdCoord(blip: number | IBlip): Vector3 {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1615,7 +1615,7 @@ export function getBlipInfoIdCoord(blip: number | IBlip): Vector3 {
 /**
  * No comment provided
  * 
- * Hash: 0x1E314167F701DC3B | Since: 323
+ * Hash: 0x1E314167F701DC3B | Since: unknown
  */
 export function getBlipInfoIdDisplay(blip: number | IBlip): number {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1625,7 +1625,7 @@ export function getBlipInfoIdDisplay(blip: number | IBlip): number {
 /**
  * No comment provided
  * 
- * Hash: 0x4BA4E2553AFEDC2C | Since: 323
+ * Hash: 0x4BA4E2553AFEDC2C | Since: unknown
  */
 export function getBlipInfoIdEntityIndex(blip: number | IBlip): number {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1635,7 +1635,7 @@ export function getBlipInfoIdEntityIndex(blip: number | IBlip): number {
 /**
  * This function is hard-coded to always return 0.
  * 
- * Hash: 0x9B6786E4C03DD382 | Since: 323
+ * Hash: 0x9B6786E4C03DD382 | Since: unknown
  */
 export function getBlipInfoIdPickupIndex(blip: number | IBlip): any {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1652,7 +1652,7 @@ export function getBlipInfoIdPickupIndex(blip: number | IBlip): any {
  * 6 - Pickup
  * 7 - Radius
  * 
- * Hash: 0xBE9B0959FFD0779B | Since: 323
+ * Hash: 0xBE9B0959FFD0779B | Since: unknown
  */
 export function getBlipInfoIdType(blip: number | IBlip): number {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1662,7 +1662,7 @@ export function getBlipInfoIdType(blip: number | IBlip): number {
 /**
  * No comment provided
  * 
- * Hash: 0x003E92BA477F9D7F | Since: 2060
+ * Hash: 0x003E92BA477F9D7F | Since: unknown
  */
 export function getBlipRotation(blip: number | IBlip): number {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1673,7 +1673,7 @@ export function getBlipRotation(blip: number | IBlip): number {
  * Blips Images + IDs:
  * gtaxscripting.blogspot.com/2016/05/gta-v-blips-id-and-image.html
  * 
- * Hash: 0x1FC877464A04FC4F | Since: 323
+ * Hash: 0x1FC877464A04FC4F | Since: unknown
  */
 export function getBlipSprite(blip: number | IBlip): number {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -1687,7 +1687,7 @@ export function getBlipSprite(blip: number | IBlip): number {
  * // Get "STRING" text from "MY_STRING"
  * `subStr = HUD::GET_CHARACTER_FROM_AUDIO_CONVERSATION_FILENAME("MY_STRING", 3, 6);`
  * 
- * Hash: 0x169BD9382084C8C0 | Since: 323
+ * Hash: 0x169BD9382084C8C0 | Since: unknown
  */
 export function getCharacterFromAudioConversationFilename(text: string, position: number, length: number): string {
     return GetTextSubstring(text, position, length);
@@ -1702,7 +1702,7 @@ export function getCharacterFromAudioConversationFilename(text: string, position
  * // Overflows are possibly replaced with underscores (needs verification)
  * `subStr = HUD::GET_CHARACTER_FROM_AUDIO_CONVERSATION_FILENAME_BYTES("MY_STRING", 3, 10); // "STRING_"?`
  * 
- * Hash: 0xCE94AEBA5D82908A | Since: 323
+ * Hash: 0xCE94AEBA5D82908A | Since: unknown
  */
 export function getCharacterFromAudioConversationFilenameBytes(text: string, startPosition: number, endPosition: number): string {
     return GetTextSubstringSlice(text, startPosition, endPosition);
@@ -1731,7 +1731,7 @@ export function getCharacterFromAudioConversationFilenameBytes(text: string, sta
  * return TRUE;
  * }
  * 
- * Hash: 0xB2798643312205C5 | Since: 323
+ * Hash: 0xB2798643312205C5 | Since: unknown
  */
 export function getCharacterFromAudioConversationFilenameWithByteLimit(text: string, position: number, length: number, maxLength: number): string {
     return GetTextSubstringSafe(text, position, length, maxLength);
@@ -1740,7 +1740,7 @@ export function getCharacterFromAudioConversationFilenameWithByteLimit(text: str
 /**
  * No comment provided
  * 
- * Hash: 0x8F08017F9D7C47BD | Since: 323
+ * Hash: 0x8F08017F9D7C47BD | Since: unknown
  */
 export function getCharacterMenuPedFloatStat(statHash: number): [boolean, number] {
     return Citizen.invokeNative('0x8F08017F9D7C47BD', statHash, false);
@@ -1749,7 +1749,7 @@ export function getCharacterMenuPedFloatStat(statHash: number): [boolean, number
 /**
  * No comment provided
  * 
- * Hash: 0xCA6B2F7CE32AB653 | Since: 323
+ * Hash: 0xCA6B2F7CE32AB653 | Since: unknown
  */
 export function getCharacterMenuPedIntStat(): [boolean, any] {
     return Citizen.invokeNative('0xCA6B2F7CE32AB653', undefined, undefined);
@@ -1758,7 +1758,7 @@ export function getCharacterMenuPedIntStat(): [boolean, any] {
 /**
  * No comment provided
  * 
- * Hash: 0x24A49BEAF468DC90 | Since: 323
+ * Hash: 0x24A49BEAF468DC90 | Since: unknown
  */
 export function getCharacterMenuPedMaskedIntStat(statHash: number | string, mask: number): [boolean, any] {
     if (typeof statHash === 'string') statHash = GetHashKey(statHash)
@@ -1768,7 +1768,7 @@ export function getCharacterMenuPedMaskedIntStat(statHash: number | string, mask
 /**
  * No comment provided
  * 
- * Hash: 0xD484BF71050CA1EE | Since: 1180
+ * Hash: 0xD484BF71050CA1EE | Since: unknown
  */
 export function getClosestBlipInfoId(blipSprite: number): number {
     return GetClosestBlipOfType(blipSprite);
@@ -1777,7 +1777,7 @@ export function getClosestBlipInfoId(blipSprite: number): number {
 /**
  * `if (HUD::GET_CURRENT_FRONTEND_MENU_VERSION() == joaat("fe_menu_version_empty_no_background"))`
  * 
- * Hash: 0x2309595AD6145265 | Since: 323
+ * Hash: 0x2309595AD6145265 | Since: unknown
  */
 export function getCurrentFrontendMenuVersion(): number {
     return GetCurrentFrontendMenuVersion();
@@ -1786,7 +1786,7 @@ export function getCurrentFrontendMenuVersion(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x01A358D9128B7A86 | Since: 323
+ * Hash: 0x01A358D9128B7A86 | Since: unknown
  */
 export function getCurrentWebpageId(): number {
     return GetCurrentWebpageId();
@@ -1795,7 +1795,7 @@ export function getCurrentWebpageId(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x97D47996FC48CBAD | Since: 323
+ * Hash: 0x97D47996FC48CBAD | Since: unknown
  */
 export function getCurrentWebsiteId(): number {
     return GetCurrentWebsiteId();
@@ -1804,7 +1804,7 @@ export function getCurrentWebsiteId(): number {
 /**
  * This function is hard-coded to always return 1.
  * 
- * Hash: 0x52F0982D7FD156B6 | Since: 323
+ * Hash: 0x52F0982D7FD156B6 | Since: unknown
  */
 export function getDefaultScriptRendertargetRenderId(): number {
     return GetDefaultScriptRendertargetRenderId();
@@ -1813,7 +1813,7 @@ export function getDefaultScriptRendertargetRenderId(): number {
 /**
  * Getter for SET_FAKE_SPECTATOR_MODE
  * 
- * Hash: 0xC2D2AD9EAAE265B8 | Since: 505
+ * Hash: 0xC2D2AD9EAAE265B8 | Since: unknown
  */
 export function getFakeSpectatorMode(): boolean {
     return Citizen.invokeNative('0xC2D2AD9EAAE265B8');
@@ -1822,7 +1822,7 @@ export function getFakeSpectatorMode(): boolean {
 /**
  * `Gets a localized string literal from a label name. Can be used for output of e.g. VEHICLE::GET_LIVERY_NAME. To check if a GXT label can be localized with this, HUD::DOES_TEXT_LABEL_EXIST can be used.`
  * 
- * Hash: 0x7B5280EBA9840C72 | Since: 323
+ * Hash: 0x7B5280EBA9840C72 | Since: unknown
  */
 export function getFilenameForAudioConversation(labelName: string): string {
     return GetFilenameForAudioConversation(labelName);
@@ -1831,7 +1831,7 @@ export function getFilenameForAudioConversation(labelName: string): string {
 /**
  * No comment provided
  * 
- * Hash: 0x1BEDE233E6CD2A1F | Since: 323
+ * Hash: 0x1BEDE233E6CD2A1F | Since: unknown
  */
 export function getFirstBlipInfoId(blipSprite: number): number {
     return GetFirstBlipInfoId(blipSprite);
@@ -1840,7 +1840,7 @@ export function getFirstBlipInfoId(blipSprite: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0x98C3CF913D895111 | Since: 505
+ * Hash: 0x98C3CF913D895111 | Since: unknown
  */
 export function getFirstNCharactersOfLiteralString(_string: string, length: number): string {
     return Citizen.invokeNative('0x98C3CF913D895111', _string, length);
@@ -1857,7 +1857,7 @@ export function getFirstNCharactersOfLiteralString(_string: string, length: numb
  * 
  * There are 20 flags in total.
  * 
- * Hash: 0xE3B05614DCE1D014 | Since: 323
+ * Hash: 0xE3B05614DCE1D014 | Since: unknown
  */
 export function getGlobalActionscriptFlag(flagIndex: number): number {
     return GetGlobalActionscriptFlag(flagIndex);
@@ -1866,7 +1866,7 @@ export function getGlobalActionscriptFlag(flagIndex: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0x7C9C91AB74A0360F | Since: 323
+ * Hash: 0x7C9C91AB74A0360F | Since: unknown
  */
 export function getColour(hudColorIndex: number): [number, number, number, number] {
     return GetHudColour(hudColorIndex);
@@ -1875,7 +1875,7 @@ export function getColour(hudColorIndex: number): [number, number, number, numbe
 /**
  * No comment provided
  * 
- * Hash: 0x223CA69A8C4417FD | Since: 323
+ * Hash: 0x223CA69A8C4417FD | Since: unknown
  */
 export function getComponentPosition(id: number): Vector3 {
     return new Vector3(GetHudComponentPosition(id));
@@ -1884,7 +1884,7 @@ export function getComponentPosition(id: number): Vector3 {
 /**
  * World to relative screen coords, this world to screen will keep the text on screen. Was named _GET_SCREEN_COORD_FROM_WORLD_COORD, but this conflicts with 0x34E82F05DF2974F5. As that hash actually matches GET_SCREEN_COORD_FROM_WORLD_COORD that one supercedes and this one was renamed to _GET_2D_COORD_FROM_3D_COORD
  * 
- * Hash: 0xF9904D11F1ACBEC3 | Since: 323
+ * Hash: 0xF9904D11F1ACBEC3 | Since: unknown
  */
 export function getScreenPositionFromWorldPosition(worldPos: Vector3): [number, number, number] {
     return GetHudScreenPositionFromWorldPosition(worldPos.x, worldPos.y, worldPos.z);
@@ -1893,7 +1893,7 @@ export function getScreenPositionFromWorldPosition(worldPos: Vector3): [number, 
 /**
  * Returns the length of the string passed (much like strlen).
  * 
- * Hash: 0xF030907CCBB8A9FD | Since: 323
+ * Hash: 0xF030907CCBB8A9FD | Since: unknown
  */
 export function getLengthOfLiteralString(_string: string): number {
     return GetLengthOfLiteralString(_string);
@@ -1902,7 +1902,7 @@ export function getLengthOfLiteralString(_string: string): number {
 /**
  * No comment provided
  * 
- * Hash: 0x43E4111189E54F0E | Since: 323
+ * Hash: 0x43E4111189E54F0E | Since: unknown
  */
 export function getLengthOfLiteralStringInBytes(_string: string): number {
     return GetLengthOfLiteralStringInBytes(_string);
@@ -1911,7 +1911,7 @@ export function getLengthOfLiteralStringInBytes(_string: string): number {
 /**
  * Returns the string length of the string from the gxt string .
  * 
- * Hash: 0x801BD273D3A23F74 | Since: 323
+ * Hash: 0x801BD273D3A23F74 | Since: unknown
  */
 export function getLengthOfStringWithThisTextLabel(gxt: string): number {
     return GetLengthOfStringWithThisTextLabel(gxt);
@@ -1920,7 +1920,7 @@ export function getLengthOfStringWithThisTextLabel(gxt: string): number {
 /**
  * No comment provided
  * 
- * Hash: 0xDCD4EC3F419D02FA | Since: 323
+ * Hash: 0xDCD4EC3F419D02FA | Since: unknown
  */
 export function getMainPlayerBlipId(): number {
     return GetMainPlayerBlipId();
@@ -1946,7 +1946,7 @@ export function getMainPlayerBlipId(): number {
  * selectedItemMenuId = -1
  * selectedItemUniqueId updates as normal
  * 
- * Hash: 0x7E17BE53E1AAABAF | Since: 323
+ * Hash: 0x7E17BE53E1AAABAF | Since: unknown
  */
 export function getMenuLayoutChangedEventDetails(): [number, number, number] {
     return GetPauseMenuSelectionData();
@@ -1955,7 +1955,7 @@ export function getMenuLayoutChangedEventDetails(): [number, number, number] {
 /**
  * p0 was always 0xAE2602A3.
  * 
- * Hash: 0x052991E59076E4E4 | Since: 323
+ * Hash: 0x052991E59076E4E4 | Since: unknown
  */
 export function getMenuPedBoolStat(statHash: number | string): [boolean, boolean] {
     if (typeof statHash === 'string') statHash = GetHashKey(statHash)
@@ -1965,7 +1965,7 @@ export function getMenuPedBoolStat(statHash: number | string): [boolean, boolean
 /**
  * No comment provided
  * 
- * Hash: 0x5FBD7095FE7AE57F | Since: 323
+ * Hash: 0x5FBD7095FE7AE57F | Since: unknown
  */
 export function getMenuPedFloatStat(statHash: number | string): [boolean, number] {
     if (typeof statHash === 'string') statHash = GetHashKey(statHash)
@@ -1975,7 +1975,7 @@ export function getMenuPedFloatStat(statHash: number | string): [boolean, number
 /**
  * No comment provided
  * 
- * Hash: 0xEF4CED81CEBEDC6D | Since: 323
+ * Hash: 0xEF4CED81CEBEDC6D | Since: unknown
  */
 export function getMenuPedIntStat(): [boolean, any] {
     return GetMenuPedIntStat(undefined);
@@ -1984,7 +1984,7 @@ export function getMenuPedIntStat(): [boolean, any] {
 /**
  * No comment provided
  * 
- * Hash: 0x90A6526CF0381030 | Since: 323
+ * Hash: 0x90A6526CF0381030 | Since: unknown
  */
 export function getMenuPedMaskedIntStat(statHash: number | string, mask: number): [boolean, number] {
     if (typeof statHash === 'string') statHash = GetHashKey(statHash)
@@ -1994,7 +1994,7 @@ export function getMenuPedMaskedIntStat(statHash: number | string, mask: number)
 /**
  * No comment provided
  * 
- * Hash: 0x36C1451A88A09630 | Since: 323
+ * Hash: 0x36C1451A88A09630 | Since: unknown
  */
 export function getMenuTriggerEventDetails(): [number, number] {
     return GetPauseMenuSelection();
@@ -2003,7 +2003,7 @@ export function getMenuTriggerEventDetails(): [number, number] {
 /**
  * No comment provided
  * 
- * Hash: 0x6E31B91145873922 | Since: 323
+ * Hash: 0x6E31B91145873922 | Since: unknown
  */
 export function getMinimapFowCoordinateIsRevealed(pos: Vector3): boolean {
     return GetMinimapFowCoordinateIsRevealed(pos.x, pos.y, pos.z);
@@ -2012,7 +2012,7 @@ export function getMinimapFowCoordinateIsRevealed(pos: Vector3): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xE0130B41D3CF4574 | Since: 323
+ * Hash: 0xE0130B41D3CF4574 | Since: unknown
  */
 export function getMinimapFowDiscoveryRatio(): number {
     return GetMinimapFowDiscoveryRatio();
@@ -2021,7 +2021,7 @@ export function getMinimapFowDiscoveryRatio(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x632B2940C67F4EA9 | Since: 323
+ * Hash: 0x632B2940C67F4EA9 | Since: unknown
  */
 export function getMouseEvent(scaleformHandle: number): [boolean, any, any, any] {
     return GetScaleformMovieCursorSelection(scaleformHandle);
@@ -2030,7 +2030,7 @@ export function getMouseEvent(scaleformHandle: number): [boolean, any, any, any]
 /**
  * No comment provided
  * 
- * Hash: 0x1A6478B61C6BDC3B | Since: 323
+ * Hash: 0x1A6478B61C6BDC3B | Since: unknown
  */
 export function getNamedRendertargetRenderId(name: string): number {
     return GetNamedRendertargetRenderId(name);
@@ -2039,7 +2039,7 @@ export function getNamedRendertargetRenderId(name: string): number {
 /**
  * No comment provided
  * 
- * Hash: 0x5C90988E7C8E1AF4 | Since: 323
+ * Hash: 0x5C90988E7C8E1AF4 | Since: unknown
  */
 export function getNewSelectedMissionCreatorBlip(): number {
     return GetNewSelectedMissionCreatorBlip();
@@ -2048,7 +2048,7 @@ export function getNewSelectedMissionCreatorBlip(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x14F96AA50D6FBEA7 | Since: 323
+ * Hash: 0x14F96AA50D6FBEA7 | Since: unknown
  */
 export function getNextBlipInfoId(blipSprite: number): number {
     return GetNextBlipInfoId(blipSprite);
@@ -2057,7 +2057,7 @@ export function getNextBlipInfoId(blipSprite: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0x3F0CF9CB7E589B88 | Since: 463
+ * Hash: 0x3F0CF9CB7E589B88 | Since: unknown
  */
 export function getNorthBlidIndex(): number {
     return GetNorthRadarBlip();
@@ -2066,7 +2066,7 @@ export function getNorthBlidIndex(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x9A3FF3DE163034E8 | Since: 323
+ * Hash: 0x9A3FF3DE163034E8 | Since: unknown
  */
 export function getNumberOfActiveBlips(): number {
     return GetNumberOfActiveBlips();
@@ -2075,7 +2075,7 @@ export function getNumberOfActiveBlips(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x5BFF36D6ED83E0AE | Since: 323
+ * Hash: 0x5BFF36D6ED83E0AE | Since: unknown
  */
 export function getPauseMenuPosition(): Vector3 {
     return new Vector3(GetPauseMenuCursorPosition());
@@ -2094,7 +2094,7 @@ export function getPauseMenuPosition(): Vector3 {
  * 35
  * 
  * 
- * Hash: 0x272ACD84970869C5 | Since: 323
+ * Hash: 0x272ACD84970869C5 | Since: unknown
  */
 export function getPauseMenuState(): number {
     return GetPauseMenuState();
@@ -2103,7 +2103,7 @@ export function getPauseMenuState(): number {
 /**
  * No comment provided
  * 
- * Hash: 0xA238192F33110615 | Since: 323
+ * Hash: 0xA238192F33110615 | Since: unknown
  */
 export function getPmPlayerCrewColor(): [boolean, number, number, number] {
     return Citizen.invokeNative('0xA238192F33110615');
@@ -2112,7 +2112,7 @@ export function getPmPlayerCrewColor(): [boolean, number, number, number] {
 /**
  * This gets the height of the FONT and not the total text. You need to get the number of lines your text uses, and get the height of a newline (I'm using a smaller value) to get the total text height.
  * 
- * Hash: 0xDB88A37483346780 | Since: 323
+ * Hash: 0xDB88A37483346780 | Since: unknown
  */
 export function getRenderedCharacterHeight(size: number, font: number): number {
     return GetRenderedCharacterHeight(size, font);
@@ -2121,7 +2121,16 @@ export function getRenderedCharacterHeight(size: number, font: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0x593FEAE1F73392D4 | Since: 323
+ * Hash: 0xD6FAD05D855AF80F | Since: unknown
+ */
+export function getRenderedTextPaddingSize(): number {
+    return Citizen.invokeNative('0xD6FAD05D855AF80F');
+}
+
+/**
+ * No comment provided
+ * 
+ * Hash: 0x593FEAE1F73392D4 | Since: unknown
  */
 export function getScreenCodeWantsScriptToControl(): number {
     return Citizen.invokeNative('0x593FEAE1F73392D4');
@@ -2130,7 +2139,7 @@ export function getScreenCodeWantsScriptToControl(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x4A9923385BDB9DAD | Since: 323
+ * Hash: 0x4A9923385BDB9DAD | Since: unknown
  */
 export function getStandardBlipEnumId(): number {
     return GetStandardBlipEnumId();
@@ -2141,7 +2150,7 @@ export function getStandardBlipEnumId(): number {
  * 
  * `For how to get the hashes, see PATHFIND::GET_STREET_NAME_AT_COORD.`
  * 
- * Hash: 0xD0EF8A959B8A4CB9 | Since: 323
+ * Hash: 0xD0EF8A959B8A4CB9 | Since: unknown
  */
 export function getStreetNameFromHashKey(hash: number | string): string {
     if (typeof hash === 'string') hash = GetHashKey(hash)
@@ -2151,7 +2160,7 @@ export function getStreetNameFromHashKey(hash: number | string): string {
 /**
  * Has to do with the confirmation overlay (E.g. confirm exit)
  * 
- * Hash: 0x81DF9ABA6C83DFF9 | Since: 1290
+ * Hash: 0x81DF9ABA6C83DFF9 | Since: unknown
  */
 export function getWarningScreenMessageHash(): number {
     return GetWarningMessageTitleHash();
@@ -2160,7 +2169,7 @@ export function getWarningScreenMessageHash(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x186E5D252FA50E7D | Since: 323
+ * Hash: 0x186E5D252FA50E7D | Since: unknown
  */
 export function getWaypointBlipEnumId(): number {
     return GetWaypointBlipEnumId();
@@ -2169,7 +2178,7 @@ export function getWaypointBlipEnumId(): number {
 /**
  * No comment provided
  * 
- * Hash: 0xF46851AB8B02EF40 | Since: 3717
+ * Hash: 0xF46851AB8B02EF40 | Since: unknown
  */
 export function getWaypointClearOnArrivalMode(): number {
     return Citizen.invokeNative('0xF46851AB8B02EF40');
@@ -2178,7 +2187,7 @@ export function getWaypointClearOnArrivalMode(): number {
 /**
  * p1 is either 1 or 2 in the PC scripts.
  * 
- * Hash: 0xAC0BFBDC3BE00E14 | Since: 323
+ * Hash: 0xAC0BFBDC3BE00E14 | Since: unknown
  */
 export function givePedToPauseMenu(ped: number | IPed): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2188,7 +2197,7 @@ export function givePedToPauseMenu(ped: number | IPed): void {
 /**
  * No comment provided
  * 
- * Hash: 0x02245FE4BED318B8 | Since: 323
+ * Hash: 0x02245FE4BED318B8 | Since: unknown
  */
 export function hasAdditionalTextLoaded(slot: number): boolean {
     return HasAdditionalTextLoaded(slot);
@@ -2197,7 +2206,7 @@ export function hasAdditionalTextLoaded(slot: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xA277800A9EAE340E | Since: 323
+ * Hash: 0xA277800A9EAE340E | Since: unknown
  */
 export function hasDirectorModeBeenLaunchedByCode(): boolean {
     return HasDirectorModeBeenTriggered();
@@ -2206,7 +2215,7 @@ export function hasDirectorModeBeenLaunchedByCode(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x2E22FEFA0100275E | Since: 323
+ * Hash: 0x2E22FEFA0100275E | Since: unknown
  */
 export function hasMenuLayoutChangedEventOccurred(): boolean {
     return Citizen.invokeNative('0x2E22FEFA0100275E');
@@ -2215,7 +2224,7 @@ export function hasMenuLayoutChangedEventOccurred(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xF284AC67940C6812 | Since: 323
+ * Hash: 0xF284AC67940C6812 | Since: unknown
  */
 export function hasMenuTriggerEventOccurred(): boolean {
     return Citizen.invokeNative('0xF284AC67940C6812');
@@ -2224,7 +2233,7 @@ export function hasMenuTriggerEventOccurred(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x214CD562A939246A | Since: 323
+ * Hash: 0x214CD562A939246A | Since: unknown
  */
 export function hasScriptHiddenHelpThisFrame(): boolean {
     return Citizen.invokeNative('0x214CD562A939246A');
@@ -2233,7 +2242,7 @@ export function hasScriptHiddenHelpThisFrame(): boolean {
 /**
  * Checks if the specified gxt has loaded into the passed slot.
  * 
- * Hash: 0xADBF060E2B30C5BC | Since: 323
+ * Hash: 0xADBF060E2B30C5BC | Since: unknown
  */
 export function hasThisAdditionalTextLoaded(gxt: string, slot: number): boolean {
     return HasThisAdditionalTextLoaded(gxt, slot);
@@ -2242,7 +2251,7 @@ export function hasThisAdditionalTextLoaded(gxt: string, slot: number): boolean 
 /**
  * No comment provided
  * 
- * Hash: 0xD46923FC481CA285 | Since: 323
+ * Hash: 0xD46923FC481CA285 | Since: unknown
  */
 export function hideHelpTextThisFrame(): void {
     HideHelpTextThisFrame();
@@ -2251,7 +2260,7 @@ export function hideHelpTextThisFrame(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x243296A510B562B6 | Since: 2060
+ * Hash: 0x243296A510B562B6 | Since: unknown
  */
 export function hidemarkersThisFrame(): void {
     Citizen.invokeNative('0x243296A510B562B6');
@@ -2260,7 +2269,7 @@ export function hidemarkersThisFrame(): void {
 /**
  * Hides HUD and radar this frame and prohibits switching to other weapons (or accessing the weapon wheel)
  * 
- * Hash: 0x719FF505F097FD20 | Since: 323
+ * Hash: 0x719FF505F097FD20 | Since: unknown
  */
 export function hideAndRadarThisFrame(): void {
     HideHudAndRadarThisFrame();
@@ -2294,7 +2303,7 @@ export function hideAndRadarThisFrame(): void {
  * 
  * These integers also work for the `SHOW_HUD_COMPONENT_THIS_FRAME` native, but instead shows the HUD Component.
  * 
- * Hash: 0x6806C51AD12B83B8 | Since: 323
+ * Hash: 0x6806C51AD12B83B8 | Since: unknown
  */
 export function hideComponentThisFrame(id: number): void {
     HideHudComponentThisFrame(id);
@@ -2303,7 +2312,7 @@ export function hideComponentThisFrame(id: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x4B0311D3CDC4648F | Since: 323
+ * Hash: 0x4B0311D3CDC4648F | Since: unknown
  */
 export function hideLoadingOnFadeThisFrame(): void {
     HideLoadingOnFadeThisFrame();
@@ -2312,7 +2321,7 @@ export function hideLoadingOnFadeThisFrame(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x5FBAE526203990C9 | Since: 323
+ * Hash: 0x5FBAE526203990C9 | Since: unknown
  */
 export function hideMinimapExteriorMapThisFrame(): void {
     HideMinimapExteriorMapThisFrame();
@@ -2321,7 +2330,7 @@ export function hideMinimapExteriorMapThisFrame(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x20FE7FDFEEAD38C0 | Since: 323
+ * Hash: 0x20FE7FDFEEAD38C0 | Since: unknown
  */
 export function hideMinimapInteriorMapThisFrame(): void {
     HideMinimapInteriorMapThisFrame();
@@ -2330,7 +2339,7 @@ export function hideMinimapInteriorMapThisFrame(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x532CFF637EF80148 | Since: 323
+ * Hash: 0x532CFF637EF80148 | Since: unknown
  */
 export function hideNumberOnBlip(blip: number | IBlip): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -2340,7 +2349,7 @@ export function hideNumberOnBlip(blip: number | IBlip): void {
 /**
  * No comment provided
  * 
- * Hash: 0xE374C498D8BADC14 | Since: 323
+ * Hash: 0xE374C498D8BADC14 | Since: unknown
  */
 export function hideScriptedComponentThisFrame(id: number): void {
     HideScriptedHudComponentThisFrame(id);
@@ -2349,7 +2358,7 @@ export function hideScriptedComponentThisFrame(id: number): void {
 /**
  * Hides area and vehicle name HUD components for one frame.
  * 
- * Hash: 0xA4DEDE28B1814289 | Since: 323
+ * Hash: 0xA4DEDE28B1814289 | Since: unknown
  */
 export function hideStreetAndCarNamesThisFrame(): void {
     HideAreaAndVehicleNameThisFrame();
@@ -2358,7 +2367,7 @@ export function hideStreetAndCarNamesThisFrame(): void {
 /**
  * Displays "blazer_wheels_up" and "blazer_wheels_down" "weapon" icons when switching between jetski and quadbike modes. Works only on vehicles using "VEHICLE_TYPE_AMPHIBIOUS_QUADBIKE" vehicle type. Needs to be called every time prior to switching modes, otherwise the icon will only appear when switching modes once.
  * 
- * Hash: 0x488043841BBE156F | Since: 1011
+ * Hash: 0x488043841BBE156F | Since: unknown
  */
 export function forceSpecialVehicleWeaponWheel(): void {
     HudDisplayLoadingScreenTips();
@@ -2367,7 +2376,7 @@ export function forceSpecialVehicleWeaponWheel(): void {
 /**
  * Forces the weapon wheel to show/hide.
  * 
- * Hash: 0xEB354E5376BC81A7 | Since: 323
+ * Hash: 0xEB354E5376BC81A7 | Since: unknown
  */
 export function forceWeaponWheel(show: boolean): void {
     HudForceWeaponWheel(show);
@@ -2376,7 +2385,7 @@ export function forceWeaponWheel(show: boolean): void {
 /**
  * Returns the weapon hash to the selected/highlighted weapon in the wheel
  * 
- * Hash: 0xA48931185F0536FE | Since: 323
+ * Hash: 0xA48931185F0536FE | Since: unknown
  */
 export function getWeaponWheelCurrentlyHighlighted(): number {
     return HudWeaponWheelGetSelectedHash();
@@ -2385,7 +2394,7 @@ export function getWeaponWheelCurrentlyHighlighted(): number {
 /**
  * Returns the weapon hash active in a specific weapon wheel slotList
  * 
- * Hash: 0xA13E93403F26C812 | Since: 323
+ * Hash: 0xA13E93403F26C812 | Since: unknown
  */
 export function getWeaponWheelTopSlot(weaponTypeIndex: number): number {
     return HudWeaponWheelGetSlotHash(weaponTypeIndex);
@@ -2394,7 +2403,7 @@ export function getWeaponWheelTopSlot(weaponTypeIndex: number): number {
 /**
  * Set the active slotIndex in the wheel weapon to the slot associated with the provided Weapon hash
  * 
- * Hash: 0x72C1056D678BB7D8 | Since: 323
+ * Hash: 0x72C1056D678BB7D8 | Since: unknown
  */
 export function setWeaponWheelTopSlot(weaponHash: number | string): void {
     if (typeof weaponHash === 'string') weaponHash = GetHashKey(weaponHash)
@@ -2404,7 +2413,7 @@ export function setWeaponWheelTopSlot(weaponHash: number | string): void {
 /**
  * Sets a global that disables many weapon input tasks (shooting, aiming, etc.). Does not work with vehicle weapons, only used in selector.ysc
  * 
- * Hash: 0x14C9FDCC41F81F63 | Since: 323
+ * Hash: 0x14C9FDCC41F81F63 | Since: unknown
  */
 export function showingCharacterSwitchSelection(toggle: boolean): void {
     HudWeaponWheelIgnoreControlInput(toggle);
@@ -2413,7 +2422,7 @@ export function showingCharacterSwitchSelection(toggle: boolean): void {
 /**
  * Calling this each frame, stops the player from receiving a weapon via the weapon wheel.
  * 
- * Hash: 0x0AFC4AF510774B47 | Since: 323
+ * Hash: 0x0AFC4AF510774B47 | Since: unknown
  */
 export function suppressWeaponWheelResultsThisFrame(): void {
     HudWeaponWheelIgnoreSelection();
@@ -2422,7 +2431,7 @@ export function suppressWeaponWheelResultsThisFrame(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA5E41FD83AD6CEF0 | Since: 323
+ * Hash: 0xA5E41FD83AD6CEF0 | Since: unknown
  */
 export function isBlipFlashing(blip: number | IBlip): boolean {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -2432,7 +2441,7 @@ export function isBlipFlashing(blip: number | IBlip): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xE41CA53051197A27 | Since: 323
+ * Hash: 0xE41CA53051197A27 | Since: unknown
  */
 export function isBlipOnMinimap(blip: number | IBlip): boolean {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -2442,7 +2451,7 @@ export function isBlipOnMinimap(blip: number | IBlip): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xDA5F8727EB75B926 | Since: 323
+ * Hash: 0xDA5F8727EB75B926 | Since: unknown
  */
 export function isBlipShortRange(blip: number | IBlip): boolean {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -2452,7 +2461,7 @@ export function isBlipShortRange(blip: number | IBlip): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x2432784ACA090DA4 | Since: 323
+ * Hash: 0x2432784ACA090DA4 | Since: unknown
  */
 export function isFloatingHelpTextOnScreen(hudIndex: number): boolean {
     return IsFloatingHelpTextOnScreen(hudIndex);
@@ -2461,7 +2470,7 @@ export function isFloatingHelpTextOnScreen(hudIndex: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x3BAB9A4E4F2FF5C7 | Since: 323
+ * Hash: 0x3BAB9A4E4F2FF5C7 | Since: unknown
  */
 export function isFrontendReadyForControl(): boolean {
     return IsFrontendReadyForControl();
@@ -2470,7 +2479,7 @@ export function isFrontendReadyForControl(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x4D79439A6B55AC67 | Since: 323
+ * Hash: 0x4D79439A6B55AC67 | Since: unknown
  */
 export function isHelpMessageBeingDisplayed(): boolean {
     return IsHelpMessageBeingDisplayed();
@@ -2479,7 +2488,7 @@ export function isHelpMessageBeingDisplayed(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x327EDEEEAC55C369 | Since: 323
+ * Hash: 0x327EDEEEAC55C369 | Since: unknown
  */
 export function isHelpMessageFadingOut(): boolean {
     return IsHelpMessageFadingOut();
@@ -2488,7 +2497,7 @@ export function isHelpMessageFadingOut(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xDAD37F45428801AE | Since: 323
+ * Hash: 0xDAD37F45428801AE | Since: unknown
  */
 export function isHelpMessageOnScreen(): boolean {
     return IsHelpMessageOnScreen();
@@ -2497,7 +2506,7 @@ export function isHelpMessageOnScreen(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x4167EFE0527D706E | Since: 323
+ * Hash: 0x4167EFE0527D706E | Since: unknown
  */
 export function isHoveringOverMissionCreatorBlip(): boolean {
     return IsHoveringOverMissionCreatorBlip();
@@ -2531,7 +2540,7 @@ export function isHoveringOverMissionCreatorBlip(): boolean {
  * MAX_HUD_WEAPONS = 22;
  * MAX_SCRIPTED_HUD_COMPONENTS = 141;
  * 
- * Hash: 0xBC4C9EA5391ECC0D | Since: 323
+ * Hash: 0xBC4C9EA5391ECC0D | Since: unknown
  */
 export function isComponentActive(id: number): boolean {
     return IsHudComponentActive(id);
@@ -2540,7 +2549,7 @@ export function isComponentActive(id: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x8EDC335C943465C8 | Since: 3717
+ * Hash: 0x8EDC335C943465C8 | Since: unknown
  */
 export function isComponentHiddenThisFrame(id: number): boolean {
     return Citizen.invokeNative('0x8EDC335C943465C8', id);
@@ -2549,7 +2558,7 @@ export function isComponentHiddenThisFrame(id: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xA86478C6958735C5 | Since: 323
+ * Hash: 0xA86478C6958735C5 | Since: unknown
  */
 export function isHidden(): boolean {
     return IsHudHidden();
@@ -2558,7 +2567,7 @@ export function isHidden(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x1930DFA731813EC4 | Since: 323
+ * Hash: 0x1930DFA731813EC4 | Since: unknown
  */
 export function isPreferenceSwitchedOn(): boolean {
     return IsHudPreferenceSwitchedOn();
@@ -2567,7 +2576,7 @@ export function isPreferenceSwitchedOn(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x801879A9B4F4B2FB | Since: 372
+ * Hash: 0x801879A9B4F4B2FB | Since: unknown
  */
 export function isImeInProgress(): boolean {
     return Citizen.invokeNative('0x801879A9B4F4B2FB');
@@ -2576,7 +2585,7 @@ export function isImeInProgress(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x7984C03AA5CC2F41 | Since: 323
+ * Hash: 0x7984C03AA5CC2F41 | Since: unknown
  */
 export function isMessageBeingDisplayed(): boolean {
     return IsMessageBeingDisplayed();
@@ -2585,7 +2594,7 @@ export function isMessageBeingDisplayed(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xAF754F20EB5CD51A | Since: 323
+ * Hash: 0xAF754F20EB5CD51A | Since: unknown
  */
 export function isMinimapRendering(): boolean {
     return IsMinimapRendering();
@@ -2594,7 +2603,7 @@ export function isMinimapRendering(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x26F49BF3381D933D | Since: 323
+ * Hash: 0x26F49BF3381D933D | Since: unknown
  */
 export function isMissionCreatorBlip(blip: number | IBlip): boolean {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -2604,7 +2613,7 @@ export function isMissionCreatorBlip(blip: number | IBlip): boolean {
 /**
  * Returns TRUE if mouse is hovering above instructional buttons. Works with all buttons gfx, such as popup_warning, pause_menu_instructional_buttons, instructional_buttons, etc. Note: You have to call TOGGLE_MOUSE_BUTTONS on the scaleform if you want this native to work.
  * 
- * Hash: 0x3D9ACB1EB139E702 | Since: 323
+ * Hash: 0x3D9ACB1EB139E702 | Since: unknown
  */
 export function isMouseRolledOverInstructionalButtons(): boolean {
     return IsMouseRolledOverInstructionalButtons();
@@ -2613,7 +2622,7 @@ export function isMouseRolledOverInstructionalButtons(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x4E929E7A5796FD26 | Since: 323
+ * Hash: 0x4E929E7A5796FD26 | Since: unknown
  */
 export function isMpGamerTagActive(gamerTagId: number): boolean {
     return IsMpGamerTagActive(gamerTagId);
@@ -2622,7 +2631,7 @@ export function isMpGamerTagActive(gamerTagId: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x595B5178E412E199 | Since: 323
+ * Hash: 0x595B5178E412E199 | Since: unknown
  */
 export function isMpGamerTagFree(gamerTagId: number): boolean {
     return IsMpGamerTagFree(gamerTagId);
@@ -2631,7 +2640,7 @@ export function isMpGamerTagFree(gamerTagId: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x6E0EB3EB47C8D7AA | Since: 323
+ * Hash: 0x6E0EB3EB47C8D7AA | Since: unknown
  */
 export function isMpGamerTagMovieActive(): boolean {
     return IsMpGamerTagMovieActive();
@@ -2640,7 +2649,7 @@ export function isMpGamerTagMovieActive(): boolean {
 /**
  * Returns whether or not the text chat (MULTIPLAYER_CHAT Scaleform component) is active.
  * 
- * Hash: 0xB118AF58B5F332A1 | Since: 323
+ * Hash: 0xB118AF58B5F332A1 | Since: unknown
  */
 export function isMpTextChatTyping(): boolean {
     return IsMultiplayerChatActive();
@@ -2649,7 +2658,7 @@ export function isMpTextChatTyping(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x113750538FA31298 | Since: 323
+ * Hash: 0x113750538FA31298 | Since: unknown
  */
 export function isNamedRendertargetLinked(modelHash: number | string): boolean {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -2659,7 +2668,7 @@ export function isNamedRendertargetLinked(modelHash: number | string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x78DCDC15C9F116B4 | Since: 323
+ * Hash: 0x78DCDC15C9F116B4 | Since: unknown
  */
 export function isNamedRendertargetRegistered(name: string): boolean {
     return IsNamedRendertargetRegistered(name);
@@ -2668,7 +2677,7 @@ export function isNamedRendertargetRegistered(name: string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x4E3CD0EF8A489541 | Since: 323
+ * Hash: 0x4E3CD0EF8A489541 | Since: unknown
  */
 export function isNavigatingMenuContent(): boolean {
     return IsNavigatingMenuContent();
@@ -2677,7 +2686,7 @@ export function isNavigatingMenuContent(): boolean {
 /**
  * Returns the same as IS_SOCIAL_CLUB_ACTIVE
  * 
- * Hash: 0x6F72CD94F7B5B68C | Since: 323
+ * Hash: 0x6F72CD94F7B5B68C | Since: unknown
  */
 export function isOnlinePoliciesMenuActive(): boolean {
     return IsOnlinePoliciesMenuActive();
@@ -2686,7 +2695,7 @@ export function isOnlinePoliciesMenuActive(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x9049FE339D5F6F6F | Since: 323
+ * Hash: 0x9049FE339D5F6F6F | Since: unknown
  */
 export function isPausemapInInteriorMode(): boolean {
     return IsPausemapInInteriorMode();
@@ -2695,7 +2704,7 @@ export function isPausemapInInteriorMode(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xB0034A223497FFCB | Since: 323
+ * Hash: 0xB0034A223497FFCB | Since: unknown
  */
 export function isPauseMenuActive(): boolean {
     return IsPauseMenuActive();
@@ -2704,7 +2713,7 @@ export function isPauseMenuActive(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x1C491717107431C7 | Since: 323
+ * Hash: 0x1C491717107431C7 | Since: unknown
  */
 export function isPauseMenuRestarting(): boolean {
     return IsPauseMenuRestarting();
@@ -2713,7 +2722,7 @@ export function isPauseMenuRestarting(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x157F93B036700462 | Since: 323
+ * Hash: 0x157F93B036700462 | Since: unknown
  */
 export function isRadarHidden(): boolean {
     return IsRadarHidden();
@@ -2722,7 +2731,7 @@ export function isRadarHidden(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x9EB6522EA68F22FE | Since: 323
+ * Hash: 0x9EB6522EA68F22FE | Since: unknown
  */
 export function isRadarPreferenceSwitchedOn(): boolean {
     return IsRadarPreferenceSwitchedOn();
@@ -2731,7 +2740,7 @@ export function isRadarPreferenceSwitchedOn(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x9135584D09A3437E | Since: 323
+ * Hash: 0x9135584D09A3437E | Since: unknown
  */
 export function isReportugcMenuOpen(): boolean {
     return IsReportugcMenuOpen();
@@ -2740,7 +2749,7 @@ export function isReportugcMenuOpen(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xDD100EB17A94FF65 | Since: 323
+ * Hash: 0xDD100EB17A94FF65 | Since: unknown
  */
 export function isScriptedComponentActive(id: number): boolean {
     return IsScriptedHudComponentActive(id);
@@ -2749,7 +2758,7 @@ export function isScriptedComponentActive(id: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x09C0403ED9A751C2 | Since: 323
+ * Hash: 0x09C0403ED9A751C2 | Since: unknown
  */
 export function isScriptedComponentHiddenThisFrame(id: number): boolean {
     return IsScriptedHudComponentHiddenThisFrame(id);
@@ -2758,7 +2767,7 @@ export function isScriptedComponentHiddenThisFrame(id: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xC406BE343FC4B9AF | Since: 323
+ * Hash: 0xC406BE343FC4B9AF | Since: unknown
  */
 export function isSocialClubActive(): boolean {
     return IsSocialClubActive();
@@ -2767,7 +2776,7 @@ export function isSocialClubActive(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x2F057596F2BD0061 | Since: 323
+ * Hash: 0x2F057596F2BD0061 | Since: unknown
  */
 export function isStorePendingNetworkShutdownToOpen(): boolean {
     return Citizen.invokeNative('0x2F057596F2BD0061');
@@ -2776,7 +2785,7 @@ export function isStorePendingNetworkShutdownToOpen(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x8B6817B71B85EBF0 | Since: 323
+ * Hash: 0x8B6817B71B85EBF0 | Since: unknown
  */
 export function isStreamingAdditionalText(): boolean {
     return IsStreamingAdditionalText(0);
@@ -2785,7 +2794,7 @@ export function isStreamingAdditionalText(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xAD6DACA4BA53E0A4 | Since: 323
+ * Hash: 0xAD6DACA4BA53E0A4 | Since: unknown
  */
 export function isSubtitlePreferenceSwitchedOn(): boolean {
     return IsSubtitlePreferenceSwitchedOn();
@@ -2794,7 +2803,7 @@ export function isSubtitlePreferenceSwitchedOn(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xEB709A36958ABE0D | Since: 323
+ * Hash: 0xEB709A36958ABE0D | Since: unknown
  */
 export function isUpdatingMpGamerTagNameAndCrewDetails(gamerTagId: number): boolean {
     return IsValidMpGamerTagMovie(gamerTagId);
@@ -2803,7 +2812,7 @@ export function isUpdatingMpGamerTagNameAndCrewDetails(gamerTagId: number): bool
 /**
  * No comment provided
  * 
- * Hash: 0xE18B138FABC53103 | Since: 323
+ * Hash: 0xE18B138FABC53103 | Since: unknown
  */
 export function isWarningMessageActive(): boolean {
     return IsWarningMessageActive();
@@ -2812,7 +2821,7 @@ export function isWarningMessageActive(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xAF42195A42C63BBA | Since: 323
+ * Hash: 0xAF42195A42C63BBA | Since: unknown
  */
 export function isWarningMessageReadyForControl(): boolean {
     return IsWarningMessageActive2();
@@ -2821,7 +2830,7 @@ export function isWarningMessageReadyForControl(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x1DD1F58F493F1DA5 | Since: 323
+ * Hash: 0x1DD1F58F493F1DA5 | Since: unknown
  */
 export function isWaypointActive(): boolean {
     return IsWaypointActive();
@@ -2830,7 +2839,7 @@ export function isWaypointActive(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xF6C09E276AEB3F2D | Since: 323
+ * Hash: 0xF6C09E276AEB3F2D | Since: unknown
  */
 export function linkNamedRendertarget(modelHash: number | string): void {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -2842,7 +2851,7 @@ export function linkNamedRendertarget(modelHash: number | string): void {
  * 
  * angle: The angle in whole degrees. If less than 0 or greater than 360, unlocks the angle.
  * 
- * Hash: 0x299FAEBB108AE05B | Since: 323
+ * Hash: 0x299FAEBB108AE05B | Since: unknown
  */
 export function lockMinimapAngle(angle: number): void {
     LockMinimapAngle(angle);
@@ -2851,7 +2860,7 @@ export function lockMinimapAngle(angle: number): void {
 /**
  * Locks the minimap to the specified world position.
  * 
- * Hash: 0x1279E861A329E73F | Since: 323
+ * Hash: 0x1279E861A329E73F | Since: unknown
  */
 export function lockMinimapPosition(x: number, y: number): void {
     LockMinimapPosition(x, y);
@@ -2860,7 +2869,7 @@ export function lockMinimapPosition(x: number, y: number): void {
 /**
  * Hides the chat history, closes the input box and makes it unable to be opened unless called again with FALSE.
  * 
- * Hash: 0x1DB21A44B09E8BA3 | Since: 323
+ * Hash: 0x1DB21A44B09E8BA3 | Since: unknown
  */
 export function mpTextChatDisable(toggle: boolean): void {
     DisableMultiplayerChat(toggle);
@@ -2869,7 +2878,7 @@ export function mpTextChatDisable(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x7C226D5346D4D10A | Since: 372
+ * Hash: 0x7C226D5346D4D10A | Since: unknown
  */
 export function mpTextChatIsTeamJob(): void {
     Citizen.invokeNative('0x7C226D5346D4D10A', undefined);
@@ -2878,7 +2887,7 @@ export function mpTextChatIsTeamJob(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x805D7CBB36FD6C4C | Since: 323
+ * Hash: 0x805D7CBB36FD6C4C | Since: unknown
  */
 export function openOnlinePoliciesMenu(): void {
     OpenOnlinePoliciesMenu();
@@ -2887,7 +2896,7 @@ export function openOnlinePoliciesMenu(): void {
 /**
  * Shows a menu for reporting UGC content.
  * 
- * Hash: 0x523A590C1A3CC0D3 | Since: 323
+ * Hash: 0x523A590C1A3CC0D3 | Since: unknown
  */
 export function openReportugcMenu(): void {
     OpenReportugcMenu();
@@ -2897,7 +2906,7 @@ export function openReportugcMenu(): void {
  * Uses the `SOCIAL_CLUB2` scaleform.
  * menu: GALLERY, MISSIONS, CREWS, MIGRATE, PLAYLISTS, JOBS
  * 
- * Hash: 0x75D3691713C3B05A | Since: 323
+ * Hash: 0x75D3691713C3B05A | Since: unknown
  */
 export function openSocialClubMenu(menu: number | string): void {
     if (typeof menu === 'string') menu = GetHashKey(menu)
@@ -2907,7 +2916,7 @@ export function openSocialClubMenu(menu: number | string): void {
 /**
  * No comment provided
  * 
- * Hash: 0xF47E567B3630DD12 | Since: 678
+ * Hash: 0xF47E567B3630DD12 | Since: unknown
  */
 export function overrideMpTextChatColor(hudColor: number): void {
     OverrideMultiplayerChatColour(0, hudColor);
@@ -2916,7 +2925,7 @@ export function overrideMpTextChatColor(hudColor: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x6A1738B4323FE2D9 | Since: 573
+ * Hash: 0x6A1738B4323FE2D9 | Since: unknown
  */
 export function overrideMpTextChatTeamString(gxtEntryHash: number | string): void {
     if (typeof gxtEntryHash === 'string') gxtEntryHash = GetHashKey(gxtEntryHash)
@@ -2926,7 +2935,7 @@ export function overrideMpTextChatTeamString(gxtEntryHash: number | string): voi
 /**
  * No comment provided
  * 
- * Hash: 0x77F16B447824DA6C | Since: 323
+ * Hash: 0x77F16B447824DA6C | Since: unknown
  */
 export function pauseMenuceptionGoDeeper(page: number): void {
     PauseMenuceptionGoDeeper(page);
@@ -2935,7 +2944,7 @@ export function pauseMenuceptionGoDeeper(page: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xCDCA26E80FAECB8F | Since: 323
+ * Hash: 0xCDCA26E80FAECB8F | Since: unknown
  */
 export function pauseMenuceptionTheKick(): void {
     PauseMenuceptionTheKick();
@@ -2948,7 +2957,7 @@ export function pauseMenuceptionTheKick(): void {
  * The `*NONE*` part of the context section means that whatever is being defined, will NOT be active if any or all of the conditions after `*NONE*` are met.
  * This basically allows you to hide certain menu sections, or things like instructional buttons.
  * 
- * Hash: 0xDD564BDD0472C936 | Since: 323
+ * Hash: 0xDD564BDD0472C936 | Since: unknown
  */
 export function pauseMenuActivateContext(contextHash: number | string): void {
     if (typeof contextHash === 'string') contextHash = GetHashKey(contextHash)
@@ -2958,7 +2967,17 @@ export function pauseMenuActivateContext(contextHash: number | string): void {
 /**
  * No comment provided
  * 
- * Hash: 0x444D8CF241EC25C5 | Since: 323
+ * Hash: 0x4947F58BB3AB76D2 | Since: unknown
+ */
+export function pauseMenuClearCloudBusySpinner(): void {
+    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x4947F58BB3AB76D2)'); return;
+    Citizen.invokeNative('0x4947F58BB3AB76D2');
+}
+
+/**
+ * No comment provided
+ * 
+ * Hash: 0x444D8CF241EC25C5 | Since: unknown
  */
 export function pauseMenuDeactivateContext(contextHash: number | string): void {
     if (typeof contextHash === 'string') contextHash = GetHashKey(contextHash)
@@ -2968,7 +2987,7 @@ export function pauseMenuDeactivateContext(contextHash: number | string): void {
 /**
  * No comment provided
  * 
- * Hash: 0xDE03620F8703A9DF | Since: 323
+ * Hash: 0xDE03620F8703A9DF | Since: unknown
  */
 export function pauseMenuGetHairColourIndex(): number {
     return Citizen.invokeNative('0xDE03620F8703A9DF');
@@ -2977,7 +2996,7 @@ export function pauseMenuGetHairColourIndex(): number {
 /**
  * No comment provided
  * 
- * Hash: 0xC8E1071177A23BE5 | Since: 323
+ * Hash: 0xC8E1071177A23BE5 | Since: unknown
  */
 export function pauseMenuGetMouseClickEvent(): [boolean, any, any, any] {
     return Citizen.invokeNative('0xC8E1071177A23BE5');
@@ -2986,7 +3005,7 @@ export function pauseMenuGetMouseClickEvent(): [boolean, any, any, any] {
 /**
  * No comment provided
  * 
- * Hash: 0x359AF31A4B52F5ED | Since: 323
+ * Hash: 0x359AF31A4B52F5ED | Since: unknown
  */
 export function pauseMenuGetMouseHoverIndex(): number {
     return PauseMenuGetIndexOfMouseHoveredSlot();
@@ -2995,7 +3014,7 @@ export function pauseMenuGetMouseHoverIndex(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x13C4B962653A5280 | Since: 323
+ * Hash: 0x13C4B962653A5280 | Since: unknown
  */
 export function pauseMenuGetMouseHoverUniqueId(): number {
     return PauseMenuGetUniqueIdOfMouseHoveredSlot();
@@ -3004,7 +3023,7 @@ export function pauseMenuGetMouseHoverUniqueId(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x84698AB38D0C6636 | Since: 323
+ * Hash: 0x84698AB38D0C6636 | Since: unknown
  */
 export function pauseMenuIsContextActive(contextHash: number | string): boolean {
     if (typeof contextHash === 'string') contextHash = GetHashKey(contextHash)
@@ -3014,7 +3033,7 @@ export function pauseMenuIsContextActive(contextHash: number | string): boolean 
 /**
  * No comment provided
  * 
- * Hash: 0x2A25ADC48F87841F | Since: 323
+ * Hash: 0x2A25ADC48F87841F | Since: unknown
  */
 export function pauseMenuIsContextMenuActive(): boolean {
     return PauseMenuIsContextMenuActive();
@@ -3023,7 +3042,7 @@ export function pauseMenuIsContextMenuActive(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x4895BDEA16E7C080 | Since: 323
+ * Hash: 0x4895BDEA16E7C080 | Since: unknown
  */
 export function pauseMenuRedrawInstructionalButtons(): void {
     PauseMenuRedrawInstructionalButtons(0);
@@ -3032,7 +3051,7 @@ export function pauseMenuRedrawInstructionalButtons(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xC78E239AC5B2DDB9 | Since: 323
+ * Hash: 0xC78E239AC5B2DDB9 | Since: unknown
  */
 export function pauseMenuSetBusySpinner(position: number, spinnerIndex: number): void {
     PauseMenuSetBusySpinner(false, position, spinnerIndex);
@@ -3041,7 +3060,17 @@ export function pauseMenuSetBusySpinner(position: number, spinnerIndex: number):
 /**
  * No comment provided
  * 
- * Hash: 0xF06EBB91A81E09E3 | Since: 323
+ * Hash: 0x640B4FB20A104099 | Since: unknown
+ */
+export function pauseMenuSetCloudBusySpinner(TextLabel: string, bNoMenu: boolean, bBlackBackground: boolean): void {
+    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x640B4FB20A104099)'); return;
+    Citizen.invokeNative('0x640B4FB20A104099', TextLabel, bNoMenu, bBlackBackground);
+}
+
+/**
+ * No comment provided
+ * 
+ * Hash: 0xF06EBB91A81E09E3 | Since: unknown
  */
 export function pauseMenuSetWarnOnTabChange(): void {
     PauseMenuSetWarnOnTabChange(false);
@@ -3050,7 +3079,7 @@ export function pauseMenuSetWarnOnTabChange(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2DE6C5E2E996F178 | Since: 372
+ * Hash: 0x2DE6C5E2E996F178 | Since: unknown
  */
 export function pauseToggleFullscreenMap(): void {
     PauseToggleFullscreenMap(undefined);
@@ -3059,7 +3088,7 @@ export function pauseToggleFullscreenMap(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xC65AB383CD91DF98 | Since: 323
+ * Hash: 0xC65AB383CD91DF98 | Since: unknown
  */
 export function preloadBusyspinner(): void {
     PreloadBusyspinner();
@@ -3068,7 +3097,7 @@ export function preloadBusyspinner(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x742D6FD43115AF73 | Since: 323
+ * Hash: 0x742D6FD43115AF73 | Since: unknown
  */
 export function pulseBlip(blip: number | IBlip): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3078,7 +3107,7 @@ export function pulseBlip(blip: number | IBlip): void {
 /**
  * No comment provided
  * 
- * Hash: 0x81FA173F170560D1 | Since: 323
+ * Hash: 0x81FA173F170560D1 | Since: unknown
  */
 export function refreshWaypoint(): void {
     RefreshWaypoint();
@@ -3087,7 +3116,7 @@ export function refreshWaypoint(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x57D9C12635E25CE3 | Since: 323
+ * Hash: 0x57D9C12635E25CE3 | Since: unknown
  */
 export function registerNamedRendertarget(name: string): boolean {
     return RegisterNamedRendertarget(name, false);
@@ -3097,7 +3126,7 @@ export function registerNamedRendertarget(name: string): boolean {
  * Enables frontend (works in custom frontends, not sure about regular pause menu) navigation keys on keyboard if they were disabled using the native below.
  * To disable the keys, use `0xEC9264727EEC0F28`
  * 
- * Hash: 0x14621BB1DF14E2B2 | Since: 323
+ * Hash: 0x14621BB1DF14E2B2 | Since: unknown
  */
 export function releaseControlOfFrontend(): void {
     ReleaseControlOfFrontend();
@@ -3106,7 +3135,7 @@ export function releaseControlOfFrontend(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xE9F6FFE837354DD4 | Since: 323
+ * Hash: 0xE9F6FFE837354DD4 | Since: unknown
  */
 export function releaseNamedRendertarget(name: string): boolean {
     return ReleaseNamedRendertarget(name);
@@ -3115,7 +3144,7 @@ export function releaseNamedRendertarget(name: string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x2916A928514C9827 | Since: 573
+ * Hash: 0x2916A928514C9827 | Since: unknown
  */
 export function reloadMapMenu(): void {
     ReloadMapMenu();
@@ -3149,17 +3178,16 @@ export function reloadMapMenu(): void {
  * 
  * Remove blip will currently crash your game, just artificially remove the blip by setting the sprite to a id that is 'invisible'.
  * 
- * Hash: 0x86A652570E5F25DD | Since: 323
+ * Hash: 0x86A652570E5F25DD | Since: unknown
  */
-export function removeBlip(blip: number | IBlip): void {
-    const _blip = typeof blip == 'object' ? blip.handle() : blip;
-    RemoveBlip(_blip);
+export function removeBlip(): number {
+    return RemoveBlip();
 }
 
 /**
  * Interesting fact: A hash collision for this is RESET_JETPACK_MODEL_SETTINGS
  * 
- * Hash: 0xC594B315EDF2D4AF | Since: 323
+ * Hash: 0xC594B315EDF2D4AF | Since: unknown
  */
 export function removeCopBlipFromPed(ped: number | IPed): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3169,7 +3197,7 @@ export function removeCopBlipFromPed(ped: number | IPed): void {
 /**
  * No comment provided
  * 
- * Hash: 0x35A3CD97B2C0A6D2 | Since: 1290
+ * Hash: 0x35A3CD97B2C0A6D2 | Since: unknown
  */
 export function removeFakeConeData(blip: number | IBlip): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3179,7 +3207,7 @@ export function removeFakeConeData(blip: number | IBlip): void {
 /**
  * No comment provided
  * 
- * Hash: 0x31698AA80E0223F8 | Since: 323
+ * Hash: 0x31698AA80E0223F8 | Since: unknown
  */
 export function removeMpGamerTag(gamerTagId: number): void {
     RemoveMpGamerTag(gamerTagId);
@@ -3188,7 +3216,7 @@ export function removeMpGamerTag(gamerTagId: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xC7C6789AA1CFEDD0 | Since: 323
+ * Hash: 0xC7C6789AA1CFEDD0 | Since: unknown
  */
 export function removeMultiplayerBankCash(): void {
     RemoveMultiplayerBankCash();
@@ -3197,7 +3225,7 @@ export function removeMultiplayerBankCash(): void {
 /**
  * Removes multiplayer cash hud each frame
  * 
- * Hash: 0x968F270E39141ECA | Since: 323
+ * Hash: 0x968F270E39141ECA | Since: unknown
  */
 export function removeMultiplayerCash(): void {
     RemoveMultiplayerHudCash();
@@ -3206,7 +3234,7 @@ export function removeMultiplayerCash(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x95CF81BD06EE1887 | Since: 323
+ * Hash: 0x95CF81BD06EE1887 | Since: unknown
  */
 export function removeMultiplayerWalletCash(): void {
     RemoveMultiplayerWalletCash();
@@ -3215,7 +3243,7 @@ export function removeMultiplayerWalletCash(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x6EF54AB721DC6242 | Since: 323
+ * Hash: 0x6EF54AB721DC6242 | Since: unknown
  */
 export function removeWarningMessageOptionItems(): void {
     RemoveWarningMessageListItems();
@@ -3224,7 +3252,7 @@ export function removeWarningMessageOptionItems(): void {
 /**
  * makes hudColorIndex2 color into hudColorIndex color
  * 
- * Hash: 0x1CCC708F0F850613 | Since: 323
+ * Hash: 0x1CCC708F0F850613 | Since: unknown
  */
 export function replaceColour(hudColorIndex: number, hudColorIndex2: number): void {
     ReplaceHudColour(hudColorIndex, hudColorIndex2);
@@ -3233,7 +3261,7 @@ export function replaceColour(hudColorIndex: number, hudColorIndex2: number): vo
 /**
  * No comment provided
  * 
- * Hash: 0xF314CF4F0211894E | Since: 323
+ * Hash: 0xF314CF4F0211894E | Since: unknown
  */
 export function replaceColourWithRgba(hudColorIndex: number, r: number, g: number, b: number, a: number): void {
     ReplaceHudColourWithRgba(hudColorIndex, r, g, b, a);
@@ -3242,7 +3270,7 @@ export function replaceColourWithRgba(hudColorIndex: number, r: number, g: numbe
 /**
  * Request a gxt into the passed slot.
  * 
- * Hash: 0x71A78003C8E71424 | Since: 323
+ * Hash: 0x71A78003C8E71424 | Since: unknown
  */
 export function requestAdditionalText(gxt: string, slot: number): void {
     RequestAdditionalText(gxt, slot);
@@ -3251,7 +3279,7 @@ export function requestAdditionalText(gxt: string, slot: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x6009F9F1AE90D8A6 | Since: 323
+ * Hash: 0x6009F9F1AE90D8A6 | Since: unknown
  */
 export function requestAdditionalTextForDlc(gxt: string, slot: number): void {
     RequestAdditionalTextForDlc(gxt, slot);
@@ -3260,7 +3288,7 @@ export function requestAdditionalTextForDlc(gxt: string, slot: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xB99C4E4D9499DF29 | Since: 323
+ * Hash: 0xB99C4E4D9499DF29 | Since: unknown
  */
 export function resetGlobalActionscriptFlag(flagIndex: number): void {
     ResetGlobalActionscriptFlag(flagIndex);
@@ -3269,7 +3297,7 @@ export function resetGlobalActionscriptFlag(flagIndex: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x450930E616475D0D | Since: 323
+ * Hash: 0x450930E616475D0D | Since: unknown
  */
 export function resetComponentValues(id: number): void {
     ResetHudComponentValues(id);
@@ -3278,7 +3306,7 @@ export function resetComponentValues(id: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x12782CE0A636E9F0 | Since: 323
+ * Hash: 0x12782CE0A636E9F0 | Since: unknown
  */
 export function resetReticuleValues(): void {
     ResetReticuleValues();
@@ -3297,7 +3325,7 @@ export function resetReticuleValues(): void {
  * p1 = Hash of Menu
  * p2 = Unknown but always works with -1.
  * 
- * Hash: 0x10706DC6AD2D49C0 | Since: 323
+ * Hash: 0x10706DC6AD2D49C0 | Since: unknown
  */
 export function restartFrontendMenu(menuHash: number | string): void {
     if (typeof menuHash === 'string') menuHash = GetHashKey(menuHash)
@@ -3307,7 +3335,7 @@ export function restartFrontendMenu(menuHash: number | string): void {
 /**
  * No comment provided
  * 
- * Hash: 0xF83D0FEBE75E62C9 | Since: 1290
+ * Hash: 0xF83D0FEBE75E62C9 | Since: unknown
  */
 export function setupFakeConeData(blip: number | IBlip): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3317,7 +3345,7 @@ export function setupFakeConeData(blip: number | IBlip): void {
 /**
  * No comment provided
  * 
- * Hash: 0x9969599CCFF5D85E | Since: 323
+ * Hash: 0x9969599CCFF5D85E | Since: unknown
  */
 export function setAbilityBarValue(): void {
     SetAbilityBarValue(0, 0);
@@ -3326,7 +3354,7 @@ export function setAbilityBarValue(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x1DFEDD15019315A9 | Since: 1493
+ * Hash: 0x1DFEDD15019315A9 | Since: unknown
  */
 export function setAbilityBarVisibility(visible: boolean): void {
     SetAbilityBarVisibilityInMultiplayer(visible);
@@ -3335,7 +3363,7 @@ export function setAbilityBarVisibility(visible: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x889329C80FE5963C | Since: 1868
+ * Hash: 0x889329C80FE5963C | Since: unknown
  */
 export function setAllowAbilityBar(toggle: boolean): void {
     SetAllowAbilityBarInMultiplayer(toggle);
@@ -3344,7 +3372,7 @@ export function setAllowAbilityBar(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x577599CCED639CA2 | Since: 505
+ * Hash: 0x577599CCED639CA2 | Since: unknown
  */
 export function setAllowCommaOnTextInput(): void {
     SetAllowCommaOnTextInput(undefined);
@@ -3353,7 +3381,7 @@ export function setAllowCommaOnTextInput(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xEE76FF7E6A0166B0 | Since: 323
+ * Hash: 0xEE76FF7E6A0166B0 | Since: unknown
  */
 export function setAllMpGamerTagsVisibility(gamerTagId: number, toggle: boolean): void {
     SetMpGamerTagVisibilityAll(gamerTagId, toggle);
@@ -3362,7 +3390,7 @@ export function setAllMpGamerTagsVisibility(gamerTagId: number, toggle: boolean)
 /**
  * Toggles the big minimap state like in GTA:Online.
  * 
- * Hash: 0x231C8F89D0539D8F | Since: 323
+ * Hash: 0x231C8F89D0539D8F | Since: unknown
  */
 export function setBigmapActive(toggleBigMap: boolean, showFullMap: boolean): void {
     SetBigmapActive(toggleBigMap, showFullMap);
@@ -3378,7 +3406,7 @@ export function setBigmapActive(toggleBigMap: boolean, showFullMap: boolean): vo
  * `HUD::SET_BLIP_ALPHA(blip , 64);`
  * 
  * 
- * Hash: 0x45FF974EEE1C8734 | Since: 323
+ * Hash: 0x45FF974EEE1C8734 | Since: unknown
  */
 export function setBlipAlpha(blip: number | IBlip, alpha: number): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3389,7 +3417,7 @@ export function setBlipAlpha(blip: number | IBlip, alpha: number): void {
  * false for enemy
  * true for friendly
  * 
- * Hash: 0x6F6F290102C02AB4 | Since: 323
+ * Hash: 0x6F6F290102C02AB4 | Since: unknown
  */
 export function setBlipAsFriendly(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3399,7 +3427,7 @@ export function setBlipAsFriendly(blip: number | IBlip, toggle: boolean): void {
 /**
  * Makes a blip go small when off the minimap.
  * 
- * Hash: 0x2B6D467DAB714E8D | Since: 323
+ * Hash: 0x2B6D467DAB714E8D | Since: unknown
  */
 export function setBlipAsMinimalOnEdge(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3409,7 +3437,7 @@ export function setBlipAsMinimalOnEdge(blip: number | IBlip, toggle: boolean): v
 /**
  * No comment provided
  * 
- * Hash: 0x24AC0137444F9FD5 | Since: 323
+ * Hash: 0x24AC0137444F9FD5 | Since: unknown
  */
 export function setBlipAsMissionCreatorBlip(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3419,7 +3447,7 @@ export function setBlipAsMissionCreatorBlip(blip: number | IBlip, toggle: boolea
 /**
  * Sets whether or not the specified blip should only be displayed when nearby, or on the minimap.
  * 
- * Hash: 0xBE8BE4FE60E27B72 | Since: 323
+ * Hash: 0xBE8BE4FE60E27B72 | Since: unknown
  */
 export function setBlipAsShortRange(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3429,7 +3457,7 @@ export function setBlipAsShortRange(blip: number | IBlip, toggle: boolean): void
 /**
  * No comment provided
  * 
- * Hash: 0xB203913733F27884 | Since: 323
+ * Hash: 0xB203913733F27884 | Since: unknown
  */
 export function setBlipBright(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3455,7 +3483,7 @@ export function setBlipBright(blip: number | IBlip, toggle: boolean): void {
  * 
  * Category needs to be `7` in order for blip names to show on the expanded minimap when using DISPLAY_PLAYER_NAME_TAGS_ON_BLIPS.
  * 
- * Hash: 0x234CDD44D996FD9A | Since: 323
+ * Hash: 0x234CDD44D996FD9A | Since: unknown
  */
 export function setBlipCategory(blip: number | IBlip, index: number): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3465,7 +3493,7 @@ export function setBlipCategory(blip: number | IBlip, index: number): void {
 /**
  * https://gtaforums.com/topic/864881-all-blip-color-ids-pictured/
  * 
- * Hash: 0x03D7FB09E75D6B7E | Since: 323
+ * Hash: 0x03D7FB09E75D6B7E | Since: unknown
  */
 export function setBlipColour(blip: number | IBlip, color: number): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3475,7 +3503,7 @@ export function setBlipColour(blip: number | IBlip, color: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xAE2AF67E9D9AF65D | Since: 323
+ * Hash: 0xAE2AF67E9D9AF65D | Since: unknown
  */
 export function setBlipCoords(blip: number | IBlip, pos: Vector3): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3498,7 +3526,7 @@ export function setBlipCoords(blip: number | IBlip, pos: Vector3): void {
  * 
  * Anything higher than 10 seems to be exactly the same as 10.
  * 
- * Hash: 0x9029B2F3DA924928 | Since: 323
+ * Hash: 0x9029B2F3DA924928 | Since: unknown
  */
 export function setBlipDisplay(blip: number | IBlip, displayId: number): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3508,7 +3536,7 @@ export function setBlipDisplay(blip: number | IBlip, displayId: number): void {
 /**
  * Must be toggled before being queued for animation
  * 
- * Hash: 0xC4278F70131BAA6D | Since: 323
+ * Hash: 0xC4278F70131BAA6D | Since: unknown
  */
 export function setBlipExtendedHeightThreshold(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3518,7 +3546,7 @@ export function setBlipExtendedHeightThreshold(blip: number | IBlip, toggle: boo
 /**
  * No comment provided
  * 
- * Hash: 0x2AEE8F8390D2298C | Since: 323
+ * Hash: 0x2AEE8F8390D2298C | Since: unknown
  */
 export function setBlipFade(blip: number | IBlip, opacity: number, duration: number): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3528,7 +3556,7 @@ export function setBlipFade(blip: number | IBlip, opacity: number, duration: num
 /**
  * No comment provided
  * 
- * Hash: 0xB14552383D39CE3E | Since: 323
+ * Hash: 0xB14552383D39CE3E | Since: unknown
  */
 export function setBlipFlashes(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3538,7 +3566,7 @@ export function setBlipFlashes(blip: number | IBlip, toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2E8D9498C56DD0D1 | Since: 323
+ * Hash: 0x2E8D9498C56DD0D1 | Since: unknown
  */
 export function setBlipFlashesAlternate(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3548,7 +3576,7 @@ export function setBlipFlashesAlternate(blip: number | IBlip, toggle: boolean): 
 /**
  * No comment provided
  * 
- * Hash: 0xAA51DB313C010A7E | Since: 323
+ * Hash: 0xAA51DB313C010A7E | Since: unknown
  */
 export function setBlipFlashInterval(blip: number | IBlip): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3558,7 +3586,7 @@ export function setBlipFlashInterval(blip: number | IBlip): void {
 /**
  * Adds up after viewing multiple R* scripts. I believe that the duration is in miliseconds.
  * 
- * Hash: 0xD3CD6FD297AE87CC | Since: 323
+ * Hash: 0xD3CD6FD297AE87CC | Since: unknown
  */
 export function setBlipFlashTimer(blip: number | IBlip, duration: number): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3568,7 +3596,7 @@ export function setBlipFlashTimer(blip: number | IBlip, duration: number): void 
 /**
  * No comment provided
  * 
- * Hash: 0x54318C915D27E4CE | Since: 323
+ * Hash: 0x54318C915D27E4CE | Since: unknown
  */
 export function setBlipHiddenOnLegend(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3578,7 +3606,7 @@ export function setBlipHiddenOnLegend(blip: number | IBlip, toggle: boolean): vo
 /**
  * No comment provided
  * 
- * Hash: 0xE2590BC29220CEBB | Since: 323
+ * Hash: 0xE2590BC29220CEBB | Since: unknown
  */
 export function setBlipHighDetail(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3588,7 +3616,7 @@ export function setBlipHighDetail(blip: number | IBlip, toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xB552929B85FC27EC | Since: 573
+ * Hash: 0xB552929B85FC27EC | Since: unknown
  */
 export function setBlipMarkerLongDistance(): void {
     Citizen.invokeNative('0xB552929B85FC27EC', undefined, undefined);
@@ -3597,7 +3625,7 @@ export function setBlipMarkerLongDistance(): void {
 /**
  * Doesn't work if the label text of gxtEntry is >= 80.
  * 
- * Hash: 0xEAA0FFE120D92784 | Since: 323
+ * Hash: 0xEAA0FFE120D92784 | Since: unknown
  */
 export function setBlipNameFromTextFile(blip: number | IBlip, gxtEntry: string): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3607,7 +3635,7 @@ export function setBlipNameFromTextFile(blip: number | IBlip, gxtEntry: string):
 /**
  * No comment provided
  * 
- * Hash: 0x127DE7B20C60A6A3 | Since: 323
+ * Hash: 0x127DE7B20C60A6A3 | Since: unknown
  */
 export function setBlipNameToPlayerName(blip: number | IBlip, player: number | string | IPlayer): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3618,7 +3646,7 @@ export function setBlipNameToPlayerName(blip: number | IBlip, player: number | s
 /**
  * See this topic for more details : gtaforums.com/topic/717612-v-scriptnative-documentation-and-research/page-35?p=1069477935
  * 
- * Hash: 0xAE9FC9EF6A9FAC79 | Since: 323
+ * Hash: 0xAE9FC9EF6A9FAC79 | Since: unknown
  */
 export function setBlipPriority(blip: number | IBlip, priority: number): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3628,7 +3656,7 @@ export function setBlipPriority(blip: number | IBlip, priority: number): void {
 /**
  * After some testing, looks like you need to use CEIL() on the rotation (vehicle/ped heading) before using it there.
  * 
- * Hash: 0xF87683CDF73C3F6E | Since: 323
+ * Hash: 0xF87683CDF73C3F6E | Since: unknown
  */
 export function setBlipRotation(blip: number | IBlip, rotation: number): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3638,7 +3666,7 @@ export function setBlipRotation(blip: number | IBlip, rotation: number): void {
 /**
  * Does not require whole number/integer rotations.
  * 
- * Hash: 0xA8B6AFDAC320AC87 | Since: 877
+ * Hash: 0xA8B6AFDAC320AC87 | Since: unknown
  */
 export function setBlipRotationWithFloat(blip: number | IBlip, heading: number): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3648,7 +3676,7 @@ export function setBlipRotationWithFloat(blip: number | IBlip, heading: number):
 /**
  * Enable / disable showing route for the Blip-object.
  * 
- * Hash: 0x4F7D8A9BFB0B43E9 | Since: 323
+ * Hash: 0x4F7D8A9BFB0B43E9 | Since: unknown
  */
 export function setBlipRoute(blip: number | IBlip, enabled: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3658,7 +3686,7 @@ export function setBlipRoute(blip: number | IBlip, enabled: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x837155CD2F63DA09 | Since: 323
+ * Hash: 0x837155CD2F63DA09 | Since: unknown
  */
 export function setBlipRouteColour(blip: number | IBlip, colour: number): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3668,7 +3696,7 @@ export function setBlipRouteColour(blip: number | IBlip, colour: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xD38744167B2FA257 | Since: 323
+ * Hash: 0xD38744167B2FA257 | Since: unknown
  */
 export function setBlipScale(blip: number | IBlip, scale: number): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3678,7 +3706,7 @@ export function setBlipScale(blip: number | IBlip, scale: number): void {
 /**
  * See https://imgur.com/a/lLkEsMN
  * 
- * Hash: 0xCD6524439909C979 | Since: 1734
+ * Hash: 0xCD6524439909C979 | Since: unknown
  */
 export function setBlipScale2d(blip: number | IBlip, xScale: number, yScale: number): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3688,7 +3716,7 @@ export function setBlipScale2d(blip: number | IBlip, xScale: number, yScale: num
 /**
  * Can be used to give blips any RGB colour with SET_BLIP_COLOUR(blip, 84).
  * 
- * Hash: 0x14892474891E09EB | Since: 323
+ * Hash: 0x14892474891E09EB | Since: unknown
  */
 export function setBlipSecondaryColour(blip: number | IBlip, r: number, g: number, b: number): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3698,7 +3726,7 @@ export function setBlipSecondaryColour(blip: number | IBlip, r: number, g: numbe
 /**
  * No comment provided
  * 
- * Hash: 0x4B5B620C9B59ED34 | Since: 678
+ * Hash: 0x4B5B620C9B59ED34 | Since: unknown
  */
 export function setBlipShortHeightThreshold(): void {
     Citizen.invokeNative('0x4B5B620C9B59ED34', undefined, undefined);
@@ -3707,7 +3735,7 @@ export function setBlipShortHeightThreshold(): void {
 /**
  * As of b2189, the third parameter sets the color of the cone (before b2189 it was ignored). Note that it uses HUD colors, not blip colors.
  * 
- * Hash: 0x13127EC3665E8EE1 | Since: 323
+ * Hash: 0x13127EC3665E8EE1 | Since: unknown
  */
 export function setBlipShowCone(blip: number | IBlip, toggle: boolean, hudColorIndex: number): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3723,7 +3751,7 @@ export function setBlipShowCone(blip: number | IBlip, toggle: boolean, hudColorI
  * Blips Images + IDs:
  * https://gtaxscripting.blogspot.com/2016/05/gta-v-blips-id-and-image.html
  * 
- * Hash: 0xDF735600A4696DAF | Since: 323
+ * Hash: 0xDF735600A4696DAF | Since: unknown
  */
 export function setBlipSprite(blip: number | IBlip, spriteId: number): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3733,7 +3761,7 @@ export function setBlipSprite(blip: number | IBlip, spriteId: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2C9F302398E13141 | Since: 1103
+ * Hash: 0x2C9F302398E13141 | Since: unknown
  */
 export function setBlipUseHeightIndicatorOnEdge(blip: number | IBlip): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -3743,7 +3771,7 @@ export function setBlipUseHeightIndicatorOnEdge(blip: number | IBlip): void {
 /**
  * No comment provided
  * 
- * Hash: 0xD1942374085C8469 | Since: 505
+ * Hash: 0xD1942374085C8469 | Since: unknown
  */
 export function setBlockWantedFlash(disabled: boolean): void {
     Citizen.invokeNative('0xD1942374085C8469', disabled);
@@ -3752,7 +3780,7 @@ export function setBlockWantedFlash(disabled: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x39BBF623FC803EAC | Since: 323
+ * Hash: 0x39BBF623FC803EAC | Since: unknown
  */
 export function setColourOfNextTextComponent(hudColor: number): void {
     SetColourOfNextTextComponent(hudColor);
@@ -3761,7 +3789,7 @@ export function setColourOfNextTextComponent(hudColor: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x9FCB3CBFB3EAD69A | Since: 1734
+ * Hash: 0x9FCB3CBFB3EAD69A | Since: unknown
  */
 export function setCopBlipSprite(): void {
     Citizen.invokeNative('0x9FCB3CBFB3EAD69A', 0, 0);
@@ -3770,7 +3798,7 @@ export function setCopBlipSprite(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xB7B873520C84C118 | Since: 1734
+ * Hash: 0xB7B873520C84C118 | Since: unknown
  */
 export function setCopBlipSpriteAsStandard(): void {
     Citizen.invokeNative('0xB7B873520C84C118');
@@ -3779,7 +3807,7 @@ export function setCopBlipSpriteAsStandard(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2ACCB195F3CCD9DE | Since: 2545
+ * Hash: 0x2ACCB195F3CCD9DE | Since: unknown
  */
 export function setCustomMpColor(hudColorId: number): void {
     SetCustomMpHudColor(hudColorId);
@@ -3788,7 +3816,7 @@ export function setCustomMpColor(hudColorId: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x817B86108EB94E51 | Since: 323
+ * Hash: 0x817B86108EB94E51 | Since: unknown
  */
 export function setDescriptionForUgcMissionEightStrings(): void {
     Citizen.invokeNative('0x817B86108EB94E51', false, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined);
@@ -3797,7 +3825,7 @@ export function setDescriptionForUgcMissionEightStrings(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x04655F9D075D0AE5 | Since: 323
+ * Hash: 0x04655F9D075D0AE5 | Since: unknown
  */
 export function setDirectorModeAvailable(toggle: boolean): void {
     Citizen.invokeNative('0x04655F9D075D0AE5', toggle);
@@ -3806,7 +3834,7 @@ export function setDirectorModeAvailable(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2632482FD6B9AB87 | Since: 323
+ * Hash: 0x2632482FD6B9AB87 | Since: unknown
  */
 export function setDirectorModeLaunchedByScript(): void {
     SetDirectorModeClearTriggeredFlag();
@@ -3815,7 +3843,7 @@ export function setDirectorModeLaunchedByScript(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA17784FCA9548D15 | Since: 877
+ * Hash: 0xA17784FCA9548D15 | Since: unknown
  */
 export function setFakeGpsPlayerPositionThisFrame(pos: Vector3): void {
     Citizen.invokeNative('0xA17784FCA9548D15', pos.x, pos.y, pos.z);
@@ -3824,7 +3852,7 @@ export function setFakeGpsPlayerPositionThisFrame(pos: Vector3): void {
 /**
  * Argument must be 0.0f or above 38.0f, or it will be ignored.
  * 
- * Hash: 0xD201F3FF917A506D | Since: 323
+ * Hash: 0xD201F3FF917A506D | Since: unknown
  */
 export function setFakeMinimapMaxAltimeterHeight(altitude: number): void {
     SetMinimapAltitudeIndicatorLevel(altitude, false, undefined);
@@ -3835,7 +3863,7 @@ export function setFakeMinimapMaxAltimeterHeight(altitude: number): void {
  * 
  * Too bad this wouldn't work over the network (obviously not). Could spoof where we would be.
  * 
- * Hash: 0x77E2DD177910E1CF | Since: 323
+ * Hash: 0x77E2DD177910E1CF | Since: unknown
  */
 export function setFakePausemapPlayerPositionThisFrame(x: number, y: number): void {
     SetFakePausemapPlayerPositionThisFrame(x, y);
@@ -3844,7 +3872,7 @@ export function setFakePausemapPlayerPositionThisFrame(x: number, y: number): vo
 /**
  * Setter for GET_FAKE_SPECTATOR_MODE
  * 
- * Hash: 0xCD74233600C4EA6B | Since: 505
+ * Hash: 0xCD74233600C4EA6B | Since: unknown
  */
 export function setFakeSpectatorMode(toggle: boolean): void {
     Citizen.invokeNative('0xCD74233600C4EA6B', toggle);
@@ -3853,7 +3881,7 @@ export function setFakeSpectatorMode(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x7679CC1BCEBE3D4C | Since: 323
+ * Hash: 0x7679CC1BCEBE3D4C | Since: unknown
  */
 export function setFloatingHelpTextScreenPosition(hudIndex: number, x: number, y: number): void {
     SetFloatingHelpTextScreenPosition(hudIndex, x, y);
@@ -3862,7 +3890,7 @@ export function setFloatingHelpTextScreenPosition(hudIndex: number, x: number, y
 /**
  * No comment provided
  * 
- * Hash: 0x788E7FD431BD67F1 | Since: 323
+ * Hash: 0x788E7FD431BD67F1 | Since: unknown
  */
 export function setFloatingHelpTextStyle(hudIndex: number): void {
     SetFloatingHelpTextStyle(hudIndex, 0, 0, 0, 0, 0);
@@ -3871,7 +3899,7 @@ export function setFloatingHelpTextStyle(hudIndex: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xB094BC1DB4018240 | Since: 323
+ * Hash: 0xB094BC1DB4018240 | Since: unknown
  */
 export function setFloatingHelpTextToEntity(hudIndex: number, entity: number | IEntity, offsetX: number, offsetY: number): void {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -3881,7 +3909,7 @@ export function setFloatingHelpTextToEntity(hudIndex: number, entity: number | I
 /**
  * No comment provided
  * 
- * Hash: 0x784BA7E0ECEB4178 | Since: 323
+ * Hash: 0x784BA7E0ECEB4178 | Since: unknown
  */
 export function setFloatingHelpTextWorldPosition(hudIndex: number, pos: Vector3): void {
     SetFloatingHelpTextWorldPosition(hudIndex, pos.x, pos.y, pos.z);
@@ -3890,7 +3918,7 @@ export function setFloatingHelpTextWorldPosition(hudIndex: number, pos: Vector3)
 /**
  * No comment provided
  * 
- * Hash: 0x2790F4B17D098E26 | Since: 573
+ * Hash: 0x2790F4B17D098E26 | Since: unknown
  */
 export function setForceShowGps(toggle: boolean): void {
     Citizen.invokeNative('0x2790F4B17D098E26', toggle);
@@ -3899,7 +3927,7 @@ export function setForceShowGps(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x745711A75AB09277 | Since: 323
+ * Hash: 0x745711A75AB09277 | Since: unknown
  */
 export function setFrontendActive(active: boolean): void {
     SetFrontendActive(active);
@@ -3909,7 +3937,7 @@ export function setFrontendActive(active: boolean): void {
  * radarThickness: The width of the GPS route on the radar
  * mapThickness: The width of the GPS route on the map
  * 
- * Hash: 0x900086F371220B6F | Since: 323
+ * Hash: 0x900086F371220B6F | Since: unknown
  */
 export function setGpsCustomRouteRender(toggle: boolean, radarThickness: number, mapThickness: number): void {
     SetGpsCustomRouteRender(toggle, radarThickness, mapThickness);
@@ -3920,7 +3948,7 @@ export function setGpsCustomRouteRender(toggle: boolean, radarThickness: number,
  * 
  * Doesn't seem like the flags are actually read by the game at all.
  * 
- * Hash: 0x5B440763A4C8D15B | Since: 323
+ * Hash: 0x5B440763A4C8D15B | Since: unknown
  */
 export function setGpsFlags(): void {
     SetGpsFlags(0, 0);
@@ -3929,7 +3957,7 @@ export function setGpsFlags(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x320D0E0D936A0E9B | Since: 323
+ * Hash: 0x320D0E0D936A0E9B | Since: unknown
  */
 export function setGpsFlashes(toggle: boolean): void {
     SetGpsFlashes(toggle);
@@ -3938,7 +3966,7 @@ export function setGpsFlashes(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x3DDA37128DD1ACA8 | Since: 323
+ * Hash: 0x3DDA37128DD1ACA8 | Since: unknown
  */
 export function setGpsMultiRouteRender(toggle: boolean): void {
     SetGpsMultiRouteRender(toggle);
@@ -3947,7 +3975,7 @@ export function setGpsMultiRouteRender(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x3F5CC444DCAAA8F2 | Since: 323
+ * Hash: 0x3F5CC444DCAAA8F2 | Since: unknown
  */
 export function setHealthDisplayValues(health: number, capacity: number, wasAdded: boolean): void {
     SetHealthHudDisplayValues(health, capacity, wasAdded);
@@ -3956,7 +3984,7 @@ export function setHealthDisplayValues(health: number, capacity: number, wasAdde
 /**
  * No comment provided
  * 
- * Hash: 0xB9C362BABECDDC7A | Since: 463
+ * Hash: 0xB9C362BABECDDC7A | Since: unknown
  */
 export function setHelpMessageStyle(style: number, hudColor: number, alpha: number): void {
     SetHelpMessageTextStyle(style, hudColor, alpha, 0, 0);
@@ -3965,7 +3993,7 @@ export function setHelpMessageStyle(style: number, hudColor: number, alpha: numb
 /**
  * No comment provided
  * 
- * Hash: 0xAABB1F56E2A17CED | Since: 323
+ * Hash: 0xAABB1F56E2A17CED | Since: unknown
  */
 export function setComponentPosition(id: number, x: number, y: number): void {
     SetHudComponentPosition(id, x, y);
@@ -3974,7 +4002,7 @@ export function setComponentPosition(id: number, x: number, y: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x7EC8ABA5E74B3D7A | Since: 2372
+ * Hash: 0x7EC8ABA5E74B3D7A | Since: unknown
  */
 export function setInsideVeryLargeInterior(toggle: boolean): void {
     SetInteriorZoomLevelDecreased(toggle);
@@ -3983,7 +4011,7 @@ export function setInsideVeryLargeInterior(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x504DFE62A1692296 | Since: 1493
+ * Hash: 0x504DFE62A1692296 | Since: unknown
  */
 export function setInsideVerySmallInterior(toggle: boolean): void {
     SetInteriorZoomLevelIncreased(toggle);
@@ -3992,7 +4020,7 @@ export function setInsideVerySmallInterior(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x06A320535F5F0248 | Since: 323
+ * Hash: 0x06A320535F5F0248 | Since: unknown
  */
 export function setMaxArmourDisplay(maximumValue: number): void {
     SetMaxArmourHudDisplay(maximumValue);
@@ -4001,7 +4029,7 @@ export function setMaxArmourDisplay(maximumValue: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x975D66A0BC17064C | Since: 323
+ * Hash: 0x975D66A0BC17064C | Since: unknown
  */
 export function setMaxHealthDisplay(maximumValue: number): void {
     SetMaxHealthHudDisplay(maximumValue);
@@ -4010,7 +4038,7 @@ export function setMaxHealthDisplay(maximumValue: number): void {
 /**
  * This native does absolutely nothing on PC master builds, just a nullsub.
  * 
- * Hash: 0xB09D42557C45EBA1 | Since: 3258
+ * Hash: 0xB09D42557C45EBA1 | Since: unknown
  */
 export function setMinimapBackgroundHidden(toggle: boolean): void {
     Citizen.invokeNative('0xB09D42557C45EBA1', toggle);
@@ -4019,7 +4047,7 @@ export function setMinimapBackgroundHidden(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x58FADDED207897DC | Since: 323
+ * Hash: 0x58FADDED207897DC | Since: unknown
  */
 export function setMinimapBlockWaypoint(toggle: boolean): void {
     SetMinimapBlockWaypoint(toggle);
@@ -4029,7 +4057,7 @@ export function setMinimapBlockWaypoint(toggle: boolean): void {
  * This native is used to colorize certain map components like the army base at the top of the map.
  * p2 appears to be always -1. If p2 is -1 then native wouldn't change the color. See https://gfycat.com/SkinnyPinkChupacabra
  * 
- * Hash: 0x75A9A10948D1DEA6 | Since: 323
+ * Hash: 0x75A9A10948D1DEA6 | Since: unknown
  */
 export function setMinimapComponent(componentId: number, toggle: boolean, overrideColor: number): boolean {
     return SetMinimapComponent(componentId, toggle, overrideColor);
@@ -4038,7 +4066,7 @@ export function setMinimapComponent(componentId: number, toggle: boolean, overri
 /**
  * No comment provided
  * 
- * Hash: 0x62E849B7EB28E770 | Since: 323
+ * Hash: 0x62E849B7EB28E770 | Since: unknown
  */
 export function setMinimapFowDoNotUpdate(): void {
     Citizen.invokeNative('0x62E849B7EB28E770', false);
@@ -4047,7 +4075,7 @@ export function setMinimapFowDoNotUpdate(): void {
 /**
  * Up to eight coordinates may be revealed per frame
  * 
- * Hash: 0x0923DBF87DFF735E | Since: 323
+ * Hash: 0x0923DBF87DFF735E | Since: unknown
  */
 export function setMinimapFowRevealCoordinate(pos: Vector3): void {
     SetMinimapFowRevealCoordinate(pos.x, pos.y, pos.z);
@@ -4060,7 +4088,7 @@ export function setMinimapFowRevealCoordinate(pos: Vector3): void {
  * You'll also need to use the `GOLF` scaleform in order to get the correct minmap border to show up.
  * Use `0x35edd5b2e3ff01c0` to reset the map when you no longer want to display any golf holes (you still need to unlock zoom, position and angle of the radar manually after calling this).
  * 
- * Hash: 0x71BDB63DBAF8DA59 | Since: 323
+ * Hash: 0x71BDB63DBAF8DA59 | Since: unknown
  */
 export function setMinimapGolfCourse(hole: number): void {
     SetMinimapGolfCourse(hole);
@@ -4069,7 +4097,7 @@ export function setMinimapGolfCourse(hole: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x35EDD5B2E3FF01C0 | Since: 323
+ * Hash: 0x35EDD5B2E3FF01C0 | Since: unknown
  */
 export function setMinimapGolfCourseOff(): void {
     SetMinimapGolfCourseOff();
@@ -4080,7 +4108,7 @@ export function setMinimapGolfCourseOff(): void {
  * 
  * FOW = Fog of War
  * 
- * Hash: 0xF8DEE0A5600CBB93 | Since: 323
+ * Hash: 0xF8DEE0A5600CBB93 | Since: unknown
  */
 export function setMinimapHideFow(toggle: boolean): void {
     SetMinimapHideFow(toggle);
@@ -4089,7 +4117,7 @@ export function setMinimapHideFow(toggle: boolean): void {
 /**
  * Toggles the North Yankton map
  * 
- * Hash: 0x9133955F1A2DA957 | Since: 323
+ * Hash: 0x9133955F1A2DA957 | Since: unknown
  */
 export function setMinimapInPrologue(toggle: boolean): void {
     SetMinimapInPrologue(toggle);
@@ -4098,7 +4126,7 @@ export function setMinimapInPrologue(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x1A5CD7752DD28CD3 | Since: 323
+ * Hash: 0x1A5CD7752DD28CD3 | Since: unknown
  */
 export function setMinimapInSpectatorMode(toggle: boolean, ped: number | IPed): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4108,7 +4136,7 @@ export function setMinimapInSpectatorMode(toggle: boolean, ped: number | IPed): 
 /**
  * No comment provided
  * 
- * Hash: 0x6B50FC8749632EC1 | Since: 2189
+ * Hash: 0x6B50FC8749632EC1 | Since: unknown
  */
 export function setMinimapSonarSweep(toggle: boolean): void {
     SetMinimapSonarSweep(toggle);
@@ -4117,7 +4145,7 @@ export function setMinimapSonarSweep(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x5F28ECF5FC84772F | Since: 323
+ * Hash: 0x5F28ECF5FC84772F | Since: unknown
  */
 export function setMissionName(name: string): void {
     SetMissionName(false, name);
@@ -4126,7 +4154,7 @@ export function setMissionName(name: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0xE45087D85F468BC2 | Since: 323
+ * Hash: 0xE45087D85F468BC2 | Since: unknown
  */
 export function setMissionNameForUgcMission(name: string): void {
     SetMissionName2(false, name);
@@ -4138,7 +4166,7 @@ export function setMissionNameForUgcMission(name: string): void {
  * 6 = Left Arrow
  * 7 = Right Arrow
  * 
- * Hash: 0x8DB8CFFD58B62552 | Since: 323
+ * Hash: 0x8DB8CFFD58B62552 | Since: unknown
  */
 export function setMouseCursorStyle(spriteId: number): void {
     SetMouseCursorStyle(spriteId);
@@ -4147,7 +4175,7 @@ export function setMouseCursorStyle(spriteId: number): void {
 /**
  * Shows the cursor on screen for one frame.
  * 
- * Hash: 0xAAE7CE1D63167423 | Since: 323
+ * Hash: 0xAAE7CE1D63167423 | Since: unknown
  */
 export function setMouseCursorThisFrame(): void {
     SetMouseCursorThisFrame();
@@ -4157,7 +4185,7 @@ export function setMouseCursorThisFrame(): void {
  * Shows/hides the frontend cursor on the pause menu or similar menus.
  * Clicking off and then on the game window will show it again.
  * 
- * Hash: 0x98215325A695E78A | Since: 323
+ * Hash: 0x98215325A695E78A | Since: unknown
  */
 export function setMouseCursorVisible(toggle: boolean): void {
     SetMouseCursorVisible(toggle);
@@ -4166,7 +4194,7 @@ export function setMouseCursorVisible(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x1563FE35E9928E67 | Since: 1365
+ * Hash: 0x1563FE35E9928E67 | Since: unknown
  */
 export function setMpGamerTagsPointHealth(gamerTagId: number, value: number, maximumValue: number): void {
     SetMpGamerTagOverridePlayerHealth(gamerTagId, value, maximumValue);
@@ -4175,7 +4203,7 @@ export function setMpGamerTagsPointHealth(gamerTagId: number, value: number, max
 /**
  * No comment provided
  * 
- * Hash: 0xD29EC58C2F6B5014 | Since: 1365
+ * Hash: 0xD29EC58C2F6B5014 | Since: unknown
  */
 export function setMpGamerTagsShouldUsePointsHealth(gamerTagId: number, toggle: boolean): void {
     SetMpGamerTagDisablePlayerHealthSync(gamerTagId, toggle);
@@ -4184,7 +4212,7 @@ export function setMpGamerTagsShouldUsePointsHealth(gamerTagId: number, toggle: 
 /**
  * Displays a bunch of icons above the players name, and level, and their name twice
  * 
- * Hash: 0xA67F9C46D612B6F1 | Since: 323
+ * Hash: 0xA67F9C46D612B6F1 | Since: unknown
  */
 export function setMpGamerTagsShouldUseVehicleHealth(gamerTagId: number, toggle: boolean): void {
     SetMpGamerTagUseVehicleHealth(gamerTagId, toggle);
@@ -4193,7 +4221,7 @@ export function setMpGamerTagsShouldUseVehicleHealth(gamerTagId: number, toggle:
 /**
  * Sets flag's sprite transparency. 0-255.
  * 
- * Hash: 0xD48FE545CD46F857 | Since: 323
+ * Hash: 0xD48FE545CD46F857 | Since: unknown
  */
 export function setMpGamerTagAlpha(gamerTagId: number, component: number, alpha: number): void {
     SetMpGamerTagAlpha(gamerTagId, component, alpha);
@@ -4202,7 +4230,7 @@ export function setMpGamerTagAlpha(gamerTagId: number, component: number, alpha:
 /**
  * No comment provided
  * 
- * Hash: 0x7B7723747CCB55B6 | Since: 323
+ * Hash: 0x7B7723747CCB55B6 | Since: unknown
  */
 export function setMpGamerTagBigText(gamerTagId: number, _string: string): void {
     SetMpGamerTagBigText(gamerTagId, _string);
@@ -4214,7 +4242,7 @@ export function setMpGamerTagBigText(gamerTagId: number, _string: string): void 
  * gamerTagId is obtained using for example CREATE_FAKE_MP_GAMER_TAG
  * Ranges from 0 to 255. 0 is grey health bar, ~50 yellow, 200 purple.
  * 
- * Hash: 0x613ED644950626AE | Since: 323
+ * Hash: 0x613ED644950626AE | Since: unknown
  */
 export function setMpGamerTagColour(gamerTagId: number, component: number, hudColorIndex: number): void {
     SetMpGamerTagColour(gamerTagId, component, hudColorIndex);
@@ -4227,7 +4255,7 @@ export function setMpGamerTagColour(gamerTagId: number, component: number, hudCo
  * - This was _SET_MP_GAMER_TAG_HEALTH_BAR_COLOR,
  * -> Rockstar use the EU spelling of 'color' so I hashed the same name with COLOUR and it came back as the correct hash, so it has been corrected above.
  * 
- * Hash: 0x3158C77A7E888AB4 | Since: 323
+ * Hash: 0x3158C77A7E888AB4 | Since: unknown
  */
 export function setMpGamerTagHealthBarColour(gamerTagId: number, hudColorIndex: number): void {
     SetMpGamerTagHealthBarColour(gamerTagId, hudColorIndex);
@@ -4236,7 +4264,7 @@ export function setMpGamerTagHealthBarColour(gamerTagId: number, hudColorIndex: 
 /**
  * No comment provided
  * 
- * Hash: 0xDEA2B8283BAA3944 | Since: 323
+ * Hash: 0xDEA2B8283BAA3944 | Since: unknown
  */
 export function setMpGamerTagName(gamerTagId: number, _string: string): void {
     SetMpGamerTagName(gamerTagId, _string);
@@ -4245,7 +4273,7 @@ export function setMpGamerTagName(gamerTagId: number, _string: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0x9C16459B2324B2CF | Since: 877
+ * Hash: 0x9C16459B2324B2CF | Since: unknown
  */
 export function setMpGamerTagNumPackages(gamerTagId: number): void {
     SetMpGamerTagMpBagLargeCount(gamerTagId, 0);
@@ -4286,7 +4314,7 @@ export function setMpGamerTagNumPackages(gamerTagId: number): void {
  * MP_TAG_BOMB
  * };
  * 
- * Hash: 0x63BB75ABEDC1F6A0 | Since: 323
+ * Hash: 0x63BB75ABEDC1F6A0 | Since: unknown
  */
 export function setMpGamerTagVisibility(gamerTagId: number, component: number, toggle: boolean): void {
     SetMpGamerTagVisibility(gamerTagId, component, toggle, undefined);
@@ -4295,7 +4323,7 @@ export function setMpGamerTagVisibility(gamerTagId: number, component: number, t
 /**
  * displays wanted star above head
  * 
- * Hash: 0xCF228E2AA03099C3 | Since: 323
+ * Hash: 0xCF228E2AA03099C3 | Since: unknown
  */
 export function setMpGamerTagWantedLevel(gamerTagId: number, wantedlvl: number): void {
     SetMpGamerTagWantedLevel(gamerTagId, wantedlvl);
@@ -4304,7 +4332,7 @@ export function setMpGamerTagWantedLevel(gamerTagId: number, wantedlvl: number):
 /**
  * No comment provided
  * 
- * Hash: 0xDD21B55DF695CD0A | Since: 323
+ * Hash: 0xDD21B55DF695CD0A | Since: unknown
  */
 export function setMultiplayerBankCash(): void {
     SetMultiplayerBankCash();
@@ -4313,7 +4341,7 @@ export function setMultiplayerBankCash(): void {
 /**
  * This native does absolutely nothing, just a nullsub
  * 
- * Hash: 0xFD1D220394BCB824 | Since: 323
+ * Hash: 0xFD1D220394BCB824 | Since: unknown
  */
 export function setMultiplayerCash(): void {
     SetMultiplayerHudCash(0, false);
@@ -4322,7 +4350,7 @@ export function setMultiplayerCash(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xC2D15BEF167E27BC | Since: 323
+ * Hash: 0xC2D15BEF167E27BC | Since: unknown
  */
 export function setMultiplayerWalletCash(): void {
     SetMultiplayerWalletCash();
@@ -4331,7 +4359,7 @@ export function setMultiplayerWalletCash(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xFE43368D2AA4F2FC | Since: 323
+ * Hash: 0xFE43368D2AA4F2FC | Since: unknown
  */
 export function setNewWaypoint(x: number, y: number): void {
     SetNewWaypoint(x, y);
@@ -4340,7 +4368,7 @@ export function setNewWaypoint(x: number, y: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xDF47FC56C71569CF | Since: 323
+ * Hash: 0xDF47FC56C71569CF | Since: unknown
  */
 export function setPauseMenuActive(toggle: boolean): void {
     SetPauseMenuActive(toggle);
@@ -4356,7 +4384,7 @@ export function setPauseMenuActive(toggle: boolean): void {
  * Lights On: https://vespura.com/hi/i/2019-04-01_16-09_540ee_1015.png
  * Lights Off: https://vespura.com/hi/i/2019-04-01_16-10_8b5e7_1016.png
  * 
- * Hash: 0x3CA6050692BC61B0 | Since: 323
+ * Hash: 0x3CA6050692BC61B0 | Since: unknown
  */
 export function setPauseMenuPedLighting(state: boolean): void {
     SetPauseMenuPedLighting(state);
@@ -4369,7 +4397,7 @@ export function setPauseMenuPedLighting(state: boolean): void {
  * 
  * `state` 0 will make the ped slowly fall asleep, 1 will slowly wake the ped up.
  * 
- * Hash: 0xECF128344E9FF9F1 | Since: 323
+ * Hash: 0xECF128344E9FF9F1 | Since: unknown
  */
 export function setPauseMenuPedSleepState(state: boolean): void {
     SetPauseMenuPedSleepState(state);
@@ -4378,7 +4406,7 @@ export function setPauseMenuPedSleepState(state: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x0C4BBF625CA98C4E | Since: 323
+ * Hash: 0x0C4BBF625CA98C4E | Since: unknown
  */
 export function setPedAiBlipForcedOn(ped: number | IPed, toggle: boolean): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4388,7 +4416,7 @@ export function setPedAiBlipForcedOn(ped: number | IPed, toggle: boolean): void 
 /**
  * No comment provided
  * 
- * Hash: 0xE52B8E7F85D39A08 | Since: 323
+ * Hash: 0xE52B8E7F85D39A08 | Since: unknown
  */
 export function setPedAiBlipGangId(ped: number | IPed, gangId: number): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4398,7 +4426,7 @@ export function setPedAiBlipGangId(ped: number | IPed, gangId: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x3EED80DFF7325CAA | Since: 323
+ * Hash: 0x3EED80DFF7325CAA | Since: unknown
  */
 export function setPedAiBlipHasCone(ped: number | IPed, toggle: boolean): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4408,7 +4436,7 @@ export function setPedAiBlipHasCone(ped: number | IPed, toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x97C65887D4B37FA9 | Since: 323
+ * Hash: 0x97C65887D4B37FA9 | Since: unknown
  */
 export function setPedAiBlipNoticeRange(ped: number | IPed, range: number): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4418,7 +4446,7 @@ export function setPedAiBlipNoticeRange(ped: number | IPed, range: number): void
 /**
  * No comment provided
  * 
- * Hash: 0xFCFACD0DB9D7A57D | Since: 877
+ * Hash: 0xFCFACD0DB9D7A57D | Since: unknown
  */
 export function setPedAiBlipSprite(ped: number | IPed, spriteId: number): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4430,7 +4458,7 @@ export function setPedAiBlipSprite(ped: number | IPed, spriteId: number): void {
  * 
  * See gtaforums.com/topic/884370-native-research-ai-blips for further information.
  * 
- * Hash: 0xD30C50DF888D58B5 | Since: 323
+ * Hash: 0xD30C50DF888D58B5 | Since: unknown
  */
 export function setPedHasAiBlip(ped: number | IPed, hasCone: boolean): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4440,7 +4468,7 @@ export function setPedHasAiBlip(ped: number | IPed, hasCone: boolean): void {
 /**
  * color: see SET_BLIP_COLOUR
  * 
- * Hash: 0xB13DCB4C6FAAD238 | Since: 505
+ * Hash: 0xB13DCB4C6FAAD238 | Since: unknown
  */
 export function setPedHasAiBlipWithColour(ped: number | IPed, hasCone: boolean, color: number): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4450,7 +4478,7 @@ export function setPedHasAiBlipWithColour(ped: number | IPed, hasCone: boolean, 
 /**
  * No comment provided
  * 
- * Hash: 0x7B21E0BB01E8224A | Since: 323
+ * Hash: 0x7B21E0BB01E8224A | Since: unknown
  */
 export function setPlayerIconColour(color: number): void {
     SetMainPlayerBlipColour(color);
@@ -4460,7 +4488,7 @@ export function setPlayerIconColour(color: number): void {
  * If toggle is true, hides special ability bar / character name in the pause menu
  * If toggle is false, shows special ability bar / character name in the pause menu
  * 
- * Hash: 0x808519373FD336A3 | Since: 323
+ * Hash: 0x808519373FD336A3 | Since: unknown
  */
 export function setPlayerIsInDirectorMode(toggle: boolean): void {
     SetPlayerIsInDirectorMode(toggle);
@@ -4469,7 +4497,7 @@ export function setPlayerIsInDirectorMode(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x41350B4FC28E3941 | Since: 323
+ * Hash: 0x41350B4FC28E3941 | Since: unknown
  */
 export function setPmWarningscreenActive(): void {
     Citizen.invokeNative('0x41350B4FC28E3941', false);
@@ -4478,7 +4506,7 @@ export function setPmWarningscreenActive(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x1EAC5F91BCBC5073 | Since: 323
+ * Hash: 0x1EAC5F91BCBC5073 | Since: unknown
  */
 export function setRaceTrackRender(toggle: boolean): void {
     SetRaceTrackRender(toggle);
@@ -4487,7 +4515,7 @@ export function setRaceTrackRender(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xE81B7D2A3DAB2D81 | Since: 323
+ * Hash: 0xE81B7D2A3DAB2D81 | Since: unknown
  */
 export function setRadarAsExteriorThisFrame(): void {
     SetRadarAsExteriorThisFrame();
@@ -4497,7 +4525,7 @@ export function setRadarAsExteriorThisFrame(): void {
  * List of interior hashes: https://pastebin.com/1FUyXNqY
  * Not for every interior zoom > 0 available.
  * 
- * Hash: 0x59E727A1C9D3E31A | Since: 323
+ * Hash: 0x59E727A1C9D3E31A | Since: unknown
  */
 export function setRadarAsInteriorThisFrame(interior: number | string, pos: Vector3, zoom: number): void {
     if (typeof interior === 'string') interior = GetHashKey(interior)
@@ -4507,7 +4535,7 @@ export function setRadarAsInteriorThisFrame(interior: number | string, pos: Vect
 /**
  * zoomLevel ranges from 0 to 1400 in R* Scripts
  * 
- * Hash: 0x096EF57A0C999BBA | Since: 323
+ * Hash: 0x096EF57A0C999BBA | Since: unknown
  */
 export function setRadarZoom(zoomLevel: number): void {
     SetRadarZoom(zoomLevel);
@@ -4516,7 +4544,7 @@ export function setRadarZoom(zoomLevel: number): void {
 /**
  * zoom ranges from 0 to 90f in R* Scripts
  * 
- * Hash: 0xBD12C5EEE184C337 | Since: 323
+ * Hash: 0xBD12C5EEE184C337 | Since: unknown
  */
 export function setRadarZoomPrecise(zoom: number): void {
     SetRadarZoomPrecise(zoom);
@@ -4525,7 +4553,7 @@ export function setRadarZoomPrecise(zoom: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xF98E4B3E56AFC7B1 | Since: 323
+ * Hash: 0xF98E4B3E56AFC7B1 | Since: unknown
  */
 export function setRadarZoomToBlip(blip: number | IBlip, zoom: number): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -4535,7 +4563,7 @@ export function setRadarZoomToBlip(blip: number | IBlip, zoom: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xCB7CC0D58405AD41 | Since: 323
+ * Hash: 0xCB7CC0D58405AD41 | Since: unknown
  */
 export function setRadarZoomToDistance(zoom: number): void {
     SetRadarZoomToDistance(zoom);
@@ -4544,7 +4572,7 @@ export function setRadarZoomToDistance(zoom: number): void {
 /**
  * Enabling this on a radius blip will make it outline only. See https://cdn.discordapp.com/attachments/553235301632573459/575132227935928330/unknown.png
  * 
- * Hash: 0x25615540D894B814 | Since: 323
+ * Hash: 0x25615540D894B814 | Since: unknown
  */
 export function setRadiusBlipEdge(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -4554,7 +4582,7 @@ export function setRadiusBlipEdge(blip: number | IBlip, toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x0CF54F20DE43879C | Since: 323
+ * Hash: 0x0CF54F20DE43879C | Since: unknown
  */
 export function setSavegameListUniqueId(): void {
     Citizen.invokeNative('0x0CF54F20DE43879C', undefined);
@@ -4563,7 +4591,7 @@ export function setSavegameListUniqueId(): void {
 /**
  * Sets the color of HUD_COLOUR_SCRIPT_VARIABLE
  * 
- * Hash: 0xD68A5FF8A3A89874 | Since: 323
+ * Hash: 0xD68A5FF8A3A89874 | Since: unknown
  */
 export function setScriptVariableColour(r: number, g: number, b: number, a: number): void {
     SetScriptVariableHudColour(r, g, b, a);
@@ -4572,7 +4600,7 @@ export function setScriptVariableColour(r: number, g: number, b: number, a: numb
 /**
  * Sets the color of HUD_COLOUR_SCRIPT_VARIABLE_2
  * 
- * Hash: 0x16A304E6CB2BFAB9 | Since: 323
+ * Hash: 0x16A304E6CB2BFAB9 | Since: unknown
  */
 export function setSecondScriptVariableColour(r: number, g: number, b: number, a: number): void {
     SetScriptVariable2HudColour(r, g, b, a);
@@ -4584,7 +4612,7 @@ export function setSecondScriptVariableColour(r: number, g: number, b: number, a
  * `HUD::SET_SOCIAL_CLUB_TOUR("General");`
  * `HUD::SET_SOCIAL_CLUB_TOUR("Playlists");`
  * 
- * Hash: 0x9E778248D6685FE0 | Since: 323
+ * Hash: 0x9E778248D6685FE0 | Since: unknown
  */
 export function setSocialClubTour(name: string): void {
     SetSocialClubTour(name);
@@ -4593,7 +4621,7 @@ export function setSocialClubTour(name: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0xC02F4DBFB51D988B | Since: 323
+ * Hash: 0xC02F4DBFB51D988B | Since: unknown
  */
 export function setTextCentre(align: boolean): void {
     SetTextCentre(align);
@@ -4602,7 +4630,7 @@ export function setTextCentre(align: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xBE6B23FFA53FB442 | Since: 323
+ * Hash: 0xBE6B23FFA53FB442 | Since: unknown
  */
 export function setTextColour(red: number, green: number, blue: number, alpha: number): void {
     SetTextColour(red, green, blue, alpha);
@@ -4612,7 +4640,7 @@ export function setTextColour(red: number, green: number, blue: number, alpha: n
  * distance - shadow distance in pixels, both horizontal and vertical
  * r, g, b, a - color
  * 
- * Hash: 0x465C84BC39F1C351 | Since: 323
+ * Hash: 0x465C84BC39F1C351 | Since: unknown
  */
 export function setTextDropshadow(distance: number, r: number, g: number, b: number, a: number): void {
     SetTextDropshadow(distance, r, g, b, a);
@@ -4621,7 +4649,7 @@ export function setTextDropshadow(distance: number, r: number, g: number, b: num
 /**
  * No comment provided
  * 
- * Hash: 0x1CA3E9EAC9D93E5E | Since: 323
+ * Hash: 0x1CA3E9EAC9D93E5E | Since: unknown
  */
 export function setTextDropShadow(): void {
     SetTextDropShadow();
@@ -4630,7 +4658,7 @@ export function setTextDropShadow(): void {
 /**
  * This native does absolutely nothing, just a nullsub
  * 
- * Hash: 0x441603240D202FA6 | Since: 323
+ * Hash: 0x441603240D202FA6 | Since: unknown
  */
 export function setTextEdge(r: number, g: number, b: number, a: number): void {
     SetTextEdge(0, r, g, b, a);
@@ -4639,7 +4667,7 @@ export function setTextEdge(r: number, g: number, b: number, a: number): void {
 /**
  * fonts that mess up your text where made for number values/misc stuff
  * 
- * Hash: 0x66E0276CC5F6B9DA | Since: 323
+ * Hash: 0x66E0276CC5F6B9DA | Since: unknown
  */
 export function setTextFont(fontType: number): void {
     SetTextFont(fontType);
@@ -4648,7 +4676,7 @@ export function setTextFont(fontType: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x1185A8087587322C | Since: 323
+ * Hash: 0x1185A8087587322C | Since: unknown
  */
 export function setTextInputBoxEnabled(): void {
     SetTextInputBoxEnabled(false);
@@ -4662,7 +4690,7 @@ export function setTextInputBoxEnabled(): void {
  * 
  * Right-Justify requires SET_TEXT_WRAP, otherwise it will draw to the far right of the screen
  * 
- * Hash: 0x4E096588B13FFECA | Since: 323
+ * Hash: 0x4E096588B13FFECA | Since: unknown
  */
 export function setTextJustification(justifyType: number): void {
     SetTextJustification(justifyType);
@@ -4671,7 +4699,7 @@ export function setTextJustification(justifyType: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA50ABC31E3CDFAFF | Since: 323
+ * Hash: 0xA50ABC31E3CDFAFF | Since: unknown
  */
 export function setTextLeading(): void {
     SetTextLeading(0);
@@ -4680,7 +4708,7 @@ export function setTextLeading(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x9F4624F76E6953D1 | Since: 3095
+ * Hash: 0x9F4624F76E6953D1 | Since: unknown
  */
 export function setTextLineHeightMult(lineHeightMult: number): void {
     Citizen.invokeNative('0x9F4624F76E6953D1', lineHeightMult);
@@ -4689,7 +4717,7 @@ export function setTextLineHeightMult(lineHeightMult: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2513DFB0FB8400FE | Since: 323
+ * Hash: 0x2513DFB0FB8400FE | Since: unknown
  */
 export function setTextOutline(): void {
     SetTextOutline();
@@ -4698,7 +4726,7 @@ export function setTextOutline(): void {
 /**
  * This native does absolutely nothing, just a nullsub
  * 
- * Hash: 0x038C1F517D7FDCF8 | Since: 323
+ * Hash: 0x038C1F517D7FDCF8 | Since: unknown
  */
 export function setTextProportional(): void {
     SetTextProportional(false);
@@ -4707,7 +4735,7 @@ export function setTextProportional(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x5F15302936E07111 | Since: 323
+ * Hash: 0x5F15302936E07111 | Since: unknown
  */
 export function setTextRenderId(renderId: number): void {
     SetTextRenderId(renderId);
@@ -4716,7 +4744,7 @@ export function setTextRenderId(renderId: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x6B3C4650BC8BEE47 | Since: 323
+ * Hash: 0x6B3C4650BC8BEE47 | Since: unknown
  */
 export function setTextRightJustify(toggle: boolean): void {
     SetTextRightJustify(toggle);
@@ -4726,7 +4754,7 @@ export function setTextRightJustify(toggle: boolean): void {
  * Size range : 0F to 1.0F
  * p0 is unknown and doesn't seem to have an effect, yet in the game scripts it changes to 1.0F sometimes.
  * 
- * Hash: 0x07C837F9A01C34C9 | Since: 323
+ * Hash: 0x07C837F9A01C34C9 | Since: unknown
  */
 export function setTextScale(scale: number, size: number): void {
     SetTextScale(scale, size);
@@ -4738,7 +4766,7 @@ export function setTextScale(scale: number, size: number): void {
  * start - left boundry on screen position (0.0 - 1.0)
  * end - right boundry on screen position (0.0 - 1.0)
  * 
- * Hash: 0x63145D9C883A1A70 | Since: 323
+ * Hash: 0x63145D9C883A1A70 | Since: unknown
  */
 export function setTextWrap(start: number, end: number): void {
     SetTextWrap(start, end);
@@ -4747,7 +4775,7 @@ export function setTextWrap(start: number, end: number): void {
 /**
  * Toggles the Cayo Perico map.
  * 
- * Hash: 0x5E1460624D194A38 | Since: 2189
+ * Hash: 0x5E1460624D194A38 | Since: unknown
  */
 export function setUseIslandMap(toggle: boolean): void {
     SetUseIslandMap(toggle);
@@ -4756,7 +4784,7 @@ export function setUseIslandMap(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x6CDD58146A436083 | Since: 573
+ * Hash: 0x6CDD58146A436083 | Since: unknown
  */
 export function setUseSetDestinationInPauseMap(toggle: boolean): void {
     SetUseWaypointAsDestination(toggle);
@@ -4768,7 +4796,7 @@ export function setUseSetDestinationInPauseMap(toggle: boolean): void {
  * Example: SET_WARNING_MESSAGE("t20", 3, "adder", false, -1, 0, 0, true);
  * errorCode: shows an error code at the bottom left if nonzero
  * 
- * Hash: 0x7B1776B3B53F8D74 | Since: 323
+ * Hash: 0x7B1776B3B53F8D74 | Since: unknown
  */
 export function setWarningMessage(titleMsg: string, flags: number, promptMsg: string, showBackground: boolean, errorCode: number): void {
     SetWarningMessage(titleMsg, flags, promptMsg, false, 0, undefined, undefined, showBackground, errorCode);
@@ -4777,7 +4805,7 @@ export function setWarningMessage(titleMsg: string, flags: number, promptMsg: st
 /**
  * No comment provided
  * 
- * Hash: 0xDAF87174BE7454FF | Since: 323
+ * Hash: 0xDAF87174BE7454FF | Since: unknown
  */
 export function setWarningMessageOptionHighlight(): boolean {
     return Citizen.invokeNative('0xDAF87174BE7454FF', undefined);
@@ -4788,7 +4816,7 @@ export function setWarningMessageOptionHighlight(): boolean {
  * Param names copied from the corresponding scaleform function "SET_LIST_ROW".
  * Example: https://i.imgur.com/arKvOYx.png
  * 
- * Hash: 0x0C5A80A9E096D529 | Since: 323
+ * Hash: 0x0C5A80A9E096D529 | Since: unknown
  */
 export function setWarningMessageOptionItems(index: number, name: string, cash: number, rp: number, lvl: number, colour: number): boolean {
     return SetWarningMessageListRow(index, name, cash, rp, lvl, colour);
@@ -4799,7 +4827,7 @@ export function setWarningMessageOptionItems(index: number, name: string, cash: 
  * Note: You can only use text entries. No custom text. You can recreate this easily with scaleforms.
  * Example: https://i.imgur.com/ITJt8bJ.png
  * 
- * Hash: 0xDC38CC1E35B6A5D7 | Since: 323
+ * Hash: 0xDC38CC1E35B6A5D7 | Since: unknown
  */
 export function setWarningMessageWithHeader(entryHeader: string, entryLine1: string, instructionalKey: number, entryLine2: string): [any, any] {
     return SetWarningMessageWithHeader(entryHeader, entryLine1, instructionalKey, entryLine2, false, undefined, false, undefined);
@@ -4821,7 +4849,7 @@ export function setWarningMessageWithHeader(entryHeader: string, entryLine1: str
  * Screenshot:
  * https://imgur.com/a/IYA7vJ8
  * 
- * Hash: 0x701919482C74B5AB | Since: 323
+ * Hash: 0x701919482C74B5AB | Since: unknown
  */
 export function setWarningMessageWithHeaderAndSubstringFlags(entryHeader: string, entryLine1: string, instructionalKey: number, entryLine2: string, additionalIntInfo: any, additionalTextInfoLine1: string, additionalTextInfoLine2: string, showBackground: boolean, errorCode: number): void {
     SetWarningMessageWithHeaderAndSubstringFlags(entryHeader, entryLine1, instructionalKey, entryLine2, false, undefined, additionalIntInfo, additionalTextInfoLine1, additionalTextInfoLine2, showBackground, errorCode);
@@ -4887,7 +4915,7 @@ export function setWarningMessageWithHeaderAndSubstringFlags(entryHeader: string
  * 
  * Example: https://i.imgur.com/TvmNF4k.png
  * 
- * Hash: 0x15803FEC3B9A872B | Since: 573
+ * Hash: 0x15803FEC3B9A872B | Since: unknown
  */
 export function setWarningMessageWithHeaderAndSubstringFlagsExtended(labelTitle: string, labelMessage: string, labelMessage2: string, background: boolean, errorCode: number): void {
     SetWarningMessageWithAlert(labelTitle, labelMessage, 0, 0, labelMessage2, false, 0, 0, undefined, undefined, background, errorCode);
@@ -4896,7 +4924,7 @@ export function setWarningMessageWithHeaderAndSubstringFlagsExtended(labelTitle:
 /**
  * No comment provided
  * 
- * Hash: 0x38B55259C2E078ED | Since: 1493
+ * Hash: 0x38B55259C2E078ED | Since: unknown
  */
 export function setWarningMessageWithHeaderExtended(entryHeader: string, entryLine1: string, flags: number, entryLine2: string, showBg: boolean): [any, any] {
     return SetWarningMessageWithHeaderExtended(entryHeader, entryLine1, flags, entryLine2, false, undefined, showBg, undefined, undefined);
@@ -4905,7 +4933,7 @@ export function setWarningMessageWithHeaderExtended(entryHeader: string, entryLi
 /**
  * No comment provided
  * 
- * Hash: 0x3FFC556B62146F75 | Since: 3717
+ * Hash: 0x3FFC556B62146F75 | Since: unknown
  */
 export function setWaypointClearOnArrivalMode(mode: number): void {
     Citizen.invokeNative('0x3FFC556B62146F75', mode);
@@ -4921,7 +4949,7 @@ export function setWaypointClearOnArrivalMode(mode: number): void {
  * C++:
  * `HUD::SET_WAYPOINT_OFF();`
  * 
- * Hash: 0xA7E4E2D361C2627F | Since: 323
+ * Hash: 0xA7E4E2D361C2627F | Since: unknown
  */
 export function setWaypointOff(): void {
     SetWaypointOff();
@@ -4930,7 +4958,7 @@ export function setWaypointOff(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xC3B07BA00A83B0F1 | Since: 323
+ * Hash: 0xC3B07BA00A83B0F1 | Since: unknown
  */
 export function setWidescreenFormat(): void {
     SetWidescreenFormat(undefined);
@@ -4939,7 +4967,7 @@ export function setWidescreenFormat(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x60E892BA4F5BDCA4 | Since: 323
+ * Hash: 0x60E892BA4F5BDCA4 | Since: unknown
  */
 export function showAccountPicker(): void {
     ShowSigninUi();
@@ -4948,7 +4976,7 @@ export function showAccountPicker(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xC772A904CDE1186F | Since: 2545
+ * Hash: 0xC772A904CDE1186F | Since: unknown
  */
 export function showContactInstructionalButton(toggle: boolean): void {
     ShowContactInstructionalButton(toggle);
@@ -4957,7 +4985,7 @@ export function showContactInstructionalButton(toggle: boolean): void {
 /**
  * Enables or disables the blue half circle https://i.imgur.com/iZes9Ec.png around the specified blip on the left side of the blip. This is used to indicate that the player is in your crew in GTA:O. Color is changeable by using `SET_BLIP_SECONDARY_COLOUR`.
  * 
- * Hash: 0xDCFB5D4DB8BF367E | Since: 323
+ * Hash: 0xDCFB5D4DB8BF367E | Since: unknown
  */
 export function showCrewIndicatorOnBlip(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -4967,7 +4995,7 @@ export function showCrewIndicatorOnBlip(blip: number | IBlip, toggle: boolean): 
 /**
  * No comment provided
  * 
- * Hash: 0x19BD6E3C0E16A8FA | Since: 2802
+ * Hash: 0x19BD6E3C0E16A8FA | Since: unknown
  */
 export function showForSaleIconOnBlip(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -4979,7 +5007,7 @@ export function showForSaleIconOnBlip(blip: number | IBlip, toggle: boolean): vo
  * .Indicating that that player is a friend (in GTA:O). This color can not be changed.
  * To toggle the left side (crew member indicator) of the half circle around the blip, use: `SHOW_CREW_INDICATOR_ON_BLIP`
  * 
- * Hash: 0x23C3EB807312F01A | Since: 323
+ * Hash: 0x23C3EB807312F01A | Since: unknown
  */
 export function showFriendIndicatorOnBlip(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -4990,7 +5018,7 @@ export function showFriendIndicatorOnBlip(blip: number | IBlip, toggle: boolean)
  * Adds a orange checkmark on top of a given blip handle: https://imgur.com/a/aw5OTMF
  * _SHOW_FRIEND_INDICATOR_ON_BLIP* - _SHOW_HEADING_INDICATOR_ON_BLIP*
  * 
- * Hash: 0xCAC2031EBF79B1A8 | Since: 2699
+ * Hash: 0xCAC2031EBF79B1A8 | Since: unknown
  */
 export function showGoldTickOnBlip(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -5000,7 +5028,7 @@ export function showGoldTickOnBlip(blip: number | IBlip, toggle: boolean): void 
 /**
  * Adds the GTA: Online player heading indicator to a blip.
  * 
- * Hash: 0x5FBCA48327B914DF | Since: 323
+ * Hash: 0x5FBCA48327B914DF | Since: unknown
  */
 export function showHeadingIndicatorOnBlip(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -5010,7 +5038,7 @@ export function showHeadingIndicatorOnBlip(blip: number | IBlip, toggle: boolean
 /**
  * No comment provided
  * 
- * Hash: 0x75A16C3DA34F1245 | Since: 323
+ * Hash: 0x75A16C3DA34F1245 | Since: unknown
  */
 export function showHeightOnBlip(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -5045,7 +5073,7 @@ export function showHeightOnBlip(blip: number | IBlip, toggle: boolean): void {
  * 
  * These integers also work for the `HIDE_HUD_COMPONENT_THIS_FRAME` native, but instead hides the HUD Component.
  * 
- * Hash: 0x0B4DF1FA60C0E664 | Since: 323
+ * Hash: 0x0B4DF1FA60C0E664 | Since: unknown
  */
 export function showComponentThisFrame(id: number): void {
     ShowHudComponentThisFrame(id);
@@ -5054,7 +5082,7 @@ export function showComponentThisFrame(id: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA3C0B359DCB848B6 | Since: 323
+ * Hash: 0xA3C0B359DCB848B6 | Since: unknown
  */
 export function showNumberOnBlip(blip: number | IBlip, _number: number): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -5066,7 +5094,7 @@ export function showNumberOnBlip(blip: number | IBlip, _number: number): void {
  * 
  * Color can be changed with SET_BLIP_SECONDARY_COLOUR
  * 
- * Hash: 0xB81656BC81FE24D1 | Since: 323
+ * Hash: 0xB81656BC81FE24D1 | Since: unknown
  */
 export function showOutlineIndicatorOnBlip(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -5076,7 +5104,7 @@ export function showOutlineIndicatorOnBlip(blip: number | IBlip, toggle: boolean
 /**
  * No comment provided
  * 
- * Hash: 0x4F38DCA127DAAEA2 | Since: 1734
+ * Hash: 0x4F38DCA127DAAEA2 | Since: unknown
  */
 export function showScriptedComponentThisFrame(id: number): void {
     ShowScriptedHudComponentThisFrame(id);
@@ -5085,7 +5113,7 @@ export function showScriptedComponentThisFrame(id: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xF1A6C18B35BCADE6 | Since: 323
+ * Hash: 0xF1A6C18B35BCADE6 | Since: unknown
  */
 export function showStartMissionInstructionalButton(toggle: boolean): void {
     ShowStartMissionInstructionalButton(toggle);
@@ -5094,7 +5122,7 @@ export function showStartMissionInstructionalButton(toggle: boolean): void {
 /**
  * Adds a green checkmark on top of a blip.
  * 
- * Hash: 0x74513EA3E505181E | Since: 323
+ * Hash: 0x74513EA3E505181E | Since: unknown
  */
 export function showTickOnBlip(blip: number | IBlip, toggle: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -5110,7 +5138,7 @@ export function showTickOnBlip(blip: number | IBlip, toggle: boolean): void {
  * displayOnFoot: Draws the path regardless if the player is in a vehicle or not.
  * followPlayer: Draw the path partially between the previous and next point based on the players position between them. When false, the GPS appears to not disappear after the last leg is completed.
  * 
- * Hash: 0xDB34E8D56FC13B08 | Since: 323
+ * Hash: 0xDB34E8D56FC13B08 | Since: unknown
  */
 export function startGpsCustomRoute(hudColor: number, displayOnFoot: boolean, followPlayer: boolean): void {
     StartGpsCustomRoute(hudColor, displayOnFoot, followPlayer);
@@ -5127,7 +5155,7 @@ export function startGpsCustomRoute(hudColor: number, displayOnFoot: boolean, fo
  * routeFromPlayer: Makes the GPS draw a path from the player to the next point, rather than the original path from the previous point.
  * displayOnFoot: Draws the GPS path regardless if the player is in a vehicle or not.
  * 
- * Hash: 0x3D3D15AF7BCAAF83 | Since: 323
+ * Hash: 0x3D3D15AF7BCAAF83 | Since: unknown
  */
 export function startGpsMultiRoute(hudColor: number, routeFromPlayer: boolean, displayOnFoot: boolean): void {
     StartGpsMultiRoute(hudColor, routeFromPlayer, displayOnFoot);
@@ -5136,7 +5164,7 @@ export function startGpsMultiRoute(hudColor: number, routeFromPlayer: boolean, d
 /**
  * No comment provided
  * 
- * Hash: 0xBA751764F0821256 | Since: 323
+ * Hash: 0xBA751764F0821256 | Since: unknown
  */
 export function suppressFrontendRenderingThisFrame(): void {
     SuppressFrontendRenderingThisFrame();
@@ -5147,7 +5175,7 @@ export function suppressFrontendRenderingThisFrame(): void {
  * 
  * To enable the keys again, use `0x14621BB1DF14E2B2`.
  * 
- * Hash: 0xEC9264727EEC0F28 | Since: 323
+ * Hash: 0xEC9264727EEC0F28 | Since: unknown
  */
 export function takeControlOfFrontend(): void {
     TakeControlOfFrontend();
@@ -5156,7 +5184,7 @@ export function takeControlOfFrontend(): void {
 /**
  * Displays "normal" notifications again after calling `THEFEED_AUTO_POST_GAMETIPS_ON` (those that were drawn before calling this native too), though those will have a weird offset and stay on screen forever (tested with notifications created from same script).
  * 
- * Hash: 0xADED7F5748ACAFE6 | Since: 323
+ * Hash: 0xADED7F5748ACAFE6 | Since: unknown
  */
 export function thefeedAutoPostGametipsOff(): void {
     ThefeedCommentTeleportPoolOff();
@@ -5165,7 +5193,7 @@ export function thefeedAutoPostGametipsOff(): void {
 /**
  * Enables loading screen tips to be be shown (`THEFEED_SHOW`), blocks other kinds of notifications from being displayed (at least from current script). Call `THEFEED_AUTO_POST_GAMETIPS_OFF` to display those again.
  * 
- * Hash: 0x56C8B608CFD49854 | Since: 323
+ * Hash: 0x56C8B608CFD49854 | Since: unknown
  */
 export function thefeedAutoPostGametipsOn(): void {
     ThefeedCommentTeleportPoolOn();
@@ -5174,7 +5202,7 @@ export function thefeedAutoPostGametipsOn(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x80FE4F3AB4E1B62A | Since: 323
+ * Hash: 0x80FE4F3AB4E1B62A | Since: unknown
  */
 export function thefeedClearFrozenPost(): void {
     ThefeedClearFrozenPost();
@@ -5183,7 +5211,7 @@ export function thefeedClearFrozenPost(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA8FDB297A8D25FBA | Since: 323
+ * Hash: 0xA8FDB297A8D25FBA | Since: unknown
  */
 export function thefeedFlushQueue(): void {
     ThefeedFlushQueue();
@@ -5192,7 +5220,7 @@ export function thefeedFlushQueue(): void {
 /**
  * Enables loading screen tips to be be shown (`THEFEED_SHOW`), blocks other kinds of notifications from being displayed (at least from current script). Call `0xADED7F5748ACAFE6` to display those again.
  * 
- * Hash: 0x583049884A2EEE3C | Since: 323
+ * Hash: 0x583049884A2EEE3C | Since: unknown
  */
 export function thefeedForceRenderOff(): void {
     ThefeedForceRenderOff();
@@ -5201,7 +5229,7 @@ export function thefeedForceRenderOff(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA13C11E1B5C06BFC | Since: 323
+ * Hash: 0xA13C11E1B5C06BFC | Since: unknown
  */
 export function thefeedForceRenderOn(): void {
     ThefeedForceRenderOn();
@@ -5210,7 +5238,7 @@ export function thefeedForceRenderOn(): void {
 /**
  * Requires manual management of game stream handles (i.e., 0xBE4390CB40B3E627).
  * 
- * Hash: 0xFDEC055AB549E328 | Since: 323
+ * Hash: 0xFDEC055AB549E328 | Since: unknown
  */
 export function thefeedFreezeNextPost(): void {
     ThefeedFreezeNextPost();
@@ -5219,7 +5247,7 @@ export function thefeedFreezeNextPost(): void {
 /**
  * Returns the handle for the notification currently displayed on the screen. Name may be a hash collision, but describes the function accurately.
  * 
- * Hash: 0x82352748437638CA | Since: 323
+ * Hash: 0x82352748437638CA | Since: unknown
  */
 export function thefeedGetLastShownPhoneActivatableFeedId(): number {
     return ThefeedGetFirstVisibleDeleteRemaining();
@@ -5228,7 +5256,7 @@ export function thefeedGetLastShownPhoneActivatableFeedId(): number {
 /**
  * Stops loading screen tips shown by invoking `THEFEED_SHOW`
  * 
- * Hash: 0x32888337579A5970 | Since: 463
+ * Hash: 0x32888337579A5970 | Since: unknown
  */
 export function thefeedHide(): void {
     ThefeedDisableLoadingScreenTips();
@@ -5237,7 +5265,7 @@ export function thefeedHide(): void {
 /**
  * Once called each frame hides all above radar notifications.
  * 
- * Hash: 0x25F87B30C382FCA7 | Since: 323
+ * Hash: 0x25F87B30C382FCA7 | Since: unknown
  */
 export function thefeedHideThisFrame(): void {
     ThefeedHideThisFrame();
@@ -5246,7 +5274,7 @@ export function thefeedHideThisFrame(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA9CBFD40B3FA3010 | Since: 323
+ * Hash: 0xA9CBFD40B3FA3010 | Since: unknown
  */
 export function thefeedIsPaused(): boolean {
     return ThefeedIsPaused();
@@ -5255,7 +5283,7 @@ export function thefeedIsPaused(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x6F1554B0CC2089FA | Since: 323
+ * Hash: 0x6F1554B0CC2089FA | Since: unknown
  */
 export function thefeedOnlyShowTooltips(toggle: boolean): void {
     ThefeedOnlyShowTooltips(toggle);
@@ -5264,7 +5292,7 @@ export function thefeedOnlyShowTooltips(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xFDB423997FA30340 | Since: 323
+ * Hash: 0xFDB423997FA30340 | Since: unknown
  */
 export function thefeedPause(): void {
     ThefeedPause();
@@ -5273,7 +5301,7 @@ export function thefeedPause(): void {
 /**
  * Removes a notification instantly instead of waiting for it to disappear
  * 
- * Hash: 0xBE4390CB40B3E627 | Since: 323
+ * Hash: 0xBE4390CB40B3E627 | Since: unknown
  */
 export function thefeedRemoveItem(notificationId: number): void {
     ThefeedRemoveItem(notificationId);
@@ -5282,7 +5310,7 @@ export function thefeedRemoveItem(notificationId: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xB695E2CD0A2DA9EE | Since: 323
+ * Hash: 0xB695E2CD0A2DA9EE | Since: unknown
  */
 export function thefeedReportLogoOff(): void {
     ThefeedSpsExtendWidescreenOff();
@@ -5291,7 +5319,7 @@ export function thefeedReportLogoOff(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xD4438C0564490E63 | Since: 323
+ * Hash: 0xD4438C0564490E63 | Since: unknown
  */
 export function thefeedReportLogoOn(): void {
     ThefeedSpsExtendWidescreenOn();
@@ -5300,7 +5328,7 @@ export function thefeedReportLogoOn(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xFDD85225B2DEA55E | Since: 323
+ * Hash: 0xFDD85225B2DEA55E | Since: unknown
  */
 export function thefeedResetAllParameters(): void {
     ThefeedResetAllParameters();
@@ -5309,7 +5337,7 @@ export function thefeedResetAllParameters(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xE1CD1E48E025E661 | Since: 323
+ * Hash: 0xE1CD1E48E025E661 | Since: unknown
  */
 export function thefeedResume(): void {
     ThefeedResume();
@@ -5328,7 +5356,7 @@ export function thefeedResume(): void {
  * 
  * Here is a list of some colors that can be used: https://gyazo.com/68bd384455fceb0a85a8729e48216e15
  * 
- * Hash: 0x92F0DA1E27DB96DC | Since: 323
+ * Hash: 0x92F0DA1E27DB96DC | Since: unknown
  */
 export function thefeedSetBackgroundColorForNextPost(hudColorIndex: number): void {
     ThefeedSetNextPostBackgroundColor(hudColorIndex);
@@ -5337,7 +5365,7 @@ export function thefeedSetBackgroundColorForNextPost(hudColorIndex: number): voi
 /**
  * Related to notification color flashing, setting count to 0 invalidates a `THEFEED_SET_RGBA_PARAMETER_FOR_NEXT_MESSAGE` call for the target notification.
  * 
- * Hash: 0x17AD8C9706BDD88A | Since: 323
+ * Hash: 0x17AD8C9706BDD88A | Since: unknown
  */
 export function thefeedSetFlashDurationParameterForNextMessage(count: number): void {
     ThefeedSetAnimpostfxCount(count);
@@ -5346,7 +5374,7 @@ export function thefeedSetFlashDurationParameterForNextMessage(count: number): v
 /**
  * No comment provided
  * 
- * Hash: 0x17430B918701C342 | Since: 323
+ * Hash: 0x17430B918701C342 | Since: unknown
  */
 export function thefeedSetRgbaParameterForNextMessage(red: number, green: number, blue: number, alpha: number): void {
     ThefeedSetAnimpostfxColor(red, green, blue, alpha);
@@ -5355,7 +5383,7 @@ export function thefeedSetRgbaParameterForNextMessage(red: number, green: number
 /**
  * No comment provided
  * 
- * Hash: 0x55598D21339CB998 | Since: 323
+ * Hash: 0x55598D21339CB998 | Since: unknown
  */
 export function thefeedSetScriptedMenuHeight(pos: number): void {
     ThefeedSetScriptedMenuHeight(pos);
@@ -5364,7 +5392,7 @@ export function thefeedSetScriptedMenuHeight(pos: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xBAE4F9B97CD43B30 | Since: 323
+ * Hash: 0xBAE4F9B97CD43B30 | Since: unknown
  */
 export function thefeedSetSnapFeedItemPositions(): void {
     ThefeedSetFlushAnimpostfx(false);
@@ -5373,7 +5401,7 @@ export function thefeedSetSnapFeedItemPositions(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x4A0C7C9BB10ABB36 | Since: 323
+ * Hash: 0x4A0C7C9BB10ABB36 | Since: unknown
  */
 export function thefeedSetVibrateParameterForNextMessage(toggle: boolean): void {
     ThefeedSetAnimpostfxSound(toggle);
@@ -5382,7 +5410,7 @@ export function thefeedSetVibrateParameterForNextMessage(toggle: boolean): void 
 /**
  * Displays loading screen tips, requires `THEFEED_AUTO_POST_GAMETIPS_ON` to be called beforehand.
  * 
- * Hash: 0x15CFA549788D35EF | Since: 463
+ * Hash: 0x15CFA549788D35EF | Since: unknown
  */
 export function thefeedShow(): void {
     ThefeedDisplayLoadingScreenTips();
@@ -5391,7 +5419,7 @@ export function thefeedShow(): void {
 /**
  * Used in the native scripts to reference "GET_PEDHEADSHOT_TXD_STRING" and "CHAR_DEFAULT".
  * 
- * Hash: 0x317EBA71D7543F52 | Since: 323
+ * Hash: 0x317EBA71D7543F52 | Since: unknown
  */
 export function thefeedUpdateItemTexture(txdString1: string, txnString1: string, txdString2: string, txnString2: string): void {
     ThefeedUpdateItemTexture(txdString1, txnString1, txdString2, txnString2);
@@ -5400,7 +5428,7 @@ export function thefeedUpdateItemTexture(txdString1: string, txnString1: string,
 /**
  * No comment provided
  * 
- * Hash: 0x6AFDFB93754950C7 | Since: 323
+ * Hash: 0x6AFDFB93754950C7 | Since: unknown
  */
 export function toggleStealthRadar(toggle: boolean): void {
     ToggleStealthRadar(toggle);
@@ -5409,7 +5437,7 @@ export function toggleStealthRadar(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x72DD432F3CDFC0EE | Since: 323
+ * Hash: 0x72DD432F3CDFC0EE | Since: unknown
  */
 export function triggerSonarBlip(pos: Vector3, radius: number): void {
     TriggerSonarBlip(pos.x, pos.y, pos.z, radius, 0);
@@ -5418,7 +5446,7 @@ export function triggerSonarBlip(pos: Vector3, radius: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x8183455E16C42E3A | Since: 323
+ * Hash: 0x8183455E16C42E3A | Since: unknown
  */
 export function unlockMinimapAngle(): void {
     UnlockMinimapAngle();
@@ -5427,7 +5455,7 @@ export function unlockMinimapAngle(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x3E93E06DB8EF1F30 | Since: 323
+ * Hash: 0x3E93E06DB8EF1F30 | Since: unknown
  */
 export function unlockMinimapPosition(): void {
     UnlockMinimapPosition();
@@ -5436,7 +5464,7 @@ export function unlockMinimapPosition(): void {
 /**
  * Does nothing (it's a nullsub).
  * 
- * Hash: 0xD2049635DEB9C375 | Since: 323
+ * Hash: 0xD2049635DEB9C375 | Since: unknown
  */
 export function updateRadarZoomToBlip(): void {
     Citizen.invokeNative('0xD2049635DEB9C375');
@@ -5446,7 +5474,7 @@ export function updateRadarZoomToBlip(): void {
  * Related to displaying cash on the HUD
  * `Always called before HUD::CHANGE_FAKE_MP_CASH in decompiled scripts`
  * 
- * Hash: 0x170F541E1CADD1DE | Since: 323
+ * Hash: 0x170F541E1CADD1DE | Since: unknown
  */
 export function useFakeMpCash(toggle: boolean): void {
     UseFakeMpCash(toggle);
@@ -5455,16 +5483,34 @@ export function useFakeMpCash(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x0C698D8F099174C7 | Since: 1180
+ * Hash: 0x0C698D8F099174C7 | Since: unknown
  */
 export function useVehicleTargetingReticule(): void {
     Citizen.invokeNative('0x0C698D8F099174C7', undefined);
 }
 
 /**
+ * No comment provided
+ * 
+ * Hash: 0xA3C8062CAB30E8A9 | Since: unknown
+ */
+export function getNominatedJobReportStatus(index: number): number {
+    return Citizen.invokeNative('0xA3C8062CAB30E8A9', index);
+}
+
+/**
+ * p1 is unused
+ * 
+ * Hash: 0x764EED2568508F13 | Since: unknown
+ */
+export function reportNominatedJob(jobNominated: string): [number, any] {
+    return Citizen.invokeNative('0x764EED2568508F13', jobNominated);
+}
+
+/**
  * Applies to new eBlipParams _BLIP_CHANGE_46* and _BLIP_CHANGE_47*
  * 
- * Hash: 0x25D984CFB64ED6DE | Since: 3095
+ * Hash: 0x25D984CFB64ED6DE | Since: unknown
  */
 export function setBlipGpsRouteDisplayDistance(blip: number | IBlip, blipChangeParam46: number, blipChangeParam47: boolean): void {
     const _blip = typeof blip == 'object' ? blip.handle() : blip;
@@ -5474,7 +5520,7 @@ export function setBlipGpsRouteDisplayDistance(blip: number | IBlip, blipChangeP
 /**
  * No comment provided
  * 
- * Hash: 0x35CCE12EAECB4A51 | Since: 2944
+ * Hash: 0x35CCE12EAECB4A51 | Since: unknown
  */
 export function setPauseExteriorRenderingWhileInInterior(): void {
     Citizen.invokeNative('0x35CCE12EAECB4A51');
@@ -5483,7 +5529,7 @@ export function setPauseExteriorRenderingWhileInInterior(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xF6865E26067B708C | Since: 3407
+ * Hash: 0xF6865E26067B708C | Since: unknown
  */
 export function showPurchaseInstructionalButton(toggle: boolean): void {
     Citizen.invokeNative('0xF6865E26067B708C', toggle);
@@ -5492,7 +5538,7 @@ export function showPurchaseInstructionalButton(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x1BC0EA2912708625 | Since: 3095
+ * Hash: 0x1BC0EA2912708625 | Since: unknown
  */
 export function useVehicleTargetingReticuleOnVehicles(enable: boolean): void {
     Citizen.invokeNative('0x1BC0EA2912708625', enable);

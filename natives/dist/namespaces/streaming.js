@@ -1,7 +1,7 @@
 /**
  * No comment provided
  *
- * Hash: 0x0BC3144DEB678666 | Since: 323
+ * Hash: 0x0BC3144DEB678666 | Since: unknown
  */
 export function addModelToCreatorBudget(modelHash) {
     if (typeof modelHash === 'string')
@@ -11,7 +11,7 @@ export function addModelToCreatorBudget(modelHash) {
 /**
  * No comment provided
  *
- * Hash: 0x8E2A065ABDAE6994 | Since: 323
+ * Hash: 0x8E2A065ABDAE6994 | Since: unknown
  */
 export function allowPlayerSwitchAscent() {
     AllowPlayerSwitchAscent();
@@ -19,7 +19,7 @@ export function allowPlayerSwitchAscent() {
 /**
  * No comment provided
  *
- * Hash: 0xAD5FDF34B81BFE79 | Since: 323
+ * Hash: 0xAD5FDF34B81BFE79 | Since: unknown
  */
 export function allowPlayerSwitchDescent() {
     AllowPlayerSwitchDescent();
@@ -27,7 +27,7 @@ export function allowPlayerSwitchDescent() {
 /**
  * No comment provided
  *
- * Hash: 0x74DE2E8739086740 | Since: 323
+ * Hash: 0x74DE2E8739086740 | Since: unknown
  */
 export function allowPlayerSwitchOutro() {
     AllowPlayerSwitchOutro();
@@ -35,7 +35,7 @@ export function allowPlayerSwitchOutro() {
 /**
  * No comment provided
  *
- * Hash: 0x43D1680C6D19A8E9 | Since: 323
+ * Hash: 0x43D1680C6D19A8E9 | Since: unknown
  */
 export function allowPlayerSwitchPan() {
     AllowPlayerSwitchPan();
@@ -43,7 +43,7 @@ export function allowPlayerSwitchPan() {
 /**
  * No comment provided
  *
- * Hash: 0x9BADDC94EF83B823 | Since: 323
+ * Hash: 0x9BADDC94EF83B823 | Since: unknown
  */
 export function beginSrl() {
     BeginSrl();
@@ -51,7 +51,7 @@ export function beginSrl() {
 /**
  * No comment provided
  *
- * Hash: 0x31B73D1EA9F01DA2 | Since: 323
+ * Hash: 0x31B73D1EA9F01DA2 | Since: unknown
  */
 export function clearFocus() {
     ClearFocus();
@@ -59,7 +59,7 @@ export function clearFocus() {
 /**
  * No comment provided
  *
- * Hash: 0xCE58B1CFB9290813 | Since: 323
+ * Hash: 0xCE58B1CFB9290813 | Since: unknown
  */
 export function clearHdArea() {
     ClearHdArea();
@@ -67,7 +67,7 @@ export function clearHdArea() {
 /**
  * No comment provided
  *
- * Hash: 0xBD605B8E0E18B3BB | Since: 323
+ * Hash: 0xBD605B8E0E18B3BB | Since: unknown
  */
 export function disableSwitchOutroFx() {
     DisableSwitchOutroFx();
@@ -75,7 +75,7 @@ export function disableSwitchOutroFx() {
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
  *
- * Hash: 0x2DA49C3B79856961 | Since: 323
+ * Hash: 0x2DA49C3B79856961 | Since: unknown
  */
 export function doesAnimDictExist(animDict) {
     return DoesAnimDictExist(animDict);
@@ -83,7 +83,7 @@ export function doesAnimDictExist(animDict) {
 /**
  * No comment provided
  *
- * Hash: 0xD4793DFF3AF2ABCD | Since: 323
+ * Hash: 0xD4793DFF3AF2ABCD | Since: unknown
  */
 export function enableSwitchPauseBeforeDescent() {
     EnableSwitchPauseBeforeDescent();
@@ -91,7 +91,7 @@ export function enableSwitchPauseBeforeDescent() {
 /**
  * Clear the current srl and stop rendering the area selected by PREFETCH_SRL and started with BEGIN_SRL.
  *
- * Hash: 0x0A41540E63C9EE17 | Since: 323
+ * Hash: 0x0A41540E63C9EE17 | Since: unknown
  */
 export function endSrl() {
     EndSrl();
@@ -99,7 +99,7 @@ export function endSrl() {
 /**
  * No comment provided
  *
- * Hash: 0x03F1A106BDA7DD3E | Since: 323
+ * Hash: 0x03F1A106BDA7DD3E | Since: unknown
  */
 export function forceAllowTimeBasedFadingThisFrame() {
     Citizen.invokeNative('0x03F1A106BDA7DD3E');
@@ -107,7 +107,7 @@ export function forceAllowTimeBasedFadingThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0xF741BD853611592D | Since: 2189
+ * Hash: 0xF741BD853611592D | Since: unknown
  */
 export function getGlobalWaterFile() {
     return GetGlobalWaterType();
@@ -116,7 +116,7 @@ export function getGlobalWaterFile() {
  * x1, y1, z1 -- Coords of your ped model
  * x2, y2, z2 -- Coords of the ped you want to switch to
  *
- * Hash: 0xB5D7B26B45720E05 | Since: 323
+ * Hash: 0xB5D7B26B45720E05 | Since: unknown
  */
 export function getIdealPlayerSwitchType(x1, y1, z1, x2, y2, z2) {
     return GetIdealPlayerSwitchType(x1, y1, z1, x2, y2, z2);
@@ -124,7 +124,7 @@ export function getIdealPlayerSwitchType(x1, y1, z1, x2, y2, z2) {
 /**
  * No comment provided
  *
- * Hash: 0x0C15B0E443B2349D | Since: 323
+ * Hash: 0x0C15B0E443B2349D | Since: unknown
  */
 export function getLodscale() {
     return GetLodscale();
@@ -132,7 +132,7 @@ export function getLodscale() {
 /**
  * No comment provided
  *
- * Hash: 0x4060057271CEBC89 | Since: 323
+ * Hash: 0x4060057271CEBC89 | Since: unknown
  */
 export function getNumberOfRequests() {
     return GetNumberOfStreamingRequests();
@@ -140,7 +140,7 @@ export function getNumberOfRequests() {
 /**
  * No comment provided
  *
- * Hash: 0x20F898A5D9782800 | Since: 323
+ * Hash: 0x20F898A5D9782800 | Since: unknown
  */
 export function getPlayerShortSwitchState() {
     return GetPlayerShortSwitchState();
@@ -148,7 +148,7 @@ export function getPlayerShortSwitchState() {
 /**
  * No comment provided
  *
- * Hash: 0x5B48A06DD0E792A5 | Since: 323
+ * Hash: 0x5B48A06DD0E792A5 | Since: unknown
  */
 export function getPlayerSwitchInterpOutCurrentTime() {
     return GetPlayerSwitchInterpOutCurrentTime();
@@ -156,7 +156,7 @@ export function getPlayerSwitchInterpOutCurrentTime() {
 /**
  * No comment provided
  *
- * Hash: 0x08C2D6C52A3104BB | Since: 323
+ * Hash: 0x08C2D6C52A3104BB | Since: unknown
  */
 export function getPlayerSwitchInterpOutDuration() {
     return GetPlayerSwitchInterpOutDuration();
@@ -164,7 +164,7 @@ export function getPlayerSwitchInterpOutDuration() {
 /**
  * No comment provided
  *
- * Hash: 0x78C0D93253149435 | Since: 323
+ * Hash: 0x78C0D93253149435 | Since: unknown
  */
 export function getPlayerSwitchJumpCutIndex() {
     return GetPlayerSwitchJumpCutIndex();
@@ -172,7 +172,7 @@ export function getPlayerSwitchJumpCutIndex() {
 /**
  * No comment provided
  *
- * Hash: 0x470555300D10B2A5 | Since: 323
+ * Hash: 0x470555300D10B2A5 | Since: unknown
  */
 export function getPlayerSwitchState() {
     return GetPlayerSwitchState();
@@ -180,7 +180,7 @@ export function getPlayerSwitchState() {
 /**
  * No comment provided
  *
- * Hash: 0xB3C94A90D9FC9E62 | Since: 323
+ * Hash: 0xB3C94A90D9FC9E62 | Since: unknown
  */
 export function getPlayerSwitchType() {
     return GetPlayerSwitchType();
@@ -191,7 +191,7 @@ export function getPlayerSwitchType() {
  *
  * Maximum model memory (as defined in common\data\missioncreatordata.meta) is 100 MiB
  *
- * Hash: 0x3D3D8B3BE5A83D35 | Since: 323
+ * Hash: 0x3D3D8B3BE5A83D35 | Since: unknown
  */
 export function getUsedCreatorBudget() {
     return GetUsedCreatorModelMemoryPercentage();
@@ -199,7 +199,7 @@ export function getUsedCreatorBudget() {
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
  *
- * Hash: 0xD031A9162D01088C | Since: 323
+ * Hash: 0xD031A9162D01088C | Since: unknown
  */
 export function hasAnimDictLoaded(animDict) {
     return HasAnimDictLoaded(animDict);
@@ -213,7 +213,7 @@ export function hasAnimDictLoaded(animDict) {
  *
  * Full list of movement clipsets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/movementClipsetsCompact.json
  *
- * Hash: 0xC4EA073D86FB29B0 | Since: 323
+ * Hash: 0xC4EA073D86FB29B0 | Since: unknown
  */
 export function hasAnimSetLoaded(animSet) {
     return HasAnimSetLoaded(animSet);
@@ -225,7 +225,7 @@ export function hasAnimSetLoaded(animSet) {
  *
  * Full list of movement clipsets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/movementClipsetsCompact.json
  *
- * Hash: 0x318234F4F3738AF3 | Since: 323
+ * Hash: 0x318234F4F3738AF3 | Since: unknown
  */
 export function hasClipSetLoaded(clipSet) {
     return HasClipSetLoaded(clipSet);
@@ -233,7 +233,7 @@ export function hasClipSetLoaded(clipSet) {
 /**
  * No comment provided
  *
- * Hash: 0x22CCA434E368F03A | Since: 323
+ * Hash: 0x22CCA434E368F03A | Since: unknown
  */
 export function hasCollisionForModelLoaded(model) {
     if (typeof model === 'string')
@@ -243,7 +243,7 @@ export function hasCollisionForModelLoaded(model) {
 /**
  * Checks if the specified model has loaded into memory.
  *
- * Hash: 0x98A4EB5D89A0C952 | Since: 323
+ * Hash: 0x98A4EB5D89A0C952 | Since: unknown
  */
 export function hasModelLoaded(model) {
     if (typeof model === 'string')
@@ -253,7 +253,7 @@ export function hasModelLoaded(model) {
 /**
  * No comment provided
  *
- * Hash: 0x8702416E512EC454 | Since: 323
+ * Hash: 0x8702416E512EC454 | Since: unknown
  */
 export function hasNamedPtfxAssetLoaded(fxName) {
     return HasNamedPtfxAssetLoaded(fxName);
@@ -261,7 +261,7 @@ export function hasNamedPtfxAssetLoaded(fxName) {
 /**
  * No comment provided
  *
- * Hash: 0xCA7D9B86ECA7481B | Since: 323
+ * Hash: 0xCA7D9B86ECA7481B | Since: unknown
  */
 export function hasPtfxAssetLoaded() {
     return HasPtfxAssetLoaded();
@@ -269,7 +269,7 @@ export function hasPtfxAssetLoaded() {
 /**
  * No comment provided
  *
- * Hash: 0xB5A4DB34FE89B88A | Since: 323
+ * Hash: 0xB5A4DB34FE89B88A | Since: unknown
  */
 export function initCreatorBudget() {
     InitCreatorBudget();
@@ -277,7 +277,7 @@ export function initCreatorBudget() {
 /**
  * No comment provided
  *
- * Hash: 0x63EB2B972A218CAC | Since: 323
+ * Hash: 0x63EB2B972A218CAC | Since: unknown
  */
 export function iplGroupSwapCancel() {
     Citizen.invokeNative('0x63EB2B972A218CAC');
@@ -285,7 +285,7 @@ export function iplGroupSwapCancel() {
 /**
  * No comment provided
  *
- * Hash: 0xF4A0DADB70F57FA6 | Since: 323
+ * Hash: 0xF4A0DADB70F57FA6 | Since: unknown
  */
 export function iplGroupSwapFinish() {
     Citizen.invokeNative('0xF4A0DADB70F57FA6');
@@ -293,7 +293,7 @@ export function iplGroupSwapFinish() {
 /**
  * No comment provided
  *
- * Hash: 0x5068F488DDB54DD8 | Since: 323
+ * Hash: 0x5068F488DDB54DD8 | Since: unknown
  */
 export function iplGroupSwapIsActive() {
     return Citizen.invokeNative('0x5068F488DDB54DD8');
@@ -301,7 +301,7 @@ export function iplGroupSwapIsActive() {
 /**
  * No comment provided
  *
- * Hash: 0xFB199266061F820A | Since: 323
+ * Hash: 0xFB199266061F820A | Since: unknown
  */
 export function iplGroupSwapIsReady() {
     return Citizen.invokeNative('0xFB199266061F820A');
@@ -309,7 +309,7 @@ export function iplGroupSwapIsReady() {
 /**
  * No comment provided
  *
- * Hash: 0x95A7DABDDBB78AE7 | Since: 323
+ * Hash: 0x95A7DABDDBB78AE7 | Since: unknown
  */
 export function iplGroupSwapStart(iplName1, iplName2) {
     Citizen.invokeNative('0x95A7DABDDBB78AE7', iplName1, iplName2);
@@ -317,16 +317,27 @@ export function iplGroupSwapStart(iplName1, iplName2) {
 /**
  * No comment provided
  *
- * Hash: 0x2DDFF3FB9075D747 | Since: 323
+ * Hash: 0x2DDFF3FB9075D747 | Since: unknown
  */
 export function isEntityFocus(entity) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
     return IsEntityFocus(_entity);
 }
 /**
+ * No comment provided
+ *
+ * Hash: 0x7F87B6CE3D8D9DD8 | Since: unknown
+ */
+export function isGameInstalled() {
+    if (!IsGameEnhancedVersion())
+        console.error('This native is not supported on legacy (0x7F87B6CE3D8D9DD8)');
+    return;
+    return Citizen.invokeNative('0x7F87B6CE3D8D9DD8');
+}
+/**
  * Full list of IPLs and interior entity sets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ipls.json
  *
- * Hash: 0x88A741E44A2B3495 | Since: 323
+ * Hash: 0x88A741E44A2B3495 | Since: unknown
  */
 export function isIplActive(iplName) {
     return IsIplActive(iplName);
@@ -334,7 +345,7 @@ export function isIplActive(iplName) {
 /**
  * No comment provided
  *
- * Hash: 0x75816577FEA6DAD5 | Since: 1103
+ * Hash: 0x75816577FEA6DAD5 | Since: unknown
  */
 export function isModelAPed(model) {
     if (typeof model === 'string')
@@ -344,7 +355,7 @@ export function isModelAPed(model) {
 /**
  * Returns whether the specified model represents a vehicle.
  *
- * Hash: 0x19AAC8F07BFEC53E | Since: 323
+ * Hash: 0x19AAC8F07BFEC53E | Since: unknown
  */
 export function isModelAVehicle(model) {
     if (typeof model === 'string')
@@ -354,7 +365,7 @@ export function isModelAVehicle(model) {
 /**
  * Check if model is in cdimage(rpf)
  *
- * Hash: 0x35B9E0803292B641 | Since: 323
+ * Hash: 0x35B9E0803292B641 | Since: unknown
  */
 export function isModelInCdimage(model) {
     if (typeof model === 'string')
@@ -364,7 +375,7 @@ export function isModelInCdimage(model) {
 /**
  * Returns whether the specified model exists in the game.
  *
- * Hash: 0xC0296A2EDF545E92 | Since: 323
+ * Hash: 0xC0296A2EDF545E92 | Since: unknown
  */
 export function isModelValid(model) {
     if (typeof model === 'string')
@@ -374,7 +385,7 @@ export function isModelValid(model) {
 /**
  * No comment provided
  *
- * Hash: 0x41CA5A33160EA4AB | Since: 323
+ * Hash: 0x41CA5A33160EA4AB | Since: unknown
  */
 export function isNetworkLoadingScene() {
     return IsNetworkLoadingScene();
@@ -382,7 +393,7 @@ export function isNetworkLoadingScene() {
 /**
  * No comment provided
  *
- * Hash: 0xA41A05B6CB741B85 | Since: 323
+ * Hash: 0xA41A05B6CB741B85 | Since: unknown
  */
 export function isNewLoadSceneActive() {
     return IsNewLoadSceneActive();
@@ -390,7 +401,7 @@ export function isNewLoadSceneActive() {
 /**
  * No comment provided
  *
- * Hash: 0x01B8247A7A8B9AD1 | Since: 323
+ * Hash: 0x01B8247A7A8B9AD1 | Since: unknown
  */
 export function isNewLoadSceneLoaded() {
     return IsNewLoadSceneLoaded();
@@ -399,7 +410,7 @@ export function isNewLoadSceneLoaded() {
  * Returns true if the player is currently switching, false otherwise.
  * (When the camera is in the sky moving from Trevor to Franklin for example)
  *
- * Hash: 0xD9D2CFFF49FAB35F | Since: 323
+ * Hash: 0xD9D2CFFF49FAB35F | Since: unknown
  */
 export function isPlayerSwitchInProgress() {
     return IsPlayerSwitchInProgress();
@@ -407,7 +418,7 @@ export function isPlayerSwitchInProgress() {
 /**
  * No comment provided
  *
- * Hash: 0x71E7B2E657449AAD | Since: 323
+ * Hash: 0x71E7B2E657449AAD | Since: unknown
  */
 export function isSafeToStartPlayerSwitch() {
     return Citizen.invokeNative('0x71E7B2E657449AAD');
@@ -415,7 +426,7 @@ export function isSafeToStartPlayerSwitch() {
 /**
  * Returns true when the srl from BEGIN_SRL is loaded.
  *
- * Hash: 0xD0263801A4C5B0BB | Since: 323
+ * Hash: 0xD0263801A4C5B0BB | Since: unknown
  */
 export function isSrlLoaded() {
     return IsSrlLoaded();
@@ -423,7 +434,7 @@ export function isSrlLoaded() {
 /**
  * No comment provided
  *
- * Hash: 0xBC9823AB80A3DCAC | Since: 323
+ * Hash: 0xBC9823AB80A3DCAC | Since: unknown
  */
 export function isStreamvolActive() {
     return IsStreamvolActive();
@@ -431,7 +442,7 @@ export function isStreamvolActive() {
 /**
  * No comment provided
  *
- * Hash: 0xDFA80CB25D0A19B3 | Since: 323
+ * Hash: 0xDFA80CB25D0A19B3 | Since: unknown
  */
 export function isSwitchReadyForDescent() {
     return IsSwitchReadyForDescent();
@@ -439,7 +450,7 @@ export function isSwitchReadyForDescent() {
 /**
  * No comment provided
  *
- * Hash: 0x5B74EA8CFD5E3E7E | Since: 323
+ * Hash: 0x5B74EA8CFD5E3E7E | Since: unknown
  */
 export function isSwitchSkippingDescent() {
     return IsSwitchSkippingDescent();
@@ -447,7 +458,7 @@ export function isSwitchSkippingDescent() {
 /**
  * No comment provided
  *
- * Hash: 0x933BBEEB8C61B5F4 | Since: 323
+ * Hash: 0x933BBEEB8C61B5F4 | Since: unknown
  */
 export function isSwitchToMultiFirstpartFinished() {
     return Citizen.invokeNative('0x933BBEEB8C61B5F4');
@@ -455,7 +466,7 @@ export function isSwitchToMultiFirstpartFinished() {
 /**
  * No comment provided
  *
- * Hash: 0xBD6E84632DD4CB3F | Since: 323
+ * Hash: 0xBD6E84632DD4CB3F | Since: unknown
  */
 export function loadAllObjectsNow() {
     LoadAllObjectsNow();
@@ -464,7 +475,7 @@ export function loadAllObjectsNow() {
  * 0 - default
  * 1 - HeistIsland
  *
- * Hash: 0x7E3F55ED251B76D3 | Since: 2189
+ * Hash: 0x7E3F55ED251B76D3 | Since: unknown
  */
 export function loadGlobalWaterFile(waterType) {
     LoadGlobalWaterType(waterType);
@@ -472,7 +483,7 @@ export function loadGlobalWaterFile(waterType) {
 /**
  * No comment provided
  *
- * Hash: 0x4448EB75B4904BDB | Since: 323
+ * Hash: 0x4448EB75B4904BDB | Since: unknown
  */
 export function loadScene(pos) {
     LoadScene(pos.x, pos.y, pos.z);
@@ -480,7 +491,7 @@ export function loadScene(pos) {
 /**
  * No comment provided
  *
- * Hash: 0xC4582015556D1C46 | Since: 323
+ * Hash: 0xC4582015556D1C46 | Since: unknown
  */
 export function networkUpdateLoadScene() {
     return NetworkUpdateLoadScene();
@@ -490,7 +501,7 @@ export function networkUpdateLoadScene() {
  * `p7` is 0, 1, 2, 3 or 4 used in decompiled scripts, 0 is by far the most common.
  * Returns True if success, used only 7 times in decompiled scripts of 1868
  *
- * Hash: 0x212A8D0D2BABFAC2 | Since: 323
+ * Hash: 0x212A8D0D2BABFAC2 | Since: unknown
  */
 export function newLoadSceneStart(pos, offsetX, offsetY, offsetZ, radius) {
     return NewLoadSceneStart(pos.x, pos.y, pos.z, offsetX, offsetY, offsetZ, radius, 0);
@@ -498,7 +509,7 @@ export function newLoadSceneStart(pos, offsetX, offsetY, offsetZ, radius) {
 /**
  * No comment provided
  *
- * Hash: 0xACCFB4ACF53551B0 | Since: 323
+ * Hash: 0xACCFB4ACF53551B0 | Since: unknown
  */
 export function newLoadSceneStartSphere(pos, radius) {
     return NewLoadSceneStartSphere(pos.x, pos.y, pos.z, radius, undefined);
@@ -506,7 +517,7 @@ export function newLoadSceneStartSphere(pos, radius) {
 /**
  * No comment provided
  *
- * Hash: 0xC197616D221FF4A4 | Since: 323
+ * Hash: 0xC197616D221FF4A4 | Since: unknown
  */
 export function newLoadSceneStop() {
     NewLoadSceneStop();
@@ -516,7 +527,7 @@ export function newLoadSceneStop() {
  * Max scaling seems to be 200.0, normal is 1.0
  * See https://gfycat.com/DetailedHauntingIncatern
  *
- * Hash: 0xA76359FC80B2438E | Since: 323
+ * Hash: 0xA76359FC80B2438E | Since: unknown
  */
 export function overrideLodscaleThisFrame(scaling) {
     OverrideLodscaleThisFrame(scaling);
@@ -527,7 +538,7 @@ export function overrideLodscaleThisFrame(scaling) {
  * https://pastebin.com/2EeKVeLA : a list of SRL found in srllist.meta
  * https://pastebin.com/zd9XYUWY here is the content of a SRL file opened with codewalker.
  *
- * Hash: 0x3D245789CE12982C | Since: 323
+ * Hash: 0x3D245789CE12982C | Since: unknown
  */
 export function prefetchSrl(srl) {
     PrefetchSrl(srl);
@@ -535,7 +546,7 @@ export function prefetchSrl(srl) {
 /**
  * No comment provided
  *
- * Hash: 0xBED8CA5FF5E04113 | Since: 323
+ * Hash: 0xBED8CA5FF5E04113 | Since: unknown
  */
 export function remapLodscaleRangeThisFrame() {
     Citizen.invokeNative('0xBED8CA5FF5E04113', 0, 0, 0, 0);
@@ -543,7 +554,7 @@ export function remapLodscaleRangeThisFrame() {
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
  *
- * Hash: 0xF66A602F829E2A06 | Since: 323
+ * Hash: 0xF66A602F829E2A06 | Since: unknown
  */
 export function removeAnimDict(animDict) {
     RemoveAnimDict(animDict);
@@ -557,7 +568,7 @@ export function removeAnimDict(animDict) {
  *
  * Full list of movement clipsets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/movementClipsetsCompact.json
  *
- * Hash: 0x16350528F93024B3 | Since: 323
+ * Hash: 0x16350528F93024B3 | Since: unknown
  */
 export function removeAnimSet(animSet) {
     RemoveAnimSet(animSet);
@@ -569,7 +580,7 @@ export function removeAnimSet(animSet) {
  *
  * Full list of movement clipsets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/movementClipsetsCompact.json
  *
- * Hash: 0x01F73A131C18CD94 | Since: 323
+ * Hash: 0x01F73A131C18CD94 | Since: unknown
  */
 export function removeClipSet(clipSet) {
     RemoveClipSet(clipSet);
@@ -588,7 +599,7 @@ export function removeClipSet(clipSet) {
  *
  * iplName = Name of IPL you want to remove.
  *
- * Hash: 0xEE6C5AD3ECE0A82D | Since: 323
+ * Hash: 0xEE6C5AD3ECE0A82D | Since: unknown
  */
 export function removeIpl(iplName) {
     RemoveIpl(iplName);
@@ -596,7 +607,7 @@ export function removeIpl(iplName) {
 /**
  * No comment provided
  *
- * Hash: 0xF086AD9354FAC3A3 | Since: 323
+ * Hash: 0xF086AD9354FAC3A3 | Since: unknown
  */
 export function removeModelFromCreatorBudget(modelHash) {
     if (typeof modelHash === 'string')
@@ -606,7 +617,7 @@ export function removeModelFromCreatorBudget(modelHash) {
 /**
  * No comment provided
  *
- * Hash: 0x5F61EBBE1A00F96D | Since: 323
+ * Hash: 0x5F61EBBE1A00F96D | Since: unknown
  */
 export function removeNamedPtfxAsset(fxName) {
     RemoveNamedPtfxAsset(fxName);
@@ -614,7 +625,7 @@ export function removeNamedPtfxAsset(fxName) {
 /**
  * No comment provided
  *
- * Hash: 0x88C6814073DD4A73 | Since: 323
+ * Hash: 0x88C6814073DD4A73 | Since: unknown
  */
 export function removePtfxAsset() {
     RemovePtfxAsset();
@@ -622,7 +633,7 @@ export function removePtfxAsset() {
 /**
  * Alias of REQUEST_COLLISION_AT_COORD.
  *
- * Hash: 0xC9156DC11411A9EA | Since: 323
+ * Hash: 0xC9156DC11411A9EA | Since: unknown
  */
 export function requestAdditionalCollisionAtCoord(pos) {
     RequestAdditionalCollisionAtCoord(pos.x, pos.y, pos.z);
@@ -630,7 +641,7 @@ export function requestAdditionalCollisionAtCoord(pos) {
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
  *
- * Hash: 0xD3BD40951412FEF6 | Since: 323
+ * Hash: 0xD3BD40951412FEF6 | Since: unknown
  */
 export function requestAnimDict(animDict) {
     RequestAnimDict(animDict);
@@ -642,7 +653,7 @@ export function requestAnimDict(animDict) {
  *
  * Full list of movement clipsets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/movementClipsetsCompact.json
  *
- * Hash: 0x6EA47DAE7FAD0EED | Since: 323
+ * Hash: 0x6EA47DAE7FAD0EED | Since: unknown
  */
 export function requestAnimSet(animSet) {
     RequestAnimSet(animSet);
@@ -652,7 +663,7 @@ export function requestAnimSet(animSet) {
  *
  * Full list of movement clipsets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/movementClipsetsCompact.json
  *
- * Hash: 0xD2A71E1A77418A49 | Since: 323
+ * Hash: 0xD2A71E1A77418A49 | Since: unknown
  */
 export function requestClipSet(clipSet) {
     RequestClipSet(clipSet);
@@ -660,7 +671,7 @@ export function requestClipSet(clipSet) {
 /**
  * No comment provided
  *
- * Hash: 0x07503F7948F491A7 | Since: 323
+ * Hash: 0x07503F7948F491A7 | Since: unknown
  */
 export function requestCollisionAtCoord(pos) {
     RequestCollisionAtCoord(pos.x, pos.y, pos.z);
@@ -668,7 +679,7 @@ export function requestCollisionAtCoord(pos) {
 /**
  * No comment provided
  *
- * Hash: 0x923CB32A3B874FCB | Since: 323
+ * Hash: 0x923CB32A3B874FCB | Since: unknown
  */
 export function requestCollisionForModel(model) {
     if (typeof model === 'string')
@@ -680,7 +691,7 @@ export function requestCollisionForModel(model) {
  *
  * Full list of IPLs and interior entity sets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ipls.json
  *
- * Hash: 0x41B4893843BBDB74 | Since: 323
+ * Hash: 0x41B4893843BBDB74 | Since: unknown
  */
 export function requestIpl(iplName) {
     RequestIpl(iplName);
@@ -688,7 +699,7 @@ export function requestIpl(iplName) {
 /**
  * No comment provided
  *
- * Hash: 0xA0261AEF7ACFC51E | Since: 323
+ * Hash: 0xA0261AEF7ACFC51E | Since: unknown
  */
 export function requestMenuPedModel(model) {
     if (typeof model === 'string')
@@ -699,7 +710,7 @@ export function requestMenuPedModel(model) {
  * Request a model to be loaded into memory.
  *
  *
- * Hash: 0x963D27A58DF860AC | Since: 323
+ * Hash: 0x963D27A58DF860AC | Since: unknown
  */
 export function requestModel(model) {
     if (typeof model === 'string')
@@ -714,7 +725,7 @@ export function requestModel(model) {
  * `STREAMING::REQUEST_MODELS_IN_ROOM(l_13BC, "v_fib01_jan_elev");`
  * `STREAMING::REQUEST_MODELS_IN_ROOM(l_13BC, "limbo");`
  *
- * Hash: 0x8A7A40100EDFEC58 | Since: 323
+ * Hash: 0x8A7A40100EDFEC58 | Since: unknown
  */
 export function requestModelsInRoom(interior, roomName) {
     RequestModelsInRoom(interior, roomName);
@@ -736,7 +747,7 @@ export function requestModelsInRoom(interior, roomName) {
  * `STREAMING::REQUEST_NAMED_PTFX_ASSET("scr_ornate_heist");`
  * `STREAMING::REQUEST_NAMED_PTFX_ASSET("scr_prison_break_heist_station");`
  *
- * Hash: 0xB80D8756B4668AB6 | Since: 323
+ * Hash: 0xB80D8756B4668AB6 | Since: unknown
  */
 export function requestNamedPtfxAsset(fxName) {
     RequestNamedPtfxAsset(fxName);
@@ -744,7 +755,7 @@ export function requestNamedPtfxAsset(fxName) {
 /**
  * maps script name (thread + 0xD0) by lookup via scriptfx.dat - does nothing when script name is empty
  *
- * Hash: 0x944955FB2A3935C8 | Since: 323
+ * Hash: 0x944955FB2A3935C8 | Since: unknown
  */
 export function requestPtfxAsset() {
     RequestPtfxAsset();
@@ -752,7 +763,7 @@ export function requestPtfxAsset() {
 /**
  * This native does absolutely nothing, just a nullsub
  *
- * Hash: 0x4E52E752C76E7E7A | Since: 323
+ * Hash: 0x4E52E752C76E7E7A | Since: unknown
  */
 export function setAllMapdataCulled() {
     Citizen.invokeNative('0x4E52E752C76E7E7A', undefined);
@@ -760,7 +771,7 @@ export function setAllMapdataCulled() {
 /**
  * This is a NOP function. It does nothing at all.
  *
- * Hash: 0x42CBE54462D92634 | Since: 323
+ * Hash: 0x42CBE54462D92634 | Since: unknown
  */
 export function setDitchPoliceModels(toggle) {
     SetDitchPoliceModels(toggle);
@@ -768,7 +779,7 @@ export function setDitchPoliceModels(toggle) {
 /**
  * It seems to make the entity's coords mark the point from which LOD-distances are measured. In my testing, setting a vehicle as the focus entity and moving that vehicle more than 300 distance units away from the player will make the level of detail around the player go down drastically (shadows disappear, textures go extremely low res, etc). The player seems to be the default focus entity.
  *
- * Hash: 0x198F77705FA0931D | Since: 323
+ * Hash: 0x198F77705FA0931D | Since: unknown
  */
 export function setFocusEntity(entity) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -779,7 +790,7 @@ export function setFocusEntity(entity) {
  * p3, p4 and p5 are usually set to 0.0
  *
  *
- * Hash: 0xBB7454BAFF08FE25 | Since: 323
+ * Hash: 0xBB7454BAFF08FE25 | Since: unknown
  */
 export function setFocusPosAndVel(pos, offsetX, offsetY, offsetZ) {
     SetFocusPosAndVel(pos.x, pos.y, pos.z, offsetX, offsetY, offsetZ);
@@ -787,7 +798,7 @@ export function setFocusPosAndVel(pos, offsetX, offsetY, offsetZ) {
 /**
  * No comment provided
  *
- * Hash: 0x717CD6E6FAEBBEDC | Since: 323
+ * Hash: 0x717CD6E6FAEBBEDC | Since: unknown
  */
 export function setGamePausesFor(toggle) {
     SetGamePausesForStreaming(toggle);
@@ -795,7 +806,7 @@ export function setGamePausesFor(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xB85F26619073E775 | Since: 323
+ * Hash: 0xB85F26619073E775 | Since: unknown
  */
 export function setHdArea(pos, radius) {
     SetHdArea(pos.x, pos.y, pos.z, radius);
@@ -803,7 +814,7 @@ export function setHdArea(pos, radius) {
 /**
  * No comment provided
  *
- * Hash: 0xE37B76C387BE28ED | Since: 323
+ * Hash: 0xE37B76C387BE28ED | Since: unknown
  */
 export function setInteriorActive(interiorID, toggle) {
     SetInteriorActive(interiorID, toggle);
@@ -811,7 +822,7 @@ export function setInteriorActive(interiorID, toggle) {
 /**
  * Enables the specified island. For more information, see islandhopper.meta
  *
- * Hash: 0x9A9D1BA639675CF1 | Since: 2189
+ * Hash: 0x9A9D1BA639675CF1 | Since: unknown
  */
 export function setIslandEnabled(name, toggle) {
     SetIslandEnabled(name, toggle);
@@ -822,7 +833,7 @@ export function setIslandEnabled(name, toggle) {
  * "prologue"
  * "Prologue_Main"
  *
- * Hash: 0xAF12610C644A35C9 | Since: 323
+ * Hash: 0xAF12610C644A35C9 | Since: unknown
  */
 export function setMapdatacullboxEnabled(name, toggle) {
     SetMapdatacullboxEnabled(name, toggle);
@@ -830,7 +841,7 @@ export function setMapdatacullboxEnabled(name, toggle) {
 /**
  * Unloads model from memory
  *
- * Hash: 0xE532F5D78798DAAB | Since: 323
+ * Hash: 0xE532F5D78798DAAB | Since: unknown
  */
 export function setModelAsNoLongerNeeded(model) {
     if (typeof model === 'string')
@@ -841,7 +852,7 @@ export function setModelAsNoLongerNeeded(model) {
  * Control how many new (ambient?) peds will spawn in the game world.
  * Range for p0 seems to be 0-3, where 0 is none and 3 is the normal level.
  *
- * Hash: 0x8C95333CFC3340F3 | Since: 323
+ * Hash: 0x8C95333CFC3340F3 | Since: unknown
  */
 export function setPedPopulationBudget() {
     SetPedPopulationBudget(0);
@@ -849,7 +860,7 @@ export function setPedPopulationBudget() {
 /**
  * No comment provided
  *
- * Hash: 0x5F2013F8BC24EE69 | Since: 323
+ * Hash: 0x5F2013F8BC24EE69 | Since: unknown
  */
 export function setPlayerShortSwitchStyle() {
     SetPlayerShortSwitchStyle(0);
@@ -857,7 +868,7 @@ export function setPlayerShortSwitchStyle() {
 /**
  * All names can be found in playerswitchestablishingshots.meta
  *
- * Hash: 0x0FDE9DBFC0A6BC65 | Since: 323
+ * Hash: 0x0FDE9DBFC0A6BC65 | Since: unknown
  */
 export function setPlayerSwitchEstablishingShot(name) {
     SetPlayerSwitchEstablishingShot(name);
@@ -865,7 +876,7 @@ export function setPlayerSwitchEstablishingShot(name) {
 /**
  * No comment provided
  *
- * Hash: 0xC208B673CE446B61 | Since: 323
+ * Hash: 0xC208B673CE446B61 | Since: unknown
  */
 export function setPlayerSwitchOutro(cameraCoordX, cameraCoordY, cameraCoordZ, camRotationX, camRotationY, camRotationZ, camFov, camFarClip, rotationOrder) {
     SetPlayerSwitchOutro(cameraCoordX, cameraCoordY, cameraCoordZ, camRotationX, camRotationY, camRotationZ, camFov, camFarClip, rotationOrder);
@@ -873,7 +884,7 @@ export function setPlayerSwitchOutro(cameraCoordX, cameraCoordY, cameraCoordZ, c
 /**
  * No comment provided
  *
- * Hash: 0x77B5F9A36BF96710 | Since: 323
+ * Hash: 0x77B5F9A36BF96710 | Since: unknown
  */
 export function setReducePedModelBudget(toggle) {
     SetReducePedModelBudget(toggle);
@@ -881,7 +892,7 @@ export function setReducePedModelBudget(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x80C527893080CCF3 | Since: 323
+ * Hash: 0x80C527893080CCF3 | Since: unknown
  */
 export function setReduceVehicleModelBudget(toggle) {
     SetReduceVehicleModelBudget(toggle);
@@ -889,7 +900,7 @@ export function setReduceVehicleModelBudget(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x40AEFD1A244741F2 | Since: 323
+ * Hash: 0x40AEFD1A244741F2 | Since: unknown
  */
 export function setRenderHdOnly(toggle) {
     SetRenderHdOnly(toggle);
@@ -897,7 +908,7 @@ export function setRenderHdOnly(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x0811381EF5062FEC | Since: 323
+ * Hash: 0x0811381EF5062FEC | Since: unknown
  */
 export function setRestoreFocusEntity(p0) {
     const _p0 = typeof p0 == 'object' ? p0.handle() : p0;
@@ -906,7 +917,7 @@ export function setRestoreFocusEntity(p0) {
 /**
  * No comment provided
  *
- * Hash: 0x1E9057A74FD73E23 | Since: 323
+ * Hash: 0x1E9057A74FD73E23 | Since: unknown
  */
 export function setSceneTracksCamPosThisFrame() {
     Citizen.invokeNative('0x1E9057A74FD73E23');
@@ -914,7 +925,7 @@ export function setSceneTracksCamPosThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0xF8155A7F03DDFC8E | Since: 323
+ * Hash: 0xF8155A7F03DDFC8E | Since: unknown
  */
 export function setSrlForcePrestream() {
     Citizen.invokeNative('0xF8155A7F03DDFC8E', undefined);
@@ -922,7 +933,7 @@ export function setSrlForcePrestream() {
 /**
  * No comment provided
  *
- * Hash: 0x20C6C7E4EB082A7F | Since: 323
+ * Hash: 0x20C6C7E4EB082A7F | Since: unknown
  */
 export function setSrlLongJumpMode() {
     Citizen.invokeNative('0x20C6C7E4EB082A7F', false);
@@ -930,7 +941,7 @@ export function setSrlLongJumpMode() {
 /**
  * No comment provided
  *
- * Hash: 0xEF39EE20C537E98C | Since: 323
+ * Hash: 0xEF39EE20C537E98C | Since: unknown
  */
 export function setSrlPostCutsceneCamera() {
     Citizen.invokeNative('0xEF39EE20C537E98C', undefined, undefined, undefined, undefined, undefined, undefined);
@@ -938,7 +949,7 @@ export function setSrlPostCutsceneCamera() {
 /**
  * No comment provided
  *
- * Hash: 0xBEB2D9A1D9A8F55A | Since: 323
+ * Hash: 0xBEB2D9A1D9A8F55A | Since: unknown
  */
 export function setSrlReadaheadTimes() {
     Citizen.invokeNative('0xBEB2D9A1D9A8F55A', undefined, undefined, undefined, undefined);
@@ -946,7 +957,7 @@ export function setSrlReadaheadTimes() {
 /**
  * No comment provided
  *
- * Hash: 0xA74A541C6884E7B8 | Since: 323
+ * Hash: 0xA74A541C6884E7B8 | Since: unknown
  */
 export function setSrlTime() {
     SetSrlTime(0);
@@ -954,7 +965,7 @@ export function setSrlTime() {
 /**
  * No comment provided
  *
- * Hash: 0x6E0C692677008888 | Since: 323
+ * Hash: 0x6E0C692677008888 | Since: unknown
  */
 export function setStreaming(toggle) {
     SetStreaming(toggle);
@@ -962,7 +973,7 @@ export function setStreaming(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xCB9E1EB3BE2AF4E9 | Since: 323
+ * Hash: 0xCB9E1EB3BE2AF4E9 | Since: unknown
  */
 export function setVehiclePopulationBudget() {
     SetVehiclePopulationBudget(0);
@@ -970,7 +981,7 @@ export function setVehiclePopulationBudget() {
 /**
  * No comment provided
  *
- * Hash: 0xCCE26000E9A6FAD7 | Since: 323
+ * Hash: 0xCCE26000E9A6FAD7 | Since: unknown
  */
 export function shutdownCreatorBudget() {
     ShutdownCreatorBudget();
@@ -1001,7 +1012,7 @@ export function shutdownCreatorBudget() {
  * Flag 8 w/ SWITCH_TYPE_LONG will zoom out 3 steps, then zoom in 2/3 steps and stop on the 3rd and just hang there.
  * Flag 8 w/ SWITCH_TYPE_MEDIUM will zoom out 1 step, and just hang there.
  *
- * Hash: 0xFAA23F2CBA159D67 | Since: 323
+ * Hash: 0xFAA23F2CBA159D67 | Since: unknown
  */
 export function startPlayerSwitch(_from, to, flags, switchType) {
     const __from = typeof _from == 'object' ? _from.handle() : _from;
@@ -1011,7 +1022,7 @@ export function startPlayerSwitch(_from, to, flags, switchType) {
 /**
  * No comment provided
  *
- * Hash: 0x95C0A5BBDC189AA1 | Since: 323
+ * Hash: 0x95C0A5BBDC189AA1 | Since: unknown
  */
 export function stopPlayerSwitch() {
     StopPlayerSwitch();
@@ -1019,7 +1030,7 @@ export function stopPlayerSwitch() {
 /**
  * Always returns zero.
  *
- * Hash: 0x1F3F018BC3AFA77C | Since: 323
+ * Hash: 0x1F3F018BC3AFA77C | Since: unknown
  */
 export function streamvolCreateFrustum() {
     return StreamvolCreateFrustum(0, 0, 0, 0, 0, 0, 0, undefined, undefined);
@@ -1027,7 +1038,7 @@ export function streamvolCreateFrustum() {
 /**
  * Always returns zero.
  *
- * Hash: 0x0AD9710CEE2F590F | Since: 323
+ * Hash: 0x0AD9710CEE2F590F | Since: unknown
  */
 export function streamvolCreateLine() {
     return StreamvolCreateLine(0, 0, 0, 0, 0, 0, undefined);
@@ -1035,7 +1046,7 @@ export function streamvolCreateLine() {
 /**
  * Always returns zero.
  *
- * Hash: 0x219C7B8D53E429FD | Since: 323
+ * Hash: 0x219C7B8D53E429FD | Since: unknown
  */
 export function streamvolCreateSphere(pos, rad) {
     return StreamvolCreateSphere(pos.x, pos.y, pos.z, rad, undefined, undefined);
@@ -1043,7 +1054,7 @@ export function streamvolCreateSphere(pos, rad) {
 /**
  * No comment provided
  *
- * Hash: 0x1EE7D8DF4425F053 | Since: 323
+ * Hash: 0x1EE7D8DF4425F053 | Since: unknown
  */
 export function streamvolDelete(unused) {
     StreamvolDelete(unused);
@@ -1051,7 +1062,7 @@ export function streamvolDelete(unused) {
 /**
  * No comment provided
  *
- * Hash: 0x7D41E9D2D17C5B2D | Since: 323
+ * Hash: 0x7D41E9D2D17C5B2D | Since: unknown
  */
 export function streamvolHasLoaded(unused) {
     return StreamvolHasLoaded(unused);
@@ -1059,7 +1070,7 @@ export function streamvolHasLoaded(unused) {
 /**
  * No comment provided
  *
- * Hash: 0x07C313F94746702C | Since: 323
+ * Hash: 0x07C313F94746702C | Since: unknown
  */
 export function streamvolIsValid(unused) {
     return StreamvolIsValid(unused);
@@ -1067,7 +1078,7 @@ export function streamvolIsValid(unused) {
 /**
  * No comment provided
  *
- * Hash: 0x472397322E92A856 | Since: 323
+ * Hash: 0x472397322E92A856 | Since: unknown
  */
 export function suppressHdMapThisFrame() {
     Citizen.invokeNative('0x472397322E92A856');
@@ -1087,7 +1098,7 @@ export function suppressHdMapThisFrame() {
  * 2: 1 step out from ped
  * 3: 1 step towards ped
  *
- * Hash: 0xAAB3200ED59016BC | Since: 323
+ * Hash: 0xAAB3200ED59016BC | Since: unknown
  */
 export function switchToMultiFirstpart(ped, flags, switchType) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1096,7 +1107,7 @@ export function switchToMultiFirstpart(ped, flags, switchType) {
 /**
  * No comment provided
  *
- * Hash: 0xD8295AF639FD9CB8 | Since: 323
+ * Hash: 0xD8295AF639FD9CB8 | Since: unknown
  */
 export function switchToMultiSecondpart(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1105,17 +1116,7 @@ export function switchToMultiSecondpart(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x0F7082C60FB479EF | Since: 3717
- */
-export function getModelAdditionalCost(modelHash) {
-    if (typeof modelHash === 'string')
-        modelHash = GetHashKey(modelHash);
-    return Citizen.invokeNative('0x0F7082C60FB479EF', modelHash);
-}
-/**
- * No comment provided
- *
- * Hash: 0x4A91423C04BAADA1 | Since: 3717
+ * Hash: 0x4A91423C04BAADA1 | Since: unknown
  */
 export function getTotalModelCost(modelHash) {
     if (typeof modelHash === 'string')
@@ -1125,7 +1126,7 @@ export function getTotalModelCost(modelHash) {
 /**
  * No comment provided
  *
- * Hash: 0x68F1C25420D5F6AA | Since: 3717
+ * Hash: 0x68F1C25420D5F6AA | Since: unknown
  */
 export function setSphericalStreamDistantHilodsThisFrame() {
     Citizen.invokeNative('0x68F1C25420D5F6AA');

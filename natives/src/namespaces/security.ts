@@ -3,7 +3,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
 /**
  * No comment provided
  * 
- * Hash: 0x8E580AB902917360 | Since: 2545
+ * Hash: 0x8E580AB902917360 | Since: unknown
  */
 export function forceCheckScriptVariables(): void {
     Citizen.invokeNative('0x8E580AB902917360');
@@ -12,7 +12,7 @@ export function forceCheckScriptVariables(): void {
 /**
  * Registers a protected variable that will be checked for modifications by the anticheat
  * 
- * Hash: 0x40EB1EFD921822BC | Since: 2545
+ * Hash: 0x40EB1EFD921822BC | Since: unknown
  */
 export function registerScriptVariable(): any {
     return Citizen.invokeNative('0x40EB1EFD921822BC');
@@ -21,7 +21,7 @@ export function registerScriptVariable(): any {
 /**
  * No comment provided
  * 
- * Hash: 0x340A36A700E99699 | Since: 2545
+ * Hash: 0x340A36A700E99699 | Since: unknown
  */
 export function unregisterScriptVariable(): any {
     return Citizen.invokeNative('0x340A36A700E99699');

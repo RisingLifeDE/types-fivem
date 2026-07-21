@@ -8,7 +8,7 @@
  * `STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(vehicleHash);`
  * `ZONE::CLEAR_POPSCHEDULE_OVERRIDE_VEHICLE_MODEL(popSchedules[index]);`
  *
- * Hash: 0x5C0DE367AA0D911C | Since: 323
+ * Hash: 0x5C0DE367AA0D911C | Since: unknown
  */
 export function clearPopscheduleOverrideVehicleModel(scheduleId) {
     ClearPopscheduleOverrideVehicleModel(scheduleId);
@@ -25,7 +25,7 @@ export function clearPopscheduleOverrideVehicleModel(scheduleId) {
  * Ped player = Game.Player.Character;
  * Hash h = Function.Call<Hash>(Hash.GET_HASH_OF_MAP_AREA_AT_COORDS, player.Position.X, player.Position.Y, player.Position.Z);
  *
- * Hash: 0x7EE64D51E8498728 | Since: 323
+ * Hash: 0x7EE64D51E8498728 | Since: unknown
  */
 export function getHashOfMapAreaAtCoords(pos) {
     return GetHashOfMapAreaAtCoords(pos.x, pos.y, pos.z);
@@ -123,7 +123,7 @@ export function getHashOfMapAreaAtCoords(pos) {
  *
  * Full list of zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/zones.json
  *
- * Hash: 0xCD90657D4C30E1CA | Since: 323
+ * Hash: 0xCD90657D4C30E1CA | Since: unknown
  */
 export function getNameOf(pos) {
     return GetNameOfZone(pos.x, pos.y, pos.z);
@@ -131,7 +131,7 @@ export function getNameOf(pos) {
 /**
  * No comment provided
  *
- * Hash: 0x27040C25DE6CB2F4 | Since: 323
+ * Hash: 0x27040C25DE6CB2F4 | Since: unknown
  */
 export function getAtCoords(pos) {
     return GetZoneAtCoords(pos.x, pos.y, pos.z);
@@ -231,7 +231,7 @@ export function getAtCoords(pos) {
  *
  * Full list of zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/zones.json
  *
- * Hash: 0x98CD1D2934B76CC1 | Since: 323
+ * Hash: 0x98CD1D2934B76CC1 | Since: unknown
  */
 export function getFromNameId(zoneName) {
     return GetZoneFromNameId(zoneName);
@@ -239,7 +239,7 @@ export function getFromNameId(zoneName) {
 /**
  * No comment provided
  *
- * Hash: 0x4334BC40AA0CB4BB | Since: 323
+ * Hash: 0x4334BC40AA0CB4BB | Since: unknown
  */
 export function getPopschedule(zoneId) {
     return GetZonePopschedule(zoneId);
@@ -247,7 +247,7 @@ export function getPopschedule(zoneId) {
 /**
  * cellphone range 1- 5 used for signal bar in iFruit phone
  *
- * Hash: 0x5F7B268D15BA0739 | Since: 323
+ * Hash: 0x5F7B268D15BA0739 | Since: unknown
  */
 export function getScumminess(zoneId) {
     return GetZoneScumminess(zoneId);
@@ -262,7 +262,7 @@ export function getScumminess(zoneId) {
  * `ZONE::OVERRIDE_POPSCHEDULE_VEHICLE_MODEL(popSchedules[index], vehicleHash);`
  * `STREAMING::REQUEST_MODEL(vehicleHash);`
  *
- * Hash: 0x5F7D596BAC2E7777 | Since: 323
+ * Hash: 0x5F7D596BAC2E7777 | Since: unknown
  */
 export function overridePopscheduleVehicleModel(scheduleId, vehicleHash) {
     if (typeof vehicleHash === 'string')
@@ -272,7 +272,7 @@ export function overridePopscheduleVehicleModel(scheduleId, vehicleHash) {
 /**
  * No comment provided
  *
- * Hash: 0xBA5ECEEA120E5611 | Since: 323
+ * Hash: 0xBA5ECEEA120E5611 | Since: unknown
  */
 export function setEnabled(zoneId, toggle) {
     SetZoneEnabled(zoneId, toggle);

@@ -467,7 +467,7 @@ export function getBoneMatrix(ped, boneId) {
 /**
  * Same as SET_PED_ARMOUR, but ADDS 'amount' to the armor the Ped already has.
  *
- * Hash: 0x5BA652A0CD14DF2F | Since: 323 | API-Set: unknown
+ * Hash: 0x5BA652A0CD14DF2F | Since: unknown | API-Set: unknown
  */
 export function addArmourTo(ped, amount) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -502,7 +502,7 @@ export function addArmourTo(ped, amount) {
  *
  * Full list of ped overlays / decorations by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedOverlayCollections.json
  *
- * Hash: 0x5F5D1665E352A839 | Since: 323 | API-Set: unknown
+ * Hash: 0x5F5D1665E352A839 | Since: unknown | API-Set: unknown
  */
 export function addDecorationFromHashes(ped, collection, overlay) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -515,7 +515,7 @@ export function addDecorationFromHashes(ped, collection, overlay) {
 /**
  * Full list of ped overlays / decorations by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedOverlayCollections.json
  *
- * Hash: 0x5619BFA07CFD7833 | Since: 323 | API-Set: unknown
+ * Hash: 0x5619BFA07CFD7833 | Since: unknown | API-Set: unknown
  */
 export function addDecorationFromHashesInCorona(ped, collection, overlay) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -528,7 +528,7 @@ export function addDecorationFromHashesInCorona(ped, collection, overlay) {
 /**
  * Can't select void. This function returns nothing. The hash of the created relationship group is output in the second parameter.
  *
- * Hash: 0xF372BC22FCB88606 | Since: 323 | API-Set: unknown
+ * Hash: 0xF372BC22FCB88606 | Since: unknown | API-Set: unknown
  */
 export function addRelationshipGroup(name) {
     return AddRelationshipGroup(name);
@@ -536,7 +536,7 @@ export function addRelationshipGroup(name) {
 /**
  * No comment provided
  *
- * Hash: 0x1B5C85C612E5256E | Since: 323 | API-Set: unknown
+ * Hash: 0x1B5C85C612E5256E | Since: unknown | API-Set: unknown
  */
 export function addScenarioBlockingArea(x1, y1, z1, x2, y2, z2) {
     return AddScenarioBlockingArea(x1, y1, z1, x2, y2, z2, false, false, false, false, undefined);
@@ -544,7 +544,7 @@ export function addScenarioBlockingArea(x1, y1, z1, x2, y2, z2) {
 /**
  * damages a ped with the given amount
  *
- * Hash: 0x697157CED63F18D4 | Since: 323 | API-Set: unknown
+ * Hash: 0x697157CED63F18D4 | Since: unknown | API-Set: unknown
  */
 export function applyDamageTo(ped, damageAmount, weaponType) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -568,7 +568,7 @@ export function applyDamageTo(ped, damageAmount, weaponType) {
  * - Scripted_Ped_Splash_Back
  * - BackSplash
  *
- * Hash: 0x83F7E01C7B769A26 | Since: 323 | API-Set: unknown
+ * Hash: 0x83F7E01C7B769A26 | Since: unknown | API-Set: unknown
  */
 export function applyBlood(ped, boneIndex, rot, woundType) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -577,7 +577,7 @@ export function applyBlood(ped, boneIndex, rot, woundType) {
 /**
  * No comment provided
  *
- * Hash: 0x3311E47B91EDCBBC | Since: 323 | API-Set: unknown
+ * Hash: 0x3311E47B91EDCBBC | Since: unknown | API-Set: unknown
  */
 export function applyBloodByZone(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -586,7 +586,7 @@ export function applyBloodByZone(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x816F6981C60BF53B | Since: 323 | API-Set: unknown
+ * Hash: 0x816F6981C60BF53B | Since: unknown | API-Set: unknown
  */
 export function applyBloodDamageByZone(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -595,7 +595,7 @@ export function applyBloodDamageByZone(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xEF0D582CBF2D9B0F | Since: 323 | API-Set: unknown
+ * Hash: 0xEF0D582CBF2D9B0F | Since: unknown | API-Set: unknown
  */
 export function applyBloodSpecific(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -627,7 +627,7 @@ export function applyBloodSpecific(ped) {
  *
  * APPLY_PED_DAMAGE_DECAL(ped, 1, 0.5f, 0.513f, 0f, 1f, unk, 0, 0, "blushing");
  *
- * Hash: 0x397C38AA7B4A5F83 | Since: 323 | API-Set: unknown
+ * Hash: 0x397C38AA7B4A5F83 | Since: unknown | API-Set: unknown
  */
 export function applyDamageDecal(ped, damageZone, xOffset, yOffset, heading, scale, alpha, variation, fadeIn, decalName) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -663,7 +663,7 @@ export function applyDamageDecal(ped, damageZone, xOffset, yOffset, heading, sca
  * gist.github.com/alexguirre/f3f47f75ddcf617f416f3c8a55ae2227
  * Full list of ped damage packs by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedDamagePacks.json
  *
- * Hash: 0x46DF918788CB093F | Since: 323 | API-Set: unknown
+ * Hash: 0x46DF918788CB093F | Since: unknown | API-Set: unknown
  */
 export function applyDamagePack(ped, damagePack, damage, mult) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -672,7 +672,7 @@ export function applyDamagePack(ped, damagePack, damage, mult) {
 /**
  * No comment provided
  *
- * Hash: 0x272E4723B56A3B96 | Since: 323 | API-Set: unknown
+ * Hash: 0x272E4723B56A3B96 | Since: unknown | API-Set: unknown
  */
 export function attachSynchronizedSceneToEntity(sceneID, entity, boneIndex) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -681,7 +681,7 @@ export function attachSynchronizedSceneToEntity(sceneID, entity, boneIndex) {
 /**
  * No comment provided
  *
- * Hash: 0xE43A13C9E4CCCBCF | Since: 323 | API-Set: unknown
+ * Hash: 0xE43A13C9E4CCCBCF | Since: unknown | API-Set: unknown
  */
 export function blockFromGeneratingDeadBodyEventsWhenDead(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -690,7 +690,7 @@ export function blockFromGeneratingDeadBodyEventsWhenDead(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xEACEEDA81751915C | Since: 323 | API-Set: unknown
+ * Hash: 0xEACEEDA81751915C | Since: unknown | API-Set: unknown
  */
 export function canCreateRandomBikeRider() {
     return CanCreateRandomBikeRider();
@@ -698,7 +698,7 @@ export function canCreateRandomBikeRider() {
 /**
  * No comment provided
  *
- * Hash: 0x5EE2CAFF7F17770D | Since: 323 | API-Set: unknown
+ * Hash: 0x5EE2CAFF7F17770D | Since: unknown | API-Set: unknown
  */
 export function canCreateRandomCops() {
     return CanCreateRandomCops();
@@ -706,7 +706,7 @@ export function canCreateRandomCops() {
 /**
  * No comment provided
  *
- * Hash: 0xB8EB95E5B4E56978 | Since: 323 | API-Set: unknown
+ * Hash: 0xB8EB95E5B4E56978 | Since: unknown | API-Set: unknown
  */
 export function canCreateRandomDriver() {
     return CanCreateRandomDriver();
@@ -714,7 +714,7 @@ export function canCreateRandomDriver() {
 /**
  * No comment provided
  *
- * Hash: 0x3E8349C08E4B82E4 | Since: 323 | API-Set: unknown
+ * Hash: 0x3E8349C08E4B82E4 | Since: unknown | API-Set: unknown
  */
 export function canCreateRandom() {
     return CanCreateRandomPed(false);
@@ -722,7 +722,7 @@ export function canCreateRandom() {
 /**
  * No comment provided
  *
- * Hash: 0x51AC07A44D4F5B8A | Since: 323 | API-Set: unknown
+ * Hash: 0x51AC07A44D4F5B8A | Since: unknown | API-Set: unknown
  */
 export function canKnockOffVehicle(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -731,7 +731,7 @@ export function canKnockOffVehicle(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xEAD42DE3610D0721 | Since: 323 | API-Set: unknown
+ * Hash: 0xEAD42DE3610D0721 | Since: unknown | API-Set: unknown
  */
 export function canInCombatSeeTarget(ped, target) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -743,7 +743,7 @@ export function canInCombatSeeTarget(ped, target) {
  *
  * [Example: Can prevent peds from falling when standing on moving vehicles.]
  *
- * Hash: 0x128F79EDCECE4FD5 | Since: 323 | API-Set: unknown
+ * Hash: 0x128F79EDCECE4FD5 | Since: unknown | API-Set: unknown
  */
 export function canRagdoll(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -752,7 +752,7 @@ export function canRagdoll(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x6CD5A433374D4CFB | Since: 323 | API-Set: unknown
+ * Hash: 0x6CD5A433374D4CFB | Since: unknown | API-Set: unknown
  */
 export function canSeeHatedPed(ped1, ped2) {
     const _ped1 = typeof ped1 == 'object' ? ped1.handle() : ped1;
@@ -762,7 +762,7 @@ export function canSeeHatedPed(ped1, ped2) {
 /**
  * No comment provided
  *
- * Hash: 0x2DFC81C9B9608549 | Since: 944 | API-Set: unknown
+ * Hash: 0x2DFC81C9B9608549 | Since: unknown | API-Set: unknown
  */
 export function canShuffleToOrFromExtraSeat(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -771,7 +771,7 @@ export function canShuffleToOrFromExtraSeat(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x9C6A6C19B6C0C496 | Since: 323 | API-Set: unknown
+ * Hash: 0x9C6A6C19B6C0C496 | Since: unknown | API-Set: unknown
  */
 export function canShuffleToOrFromTurretSeat(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -781,7 +781,7 @@ export function canShuffleToOrFromTurretSeat(ped) {
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0xCD8A7537A9B52F06 | Since: 323 | API-Set: unknown
+ * Hash: 0xCD8A7537A9B52F06 | Since: unknown | API-Set: unknown
  */
 export function clearAllProps(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -790,7 +790,7 @@ export function clearAllProps(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xE6CA85E7259CE16B | Since: 323 | API-Set: unknown
+ * Hash: 0xE6CA85E7259CE16B | Since: unknown | API-Set: unknown
  */
 export function clearAllVehicleForcedSeatUsage(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -799,7 +799,7 @@ export function clearAllVehicleForcedSeatUsage(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x637822DC2AFEEBF8 | Since: 1493 | API-Set: unknown
+ * Hash: 0x637822DC2AFEEBF8 | Since: unknown | API-Set: unknown
  */
 export function clearCoverPointFor(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -808,7 +808,7 @@ export function clearCoverPointFor(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x726256CC1EEB182F | Since: 323 | API-Set: unknown
+ * Hash: 0x726256CC1EEB182F | Since: unknown | API-Set: unknown
  */
 export function clearFacialIdleAnimOverride(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -817,7 +817,7 @@ export function clearFacialIdleAnimOverride(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xD8D19675ED5FBDCE | Since: 323 | API-Set: unknown
+ * Hash: 0xD8D19675ED5FBDCE | Since: unknown | API-Set: unknown
  */
 export function clearAlternateMovementAnim(ped, stance) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -826,7 +826,7 @@ export function clearAlternateMovementAnim(ped, stance) {
 /**
  * No comment provided
  *
- * Hash: 0x8844BBFCE30AA9E9 | Since: 323 | API-Set: unknown
+ * Hash: 0x8844BBFCE30AA9E9 | Since: unknown | API-Set: unknown
  */
 export function clearAlternateWalkAnim(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -835,7 +835,7 @@ export function clearAlternateWalkAnim(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x8FE22675A5A45817 | Since: 323 | API-Set: unknown
+ * Hash: 0x8FE22675A5A45817 | Since: unknown | API-Set: unknown
  */
 export function clearBloodDamage(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -844,7 +844,7 @@ export function clearBloodDamage(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x56E3B78C5408D9F4 | Since: 323 | API-Set: unknown
+ * Hash: 0x56E3B78C5408D9F4 | Since: unknown | API-Set: unknown
  */
 export function clearBloodDamageByZone(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -854,7 +854,7 @@ export function clearBloodDamageByZone(ped) {
  * p1: from 0 to 5 in the b617d scripts.
  * p2: "blushing" and "ALL" found in the b617d scripts.
  *
- * Hash: 0x523C79AEEFCC4A2A | Since: 323 | API-Set: unknown
+ * Hash: 0x523C79AEEFCC4A2A | Since: unknown | API-Set: unknown
  */
 export function clearDamageDecalByZone(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -863,7 +863,7 @@ export function clearDamageDecalByZone(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x0E5173C163976E38 | Since: 323 | API-Set: unknown
+ * Hash: 0x0E5173C163976E38 | Since: unknown | API-Set: unknown
  */
 export function clearDecorations(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -872,7 +872,7 @@ export function clearDecorations(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xE3B27E70CEAB9F0C | Since: 323 | API-Set: unknown
+ * Hash: 0xE3B27E70CEAB9F0C | Since: unknown | API-Set: unknown
  */
 export function clearDecorationsLeaveScars(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -881,7 +881,7 @@ export function clearDecorationsLeaveScars(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x4AFE3690D7E0B5AC | Since: 323 | API-Set: unknown
+ * Hash: 0x4AFE3690D7E0B5AC | Since: unknown | API-Set: unknown
  */
 export function clearDriveByClipsetOverride(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -890,7 +890,7 @@ export function clearDriveByClipsetOverride(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x6585D955A68452A5 | Since: 323 | API-Set: unknown
+ * Hash: 0x6585D955A68452A5 | Since: unknown | API-Set: unknown
  */
 export function clearEnvDirt(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -899,7 +899,7 @@ export function clearEnvDirt(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x80054D7FCC70EEC6 | Since: 323 | API-Set: unknown
+ * Hash: 0x80054D7FCC70EEC6 | Since: unknown | API-Set: unknown
  */
 export function clearFallUpperBodyClipsetOverride(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -908,7 +908,7 @@ export function clearFallUpperBodyClipsetOverride(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x8EF6B7AC68E2F01B | Since: 323 | API-Set: unknown
+ * Hash: 0x8EF6B7AC68E2F01B | Since: unknown | API-Set: unknown
  */
 export function clearLastDamageBone(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -917,7 +917,7 @@ export function clearLastDamageBone(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xC79196DCB36F6121 | Since: 323 | API-Set: unknown
+ * Hash: 0xC79196DCB36F6121 | Since: unknown | API-Set: unknown
  */
 export function clearMotionInCoverClipsetOverride(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -926,7 +926,7 @@ export function clearMotionInCoverClipsetOverride(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x2E05208086BA0651 | Since: 323 | API-Set: unknown
+ * Hash: 0x2E05208086BA0651 | Since: unknown | API-Set: unknown
  */
 export function clearNonCreationArea() {
     ClearPedNonCreationArea();
@@ -934,7 +934,7 @@ export function clearNonCreationArea() {
 /**
  * No comment provided
  *
- * Hash: 0x1280804F7CFD2D6C | Since: 323 | API-Set: unknown
+ * Hash: 0x1280804F7CFD2D6C | Since: unknown | API-Set: unknown
  */
 export function clearParachutePackVariation(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -944,7 +944,7 @@ export function clearParachutePackVariation(ped) {
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x0943E5B8E078E76E | Since: 323 | API-Set: unknown
+ * Hash: 0x0943E5B8E078E76E | Since: unknown | API-Set: unknown
  */
 export function clearProp(ped, propId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -953,7 +953,7 @@ export function clearProp(ped, propId) {
 /**
  * Removes the scubagear (for mp male: component id: 8, drawableId: 123, textureId: any) from peds. Does not play the 'remove scuba gear' animation, but instantly removes it.
  *
- * Hash: 0xB50EB4CCB29704AC | Since: 323 | API-Set: unknown
+ * Hash: 0xB50EB4CCB29704AC | Since: unknown | API-Set: unknown
  */
 export function clearScubaGearVariation(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -962,7 +962,7 @@ export function clearScubaGearVariation(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x687C0B594907D2E8 | Since: 323 | API-Set: unknown
+ * Hash: 0x687C0B594907D2E8 | Since: unknown | API-Set: unknown
  */
 export function clearStoredHatProp(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -971,7 +971,7 @@ export function clearStoredHatProp(ped) {
 /**
  * It clears the wetness of the selected Ped/Player. Clothes have to be wet to notice the difference.
  *
- * Hash: 0x9C720776DAA43E7E | Since: 323 | API-Set: unknown
+ * Hash: 0x9C720776DAA43E7E | Since: unknown | API-Set: unknown
  */
 export function clearWetness(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -980,7 +980,7 @@ export function clearWetness(ped) {
 /**
  * See SET_RAGDOLL_BLOCKING_FLAGS for flags
  *
- * Hash: 0xD86D101FCFD00A4B | Since: 323 | API-Set: unknown
+ * Hash: 0xD86D101FCFD00A4B | Since: unknown | API-Set: unknown
  */
 export function clearRagdollBlockingFlags(ped, blockingFlag) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1003,7 +1003,7 @@ export function clearRagdollBlockingFlags(ped, blockingFlag) {
  * `PED::CLEAR_RELATIONSHIP_BETWEEN_GROUPS(2, l_1017, 0xA49E591C);`
  * `PED::CLEAR_RELATIONSHIP_BETWEEN_GROUPS(2, 0xA49E591C, l_1017);`
  *
- * Hash: 0x5E29243FB56FC6D4 | Since: 323 | API-Set: unknown
+ * Hash: 0x5E29243FB56FC6D4 | Since: unknown | API-Set: unknown
  */
 export function clearRelationshipBetweenGroups(relationship, group1, group2) {
     if (typeof group1 === 'string')
@@ -1015,7 +1015,7 @@ export function clearRelationshipBetweenGroups(relationship, group1, group2) {
 /**
  * No comment provided
  *
- * Hash: 0xEF29A16337FACADB | Since: 323 | API-Set: unknown
+ * Hash: 0xEF29A16337FACADB | Since: unknown | API-Set: unknown
  */
 export function clone(ped, isNetwork, bScriptHostPed, copyHeadBlendFlag) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1024,7 +1024,7 @@ export function clone(ped, isNetwork, bScriptHostPed, copyHeadBlendFlag) {
 /**
  * No comment provided
  *
- * Hash: 0x668FD40BCBA5DE48 | Since: 463 | API-Set: unknown
+ * Hash: 0x668FD40BCBA5DE48 | Since: unknown | API-Set: unknown
  */
 export function cloneAlt(ped, isNetwork, bScriptHostPed, copyHeadBlendFlag) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1033,7 +1033,7 @@ export function cloneAlt(ped, isNetwork, bScriptHostPed, copyHeadBlendFlag) {
 /**
  * Copies ped's components and props to targetPed.
  *
- * Hash: 0xE952D6431689AD9A | Since: 323 | API-Set: unknown
+ * Hash: 0xE952D6431689AD9A | Since: unknown | API-Set: unknown
  */
 export function cloneToTarget(ped, targetPed) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1043,7 +1043,7 @@ export function cloneToTarget(ped, targetPed) {
 /**
  * No comment provided
  *
- * Hash: 0x148B08C2D2ACB884 | Since: 463 | API-Set: unknown
+ * Hash: 0x148B08C2D2ACB884 | Since: unknown | API-Set: unknown
  */
 export function cloneToTargetAlt(ped, targetPed) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1053,7 +1053,7 @@ export function cloneToTargetAlt(ped, targetPed) {
 /**
  * No comment provided
  *
- * Hash: 0x5407B7288D0478B7 | Since: 323 | API-Set: unknown
+ * Hash: 0x5407B7288D0478B7 | Since: unknown | API-Set: unknown
  */
 export function countsInCombatWithTarget(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1062,7 +1062,7 @@ export function countsInCombatWithTarget(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x336B3D200AB007CB | Since: 323 | API-Set: unknown
+ * Hash: 0x336B3D200AB007CB | Since: unknown | API-Set: unknown
  */
 export function countsInCombatWithTargetWithinRadius(ped, pos, radius) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1076,7 +1076,7 @@ export function countsInCombatWithTargetWithinRadius(ped, pos, radius) {
  *
  * Returns a handle to the created group, or 0 if a group couldn't be created.
  *
- * Hash: 0x90370EBE0FEE1A3D | Since: 323 | API-Set: unknown
+ * Hash: 0x90370EBE0FEE1A3D | Since: unknown | API-Set: unknown
  */
 export function createGroup(unused) {
     return CreateGroup(unused);
@@ -1089,7 +1089,7 @@ export function createGroup(unused) {
  *
  * If a message already exists, this function does nothing. A message exists until the point it has been successfully dispatched by GIVE_PED_NM_MESSAGE.
  *
- * Hash: 0x418EF2A1BCE56685 | Since: 323 | API-Set: unknown
+ * Hash: 0x418EF2A1BCE56685 | Since: unknown | API-Set: unknown
  */
 export function createNmMessage(startImmediately, messageId) {
     CreateNmMessage(startImmediately, messageId);
@@ -1097,7 +1097,7 @@ export function createNmMessage(startImmediately, messageId) {
 /**
  * No comment provided
  *
- * Hash: 0x8C4F3BF23B6237DB | Since: 323 | API-Set: unknown
+ * Hash: 0x8C4F3BF23B6237DB | Since: unknown | API-Set: unknown
  */
 export function createParachuteBagObject(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1108,7 +1108,7 @@ export function createParachuteBagObject(ped) {
  *
  * Full list of peds by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/peds.json
  *
- * Hash: 0xD49F9B0955C367DE | Since: 323 | API-Set: unknown
+ * Hash: 0xD49F9B0955C367DE | Since: unknown | API-Set: unknown
  */
 export function create(pedType, modelHash, pos, heading, isNetwork, bScriptHostPed) {
     if (typeof modelHash === 'string')
@@ -1120,7 +1120,7 @@ export function create(pedType, modelHash, pos, heading, isNetwork, bScriptHostP
  *
  * Full list of peds by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/peds.json
  *
- * Hash: 0x7DD959874C1FD534 | Since: 323 | API-Set: unknown
+ * Hash: 0x7DD959874C1FD534 | Since: unknown | API-Set: unknown
  */
 export function createInsideVehicle(vehicle, pedType, modelHash, seat, isNetwork, bScriptHostPed) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1139,7 +1139,7 @@ export function createInsideVehicle(vehicle, pedType, modelHash, seat, isNetwork
  * Creates a Ped at the specified location, returns the Ped Handle.
  * Ped will not act until SET_PED_AS_NO_LONGER_NEEDED is called.
  *
- * Hash: 0xB4AC7D0CF06BFE8F | Since: 323 | API-Set: unknown
+ * Hash: 0xB4AC7D0CF06BFE8F | Since: unknown | API-Set: unknown
  */
 export function createRandom(pos) {
     return CreateRandomPed(pos.x, pos.y, pos.z);
@@ -1147,7 +1147,7 @@ export function createRandom(pos) {
 /**
  * No comment provided
  *
- * Hash: 0x9B62392B474F44A0 | Since: 323 | API-Set: unknown
+ * Hash: 0x9B62392B474F44A0 | Since: unknown | API-Set: unknown
  */
 export function createRandomAsDriver(vehicle, returnHandle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1159,7 +1159,7 @@ export function createRandomAsDriver(vehicle, returnHandle) {
  * roll and pitch 0
  * yaw to Ped.rotation
  *
- * Hash: 0x8C18E0F9080ADD73 | Since: 323 | API-Set: unknown
+ * Hash: 0x8C18E0F9080ADD73 | Since: unknown | API-Set: unknown
  */
 export function createSynchronizedScene(pos, roll, pitch, yaw) {
     return CreateSynchronizedScene(pos.x, pos.y, pos.z, roll, pitch, yaw, 0);
@@ -1167,7 +1167,7 @@ export function createSynchronizedScene(pos, roll, pitch, yaw) {
 /**
  * No comment provided
  *
- * Hash: 0x62EC273D00187DCA | Since: 323 | API-Set: unknown
+ * Hash: 0x62EC273D00187DCA | Since: unknown | API-Set: unknown
  */
 export function createSynchronizedSceneAtMapObject(pos, radius, _object) {
     if (typeof _object === 'string')
@@ -1177,16 +1177,15 @@ export function createSynchronizedSceneAtMapObject(pos, radius, _object) {
 /**
  * Deletes the specified ped, then sets the handle pointed to by the pointer to NULL.
  *
- * Hash: 0x9614299DCB53E54B | Since: 323 | API-Set: unknown
+ * Hash: 0x9614299DCB53E54B | Since: unknown | API-Set: unknown
  */
-export function deletePed(ped) {
-    const _ped = typeof ped == 'object' ? ped.handle() : ped;
-    DeletePed(_ped);
+export function deletePed() {
+    return DeletePed();
 }
 /**
  * No comment provided
  *
- * Hash: 0x6D38F1F04CBB37EA | Since: 323 | API-Set: unknown
+ * Hash: 0x6D38F1F04CBB37EA | Since: unknown | API-Set: unknown
  */
 export function detachSynchronizedScene(sceneID) {
     DetachSynchronizedScene(sceneID);
@@ -1194,7 +1193,7 @@ export function detachSynchronizedScene(sceneID) {
 /**
  * No comment provided
  *
- * Hash: 0xA21C118553BBDF02 | Since: 323 | API-Set: unknown
+ * Hash: 0xA21C118553BBDF02 | Since: unknown | API-Set: unknown
  */
 export function disableHeadBlendPaletteColor(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1203,7 +1202,7 @@ export function disableHeadBlendPaletteColor(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x600048C60D5C2C51 | Since: 323 | API-Set: unknown
+ * Hash: 0x600048C60D5C2C51 | Since: unknown | API-Set: unknown
  */
 export function disableHeatscaleOverride(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1212,7 +1211,7 @@ export function disableHeatscaleOverride(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x733C87D4CE22BEA2 | Since: 323 | API-Set: unknown
+ * Hash: 0x733C87D4CE22BEA2 | Since: unknown | API-Set: unknown
  */
 export function disableInjuredOnGroundBehaviour(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1221,7 +1220,7 @@ export function disableInjuredOnGroundBehaviour(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x7C6B0C22F9F40BBE | Since: 323 | API-Set: unknown
+ * Hash: 0x7C6B0C22F9F40BBE | Since: unknown | API-Set: unknown
  */
 export function doesGroupExist(groupId) {
     return DoesGroupExist(groupId);
@@ -1229,7 +1228,7 @@ export function doesGroupExist(groupId) {
 /**
  * No comment provided
  *
- * Hash: 0xCC6E3B6BB69501F1 | Since: 505 | API-Set: unknown
+ * Hash: 0xCC6E3B6BB69501F1 | Since: unknown | API-Set: unknown
  */
 export function doesRelationshipGroupExist(groupHash) {
     if (typeof groupHash === 'string')
@@ -1239,7 +1238,7 @@ export function doesRelationshipGroupExist(groupHash) {
 /**
  * No comment provided
  *
- * Hash: 0x8A24B067D175A7BD | Since: 678 | API-Set: unknown
+ * Hash: 0x8A24B067D175A7BD | Since: unknown | API-Set: unknown
  */
 export function doesScenarioBlockingAreaExists(x1, y1, z1, x2, y2, z2) {
     return DoesScenarioBlockingAreaExist(x1, y1, z1, x2, y2, z2);
@@ -1247,7 +1246,7 @@ export function doesScenarioBlockingAreaExists(x1, y1, z1, x2, y2, z2) {
 /**
  * No comment provided
  *
- * Hash: 0xAFF4710E2A0A6C12 | Since: 323 | API-Set: unknown
+ * Hash: 0xAFF4710E2A0A6C12 | Since: unknown | API-Set: unknown
  */
 export function dropAmbientProp(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1256,7 +1255,7 @@ export function dropAmbientProp(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xEE2476B9EE4A094F | Since: 1493 | API-Set: unknown
+ * Hash: 0xEE2476B9EE4A094F | Since: unknown | API-Set: unknown
  */
 export function enableMpLight(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1267,7 +1266,7 @@ export function enableMpLight(ped, toggle) {
  *
  * It doesn't really explode the ped's head but it kills the ped
  *
- * Hash: 0x2D05CED3A38D0F3A | Since: 323 | API-Set: unknown
+ * Hash: 0x2D05CED3A38D0F3A | Since: unknown | API-Set: unknown
  */
 export function explodeHead(ped, weaponHash) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1278,7 +1277,7 @@ export function explodeHead(ped, weaponHash) {
 /**
  * No comment provided
  *
- * Hash: 0x4668D80430D6C299 | Since: 323 | API-Set: unknown
+ * Hash: 0x4668D80430D6C299 | Since: unknown | API-Set: unknown
  */
 export function finalizeHeadBlend(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1287,7 +1286,7 @@ export function finalizeHeadBlend(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xFF287323B0E2C69A | Since: 323 | API-Set: unknown
+ * Hash: 0xFF287323B0E2C69A | Since: unknown | API-Set: unknown
  */
 export function forceAllHeadingValuesToAlign(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1296,7 +1295,7 @@ export function forceAllHeadingValuesToAlign(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xED3C76ADFA6D07C4 | Since: 323 | API-Set: unknown
+ * Hash: 0xED3C76ADFA6D07C4 | Since: unknown | API-Set: unknown
  */
 export function forceInstantLegIkSetup(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1305,7 +1304,7 @@ export function forceInstantLegIkSetup(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x2208438012482A1A | Since: 323 | API-Set: unknown
+ * Hash: 0x2208438012482A1A | Since: unknown | API-Set: unknown
  */
 export function forceAiAndAnimationUpdate(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1342,7 +1341,7 @@ export function forceAiAndAnimationUpdate(ped) {
  * MotionState_Jetpack = 0x535E6A5E
  * };
  *
- * Hash: 0xF28965D04F570DCA | Since: 323 | API-Set: unknown
+ * Hash: 0xF28965D04F570DCA | Since: unknown | API-Set: unknown
  */
 export function forceMotionState(ped, motionStateHash) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1353,7 +1352,7 @@ export function forceMotionState(ped, motionStateHash) {
 /**
  * No comment provided
  *
- * Hash: 0x16E42E800B472221 | Since: 323 | API-Set: unknown
+ * Hash: 0x16E42E800B472221 | Since: unknown | API-Set: unknown
  */
 export function forceToOpenParachute(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1362,7 +1361,7 @@ export function forceToOpenParachute(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xD33DAA36272177C4 | Since: 323 | API-Set: unknown
+ * Hash: 0xD33DAA36272177C4 | Since: unknown | API-Set: unknown
  */
 export function forceZeroMassInCollisions(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1371,7 +1370,7 @@ export function forceZeroMassInCollisions(ped) {
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
  *
- * Hash: 0xBE22B26DD764C040 | Since: 323 | API-Set: unknown
+ * Hash: 0xBE22B26DD764C040 | Since: unknown | API-Set: unknown
  */
 export function getAnimInitialOffsetPosition(animDict, animName, pos, rot) {
     return new Vector3(GetAnimInitialOffsetPosition(animDict, animName, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, 0, 0));
@@ -1379,7 +1378,7 @@ export function getAnimInitialOffsetPosition(animDict, animName, pos, rot) {
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
  *
- * Hash: 0x4B805E6046EE9E47 | Since: 323 | API-Set: unknown
+ * Hash: 0x4B805E6046EE9E47 | Since: unknown | API-Set: unknown
  */
 export function getAnimInitialOffsetRotation(animDict, animName, pos, rot) {
     return new Vector3(GetAnimInitialOffsetRotation(animDict, animName, pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, 0, 0));
@@ -1387,7 +1386,7 @@ export function getAnimInitialOffsetRotation(animDict, animName, pos, rot) {
 /**
  * No comment provided
  *
- * Hash: 0x03EA03AF85A85CB7 | Since: 323 | API-Set: unknown
+ * Hash: 0x03EA03AF85A85CB7 | Since: unknown | API-Set: unknown
  */
 export function getCanBeGrabbedByScript(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1429,7 +1428,7 @@ export function getCanBeGrabbedByScript(ped) {
  *
  * `Note: PED::GET_PED_NEARBY_PEDS works for more peds.`
  *
- * Hash: 0xC33AB876A77F8164 | Since: 323 | API-Set: unknown
+ * Hash: 0xC33AB876A77F8164 | Since: unknown | API-Set: unknown
  */
 export function getClosest(pos, radius, pedType) {
     return GetClosestPed(pos.x, pos.y, pos.z, radius, false, false, false, false, pedType);
@@ -1467,7 +1466,7 @@ export function getClosest(pos, radius, pedType) {
  * 16=OptimalCoverDistance
  *
  *
- * Hash: 0x52DFF8A10508090A | Since: 323 | API-Set: unknown
+ * Hash: 0x52DFF8A10508090A | Since: unknown | API-Set: unknown
  */
 export function getCombatFloat(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1476,7 +1475,7 @@ export function getCombatFloat(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xCD5003B097200F36 | Since: 323 | API-Set: unknown
+ * Hash: 0xCD5003B097200F36 | Since: unknown | API-Set: unknown
  */
 export function getDeadPickupCoords(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1485,7 +1484,7 @@ export function getDeadPickupCoords(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xAAA6A3698A69E048 | Since: 323 | API-Set: unknown
+ * Hash: 0xAAA6A3698A69E048 | Since: unknown | API-Set: unknown
  */
 export function getDefaultSecondaryTintForBarber(colorID) {
     return Citizen.invokeNative('0xAAA6A3698A69E048', colorID);
@@ -1493,7 +1492,7 @@ export function getDefaultSecondaryTintForBarber(colorID) {
 /**
  * No comment provided
  *
- * Hash: 0xEA9960D07DADCF10 | Since: 323 | API-Set: unknown
+ * Hash: 0xEA9960D07DADCF10 | Since: unknown | API-Set: unknown
  */
 export function getDefaultSecondaryTintForCreator(colorId) {
     return Citizen.invokeNative('0xEA9960D07DADCF10', colorId);
@@ -1501,7 +1500,7 @@ export function getDefaultSecondaryTintForCreator(colorId) {
 /**
  * No comment provided
  *
- * Hash: 0xF033419D1B81FAE8 | Since: 323 | API-Set: unknown
+ * Hash: 0xF033419D1B81FAE8 | Since: unknown | API-Set: unknown
  */
 export function getFmFemaleShopApparelItemIndex() {
     return Citizen.invokeNative('0xF033419D1B81FAE8', 0);
@@ -1509,7 +1508,7 @@ export function getFmFemaleShopApparelItemIndex() {
 /**
  * No comment provided
  *
- * Hash: 0x1E77FA7A62EE6C4C | Since: 323 | API-Set: unknown
+ * Hash: 0x1E77FA7A62EE6C4C | Since: unknown | API-Set: unknown
  */
 export function getFmMaleShopApparelItemIndex() {
     return Citizen.invokeNative('0x1E77FA7A62EE6C4C', 0);
@@ -1517,7 +1516,7 @@ export function getFmMaleShopApparelItemIndex() {
 /**
  * p1 may be a BOOL representing whether or not the group even exists
  *
- * Hash: 0x8DE69FE35CA09A45 | Since: 323 | API-Set: unknown
+ * Hash: 0x8DE69FE35CA09A45 | Since: unknown | API-Set: unknown
  */
 export function getGroupSize(groupID) {
     return GetGroupSize(groupID);
@@ -1525,7 +1524,7 @@ export function getGroupSize(groupID) {
 /**
  * A getter for _SET_PED_EYE_COLOR. Returns -1 if fails to get.
  *
- * Hash: 0x76BBA2CEE66D47E9 | Since: 1011 | API-Set: unknown
+ * Hash: 0x76BBA2CEE66D47E9 | Since: unknown | API-Set: unknown
  */
 export function getHeadBlendEyeColor(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1534,7 +1533,7 @@ export function getHeadBlendEyeColor(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x5486A79D9FBD342D | Since: 323 | API-Set: unknown
+ * Hash: 0x5486A79D9FBD342D | Since: unknown | API-Set: unknown
  */
 export function getJackTarget(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1543,7 +1542,7 @@ export function getJackTarget(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x18A3E9EE1297FD39 | Since: 323 | API-Set: unknown
+ * Hash: 0x18A3E9EE1297FD39 | Since: unknown | API-Set: unknown
  */
 export function getMeleeTargetFor(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1561,7 +1560,7 @@ export function getMeleeTargetFor(ped) {
  * v1->Returns->Item1= 0;
  * }
  *
- * Hash: 0xE7E11B8DCBED1058 | Since: 323 | API-Set: unknown
+ * Hash: 0xE7E11B8DCBED1058 | Since: unknown | API-Set: unknown
  */
 export function getMount(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1570,7 +1569,7 @@ export function getMount(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x88274C11CF0D866D | Since: 1493 | API-Set: unknown
+ * Hash: 0x88274C11CF0D866D | Since: unknown | API-Set: unknown
  */
 export function getMpLightEnabled(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1579,7 +1578,7 @@ export function getMpLightEnabled(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x9E30E91FB03A2CAF | Since: 323 | API-Set: unknown
+ * Hash: 0x9E30E91FB03A2CAF | Since: unknown | API-Set: unknown
  */
 export function getMpOutfitDataFromMetadata() {
     return Citizen.invokeNative('0x9E30E91FB03A2CAF');
@@ -1588,7 +1587,7 @@ export function getMpOutfitDataFromMetadata() {
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x27561561732A7842 | Since: 323 | API-Set: unknown
+ * Hash: 0x27561561732A7842 | Since: unknown | API-Set: unknown
  */
 export function getNumberOfDrawableVariations(ped, componentId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1598,7 +1597,7 @@ export function getNumberOfDrawableVariations(ped, componentId) {
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x5FAF9754E789FB47 | Since: 323 | API-Set: unknown
+ * Hash: 0x5FAF9754E789FB47 | Since: unknown | API-Set: unknown
  */
 export function getNumberOfPropDrawableVariations(ped, propId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1608,7 +1607,7 @@ export function getNumberOfPropDrawableVariations(ped, propId) {
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0xA6E7F1CEB523E171 | Since: 323 | API-Set: unknown
+ * Hash: 0xA6E7F1CEB523E171 | Since: unknown | API-Set: unknown
  */
 export function getNumberOfPropTextureVariations(ped, propId, drawableId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1618,7 +1617,7 @@ export function getNumberOfPropTextureVariations(ped, propId, drawableId) {
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x8F7156A3142A6BAD | Since: 323 | API-Set: unknown
+ * Hash: 0x8F7156A3142A6BAD | Since: unknown | API-Set: unknown
  */
 export function getNumberOfTextureVariations(ped, componentId, drawableId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1627,7 +1626,7 @@ export function getNumberOfTextureVariations(ped, componentId, drawableId) {
 /**
  * No comment provided
  *
- * Hash: 0xE5C0CF872C2AD150 | Since: 323 | API-Set: unknown
+ * Hash: 0xE5C0CF872C2AD150 | Since: unknown | API-Set: unknown
  */
 export function getNumHairTints() {
     return GetNumHairColors();
@@ -1635,7 +1634,7 @@ export function getNumHairTints() {
 /**
  * No comment provided
  *
- * Hash: 0xD1F7CA1535D22818 | Since: 323 | API-Set: unknown
+ * Hash: 0xD1F7CA1535D22818 | Since: unknown | API-Set: unknown
  */
 export function getNumMakeupTints() {
     return GetNumMakeupColors();
@@ -1643,7 +1642,7 @@ export function getNumMakeupTints() {
 /**
  * gtaforums.com/topic/885580-ped-headshotmugshot-txd/
  *
- * Hash: 0xDB4EACD4AD0A5D6B | Since: 323 | API-Set: unknown
+ * Hash: 0xDB4EACD4AD0A5D6B | Since: unknown | API-Set: unknown
  */
 export function getheadshotTxdString(id) {
     return GetPedheadshotTxdString(id);
@@ -1651,7 +1650,7 @@ export function getheadshotTxdString(id) {
 /**
  * No comment provided
  *
- * Hash: 0x9B128DC36C1E04CF | Since: 323 | API-Set: unknown
+ * Hash: 0x9B128DC36C1E04CF | Since: unknown | API-Set: unknown
  */
 export function getsJacker(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1660,7 +1659,7 @@ export function getsJacker(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x37F4AD56ECBC0CD6 | Since: 323 | API-Set: unknown
+ * Hash: 0x37F4AD56ECBC0CD6 | Since: unknown | API-Set: unknown
  */
 export function getAccuracy(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1678,7 +1677,7 @@ export function getAccuracy(ped) {
  *
  * If the Ped does not exist, returns -1.
  *
- * Hash: 0xF6AA118530443FD2 | Since: 323 | API-Set: unknown
+ * Hash: 0xF6AA118530443FD2 | Since: unknown | API-Set: unknown
  */
 export function getAlertness(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1687,7 +1686,7 @@ export function getAlertness(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x9483AF821605B1D8 | Since: 323 | API-Set: unknown
+ * Hash: 0x9483AF821605B1D8 | Since: unknown | API-Set: unknown
  */
 export function getArmour(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1696,7 +1695,7 @@ export function getArmour(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x5CCE68DBD5FE93EC | Since: 323 | API-Set: unknown
+ * Hash: 0x5CCE68DBD5FE93EC | Since: unknown | API-Set: unknown
  */
 export function getAsGroupLeader(groupID) {
     return GetPedAsGroupLeader(groupID);
@@ -1711,7 +1710,7 @@ export function getAsGroupLeader(groupID) {
  * `. . . . . . . . Ped ped1 = PED::GET_PED_AS_GROUP_MEMBER(groupID, memberNumber);`
  * . . . . . . . . //and so on
  *
- * Hash: 0x51455483CF23ED97 | Since: 323 | API-Set: unknown
+ * Hash: 0x51455483CF23ED97 | Since: unknown | API-Set: unknown
  */
 export function getAsGroupMember(groupID, memberNumber) {
     return GetPedAsGroupMember(groupID, memberNumber);
@@ -1725,7 +1724,7 @@ export function getAsGroupMember(groupID, memberNumber) {
  * offsetY: The Y-component of the offset to add to the position relative to the bone's rotation.
  * offsetZ: The Z-component of the offset to add to the position relative to the bone's rotation.
  *
- * Hash: 0x17C07FC640E86B4E | Since: 323 | API-Set: unknown
+ * Hash: 0x17C07FC640E86B4E | Since: unknown | API-Set: unknown
  */
 export function getBoneCoords(ped, boneId, offsetX, offsetY, offsetZ) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1834,7 +1833,7 @@ export function getBoneCoords(ped, boneId, offsetX, offsetY, offsetZ) {
  * RB_Neck_1 = 0x8b93,
  * IK_Root = 0xdd1c
  *
- * Hash: 0x3F428D08BE5AAE31 | Since: 323 | API-Set: unknown
+ * Hash: 0x3F428D08BE5AAE31 | Since: unknown | API-Set: unknown
  */
 export function getBoneIndex(ped, boneId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1843,7 +1842,7 @@ export function getBoneIndex(ped, boneId) {
 /**
  * Returns the hash of the weapon/model/object that killed the ped.
  *
- * Hash: 0x16FFE42AB2D2DC59 | Since: 323 | API-Set: unknown
+ * Hash: 0x16FFE42AB2D2DC59 | Since: unknown | API-Set: unknown
  */
 export function getCauseOfDeath(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1852,7 +1851,7 @@ export function getCauseOfDeath(ped) {
 /**
  * See SET_PED_COMBAT_MOVEMENT
  *
- * Hash: 0xDEA92412FCAEB3F5 | Since: 323 | API-Set: unknown
+ * Hash: 0xDEA92412FCAEB3F5 | Since: unknown | API-Set: unknown
  */
 export function getCombatMovement(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1861,7 +1860,7 @@ export function getCombatMovement(ped) {
 /**
  * See SET_PED_COMBAT_RANGE
  *
- * Hash: 0xF9D9F7F2DB8E2FA0 | Since: 323 | API-Set: unknown
+ * Hash: 0xF9D9F7F2DB8E2FA0 | Since: unknown | API-Set: unknown
  */
 export function getCombatRange(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1870,7 +1869,7 @@ export function getCombatRange(ped) {
 /**
  * See SET_PED_CONFIG_FLAG
  *
- * Hash: 0x7EE53118C892B513 | Since: 323 | API-Set: unknown
+ * Hash: 0x7EE53118C892B513 | Since: unknown | API-Set: unknown
  */
 export function getConfigFlag(ped, flagId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1879,7 +1878,7 @@ export function getConfigFlag(ped, flagId) {
 /**
  * No comment provided
  *
- * Hash: 0xF60165E1D2C5370B | Since: 323 | API-Set: unknown
+ * Hash: 0xF60165E1D2C5370B | Since: unknown | API-Set: unknown
  */
 export function getCurrentMoveBlendRatio(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1888,7 +1887,7 @@ export function getCurrentMoveBlendRatio(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x71EAB450D86954A1 | Since: 323 | API-Set: unknown
+ * Hash: 0x71EAB450D86954A1 | Since: unknown | API-Set: unknown
  */
 export function getDecorationsState(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1910,7 +1909,7 @@ export function getDecorationsState(ped) {
  *
  * Full list of ped overlays / decorations by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedOverlayCollections.json
  *
- * Hash: 0x9FD452BFBE7A7A8B | Since: 323 | API-Set: unknown
+ * Hash: 0x9FD452BFBE7A7A8B | Since: unknown | API-Set: unknown
  */
 export function getDecorationZoneFromHashes(collection, overlay) {
     if (typeof collection === 'string')
@@ -1922,7 +1921,7 @@ export function getDecorationZoneFromHashes(collection, overlay) {
 /**
  * No comment provided
  *
- * Hash: 0x3C06B8786DD94CD1 | Since: 323 | API-Set: unknown
+ * Hash: 0x3C06B8786DD94CD1 | Since: unknown | API-Set: unknown
  */
 export function getDefensiveAreaPosition(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1931,7 +1930,7 @@ export function getDefensiveAreaPosition(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x65671A4FB8218930 | Since: 2699 | API-Set: unknown
+ * Hash: 0x65671A4FB8218930 | Since: unknown | API-Set: unknown
  */
 export function getDiesInWater(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1952,7 +1951,7 @@ export function getDiesInWater(ped) {
  * 10- Decals
  * 11 - Auxiliary parts for torso
  *
- * Hash: 0x67F3780DD425D4FC | Since: 323 | API-Set: unknown
+ * Hash: 0x67F3780DD425D4FC | Since: unknown | API-Set: unknown
  */
 export function getDrawableVariation(ped, componentId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1962,7 +1961,7 @@ export function getDrawableVariation(ped, componentId) {
  * Use 0x4E90D746056E273D to set the illuminated clothing glow intensity for a specific ped.
  * Returns a float between 0.0 and 1.0 representing the current illuminated clothing glow intensity.
  *
- * Hash: 0x1461B28A06717D68 | Since: 944 | API-Set: unknown
+ * Hash: 0x1461B28A06717D68 | Since: unknown | API-Set: unknown
  */
 export function getEmissiveScale(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1971,7 +1970,7 @@ export function getEmissiveScale(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x9C14D30395A51A3C | Since: 323 | API-Set: unknown
+ * Hash: 0x9C14D30395A51A3C | Since: unknown | API-Set: unknown
  */
 export function getEnveffScale(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1984,7 +1983,7 @@ export function getEnveffScale(ped) {
  *
  * If worldSpace is true, the returned offset is relative to the world. That is, if the ped has moved 1 meter on the X axis and 5 meters on the Y axis, it'll return 1,5,0.
  *
- * Hash: 0xE0AF41401ADF87E3 | Since: 323 | API-Set: unknown
+ * Hash: 0xE0AF41401ADF87E3 | Since: unknown | API-Set: unknown
  */
 export function getExtractedDisplacement(ped, worldSpace) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1993,7 +1992,7 @@ export function getExtractedDisplacement(ped, worldSpace) {
 /**
  * Returns the group id of which the specified ped is a member of.
  *
- * Hash: 0xF162E133B4E7A675 | Since: 323 | API-Set: unknown
+ * Hash: 0xF162E133B4E7A675 | Since: unknown | API-Set: unknown
  */
 export function getGroupIndex(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2006,7 +2005,7 @@ export function getGroupIndex(ped) {
  * This is used with the hair color swatches scaleform.
  * Use `GET_PED_MAKEUP_TINT_COLOR` to get the makeup colors.
  *
- * Hash: 0x4852FC386E2E1BB5 | Since: 323 | API-Set: unknown
+ * Hash: 0x4852FC386E2E1BB5 | Since: unknown | API-Set: unknown
  */
 export function getHairTintColor(hairColorIndex) {
     return GetPedHairRgbColor(hairColorIndex);
@@ -2037,7 +2036,7 @@ export function getHairTintColor(hairColorIndex) {
  * bool isParent;
  * };
  *
- * Hash: 0x2746BD9D88C5C5D0 | Since: 323 | API-Set: unknown
+ * Hash: 0x2746BD9D88C5C5D0 | Since: unknown | API-Set: unknown
  */
 export function getHeadBlendData(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2048,7 +2047,7 @@ export function getHeadBlendData(ped) {
  *
  * Used when calling SET_PED_HEAD_BLEND_DATA.
  *
- * Hash: 0x68D353AB88B97E0C | Since: 323 | API-Set: unknown
+ * Hash: 0x68D353AB88B97E0C | Since: unknown | API-Set: unknown
  */
 export function getHeadBlendFirstIndex(_type) {
     return GetPedHeadBlendFirstIndex(_type);
@@ -2056,7 +2055,7 @@ export function getHeadBlendFirstIndex(_type) {
 /**
  * Type equals 0 for male non-dlc, 1 for female non-dlc, 2 for male dlc, and 3 for female dlc.
  *
- * Hash: 0x5EF37013A6539C9D | Since: 323 | API-Set: unknown
+ * Hash: 0x5EF37013A6539C9D | Since: unknown | API-Set: unknown
  */
 export function getHeadBlendNumHeads(_type) {
     return GetPedHeadBlendNumHeads(_type);
@@ -2066,7 +2065,7 @@ export function getHeadBlendNumHeads(_type) {
  *
  * This might be the once removed native GET_PED_HEAD_OVERLAY.
  *
- * Hash: 0xA60EF3B6461A4D43 | Since: 323 | API-Set: unknown
+ * Hash: 0xA60EF3B6461A4D43 | Since: unknown | API-Set: unknown
  */
 export function getHeadOverlay(ped, overlayID) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2075,7 +2074,7 @@ export function getHeadOverlay(ped, overlayID) {
 /**
  * No comment provided
  *
- * Hash: 0xCF1CE768BB43480E | Since: 323 | API-Set: unknown
+ * Hash: 0xCF1CE768BB43480E | Since: unknown | API-Set: unknown
  */
 export function getHeadOverlayNum(overlayID) {
     return GetPedHeadOverlayNum(overlayID);
@@ -2083,7 +2082,7 @@ export function getHeadOverlayNum(overlayID) {
 /**
  * No comment provided
  *
- * Hash: 0x451294E859ECC018 | Since: 323 | API-Set: unknown
+ * Hash: 0x451294E859ECC018 | Since: unknown | API-Set: unknown
  */
 export function getHelmetStoredHatPropIndex(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2092,7 +2091,7 @@ export function getHelmetStoredHatPropIndex(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x9D728C1E12BF5518 | Since: 323 | API-Set: unknown
+ * Hash: 0x9D728C1E12BF5518 | Since: unknown | API-Set: unknown
  */
 export function getHelmetStoredHatTexIndex(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2101,7 +2100,7 @@ export function getHelmetStoredHatTexIndex(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xD75960F6BD9EA49C | Since: 323 | API-Set: unknown
+ * Hash: 0xD75960F6BD9EA49C | Since: unknown | API-Set: unknown
  */
 export function getLastDamageBone(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2114,7 +2113,7 @@ export function getLastDamageBone(ped) {
  * This is used with the makeup color swatches scaleform.
  * Use `GET_PED_HAIR_TINT_COLOR` to get the hair colors.
  *
- * Hash: 0x013E5CFC38CD5387 | Since: 323 | API-Set: unknown
+ * Hash: 0x013E5CFC38CD5387 | Since: unknown | API-Set: unknown
  */
 export function getMakeupTintColor(makeupColorIndex) {
     return GetPedMakeupRgbColor(makeupColorIndex);
@@ -2122,7 +2121,7 @@ export function getMakeupTintColor(makeupColorIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x4700A416E8324EF3 | Since: 323 | API-Set: unknown
+ * Hash: 0x4700A416E8324EF3 | Since: unknown | API-Set: unknown
  */
 export function getMaxHealth(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2131,7 +2130,7 @@ export function getMaxHealth(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x3F69145BBA87BAE7 | Since: 323 | API-Set: unknown
+ * Hash: 0x3F69145BBA87BAE7 | Since: unknown | API-Set: unknown
  */
 export function getMoney(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2153,7 +2152,7 @@ export function getMoney(ped) {
  *
  * Example: gtaforums.com/topic/789788-function-args-to-pedget-ped-nearby-peds/?p=1067386687
  *
- * Hash: 0x23F8F5FC7E8C4A6B | Since: 323 | API-Set: unknown
+ * Hash: 0x23F8F5FC7E8C4A6B | Since: unknown | API-Set: unknown
  */
 export function getNearbyPeds(ped, ignore) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2189,7 +2188,7 @@ export function getNearbyPeds(ped, ignore) {
  * }
  * }
  *
- * Hash: 0xCFF869CBFA210D82 | Since: 323 | API-Set: unknown
+ * Hash: 0xCFF869CBFA210D82 | Since: unknown | API-Set: unknown
  */
 export function getNearbyVehicles(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2199,7 +2198,7 @@ export function getNearbyVehicles(ped) {
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0xE3DD5F2A84B42281 | Since: 323 | API-Set: unknown
+ * Hash: 0xE3DD5F2A84B42281 | Since: unknown | API-Set: unknown
  */
 export function getPaletteVariation(ped, componentId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2212,7 +2211,7 @@ export function getPaletteVariation(ped, componentId) {
  * 2: rolling
  * 3: ragdoll
  *
- * Hash: 0x8B9F1FC6AE8166C0 | Since: 323 | API-Set: unknown
+ * Hash: 0x8B9F1FC6AE8166C0 | Since: unknown | API-Set: unknown
  */
 export function getParachuteLandingType(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2229,7 +2228,7 @@ export function getParachuteLandingType(ped) {
  *
  * Normal means no parachute?
  *
- * Hash: 0x79CFD9827CC979B6 | Since: 323 | API-Set: unknown
+ * Hash: 0x79CFD9827CC979B6 | Since: unknown | API-Set: unknown
  */
 export function getParachuteState(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2238,7 +2237,7 @@ export function getParachuteState(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xEAF5F7E5AE7C6C9D | Since: 323 | API-Set: unknown
+ * Hash: 0xEAF5F7E5AE7C6C9D | Since: unknown | API-Set: unknown
  */
 export function getParachuteTintIndex(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2248,7 +2247,7 @@ export function getParachuteTintIndex(ped) {
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x898CC20EA75BACD8 | Since: 323 | API-Set: unknown
+ * Hash: 0x898CC20EA75BACD8 | Since: unknown | API-Set: unknown
  */
 export function getPropIndex(ped, componentId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2258,7 +2257,7 @@ export function getPropIndex(ped, componentId) {
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0xE131A28626F81AB2 | Since: 323 | API-Set: unknown
+ * Hash: 0xE131A28626F81AB2 | Since: unknown | API-Set: unknown
  */
 export function getPropTextureIndex(ped, componentId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2267,7 +2266,7 @@ export function getPropTextureIndex(ped, componentId) {
 /**
  * No comment provided
  *
- * Hash: 0x2057EF813397A772 | Since: 323 | API-Set: unknown
+ * Hash: 0x2057EF813397A772 | Since: unknown | API-Set: unknown
  */
 export function getRagdollBoneIndex(ped, bone) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2276,7 +2275,7 @@ export function getRagdollBoneIndex(ped, bone) {
 /**
  * No comment provided
  *
- * Hash: 0x42FDD0F017B1E38E | Since: 323 | API-Set: unknown
+ * Hash: 0x42FDD0F017B1E38E | Since: unknown | API-Set: unknown
  */
 export function getRelationshipGroupDefaultHash(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2285,7 +2284,7 @@ export function getRelationshipGroupDefaultHash(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x7DBDD04862D95F04 | Since: 323 | API-Set: unknown
+ * Hash: 0x7DBDD04862D95F04 | Since: unknown | API-Set: unknown
  */
 export function getRelationshipGroupHash(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2294,7 +2293,7 @@ export function getRelationshipGroupHash(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xAF9E59B1B1FBF2A0 | Since: 323 | API-Set: unknown
+ * Hash: 0xAF9E59B1B1FBF2A0 | Since: unknown | API-Set: unknown
  */
 export function getResetFlag(ped, flagId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2305,7 +2304,7 @@ export function getResetFlag(ped, flagId) {
  *
  * Is best to check if the Ped is dead before asking for its killer.
  *
- * Hash: 0x93C8B64DEB84728C | Since: 323 | API-Set: unknown
+ * Hash: 0x93C8B64DEB84728C | Since: unknown | API-Set: unknown
  */
 export function getSourceOfDeath(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2314,7 +2313,7 @@ export function getSourceOfDeath(ped) {
 /**
  * Returns whether the entity is in stealth mode
  *
- * Hash: 0x7C2AC9CA66575FBF | Since: 323 | API-Set: unknown
+ * Hash: 0x7C2AC9CA66575FBF | Since: unknown | API-Set: unknown
  */
 export function getStealthMovement(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2323,7 +2322,7 @@ export function getStealthMovement(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x32C27A11307B01CC | Since: 2372 | API-Set: unknown
+ * Hash: 0x32C27A11307B01CC | Since: unknown | API-Set: unknown
  */
 export function getTargetFromCombatPed(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2333,7 +2332,7 @@ export function getTargetFromCombatPed(ped) {
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x04A355E041E004E6 | Since: 323 | API-Set: unknown
+ * Hash: 0x04A355E041E004E6 | Since: unknown | API-Set: unknown
  */
 export function getTextureVariation(ped, componentId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2342,7 +2341,7 @@ export function getTextureVariation(ped, componentId) {
 /**
  * No comment provided
  *
- * Hash: 0x1E98817B311AE98A | Since: 323 | API-Set: unknown
+ * Hash: 0x1E98817B311AE98A | Since: unknown | API-Set: unknown
  */
 export function getTimeOfDeath(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2351,7 +2350,7 @@ export function getTimeOfDeath(ped) {
 /**
  * https://alloc8or.re/gta5/doc/enums/ePedType.txt
  *
- * Hash: 0xFF059E1E4C01E63C | Since: 323 | API-Set: unknown
+ * Hash: 0xFF059E1E4C01E63C | Since: unknown | API-Set: unknown
  */
 export function getType(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2360,7 +2359,7 @@ export function getType(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xEF2C71A32CAD5FBD | Since: 1493 | API-Set: unknown
+ * Hash: 0xEF2C71A32CAD5FBD | Since: unknown | API-Set: unknown
  */
 export function getVisualFieldCenterAngle(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2369,7 +2368,7 @@ export function getVisualFieldCenterAngle(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x6A3975DEA89F9A17 | Since: 323 | API-Set: unknown
+ * Hash: 0x6A3975DEA89F9A17 | Since: unknown | API-Set: unknown
  */
 export function getPlayerIsFollowing(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2378,7 +2377,7 @@ export function getPlayerIsFollowing(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xBA656A3BB01BDEA3 | Since: 2189 | API-Set: unknown
+ * Hash: 0xBA656A3BB01BDEA3 | Since: unknown | API-Set: unknown
  */
 export function getPosFromFiredEvent(ped, eventType) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2398,7 +2397,7 @@ export function getPosFromFiredEvent(ped, eventType) {
  * Animal = 28
  * Army = 29
  *
- * Hash: 0x876046A8E3A4B71C | Since: 323 | API-Set: unknown
+ * Hash: 0x876046A8E3A4B71C | Since: unknown | API-Set: unknown
  */
 export function getRandomAtCoord(pos, xRadius, yRadius, zRadius, pedType) {
     return GetRandomPedAtCoord(pos.x, pos.y, pos.z, xRadius, yRadius, zRadius, pedType);
@@ -2419,7 +2418,7 @@ export function getRandomAtCoord(pos, xRadius, yRadius, zRadius, pedType) {
  * `PED::GET_RELATIONSHIP_BETWEEN_GROUPS(l_1017, 0xA49E591C);`
  * `PED::GET_RELATIONSHIP_BETWEEN_GROUPS(0xA49E591C, l_1017);`
  *
- * Hash: 0x9E6B70061662AE5C | Since: 323 | API-Set: unknown
+ * Hash: 0x9E6B70061662AE5C | Since: unknown | API-Set: unknown
  */
 export function getRelationshipBetweenGroups(group1, group2) {
     if (typeof group1 === 'string')
@@ -2445,7 +2444,7 @@ export function getRelationshipBetweenGroups(group1, group2) {
  * `PED::GET_RELATIONSHIP_BETWEEN_PEDS(2, l_1017, 0xA49E591C);`
  * `PED::GET_RELATIONSHIP_BETWEEN_PEDS(2, 0xA49E591C, l_1017);`
  *
- * Hash: 0xEBA5AD3A0EAF7121 | Since: 323 | API-Set: unknown
+ * Hash: 0xEBA5AD3A0EAF7121 | Since: unknown | API-Set: unknown
  */
 export function getRelationshipBetweens(ped1, ped2) {
     const _ped1 = typeof ped1 == 'object' ? ped1.handle() : ped1;
@@ -2455,7 +2454,7 @@ export function getRelationshipBetweens(ped1, ped2) {
 /**
  * No comment provided
  *
- * Hash: 0x6F4C85ACD641BCD2 | Since: 323 | API-Set: unknown
+ * Hash: 0x6F4C85ACD641BCD2 | Since: unknown | API-Set: unknown
  */
 export function getSeatIsTryingToEnter(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2464,7 +2463,7 @@ export function getSeatIsTryingToEnter(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xE4A310B1D7FA73CC | Since: 323 | API-Set: unknown
+ * Hash: 0xE4A310B1D7FA73CC | Since: unknown | API-Set: unknown
  */
 export function getSynchronizedScenePhase(sceneID) {
     return GetSynchronizedScenePhase(sceneID);
@@ -2472,7 +2471,7 @@ export function getSynchronizedScenePhase(sceneID) {
 /**
  * No comment provided
  *
- * Hash: 0xD80932D577274D40 | Since: 323 | API-Set: unknown
+ * Hash: 0xD80932D577274D40 | Since: unknown | API-Set: unknown
  */
 export function getSynchronizedSceneRate(sceneID) {
     return GetSynchronizedSceneRate(sceneID);
@@ -2480,7 +2479,7 @@ export function getSynchronizedSceneRate(sceneID) {
 /**
  * No comment provided
  *
- * Hash: 0x36B77BB84687C318 | Since: 323 | API-Set: unknown
+ * Hash: 0x36B77BB84687C318 | Since: unknown | API-Set: unknown
  */
 export function getTimeDamagedByWeapon(ped, weaponHash) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2491,7 +2490,7 @@ export function getTimeDamagedByWeapon(ped, weaponHash) {
 /**
  * No comment provided
  *
- * Hash: 0xC56FBF2F228E1DAC | Since: 323 | API-Set: unknown
+ * Hash: 0xC56FBF2F228E1DAC | Since: unknown | API-Set: unknown
  */
 export function getTintIndexForLastGenHairTexture(modelHash, drawableId, textureId) {
     if (typeof modelHash === 'string')
@@ -2501,7 +2500,7 @@ export function getTintIndexForLastGenHairTexture(modelHash, drawableId, texture
 /**
  * No comment provided
  *
- * Hash: 0x511F1A683387C7E2 | Since: 323 | API-Set: unknown
+ * Hash: 0x511F1A683387C7E2 | Since: unknown | API-Set: unknown
  */
 export function getTrackedPixelcount(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2510,7 +2509,7 @@ export function getTrackedPixelcount(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xF92691AED837A5FC | Since: 323 | API-Set: unknown
+ * Hash: 0xF92691AED837A5FC | Since: unknown | API-Set: unknown
  */
 export function getVehicleIsEntering(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2519,7 +2518,7 @@ export function getVehicleIsEntering(ped) {
 /**
  * Gets the vehicle the specified Ped is in. Returns 0 if the ped is/was not in a vehicle.
  *
- * Hash: 0x9A9112A0FE9A4713 | Since: 323 | API-Set: unknown
+ * Hash: 0x9A9112A0FE9A4713 | Since: unknown | API-Set: unknown
  */
 export function getVehicleIsIn(ped, includeEntering) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2528,7 +2527,7 @@ export function getVehicleIsIn(ped, includeEntering) {
 /**
  * No comment provided
  *
- * Hash: 0x814FA8BE5449445D | Since: 323 | API-Set: unknown
+ * Hash: 0x814FA8BE5449445D | Since: unknown | API-Set: unknown
  */
 export function getVehicleIsTryingToEnter(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2537,7 +2536,7 @@ export function getVehicleIsTryingToEnter(ped) {
 /**
  * Gets ID of vehicle player using. It means it can get ID at any interaction with vehicle. Enter\exit for example. And that means it is faster than GET_VEHICLE_PED_IS_IN but less safe.
  *
- * Hash: 0x6094AD011A2EA87D | Since: 323 | API-Set: unknown
+ * Hash: 0x6094AD011A2EA87D | Since: unknown | API-Set: unknown
  */
 export function getVehicleIsUsing(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2552,7 +2551,7 @@ export function getVehicleIsUsing(ped) {
  * --
  * p2 is generally 4096 or 16384 in the scripts. p1 varies between 1 and 0.
  *
- * Hash: 0x54C7C4A94367717E | Since: 323 | API-Set: unknown
+ * Hash: 0x54C7C4A94367717E | Since: unknown | API-Set: unknown
  */
 export function giveHelmet(ped, cannotRemove, helmetFlag, textureIndex) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2579,7 +2578,7 @@ export function giveHelmet(ped, cannotRemove, helmetFlag, textureIndex) {
  * CREATE_NM_MESSAGE(true, 372); // armsWindmill - Swing arms around.
  * GIVE_PED_NM_MESSAGE(ped); // Dispatch message to Ped.
  *
- * Hash: 0xB158DFCCC56E5C5B | Since: 323 | API-Set: unknown
+ * Hash: 0xB158DFCCC56E5C5B | Since: unknown | API-Set: unknown
  */
 export function giveNmMessage(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2588,7 +2587,7 @@ export function giveNmMessage(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xE4B5F4BF2CB24E65 | Since: 323 | API-Set: unknown
+ * Hash: 0xE4B5F4BF2CB24E65 | Since: unknown | API-Set: unknown
  */
 export function hasActionModeAssetLoaded(asset) {
     return HasActionModeAssetLoaded(asset);
@@ -2596,7 +2595,7 @@ export function hasActionModeAssetLoaded(asset) {
 /**
  * No comment provided
  *
- * Hash: 0x876928DDDFCCC9CD | Since: 323 | API-Set: unknown
+ * Hash: 0x876928DDDFCCC9CD | Since: unknown | API-Set: unknown
  */
 export function hasheadshotImgUploadFailed() {
     return HasPedheadshotImgUploadFailed();
@@ -2604,7 +2603,7 @@ export function hasheadshotImgUploadFailed() {
 /**
  * No comment provided
  *
- * Hash: 0xE8A169E666CBC541 | Since: 323 | API-Set: unknown
+ * Hash: 0xE8A169E666CBC541 | Since: unknown | API-Set: unknown
  */
 export function hasheadshotImgUploadSucceeded() {
     return HasPedheadshotImgUploadSucceeded();
@@ -2612,7 +2611,7 @@ export function hasheadshotImgUploadSucceeded() {
 /**
  * No comment provided
  *
- * Hash: 0x654CD0A825161131 | Since: 323 | API-Set: unknown
+ * Hash: 0x654CD0A825161131 | Since: unknown | API-Set: unknown
  */
 export function hasHeadBlendFinished(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2621,7 +2620,7 @@ export function hasHeadBlendFinished(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x784002A632822099 | Since: 323 | API-Set: unknown
+ * Hash: 0x784002A632822099 | Since: unknown | API-Set: unknown
  */
 export function hasPreloadPropDataFinished(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2630,7 +2629,7 @@ export function hasPreloadPropDataFinished(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x66680A92700F43DF | Since: 323 | API-Set: unknown
+ * Hash: 0x66680A92700F43DF | Since: unknown | API-Set: unknown
  */
 export function hasPreloadVariationDataFinished(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2639,7 +2638,7 @@ export function hasPreloadVariationDataFinished(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x8507BCB710FA6DC0 | Since: 323 | API-Set: unknown
+ * Hash: 0x8507BCB710FA6DC0 | Since: unknown | API-Set: unknown
  */
 export function hasReceivedEvent(ped, eventId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2648,7 +2647,7 @@ export function hasReceivedEvent(ped, eventId) {
 /**
  * No comment provided
  *
- * Hash: 0xE977FC5B08AF3441 | Since: 323 | API-Set: unknown
+ * Hash: 0xE977FC5B08AF3441 | Since: unknown | API-Set: unknown
  */
 export function hasStealthModeAssetLoaded(asset) {
     return HasStealthModeAssetLoaded(asset);
@@ -2656,7 +2655,7 @@ export function hasStealthModeAssetLoaded(asset) {
 /**
  * No comment provided
  *
- * Hash: 0x7350823473013C02 | Since: 323 | API-Set: unknown
+ * Hash: 0x7350823473013C02 | Since: unknown | API-Set: unknown
  */
 export function haveAllStreamingRequestsCompleted(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2665,7 +2664,7 @@ export function haveAllStreamingRequestsCompleted(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x62AB793144DE75DC | Since: 323 | API-Set: unknown
+ * Hash: 0x62AB793144DE75DC | Since: unknown | API-Set: unknown
  */
 export function hideBloodDamageByZone(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2674,7 +2673,7 @@ export function hideBloodDamageByZone(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x4759CC730F947C81 | Since: 323 | API-Set: unknown
+ * Hash: 0x4759CC730F947C81 | Since: unknown | API-Set: unknown
  */
 export function instantlyFillPopulation() {
     InstantlyFillPedPopulation();
@@ -2682,7 +2681,7 @@ export function instantlyFillPopulation() {
 /**
  * No comment provided
  *
- * Hash: 0x68772DB2B2526F9F | Since: 323 | API-Set: unknown
+ * Hash: 0x68772DB2B2526F9F | Since: unknown | API-Set: unknown
  */
 export function isAnyHostileNearPoint(ped, pos, radius) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2691,7 +2690,7 @@ export function isAnyHostileNearPoint(ped, pos, radius) {
 /**
  * No comment provided
  *
- * Hash: 0x083961498679DC9F | Since: 323 | API-Set: unknown
+ * Hash: 0x083961498679DC9F | Since: unknown | API-Set: unknown
  */
 export function isAnyNearPoint(pos, radius) {
     return IsAnyPedNearPoint(pos.x, pos.y, pos.z, radius);
@@ -2699,7 +2698,7 @@ export function isAnyNearPoint(pos, radius) {
 /**
  * No comment provided
  *
- * Hash: 0xA0D3D71EA1086C55 | Since: 323 | API-Set: unknown
+ * Hash: 0xA0D3D71EA1086C55 | Since: unknown | API-Set: unknown
  */
 export function isAnyShootingInArea(x1, y1, z1, x2, y2, z2) {
     return IsAnyPedShootingInArea(x1, y1, z1, x2, y2, z2, false, false);
@@ -2707,7 +2706,7 @@ export function isAnyShootingInArea(x1, y1, z1, x2, y2, z2) {
 /**
  * No comment provided
  *
- * Hash: 0xE0A0AEC214B1FABA | Since: 323 | API-Set: unknown
+ * Hash: 0xE0A0AEC214B1FABA | Since: unknown | API-Set: unknown
  */
 export function isConversationDead(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2716,7 +2715,7 @@ export function isConversationDead(ped) {
 /**
  * xyz - relative to the world origin.
  *
- * Hash: 0x16EC4839969F9F5E | Since: 323 | API-Set: unknown
+ * Hash: 0x16EC4839969F9F5E | Since: unknown | API-Set: unknown
  */
 export function isCopInArea3d(x1, y1, z1, x2, y2, z2) {
     return IsCopPedInArea3d(x1, y1, z1, x2, y2, z2);
@@ -2724,7 +2723,7 @@ export function isCopInArea3d(x1, y1, z1, x2, y2, z2) {
 /**
  * No comment provided
  *
- * Hash: 0xF2385935BFFD4D92 | Since: 323 | API-Set: unknown
+ * Hash: 0xF2385935BFFD4D92 | Since: unknown | API-Set: unknown
  */
 export function isCurrentHeadPropAHelmet() {
     return Citizen.invokeNative('0xF2385935BFFD4D92', undefined);
@@ -2732,7 +2731,7 @@ export function isCurrentHeadPropAHelmet() {
 /**
  * No comment provided
  *
- * Hash: 0xA3F3564A5B3646C0 | Since: 323 | API-Set: unknown
+ * Hash: 0xA3F3564A5B3646C0 | Since: unknown | API-Set: unknown
  */
 export function isMobilePhoneToEar(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2741,7 +2740,7 @@ export function isMobilePhoneToEar(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xEBB376779A760AA8 | Since: 323 | API-Set: unknown
+ * Hash: 0xEBB376779A760AA8 | Since: unknown | API-Set: unknown
  */
 export function isheadshotImgUploadAvailable() {
     return IsPedheadshotImgUploadAvailable();
@@ -2749,7 +2748,7 @@ export function isheadshotImgUploadAvailable() {
 /**
  * gtaforums.com/topic/885580-ped-headshotmugshot-txd/
  *
- * Hash: 0x7085228842B13A67 | Since: 323 | API-Set: unknown
+ * Hash: 0x7085228842B13A67 | Since: unknown | API-Set: unknown
  */
 export function isheadshotReady(id) {
     return IsPedheadshotReady(id);
@@ -2757,7 +2756,7 @@ export function isheadshotReady(id) {
 /**
  * gtaforums.com/topic/885580-ped-headshotmugshot-txd/
  *
- * Hash: 0xA0A9668F158129A2 | Since: 323 | API-Set: unknown
+ * Hash: 0xA0A9668F158129A2 | Since: unknown | API-Set: unknown
  */
 export function isheadshotValid(id) {
     return IsPedheadshotValid(id);
@@ -2765,7 +2764,7 @@ export function isheadshotValid(id) {
 /**
  * No comment provided
  *
- * Hash: 0x3998B1276A3300E5 | Since: 323 | API-Set: unknown
+ * Hash: 0x3998B1276A3300E5 | Since: unknown | API-Set: unknown
  */
 export function isAimingFromCover(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2774,7 +2773,7 @@ export function isAimingFromCover(ped) {
 /**
  * Returns true if the given ped has a valid pointer to CPlayerInfo in its CPed class. That's all.
  *
- * Hash: 0x12534C348C6CB68B | Since: 323 | API-Set: unknown
+ * Hash: 0x12534C348C6CB68B | Since: unknown | API-Set: unknown
  */
 export function isAPlayer(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2783,7 +2782,7 @@ export function isAPlayer(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x9A497FE2DF198913 | Since: 323 | API-Set: unknown
+ * Hash: 0x9A497FE2DF198913 | Since: unknown | API-Set: unknown
  */
 export function isBeingJacked(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2792,7 +2791,7 @@ export function isBeingJacked(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x863B23EFDE9C5DF2 | Since: 323 | API-Set: unknown
+ * Hash: 0x863B23EFDE9C5DF2 | Since: unknown | API-Set: unknown
  */
 export function isBeingStealthKilled(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2801,7 +2800,7 @@ export function isBeingStealthKilled(ped) {
 /**
  * p1 is always 0
  *
- * Hash: 0x4FBACCE3B4138EE8 | Since: 323 | API-Set: unknown
+ * Hash: 0x4FBACCE3B4138EE8 | Since: unknown | API-Set: unknown
  */
 export function isBeingStunned(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2810,7 +2809,7 @@ export function isBeingStunned(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x09E7ECA981D9B210 | Since: 1290 | API-Set: unknown
+ * Hash: 0x09E7ECA981D9B210 | Since: unknown | API-Set: unknown
  */
 export function isBlushFacepaintTintForBarber(colorId) {
     return IsPedBodyBlemishValid(colorId);
@@ -2818,7 +2817,7 @@ export function isBlushFacepaintTintForBarber(colorId) {
 /**
  * No comment provided
  *
- * Hash: 0x604E810189EE3A59 | Since: 323 | API-Set: unknown
+ * Hash: 0x604E810189EE3A59 | Since: unknown | API-Set: unknown
  */
 export function isBlushTintForBarber(colorID) {
     return IsPedBlushColorValid(colorID);
@@ -2826,7 +2825,7 @@ export function isBlushTintForBarber(colorID) {
 /**
  * No comment provided
  *
- * Hash: 0xF41B5D290C99A3D6 | Since: 323 | API-Set: unknown
+ * Hash: 0xF41B5D290C99A3D6 | Since: unknown | API-Set: unknown
  */
 export function isBlushTintForCreator(colorId) {
     return IsPedBlushColorValid2(colorId);
@@ -2834,7 +2833,7 @@ export function isBlushTintForCreator(colorId) {
 /**
  * No comment provided
  *
- * Hash: 0x53E8CB4F48BFE623 | Since: 323 | API-Set: unknown
+ * Hash: 0x53E8CB4F48BFE623 | Since: unknown | API-Set: unknown
  */
 export function isClimbing(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2848,7 +2847,7 @@ export function isClimbing(ped) {
  *
  * Full list of ped components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedComponentVariations.json
  *
- * Hash: 0xE825F6B6CEA7671D | Since: 323 | API-Set: unknown
+ * Hash: 0xE825F6B6CEA7671D | Since: unknown | API-Set: unknown
  */
 export function isComponentVariationValid(ped, componentId, drawableId, textureId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2857,7 +2856,7 @@ export function isComponentVariationValid(ped, componentId, drawableId, textureI
 /**
  * No comment provided
  *
- * Hash: 0x3317DEDB88C95038 | Since: 323 | API-Set: unknown
+ * Hash: 0x3317DEDB88C95038 | Since: unknown | API-Set: unknown
  */
 export function isDeadOrDying(ped, checkMeleeDeathFlags) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2866,7 +2865,7 @@ export function isDeadOrDying(ped, checkMeleeDeathFlags) {
 /**
  * No comment provided
  *
- * Hash: 0xBA63D9FE45412247 | Since: 323 | API-Set: unknown
+ * Hash: 0xBA63D9FE45412247 | Since: unknown | API-Set: unknown
  */
 export function isDefensiveAreaActive(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2875,7 +2874,7 @@ export function isDefensiveAreaActive(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x5527B8246FEF9B11 | Since: 323 | API-Set: unknown
+ * Hash: 0x5527B8246FEF9B11 | Since: unknown | API-Set: unknown
  */
 export function isDiving(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2884,7 +2883,7 @@ export function isDiving(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x451D05012CCEC234 | Since: 573 | API-Set: unknown
+ * Hash: 0x451D05012CCEC234 | Since: unknown | API-Set: unknown
  */
 export function isDoingABeastJump() {
     return IsPedDoingBeastJump(undefined);
@@ -2892,7 +2891,7 @@ export function isDoingABeastJump() {
 /**
  * No comment provided
  *
- * Hash: 0xB2C086CC1BF8F2BF | Since: 323 | API-Set: unknown
+ * Hash: 0xB2C086CC1BF8F2BF | Since: unknown | API-Set: unknown
  */
 export function isDoingDriveby(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2901,7 +2900,7 @@ export function isDoingDriveby(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xD125AE748725C6BC | Since: 323 | API-Set: unknown
+ * Hash: 0xD125AE748725C6BC | Since: unknown | API-Set: unknown
  */
 export function isDucking(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2914,7 +2913,7 @@ export function isDucking(ped) {
  * `if (PED::IS_PED_EVASIVE_DIVING(A_0, &num3) != 0)`
  * `if (ENTITY::IS_ENTITY_A_VEHICLE(num3) != 0)`
  *
- * Hash: 0x414641C26E105898 | Since: 323 | API-Set: unknown
+ * Hash: 0x414641C26E105898 | Since: unknown | API-Set: unknown
  */
 export function isEvasiveDiving(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2923,7 +2922,7 @@ export function isEvasiveDiving(ped) {
 /**
  * angle is ped's view cone
  *
- * Hash: 0xD71649DB0A545AA3 | Since: 323 | API-Set: unknown
+ * Hash: 0xD71649DB0A545AA3 | Since: unknown | API-Set: unknown
  */
 export function isFacingPed(ped, otherPed, angle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2933,7 +2932,7 @@ export function isFacingPed(ped, otherPed, angle) {
 /**
  * No comment provided
  *
- * Hash: 0xFB92A102F1C4DFA3 | Since: 323 | API-Set: unknown
+ * Hash: 0xFB92A102F1C4DFA3 | Since: unknown | API-Set: unknown
  */
 export function isFalling(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2943,7 +2942,7 @@ export function isFalling(ped) {
  * Gets a value indicating whether this ped's health is below its fatally injured threshold. The default threshold is 100.
  * If the handle is invalid, the function returns true.
  *
- * Hash: 0xD839450756ED5A80 | Since: 323 | API-Set: unknown
+ * Hash: 0xD839450756ED5A80 | Since: unknown | API-Set: unknown
  */
 export function isFatallyInjured(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2952,7 +2951,7 @@ export function isFatallyInjured(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xBBCCE00B381F8482 | Since: 323 | API-Set: unknown
+ * Hash: 0xBBCCE00B381F8482 | Since: unknown | API-Set: unknown
  */
 export function isFleeing(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2961,7 +2960,7 @@ export function isFleeing(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xC30BDAEE47256C13 | Since: 1868 | API-Set: unknown
+ * Hash: 0xC30BDAEE47256C13 | Since: unknown | API-Set: unknown
  */
 export function isGesturing() {
     return Citizen.invokeNative('0xC30BDAEE47256C13', undefined);
@@ -2969,7 +2968,7 @@ export function isGesturing() {
 /**
  * No comment provided
  *
- * Hash: 0xBB062B2B5722478E | Since: 323 | API-Set: unknown
+ * Hash: 0xBB062B2B5722478E | Since: unknown | API-Set: unknown
  */
 export function isGettingIntoAVehicle(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2978,7 +2977,7 @@ export function isGettingIntoAVehicle(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x9F65DBC537E59AD5 | Since: 323 | API-Set: unknown
+ * Hash: 0x9F65DBC537E59AD5 | Since: unknown | API-Set: unknown
  */
 export function isGoingIntoCover(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2987,7 +2986,7 @@ export function isGoingIntoCover(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x9BB01E3834671191 | Since: 323 | API-Set: unknown
+ * Hash: 0x9BB01E3834671191 | Since: unknown | API-Set: unknown
  */
 export function isGroupMember(ped, groupId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2996,7 +2995,7 @@ export function isGroupMember(ped, groupId) {
 /**
  * No comment provided
  *
- * Hash: 0xE0D36E5D9E99CC21 | Since: 323 | API-Set: unknown
+ * Hash: 0xE0D36E5D9E99CC21 | Since: unknown | API-Set: unknown
  */
 export function isHairTintForBarber(colorID) {
     return IsPedHairColorValid(colorID);
@@ -3004,7 +3003,7 @@ export function isHairTintForBarber(colorID) {
 /**
  * No comment provided
  *
- * Hash: 0xED6D8E27A43B8CDE | Since: 323 | API-Set: unknown
+ * Hash: 0xED6D8E27A43B8CDE | Since: unknown | API-Set: unknown
  */
 export function isHairTintForCreator(colorId) {
     return IsPedHairColorValid2(colorId);
@@ -3012,7 +3011,7 @@ export function isHairTintForCreator(colorId) {
 /**
  * No comment provided
  *
- * Hash: 0x1C86D8AEF8254B78 | Since: 323 | API-Set: unknown
+ * Hash: 0x1C86D8AEF8254B78 | Since: unknown | API-Set: unknown
  */
 export function isHangingOnToVehicle(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3021,7 +3020,7 @@ export function isHangingOnToVehicle(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xFCF37A457CB96DC0 | Since: 323 | API-Set: unknown
+ * Hash: 0xFCF37A457CB96DC0 | Since: unknown | API-Set: unknown
  */
 export function isHeadingTowardsPosition(ped, pos) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3030,7 +3029,7 @@ export function isHeadingTowardsPosition(ped, pos) {
 /**
  * No comment provided
  *
- * Hash: 0x813A0A7C9D2E831F | Since: 323 | API-Set: unknown
+ * Hash: 0x813A0A7C9D2E831F | Since: unknown | API-Set: unknown
  */
 export function isHeadtrackingEntity(ped, entity) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3040,7 +3039,7 @@ export function isHeadtrackingEntity(ped, entity) {
 /**
  * No comment provided
  *
- * Hash: 0x5CD3CB88A7F8850D | Since: 323 | API-Set: unknown
+ * Hash: 0x5CD3CB88A7F8850D | Since: unknown | API-Set: unknown
  */
 export function isHeadtrackingPed(ped1, ped2) {
     const _ped1 = typeof ped1 == 'object' ? ped1.handle() : ped1;
@@ -3050,7 +3049,7 @@ export function isHeadtrackingPed(ped1, ped2) {
 /**
  * No comment provided
  *
- * Hash: 0xB9496CE47546DB2C | Since: 791 | API-Set: unknown
+ * Hash: 0xB9496CE47546DB2C | Since: unknown | API-Set: unknown
  */
 export function isHelmetVisorUp(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3059,7 +3058,7 @@ export function isHelmetVisorUp(ped) {
 /**
  * Returns true/false if the ped is/isn't humanoid.
  *
- * Hash: 0xB980061DA992779D | Since: 323 | API-Set: unknown
+ * Hash: 0xB980061DA992779D | Since: unknown | API-Set: unknown
  */
 export function isHuman(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3068,7 +3067,7 @@ export function isHuman(ped) {
 /**
  * Returns whether the specified ped is hurt.
  *
- * Hash: 0x5983BB449D7FDB12 | Since: 323 | API-Set: unknown
+ * Hash: 0x5983BB449D7FDB12 | Since: unknown | API-Set: unknown
  */
 export function isHurt(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3079,7 +3078,7 @@ export function isHurt(ped) {
  *
  * The default threshold is 100.
  *
- * Hash: 0x84A2DD9AC37C35C1 | Since: 323 | API-Set: unknown
+ * Hash: 0x84A2DD9AC37C35C1 | Since: unknown | API-Set: unknown
  */
 export function isInjured(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3088,7 +3087,7 @@ export function isInjured(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x2E0E1C2B4F6CB339 | Since: 323 | API-Set: unknown
+ * Hash: 0x2E0E1C2B4F6CB339 | Since: unknown | API-Set: unknown
  */
 export function isInAnyBoat(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3097,7 +3096,7 @@ export function isInAnyBoat(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x298B91AE825E5705 | Since: 323 | API-Set: unknown
+ * Hash: 0x298B91AE825E5705 | Since: unknown | API-Set: unknown
  */
 export function isInAnyHeli(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3106,7 +3105,7 @@ export function isInAnyHeli(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x5FFF4CFC74D8FB80 | Since: 323 | API-Set: unknown
+ * Hash: 0x5FFF4CFC74D8FB80 | Since: unknown | API-Set: unknown
  */
 export function isInAnyPlane(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3115,7 +3114,7 @@ export function isInAnyPlane(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x0BD04E29640C9C12 | Since: 323 | API-Set: unknown
+ * Hash: 0x0BD04E29640C9C12 | Since: unknown | API-Set: unknown
  */
 export function isInAnyPoliceVehicle(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3124,7 +3123,7 @@ export function isInAnyPoliceVehicle(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xFBFC01CCFB35D99E | Since: 323 | API-Set: unknown
+ * Hash: 0xFBFC01CCFB35D99E | Since: unknown | API-Set: unknown
  */
 export function isInAnySub(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3133,7 +3132,7 @@ export function isInAnySub(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x6E575D6A898AB852 | Since: 323 | API-Set: unknown
+ * Hash: 0x6E575D6A898AB852 | Since: unknown | API-Set: unknown
  */
 export function isInAnyTaxi(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3142,7 +3141,7 @@ export function isInAnyTaxi(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x6F972C1AB75A1ED0 | Since: 323 | API-Set: unknown
+ * Hash: 0x6F972C1AB75A1ED0 | Since: unknown | API-Set: unknown
  */
 export function isInAnyTrain(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3153,7 +3152,7 @@ export function isInAnyTrain(ped) {
  *
  * If 'atGetIn' is false, the function will not return true until the ped is sitting in the vehicle and is about to close the door. If it's true, the function returns true the moment the ped starts to get onto the seat (after opening the door). Eg. if false, and the ped is getting into a submersible, the function will not return true until the ped has descended down into the submersible and gotten into the seat, while if it's true, it'll return true the moment the hatch has been opened and the ped is about to descend into the submersible.
  *
- * Hash: 0x997ABD671D25CA0B | Since: 323 | API-Set: unknown
+ * Hash: 0x997ABD671D25CA0B | Since: unknown | API-Set: unknown
  */
 export function isInAnyVehicle(ped, atGetIn) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3164,7 +3163,7 @@ export function isInAnyVehicle(ped, atGetIn) {
  *
  * `p1 is usually 0 in the scripts because it gets the ped id during the task sequence. For instance: PED::IS_PED_IN_COMBAT(l_42E[4\/\*14\*\/], PLAYER::PLAYER_PED_ID()) // armenian2.ct4: 43794`
  *
- * Hash: 0x4859F1FC66A6278E | Since: 323 | API-Set: unknown
+ * Hash: 0x4859F1FC66A6278E | Since: unknown | API-Set: unknown
  */
 export function isInCombat(ped, target) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3174,7 +3173,7 @@ export function isInCombat(ped, target) {
 /**
  * p1 is nearly always 0 in the scripts.
  *
- * Hash: 0x60DFD0691A170B88 | Since: 323 | API-Set: unknown
+ * Hash: 0x60DFD0691A170B88 | Since: unknown | API-Set: unknown
  */
 export function isInCover(ped, exceptUseWeapon) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3183,7 +3182,7 @@ export function isInCover(ped, exceptUseWeapon) {
 /**
  * No comment provided
  *
- * Hash: 0x845333B3150583AB | Since: 323 | API-Set: unknown
+ * Hash: 0x845333B3150583AB | Since: unknown | API-Set: unknown
  */
 export function isInCoverFacingLeft(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3192,7 +3191,7 @@ export function isInCoverFacingLeft(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x9134873537FA419C | Since: 323 | API-Set: unknown
+ * Hash: 0x9134873537FA419C | Since: unknown | API-Set: unknown
  */
 export function isInFlyingVehicle(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3201,7 +3200,7 @@ export function isInFlyingVehicle(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x5891CAC5D4ACFF74 | Since: 323 | API-Set: unknown
+ * Hash: 0x5891CAC5D4ACFF74 | Since: unknown | API-Set: unknown
  */
 export function isInGroup(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3210,7 +3209,7 @@ export function isInGroup(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x6A03BF943D767C93 | Since: 323 | API-Set: unknown
+ * Hash: 0x6A03BF943D767C93 | Since: unknown | API-Set: unknown
  */
 export function isInHighCover(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3226,7 +3225,7 @@ export function isInHighCover(ped) {
  *
  * You don't have to be holding the melee-targetting button to be in this stance; you stay in it by default for a few seconds after swinging at someone. If you do a sprinting punch, it returns true for the duration of the punch animation and then returns false again, even if you've punched and made-angry many peds
  *
- * Hash: 0x4E209B2C1EAD5159 | Since: 323 | API-Set: unknown
+ * Hash: 0x4E209B2C1EAD5159 | Since: unknown | API-Set: unknown
  */
 export function isInMeleeCombat(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3235,7 +3234,7 @@ export function isInMeleeCombat(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x796D90EFB19AA332 | Since: 323 | API-Set: unknown
+ * Hash: 0x796D90EFB19AA332 | Since: unknown | API-Set: unknown
  */
 export function isInModel(ped, modelHash) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3246,7 +3245,7 @@ export function isInModel(ped, modelHash) {
 /**
  * No comment provided
  *
- * Hash: 0x7DCE8BDA0F1C1200 | Since: 323 | API-Set: unknown
+ * Hash: 0x7DCE8BDA0F1C1200 | Since: unknown | API-Set: unknown
  */
 export function isInParachuteFreeFall(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3257,7 +3256,7 @@ export function isInParachuteFreeFall(ped) {
  *
  * If 'atGetIn' is false, the function will not return true until the ped is sitting in the vehicle and is about to close the door. If it's true, the function returns true the moment the ped starts to get onto the seat (after opening the door). Eg. if false, and the ped is getting into a submersible, the function will not return true until the ped has descended down into the submersible and gotten into the seat, while if it's true, it'll return true the moment the hatch has been opened and the ped is about to descend into the submersible.
  *
- * Hash: 0xA3EE4A07279BB9DB | Since: 323 | API-Set: unknown
+ * Hash: 0xA3EE4A07279BB9DB | Since: unknown | API-Set: unknown
  */
 export function isInVehicle(ped, vehicle, atGetIn) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3267,7 +3266,7 @@ export function isInVehicle(ped, vehicle, atGetIn) {
 /**
  * No comment provided
  *
- * Hash: 0x4AE4FF911DFB61DA | Since: 323 | API-Set: unknown
+ * Hash: 0x4AE4FF911DFB61DA | Since: unknown | API-Set: unknown
  */
 export function isJacking(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3276,7 +3275,7 @@ export function isJacking(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xCEDABC5900A0BF97 | Since: 323 | API-Set: unknown
+ * Hash: 0xCEDABC5900A0BF97 | Since: unknown | API-Set: unknown
  */
 export function isJumping(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3285,7 +3284,7 @@ export function isJumping(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x433DDFFE2044B636 | Since: 323 | API-Set: unknown
+ * Hash: 0x433DDFFE2044B636 | Since: unknown | API-Set: unknown
  */
 export function isJumpingOutOfVehicle(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3294,7 +3293,7 @@ export function isJumpingOutOfVehicle(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x412F1364FA066CFB | Since: 573 | API-Set: unknown
+ * Hash: 0x412F1364FA066CFB | Since: unknown | API-Set: unknown
  */
 export function isLanding() {
     return Citizen.invokeNative('0x412F1364FA066CFB', undefined);
@@ -3302,7 +3301,7 @@ export function isLanding() {
 /**
  * No comment provided
  *
- * Hash: 0x0525A2C2562F3CD4 | Since: 323 | API-Set: unknown
+ * Hash: 0x0525A2C2562F3CD4 | Since: unknown | API-Set: unknown
  */
 export function isLipstickTintForBarber(colorID) {
     return IsPedLipstickColorValid(colorID);
@@ -3310,7 +3309,7 @@ export function isLipstickTintForBarber(colorID) {
 /**
  * No comment provided
  *
- * Hash: 0x3E802F11FBE27674 | Since: 323 | API-Set: unknown
+ * Hash: 0x3E802F11FBE27674 | Since: unknown | API-Set: unknown
  */
 export function isLipstickTintForCreator(colorId) {
     return IsPedLipstickColorValid2(colorId);
@@ -3318,7 +3317,7 @@ export function isLipstickTintForCreator(colorId) {
 /**
  * Returns true/false if the ped is/isn't male.
  *
- * Hash: 0x6D9F5FAA7488BA46 | Since: 323 | API-Set: unknown
+ * Hash: 0x6D9F5FAA7488BA46 | Since: unknown | API-Set: unknown
  */
 export function isMale(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3327,7 +3326,7 @@ export function isMale(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xC9D55B1A358A5BF7 | Since: 323 | API-Set: unknown
+ * Hash: 0xC9D55B1A358A5BF7 | Since: unknown | API-Set: unknown
  */
 export function isModel(ped, modelHash) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3338,7 +3337,7 @@ export function isModel(ped, modelHash) {
 /**
  * No comment provided
  *
- * Hash: 0x94495889E22C6479 | Since: 323 | API-Set: unknown
+ * Hash: 0x94495889E22C6479 | Since: unknown | API-Set: unknown
  */
 export function isOnAnyBike(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3347,7 +3346,7 @@ export function isOnAnyBike(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x01FEE67DB37F59B2 | Since: 323 | API-Set: unknown
+ * Hash: 0x01FEE67DB37F59B2 | Since: unknown | API-Set: unknown
  */
 export function isOnFoot(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3356,7 +3355,7 @@ export function isOnFoot(ped) {
 /**
  * `Same function call as PED::GET_MOUNT, aka just returns 0`
  *
- * Hash: 0x460BC76A0E10655E | Since: 323 | API-Set: unknown
+ * Hash: 0x460BC76A0E10655E | Since: unknown | API-Set: unknown
  */
 export function isOnMount(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3365,7 +3364,7 @@ export function isOnMount(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xEC5F66E459AF3BB2 | Since: 323 | API-Set: unknown
+ * Hash: 0xEC5F66E459AF3BB2 | Since: unknown | API-Set: unknown
  */
 export function isOnSpecificVehicle(ped, vehicle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3379,7 +3378,7 @@ export function isOnSpecificVehicle(ped, vehicle) {
  * Return 0 when ped is not on a vehicle.
  *
  *
- * Hash: 0x67722AEB798E5FAB | Since: 323 | API-Set: unknown
+ * Hash: 0x67722AEB798E5FAB | Since: unknown | API-Set: unknown
  */
 export function isOnVehicle(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3388,7 +3387,7 @@ export function isOnVehicle(ped) {
 /**
  * Returns true if the ped is currently opening a door (CTaskOpenDoor).
  *
- * Hash: 0x26AF0E8E30BD2A2C | Since: 323 | API-Set: unknown
+ * Hash: 0x26AF0E8E30BD2A2C | Since: unknown | API-Set: unknown
  */
 export function isOpeningDoor(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3397,7 +3396,7 @@ export function isOpeningDoor(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xEBD0EDBA5BE957CF | Since: 323 | API-Set: unknown
+ * Hash: 0xEBD0EDBA5BE957CF | Since: unknown | API-Set: unknown
  */
 export function isPerformingACounterAttack(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3406,7 +3405,7 @@ export function isPerformingACounterAttack(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xDCCA191DF9980FD7 | Since: 323 | API-Set: unknown
+ * Hash: 0xDCCA191DF9980FD7 | Since: unknown | API-Set: unknown
  */
 export function isPerformingMeleeAction(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3415,7 +3414,7 @@ export function isPerformingMeleeAction(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xFD4CCDBCC59941B7 | Since: 323 | API-Set: unknown
+ * Hash: 0xFD4CCDBCC59941B7 | Since: unknown | API-Set: unknown
  */
 export function isPerformingStealthKill(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3424,7 +3423,7 @@ export function isPerformingStealthKill(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xC70B5FAE151982D8 | Since: 323 | API-Set: unknown
+ * Hash: 0xC70B5FAE151982D8 | Since: unknown | API-Set: unknown
  */
 export function isPlantingBomb(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3433,7 +3432,7 @@ export function isPlantingBomb(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xD6A86331A537A7B9 | Since: 323 | API-Set: unknown
+ * Hash: 0xD6A86331A537A7B9 | Since: unknown | API-Set: unknown
  */
 export function isProne(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3442,7 +3441,7 @@ export function isProne(ped) {
 /**
  * If the ped handle passed through the parenthesis is in a ragdoll state this will return true.
  *
- * Hash: 0x47E4E977581C5B55 | Since: 323 | API-Set: unknown
+ * Hash: 0x47E4E977581C5B55 | Since: unknown | API-Set: unknown
  */
 export function isRagdoll(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3451,7 +3450,7 @@ export function isRagdoll(ped) {
 /**
  * Returns whether the specified ped is reloading.
  *
- * Hash: 0x24B100C68C645951 | Since: 323 | API-Set: unknown
+ * Hash: 0x24B100C68C645951 | Since: unknown | API-Set: unknown
  */
 export function isReloading(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3460,7 +3459,7 @@ export function isReloading(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x625B774D75C87068 | Since: 323 | API-Set: unknown
+ * Hash: 0x625B774D75C87068 | Since: unknown | API-Set: unknown
  */
 export function isRespondingToEvent(ped, event) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3469,7 +3468,7 @@ export function isRespondingToEvent(ped, event) {
 /**
  * No comment provided
  *
- * Hash: 0xD1871251F3B5ACD7 | Since: 323 | API-Set: unknown
+ * Hash: 0xD1871251F3B5ACD7 | Since: unknown | API-Set: unknown
  */
 export function isRunningMeleeTask(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3478,7 +3477,7 @@ export function isRunningMeleeTask(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x2AFE52F782F25775 | Since: 323 | API-Set: unknown
+ * Hash: 0x2AFE52F782F25775 | Since: unknown | API-Set: unknown
  */
 export function isRunningMobilePhoneTask(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3487,7 +3486,7 @@ export function isRunningMobilePhoneTask(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xE3B6097CC25AA69E | Since: 323 | API-Set: unknown
+ * Hash: 0xE3B6097CC25AA69E | Since: unknown | API-Set: unknown
  */
 export function isRunningRagdollTask(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3496,7 +3495,7 @@ export function isRunningRagdollTask(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x81AA517FBBA05D39 | Since: 944 | API-Set: unknown
+ * Hash: 0x81AA517FBBA05D39 | Since: unknown | API-Set: unknown
  */
 export function isShaderReady(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3505,7 +3504,7 @@ export function isShaderReady(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xB8B52E498014F5B0 | Since: 323 | API-Set: unknown
+ * Hash: 0xB8B52E498014F5B0 | Since: unknown | API-Set: unknown
  */
 export function isSheltered(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3514,7 +3513,7 @@ export function isSheltered(ped) {
 /**
  * Returns whether the specified ped is shooting.
  *
- * Hash: 0x34616828CD07F1A1 | Since: 323 | API-Set: unknown
+ * Hash: 0x34616828CD07F1A1 | Since: unknown | API-Set: unknown
  */
 export function isShooting(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3523,7 +3522,7 @@ export function isShooting(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x7E9DFE24AC1E58EF | Since: 323 | API-Set: unknown
+ * Hash: 0x7E9DFE24AC1E58EF | Since: unknown | API-Set: unknown
  */
 export function isShootingInArea(ped, x1, y1, z1, x2, y2, z2) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3533,7 +3532,7 @@ export function isShootingInArea(ped, x1, y1, z1, x2, y2, z2) {
  * Detect if ped is in any vehicle
  * [True/False]
  *
- * Hash: 0x826AA586EDB9FEF8 | Since: 323 | API-Set: unknown
+ * Hash: 0x826AA586EDB9FEF8 | Since: unknown | API-Set: unknown
  */
 export function isSittingInAnyVehicle(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3543,7 +3542,7 @@ export function isSittingInAnyVehicle(ped) {
  * Detect if ped is sitting in the specified vehicle
  * [True/False]
  *
- * Hash: 0xA808AA1D79230FC2 | Since: 323 | API-Set: unknown
+ * Hash: 0xA808AA1D79230FC2 | Since: unknown | API-Set: unknown
  */
 export function isSittingInVehicle(ped, vehicle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3553,7 +3552,7 @@ export function isSittingInVehicle(ped, vehicle) {
 /**
  * Returns true if the ped doesn't do any movement. If the ped is being pushed forwards by using APPLY_FORCE_TO_ENTITY for example, the function returns false.
  *
- * Hash: 0x530944F6F4B8A214 | Since: 323 | API-Set: unknown
+ * Hash: 0x530944F6F4B8A214 | Since: unknown | API-Set: unknown
  */
 export function isStopped(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3562,7 +3561,7 @@ export function isStopped(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x9DE327631295B4C2 | Since: 323 | API-Set: unknown
+ * Hash: 0x9DE327631295B4C2 | Since: unknown | API-Set: unknown
  */
 export function isSwimming(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3571,7 +3570,7 @@ export function isSwimming(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xC024869A53992F34 | Since: 323 | API-Set: unknown
+ * Hash: 0xC024869A53992F34 | Since: unknown | API-Set: unknown
  */
 export function isSwimmingUnderWater(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3580,7 +3579,7 @@ export function isSwimmingUnderWater(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x3795688A307E1EB6 | Since: 505 | API-Set: unknown
+ * Hash: 0x3795688A307E1EB6 | Since: unknown | API-Set: unknown
  */
 export function isSwitchingWeapon(Ped) {
     const _Ped = typeof Ped == 'object' ? Ped.handle() : Ped;
@@ -3589,7 +3588,7 @@ export function isSwitchingWeapon(Ped) {
 /**
  * No comment provided
  *
- * Hash: 0x14590DDBEDB1EC85 | Since: 323 | API-Set: unknown
+ * Hash: 0x14590DDBEDB1EC85 | Since: unknown | API-Set: unknown
  */
 export function isTakingOffHelmet(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3598,7 +3597,7 @@ export function isTakingOffHelmet(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x4C5E1F087CD10BB7 | Since: 323 | API-Set: unknown
+ * Hash: 0x4C5E1F087CD10BB7 | Since: unknown | API-Set: unknown
  */
 export function isTracked(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3607,7 +3606,7 @@ export function isTracked(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x44D28D5DDFE5F68C | Since: 323 | API-Set: unknown
+ * Hash: 0x44D28D5DDFE5F68C | Since: unknown | API-Set: unknown
  */
 export function isTryingToEnterALockedVehicle(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3616,7 +3615,7 @@ export function isTryingToEnterALockedVehicle(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x00E73468D085F745 | Since: 323 | API-Set: unknown
+ * Hash: 0x00E73468D085F745 | Since: unknown | API-Set: unknown
  */
 export function isUsingActionMode(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3625,7 +3624,7 @@ export function isUsingActionMode(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x57AB4A3080F85143 | Since: 323 | API-Set: unknown
+ * Hash: 0x57AB4A3080F85143 | Since: unknown | API-Set: unknown
  */
 export function isUsingAnyScenario(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3634,7 +3633,7 @@ export function isUsingAnyScenario(ped) {
 /**
  * Full list of ped scenarios by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scenariosCompact.json
  *
- * Hash: 0x1BF094736DD62C2E | Since: 323 | API-Set: unknown
+ * Hash: 0x1BF094736DD62C2E | Since: unknown | API-Set: unknown
  */
 export function isUsingScenario(ped, scenario) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3643,7 +3642,7 @@ export function isUsingScenario(ped, scenario) {
 /**
  * No comment provided
  *
- * Hash: 0x117C70D1F5730B5E | Since: 323 | API-Set: unknown
+ * Hash: 0x117C70D1F5730B5E | Since: unknown | API-Set: unknown
  */
 export function isVaulting(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3652,7 +3651,7 @@ export function isVaulting(ped) {
 /**
  * Returns true if the ped passed through the parenthesis is wearing a helmet.
  *
- * Hash: 0xF33BDFE19B309B19 | Since: 323 | API-Set: unknown
+ * Hash: 0xF33BDFE19B309B19 | Since: unknown | API-Set: unknown
  */
 export function isWearingHelmet(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3661,7 +3660,7 @@ export function isWearingHelmet(ped) {
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
  *
- * Hash: 0x6EC47A344923E1ED | Since: 323 | API-Set: unknown
+ * Hash: 0x6EC47A344923E1ED | Since: unknown | API-Set: unknown
  */
 export function isScriptedScenarioUsingConditionalAnim(ped, animDict, anim) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3670,7 +3669,7 @@ export function isScriptedScenarioUsingConditionalAnim(ped, animDict, anim) {
 /**
  * No comment provided
  *
- * Hash: 0x7F2F4F13AC5257EF | Since: 323 | API-Set: unknown
+ * Hash: 0x7F2F4F13AC5257EF | Since: unknown | API-Set: unknown
  */
 export function isSynchronizedSceneHoldLastFrame(sceneID) {
     return IsSynchronizedSceneHoldLastFrame(sceneID);
@@ -3678,7 +3677,7 @@ export function isSynchronizedSceneHoldLastFrame(sceneID) {
 /**
  * No comment provided
  *
- * Hash: 0x62522002E0C391BA | Since: 323 | API-Set: unknown
+ * Hash: 0x62522002E0C391BA | Since: unknown | API-Set: unknown
  */
 export function isSynchronizedSceneLoo(sceneID) {
     return IsSynchronizedSceneLooped(sceneID);
@@ -3686,7 +3685,7 @@ export function isSynchronizedSceneLoo(sceneID) {
 /**
  * Returns true if a synchronized scene is running
  *
- * Hash: 0x25D39B935A038A26 | Since: 323 | API-Set: unknown
+ * Hash: 0x25D39B935A038A26 | Since: unknown | API-Set: unknown
  */
 export function isSynchronizedSceneRunning(sceneId) {
     return IsSynchronizedSceneRunning(sceneId);
@@ -3694,7 +3693,7 @@ export function isSynchronizedSceneRunning(sceneId) {
 /**
  * No comment provided
  *
- * Hash: 0x06087579E7AA85A9 | Since: 323 | API-Set: unknown
+ * Hash: 0x06087579E7AA85A9 | Since: unknown | API-Set: unknown
  */
 export function isTargetInPerceptionArea(ped, targetPed) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3707,7 +3706,7 @@ export function isTargetInPerceptionArea(ped, targetPed) {
  *
  * Target needs to be tracked.. won't work otherwise.
  *
- * Hash: 0x91C8E617F64188AC | Since: 323 | API-Set: unknown
+ * Hash: 0x91C8E617F64188AC | Since: unknown | API-Set: unknown
  */
 export function isTrackedVisible(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3716,7 +3715,7 @@ export function isTrackedVisible(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xFEC9A3B1820F3331 | Since: 323 | API-Set: unknown
+ * Hash: 0xFEC9A3B1820F3331 | Since: unknown | API-Set: unknown
  */
 export function isUsingScubaGearVariation() {
     return Citizen.invokeNative('0xFEC9A3B1820F3331', undefined);
@@ -3725,7 +3724,7 @@ export function isUsingScubaGearVariation() {
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x6FD7816A36615F48 | Since: 323 | API-Set: unknown
+ * Hash: 0x6FD7816A36615F48 | Since: unknown | API-Set: unknown
  */
 export function knockOffProp(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3734,7 +3733,7 @@ export function knockOffProp(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x45BBCBA77C29A841 | Since: 323 | API-Set: unknown
+ * Hash: 0x45BBCBA77C29A841 | Since: unknown | API-Set: unknown
  */
 export function knockOffVehicle(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3743,7 +3742,7 @@ export function knockOffVehicle(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x2B694AFCF64E6994 | Since: 323 | API-Set: unknown
+ * Hash: 0x2B694AFCF64E6994 | Since: unknown | API-Set: unknown
  */
 export function markDecorationsAsClonedFromLocalPlayer(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3759,7 +3758,7 @@ export function markDecorationsAsClonedFromLocalPlayer(ped) {
  * SF_HOT_PERSON = 2,
  * };
  *
- * Hash: 0x46B05BCAE43856B0 | Since: 323 | API-Set: unknown
+ * Hash: 0x46B05BCAE43856B0 | Since: unknown | API-Set: unknown
  */
 export function hasSexinessFlagSet(ped, sexinessFlag) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3768,7 +3767,7 @@ export function hasSexinessFlagSet(ped, sexinessFlag) {
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
  *
- * Hash: 0xE1E65CA8AC9C00ED | Since: 323 | API-Set: unknown
+ * Hash: 0xE1E65CA8AC9C00ED | Since: unknown | API-Set: unknown
  */
 export function playFacialAnim(ped, animName, animDict) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3777,7 +3776,7 @@ export function playFacialAnim(ped, animName, animDict) {
 /**
  * Based on TASK_COMBAT_HATED_TARGETS_AROUND_PED, the parameters are likely similar (PedHandle, and area to attack in).
  *
- * Hash: 0x9222F300BF8354FE | Since: 323 | API-Set: unknown
+ * Hash: 0x9222F300BF8354FE | Since: unknown | API-Set: unknown
  */
 export function registerHatedTargetsAround(ped, radius) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3786,7 +3785,7 @@ export function registerHatedTargetsAround(ped, radius) {
 /**
  * gtaforums.com/topic/885580-ped-headshotmugshot-txd/
  *
- * Hash: 0x4462658788425076 | Since: 323 | API-Set: unknown
+ * Hash: 0x4462658788425076 | Since: unknown | API-Set: unknown
  */
 export function registerheadshot(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3795,7 +3794,7 @@ export function registerheadshot(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xBA8805A1108A2515 | Since: 877 | API-Set: unknown
+ * Hash: 0xBA8805A1108A2515 | Since: unknown | API-Set: unknown
  */
 export function registerheadshotHires(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3804,7 +3803,7 @@ export function registerheadshotHires(ped) {
 /**
  * Similar to REGISTER_PEDHEADSHOT but creates a transparent background instead of black. Example: https://i.imgur.com/iHz8ztn.png
  *
- * Hash: 0x953563CE563143AF | Since: 323 | API-Set: unknown
+ * Hash: 0x953563CE563143AF | Since: unknown | API-Set: unknown
  */
 export function registerheadshotTransparent(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3815,7 +3814,7 @@ export function registerheadshotTransparent(ped) {
  *
  * l_216 = RECSBRobber1
  *
- * Hash: 0x2F25D9AEFA34FBA2 | Since: 323 | API-Set: unknown
+ * Hash: 0x2F25D9AEFA34FBA2 | Since: unknown | API-Set: unknown
  */
 export function registerTarget(ped, target) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3825,7 +3824,7 @@ export function registerTarget(ped, target) {
 /**
  * No comment provided
  *
- * Hash: 0x5D517B27CF6ECD04 | Since: 323 | API-Set: unknown
+ * Hash: 0x5D517B27CF6ECD04 | Since: unknown | API-Set: unknown
  */
 export function releaseheadshotImgUpload(id) {
     ReleasePedheadshotImgUpload(id);
@@ -3833,7 +3832,7 @@ export function releaseheadshotImgUpload(id) {
 /**
  * No comment provided
  *
- * Hash: 0xF79F9DEF0AADE61A | Since: 323 | API-Set: unknown
+ * Hash: 0xF79F9DEF0AADE61A | Since: unknown | API-Set: unknown
  */
 export function releasePreloadPropData(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3842,7 +3841,7 @@ export function releasePreloadPropData(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x5AAB586FFEC0FD96 | Since: 323 | API-Set: unknown
+ * Hash: 0x5AAB586FFEC0FD96 | Since: unknown | API-Set: unknown
  */
 export function releasePreloadVariationData(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3851,7 +3850,7 @@ export function releasePreloadVariationData(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x13E940F88470FA51 | Since: 323 | API-Set: unknown
+ * Hash: 0x13E940F88470FA51 | Since: unknown | API-Set: unknown
  */
 export function removeActionModeAsset(asset) {
     RemoveActionModeAsset(asset);
@@ -3859,7 +3858,7 @@ export function removeActionModeAsset(asset) {
 /**
  * No comment provided
  *
- * Hash: 0x8EB2F69076AF7053 | Since: 323 | API-Set: unknown
+ * Hash: 0x8EB2F69076AF7053 | Since: unknown | API-Set: unknown
  */
 export function removeGroup(groupId) {
     RemoveGroup(groupId);
@@ -3867,7 +3866,7 @@ export function removeGroup(groupId) {
 /**
  * Ped will no longer get angry when you stay near him.
  *
- * Hash: 0x74D4E028107450A9 | Since: 323 | API-Set: unknown
+ * Hash: 0x74D4E028107450A9 | Since: unknown | API-Set: unknown
  */
 export function removeDefensiveArea(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3876,16 +3875,15 @@ export function removeDefensiveArea(ped, toggle) {
 /**
  * Judging purely from a quick disassembly, if the ped is in a vehicle, the ped will be deleted immediately. If not, it'll be marked as no longer needed. - very elegant..
  *
- * Hash: 0xAC6D445B994DF95E | Since: 323 | API-Set: unknown
+ * Hash: 0xAC6D445B994DF95E | Since: unknown | API-Set: unknown
  */
-export function removeElegantly(ped) {
-    const _ped = typeof ped == 'object' ? ped.handle() : ped;
-    RemovePedElegantly(_ped);
+export function removeElegantly() {
+    return RemovePedElegantly();
 }
 /**
  * No comment provided
  *
- * Hash: 0xED74007FFB146BC2 | Since: 323 | API-Set: unknown
+ * Hash: 0xED74007FFB146BC2 | Since: unknown | API-Set: unknown
  */
 export function removeFromGroup(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3894,7 +3892,7 @@ export function removeFromGroup(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xA7B2458D0AD6DED8 | Since: 323 | API-Set: unknown
+ * Hash: 0xA7B2458D0AD6DED8 | Since: unknown | API-Set: unknown
  */
 export function removeHelmet(ped, instantly) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3903,7 +3901,7 @@ export function removeHelmet(ped, instantly) {
 /**
  * No comment provided
  *
- * Hash: 0xFDDB234CF74073D9 | Since: 323 | API-Set: unknown
+ * Hash: 0xFDDB234CF74073D9 | Since: unknown | API-Set: unknown
  */
 export function removePreferredCoverSet(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3912,7 +3910,7 @@ export function removePreferredCoverSet(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xB6BA2444AB393DA2 | Since: 323 | API-Set: unknown
+ * Hash: 0xB6BA2444AB393DA2 | Since: unknown | API-Set: unknown
  */
 export function removeRelationshipGroup(groupHash) {
     if (typeof groupHash === 'string')
@@ -3922,7 +3920,7 @@ export function removeRelationshipGroup(groupHash) {
 /**
  * No comment provided
  *
- * Hash: 0x31D16B74C6E29D66 | Since: 323 | API-Set: unknown
+ * Hash: 0x31D16B74C6E29D66 | Since: unknown | API-Set: unknown
  */
 export function removeScenarioBlockingArea() {
     RemoveScenarioBlockingArea(undefined, false);
@@ -3930,7 +3928,7 @@ export function removeScenarioBlockingArea() {
 /**
  * No comment provided
  *
- * Hash: 0xD37401D78A929A49 | Since: 323 | API-Set: unknown
+ * Hash: 0xD37401D78A929A49 | Since: unknown | API-Set: unknown
  */
 export function removeScenarioBlockingAreas() {
     RemoveScenarioBlockingAreas();
@@ -3938,7 +3936,7 @@ export function removeScenarioBlockingAreas() {
 /**
  * No comment provided
  *
- * Hash: 0x9219857D21F0E842 | Since: 323 | API-Set: unknown
+ * Hash: 0x9219857D21F0E842 | Since: unknown | API-Set: unknown
  */
 export function removeStealthModeAsset(asset) {
     RemoveStealthModeAsset(asset);
@@ -3946,7 +3944,7 @@ export function removeStealthModeAsset(asset) {
 /**
  * No comment provided
  *
- * Hash: 0x290E2780BB7AA598 | Since: 323 | API-Set: unknown
+ * Hash: 0x290E2780BB7AA598 | Since: unknown | API-Set: unknown
  */
 export function requestActionModeAsset(asset) {
     RequestActionModeAsset(asset);
@@ -3954,7 +3952,7 @@ export function requestActionModeAsset(asset) {
 /**
  * No comment provided
  *
- * Hash: 0xF0DAEF2F545BEE25 | Since: 323 | API-Set: unknown
+ * Hash: 0xF0DAEF2F545BEE25 | Since: unknown | API-Set: unknown
  */
 export function requestheadshotImgUpload(id) {
     return RequestPedheadshotImgUpload(id);
@@ -3962,7 +3960,7 @@ export function requestheadshotImgUpload(id) {
 /**
  * No comment provided
  *
- * Hash: 0xCD018C591F94CB43 | Since: 323 | API-Set: unknown
+ * Hash: 0xCD018C591F94CB43 | Since: unknown | API-Set: unknown
  */
 export function requestRestrictedVehicleVisibilityTracking(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3971,7 +3969,7 @@ export function requestRestrictedVehicleVisibilityTracking(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x75BA1CB3B7D40CAF | Since: 323 | API-Set: unknown
+ * Hash: 0x75BA1CB3B7D40CAF | Since: unknown | API-Set: unknown
  */
 export function requestUseSmallBboxVisibilityTracking(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3980,7 +3978,7 @@ export function requestUseSmallBboxVisibilityTracking(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x2BC338A7B21F4608 | Since: 323 | API-Set: unknown
+ * Hash: 0x2BC338A7B21F4608 | Since: unknown | API-Set: unknown
  */
 export function requestVehicleVisibilityTracking(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3989,7 +3987,7 @@ export function requestVehicleVisibilityTracking(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x7D7A2E43E74E2EB8 | Since: 323 | API-Set: unknown
+ * Hash: 0x7D7A2E43E74E2EB8 | Since: unknown | API-Set: unknown
  */
 export function requestVisibilityTracking(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3998,7 +3996,7 @@ export function requestVisibilityTracking(ped) {
 /**
  * This native does absolutely nothing, just a nullsub
  *
- * Hash: 0x1216E0BFA72CC703 | Since: 323 | API-Set: unknown
+ * Hash: 0x1216E0BFA72CC703 | Since: unknown | API-Set: unknown
  */
 export function requestRagdollBoundsUpdate() {
     Citizen.invokeNative('0x1216E0BFA72CC703', undefined, undefined);
@@ -4006,7 +4004,7 @@ export function requestRagdollBoundsUpdate() {
 /**
  * No comment provided
  *
- * Hash: 0x2A0A62FCDEE16D4F | Since: 323 | API-Set: unknown
+ * Hash: 0x2A0A62FCDEE16D4F | Since: unknown | API-Set: unknown
  */
 export function requestStealthModeAsset(asset) {
     RequestStealthModeAsset(asset);
@@ -4014,7 +4012,7 @@ export function requestStealthModeAsset(asset) {
 /**
  * No comment provided
  *
- * Hash: 0x46E56A7CD1D63C3F | Since: 323 | API-Set: unknown
+ * Hash: 0x46E56A7CD1D63C3F | Since: unknown | API-Set: unknown
  */
 export function resetAiMeleeWeaponDamageModifier() {
     ResetAiMeleeWeaponDamageModifier();
@@ -4022,7 +4020,7 @@ export function resetAiMeleeWeaponDamageModifier() {
 /**
  * No comment provided
  *
- * Hash: 0xEA16670E7BA4743C | Since: 323 | API-Set: unknown
+ * Hash: 0xEA16670E7BA4743C | Since: unknown | API-Set: unknown
  */
 export function resetAiWeaponDamageModifier() {
     ResetAiWeaponDamageModifier();
@@ -4030,7 +4028,7 @@ export function resetAiWeaponDamageModifier() {
 /**
  * No comment provided
  *
- * Hash: 0x007FDE5A7897E426 | Since: 2802 | API-Set: unknown
+ * Hash: 0x007FDE5A7897E426 | Since: unknown | API-Set: unknown
  */
 export function resetFacialIdleAnim(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4039,7 +4037,7 @@ export function resetFacialIdleAnim(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x63DAB4CCB3273205 | Since: 323 | API-Set: unknown
+ * Hash: 0x63DAB4CCB3273205 | Since: unknown | API-Set: unknown
  */
 export function resetGroupFormationDefaultSpacing(groupHandle) {
     ResetGroupFormationDefaultSpacing(groupHandle);
@@ -4047,7 +4045,7 @@ export function resetGroupFormationDefaultSpacing(groupHandle) {
 /**
  * No comment provided
  *
- * Hash: 0x22EF8FF8778030EB | Since: 323 | API-Set: unknown
+ * Hash: 0x22EF8FF8778030EB | Since: unknown | API-Set: unknown
  */
 export function resetInVehicleContext(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4056,7 +4054,7 @@ export function resetInVehicleContext(ped) {
 /**
  * Resets the value for the last vehicle driven by the Ped.
  *
- * Hash: 0xBB8DE8CF6A8DD8BB | Since: 323 | API-Set: unknown
+ * Hash: 0xBB8DE8CF6A8DD8BB | Since: unknown | API-Set: unknown
  */
 export function resetLastVehicle(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4069,7 +4067,7 @@ export function resetLastVehicle(ped) {
  * Using the following code to reset back to normal
  * `PED::RESET_PED_MOVEMENT_CLIPSET(PLAYER::PLAYER_PED_ID(), 0.0);`
  *
- * Hash: 0xAA74EC0CB0AAEA2C | Since: 323 | API-Set: unknown
+ * Hash: 0xAA74EC0CB0AAEA2C | Since: unknown | API-Set: unknown
  */
 export function resetMovementClipset(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4078,7 +4076,7 @@ export function resetMovementClipset(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x9FA4664CF62E47E8 | Since: 323 | API-Set: unknown
+ * Hash: 0x9FA4664CF62E47E8 | Since: unknown | API-Set: unknown
  */
 export function resetRagdollTimer(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4087,7 +4085,7 @@ export function resetRagdollTimer(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x20510814175EA477 | Since: 323 | API-Set: unknown
+ * Hash: 0x20510814175EA477 | Since: unknown | API-Set: unknown
  */
 export function resetStrafeClipset(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4096,7 +4094,7 @@ export function resetStrafeClipset(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x3AC1F7B898F30C05 | Since: 323 | API-Set: unknown
+ * Hash: 0x3AC1F7B898F30C05 | Since: unknown | API-Set: unknown
  */
 export function resetVisibleDamage(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4105,7 +4103,7 @@ export function resetVisibleDamage(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x97B0DB5B4AA74E77 | Since: 323 | API-Set: unknown
+ * Hash: 0x97B0DB5B4AA74E77 | Since: unknown | API-Set: unknown
  */
 export function resetWeaponMovementClipset(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4120,7 +4118,7 @@ export function resetWeaponMovementClipset(ped) {
  *
  * Also, disabling any assigned task immediately helped in the number of scenarios, where If you want peds to perform certain decided tasks.
  *
- * Hash: 0x71BC8E838B9C6035 | Since: 323 | API-Set: unknown
+ * Hash: 0x71BC8E838B9C6035 | Since: unknown | API-Set: unknown
  */
 export function resurrect(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4133,7 +4131,7 @@ export function resurrect(ped) {
  *
  * This function is well suited there.
  *
- * Hash: 0x8D8ACD8388CD99CE | Since: 323 | API-Set: unknown
+ * Hash: 0x8D8ACD8388CD99CE | Since: unknown | API-Set: unknown
  */
 export function reviveInjured(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4142,7 +4140,7 @@ export function reviveInjured(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x66460DEDDD417254 | Since: 323 | API-Set: unknown
+ * Hash: 0x66460DEDDD417254 | Since: unknown | API-Set: unknown
  */
 export function setAiMeleeWeaponDamageModifier(modifier) {
     SetAiMeleeWeaponDamageModifier(modifier);
@@ -4150,7 +4148,7 @@ export function setAiMeleeWeaponDamageModifier(modifier) {
 /**
  * No comment provided
  *
- * Hash: 0x1B1E2A40A65B8521 | Since: 323 | API-Set: unknown
+ * Hash: 0x1B1E2A40A65B8521 | Since: unknown | API-Set: unknown
  */
 export function setAiWeaponDamageModifier(value) {
     SetAiWeaponDamageModifier(value);
@@ -4158,7 +4156,7 @@ export function setAiWeaponDamageModifier(value) {
 /**
  * No comment provided
  *
- * Hash: 0x061CB768363D6424 | Since: 323 | API-Set: unknown
+ * Hash: 0x061CB768363D6424 | Since: unknown | API-Set: unknown
  */
 export function setAllowLockonToIfFriendly(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4167,7 +4165,7 @@ export function setAllowLockonToIfFriendly(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xFAB944D4D481ACCB | Since: 1734 | API-Set: unknown
+ * Hash: 0xFAB944D4D481ACCB | Since: unknown | API-Set: unknown
  */
 export function setAllowStuntJumpCamera(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4176,7 +4174,7 @@ export function setAllowStuntJumpCamera(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x87DDEB611B329A9C | Since: 1103 | API-Set: unknown
+ * Hash: 0x87DDEB611B329A9C | Since: unknown | API-Set: unknown
  */
 export function setAmbientLawAccuracyModifier(multiplier) {
     Citizen.invokeNative('0x87DDEB611B329A9C', multiplier);
@@ -4184,7 +4182,7 @@ export function setAmbientLawAccuracyModifier(multiplier) {
 /**
  * No comment provided
  *
- * Hash: 0x6B0E6172C9A4D902 | Since: 323 | API-Set: unknown
+ * Hash: 0x6B0E6172C9A4D902 | Since: unknown | API-Set: unknown
  */
 export function setAmbientsDropMoney() {
     SetAmbientPedsDropMoney(false);
@@ -4192,7 +4190,7 @@ export function setAmbientsDropMoney() {
 /**
  * `works with TASK::TASK_SET_BLOCKING_OF_NON_TEMPORARY_EVENTS to make a ped completely oblivious to all events going on around him`
  *
- * Hash: 0x9F8AA94D6D97DBF4 | Since: 323 | API-Set: unknown
+ * Hash: 0x9F8AA94D6D97DBF4 | Since: unknown | API-Set: unknown
  */
 export function setBlockingOfNonTemporaryEvents(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4201,7 +4199,7 @@ export function setBlockingOfNonTemporaryEvents(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x9911F4A24485F653 | Since: 323 | API-Set: unknown
+ * Hash: 0x9911F4A24485F653 | Since: unknown | API-Set: unknown
  */
 export function setBlockingOfNonTemporaryEventsForAmbientsThisFrame() {
     Citizen.invokeNative('0x9911F4A24485F653', false);
@@ -4214,7 +4212,7 @@ export function setBlockingOfNonTemporaryEventsForAmbientsThisFrame() {
  * p1 = false & p2 = false for unable to aim at.
  * p1 = true & p2 = false for able to aim at.
  *
- * Hash: 0xB3B1CB349FF9C75D | Since: 323 | API-Set: unknown
+ * Hash: 0xB3B1CB349FF9C75D | Since: unknown | API-Set: unknown
  */
 export function setCanAttackFriendly(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4223,7 +4221,7 @@ export function setCanAttackFriendly(ped, toggle) {
 /**
  * combatType can be between 0-14. See GET_COMBAT_FLOAT below for a list of possible parameters.
  *
- * Hash: 0xFF41B4B141ED981C | Since: 323 | API-Set: unknown
+ * Hash: 0xFF41B4B141ED981C | Since: unknown | API-Set: unknown
  */
 export function setCombatFloat(ped, combatType) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4232,7 +4230,7 @@ export function setCombatFloat(ped, combatType) {
 /**
  * No comment provided
  *
- * Hash: 0x2F074C904D85129E | Since: 393 | API-Set: unknown
+ * Hash: 0x2F074C904D85129E | Since: unknown | API-Set: unknown
  */
 export function setCopPerceptionOverrides(seeingRange, seeingRangePeripheral, hearingRange, visualFieldMinAzimuthAngle, visualFieldMaxAzimuthAngle, fieldOfGazeMaxAngle) {
     Citizen.invokeNative('0x2F074C904D85129E', seeingRange, seeingRangePeripheral, hearingRange, visualFieldMinAzimuthAngle, visualFieldMaxAzimuthAngle, fieldOfGazeMaxAngle, 0);
@@ -4240,7 +4238,7 @@ export function setCopPerceptionOverrides(seeingRange, seeingRangePeripheral, he
 /**
  * No comment provided
  *
- * Hash: 0x2735233A786B1BEF | Since: 323 | API-Set: unknown
+ * Hash: 0x2735233A786B1BEF | Since: unknown | API-Set: unknown
  */
 export function setCorpseRagdollFriction(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4249,7 +4247,7 @@ export function setCorpseRagdollFriction(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x102E68B2024D536D | Since: 323 | API-Set: unknown
+ * Hash: 0x102E68B2024D536D | Since: unknown | API-Set: unknown
  */
 export function setCreateRandomCops(toggle) {
     SetCreateRandomCops(toggle);
@@ -4257,7 +4255,7 @@ export function setCreateRandomCops(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x8A4986851C4EF6E7 | Since: 323 | API-Set: unknown
+ * Hash: 0x8A4986851C4EF6E7 | Since: unknown | API-Set: unknown
  */
 export function setCreateRandomCopsNotOnScenarios(toggle) {
     SetCreateRandomCopsNotOnScenarios(toggle);
@@ -4265,7 +4263,7 @@ export function setCreateRandomCopsNotOnScenarios(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x444CB7D7DBE6973D | Since: 323 | API-Set: unknown
+ * Hash: 0x444CB7D7DBE6973D | Since: unknown | API-Set: unknown
  */
 export function setCreateRandomCopsOnScenarios(toggle) {
     SetCreateRandomCopsOnScenarios(toggle);
@@ -4273,7 +4271,7 @@ export function setCreateRandomCopsOnScenarios(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x711794453CFD692B | Since: 463 | API-Set: unknown
+ * Hash: 0x711794453CFD692B | Since: unknown | API-Set: unknown
  */
 export function setDisableHighFallDeath(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4282,7 +4280,7 @@ export function setDisableHighFallDeath(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xDFE68C4B787E1BFB | Since: 1180 | API-Set: unknown
+ * Hash: 0xDFE68C4B787E1BFB | Since: unknown | API-Set: unknown
  */
 export function setDisableMapCollision(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4291,7 +4289,7 @@ export function setDisableMapCollision(ped) {
 /**
  * The function specifically verifies the value is equal to, or less than 1.0f. If it is greater than 1.0f, the function does nothing at all.
  *
- * Hash: 0xB195FFA8042FC5C3 | Since: 323 | API-Set: unknown
+ * Hash: 0xB195FFA8042FC5C3 | Since: unknown | API-Set: unknown
  */
 export function setDriverAbility(driver, ability) {
     const _driver = typeof driver == 'object' ? driver.handle() : driver;
@@ -4300,7 +4298,7 @@ export function setDriverAbility(driver, ability) {
 /**
  * range 0.0f - 1.0f
  *
- * Hash: 0xA731F608CA104E3C | Since: 323 | API-Set: unknown
+ * Hash: 0xA731F608CA104E3C | Since: unknown | API-Set: unknown
  */
 export function setDriverAggressiveness(driver, aggressiveness) {
     const _driver = typeof driver == 'object' ? driver.handle() : driver;
@@ -4309,7 +4307,7 @@ export function setDriverAggressiveness(driver, aggressiveness) {
 /**
  * Scripts use 0.2, 0.5 and 1.0. Value must be >= 0.0 && <= 1.0
  *
- * Hash: 0xDED5AF5A0EA4B297 | Since: 323 | API-Set: unknown
+ * Hash: 0xDED5AF5A0EA4B297 | Since: unknown | API-Set: unknown
  */
 export function setDriverRacingModifier(driver, modifier) {
     const _driver = typeof driver == 'object' ? driver.handle() : driver;
@@ -4318,7 +4316,7 @@ export function setDriverRacingModifier(driver, modifier) {
 /**
  * Used with SET_ENABLE_HANDCUFFS in decompiled scripts. From my observations, I have noticed that while being ragdolled you are not able to get up but you can still run. Your legs can also bend.
  *
- * Hash: 0xC52E0F855C58FC2E | Since: 323 | API-Set: unknown
+ * Hash: 0xC52E0F855C58FC2E | Since: unknown | API-Set: unknown
  */
 export function setEnableBoundAnkles(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4327,7 +4325,7 @@ export function setEnableBoundAnkles(ped, toggle) {
 /**
  * ped can not pull out a weapon when true
  *
- * Hash: 0xDF1AF8B5D56542FA | Since: 323 | API-Set: unknown
+ * Hash: 0xDF1AF8B5D56542FA | Since: unknown | API-Set: unknown
  */
 export function setEnableHandcuffs(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4336,7 +4334,7 @@ export function setEnableHandcuffs(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xD2C5AA0C0E8D0F1E | Since: 323 | API-Set: unknown
+ * Hash: 0xD2C5AA0C0E8D0F1E | Since: unknown | API-Set: unknown
  */
 export function setEnableEnveffScale(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4345,7 +4343,7 @@ export function setEnableEnveffScale(ped, toggle) {
 /**
  * Enables diving motion when underwater.
  *
- * Hash: 0xF99F62004024D506 | Since: 323 | API-Set: unknown
+ * Hash: 0xF99F62004024D506 | Since: unknown | API-Set: unknown
  */
 export function setEnableScuba(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4364,7 +4362,7 @@ export function setEnableScuba(ped, toggle) {
  * mood_talking_1
  *
  *
- * Hash: 0x5687C7F05B39E401 | Since: 1493 | API-Set: unknown
+ * Hash: 0x5687C7F05B39E401 | Since: unknown | API-Set: unknown
  */
 export function setFacialClipset(ped, animDict) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4373,7 +4371,7 @@ export function setFacialClipset(ped, animDict) {
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
  *
- * Hash: 0xFFC24B988B938B38 | Since: 323 | API-Set: unknown
+ * Hash: 0xFFC24B988B938B38 | Since: unknown | API-Set: unknown
  */
 export function setFacialIdleAnimOverride(ped, animName, animDict) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4382,7 +4380,7 @@ export function setFacialIdleAnimOverride(ped, animName, animDict) {
 /**
  * No comment provided
  *
- * Hash: 0x129466ED55140F8D | Since: 323 | API-Set: unknown
+ * Hash: 0x129466ED55140F8D | Since: unknown | API-Set: unknown
  */
 export function setForceFootstepUpdate(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4391,7 +4389,7 @@ export function setForceFootstepUpdate(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xCB968B53FC7F916D | Since: 323 | API-Set: unknown
+ * Hash: 0xCB968B53FC7F916D | Since: unknown | API-Set: unknown
  */
 export function setForceStepType(ped, _type) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4403,7 +4401,7 @@ export function setForceStepType(ped, _type) {
  * 2: Alternative Circle Around Leader
  * 3: Line, with Leader at center
  *
- * Hash: 0xCE2F5FC3AF7E8C1E | Since: 323 | API-Set: unknown
+ * Hash: 0xCE2F5FC3AF7E8C1E | Since: unknown | API-Set: unknown
  */
 export function setGroupFormation(groupId, formationType) {
     SetGroupFormation(groupId, formationType);
@@ -4411,7 +4409,7 @@ export function setGroupFormation(groupId, formationType) {
 /**
  * No comment provided
  *
- * Hash: 0x1D9D45004C28C916 | Since: 323 | API-Set: unknown
+ * Hash: 0x1D9D45004C28C916 | Since: unknown | API-Set: unknown
  */
 export function setGroupFormationSpacing(groupId, pos) {
     SetGroupFormationSpacing(groupId, pos.x, pos.y, pos.z);
@@ -4419,7 +4417,7 @@ export function setGroupFormationSpacing(groupId, pos) {
 /**
  * Sets the range at which members will automatically leave the group.
  *
- * Hash: 0x4102C7858CFEE4E4 | Since: 323 | API-Set: unknown
+ * Hash: 0x4102C7858CFEE4E4 | Since: unknown | API-Set: unknown
  */
 export function setGroupSeparationRange(groupHandle, separationRange) {
     SetGroupSeparationRange(groupHandle, separationRange);
@@ -4460,7 +4458,7 @@ export function setGroupSeparationRange(groupHandle, separationRange) {
  * 30. white small pupil
  * 31. glossed over
  *
- * Hash: 0x50B56988B170AFDF | Since: 323 | API-Set: unknown
+ * Hash: 0x50B56988B170AFDF | Since: unknown | API-Set: unknown
  */
 export function setHeadBlendEyeColor(ped, index) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4470,7 +4468,7 @@ export function setHeadBlendEyeColor(ped, index) {
  * p4 seems to vary from 0 to 3.
  * Preview: https://gfycat.com/MaleRareAmazonparrot
  *
- * Hash: 0xCC9682B8951C5229 | Since: 323 | API-Set: unknown
+ * Hash: 0xCC9682B8951C5229 | Since: unknown | API-Set: unknown
  */
 export function setHeadBlendPaletteColor(ped, r, g, b, id) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4479,7 +4477,7 @@ export function setHeadBlendPaletteColor(ped, r, g, b, id) {
 /**
  * Related to Peds dropping pickup_health_snack; p0 is a value between [0.0, 1.0] that corresponds to drop rate
  *
- * Hash: 0xFF4803BC019852D9 | Since: 323 | API-Set: unknown
+ * Hash: 0xFF4803BC019852D9 | Since: unknown | API-Set: unknown
  */
 export function setHealthSnacksCarriedByAllNews() {
     Citizen.invokeNative('0xFF4803BC019852D9', 0, undefined);
@@ -4487,7 +4485,7 @@ export function setHealthSnacksCarriedByAllNews() {
 /**
  * No comment provided
  *
- * Hash: 0xC32779C16FCEECD9 | Since: 323 | API-Set: unknown
+ * Hash: 0xC32779C16FCEECD9 | Since: unknown | API-Set: unknown
  */
 export function setIkTarget(ped, ikIndex, entityLookAt, boneLookAt, offsetX, offsetY, offsetZ, blendInDuration, blendOutDuration) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4497,7 +4495,7 @@ export function setIkTarget(ped, ikIndex, entityLookAt, boneLookAt, offsetX, off
 /**
  * Only appears in lamar1 script.
  *
- * Hash: 0x1A330D297AAC6BC1 | Since: 323 | API-Set: unknown
+ * Hash: 0x1A330D297AAC6BC1 | Since: unknown | API-Set: unknown
  */
 export function setLadderClimbInputState(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4506,7 +4504,7 @@ export function setLadderClimbInputState(ped) {
 /**
  * name: "MP_FEMALE_ACTION" found multiple times in the b617d scripts.
  *
- * Hash: 0x781DE8FA214E87D2 | Since: 323 | API-Set: unknown
+ * Hash: 0x781DE8FA214E87D2 | Since: unknown | API-Set: unknown
  */
 export function setMovementModeOverride(ped, name) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4515,7 +4513,7 @@ export function setMovementModeOverride(ped, name) {
 /**
  * accuracy = 0-100, 100 being perfectly accurate
  *
- * Hash: 0x7AEFB85C1D49DEB6 | Since: 323 | API-Set: unknown
+ * Hash: 0x7AEFB85C1D49DEB6 | Since: unknown | API-Set: unknown
  */
 export function setAccuracy(ped, accuracy) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4524,7 +4522,7 @@ export function setAccuracy(ped, accuracy) {
 /**
  * value ranges from 0 to 3.
  *
- * Hash: 0xDBA71115ED9941A6 | Since: 323 | API-Set: unknown
+ * Hash: 0xDBA71115ED9941A6 | Since: unknown | API-Set: unknown
  */
 export function setAlertness(ped, value) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4533,7 +4531,7 @@ export function setAlertness(ped, value) {
 /**
  * No comment provided
  *
- * Hash: 0xDA1F1B7BE1A8766F | Since: 323 | API-Set: unknown
+ * Hash: 0xDA1F1B7BE1A8766F | Since: unknown | API-Set: unknown
  */
 export function setAllowedToDuck(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4544,7 +4542,7 @@ export function setAllowedToDuck(ped, toggle) {
  *
  * The one time this is set to true seems to do with when you fail the mission.
  *
- * Hash: 0xF2BEBCDFAFDAA19E | Since: 323 | API-Set: unknown
+ * Hash: 0xF2BEBCDFAFDAA19E | Since: unknown | API-Set: unknown
  */
 export function setAllowHurtCombatForAllMissionPeds(toggle) {
     Citizen.invokeNative('0xF2BEBCDFAFDAA19E', toggle);
@@ -4552,7 +4550,7 @@ export function setAllowHurtCombatForAllMissionPeds(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x49E50BDB8BA4DAB2 | Since: 323 | API-Set: unknown
+ * Hash: 0x49E50BDB8BA4DAB2 | Since: unknown | API-Set: unknown
  */
 export function setAllowMinorReactionsAsMissionPed(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4561,7 +4559,7 @@ export function setAllowMinorReactionsAsMissionPed(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x3C028C636A414ED9 | Since: 323 | API-Set: unknown
+ * Hash: 0x3C028C636A414ED9 | Since: unknown | API-Set: unknown
  */
 export function setAllowVehiclesOverride(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4579,7 +4577,7 @@ export function setAllowVehiclesOverride(ped, toggle) {
  *
  * Full list of movement clipsets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/movementClipsetsCompact.json
  *
- * Hash: 0x90A43CC281FFAB46 | Since: 323 | API-Set: unknown
+ * Hash: 0x90A43CC281FFAB46 | Since: unknown | API-Set: unknown
  */
 export function setAlternateMovementAnim(ped, stance, animDictionary, animationName) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4590,7 +4588,7 @@ export function setAlternateMovementAnim(ped, stance, animDictionary, animationN
  *
  * Full list of movement clipsets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/movementClipsetsCompact.json
  *
- * Hash: 0x6C60394CB4F75E9A | Since: 323 | API-Set: unknown
+ * Hash: 0x6C60394CB4F75E9A | Since: unknown | API-Set: unknown
  */
 export function setAlternateWalkAnim(ped, animDict, animName) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4599,7 +4597,7 @@ export function setAlternateWalkAnim(ped, animDict, animName) {
 /**
  * No comment provided
  *
- * Hash: 0xC7F76DF27A5045A1 | Since: 323 | API-Set: unknown
+ * Hash: 0xC7F76DF27A5045A1 | Since: unknown | API-Set: unknown
  */
 export function setAngledDefensiveArea(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4608,7 +4606,7 @@ export function setAngledDefensiveArea(ped) {
 /**
  * Enable/disable ped shadow (ambient occlusion). https://gfycat.com/thankfulesteemedgecko
  *
- * Hash: 0x2B5AA717A181FB4C | Since: 323 | API-Set: unknown
+ * Hash: 0x2B5AA717A181FB4C | Since: unknown | API-Set: unknown
  */
 export function setAoBlobRendering(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4620,7 +4618,7 @@ export function setAoBlobRendering(ped, toggle) {
  * ped: The Ped to set the armor of.
  * amount: A value between 0 and 100 indicating the value to set the Ped's armor to.
  *
- * Hash: 0xCEA04D83135264CC | Since: 323 | API-Set: unknown
+ * Hash: 0xCEA04D83135264CC | Since: unknown | API-Set: unknown
  */
 export function setArmour(ped, amount) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4629,7 +4627,7 @@ export function setArmour(ped, amount) {
 /**
  * Turns the desired ped into a cop. If you use this on the player ped, you will become almost invisible to cops dispatched for you. You will also report your own crimes, get a generic cop voice, get a cop-vision-cone on the radar, and you will be unable to shoot at other cops. SWAT and Army will still shoot at you. Toggling ped as "false" has no effect; you must change p0's ped model to disable the effect.
  *
- * Hash: 0xBB03C38DD3FB7FFD | Since: 323 | API-Set: unknown
+ * Hash: 0xBB03C38DD3FB7FFD | Since: unknown | API-Set: unknown
  */
 export function setAsCop(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4638,7 +4636,7 @@ export function setAsCop(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x02A0C9720B854BFA | Since: 323 | API-Set: unknown
+ * Hash: 0x02A0C9720B854BFA | Since: unknown | API-Set: unknown
  */
 export function setAsEnemy(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4647,7 +4645,7 @@ export function setAsEnemy(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x2A7819605465FBCE | Since: 323 | API-Set: unknown
+ * Hash: 0x2A7819605465FBCE | Since: unknown | API-Set: unknown
  */
 export function setAsGroupLeader(ped, groupId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4656,7 +4654,7 @@ export function setAsGroupLeader(ped, groupId) {
 /**
  * No comment provided
  *
- * Hash: 0x9F3480FE65DB31B5 | Since: 323 | API-Set: unknown
+ * Hash: 0x9F3480FE65DB31B5 | Since: unknown | API-Set: unknown
  */
 export function setAsGroupMember(ped, groupId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4665,7 +4663,7 @@ export function setAsGroupMember(ped, groupId) {
 /**
  * No comment provided
  *
- * Hash: 0x137BBD05230DB22D | Since: 323 | API-Set: unknown
+ * Hash: 0x137BBD05230DB22D | Since: unknown | API-Set: unknown
  */
 export function setBlendFromParents(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4674,7 +4672,7 @@ export function setBlendFromParents(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x576594E8D64375E2 | Since: 323 | API-Set: unknown
+ * Hash: 0x576594E8D64375E2 | Since: unknown | API-Set: unknown
  */
 export function setBlocksPathingWhenDead(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4683,7 +4681,7 @@ export function setBlocksPathingWhenDead(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x4F5F651ACCC9C4CF | Since: 323 | API-Set: unknown
+ * Hash: 0x4F5F651ACCC9C4CF | Since: unknown | API-Set: unknown
  */
 export function setBoundsOrientation(ped, pos) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4692,7 +4690,7 @@ export function setBoundsOrientation(ped, pos) {
 /**
  * No comment provided
  *
- * Hash: 0x6C3B4D6D13B4C841 | Since: 323 | API-Set: unknown
+ * Hash: 0x6C3B4D6D13B4C841 | Since: unknown | API-Set: unknown
  */
 export function setCanArmIk(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4701,7 +4699,7 @@ export function setCanArmIk(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xC1670E958EEE24E5 | Since: 323 | API-Set: unknown
+ * Hash: 0xC1670E958EEE24E5 | Since: unknown | API-Set: unknown
  */
 export function setCanBeDraggedOut(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4710,7 +4708,7 @@ export function setCanBeDraggedOut(ped, toggle) {
 /**
  * This native does absolutely nothing, just a nullsub
  *
- * Hash: 0xB282749D5E028163 | Since: 877 | API-Set: unknown
+ * Hash: 0xB282749D5E028163 | Since: unknown | API-Set: unknown
  */
 export function setCanBeKnockedOffBike() {
     Citizen.invokeNative('0xB282749D5E028163', undefined, undefined);
@@ -4718,7 +4716,7 @@ export function setCanBeKnockedOffBike() {
 /**
  * state: https://alloc8or.re/gta5/doc/enums/eKnockOffVehicle.txt
  *
- * Hash: 0x7A6535691B477C48 | Since: 323 | API-Set: unknown
+ * Hash: 0x7A6535691B477C48 | Since: unknown | API-Set: unknown
  */
 export function setCanBeKnockedOffVehicle(ped, state) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4727,7 +4725,7 @@ export function setCanBeKnockedOffVehicle(ped, state) {
 /**
  * No comment provided
  *
- * Hash: 0xC7EF1BA83230BA07 | Since: 323 | API-Set: unknown
+ * Hash: 0xC7EF1BA83230BA07 | Since: unknown | API-Set: unknown
  */
 export function setCanBeShotInVehicle(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4736,7 +4734,7 @@ export function setCanBeShotInVehicle(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x638C03B0F9878F57 | Since: 323 | API-Set: unknown
+ * Hash: 0x638C03B0F9878F57 | Since: unknown | API-Set: unknown
  */
 export function setCanBeTargetedWhenInjured(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4745,7 +4743,7 @@ export function setCanBeTargetedWhenInjured(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x4328652AE5769C71 | Since: 323 | API-Set: unknown
+ * Hash: 0x4328652AE5769C71 | Since: unknown | API-Set: unknown
  */
 export function setCanBeTargetedWithoutLos(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4754,7 +4752,7 @@ export function setCanBeTargetedWithoutLos(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x63F58F7C80513AAD | Since: 323 | API-Set: unknown
+ * Hash: 0x63F58F7C80513AAD | Since: unknown | API-Set: unknown
  */
 export function setCanBeTargetted(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4763,7 +4761,7 @@ export function setCanBeTargetted(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x66B57B72E0836A76 | Since: 323 | API-Set: unknown
+ * Hash: 0x66B57B72E0836A76 | Since: unknown | API-Set: unknown
  */
 export function setCanBeTargettedByPlayer(ped, player, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4773,7 +4771,7 @@ export function setCanBeTargettedByPlayer(ped, player, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xBF1CA77833E58F2C | Since: 323 | API-Set: unknown
+ * Hash: 0xBF1CA77833E58F2C | Since: unknown | API-Set: unknown
  */
 export function setCanBeTargettedByTeam(ped, team, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4782,7 +4780,7 @@ export function setCanBeTargettedByTeam(ped, team, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xE84EC1735FB39663 | Since: 3717 | API-Set: unknown
+ * Hash: 0xE84EC1735FB39663 | Since: unknown | API-Set: unknown
  */
 export function setCanBodyRecoilIk(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4793,7 +4791,7 @@ export function setCanBodyRecoilIk(ped, toggle) {
  *
  * Peds flee attributes must be set to not to flee, first. Else, most of the peds, will just flee from gunshot sounds or any other panic situations.
  *
- * Hash: 0xCB7553CDCEF4A735 | Since: 323 | API-Set: unknown
+ * Hash: 0xCB7553CDCEF4A735 | Since: unknown | API-Set: unknown
  */
 export function setCanCowerInCover(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4802,7 +4800,7 @@ export function setCanCowerInCover(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x6B7A646C242A7059 | Since: 323 | API-Set: unknown
+ * Hash: 0x6B7A646C242A7059 | Since: unknown | API-Set: unknown
  */
 export function setCanEvasiveDive(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4811,7 +4809,7 @@ export function setCanEvasiveDive(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xC11C18092C5530DC | Since: 323 | API-Set: unknown
+ * Hash: 0xC11C18092C5530DC | Since: unknown | API-Set: unknown
  */
 export function setCanHeadIk(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4820,7 +4818,7 @@ export function setCanHeadIk(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x73518ECE2485412B | Since: 323 | API-Set: unknown
+ * Hash: 0x73518ECE2485412B | Since: unknown | API-Set: unknown
  */
 export function setCanLegIk(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4829,7 +4827,7 @@ export function setCanLegIk(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xE861D0B05C7662B8 | Since: 323 | API-Set: unknown
+ * Hash: 0xE861D0B05C7662B8 | Since: unknown | API-Set: unknown
  */
 export function setCanLosePropsOnDamage(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4838,7 +4836,7 @@ export function setCanLosePropsOnDamage(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xC514825C507E3736 | Since: 323 | API-Set: unknown
+ * Hash: 0xC514825C507E3736 | Since: unknown | API-Set: unknown
  */
 export function setCanPeekInCover(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4847,7 +4845,7 @@ export function setCanPeekInCover(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x6373D1349925A70E | Since: 323 | API-Set: unknown
+ * Hash: 0x6373D1349925A70E | Since: unknown | API-Set: unknown
  */
 export function setCanPlayAmbientAnims(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4856,7 +4854,7 @@ export function setCanPlayAmbientAnims(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x0EB0585D15254740 | Since: 323 | API-Set: unknown
+ * Hash: 0x0EB0585D15254740 | Since: unknown | API-Set: unknown
  */
 export function setCanPlayAmbientBaseAnims(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4865,7 +4863,7 @@ export function setCanPlayAmbientBaseAnims(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xBAF20C5432058024 | Since: 323 | API-Set: unknown
+ * Hash: 0xBAF20C5432058024 | Since: unknown | API-Set: unknown
  */
 export function setCanPlayGestureAnims(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4874,7 +4872,7 @@ export function setCanPlayGestureAnims(ped, toggle) {
 /**
  * Toggles config flag CPED_CONFIG_FLAG_CanPlayInCarIdles.
  *
- * Hash: 0x820E9892A77E97CD | Since: 877 | API-Set: unknown
+ * Hash: 0x820E9892A77E97CD | Since: unknown | API-Set: unknown
  */
 export function setCanPlayInCarIdles(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4883,7 +4881,7 @@ export function setCanPlayInCarIdles(ped, toggle) {
 /**
  * p2 usually 0
  *
- * Hash: 0xF833DDBA3B104D43 | Since: 323 | API-Set: unknown
+ * Hash: 0xF833DDBA3B104D43 | Since: unknown | API-Set: unknown
  */
 export function setCanPlayVisemeAnims(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4892,7 +4890,7 @@ export function setCanPlayVisemeAnims(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xB128377056A54E2A | Since: 323 | API-Set: unknown
+ * Hash: 0xB128377056A54E2A | Since: unknown | API-Set: unknown
  */
 export function setCanRagdoll(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4901,7 +4899,7 @@ export function setCanRagdoll(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xDF993EE5E90ABA25 | Since: 323 | API-Set: unknown
+ * Hash: 0xDF993EE5E90ABA25 | Since: unknown | API-Set: unknown
  */
 export function setCanRagdollFromPlayerImpact(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4910,7 +4908,7 @@ export function setCanRagdollFromPlayerImpact(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x1CCE141467FF42A2 | Since: 323 | API-Set: unknown
+ * Hash: 0x1CCE141467FF42A2 | Since: unknown | API-Set: unknown
  */
 export function setCanSmashGlass(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4919,7 +4917,7 @@ export function setCanSmashGlass(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xED7F7EFE9FABF340 | Since: 323 | API-Set: unknown
+ * Hash: 0xED7F7EFE9FABF340 | Since: unknown | API-Set: unknown
  */
 export function setCanSwitchWeapon(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4930,7 +4928,7 @@ export function setCanSwitchWeapon(ped, toggle) {
  *
  * Only works in singleplayer
  *
- * Hash: 0x2E2F4240B3F24647 | Since: 323 | API-Set: unknown
+ * Hash: 0x2E2F4240B3F24647 | Since: unknown | API-Set: unknown
  */
 export function setCanTeleportToGroupLeader(pedHandle, groupHandle, toggle) {
     const _pedHandle = typeof pedHandle == 'object' ? pedHandle.handle() : pedHandle;
@@ -4939,7 +4937,7 @@ export function setCanTeleportToGroupLeader(pedHandle, groupHandle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xF2B7106D37947CE0 | Since: 323 | API-Set: unknown
+ * Hash: 0xF2B7106D37947CE0 | Since: unknown | API-Set: unknown
  */
 export function setCanTorsoIk(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4948,7 +4946,7 @@ export function setCanTorsoIk(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xF5846EDB26A98A24 | Since: 323 | API-Set: unknown
+ * Hash: 0xF5846EDB26A98A24 | Since: unknown | API-Set: unknown
  */
 export function setCanTorsoReactIk(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4957,7 +4955,7 @@ export function setCanTorsoReactIk(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x6647C5F6F5792496 | Since: 323 | API-Set: unknown
+ * Hash: 0x6647C5F6F5792496 | Since: unknown | API-Set: unknown
  */
 export function setCanTorsoVehicleIk(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4966,7 +4964,7 @@ export function setCanTorsoVehicleIk(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xEC4686EC06434678 | Since: 323 | API-Set: unknown
+ * Hash: 0xEC4686EC06434678 | Since: unknown | API-Set: unknown
  */
 export function setCanUseAutoConversationLookat(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4978,7 +4976,7 @@ export function setCanUseAutoConversationLookat(ped, toggle) {
  *
  * Setting this to 0.001 will allow warping through some objects.
  *
- * Hash: 0x364DF566EC833DE2 | Since: 323 | API-Set: unknown
+ * Hash: 0x364DF566EC833DE2 | Since: unknown | API-Set: unknown
  */
 export function setCapsule(ped, value) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4987,7 +4985,7 @@ export function setCapsule(ped, value) {
 /**
  * No comment provided
  *
- * Hash: 0x82A3D6D9CC2CB8E3 | Since: 323 | API-Set: unknown
+ * Hash: 0x82A3D6D9CC2CB8E3 | Since: unknown | API-Set: unknown
  */
 export function setClothPackageIndex() {
     SetPedClothProne(undefined, undefined);
@@ -4995,7 +4993,7 @@ export function setClothPackageIndex() {
 /**
  * No comment provided
  *
- * Hash: 0x78C4E9961DB3EB5B | Since: 323 | API-Set: unknown
+ * Hash: 0x78C4E9961DB3EB5B | Since: unknown | API-Set: unknown
  */
 export function setClothPinFrames() {
     SetPedClothPackageIndex(undefined, undefined);
@@ -5003,7 +5001,7 @@ export function setClothPinFrames() {
 /**
  * No comment provided
  *
- * Hash: 0xA660FAF550EB37E5 | Since: 323 | API-Set: unknown
+ * Hash: 0xA660FAF550EB37E5 | Since: unknown | API-Set: unknown
  */
 export function setClothProne() {
     Citizen.invokeNative('0xA660FAF550EB37E5', undefined, false);
@@ -5017,7 +5015,7 @@ export function setClothProne() {
  * CA_NumTypes
  * };
  *
- * Hash: 0xC7622C0D36B2FDA8 | Since: 323 | API-Set: unknown
+ * Hash: 0xC7622C0D36B2FDA8 | Since: unknown | API-Set: unknown
  */
 export function setCombatAbility(ped, abilityLevel) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5120,7 +5118,7 @@ export function setCombatAbility(ped, abilityLevel) {
  * BF_0x053AEAD9 = 91
  * };
  *
- * Hash: 0x9F7794730795E019 | Since: 323 | API-Set: unknown
+ * Hash: 0x9F7794730795E019 | Since: unknown | API-Set: unknown
  */
 export function setCombatAttributes(ped, attributeId, enabled) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5135,7 +5133,7 @@ export function setCombatAttributes(ped, attributeId, enabled) {
  * CM_WillRetreat
  * };
  *
- * Hash: 0x4D9CA1009AFBD057 | Since: 323 | API-Set: unknown
+ * Hash: 0x4D9CA1009AFBD057 | Since: unknown | API-Set: unknown
  */
 export function setCombatMovement(ped, combatMovement) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5151,7 +5149,7 @@ export function setCombatMovement(ped, combatMovement) {
  * CR_NumRanges
  * };
  *
- * Hash: 0x3C606747B23E497B | Since: 323 | API-Set: unknown
+ * Hash: 0x3C606747B23E497B | Since: unknown | API-Set: unknown
  */
 export function setCombatRange(ped, combatRange) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5183,7 +5181,7 @@ export function setCombatRange(ped, combatRange) {
  *
  * Full list of ped components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedComponentVariations.json
  *
- * Hash: 0x262B14F48D29DE80 | Since: 323 | API-Set: unknown
+ * Hash: 0x262B14F48D29DE80 | Since: unknown | API-Set: unknown
  */
 export function setComponentVariation(ped, componentId, drawableId, textureId, paletteId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5652,7 +5650,7 @@ export function setComponentVariation(ped, componentId, drawableId, textureId, p
  * CPED_CONFIG_FLAG_DontChangeTargetFromMelee = 458,
  * };
  *
- * Hash: 0x1913FE4CBF41C463 | Since: 323 | API-Set: unknown
+ * Hash: 0x1913FE4CBF41C463 | Since: unknown | API-Set: unknown
  */
 export function setConfigFlag(ped, flagId, value) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5661,7 +5659,7 @@ export function setConfigFlag(ped, flagId, value) {
 /**
  * teleports ped to coords along with the vehicle ped is in
  *
- * Hash: 0x9AFEFF481A85AB2E | Since: 323 | API-Set: unknown
+ * Hash: 0x9AFEFF481A85AB2E | Since: unknown | API-Set: unknown
  */
 export function setCoordsKeepVehicle(ped, pos) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5670,7 +5668,7 @@ export function setCoordsKeepVehicle(ped, pos) {
 /**
  * No comment provided
  *
- * Hash: 0x87052FE446E07247 | Since: 323 | API-Set: unknown
+ * Hash: 0x87052FE446E07247 | Since: unknown | API-Set: unknown
  */
 export function setCoordsNoGang(ped, pos) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5679,7 +5677,7 @@ export function setCoordsNoGang(ped, pos) {
 /**
  * p1: Only "CODE_HUMAN_STAND_COWER" found in the b617d scripts.
  *
- * Hash: 0xA549131166868ED3 | Since: 323 | API-Set: unknown
+ * Hash: 0xA549131166868ED3 | Since: unknown | API-Set: unknown
  */
 export function setCowerHash(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5688,7 +5686,7 @@ export function setCowerHash(ped) {
 /**
  * Sets Ped Default Clothes
  *
- * Hash: 0x45EEE61580806D63 | Since: 323 | API-Set: unknown
+ * Hash: 0x45EEE61580806D63 | Since: unknown | API-Set: unknown
  */
 export function setDefaultComponentVariation(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5697,7 +5695,7 @@ export function setDefaultComponentVariation(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x4EF47FE21698A8B6 | Since: 323 | API-Set: unknown
+ * Hash: 0x4EF47FE21698A8B6 | Since: unknown | API-Set: unknown
  */
 export function setDefensiveAreaAttachedToPed(ped, attachPed) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5707,7 +5705,7 @@ export function setDefensiveAreaAttachedToPed(ped, attachPed) {
 /**
  * No comment provided
  *
- * Hash: 0x413C6C763A4AFFAD | Since: 323 | API-Set: unknown
+ * Hash: 0x413C6C763A4AFFAD | Since: unknown | API-Set: unknown
  */
 export function setDefensiveAreaDirection(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5716,7 +5714,7 @@ export function setDefensiveAreaDirection(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xF9B8F91AAD3B953E | Since: 323 | API-Set: unknown
+ * Hash: 0xF9B8F91AAD3B953E | Since: unknown | API-Set: unknown
  */
 export function setDefensiveSphereAttachedToPed(ped, target, xOffset, yOffset, zOffset, radius) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5726,7 +5724,7 @@ export function setDefensiveSphereAttachedToPed(ped, target, xOffset, yOffset, z
 /**
  * No comment provided
  *
- * Hash: 0xE4723DB6E736CCFF | Since: 323 | API-Set: unknown
+ * Hash: 0xE4723DB6E736CCFF | Since: unknown | API-Set: unknown
  */
 export function setDefensiveSphereAttachedToVehicle(ped, target, xOffset, yOffset, zOffset, radius) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5736,7 +5734,7 @@ export function setDefensiveSphereAttachedToVehicle(ped, target, xOffset, yOffse
 /**
  * No comment provided
  *
- * Hash: 0x95E3D6257B166CF2 | Since: 323 | API-Set: unknown
+ * Hash: 0x95E3D6257B166CF2 | Since: unknown | API-Set: unknown
  */
 export function setDensityMultiplierThisFrame(multiplier) {
     SetPedDensityMultiplierThisFrame(multiplier);
@@ -5744,7 +5742,7 @@ export function setDensityMultiplierThisFrame(multiplier) {
 /**
  * No comment provided
  *
- * Hash: 0xAA5A7ECE2AA8FE70 | Since: 323 | API-Set: unknown
+ * Hash: 0xAA5A7ECE2AA8FE70 | Since: unknown | API-Set: unknown
  */
 export function setDesiredHeading(ped, heading) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5753,7 +5751,7 @@ export function setDesiredHeading(ped, heading) {
 /**
  * No comment provided
  *
- * Hash: 0xEEB64139BA29A7CF | Since: 323 | API-Set: unknown
+ * Hash: 0xEEB64139BA29A7CF | Since: unknown | API-Set: unknown
  */
 export function setDiesInstantlyInWater(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5762,7 +5760,7 @@ export function setDiesInstantlyInWater(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xD718A22995E2B4BC | Since: 323 | API-Set: unknown
+ * Hash: 0xD718A22995E2B4BC | Since: unknown | API-Set: unknown
  */
 export function setDiesInSinkingVehicle(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5771,7 +5769,7 @@ export function setDiesInSinkingVehicle(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x2A30922C90C9B42C | Since: 323 | API-Set: unknown
+ * Hash: 0x2A30922C90C9B42C | Since: unknown | API-Set: unknown
  */
 export function setDiesInVehicle(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5780,7 +5778,7 @@ export function setDiesInVehicle(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x56CEF0AC79073BDE | Since: 323 | API-Set: unknown
+ * Hash: 0x56CEF0AC79073BDE | Since: unknown | API-Set: unknown
  */
 export function setDiesInWater(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5789,7 +5787,7 @@ export function setDiesInWater(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x5BA7919BED300023 | Since: 323 | API-Set: unknown
+ * Hash: 0x5BA7919BED300023 | Since: unknown | API-Set: unknown
  */
 export function setDiesWhenInjured(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5798,7 +5796,7 @@ export function setDiesWhenInjured(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xED34AB6C5CB36520 | Since: 323 | API-Set: unknown
+ * Hash: 0xED34AB6C5CB36520 | Since: unknown | API-Set: unknown
  */
 export function setDriveByClipsetOverride(ped, clipset) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5807,7 +5805,7 @@ export function setDriveByClipsetOverride(ped, clipset) {
 /**
  * This is the SET_CHAR_DUCKING from GTA IV, that makes Peds duck. This function does nothing in GTA V. It cannot set the ped as ducking in vehicles, and IS_PED_DUCKING will always return false.
  *
- * Hash: 0x030983CA930B692D | Since: 323 | API-Set: unknown
+ * Hash: 0x030983CA930B692D | Since: unknown | API-Set: unknown
  */
 export function setDucking(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5818,7 +5816,7 @@ export function setDucking(ped, toggle) {
  *
  * This native sets the emissive intensity for the given ped. It is used for different 'glow' levels on illuminated clothing.
  *
- * Hash: 0x4E90D746056E273D | Since: 944 | API-Set: unknown
+ * Hash: 0x4E90D746056E273D | Since: unknown | API-Set: unknown
  */
 export function setEmissiveScale(ped, intensity) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5827,7 +5825,7 @@ export function setEmissiveScale(ped, intensity) {
 /**
  * No comment provided
  *
- * Hash: 0xE906EC930F5FE7C8 | Since: 791 | API-Set: unknown
+ * Hash: 0xE906EC930F5FE7C8 | Since: unknown | API-Set: unknown
  */
 export function setEnableCrewEmblem(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5836,7 +5834,7 @@ export function setEnableCrewEmblem(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x97A790315D3831FD | Since: 323 | API-Set: unknown
+ * Hash: 0x97A790315D3831FD | Since: unknown | API-Set: unknown
  */
 export function setEnableWeaponBlocking(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5846,7 +5844,7 @@ export function setEnableWeaponBlocking(ped, toggle) {
  * Something related to the environmental effects natives.
  * In the "agency_heist3b" script, p1 - p3 are always under 100 - usually they are {87, 81, 68}. If SET_PED_ENVEFF_SCALE is set to 0.65 (instead of the usual 1.0), they use {74, 69, 60}
  *
- * Hash: 0xD69411AA0CEBF9E9 | Since: 323 | API-Set: unknown
+ * Hash: 0xD69411AA0CEBF9E9 | Since: unknown | API-Set: unknown
  */
 export function setEnveffColorModulator(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5867,7 +5865,7 @@ export function setEnveffColorModulator(ped) {
  * `PED::SET_PED_ENVEFF_COLOR_MODULATOR(ped, 74, 69, 60);`
  * `PED::SET_ENABLE_PED_ENVEFF_SCALE(ped, 1);`
  *
- * Hash: 0x110F526AB784111F | Since: 323 | API-Set: unknown
+ * Hash: 0x110F526AB784111F | Since: unknown | API-Set: unknown
  */
 export function setEnveffCpvAdd(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5879,7 +5877,7 @@ export function setEnveffCpvAdd(ped) {
  *
  * You are correct, just looked in IDA it breaks from the function if it's less than 0.0f or greater than 1.0f.
  *
- * Hash: 0xBF29516833893561 | Since: 323 | API-Set: unknown
+ * Hash: 0xBF29516833893561 | Since: unknown | API-Set: unknown
  */
 export function setEnveffScale(ped, value) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5905,7 +5903,7 @@ export function setEnveffScale(ped, value) {
  *
  * Firing pattern info: https://pastebin.com/Px036isB
  *
- * Hash: 0x9AC577F5A12AD8A9 | Since: 323 | API-Set: unknown
+ * Hash: 0x9AC577F5A12AD8A9 | Since: unknown | API-Set: unknown
  */
 export function setFiringPattern(ped, patternHash) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5917,7 +5915,7 @@ export function setFiringPattern(ped, patternHash) {
  * bit 1 (0x2) = use vehicle
  * bit 15 (0x8000) = force cower
  *
- * Hash: 0x70A2D1137C8ED7C9 | Since: 323 | API-Set: unknown
+ * Hash: 0x70A2D1137C8ED7C9 | Since: unknown | API-Set: unknown
  */
 export function setFleeAttributes(ped, attributeFlags, enable) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5926,7 +5924,7 @@ export function setFleeAttributes(ped, attributeFlags, enable) {
 /**
  * No comment provided
  *
- * Hash: 0x7FB17BA2E7DECA5B | Since: 323 | API-Set: unknown
+ * Hash: 0x7FB17BA2E7DECA5B | Since: unknown | API-Set: unknown
  */
 export function setGeneratesDeadBodyEvents(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5939,7 +5937,7 @@ export function setGeneratesDeadBodyEvents(ped, toggle) {
  * `PED::SET_PED_GESTURE_GROUP(PLAYER::PLAYER_PED_ID(),`
  * "ANIM_GROUP_GESTURE_MISS_DocksSetup1");
  *
- * Hash: 0xDDF803377F94AAA8 | Since: 323 | API-Set: unknown
+ * Hash: 0xDDF803377F94AAA8 | Since: unknown | API-Set: unknown
  */
 export function setGestureGroup(ped, animGroupGesture) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5948,7 +5946,7 @@ export function setGestureGroup(ped, animGroupGesture) {
 /**
  * No comment provided
  *
- * Hash: 0xBC0ED94165A48BC2 | Since: 323 | API-Set: unknown
+ * Hash: 0xBC0ED94165A48BC2 | Since: unknown | API-Set: unknown
  */
 export function setGetOutUpsideDownVehicle(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5961,7 +5959,7 @@ export function setGetOutUpsideDownVehicle(ped, toggle) {
  * `PED::SET_PED_GRAVITY(PLAYER::PLAYER_PED_ID(), 0x00000001);`
  * `PED::SET_PED_GRAVITY(Local_289[iVar0 \/\*20\*\/], 0x00000001);`
  *
- * Hash: 0x9FF447B6B6AD960A | Since: 323 | API-Set: unknown
+ * Hash: 0x9FF447B6B6AD960A | Since: unknown | API-Set: unknown
  */
 export function setGravity(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5970,7 +5968,7 @@ export function setGravity(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x0BDDB8D9EC6BCF3C | Since: 323 | API-Set: unknown
+ * Hash: 0x0BDDB8D9EC6BCF3C | Since: unknown | API-Set: unknown
  */
 export function setGroupMemberPassengerIndex(ped, index) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5979,7 +5977,7 @@ export function setGroupMemberPassengerIndex(ped, index) {
 /**
  * No comment provided
  *
- * Hash: 0x4CFFC65454C93A49 | Since: 323 | API-Set: unknown
+ * Hash: 0x4CFFC65454C93A49 | Since: unknown | API-Set: unknown
  */
 export function setHairTint(ped, colorID, highlightColorID) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -5999,7 +5997,7 @@ export function setHairTint(ped, colorID, highlightColorID) {
  * For more info please refer to this topic.
  * gtaforums.com/topic/858970-all-gtao-face-ids-pedset-ped-head-blend-data-explained
  *
- * Hash: 0x9414E18B9434C2FE | Since: 323 | API-Set: unknown
+ * Hash: 0x9414E18B9434C2FE | Since: unknown | API-Set: unknown
  */
 export function setHeadBlendData(ped, shapeFirstID, shapeSecondID, shapeThirdID, skinFirstID, skinSecondID, skinThirdID, shapeMix, skinMix, thirdMix, isParent) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6023,7 +6021,7 @@ export function setHeadBlendData(ped, shapeFirstID, shapeSecondID, shapeThirdID,
  * 11              Body Blemishes        0 - 11, 255
  * 12              Add Body Blemishes    0 - 1, 255
  *
- * Hash: 0x48F44967FA05CC1E | Since: 323 | API-Set: unknown
+ * Hash: 0x48F44967FA05CC1E | Since: unknown | API-Set: unknown
  */
 export function setHeadOverlay(ped, overlayID, index, opacity) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6036,7 +6034,7 @@ export function setHeadOverlay(ped, overlayID, index, opacity) {
  *
  * Called after SET_PED_HEAD_OVERLAY().
  *
- * Hash: 0x497BF74A7B9CB952 | Since: 323 | API-Set: unknown
+ * Hash: 0x497BF74A7B9CB952 | Since: unknown | API-Set: unknown
  */
 export function setHeadOverlayTint(ped, overlayID, colorType, colorID, secondColorID) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6045,7 +6043,7 @@ export function setHeadOverlayTint(ped, overlayID, colorType, colorID, secondCol
 /**
  * No comment provided
  *
- * Hash: 0xB3352E018D6F89DF | Since: 2699 | API-Set: unknown
+ * Hash: 0xB3352E018D6F89DF | Since: unknown | API-Set: unknown
  */
 export function setHealthPendingLastDamageEventOverrideFlag(toggle) {
     Citizen.invokeNative('0xB3352E018D6F89DF', toggle);
@@ -6053,7 +6051,7 @@ export function setHealthPendingLastDamageEventOverrideFlag(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x33A8F7F7D5F7F33C | Since: 323 | API-Set: unknown
+ * Hash: 0x33A8F7F7D5F7F33C | Since: unknown | API-Set: unknown
  */
 export function setHearingRange(ped, value) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6062,7 +6060,7 @@ export function setHearingRange(ped, value) {
 /**
  * No comment provided
  *
- * Hash: 0xC1F6EBF9A3D55538 | Since: 323 | API-Set: unknown
+ * Hash: 0xC1F6EBF9A3D55538 | Since: unknown | API-Set: unknown
  */
 export function setHeatscaleOverride(ped, heatScale) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6071,7 +6069,7 @@ export function setHeatscaleOverride(ped, heatScale) {
 /**
  * No comment provided
  *
- * Hash: 0x560A43136EB58105 | Since: 323 | API-Set: unknown
+ * Hash: 0x560A43136EB58105 | Since: unknown | API-Set: unknown
  */
 export function setHelmet(ped, canWearHelmet) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6080,7 +6078,7 @@ export function setHelmet(ped, canWearHelmet) {
 /**
  * No comment provided
  *
- * Hash: 0xC0E78D5C2CE3EB25 | Since: 323 | API-Set: unknown
+ * Hash: 0xC0E78D5C2CE3EB25 | Since: unknown | API-Set: unknown
  */
 export function setHelmetFlag(ped, helmetFlag) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6090,7 +6088,7 @@ export function setHelmetFlag(ped, helmetFlag) {
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x26D83693ED99291C | Since: 323 | API-Set: unknown
+ * Hash: 0x26D83693ED99291C | Since: unknown | API-Set: unknown
  */
 export function setHelmetPropIndex(ped, propIndex) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6099,7 +6097,7 @@ export function setHelmetPropIndex(ped, propIndex) {
 /**
  * No comment provided
  *
- * Hash: 0xF1550C4BD22582E2 | Since: 323 | API-Set: unknown
+ * Hash: 0xF1550C4BD22582E2 | Since: unknown | API-Set: unknown
  */
 export function setHelmetTextureIndex(ped, textureIndex) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6108,7 +6106,7 @@ export function setHelmetTextureIndex(ped, textureIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x3F7325574E41B44D | Since: 791 | API-Set: unknown
+ * Hash: 0x3F7325574E41B44D | Since: unknown | API-Set: unknown
  */
 export function setHelmetVisorPropIndices(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6117,7 +6115,7 @@ export function setHelmetVisorPropIndices(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x52D59AB61DDC05DD | Since: 323 | API-Set: unknown
+ * Hash: 0x52D59AB61DDC05DD | Since: unknown | API-Set: unknown
  */
 export function setHighlyPerceptive(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6126,7 +6124,7 @@ export function setHighlyPerceptive(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xF107E836A70DCE05 | Since: 323 | API-Set: unknown
+ * Hash: 0xF107E836A70DCE05 | Since: unknown | API-Set: unknown
  */
 export function setIdRange(ped, value) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6135,7 +6133,7 @@ export function setIdRange(ped, value) {
 /**
  * No comment provided
  *
- * Hash: 0x570389D1C3DE3C6B | Since: 323 | API-Set: unknown
+ * Hash: 0x570389D1C3DE3C6B | Since: unknown | API-Set: unknown
  */
 export function setIncreasedAvoidanceRadius(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6144,7 +6142,7 @@ export function setIncreasedAvoidanceRadius(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xEC4B4B3B9908052A | Since: 323 | API-Set: unknown
+ * Hash: 0xEC4B4B3B9908052A | Since: unknown | API-Set: unknown
  */
 export function setInjuredOnGroundBehaviour(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6161,7 +6159,7 @@ export function setInjuredOnGroundBehaviour(ped) {
  * Left Rear = 1
  * RightRear = 2
  *
- * Hash: 0xF75B0D629E1C063D | Since: 323 | API-Set: unknown
+ * Hash: 0xF75B0D629E1C063D | Since: unknown | API-Set: unknown
  */
 export function setIntoVehicle(ped, vehicle, seatIndex) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6178,7 +6176,7 @@ export function setIntoVehicle(ped, vehicle, seatIndex) {
  * `PED::SET_PED_IN_VEHICLE_CONTEXT(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY("MISS_ARMENIAN3_FRANKLIN_TENSE"));`
  * `PED::SET_PED_IN_VEHICLE_CONTEXT(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY("MISSFBI5_TREVOR_DRIVING"));`
  *
- * Hash: 0x530071295899A8C6 | Since: 323 | API-Set: unknown
+ * Hash: 0x530071295899A8C6 | Since: unknown | API-Set: unknown
  */
 export function setInVehicleContext(ped, context) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6189,7 +6187,7 @@ export function setInVehicleContext(ped, context) {
 /**
  * No comment provided
  *
- * Hash: 0xA9B61A329BFDCBEA | Since: 323 | API-Set: unknown
+ * Hash: 0xA9B61A329BFDCBEA | Since: unknown | API-Set: unknown
  */
 export function setIsAvoidedByOthers() {
     Citizen.invokeNative('0xA9B61A329BFDCBEA', undefined, false);
@@ -6197,7 +6195,7 @@ export function setIsAvoidedByOthers() {
 /**
  * No comment provided
  *
- * Hash: 0x33A60D8BDD6E508C | Since: 323 | API-Set: unknown
+ * Hash: 0x33A60D8BDD6E508C | Since: unknown | API-Set: unknown
  */
 export function setIsIgnoredByAutoOpenDoors(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6206,7 +6204,7 @@ export function setIsIgnoredByAutoOpenDoors(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x971D38760FBC02EF | Since: 323 | API-Set: unknown
+ * Hash: 0x971D38760FBC02EF | Since: unknown | API-Set: unknown
  */
 export function setKeepTask(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6215,7 +6213,7 @@ export function setKeepTask(ped, toggle) {
 /**
  * "IK" stands for "Inverse kinematics." I assume this has something to do with how the ped uses his legs to balance. In the scripts, the second parameter is always an int with a value of 2, 0, or sometimes 1
  *
- * Hash: 0xC396F5B86FF9FEBD | Since: 323 | API-Set: unknown
+ * Hash: 0xC396F5B86FF9FEBD | Since: unknown | API-Set: unknown
  */
 export function setLegIkMode(ped, mode) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6224,7 +6222,7 @@ export function setLegIkMode(ped, mode) {
 /**
  * No comment provided
  *
- * Hash: 0xDC2C5C242AAC342B | Since: 323 | API-Set: unknown
+ * Hash: 0xDC2C5C242AAC342B | Since: unknown | API-Set: unknown
  */
 export function setLodMultiplier(ped, multiplier) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6233,7 +6231,7 @@ export function setLodMultiplier(ped, multiplier) {
 /**
  * Sets the maximum health of a ped.
  *
- * Hash: 0xF5F6378C4F3419D3 | Since: 323 | API-Set: unknown
+ * Hash: 0xF5F6378C4F3419D3 | Since: unknown | API-Set: unknown
  */
 export function setMaxHealth(ped, value) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6242,7 +6240,7 @@ export function setMaxHealth(ped, value) {
 /**
  * No comment provided
  *
- * Hash: 0x433083750C5E064A | Since: 323 | API-Set: unknown
+ * Hash: 0x433083750C5E064A | Since: unknown | API-Set: unknown
  */
 export function setMaxMoveBlendRatio(ped, value) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6251,7 +6249,7 @@ export function setMaxMoveBlendRatio(ped, value) {
 /**
  * No comment provided
  *
- * Hash: 0x43C851690662113D | Since: 323 | API-Set: unknown
+ * Hash: 0x43C851690662113D | Since: unknown | API-Set: unknown
  */
 export function setMaxTimeInWater(ped, value) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6260,7 +6258,7 @@ export function setMaxTimeInWater(ped, value) {
 /**
  * No comment provided
  *
- * Hash: 0x6BA428C528D9E522 | Since: 323 | API-Set: unknown
+ * Hash: 0x6BA428C528D9E522 | Since: unknown | API-Set: unknown
  */
 export function setMaxTimeUnderwater(ped, value) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6311,7 +6309,7 @@ export function setMaxTimeUnderwater(ped, value) {
  *
  * 19 - Neck Thickness (Thin/Thick)
  *
- * Hash: 0x71A5C1DBA060049E | Since: 323 | API-Set: unknown
+ * Hash: 0x71A5C1DBA060049E | Since: unknown | API-Set: unknown
  */
 export function setMicroMorph(ped, index, scale) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6320,7 +6318,7 @@ export function setMicroMorph(ped, index, scale) {
 /**
  * Ped will stay on the ground after being stunned for at lest ms time. (in milliseconds)
  *
- * Hash: 0xFA0675AB151073FA | Since: 323 | API-Set: unknown
+ * Hash: 0xFA0675AB151073FA | Since: unknown | API-Set: unknown
  */
 export function setMinGroundTimeForStungun(ped, ms) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6329,7 +6327,7 @@ export function setMinGroundTimeForStungun(ped, ms) {
 /**
  * No comment provided
  *
- * Hash: 0x01A898D26E2333DD | Since: 323 | API-Set: unknown
+ * Hash: 0x01A898D26E2333DD | Since: unknown | API-Set: unknown
  */
 export function setMinMoveBlendRatio(ped, value) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6338,7 +6336,7 @@ export function setMinMoveBlendRatio(ped, value) {
 /**
  * Full list of peds by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/peds.json
  *
- * Hash: 0xE163A4BCE4DE6F11 | Since: 323 | API-Set: unknown
+ * Hash: 0xE163A4BCE4DE6F11 | Since: unknown | API-Set: unknown
  */
 export function setModelIsSuppressed(modelHash, toggle) {
     if (typeof modelHash === 'string')
@@ -6352,7 +6350,7 @@ export function setModelIsSuppressed(modelHash, toggle) {
  *
  * Maximum amount that a ped can theoretically have is 65535 (0xFFFF) since the amount is stored as an unsigned short (uint16_t) value.
  *
- * Hash: 0xA9C8960E8684C1B5 | Since: 323 | API-Set: unknown
+ * Hash: 0xA9C8960E8684C1B5 | Since: unknown | API-Set: unknown
  */
 export function setMoney(ped, amount) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6361,7 +6359,7 @@ export function setMoney(ped, amount) {
 /**
  * No comment provided
  *
- * Hash: 0x0A986918B102B448 | Since: 323 | API-Set: unknown
+ * Hash: 0x0A986918B102B448 | Since: unknown | API-Set: unknown
  */
 export function setMotionBlur(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6371,7 +6369,7 @@ export function setMotionBlur(ped, toggle) {
  * Found in the b617d scripts:
  * `PED::SET_PED_MOTION_IN_COVER_CLIPSET_OVERRIDE(v_7, "trevor_heist_cover_2h");`
  *
- * Hash: 0x9DBA107B4937F809 | Since: 323 | API-Set: unknown
+ * Hash: 0x9DBA107B4937F809 | Since: unknown | API-Set: unknown
  */
 export function setMotionInCoverClipsetOverride(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6433,7 +6431,7 @@ export function setMotionInCoverClipsetOverride(ped) {
  *
  * Full list of movement clipsets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/movementClipsetsCompact.json
  *
- * Hash: 0xAF8A94EDE7712BEF | Since: 323 | API-Set: unknown
+ * Hash: 0xAF8A94EDE7712BEF | Since: unknown | API-Set: unknown
  */
 export function setMovementClipset(ped, clipSet, transitionSpeed) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6442,7 +6440,7 @@ export function setMovementClipset(ped, clipSet, transitionSpeed) {
 /**
  * No comment provided
  *
- * Hash: 0x9E8C908F41584ECD | Since: 323 | API-Set: unknown
+ * Hash: 0x9E8C908F41584ECD | Since: unknown | API-Set: unknown
  */
 export function setMoveAnimsBlendOut(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6451,7 +6449,7 @@ export function setMoveAnimsBlendOut(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x0B3E35AC043707D9 | Since: 573 | API-Set: unknown
+ * Hash: 0x0B3E35AC043707D9 | Since: unknown | API-Set: unknown
  */
 export function setMoveRateInWaterOverride(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6471,7 +6469,7 @@ export function setMoveRateInWaterOverride(ped) {
  *
  * Note: According to IDA for the Xbox360 xex, when they check bgt they seem to have the min to 0.0f, but the max set to 1.15f not 10.0f.
  *
- * Hash: 0x085BF80FA50A39D1 | Since: 323 | API-Set: unknown
+ * Hash: 0x085BF80FA50A39D1 | Since: unknown | API-Set: unknown
  */
 export function setMoveRateOverride(ped, value) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6482,7 +6480,7 @@ export function setMoveRateOverride(ped, value) {
  *
  * *untested but char *name could also be a hash for a localized string
  *
- * Hash: 0x98EFA132A4117BE1 | Since: 323 | API-Set: unknown
+ * Hash: 0x98EFA132A4117BE1 | Since: unknown | API-Set: unknown
  */
 export function setNameDebug(ped, name) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6491,7 +6489,7 @@ export function setNameDebug(ped, name) {
 /**
  * No comment provided
  *
- * Hash: 0x3DBFC55D5C9BB447 | Since: 323 | API-Set: unknown
+ * Hash: 0x3DBFC55D5C9BB447 | Since: unknown | API-Set: unknown
  */
 export function setNeverLeavesGroup(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6500,7 +6498,7 @@ export function setNeverLeavesGroup(ped, toggle) {
 /**
  * The distance between these points, is the diagonal of a box (remember it's 3D).
  *
- * Hash: 0xEE01041D559983EA | Since: 323 | API-Set: unknown
+ * Hash: 0xEE01041D559983EA | Since: unknown | API-Set: unknown
  */
 export function setNonCreationArea(x1, y1, z1, x2, y2, z2) {
     SetPedNonCreationArea(x1, y1, z1, x2, y2, z2);
@@ -6508,7 +6506,7 @@ export function setNonCreationArea(x1, y1, z1, x2, y2, z2) {
 /**
  * No comment provided
  *
- * Hash: 0xA52D5247A4227E14 | Since: 323 | API-Set: unknown
+ * Hash: 0xA52D5247A4227E14 | Since: unknown | API-Set: unknown
  */
 export function setNoTimeDelayBeforeShot() {
     Citizen.invokeNative('0xA52D5247A4227E14', undefined);
@@ -6516,7 +6514,7 @@ export function setNoTimeDelayBeforeShot() {
 /**
  * No comment provided
  *
- * Hash: 0xFE07FF6495D52E2A | Since: 323 | API-Set: unknown
+ * Hash: 0xFE07FF6495D52E2A | Since: unknown | API-Set: unknown
  */
 export function setPanicExitScenario() {
     return SetPedPanicExitScenario(undefined, undefined, undefined, undefined);
@@ -6524,7 +6522,7 @@ export function setPanicExitScenario() {
 /**
  * No comment provided
  *
- * Hash: 0x333FC8DB079B7186 | Since: 323 | API-Set: unknown
+ * Hash: 0x333FC8DB079B7186 | Since: unknown | API-Set: unknown
  */
 export function setParachuteTintIndex(ped, tintIndex) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6533,7 +6531,7 @@ export function setParachuteTintIndex(ped, tintIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x83A169EABCDB10A2 | Since: 323 | API-Set: unknown
+ * Hash: 0x83A169EABCDB10A2 | Since: unknown | API-Set: unknown
  */
 export function setPhonePaletteIdx() {
     SetPedPhonePaletteIdx(undefined, undefined);
@@ -6541,7 +6539,7 @@ export function setPhonePaletteIdx() {
 /**
  * i could be time. Only example in the decompiled scripts uses it as -1.
  *
- * Hash: 0xAAD6D1ACF08F4612 | Since: 323 | API-Set: unknown
+ * Hash: 0xAAD6D1ACF08F4612 | Since: unknown | API-Set: unknown
  */
 export function setPinnedDown(ped, pinned, i) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6550,7 +6548,7 @@ export function setPinnedDown(ped, pinned, i) {
 /**
  * This native does absolutely nothing, just a nullsub
  *
- * Hash: 0x94D94BF1A75AED3D | Since: 323 | API-Set: unknown
+ * Hash: 0x94D94BF1A75AED3D | Since: unknown | API-Set: unknown
  */
 export function setPlaysHeadOnHornAnimWhenDiesInVehicle(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6559,7 +6557,7 @@ export function setPlaysHeadOnHornAnimWhenDiesInVehicle(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x8421EB4DA7E391B9 | Since: 323 | API-Set: unknown
+ * Hash: 0x8421EB4DA7E391B9 | Since: unknown | API-Set: unknown
  */
 export function setPreferredCoverSet(ped, itemSet) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6569,7 +6567,7 @@ export function setPreferredCoverSet(ped, itemSet) {
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x2B16A3BFF1FBCE49 | Since: 323 | API-Set: unknown
+ * Hash: 0x2B16A3BFF1FBCE49 | Since: unknown | API-Set: unknown
  */
 export function setPreloadPropData(ped, componentId, drawableId, TextureId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6581,7 +6579,7 @@ export function setPreloadPropData(ped, componentId, drawableId, TextureId) {
  *
  * p1 is probably componentId
  *
- * Hash: 0x39D55A620FCB6A3A | Since: 323 | API-Set: unknown
+ * Hash: 0x39D55A620FCB6A3A | Since: unknown | API-Set: unknown
  */
 export function setPreloadVariationData(ped, slot, drawableId, textureId) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6594,7 +6592,7 @@ export function setPreloadVariationData(ped, slot, drawableId, textureId) {
  * sub_1CA8("WORLD_HUMAN_SMOKING", 2);
  * `PED::SET_PED_PRIMARY_LOOKAT(getElem(3, &l_34, 4), PLAYER::PLAYER_PED_ID());`
  *
- * Hash: 0xCD17B554996A8D9E | Since: 323 | API-Set: unknown
+ * Hash: 0xCD17B554996A8D9E | Since: unknown | API-Set: unknown
  */
 export function setPrimaryLookat(ped, lookAt) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6615,7 +6613,7 @@ export function setPrimaryLookat(ped, lookAt) {
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x93376B65A266EB5F | Since: 323 | API-Set: unknown
+ * Hash: 0x93376B65A266EB5F | Since: unknown | API-Set: unknown
  */
 export function setPropIndex(ped, componentId, drawableId, TextureId, attach) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6624,7 +6622,7 @@ export function setPropIndex(ped, componentId, drawableId, TextureId, attach) {
 /**
  * No comment provided
  *
- * Hash: 0x01F6594B923B9251 | Since: 323 | API-Set: unknown
+ * Hash: 0x01F6594B923B9251 | Since: unknown | API-Set: unknown
  */
 export function setRagdollForceFall(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6633,7 +6631,7 @@ export function setRagdollForceFall(ped) {
 /**
  * Causes Ped to ragdoll on collision with any object (e.g Running into trashcan). If applied to player you will sometimes trip on the sidewalk.
  *
- * Hash: 0xF0A4F1BBF4FA7497 | Since: 323 | API-Set: unknown
+ * Hash: 0xF0A4F1BBF4FA7497 | Since: unknown | API-Set: unknown
  */
 export function setRagdollOnCollision(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6645,7 +6643,7 @@ export function setRagdollOnCollision(ped, toggle) {
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0xC8A9481A01E63C28 | Since: 323 | API-Set: unknown
+ * Hash: 0xC8A9481A01E63C28 | Since: unknown | API-Set: unknown
  */
 export function setRandomComponentVariation(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6655,7 +6653,7 @@ export function setRandomComponentVariation(ped) {
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0xC44AA05345C992C6 | Since: 323 | API-Set: unknown
+ * Hash: 0xC44AA05345C992C6 | Since: unknown | API-Set: unknown
  */
 export function setRandomProps(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6664,7 +6662,7 @@ export function setRandomProps(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xADB3F206518799E8 | Since: 323 | API-Set: unknown
+ * Hash: 0xADB3F206518799E8 | Since: unknown | API-Set: unknown
  */
 export function setRelationshipGroupDefaultHash(ped, hash) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6675,7 +6673,7 @@ export function setRelationshipGroupDefaultHash(ped, hash) {
 /**
  * No comment provided
  *
- * Hash: 0xC80A74AC829DDD92 | Since: 323 | API-Set: unknown
+ * Hash: 0xC80A74AC829DDD92 | Since: unknown | API-Set: unknown
  */
 export function setRelationshipGroupHash(ped, hash) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6686,7 +6684,7 @@ export function setRelationshipGroupHash(ped, hash) {
 /**
  * No comment provided
  *
- * Hash: 0xE88DA0751C22A2AD | Since: 323 | API-Set: unknown
+ * Hash: 0xE88DA0751C22A2AD | Since: unknown | API-Set: unknown
  */
 export function setReserveParachuteTintIndex(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6697,7 +6695,7 @@ export function setReserveParachuteTintIndex(ped) {
  * Known values:
  * PRF_PreventGoingIntoStillInVehicleState = 236 *(fanatic2.c)*
  *
- * Hash: 0xC1E8A365BF3B29F2 | Since: 323 | API-Set: unknown
+ * Hash: 0xC1E8A365BF3B29F2 | Since: unknown | API-Set: unknown
  */
 export function setResetFlag(ped, flagId, doReset) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6706,7 +6704,7 @@ export function setResetFlag(ped, flagId, doReset) {
 /**
  * This native sets a scuba mask for freemode models and an oxygen bottle for player_* models. It works on freemode and player_* models.
  *
- * Hash: 0x36C6984C3ED0C911 | Since: 323 | API-Set: unknown
+ * Hash: 0x36C6984C3ED0C911 | Since: unknown | API-Set: unknown
  */
 export function setScubaGearVariation(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6715,7 +6713,7 @@ export function setScubaGearVariation(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xF29CF591C4BF6CEE | Since: 323 | API-Set: unknown
+ * Hash: 0xF29CF591C4BF6CEE | Since: unknown | API-Set: unknown
  */
 export function setSeeingRange(ped, value) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6724,7 +6722,7 @@ export function setSeeingRange(ped, value) {
 /**
  * No comment provided
  *
- * Hash: 0x96A05E4FB321B1BA | Since: 323 | API-Set: unknown
+ * Hash: 0x96A05E4FB321B1BA | Since: unknown | API-Set: unknown
  */
 export function setShootsAtCoord(ped, pos, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6733,7 +6731,7 @@ export function setShootsAtCoord(ped, pos, toggle) {
 /**
  * shootRate 0-1000
  *
- * Hash: 0x614DA022990752DC | Since: 323 | API-Set: unknown
+ * Hash: 0x614DA022990752DC | Since: unknown | API-Set: unknown
  */
 export function setShootRate(ped, shootRate) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6742,7 +6740,7 @@ export function setShootRate(ped, shootRate) {
 /**
  * No comment provided
  *
- * Hash: 0x425AECF167663F48 | Since: 323 | API-Set: unknown
+ * Hash: 0x425AECF167663F48 | Since: unknown | API-Set: unknown
  */
 export function setShouldIgnoreScenarioExitCollisionChecks(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6751,7 +6749,7 @@ export function setShouldIgnoreScenarioExitCollisionChecks(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x5B6010B3CBC29095 | Since: 323 | API-Set: unknown
+ * Hash: 0x5B6010B3CBC29095 | Since: unknown | API-Set: unknown
  */
 export function setShouldIgnoreScenarioNavChecks() {
     Citizen.invokeNative('0x5B6010B3CBC29095', undefined, false);
@@ -6759,7 +6757,7 @@ export function setShouldIgnoreScenarioNavChecks() {
 /**
  * No comment provided
  *
- * Hash: 0xEC6935EBE0847B90 | Since: 323 | API-Set: unknown
+ * Hash: 0xEC6935EBE0847B90 | Since: unknown | API-Set: unknown
  */
 export function setShouldPlayDirectedNormalScenarioExit() {
     return SetPedShouldPlayDirectedScenarioExit(undefined, undefined, undefined, undefined);
@@ -6767,7 +6765,7 @@ export function setShouldPlayDirectedNormalScenarioExit() {
 /**
  * No comment provided
  *
- * Hash: 0xEEED8FAFEC331A70 | Since: 323 | API-Set: unknown
+ * Hash: 0xEEED8FAFEC331A70 | Since: unknown | API-Set: unknown
  */
 export function setShouldPlayFleeScenarioExit(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6776,7 +6774,7 @@ export function setShouldPlayFleeScenarioExit(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xF1C03A5352243A30 | Since: 323 | API-Set: unknown
+ * Hash: 0xF1C03A5352243A30 | Since: unknown | API-Set: unknown
  */
 export function setShouldPlayImmediateScenarioExit(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6785,7 +6783,7 @@ export function setShouldPlayImmediateScenarioExit(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xA3A9299C4F2ADB98 | Since: 323 | API-Set: unknown
+ * Hash: 0xA3A9299C4F2ADB98 | Since: unknown | API-Set: unknown
  */
 export function setShouldPlayNormalScenarioExit(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6794,7 +6792,7 @@ export function setShouldPlayNormalScenarioExit(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xCEDA60A74219D064 | Since: 323 | API-Set: unknown
+ * Hash: 0xCEDA60A74219D064 | Since: unknown | API-Set: unknown
  */
 export function setShouldProbeForScenarioExitsInOneFrame() {
     Citizen.invokeNative('0xCEDA60A74219D064', undefined, false);
@@ -6802,7 +6800,7 @@ export function setShouldProbeForScenarioExitsInOneFrame() {
 /**
  * No comment provided
  *
- * Hash: 0x9D3151A373974804 | Since: 323 | API-Set: unknown
+ * Hash: 0x9D3151A373974804 | Since: unknown | API-Set: unknown
  */
 export function setSphereDefensiveArea(ped, pos, radius) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6811,7 +6809,7 @@ export function setSphereDefensiveArea(ped, pos, radius) {
 /**
  * No comment provided
  *
- * Hash: 0xEDF4079F9D54C9A1 | Since: 323 | API-Set: unknown
+ * Hash: 0xEDF4079F9D54C9A1 | Since: unknown | API-Set: unknown
  */
 export function setStayInVehicleWhenJacked(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6820,7 +6818,7 @@ export function setStayInVehicleWhenJacked(ped, toggle) {
 /**
  * p1 is usually 0 in the scripts. action is either 0 or a pointer to "DEFAULT_ACTION".
  *
- * Hash: 0x88CBB5CEB96B7BD2 | Since: 323 | API-Set: unknown
+ * Hash: 0x88CBB5CEB96B7BD2 | Since: unknown | API-Set: unknown
  */
 export function setStealthMovement(ped, action) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6829,7 +6827,7 @@ export function setStealthMovement(ped, action) {
 /**
  * No comment provided
  *
- * Hash: 0x2016C603D6B8987C | Since: 323 | API-Set: unknown
+ * Hash: 0x2016C603D6B8987C | Since: unknown | API-Set: unknown
  */
 export function setSteersAroundDeadBodies(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6838,7 +6836,7 @@ export function setSteersAroundDeadBodies(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x1509C089ADC208BF | Since: 323 | API-Set: unknown
+ * Hash: 0x1509C089ADC208BF | Since: unknown | API-Set: unknown
  */
 export function setSteersAroundObjects(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6847,7 +6845,7 @@ export function setSteersAroundObjects(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x46F2193B3AD1D891 | Since: 323 | API-Set: unknown
+ * Hash: 0x46F2193B3AD1D891 | Since: unknown | API-Set: unknown
  */
 export function setSteersAroundPeds(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6856,7 +6854,7 @@ export function setSteersAroundPeds(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xEB6FB9D48DDE23EC | Since: 323 | API-Set: unknown
+ * Hash: 0xEB6FB9D48DDE23EC | Since: unknown | API-Set: unknown
  */
 export function setSteersAroundVehicles(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6865,7 +6863,7 @@ export function setSteersAroundVehicles(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x288DF530C92DAD6F | Since: 323 | API-Set: unknown
+ * Hash: 0x288DF530C92DAD6F | Since: unknown | API-Set: unknown
  */
 export function setSteerBias(ped, value) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6874,7 +6872,7 @@ export function setSteerBias(ped, value) {
 /**
  * Full list of movement clipsets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/movementClipsetsCompact.json
  *
- * Hash: 0x29A28F3F8CF6D854 | Since: 323 | API-Set: unknown
+ * Hash: 0x29A28F3F8CF6D854 | Since: unknown | API-Set: unknown
  */
 export function setStrafeClipset(ped, clipSet) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6884,7 +6882,7 @@ export function setStrafeClipset(ped, clipSet) {
  * Ped no longer takes critical damage modifiers if set to FALSE.
  * Example: Headshotting a player no longer one shots them. Instead they will take the same damage as a torso shot.
  *
- * Hash: 0xEBD76F2359F190AC | Since: 323 | API-Set: unknown
+ * Hash: 0xEBD76F2359F190AC | Since: unknown | API-Set: unknown
  */
 export function setSuffersCriticalHits(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6893,7 +6891,7 @@ export function setSuffersCriticalHits(ped, toggle) {
 /**
  * Sweat is set to 100.0 or 0.0 in the decompiled scripts.
  *
- * Hash: 0x27B0405F59637D1F | Since: 323 | API-Set: unknown
+ * Hash: 0x27B0405F59637D1F | Since: unknown | API-Set: unknown
  */
 export function setSweat(ped, sweat) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6907,7 +6905,7 @@ export function setSweat(ped, sweat) {
  * TLR_SearchForTarget
  * };
  *
- * Hash: 0x0703B9079823DA4A | Since: 323 | API-Set: unknown
+ * Hash: 0x0703B9079823DA4A | Since: unknown | API-Set: unknown
  */
 export function setTargetLossResponse(ped, responseType) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6916,7 +6914,7 @@ export function setTargetLossResponse(ped, responseType) {
 /**
  * No comment provided
  *
- * Hash: 0x112942C6E708F70B | Since: 323 | API-Set: unknown
+ * Hash: 0x112942C6E708F70B | Since: unknown | API-Set: unknown
  */
 export function setToInformRespectedFriends(ped, radius, maxFriends) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6925,7 +6923,7 @@ export function setToInformRespectedFriends(ped, radius, maxFriends) {
 /**
  * No comment provided
  *
- * Hash: 0x332B562EEDA62399 | Since: 323 | API-Set: unknown
+ * Hash: 0x332B562EEDA62399 | Since: unknown | API-Set: unknown
  */
 export function setToLoadCover(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6956,7 +6954,7 @@ export function setToLoadCover(ped, toggle) {
  *
  * Edit Mar 21, 2017: removed part about time2 being the microseconds version of time1. this just isn't correct. time2 is in milliseconds, and time1 and time2 don't seem to be connected in any way.
  *
- * Hash: 0xAE99FB955581844A | Since: 323 | API-Set: unknown
+ * Hash: 0xAE99FB955581844A | Since: unknown | API-Set: unknown
  */
 export function setToRagdoll(ped, time1, time2, ragdollType) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6983,7 +6981,7 @@ export function setToRagdoll(ped, time1, time2, ragdollType) {
  * `ped::set_ped_to_ragdoll_with_fall(ped, 1500, 2000, 1, -entity::get_entity_forward_vector(ped), 1f, 0f, 0f, 0f, 0f, 0f, 0f);`
  *
  *
- * Hash: 0xD76632D99E4966C8 | Since: 323 | API-Set: unknown
+ * Hash: 0xD76632D99E4966C8 | Since: unknown | API-Set: unknown
  */
 export function setToRagdollWithFall(ped, time, ragdollType, pos, velocity) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -6992,7 +6990,7 @@ export function setToRagdollWithFall(ped, time, ragdollType, pos, velocity) {
 /**
  * No comment provided
  *
- * Hash: 0x0F62619393661D6E | Since: 877 | API-Set: unknown
+ * Hash: 0x0F62619393661D6E | Since: unknown | API-Set: unknown
  */
 export function setTreatedAsFriendly() {
     Citizen.invokeNative('0x0F62619393661D6E', undefined, undefined, undefined);
@@ -7000,7 +6998,7 @@ export function setTreatedAsFriendly() {
 /**
  * No comment provided
  *
- * Hash: 0xAFC976FD0580C7B3 | Since: 323 | API-Set: unknown
+ * Hash: 0xAFC976FD0580C7B3 | Since: unknown | API-Set: unknown
  */
 export function setUpperBodyDamageOnly(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7009,7 +7007,7 @@ export function setUpperBodyDamageOnly(ped, toggle) {
 /**
  * p2 is usually -1 in the scripts. action is either 0 or "DEFAULT_ACTION".
  *
- * Hash: 0xD75ACCF5E0FB5367 | Since: 323 | API-Set: unknown
+ * Hash: 0xD75ACCF5E0FB5367 | Since: unknown | API-Set: unknown
  */
 export function setUsingActionMode(ped, action) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7018,7 +7016,7 @@ export function setUsingActionMode(ped, action) {
 /**
  * seatIndex must be <= 2
  *
- * Hash: 0x952F06BEECD775CC | Since: 323 | API-Set: unknown
+ * Hash: 0x952F06BEECD775CC | Since: unknown | API-Set: unknown
  */
 export function setVehicleForcedSeatUsage(ped, vehicle, seatIndex, flags) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7028,7 +7026,7 @@ export function setVehicleForcedSeatUsage(ped, vehicle, seatIndex, flags) {
 /**
  * No comment provided
  *
- * Hash: 0x3B6405E8AB34A907 | Since: 323 | API-Set: unknown
+ * Hash: 0x3B6405E8AB34A907 | Since: unknown | API-Set: unknown
  */
 export function setVisualFieldCenterAngle(ped, angle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7037,7 +7035,7 @@ export function setVisualFieldCenterAngle(ped, angle) {
 /**
  * No comment provided
  *
- * Hash: 0x70793BDCA1E854D4 | Since: 323 | API-Set: unknown
+ * Hash: 0x70793BDCA1E854D4 | Since: unknown | API-Set: unknown
  */
 export function setVisualFieldMaxAngle(ped, value) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7046,7 +7044,7 @@ export function setVisualFieldMaxAngle(ped, value) {
 /**
  * This native refers to the field of vision the ped has above them, starting at 0 degrees. 90f would let the ped see enemies directly above of them.
  *
- * Hash: 0x78D0B67629D75856 | Since: 323 | API-Set: unknown
+ * Hash: 0x78D0B67629D75856 | Since: unknown | API-Set: unknown
  */
 export function setVisualFieldMaxElevationAngle(ped, angle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7055,7 +7053,7 @@ export function setVisualFieldMaxElevationAngle(ped, angle) {
 /**
  * No comment provided
  *
- * Hash: 0x2DB492222FB21E26 | Since: 323 | API-Set: unknown
+ * Hash: 0x2DB492222FB21E26 | Since: unknown | API-Set: unknown
  */
 export function setVisualFieldMinAngle(ped, value) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7065,7 +7063,7 @@ export function setVisualFieldMinAngle(ped, value) {
  * This native refers to the field of vision the ped has below them, starting at 0 degrees. The angle value should be negative.
  * -90f should let the ped see 90 degrees below them, for example.
  *
- * Hash: 0x7A276EB2C224D70F | Since: 323 | API-Set: unknown
+ * Hash: 0x7A276EB2C224D70F | Since: unknown | API-Set: unknown
  */
 export function setVisualFieldMinElevationAngle(ped, angle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7074,7 +7072,7 @@ export function setVisualFieldMinElevationAngle(ped, angle) {
 /**
  * No comment provided
  *
- * Hash: 0x9C74B0BC831B753A | Since: 323 | API-Set: unknown
+ * Hash: 0x9C74B0BC831B753A | Since: unknown | API-Set: unknown
  */
 export function setVisualFieldPeripheralRange(ped, range) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7083,7 +7081,7 @@ export function setVisualFieldPeripheralRange(ped, range) {
 /**
  * No comment provided
  *
- * Hash: 0x2622E35B77D3ACA2 | Since: 323 | API-Set: unknown
+ * Hash: 0x2622E35B77D3ACA2 | Since: unknown | API-Set: unknown
  */
 export function setWeaponMovementClipset(ped, clipSet) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7092,7 +7090,7 @@ export function setWeaponMovementClipset(ped, clipSet) {
 /**
  * No comment provided
  *
- * Hash: 0xAC0BB4D87777CAE2 | Since: 2802 | API-Set: unknown
+ * Hash: 0xAC0BB4D87777CAE2 | Since: unknown | API-Set: unknown
  */
 export function setWetness(ped, wetLevel) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7101,7 +7099,7 @@ export function setWetness(ped, wetLevel) {
 /**
  * `combined with PED::SET_PED_WETNESS_HEIGHT(), this native makes the ped drenched in water up to the height specified in the other function`
  *
- * Hash: 0xB5485E4907B53019 | Since: 323 | API-Set: unknown
+ * Hash: 0xB5485E4907B53019 | Since: unknown | API-Set: unknown
  */
 export function setWetnessEnabledThisFrame(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7112,7 +7110,7 @@ export function setWetnessEnabledThisFrame(ped) {
  *
  *
  *
- * Hash: 0x44CB6447D2571AA0 | Since: 323 | API-Set: unknown
+ * Hash: 0x44CB6447D2571AA0 | Since: unknown | API-Set: unknown
  */
 export function setWetnessHeight(ped, height) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7121,7 +7119,7 @@ export function setWetnessHeight(ped, height) {
 /**
  * No comment provided
  *
- * Hash: 0x3E9679C1DFCF422C | Since: 877 | API-Set: unknown
+ * Hash: 0x3E9679C1DFCF422C | Since: unknown | API-Set: unknown
  */
 export function setWillOnlyAttackWantedPlayer() {
     Citizen.invokeNative('0x3E9679C1DFCF422C', undefined, undefined);
@@ -7129,7 +7127,7 @@ export function setWillOnlyAttackWantedPlayer() {
 /**
  * Min and max are usually 100.0 and 200.0
  *
- * Hash: 0xD8C3BE3EE94CAF2D | Since: 323 | API-Set: unknown
+ * Hash: 0xD8C3BE3EE94CAF2D | Since: unknown | API-Set: unknown
  */
 export function setPopControlSphereThisFrame(pos, min, max) {
     SetPopControlSphereThisFrame(pos.x, pos.y, pos.z, min, max);
@@ -7161,7 +7159,7 @@ export function setPopControlSphereThisFrame(pos, min, max) {
  *
  *
  *
- * Hash: 0x26695EC767728D84 | Since: 323 | API-Set: unknown
+ * Hash: 0x26695EC767728D84 | Since: unknown | API-Set: unknown
  */
 export function setRagdollBlockingFlags(ped, blockingFlag) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7183,7 +7181,7 @@ export function setRagdollBlockingFlags(ped, blockingFlag) {
  * `PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, l_1017, 0xA49E591C);`
  * `PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 0xA49E591C, l_1017);`
  *
- * Hash: 0xBF25EB89375A37AD | Since: 323 | API-Set: unknown
+ * Hash: 0xBF25EB89375A37AD | Since: unknown | API-Set: unknown
  */
 export function setRelationshipBetweenGroups(relationship, group1, group2) {
     if (typeof group1 === 'string')
@@ -7195,7 +7193,7 @@ export function setRelationshipBetweenGroups(relationship, group1, group2) {
 /**
  * No comment provided
  *
- * Hash: 0x5615E0C5EB2BC6E2 | Since: 877 | API-Set: unknown
+ * Hash: 0x5615E0C5EB2BC6E2 | Since: unknown | API-Set: unknown
  */
 export function setRelationshipGroupAffectsWantedLevel(group) {
     if (typeof group === 'string')
@@ -7205,7 +7203,7 @@ export function setRelationshipGroupAffectsWantedLevel(group) {
 /**
  * No comment provided
  *
- * Hash: 0x28157D43CF600981 | Since: 323 | API-Set: unknown
+ * Hash: 0x28157D43CF600981 | Since: unknown | API-Set: unknown
  */
 export function setScenariosSpawnInSphereArea(pos, range) {
     SetScenarioPedsSpawnInSphereArea(pos.x, pos.y, pos.z, range, 0);
@@ -7213,7 +7211,7 @@ export function setScenariosSpawnInSphereArea(pos, range) {
 /**
  * Sets a value indicating whether scenario peds should be returned by the next call to a command that returns peds. Eg. GET_CLOSEST_PED.
  *
- * Hash: 0x14F19A8782C8071E | Since: 323 | API-Set: unknown
+ * Hash: 0x14F19A8782C8071E | Since: unknown | API-Set: unknown
  */
 export function setScenariosToBeReturnedByNextCommand(value) {
     SetScenarioPedsToBeReturnedByNextCommand(value);
@@ -7221,7 +7219,7 @@ export function setScenariosToBeReturnedByNextCommand(value) {
 /**
  * No comment provided
  *
- * Hash: 0x7A556143A1C03898 | Since: 323 | API-Set: unknown
+ * Hash: 0x7A556143A1C03898 | Since: unknown | API-Set: unknown
  */
 export function setScenarioDensityMultiplierThisFrame() {
     SetScenarioPedDensityMultiplierThisFrame(0, 0);
@@ -7229,7 +7227,7 @@ export function setScenarioDensityMultiplierThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0x5917BBA32D06C230 | Since: 323 | API-Set: unknown
+ * Hash: 0x5917BBA32D06C230 | Since: unknown | API-Set: unknown
  */
 export function setScriptedAnimSeatOffset(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7238,7 +7236,7 @@ export function setScriptedAnimSeatOffset(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x5086C7843552CF85 | Since: 323 | API-Set: unknown
+ * Hash: 0x5086C7843552CF85 | Since: unknown | API-Set: unknown
  */
 export function setScriptedConversionCoordThisFrame(pos) {
     SetScriptedConversionCoordThisFrame(pos.x, pos.y, pos.z);
@@ -7246,7 +7244,7 @@ export function setScriptedConversionCoordThisFrame(pos) {
 /**
  * No comment provided
  *
- * Hash: 0x394B9CD12435C981 | Since: 323 | API-Set: unknown
+ * Hash: 0x394B9CD12435C981 | Since: unknown | API-Set: unknown
  */
 export function setSynchronizedSceneHoldLastFrame(sceneID, toggle) {
     SetSynchronizedSceneHoldLastFrame(sceneID, toggle);
@@ -7254,7 +7252,7 @@ export function setSynchronizedSceneHoldLastFrame(sceneID, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xD9A897A4C6C2974F | Since: 323 | API-Set: unknown
+ * Hash: 0xD9A897A4C6C2974F | Since: unknown | API-Set: unknown
  */
 export function setSynchronizedSceneLoo(sceneID, toggle) {
     SetSynchronizedSceneLooped(sceneID, toggle);
@@ -7262,7 +7260,7 @@ export function setSynchronizedSceneLoo(sceneID, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x6ACF6B7225801CD7 | Since: 323 | API-Set: unknown
+ * Hash: 0x6ACF6B7225801CD7 | Since: unknown | API-Set: unknown
  */
 export function setSynchronizedSceneOrigin(sceneID, pos, roll, pitch, yaw) {
     SetSynchronizedSceneOrigin(sceneID, pos.x, pos.y, pos.z, roll, pitch, yaw, false);
@@ -7270,7 +7268,7 @@ export function setSynchronizedSceneOrigin(sceneID, pos, roll, pitch, yaw) {
 /**
  * No comment provided
  *
- * Hash: 0x734292F4F0ABF6D0 | Since: 323 | API-Set: unknown
+ * Hash: 0x734292F4F0ABF6D0 | Since: unknown | API-Set: unknown
  */
 export function setSynchronizedScenePhase(sceneID, phase) {
     SetSynchronizedScenePhase(sceneID, phase);
@@ -7278,7 +7276,7 @@ export function setSynchronizedScenePhase(sceneID, phase) {
 /**
  * No comment provided
  *
- * Hash: 0xB6C49F8A5E295A5D | Since: 323 | API-Set: unknown
+ * Hash: 0xB6C49F8A5E295A5D | Since: unknown | API-Set: unknown
  */
 export function setSynchronizedSceneRate(sceneID, rate) {
     SetSynchronizedSceneRate(sceneID, rate);
@@ -7286,7 +7284,7 @@ export function setSynchronizedSceneRate(sceneID, rate) {
 /**
  * No comment provided
  *
- * Hash: 0x2F3C3D9F50681DE4 | Since: 323 | API-Set: unknown
+ * Hash: 0x2F3C3D9F50681DE4 | Since: unknown | API-Set: unknown
  */
 export function setTreatAsAmbientForDriverLockon(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7295,7 +7293,7 @@ export function setTreatAsAmbientForDriverLockon(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xFD325494792302D7 | Since: 323 | API-Set: unknown
+ * Hash: 0xFD325494792302D7 | Since: unknown | API-Set: unknown
  */
 export function setUseCameraHeadingForDesiredDirectionLockOnTest(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7304,7 +7302,7 @@ export function setUseCameraHeadingForDesiredDirectionLockOnTest(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xFEE4A5459472A9F8 | Since: 323 | API-Set: unknown
+ * Hash: 0xFEE4A5459472A9F8 | Since: unknown | API-Set: unknown
  */
 export function spawnpointsCancelSearch() {
     SpawnpointsCancelSearch();
@@ -7312,7 +7310,7 @@ export function spawnpointsCancelSearch() {
 /**
  * No comment provided
  *
- * Hash: 0xA635C11B8C44AFC2 | Since: 323 | API-Set: unknown
+ * Hash: 0xA635C11B8C44AFC2 | Since: unknown | API-Set: unknown
  */
 export function spawnpointsGetNumSearchResults() {
     return SpawnpointsGetNumSearchResults();
@@ -7320,7 +7318,7 @@ export function spawnpointsGetNumSearchResults() {
 /**
  * No comment provided
  *
- * Hash: 0x280C7E3AC7F56E90 | Since: 323 | API-Set: unknown
+ * Hash: 0x280C7E3AC7F56E90 | Since: unknown | API-Set: unknown
  */
 export function spawnpointsGetSearchResult(randomInt) {
     return SpawnpointsGetSearchResult(randomInt);
@@ -7328,7 +7326,7 @@ export function spawnpointsGetSearchResult(randomInt) {
 /**
  * No comment provided
  *
- * Hash: 0xB782F8238512BAD5 | Since: 323 | API-Set: unknown
+ * Hash: 0xB782F8238512BAD5 | Since: unknown | API-Set: unknown
  */
 export function spawnpointsGetSearchResultFlags() {
     return SpawnpointsGetSearchResultFlags(0);
@@ -7336,7 +7334,7 @@ export function spawnpointsGetSearchResultFlags() {
 /**
  * No comment provided
  *
- * Hash: 0x3C67506996001F5E | Since: 323 | API-Set: unknown
+ * Hash: 0x3C67506996001F5E | Since: unknown | API-Set: unknown
  */
 export function spawnpointsIsSearchActive() {
     return SpawnpointsIsSearchActive();
@@ -7344,7 +7342,7 @@ export function spawnpointsIsSearchActive() {
 /**
  * No comment provided
  *
- * Hash: 0xA586FBEB32A53DBB | Since: 323 | API-Set: unknown
+ * Hash: 0xA586FBEB32A53DBB | Since: unknown | API-Set: unknown
  */
 export function spawnpointsIsSearchComplete() {
     return SpawnpointsIsSearchComplete();
@@ -7352,7 +7350,7 @@ export function spawnpointsIsSearchComplete() {
 /**
  * No comment provided
  *
- * Hash: 0xF445DE8DA80A1792 | Since: 323 | API-Set: unknown
+ * Hash: 0xF445DE8DA80A1792 | Since: unknown | API-Set: unknown
  */
 export function spawnpointsIsSearchFailed() {
     return SpawnpointsIsSearchFailed();
@@ -7360,7 +7358,7 @@ export function spawnpointsIsSearchFailed() {
 /**
  * No comment provided
  *
- * Hash: 0x2DF9038C90AD5264 | Since: 323 | API-Set: unknown
+ * Hash: 0x2DF9038C90AD5264 | Since: unknown | API-Set: unknown
  */
 export function spawnpointsStartSearch(interiorFlags, scale, duration) {
     SpawnpointsStartSearch(0, 0, 0, 0, 0, interiorFlags, scale, duration);
@@ -7368,7 +7366,7 @@ export function spawnpointsStartSearch(interiorFlags, scale, duration) {
 /**
  * No comment provided
  *
- * Hash: 0xB2AFF10216DEFA2F | Since: 323 | API-Set: unknown
+ * Hash: 0xB2AFF10216DEFA2F | Since: unknown | API-Set: unknown
  */
 export function spawnpointsStartSearchInAngledArea(x1, y1, z1, x2, y2, z2, width, interiorFlags, scale, duration) {
     SpawnpointsStartSearchInAngledArea(x1, y1, z1, x2, y2, z2, width, interiorFlags, scale, duration);
@@ -7378,7 +7376,7 @@ export function spawnpointsStartSearchInAngledArea(x1, y1, z1, x2, y2, z2, width
  *
  * Kicks the ped from the current vehicle and keeps the rendering-focus on this ped (also disables its collision). If doing this for your player ped, you'll still be able to drive the vehicle.
  *
- * Hash: 0xF9ACF4A08098EA25 | Since: 323 | API-Set: unknown
+ * Hash: 0xF9ACF4A08098EA25 | Since: unknown | API-Set: unknown
  */
 export function specialFunctionDoNotUse(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7387,7 +7385,7 @@ export function specialFunctionDoNotUse(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xB47BD05FA66B40CF | Since: 323 | API-Set: unknown
+ * Hash: 0xB47BD05FA66B40CF | Since: unknown | API-Set: unknown
  */
 export function stopAnyModelBeingSuppressed() {
     StopAnyPedModelBeingSuppressed();
@@ -7395,7 +7393,7 @@ export function stopAnyModelBeingSuppressed() {
 /**
  * No comment provided
  *
- * Hash: 0xC158D28142A34608 | Since: 323 | API-Set: unknown
+ * Hash: 0xC158D28142A34608 | Since: unknown | API-Set: unknown
  */
 export function stopWeaponFiringWhenDropped(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7404,7 +7402,7 @@ export function stopWeaponFiringWhenDropped(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x5A7F62FDA59759BD | Since: 323 | API-Set: unknown
+ * Hash: 0x5A7F62FDA59759BD | Since: unknown | API-Set: unknown
  */
 export function suppressAmbientAggressiveCleanupThisFrame() {
     Citizen.invokeNative('0x5A7F62FDA59759BD');
@@ -7412,7 +7410,7 @@ export function suppressAmbientAggressiveCleanupThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0xCD9CC7E200A52A6F | Since: 323 | API-Set: unknown
+ * Hash: 0xCD9CC7E200A52A6F | Since: unknown | API-Set: unknown
  */
 export function takeOwnershipOfSynchronizedScene(scene) {
     TakeOwnershipOfSynchronizedScene(scene);
@@ -7420,18 +7418,18 @@ export function takeOwnershipOfSynchronizedScene(scene) {
 /**
  * No comment provided
  *
- * Hash: 0xAD27D957598E49E9 | Since: 1290 | API-Set: unknown
+ * Hash: 0xAD27D957598E49E9 | Since: unknown | API-Set: unknown
  */
-export function tellGroupsInAreaToAttack(ped, hash) {
+export function tellGroupsInAreaToAttack(ped, pos, radius, hash) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
     if (typeof hash === 'string')
         hash = GetHashKey(hash);
-    Citizen.invokeNative('0xAD27D957598E49E9', _ped, undefined, 0, hash, undefined, undefined);
+    Citizen.invokeNative('0xAD27D957598E49E9', _ped, pos.x, pos.y, pos.z, radius, hash);
 }
 /**
  * No comment provided
  *
- * Hash: 0x9A77DFD295E29B09 | Since: 323 | API-Set: unknown
+ * Hash: 0x9A77DFD295E29B09 | Since: unknown | API-Set: unknown
  */
 export function toggleScenarioCowerInPlace(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7440,7 +7438,7 @@ export function toggleScenarioCowerInPlace(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xC2EE020F5FB4DB53 | Since: 323 | API-Set: unknown
+ * Hash: 0xC2EE020F5FB4DB53 | Since: unknown | API-Set: unknown
  */
 export function triggerIdleAnimationOn(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7449,7 +7447,7 @@ export function triggerIdleAnimationOn(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x25361A96E0F7E419 | Since: 323 | API-Set: unknown
+ * Hash: 0x25361A96E0F7E419 | Since: unknown | API-Set: unknown
  */
 export function triggerScenarioPanicexittoflee() {
     return Citizen.invokeNative('0x25361A96E0F7E419', undefined, undefined, undefined, undefined);
@@ -7457,7 +7455,7 @@ export function triggerScenarioPanicexittoflee() {
 /**
  * gtaforums.com/topic/885580-ped-headshotmugshot-txd/
  *
- * Hash: 0x96B1361D9B24C2FF | Since: 323 | API-Set: unknown
+ * Hash: 0x96B1361D9B24C2FF | Since: unknown | API-Set: unknown
  */
 export function unregisterheadshot(id) {
     UnregisterPedheadshot(id);
@@ -7465,7 +7463,7 @@ export function unregisterheadshot(id) {
 /**
  * See SET_PED_HEAD_BLEND_DATA().
  *
- * Hash: 0x723538F61C647C5A | Since: 323 | API-Set: unknown
+ * Hash: 0x723538F61C647C5A | Since: unknown | API-Set: unknown
  */
 export function updateHeadBlendData(ped, shapeMix, skinMix, thirdMix) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7474,7 +7472,7 @@ export function updateHeadBlendData(ped, shapeMix, skinMix, thirdMix) {
 /**
  * No comment provided
  *
- * Hash: 0xF9800AA1A771B000 | Since: 323 | API-Set: unknown
+ * Hash: 0xF9800AA1A771B000 | Since: unknown | API-Set: unknown
  */
 export function wasKilledByStealth(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7483,7 +7481,7 @@ export function wasKilledByStealth(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x7F08E26039C7347C | Since: 323 | API-Set: unknown
+ * Hash: 0x7F08E26039C7347C | Since: unknown | API-Set: unknown
  */
 export function wasKilledByTakedown(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7492,7 +7490,7 @@ export function wasKilledByTakedown(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x61767F73EACEED21 | Since: 323 | API-Set: unknown
+ * Hash: 0x61767F73EACEED21 | Since: unknown | API-Set: unknown
  */
 export function wasKnockedOut(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7501,7 +7499,7 @@ export function wasKnockedOut(ped) {
 /**
  * Despite this function's name, it simply returns whether the specified handle is a Ped.
  *
- * Hash: 0x11B499C1E0FF8559 | Since: 323 | API-Set: unknown
+ * Hash: 0x11B499C1E0FF8559 | Since: unknown | API-Set: unknown
  */
 export function wasSkeletonUpdated(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7510,7 +7508,27 @@ export function wasSkeletonUpdated(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xA32ABFEB2A03B306 | Since: 3095 | API-Set: unknown
+ * Hash: 0x5CBD1684E56BF99D | Since: unknown | API-Set: unknown
+ */
+export function blockFromWrithingWhenInjured(ped, toggle) {
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    Citizen.invokeNative('0x5CBD1684E56BF99D', _ped, toggle);
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0x6D1FCD0950EFA3DD | Since: unknown | API-Set: unknown
+ */
+export function generateDamageEvent(ped, pos, weaponType) {
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    if (typeof weaponType === 'string')
+        weaponType = GetHashKey(weaponType);
+    Citizen.invokeNative('0x6D1FCD0950EFA3DD', _ped, pos.x, pos.y, pos.z, weaponType);
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0xA32ABFEB2A03B306 | Since: unknown | API-Set: unknown
  */
 export function hasClearLosToEntity(ped, entity, pos) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -7520,7 +7538,7 @@ export function hasClearLosToEntity(ped, entity, pos) {
 /**
  * No comment provided
  *
- * Hash: 0xC73EFFC5E043A8BA | Since: 3258 | API-Set: unknown
+ * Hash: 0xC73EFFC5E043A8BA | Since: unknown | API-Set: unknown
  */
 export function setBlockAmbientsFromDroppingWeaponsThisFrame() {
     SetBlockAmbientPedsFromDroppingWeaponsThisFrame();
@@ -7528,7 +7546,7 @@ export function setBlockAmbientsFromDroppingWeaponsThisFrame() {
 /**
  * No comment provided
  *
- * Hash: 0x100CD221F572F6E1 | Since: 3407 | API-Set: unknown
+ * Hash: 0x100CD221F572F6E1 | Since: unknown | API-Set: unknown
  */
 export function setSurvivesBeingOutOfWater(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;

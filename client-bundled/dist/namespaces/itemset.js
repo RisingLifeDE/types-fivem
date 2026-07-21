@@ -1,7 +1,7 @@
 /**
  * No comment provided
  *
- * Hash: 0xE3945201F14637DD | Since: 323 | API-Set: unknown
+ * Hash: 0xE3945201F14637DD | Since: unknown | API-Set: unknown
  */
 export function addTo(item, itemset) {
     return AddToItemset(item, itemset);
@@ -9,7 +9,7 @@ export function addTo(item, itemset) {
 /**
  * No comment provided
  *
- * Hash: 0x41BC0D722FC04221 | Since: 323 | API-Set: unknown
+ * Hash: 0x41BC0D722FC04221 | Since: unknown | API-Set: unknown
  */
 export function clean(itemset) {
     CleanItemset(itemset);
@@ -17,7 +17,7 @@ export function clean(itemset) {
 /**
  * No comment provided
  *
- * Hash: 0x35AD299F50D91B24 | Since: 323 | API-Set: unknown
+ * Hash: 0x35AD299F50D91B24 | Since: unknown | API-Set: unknown
  */
 export function create() {
     return CreateItemset(false);
@@ -25,7 +25,7 @@ export function create() {
 /**
  * No comment provided
  *
- * Hash: 0xDE18220B1C183EDA | Since: 323 | API-Set: unknown
+ * Hash: 0xDE18220B1C183EDA | Since: unknown | API-Set: unknown
  */
 export function destroy(itemset) {
     DestroyItemset(itemset);
@@ -33,7 +33,7 @@ export function destroy(itemset) {
 /**
  * No comment provided
  *
- * Hash: 0x7A197E2521EE2BAB | Since: 323 | API-Set: unknown
+ * Hash: 0x7A197E2521EE2BAB | Since: unknown | API-Set: unknown
  */
 export function getIndexedItemIn(index, itemset) {
     return GetIndexedItemInItemset(index, itemset);
@@ -41,7 +41,7 @@ export function getIndexedItemIn(index, itemset) {
 /**
  * No comment provided
  *
- * Hash: 0xD9127E83ABF7C631 | Since: 323 | API-Set: unknown
+ * Hash: 0xD9127E83ABF7C631 | Since: unknown | API-Set: unknown
  */
 export function getSize(itemset) {
     return GetItemsetSize(itemset);
@@ -49,7 +49,7 @@ export function getSize(itemset) {
 /**
  * No comment provided
  *
- * Hash: 0x2D0FC594D1E9C107 | Since: 323 | API-Set: unknown
+ * Hash: 0x2D0FC594D1E9C107 | Since: unknown | API-Set: unknown
  */
 export function isIn(item, itemset) {
     return IsInItemset(item, itemset);
@@ -57,7 +57,7 @@ export function isIn(item, itemset) {
 /**
  * No comment provided
  *
- * Hash: 0xB1B1EA596344DFAB | Since: 323 | API-Set: unknown
+ * Hash: 0xB1B1EA596344DFAB | Since: unknown | API-Set: unknown
  */
 export function isValid(itemset) {
     return IsItemsetValid(itemset);
@@ -65,7 +65,7 @@ export function isValid(itemset) {
 /**
  * No comment provided
  *
- * Hash: 0x25E68244B0177686 | Since: 323 | API-Set: unknown
+ * Hash: 0x25E68244B0177686 | Since: unknown | API-Set: unknown
  */
 export function removeFrom(item, itemset) {
     RemoveFromItemset(item, itemset);

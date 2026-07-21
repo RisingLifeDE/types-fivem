@@ -7,7 +7,7 @@
  *
  * Hardcoded to not work in Multiplayer.
  *
- * Hash: 0x4EE5367468A65CCC | Since: 323 | API-Set: unknown
+ * Hash: 0x4EE5367468A65CCC | Since: unknown | API-Set: unknown
  */
 export function addScriptToRandomPed(name, model) {
     if (typeof model === 'string')
@@ -17,7 +17,7 @@ export function addScriptToRandomPed(name, model) {
 /**
  * No comment provided
  *
- * Hash: 0x14D8518E9760F08F | Since: 323 | API-Set: unknown
+ * Hash: 0x14D8518E9760F08F | Since: unknown | API-Set: unknown
  */
 export function disableScriptSet(brainSet) {
     DisableScriptBrainSet(brainSet);
@@ -25,7 +25,7 @@ export function disableScriptSet(brainSet) {
 /**
  * No comment provided
  *
- * Hash: 0x67AA4D73F0CFA86B | Since: 323 | API-Set: unknown
+ * Hash: 0x67AA4D73F0CFA86B | Since: unknown | API-Set: unknown
  */
 export function enableScriptSet(brainSet) {
     EnableScriptBrainSet(brainSet);
@@ -33,7 +33,7 @@ export function enableScriptSet(brainSet) {
 /**
  * No comment provided
  *
- * Hash: 0xCCBA154209823057 | Since: 323 | API-Set: unknown
+ * Hash: 0xCCBA154209823057 | Since: unknown | API-Set: unknown
  */
 export function isObjectWithinActivationRange(_object) {
     const __object = typeof _object == 'object' ? _object.handle() : _object;
@@ -42,7 +42,7 @@ export function isObjectWithinActivationRange(_object) {
 /**
  * Gets whether the world point the calling script is registered to is within desired range of the player.
  *
- * Hash: 0xC5042CC6F5E3D450 | Since: 323 | API-Set: unknown
+ * Hash: 0xC5042CC6F5E3D450 | Since: unknown | API-Set: unknown
  */
 export function isWorldPointWithinActivationRange() {
     return IsWorldPointWithinBrainActivationRange();
@@ -50,7 +50,7 @@ export function isWorldPointWithinActivationRange() {
 /**
  * No comment provided
  *
- * Hash: 0x4D953DF78EBF8158 | Since: 323 | API-Set: unknown
+ * Hash: 0x4D953DF78EBF8158 | Since: unknown | API-Set: unknown
  */
 export function reactivateAllObjectsThatAreWaitingTillOutOfRange() {
     Citizen.invokeNative('0x4D953DF78EBF8158');
@@ -58,7 +58,7 @@ export function reactivateAllObjectsThatAreWaitingTillOutOfRange() {
 /**
  * No comment provided
  *
- * Hash: 0x0B40ED49D7D6FF84 | Since: 323 | API-Set: unknown
+ * Hash: 0x0B40ED49D7D6FF84 | Since: unknown | API-Set: unknown
  */
 export function reactivateAllWorldsThatAreWaitingTillOutOfRange() {
     Citizen.invokeNative('0x0B40ED49D7D6FF84');
@@ -71,7 +71,7 @@ export function reactivateAllWorldsThatAreWaitingTillOutOfRange() {
  * "ob_tv"
  * "launcher_Darts"
  *
- * Hash: 0x6E91B04E08773030 | Since: 323 | API-Set: unknown
+ * Hash: 0x6E91B04E08773030 | Since: unknown | API-Set: unknown
  */
 export function reactivateNamedObjectsWaitingTillOutOfRange(scriptName) {
     Citizen.invokeNative('0x6E91B04E08773030', scriptName);
@@ -106,7 +106,7 @@ export function reactivateNamedObjectsWaitingTillOutOfRange(scriptName) {
  * ob_mp_bed_low
  * ob_mp_bed_med
  *
- * Hash: 0x6D6840CEE8845831 | Since: 323 | API-Set: unknown
+ * Hash: 0x6D6840CEE8845831 | Since: unknown | API-Set: unknown
  */
 export function reactivateNamedWorldsWaitingTillOutOfRange(scriptName) {
     Citizen.invokeNative('0x6D6840CEE8845831', scriptName);
@@ -118,7 +118,7 @@ export function reactivateNamedWorldsWaitingTillOutOfRange(scriptName) {
  *
  * - Nacorpio
  *
- * Hash: 0x0BE84C318BA6EC22 | Since: 323 | API-Set: unknown
+ * Hash: 0x0BE84C318BA6EC22 | Since: unknown | API-Set: unknown
  */
 export function registerObjectScript(scriptName, modelHash, activationRange) {
     if (typeof modelHash === 'string')
@@ -128,7 +128,7 @@ export function registerObjectScript(scriptName, modelHash, activationRange) {
 /**
  * No comment provided
  *
- * Hash: 0x3CDC7136613284BD | Since: 323 | API-Set: unknown
+ * Hash: 0x3CDC7136613284BD | Since: unknown | API-Set: unknown
  */
 export function registerWorldPointScript(scriptName, activationRange) {
     RegisterWorldPointScriptBrain(scriptName, activationRange, 0);

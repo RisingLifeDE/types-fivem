@@ -87,7 +87,7 @@ export function setSubmixOutputVolumes(submixId, outputSlot, frontLeftVolume, fr
  * BARRY_02_SLOWMO
  * BARRY_01_SLOWMO
  *
- * Hash: 0xD01005D2BA2EB778 | Since: 323 | API-Set: unknown
+ * Hash: 0xD01005D2BA2EB778 | Since: unknown | API-Set: unknown
  */
 export function activateSlowmoMode(mode) {
     ActivateAudioSlowmoMode(mode);
@@ -96,7 +96,7 @@ export function activateSlowmoMode(mode) {
  * All found occurrences in b678d:
  * https://pastebin.com/ceu67jz8
  *
- * Hash: 0x153973AB99FE8980 | Since: 323 | API-Set: unknown
+ * Hash: 0x153973AB99FE8980 | Since: unknown | API-Set: unknown
  */
 export function addEntityToMixGroup(entity, groupName) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -120,7 +120,7 @@ export function addEntityToMixGroup(entity, groupName) {
  * p11 is either 0 or 1 (The func to determine this is bool)
  * p12 is unknown as in TU27 X360 scripts it only goes to p11.
  *
- * Hash: 0xC5EF963405593646 | Since: 323 | API-Set: unknown
+ * Hash: 0xC5EF963405593646 | Since: unknown | API-Set: unknown
  */
 export function addLineToConversation(index) {
     AddLineToConversation(index, undefined, undefined, 0, 0, false, false, false, false, 0, false, false, false);
@@ -133,7 +133,7 @@ export function addLineToConversation(index) {
  * =================================================
  * One of the 2 calls in dialogue_handler.c p0 is in a while-loop, and so is determined to also possibly be 0 - 15.
  *
- * Hash: 0x95D9F4BC443956E7 | Since: 323 | API-Set: unknown
+ * Hash: 0x95D9F4BC443956E7 | Since: unknown | API-Set: unknown
  */
 export function addPedToConversation(index, ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -142,7 +142,7 @@ export function addPedToConversation(index, ped) {
 /**
  * No comment provided
  *
- * Hash: 0x845FFC3A4FEEFA3E | Since: 323 | API-Set: unknown
+ * Hash: 0x845FFC3A4FEEFA3E | Since: unknown | API-Set: unknown
  */
 export function isMusicPlaying() {
     return AudioIsScriptedMusicPlaying();
@@ -150,7 +150,7 @@ export function isMusicPlaying() {
 /**
  * This is an alias of AUDIO_IS_MUSIC_PLAYING.
  *
- * Hash: 0x2DD39BF3E2F9C47F | Since: 463 | API-Set: unknown
+ * Hash: 0x2DD39BF3E2F9C47F | Since: unknown | API-Set: unknown
  */
 export function isScriptedMusicPlaying() {
     return Citizen.invokeNative('0x2DD39BF3E2F9C47F');
@@ -159,7 +159,7 @@ export function isScriptedMusicPlaying() {
  * Plays the siren sound of a vehicle which is otherwise activated when fastly double-pressing the horn key.
  * Only works on vehicles with a police siren.
  *
- * Hash: 0x1B9025BDA76822B6 | Since: 323 | API-Set: unknown
+ * Hash: 0x1B9025BDA76822B6 | Since: unknown | API-Set: unknown
  */
 export function blipSiren(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -168,7 +168,7 @@ export function blipSiren(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xF8AD2EED7C47E8FE | Since: 1734 | API-Set: unknown
+ * Hash: 0xF8AD2EED7C47E8FE | Since: unknown | API-Set: unknown
  */
 export function blockAllSpeechFromPed(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -177,7 +177,7 @@ export function blockAllSpeechFromPed(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xF154B8D1775B2DEC | Since: 323 | API-Set: unknown
+ * Hash: 0xF154B8D1775B2DEC | Since: unknown | API-Set: unknown
  */
 export function blockDeathJingle(toggle) {
     BlockDeathJingle(toggle);
@@ -185,7 +185,7 @@ export function blockDeathJingle(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xA8A7D434AFB4B97B | Since: 1493 | API-Set: unknown
+ * Hash: 0xA8A7D434AFB4B97B | Since: unknown | API-Set: unknown
  */
 export function blockSpeechContextGroup() {
     BlockSpeechContextGroup(undefined, 0);
@@ -193,7 +193,7 @@ export function blockSpeechContextGroup() {
 /**
  * No comment provided
  *
- * Hash: 0xB4F90FAF7670B16F | Since: 323 | API-Set: unknown
+ * Hash: 0xB4F90FAF7670B16F | Since: unknown | API-Set: unknown
  */
 export function cancelAllPoliceReports() {
     CancelAllPoliceReports();
@@ -202,7 +202,7 @@ export function cancelAllPoliceReports() {
  * All music event names found in the b617d scripts: https://pastebin.com/GnYt0R3P
  * Full list of music event names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/musicEventNames.json
  *
- * Hash: 0x5B17A90291133DA5 | Since: 323 | API-Set: unknown
+ * Hash: 0x5B17A90291133DA5 | Since: unknown | API-Set: unknown
  */
 export function cancelMusicEvent(eventName) {
     return CancelMusicEvent(eventName);
@@ -210,7 +210,7 @@ export function cancelMusicEvent(eventName) {
 /**
  * No comment provided
  *
- * Hash: 0x032A116663A4D5AC | Since: 323 | API-Set: unknown
+ * Hash: 0x032A116663A4D5AC | Since: unknown | API-Set: unknown
  */
 export function canVehicleReceiveCbRadio(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -219,7 +219,7 @@ export function canVehicleReceiveCbRadio(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xB32209EFFDC04913 | Since: 323 | API-Set: unknown
+ * Hash: 0xB32209EFFDC04913 | Since: unknown | API-Set: unknown
  */
 export function clearAllBrokenGlass() {
     ClearAllBrokenGlass();
@@ -227,7 +227,7 @@ export function clearAllBrokenGlass() {
 /**
  * No comment provided
  *
- * Hash: 0x120C48C614909FA4 | Since: 323 | API-Set: unknown
+ * Hash: 0x120C48C614909FA4 | Since: unknown | API-Set: unknown
  */
 export function clearAmbientZoneListState(ambientZone) {
     ClearAmbientZoneListState(ambientZone, false);
@@ -239,7 +239,7 @@ export function clearAmbientZoneListState(ambientZone) {
  *
  * Full list of ambient zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientZones.json
  *
- * Hash: 0x218DD44AAAC964FF | Since: 323 | API-Set: unknown
+ * Hash: 0x218DD44AAAC964FF | Since: unknown | API-Set: unknown
  */
 export function clearAmbientZoneState(zoneName) {
     ClearAmbientZoneState(zoneName, false);
@@ -250,7 +250,7 @@ export function clearAmbientZoneState(zoneName) {
  * `AUDIO::CLEAR_CUSTOM_RADIO_TRACK_LIST("RADIO_16_SILVERLAKE");`
  * `AUDIO::CLEAR_CUSTOM_RADIO_TRACK_LIST("RADIO_01_CLASS_ROCK");`
  *
- * Hash: 0x1654F24A88A8E3FE | Since: 323 | API-Set: unknown
+ * Hash: 0x1654F24A88A8E3FE | Since: unknown | API-Set: unknown
  */
 export function clearCustomRadioTrackList(radioStation) {
     ClearCustomRadioTrackList(radioStation);
@@ -258,7 +258,7 @@ export function clearCustomRadioTrackList(radioStation) {
 /**
  * No comment provided
  *
- * Hash: 0xD2C91A0B572AAE56 | Since: 323 | API-Set: unknown
+ * Hash: 0xD2C91A0B572AAE56 | Since: unknown | API-Set: unknown
  */
 export function createNewScriptedConversation() {
     CreateNewScriptedConversation();
@@ -266,7 +266,7 @@ export function createNewScriptedConversation() {
 /**
  * see ACTIVATE_AUDIO_SLOWMO_MODE for modes
  *
- * Hash: 0xDDC635D5B3262C56 | Since: 323 | API-Set: unknown
+ * Hash: 0xDDC635D5B3262C56 | Since: unknown | API-Set: unknown
  */
 export function deactivateSlowmoMode(mode) {
     DeactivateAudioSlowmoMode(mode);
@@ -274,7 +274,7 @@ export function deactivateSlowmoMode(mode) {
 /**
  * No comment provided
  *
- * Hash: 0xA9A41C1E940FB0E8 | Since: 323 | API-Set: unknown
+ * Hash: 0xA9A41C1E940FB0E8 | Since: unknown | API-Set: unknown
  */
 export function disablePedPain(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -284,7 +284,7 @@ export function disablePedPain(ped, toggle) {
  * If value is set to true, and ambient siren sound will be played.
  * Appears to enable/disable an audio flag.
  *
- * Hash: 0x552369F549563AD5 | Since: 323 | API-Set: unknown
+ * Hash: 0x552369F549563AD5 | Since: unknown | API-Set: unknown
  */
 export function distantCopCarSirens(value) {
     DistantCopCarSirens(value);
@@ -292,7 +292,7 @@ export function distantCopCarSirens(value) {
 /**
  * Checks if the ped can play the speech or has the speech file, p2 is usually false.
  *
- * Hash: 0x49B99BF3FDA89A7A | Since: 323 | API-Set: unknown
+ * Hash: 0x49B99BF3FDA89A7A | Since: unknown | API-Set: unknown
  */
 export function doesContextExistForThisPed(ped, speechName) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -301,7 +301,7 @@ export function doesContextExistForThisPed(ped, speechName) {
 /**
  * No comment provided
  *
- * Hash: 0x109697E2FFBAC8A1 | Since: 323 | API-Set: unknown
+ * Hash: 0x109697E2FFBAC8A1 | Since: unknown | API-Set: unknown
  */
 export function doesPlayerVehHaveRadio() {
     return DoesPlayerVehHaveRadio();
@@ -309,7 +309,7 @@ export function doesPlayerVehHaveRadio() {
 /**
  * Works for planes only.
  *
- * Hash: 0xC15907D667F7CFB2 | Since: 323 | API-Set: unknown
+ * Hash: 0xC15907D667F7CFB2 | Since: unknown | API-Set: unknown
  */
 export function enableStallWarningSounds(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -318,7 +318,7 @@ export function enableStallWarningSounds(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xB81CF134AEB56FFB | Since: 791 | API-Set: unknown
+ * Hash: 0xB81CF134AEB56FFB | Since: unknown | API-Set: unknown
  */
 export function enableStuntJump() {
     EnableStuntJumpAudio();
@@ -326,7 +326,7 @@ export function enableStuntJump() {
 /**
  * No comment provided
  *
- * Hash: 0x2BE4BC731D039D5A | Since: 323 | API-Set: unknown
+ * Hash: 0x2BE4BC731D039D5A | Since: unknown | API-Set: unknown
  */
 export function enableVehicleExhaustPops(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -335,7 +335,7 @@ export function enableVehicleExhaustPops(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x1C073274E065C6D2 | Since: 323 | API-Set: unknown
+ * Hash: 0x1C073274E065C6D2 | Since: unknown | API-Set: unknown
  */
 export function enableVehicleFanbeltDamage(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -344,7 +344,7 @@ export function enableVehicleFanbeltDamage(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x8D67489793FF428B | Since: 323 | API-Set: unknown
+ * Hash: 0x8D67489793FF428B | Since: unknown | API-Set: unknown
  */
 export function findRadioStationIndex(stationNameHash) {
     if (typeof stationNameHash === 'string')
@@ -355,7 +355,7 @@ export function findRadioStationIndex(stationNameHash) {
  * Changes start time of a tracklist (milliseconds)
  * `R* uses a random int: MISC::GET_RANDOM_INT_IN_RANGE(0, 13) * 60000)`
  *
- * Hash: 0x4E0AF9114608257C | Since: 2372 | API-Set: unknown
+ * Hash: 0x4E0AF9114608257C | Since: unknown | API-Set: unknown
  */
 export function forceMusicTrackList(radioStation, trackListName, milliseconds) {
     ForceMusicTrackList(radioStation, trackListName, milliseconds);
@@ -363,7 +363,7 @@ export function forceMusicTrackList(radioStation, trackListName, milliseconds) {
 /**
  * No comment provided
  *
- * Hash: 0x062D5EAD4DA2FA6A | Since: 323 | API-Set: unknown
+ * Hash: 0x062D5EAD4DA2FA6A | Since: unknown | API-Set: unknown
  */
 export function forcePedPanicWalla() {
     ForcePedPanicWalla();
@@ -377,7 +377,7 @@ export function forcePedPanicWalla() {
  * _SET_VEHICLE_AUDIO(veh, "ADDER");
  * The selected vehicle will now have the audio of the Adder.
  *
- * Hash: 0x4F0C413926060B38 | Since: 323 | API-Set: unknown
+ * Hash: 0x4F0C413926060B38 | Since: unknown | API-Set: unknown
  */
 export function forceUseGameObject(vehicle, audioName) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -386,7 +386,7 @@ export function forceUseGameObject(vehicle, audioName) {
 /**
  * No comment provided
  *
- * Hash: 0xD57AAAE0E2214D11 | Since: 323 | API-Set: unknown
+ * Hash: 0xD57AAAE0E2214D11 | Since: unknown | API-Set: unknown
  */
 export function freezeMicrophone() {
     FreezeMicrophone();
@@ -394,7 +394,7 @@ export function freezeMicrophone() {
 /**
  * No comment provided
  *
- * Hash: 0x344F393B027E38C3 | Since: 323 | API-Set: unknown
+ * Hash: 0x344F393B027E38C3 | Since: unknown | API-Set: unknown
  */
 export function freezeRadioStation(radioStation) {
     FreezeRadioStation(radioStation);
@@ -402,7 +402,7 @@ export function freezeRadioStation(radioStation) {
 /**
  * No comment provided
  *
- * Hash: 0x5E203DA2BA15D436 | Since: 463 | API-Set: unknown
+ * Hash: 0x5E203DA2BA15D436 | Since: unknown | API-Set: unknown
  */
 export function getAmbientVoiceNameHash(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -411,7 +411,7 @@ export function getAmbientVoiceNameHash(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x50B196FC9ED6545B | Since: 323 | API-Set: unknown
+ * Hash: 0x50B196FC9ED6545B | Since: unknown | API-Set: unknown
  */
 export function getAudibleMusicTrackTextId() {
     return GetAudibleMusicTrackTextId();
@@ -419,7 +419,7 @@ export function getAudibleMusicTrackTextId() {
 /**
  * No comment provided
  *
- * Hash: 0x480357EE890C295A | Since: 323 | API-Set: unknown
+ * Hash: 0x480357EE890C295A | Since: unknown | API-Set: unknown
  */
 export function getCurrentScriptedConversationLine() {
     return GetCurrentScriptedConversationLine();
@@ -427,7 +427,7 @@ export function getCurrentScriptedConversationLine() {
 /**
  * No comment provided
  *
- * Hash: 0x3E65CDE5215832C1 | Since: 1493 | API-Set: unknown
+ * Hash: 0x3E65CDE5215832C1 | Since: unknown | API-Set: unknown
  */
 export function getCurrentTrackPlayTime(radioStationName) {
     return GetCurrentRadioTrackPlaybackTime(radioStationName);
@@ -435,7 +435,7 @@ export function getCurrentTrackPlayTime(radioStationName) {
 /**
  * No comment provided
  *
- * Hash: 0x34D66BC058019CE0 | Since: 1493 | API-Set: unknown
+ * Hash: 0x34D66BC058019CE0 | Since: unknown | API-Set: unknown
  */
 export function getCurrentTrackSoundName(radioStationName) {
     return GetCurrentTrackSoundName(radioStationName);
@@ -443,7 +443,7 @@ export function getCurrentTrackSoundName(radioStationName) {
 /**
  * No comment provided
  *
- * Hash: 0xDD3AA743AB7D4D75 | Since: 3095 | API-Set: unknown
+ * Hash: 0xDD3AA743AB7D4D75 | Since: unknown | API-Set: unknown
  */
 export function getCurrentTvShowPlayTime() {
     return Citizen.invokeNative('0xDD3AA743AB7D4D75');
@@ -451,7 +451,7 @@ export function getCurrentTvShowPlayTime() {
 /**
  * No comment provided
  *
- * Hash: 0xE73364DB90778FFA | Since: 323 | API-Set: unknown
+ * Hash: 0xE73364DB90778FFA | Since: unknown | API-Set: unknown
  */
 export function getIsPreloadedConversationReady() {
     return GetIsPreloadedConversationReady();
@@ -459,7 +459,7 @@ export function getIsPreloadedConversationReady() {
 /**
  * No comment provided
  *
- * Hash: 0xE7A0D23DC414507B | Since: 323 | API-Set: unknown
+ * Hash: 0xE7A0D23DC414507B | Since: unknown | API-Set: unknown
  */
 export function getMusicPlaytime() {
     return GetMusicPlaytime();
@@ -467,7 +467,7 @@ export function getMusicPlaytime() {
 /**
  * No comment provided
  *
- * Hash: 0x3A48AB4445D499BE | Since: 323 | API-Set: unknown
+ * Hash: 0x3A48AB4445D499BE | Since: unknown | API-Set: unknown
  */
 export function getMusicVolSlider() {
     return GetMusicVolSlider();
@@ -475,7 +475,7 @@ export function getMusicVolSlider() {
 /**
  * No comment provided
  *
- * Hash: 0x2DE3F0A134FFBC0D | Since: 323 | API-Set: unknown
+ * Hash: 0x2DE3F0A134FFBC0D | Since: unknown | API-Set: unknown
  */
 export function getNetworkIdFromSoundId(soundId) {
     return GetNetworkIdFromSoundId(soundId);
@@ -483,7 +483,7 @@ export function getNetworkIdFromSoundId(soundId) {
 /**
  * No comment provided
  *
- * Hash: 0xC64A06D939F826F5 | Since: 1493 | API-Set: unknown
+ * Hash: 0xC64A06D939F826F5 | Since: unknown | API-Set: unknown
  */
 export function getNextAudibleBeat() {
     return GetNextAudibleBeat();
@@ -491,7 +491,7 @@ export function getNextAudibleBeat() {
 /**
  * No comment provided
  *
- * Hash: 0xF1620ECB50E01DE7 | Since: 323 | API-Set: unknown
+ * Hash: 0xF1620ECB50E01DE7 | Since: unknown | API-Set: unknown
  */
 export function getNumUnlockedRadioStations() {
     return GetNumUnlockedRadioStations();
@@ -499,7 +499,7 @@ export function getNumUnlockedRadioStations() {
 /**
  * No comment provided
  *
- * Hash: 0xA571991A7FE6CCEB | Since: 323 | API-Set: unknown
+ * Hash: 0xA571991A7FE6CCEB | Since: unknown | API-Set: unknown
  */
 export function getPlayerRadioStationGenre() {
     return GetPlayerRadioStationGenre();
@@ -507,7 +507,7 @@ export function getPlayerRadioStationGenre() {
 /**
  * Returns 255 (radio off index) if the function fails.
  *
- * Hash: 0xE8AF77C4C06ADC93 | Since: 323 | API-Set: unknown
+ * Hash: 0xE8AF77C4C06ADC93 | Since: unknown | API-Set: unknown
  */
 export function getPlayerRadioStationIndex() {
     return GetPlayerRadioStationIndex();
@@ -515,7 +515,7 @@ export function getPlayerRadioStationIndex() {
 /**
  * Returns active radio station name
  *
- * Hash: 0xF6D733C32076AD03 | Since: 323 | API-Set: unknown
+ * Hash: 0xF6D733C32076AD03 | Since: unknown | API-Set: unknown
  */
 export function getPlayerRadioStationName() {
     return GetPlayerRadioStationName();
@@ -523,7 +523,7 @@ export function getPlayerRadioStationName() {
 /**
  * `Converts radio station index to string. Use HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION to get the user-readable text.`
  *
- * Hash: 0xB28ECA15046CA8B9 | Since: 323 | API-Set: unknown
+ * Hash: 0xB28ECA15046CA8B9 | Since: unknown | API-Set: unknown
  */
 export function getRadioStationName(radioStation) {
     return GetRadioStationName(radioStation);
@@ -531,7 +531,7 @@ export function getRadioStationName(radioStation) {
 /**
  * No comment provided
  *
- * Hash: 0x430386FE9BF80B45 | Since: 323 | API-Set: unknown
+ * Hash: 0x430386FE9BF80B45 | Since: unknown | API-Set: unknown
  */
 export function getSoundId() {
     return GetSoundId();
@@ -539,7 +539,7 @@ export function getSoundId() {
 /**
  * No comment provided
  *
- * Hash: 0x75262FD12D0A1C84 | Since: 323 | API-Set: unknown
+ * Hash: 0x75262FD12D0A1C84 | Since: unknown | API-Set: unknown
  */
 export function getSoundIdFromNetworkId(netId) {
     return GetSoundIdFromNetworkId(netId);
@@ -547,7 +547,7 @@ export function getSoundIdFromNetworkId(netId) {
 /**
  * No comment provided
  *
- * Hash: 0x4E72BBDBCA58A3DB | Since: 323 | API-Set: unknown
+ * Hash: 0x4E72BBDBCA58A3DB | Since: unknown | API-Set: unknown
  */
 export function getStreamPlayTime() {
     return GetStreamPlayTime();
@@ -555,7 +555,7 @@ export function getStreamPlayTime() {
 /**
  * No comment provided
  *
- * Hash: 0xAA19F5572C38B564 | Since: 323 | API-Set: unknown
+ * Hash: 0xAA19F5572C38B564 | Since: unknown | API-Set: unknown
  */
 export function getVariationChosenForScriptedLine() {
     return GetVariationChosenForScriptedLine();
@@ -565,7 +565,7 @@ export function getVariationChosenForScriptedLine() {
  *
  * Hash is stored in audVehicleAudioEntity
  *
- * Hash: 0x02165D55000219AC | Since: 323 | API-Set: unknown
+ * Hash: 0x02165D55000219AC | Since: unknown | API-Set: unknown
  */
 export function getVehicleDefaultHorn(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -574,7 +574,7 @@ export function getVehicleDefaultHorn(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xACB5DCCA1EC76840 | Since: 323 | API-Set: unknown
+ * Hash: 0xACB5DCCA1EC76840 | Since: unknown | API-Set: unknown
  */
 export function getVehicleDefaultHornIgnoreMods(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -583,7 +583,7 @@ export function getVehicleDefaultHornIgnoreMods(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xD53F3A29BCE2580E | Since: 1365 | API-Set: unknown
+ * Hash: 0xD53F3A29BCE2580E | Since: unknown | API-Set: unknown
  */
 export function getVehicleHornSoundIndex(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -592,7 +592,7 @@ export function getVehicleHornSoundIndex(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x544810ED9DB6BBE6 | Since: 323 | API-Set: unknown
+ * Hash: 0x544810ED9DB6BBE6 | Since: unknown | API-Set: unknown
  */
 export function hasLoadedMpDataSet() {
     return HasLoadedMpDataSet();
@@ -600,7 +600,7 @@ export function hasLoadedMpDataSet() {
 /**
  * No comment provided
  *
- * Hash: 0x5B50ABB1FE3746F4 | Since: 323 | API-Set: unknown
+ * Hash: 0x5B50ABB1FE3746F4 | Since: unknown | API-Set: unknown
  */
 export function hasLoadedSpDataSet() {
     return HasLoadedSpDataSet();
@@ -608,7 +608,7 @@ export function hasLoadedSpDataSet() {
 /**
  * No comment provided
  *
- * Hash: 0xFCBDCE714A7C88E5 | Since: 323 | API-Set: unknown
+ * Hash: 0xFCBDCE714A7C88E5 | Since: unknown | API-Set: unknown
  */
 export function hasSoundFinished(soundId) {
     return HasSoundFinished(soundId);
@@ -616,7 +616,7 @@ export function hasSoundFinished(soundId) {
 /**
  * p2 is always -1
  *
- * Hash: 0x8F8C0E370AE62F5C | Since: 323 | API-Set: unknown
+ * Hash: 0x8F8C0E370AE62F5C | Since: unknown | API-Set: unknown
  */
 export function hintAmbientBank(audioBank) {
     return HintAmbientAudioBank(audioBank, false, undefined);
@@ -624,7 +624,7 @@ export function hintAmbientBank(audioBank) {
 /**
  * p2 is always -1
  *
- * Hash: 0x40763EA7B9B783E7 | Since: 573 | API-Set: unknown
+ * Hash: 0x40763EA7B9B783E7 | Since: unknown | API-Set: unknown
  */
 export function hintMissionBank(audioBank) {
     return HintMissionAudioBank(audioBank, false, undefined);
@@ -632,7 +632,7 @@ export function hintMissionBank(audioBank) {
 /**
  * p2 is always -1
  *
- * Hash: 0xFB380A29641EC31A | Since: 323 | API-Set: unknown
+ * Hash: 0xFB380A29641EC31A | Since: unknown | API-Set: unknown
  */
 export function hintScriptBank(audioBank) {
     return HintScriptAudioBank(audioBank, false, undefined);
@@ -640,7 +640,7 @@ export function hintScriptBank(audioBank) {
 /**
  * No comment provided
  *
- * Hash: 0x950A154B8DAB6185 | Since: 323 | API-Set: unknown
+ * Hash: 0x950A154B8DAB6185 | Since: unknown | API-Set: unknown
  */
 export function initSynchSceneWithEntity(audioEvent, entity) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -649,7 +649,7 @@ export function initSynchSceneWithEntity(audioEvent, entity) {
 /**
  * No comment provided
  *
- * Hash: 0xC8EDE9BDBCCBA6D4 | Since: 323 | API-Set: unknown
+ * Hash: 0xC8EDE9BDBCCBA6D4 | Since: unknown | API-Set: unknown
  */
 export function initSynchSceneWithPosition(audioEvent, pos) {
     InitSynchSceneAudioWithPosition(audioEvent, pos.x, pos.y, pos.z);
@@ -658,7 +658,7 @@ export function initSynchSceneWithPosition(audioEvent, pos) {
  * `Example from carsteal3.c: AUDIO::INTERRUPT_CONVERSATION(PLAYER::PLAYER_PED_ID(), "CST4_CFAA", "FRANKLIN");`
  * Voicelines can be found in GTAV\x64\audio\sfx in files starting with "SS_" which seems to mean scripted speech.
  *
- * Hash: 0xA018A12E5C5C2FA6 | Since: 323 | API-Set: unknown
+ * Hash: 0xA018A12E5C5C2FA6 | Since: unknown | API-Set: unknown
  */
 export function interruptConversation(ped, voiceline, speaker) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -669,7 +669,7 @@ export function interruptConversation(ped, voiceline, speaker) {
  *
  * `AUDIO::INTERRUPT_CONVERSATION_AND_PAUSE(NETWORK::NET_TO_PED(l_3989._f26F[0\/\*1\*\/]), "CONV_INTERRUPT_QUIT_IT", "LESTER");`
  *
- * Hash: 0x8A694D7A68F8DC38 | Since: 323 | API-Set: unknown
+ * Hash: 0x8A694D7A68F8DC38 | Since: unknown | API-Set: unknown
  */
 export function interruptConversationAndPause(ped, speaker) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -681,7 +681,7 @@ export function interruptConversationAndPause(ped, speaker) {
  * `bool playing = AUDIO::IS_ALARM_PLAYING("PORT_OF_LS_HEIST_FORT_ZANCUDO_ALARMS");`
  * Full list of alarm names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/alarmSounds.json
  *
- * Hash: 0x226435CB96CCFC8C | Since: 323 | API-Set: unknown
+ * Hash: 0x226435CB96CCFC8C | Since: unknown | API-Set: unknown
  */
 export function isAlarmPlaying(alarmName) {
     return IsAlarmPlaying(alarmName);
@@ -690,7 +690,7 @@ export function isAlarmPlaying(alarmName) {
  * Common in the scripts:
  * `AUDIO::IS_AMBIENT_SPEECH_DISABLED(PLAYER::PLAYER_PED_ID());`
  *
- * Hash: 0x932C2D096A2C3FFF | Since: 323 | API-Set: unknown
+ * Hash: 0x932C2D096A2C3FFF | Since: unknown | API-Set: unknown
  */
 export function isAmbientSpeechDisabled(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -699,7 +699,7 @@ export function isAmbientSpeechDisabled(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x9072C8B49907BFAD | Since: 323 | API-Set: unknown
+ * Hash: 0x9072C8B49907BFAD | Since: unknown | API-Set: unknown
  */
 export function isAmbientSpeechPlaying(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -708,7 +708,7 @@ export function isAmbientSpeechPlaying(ped) {
 /**
  * Full list of ambient zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientZones.json
  *
- * Hash: 0x01E2817A479A7F9B | Since: 323 | API-Set: unknown
+ * Hash: 0x01E2817A479A7F9B | Since: unknown | API-Set: unknown
  */
 export function isAmbientZoneEnabled(ambientZone) {
     return IsAmbientZoneEnabled(ambientZone);
@@ -716,7 +716,7 @@ export function isAmbientZoneEnabled(ambientZone) {
 /**
  * No comment provided
  *
- * Hash: 0xC265DF9FB44A9FBD | Since: 323 | API-Set: unknown
+ * Hash: 0xC265DF9FB44A9FBD | Since: unknown | API-Set: unknown
  */
 export function isAnimalVocalizationPlaying(pedHandle) {
     const _pedHandle = typeof pedHandle == 'object' ? pedHandle.handle() : pedHandle;
@@ -725,7 +725,7 @@ export function isAnimalVocalizationPlaying(pedHandle) {
 /**
  * No comment provided
  *
- * Hash: 0x30CA2EF91D15ADF8 | Since: 2189 | API-Set: unknown
+ * Hash: 0x30CA2EF91D15ADF8 | Since: unknown | API-Set: unknown
  */
 export function isAnyPositionalSpeechPlaying() {
     return IsAnyPositionalSpeechPlaying();
@@ -733,7 +733,7 @@ export function isAnyPositionalSpeechPlaying() {
 /**
  * No comment provided
  *
- * Hash: 0x729072355FA39EC9 | Since: 323 | API-Set: unknown
+ * Hash: 0x729072355FA39EC9 | Since: unknown | API-Set: unknown
  */
 export function isAnySpeechPlaying(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -742,7 +742,7 @@ export function isAnySpeechPlaying(ped) {
 /**
  * Full list of audio scene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/audioSceneNames.json
  *
- * Hash: 0xB65B60556E2A9225 | Since: 323 | API-Set: unknown
+ * Hash: 0xB65B60556E2A9225 | Since: unknown | API-Set: unknown
  */
 export function isSceneActive(scene) {
     return IsAudioSceneActive(scene);
@@ -750,7 +750,7 @@ export function isSceneActive(scene) {
 /**
  * Hardcoded to return 1
  *
- * Hash: 0x6D28DC1671E334FD | Since: 323 | API-Set: unknown
+ * Hash: 0x6D28DC1671E334FD | Since: unknown | API-Set: unknown
  */
 export function isGameInControlOfMusic() {
     return IsGameInControlOfMusic();
@@ -758,7 +758,7 @@ export function isGameInControlOfMusic() {
 /**
  * Checks whether the horn of a vehicle is currently played.
  *
- * Hash: 0x9D6BFC12B05C6121 | Since: 323 | API-Set: unknown
+ * Hash: 0x9D6BFC12B05C6121 | Since: unknown | API-Set: unknown
  */
 export function isHornActive(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -767,7 +767,7 @@ export function isHornActive(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x19A30C23F5827F8A | Since: 323 | API-Set: unknown
+ * Hash: 0x19A30C23F5827F8A | Since: unknown | API-Set: unknown
  */
 export function isMissionCompletePlaying() {
     return IsMissionCompletePlaying();
@@ -775,7 +775,7 @@ export function isMissionCompletePlaying() {
 /**
  * No comment provided
  *
- * Hash: 0x6F259F82D873B8B8 | Since: 323 | API-Set: unknown
+ * Hash: 0x6F259F82D873B8B8 | Since: unknown | API-Set: unknown
  */
 export function isMissionCompleteReadyForUi() {
     return IsMissionCompleteReadyForUi();
@@ -783,7 +783,7 @@ export function isMissionCompleteReadyForUi() {
 /**
  * No comment provided
  *
- * Hash: 0x66E49BF55B4B1874 | Since: 323 | API-Set: unknown
+ * Hash: 0x66E49BF55B4B1874 | Since: unknown | API-Set: unknown
  */
 export function isMissionNewsStoryUnlocked(newsStory) {
     return IsMissionNewsStoryUnlocked(newsStory);
@@ -791,7 +791,7 @@ export function isMissionNewsStoryUnlocked(newsStory) {
 /**
  * No comment provided
  *
- * Hash: 0xC8B1B2425604CDD0 | Since: 323 | API-Set: unknown
+ * Hash: 0xC8B1B2425604CDD0 | Since: unknown | API-Set: unknown
  */
 export function isMobileInterferenceActive() {
     return IsMobileInterferenceActive();
@@ -799,7 +799,7 @@ export function isMobileInterferenceActive() {
 /**
  * No comment provided
  *
- * Hash: 0x7497D2CE2C30D24C | Since: 323 | API-Set: unknown
+ * Hash: 0x7497D2CE2C30D24C | Since: unknown | API-Set: unknown
  */
 export function isMobilePhoneCallOngoing() {
     return IsMobilePhoneCallOngoing();
@@ -807,7 +807,7 @@ export function isMobilePhoneCallOngoing() {
 /**
  * No comment provided
  *
- * Hash: 0xB35CE999E8EF317E | Since: 323 | API-Set: unknown
+ * Hash: 0xB35CE999E8EF317E | Since: unknown | API-Set: unknown
  */
 export function isMobilePhoneRadioActive() {
     return IsMobilePhoneRadioActive();
@@ -815,7 +815,7 @@ export function isMobilePhoneRadioActive() {
 /**
  * No comment provided
  *
- * Hash: 0xA097AB275061FB21 | Since: 323 | API-Set: unknown
+ * Hash: 0xA097AB275061FB21 | Since: unknown | API-Set: unknown
  */
 export function isMusicOneshotPlaying() {
     return IsMusicOneshotPlaying();
@@ -823,7 +823,7 @@ export function isMusicOneshotPlaying() {
 /**
  * No comment provided
  *
- * Hash: 0x049E937F18F4020C | Since: 323 | API-Set: unknown
+ * Hash: 0x049E937F18F4020C | Since: unknown | API-Set: unknown
  */
 export function isPedInCurrentConversation(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -832,7 +832,7 @@ export function isPedInCurrentConversation(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x1E8E5E20937E3137 | Since: 323 | API-Set: unknown
+ * Hash: 0x1E8E5E20937E3137 | Since: unknown | API-Set: unknown
  */
 export function isPedRingtonePlaying(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -841,7 +841,7 @@ export function isPedRingtonePlaying(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x5F43D83FD6738741 | Since: 323 | API-Set: unknown
+ * Hash: 0x5F43D83FD6738741 | Since: unknown | API-Set: unknown
  */
 export function isPlayerVehRadioEnable() {
     return IsPlayerVehRadioEnable();
@@ -849,7 +849,7 @@ export function isPlayerVehRadioEnable() {
 /**
  * No comment provided
  *
- * Hash: 0x0626A247D2405330 | Since: 323 | API-Set: unknown
+ * Hash: 0x0626A247D2405330 | Since: unknown | API-Set: unknown
  */
 export function isRadioFadedOut() {
     return IsRadioFadedOut();
@@ -857,7 +857,7 @@ export function isRadioFadedOut() {
 /**
  * No comment provided
  *
- * Hash: 0xA151A7394A214E65 | Since: 323 | API-Set: unknown
+ * Hash: 0xA151A7394A214E65 | Since: unknown | API-Set: unknown
  */
 export function isRadioRetuning() {
     return IsRadioRetuning();
@@ -865,7 +865,7 @@ export function isRadioRetuning() {
 /**
  * No comment provided
  *
- * Hash: 0x2B1784DB08AFEA79 | Since: 2699 | API-Set: unknown
+ * Hash: 0x2B1784DB08AFEA79 | Since: unknown | API-Set: unknown
  */
 export function isRadioStationFavourited(radioStation) {
     return IsRadioStationFavourited(radioStation);
@@ -873,7 +873,7 @@ export function isRadioStationFavourited(radioStation) {
 /**
  * No comment provided
  *
- * Hash: 0xDF0D54BE7A776737 | Since: 323 | API-Set: unknown
+ * Hash: 0xDF0D54BE7A776737 | Since: unknown | API-Set: unknown
  */
 export function isScriptedConversationLoaded() {
     return IsScriptedConversationLoaded();
@@ -881,7 +881,7 @@ export function isScriptedConversationLoaded() {
 /**
  * No comment provided
  *
- * Hash: 0x16754C556D2EDE3D | Since: 323 | API-Set: unknown
+ * Hash: 0x16754C556D2EDE3D | Since: unknown | API-Set: unknown
  */
 export function isScriptedConversationOngoing() {
     return IsScriptedConversationOngoing();
@@ -889,7 +889,7 @@ export function isScriptedConversationOngoing() {
 /**
  * No comment provided
  *
- * Hash: 0xCC9AA18DCC7084F4 | Since: 323 | API-Set: unknown
+ * Hash: 0xCC9AA18DCC7084F4 | Since: unknown | API-Set: unknown
  */
 export function isScriptedSpeechPlaying(p0) {
     const _p0 = typeof p0 == 'object' ? p0.handle() : p0;
@@ -898,7 +898,7 @@ export function isScriptedSpeechPlaying(p0) {
 /**
  * No comment provided
  *
- * Hash: 0xD11FA52EB849D978 | Since: 323 | API-Set: unknown
+ * Hash: 0xD11FA52EB849D978 | Since: unknown | API-Set: unknown
  */
 export function isStreamPlaying() {
     return IsStreamPlaying();
@@ -906,7 +906,7 @@ export function isStreamPlaying() {
 /**
  * No comment provided
  *
- * Hash: 0x5DB8010EE71FDEF2 | Since: 323 | API-Set: unknown
+ * Hash: 0x5DB8010EE71FDEF2 | Since: unknown | API-Set: unknown
  */
 export function isVehicleAudiblyDamaged(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -915,7 +915,7 @@ export function isVehicleAudiblyDamaged(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x0BE4BE946463F917 | Since: 505 | API-Set: unknown
+ * Hash: 0x0BE4BE946463F917 | Since: unknown | API-Set: unknown
  */
 export function isVehicleRadioOn(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -924,7 +924,7 @@ export function isVehicleRadioOn(vehicle) {
 /**
  * Full list of static emitters by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/staticEmitters.json
  *
- * Hash: 0x651D3228960D08AF | Since: 505 | API-Set: unknown
+ * Hash: 0x651D3228960D08AF | Since: unknown | API-Set: unknown
  */
 export function linkStaticEmitterToEntity(emitterName, entity) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -942,7 +942,7 @@ export function linkStaticEmitterToEntity(emitterName, entity) {
  *
  * Full list of audio / sound names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/soundNames.json
  *
- * Hash: 0x1F1F957154EC51DF | Since: 323 | API-Set: unknown
+ * Hash: 0x1F1F957154EC51DF | Since: unknown | API-Set: unknown
  */
 export function loadStream(streamName, soundSet) {
     return LoadStream(streamName, soundSet);
@@ -955,7 +955,7 @@ export function loadStream(streamName, soundSet) {
  *
  * Full list of audio / sound names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/soundNames.json
  *
- * Hash: 0x59C16B79F53B3712 | Since: 323 | API-Set: unknown
+ * Hash: 0x59C16B79F53B3712 | Since: unknown | API-Set: unknown
  */
 export function loadStreamWithStartOffset(streamName, startOffset, soundSet) {
     return LoadStreamWithStartOffset(streamName, startOffset, soundSet);
@@ -963,7 +963,7 @@ export function loadStreamWithStartOffset(streamName, startOffset, soundSet) {
 /**
  * Disables the radio station (hides it from the radio wheel).
  *
- * Hash: 0x477D9DB48F889591 | Since: 1493 | API-Set: unknown
+ * Hash: 0x477D9DB48F889591 | Since: unknown | API-Set: unknown
  */
 export function lockRadioStation(radioStationName, toggle) {
     LockRadioStation(radioStationName, toggle);
@@ -971,7 +971,7 @@ export function lockRadioStation(radioStationName, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xFF5E5EA2DCEEACF3 | Since: 2372 | API-Set: unknown
+ * Hash: 0xFF5E5EA2DCEEACF3 | Since: unknown | API-Set: unknown
  */
 export function lockRadioStationTrackList(radioStation, trackListName) {
     LockRadioStationTrackList(radioStation, trackListName);
@@ -979,7 +979,7 @@ export function lockRadioStationTrackList(radioStation, trackListName) {
 /**
  * Sets audio flag "OverrideMicrophoneSettings"
  *
- * Hash: 0x75773E11BA459E90 | Since: 323 | API-Set: unknown
+ * Hash: 0x75773E11BA459E90 | Since: unknown | API-Set: unknown
  */
 export function overrideMicrophoneSettings(hash, toggle) {
     if (typeof hash === 'string')
@@ -989,7 +989,7 @@ export function overrideMicrophoneSettings(hash, toggle) {
 /**
  * Sets audio flag "OverridePlayerGroundMaterial"
  *
- * Hash: 0xD2CC78CD3D0B50F9 | Since: 323 | API-Set: unknown
+ * Hash: 0xD2CC78CD3D0B50F9 | Since: unknown | API-Set: unknown
  */
 export function overridePlayerGroundMaterial(hash, toggle) {
     if (typeof hash === 'string')
@@ -999,7 +999,7 @@ export function overridePlayerGroundMaterial(hash, toggle) {
 /**
  * This native enables the audio flag "TrevorRageIsOverridden" and sets the voice effect to `voiceEffect`
  *
- * Hash: 0x13AD665062541A7E | Since: 323 | API-Set: unknown
+ * Hash: 0x13AD665062541A7E | Since: unknown | API-Set: unknown
  */
 export function overrideTrevorRage(voiceEffect) {
     OverrideTrevorRage(voiceEffect);
@@ -1007,7 +1007,7 @@ export function overrideTrevorRage(voiceEffect) {
 /**
  * No comment provided
  *
- * Hash: 0xF2A9CDABCEA04BD6 | Since: 323 | API-Set: unknown
+ * Hash: 0xF2A9CDABCEA04BD6 | Since: unknown | API-Set: unknown
  */
 export function overrideUnderwaterStream() {
     OverrideUnderwaterStream(undefined, false);
@@ -1018,7 +1018,7 @@ export function overrideUnderwaterStream() {
  *
  * vehicle - the vehicle whose horn should be overwritten
  *
- * Hash: 0x3CDC1E622CCE0356 | Since: 323 | API-Set: unknown
+ * Hash: 0x3CDC1E622CCE0356 | Since: unknown | API-Set: unknown
  */
 export function overrideVehHorn(vehicle, override, hornHash) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1027,7 +1027,7 @@ export function overrideVehHorn(vehicle, override, hornHash) {
 /**
  * No comment provided
  *
- * Hash: 0x8530AD776CD72B12 | Since: 323 | API-Set: unknown
+ * Hash: 0x8530AD776CD72B12 | Since: unknown | API-Set: unknown
  */
 export function pauseScriptedConversation() {
     PauseScriptedConversation(false);
@@ -1035,7 +1035,7 @@ export function pauseScriptedConversation() {
 /**
  * Full list of speeches and voices names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/speeches.json
  *
- * Hash: 0xED640017ED337E45 | Since: 323 | API-Set: unknown
+ * Hash: 0xED640017ED337E45 | Since: unknown | API-Set: unknown
  */
 export function playAmbientSpeechFromPositionNative(speechName, voiceName, pos, speechParam) {
     PlayAmbientSpeechFromPositionNative(speechName, voiceName, pos.x, pos.y, pos.z, speechParam);
@@ -1045,7 +1045,7 @@ export function playAmbientSpeechFromPositionNative(speechName, voiceName, pos, 
  * This native is works only when you call it on the ped with right model (ac_chop only ?)
  * Speech Name can be: CHOP_SNIFF_SEQ CHOP_WHINE CHOP_LICKS_MOUTH CHOP_PANT bark GROWL SNARL BARK_SEQ
  *
- * Hash: 0xEE066C7006C49C0A | Since: 323 | API-Set: unknown
+ * Hash: 0xEE066C7006C49C0A | Since: unknown | API-Set: unknown
  */
 export function playAnimalVocalization(pedHandle, speechName) {
     const _pedHandle = typeof pedHandle == 'object' ? pedHandle.handle() : pedHandle;
@@ -1058,7 +1058,7 @@ export function playAnimalVocalization(pedHandle, speechName) {
  *
  * Full list of audio / sound names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/soundNames.json
  *
- * Hash: 0xCADA5A0D0702381E | Since: 323 | API-Set: unknown
+ * Hash: 0xCADA5A0D0702381E | Since: unknown | API-Set: unknown
  */
 export function playDeferredSoundFrontend(soundName, soundsetName) {
     PlayDeferredSoundFrontend(soundName, soundsetName);
@@ -1066,7 +1066,7 @@ export function playDeferredSoundFrontend(soundName, soundsetName) {
 /**
  * No comment provided
  *
- * Hash: 0xCD536C4D33DCC900 | Since: 323 | API-Set: unknown
+ * Hash: 0xCD536C4D33DCC900 | Since: unknown | API-Set: unknown
  */
 export function playEndCreditsMusic(play) {
     PlayEndCreditsMusic(play);
@@ -1080,7 +1080,7 @@ export function playEndCreditsMusic(play) {
  * `AUDIO::PLAY_MISSION_COMPLETE_AUDIO("GENERIC_FAILED");`
  * `AUDIO::PLAY_MISSION_COMPLETE_AUDIO("TREVOR_SMALL_01");`
  *
- * Hash: 0xB138AAB8A70D3C69 | Since: 323 | API-Set: unknown
+ * Hash: 0xB138AAB8A70D3C69 | Since: unknown | API-Set: unknown
  */
 export function playMissionComplete(audioName) {
     PlayMissionCompleteAudio(audioName);
@@ -1101,7 +1101,7 @@ export function playMissionComplete(audioName) {
  * 8 - On Fire
  *
  *
- * Hash: 0xBC9AE166038A5CEC | Since: 323 | API-Set: unknown
+ * Hash: 0xBC9AE166038A5CEC | Since: unknown | API-Set: unknown
  */
 export function playPain(ped, painID) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1114,7 +1114,7 @@ export function playPain(ped, painID) {
  *
  * Full list of speeches and voices names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/speeches.json
  *
- * Hash: 0xC6941B4A3A8FBBB9 | Since: 323 | API-Set: unknown
+ * Hash: 0xC6941B4A3A8FBBB9 | Since: unknown | API-Set: unknown
  */
 export function playPedAmbientSpeechAndCloneNative(ped, speechName, speechParam) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1168,7 +1168,7 @@ export function playPedAmbientSpeechAndCloneNative(ped, speechName, speechParam)
  *
  * Full list of speeches and voices names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/speeches.json
  *
- * Hash: 0x8E04FEDD28D42462 | Since: 323 | API-Set: unknown
+ * Hash: 0x8E04FEDD28D42462 | Since: unknown | API-Set: unknown
  */
 export function playPedAmbientSpeechNative(ped, speechName, speechParam) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1184,7 +1184,7 @@ export function playPedAmbientSpeechNative(ped, speechName, speechParam) {
  *
  * Full list of speeches and voices names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/speeches.json
  *
- * Hash: 0x3523634255FC3318 | Since: 323 | API-Set: unknown
+ * Hash: 0x3523634255FC3318 | Since: unknown | API-Set: unknown
  */
 export function playPedAmbientSpeechWithVoiceNative(ped, speechName, voiceName, speechParam) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1193,7 +1193,7 @@ export function playPedAmbientSpeechWithVoiceNative(ped, speechName, voiceName, 
 /**
  * No comment provided
  *
- * Hash: 0xAD2191A6E3543189 | Since: 3717 | API-Set: unknown
+ * Hash: 0xAD2191A6E3543189 | Since: unknown | API-Set: unknown
  */
 export function playPedEventAnim(pedHandle, audioEvent) {
     const _pedHandle = typeof pedHandle == 'object' ? pedHandle.handle() : pedHandle;
@@ -1206,7 +1206,7 @@ export function playPedEventAnim(pedHandle, audioEvent) {
  * `AUDIO::PLAY_PED_RINGTONE("Dial_and_Remote_Ring", PLAYER::PLAYER_PED_ID(), 1);`
  *
  *
- * Hash: 0xF9E56683CA8E11A5 | Since: 323 | API-Set: unknown
+ * Hash: 0xF9E56683CA8E11A5 | Since: unknown | API-Set: unknown
  */
 export function playPedRingtone(ringtoneName, ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1218,7 +1218,7 @@ export function playPedRingtone(ringtoneName, ped) {
  * All found occurrences in b617d, sorted alphabetically and identical lines removed: https://pastebin.com/GBnsQ5hr
  * Full list of police report names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/policeReportNames.json
  *
- * Hash: 0xDFEBD56D9BD1EB16 | Since: 323 | API-Set: unknown
+ * Hash: 0xDFEBD56D9BD1EB16 | Since: unknown | API-Set: unknown
  */
 export function playPoliceReport(name) {
     return PlayPoliceReport(name, 0);
@@ -1228,7 +1228,7 @@ export function playPoliceReport(name) {
  *
  * Full list of audio / sound names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/soundNames.json
  *
- * Hash: 0x7FF4944CC209192D | Since: 323 | API-Set: unknown
+ * Hash: 0x7FF4944CC209192D | Since: unknown | API-Set: unknown
  */
 export function playSound(soundId, audioName, audioRef) {
     PlaySound(soundId, audioName, audioRef, false, undefined, false);
@@ -1240,7 +1240,7 @@ export function playSound(soundId, audioName, audioRef) {
  *
  * Full list of audio / sound names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/soundNames.json
  *
- * Hash: 0x8D8686B622B88120 | Since: 323 | API-Set: unknown
+ * Hash: 0x8D8686B622B88120 | Since: unknown | API-Set: unknown
  */
 export function playSoundFromCoord(soundId, audioName, pos, audioRef, isNetwork, range) {
     PlaySoundFromCoord(soundId, audioName, pos.x, pos.y, pos.z, audioRef, isNetwork, range, false);
@@ -1253,7 +1253,7 @@ export function playSoundFromCoord(soundId, audioName, pos, audioRef, isNetwork,
  *
  * Full list of audio / sound names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/soundNames.json
  *
- * Hash: 0xE65F427EB70AB1ED | Since: 323 | API-Set: unknown
+ * Hash: 0xE65F427EB70AB1ED | Since: unknown | API-Set: unknown
  */
 export function playSoundFromEntity(soundId, audioName, entity, audioRef, isNetwork) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -1263,7 +1263,7 @@ export function playSoundFromEntity(soundId, audioName, entity, audioRef, isNetw
  * Only used with "formation_flying_blips_soundset" and "biker_formation_blips_soundset".
  * p1 is always the model of p2
  *
- * Hash: 0x5B9853296731E88D | Since: 877 | API-Set: unknown
+ * Hash: 0x5B9853296731E88D | Since: unknown | API-Set: unknown
  */
 export function playSoundFromEntityHash(soundId, model, entity, soundSetHash) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -1280,7 +1280,7 @@ export function playSoundFromEntityHash(soundId, model, entity, soundSetHash) {
  *
  * Full list of audio / sound names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/soundNames.json
  *
- * Hash: 0x67C540AA08E4A6F5 | Since: 323 | API-Set: unknown
+ * Hash: 0x67C540AA08E4A6F5 | Since: unknown | API-Set: unknown
  */
 export function playSoundFrontend(soundId, audioName, audioRef) {
     PlaySoundFrontend(soundId, audioName, audioRef, false);
@@ -1298,7 +1298,7 @@ export function playSoundFrontend(soundId, audioName, audioRef) {
  * `AUDIO::PLAY_STREAM_FROM_OBJECT(l_36F[0\/\*1\*\/]);`
  * }
  *
- * Hash: 0xEBAA9B64D76356FD | Since: 323 | API-Set: unknown
+ * Hash: 0xEBAA9B64D76356FD | Since: unknown | API-Set: unknown
  */
 export function playStreamFromObject(_object) {
     const __object = typeof _object == 'object' ? _object.handle() : _object;
@@ -1307,7 +1307,7 @@ export function playStreamFromObject(_object) {
 /**
  * No comment provided
  *
- * Hash: 0x89049DD63C08B5D1 | Since: 323 | API-Set: unknown
+ * Hash: 0x89049DD63C08B5D1 | Since: unknown | API-Set: unknown
  */
 export function playStreamFromPed(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1316,7 +1316,7 @@ export function playStreamFromPed(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x21442F412E8DE56B | Since: 323 | API-Set: unknown
+ * Hash: 0x21442F412E8DE56B | Since: unknown | API-Set: unknown
  */
 export function playStreamFromPosition(pos) {
     PlayStreamFromPosition(pos.x, pos.y, pos.z);
@@ -1324,7 +1324,7 @@ export function playStreamFromPosition(pos) {
 /**
  * No comment provided
  *
- * Hash: 0xB70374A758007DFA | Since: 323 | API-Set: unknown
+ * Hash: 0xB70374A758007DFA | Since: unknown | API-Set: unknown
  */
 export function playStreamFromVehicle(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1333,7 +1333,7 @@ export function playStreamFromVehicle(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x58FCE43488F9F5F4 | Since: 323 | API-Set: unknown
+ * Hash: 0x58FCE43488F9F5F4 | Since: unknown | API-Set: unknown
  */
 export function playStreamFrontend() {
     PlayStreamFrontend();
@@ -1341,7 +1341,7 @@ export function playStreamFrontend() {
 /**
  * No comment provided
  *
- * Hash: 0x8B2FD4560E55DD2D | Since: 323 | API-Set: unknown
+ * Hash: 0x8B2FD4560E55DD2D | Since: unknown | API-Set: unknown
  */
 export function playSynchronizedEvent(sceneID) {
     return PlaySynchronizedAudioEvent(sceneID);
@@ -1349,7 +1349,7 @@ export function playSynchronizedEvent(sceneID) {
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  *
- * Hash: 0x62A456AA4769EF34 | Since: 323 | API-Set: unknown
+ * Hash: 0x62A456AA4769EF34 | Since: unknown | API-Set: unknown
  */
 export function playVehicleDoorCloseSound(vehicle, doorId) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1358,7 +1358,7 @@ export function playVehicleDoorCloseSound(vehicle, doorId) {
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  *
- * Hash: 0x3A539D52857EA82D | Since: 323 | API-Set: unknown
+ * Hash: 0x3A539D52857EA82D | Since: unknown | API-Set: unknown
  */
 export function playVehicleDoorOpenSound(vehicle, doorId) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1367,7 +1367,7 @@ export function playVehicleDoorOpenSound(vehicle, doorId) {
 /**
  * No comment provided
  *
- * Hash: 0x3B3CAD6166916D87 | Since: 323 | API-Set: unknown
+ * Hash: 0x3B3CAD6166916D87 | Since: unknown | API-Set: unknown
  */
 export function preloadScriptConversation() {
     PreloadScriptConversation(false, false, false, false);
@@ -1375,7 +1375,7 @@ export function preloadScriptConversation() {
 /**
  * No comment provided
  *
- * Hash: 0x6004BCB0E226AAEA | Since: 323 | API-Set: unknown
+ * Hash: 0x6004BCB0E226AAEA | Since: unknown | API-Set: unknown
  */
 export function preloadScriptPhoneConversation() {
     PreloadScriptPhoneConversation(false, false);
@@ -1383,7 +1383,7 @@ export function preloadScriptPhoneConversation() {
 /**
  * No comment provided
  *
- * Hash: 0xCA4CEA6AE0000A7E | Since: 1180 | API-Set: unknown
+ * Hash: 0xCA4CEA6AE0000A7E | Since: unknown | API-Set: unknown
  */
 export function preloadVehicleBank(vehicleModel) {
     if (typeof vehicleModel === 'string')
@@ -1396,7 +1396,7 @@ export function preloadVehicleBank(vehicleModel) {
  * `bool prepareAlarm = AUDIO::PREPARE_ALARM("PORT_OF_LS_HEIST_FORT_ZANCUDO_ALARMS");`
  * Full list of alarm names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/alarmSounds.json
  *
- * Hash: 0x9D74AE343DB65533 | Since: 323 | API-Set: unknown
+ * Hash: 0x9D74AE343DB65533 | Since: unknown | API-Set: unknown
  */
 export function prepareAlarm(alarmName) {
     return PrepareAlarm(alarmName);
@@ -1405,7 +1405,7 @@ export function prepareAlarm(alarmName) {
  * All music event names found in the b617d scripts: https://pastebin.com/GnYt0R3P
  * Full list of music event names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/musicEventNames.json
  *
- * Hash: 0x1E5185B72EF5158A | Since: 323 | API-Set: unknown
+ * Hash: 0x1E5185B72EF5158A | Since: unknown | API-Set: unknown
  */
 export function prepareMusicEvent(eventName) {
     return PrepareMusicEvent(eventName);
@@ -1413,7 +1413,7 @@ export function prepareMusicEvent(eventName) {
 /**
  * p1 is always 0 in the scripts
  *
- * Hash: 0xC7ABCACA4985A766 | Since: 323 | API-Set: unknown
+ * Hash: 0xC7ABCACA4985A766 | Since: unknown | API-Set: unknown
  */
 export function prepareSynchronizedEvent(audioEvent) {
     return PrepareSynchronizedAudioEvent(audioEvent, undefined);
@@ -1421,7 +1421,7 @@ export function prepareSynchronizedEvent(audioEvent) {
 /**
  * No comment provided
  *
- * Hash: 0x029FE7CD1B7E2E75 | Since: 323 | API-Set: unknown
+ * Hash: 0x029FE7CD1B7E2E75 | Since: unknown | API-Set: unknown
  */
 export function prepareSynchronizedEventForScene(sceneID, audioEvent) {
     return PrepareSynchronizedAudioEventForScene(sceneID, audioEvent);
@@ -1429,7 +1429,7 @@ export function prepareSynchronizedEventForScene(sceneID, audioEvent) {
 /**
  * No comment provided
  *
- * Hash: 0xFBE20329593DEC9D | Since: 323 | API-Set: unknown
+ * Hash: 0xFBE20329593DEC9D | Since: unknown | API-Set: unknown
  */
 export function recordBrokenGlass(pos, radius) {
     RecordBrokenGlass(pos.x, pos.y, pos.z, radius);
@@ -1437,7 +1437,7 @@ export function recordBrokenGlass(pos, radius) {
 /**
  * No comment provided
  *
- * Hash: 0x5D2BFAAB8D956E0E | Since: 573 | API-Set: unknown
+ * Hash: 0x5D2BFAAB8D956E0E | Since: unknown | API-Set: unknown
  */
 export function refreshClosestOceanShoreline() {
     RefreshClosestOceanShoreline();
@@ -1445,7 +1445,7 @@ export function refreshClosestOceanShoreline() {
 /**
  * This native does absolutely nothing, just a nullsub
  *
- * Hash: 0xC6ED9D5092438D91 | Since: 323 | API-Set: unknown
+ * Hash: 0xC6ED9D5092438D91 | Since: unknown | API-Set: unknown
  */
 export function registerScriptWith() {
     RegisterScriptWithAudio(0);
@@ -1453,7 +1453,7 @@ export function registerScriptWith() {
 /**
  * No comment provided
  *
- * Hash: 0x65475A218FFAA93D | Since: 323 | API-Set: unknown
+ * Hash: 0x65475A218FFAA93D | Since: unknown | API-Set: unknown
  */
 export function releaseAmbientBank() {
     ReleaseAmbientAudioBank();
@@ -1461,7 +1461,7 @@ export function releaseAmbientBank() {
 /**
  * No comment provided
  *
- * Hash: 0x0EC92A1BF0857187 | Since: 323 | API-Set: unknown
+ * Hash: 0x0EC92A1BF0857187 | Since: unknown | API-Set: unknown
  */
 export function releaseMissionBank() {
     ReleaseMissionAudioBank();
@@ -1469,7 +1469,7 @@ export function releaseMissionBank() {
 /**
  * Full list of script audio bank names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scriptAudioBankNames.json
  *
- * Hash: 0x77ED170667F50170 | Since: 323 | API-Set: unknown
+ * Hash: 0x77ED170667F50170 | Since: unknown | API-Set: unknown
  */
 export function releaseNamedScriptBank(audioBank) {
     ReleaseNamedScriptAudioBank(audioBank);
@@ -1477,7 +1477,7 @@ export function releaseNamedScriptBank(audioBank) {
 /**
  * No comment provided
  *
- * Hash: 0x7A2D8AD0A9EB9C3F | Since: 323 | API-Set: unknown
+ * Hash: 0x7A2D8AD0A9EB9C3F | Since: unknown | API-Set: unknown
  */
 export function releaseScriptBank() {
     ReleaseScriptAudioBank();
@@ -1485,7 +1485,7 @@ export function releaseScriptBank() {
 /**
  * No comment provided
  *
- * Hash: 0x353FC880830B88FA | Since: 323 | API-Set: unknown
+ * Hash: 0x353FC880830B88FA | Since: unknown | API-Set: unknown
  */
 export function releaseSoundId(soundId) {
     ReleaseSoundId(soundId);
@@ -1493,7 +1493,7 @@ export function releaseSoundId(soundId) {
 /**
  * No comment provided
  *
- * Hash: 0xCE4AC0439F607045 | Since: 323 | API-Set: unknown
+ * Hash: 0xCE4AC0439F607045 | Since: unknown | API-Set: unknown
  */
 export function releaseWeapon() {
     ReleaseWeaponAudio();
@@ -1501,7 +1501,7 @@ export function releaseWeapon() {
 /**
  * No comment provided
  *
- * Hash: 0x18EB48CFC41F2EA0 | Since: 323 | API-Set: unknown
+ * Hash: 0x18EB48CFC41F2EA0 | Since: unknown | API-Set: unknown
  */
 export function removeEntityFromMixGroup(entity) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -1510,7 +1510,7 @@ export function removeEntityFromMixGroup(entity) {
 /**
  * No comment provided
  *
- * Hash: 0x8EF105736194F80C | Since: 3570 | API-Set: unknown
+ * Hash: 0x8EF105736194F80C | Since: unknown | API-Set: unknown
  */
 export function removeIndividualPortalSettingsOverride(interiorNameHash, roomIndex, doorIndex) {
     if (typeof interiorNameHash === 'string')
@@ -1526,7 +1526,7 @@ export function removeIndividualPortalSettingsOverride(interiorNameHash, roomInd
  * `AUDIO::REMOVE_PORTAL_SETTINGS_OVERRIDE("V_FINALEBANK_PS_VAULT_INTACT");`
  * `AUDIO::REMOVE_PORTAL_SETTINGS_OVERRIDE("V_MICHAEL_PS_BATHROOM_WITH_WINDOW");`
  *
- * Hash: 0xB4BBFD9CD8B3922B | Since: 323 | API-Set: unknown
+ * Hash: 0xB4BBFD9CD8B3922B | Since: unknown | API-Set: unknown
  */
 export function removePortalSettingsOverride() {
     RemovePortalSettingsOverride(undefined);
@@ -1536,7 +1536,7 @@ export function removePortalSettingsOverride() {
  * Full list of ambient audio bank names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientAudioBankNames.json
  * p2 is always -1
  *
- * Hash: 0xFE02FFBED8CA9D99 | Since: 323 | API-Set: unknown
+ * Hash: 0xFE02FFBED8CA9D99 | Since: unknown | API-Set: unknown
  */
 export function requestAmbientBank(audioBank) {
     return RequestAmbientAudioBank(audioBank, false, undefined);
@@ -1546,7 +1546,7 @@ export function requestAmbientBank(audioBank) {
  * Full list of mission audio bank names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/missionAudioBankNames.json
  * p2 is always -1
  *
- * Hash: 0x7345BDD95E62E0F2 | Since: 323 | API-Set: unknown
+ * Hash: 0x7345BDD95E62E0F2 | Since: unknown | API-Set: unknown
  */
 export function requestMissionBank(audioBank) {
     return RequestMissionAudioBank(audioBank, false, undefined);
@@ -1556,7 +1556,7 @@ export function requestMissionBank(audioBank) {
  * Full list of script audio bank names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scriptAudioBankNames.json
  * p2 is always -1
  *
- * Hash: 0x2F844A8B08D76685 | Since: 323 | API-Set: unknown
+ * Hash: 0x2F844A8B08D76685 | Since: unknown | API-Set: unknown
  */
 export function requestScriptBank(audioBank) {
     return RequestScriptAudioBank(audioBank, false, undefined);
@@ -1564,7 +1564,7 @@ export function requestScriptBank(audioBank) {
 /**
  * No comment provided
  *
- * Hash: 0x4ADA3F19BE4A6047 | Since: 323 | API-Set: unknown
+ * Hash: 0x4ADA3F19BE4A6047 | Since: unknown | API-Set: unknown
  */
 export function requestTennisBanks(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1573,7 +1573,7 @@ export function requestTennisBanks(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xF54BB7B61036F335 | Since: 323 | API-Set: unknown
+ * Hash: 0xF54BB7B61036F335 | Since: unknown | API-Set: unknown
  */
 export function resetPedFlags(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1582,7 +1582,7 @@ export function resetPedFlags(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xE78503B10C4314E0 | Since: 323 | API-Set: unknown
+ * Hash: 0xE78503B10C4314E0 | Since: unknown | API-Set: unknown
  */
 export function resetTrevorRage() {
     ResetTrevorRage();
@@ -1590,7 +1590,7 @@ export function resetTrevorRage() {
 /**
  * No comment provided
  *
- * Hash: 0xD2DCCD8E16E20997 | Since: 323 | API-Set: unknown
+ * Hash: 0xD2DCCD8E16E20997 | Since: unknown | API-Set: unknown
  */
 export function resetVehicleStartupRevSound(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1599,7 +1599,7 @@ export function resetVehicleStartupRevSound(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x9AEB285D1818C9AC | Since: 323 | API-Set: unknown
+ * Hash: 0x9AEB285D1818C9AC | Since: unknown | API-Set: unknown
  */
 export function restartScriptedConversation() {
     RestartScriptedConversation();
@@ -1607,7 +1607,7 @@ export function restartScriptedConversation() {
 /**
  * No comment provided
  *
- * Hash: 0x70B8EC8FC108A634 | Since: 323 | API-Set: unknown
+ * Hash: 0x70B8EC8FC108A634 | Since: unknown | API-Set: unknown
  */
 export function scriptOverridesWindElevation() {
     ScriptOverridesWindElevation(false, undefined);
@@ -1615,7 +1615,7 @@ export function scriptOverridesWindElevation() {
 /**
  * Makes pedestrians sound their horn longer, faster and more agressive when they use their horn.
  *
- * Hash: 0x395BF71085D1B1D9 | Since: 323 | API-Set: unknown
+ * Hash: 0x395BF71085D1B1D9 | Since: unknown | API-Set: unknown
  */
 export function setAggressiveHorns(toggle) {
     SetAggressiveHorns(toggle);
@@ -1626,7 +1626,7 @@ export function setAggressiveHorns(toggle) {
  *
  * All found occurrences in b617d, sorted alphabetically and identical lines removed: https://pastebin.com/FTeAj4yZ
  *
- * Hash: 0x6C8065A3B780185B | Since: 323 | API-Set: unknown
+ * Hash: 0x6C8065A3B780185B | Since: unknown | API-Set: unknown
  */
 export function setAmbientVoiceName(ped, name) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1635,7 +1635,7 @@ export function setAmbientVoiceName(ped, name) {
 /**
  * No comment provided
  *
- * Hash: 0x9A53DED9921DE990 | Since: 463 | API-Set: unknown
+ * Hash: 0x9A53DED9921DE990 | Since: unknown | API-Set: unknown
  */
 export function setAmbientVoiceNameHash(ped, hash) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1646,39 +1646,39 @@ export function setAmbientVoiceNameHash(ped, hash) {
 /**
  * No comment provided
  *
- * Hash: 0x9748FA4DE50CCE3E | Since: 323 | API-Set: unknown
+ * Hash: 0x9748FA4DE50CCE3E | Since: unknown | API-Set: unknown
  */
-export function setAmbientZoneListState(ambientZone, enabled, forceUpdate) {
-    SetAmbientZoneListState(ambientZone, enabled, forceUpdate);
+export function setAmbientZoneListState(ambientZone) {
+    SetAmbientZoneListState(ambientZone, false, false);
 }
 /**
  * Full list of ambient zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientZones.json
  *
- * Hash: 0xF3638DAE8C4045E1 | Since: 323 | API-Set: unknown
+ * Hash: 0xF3638DAE8C4045E1 | Since: unknown | API-Set: unknown
  */
-export function setAmbientZoneListStatePersistent(ambientZone, enabled, forceUpdate) {
-    SetAmbientZoneListStatePersistent(ambientZone, enabled, forceUpdate);
+export function setAmbientZoneListStatePersistent(ambientZone) {
+    SetAmbientZoneListStatePersistent(ambientZone, false, false);
 }
 /**
  * Full list of ambient zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientZones.json
  *
- * Hash: 0xBDA07E5950085E46 | Since: 323 | API-Set: unknown
+ * Hash: 0xBDA07E5950085E46 | Since: unknown | API-Set: unknown
  */
-export function setAmbientZoneState(zoneName, enabled, forceUpdate) {
-    SetAmbientZoneState(zoneName, enabled, forceUpdate);
+export function setAmbientZoneState(zoneName) {
+    SetAmbientZoneState(zoneName, false, false);
 }
 /**
  * Full list of ambient zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientZones.json
  *
- * Hash: 0x1D6650420CEC9D3B | Since: 323 | API-Set: unknown
+ * Hash: 0x1D6650420CEC9D3B | Since: unknown | API-Set: unknown
  */
-export function setAmbientZoneStatePersistent(ambientZone, enabled, forceUpdate) {
-    SetAmbientZoneStatePersistent(ambientZone, enabled, forceUpdate);
+export function setAmbientZoneStatePersistent(ambientZone) {
+    SetAmbientZoneStatePersistent(ambientZone, false, false);
 }
 /**
  * mood can be 0 or 1 (it's not a boolean value!). Effects audio of the animal.
  *
- * Hash: 0xCC97B29285B1DC3B | Since: 323 | API-Set: unknown
+ * Hash: 0xCC97B29285B1DC3B | Since: unknown | API-Set: unknown
  */
 export function setAnimalMood(animal, mood) {
     const _animal = typeof animal == 'object' ? animal.handle() : animal;
@@ -1799,7 +1799,7 @@ export function setAnimalMood(animal, mood) {
  * ID: 62 | Hash: 0xE24C3AA6
  * ID: 63 | Hash: 0xBFFDD2B7
  *
- * Hash: 0xB9EFD5C25018725A | Since: 323 | API-Set: unknown
+ * Hash: 0xB9EFD5C25018725A | Since: unknown | API-Set: unknown
  */
 export function setFlag(flagName, toggle) {
     SetAudioFlag(flagName, toggle);
@@ -1807,7 +1807,7 @@ export function setFlag(flagName, toggle) {
 /**
  * Full list of audio scene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/audioSceneNames.json
  *
- * Hash: 0xEF21A9EF089A2668 | Since: 323 | API-Set: unknown
+ * Hash: 0xEF21A9EF089A2668 | Since: unknown | API-Set: unknown
  */
 export function setSceneVariable(scene, variable, value) {
     SetAudioSceneVariable(scene, variable, value);
@@ -1815,7 +1815,7 @@ export function setSceneVariable(scene, variable, value) {
 /**
  * No comment provided
  *
- * Hash: 0xA5F377B175A699C5 | Since: 323 | API-Set: unknown
+ * Hash: 0xA5F377B175A699C5 | Since: unknown | API-Set: unknown
  */
 export function setScriptCleanupTime(time) {
     SetAudioScriptCleanupTime(time);
@@ -1824,7 +1824,7 @@ export function setScriptCleanupTime(time) {
  * Needs to be called every frame.
  * Audio mode to apply this frame: https://alloc8or.re/gta5/doc/enums/audSpecialEffectMode.txt
  *
- * Hash: 0x12561FCBB62D5B9C | Since: 323 | API-Set: unknown
+ * Hash: 0x12561FCBB62D5B9C | Since: unknown | API-Set: unknown
  */
 export function setSpecialEffectMode(mode) {
     SetAudioSpecialEffectMode(mode);
@@ -1832,7 +1832,7 @@ export function setSpecialEffectMode(mode) {
 /**
  * No comment provided
  *
- * Hash: 0xE5564483E407F914 | Since: 323 | API-Set: unknown
+ * Hash: 0xE5564483E407F914 | Since: unknown | API-Set: unknown
  */
 export function setVehiclePriority(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1841,7 +1841,7 @@ export function setVehiclePriority(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x0B568201DD99F0EB | Since: 323 | API-Set: unknown
+ * Hash: 0x0B568201DD99F0EB | Since: unknown | API-Set: unknown
  */
 export function setConversationControlledByAnim() {
     SetConversationAudioControlledByAnim(false);
@@ -1849,7 +1849,7 @@ export function setConversationControlledByAnim() {
 /**
  * No comment provided
  *
- * Hash: 0x61631F5DF50D1C34 | Since: 323 | API-Set: unknown
+ * Hash: 0x61631F5DF50D1C34 | Since: unknown | API-Set: unknown
  */
 export function setConversationPlaceholder() {
     SetConversationAudioPlaceholder(false);
@@ -1866,7 +1866,7 @@ export function setConversationPlaceholder() {
  * `AUDIO::SET_CUSTOM_RADIO_TRACK_LIST("RADIO_16_SILVERLAKE", "SEA_RACE_RADIO_PLAYLIST", 1);`
  * `AUDIO::SET_CUSTOM_RADIO_TRACK_LIST("RADIO_01_CLASS_ROCK", "OFF_ROAD_RADIO_ROCK_LIST", 1);`
  *
- * Hash: 0x4E404A9361F75BB2 | Since: 323 | API-Set: unknown
+ * Hash: 0x4E404A9361F75BB2 | Since: unknown | API-Set: unknown
  */
 export function setCustomRadioTrackList(radioStation, trackListName) {
     SetCustomRadioTrackList(radioStation, trackListName, false);
@@ -1879,7 +1879,7 @@ export function setCustomRadioTrackList(radioStation, trackListName) {
  * `AUDIO::SET_CUTSCENE_AUDIO_OVERRIDE("_TOOTHLESS");`
  * Full list of cutscene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/cutsceneNames.json
  *
- * Hash: 0x3B4BF5F0859204D9 | Since: 323 | API-Set: unknown
+ * Hash: 0x3B4BF5F0859204D9 | Since: unknown | API-Set: unknown
  */
 export function setCutsceneOverride(name) {
     SetCutsceneAudioOverride(name);
@@ -1887,7 +1887,7 @@ export function setCutsceneOverride(name) {
 /**
  * Full list of static emitters by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/staticEmitters.json
  *
- * Hash: 0xACF57305B12AF907 | Since: 323 | API-Set: unknown
+ * Hash: 0xACF57305B12AF907 | Since: unknown | API-Set: unknown
  */
 export function setEmitterRadioStation(emitterName, radioStation) {
     SetEmitterRadioStation(emitterName, radioStation, undefined);
@@ -1895,7 +1895,7 @@ export function setEmitterRadioStation(emitterName, radioStation) {
 /**
  * No comment provided
  *
- * Hash: 0x892B6AB8F33606F5 | Since: 323 | API-Set: unknown
+ * Hash: 0x892B6AB8F33606F5 | Since: unknown | API-Set: unknown
  */
 export function setEntityForNullConvPed(entity) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -1904,7 +1904,7 @@ export function setEntityForNullConvPed(entity) {
 /**
  * No comment provided
  *
- * Hash: 0xF7F26C6E9CC9EBB8 | Since: 323 | API-Set: unknown
+ * Hash: 0xF7F26C6E9CC9EBB8 | Since: unknown | API-Set: unknown
  */
 export function setFrontendRadioActive(active) {
     SetFrontendRadioActive(active);
@@ -1912,7 +1912,7 @@ export function setFrontendRadioActive(active) {
 /**
  * No comment provided
  *
- * Hash: 0x159B7318403A1CD8 | Since: 1103 | API-Set: unknown
+ * Hash: 0x159B7318403A1CD8 | Since: unknown | API-Set: unknown
  */
 export function setGlobalRadioSignalLevel() {
     SetGlobalRadioSignalLevel(undefined);
@@ -1920,7 +1920,7 @@ export function setGlobalRadioSignalLevel() {
 /**
  * No comment provided
  *
- * Hash: 0x3BD3F52BA9B1E4E8 | Since: 323 | API-Set: unknown
+ * Hash: 0x3BD3F52BA9B1E4E8 | Since: unknown | API-Set: unknown
  */
 export function setGpsActive(active) {
     SetGpsActive(active);
@@ -1928,7 +1928,7 @@ export function setGpsActive(active) {
 /**
  * No comment provided
  *
- * Hash: 0x76D683C108594D0E | Since: 323 | API-Set: unknown
+ * Hash: 0x76D683C108594D0E | Since: unknown | API-Set: unknown
  */
 export function setHornEnabled(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1937,7 +1937,7 @@ export function setHornEnabled(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x9C11908013EA4715 | Since: 323 | API-Set: unknown
+ * Hash: 0x9C11908013EA4715 | Since: unknown | API-Set: unknown
  */
 export function setHornPermanentlyOn(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1946,7 +1946,7 @@ export function setHornPermanentlyOn(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x9D3AF56E94C9AE98 | Since: 323 | API-Set: unknown
+ * Hash: 0x9D3AF56E94C9AE98 | Since: unknown | API-Set: unknown
  */
 export function setHornPermanentlyOnTime(vehicle, time) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1955,7 +1955,7 @@ export function setHornPermanentlyOnTime(vehicle, time) {
 /**
  * No comment provided
  *
- * Hash: 0xC9D623C5A3D8FD5D | Since: 3570 | API-Set: unknown
+ * Hash: 0xC9D623C5A3D8FD5D | Since: unknown | API-Set: unknown
  */
 export function setIndividualPortalSettingsOverride(interiorNameHash, roomIndex, doorIndex, newPortalSettingsName) {
     if (typeof interiorNameHash === 'string')
@@ -1965,7 +1965,7 @@ export function setIndividualPortalSettingsOverride(interiorNameHash, roomIndex,
 /**
  * No comment provided
  *
- * Hash: 0x88795F13FACDA88D | Since: 323 | API-Set: unknown
+ * Hash: 0x88795F13FACDA88D | Since: unknown | API-Set: unknown
  */
 export function setInitialPlayerStation(radioStation) {
     SetInitialPlayerStation(radioStation);
@@ -1977,7 +1977,7 @@ export function setInitialPlayerStation(radioStation) {
  * The scripts mostly use it with only one position such as in fbi3.c:
  * `AUDIO::SET_MICROPHONE_POSITION(true, ENTITY::GET_ENTITY_COORDS(iLocal_3091, true), ENTITY::GET_ENTITY_COORDS(iLocal_3091, true), ENTITY::GET_ENTITY_COORDS(iLocal_3091, true));`
  *
- * Hash: 0xB6AE90EDDE95C762 | Since: 323 | API-Set: unknown
+ * Hash: 0xB6AE90EDDE95C762 | Since: unknown | API-Set: unknown
  */
 export function setMicrophonePosition(toggle, x1, y1, z1, x2, y2, z2, x3, y3, z3) {
     SetMicrophonePosition(toggle, x1, y1, z1, x2, y2, z2, x3, y3, z3);
@@ -1985,7 +1985,7 @@ export function setMicrophonePosition(toggle, x1, y1, z1, x2, y2, z2, x3, y3, z3
 /**
  * No comment provided
  *
- * Hash: 0xBF286C554784F3DF | Since: 323 | API-Set: unknown
+ * Hash: 0xBF286C554784F3DF | Since: unknown | API-Set: unknown
  */
 export function setMobilePhoneRadioState(state) {
     SetMobilePhoneRadioState(state);
@@ -1993,7 +1993,7 @@ export function setMobilePhoneRadioState(state) {
 /**
  * No comment provided
  *
- * Hash: 0x1098355A16064BB3 | Since: 323 | API-Set: unknown
+ * Hash: 0x1098355A16064BB3 | Since: unknown | API-Set: unknown
  */
 export function setMobileRadioEnabledDuringGameplay(toggle) {
     SetMobileRadioEnabledDuringGameplay(toggle);
@@ -2001,7 +2001,7 @@ export function setMobileRadioEnabledDuringGameplay(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x55ECF4D13D9903B0 | Since: 1868 | API-Set: unknown
+ * Hash: 0x55ECF4D13D9903B0 | Since: unknown | API-Set: unknown
  */
 export function setNextRadioTrack(radioName, radioTrack) {
     Citizen.invokeNative('0x55ECF4D13D9903B0', radioName, radioTrack, undefined, undefined);
@@ -2009,7 +2009,7 @@ export function setNextRadioTrack(radioName, radioTrack) {
 /**
  * No comment provided
  *
- * Hash: 0xB542DE8C3D1CB210 | Since: 323 | API-Set: unknown
+ * Hash: 0xB542DE8C3D1CB210 | Since: unknown | API-Set: unknown
  */
 export function setNoDuckingForConversation() {
     Citizen.invokeNative('0xB542DE8C3D1CB210', false);
@@ -2017,7 +2017,7 @@ export function setNoDuckingForConversation() {
 /**
  * Enables/disables ped's "quiet" footstep sound.
  *
- * Hash: 0x29DA3CA8D8B2692D | Since: 1493 | API-Set: unknown
+ * Hash: 0x29DA3CA8D8B2692D | Since: unknown | API-Set: unknown
  */
 export function setPedClothEventsEnabled(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2026,7 +2026,7 @@ export function setPedClothEventsEnabled(ped, toggle) {
 /**
  * Enables/disables ped's "loud" footstep sound.
  *
- * Hash: 0x0653B735BFBDFE87 | Since: 1493 | API-Set: unknown
+ * Hash: 0x0653B735BFBDFE87 | Since: unknown | API-Set: unknown
  */
 export function setPedFootstepsEventsEnabled(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2035,7 +2035,7 @@ export function setPedFootstepsEventsEnabled(ped, toggle) {
 /**
  * BOOL p1: 0 = Female; 1 = Male
  *
- * Hash: 0xA5342D390CDA41D6 | Since: 323 | API-Set: unknown
+ * Hash: 0xA5342D390CDA41D6 | Since: unknown | API-Set: unknown
  */
 export function setPedGender(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2044,7 +2044,7 @@ export function setPedGender(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x8BF907833BE275DE | Since: 323 | API-Set: unknown
+ * Hash: 0x8BF907833BE275DE | Since: unknown | API-Set: unknown
  */
 export function setPedInteriorWallaDensity() {
     Citizen.invokeNative('0x8BF907833BE275DE', 0, 0);
@@ -2071,7 +2071,7 @@ export function setPedInteriorWallaDensity() {
  * And to stop the effect use
  * RESET_PED_MOVEMENT_CLIPSET
  *
- * Hash: 0x95D2D383D5396B8A | Since: 323 | API-Set: unknown
+ * Hash: 0x95D2D383D5396B8A | Since: unknown | API-Set: unknown
  */
 export function setPedIsDrunk(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2080,7 +2080,7 @@ export function setPedIsDrunk(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x1B7ABE26CBCBF8C7 | Since: 372 | API-Set: unknown
+ * Hash: 0x1B7ABE26CBCBF8C7 | Since: unknown | API-Set: unknown
  */
 export function setPedRaceAndVoiceGroup(ped, voiceGroup) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2091,7 +2091,7 @@ export function setPedRaceAndVoiceGroup(ped, voiceGroup) {
 /**
  * Assigns some ambient voice to the ped.
  *
- * Hash: 0x40CF0D12D142A9E8 | Since: 323 | API-Set: unknown
+ * Hash: 0x40CF0D12D142A9E8 | Since: unknown | API-Set: unknown
  */
 export function setPedVoiceFull(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2105,7 +2105,7 @@ export function setPedVoiceFull(ped) {
  * `AUDIO::SET_PED_VOICE_GROUP(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY("FEMALE_LOST_BLACK_PVG"));`
  * `AUDIO::SET_PED_VOICE_GROUP(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY("FEMALE_LOST_WHITE_PVG"));`
  *
- * Hash: 0x7CDC8C3B89F661B3 | Since: 323 | API-Set: unknown
+ * Hash: 0x7CDC8C3B89F661B3 | Since: unknown | API-Set: unknown
  */
 export function setPedVoiceGroup(ped, voiceGroupHash) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2116,7 +2116,7 @@ export function setPedVoiceGroup(ped, voiceGroupHash) {
 /**
  * Dat151RelType == 29
  *
- * Hash: 0x0BABC1345ABBFB16 | Since: 2699 | API-Set: unknown
+ * Hash: 0x0BABC1345ABBFB16 | Since: unknown | API-Set: unknown
  */
 export function setPedVoiceGroupFromRaceToPvg(ped, voiceGroupHash) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2127,7 +2127,7 @@ export function setPedVoiceGroupFromRaceToPvg(ped, voiceGroupHash) {
 /**
  * No comment provided
  *
- * Hash: 0x149AEE66F0CB3A99 | Since: 323 | API-Set: unknown
+ * Hash: 0x149AEE66F0CB3A99 | Since: unknown | API-Set: unknown
  */
 export function setPedWallaDensity() {
     SetPedWallaDensity(0, 0);
@@ -2135,7 +2135,7 @@ export function setPedWallaDensity() {
 /**
  * No comment provided
  *
- * Hash: 0xEA241BB04110F091 | Since: 323 | API-Set: unknown
+ * Hash: 0xEA241BB04110F091 | Since: unknown | API-Set: unknown
  */
 export function setPlayerAngry(ped, toggle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2144,7 +2144,7 @@ export function setPlayerAngry(ped, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x6FDDAD856E36988A | Since: 323 | API-Set: unknown
+ * Hash: 0x6FDDAD856E36988A | Since: unknown | API-Set: unknown
  */
 export function setPlayerVehicleAlarmActive(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2163,7 +2163,7 @@ export function setPlayerVehicleAlarmActive(vehicle, toggle) {
  *
  * `AUDIO::SET_PORTAL_SETTINGS_OVERRIDE("V_MICHAEL_PS_BATHROOM_WITH_WINDOW", "V_MICHAEL_PS_BATHROOM_WITHOUT_WINDOW");`
  *
- * Hash: 0x044DBAD7A7FA2BE5 | Since: 323 | API-Set: unknown
+ * Hash: 0x044DBAD7A7FA2BE5 | Since: unknown | API-Set: unknown
  */
 export function setPortalSettingsOverride() {
     SetPortalSettingsOverride(undefined, undefined);
@@ -2171,7 +2171,7 @@ export function setPortalSettingsOverride() {
 /**
  * No comment provided
  *
- * Hash: 0xDA07819E452FFE8F | Since: 505 | API-Set: unknown
+ * Hash: 0xDA07819E452FFE8F | Since: unknown | API-Set: unknown
  */
 export function setPositionedPlayerVehicleRadioEmitterEnabled() {
     SetPositionedPlayerVehicleRadioEmitterEnabled(undefined);
@@ -2179,7 +2179,7 @@ export function setPositionedPlayerVehicleRadioEmitterEnabled() {
 /**
  * No comment provided
  *
- * Hash: 0x33E3C6C6F2F0B506 | Since: 323 | API-Set: unknown
+ * Hash: 0x33E3C6C6F2F0B506 | Since: unknown | API-Set: unknown
  */
 export function setPositionForNullConvPed() {
     SetPositionForNullConvPed(undefined, 0, 0, 0);
@@ -2187,7 +2187,7 @@ export function setPositionForNullConvPed() {
 /**
  * No comment provided
  *
- * Hash: 0xC1AA9F53CE982990 | Since: 323 | API-Set: unknown
+ * Hash: 0xC1AA9F53CE982990 | Since: unknown | API-Set: unknown
  */
 export function setRadioAutoUnfreeze(toggle) {
     SetRadioAutoUnfreeze(toggle);
@@ -2195,7 +2195,7 @@ export function setRadioAutoUnfreeze(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x2C96CDB04FCA358E | Since: 323 | API-Set: unknown
+ * Hash: 0x2C96CDB04FCA358E | Since: unknown | API-Set: unknown
  */
 export function setRadioFrontendFadeTime(fadeTime) {
     SetRadioFrontendFadeTime(fadeTime);
@@ -2203,7 +2203,7 @@ export function setRadioFrontendFadeTime(fadeTime) {
 /**
  * Does nothing (it's a nullsub).
  *
- * Hash: 0x02E93C796ABD3A97 | Since: 323 | API-Set: unknown
+ * Hash: 0x02E93C796ABD3A97 | Since: unknown | API-Set: unknown
  */
 export function setRadioPositionMute() {
     Citizen.invokeNative('0x02E93C796ABD3A97', false);
@@ -2211,7 +2211,7 @@ export function setRadioPositionMute() {
 /**
  * Tune Backwards...
  *
- * Hash: 0xDD6BCF9E94425DF9 | Since: 323 | API-Set: unknown
+ * Hash: 0xDD6BCF9E94425DF9 | Since: unknown | API-Set: unknown
  */
 export function setRadioRetuneDown() {
     Citizen.invokeNative('0xDD6BCF9E94425DF9');
@@ -2219,7 +2219,7 @@ export function setRadioRetuneDown() {
 /**
  * Tune Forward...
  *
- * Hash: 0xFF266D1D0EB1195D | Since: 323 | API-Set: unknown
+ * Hash: 0xFF266D1D0EB1195D | Since: unknown | API-Set: unknown
  */
 export function setRadioRetuneUp() {
     Citizen.invokeNative('0xFF266D1D0EB1195D');
@@ -2227,7 +2227,7 @@ export function setRadioRetuneUp() {
 /**
  * Doesn't have an effect in Story Mode.
  *
- * Hash: 0x4CAFEBFA21EC188D | Since: 2372 | API-Set: unknown
+ * Hash: 0x4CAFEBFA21EC188D | Since: unknown | API-Set: unknown
  */
 export function setRadioStationAsFavourite(radioStation, toggle) {
     SetRadioStationIsVisible(radioStation, toggle);
@@ -2239,7 +2239,7 @@ export function setRadioStationAsFavourite(radioStation, toggle) {
  * `AUDIO::SET_RADIO_STATION_MUSIC_ONLY(AUDIO::GET_RADIO_STATION_NAME(10), 0);`
  * `AUDIO::SET_RADIO_STATION_MUSIC_ONLY(AUDIO::GET_RADIO_STATION_NAME(10), 1);`
  *
- * Hash: 0x774BD811F656A122 | Since: 323 | API-Set: unknown
+ * Hash: 0x774BD811F656A122 | Since: unknown | API-Set: unknown
  */
 export function setRadioStationMusicOnly(radioStation, toggle) {
     SetRadioStationMusicOnly(radioStation, toggle);
@@ -2247,7 +2247,7 @@ export function setRadioStationMusicOnly(radioStation, toggle) {
 /**
  * Sets radio station by index.
  *
- * Hash: 0xA619B168B8A8570F | Since: 323 | API-Set: unknown
+ * Hash: 0xA619B168B8A8570F | Since: unknown | API-Set: unknown
  */
 export function setRadioToStationIndex(radioStation) {
     SetRadioToStationIndex(radioStation);
@@ -2256,7 +2256,7 @@ export function setRadioToStationIndex(radioStation) {
  * List of radio stations that are in the wheel, in clockwise order, as of LS Tuners DLC: https://git.io/J8a3k
  * An older list including hidden radio stations: https://pastebin.com/Kj9t38KF
  *
- * Hash: 0xC69EDA28699D5107 | Since: 323 | API-Set: unknown
+ * Hash: 0xC69EDA28699D5107 | Since: unknown | API-Set: unknown
  */
 export function setRadioToStationName(stationName) {
     SetRadioToStationName(stationName);
@@ -2267,7 +2267,7 @@ export function setRadioToStationName(stationName) {
  * `AUDIO::SET_RADIO_TRACK("RADIO_03_HIPHOP_NEW", "ARM1_RADIO_STARTS");`
  *
  *
- * Hash: 0xB39786F201FEE30B | Since: 323 | API-Set: unknown
+ * Hash: 0xB39786F201FEE30B | Since: unknown | API-Set: unknown
  */
 export function setRadioTrack(radioStation, radioTrack) {
     SetRadioTrack(radioStation, radioTrack);
@@ -2275,7 +2275,7 @@ export function setRadioTrack(radioStation, radioTrack) {
 /**
  * No comment provided
  *
- * Hash: 0x2CB0075110BE1E56 | Since: 1493 | API-Set: unknown
+ * Hash: 0x2CB0075110BE1E56 | Since: unknown | API-Set: unknown
  */
 export function setRadioTrackWithStartOffset(radioStationName, mixName) {
     SetRadioTrackMix(radioStationName, mixName, 0);
@@ -2283,7 +2283,7 @@ export function setRadioTrackWithStartOffset(radioStationName, mixName) {
 /**
  * No comment provided
  *
- * Hash: 0x06C0023BED16DD6B | Since: 323 | API-Set: unknown
+ * Hash: 0x06C0023BED16DD6B | Since: unknown | API-Set: unknown
  */
 export function setScriptUpdateDoor(doorHash, toggle) {
     if (typeof doorHash === 'string')
@@ -2293,7 +2293,7 @@ export function setScriptUpdateDoor(doorHash, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xF584CF8529B51434 | Since: 2372 | API-Set: unknown
+ * Hash: 0xF584CF8529B51434 | Since: unknown | API-Set: unknown
  */
 export function setSirenBypassMpDriverCheck(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2302,7 +2302,7 @@ export function setSirenBypassMpDriverCheck(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x43FA0DFC5DF87815 | Since: 323 | API-Set: unknown
+ * Hash: 0x43FA0DFC5DF87815 | Since: unknown | API-Set: unknown
  */
 export function setSirenCanBeControlledBy(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2311,7 +2311,7 @@ export function setSirenCanBeControlledBy(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x1FEF0683B96EBCF2 | Since: 323 | API-Set: unknown
+ * Hash: 0x1FEF0683B96EBCF2 | Since: unknown | API-Set: unknown
  */
 export function setSirenWithNoDriver(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2320,7 +2320,7 @@ export function setSirenWithNoDriver(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xBEF34B1D9624D5DD | Since: 323 | API-Set: unknown
+ * Hash: 0xBEF34B1D9624D5DD | Since: unknown | API-Set: unknown
  */
 export function setSkipMinigunSpinUp() {
     Citizen.invokeNative('0xBEF34B1D9624D5DD', false);
@@ -2333,7 +2333,7 @@ export function setSkipMinigunSpinUp() {
  *
  * Full list of static emitters by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/staticEmitters.json
  *
- * Hash: 0x399D2D3B33F1B8EB | Since: 323 | API-Set: unknown
+ * Hash: 0x399D2D3B33F1B8EB | Since: unknown | API-Set: unknown
  */
 export function setStaticEmitterEnabled(emitterName, toggle) {
     SetStaticEmitterEnabled(emitterName, toggle);
@@ -2341,7 +2341,7 @@ export function setStaticEmitterEnabled(emitterName, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x19F21E63AE6EAE4E | Since: 323 | API-Set: unknown
+ * Hash: 0x19F21E63AE6EAE4E | Since: unknown | API-Set: unknown
  */
 export function setUserRadioControlEnabled(toggle) {
     SetUserRadioControlEnabled(toggle);
@@ -2349,7 +2349,7 @@ export function setUserRadioControlEnabled(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xAD6B3148A78AE9B6 | Since: 323 | API-Set: unknown
+ * Hash: 0xAD6B3148A78AE9B6 | Since: unknown | API-Set: unknown
  */
 export function setVariableOnSound(soundId, variable) {
     SetVariableOnSound(soundId, variable, 0);
@@ -2362,7 +2362,7 @@ export function setVariableOnSound(soundId, variable) {
  * "Monkey_Stream",
  * "ZoomLevel"
  *
- * Hash: 0x2F9D3834AEB9EF79 | Since: 323 | API-Set: unknown
+ * Hash: 0x2F9D3834AEB9EF79 | Since: unknown | API-Set: unknown
  */
 export function setVariableOnStream(variable) {
     SetVariableOnStream(variable, 0);
@@ -2370,7 +2370,7 @@ export function setVariableOnStream(variable) {
 /**
  * No comment provided
  *
- * Hash: 0xBCC29F935ED07688 | Since: 323 | API-Set: unknown
+ * Hash: 0xBCC29F935ED07688 | Since: unknown | API-Set: unknown
  */
 export function setVariableOnSynchScene(variableName, value) {
     SetVariableOnCutsceneAudio(variableName, value);
@@ -2379,7 +2379,7 @@ export function setVariableOnSynchScene(variableName, value) {
  * `AUDIO::SET_VARIABLE_ON_UNDER_WATER_STREAM("inTunnel", 1.0);`
  * `AUDIO::SET_VARIABLE_ON_UNDER_WATER_STREAM("inTunnel", 0.0);`
  *
- * Hash: 0x733ADF241531E5C2 | Since: 323 | API-Set: unknown
+ * Hash: 0x733ADF241531E5C2 | Since: unknown | API-Set: unknown
  */
 export function setVariableOnUnderWaterStream(variableName, value) {
     SetVariableOnUnderWaterStream(variableName, value);
@@ -2388,7 +2388,7 @@ export function setVariableOnUnderWaterStream(variableName, value) {
  * intensity: 0.0f - 1.0f, only used once with 1.0f in R* Scripts (nigel2)
  * Makes an engine rattling noise when you decelerate, you need to be going faster to hear lower values
  *
- * Hash: 0x01BB4D577D38BD9E | Since: 323 | API-Set: unknown
+ * Hash: 0x01BB4D577D38BD9E | Since: unknown | API-Set: unknown
  */
 export function setVehicleBodyDamageFactor(vehicle, intensity) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2397,7 +2397,7 @@ export function setVehicleBodyDamageFactor(vehicle, intensity) {
 /**
  * No comment provided
  *
- * Hash: 0x59E7B488451F4D3A | Since: 323 | API-Set: unknown
+ * Hash: 0x59E7B488451F4D3A | Since: unknown | API-Set: unknown
  */
 export function setVehicleEngineDamageFactor(vehicle, damageFactor) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2409,7 +2409,7 @@ export function setVehicleEngineDamageFactor(vehicle, damageFactor) {
  *
  * Will give a boost-soundeffect.
  *
- * Hash: 0x4A04DE7CAB2739A1 | Since: 323 | API-Set: unknown
+ * Hash: 0x4A04DE7CAB2739A1 | Since: unknown | API-Set: unknown
  */
 export function setVehicleBoostActive(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2418,7 +2418,7 @@ export function setVehicleBoostActive(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x58BB377BEC7CD5F4 | Since: 323 | API-Set: unknown
+ * Hash: 0x58BB377BEC7CD5F4 | Since: unknown | API-Set: unknown
  */
 export function setVehicleConversationsPersist() {
     Citizen.invokeNative('0x58BB377BEC7CD5F4', false, false);
@@ -2426,7 +2426,7 @@ export function setVehicleConversationsPersist() {
 /**
  * No comment provided
  *
- * Hash: 0x9BD7BD55E4533183 | Since: 1290 | API-Set: unknown
+ * Hash: 0x9BD7BD55E4533183 | Since: unknown | API-Set: unknown
  */
 export function setVehicleConversationsPersistNew() {
     Citizen.invokeNative('0x9BD7BD55E4533183', false, false, false);
@@ -2434,7 +2434,7 @@ export function setVehicleConversationsPersistNew() {
 /**
  * No comment provided
  *
- * Hash: 0x97FFB4ADEED08066 | Since: 2372 | API-Set: unknown
+ * Hash: 0x97FFB4ADEED08066 | Since: unknown | API-Set: unknown
  */
 export function setVehicleForceReverseWarning() {
     Citizen.invokeNative('0x97FFB4ADEED08066', undefined, undefined);
@@ -2442,7 +2442,7 @@ export function setVehicleForceReverseWarning() {
 /**
  * No comment provided
  *
- * Hash: 0x0350E7E17BA767D0 | Since: 1365 | API-Set: unknown
+ * Hash: 0x0350E7E17BA767D0 | Since: unknown | API-Set: unknown
  */
 export function setVehicleHornSoundIndex(vehicle, value) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2451,7 +2451,7 @@ export function setVehicleHornSoundIndex(vehicle, value) {
 /**
  * No comment provided
  *
- * Hash: 0xF3365489E0DD50F9 | Since: 323 | API-Set: unknown
+ * Hash: 0xF3365489E0DD50F9 | Since: unknown | API-Set: unknown
  */
 export function setVehicleMissileWarningEnabled(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2460,7 +2460,7 @@ export function setVehicleMissileWarningEnabled(vehicle, toggle) {
 /**
  * can't seem to enable radio on cop cars etc
  *
- * Hash: 0x3B988190C0AA6C0B | Since: 323 | API-Set: unknown
+ * Hash: 0x3B988190C0AA6C0B | Since: unknown | API-Set: unknown
  */
 export function setVehicleRadioEnabled(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2469,7 +2469,7 @@ export function setVehicleRadioEnabled(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xBB6F1CAEC68B0BCE | Since: 323 | API-Set: unknown
+ * Hash: 0xBB6F1CAEC68B0BCE | Since: unknown | API-Set: unknown
  */
 export function setVehicleRadioLoud(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2478,7 +2478,7 @@ export function setVehicleRadioLoud(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xF1F8157B8C3F171C | Since: 323 | API-Set: unknown
+ * Hash: 0xF1F8157B8C3F171C | Since: unknown | API-Set: unknown
  */
 export function setVehicleStartupRevSound(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2487,7 +2487,7 @@ export function setVehicleStartupRevSound(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xC1805D05E6D4FE10 | Since: 323 | API-Set: unknown
+ * Hash: 0xC1805D05E6D4FE10 | Since: unknown | API-Set: unknown
  */
 export function setVehForcedRadioThisFrame(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2496,7 +2496,7 @@ export function setVehForcedRadioThisFrame(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x3E45765F3FBB582F | Since: 2372 | API-Set: unknown
+ * Hash: 0x3E45765F3FBB582F | Since: unknown | API-Set: unknown
  */
 export function setVehHasNormalRadio(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2506,7 +2506,7 @@ export function setVehHasNormalRadio(vehicle) {
  * List of radio stations that are in the wheel, in clockwise order, as of LS Tuners DLC: https://git.io/J8a3k
  * An older list including hidden radio stations: https://pastebin.com/Kj9t38KF
  *
- * Hash: 0x1B9C0099CB942AC6 | Since: 323 | API-Set: unknown
+ * Hash: 0x1B9C0099CB942AC6 | Since: unknown | API-Set: unknown
  */
 export function setVehRadioStation(vehicle, radioStation) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2515,7 +2515,7 @@ export function setVehRadioStation(vehicle, radioStation) {
 /**
  * No comment provided
  *
- * Hash: 0x6DDBBDD98E2E9C25 | Since: 323 | API-Set: unknown
+ * Hash: 0x6DDBBDD98E2E9C25 | Since: unknown | API-Set: unknown
  */
 export function skipRadioForward() {
     SkipRadioForward();
@@ -2523,7 +2523,7 @@ export function skipRadioForward() {
 /**
  * No comment provided
  *
- * Hash: 0x9663FE6B7A61EB00 | Since: 323 | API-Set: unknown
+ * Hash: 0x9663FE6B7A61EB00 | Since: unknown | API-Set: unknown
  */
 export function skipToNextScriptedConversationLine() {
     SkipToNextScriptedConversationLine();
@@ -2561,7 +2561,7 @@ export function skipToNextScriptedConversationLine() {
  * `AUDIO::START_ALARM("PROLOGUE_VAULT_ALARMS", 0);`
  * Full list of alarm names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/alarmSounds.json
  *
- * Hash: 0x0355EF116C4C97B2 | Since: 323 | API-Set: unknown
+ * Hash: 0x0355EF116C4C97B2 | Since: unknown | API-Set: unknown
  */
 export function startAlarm(alarmName) {
     StartAlarm(alarmName, false);
@@ -2572,7 +2572,7 @@ export function startAlarm(alarmName) {
  * List of all usable scene names found in b617d. Sorted alphabetically and identical names removed: https://pastebin.com/MtM9N9CC
  * Full list of audio scene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/audioSceneNames.json
  *
- * Hash: 0x013A80FC08F6E4F2 | Since: 323 | API-Set: unknown
+ * Hash: 0x013A80FC08F6E4F2 | Since: unknown | API-Set: unknown
  */
 export function startScene(scene) {
     return StartAudioScene(scene);
@@ -2580,7 +2580,7 @@ export function startScene(scene) {
 /**
  * No comment provided
  *
- * Hash: 0x23641AFE870AF385 | Since: 323 | API-Set: unknown
+ * Hash: 0x23641AFE870AF385 | Since: unknown | API-Set: unknown
  */
 export function startPreloadedConversation() {
     StartPreloadedConversation();
@@ -2588,7 +2588,7 @@ export function startPreloadedConversation() {
 /**
  * No comment provided
  *
- * Hash: 0x6B17C62C9635D2DC | Since: 323 | API-Set: unknown
+ * Hash: 0x6B17C62C9635D2DC | Since: unknown | API-Set: unknown
  */
 export function startScriptConversation() {
     StartScriptConversation(false, false, false, false);
@@ -2596,7 +2596,7 @@ export function startScriptConversation() {
 /**
  * No comment provided
  *
- * Hash: 0x252E5F915EABB675 | Since: 323 | API-Set: unknown
+ * Hash: 0x252E5F915EABB675 | Since: unknown | API-Set: unknown
  */
 export function startScriptPhoneConversation() {
     StartScriptPhoneConversation(false, false);
@@ -2612,7 +2612,7 @@ export function startScriptPhoneConversation() {
  * Second parameter (bool) has to be true (1) to have any effect.
  * Full list of alarm names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/alarmSounds.json
  *
- * Hash: 0xA1CADDCD98415A41 | Since: 323 | API-Set: unknown
+ * Hash: 0xA1CADDCD98415A41 | Since: unknown | API-Set: unknown
  */
 export function stopAlarm(alarmName, toggle) {
     StopAlarm(alarmName, toggle);
@@ -2620,7 +2620,7 @@ export function stopAlarm(alarmName, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x2F794A877ADD4C92 | Since: 323 | API-Set: unknown
+ * Hash: 0x2F794A877ADD4C92 | Since: unknown | API-Set: unknown
  */
 export function stopAllAlarms(stop) {
     StopAllAlarms(stop);
@@ -2628,7 +2628,7 @@ export function stopAllAlarms(stop) {
 /**
  * Full list of audio scene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/audioSceneNames.json
  *
- * Hash: 0xDFE8422B3B94E688 | Since: 323 | API-Set: unknown
+ * Hash: 0xDFE8422B3B94E688 | Since: unknown | API-Set: unknown
  */
 export function stopScene(scene) {
     StopAudioScene(scene);
@@ -2636,7 +2636,7 @@ export function stopScene(scene) {
 /**
  * No comment provided
  *
- * Hash: 0xBAC7FC81A75EC1A1 | Since: 323 | API-Set: unknown
+ * Hash: 0xBAC7FC81A75EC1A1 | Since: unknown | API-Set: unknown
  */
 export function stopScenes() {
     StopAudioScenes();
@@ -2644,7 +2644,7 @@ export function stopScenes() {
 /**
  * No comment provided
  *
- * Hash: 0xB8BEC0CA6F0EDB0F | Since: 323 | API-Set: unknown
+ * Hash: 0xB8BEC0CA6F0EDB0F | Since: unknown | API-Set: unknown
  */
 export function stopCurrentPlayingAmbientSpeech(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2653,7 +2653,7 @@ export function stopCurrentPlayingAmbientSpeech(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x7A73D05A607734C7 | Since: 323 | API-Set: unknown
+ * Hash: 0x7A73D05A607734C7 | Since: unknown | API-Set: unknown
  */
 export function stopCurrentPlayingSpeech(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2662,7 +2662,7 @@ export function stopCurrentPlayingSpeech(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x806058BBDC136E06 | Since: 323 | API-Set: unknown
+ * Hash: 0x806058BBDC136E06 | Since: unknown | API-Set: unknown
  */
 export function stopCutscene() {
     StopCutsceneAudio();
@@ -2670,7 +2670,7 @@ export function stopCutscene() {
 /**
  * No comment provided
  *
- * Hash: 0x6C5AE23EFA885092 | Since: 323 | API-Set: unknown
+ * Hash: 0x6C5AE23EFA885092 | Since: unknown | API-Set: unknown
  */
 export function stopPedRingtone(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2679,7 +2679,7 @@ export function stopPedRingtone(ped) {
 /**
  * No comment provided
  *
- * Hash: 0x9D64D7405520E3D3 | Since: 323 | API-Set: unknown
+ * Hash: 0x9D64D7405520E3D3 | Since: unknown | API-Set: unknown
  */
 export function stopPedSpeaking(ped, shaking) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2688,7 +2688,7 @@ export function stopPedSpeaking(ped, shaking) {
 /**
  * No comment provided
  *
- * Hash: 0xAB6781A5F3101470 | Since: 1868 | API-Set: unknown
+ * Hash: 0xAB6781A5F3101470 | Since: unknown | API-Set: unknown
  */
 export function stopPedSpeakingSynced(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2697,7 +2697,7 @@ export function stopPedSpeakingSynced(ped) {
 /**
  * No comment provided
  *
- * Hash: 0xD79DEEFB53455EBA | Since: 323 | API-Set: unknown
+ * Hash: 0xD79DEEFB53455EBA | Since: unknown | API-Set: unknown
  */
 export function stopScriptedConversation() {
     return StopScriptedConversation(false);
@@ -2705,7 +2705,7 @@ export function stopScriptedConversation() {
 /**
  * No comment provided
  *
- * Hash: 0xE4E6DD5566D28C82 | Since: 323 | API-Set: unknown
+ * Hash: 0xE4E6DD5566D28C82 | Since: unknown | API-Set: unknown
  */
 export function stopSmokeGrenadeExplosionSounds() {
     StopSmokeGrenadeExplosionSounds();
@@ -2713,7 +2713,7 @@ export function stopSmokeGrenadeExplosionSounds() {
 /**
  * No comment provided
  *
- * Hash: 0xA3B0C41BA5CC0BB5 | Since: 323 | API-Set: unknown
+ * Hash: 0xA3B0C41BA5CC0BB5 | Since: unknown | API-Set: unknown
  */
 export function stopSound(soundId) {
     StopSound(soundId);
@@ -2721,7 +2721,7 @@ export function stopSound(soundId) {
 /**
  * No comment provided
  *
- * Hash: 0xA4718A1419D18151 | Since: 323 | API-Set: unknown
+ * Hash: 0xA4718A1419D18151 | Since: unknown | API-Set: unknown
  */
 export function stopStream() {
     StopStream();
@@ -2729,7 +2729,7 @@ export function stopStream() {
 /**
  * No comment provided
  *
- * Hash: 0x92D6A88E64A94430 | Since: 323 | API-Set: unknown
+ * Hash: 0x92D6A88E64A94430 | Since: unknown | API-Set: unknown
  */
 export function stopSynchronizedEvent(sceneID) {
     return StopSynchronizedAudioEvent(sceneID);
@@ -2740,7 +2740,7 @@ export function stopSynchronizedEvent(sceneID) {
  * All music event names found in the b617d scripts: https://pastebin.com/GnYt0R3P
  * Full list of music event names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/musicEventNames.json
  *
- * Hash: 0x706D57B0F50DA710 | Since: 323 | API-Set: unknown
+ * Hash: 0x706D57B0F50DA710 | Since: unknown | API-Set: unknown
  */
 export function triggerMusicEvent(eventName) {
     return TriggerMusicEvent(eventName);
@@ -2748,7 +2748,7 @@ export function triggerMusicEvent(eventName) {
 /**
  * No comment provided
  *
- * Hash: 0x66C3FB05206041BA | Since: 1290 | API-Set: unknown
+ * Hash: 0x66C3FB05206041BA | Since: unknown | API-Set: unknown
  */
 export function triggerSiren(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2757,7 +2757,7 @@ export function triggerSiren(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x2ACABED337622DF2 | Since: 1493 | API-Set: unknown
+ * Hash: 0x2ACABED337622DF2 | Since: unknown | API-Set: unknown
  */
 export function unblockSpeechContextGroup() {
     UnblockSpeechContextGroup(undefined);
@@ -2765,7 +2765,7 @@ export function unblockSpeechContextGroup() {
 /**
  * No comment provided
  *
- * Hash: 0xFC00454CF60B91DD | Since: 323 | API-Set: unknown
+ * Hash: 0xFC00454CF60B91DD | Since: unknown | API-Set: unknown
  */
 export function unfreezeRadioStation(radioStation) {
     UnfreezeRadioStation(radioStation);
@@ -2773,7 +2773,7 @@ export function unfreezeRadioStation(radioStation) {
 /**
  * No comment provided
  *
- * Hash: 0x19AF7ED9B9D23058 | Since: 323 | API-Set: unknown
+ * Hash: 0x19AF7ED9B9D23058 | Since: unknown | API-Set: unknown
  */
 export function unhintAmbientBank() {
     Citizen.invokeNative('0x19AF7ED9B9D23058');
@@ -2781,7 +2781,7 @@ export function unhintAmbientBank() {
 /**
  * No comment provided
  *
- * Hash: 0x11579D940949C49E | Since: 678 | API-Set: unknown
+ * Hash: 0x11579D940949C49E | Since: unknown | API-Set: unknown
  */
 export function unhintNamedScriptBank(audioBank) {
     Citizen.invokeNative('0x11579D940949C49E', audioBank);
@@ -2789,7 +2789,7 @@ export function unhintNamedScriptBank(audioBank) {
 /**
  * No comment provided
  *
- * Hash: 0x9AC92EED5E4793AB | Since: 323 | API-Set: unknown
+ * Hash: 0x9AC92EED5E4793AB | Since: unknown | API-Set: unknown
  */
 export function unhintScriptBank() {
     Citizen.invokeNative('0x9AC92EED5E4793AB');
@@ -2797,7 +2797,7 @@ export function unhintScriptBank() {
 /**
  * "news" that play on the radio after you've done something in story mode(?)
  *
- * Hash: 0xB165AB7C248B2DC1 | Since: 323 | API-Set: unknown
+ * Hash: 0xB165AB7C248B2DC1 | Since: unknown | API-Set: unknown
  */
 export function unlockMissionNewsStory(newsStory) {
     UnlockMissionNewsStory(newsStory);
@@ -2805,7 +2805,7 @@ export function unlockMissionNewsStory(newsStory) {
 /**
  * `AUDIO::UNLOCK_RADIO_STATION_TRACK_LIST("RADIO_16_SILVERLAKE", "MIRRORPARK_LOCKED");`
  *
- * Hash: 0x031ACB6ABA18C729 | Since: 323 | API-Set: unknown
+ * Hash: 0x031ACB6ABA18C729 | Since: unknown | API-Set: unknown
  */
 export function unlockRadioStationTrackList(radioStation, trackListName) {
     UnlockRadioStationTrackList(radioStation, trackListName);
@@ -2813,7 +2813,7 @@ export function unlockRadioStationTrackList(radioStation, trackListName) {
 /**
  * This native does absolutely nothing, just a nullsub
  *
- * Hash: 0xA8638BE228D4751A | Since: 323 | API-Set: unknown
+ * Hash: 0xA8638BE228D4751A | Since: unknown | API-Set: unknown
  */
 export function unregisterScriptWith() {
     UnregisterScriptWithAudio();
@@ -2821,7 +2821,7 @@ export function unregisterScriptWith() {
 /**
  * No comment provided
  *
- * Hash: 0x0150B6FF25A9E2E5 | Since: 323 | API-Set: unknown
+ * Hash: 0x0150B6FF25A9E2E5 | Since: unknown | API-Set: unknown
  */
 export function unrequestTennisBanks() {
     UnrequestTennisBanks();
@@ -2829,7 +2829,7 @@ export function unrequestTennisBanks() {
 /**
  * No comment provided
  *
- * Hash: 0x7EC3C679D0E7E46B | Since: 678 | API-Set: unknown
+ * Hash: 0x7EC3C679D0E7E46B | Since: unknown | API-Set: unknown
  */
 export function updateSoundCoord(soundId, pos) {
     UpdateSoundCoord(soundId, pos.x, pos.y, pos.z);
@@ -2837,7 +2837,7 @@ export function updateSoundCoord(soundId, pos) {
 /**
  * Just a nullsub (i.e. does absolutely nothing) since build 1604.
  *
- * Hash: 0x47AED84213A47510 | Since: 1493 | API-Set: unknown
+ * Hash: 0x47AED84213A47510 | Since: unknown | API-Set: unknown
  */
 export function updateUnlockableDjRadioTracks(enableMixes) {
     UpdateUnlockableDjRadioTracks(enableMixes);
@@ -2845,7 +2845,7 @@ export function updateUnlockableDjRadioTracks(enableMixes) {
 /**
  * No comment provided
  *
- * Hash: 0xBF4DC1784BE94DFA | Since: 323 | API-Set: unknown
+ * Hash: 0xBF4DC1784BE94DFA | Since: unknown | API-Set: unknown
  */
 export function useFootstepScriptSweeteners(ped, hash) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2856,7 +2856,7 @@ export function useFootstepScriptSweeteners(ped, hash) {
 /**
  * No comment provided
  *
- * Hash: 0xFA932DE350266EF8 | Since: 323 | API-Set: unknown
+ * Hash: 0xFA932DE350266EF8 | Since: unknown | API-Set: unknown
  */
 export function useSirenAsHorn(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2865,7 +2865,7 @@ export function useSirenAsHorn(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xBEFB80290414FD4F | Since: 3095 | API-Set: unknown
+ * Hash: 0xBEFB80290414FD4F | Since: unknown | API-Set: unknown
  */
 export function enableDragRaceStationaryWarningSounds(vehicle, enable) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2874,7 +2874,7 @@ export function enableDragRaceStationaryWarningSounds(vehicle, enable) {
 /**
  * Called together with SET_VEHICLE_TYRES_CAN_BURST
  *
- * Hash: 0xEB7D0E1FCC8FE17A | Since: 3258 | API-Set: unknown
+ * Hash: 0xEB7D0E1FCC8FE17A | Since: unknown | API-Set: unknown
  */
 export function forceVehicleEngineSynth(vehicle, force) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;

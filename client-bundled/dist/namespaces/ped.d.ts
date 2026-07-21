@@ -339,7 +339,7 @@ export declare function getBoneMatrix(ped: number | IPed, boneId: number): [Vect
 /**
  * Same as SET_PED_ARMOUR, but ADDS 'amount' to the armor the Ped already has.
  *
- * Hash: 0x5BA652A0CD14DF2F | Since: 323 | API-Set: unknown
+ * Hash: 0x5BA652A0CD14DF2F | Since: unknown | API-Set: unknown
  */
 export declare function addArmourTo(ped: number | IPed, amount: number): void;
 /**
@@ -371,31 +371,31 @@ export declare function addArmourTo(ped: number | IPed, amount: number): void;
  *
  * Full list of ped overlays / decorations by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedOverlayCollections.json
  *
- * Hash: 0x5F5D1665E352A839 | Since: 323 | API-Set: unknown
+ * Hash: 0x5F5D1665E352A839 | Since: unknown | API-Set: unknown
  */
 export declare function addDecorationFromHashes(ped: number | IPed, collection: number | string, overlay: number | string): void;
 /**
  * Full list of ped overlays / decorations by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedOverlayCollections.json
  *
- * Hash: 0x5619BFA07CFD7833 | Since: 323 | API-Set: unknown
+ * Hash: 0x5619BFA07CFD7833 | Since: unknown | API-Set: unknown
  */
 export declare function addDecorationFromHashesInCorona(ped: number | IPed, collection: number | string, overlay: number | string): void;
 /**
  * Can't select void. This function returns nothing. The hash of the created relationship group is output in the second parameter.
  *
- * Hash: 0xF372BC22FCB88606 | Since: 323 | API-Set: unknown
+ * Hash: 0xF372BC22FCB88606 | Since: unknown | API-Set: unknown
  */
 export declare function addRelationshipGroup(name: string): [boolean, number];
 /**
  * No comment provided
  *
- * Hash: 0x1B5C85C612E5256E | Since: 323 | API-Set: unknown
+ * Hash: 0x1B5C85C612E5256E | Since: unknown | API-Set: unknown
  */
 export declare function addScenarioBlockingArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): number;
 /**
  * damages a ped with the given amount
  *
- * Hash: 0x697157CED63F18D4 | Since: 323 | API-Set: unknown
+ * Hash: 0x697157CED63F18D4 | Since: unknown | API-Set: unknown
  */
 export declare function applyDamageTo(ped: number | IPed, damageAmount: number, weaponType: number | string): void;
 /**
@@ -414,25 +414,25 @@ export declare function applyDamageTo(ped: number | IPed, damageAmount: number, 
  * - Scripted_Ped_Splash_Back
  * - BackSplash
  *
- * Hash: 0x83F7E01C7B769A26 | Since: 323 | API-Set: unknown
+ * Hash: 0x83F7E01C7B769A26 | Since: unknown | API-Set: unknown
  */
 export declare function applyBlood(ped: number | IPed, boneIndex: number, rot: Vector3, woundType: string): void;
 /**
  * No comment provided
  *
- * Hash: 0x3311E47B91EDCBBC | Since: 323 | API-Set: unknown
+ * Hash: 0x3311E47B91EDCBBC | Since: unknown | API-Set: unknown
  */
 export declare function applyBloodByZone(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x816F6981C60BF53B | Since: 323 | API-Set: unknown
+ * Hash: 0x816F6981C60BF53B | Since: unknown | API-Set: unknown
  */
 export declare function applyBloodDamageByZone(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xEF0D582CBF2D9B0F | Since: 323 | API-Set: unknown
+ * Hash: 0xEF0D582CBF2D9B0F | Since: unknown | API-Set: unknown
  */
 export declare function applyBloodSpecific(ped: number | IPed): void;
 /**
@@ -461,7 +461,7 @@ export declare function applyBloodSpecific(ped: number | IPed): void;
  *
  * APPLY_PED_DAMAGE_DECAL(ped, 1, 0.5f, 0.513f, 0f, 1f, unk, 0, 0, "blushing");
  *
- * Hash: 0x397C38AA7B4A5F83 | Since: 323 | API-Set: unknown
+ * Hash: 0x397C38AA7B4A5F83 | Since: unknown | API-Set: unknown
  */
 export declare function applyDamageDecal(ped: number | IPed, damageZone: number, xOffset: number, yOffset: number, heading: number, scale: number, alpha: number, variation: number, fadeIn: boolean, decalName: string): void;
 /**
@@ -494,55 +494,55 @@ export declare function applyDamageDecal(ped: number | IPed, damageZone: number,
  * gist.github.com/alexguirre/f3f47f75ddcf617f416f3c8a55ae2227
  * Full list of ped damage packs by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedDamagePacks.json
  *
- * Hash: 0x46DF918788CB093F | Since: 323 | API-Set: unknown
+ * Hash: 0x46DF918788CB093F | Since: unknown | API-Set: unknown
  */
 export declare function applyDamagePack(ped: number | IPed, damagePack: string, damage: number, mult: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x272E4723B56A3B96 | Since: 323 | API-Set: unknown
+ * Hash: 0x272E4723B56A3B96 | Since: unknown | API-Set: unknown
  */
 export declare function attachSynchronizedSceneToEntity(sceneID: number, entity: number | IEntity, boneIndex: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xE43A13C9E4CCCBCF | Since: 323 | API-Set: unknown
+ * Hash: 0xE43A13C9E4CCCBCF | Since: unknown | API-Set: unknown
  */
 export declare function blockFromGeneratingDeadBodyEventsWhenDead(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xEACEEDA81751915C | Since: 323 | API-Set: unknown
+ * Hash: 0xEACEEDA81751915C | Since: unknown | API-Set: unknown
  */
 export declare function canCreateRandomBikeRider(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x5EE2CAFF7F17770D | Since: 323 | API-Set: unknown
+ * Hash: 0x5EE2CAFF7F17770D | Since: unknown | API-Set: unknown
  */
 export declare function canCreateRandomCops(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xB8EB95E5B4E56978 | Since: 323 | API-Set: unknown
+ * Hash: 0xB8EB95E5B4E56978 | Since: unknown | API-Set: unknown
  */
 export declare function canCreateRandomDriver(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x3E8349C08E4B82E4 | Since: 323 | API-Set: unknown
+ * Hash: 0x3E8349C08E4B82E4 | Since: unknown | API-Set: unknown
  */
 export declare function canCreateRandom(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x51AC07A44D4F5B8A | Since: 323 | API-Set: unknown
+ * Hash: 0x51AC07A44D4F5B8A | Since: unknown | API-Set: unknown
  */
 export declare function canKnockOffVehicle(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xEAD42DE3610D0721 | Since: 323 | API-Set: unknown
+ * Hash: 0xEAD42DE3610D0721 | Since: unknown | API-Set: unknown
  */
 export declare function canInCombatSeeTarget(ped: number | IPed, target: number | IPed): boolean;
 /**
@@ -550,166 +550,166 @@ export declare function canInCombatSeeTarget(ped: number | IPed, target: number 
  *
  * [Example: Can prevent peds from falling when standing on moving vehicles.]
  *
- * Hash: 0x128F79EDCECE4FD5 | Since: 323 | API-Set: unknown
+ * Hash: 0x128F79EDCECE4FD5 | Since: unknown | API-Set: unknown
  */
 export declare function canRagdoll(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x6CD5A433374D4CFB | Since: 323 | API-Set: unknown
+ * Hash: 0x6CD5A433374D4CFB | Since: unknown | API-Set: unknown
  */
 export declare function canSeeHatedPed(ped1: number | IPed, ped2: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x2DFC81C9B9608549 | Since: 944 | API-Set: unknown
+ * Hash: 0x2DFC81C9B9608549 | Since: unknown | API-Set: unknown
  */
 export declare function canShuffleToOrFromExtraSeat(ped: number | IPed): [boolean, number];
 /**
  * No comment provided
  *
- * Hash: 0x9C6A6C19B6C0C496 | Since: 323 | API-Set: unknown
+ * Hash: 0x9C6A6C19B6C0C496 | Since: unknown | API-Set: unknown
  */
 export declare function canShuffleToOrFromTurretSeat(ped: number | IPed): [boolean, number];
 /**
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0xCD8A7537A9B52F06 | Since: 323 | API-Set: unknown
+ * Hash: 0xCD8A7537A9B52F06 | Since: unknown | API-Set: unknown
  */
 export declare function clearAllProps(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xE6CA85E7259CE16B | Since: 323 | API-Set: unknown
+ * Hash: 0xE6CA85E7259CE16B | Since: unknown | API-Set: unknown
  */
 export declare function clearAllVehicleForcedSeatUsage(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x637822DC2AFEEBF8 | Since: 1493 | API-Set: unknown
+ * Hash: 0x637822DC2AFEEBF8 | Since: unknown | API-Set: unknown
  */
 export declare function clearCoverPointFor(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x726256CC1EEB182F | Since: 323 | API-Set: unknown
+ * Hash: 0x726256CC1EEB182F | Since: unknown | API-Set: unknown
  */
 export declare function clearFacialIdleAnimOverride(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xD8D19675ED5FBDCE | Since: 323 | API-Set: unknown
+ * Hash: 0xD8D19675ED5FBDCE | Since: unknown | API-Set: unknown
  */
 export declare function clearAlternateMovementAnim(ped: number | IPed, stance: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x8844BBFCE30AA9E9 | Since: 323 | API-Set: unknown
+ * Hash: 0x8844BBFCE30AA9E9 | Since: unknown | API-Set: unknown
  */
 export declare function clearAlternateWalkAnim(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x8FE22675A5A45817 | Since: 323 | API-Set: unknown
+ * Hash: 0x8FE22675A5A45817 | Since: unknown | API-Set: unknown
  */
 export declare function clearBloodDamage(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x56E3B78C5408D9F4 | Since: 323 | API-Set: unknown
+ * Hash: 0x56E3B78C5408D9F4 | Since: unknown | API-Set: unknown
  */
 export declare function clearBloodDamageByZone(ped: number | IPed): void;
 /**
  * p1: from 0 to 5 in the b617d scripts.
  * p2: "blushing" and "ALL" found in the b617d scripts.
  *
- * Hash: 0x523C79AEEFCC4A2A | Since: 323 | API-Set: unknown
+ * Hash: 0x523C79AEEFCC4A2A | Since: unknown | API-Set: unknown
  */
 export declare function clearDamageDecalByZone(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x0E5173C163976E38 | Since: 323 | API-Set: unknown
+ * Hash: 0x0E5173C163976E38 | Since: unknown | API-Set: unknown
  */
 export declare function clearDecorations(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xE3B27E70CEAB9F0C | Since: 323 | API-Set: unknown
+ * Hash: 0xE3B27E70CEAB9F0C | Since: unknown | API-Set: unknown
  */
 export declare function clearDecorationsLeaveScars(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x4AFE3690D7E0B5AC | Since: 323 | API-Set: unknown
+ * Hash: 0x4AFE3690D7E0B5AC | Since: unknown | API-Set: unknown
  */
 export declare function clearDriveByClipsetOverride(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x6585D955A68452A5 | Since: 323 | API-Set: unknown
+ * Hash: 0x6585D955A68452A5 | Since: unknown | API-Set: unknown
  */
 export declare function clearEnvDirt(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x80054D7FCC70EEC6 | Since: 323 | API-Set: unknown
+ * Hash: 0x80054D7FCC70EEC6 | Since: unknown | API-Set: unknown
  */
 export declare function clearFallUpperBodyClipsetOverride(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x8EF6B7AC68E2F01B | Since: 323 | API-Set: unknown
+ * Hash: 0x8EF6B7AC68E2F01B | Since: unknown | API-Set: unknown
  */
 export declare function clearLastDamageBone(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xC79196DCB36F6121 | Since: 323 | API-Set: unknown
+ * Hash: 0xC79196DCB36F6121 | Since: unknown | API-Set: unknown
  */
 export declare function clearMotionInCoverClipsetOverride(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x2E05208086BA0651 | Since: 323 | API-Set: unknown
+ * Hash: 0x2E05208086BA0651 | Since: unknown | API-Set: unknown
  */
 export declare function clearNonCreationArea(): void;
 /**
  * No comment provided
  *
- * Hash: 0x1280804F7CFD2D6C | Since: 323 | API-Set: unknown
+ * Hash: 0x1280804F7CFD2D6C | Since: unknown | API-Set: unknown
  */
 export declare function clearParachutePackVariation(ped: number | IPed): void;
 /**
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x0943E5B8E078E76E | Since: 323 | API-Set: unknown
+ * Hash: 0x0943E5B8E078E76E | Since: unknown | API-Set: unknown
  */
 export declare function clearProp(ped: number | IPed, propId: number): void;
 /**
  * Removes the scubagear (for mp male: component id: 8, drawableId: 123, textureId: any) from peds. Does not play the 'remove scuba gear' animation, but instantly removes it.
  *
- * Hash: 0xB50EB4CCB29704AC | Since: 323 | API-Set: unknown
+ * Hash: 0xB50EB4CCB29704AC | Since: unknown | API-Set: unknown
  */
 export declare function clearScubaGearVariation(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x687C0B594907D2E8 | Since: 323 | API-Set: unknown
+ * Hash: 0x687C0B594907D2E8 | Since: unknown | API-Set: unknown
  */
 export declare function clearStoredHatProp(ped: number | IPed): void;
 /**
  * It clears the wetness of the selected Ped/Player. Clothes have to be wet to notice the difference.
  *
- * Hash: 0x9C720776DAA43E7E | Since: 323 | API-Set: unknown
+ * Hash: 0x9C720776DAA43E7E | Since: unknown | API-Set: unknown
  */
 export declare function clearWetness(ped: number | IPed): void;
 /**
  * See SET_RAGDOLL_BLOCKING_FLAGS for flags
  *
- * Hash: 0xD86D101FCFD00A4B | Since: 323 | API-Set: unknown
+ * Hash: 0xD86D101FCFD00A4B | Since: unknown | API-Set: unknown
  */
 export declare function clearRagdollBlockingFlags(ped: number | IPed, blockingFlag: number): void;
 /**
@@ -729,43 +729,43 @@ export declare function clearRagdollBlockingFlags(ped: number | IPed, blockingFl
  * `PED::CLEAR_RELATIONSHIP_BETWEEN_GROUPS(2, l_1017, 0xA49E591C);`
  * `PED::CLEAR_RELATIONSHIP_BETWEEN_GROUPS(2, 0xA49E591C, l_1017);`
  *
- * Hash: 0x5E29243FB56FC6D4 | Since: 323 | API-Set: unknown
+ * Hash: 0x5E29243FB56FC6D4 | Since: unknown | API-Set: unknown
  */
 export declare function clearRelationshipBetweenGroups(relationship: number, group1: number | string, group2: number | string): void;
 /**
  * No comment provided
  *
- * Hash: 0xEF29A16337FACADB | Since: 323 | API-Set: unknown
+ * Hash: 0xEF29A16337FACADB | Since: unknown | API-Set: unknown
  */
 export declare function clone(ped: number | IPed, isNetwork: boolean, bScriptHostPed: boolean, copyHeadBlendFlag: boolean): number;
 /**
  * No comment provided
  *
- * Hash: 0x668FD40BCBA5DE48 | Since: 463 | API-Set: unknown
+ * Hash: 0x668FD40BCBA5DE48 | Since: unknown | API-Set: unknown
  */
 export declare function cloneAlt(ped: number | IPed, isNetwork: boolean, bScriptHostPed: boolean, copyHeadBlendFlag: boolean): number;
 /**
  * Copies ped's components and props to targetPed.
  *
- * Hash: 0xE952D6431689AD9A | Since: 323 | API-Set: unknown
+ * Hash: 0xE952D6431689AD9A | Since: unknown | API-Set: unknown
  */
 export declare function cloneToTarget(ped: number | IPed, targetPed: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x148B08C2D2ACB884 | Since: 463 | API-Set: unknown
+ * Hash: 0x148B08C2D2ACB884 | Since: unknown | API-Set: unknown
  */
 export declare function cloneToTargetAlt(ped: number | IPed, targetPed: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x5407B7288D0478B7 | Since: 323 | API-Set: unknown
+ * Hash: 0x5407B7288D0478B7 | Since: unknown | API-Set: unknown
  */
 export declare function countsInCombatWithTarget(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0x336B3D200AB007CB | Since: 323 | API-Set: unknown
+ * Hash: 0x336B3D200AB007CB | Since: unknown | API-Set: unknown
  */
 export declare function countsInCombatWithTargetWithinRadius(ped: number | IPed, pos: Vector3, radius: number): number;
 /**
@@ -776,7 +776,7 @@ export declare function countsInCombatWithTargetWithinRadius(ped: number | IPed,
  *
  * Returns a handle to the created group, or 0 if a group couldn't be created.
  *
- * Hash: 0x90370EBE0FEE1A3D | Since: 323 | API-Set: unknown
+ * Hash: 0x90370EBE0FEE1A3D | Since: unknown | API-Set: unknown
  */
 export declare function createGroup(unused: number): number;
 /**
@@ -787,13 +787,13 @@ export declare function createGroup(unused: number): number;
  *
  * If a message already exists, this function does nothing. A message exists until the point it has been successfully dispatched by GIVE_PED_NM_MESSAGE.
  *
- * Hash: 0x418EF2A1BCE56685 | Since: 323 | API-Set: unknown
+ * Hash: 0x418EF2A1BCE56685 | Since: unknown | API-Set: unknown
  */
 export declare function createNmMessage(startImmediately: boolean, messageId: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x8C4F3BF23B6237DB | Since: 323 | API-Set: unknown
+ * Hash: 0x8C4F3BF23B6237DB | Since: unknown | API-Set: unknown
  */
 export declare function createParachuteBagObject(ped: number | IPed): number;
 /**
@@ -801,7 +801,7 @@ export declare function createParachuteBagObject(ped: number | IPed): number;
  *
  * Full list of peds by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/peds.json
  *
- * Hash: 0xD49F9B0955C367DE | Since: 323 | API-Set: unknown
+ * Hash: 0xD49F9B0955C367DE | Since: unknown | API-Set: unknown
  */
 export declare function create(pedType: number, modelHash: number | string, pos: Vector3, heading: number, isNetwork: boolean, bScriptHostPed: boolean): number;
 /**
@@ -809,7 +809,7 @@ export declare function create(pedType: number, modelHash: number | string, pos:
  *
  * Full list of peds by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/peds.json
  *
- * Hash: 0x7DD959874C1FD534 | Since: 323 | API-Set: unknown
+ * Hash: 0x7DD959874C1FD534 | Since: unknown | API-Set: unknown
  */
 export declare function createInsideVehicle(vehicle: number | IVehicle, pedType: number, modelHash: number | string, seat: number, isNetwork: boolean, bScriptHostPed: boolean): number;
 /**
@@ -823,13 +823,13 @@ export declare function createInsideVehicle(vehicle: number | IVehicle, pedType:
  * Creates a Ped at the specified location, returns the Ped Handle.
  * Ped will not act until SET_PED_AS_NO_LONGER_NEEDED is called.
  *
- * Hash: 0xB4AC7D0CF06BFE8F | Since: 323 | API-Set: unknown
+ * Hash: 0xB4AC7D0CF06BFE8F | Since: unknown | API-Set: unknown
  */
 export declare function createRandom(pos: Vector3): number;
 /**
  * No comment provided
  *
- * Hash: 0x9B62392B474F44A0 | Since: 323 | API-Set: unknown
+ * Hash: 0x9B62392B474F44A0 | Since: unknown | API-Set: unknown
  */
 export declare function createRandomAsDriver(vehicle: number | IVehicle, returnHandle: boolean): number;
 /**
@@ -838,73 +838,73 @@ export declare function createRandomAsDriver(vehicle: number | IVehicle, returnH
  * roll and pitch 0
  * yaw to Ped.rotation
  *
- * Hash: 0x8C18E0F9080ADD73 | Since: 323 | API-Set: unknown
+ * Hash: 0x8C18E0F9080ADD73 | Since: unknown | API-Set: unknown
  */
 export declare function createSynchronizedScene(pos: Vector3, roll: number, pitch: number, yaw: number): number;
 /**
  * No comment provided
  *
- * Hash: 0x62EC273D00187DCA | Since: 323 | API-Set: unknown
+ * Hash: 0x62EC273D00187DCA | Since: unknown | API-Set: unknown
  */
 export declare function createSynchronizedSceneAtMapObject(pos: Vector3, radius: number, _object: number | string): number;
 /**
  * Deletes the specified ped, then sets the handle pointed to by the pointer to NULL.
  *
- * Hash: 0x9614299DCB53E54B | Since: 323 | API-Set: unknown
+ * Hash: 0x9614299DCB53E54B | Since: unknown | API-Set: unknown
  */
-export declare function deletePed(ped: number | IPed): void;
+export declare function deletePed(): number;
 /**
  * No comment provided
  *
- * Hash: 0x6D38F1F04CBB37EA | Since: 323 | API-Set: unknown
+ * Hash: 0x6D38F1F04CBB37EA | Since: unknown | API-Set: unknown
  */
 export declare function detachSynchronizedScene(sceneID: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xA21C118553BBDF02 | Since: 323 | API-Set: unknown
+ * Hash: 0xA21C118553BBDF02 | Since: unknown | API-Set: unknown
  */
 export declare function disableHeadBlendPaletteColor(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x600048C60D5C2C51 | Since: 323 | API-Set: unknown
+ * Hash: 0x600048C60D5C2C51 | Since: unknown | API-Set: unknown
  */
 export declare function disableHeatscaleOverride(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x733C87D4CE22BEA2 | Since: 323 | API-Set: unknown
+ * Hash: 0x733C87D4CE22BEA2 | Since: unknown | API-Set: unknown
  */
 export declare function disableInjuredOnGroundBehaviour(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x7C6B0C22F9F40BBE | Since: 323 | API-Set: unknown
+ * Hash: 0x7C6B0C22F9F40BBE | Since: unknown | API-Set: unknown
  */
 export declare function doesGroupExist(groupId: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xCC6E3B6BB69501F1 | Since: 505 | API-Set: unknown
+ * Hash: 0xCC6E3B6BB69501F1 | Since: unknown | API-Set: unknown
  */
 export declare function doesRelationshipGroupExist(groupHash: number | string): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x8A24B067D175A7BD | Since: 678 | API-Set: unknown
+ * Hash: 0x8A24B067D175A7BD | Since: unknown | API-Set: unknown
  */
 export declare function doesScenarioBlockingAreaExists(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xAFF4710E2A0A6C12 | Since: 323 | API-Set: unknown
+ * Hash: 0xAFF4710E2A0A6C12 | Since: unknown | API-Set: unknown
  */
 export declare function dropAmbientProp(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xEE2476B9EE4A094F | Since: 1493 | API-Set: unknown
+ * Hash: 0xEE2476B9EE4A094F | Since: unknown | API-Set: unknown
  */
 export declare function enableMpLight(ped: number | IPed, toggle: boolean): void;
 /**
@@ -912,31 +912,31 @@ export declare function enableMpLight(ped: number | IPed, toggle: boolean): void
  *
  * It doesn't really explode the ped's head but it kills the ped
  *
- * Hash: 0x2D05CED3A38D0F3A | Since: 323 | API-Set: unknown
+ * Hash: 0x2D05CED3A38D0F3A | Since: unknown | API-Set: unknown
  */
 export declare function explodeHead(ped: number | IPed, weaponHash: number | string): void;
 /**
  * No comment provided
  *
- * Hash: 0x4668D80430D6C299 | Since: 323 | API-Set: unknown
+ * Hash: 0x4668D80430D6C299 | Since: unknown | API-Set: unknown
  */
 export declare function finalizeHeadBlend(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xFF287323B0E2C69A | Since: 323 | API-Set: unknown
+ * Hash: 0xFF287323B0E2C69A | Since: unknown | API-Set: unknown
  */
 export declare function forceAllHeadingValuesToAlign(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xED3C76ADFA6D07C4 | Since: 323 | API-Set: unknown
+ * Hash: 0xED3C76ADFA6D07C4 | Since: unknown | API-Set: unknown
  */
 export declare function forceInstantLegIkSetup(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x2208438012482A1A | Since: 323 | API-Set: unknown
+ * Hash: 0x2208438012482A1A | Since: unknown | API-Set: unknown
  */
 export declare function forceAiAndAnimationUpdate(ped: number | IPed): void;
 /**
@@ -970,37 +970,37 @@ export declare function forceAiAndAnimationUpdate(ped: number | IPed): void;
  * MotionState_Jetpack = 0x535E6A5E
  * };
  *
- * Hash: 0xF28965D04F570DCA | Since: 323 | API-Set: unknown
+ * Hash: 0xF28965D04F570DCA | Since: unknown | API-Set: unknown
  */
 export declare function forceMotionState(ped: number | IPed, motionStateHash: number | string): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x16E42E800B472221 | Since: 323 | API-Set: unknown
+ * Hash: 0x16E42E800B472221 | Since: unknown | API-Set: unknown
  */
 export declare function forceToOpenParachute(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xD33DAA36272177C4 | Since: 323 | API-Set: unknown
+ * Hash: 0xD33DAA36272177C4 | Since: unknown | API-Set: unknown
  */
 export declare function forceZeroMassInCollisions(ped: number | IPed): void;
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
  *
- * Hash: 0xBE22B26DD764C040 | Since: 323 | API-Set: unknown
+ * Hash: 0xBE22B26DD764C040 | Since: unknown | API-Set: unknown
  */
 export declare function getAnimInitialOffsetPosition(animDict: string, animName: string, pos: Vector3, rot: Vector3): Vector3;
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
  *
- * Hash: 0x4B805E6046EE9E47 | Since: 323 | API-Set: unknown
+ * Hash: 0x4B805E6046EE9E47 | Since: unknown | API-Set: unknown
  */
 export declare function getAnimInitialOffsetRotation(animDict: string, animName: string, pos: Vector3, rot: Vector3): Vector3;
 /**
  * No comment provided
  *
- * Hash: 0x03EA03AF85A85CB7 | Since: 323 | API-Set: unknown
+ * Hash: 0x03EA03AF85A85CB7 | Since: unknown | API-Set: unknown
  */
 export declare function getCanBeGrabbedByScript(ped: number | IPed): boolean;
 /**
@@ -1039,7 +1039,7 @@ export declare function getCanBeGrabbedByScript(ped: number | IPed): boolean;
  *
  * `Note: PED::GET_PED_NEARBY_PEDS works for more peds.`
  *
- * Hash: 0xC33AB876A77F8164 | Since: 323 | API-Set: unknown
+ * Hash: 0xC33AB876A77F8164 | Since: unknown | API-Set: unknown
  */
 export declare function getClosest(pos: Vector3, radius: number, pedType: number): [boolean, number];
 /**
@@ -1075,61 +1075,61 @@ export declare function getClosest(pos: Vector3, radius: number, pedType: number
  * 16=OptimalCoverDistance
  *
  *
- * Hash: 0x52DFF8A10508090A | Since: 323 | API-Set: unknown
+ * Hash: 0x52DFF8A10508090A | Since: unknown | API-Set: unknown
  */
 export declare function getCombatFloat(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0xCD5003B097200F36 | Since: 323 | API-Set: unknown
+ * Hash: 0xCD5003B097200F36 | Since: unknown | API-Set: unknown
  */
 export declare function getDeadPickupCoords(ped: number | IPed): Vector3;
 /**
  * No comment provided
  *
- * Hash: 0xAAA6A3698A69E048 | Since: 323 | API-Set: unknown
+ * Hash: 0xAAA6A3698A69E048 | Since: unknown | API-Set: unknown
  */
 export declare function getDefaultSecondaryTintForBarber(colorID: number): number;
 /**
  * No comment provided
  *
- * Hash: 0xEA9960D07DADCF10 | Since: 323 | API-Set: unknown
+ * Hash: 0xEA9960D07DADCF10 | Since: unknown | API-Set: unknown
  */
 export declare function getDefaultSecondaryTintForCreator(colorId: number): number;
 /**
  * No comment provided
  *
- * Hash: 0xF033419D1B81FAE8 | Since: 323 | API-Set: unknown
+ * Hash: 0xF033419D1B81FAE8 | Since: unknown | API-Set: unknown
  */
 export declare function getFmFemaleShopApparelItemIndex(): number;
 /**
  * No comment provided
  *
- * Hash: 0x1E77FA7A62EE6C4C | Since: 323 | API-Set: unknown
+ * Hash: 0x1E77FA7A62EE6C4C | Since: unknown | API-Set: unknown
  */
 export declare function getFmMaleShopApparelItemIndex(): number;
 /**
  * p1 may be a BOOL representing whether or not the group even exists
  *
- * Hash: 0x8DE69FE35CA09A45 | Since: 323 | API-Set: unknown
+ * Hash: 0x8DE69FE35CA09A45 | Since: unknown | API-Set: unknown
  */
 export declare function getGroupSize(groupID: number): [any, number];
 /**
  * A getter for _SET_PED_EYE_COLOR. Returns -1 if fails to get.
  *
- * Hash: 0x76BBA2CEE66D47E9 | Since: 1011 | API-Set: unknown
+ * Hash: 0x76BBA2CEE66D47E9 | Since: unknown | API-Set: unknown
  */
 export declare function getHeadBlendEyeColor(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0x5486A79D9FBD342D | Since: 323 | API-Set: unknown
+ * Hash: 0x5486A79D9FBD342D | Since: unknown | API-Set: unknown
  */
 export declare function getJackTarget(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0x18A3E9EE1297FD39 | Since: 323 | API-Set: unknown
+ * Hash: 0x18A3E9EE1297FD39 | Since: unknown | API-Set: unknown
  */
 export declare function getMeleeTargetFor(ped: number | IPed): number;
 /**
@@ -1144,77 +1144,77 @@ export declare function getMeleeTargetFor(ped: number | IPed): number;
  * v1->Returns->Item1= 0;
  * }
  *
- * Hash: 0xE7E11B8DCBED1058 | Since: 323 | API-Set: unknown
+ * Hash: 0xE7E11B8DCBED1058 | Since: unknown | API-Set: unknown
  */
 export declare function getMount(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0x88274C11CF0D866D | Since: 1493 | API-Set: unknown
+ * Hash: 0x88274C11CF0D866D | Since: unknown | API-Set: unknown
  */
 export declare function getMpLightEnabled(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x9E30E91FB03A2CAF | Since: 323 | API-Set: unknown
+ * Hash: 0x9E30E91FB03A2CAF | Since: unknown | API-Set: unknown
  */
 export declare function getMpOutfitDataFromMetadata(): [boolean, any, any];
 /**
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x27561561732A7842 | Since: 323 | API-Set: unknown
+ * Hash: 0x27561561732A7842 | Since: unknown | API-Set: unknown
  */
 export declare function getNumberOfDrawableVariations(ped: number | IPed, componentId: number): number;
 /**
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x5FAF9754E789FB47 | Since: 323 | API-Set: unknown
+ * Hash: 0x5FAF9754E789FB47 | Since: unknown | API-Set: unknown
  */
 export declare function getNumberOfPropDrawableVariations(ped: number | IPed, propId: number): number;
 /**
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0xA6E7F1CEB523E171 | Since: 323 | API-Set: unknown
+ * Hash: 0xA6E7F1CEB523E171 | Since: unknown | API-Set: unknown
  */
 export declare function getNumberOfPropTextureVariations(ped: number | IPed, propId: number, drawableId: number): number;
 /**
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x8F7156A3142A6BAD | Since: 323 | API-Set: unknown
+ * Hash: 0x8F7156A3142A6BAD | Since: unknown | API-Set: unknown
  */
 export declare function getNumberOfTextureVariations(ped: number | IPed, componentId: number, drawableId: number): number;
 /**
  * No comment provided
  *
- * Hash: 0xE5C0CF872C2AD150 | Since: 323 | API-Set: unknown
+ * Hash: 0xE5C0CF872C2AD150 | Since: unknown | API-Set: unknown
  */
 export declare function getNumHairTints(): number;
 /**
  * No comment provided
  *
- * Hash: 0xD1F7CA1535D22818 | Since: 323 | API-Set: unknown
+ * Hash: 0xD1F7CA1535D22818 | Since: unknown | API-Set: unknown
  */
 export declare function getNumMakeupTints(): number;
 /**
  * gtaforums.com/topic/885580-ped-headshotmugshot-txd/
  *
- * Hash: 0xDB4EACD4AD0A5D6B | Since: 323 | API-Set: unknown
+ * Hash: 0xDB4EACD4AD0A5D6B | Since: unknown | API-Set: unknown
  */
 export declare function getheadshotTxdString(id: number): string;
 /**
  * No comment provided
  *
- * Hash: 0x9B128DC36C1E04CF | Since: 323 | API-Set: unknown
+ * Hash: 0x9B128DC36C1E04CF | Since: unknown | API-Set: unknown
  */
 export declare function getsJacker(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0x37F4AD56ECBC0CD6 | Since: 323 | API-Set: unknown
+ * Hash: 0x37F4AD56ECBC0CD6 | Since: unknown | API-Set: unknown
  */
 export declare function getAccuracy(ped: number | IPed): number;
 /**
@@ -1229,19 +1229,19 @@ export declare function getAccuracy(ped: number | IPed): number;
  *
  * If the Ped does not exist, returns -1.
  *
- * Hash: 0xF6AA118530443FD2 | Since: 323 | API-Set: unknown
+ * Hash: 0xF6AA118530443FD2 | Since: unknown | API-Set: unknown
  */
 export declare function getAlertness(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0x9483AF821605B1D8 | Since: 323 | API-Set: unknown
+ * Hash: 0x9483AF821605B1D8 | Since: unknown | API-Set: unknown
  */
 export declare function getArmour(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0x5CCE68DBD5FE93EC | Since: 323 | API-Set: unknown
+ * Hash: 0x5CCE68DBD5FE93EC | Since: unknown | API-Set: unknown
  */
 export declare function getAsGroupLeader(groupID: number): number;
 /**
@@ -1254,7 +1254,7 @@ export declare function getAsGroupLeader(groupID: number): number;
  * `. . . . . . . . Ped ped1 = PED::GET_PED_AS_GROUP_MEMBER(groupID, memberNumber);`
  * . . . . . . . . //and so on
  *
- * Hash: 0x51455483CF23ED97 | Since: 323 | API-Set: unknown
+ * Hash: 0x51455483CF23ED97 | Since: unknown | API-Set: unknown
  */
 export declare function getAsGroupMember(groupID: number, memberNumber: number): number;
 /**
@@ -1266,7 +1266,7 @@ export declare function getAsGroupMember(groupID: number, memberNumber: number):
  * offsetY: The Y-component of the offset to add to the position relative to the bone's rotation.
  * offsetZ: The Z-component of the offset to add to the position relative to the bone's rotation.
  *
- * Hash: 0x17C07FC640E86B4E | Since: 323 | API-Set: unknown
+ * Hash: 0x17C07FC640E86B4E | Since: unknown | API-Set: unknown
  */
 export declare function getBoneCoords(ped: number | IPed, boneId: number, offsetX: number, offsetY: number, offsetZ: number): Vector3;
 /**
@@ -1372,43 +1372,43 @@ export declare function getBoneCoords(ped: number | IPed, boneId: number, offset
  * RB_Neck_1 = 0x8b93,
  * IK_Root = 0xdd1c
  *
- * Hash: 0x3F428D08BE5AAE31 | Since: 323 | API-Set: unknown
+ * Hash: 0x3F428D08BE5AAE31 | Since: unknown | API-Set: unknown
  */
 export declare function getBoneIndex(ped: number | IPed, boneId: number): number;
 /**
  * Returns the hash of the weapon/model/object that killed the ped.
  *
- * Hash: 0x16FFE42AB2D2DC59 | Since: 323 | API-Set: unknown
+ * Hash: 0x16FFE42AB2D2DC59 | Since: unknown | API-Set: unknown
  */
 export declare function getCauseOfDeath(ped: number | IPed): number;
 /**
  * See SET_PED_COMBAT_MOVEMENT
  *
- * Hash: 0xDEA92412FCAEB3F5 | Since: 323 | API-Set: unknown
+ * Hash: 0xDEA92412FCAEB3F5 | Since: unknown | API-Set: unknown
  */
 export declare function getCombatMovement(ped: number | IPed): number;
 /**
  * See SET_PED_COMBAT_RANGE
  *
- * Hash: 0xF9D9F7F2DB8E2FA0 | Since: 323 | API-Set: unknown
+ * Hash: 0xF9D9F7F2DB8E2FA0 | Since: unknown | API-Set: unknown
  */
 export declare function getCombatRange(ped: number | IPed): number;
 /**
  * See SET_PED_CONFIG_FLAG
  *
- * Hash: 0x7EE53118C892B513 | Since: 323 | API-Set: unknown
+ * Hash: 0x7EE53118C892B513 | Since: unknown | API-Set: unknown
  */
 export declare function getConfigFlag(ped: number | IPed, flagId: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xF60165E1D2C5370B | Since: 323 | API-Set: unknown
+ * Hash: 0xF60165E1D2C5370B | Since: unknown | API-Set: unknown
  */
 export declare function getCurrentMoveBlendRatio(ped: number | IPed): [boolean, number, number];
 /**
  * No comment provided
  *
- * Hash: 0x71EAB450D86954A1 | Since: 323 | API-Set: unknown
+ * Hash: 0x71EAB450D86954A1 | Since: unknown | API-Set: unknown
  */
 export declare function getDecorationsState(ped: number | IPed): number;
 /**
@@ -1427,19 +1427,19 @@ export declare function getDecorationsState(ped: number | IPed): number;
  *
  * Full list of ped overlays / decorations by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedOverlayCollections.json
  *
- * Hash: 0x9FD452BFBE7A7A8B | Since: 323 | API-Set: unknown
+ * Hash: 0x9FD452BFBE7A7A8B | Since: unknown | API-Set: unknown
  */
 export declare function getDecorationZoneFromHashes(collection: number | string, overlay: number | string): number;
 /**
  * No comment provided
  *
- * Hash: 0x3C06B8786DD94CD1 | Since: 323 | API-Set: unknown
+ * Hash: 0x3C06B8786DD94CD1 | Since: unknown | API-Set: unknown
  */
 export declare function getDefensiveAreaPosition(ped: number | IPed): Vector3;
 /**
  * No comment provided
  *
- * Hash: 0x65671A4FB8218930 | Since: 2699 | API-Set: unknown
+ * Hash: 0x65671A4FB8218930 | Since: unknown | API-Set: unknown
  */
 export declare function getDiesInWater(ped: number | IPed): boolean;
 /**
@@ -1457,20 +1457,20 @@ export declare function getDiesInWater(ped: number | IPed): boolean;
  * 10- Decals
  * 11 - Auxiliary parts for torso
  *
- * Hash: 0x67F3780DD425D4FC | Since: 323 | API-Set: unknown
+ * Hash: 0x67F3780DD425D4FC | Since: unknown | API-Set: unknown
  */
 export declare function getDrawableVariation(ped: number | IPed, componentId: number): number;
 /**
  * Use 0x4E90D746056E273D to set the illuminated clothing glow intensity for a specific ped.
  * Returns a float between 0.0 and 1.0 representing the current illuminated clothing glow intensity.
  *
- * Hash: 0x1461B28A06717D68 | Since: 944 | API-Set: unknown
+ * Hash: 0x1461B28A06717D68 | Since: unknown | API-Set: unknown
  */
 export declare function getEmissiveScale(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0x9C14D30395A51A3C | Since: 323 | API-Set: unknown
+ * Hash: 0x9C14D30395A51A3C | Since: unknown | API-Set: unknown
  */
 export declare function getEnveffScale(ped: number | IPed): number;
 /**
@@ -1480,13 +1480,13 @@ export declare function getEnveffScale(ped: number | IPed): number;
  *
  * If worldSpace is true, the returned offset is relative to the world. That is, if the ped has moved 1 meter on the X axis and 5 meters on the Y axis, it'll return 1,5,0.
  *
- * Hash: 0xE0AF41401ADF87E3 | Since: 323 | API-Set: unknown
+ * Hash: 0xE0AF41401ADF87E3 | Since: unknown | API-Set: unknown
  */
 export declare function getExtractedDisplacement(ped: number | IPed, worldSpace: boolean): Vector3;
 /**
  * Returns the group id of which the specified ped is a member of.
  *
- * Hash: 0xF162E133B4E7A675 | Since: 323 | API-Set: unknown
+ * Hash: 0xF162E133B4E7A675 | Since: unknown | API-Set: unknown
  */
 export declare function getGroupIndex(ped: number | IPed): number;
 /**
@@ -1496,7 +1496,7 @@ export declare function getGroupIndex(ped: number | IPed): number;
  * This is used with the hair color swatches scaleform.
  * Use `GET_PED_MAKEUP_TINT_COLOR` to get the makeup colors.
  *
- * Hash: 0x4852FC386E2E1BB5 | Since: 323 | API-Set: unknown
+ * Hash: 0x4852FC386E2E1BB5 | Since: unknown | API-Set: unknown
  */
 export declare function getHairTintColor(hairColorIndex: number): [number, number, number];
 /**
@@ -1525,7 +1525,7 @@ export declare function getHairTintColor(hairColorIndex: number): [number, numbe
  * bool isParent;
  * };
  *
- * Hash: 0x2746BD9D88C5C5D0 | Since: 323 | API-Set: unknown
+ * Hash: 0x2746BD9D88C5C5D0 | Since: unknown | API-Set: unknown
  */
 export declare function getHeadBlendData(ped: number | IPed): [boolean, any];
 /**
@@ -1533,13 +1533,13 @@ export declare function getHeadBlendData(ped: number | IPed): [boolean, any];
  *
  * Used when calling SET_PED_HEAD_BLEND_DATA.
  *
- * Hash: 0x68D353AB88B97E0C | Since: 323 | API-Set: unknown
+ * Hash: 0x68D353AB88B97E0C | Since: unknown | API-Set: unknown
  */
 export declare function getHeadBlendFirstIndex(_type: number): number;
 /**
  * Type equals 0 for male non-dlc, 1 for female non-dlc, 2 for male dlc, and 3 for female dlc.
  *
- * Hash: 0x5EF37013A6539C9D | Since: 323 | API-Set: unknown
+ * Hash: 0x5EF37013A6539C9D | Since: unknown | API-Set: unknown
  */
 export declare function getHeadBlendNumHeads(_type: number): number;
 /**
@@ -1547,31 +1547,31 @@ export declare function getHeadBlendNumHeads(_type: number): number;
  *
  * This might be the once removed native GET_PED_HEAD_OVERLAY.
  *
- * Hash: 0xA60EF3B6461A4D43 | Since: 323 | API-Set: unknown
+ * Hash: 0xA60EF3B6461A4D43 | Since: unknown | API-Set: unknown
  */
 export declare function getHeadOverlay(ped: number | IPed, overlayID: number): number;
 /**
  * No comment provided
  *
- * Hash: 0xCF1CE768BB43480E | Since: 323 | API-Set: unknown
+ * Hash: 0xCF1CE768BB43480E | Since: unknown | API-Set: unknown
  */
 export declare function getHeadOverlayNum(overlayID: number): number;
 /**
  * No comment provided
  *
- * Hash: 0x451294E859ECC018 | Since: 323 | API-Set: unknown
+ * Hash: 0x451294E859ECC018 | Since: unknown | API-Set: unknown
  */
 export declare function getHelmetStoredHatPropIndex(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0x9D728C1E12BF5518 | Since: 323 | API-Set: unknown
+ * Hash: 0x9D728C1E12BF5518 | Since: unknown | API-Set: unknown
  */
 export declare function getHelmetStoredHatTexIndex(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0xD75960F6BD9EA49C | Since: 323 | API-Set: unknown
+ * Hash: 0xD75960F6BD9EA49C | Since: unknown | API-Set: unknown
  */
 export declare function getLastDamageBone(ped: number | IPed): [boolean, number];
 /**
@@ -1581,19 +1581,19 @@ export declare function getLastDamageBone(ped: number | IPed): [boolean, number]
  * This is used with the makeup color swatches scaleform.
  * Use `GET_PED_HAIR_TINT_COLOR` to get the hair colors.
  *
- * Hash: 0x013E5CFC38CD5387 | Since: 323 | API-Set: unknown
+ * Hash: 0x013E5CFC38CD5387 | Since: unknown | API-Set: unknown
  */
 export declare function getMakeupTintColor(makeupColorIndex: number): [number, number, number];
 /**
  * No comment provided
  *
- * Hash: 0x4700A416E8324EF3 | Since: 323 | API-Set: unknown
+ * Hash: 0x4700A416E8324EF3 | Since: unknown | API-Set: unknown
  */
 export declare function getMaxHealth(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0x3F69145BBA87BAE7 | Since: 323 | API-Set: unknown
+ * Hash: 0x3F69145BBA87BAE7 | Since: unknown | API-Set: unknown
  */
 export declare function getMoney(ped: number | IPed): number;
 /**
@@ -1612,7 +1612,7 @@ export declare function getMoney(ped: number | IPed): number;
  *
  * Example: gtaforums.com/topic/789788-function-args-to-pedget-ped-nearby-peds/?p=1067386687
  *
- * Hash: 0x23F8F5FC7E8C4A6B | Since: 323 | API-Set: unknown
+ * Hash: 0x23F8F5FC7E8C4A6B | Since: unknown | API-Set: unknown
  */
 export declare function getNearbyPeds(ped: number | IPed, ignore: number): [number, any];
 /**
@@ -1645,14 +1645,14 @@ export declare function getNearbyPeds(ped: number | IPed, ignore: number): [numb
  * }
  * }
  *
- * Hash: 0xCFF869CBFA210D82 | Since: 323 | API-Set: unknown
+ * Hash: 0xCFF869CBFA210D82 | Since: unknown | API-Set: unknown
  */
 export declare function getNearbyVehicles(ped: number | IPed): [number, any];
 /**
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0xE3DD5F2A84B42281 | Since: 323 | API-Set: unknown
+ * Hash: 0xE3DD5F2A84B42281 | Since: unknown | API-Set: unknown
  */
 export declare function getPaletteVariation(ped: number | IPed, componentId: number): number;
 /**
@@ -1662,7 +1662,7 @@ export declare function getPaletteVariation(ped: number | IPed, componentId: num
  * 2: rolling
  * 3: ragdoll
  *
- * Hash: 0x8B9F1FC6AE8166C0 | Since: 323 | API-Set: unknown
+ * Hash: 0x8B9F1FC6AE8166C0 | Since: unknown | API-Set: unknown
  */
 export declare function getParachuteLandingType(ped: number | IPed): number;
 /**
@@ -1676,51 +1676,51 @@ export declare function getParachuteLandingType(ped: number | IPed): number;
  *
  * Normal means no parachute?
  *
- * Hash: 0x79CFD9827CC979B6 | Since: 323 | API-Set: unknown
+ * Hash: 0x79CFD9827CC979B6 | Since: unknown | API-Set: unknown
  */
 export declare function getParachuteState(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0xEAF5F7E5AE7C6C9D | Since: 323 | API-Set: unknown
+ * Hash: 0xEAF5F7E5AE7C6C9D | Since: unknown | API-Set: unknown
  */
 export declare function getParachuteTintIndex(ped: number | IPed): number;
 /**
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x898CC20EA75BACD8 | Since: 323 | API-Set: unknown
+ * Hash: 0x898CC20EA75BACD8 | Since: unknown | API-Set: unknown
  */
 export declare function getPropIndex(ped: number | IPed, componentId: number): number;
 /**
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0xE131A28626F81AB2 | Since: 323 | API-Set: unknown
+ * Hash: 0xE131A28626F81AB2 | Since: unknown | API-Set: unknown
  */
 export declare function getPropTextureIndex(ped: number | IPed, componentId: number): number;
 /**
  * No comment provided
  *
- * Hash: 0x2057EF813397A772 | Since: 323 | API-Set: unknown
+ * Hash: 0x2057EF813397A772 | Since: unknown | API-Set: unknown
  */
 export declare function getRagdollBoneIndex(ped: number | IPed, bone: number): number;
 /**
  * No comment provided
  *
- * Hash: 0x42FDD0F017B1E38E | Since: 323 | API-Set: unknown
+ * Hash: 0x42FDD0F017B1E38E | Since: unknown | API-Set: unknown
  */
 export declare function getRelationshipGroupDefaultHash(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0x7DBDD04862D95F04 | Since: 323 | API-Set: unknown
+ * Hash: 0x7DBDD04862D95F04 | Since: unknown | API-Set: unknown
  */
 export declare function getRelationshipGroupHash(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0xAF9E59B1B1FBF2A0 | Since: 323 | API-Set: unknown
+ * Hash: 0xAF9E59B1B1FBF2A0 | Since: unknown | API-Set: unknown
  */
 export declare function getResetFlag(ped: number | IPed, flagId: number): boolean;
 /**
@@ -1728,56 +1728,56 @@ export declare function getResetFlag(ped: number | IPed, flagId: number): boolea
  *
  * Is best to check if the Ped is dead before asking for its killer.
  *
- * Hash: 0x93C8B64DEB84728C | Since: 323 | API-Set: unknown
+ * Hash: 0x93C8B64DEB84728C | Since: unknown | API-Set: unknown
  */
 export declare function getSourceOfDeath(ped: number | IPed): number;
 /**
  * Returns whether the entity is in stealth mode
  *
- * Hash: 0x7C2AC9CA66575FBF | Since: 323 | API-Set: unknown
+ * Hash: 0x7C2AC9CA66575FBF | Since: unknown | API-Set: unknown
  */
 export declare function getStealthMovement(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x32C27A11307B01CC | Since: 2372 | API-Set: unknown
+ * Hash: 0x32C27A11307B01CC | Since: unknown | API-Set: unknown
  */
 export declare function getTargetFromCombatPed(ped: number | IPed): number;
 /**
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x04A355E041E004E6 | Since: 323 | API-Set: unknown
+ * Hash: 0x04A355E041E004E6 | Since: unknown | API-Set: unknown
  */
 export declare function getTextureVariation(ped: number | IPed, componentId: number): number;
 /**
  * No comment provided
  *
- * Hash: 0x1E98817B311AE98A | Since: 323 | API-Set: unknown
+ * Hash: 0x1E98817B311AE98A | Since: unknown | API-Set: unknown
  */
 export declare function getTimeOfDeath(ped: number | IPed): number;
 /**
  * https://alloc8or.re/gta5/doc/enums/ePedType.txt
  *
- * Hash: 0xFF059E1E4C01E63C | Since: 323 | API-Set: unknown
+ * Hash: 0xFF059E1E4C01E63C | Since: unknown | API-Set: unknown
  */
 export declare function getType(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0xEF2C71A32CAD5FBD | Since: 1493 | API-Set: unknown
+ * Hash: 0xEF2C71A32CAD5FBD | Since: unknown | API-Set: unknown
  */
 export declare function getVisualFieldCenterAngle(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0x6A3975DEA89F9A17 | Since: 323 | API-Set: unknown
+ * Hash: 0x6A3975DEA89F9A17 | Since: unknown | API-Set: unknown
  */
 export declare function getPlayerIsFollowing(ped: number | IPed): number | string;
 /**
  * No comment provided
  *
- * Hash: 0xBA656A3BB01BDEA3 | Since: 2189 | API-Set: unknown
+ * Hash: 0xBA656A3BB01BDEA3 | Since: unknown | API-Set: unknown
  */
 export declare function getPosFromFiredEvent(ped: number | IPed, eventType: number): [boolean, any];
 /**
@@ -1794,7 +1794,7 @@ export declare function getPosFromFiredEvent(ped: number | IPed, eventType: numb
  * Animal = 28
  * Army = 29
  *
- * Hash: 0x876046A8E3A4B71C | Since: 323 | API-Set: unknown
+ * Hash: 0x876046A8E3A4B71C | Since: unknown | API-Set: unknown
  */
 export declare function getRandomAtCoord(pos: Vector3, xRadius: number, yRadius: number, zRadius: number, pedType: number): number;
 /**
@@ -1813,7 +1813,7 @@ export declare function getRandomAtCoord(pos: Vector3, xRadius: number, yRadius:
  * `PED::GET_RELATIONSHIP_BETWEEN_GROUPS(l_1017, 0xA49E591C);`
  * `PED::GET_RELATIONSHIP_BETWEEN_GROUPS(0xA49E591C, l_1017);`
  *
- * Hash: 0x9E6B70061662AE5C | Since: 323 | API-Set: unknown
+ * Hash: 0x9E6B70061662AE5C | Since: unknown | API-Set: unknown
  */
 export declare function getRelationshipBetweenGroups(group1: number | string, group2: number | string): number;
 /**
@@ -1833,67 +1833,67 @@ export declare function getRelationshipBetweenGroups(group1: number | string, gr
  * `PED::GET_RELATIONSHIP_BETWEEN_PEDS(2, l_1017, 0xA49E591C);`
  * `PED::GET_RELATIONSHIP_BETWEEN_PEDS(2, 0xA49E591C, l_1017);`
  *
- * Hash: 0xEBA5AD3A0EAF7121 | Since: 323 | API-Set: unknown
+ * Hash: 0xEBA5AD3A0EAF7121 | Since: unknown | API-Set: unknown
  */
 export declare function getRelationshipBetweens(ped1: number | IPed, ped2: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0x6F4C85ACD641BCD2 | Since: 323 | API-Set: unknown
+ * Hash: 0x6F4C85ACD641BCD2 | Since: unknown | API-Set: unknown
  */
 export declare function getSeatIsTryingToEnter(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0xE4A310B1D7FA73CC | Since: 323 | API-Set: unknown
+ * Hash: 0xE4A310B1D7FA73CC | Since: unknown | API-Set: unknown
  */
 export declare function getSynchronizedScenePhase(sceneID: number): number;
 /**
  * No comment provided
  *
- * Hash: 0xD80932D577274D40 | Since: 323 | API-Set: unknown
+ * Hash: 0xD80932D577274D40 | Since: unknown | API-Set: unknown
  */
 export declare function getSynchronizedSceneRate(sceneID: number): number;
 /**
  * No comment provided
  *
- * Hash: 0x36B77BB84687C318 | Since: 323 | API-Set: unknown
+ * Hash: 0x36B77BB84687C318 | Since: unknown | API-Set: unknown
  */
 export declare function getTimeDamagedByWeapon(ped: number | IPed, weaponHash: number | string): number;
 /**
  * No comment provided
  *
- * Hash: 0xC56FBF2F228E1DAC | Since: 323 | API-Set: unknown
+ * Hash: 0xC56FBF2F228E1DAC | Since: unknown | API-Set: unknown
  */
 export declare function getTintIndexForLastGenHairTexture(modelHash: number | string, drawableId: number, textureId: number): number;
 /**
  * No comment provided
  *
- * Hash: 0x511F1A683387C7E2 | Since: 323 | API-Set: unknown
+ * Hash: 0x511F1A683387C7E2 | Since: unknown | API-Set: unknown
  */
 export declare function getTrackedPixelcount(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0xF92691AED837A5FC | Since: 323 | API-Set: unknown
+ * Hash: 0xF92691AED837A5FC | Since: unknown | API-Set: unknown
  */
 export declare function getVehicleIsEntering(ped: number | IPed): number;
 /**
  * Gets the vehicle the specified Ped is in. Returns 0 if the ped is/was not in a vehicle.
  *
- * Hash: 0x9A9112A0FE9A4713 | Since: 323 | API-Set: unknown
+ * Hash: 0x9A9112A0FE9A4713 | Since: unknown | API-Set: unknown
  */
 export declare function getVehicleIsIn(ped: number | IPed, includeEntering: boolean): number;
 /**
  * No comment provided
  *
- * Hash: 0x814FA8BE5449445D | Since: 323 | API-Set: unknown
+ * Hash: 0x814FA8BE5449445D | Since: unknown | API-Set: unknown
  */
 export declare function getVehicleIsTryingToEnter(ped: number | IPed): number;
 /**
  * Gets ID of vehicle player using. It means it can get ID at any interaction with vehicle. Enter\exit for example. And that means it is faster than GET_VEHICLE_PED_IS_IN but less safe.
  *
- * Hash: 0x6094AD011A2EA87D | Since: 323 | API-Set: unknown
+ * Hash: 0x6094AD011A2EA87D | Since: unknown | API-Set: unknown
  */
 export declare function getVehicleIsUsing(ped: number | IPed): number;
 /**
@@ -1905,7 +1905,7 @@ export declare function getVehicleIsUsing(ped: number | IPed): number;
  * --
  * p2 is generally 4096 or 16384 in the scripts. p1 varies between 1 and 0.
  *
- * Hash: 0x54C7C4A94367717E | Since: 323 | API-Set: unknown
+ * Hash: 0x54C7C4A94367717E | Since: unknown | API-Set: unknown
  */
 export declare function giveHelmet(ped: number | IPed, cannotRemove: boolean, helmetFlag: number, textureIndex: number): void;
 /**
@@ -1929,187 +1929,187 @@ export declare function giveHelmet(ped: number | IPed, cannotRemove: boolean, he
  * CREATE_NM_MESSAGE(true, 372); // armsWindmill - Swing arms around.
  * GIVE_PED_NM_MESSAGE(ped); // Dispatch message to Ped.
  *
- * Hash: 0xB158DFCCC56E5C5B | Since: 323 | API-Set: unknown
+ * Hash: 0xB158DFCCC56E5C5B | Since: unknown | API-Set: unknown
  */
 export declare function giveNmMessage(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xE4B5F4BF2CB24E65 | Since: 323 | API-Set: unknown
+ * Hash: 0xE4B5F4BF2CB24E65 | Since: unknown | API-Set: unknown
  */
 export declare function hasActionModeAssetLoaded(asset: string): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x876928DDDFCCC9CD | Since: 323 | API-Set: unknown
+ * Hash: 0x876928DDDFCCC9CD | Since: unknown | API-Set: unknown
  */
 export declare function hasheadshotImgUploadFailed(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xE8A169E666CBC541 | Since: 323 | API-Set: unknown
+ * Hash: 0xE8A169E666CBC541 | Since: unknown | API-Set: unknown
  */
 export declare function hasheadshotImgUploadSucceeded(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x654CD0A825161131 | Since: 323 | API-Set: unknown
+ * Hash: 0x654CD0A825161131 | Since: unknown | API-Set: unknown
  */
 export declare function hasHeadBlendFinished(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x784002A632822099 | Since: 323 | API-Set: unknown
+ * Hash: 0x784002A632822099 | Since: unknown | API-Set: unknown
  */
 export declare function hasPreloadPropDataFinished(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x66680A92700F43DF | Since: 323 | API-Set: unknown
+ * Hash: 0x66680A92700F43DF | Since: unknown | API-Set: unknown
  */
 export declare function hasPreloadVariationDataFinished(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x8507BCB710FA6DC0 | Since: 323 | API-Set: unknown
+ * Hash: 0x8507BCB710FA6DC0 | Since: unknown | API-Set: unknown
  */
 export declare function hasReceivedEvent(ped: number | IPed, eventId: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xE977FC5B08AF3441 | Since: 323 | API-Set: unknown
+ * Hash: 0xE977FC5B08AF3441 | Since: unknown | API-Set: unknown
  */
 export declare function hasStealthModeAssetLoaded(asset: string): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x7350823473013C02 | Since: 323 | API-Set: unknown
+ * Hash: 0x7350823473013C02 | Since: unknown | API-Set: unknown
  */
 export declare function haveAllStreamingRequestsCompleted(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x62AB793144DE75DC | Since: 323 | API-Set: unknown
+ * Hash: 0x62AB793144DE75DC | Since: unknown | API-Set: unknown
  */
 export declare function hideBloodDamageByZone(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x4759CC730F947C81 | Since: 323 | API-Set: unknown
+ * Hash: 0x4759CC730F947C81 | Since: unknown | API-Set: unknown
  */
 export declare function instantlyFillPopulation(): void;
 /**
  * No comment provided
  *
- * Hash: 0x68772DB2B2526F9F | Since: 323 | API-Set: unknown
+ * Hash: 0x68772DB2B2526F9F | Since: unknown | API-Set: unknown
  */
 export declare function isAnyHostileNearPoint(ped: number | IPed, pos: Vector3, radius: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x083961498679DC9F | Since: 323 | API-Set: unknown
+ * Hash: 0x083961498679DC9F | Since: unknown | API-Set: unknown
  */
 export declare function isAnyNearPoint(pos: Vector3, radius: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xA0D3D71EA1086C55 | Since: 323 | API-Set: unknown
+ * Hash: 0xA0D3D71EA1086C55 | Since: unknown | API-Set: unknown
  */
 export declare function isAnyShootingInArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xE0A0AEC214B1FABA | Since: 323 | API-Set: unknown
+ * Hash: 0xE0A0AEC214B1FABA | Since: unknown | API-Set: unknown
  */
 export declare function isConversationDead(ped: number | IPed): boolean;
 /**
  * xyz - relative to the world origin.
  *
- * Hash: 0x16EC4839969F9F5E | Since: 323 | API-Set: unknown
+ * Hash: 0x16EC4839969F9F5E | Since: unknown | API-Set: unknown
  */
 export declare function isCopInArea3d(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xF2385935BFFD4D92 | Since: 323 | API-Set: unknown
+ * Hash: 0xF2385935BFFD4D92 | Since: unknown | API-Set: unknown
  */
 export declare function isCurrentHeadPropAHelmet(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xA3F3564A5B3646C0 | Since: 323 | API-Set: unknown
+ * Hash: 0xA3F3564A5B3646C0 | Since: unknown | API-Set: unknown
  */
 export declare function isMobilePhoneToEar(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xEBB376779A760AA8 | Since: 323 | API-Set: unknown
+ * Hash: 0xEBB376779A760AA8 | Since: unknown | API-Set: unknown
  */
 export declare function isheadshotImgUploadAvailable(): boolean;
 /**
  * gtaforums.com/topic/885580-ped-headshotmugshot-txd/
  *
- * Hash: 0x7085228842B13A67 | Since: 323 | API-Set: unknown
+ * Hash: 0x7085228842B13A67 | Since: unknown | API-Set: unknown
  */
 export declare function isheadshotReady(id: number): boolean;
 /**
  * gtaforums.com/topic/885580-ped-headshotmugshot-txd/
  *
- * Hash: 0xA0A9668F158129A2 | Since: 323 | API-Set: unknown
+ * Hash: 0xA0A9668F158129A2 | Since: unknown | API-Set: unknown
  */
 export declare function isheadshotValid(id: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x3998B1276A3300E5 | Since: 323 | API-Set: unknown
+ * Hash: 0x3998B1276A3300E5 | Since: unknown | API-Set: unknown
  */
 export declare function isAimingFromCover(ped: number | IPed): boolean;
 /**
  * Returns true if the given ped has a valid pointer to CPlayerInfo in its CPed class. That's all.
  *
- * Hash: 0x12534C348C6CB68B | Since: 323 | API-Set: unknown
+ * Hash: 0x12534C348C6CB68B | Since: unknown | API-Set: unknown
  */
 export declare function isAPlayer(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x9A497FE2DF198913 | Since: 323 | API-Set: unknown
+ * Hash: 0x9A497FE2DF198913 | Since: unknown | API-Set: unknown
  */
 export declare function isBeingJacked(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x863B23EFDE9C5DF2 | Since: 323 | API-Set: unknown
+ * Hash: 0x863B23EFDE9C5DF2 | Since: unknown | API-Set: unknown
  */
 export declare function isBeingStealthKilled(ped: number | IPed): boolean;
 /**
  * p1 is always 0
  *
- * Hash: 0x4FBACCE3B4138EE8 | Since: 323 | API-Set: unknown
+ * Hash: 0x4FBACCE3B4138EE8 | Since: unknown | API-Set: unknown
  */
 export declare function isBeingStunned(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x09E7ECA981D9B210 | Since: 1290 | API-Set: unknown
+ * Hash: 0x09E7ECA981D9B210 | Since: unknown | API-Set: unknown
  */
 export declare function isBlushFacepaintTintForBarber(colorId: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x604E810189EE3A59 | Since: 323 | API-Set: unknown
+ * Hash: 0x604E810189EE3A59 | Since: unknown | API-Set: unknown
  */
 export declare function isBlushTintForBarber(colorID: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xF41B5D290C99A3D6 | Since: 323 | API-Set: unknown
+ * Hash: 0xF41B5D290C99A3D6 | Since: unknown | API-Set: unknown
  */
 export declare function isBlushTintForCreator(colorId: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x53E8CB4F48BFE623 | Since: 323 | API-Set: unknown
+ * Hash: 0x53E8CB4F48BFE623 | Since: unknown | API-Set: unknown
  */
 export declare function isClimbing(ped: number | IPed): boolean;
 /**
@@ -2120,43 +2120,43 @@ export declare function isClimbing(ped: number | IPed): boolean;
  *
  * Full list of ped components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedComponentVariations.json
  *
- * Hash: 0xE825F6B6CEA7671D | Since: 323 | API-Set: unknown
+ * Hash: 0xE825F6B6CEA7671D | Since: unknown | API-Set: unknown
  */
 export declare function isComponentVariationValid(ped: number | IPed, componentId: number, drawableId: number, textureId: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x3317DEDB88C95038 | Since: 323 | API-Set: unknown
+ * Hash: 0x3317DEDB88C95038 | Since: unknown | API-Set: unknown
  */
 export declare function isDeadOrDying(ped: number | IPed, checkMeleeDeathFlags: boolean): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xBA63D9FE45412247 | Since: 323 | API-Set: unknown
+ * Hash: 0xBA63D9FE45412247 | Since: unknown | API-Set: unknown
  */
 export declare function isDefensiveAreaActive(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x5527B8246FEF9B11 | Since: 323 | API-Set: unknown
+ * Hash: 0x5527B8246FEF9B11 | Since: unknown | API-Set: unknown
  */
 export declare function isDiving(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x451D05012CCEC234 | Since: 573 | API-Set: unknown
+ * Hash: 0x451D05012CCEC234 | Since: unknown | API-Set: unknown
  */
 export declare function isDoingABeastJump(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xB2C086CC1BF8F2BF | Since: 323 | API-Set: unknown
+ * Hash: 0xB2C086CC1BF8F2BF | Since: unknown | API-Set: unknown
  */
 export declare function isDoingDriveby(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xD125AE748725C6BC | Since: 323 | API-Set: unknown
+ * Hash: 0xD125AE748725C6BC | Since: unknown | API-Set: unknown
  */
 export declare function isDucking(ped: number | IPed): boolean;
 /**
@@ -2166,110 +2166,110 @@ export declare function isDucking(ped: number | IPed): boolean;
  * `if (PED::IS_PED_EVASIVE_DIVING(A_0, &num3) != 0)`
  * `if (ENTITY::IS_ENTITY_A_VEHICLE(num3) != 0)`
  *
- * Hash: 0x414641C26E105898 | Since: 323 | API-Set: unknown
+ * Hash: 0x414641C26E105898 | Since: unknown | API-Set: unknown
  */
 export declare function isEvasiveDiving(ped: number | IPed): [boolean, number];
 /**
  * angle is ped's view cone
  *
- * Hash: 0xD71649DB0A545AA3 | Since: 323 | API-Set: unknown
+ * Hash: 0xD71649DB0A545AA3 | Since: unknown | API-Set: unknown
  */
 export declare function isFacingPed(ped: number | IPed, otherPed: number | IPed, angle: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xFB92A102F1C4DFA3 | Since: 323 | API-Set: unknown
+ * Hash: 0xFB92A102F1C4DFA3 | Since: unknown | API-Set: unknown
  */
 export declare function isFalling(ped: number | IPed): boolean;
 /**
  * Gets a value indicating whether this ped's health is below its fatally injured threshold. The default threshold is 100.
  * If the handle is invalid, the function returns true.
  *
- * Hash: 0xD839450756ED5A80 | Since: 323 | API-Set: unknown
+ * Hash: 0xD839450756ED5A80 | Since: unknown | API-Set: unknown
  */
 export declare function isFatallyInjured(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xBBCCE00B381F8482 | Since: 323 | API-Set: unknown
+ * Hash: 0xBBCCE00B381F8482 | Since: unknown | API-Set: unknown
  */
 export declare function isFleeing(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xC30BDAEE47256C13 | Since: 1868 | API-Set: unknown
+ * Hash: 0xC30BDAEE47256C13 | Since: unknown | API-Set: unknown
  */
 export declare function isGesturing(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xBB062B2B5722478E | Since: 323 | API-Set: unknown
+ * Hash: 0xBB062B2B5722478E | Since: unknown | API-Set: unknown
  */
 export declare function isGettingIntoAVehicle(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x9F65DBC537E59AD5 | Since: 323 | API-Set: unknown
+ * Hash: 0x9F65DBC537E59AD5 | Since: unknown | API-Set: unknown
  */
 export declare function isGoingIntoCover(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x9BB01E3834671191 | Since: 323 | API-Set: unknown
+ * Hash: 0x9BB01E3834671191 | Since: unknown | API-Set: unknown
  */
 export declare function isGroupMember(ped: number | IPed, groupId: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xE0D36E5D9E99CC21 | Since: 323 | API-Set: unknown
+ * Hash: 0xE0D36E5D9E99CC21 | Since: unknown | API-Set: unknown
  */
 export declare function isHairTintForBarber(colorID: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xED6D8E27A43B8CDE | Since: 323 | API-Set: unknown
+ * Hash: 0xED6D8E27A43B8CDE | Since: unknown | API-Set: unknown
  */
 export declare function isHairTintForCreator(colorId: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x1C86D8AEF8254B78 | Since: 323 | API-Set: unknown
+ * Hash: 0x1C86D8AEF8254B78 | Since: unknown | API-Set: unknown
  */
 export declare function isHangingOnToVehicle(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xFCF37A457CB96DC0 | Since: 323 | API-Set: unknown
+ * Hash: 0xFCF37A457CB96DC0 | Since: unknown | API-Set: unknown
  */
 export declare function isHeadingTowardsPosition(ped: number | IPed, pos: Vector3): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x813A0A7C9D2E831F | Since: 323 | API-Set: unknown
+ * Hash: 0x813A0A7C9D2E831F | Since: unknown | API-Set: unknown
  */
 export declare function isHeadtrackingEntity(ped: number | IPed, entity: number | IEntity): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x5CD3CB88A7F8850D | Since: 323 | API-Set: unknown
+ * Hash: 0x5CD3CB88A7F8850D | Since: unknown | API-Set: unknown
  */
 export declare function isHeadtrackingPed(ped1: number | IPed, ped2: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xB9496CE47546DB2C | Since: 791 | API-Set: unknown
+ * Hash: 0xB9496CE47546DB2C | Since: unknown | API-Set: unknown
  */
 export declare function isHelmetVisorUp(ped: number | IPed): boolean;
 /**
  * Returns true/false if the ped is/isn't humanoid.
  *
- * Hash: 0xB980061DA992779D | Since: 323 | API-Set: unknown
+ * Hash: 0xB980061DA992779D | Since: unknown | API-Set: unknown
  */
 export declare function isHuman(ped: number | IPed): boolean;
 /**
  * Returns whether the specified ped is hurt.
  *
- * Hash: 0x5983BB449D7FDB12 | Since: 323 | API-Set: unknown
+ * Hash: 0x5983BB449D7FDB12 | Since: unknown | API-Set: unknown
  */
 export declare function isHurt(ped: number | IPed): boolean;
 /**
@@ -2277,49 +2277,49 @@ export declare function isHurt(ped: number | IPed): boolean;
  *
  * The default threshold is 100.
  *
- * Hash: 0x84A2DD9AC37C35C1 | Since: 323 | API-Set: unknown
+ * Hash: 0x84A2DD9AC37C35C1 | Since: unknown | API-Set: unknown
  */
 export declare function isInjured(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x2E0E1C2B4F6CB339 | Since: 323 | API-Set: unknown
+ * Hash: 0x2E0E1C2B4F6CB339 | Since: unknown | API-Set: unknown
  */
 export declare function isInAnyBoat(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x298B91AE825E5705 | Since: 323 | API-Set: unknown
+ * Hash: 0x298B91AE825E5705 | Since: unknown | API-Set: unknown
  */
 export declare function isInAnyHeli(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x5FFF4CFC74D8FB80 | Since: 323 | API-Set: unknown
+ * Hash: 0x5FFF4CFC74D8FB80 | Since: unknown | API-Set: unknown
  */
 export declare function isInAnyPlane(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x0BD04E29640C9C12 | Since: 323 | API-Set: unknown
+ * Hash: 0x0BD04E29640C9C12 | Since: unknown | API-Set: unknown
  */
 export declare function isInAnyPoliceVehicle(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xFBFC01CCFB35D99E | Since: 323 | API-Set: unknown
+ * Hash: 0xFBFC01CCFB35D99E | Since: unknown | API-Set: unknown
  */
 export declare function isInAnySub(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x6E575D6A898AB852 | Since: 323 | API-Set: unknown
+ * Hash: 0x6E575D6A898AB852 | Since: unknown | API-Set: unknown
  */
 export declare function isInAnyTaxi(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x6F972C1AB75A1ED0 | Since: 323 | API-Set: unknown
+ * Hash: 0x6F972C1AB75A1ED0 | Since: unknown | API-Set: unknown
  */
 export declare function isInAnyTrain(ped: number | IPed): boolean;
 /**
@@ -2327,7 +2327,7 @@ export declare function isInAnyTrain(ped: number | IPed): boolean;
  *
  * If 'atGetIn' is false, the function will not return true until the ped is sitting in the vehicle and is about to close the door. If it's true, the function returns true the moment the ped starts to get onto the seat (after opening the door). Eg. if false, and the ped is getting into a submersible, the function will not return true until the ped has descended down into the submersible and gotten into the seat, while if it's true, it'll return true the moment the hatch has been opened and the ped is about to descend into the submersible.
  *
- * Hash: 0x997ABD671D25CA0B | Since: 323 | API-Set: unknown
+ * Hash: 0x997ABD671D25CA0B | Since: unknown | API-Set: unknown
  */
 export declare function isInAnyVehicle(ped: number | IPed, atGetIn: boolean): boolean;
 /**
@@ -2335,37 +2335,37 @@ export declare function isInAnyVehicle(ped: number | IPed, atGetIn: boolean): bo
  *
  * `p1 is usually 0 in the scripts because it gets the ped id during the task sequence. For instance: PED::IS_PED_IN_COMBAT(l_42E[4\/\*14\*\/], PLAYER::PLAYER_PED_ID()) // armenian2.ct4: 43794`
  *
- * Hash: 0x4859F1FC66A6278E | Since: 323 | API-Set: unknown
+ * Hash: 0x4859F1FC66A6278E | Since: unknown | API-Set: unknown
  */
 export declare function isInCombat(ped: number | IPed, target: number | IPed): boolean;
 /**
  * p1 is nearly always 0 in the scripts.
  *
- * Hash: 0x60DFD0691A170B88 | Since: 323 | API-Set: unknown
+ * Hash: 0x60DFD0691A170B88 | Since: unknown | API-Set: unknown
  */
 export declare function isInCover(ped: number | IPed, exceptUseWeapon: boolean): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x845333B3150583AB | Since: 323 | API-Set: unknown
+ * Hash: 0x845333B3150583AB | Since: unknown | API-Set: unknown
  */
 export declare function isInCoverFacingLeft(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x9134873537FA419C | Since: 323 | API-Set: unknown
+ * Hash: 0x9134873537FA419C | Since: unknown | API-Set: unknown
  */
 export declare function isInFlyingVehicle(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x5891CAC5D4ACFF74 | Since: 323 | API-Set: unknown
+ * Hash: 0x5891CAC5D4ACFF74 | Since: unknown | API-Set: unknown
  */
 export declare function isInGroup(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x6A03BF943D767C93 | Since: 323 | API-Set: unknown
+ * Hash: 0x6A03BF943D767C93 | Since: unknown | API-Set: unknown
  */
 export declare function isInHighCover(ped: number | IPed): boolean;
 /**
@@ -2378,19 +2378,19 @@ export declare function isInHighCover(ped: number | IPed): boolean;
  *
  * You don't have to be holding the melee-targetting button to be in this stance; you stay in it by default for a few seconds after swinging at someone. If you do a sprinting punch, it returns true for the duration of the punch animation and then returns false again, even if you've punched and made-angry many peds
  *
- * Hash: 0x4E209B2C1EAD5159 | Since: 323 | API-Set: unknown
+ * Hash: 0x4E209B2C1EAD5159 | Since: unknown | API-Set: unknown
  */
 export declare function isInMeleeCombat(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x796D90EFB19AA332 | Since: 323 | API-Set: unknown
+ * Hash: 0x796D90EFB19AA332 | Since: unknown | API-Set: unknown
  */
 export declare function isInModel(ped: number | IPed, modelHash: number | string): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x7DCE8BDA0F1C1200 | Since: 323 | API-Set: unknown
+ * Hash: 0x7DCE8BDA0F1C1200 | Since: unknown | API-Set: unknown
  */
 export declare function isInParachuteFreeFall(ped: number | IPed): boolean;
 /**
@@ -2398,79 +2398,79 @@ export declare function isInParachuteFreeFall(ped: number | IPed): boolean;
  *
  * If 'atGetIn' is false, the function will not return true until the ped is sitting in the vehicle and is about to close the door. If it's true, the function returns true the moment the ped starts to get onto the seat (after opening the door). Eg. if false, and the ped is getting into a submersible, the function will not return true until the ped has descended down into the submersible and gotten into the seat, while if it's true, it'll return true the moment the hatch has been opened and the ped is about to descend into the submersible.
  *
- * Hash: 0xA3EE4A07279BB9DB | Since: 323 | API-Set: unknown
+ * Hash: 0xA3EE4A07279BB9DB | Since: unknown | API-Set: unknown
  */
 export declare function isInVehicle(ped: number | IPed, vehicle: number | IVehicle, atGetIn: boolean): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x4AE4FF911DFB61DA | Since: 323 | API-Set: unknown
+ * Hash: 0x4AE4FF911DFB61DA | Since: unknown | API-Set: unknown
  */
 export declare function isJacking(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xCEDABC5900A0BF97 | Since: 323 | API-Set: unknown
+ * Hash: 0xCEDABC5900A0BF97 | Since: unknown | API-Set: unknown
  */
 export declare function isJumping(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x433DDFFE2044B636 | Since: 323 | API-Set: unknown
+ * Hash: 0x433DDFFE2044B636 | Since: unknown | API-Set: unknown
  */
 export declare function isJumpingOutOfVehicle(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x412F1364FA066CFB | Since: 573 | API-Set: unknown
+ * Hash: 0x412F1364FA066CFB | Since: unknown | API-Set: unknown
  */
 export declare function isLanding(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x0525A2C2562F3CD4 | Since: 323 | API-Set: unknown
+ * Hash: 0x0525A2C2562F3CD4 | Since: unknown | API-Set: unknown
  */
 export declare function isLipstickTintForBarber(colorID: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x3E802F11FBE27674 | Since: 323 | API-Set: unknown
+ * Hash: 0x3E802F11FBE27674 | Since: unknown | API-Set: unknown
  */
 export declare function isLipstickTintForCreator(colorId: number): boolean;
 /**
  * Returns true/false if the ped is/isn't male.
  *
- * Hash: 0x6D9F5FAA7488BA46 | Since: 323 | API-Set: unknown
+ * Hash: 0x6D9F5FAA7488BA46 | Since: unknown | API-Set: unknown
  */
 export declare function isMale(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xC9D55B1A358A5BF7 | Since: 323 | API-Set: unknown
+ * Hash: 0xC9D55B1A358A5BF7 | Since: unknown | API-Set: unknown
  */
 export declare function isModel(ped: number | IPed, modelHash: number | string): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x94495889E22C6479 | Since: 323 | API-Set: unknown
+ * Hash: 0x94495889E22C6479 | Since: unknown | API-Set: unknown
  */
 export declare function isOnAnyBike(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x01FEE67DB37F59B2 | Since: 323 | API-Set: unknown
+ * Hash: 0x01FEE67DB37F59B2 | Since: unknown | API-Set: unknown
  */
 export declare function isOnFoot(ped: number | IPed): boolean;
 /**
  * `Same function call as PED::GET_MOUNT, aka just returns 0`
  *
- * Hash: 0x460BC76A0E10655E | Since: 323 | API-Set: unknown
+ * Hash: 0x460BC76A0E10655E | Since: unknown | API-Set: unknown
  */
 export declare function isOnMount(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xEC5F66E459AF3BB2 | Since: 323 | API-Set: unknown
+ * Hash: 0xEC5F66E459AF3BB2 | Since: unknown | API-Set: unknown
  */
 export declare function isOnSpecificVehicle(ped: number | IPed, vehicle: number | IVehicle): boolean;
 /**
@@ -2480,219 +2480,219 @@ export declare function isOnSpecificVehicle(ped: number | IPed, vehicle: number 
  * Return 0 when ped is not on a vehicle.
  *
  *
- * Hash: 0x67722AEB798E5FAB | Since: 323 | API-Set: unknown
+ * Hash: 0x67722AEB798E5FAB | Since: unknown | API-Set: unknown
  */
 export declare function isOnVehicle(ped: number | IPed): boolean;
 /**
  * Returns true if the ped is currently opening a door (CTaskOpenDoor).
  *
- * Hash: 0x26AF0E8E30BD2A2C | Since: 323 | API-Set: unknown
+ * Hash: 0x26AF0E8E30BD2A2C | Since: unknown | API-Set: unknown
  */
 export declare function isOpeningDoor(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xEBD0EDBA5BE957CF | Since: 323 | API-Set: unknown
+ * Hash: 0xEBD0EDBA5BE957CF | Since: unknown | API-Set: unknown
  */
 export declare function isPerformingACounterAttack(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xDCCA191DF9980FD7 | Since: 323 | API-Set: unknown
+ * Hash: 0xDCCA191DF9980FD7 | Since: unknown | API-Set: unknown
  */
 export declare function isPerformingMeleeAction(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xFD4CCDBCC59941B7 | Since: 323 | API-Set: unknown
+ * Hash: 0xFD4CCDBCC59941B7 | Since: unknown | API-Set: unknown
  */
 export declare function isPerformingStealthKill(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xC70B5FAE151982D8 | Since: 323 | API-Set: unknown
+ * Hash: 0xC70B5FAE151982D8 | Since: unknown | API-Set: unknown
  */
 export declare function isPlantingBomb(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xD6A86331A537A7B9 | Since: 323 | API-Set: unknown
+ * Hash: 0xD6A86331A537A7B9 | Since: unknown | API-Set: unknown
  */
 export declare function isProne(ped: number | IPed): boolean;
 /**
  * If the ped handle passed through the parenthesis is in a ragdoll state this will return true.
  *
- * Hash: 0x47E4E977581C5B55 | Since: 323 | API-Set: unknown
+ * Hash: 0x47E4E977581C5B55 | Since: unknown | API-Set: unknown
  */
 export declare function isRagdoll(ped: number | IPed): boolean;
 /**
  * Returns whether the specified ped is reloading.
  *
- * Hash: 0x24B100C68C645951 | Since: 323 | API-Set: unknown
+ * Hash: 0x24B100C68C645951 | Since: unknown | API-Set: unknown
  */
 export declare function isReloading(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x625B774D75C87068 | Since: 323 | API-Set: unknown
+ * Hash: 0x625B774D75C87068 | Since: unknown | API-Set: unknown
  */
 export declare function isRespondingToEvent(ped: number | IPed, event: any): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xD1871251F3B5ACD7 | Since: 323 | API-Set: unknown
+ * Hash: 0xD1871251F3B5ACD7 | Since: unknown | API-Set: unknown
  */
 export declare function isRunningMeleeTask(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x2AFE52F782F25775 | Since: 323 | API-Set: unknown
+ * Hash: 0x2AFE52F782F25775 | Since: unknown | API-Set: unknown
  */
 export declare function isRunningMobilePhoneTask(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xE3B6097CC25AA69E | Since: 323 | API-Set: unknown
+ * Hash: 0xE3B6097CC25AA69E | Since: unknown | API-Set: unknown
  */
 export declare function isRunningRagdollTask(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x81AA517FBBA05D39 | Since: 944 | API-Set: unknown
+ * Hash: 0x81AA517FBBA05D39 | Since: unknown | API-Set: unknown
  */
 export declare function isShaderReady(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xB8B52E498014F5B0 | Since: 323 | API-Set: unknown
+ * Hash: 0xB8B52E498014F5B0 | Since: unknown | API-Set: unknown
  */
 export declare function isSheltered(ped: number | IPed): boolean;
 /**
  * Returns whether the specified ped is shooting.
  *
- * Hash: 0x34616828CD07F1A1 | Since: 323 | API-Set: unknown
+ * Hash: 0x34616828CD07F1A1 | Since: unknown | API-Set: unknown
  */
 export declare function isShooting(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x7E9DFE24AC1E58EF | Since: 323 | API-Set: unknown
+ * Hash: 0x7E9DFE24AC1E58EF | Since: unknown | API-Set: unknown
  */
 export declare function isShootingInArea(ped: number | IPed, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): boolean;
 /**
  * Detect if ped is in any vehicle
  * [True/False]
  *
- * Hash: 0x826AA586EDB9FEF8 | Since: 323 | API-Set: unknown
+ * Hash: 0x826AA586EDB9FEF8 | Since: unknown | API-Set: unknown
  */
 export declare function isSittingInAnyVehicle(ped: number | IPed): boolean;
 /**
  * Detect if ped is sitting in the specified vehicle
  * [True/False]
  *
- * Hash: 0xA808AA1D79230FC2 | Since: 323 | API-Set: unknown
+ * Hash: 0xA808AA1D79230FC2 | Since: unknown | API-Set: unknown
  */
 export declare function isSittingInVehicle(ped: number | IPed, vehicle: number | IVehicle): boolean;
 /**
  * Returns true if the ped doesn't do any movement. If the ped is being pushed forwards by using APPLY_FORCE_TO_ENTITY for example, the function returns false.
  *
- * Hash: 0x530944F6F4B8A214 | Since: 323 | API-Set: unknown
+ * Hash: 0x530944F6F4B8A214 | Since: unknown | API-Set: unknown
  */
 export declare function isStopped(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x9DE327631295B4C2 | Since: 323 | API-Set: unknown
+ * Hash: 0x9DE327631295B4C2 | Since: unknown | API-Set: unknown
  */
 export declare function isSwimming(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xC024869A53992F34 | Since: 323 | API-Set: unknown
+ * Hash: 0xC024869A53992F34 | Since: unknown | API-Set: unknown
  */
 export declare function isSwimmingUnderWater(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x3795688A307E1EB6 | Since: 505 | API-Set: unknown
+ * Hash: 0x3795688A307E1EB6 | Since: unknown | API-Set: unknown
  */
 export declare function isSwitchingWeapon(Ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x14590DDBEDB1EC85 | Since: 323 | API-Set: unknown
+ * Hash: 0x14590DDBEDB1EC85 | Since: unknown | API-Set: unknown
  */
 export declare function isTakingOffHelmet(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x4C5E1F087CD10BB7 | Since: 323 | API-Set: unknown
+ * Hash: 0x4C5E1F087CD10BB7 | Since: unknown | API-Set: unknown
  */
 export declare function isTracked(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x44D28D5DDFE5F68C | Since: 323 | API-Set: unknown
+ * Hash: 0x44D28D5DDFE5F68C | Since: unknown | API-Set: unknown
  */
 export declare function isTryingToEnterALockedVehicle(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x00E73468D085F745 | Since: 323 | API-Set: unknown
+ * Hash: 0x00E73468D085F745 | Since: unknown | API-Set: unknown
  */
 export declare function isUsingActionMode(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x57AB4A3080F85143 | Since: 323 | API-Set: unknown
+ * Hash: 0x57AB4A3080F85143 | Since: unknown | API-Set: unknown
  */
 export declare function isUsingAnyScenario(ped: number | IPed): boolean;
 /**
  * Full list of ped scenarios by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scenariosCompact.json
  *
- * Hash: 0x1BF094736DD62C2E | Since: 323 | API-Set: unknown
+ * Hash: 0x1BF094736DD62C2E | Since: unknown | API-Set: unknown
  */
 export declare function isUsingScenario(ped: number | IPed, scenario: string): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x117C70D1F5730B5E | Since: 323 | API-Set: unknown
+ * Hash: 0x117C70D1F5730B5E | Since: unknown | API-Set: unknown
  */
 export declare function isVaulting(ped: number | IPed): boolean;
 /**
  * Returns true if the ped passed through the parenthesis is wearing a helmet.
  *
- * Hash: 0xF33BDFE19B309B19 | Since: 323 | API-Set: unknown
+ * Hash: 0xF33BDFE19B309B19 | Since: unknown | API-Set: unknown
  */
 export declare function isWearingHelmet(ped: number | IPed): boolean;
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
  *
- * Hash: 0x6EC47A344923E1ED | Since: 323 | API-Set: unknown
+ * Hash: 0x6EC47A344923E1ED | Since: unknown | API-Set: unknown
  */
 export declare function isScriptedScenarioUsingConditionalAnim(ped: number | IPed, animDict: string, anim: string): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x7F2F4F13AC5257EF | Since: 323 | API-Set: unknown
+ * Hash: 0x7F2F4F13AC5257EF | Since: unknown | API-Set: unknown
  */
 export declare function isSynchronizedSceneHoldLastFrame(sceneID: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x62522002E0C391BA | Since: 323 | API-Set: unknown
+ * Hash: 0x62522002E0C391BA | Since: unknown | API-Set: unknown
  */
 export declare function isSynchronizedSceneLoo(sceneID: number): boolean;
 /**
  * Returns true if a synchronized scene is running
  *
- * Hash: 0x25D39B935A038A26 | Since: 323 | API-Set: unknown
+ * Hash: 0x25D39B935A038A26 | Since: unknown | API-Set: unknown
  */
 export declare function isSynchronizedSceneRunning(sceneId: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x06087579E7AA85A9 | Since: 323 | API-Set: unknown
+ * Hash: 0x06087579E7AA85A9 | Since: unknown | API-Set: unknown
  */
 export declare function isTargetInPerceptionArea(ped: number | IPed, targetPed: number | IPed): boolean;
 /**
@@ -2701,32 +2701,32 @@ export declare function isTargetInPerceptionArea(ped: number | IPed, targetPed: 
  *
  * Target needs to be tracked.. won't work otherwise.
  *
- * Hash: 0x91C8E617F64188AC | Since: 323 | API-Set: unknown
+ * Hash: 0x91C8E617F64188AC | Since: unknown | API-Set: unknown
  */
 export declare function isTrackedVisible(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xFEC9A3B1820F3331 | Since: 323 | API-Set: unknown
+ * Hash: 0xFEC9A3B1820F3331 | Since: unknown | API-Set: unknown
  */
 export declare function isUsingScubaGearVariation(): boolean;
 /**
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x6FD7816A36615F48 | Since: 323 | API-Set: unknown
+ * Hash: 0x6FD7816A36615F48 | Since: unknown | API-Set: unknown
  */
 export declare function knockOffProp(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x45BBCBA77C29A841 | Since: 323 | API-Set: unknown
+ * Hash: 0x45BBCBA77C29A841 | Since: unknown | API-Set: unknown
  */
 export declare function knockOffVehicle(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x2B694AFCF64E6994 | Since: 323 | API-Set: unknown
+ * Hash: 0x2B694AFCF64E6994 | Since: unknown | API-Set: unknown
  */
 export declare function markDecorationsAsClonedFromLocalPlayer(ped: number | IPed): void;
 /**
@@ -2739,37 +2739,37 @@ export declare function markDecorationsAsClonedFromLocalPlayer(ped: number | IPe
  * SF_HOT_PERSON = 2,
  * };
  *
- * Hash: 0x46B05BCAE43856B0 | Since: 323 | API-Set: unknown
+ * Hash: 0x46B05BCAE43856B0 | Since: unknown | API-Set: unknown
  */
 export declare function hasSexinessFlagSet(ped: number | IPed, sexinessFlag: number): boolean;
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
  *
- * Hash: 0xE1E65CA8AC9C00ED | Since: 323 | API-Set: unknown
+ * Hash: 0xE1E65CA8AC9C00ED | Since: unknown | API-Set: unknown
  */
 export declare function playFacialAnim(ped: number | IPed, animName: string, animDict: string): void;
 /**
  * Based on TASK_COMBAT_HATED_TARGETS_AROUND_PED, the parameters are likely similar (PedHandle, and area to attack in).
  *
- * Hash: 0x9222F300BF8354FE | Since: 323 | API-Set: unknown
+ * Hash: 0x9222F300BF8354FE | Since: unknown | API-Set: unknown
  */
 export declare function registerHatedTargetsAround(ped: number | IPed, radius: number): void;
 /**
  * gtaforums.com/topic/885580-ped-headshotmugshot-txd/
  *
- * Hash: 0x4462658788425076 | Since: 323 | API-Set: unknown
+ * Hash: 0x4462658788425076 | Since: unknown | API-Set: unknown
  */
 export declare function registerheadshot(ped: number | IPed): number;
 /**
  * No comment provided
  *
- * Hash: 0xBA8805A1108A2515 | Since: 877 | API-Set: unknown
+ * Hash: 0xBA8805A1108A2515 | Since: unknown | API-Set: unknown
  */
 export declare function registerheadshotHires(ped: number | IPed): number;
 /**
  * Similar to REGISTER_PEDHEADSHOT but creates a transparent background instead of black. Example: https://i.imgur.com/iHz8ztn.png
  *
- * Hash: 0x953563CE563143AF | Since: 323 | API-Set: unknown
+ * Hash: 0x953563CE563143AF | Since: unknown | API-Set: unknown
  */
 export declare function registerheadshotTransparent(ped: number | IPed): number;
 /**
@@ -2777,175 +2777,175 @@ export declare function registerheadshotTransparent(ped: number | IPed): number;
  *
  * l_216 = RECSBRobber1
  *
- * Hash: 0x2F25D9AEFA34FBA2 | Since: 323 | API-Set: unknown
+ * Hash: 0x2F25D9AEFA34FBA2 | Since: unknown | API-Set: unknown
  */
 export declare function registerTarget(ped: number | IPed, target: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x5D517B27CF6ECD04 | Since: 323 | API-Set: unknown
+ * Hash: 0x5D517B27CF6ECD04 | Since: unknown | API-Set: unknown
  */
 export declare function releaseheadshotImgUpload(id: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xF79F9DEF0AADE61A | Since: 323 | API-Set: unknown
+ * Hash: 0xF79F9DEF0AADE61A | Since: unknown | API-Set: unknown
  */
 export declare function releasePreloadPropData(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x5AAB586FFEC0FD96 | Since: 323 | API-Set: unknown
+ * Hash: 0x5AAB586FFEC0FD96 | Since: unknown | API-Set: unknown
  */
 export declare function releasePreloadVariationData(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x13E940F88470FA51 | Since: 323 | API-Set: unknown
+ * Hash: 0x13E940F88470FA51 | Since: unknown | API-Set: unknown
  */
 export declare function removeActionModeAsset(asset: string): void;
 /**
  * No comment provided
  *
- * Hash: 0x8EB2F69076AF7053 | Since: 323 | API-Set: unknown
+ * Hash: 0x8EB2F69076AF7053 | Since: unknown | API-Set: unknown
  */
 export declare function removeGroup(groupId: number): void;
 /**
  * Ped will no longer get angry when you stay near him.
  *
- * Hash: 0x74D4E028107450A9 | Since: 323 | API-Set: unknown
+ * Hash: 0x74D4E028107450A9 | Since: unknown | API-Set: unknown
  */
 export declare function removeDefensiveArea(ped: number | IPed, toggle: boolean): void;
 /**
  * Judging purely from a quick disassembly, if the ped is in a vehicle, the ped will be deleted immediately. If not, it'll be marked as no longer needed. - very elegant..
  *
- * Hash: 0xAC6D445B994DF95E | Since: 323 | API-Set: unknown
+ * Hash: 0xAC6D445B994DF95E | Since: unknown | API-Set: unknown
  */
-export declare function removeElegantly(ped: number | IPed): void;
+export declare function removeElegantly(): number;
 /**
  * No comment provided
  *
- * Hash: 0xED74007FFB146BC2 | Since: 323 | API-Set: unknown
+ * Hash: 0xED74007FFB146BC2 | Since: unknown | API-Set: unknown
  */
 export declare function removeFromGroup(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xA7B2458D0AD6DED8 | Since: 323 | API-Set: unknown
+ * Hash: 0xA7B2458D0AD6DED8 | Since: unknown | API-Set: unknown
  */
 export declare function removeHelmet(ped: number | IPed, instantly: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xFDDB234CF74073D9 | Since: 323 | API-Set: unknown
+ * Hash: 0xFDDB234CF74073D9 | Since: unknown | API-Set: unknown
  */
 export declare function removePreferredCoverSet(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xB6BA2444AB393DA2 | Since: 323 | API-Set: unknown
+ * Hash: 0xB6BA2444AB393DA2 | Since: unknown | API-Set: unknown
  */
 export declare function removeRelationshipGroup(groupHash: number | string): void;
 /**
  * No comment provided
  *
- * Hash: 0x31D16B74C6E29D66 | Since: 323 | API-Set: unknown
+ * Hash: 0x31D16B74C6E29D66 | Since: unknown | API-Set: unknown
  */
 export declare function removeScenarioBlockingArea(): void;
 /**
  * No comment provided
  *
- * Hash: 0xD37401D78A929A49 | Since: 323 | API-Set: unknown
+ * Hash: 0xD37401D78A929A49 | Since: unknown | API-Set: unknown
  */
 export declare function removeScenarioBlockingAreas(): void;
 /**
  * No comment provided
  *
- * Hash: 0x9219857D21F0E842 | Since: 323 | API-Set: unknown
+ * Hash: 0x9219857D21F0E842 | Since: unknown | API-Set: unknown
  */
 export declare function removeStealthModeAsset(asset: string): void;
 /**
  * No comment provided
  *
- * Hash: 0x290E2780BB7AA598 | Since: 323 | API-Set: unknown
+ * Hash: 0x290E2780BB7AA598 | Since: unknown | API-Set: unknown
  */
 export declare function requestActionModeAsset(asset: string): void;
 /**
  * No comment provided
  *
- * Hash: 0xF0DAEF2F545BEE25 | Since: 323 | API-Set: unknown
+ * Hash: 0xF0DAEF2F545BEE25 | Since: unknown | API-Set: unknown
  */
 export declare function requestheadshotImgUpload(id: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xCD018C591F94CB43 | Since: 323 | API-Set: unknown
+ * Hash: 0xCD018C591F94CB43 | Since: unknown | API-Set: unknown
  */
 export declare function requestRestrictedVehicleVisibilityTracking(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x75BA1CB3B7D40CAF | Since: 323 | API-Set: unknown
+ * Hash: 0x75BA1CB3B7D40CAF | Since: unknown | API-Set: unknown
  */
 export declare function requestUseSmallBboxVisibilityTracking(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x2BC338A7B21F4608 | Since: 323 | API-Set: unknown
+ * Hash: 0x2BC338A7B21F4608 | Since: unknown | API-Set: unknown
  */
 export declare function requestVehicleVisibilityTracking(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x7D7A2E43E74E2EB8 | Since: 323 | API-Set: unknown
+ * Hash: 0x7D7A2E43E74E2EB8 | Since: unknown | API-Set: unknown
  */
 export declare function requestVisibilityTracking(ped: number | IPed): void;
 /**
  * This native does absolutely nothing, just a nullsub
  *
- * Hash: 0x1216E0BFA72CC703 | Since: 323 | API-Set: unknown
+ * Hash: 0x1216E0BFA72CC703 | Since: unknown | API-Set: unknown
  */
 export declare function requestRagdollBoundsUpdate(): void;
 /**
  * No comment provided
  *
- * Hash: 0x2A0A62FCDEE16D4F | Since: 323 | API-Set: unknown
+ * Hash: 0x2A0A62FCDEE16D4F | Since: unknown | API-Set: unknown
  */
 export declare function requestStealthModeAsset(asset: string): void;
 /**
  * No comment provided
  *
- * Hash: 0x46E56A7CD1D63C3F | Since: 323 | API-Set: unknown
+ * Hash: 0x46E56A7CD1D63C3F | Since: unknown | API-Set: unknown
  */
 export declare function resetAiMeleeWeaponDamageModifier(): void;
 /**
  * No comment provided
  *
- * Hash: 0xEA16670E7BA4743C | Since: 323 | API-Set: unknown
+ * Hash: 0xEA16670E7BA4743C | Since: unknown | API-Set: unknown
  */
 export declare function resetAiWeaponDamageModifier(): void;
 /**
  * No comment provided
  *
- * Hash: 0x007FDE5A7897E426 | Since: 2802 | API-Set: unknown
+ * Hash: 0x007FDE5A7897E426 | Since: unknown | API-Set: unknown
  */
 export declare function resetFacialIdleAnim(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x63DAB4CCB3273205 | Since: 323 | API-Set: unknown
+ * Hash: 0x63DAB4CCB3273205 | Since: unknown | API-Set: unknown
  */
 export declare function resetGroupFormationDefaultSpacing(groupHandle: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x22EF8FF8778030EB | Since: 323 | API-Set: unknown
+ * Hash: 0x22EF8FF8778030EB | Since: unknown | API-Set: unknown
  */
 export declare function resetInVehicleContext(ped: number | IPed): void;
 /**
  * Resets the value for the last vehicle driven by the Ped.
  *
- * Hash: 0xBB8DE8CF6A8DD8BB | Since: 323 | API-Set: unknown
+ * Hash: 0xBB8DE8CF6A8DD8BB | Since: unknown | API-Set: unknown
  */
 export declare function resetLastVehicle(ped: number | IPed): void;
 /**
@@ -2955,31 +2955,31 @@ export declare function resetLastVehicle(ped: number | IPed): void;
  * Using the following code to reset back to normal
  * `PED::RESET_PED_MOVEMENT_CLIPSET(PLAYER::PLAYER_PED_ID(), 0.0);`
  *
- * Hash: 0xAA74EC0CB0AAEA2C | Since: 323 | API-Set: unknown
+ * Hash: 0xAA74EC0CB0AAEA2C | Since: unknown | API-Set: unknown
  */
 export declare function resetMovementClipset(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x9FA4664CF62E47E8 | Since: 323 | API-Set: unknown
+ * Hash: 0x9FA4664CF62E47E8 | Since: unknown | API-Set: unknown
  */
 export declare function resetRagdollTimer(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x20510814175EA477 | Since: 323 | API-Set: unknown
+ * Hash: 0x20510814175EA477 | Since: unknown | API-Set: unknown
  */
 export declare function resetStrafeClipset(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x3AC1F7B898F30C05 | Since: 323 | API-Set: unknown
+ * Hash: 0x3AC1F7B898F30C05 | Since: unknown | API-Set: unknown
  */
 export declare function resetVisibleDamage(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x97B0DB5B4AA74E77 | Since: 323 | API-Set: unknown
+ * Hash: 0x97B0DB5B4AA74E77 | Since: unknown | API-Set: unknown
  */
 export declare function resetWeaponMovementClipset(ped: number | IPed): void;
 /**
@@ -2991,7 +2991,7 @@ export declare function resetWeaponMovementClipset(ped: number | IPed): void;
  *
  * Also, disabling any assigned task immediately helped in the number of scenarios, where If you want peds to perform certain decided tasks.
  *
- * Hash: 0x71BC8E838B9C6035 | Since: 323 | API-Set: unknown
+ * Hash: 0x71BC8E838B9C6035 | Since: unknown | API-Set: unknown
  */
 export declare function resurrect(ped: number | IPed): void;
 /**
@@ -3001,55 +3001,55 @@ export declare function resurrect(ped: number | IPed): void;
  *
  * This function is well suited there.
  *
- * Hash: 0x8D8ACD8388CD99CE | Since: 323 | API-Set: unknown
+ * Hash: 0x8D8ACD8388CD99CE | Since: unknown | API-Set: unknown
  */
 export declare function reviveInjured(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x66460DEDDD417254 | Since: 323 | API-Set: unknown
+ * Hash: 0x66460DEDDD417254 | Since: unknown | API-Set: unknown
  */
 export declare function setAiMeleeWeaponDamageModifier(modifier: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x1B1E2A40A65B8521 | Since: 323 | API-Set: unknown
+ * Hash: 0x1B1E2A40A65B8521 | Since: unknown | API-Set: unknown
  */
 export declare function setAiWeaponDamageModifier(value: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x061CB768363D6424 | Since: 323 | API-Set: unknown
+ * Hash: 0x061CB768363D6424 | Since: unknown | API-Set: unknown
  */
 export declare function setAllowLockonToIfFriendly(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xFAB944D4D481ACCB | Since: 1734 | API-Set: unknown
+ * Hash: 0xFAB944D4D481ACCB | Since: unknown | API-Set: unknown
  */
 export declare function setAllowStuntJumpCamera(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x87DDEB611B329A9C | Since: 1103 | API-Set: unknown
+ * Hash: 0x87DDEB611B329A9C | Since: unknown | API-Set: unknown
  */
 export declare function setAmbientLawAccuracyModifier(multiplier: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x6B0E6172C9A4D902 | Since: 323 | API-Set: unknown
+ * Hash: 0x6B0E6172C9A4D902 | Since: unknown | API-Set: unknown
  */
 export declare function setAmbientsDropMoney(): void;
 /**
  * `works with TASK::TASK_SET_BLOCKING_OF_NON_TEMPORARY_EVENTS to make a ped completely oblivious to all events going on around him`
  *
- * Hash: 0x9F8AA94D6D97DBF4 | Since: 323 | API-Set: unknown
+ * Hash: 0x9F8AA94D6D97DBF4 | Since: unknown | API-Set: unknown
  */
 export declare function setBlockingOfNonTemporaryEvents(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x9911F4A24485F653 | Since: 323 | API-Set: unknown
+ * Hash: 0x9911F4A24485F653 | Since: unknown | API-Set: unknown
  */
 export declare function setBlockingOfNonTemporaryEventsForAmbientsThisFrame(): void;
 /**
@@ -3060,97 +3060,97 @@ export declare function setBlockingOfNonTemporaryEventsForAmbientsThisFrame(): v
  * p1 = false & p2 = false for unable to aim at.
  * p1 = true & p2 = false for able to aim at.
  *
- * Hash: 0xB3B1CB349FF9C75D | Since: 323 | API-Set: unknown
+ * Hash: 0xB3B1CB349FF9C75D | Since: unknown | API-Set: unknown
  */
 export declare function setCanAttackFriendly(ped: number | IPed, toggle: boolean): void;
 /**
  * combatType can be between 0-14. See GET_COMBAT_FLOAT below for a list of possible parameters.
  *
- * Hash: 0xFF41B4B141ED981C | Since: 323 | API-Set: unknown
+ * Hash: 0xFF41B4B141ED981C | Since: unknown | API-Set: unknown
  */
 export declare function setCombatFloat(ped: number | IPed, combatType: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x2F074C904D85129E | Since: 393 | API-Set: unknown
+ * Hash: 0x2F074C904D85129E | Since: unknown | API-Set: unknown
  */
 export declare function setCopPerceptionOverrides(seeingRange: number, seeingRangePeripheral: number, hearingRange: number, visualFieldMinAzimuthAngle: number, visualFieldMaxAzimuthAngle: number, fieldOfGazeMaxAngle: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x2735233A786B1BEF | Since: 323 | API-Set: unknown
+ * Hash: 0x2735233A786B1BEF | Since: unknown | API-Set: unknown
  */
 export declare function setCorpseRagdollFriction(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x102E68B2024D536D | Since: 323 | API-Set: unknown
+ * Hash: 0x102E68B2024D536D | Since: unknown | API-Set: unknown
  */
 export declare function setCreateRandomCops(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x8A4986851C4EF6E7 | Since: 323 | API-Set: unknown
+ * Hash: 0x8A4986851C4EF6E7 | Since: unknown | API-Set: unknown
  */
 export declare function setCreateRandomCopsNotOnScenarios(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x444CB7D7DBE6973D | Since: 323 | API-Set: unknown
+ * Hash: 0x444CB7D7DBE6973D | Since: unknown | API-Set: unknown
  */
 export declare function setCreateRandomCopsOnScenarios(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x711794453CFD692B | Since: 463 | API-Set: unknown
+ * Hash: 0x711794453CFD692B | Since: unknown | API-Set: unknown
  */
 export declare function setDisableHighFallDeath(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xDFE68C4B787E1BFB | Since: 1180 | API-Set: unknown
+ * Hash: 0xDFE68C4B787E1BFB | Since: unknown | API-Set: unknown
  */
 export declare function setDisableMapCollision(ped: number | IPed): void;
 /**
  * The function specifically verifies the value is equal to, or less than 1.0f. If it is greater than 1.0f, the function does nothing at all.
  *
- * Hash: 0xB195FFA8042FC5C3 | Since: 323 | API-Set: unknown
+ * Hash: 0xB195FFA8042FC5C3 | Since: unknown | API-Set: unknown
  */
 export declare function setDriverAbility(driver: number | IPed, ability: number): void;
 /**
  * range 0.0f - 1.0f
  *
- * Hash: 0xA731F608CA104E3C | Since: 323 | API-Set: unknown
+ * Hash: 0xA731F608CA104E3C | Since: unknown | API-Set: unknown
  */
 export declare function setDriverAggressiveness(driver: number | IPed, aggressiveness: number): void;
 /**
  * Scripts use 0.2, 0.5 and 1.0. Value must be >= 0.0 && <= 1.0
  *
- * Hash: 0xDED5AF5A0EA4B297 | Since: 323 | API-Set: unknown
+ * Hash: 0xDED5AF5A0EA4B297 | Since: unknown | API-Set: unknown
  */
 export declare function setDriverRacingModifier(driver: number | IPed, modifier: number): void;
 /**
  * Used with SET_ENABLE_HANDCUFFS in decompiled scripts. From my observations, I have noticed that while being ragdolled you are not able to get up but you can still run. Your legs can also bend.
  *
- * Hash: 0xC52E0F855C58FC2E | Since: 323 | API-Set: unknown
+ * Hash: 0xC52E0F855C58FC2E | Since: unknown | API-Set: unknown
  */
 export declare function setEnableBoundAnkles(ped: number | IPed, toggle: boolean): void;
 /**
  * ped can not pull out a weapon when true
  *
- * Hash: 0xDF1AF8B5D56542FA | Since: 323 | API-Set: unknown
+ * Hash: 0xDF1AF8B5D56542FA | Since: unknown | API-Set: unknown
  */
 export declare function setEnableHandcuffs(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xD2C5AA0C0E8D0F1E | Since: 323 | API-Set: unknown
+ * Hash: 0xD2C5AA0C0E8D0F1E | Since: unknown | API-Set: unknown
  */
 export declare function setEnableEnveffScale(ped: number | IPed, toggle: boolean): void;
 /**
  * Enables diving motion when underwater.
  *
- * Hash: 0xF99F62004024D506 | Since: 323 | API-Set: unknown
+ * Hash: 0xF99F62004024D506 | Since: unknown | API-Set: unknown
  */
 export declare function setEnableScuba(ped: number | IPed, toggle: boolean): void;
 /**
@@ -3166,25 +3166,25 @@ export declare function setEnableScuba(ped: number | IPed, toggle: boolean): voi
  * mood_talking_1
  *
  *
- * Hash: 0x5687C7F05B39E401 | Since: 1493 | API-Set: unknown
+ * Hash: 0x5687C7F05B39E401 | Since: unknown | API-Set: unknown
  */
 export declare function setFacialClipset(ped: number | IPed, animDict: string): void;
 /**
  * Full list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json
  *
- * Hash: 0xFFC24B988B938B38 | Since: 323 | API-Set: unknown
+ * Hash: 0xFFC24B988B938B38 | Since: unknown | API-Set: unknown
  */
 export declare function setFacialIdleAnimOverride(ped: number | IPed, animName: string, animDict: string): void;
 /**
  * No comment provided
  *
- * Hash: 0x129466ED55140F8D | Since: 323 | API-Set: unknown
+ * Hash: 0x129466ED55140F8D | Since: unknown | API-Set: unknown
  */
 export declare function setForceFootstepUpdate(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xCB968B53FC7F916D | Since: 323 | API-Set: unknown
+ * Hash: 0xCB968B53FC7F916D | Since: unknown | API-Set: unknown
  */
 export declare function setForceStepType(ped: number | IPed, _type: number): void;
 /**
@@ -3193,19 +3193,19 @@ export declare function setForceStepType(ped: number | IPed, _type: number): voi
  * 2: Alternative Circle Around Leader
  * 3: Line, with Leader at center
  *
- * Hash: 0xCE2F5FC3AF7E8C1E | Since: 323 | API-Set: unknown
+ * Hash: 0xCE2F5FC3AF7E8C1E | Since: unknown | API-Set: unknown
  */
 export declare function setGroupFormation(groupId: number, formationType: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x1D9D45004C28C916 | Since: 323 | API-Set: unknown
+ * Hash: 0x1D9D45004C28C916 | Since: unknown | API-Set: unknown
  */
 export declare function setGroupFormationSpacing(groupId: number, pos: Vector3): void;
 /**
  * Sets the range at which members will automatically leave the group.
  *
- * Hash: 0x4102C7858CFEE4E4 | Since: 323 | API-Set: unknown
+ * Hash: 0x4102C7858CFEE4E4 | Since: unknown | API-Set: unknown
  */
 export declare function setGroupSeparationRange(groupHandle: number, separationRange: number): void;
 /**
@@ -3244,56 +3244,56 @@ export declare function setGroupSeparationRange(groupHandle: number, separationR
  * 30. white small pupil
  * 31. glossed over
  *
- * Hash: 0x50B56988B170AFDF | Since: 323 | API-Set: unknown
+ * Hash: 0x50B56988B170AFDF | Since: unknown | API-Set: unknown
  */
 export declare function setHeadBlendEyeColor(ped: number | IPed, index: number): void;
 /**
  * p4 seems to vary from 0 to 3.
  * Preview: https://gfycat.com/MaleRareAmazonparrot
  *
- * Hash: 0xCC9682B8951C5229 | Since: 323 | API-Set: unknown
+ * Hash: 0xCC9682B8951C5229 | Since: unknown | API-Set: unknown
  */
 export declare function setHeadBlendPaletteColor(ped: number | IPed, r: number, g: number, b: number, id: number): void;
 /**
  * Related to Peds dropping pickup_health_snack; p0 is a value between [0.0, 1.0] that corresponds to drop rate
  *
- * Hash: 0xFF4803BC019852D9 | Since: 323 | API-Set: unknown
+ * Hash: 0xFF4803BC019852D9 | Since: unknown | API-Set: unknown
  */
 export declare function setHealthSnacksCarriedByAllNews(): void;
 /**
  * No comment provided
  *
- * Hash: 0xC32779C16FCEECD9 | Since: 323 | API-Set: unknown
+ * Hash: 0xC32779C16FCEECD9 | Since: unknown | API-Set: unknown
  */
 export declare function setIkTarget(ped: number | IPed, ikIndex: number, entityLookAt: number | IEntity, boneLookAt: number, offsetX: number, offsetY: number, offsetZ: number, blendInDuration: number, blendOutDuration: number): void;
 /**
  * Only appears in lamar1 script.
  *
- * Hash: 0x1A330D297AAC6BC1 | Since: 323 | API-Set: unknown
+ * Hash: 0x1A330D297AAC6BC1 | Since: unknown | API-Set: unknown
  */
 export declare function setLadderClimbInputState(ped: number | IPed): void;
 /**
  * name: "MP_FEMALE_ACTION" found multiple times in the b617d scripts.
  *
- * Hash: 0x781DE8FA214E87D2 | Since: 323 | API-Set: unknown
+ * Hash: 0x781DE8FA214E87D2 | Since: unknown | API-Set: unknown
  */
 export declare function setMovementModeOverride(ped: number | IPed, name: string): void;
 /**
  * accuracy = 0-100, 100 being perfectly accurate
  *
- * Hash: 0x7AEFB85C1D49DEB6 | Since: 323 | API-Set: unknown
+ * Hash: 0x7AEFB85C1D49DEB6 | Since: unknown | API-Set: unknown
  */
 export declare function setAccuracy(ped: number | IPed, accuracy: number): void;
 /**
  * value ranges from 0 to 3.
  *
- * Hash: 0xDBA71115ED9941A6 | Since: 323 | API-Set: unknown
+ * Hash: 0xDBA71115ED9941A6 | Since: unknown | API-Set: unknown
  */
 export declare function setAlertness(ped: number | IPed, value: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xDA1F1B7BE1A8766F | Since: 323 | API-Set: unknown
+ * Hash: 0xDA1F1B7BE1A8766F | Since: unknown | API-Set: unknown
  */
 export declare function setAllowedToDuck(ped: number | IPed, toggle: boolean): void;
 /**
@@ -3301,19 +3301,19 @@ export declare function setAllowedToDuck(ped: number | IPed, toggle: boolean): v
  *
  * The one time this is set to true seems to do with when you fail the mission.
  *
- * Hash: 0xF2BEBCDFAFDAA19E | Since: 323 | API-Set: unknown
+ * Hash: 0xF2BEBCDFAFDAA19E | Since: unknown | API-Set: unknown
  */
 export declare function setAllowHurtCombatForAllMissionPeds(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x49E50BDB8BA4DAB2 | Since: 323 | API-Set: unknown
+ * Hash: 0x49E50BDB8BA4DAB2 | Since: unknown | API-Set: unknown
  */
 export declare function setAllowMinorReactionsAsMissionPed(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x3C028C636A414ED9 | Since: 323 | API-Set: unknown
+ * Hash: 0x3C028C636A414ED9 | Since: unknown | API-Set: unknown
  */
 export declare function setAllowVehiclesOverride(ped: number | IPed, toggle: boolean): void;
 /**
@@ -3328,7 +3328,7 @@ export declare function setAllowVehiclesOverride(ped: number | IPed, toggle: boo
  *
  * Full list of movement clipsets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/movementClipsetsCompact.json
  *
- * Hash: 0x90A43CC281FFAB46 | Since: 323 | API-Set: unknown
+ * Hash: 0x90A43CC281FFAB46 | Since: unknown | API-Set: unknown
  */
 export declare function setAlternateMovementAnim(ped: number | IPed, stance: number, animDictionary: string, animationName: string): void;
 /**
@@ -3336,19 +3336,19 @@ export declare function setAlternateMovementAnim(ped: number | IPed, stance: num
  *
  * Full list of movement clipsets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/movementClipsetsCompact.json
  *
- * Hash: 0x6C60394CB4F75E9A | Since: 323 | API-Set: unknown
+ * Hash: 0x6C60394CB4F75E9A | Since: unknown | API-Set: unknown
  */
 export declare function setAlternateWalkAnim(ped: number | IPed, animDict: string, animName: string): void;
 /**
  * No comment provided
  *
- * Hash: 0xC7F76DF27A5045A1 | Since: 323 | API-Set: unknown
+ * Hash: 0xC7F76DF27A5045A1 | Since: unknown | API-Set: unknown
  */
 export declare function setAngledDefensiveArea(ped: number | IPed): void;
 /**
  * Enable/disable ped shadow (ambient occlusion). https://gfycat.com/thankfulesteemedgecko
  *
- * Hash: 0x2B5AA717A181FB4C | Since: 323 | API-Set: unknown
+ * Hash: 0x2B5AA717A181FB4C | Since: unknown | API-Set: unknown
  */
 export declare function setAoBlobRendering(ped: number | IPed, toggle: boolean): void;
 /**
@@ -3357,115 +3357,115 @@ export declare function setAoBlobRendering(ped: number | IPed, toggle: boolean):
  * ped: The Ped to set the armor of.
  * amount: A value between 0 and 100 indicating the value to set the Ped's armor to.
  *
- * Hash: 0xCEA04D83135264CC | Since: 323 | API-Set: unknown
+ * Hash: 0xCEA04D83135264CC | Since: unknown | API-Set: unknown
  */
 export declare function setArmour(ped: number | IPed, amount: number): void;
 /**
  * Turns the desired ped into a cop. If you use this on the player ped, you will become almost invisible to cops dispatched for you. You will also report your own crimes, get a generic cop voice, get a cop-vision-cone on the radar, and you will be unable to shoot at other cops. SWAT and Army will still shoot at you. Toggling ped as "false" has no effect; you must change p0's ped model to disable the effect.
  *
- * Hash: 0xBB03C38DD3FB7FFD | Since: 323 | API-Set: unknown
+ * Hash: 0xBB03C38DD3FB7FFD | Since: unknown | API-Set: unknown
  */
 export declare function setAsCop(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x02A0C9720B854BFA | Since: 323 | API-Set: unknown
+ * Hash: 0x02A0C9720B854BFA | Since: unknown | API-Set: unknown
  */
 export declare function setAsEnemy(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x2A7819605465FBCE | Since: 323 | API-Set: unknown
+ * Hash: 0x2A7819605465FBCE | Since: unknown | API-Set: unknown
  */
 export declare function setAsGroupLeader(ped: number | IPed, groupId: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x9F3480FE65DB31B5 | Since: 323 | API-Set: unknown
+ * Hash: 0x9F3480FE65DB31B5 | Since: unknown | API-Set: unknown
  */
 export declare function setAsGroupMember(ped: number | IPed, groupId: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x137BBD05230DB22D | Since: 323 | API-Set: unknown
+ * Hash: 0x137BBD05230DB22D | Since: unknown | API-Set: unknown
  */
 export declare function setBlendFromParents(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x576594E8D64375E2 | Since: 323 | API-Set: unknown
+ * Hash: 0x576594E8D64375E2 | Since: unknown | API-Set: unknown
  */
 export declare function setBlocksPathingWhenDead(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x4F5F651ACCC9C4CF | Since: 323 | API-Set: unknown
+ * Hash: 0x4F5F651ACCC9C4CF | Since: unknown | API-Set: unknown
  */
 export declare function setBoundsOrientation(ped: number | IPed, pos: Vector3): void;
 /**
  * No comment provided
  *
- * Hash: 0x6C3B4D6D13B4C841 | Since: 323 | API-Set: unknown
+ * Hash: 0x6C3B4D6D13B4C841 | Since: unknown | API-Set: unknown
  */
 export declare function setCanArmIk(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xC1670E958EEE24E5 | Since: 323 | API-Set: unknown
+ * Hash: 0xC1670E958EEE24E5 | Since: unknown | API-Set: unknown
  */
 export declare function setCanBeDraggedOut(ped: number | IPed, toggle: boolean): void;
 /**
  * This native does absolutely nothing, just a nullsub
  *
- * Hash: 0xB282749D5E028163 | Since: 877 | API-Set: unknown
+ * Hash: 0xB282749D5E028163 | Since: unknown | API-Set: unknown
  */
 export declare function setCanBeKnockedOffBike(): void;
 /**
  * state: https://alloc8or.re/gta5/doc/enums/eKnockOffVehicle.txt
  *
- * Hash: 0x7A6535691B477C48 | Since: 323 | API-Set: unknown
+ * Hash: 0x7A6535691B477C48 | Since: unknown | API-Set: unknown
  */
 export declare function setCanBeKnockedOffVehicle(ped: number | IPed, state: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xC7EF1BA83230BA07 | Since: 323 | API-Set: unknown
+ * Hash: 0xC7EF1BA83230BA07 | Since: unknown | API-Set: unknown
  */
 export declare function setCanBeShotInVehicle(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x638C03B0F9878F57 | Since: 323 | API-Set: unknown
+ * Hash: 0x638C03B0F9878F57 | Since: unknown | API-Set: unknown
  */
 export declare function setCanBeTargetedWhenInjured(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x4328652AE5769C71 | Since: 323 | API-Set: unknown
+ * Hash: 0x4328652AE5769C71 | Since: unknown | API-Set: unknown
  */
 export declare function setCanBeTargetedWithoutLos(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x63F58F7C80513AAD | Since: 323 | API-Set: unknown
+ * Hash: 0x63F58F7C80513AAD | Since: unknown | API-Set: unknown
  */
 export declare function setCanBeTargetted(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x66B57B72E0836A76 | Since: 323 | API-Set: unknown
+ * Hash: 0x66B57B72E0836A76 | Since: unknown | API-Set: unknown
  */
 export declare function setCanBeTargettedByPlayer(ped: number | IPed, player: number | string | IPlayer, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xBF1CA77833E58F2C | Since: 323 | API-Set: unknown
+ * Hash: 0xBF1CA77833E58F2C | Since: unknown | API-Set: unknown
  */
 export declare function setCanBeTargettedByTeam(ped: number | IPed, team: number, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xE84EC1735FB39663 | Since: 3717 | API-Set: unknown
+ * Hash: 0xE84EC1735FB39663 | Since: unknown | API-Set: unknown
  */
 export declare function setCanBodyRecoilIk(ped: number | IPed, toggle: boolean): void;
 /**
@@ -3473,91 +3473,91 @@ export declare function setCanBodyRecoilIk(ped: number | IPed, toggle: boolean):
  *
  * Peds flee attributes must be set to not to flee, first. Else, most of the peds, will just flee from gunshot sounds or any other panic situations.
  *
- * Hash: 0xCB7553CDCEF4A735 | Since: 323 | API-Set: unknown
+ * Hash: 0xCB7553CDCEF4A735 | Since: unknown | API-Set: unknown
  */
 export declare function setCanCowerInCover(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x6B7A646C242A7059 | Since: 323 | API-Set: unknown
+ * Hash: 0x6B7A646C242A7059 | Since: unknown | API-Set: unknown
  */
 export declare function setCanEvasiveDive(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xC11C18092C5530DC | Since: 323 | API-Set: unknown
+ * Hash: 0xC11C18092C5530DC | Since: unknown | API-Set: unknown
  */
 export declare function setCanHeadIk(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x73518ECE2485412B | Since: 323 | API-Set: unknown
+ * Hash: 0x73518ECE2485412B | Since: unknown | API-Set: unknown
  */
 export declare function setCanLegIk(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xE861D0B05C7662B8 | Since: 323 | API-Set: unknown
+ * Hash: 0xE861D0B05C7662B8 | Since: unknown | API-Set: unknown
  */
 export declare function setCanLosePropsOnDamage(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xC514825C507E3736 | Since: 323 | API-Set: unknown
+ * Hash: 0xC514825C507E3736 | Since: unknown | API-Set: unknown
  */
 export declare function setCanPeekInCover(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x6373D1349925A70E | Since: 323 | API-Set: unknown
+ * Hash: 0x6373D1349925A70E | Since: unknown | API-Set: unknown
  */
 export declare function setCanPlayAmbientAnims(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x0EB0585D15254740 | Since: 323 | API-Set: unknown
+ * Hash: 0x0EB0585D15254740 | Since: unknown | API-Set: unknown
  */
 export declare function setCanPlayAmbientBaseAnims(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xBAF20C5432058024 | Since: 323 | API-Set: unknown
+ * Hash: 0xBAF20C5432058024 | Since: unknown | API-Set: unknown
  */
 export declare function setCanPlayGestureAnims(ped: number | IPed, toggle: boolean): void;
 /**
  * Toggles config flag CPED_CONFIG_FLAG_CanPlayInCarIdles.
  *
- * Hash: 0x820E9892A77E97CD | Since: 877 | API-Set: unknown
+ * Hash: 0x820E9892A77E97CD | Since: unknown | API-Set: unknown
  */
 export declare function setCanPlayInCarIdles(ped: number | IPed, toggle: boolean): void;
 /**
  * p2 usually 0
  *
- * Hash: 0xF833DDBA3B104D43 | Since: 323 | API-Set: unknown
+ * Hash: 0xF833DDBA3B104D43 | Since: unknown | API-Set: unknown
  */
 export declare function setCanPlayVisemeAnims(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xB128377056A54E2A | Since: 323 | API-Set: unknown
+ * Hash: 0xB128377056A54E2A | Since: unknown | API-Set: unknown
  */
 export declare function setCanRagdoll(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xDF993EE5E90ABA25 | Since: 323 | API-Set: unknown
+ * Hash: 0xDF993EE5E90ABA25 | Since: unknown | API-Set: unknown
  */
 export declare function setCanRagdollFromPlayerImpact(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x1CCE141467FF42A2 | Since: 323 | API-Set: unknown
+ * Hash: 0x1CCE141467FF42A2 | Since: unknown | API-Set: unknown
  */
 export declare function setCanSmashGlass(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xED7F7EFE9FABF340 | Since: 323 | API-Set: unknown
+ * Hash: 0xED7F7EFE9FABF340 | Since: unknown | API-Set: unknown
  */
 export declare function setCanSwitchWeapon(ped: number | IPed, toggle: boolean): void;
 /**
@@ -3565,31 +3565,31 @@ export declare function setCanSwitchWeapon(ped: number | IPed, toggle: boolean):
  *
  * Only works in singleplayer
  *
- * Hash: 0x2E2F4240B3F24647 | Since: 323 | API-Set: unknown
+ * Hash: 0x2E2F4240B3F24647 | Since: unknown | API-Set: unknown
  */
 export declare function setCanTeleportToGroupLeader(pedHandle: number | IPed, groupHandle: number, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xF2B7106D37947CE0 | Since: 323 | API-Set: unknown
+ * Hash: 0xF2B7106D37947CE0 | Since: unknown | API-Set: unknown
  */
 export declare function setCanTorsoIk(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xF5846EDB26A98A24 | Since: 323 | API-Set: unknown
+ * Hash: 0xF5846EDB26A98A24 | Since: unknown | API-Set: unknown
  */
 export declare function setCanTorsoReactIk(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x6647C5F6F5792496 | Since: 323 | API-Set: unknown
+ * Hash: 0x6647C5F6F5792496 | Since: unknown | API-Set: unknown
  */
 export declare function setCanTorsoVehicleIk(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xEC4686EC06434678 | Since: 323 | API-Set: unknown
+ * Hash: 0xEC4686EC06434678 | Since: unknown | API-Set: unknown
  */
 export declare function setCanUseAutoConversationLookat(ped: number | IPed, toggle: boolean): void;
 /**
@@ -3598,25 +3598,25 @@ export declare function setCanUseAutoConversationLookat(ped: number | IPed, togg
  *
  * Setting this to 0.001 will allow warping through some objects.
  *
- * Hash: 0x364DF566EC833DE2 | Since: 323 | API-Set: unknown
+ * Hash: 0x364DF566EC833DE2 | Since: unknown | API-Set: unknown
  */
 export declare function setCapsule(ped: number | IPed, value: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x82A3D6D9CC2CB8E3 | Since: 323 | API-Set: unknown
+ * Hash: 0x82A3D6D9CC2CB8E3 | Since: unknown | API-Set: unknown
  */
 export declare function setClothPackageIndex(): void;
 /**
  * No comment provided
  *
- * Hash: 0x78C4E9961DB3EB5B | Since: 323 | API-Set: unknown
+ * Hash: 0x78C4E9961DB3EB5B | Since: unknown | API-Set: unknown
  */
 export declare function setClothPinFrames(): void;
 /**
  * No comment provided
  *
- * Hash: 0xA660FAF550EB37E5 | Since: 323 | API-Set: unknown
+ * Hash: 0xA660FAF550EB37E5 | Since: unknown | API-Set: unknown
  */
 export declare function setClothProne(): void;
 /**
@@ -3628,7 +3628,7 @@ export declare function setClothProne(): void;
  * CA_NumTypes
  * };
  *
- * Hash: 0xC7622C0D36B2FDA8 | Since: 323 | API-Set: unknown
+ * Hash: 0xC7622C0D36B2FDA8 | Since: unknown | API-Set: unknown
  */
 export declare function setCombatAbility(ped: number | IPed, abilityLevel: number): void;
 /**
@@ -3728,7 +3728,7 @@ export declare function setCombatAbility(ped: number | IPed, abilityLevel: numbe
  * BF_0x053AEAD9 = 91
  * };
  *
- * Hash: 0x9F7794730795E019 | Since: 323 | API-Set: unknown
+ * Hash: 0x9F7794730795E019 | Since: unknown | API-Set: unknown
  */
 export declare function setCombatAttributes(ped: number | IPed, attributeId: number, enabled: boolean): void;
 /**
@@ -3740,7 +3740,7 @@ export declare function setCombatAttributes(ped: number | IPed, attributeId: num
  * CM_WillRetreat
  * };
  *
- * Hash: 0x4D9CA1009AFBD057 | Since: 323 | API-Set: unknown
+ * Hash: 0x4D9CA1009AFBD057 | Since: unknown | API-Set: unknown
  */
 export declare function setCombatMovement(ped: number | IPed, combatMovement: number): void;
 /**
@@ -3753,7 +3753,7 @@ export declare function setCombatMovement(ped: number | IPed, combatMovement: nu
  * CR_NumRanges
  * };
  *
- * Hash: 0x3C606747B23E497B | Since: 323 | API-Set: unknown
+ * Hash: 0x3C606747B23E497B | Since: unknown | API-Set: unknown
  */
 export declare function setCombatRange(ped: number | IPed, combatRange: number): void;
 /**
@@ -3782,7 +3782,7 @@ export declare function setCombatRange(ped: number | IPed, combatRange: number):
  *
  * Full list of ped components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedComponentVariations.json
  *
- * Hash: 0x262B14F48D29DE80 | Since: 323 | API-Set: unknown
+ * Hash: 0x262B14F48D29DE80 | Since: unknown | API-Set: unknown
  */
 export declare function setComponentVariation(ped: number | IPed, componentId: number, drawableId: number, textureId: number, paletteId: number): void;
 /**
@@ -4248,109 +4248,109 @@ export declare function setComponentVariation(ped: number | IPed, componentId: n
  * CPED_CONFIG_FLAG_DontChangeTargetFromMelee = 458,
  * };
  *
- * Hash: 0x1913FE4CBF41C463 | Since: 323 | API-Set: unknown
+ * Hash: 0x1913FE4CBF41C463 | Since: unknown | API-Set: unknown
  */
 export declare function setConfigFlag(ped: number | IPed, flagId: number, value: boolean): void;
 /**
  * teleports ped to coords along with the vehicle ped is in
  *
- * Hash: 0x9AFEFF481A85AB2E | Since: 323 | API-Set: unknown
+ * Hash: 0x9AFEFF481A85AB2E | Since: unknown | API-Set: unknown
  */
 export declare function setCoordsKeepVehicle(ped: number | IPed, pos: Vector3): void;
 /**
  * No comment provided
  *
- * Hash: 0x87052FE446E07247 | Since: 323 | API-Set: unknown
+ * Hash: 0x87052FE446E07247 | Since: unknown | API-Set: unknown
  */
 export declare function setCoordsNoGang(ped: number | IPed, pos: Vector3): void;
 /**
  * p1: Only "CODE_HUMAN_STAND_COWER" found in the b617d scripts.
  *
- * Hash: 0xA549131166868ED3 | Since: 323 | API-Set: unknown
+ * Hash: 0xA549131166868ED3 | Since: unknown | API-Set: unknown
  */
 export declare function setCowerHash(ped: number | IPed): void;
 /**
  * Sets Ped Default Clothes
  *
- * Hash: 0x45EEE61580806D63 | Since: 323 | API-Set: unknown
+ * Hash: 0x45EEE61580806D63 | Since: unknown | API-Set: unknown
  */
 export declare function setDefaultComponentVariation(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x4EF47FE21698A8B6 | Since: 323 | API-Set: unknown
+ * Hash: 0x4EF47FE21698A8B6 | Since: unknown | API-Set: unknown
  */
 export declare function setDefensiveAreaAttachedToPed(ped: number | IPed, attachPed: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x413C6C763A4AFFAD | Since: 323 | API-Set: unknown
+ * Hash: 0x413C6C763A4AFFAD | Since: unknown | API-Set: unknown
  */
 export declare function setDefensiveAreaDirection(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xF9B8F91AAD3B953E | Since: 323 | API-Set: unknown
+ * Hash: 0xF9B8F91AAD3B953E | Since: unknown | API-Set: unknown
  */
 export declare function setDefensiveSphereAttachedToPed(ped: number | IPed, target: number | IPed, xOffset: number, yOffset: number, zOffset: number, radius: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xE4723DB6E736CCFF | Since: 323 | API-Set: unknown
+ * Hash: 0xE4723DB6E736CCFF | Since: unknown | API-Set: unknown
  */
 export declare function setDefensiveSphereAttachedToVehicle(ped: number | IPed, target: number | IVehicle, xOffset: number, yOffset: number, zOffset: number, radius: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x95E3D6257B166CF2 | Since: 323 | API-Set: unknown
+ * Hash: 0x95E3D6257B166CF2 | Since: unknown | API-Set: unknown
  */
 export declare function setDensityMultiplierThisFrame(multiplier: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xAA5A7ECE2AA8FE70 | Since: 323 | API-Set: unknown
+ * Hash: 0xAA5A7ECE2AA8FE70 | Since: unknown | API-Set: unknown
  */
 export declare function setDesiredHeading(ped: number | IPed, heading: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xEEB64139BA29A7CF | Since: 323 | API-Set: unknown
+ * Hash: 0xEEB64139BA29A7CF | Since: unknown | API-Set: unknown
  */
 export declare function setDiesInstantlyInWater(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xD718A22995E2B4BC | Since: 323 | API-Set: unknown
+ * Hash: 0xD718A22995E2B4BC | Since: unknown | API-Set: unknown
  */
 export declare function setDiesInSinkingVehicle(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x2A30922C90C9B42C | Since: 323 | API-Set: unknown
+ * Hash: 0x2A30922C90C9B42C | Since: unknown | API-Set: unknown
  */
 export declare function setDiesInVehicle(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x56CEF0AC79073BDE | Since: 323 | API-Set: unknown
+ * Hash: 0x56CEF0AC79073BDE | Since: unknown | API-Set: unknown
  */
 export declare function setDiesInWater(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x5BA7919BED300023 | Since: 323 | API-Set: unknown
+ * Hash: 0x5BA7919BED300023 | Since: unknown | API-Set: unknown
  */
 export declare function setDiesWhenInjured(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xED34AB6C5CB36520 | Since: 323 | API-Set: unknown
+ * Hash: 0xED34AB6C5CB36520 | Since: unknown | API-Set: unknown
  */
 export declare function setDriveByClipsetOverride(ped: number | IPed, clipset: string): void;
 /**
  * This is the SET_CHAR_DUCKING from GTA IV, that makes Peds duck. This function does nothing in GTA V. It cannot set the ped as ducking in vehicles, and IS_PED_DUCKING will always return false.
  *
- * Hash: 0x030983CA930B692D | Since: 323 | API-Set: unknown
+ * Hash: 0x030983CA930B692D | Since: unknown | API-Set: unknown
  */
 export declare function setDucking(ped: number | IPed, toggle: boolean): void;
 /**
@@ -4358,26 +4358,26 @@ export declare function setDucking(ped: number | IPed, toggle: boolean): void;
  *
  * This native sets the emissive intensity for the given ped. It is used for different 'glow' levels on illuminated clothing.
  *
- * Hash: 0x4E90D746056E273D | Since: 944 | API-Set: unknown
+ * Hash: 0x4E90D746056E273D | Since: unknown | API-Set: unknown
  */
 export declare function setEmissiveScale(ped: number | IPed, intensity: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xE906EC930F5FE7C8 | Since: 791 | API-Set: unknown
+ * Hash: 0xE906EC930F5FE7C8 | Since: unknown | API-Set: unknown
  */
 export declare function setEnableCrewEmblem(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x97A790315D3831FD | Since: 323 | API-Set: unknown
+ * Hash: 0x97A790315D3831FD | Since: unknown | API-Set: unknown
  */
 export declare function setEnableWeaponBlocking(ped: number | IPed, toggle: boolean): void;
 /**
  * Something related to the environmental effects natives.
  * In the "agency_heist3b" script, p1 - p3 are always under 100 - usually they are {87, 81, 68}. If SET_PED_ENVEFF_SCALE is set to 0.65 (instead of the usual 1.0), they use {74, 69, 60}
  *
- * Hash: 0xD69411AA0CEBF9E9 | Since: 323 | API-Set: unknown
+ * Hash: 0xD69411AA0CEBF9E9 | Since: unknown | API-Set: unknown
  */
 export declare function setEnveffColorModulator(ped: number | IPed): void;
 /**
@@ -4395,7 +4395,7 @@ export declare function setEnveffColorModulator(ped: number | IPed): void;
  * `PED::SET_PED_ENVEFF_COLOR_MODULATOR(ped, 74, 69, 60);`
  * `PED::SET_ENABLE_PED_ENVEFF_SCALE(ped, 1);`
  *
- * Hash: 0x110F526AB784111F | Since: 323 | API-Set: unknown
+ * Hash: 0x110F526AB784111F | Since: unknown | API-Set: unknown
  */
 export declare function setEnveffCpvAdd(ped: number | IPed): void;
 /**
@@ -4404,7 +4404,7 @@ export declare function setEnveffCpvAdd(ped: number | IPed): void;
  *
  * You are correct, just looked in IDA it breaks from the function if it's less than 0.0f or greater than 1.0f.
  *
- * Hash: 0xBF29516833893561 | Since: 323 | API-Set: unknown
+ * Hash: 0xBF29516833893561 | Since: unknown | API-Set: unknown
  */
 export declare function setEnveffScale(ped: number | IPed, value: number): void;
 /**
@@ -4427,20 +4427,20 @@ export declare function setEnveffScale(ped: number | IPed, value: number): void;
  *
  * Firing pattern info: https://pastebin.com/Px036isB
  *
- * Hash: 0x9AC577F5A12AD8A9 | Since: 323 | API-Set: unknown
+ * Hash: 0x9AC577F5A12AD8A9 | Since: unknown | API-Set: unknown
  */
 export declare function setFiringPattern(ped: number | IPed, patternHash: number | string): void;
 /**
  * bit 1 (0x2) = use vehicle
  * bit 15 (0x8000) = force cower
  *
- * Hash: 0x70A2D1137C8ED7C9 | Since: 323 | API-Set: unknown
+ * Hash: 0x70A2D1137C8ED7C9 | Since: unknown | API-Set: unknown
  */
 export declare function setFleeAttributes(ped: number | IPed, attributeFlags: number, enable: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x7FB17BA2E7DECA5B | Since: 323 | API-Set: unknown
+ * Hash: 0x7FB17BA2E7DECA5B | Since: unknown | API-Set: unknown
  */
 export declare function setGeneratesDeadBodyEvents(ped: number | IPed, toggle: boolean): void;
 /**
@@ -4450,13 +4450,13 @@ export declare function setGeneratesDeadBodyEvents(ped: number | IPed, toggle: b
  * `PED::SET_PED_GESTURE_GROUP(PLAYER::PLAYER_PED_ID(),`
  * "ANIM_GROUP_GESTURE_MISS_DocksSetup1");
  *
- * Hash: 0xDDF803377F94AAA8 | Since: 323 | API-Set: unknown
+ * Hash: 0xDDF803377F94AAA8 | Since: unknown | API-Set: unknown
  */
 export declare function setGestureGroup(ped: number | IPed, animGroupGesture: string): void;
 /**
  * No comment provided
  *
- * Hash: 0xBC0ED94165A48BC2 | Since: 323 | API-Set: unknown
+ * Hash: 0xBC0ED94165A48BC2 | Since: unknown | API-Set: unknown
  */
 export declare function setGetOutUpsideDownVehicle(ped: number | IPed, toggle: boolean): void;
 /**
@@ -4466,19 +4466,19 @@ export declare function setGetOutUpsideDownVehicle(ped: number | IPed, toggle: b
  * `PED::SET_PED_GRAVITY(PLAYER::PLAYER_PED_ID(), 0x00000001);`
  * `PED::SET_PED_GRAVITY(Local_289[iVar0 \/\*20\*\/], 0x00000001);`
  *
- * Hash: 0x9FF447B6B6AD960A | Since: 323 | API-Set: unknown
+ * Hash: 0x9FF447B6B6AD960A | Since: unknown | API-Set: unknown
  */
 export declare function setGravity(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x0BDDB8D9EC6BCF3C | Since: 323 | API-Set: unknown
+ * Hash: 0x0BDDB8D9EC6BCF3C | Since: unknown | API-Set: unknown
  */
 export declare function setGroupMemberPassengerIndex(ped: number | IPed, index: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x4CFFC65454C93A49 | Since: 323 | API-Set: unknown
+ * Hash: 0x4CFFC65454C93A49 | Since: unknown | API-Set: unknown
  */
 export declare function setHairTint(ped: number | IPed, colorID: number, highlightColorID: number): void;
 /**
@@ -4495,7 +4495,7 @@ export declare function setHairTint(ped: number | IPed, colorID: number, highlig
  * For more info please refer to this topic.
  * gtaforums.com/topic/858970-all-gtao-face-ids-pedset-ped-head-blend-data-explained
  *
- * Hash: 0x9414E18B9434C2FE | Since: 323 | API-Set: unknown
+ * Hash: 0x9414E18B9434C2FE | Since: unknown | API-Set: unknown
  */
 export declare function setHeadBlendData(ped: number | IPed, shapeFirstID: number, shapeSecondID: number, shapeThirdID: number, skinFirstID: number, skinSecondID: number, skinThirdID: number, shapeMix: number, skinMix: number, thirdMix: number, isParent: boolean): void;
 /**
@@ -4516,7 +4516,7 @@ export declare function setHeadBlendData(ped: number | IPed, shapeFirstID: numbe
  * 11              Body Blemishes        0 - 11, 255
  * 12              Add Body Blemishes    0 - 1, 255
  *
- * Hash: 0x48F44967FA05CC1E | Since: 323 | API-Set: unknown
+ * Hash: 0x48F44967FA05CC1E | Since: unknown | API-Set: unknown
  */
 export declare function setHeadOverlay(ped: number | IPed, overlayID: number, index: number, opacity: number): void;
 /**
@@ -4526,80 +4526,80 @@ export declare function setHeadOverlay(ped: number | IPed, overlayID: number, in
  *
  * Called after SET_PED_HEAD_OVERLAY().
  *
- * Hash: 0x497BF74A7B9CB952 | Since: 323 | API-Set: unknown
+ * Hash: 0x497BF74A7B9CB952 | Since: unknown | API-Set: unknown
  */
 export declare function setHeadOverlayTint(ped: number | IPed, overlayID: number, colorType: number, colorID: number, secondColorID: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xB3352E018D6F89DF | Since: 2699 | API-Set: unknown
+ * Hash: 0xB3352E018D6F89DF | Since: unknown | API-Set: unknown
  */
 export declare function setHealthPendingLastDamageEventOverrideFlag(toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x33A8F7F7D5F7F33C | Since: 323 | API-Set: unknown
+ * Hash: 0x33A8F7F7D5F7F33C | Since: unknown | API-Set: unknown
  */
 export declare function setHearingRange(ped: number | IPed, value: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xC1F6EBF9A3D55538 | Since: 323 | API-Set: unknown
+ * Hash: 0xC1F6EBF9A3D55538 | Since: unknown | API-Set: unknown
  */
 export declare function setHeatscaleOverride(ped: number | IPed, heatScale: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x560A43136EB58105 | Since: 323 | API-Set: unknown
+ * Hash: 0x560A43136EB58105 | Since: unknown | API-Set: unknown
  */
 export declare function setHelmet(ped: number | IPed, canWearHelmet: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xC0E78D5C2CE3EB25 | Since: 323 | API-Set: unknown
+ * Hash: 0xC0E78D5C2CE3EB25 | Since: unknown | API-Set: unknown
  */
 export declare function setHelmetFlag(ped: number | IPed, helmetFlag: number): void;
 /**
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x26D83693ED99291C | Since: 323 | API-Set: unknown
+ * Hash: 0x26D83693ED99291C | Since: unknown | API-Set: unknown
  */
 export declare function setHelmetPropIndex(ped: number | IPed, propIndex: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xF1550C4BD22582E2 | Since: 323 | API-Set: unknown
+ * Hash: 0xF1550C4BD22582E2 | Since: unknown | API-Set: unknown
  */
 export declare function setHelmetTextureIndex(ped: number | IPed, textureIndex: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x3F7325574E41B44D | Since: 791 | API-Set: unknown
+ * Hash: 0x3F7325574E41B44D | Since: unknown | API-Set: unknown
  */
 export declare function setHelmetVisorPropIndices(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x52D59AB61DDC05DD | Since: 323 | API-Set: unknown
+ * Hash: 0x52D59AB61DDC05DD | Since: unknown | API-Set: unknown
  */
 export declare function setHighlyPerceptive(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xF107E836A70DCE05 | Since: 323 | API-Set: unknown
+ * Hash: 0xF107E836A70DCE05 | Since: unknown | API-Set: unknown
  */
 export declare function setIdRange(ped: number | IPed, value: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x570389D1C3DE3C6B | Since: 323 | API-Set: unknown
+ * Hash: 0x570389D1C3DE3C6B | Since: unknown | API-Set: unknown
  */
 export declare function setIncreasedAvoidanceRadius(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xEC4B4B3B9908052A | Since: 323 | API-Set: unknown
+ * Hash: 0xEC4B4B3B9908052A | Since: unknown | API-Set: unknown
  */
 export declare function setInjuredOnGroundBehaviour(ped: number | IPed): void;
 /**
@@ -4613,7 +4613,7 @@ export declare function setInjuredOnGroundBehaviour(ped: number | IPed): void;
  * Left Rear = 1
  * RightRear = 2
  *
- * Hash: 0xF75B0D629E1C063D | Since: 323 | API-Set: unknown
+ * Hash: 0xF75B0D629E1C063D | Since: unknown | API-Set: unknown
  */
 export declare function setIntoVehicle(ped: number | IPed, vehicle: number | IVehicle, seatIndex: number): void;
 /**
@@ -4626,61 +4626,61 @@ export declare function setIntoVehicle(ped: number | IPed, vehicle: number | IVe
  * `PED::SET_PED_IN_VEHICLE_CONTEXT(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY("MISS_ARMENIAN3_FRANKLIN_TENSE"));`
  * `PED::SET_PED_IN_VEHICLE_CONTEXT(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY("MISSFBI5_TREVOR_DRIVING"));`
  *
- * Hash: 0x530071295899A8C6 | Since: 323 | API-Set: unknown
+ * Hash: 0x530071295899A8C6 | Since: unknown | API-Set: unknown
  */
 export declare function setInVehicleContext(ped: number | IPed, context: number | string): void;
 /**
  * No comment provided
  *
- * Hash: 0xA9B61A329BFDCBEA | Since: 323 | API-Set: unknown
+ * Hash: 0xA9B61A329BFDCBEA | Since: unknown | API-Set: unknown
  */
 export declare function setIsAvoidedByOthers(): void;
 /**
  * No comment provided
  *
- * Hash: 0x33A60D8BDD6E508C | Since: 323 | API-Set: unknown
+ * Hash: 0x33A60D8BDD6E508C | Since: unknown | API-Set: unknown
  */
 export declare function setIsIgnoredByAutoOpenDoors(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x971D38760FBC02EF | Since: 323 | API-Set: unknown
+ * Hash: 0x971D38760FBC02EF | Since: unknown | API-Set: unknown
  */
 export declare function setKeepTask(ped: number | IPed, toggle: boolean): void;
 /**
  * "IK" stands for "Inverse kinematics." I assume this has something to do with how the ped uses his legs to balance. In the scripts, the second parameter is always an int with a value of 2, 0, or sometimes 1
  *
- * Hash: 0xC396F5B86FF9FEBD | Since: 323 | API-Set: unknown
+ * Hash: 0xC396F5B86FF9FEBD | Since: unknown | API-Set: unknown
  */
 export declare function setLegIkMode(ped: number | IPed, mode: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xDC2C5C242AAC342B | Since: 323 | API-Set: unknown
+ * Hash: 0xDC2C5C242AAC342B | Since: unknown | API-Set: unknown
  */
 export declare function setLodMultiplier(ped: number | IPed, multiplier: number): void;
 /**
  * Sets the maximum health of a ped.
  *
- * Hash: 0xF5F6378C4F3419D3 | Since: 323 | API-Set: unknown
+ * Hash: 0xF5F6378C4F3419D3 | Since: unknown | API-Set: unknown
  */
 export declare function setMaxHealth(ped: number | IPed, value: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x433083750C5E064A | Since: 323 | API-Set: unknown
+ * Hash: 0x433083750C5E064A | Since: unknown | API-Set: unknown
  */
 export declare function setMaxMoveBlendRatio(ped: number | IPed, value: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x43C851690662113D | Since: 323 | API-Set: unknown
+ * Hash: 0x43C851690662113D | Since: unknown | API-Set: unknown
  */
 export declare function setMaxTimeInWater(ped: number | IPed, value: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x6BA428C528D9E522 | Since: 323 | API-Set: unknown
+ * Hash: 0x6BA428C528D9E522 | Since: unknown | API-Set: unknown
  */
 export declare function setMaxTimeUnderwater(ped: number | IPed, value: number): void;
 /**
@@ -4728,25 +4728,25 @@ export declare function setMaxTimeUnderwater(ped: number | IPed, value: number):
  *
  * 19 - Neck Thickness (Thin/Thick)
  *
- * Hash: 0x71A5C1DBA060049E | Since: 323 | API-Set: unknown
+ * Hash: 0x71A5C1DBA060049E | Since: unknown | API-Set: unknown
  */
 export declare function setMicroMorph(ped: number | IPed, index: number, scale: number): void;
 /**
  * Ped will stay on the ground after being stunned for at lest ms time. (in milliseconds)
  *
- * Hash: 0xFA0675AB151073FA | Since: 323 | API-Set: unknown
+ * Hash: 0xFA0675AB151073FA | Since: unknown | API-Set: unknown
  */
 export declare function setMinGroundTimeForStungun(ped: number | IPed, ms: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x01A898D26E2333DD | Since: 323 | API-Set: unknown
+ * Hash: 0x01A898D26E2333DD | Since: unknown | API-Set: unknown
  */
 export declare function setMinMoveBlendRatio(ped: number | IPed, value: number): void;
 /**
  * Full list of peds by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/peds.json
  *
- * Hash: 0xE163A4BCE4DE6F11 | Since: 323 | API-Set: unknown
+ * Hash: 0xE163A4BCE4DE6F11 | Since: unknown | API-Set: unknown
  */
 export declare function setModelIsSuppressed(modelHash: number | string, toggle: boolean): void;
 /**
@@ -4756,20 +4756,20 @@ export declare function setModelIsSuppressed(modelHash: number | string, toggle:
  *
  * Maximum amount that a ped can theoretically have is 65535 (0xFFFF) since the amount is stored as an unsigned short (uint16_t) value.
  *
- * Hash: 0xA9C8960E8684C1B5 | Since: 323 | API-Set: unknown
+ * Hash: 0xA9C8960E8684C1B5 | Since: unknown | API-Set: unknown
  */
 export declare function setMoney(ped: number | IPed, amount: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x0A986918B102B448 | Since: 323 | API-Set: unknown
+ * Hash: 0x0A986918B102B448 | Since: unknown | API-Set: unknown
  */
 export declare function setMotionBlur(ped: number | IPed, toggle: boolean): void;
 /**
  * Found in the b617d scripts:
  * `PED::SET_PED_MOTION_IN_COVER_CLIPSET_OVERRIDE(v_7, "trevor_heist_cover_2h");`
  *
- * Hash: 0x9DBA107B4937F809 | Since: 323 | API-Set: unknown
+ * Hash: 0x9DBA107B4937F809 | Since: unknown | API-Set: unknown
  */
 export declare function setMotionInCoverClipsetOverride(ped: number | IPed): void;
 /**
@@ -4828,19 +4828,19 @@ export declare function setMotionInCoverClipsetOverride(ped: number | IPed): voi
  *
  * Full list of movement clipsets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/movementClipsetsCompact.json
  *
- * Hash: 0xAF8A94EDE7712BEF | Since: 323 | API-Set: unknown
+ * Hash: 0xAF8A94EDE7712BEF | Since: unknown | API-Set: unknown
  */
 export declare function setMovementClipset(ped: number | IPed, clipSet: string, transitionSpeed: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x9E8C908F41584ECD | Since: 323 | API-Set: unknown
+ * Hash: 0x9E8C908F41584ECD | Since: unknown | API-Set: unknown
  */
 export declare function setMoveAnimsBlendOut(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x0B3E35AC043707D9 | Since: 573 | API-Set: unknown
+ * Hash: 0x0B3E35AC043707D9 | Since: unknown | API-Set: unknown
  */
 export declare function setMoveRateInWaterOverride(ped: number | IPed): void;
 /**
@@ -4857,7 +4857,7 @@ export declare function setMoveRateInWaterOverride(ped: number | IPed): void;
  *
  * Note: According to IDA for the Xbox360 xex, when they check bgt they seem to have the min to 0.0f, but the max set to 1.15f not 10.0f.
  *
- * Hash: 0x085BF80FA50A39D1 | Since: 323 | API-Set: unknown
+ * Hash: 0x085BF80FA50A39D1 | Since: unknown | API-Set: unknown
  */
 export declare function setMoveRateOverride(ped: number | IPed, value: number): void;
 /**
@@ -4865,68 +4865,68 @@ export declare function setMoveRateOverride(ped: number | IPed, value: number): 
  *
  * *untested but char *name could also be a hash for a localized string
  *
- * Hash: 0x98EFA132A4117BE1 | Since: 323 | API-Set: unknown
+ * Hash: 0x98EFA132A4117BE1 | Since: unknown | API-Set: unknown
  */
 export declare function setNameDebug(ped: number | IPed, name: string): void;
 /**
  * No comment provided
  *
- * Hash: 0x3DBFC55D5C9BB447 | Since: 323 | API-Set: unknown
+ * Hash: 0x3DBFC55D5C9BB447 | Since: unknown | API-Set: unknown
  */
 export declare function setNeverLeavesGroup(ped: number | IPed, toggle: boolean): void;
 /**
  * The distance between these points, is the diagonal of a box (remember it's 3D).
  *
- * Hash: 0xEE01041D559983EA | Since: 323 | API-Set: unknown
+ * Hash: 0xEE01041D559983EA | Since: unknown | API-Set: unknown
  */
 export declare function setNonCreationArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xA52D5247A4227E14 | Since: 323 | API-Set: unknown
+ * Hash: 0xA52D5247A4227E14 | Since: unknown | API-Set: unknown
  */
 export declare function setNoTimeDelayBeforeShot(): void;
 /**
  * No comment provided
  *
- * Hash: 0xFE07FF6495D52E2A | Since: 323 | API-Set: unknown
+ * Hash: 0xFE07FF6495D52E2A | Since: unknown | API-Set: unknown
  */
 export declare function setPanicExitScenario(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x333FC8DB079B7186 | Since: 323 | API-Set: unknown
+ * Hash: 0x333FC8DB079B7186 | Since: unknown | API-Set: unknown
  */
 export declare function setParachuteTintIndex(ped: number | IPed, tintIndex: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x83A169EABCDB10A2 | Since: 323 | API-Set: unknown
+ * Hash: 0x83A169EABCDB10A2 | Since: unknown | API-Set: unknown
  */
 export declare function setPhonePaletteIdx(): void;
 /**
  * i could be time. Only example in the decompiled scripts uses it as -1.
  *
- * Hash: 0xAAD6D1ACF08F4612 | Since: 323 | API-Set: unknown
+ * Hash: 0xAAD6D1ACF08F4612 | Since: unknown | API-Set: unknown
  */
 export declare function setPinnedDown(ped: number | IPed, pinned: boolean, i: number): boolean;
 /**
  * This native does absolutely nothing, just a nullsub
  *
- * Hash: 0x94D94BF1A75AED3D | Since: 323 | API-Set: unknown
+ * Hash: 0x94D94BF1A75AED3D | Since: unknown | API-Set: unknown
  */
 export declare function setPlaysHeadOnHornAnimWhenDiesInVehicle(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x8421EB4DA7E391B9 | Since: 323 | API-Set: unknown
+ * Hash: 0x8421EB4DA7E391B9 | Since: unknown | API-Set: unknown
  */
 export declare function setPreferredCoverSet(ped: number | IPed, itemSet: any): void;
 /**
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x2B16A3BFF1FBCE49 | Since: 323 | API-Set: unknown
+ * Hash: 0x2B16A3BFF1FBCE49 | Since: unknown | API-Set: unknown
  */
 export declare function setPreloadPropData(ped: number | IPed, componentId: number, drawableId: number, TextureId: number): number;
 /**
@@ -4935,7 +4935,7 @@ export declare function setPreloadPropData(ped: number | IPed, componentId: numb
  *
  * p1 is probably componentId
  *
- * Hash: 0x39D55A620FCB6A3A | Since: 323 | API-Set: unknown
+ * Hash: 0x39D55A620FCB6A3A | Since: unknown | API-Set: unknown
  */
 export declare function setPreloadVariationData(ped: number | IPed, slot: number, drawableId: number, textureId: number): number;
 /**
@@ -4945,7 +4945,7 @@ export declare function setPreloadVariationData(ped: number | IPed, slot: number
  * sub_1CA8("WORLD_HUMAN_SMOKING", 2);
  * `PED::SET_PED_PRIMARY_LOOKAT(getElem(3, &l_34, 4), PLAYER::PLAYER_PED_ID());`
  *
- * Hash: 0xCD17B554996A8D9E | Since: 323 | API-Set: unknown
+ * Hash: 0xCD17B554996A8D9E | Since: unknown | API-Set: unknown
  */
 export declare function setPrimaryLookat(ped: number | IPed, lookAt: number | IPed): void;
 /**
@@ -4962,19 +4962,19 @@ export declare function setPrimaryLookat(ped: number | IPed, lookAt: number | IP
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0x93376B65A266EB5F | Since: 323 | API-Set: unknown
+ * Hash: 0x93376B65A266EB5F | Since: unknown | API-Set: unknown
  */
 export declare function setPropIndex(ped: number | IPed, componentId: number, drawableId: number, TextureId: number, attach: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x01F6594B923B9251 | Since: 323 | API-Set: unknown
+ * Hash: 0x01F6594B923B9251 | Since: unknown | API-Set: unknown
  */
 export declare function setRagdollForceFall(ped: number | IPed): void;
 /**
  * Causes Ped to ragdoll on collision with any object (e.g Running into trashcan). If applied to player you will sometimes trip on the sidewalk.
  *
- * Hash: 0xF0A4F1BBF4FA7497 | Since: 323 | API-Set: unknown
+ * Hash: 0xF0A4F1BBF4FA7497 | Since: unknown | API-Set: unknown
  */
 export declare function setRagdollOnCollision(ped: number | IPed, toggle: boolean): void;
 /**
@@ -4983,32 +4983,32 @@ export declare function setRagdollOnCollision(ped: number | IPed, toggle: boolea
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0xC8A9481A01E63C28 | Since: 323 | API-Set: unknown
+ * Hash: 0xC8A9481A01E63C28 | Since: unknown | API-Set: unknown
  */
 export declare function setRandomComponentVariation(ped: number | IPed): void;
 /**
  * List of component/props ID
  * gtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html
  *
- * Hash: 0xC44AA05345C992C6 | Since: 323 | API-Set: unknown
+ * Hash: 0xC44AA05345C992C6 | Since: unknown | API-Set: unknown
  */
 export declare function setRandomProps(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xADB3F206518799E8 | Since: 323 | API-Set: unknown
+ * Hash: 0xADB3F206518799E8 | Since: unknown | API-Set: unknown
  */
 export declare function setRelationshipGroupDefaultHash(ped: number | IPed, hash: number | string): void;
 /**
  * No comment provided
  *
- * Hash: 0xC80A74AC829DDD92 | Since: 323 | API-Set: unknown
+ * Hash: 0xC80A74AC829DDD92 | Since: unknown | API-Set: unknown
  */
 export declare function setRelationshipGroupHash(ped: number | IPed, hash: number | string): void;
 /**
  * No comment provided
  *
- * Hash: 0xE88DA0751C22A2AD | Since: 323 | API-Set: unknown
+ * Hash: 0xE88DA0751C22A2AD | Since: unknown | API-Set: unknown
  */
 export declare function setReserveParachuteTintIndex(ped: number | IPed): void;
 /**
@@ -5016,140 +5016,140 @@ export declare function setReserveParachuteTintIndex(ped: number | IPed): void;
  * Known values:
  * PRF_PreventGoingIntoStillInVehicleState = 236 *(fanatic2.c)*
  *
- * Hash: 0xC1E8A365BF3B29F2 | Since: 323 | API-Set: unknown
+ * Hash: 0xC1E8A365BF3B29F2 | Since: unknown | API-Set: unknown
  */
 export declare function setResetFlag(ped: number | IPed, flagId: number, doReset: boolean): void;
 /**
  * This native sets a scuba mask for freemode models and an oxygen bottle for player_* models. It works on freemode and player_* models.
  *
- * Hash: 0x36C6984C3ED0C911 | Since: 323 | API-Set: unknown
+ * Hash: 0x36C6984C3ED0C911 | Since: unknown | API-Set: unknown
  */
 export declare function setScubaGearVariation(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xF29CF591C4BF6CEE | Since: 323 | API-Set: unknown
+ * Hash: 0xF29CF591C4BF6CEE | Since: unknown | API-Set: unknown
  */
 export declare function setSeeingRange(ped: number | IPed, value: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x96A05E4FB321B1BA | Since: 323 | API-Set: unknown
+ * Hash: 0x96A05E4FB321B1BA | Since: unknown | API-Set: unknown
  */
 export declare function setShootsAtCoord(ped: number | IPed, pos: Vector3, toggle: boolean): void;
 /**
  * shootRate 0-1000
  *
- * Hash: 0x614DA022990752DC | Since: 323 | API-Set: unknown
+ * Hash: 0x614DA022990752DC | Since: unknown | API-Set: unknown
  */
 export declare function setShootRate(ped: number | IPed, shootRate: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x425AECF167663F48 | Since: 323 | API-Set: unknown
+ * Hash: 0x425AECF167663F48 | Since: unknown | API-Set: unknown
  */
 export declare function setShouldIgnoreScenarioExitCollisionChecks(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x5B6010B3CBC29095 | Since: 323 | API-Set: unknown
+ * Hash: 0x5B6010B3CBC29095 | Since: unknown | API-Set: unknown
  */
 export declare function setShouldIgnoreScenarioNavChecks(): void;
 /**
  * No comment provided
  *
- * Hash: 0xEC6935EBE0847B90 | Since: 323 | API-Set: unknown
+ * Hash: 0xEC6935EBE0847B90 | Since: unknown | API-Set: unknown
  */
 export declare function setShouldPlayDirectedNormalScenarioExit(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xEEED8FAFEC331A70 | Since: 323 | API-Set: unknown
+ * Hash: 0xEEED8FAFEC331A70 | Since: unknown | API-Set: unknown
  */
 export declare function setShouldPlayFleeScenarioExit(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xF1C03A5352243A30 | Since: 323 | API-Set: unknown
+ * Hash: 0xF1C03A5352243A30 | Since: unknown | API-Set: unknown
  */
 export declare function setShouldPlayImmediateScenarioExit(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xA3A9299C4F2ADB98 | Since: 323 | API-Set: unknown
+ * Hash: 0xA3A9299C4F2ADB98 | Since: unknown | API-Set: unknown
  */
 export declare function setShouldPlayNormalScenarioExit(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xCEDA60A74219D064 | Since: 323 | API-Set: unknown
+ * Hash: 0xCEDA60A74219D064 | Since: unknown | API-Set: unknown
  */
 export declare function setShouldProbeForScenarioExitsInOneFrame(): void;
 /**
  * No comment provided
  *
- * Hash: 0x9D3151A373974804 | Since: 323 | API-Set: unknown
+ * Hash: 0x9D3151A373974804 | Since: unknown | API-Set: unknown
  */
 export declare function setSphereDefensiveArea(ped: number | IPed, pos: Vector3, radius: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xEDF4079F9D54C9A1 | Since: 323 | API-Set: unknown
+ * Hash: 0xEDF4079F9D54C9A1 | Since: unknown | API-Set: unknown
  */
 export declare function setStayInVehicleWhenJacked(ped: number | IPed, toggle: boolean): void;
 /**
  * p1 is usually 0 in the scripts. action is either 0 or a pointer to "DEFAULT_ACTION".
  *
- * Hash: 0x88CBB5CEB96B7BD2 | Since: 323 | API-Set: unknown
+ * Hash: 0x88CBB5CEB96B7BD2 | Since: unknown | API-Set: unknown
  */
 export declare function setStealthMovement(ped: number | IPed, action: string): void;
 /**
  * No comment provided
  *
- * Hash: 0x2016C603D6B8987C | Since: 323 | API-Set: unknown
+ * Hash: 0x2016C603D6B8987C | Since: unknown | API-Set: unknown
  */
 export declare function setSteersAroundDeadBodies(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x1509C089ADC208BF | Since: 323 | API-Set: unknown
+ * Hash: 0x1509C089ADC208BF | Since: unknown | API-Set: unknown
  */
 export declare function setSteersAroundObjects(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x46F2193B3AD1D891 | Since: 323 | API-Set: unknown
+ * Hash: 0x46F2193B3AD1D891 | Since: unknown | API-Set: unknown
  */
 export declare function setSteersAroundPeds(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xEB6FB9D48DDE23EC | Since: 323 | API-Set: unknown
+ * Hash: 0xEB6FB9D48DDE23EC | Since: unknown | API-Set: unknown
  */
 export declare function setSteersAroundVehicles(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x288DF530C92DAD6F | Since: 323 | API-Set: unknown
+ * Hash: 0x288DF530C92DAD6F | Since: unknown | API-Set: unknown
  */
 export declare function setSteerBias(ped: number | IPed, value: number): void;
 /**
  * Full list of movement clipsets by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/movementClipsetsCompact.json
  *
- * Hash: 0x29A28F3F8CF6D854 | Since: 323 | API-Set: unknown
+ * Hash: 0x29A28F3F8CF6D854 | Since: unknown | API-Set: unknown
  */
 export declare function setStrafeClipset(ped: number | IPed, clipSet: string): void;
 /**
  * Ped no longer takes critical damage modifiers if set to FALSE.
  * Example: Headshotting a player no longer one shots them. Instead they will take the same damage as a torso shot.
  *
- * Hash: 0xEBD76F2359F190AC | Since: 323 | API-Set: unknown
+ * Hash: 0xEBD76F2359F190AC | Since: unknown | API-Set: unknown
  */
 export declare function setSuffersCriticalHits(ped: number | IPed, toggle: boolean): void;
 /**
  * Sweat is set to 100.0 or 0.0 in the decompiled scripts.
  *
- * Hash: 0x27B0405F59637D1F | Since: 323 | API-Set: unknown
+ * Hash: 0x27B0405F59637D1F | Since: unknown | API-Set: unknown
  */
 export declare function setSweat(ped: number | IPed, sweat: number): void;
 /**
@@ -5160,19 +5160,19 @@ export declare function setSweat(ped: number | IPed, sweat: number): void;
  * TLR_SearchForTarget
  * };
  *
- * Hash: 0x0703B9079823DA4A | Since: 323 | API-Set: unknown
+ * Hash: 0x0703B9079823DA4A | Since: unknown | API-Set: unknown
  */
 export declare function setTargetLossResponse(ped: number | IPed, responseType: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x112942C6E708F70B | Since: 323 | API-Set: unknown
+ * Hash: 0x112942C6E708F70B | Since: unknown | API-Set: unknown
  */
 export declare function setToInformRespectedFriends(ped: number | IPed, radius: number, maxFriends: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x332B562EEDA62399 | Since: 323 | API-Set: unknown
+ * Hash: 0x332B562EEDA62399 | Since: unknown | API-Set: unknown
  */
 export declare function setToLoadCover(ped: number | IPed, toggle: boolean): void;
 /**
@@ -5200,7 +5200,7 @@ export declare function setToLoadCover(ped: number | IPed, toggle: boolean): voi
  *
  * Edit Mar 21, 2017: removed part about time2 being the microseconds version of time1. this just isn't correct. time2 is in milliseconds, and time1 and time2 don't seem to be connected in any way.
  *
- * Hash: 0xAE99FB955581844A | Since: 323 | API-Set: unknown
+ * Hash: 0xAE99FB955581844A | Since: unknown | API-Set: unknown
  */
 export declare function setToRagdoll(ped: number | IPed, time1: number, time2: number, ragdollType: number): boolean;
 /**
@@ -5224,86 +5224,86 @@ export declare function setToRagdoll(ped: number | IPed, time1: number, time2: n
  * `ped::set_ped_to_ragdoll_with_fall(ped, 1500, 2000, 1, -entity::get_entity_forward_vector(ped), 1f, 0f, 0f, 0f, 0f, 0f, 0f);`
  *
  *
- * Hash: 0xD76632D99E4966C8 | Since: 323 | API-Set: unknown
+ * Hash: 0xD76632D99E4966C8 | Since: unknown | API-Set: unknown
  */
 export declare function setToRagdollWithFall(ped: number | IPed, time: number, ragdollType: number, pos: Vector3, velocity: number): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x0F62619393661D6E | Since: 877 | API-Set: unknown
+ * Hash: 0x0F62619393661D6E | Since: unknown | API-Set: unknown
  */
 export declare function setTreatedAsFriendly(): void;
 /**
  * No comment provided
  *
- * Hash: 0xAFC976FD0580C7B3 | Since: 323 | API-Set: unknown
+ * Hash: 0xAFC976FD0580C7B3 | Since: unknown | API-Set: unknown
  */
 export declare function setUpperBodyDamageOnly(ped: number | IPed, toggle: boolean): void;
 /**
  * p2 is usually -1 in the scripts. action is either 0 or "DEFAULT_ACTION".
  *
- * Hash: 0xD75ACCF5E0FB5367 | Since: 323 | API-Set: unknown
+ * Hash: 0xD75ACCF5E0FB5367 | Since: unknown | API-Set: unknown
  */
 export declare function setUsingActionMode(ped: number | IPed, action: string): void;
 /**
  * seatIndex must be <= 2
  *
- * Hash: 0x952F06BEECD775CC | Since: 323 | API-Set: unknown
+ * Hash: 0x952F06BEECD775CC | Since: unknown | API-Set: unknown
  */
 export declare function setVehicleForcedSeatUsage(ped: number | IPed, vehicle: number | IVehicle, seatIndex: number, flags: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x3B6405E8AB34A907 | Since: 323 | API-Set: unknown
+ * Hash: 0x3B6405E8AB34A907 | Since: unknown | API-Set: unknown
  */
 export declare function setVisualFieldCenterAngle(ped: number | IPed, angle: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x70793BDCA1E854D4 | Since: 323 | API-Set: unknown
+ * Hash: 0x70793BDCA1E854D4 | Since: unknown | API-Set: unknown
  */
 export declare function setVisualFieldMaxAngle(ped: number | IPed, value: number): void;
 /**
  * This native refers to the field of vision the ped has above them, starting at 0 degrees. 90f would let the ped see enemies directly above of them.
  *
- * Hash: 0x78D0B67629D75856 | Since: 323 | API-Set: unknown
+ * Hash: 0x78D0B67629D75856 | Since: unknown | API-Set: unknown
  */
 export declare function setVisualFieldMaxElevationAngle(ped: number | IPed, angle: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x2DB492222FB21E26 | Since: 323 | API-Set: unknown
+ * Hash: 0x2DB492222FB21E26 | Since: unknown | API-Set: unknown
  */
 export declare function setVisualFieldMinAngle(ped: number | IPed, value: number): void;
 /**
  * This native refers to the field of vision the ped has below them, starting at 0 degrees. The angle value should be negative.
  * -90f should let the ped see 90 degrees below them, for example.
  *
- * Hash: 0x7A276EB2C224D70F | Since: 323 | API-Set: unknown
+ * Hash: 0x7A276EB2C224D70F | Since: unknown | API-Set: unknown
  */
 export declare function setVisualFieldMinElevationAngle(ped: number | IPed, angle: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x9C74B0BC831B753A | Since: 323 | API-Set: unknown
+ * Hash: 0x9C74B0BC831B753A | Since: unknown | API-Set: unknown
  */
 export declare function setVisualFieldPeripheralRange(ped: number | IPed, range: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x2622E35B77D3ACA2 | Since: 323 | API-Set: unknown
+ * Hash: 0x2622E35B77D3ACA2 | Since: unknown | API-Set: unknown
  */
 export declare function setWeaponMovementClipset(ped: number | IPed, clipSet: string): void;
 /**
  * No comment provided
  *
- * Hash: 0xAC0BB4D87777CAE2 | Since: 2802 | API-Set: unknown
+ * Hash: 0xAC0BB4D87777CAE2 | Since: unknown | API-Set: unknown
  */
 export declare function setWetness(ped: number | IPed, wetLevel: number): void;
 /**
  * `combined with PED::SET_PED_WETNESS_HEIGHT(), this native makes the ped drenched in water up to the height specified in the other function`
  *
- * Hash: 0xB5485E4907B53019 | Since: 323 | API-Set: unknown
+ * Hash: 0xB5485E4907B53019 | Since: unknown | API-Set: unknown
  */
 export declare function setWetnessEnabledThisFrame(ped: number | IPed): void;
 /**
@@ -5311,19 +5311,19 @@ export declare function setWetnessEnabledThisFrame(ped: number | IPed): void;
  *
  *
  *
- * Hash: 0x44CB6447D2571AA0 | Since: 323 | API-Set: unknown
+ * Hash: 0x44CB6447D2571AA0 | Since: unknown | API-Set: unknown
  */
 export declare function setWetnessHeight(ped: number | IPed, height: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x3E9679C1DFCF422C | Since: 877 | API-Set: unknown
+ * Hash: 0x3E9679C1DFCF422C | Since: unknown | API-Set: unknown
  */
 export declare function setWillOnlyAttackWantedPlayer(): void;
 /**
  * Min and max are usually 100.0 and 200.0
  *
- * Hash: 0xD8C3BE3EE94CAF2D | Since: 323 | API-Set: unknown
+ * Hash: 0xD8C3BE3EE94CAF2D | Since: unknown | API-Set: unknown
  */
 export declare function setPopControlSphereThisFrame(pos: Vector3, min: number, max: number): void;
 /**
@@ -5353,7 +5353,7 @@ export declare function setPopControlSphereThisFrame(pos: Vector3, min: number, 
  *
  *
  *
- * Hash: 0x26695EC767728D84 | Since: 323 | API-Set: unknown
+ * Hash: 0x26695EC767728D84 | Since: unknown | API-Set: unknown
  */
 export declare function setRagdollBlockingFlags(ped: number | IPed, blockingFlag: number): void;
 /**
@@ -5372,139 +5372,139 @@ export declare function setRagdollBlockingFlags(ped: number | IPed, blockingFlag
  * `PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, l_1017, 0xA49E591C);`
  * `PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 0xA49E591C, l_1017);`
  *
- * Hash: 0xBF25EB89375A37AD | Since: 323 | API-Set: unknown
+ * Hash: 0xBF25EB89375A37AD | Since: unknown | API-Set: unknown
  */
 export declare function setRelationshipBetweenGroups(relationship: number, group1: number | string, group2: number | string): void;
 /**
  * No comment provided
  *
- * Hash: 0x5615E0C5EB2BC6E2 | Since: 877 | API-Set: unknown
+ * Hash: 0x5615E0C5EB2BC6E2 | Since: unknown | API-Set: unknown
  */
 export declare function setRelationshipGroupAffectsWantedLevel(group: number | string): void;
 /**
  * No comment provided
  *
- * Hash: 0x28157D43CF600981 | Since: 323 | API-Set: unknown
+ * Hash: 0x28157D43CF600981 | Since: unknown | API-Set: unknown
  */
 export declare function setScenariosSpawnInSphereArea(pos: Vector3, range: number): void;
 /**
  * Sets a value indicating whether scenario peds should be returned by the next call to a command that returns peds. Eg. GET_CLOSEST_PED.
  *
- * Hash: 0x14F19A8782C8071E | Since: 323 | API-Set: unknown
+ * Hash: 0x14F19A8782C8071E | Since: unknown | API-Set: unknown
  */
 export declare function setScenariosToBeReturnedByNextCommand(value: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x7A556143A1C03898 | Since: 323 | API-Set: unknown
+ * Hash: 0x7A556143A1C03898 | Since: unknown | API-Set: unknown
  */
 export declare function setScenarioDensityMultiplierThisFrame(): void;
 /**
  * No comment provided
  *
- * Hash: 0x5917BBA32D06C230 | Since: 323 | API-Set: unknown
+ * Hash: 0x5917BBA32D06C230 | Since: unknown | API-Set: unknown
  */
 export declare function setScriptedAnimSeatOffset(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x5086C7843552CF85 | Since: 323 | API-Set: unknown
+ * Hash: 0x5086C7843552CF85 | Since: unknown | API-Set: unknown
  */
 export declare function setScriptedConversionCoordThisFrame(pos: Vector3): void;
 /**
  * No comment provided
  *
- * Hash: 0x394B9CD12435C981 | Since: 323 | API-Set: unknown
+ * Hash: 0x394B9CD12435C981 | Since: unknown | API-Set: unknown
  */
 export declare function setSynchronizedSceneHoldLastFrame(sceneID: number, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xD9A897A4C6C2974F | Since: 323 | API-Set: unknown
+ * Hash: 0xD9A897A4C6C2974F | Since: unknown | API-Set: unknown
  */
 export declare function setSynchronizedSceneLoo(sceneID: number, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0x6ACF6B7225801CD7 | Since: 323 | API-Set: unknown
+ * Hash: 0x6ACF6B7225801CD7 | Since: unknown | API-Set: unknown
  */
 export declare function setSynchronizedSceneOrigin(sceneID: number, pos: Vector3, roll: number, pitch: number, yaw: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x734292F4F0ABF6D0 | Since: 323 | API-Set: unknown
+ * Hash: 0x734292F4F0ABF6D0 | Since: unknown | API-Set: unknown
  */
 export declare function setSynchronizedScenePhase(sceneID: number, phase: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xB6C49F8A5E295A5D | Since: 323 | API-Set: unknown
+ * Hash: 0xB6C49F8A5E295A5D | Since: unknown | API-Set: unknown
  */
 export declare function setSynchronizedSceneRate(sceneID: number, rate: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x2F3C3D9F50681DE4 | Since: 323 | API-Set: unknown
+ * Hash: 0x2F3C3D9F50681DE4 | Since: unknown | API-Set: unknown
  */
 export declare function setTreatAsAmbientForDriverLockon(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xFD325494792302D7 | Since: 323 | API-Set: unknown
+ * Hash: 0xFD325494792302D7 | Since: unknown | API-Set: unknown
  */
 export declare function setUseCameraHeadingForDesiredDirectionLockOnTest(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xFEE4A5459472A9F8 | Since: 323 | API-Set: unknown
+ * Hash: 0xFEE4A5459472A9F8 | Since: unknown | API-Set: unknown
  */
 export declare function spawnpointsCancelSearch(): void;
 /**
  * No comment provided
  *
- * Hash: 0xA635C11B8C44AFC2 | Since: 323 | API-Set: unknown
+ * Hash: 0xA635C11B8C44AFC2 | Since: unknown | API-Set: unknown
  */
 export declare function spawnpointsGetNumSearchResults(): number;
 /**
  * No comment provided
  *
- * Hash: 0x280C7E3AC7F56E90 | Since: 323 | API-Set: unknown
+ * Hash: 0x280C7E3AC7F56E90 | Since: unknown | API-Set: unknown
  */
 export declare function spawnpointsGetSearchResult(randomInt: number): [number, number, number];
 /**
  * No comment provided
  *
- * Hash: 0xB782F8238512BAD5 | Since: 323 | API-Set: unknown
+ * Hash: 0xB782F8238512BAD5 | Since: unknown | API-Set: unknown
  */
 export declare function spawnpointsGetSearchResultFlags(): number;
 /**
  * No comment provided
  *
- * Hash: 0x3C67506996001F5E | Since: 323 | API-Set: unknown
+ * Hash: 0x3C67506996001F5E | Since: unknown | API-Set: unknown
  */
 export declare function spawnpointsIsSearchActive(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xA586FBEB32A53DBB | Since: 323 | API-Set: unknown
+ * Hash: 0xA586FBEB32A53DBB | Since: unknown | API-Set: unknown
  */
 export declare function spawnpointsIsSearchComplete(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xF445DE8DA80A1792 | Since: 323 | API-Set: unknown
+ * Hash: 0xF445DE8DA80A1792 | Since: unknown | API-Set: unknown
  */
 export declare function spawnpointsIsSearchFailed(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x2DF9038C90AD5264 | Since: 323 | API-Set: unknown
+ * Hash: 0x2DF9038C90AD5264 | Since: unknown | API-Set: unknown
  */
 export declare function spawnpointsStartSearch(interiorFlags: number, scale: number, duration: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xB2AFF10216DEFA2F | Since: 323 | API-Set: unknown
+ * Hash: 0xB2AFF10216DEFA2F | Since: unknown | API-Set: unknown
  */
 export declare function spawnpointsStartSearchInAngledArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, width: number, interiorFlags: number, scale: number, duration: number): void;
 /**
@@ -5512,108 +5512,120 @@ export declare function spawnpointsStartSearchInAngledArea(x1: number, y1: numbe
  *
  * Kicks the ped from the current vehicle and keeps the rendering-focus on this ped (also disables its collision). If doing this for your player ped, you'll still be able to drive the vehicle.
  *
- * Hash: 0xF9ACF4A08098EA25 | Since: 323 | API-Set: unknown
+ * Hash: 0xF9ACF4A08098EA25 | Since: unknown | API-Set: unknown
  */
 export declare function specialFunctionDoNotUse(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0xB47BD05FA66B40CF | Since: 323 | API-Set: unknown
+ * Hash: 0xB47BD05FA66B40CF | Since: unknown | API-Set: unknown
  */
 export declare function stopAnyModelBeingSuppressed(): void;
 /**
  * No comment provided
  *
- * Hash: 0xC158D28142A34608 | Since: 323 | API-Set: unknown
+ * Hash: 0xC158D28142A34608 | Since: unknown | API-Set: unknown
  */
 export declare function stopWeaponFiringWhenDropped(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x5A7F62FDA59759BD | Since: 323 | API-Set: unknown
+ * Hash: 0x5A7F62FDA59759BD | Since: unknown | API-Set: unknown
  */
 export declare function suppressAmbientAggressiveCleanupThisFrame(): void;
 /**
  * No comment provided
  *
- * Hash: 0xCD9CC7E200A52A6F | Since: 323 | API-Set: unknown
+ * Hash: 0xCD9CC7E200A52A6F | Since: unknown | API-Set: unknown
  */
 export declare function takeOwnershipOfSynchronizedScene(scene: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xAD27D957598E49E9 | Since: 1290 | API-Set: unknown
+ * Hash: 0xAD27D957598E49E9 | Since: unknown | API-Set: unknown
  */
-export declare function tellGroupsInAreaToAttack(ped: number | IPed, hash: number | string): void;
+export declare function tellGroupsInAreaToAttack(ped: number | IPed, pos: Vector3, radius: number, hash: number | string): void;
 /**
  * No comment provided
  *
- * Hash: 0x9A77DFD295E29B09 | Since: 323 | API-Set: unknown
+ * Hash: 0x9A77DFD295E29B09 | Since: unknown | API-Set: unknown
  */
 export declare function toggleScenarioCowerInPlace(ped: number | IPed, toggle: boolean): void;
 /**
  * No comment provided
  *
- * Hash: 0xC2EE020F5FB4DB53 | Since: 323 | API-Set: unknown
+ * Hash: 0xC2EE020F5FB4DB53 | Since: unknown | API-Set: unknown
  */
 export declare function triggerIdleAnimationOn(ped: number | IPed): void;
 /**
  * No comment provided
  *
- * Hash: 0x25361A96E0F7E419 | Since: 323 | API-Set: unknown
+ * Hash: 0x25361A96E0F7E419 | Since: unknown | API-Set: unknown
  */
 export declare function triggerScenarioPanicexittoflee(): boolean;
 /**
  * gtaforums.com/topic/885580-ped-headshotmugshot-txd/
  *
- * Hash: 0x96B1361D9B24C2FF | Since: 323 | API-Set: unknown
+ * Hash: 0x96B1361D9B24C2FF | Since: unknown | API-Set: unknown
  */
 export declare function unregisterheadshot(id: number): void;
 /**
  * See SET_PED_HEAD_BLEND_DATA().
  *
- * Hash: 0x723538F61C647C5A | Since: 323 | API-Set: unknown
+ * Hash: 0x723538F61C647C5A | Since: unknown | API-Set: unknown
  */
 export declare function updateHeadBlendData(ped: number | IPed, shapeMix: number, skinMix: number, thirdMix: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xF9800AA1A771B000 | Since: 323 | API-Set: unknown
+ * Hash: 0xF9800AA1A771B000 | Since: unknown | API-Set: unknown
  */
 export declare function wasKilledByStealth(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x7F08E26039C7347C | Since: 323 | API-Set: unknown
+ * Hash: 0x7F08E26039C7347C | Since: unknown | API-Set: unknown
  */
 export declare function wasKilledByTakedown(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x61767F73EACEED21 | Since: 323 | API-Set: unknown
+ * Hash: 0x61767F73EACEED21 | Since: unknown | API-Set: unknown
  */
 export declare function wasKnockedOut(ped: number | IPed): boolean;
 /**
  * Despite this function's name, it simply returns whether the specified handle is a Ped.
  *
- * Hash: 0x11B499C1E0FF8559 | Since: 323 | API-Set: unknown
+ * Hash: 0x11B499C1E0FF8559 | Since: unknown | API-Set: unknown
  */
 export declare function wasSkeletonUpdated(ped: number | IPed): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xA32ABFEB2A03B306 | Since: 3095 | API-Set: unknown
+ * Hash: 0x5CBD1684E56BF99D | Since: unknown | API-Set: unknown
+ */
+export declare function blockFromWrithingWhenInjured(ped: number | IPed, toggle: boolean): void;
+/**
+ * No comment provided
+ *
+ * Hash: 0x6D1FCD0950EFA3DD | Since: unknown | API-Set: unknown
+ */
+export declare function generateDamageEvent(ped: number | IPed, pos: Vector3, weaponType: number | string): void;
+/**
+ * No comment provided
+ *
+ * Hash: 0xA32ABFEB2A03B306 | Since: unknown | API-Set: unknown
  */
 export declare function hasClearLosToEntity(ped: number | IPed, entity: number | IEntity, pos: Vector3): boolean;
 /**
  * No comment provided
  *
- * Hash: 0xC73EFFC5E043A8BA | Since: 3258 | API-Set: unknown
+ * Hash: 0xC73EFFC5E043A8BA | Since: unknown | API-Set: unknown
  */
 export declare function setBlockAmbientsFromDroppingWeaponsThisFrame(): void;
 /**
  * No comment provided
  *
- * Hash: 0x100CD221F572F6E1 | Since: 3407 | API-Set: unknown
+ * Hash: 0x100CD221F572F6E1 | Since: unknown | API-Set: unknown
  */
 export declare function setSurvivesBeingOutOfWater(ped: number | IPed, toggle: boolean): boolean;

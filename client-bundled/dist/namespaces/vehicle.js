@@ -760,7 +760,7 @@ export function setHandlingVector(vehicle, class_, fieldName, value) {
  * Hash: 0xB90BBC6E | Since: unknown | API-Set: client
  */
 export function setReactionToWithSirenDisabled(state) {
-    SetReactionToVehicleWithSirenDisabled(state);
+    Citizen.invokeNative('0xB90BBC6E', state);
 }
 /**
  * Enables or disables whether train doors should be forced open whilst a player is inside the train. This is enabled by default in multiplayer.
@@ -1349,7 +1349,7 @@ export function getType(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x2CE544C68FB812A0 | Since: 323 | API-Set: unknown
+ * Hash: 0x2CE544C68FB812A0 | Since: unknown | API-Set: unknown
  */
 export function addRoadNodeSpeedZone(pos, radius, speed) {
     return AddRoadNodeSpeedZone(pos.x, pos.y, pos.z, radius, speed, false);
@@ -1357,7 +1357,7 @@ export function addRoadNodeSpeedZone(pos, radius, speed) {
 /**
  * No comment provided
  *
- * Hash: 0x54B0F614960F4A5F | Since: 323 | API-Set: unknown
+ * Hash: 0x54B0F614960F4A5F | Since: unknown | API-Set: unknown
  */
 export function addCombatAngledAvoidanceArea() {
     return AddVehicleCombatAngledAvoidanceArea(0, 0, 0, 0, 0, 0, 0);
@@ -1365,7 +1365,7 @@ export function addCombatAngledAvoidanceArea() {
 /**
  * No comment provided
  *
- * Hash: 0x99AD4CCCB128CBC9 | Since: 323 | API-Set: unknown
+ * Hash: 0x99AD4CCCB128CBC9 | Since: unknown | API-Set: unknown
  */
 export function addPhoneExplosiveDevice(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1374,7 +1374,7 @@ export function addPhoneExplosiveDevice(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x2FA9923062DD396C | Since: 323 | API-Set: unknown
+ * Hash: 0x2FA9923062DD396C | Since: unknown | API-Set: unknown
  */
 export function addStuckCheckWithWarp() {
     AddVehicleStuckCheckWithWarp(undefined, 0, undefined, false, false, false, undefined);
@@ -1382,7 +1382,7 @@ export function addStuckCheckWithWarp() {
 /**
  * No comment provided
  *
- * Hash: 0xB72E26D81006005B | Since: 323 | API-Set: unknown
+ * Hash: 0xB72E26D81006005B | Since: unknown | API-Set: unknown
  */
 export function addUpsidedownCheck(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1393,7 +1393,7 @@ export function addUpsidedownCheck(vehicle) {
  *
  * Confirmed, it is a debug native.
  *
- * Hash: 0xB264C4D2F2B0A78B | Since: 323 | API-Set: unknown
+ * Hash: 0xB264C4D2F2B0A78B | Since: unknown | API-Set: unknown
  */
 export function allowAmbientsToAvoidAdverseConditions(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1402,7 +1402,7 @@ export function allowAmbientsToAvoidAdverseConditions(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x0F3B4D4E43177236 | Since: 323 | API-Set: unknown
+ * Hash: 0x0F3B4D4E43177236 | Since: unknown | API-Set: unknown
  */
 export function allowBoatBoomToAnimate(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1411,7 +1411,7 @@ export function allowBoatBoomToAnimate(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x2310A8F9421EBF43 | Since: 2372 | API-Set: unknown
+ * Hash: 0x2310A8F9421EBF43 | Since: unknown | API-Set: unknown
  */
 export function allowTrainToBeRemovedByPopulation() {
     Citizen.invokeNative('0x2310A8F9421EBF43', undefined);
@@ -1419,7 +1419,7 @@ export function allowTrainToBeRemovedByPopulation() {
 /**
  * No comment provided
  *
- * Hash: 0x249249D74F813EB2 | Since: 3095 | API-Set: unknown
+ * Hash: 0x249249D74F813EB2 | Since: unknown | API-Set: unknown
  */
 export function applyEmpEffect(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1428,7 +1428,7 @@ export function applyEmpEffect(vehicle) {
 /**
  * Appears to return false if any window is broken.
  *
- * Hash: 0x11D862A3E977A9EF | Since: 323 | API-Set: unknown
+ * Hash: 0x11D862A3E977A9EF | Since: unknown | API-Set: unknown
  */
 export function areAllWindowsIntact(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1437,7 +1437,7 @@ export function areAllWindowsIntact(vehicle) {
 /**
  * Returns false if every seat is occupied.
  *
- * Hash: 0x2D34FC3BC4ADB780 | Since: 323 | API-Set: unknown
+ * Hash: 0x2D34FC3BC4ADB780 | Since: unknown | API-Set: unknown
  */
 export function areAnySeatsFree(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1446,7 +1446,7 @@ export function areAnySeatsFree(vehicle) {
 /**
  * Only used with the "akula" and "annihilator2" in the decompiled native scripts.
  *
- * Hash: 0xAEF12960FA943792 | Since: 1290 | API-Set: unknown
+ * Hash: 0xAEF12960FA943792 | Since: unknown | API-Set: unknown
  */
 export function areFoldingWingsDeployed(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1455,7 +1455,7 @@ export function areFoldingWingsDeployed(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xF78F94D60248C737 | Since: 323 | API-Set: unknown
+ * Hash: 0xF78F94D60248C737 | Since: unknown | API-Set: unknown
  */
 export function arePlaneControlPanelsIntact(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1464,7 +1464,7 @@ export function arePlaneControlPanelsIntact(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x755D6D5267CBBD7E | Since: 323 | API-Set: unknown
+ * Hash: 0x755D6D5267CBBD7E | Since: unknown | API-Set: unknown
  */
 export function arePlanePropellersIntact(plane) {
     const _plane = typeof plane == 'object' ? plane.handle() : plane;
@@ -1473,7 +1473,7 @@ export function arePlanePropellersIntact(plane) {
 /**
  * No comment provided
  *
- * Hash: 0x5991A01434CE9677 | Since: 323 | API-Set: unknown
+ * Hash: 0x5991A01434CE9677 | Since: unknown | API-Set: unknown
  */
 export function areWingsOfPlaneIntact(plane) {
     const _plane = typeof plane == 'object' ? plane.handle() : plane;
@@ -1482,7 +1482,7 @@ export function areWingsOfPlaneIntact(plane) {
 /**
  * No comment provided
  *
- * Hash: 0x6A98C2ECF57FA5D4 | Since: 323 | API-Set: unknown
+ * Hash: 0x6A98C2ECF57FA5D4 | Since: unknown | API-Set: unknown
  */
 export function attachContainerToHandlerFrameWhenLinedUp(vehicle, entity) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1492,7 +1492,7 @@ export function attachContainerToHandlerFrameWhenLinedUp(vehicle, entity) {
 /**
  * No comment provided
  *
- * Hash: 0xA1DD82F3CCF9A01E | Since: 944 | API-Set: unknown
+ * Hash: 0xA1DD82F3CCF9A01E | Since: unknown | API-Set: unknown
  */
 export function attachEntityToCargobob() {
     AttachEntityToCargobob(undefined, undefined, undefined, undefined, undefined, undefined);
@@ -1500,7 +1500,7 @@ export function attachEntityToCargobob() {
 /**
  * This is the proper way of attaching vehicles to the car carrier, it's what Rockstar uses. Video Demo: https://www.youtube.com/watch?v=2lVEIzf7bgo
  *
- * Hash: 0x16B5E274BDE402F8 | Since: 323 | API-Set: unknown
+ * Hash: 0x16B5E274BDE402F8 | Since: unknown | API-Set: unknown
  */
 export function attachOnToTrailer(vehicle, trailer, offsetX, offsetY, offsetZ, coordsX, coordsY, coordsZ, rotationX, rotationY, rotationZ, disableCollisions) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1510,7 +1510,7 @@ export function attachOnToTrailer(vehicle, trailer, offsetX, offsetY, offsetZ, c
 /**
  * No comment provided
  *
- * Hash: 0x4127F1D84E347769 | Since: 323 | API-Set: unknown
+ * Hash: 0x4127F1D84E347769 | Since: unknown | API-Set: unknown
  */
 export function attachToCargobob(cargobob, vehicle, pos) {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -1520,7 +1520,7 @@ export function attachToCargobob(cargobob, vehicle, pos) {
 /**
  * HookOffset defines where the hook is attached. leave at 0 for default attachment.
  *
- * Hash: 0x29A16F8D621C4508 | Since: 323 | API-Set: unknown
+ * Hash: 0x29A16F8D621C4508 | Since: unknown | API-Set: unknown
  */
 export function attachToTowTruck(towTruck, vehicle, rear, hookOffsetX, hookOffsetY, hookOffsetZ) {
     const _towTruck = typeof towTruck == 'object' ? towTruck.handle() : towTruck;
@@ -1530,7 +1530,7 @@ export function attachToTowTruck(towTruck, vehicle, rear, hookOffsetX, hookOffse
 /**
  * No comment provided
  *
- * Hash: 0x3C7D42D58F770B54 | Since: 323 | API-Set: unknown
+ * Hash: 0x3C7D42D58F770B54 | Since: unknown | API-Set: unknown
  */
 export function attachToTrailer(vehicle, trailer, radius) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1544,7 +1544,7 @@ export function attachToTrailer(vehicle, trailer, radius) {
  *
  * . If killEngine is set to 1, you cannot resume driving the vehicle once it stops. This looks like is a bitmapped integer.
  *
- * Hash: 0x260BE8F09E326A20 | Since: 323 | API-Set: unknown
+ * Hash: 0x260BE8F09E326A20 | Since: unknown | API-Set: unknown
  */
 export function bringToHalt(vehicle, distance, duration) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1553,7 +1553,7 @@ export function bringToHalt(vehicle, distance, duration) {
 /**
  * No comment provided
  *
- * Hash: 0x26C10ECBDA5D043B | Since: 323 | API-Set: unknown
+ * Hash: 0x26C10ECBDA5D043B | Since: unknown | API-Set: unknown
  */
 export function canAnchorBoatHere(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1562,7 +1562,7 @@ export function canAnchorBoatHere(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x24F4121D07579880 | Since: 678 | API-Set: unknown
+ * Hash: 0x24F4121D07579880 | Since: unknown | API-Set: unknown
  */
 export function canAnchorBoatHereIgnorePlayers(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1571,7 +1571,7 @@ export function canAnchorBoatHereIgnorePlayers(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x2C1D8B3B19E517CC | Since: 757 | API-Set: unknown
+ * Hash: 0x2C1D8B3B19E517CC | Since: unknown | API-Set: unknown
  */
 export function canCargobobPickUpEntity() {
     return CanCargobobPickUpEntity(undefined, undefined);
@@ -1579,7 +1579,7 @@ export function canCargobobPickUpEntity() {
 /**
  * No comment provided
  *
- * Hash: 0x30785D90C956BF35 | Since: 323 | API-Set: unknown
+ * Hash: 0x30785D90C956BF35 | Since: unknown | API-Set: unknown
  */
 export function canShuffleSeat(vehicle, seatIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1588,7 +1588,7 @@ export function canShuffleSeat(vehicle, seatIndex) {
 /**
  * No comment provided
  *
- * Hash: 0xE01903C47C7AC89E | Since: 323 | API-Set: unknown
+ * Hash: 0xE01903C47C7AC89E | Since: unknown | API-Set: unknown
  */
 export function clearLastDriven() {
     ClearLastDrivenVehicle();
@@ -1596,7 +1596,7 @@ export function clearLastDriven() {
 /**
  * No comment provided
  *
- * Hash: 0xC889AE921400E1ED | Since: 3095 | API-Set: unknown
+ * Hash: 0xC889AE921400E1ED | Since: unknown | API-Set: unknown
  */
 export function clearNitrous(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1605,7 +1605,7 @@ export function clearNitrous(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x55E1D2758F34E437 | Since: 323 | API-Set: unknown
+ * Hash: 0x55E1D2758F34E437 | Since: unknown | API-Set: unknown
  */
 export function clearCustomPrimaryColour(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1614,7 +1614,7 @@ export function clearCustomPrimaryColour(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x5FFBDEEC3E8E2009 | Since: 323 | API-Set: unknown
+ * Hash: 0x5FFBDEEC3E8E2009 | Since: unknown | API-Set: unknown
  */
 export function clearCustomSecondaryColour(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1623,7 +1623,7 @@ export function clearCustomSecondaryColour(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x0A436B8643716D14 | Since: 323 | API-Set: unknown
+ * Hash: 0x0A436B8643716D14 | Since: unknown | API-Set: unknown
  */
 export function clearGeneratorAreaOfInterest() {
     ClearVehicleGeneratorAreaOfInterest();
@@ -1631,7 +1631,7 @@ export function clearGeneratorAreaOfInterest() {
 /**
  * No comment provided
  *
- * Hash: 0x4419966C9936071A | Since: 463 | API-Set: unknown
+ * Hash: 0x4419966C9936071A | Since: unknown | API-Set: unknown
  */
 export function clearPetroltankFireCulprit(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1640,7 +1640,7 @@ export function clearPetroltankFireCulprit(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xAA3F739ABDDCF21F | Since: 463 | API-Set: unknown
+ * Hash: 0xAA3F739ABDDCF21F | Since: unknown | API-Set: unknown
  */
 export function clearPhoneExplosiveDevice() {
     ClearVehiclePhoneExplosiveDevice();
@@ -1648,7 +1648,7 @@ export function clearPhoneExplosiveDevice() {
 /**
  * No comment provided
  *
- * Hash: 0x6D6AF961B72728AE | Since: 323 | API-Set: unknown
+ * Hash: 0x6D6AF961B72728AE | Since: unknown | API-Set: unknown
  */
 export function clearRouteHistory(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1657,7 +1657,7 @@ export function clearRouteHistory(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x3556041742A0DC74 | Since: 323 | API-Set: unknown
+ * Hash: 0x3556041742A0DC74 | Since: unknown | API-Set: unknown
  */
 export function closeBombBayDoors(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1673,7 +1673,7 @@ export function closeBombBayDoors(vehicle) {
  * 2: Opening
  * 3: Retracted
  *
- * Hash: 0xCFC8BE9A5E1FE575 | Since: 323 | API-Set: unknown
+ * Hash: 0xCFC8BE9A5E1FE575 | Since: unknown | API-Set: unknown
  */
 export function controlLandingGear(vehicle, state) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1682,7 +1682,7 @@ export function controlLandingGear(vehicle, state) {
 /**
  * Copies sourceVehicle's damage (broken bumpers, broken lights, etc.) to targetVehicle.
  *
- * Hash: 0xE44A982368A4AF23 | Since: 323 | API-Set: unknown
+ * Hash: 0xE44A982368A4AF23 | Since: unknown | API-Set: unknown
  */
 export function copyDamages(sourceVehicle, targetVehicle) {
     const _sourceVehicle = typeof sourceVehicle == 'object' ? sourceVehicle.handle() : sourceVehicle;
@@ -1702,7 +1702,7 @@ export function copyDamages(sourceVehicle, targetVehicle) {
  *
  *
  *
- * Hash: 0x63C6CCA8E68AE8C8 | Since: 323 | API-Set: unknown
+ * Hash: 0x63C6CCA8E68AE8C8 | Since: unknown | API-Set: unknown
  */
 export function createMissionTrain(variation, pos, direction) {
     return CreateMissionTrain(variation, pos.x, pos.y, pos.z, direction, undefined, undefined);
@@ -1717,7 +1717,7 @@ export function createMissionTrain(variation, pos, direction) {
  * CARGOBOB_MAGNET = 1,
  * };
  *
- * Hash: 0x7BEB0C7A235F6F3B | Since: 323 | API-Set: unknown
+ * Hash: 0x7BEB0C7A235F6F3B | Since: unknown | API-Set: unknown
  */
 export function createPickUpRopeForCargobob(cargobob, state) {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -1741,7 +1741,7 @@ export function createPickUpRopeForCargobob(cargobob, state) {
  *
  * Vector3 coords = GET_ENTITY_COORDS(PLAYER_PED_ID(), 0);    CREATE_SCRIPT_VEHICLE_GENERATOR(coords.x, coords.y, coords.z, 1.0f, 5.0f, 3.0f, GET_HASH_KEY("adder"), -1. -1, -1, -1, -1, true, false, false, false, true, -1);
  *
- * Hash: 0x9DEF883114668116 | Since: 323 | API-Set: unknown
+ * Hash: 0x9DEF883114668116 | Since: unknown | API-Set: unknown
  */
 export function createScriptGenerator(pos, heading, modelHash) {
     if (typeof modelHash === 'string')
@@ -1752,7 +1752,7 @@ export function createScriptGenerator(pos, heading, modelHash) {
  * p7 when set to true allows you to spawn vehicles under -100 z.
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  *
- * Hash: 0xAF35D0D2583051B0 | Since: 323 | API-Set: unknown
+ * Hash: 0xAF35D0D2583051B0 | Since: unknown | API-Set: unknown
  */
 export function create(modelHash, pos, heading, isNetwork, bScriptHostVeh) {
     if (typeof modelHash === 'string')
@@ -1762,7 +1762,7 @@ export function create(modelHash, pos, heading, isNetwork, bScriptHostVeh) {
 /**
  * No comment provided
  *
- * Hash: 0x736A718577F39C7D | Since: 323 | API-Set: unknown
+ * Hash: 0x736A718577F39C7D | Since: unknown | API-Set: unknown
  */
 export function deleteAllTrains() {
     DeleteAllTrains();
@@ -1770,16 +1770,15 @@ export function deleteAllTrains() {
 /**
  * No comment provided
  *
- * Hash: 0x5B76B14AE875C795 | Since: 323 | API-Set: unknown
+ * Hash: 0x5B76B14AE875C795 | Since: unknown | API-Set: unknown
  */
-export function deleteMissionTrain(train) {
-    const _train = typeof train == 'object' ? train.handle() : train;
-    DeleteMissionTrain(_train);
+export function deleteMissionTrain() {
+    return DeleteMissionTrain();
 }
 /**
  * No comment provided
  *
- * Hash: 0x22102C9ABFCF125D | Since: 323 | API-Set: unknown
+ * Hash: 0x22102C9ABFCF125D | Since: unknown | API-Set: unknown
  */
 export function deleteScriptGenerator(vehicleGenerator) {
     DeleteScriptVehicleGenerator(vehicleGenerator);
@@ -1794,16 +1793,15 @@ export function deleteScriptGenerator(vehicleGenerator) {
  *
  * Deletes the specified vehicle, then sets the handle pointed to by the pointer to NULL.
  *
- * Hash: 0xEA386986E786A54F | Since: 323 | API-Set: unknown
+ * Hash: 0xEA386986E786A54F | Since: unknown | API-Set: unknown
  */
-export function deleteVehicle(vehicle) {
-    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
-    DeleteVehicle(_vehicle);
+export function deleteVehicle() {
+    return DeleteVehicle();
 }
 /**
  * No comment provided
  *
- * Hash: 0x7C0043FDFF6436BC | Since: 323 | API-Set: unknown
+ * Hash: 0x7C0043FDFF6436BC | Since: unknown | API-Set: unknown
  */
 export function detachContainerFromHandlerFrame(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1812,7 +1810,7 @@ export function detachContainerFromHandlerFrame(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xAF03011701811146 | Since: 678 | API-Set: unknown
+ * Hash: 0xAF03011701811146 | Since: unknown | API-Set: unknown
  */
 export function detachEntityFromCargobob(cargobob, entity) {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -1822,7 +1820,7 @@ export function detachEntityFromCargobob(cargobob, entity) {
 /**
  * No comment provided
  *
- * Hash: 0xADF7BE450512C12F | Since: 323 | API-Set: unknown
+ * Hash: 0xADF7BE450512C12F | Since: unknown | API-Set: unknown
  */
 export function detachFromAnyCargobob(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1831,7 +1829,7 @@ export function detachFromAnyCargobob(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xD0E9CE05A1E68CD8 | Since: 323 | API-Set: unknown
+ * Hash: 0xD0E9CE05A1E68CD8 | Since: unknown | API-Set: unknown
  */
 export function detachFromAnyTowTruck(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1840,7 +1838,7 @@ export function detachFromAnyTowTruck(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x0E21D3DF1051399D | Since: 323 | API-Set: unknown
+ * Hash: 0x0E21D3DF1051399D | Since: unknown | API-Set: unknown
  */
 export function detachFromCargobob(vehicle, cargobob) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1850,7 +1848,7 @@ export function detachFromCargobob(vehicle, cargobob) {
 /**
  * First two parameters swapped. Scripts verify that towTruck is the first parameter, not the second.
  *
- * Hash: 0xC2DB6B6708350ED8 | Since: 323 | API-Set: unknown
+ * Hash: 0xC2DB6B6708350ED8 | Since: unknown | API-Set: unknown
  */
 export function detachFromTowTruck(towTruck, vehicle) {
     const _towTruck = typeof towTruck == 'object' ? towTruck.handle() : towTruck;
@@ -1860,7 +1858,7 @@ export function detachFromTowTruck(towTruck, vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x90532EDF0D2BDD86 | Since: 323 | API-Set: unknown
+ * Hash: 0x90532EDF0D2BDD86 | Since: unknown | API-Set: unknown
  */
 export function detachFromTrailer(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1869,7 +1867,7 @@ export function detachFromTrailer(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xEF49CF0270307CBE | Since: 323 | API-Set: unknown
+ * Hash: 0xEF49CF0270307CBE | Since: unknown | API-Set: unknown
  */
 export function detonatePhoneExplosiveDevice() {
     DetonateVehiclePhoneExplosiveDevice();
@@ -1877,7 +1875,7 @@ export function detonatePhoneExplosiveDevice() {
 /**
  * No comment provided
  *
- * Hash: 0x500873A45724C863 | Since: 323 | API-Set: unknown
+ * Hash: 0x500873A45724C863 | Since: unknown | API-Set: unknown
  */
 export function disableIndividualPlanePropeller(vehicle, propeller) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1886,7 +1884,7 @@ export function disableIndividualPlanePropeller(vehicle, propeller) {
 /**
  * No comment provided
  *
- * Hash: 0x23428FC53C60919C | Since: 323 | API-Set: unknown
+ * Hash: 0x23428FC53C60919C | Since: unknown | API-Set: unknown
  */
 export function disablePlaneAileron(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1897,7 +1895,7 @@ export function disablePlaneAileron(vehicle) {
  *
  * p1 and p2 use values from 0-255 and both make the shadow darker the lower the value is. -1 disables the effect.
  *
- * Hash: 0xF0E4BA16D1DB546C | Since: 323 | API-Set: unknown
+ * Hash: 0xF0E4BA16D1DB546C | Since: unknown | API-Set: unknown
  */
 export function disableVehcileDynamicAmbientScales(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1906,7 +1904,7 @@ export function disableVehcileDynamicAmbientScales(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xF25E02CB9C5818F8 | Since: 323 | API-Set: unknown
+ * Hash: 0xF25E02CB9C5818F8 | Since: unknown | API-Set: unknown
  */
 export function disableExplosionBreakOffParts() {
     Citizen.invokeNative('0xF25E02CB9C5818F8');
@@ -1914,7 +1912,7 @@ export function disableExplosionBreakOffParts() {
 /**
  * No comment provided
  *
- * Hash: 0x32CAEDF24A583345 | Since: 463 | API-Set: unknown
+ * Hash: 0x32CAEDF24A583345 | Since: unknown | API-Set: unknown
  */
 export function disableTurretMovementThisFrame(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1923,7 +1921,7 @@ export function disableTurretMovementThisFrame(vehicle) {
 /**
  * Full list of weapons by DurtyFree (Search for VEHICLE_*): https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
  *
- * Hash: 0xF4FC6A6F67D8D856 | Since: 323 | API-Set: unknown
+ * Hash: 0xF4FC6A6F67D8D856 | Since: unknown | API-Set: unknown
  */
 export function disableWeapon(disabled, weaponHash, vehicle, owner) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1935,7 +1933,7 @@ export function disableWeapon(disabled, weaponHash, vehicle, owner) {
 /**
  * Returns true only when the magnet is active, will return false if the hook is active
  *
- * Hash: 0x6E08BF5B3722BAC9 | Since: 323 | API-Set: unknown
+ * Hash: 0x6E08BF5B3722BAC9 | Since: unknown | API-Set: unknown
  */
 export function doesCargobobHavePickupMagnet(cargobob) {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -1944,7 +1942,7 @@ export function doesCargobobHavePickupMagnet(cargobob) {
 /**
  * Returns true only when the hook is active, will return false if the magnet is active
  *
- * Hash: 0x1821D91AD4B56108 | Since: 323 | API-Set: unknown
+ * Hash: 0x1821D91AD4B56108 | Since: unknown | API-Set: unknown
  */
 export function doesCargobobHavePickUpRope(cargobob) {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -1953,7 +1951,7 @@ export function doesCargobobHavePickUpRope(cargobob) {
 /**
  * Checks via CVehicleModelInfo
  *
- * Hash: 0x1262D55792428154 | Since: 323 | API-Set: unknown
+ * Hash: 0x1262D55792428154 | Since: unknown | API-Set: unknown
  */
 export function doesExtraExist(vehicle, extraId) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1962,7 +1960,7 @@ export function doesExtraExist(vehicle, extraId) {
 /**
  * No comment provided
  *
- * Hash: 0xF6086BC836400876 | Since: 323 | API-Set: unknown
+ * Hash: 0xF6086BC836400876 | Since: unknown | API-Set: unknown
  */
 export function doesScriptGeneratorExist(vehicleGenerator) {
     return DoesScriptVehicleGeneratorExist(vehicleGenerator);
@@ -1970,7 +1968,7 @@ export function doesScriptGeneratorExist(vehicleGenerator) {
 /**
  * Returns true if the vehicle has the FLAG_ALLOWS_RAPPEL flag set.
  *
- * Hash: 0x4E417C547182C84D | Since: 757 | API-Set: unknown
+ * Hash: 0x4E417C547182C84D | Since: unknown | API-Set: unknown
  */
 export function doesAllowRappel(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1979,7 +1977,7 @@ export function doesAllowRappel(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x956B409B984D9BF7 | Since: 323 | API-Set: unknown
+ * Hash: 0x956B409B984D9BF7 | Since: unknown | API-Set: unknown
  */
 export function doesExistWithDecorator(decorator) {
     return DoesVehicleExistWithDecorator(decorator);
@@ -1987,7 +1985,7 @@ export function doesExistWithDecorator(decorator) {
 /**
  * No comment provided
  *
- * Hash: 0x8AC862B0B32C5B80 | Since: 323 | API-Set: unknown
+ * Hash: 0x8AC862B0B32C5B80 | Since: unknown | API-Set: unknown
  */
 export function doesHaveRoof(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1996,7 +1994,7 @@ export function doesHaveRoof(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x99015ED7DBEA5113 | Since: 2189 | API-Set: unknown
+ * Hash: 0x99015ED7DBEA5113 | Since: unknown | API-Set: unknown
  */
 export function doesHaveSearchlight(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2005,7 +2003,7 @@ export function doesHaveSearchlight(vehicle) {
 /**
  * Maximum amount of vehicles with vehicle stuck check appears to be 16.
  *
- * Hash: 0x57E4C39DE5EE8470 | Since: 323 | API-Set: unknown
+ * Hash: 0x57E4C39DE5EE8470 | Since: unknown | API-Set: unknown
  */
 export function doesHaveStuckVehicleCheck(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2014,7 +2012,7 @@ export function doesHaveStuckVehicleCheck(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x25ECB9F8017D98E0 | Since: 323 | API-Set: unknown
+ * Hash: 0x25ECB9F8017D98E0 | Since: unknown | API-Set: unknown
  */
 export function doesHaveWeapons(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2023,7 +2021,7 @@ export function doesHaveWeapons(vehicle) {
 /**
  * Remove the weird shadow applied by DISABLE_VEHCILE_DYNAMIC_AMBIENT_SCALES.
  *
- * Hash: 0xF87D9F2301F7D206 | Since: 323 | API-Set: unknown
+ * Hash: 0xF87D9F2301F7D206 | Since: unknown | API-Set: unknown
  */
 export function enableDynamicAmbientScales(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2038,7 +2036,7 @@ export function enableDynamicAmbientScales(vehicle) {
  *
  * First BOOL does not give any visual explosion, the vehicle just falls apart completely but slowly and starts to burn.
  *
- * Hash: 0xBA71116ADF5B514C | Since: 323 | API-Set: unknown
+ * Hash: 0xBA71116ADF5B514C | Since: unknown | API-Set: unknown
  */
 export function explode(vehicle, isAudible, isInvisible) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2047,7 +2045,7 @@ export function explode(vehicle, isAudible, isInvisible) {
 /**
  * No comment provided
  *
- * Hash: 0x786A4EB67B01BF0B | Since: 323 | API-Set: unknown
+ * Hash: 0x786A4EB67B01BF0B | Since: unknown | API-Set: unknown
  */
 export function explodeInCutscene(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2057,7 +2055,7 @@ export function explodeInCutscene(vehicle) {
  * Finds the vehicle that is carrying this entity with a handler frame.
  * The model of the entity must be prop_contr_03b_ld or the function will return 0.
  *
- * Hash: 0x375E7FC44F21C8AB | Since: 323 | API-Set: unknown
+ * Hash: 0x375E7FC44F21C8AB | Since: unknown | API-Set: unknown
  */
 export function findHandlerContainerIsAttachedTo(entity) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -2067,7 +2065,7 @@ export function findHandlerContainerIsAttachedTo(entity) {
  * Native is significantly more complicated than simply generating a random vector & length.
  * `The 'point' is either 400.0 or 250.0 units away from the Ped's current coordinates; and paths into functions like rage::grcViewport___IsSphereVisible`
  *
- * Hash: 0x8DC9675797123522 | Since: 1290 | API-Set: unknown
+ * Hash: 0x8DC9675797123522 | Since: unknown | API-Set: unknown
  */
 export function findSpawnCoordinatesForHeli(ped) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2089,7 +2087,7 @@ export function findSpawnCoordinatesForHeli(ped) {
  *
  * Also, this function is coded to not work on vehicles of type: CBike, Bmx, CBoat, CTrain, and CSubmarine.
  *
- * Hash: 0x772282EBEB95E682 | Since: 323 | API-Set: unknown
+ * Hash: 0x772282EBEB95E682 | Since: unknown | API-Set: unknown
  */
 export function fixWindow(vehicle, windowIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2098,7 +2096,7 @@ export function fixWindow(vehicle, windowIndex) {
 /**
  * Often called after START_PLAYBACK_RECORDED_VEHICLE and SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE; similar in use to FORCE_ENTITY_AI_AND_ANIMATION_UPDATE.
  *
- * Hash: 0x1F2E4E06DEA8992B | Since: 323 | API-Set: unknown
+ * Hash: 0x1F2E4E06DEA8992B | Since: unknown | API-Set: unknown
  */
 export function forcePlaybackRecordedUpdate(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2107,7 +2105,7 @@ export function forcePlaybackRecordedUpdate(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xC67DB108A9ADE3BE | Since: 2189 | API-Set: unknown
+ * Hash: 0xC67DB108A9ADE3BE | Since: unknown | API-Set: unknown
  */
 export function forceSubmarineNeurtalBuoyancy() {
     ForceSubmarineNeurtalBuoyancy(undefined, undefined);
@@ -2115,7 +2113,7 @@ export function forceSubmarineNeurtalBuoyancy() {
 /**
  * No comment provided
  *
- * Hash: 0x33506883545AC0DF | Since: 323 | API-Set: unknown
+ * Hash: 0x33506883545AC0DF | Since: unknown | API-Set: unknown
  */
 export function forceSubmarineSurfaceMode(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2124,7 +2122,7 @@ export function forceSubmarineSurfaceMode(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x99CAD8E7AFDB60FA | Since: 323 | API-Set: unknown
+ * Hash: 0x99CAD8E7AFDB60FA | Since: unknown | API-Set: unknown
  */
 export function forceSubThrottleForTime(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2133,7 +2131,7 @@ export function forceSubThrottleForTime(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x1A2BCC8C636F9226 | Since: 3095 | API-Set: unknown
+ * Hash: 0x1A2BCC8C636F9226 | Since: unknown | API-Set: unknown
  */
 export function fullyChargeNitrous(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2142,7 +2140,7 @@ export function fullyChargeNitrous(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xA4822F1CF23F4810 | Since: 323 | API-Set: unknown
+ * Hash: 0xA4822F1CF23F4810 | Since: unknown | API-Set: unknown
  */
 export function generateCreationPosFromPaths() {
     return Citizen.invokeNative('0xA4822F1CF23F4810', undefined, undefined, undefined, undefined, undefined, undefined, undefined);
@@ -2150,7 +2148,7 @@ export function generateCreationPosFromPaths() {
 /**
  * No comment provided
  *
- * Hash: 0x9B8E1BF04B51F2E8 | Since: 1103 | API-Set: unknown
+ * Hash: 0x9B8E1BF04B51F2E8 | Since: unknown | API-Set: unknown
  */
 export function getAlls() {
     return GetAllVehicles();
@@ -2158,7 +2156,7 @@ export function getAlls() {
 /**
  * Returns true when the bomb bay doors of this plane are open. False if they're closed.
  *
- * Hash: 0xD0917A423314BBA8 | Since: 1180 | API-Set: unknown
+ * Hash: 0xD0917A423314BBA8 | Since: unknown | API-Set: unknown
  */
 export function getAreBombBayDoorsOpen(aircraft) {
     const _aircraft = typeof aircraft == 'object' ? aircraft.handle() : aircraft;
@@ -2167,7 +2165,7 @@ export function getAreBombBayDoorsOpen(aircraft) {
 /**
  * Gets the position of the cargobob hook, in world coords.
  *
- * Hash: 0xCBDB9B923CACC92D | Since: 323 | API-Set: unknown
+ * Hash: 0xCBDB9B923CACC92D | Since: unknown | API-Set: unknown
  */
 export function getAttachedPickUpHookPosition(cargobob) {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -2176,7 +2174,7 @@ export function getAttachedPickUpHookPosition(cargobob) {
 /**
  * No comment provided
  *
- * Hash: 0x6636C535F6CC2725 | Since: 323 | API-Set: unknown
+ * Hash: 0x6636C535F6CC2725 | Since: unknown | API-Set: unknown
  */
 export function getBoatBoomPositionRatio(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2185,7 +2183,7 @@ export function getBoatBoomPositionRatio(vehicle) {
 /**
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  *
- * Hash: 0x5AA3F878A178C4FC | Since: 323 | API-Set: unknown
+ * Hash: 0x5AA3F878A178C4FC | Since: unknown | API-Set: unknown
  */
 export function getBoatModelAgility(modelHash) {
     if (typeof modelHash === 'string')
@@ -2195,7 +2193,7 @@ export function getBoatModelAgility(modelHash) {
 /**
  * Returns true when both headlights are broken. This does not include extralights.
  *
- * Hash: 0xEC69ADF931AAE0C3 | Since: 505 | API-Set: unknown
+ * Hash: 0xEC69ADF931AAE0C3 | Since: unknown | API-Set: unknown
  */
 export function getBothHeadlightsDamaged(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2206,7 +2204,7 @@ export function getBothHeadlightsDamaged(vehicle) {
  * p7 is usually 2
  * p8 is usually 1
  *
- * Hash: 0x51F30DB60626A20E | Since: 1180 | API-Set: unknown
+ * Hash: 0x51F30DB60626A20E | Since: unknown | API-Set: unknown
  */
 export function getCanBePlacedHere(vehicle, pos, rot) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2215,7 +2213,7 @@ export function getCanBePlacedHere(vehicle, pos, rot) {
 /**
  * Returns true if the vehicle has the FLAG_JUMPING_CAR flag set.
  *
- * Hash: 0x9078C0C5EF8C19E9 | Since: 944 | API-Set: unknown
+ * Hash: 0x9078C0C5EF8C19E9 | Since: unknown | API-Set: unknown
  */
 export function getCarHasJump(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2251,7 +2249,7 @@ export function getCarHasJump(vehicle) {
  *
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  *
- * Hash: 0xF73EB622C4F1689B | Since: 323 | API-Set: unknown
+ * Hash: 0xF73EB622C4F1689B | Since: unknown | API-Set: unknown
  */
 export function getClosest(pos, radius, modelHash, flags) {
     if (typeof modelHash === 'string')
@@ -2264,7 +2262,7 @@ export function getClosest(pos, radius, modelHash, flags) {
  * 2 -> down
  * 3 -> raising up
  *
- * Hash: 0xF8C397922FC03F41 | Since: 323 | API-Set: unknown
+ * Hash: 0xF8C397922FC03F41 | Since: unknown | API-Set: unknown
  */
 export function getConvertibleRoofState(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2273,7 +2271,7 @@ export function getConvertibleRoofState(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x42BC05C27A946054 | Since: 323 | API-Set: unknown
+ * Hash: 0x42BC05C27A946054 | Since: unknown | API-Set: unknown
  */
 export function getCurrentPlaybackFor(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2291,7 +2289,7 @@ export function getCurrentPlaybackFor(vehicle) {
  *
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  *
- * Hash: 0xB215AAC32D25D019 | Since: 323 | API-Set: unknown
+ * Hash: 0xB215AAC32D25D019 | Since: unknown | API-Set: unknown
  */
 export function getDisplayNameFromModel(modelHash) {
     if (typeof modelHash === 'string')
@@ -2301,7 +2299,7 @@ export function getDisplayNameFromModel(modelHash) {
 /**
  * Appears to return true if the vehicle has any damage, including cosmetically.
  *
- * Hash: 0xBCDC5017D3CE1E9E | Since: 323 | API-Set: unknown
+ * Hash: 0xBCDC5017D3CE1E9E | Since: unknown | API-Set: unknown
  */
 export function getDoesHaveDamageDecals(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2310,7 +2308,7 @@ export function getDoesHaveDamageDecals(vehicle) {
 /**
  * Returns true only if the "tombstone" bone is attached to the vehicle, irrespective of "FLAG_HAS_TOMBSTONE" being present or not. Detaching the tombstone will return false.
  *
- * Hash: 0x71AFB258CCED3A27 | Since: 1604 | API-Set: unknown
+ * Hash: 0x71AFB258CCED3A27 | Since: unknown | API-Set: unknown
  */
 export function getDoesHaveTombstone(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2319,7 +2317,7 @@ export function getDoesHaveTombstone(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x2F5A72430E78C8D3 | Since: 2372 | API-Set: unknown
+ * Hash: 0x2F5A72430E78C8D3 | Since: unknown | API-Set: unknown
  */
 export function getDriftTyresSet(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2328,7 +2326,7 @@ export function getDriftTyresSet(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x99093F60746708CA | Since: 1103 | API-Set: unknown
+ * Hash: 0x99093F60746708CA | Since: unknown | API-Set: unknown
  */
 export function getEntityAttachedToCargobob() {
     return GetEntityAttachedToCargobob(undefined);
@@ -2336,7 +2334,7 @@ export function getEntityAttachedToCargobob() {
 /**
  * No comment provided
  *
- * Hash: 0xEFEA18DCF10F8F75 | Since: 323 | API-Set: unknown
+ * Hash: 0xEFEA18DCF10F8F75 | Since: unknown | API-Set: unknown
  */
 export function getEntityAttachedToTowTruck(towTruck) {
     const _towTruck = typeof towTruck == 'object' ? towTruck.handle() : towTruck;
@@ -2345,7 +2343,7 @@ export function getEntityAttachedToTowTruck(towTruck) {
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  *
- * Hash: 0xC0572928C0ABFDA3 | Since: 944 | API-Set: unknown
+ * Hash: 0xC0572928C0ABFDA3 | Since: unknown | API-Set: unknown
  */
 export function getEntryPointPosition(vehicle, doorId) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2357,7 +2355,7 @@ export function getEntryPointPosition(vehicle, doorId) {
  * 0.000 is the stock suspension.
  * 0.008 is Ultra Suspension.
  *
- * Hash: 0x53952FD2BAA19F17 | Since: 323 | API-Set: unknown
+ * Hash: 0x53952FD2BAA19F17 | Since: unknown | API-Set: unknown
  */
 export function getFakeSuspensionLoweringAmount(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2366,7 +2364,7 @@ export function getFakeSuspensionLoweringAmount(vehicle) {
 /**
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  *
- * Hash: 0xC6AD107DDC9054CC | Since: 323 | API-Set: unknown
+ * Hash: 0xC6AD107DDC9054CC | Since: unknown | API-Set: unknown
  */
 export function getFlyingModelAgility(modelHash) {
     if (typeof modelHash === 'string')
@@ -2376,7 +2374,7 @@ export function getFlyingModelAgility(modelHash) {
 /**
  * No comment provided
  *
- * Hash: 0xDCA174A42133F08C | Since: 944 | API-Set: unknown
+ * Hash: 0xDCA174A42133F08C | Since: unknown | API-Set: unknown
  */
 export function getHasRetractableWheels(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2385,7 +2383,7 @@ export function getHasRetractableWheels(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x36D782F68B309BDA | Since: 944 | API-Set: unknown
+ * Hash: 0x36D782F68B309BDA | Since: unknown | API-Set: unknown
  */
 export function getHasRocketBoost(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2394,7 +2392,7 @@ export function getHasRocketBoost(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xE8718FAF591FD224 | Since: 1604 | API-Set: unknown
+ * Hash: 0xE8718FAF591FD224 | Since: unknown | API-Set: unknown
  */
 export function getHasBeenHitByShunt(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2404,7 +2402,7 @@ export function getHasBeenHitByShunt(vehicle) {
  * Max 1000.
  * At 0 the main rotor will stall.
  *
- * Hash: 0xE4CB7541F413D2C5 | Since: 323 | API-Set: unknown
+ * Hash: 0xE4CB7541F413D2C5 | Since: unknown | API-Set: unknown
  */
 export function getHeliMainRotorHealth(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2414,7 +2412,7 @@ export function getHeliMainRotorHealth(vehicle) {
  * Max 1000.
  * At -100 both helicopter rotors will stall.
  *
- * Hash: 0xAC51915D27E4A5F7 | Since: 323 | API-Set: unknown
+ * Hash: 0xAC51915D27E4A5F7 | Since: unknown | API-Set: unknown
  */
 export function getHeliTailBoomHealth(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2424,7 +2422,7 @@ export function getHeliTailBoomHealth(vehicle) {
  * Max 1000.
  * At 0 the tail rotor will stall.
  *
- * Hash: 0xAE8CE82A4219AC8C | Since: 323 | API-Set: unknown
+ * Hash: 0xAE8CE82A4219AC8C | Since: unknown | API-Set: unknown
  */
 export function getHeliTailRotorHealth(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2433,7 +2431,7 @@ export function getHeliTailRotorHealth(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x0BB5CBDDD0F25AE3 | Since: 2372 | API-Set: unknown
+ * Hash: 0x0BB5CBDDD0F25AE3 | Since: unknown | API-Set: unknown
  */
 export function getHydraulicSuspensionRaiseFactor(vehicle, wheelId) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2442,7 +2440,7 @@ export function getHydraulicSuspensionRaiseFactor(vehicle, wheelId) {
 /**
  * No comment provided
  *
- * Hash: 0xA01BC64DD4BFBBAC | Since: 323 | API-Set: unknown
+ * Hash: 0xA01BC64DD4BFBBAC | Since: unknown | API-Set: unknown
  */
 export function getInClipsetHashForSeat(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2451,7 +2449,7 @@ export function getInClipsetHashForSeat(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xBA91D045575699AD | Since: 877 | API-Set: unknown
+ * Hash: 0xBA91D045575699AD | Since: unknown | API-Set: unknown
  */
 export function getIsBoatCapsized(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2460,7 +2458,7 @@ export function getIsBoatCapsized(vehicle) {
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  *
- * Hash: 0x645F4B6E8499F632 | Since: 944 | API-Set: unknown
+ * Hash: 0x645F4B6E8499F632 | Since: unknown | API-Set: unknown
  */
 export function getIsDoorValid(vehicle, doorId) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2469,7 +2467,7 @@ export function getIsDoorValid(vehicle, doorId) {
 /**
  * From the driver's perspective, is the left headlight broken.
  *
- * Hash: 0x5EF77C9ADD3B11A3 | Since: 323 | API-Set: unknown
+ * Hash: 0x5EF77C9ADD3B11A3 | Since: unknown | API-Set: unknown
  */
 export function getIsLeftHeadlightDamaged(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2478,7 +2476,7 @@ export function getIsLeftHeadlightDamaged(vehicle) {
 /**
  * From the driver's perspective, is the right headlight broken.
  *
- * Hash: 0xA7ECB73355EB2F20 | Since: 323 | API-Set: unknown
+ * Hash: 0xA7ECB73355EB2F20 | Since: unknown | API-Set: unknown
  */
 export function getIsRightHeadlightDamaged(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2487,7 +2485,7 @@ export function getIsRightHeadlightDamaged(vehicle) {
 /**
  * Returns whether this vehicle is currently disabled by an EMP mine.
  *
- * Hash: 0x0506ED94363AD905 | Since: 1604 | API-Set: unknown
+ * Hash: 0x0506ED94363AD905 | Since: unknown | API-Set: unknown
  */
 export function getIsDisabledByEmp(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2496,7 +2494,7 @@ export function getIsDisabledByEmp(vehicle) {
 /**
  * Returns true when in a vehicle, false whilst entering/exiting.
  *
- * Hash: 0xAE31E7DF9B5B132E | Since: 323 | API-Set: unknown
+ * Hash: 0xAE31E7DF9B5B132E | Since: unknown | API-Set: unknown
  */
 export function getIsEngineRunning(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2505,7 +2503,7 @@ export function getIsEngineRunning(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xF095C0405307B21B | Since: 323 | API-Set: unknown
+ * Hash: 0xF095C0405307B21B | Since: unknown | API-Set: unknown
  */
 export function getIsPrimaryColourCustom(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2514,7 +2512,7 @@ export function getIsPrimaryColourCustom(vehicle) {
 /**
  * Check if Vehicle Secondary is avaliable for customize
  *
- * Hash: 0x910A32E7AAD2656C | Since: 323 | API-Set: unknown
+ * Hash: 0x910A32E7AAD2656C | Since: unknown | API-Set: unknown
  */
 export function getIsSecondaryColourCustom(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2523,7 +2521,7 @@ export function getIsSecondaryColourCustom(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xA2459F72C14E2E8D | Since: 1604 | API-Set: unknown
+ * Hash: 0xA2459F72C14E2E8D | Since: unknown | API-Set: unknown
  */
 export function getIsShunting(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2532,7 +2530,7 @@ export function getIsShunting(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x1DA0DA9CB3F0C8BF | Since: 944 | API-Set: unknown
+ * Hash: 0x1DA0DA9CB3F0C8BF | Since: unknown | API-Set: unknown
  */
 export function getIsWheelsRetracted(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2549,7 +2547,7 @@ export function getIsWheelsRetracted(vehicle) {
  *
  * Returns the current state of the vehicles landing gear.
  *
- * Hash: 0x9B0F3DCA3DB0F4CD | Since: 323 | API-Set: unknown
+ * Hash: 0x9B0F3DCA3DB0F4CD | Since: unknown | API-Set: unknown
  */
 export function getLandingGearState(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2558,7 +2556,7 @@ export function getLandingGearState(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xB2D06FAEDE65B577 | Since: 323 | API-Set: unknown
+ * Hash: 0xB2D06FAEDE65B577 | Since: unknown | API-Set: unknown
  */
 export function getLastDriven() {
     return GetLastDrivenVehicle();
@@ -2566,7 +2564,7 @@ export function getLastDriven() {
 /**
  * No comment provided
  *
- * Hash: 0x83F969AA1EE2A664 | Since: 323 | API-Set: unknown
+ * Hash: 0x83F969AA1EE2A664 | Since: unknown | API-Set: unknown
  */
 export function getLastPedInSeat(vehicle, seatIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2575,7 +2573,7 @@ export function getLastPedInSeat(vehicle, seatIndex) {
 /**
  * Returns last vehicle that was rammed by the given vehicle using the shunt boost.
  *
- * Hash: 0x04F2FA6E234162F7 | Since: 1604 | API-Set: unknown
+ * Hash: 0x04F2FA6E234162F7 | Since: unknown | API-Set: unknown
  */
 export function getLastShunt(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2607,7 +2605,7 @@ export function getLastShunt(vehicle) {
  *
  * Full list of vehicle mod kits and mods by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicleModKits.json
  *
- * Hash: 0xB4C7A93837C91A1F | Since: 323 | API-Set: unknown
+ * Hash: 0xB4C7A93837C91A1F | Since: unknown | API-Set: unknown
  */
 export function getLiveryName(vehicle, liveryIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2619,7 +2617,7 @@ export function getLiveryName(vehicle, liveryIndex) {
  *
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  *
- * Hash: 0xF7AF4F159FF99F97 | Since: 1868 | API-Set: unknown
+ * Hash: 0xF7AF4F159FF99F97 | Since: unknown | API-Set: unknown
  */
 export function getMakeNameFromModel(modelHash) {
     if (typeof modelHash === 'string')
@@ -2630,7 +2628,7 @@ export function getMakeNameFromModel(modelHash) {
  * Returns the name for the type of vehicle mod(Armour, engine etc)
  *
  *
- * Hash: 0x51F0FEB9F6AE98C0 | Since: 323 | API-Set: unknown
+ * Hash: 0x51F0FEB9F6AE98C0 | Since: unknown | API-Set: unknown
  */
 export function getModSlotName(vehicle, modType) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2641,7 +2639,7 @@ export function getModSlotName(vehicle, modType) {
  *
  * Use GET_FILENAME_FOR_AUDIO_CONVERSATION to get the part name in the game's language
  *
- * Hash: 0x8935624F8C5592CC | Since: 323 | API-Set: unknown
+ * Hash: 0x8935624F8C5592CC | Since: unknown | API-Set: unknown
  */
 export function getModTextLabel(vehicle, modType, modValue) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2650,7 +2648,7 @@ export function getModTextLabel(vehicle, modType, modValue) {
 /**
  * Returns the total amount of color combinations found in the vehicle's carvariations.meta entry.
  *
- * Hash: 0x3B963160CD65D41E | Since: 323 | API-Set: unknown
+ * Hash: 0x3B963160CD65D41E | Since: unknown | API-Set: unknown
  */
 export function getNumberOfColours(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2659,7 +2657,7 @@ export function getNumberOfColours(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x92922A607497B14D | Since: 463 | API-Set: unknown
+ * Hash: 0x92922A607497B14D | Since: unknown | API-Set: unknown
  */
 export function getNumberOfDoors(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2668,7 +2666,7 @@ export function getNumberOfDoors(vehicle) {
 /**
  * Returns the number of *types* of licence plates, enumerated below in SET_VEHICLE_NUMBER_PLATE_TEXT_INDEX.
  *
- * Hash: 0x4C4D6B2644F458CB | Since: 323 | API-Set: unknown
+ * Hash: 0x4C4D6B2644F458CB | Since: unknown | API-Set: unknown
  */
 export function getNumberOfNumberPlates() {
     return GetNumberOfVehicleNumberPlates();
@@ -2683,7 +2681,7 @@ export function getNumberOfNumberPlates() {
  * 5: Chrome
  * 6: Chameleon
  *
- * Hash: 0xA551BE18C11A476D | Since: 323 | API-Set: unknown
+ * Hash: 0xA551BE18C11A476D | Since: unknown | API-Set: unknown
  */
 export function getNumModColors(paintType) {
     return GetNumModColors(paintType, false);
@@ -2691,7 +2689,7 @@ export function getNumModColors(paintType) {
 /**
  * No comment provided
  *
- * Hash: 0x33F2E3FE70EAAE1D | Since: 323 | API-Set: unknown
+ * Hash: 0x33F2E3FE70EAAE1D | Since: unknown | API-Set: unknown
  */
 export function getNumModKits(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2700,7 +2698,7 @@ export function getNumModKits(vehicle) {
 /**
  * Returns how many possible mods a vehicle has for a given mod type
  *
- * Hash: 0xE38E9162A2500646 | Since: 323 | API-Set: unknown
+ * Hash: 0xE38E9162A2500646 | Since: unknown | API-Set: unknown
  */
 export function getNumMods(vehicle, modType) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2709,7 +2707,7 @@ export function getNumMods(vehicle, modType) {
 /**
  * No comment provided
  *
- * Hash: 0x9D1224004B3A6707 | Since: 323 | API-Set: unknown
+ * Hash: 0x9D1224004B3A6707 | Since: unknown | API-Set: unknown
  */
 export function getNumWindowTints() {
     return GetNumVehicleWindowTints();
@@ -2719,7 +2717,7 @@ export function getNumWindowTints() {
  * These are the metal supports that allow it to fire.
  * This native only applies to the Chernobog.
  *
- * Hash: 0x3A9128352EAC9E85 | Since: 1290 | API-Set: unknown
+ * Hash: 0x3A9128352EAC9E85 | Since: unknown | API-Set: unknown
  */
 export function getOutriggersDeployed(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2739,7 +2737,7 @@ export function getOutriggersDeployed(vehicle) {
  *
  * If p2 is true it uses a different GetOccupant function.
  *
- * Hash: 0xBB40DD2270B65366 | Since: 323 | API-Set: unknown
+ * Hash: 0xBB40DD2270B65366 | Since: unknown | API-Set: unknown
  */
 export function getPedInSeat(vehicle, seatIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2748,7 +2746,7 @@ export function getPedInSeat(vehicle, seatIndex) {
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  *
- * Hash: 0x218297BF0CFD853B | Since: 323 | API-Set: unknown
+ * Hash: 0x218297BF0CFD853B | Since: unknown | API-Set: unknown
  */
 export function getPedUsingDoor(vehicle, doord) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2757,7 +2755,7 @@ export function getPedUsingDoor(vehicle, doord) {
 /**
  * Distance traveled in the vehicles current recording.
  *
- * Hash: 0x2DACD605FC681475 | Since: 323 | API-Set: unknown
+ * Hash: 0x2DACD605FC681475 | Since: unknown | API-Set: unknown
  */
 export function getPositionInRecording(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2768,7 +2766,7 @@ export function getPositionInRecording(vehicle) {
  *
  * See REQUEST_VEHICLE_RECORDING
  *
- * Hash: 0xD242728AA6F0FBA2 | Since: 323 | API-Set: unknown
+ * Hash: 0xD242728AA6F0FBA2 | Since: unknown | API-Set: unknown
  */
 export function getPositionOfRecordingAtTime(recording, time, script) {
     return new Vector3(GetPositionOfVehicleRecordingAtTime(recording, time, script));
@@ -2776,7 +2774,7 @@ export function getPositionOfRecordingAtTime(recording, time, script) {
 /**
  * No comment provided
  *
- * Hash: 0x92523B76657A517D | Since: 323 | API-Set: unknown
+ * Hash: 0x92523B76657A517D | Since: unknown | API-Set: unknown
  */
 export function getPositionOfRecordingIdAtTime(id, time) {
     return new Vector3(GetPositionOfVehicleRecordingIdAtTime(id, time));
@@ -2784,7 +2782,7 @@ export function getPositionOfRecordingIdAtTime(id, time) {
 /**
  * No comment provided
  *
- * Hash: 0xB50807EABE20A8DC | Since: 323 | API-Set: unknown
+ * Hash: 0xB50807EABE20A8DC | Since: unknown | API-Set: unknown
  */
 export function getRandomBackBumperInSphere() {
     return GetRandomVehicleBackBumperInSphere(0, 0, 0, 0, 0, 0, 0);
@@ -2792,7 +2790,7 @@ export function getRandomBackBumperInSphere() {
 /**
  * No comment provided
  *
- * Hash: 0xC5574E0AEB86BA68 | Since: 323 | API-Set: unknown
+ * Hash: 0xC5574E0AEB86BA68 | Since: unknown | API-Set: unknown
  */
 export function getRandomFrontBumperInSphere() {
     return GetRandomVehicleFrontBumperInSphere(0, 0, 0, 0, 0, 0, 0);
@@ -2809,7 +2807,7 @@ export function getRandomFrontBumperInSphere() {
  *
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  *
- * Hash: 0x386F6CE5BAF6091C | Since: 323 | API-Set: unknown
+ * Hash: 0x386F6CE5BAF6091C | Since: unknown | API-Set: unknown
  */
 export function getRandomInSphere(pos, radius, modelHash, flags) {
     if (typeof modelHash === 'string')
@@ -2822,7 +2820,7 @@ export function getRandomInSphere(pos, radius, modelHash, flags) {
  * p0 always true (except in one case)
  * successIndicator: 0 if success, -1 if failed
  *
- * Hash: 0x055BF0AC0C34F4FD | Since: 323 | API-Set: unknown
+ * Hash: 0x055BF0AC0C34F4FD | Since: unknown | API-Set: unknown
  */
 export function getRandomModelInMemory() {
     return GetRandomVehicleModelInMemory(false);
@@ -2832,7 +2830,7 @@ export function getRandomModelInMemory() {
  *
  * See REQUEST_VEHICLE_RECORDING
  *
- * Hash: 0x2058206FBE79A8AD | Since: 323 | API-Set: unknown
+ * Hash: 0x2058206FBE79A8AD | Since: unknown | API-Set: unknown
  */
 export function getRotationOfRecordingAtTime(recording, time, script) {
     return new Vector3(GetRotationOfVehicleRecordingAtTime(recording, time, script));
@@ -2840,7 +2838,7 @@ export function getRotationOfRecordingAtTime(recording, time, script) {
 /**
  * No comment provided
  *
- * Hash: 0xF0F2103EFAF8CBA7 | Since: 323 | API-Set: unknown
+ * Hash: 0xF0F2103EFAF8CBA7 | Since: unknown | API-Set: unknown
  */
 export function getRotationOfRecordingIdAtTime(id, time) {
     return new Vector3(GetRotationOfVehicleRecordingIdAtTime(id, time));
@@ -2848,7 +2846,7 @@ export function getRotationOfRecordingIdAtTime(id, time) {
 /**
  * No comment provided
  *
- * Hash: 0x3E71D0B300B7AA79 | Since: 2189 | API-Set: unknown
+ * Hash: 0x3E71D0B300B7AA79 | Since: unknown | API-Set: unknown
  */
 export function getSubmarineIsUnderDesignDepth(submarine) {
     const _submarine = typeof submarine == 'object' ? submarine.handle() : submarine;
@@ -2857,7 +2855,7 @@ export function getSubmarineIsUnderDesignDepth(submarine) {
 /**
  * No comment provided
  *
- * Hash: 0x093D6DDCA5B8FBAE | Since: 2189 | API-Set: unknown
+ * Hash: 0x093D6DDCA5B8FBAE | Since: unknown | API-Set: unknown
  */
 export function getSubmarineNumberOfAirLeaks(submarine) {
     const _submarine = typeof submarine == 'object' ? submarine.handle() : submarine;
@@ -2866,7 +2864,7 @@ export function getSubmarineNumberOfAirLeaks(submarine) {
 /**
  * Can be used with GET_TOTAL_DURATION_OF_VEHICLE_RECORDING{_ID} to compute a percentage.
  *
- * Hash: 0x5746F3A7AB7FE544 | Since: 323 | API-Set: unknown
+ * Hash: 0x5746F3A7AB7FE544 | Since: unknown | API-Set: unknown
  */
 export function getTimePositionInRecording(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2875,7 +2873,7 @@ export function getTimePositionInRecording(vehicle) {
 /**
  * See REQUEST_VEHICLE_RECORDING
  *
- * Hash: 0x0E48D1C262390950 | Since: 323 | API-Set: unknown
+ * Hash: 0x0E48D1C262390950 | Since: unknown | API-Set: unknown
  */
 export function getTotalDurationOfRecording(recording, script) {
     return GetTotalDurationOfVehicleRecording(recording, script);
@@ -2883,7 +2881,7 @@ export function getTotalDurationOfRecording(recording, script) {
 /**
  * No comment provided
  *
- * Hash: 0x102D125411A7B6E6 | Since: 323 | API-Set: unknown
+ * Hash: 0x102D125411A7B6E6 | Since: unknown | API-Set: unknown
  */
 export function getTotalDurationOfRecordingId(id) {
     return GetTotalDurationOfVehicleRecordingId(id);
@@ -2891,7 +2889,7 @@ export function getTotalDurationOfRecordingId(id) {
 /**
  * Corrected p1. it's basically the 'carriage/trailer number'. So if the train has 3 trailers you'd call the native once with a var or 3 times with 1, 2, 3.
  *
- * Hash: 0x08AAFD0814722BC3 | Since: 323 | API-Set: unknown
+ * Hash: 0x08AAFD0814722BC3 | Since: unknown | API-Set: unknown
  */
 export function getTrainCarriage(train, trailerNumber) {
     const _train = typeof train == 'object' ? train.handle() : train;
@@ -2906,7 +2904,7 @@ export function getTrainCarriage(train, trailerNumber) {
  * 4: wheel_lr
  * 5: wheel_rr
  *
- * Hash: 0x55EAB010FAEE9380 | Since: 1868 | API-Set: unknown
+ * Hash: 0x55EAB010FAEE9380 | Since: unknown | API-Set: unknown
  */
 export function getTyreHealth(vehicle, wheelIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2923,7 +2921,7 @@ export function getTyreHealth(vehicle, wheelIndex) {
  * 4: wheel_lr
  * 5: wheel_rr
  *
- * Hash: 0x6E387895952F4F71 | Since: 2060 | API-Set: unknown
+ * Hash: 0x6E387895952F4F71 | Since: unknown | API-Set: unknown
  */
 export function getTyreWearRate(vehicle, wheelIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2932,7 +2930,7 @@ export function getTyreWearRate(vehicle, wheelIndex) {
 /**
  * static - max acceleration
  *
- * Hash: 0x5DD35C8D074E57AE | Since: 323 | API-Set: unknown
+ * Hash: 0x5DD35C8D074E57AE | Since: unknown | API-Set: unknown
  */
 export function getAcceleration(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2941,7 +2939,7 @@ export function getAcceleration(vehicle) {
 /**
  * Returns attached vehicle (Vehicle in parameter must be cargobob)
  *
- * Hash: 0x873B82D42AC2B9E5 | Since: 323 | API-Set: unknown
+ * Hash: 0x873B82D42AC2B9E5 | Since: unknown | API-Set: unknown
  */
 export function getAttachedToCargobob(cargobob) {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -2952,7 +2950,7 @@ export function getAttachedToCargobob(cargobob) {
  * Max 1000, min 0.
  * Vehicle does not necessarily explode or become undrivable at 0.
  *
- * Hash: 0xF271147EB7B40F12 | Since: 323 | API-Set: unknown
+ * Hash: 0xF271147EB7B40F12 | Since: unknown | API-Set: unknown
  */
 export function getBodyHealth(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2961,7 +2959,7 @@ export function getBodyHealth(vehicle) {
 /**
  * Gets the amount of bombs that this vehicle has. As far as I know, this does _not_ impact vehicle weapons or the ammo of those weapons in any way, it is just a way to keep track of the amount of bombs in a specific plane.
  *
- * Hash: 0xEA12BD130D7569A1 | Since: 1180 | API-Set: unknown
+ * Hash: 0xEA12BD130D7569A1 | Since: unknown | API-Set: unknown
  */
 export function getBombAmmo(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2970,7 +2968,7 @@ export function getBombAmmo(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xA916396DF4154EE3 | Since: 944 | API-Set: unknown
+ * Hash: 0xA916396DF4154EE3 | Since: unknown | API-Set: unknown
  */
 export function getCanDeployParachute(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2984,7 +2982,7 @@ export function getCanDeployParachute(vehicle) {
  * iLocal_260 = 1;
  * }
  *
- * Hash: 0xE495D1EF4C91FD20 | Since: 323 | API-Set: unknown
+ * Hash: 0xE495D1EF4C91FD20 | Since: unknown | API-Set: unknown
  */
 export function getCauseOfDestruction(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3022,7 +3020,7 @@ export function getCauseOfDestruction(vehicle) {
  *
  * `const char* className = HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(buffer);`
  *
- * Hash: 0x29439776AAA00A62 | Since: 323 | API-Set: unknown
+ * Hash: 0x29439776AAA00A62 | Since: unknown | API-Set: unknown
  */
 export function getClass(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3031,7 +3029,7 @@ export function getClass(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x00C09F246ABEDD82 | Since: 323 | API-Set: unknown
+ * Hash: 0x00C09F246ABEDD82 | Since: unknown | API-Set: unknown
  */
 export function getClassEstimatedMaxSpeed(vehicleClass) {
     return GetVehicleClassEstimatedMaxSpeed(vehicleClass);
@@ -3044,7 +3042,7 @@ export function getClassEstimatedMaxSpeed(vehicleClass) {
  *
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  *
- * Hash: 0xDEDF1C8BD47C2200 | Since: 323 | API-Set: unknown
+ * Hash: 0xDEDF1C8BD47C2200 | Since: unknown | API-Set: unknown
  */
 export function getClassFromName(modelHash) {
     if (typeof modelHash === 'string')
@@ -3054,7 +3052,7 @@ export function getClassFromName(modelHash) {
 /**
  * No comment provided
  *
- * Hash: 0x2F83E7E45D9EA7AE | Since: 323 | API-Set: unknown
+ * Hash: 0x2F83E7E45D9EA7AE | Since: unknown | API-Set: unknown
  */
 export function getClassMaxAcceleration(vehicleClass) {
     return GetVehicleClassMaxAcceleration(vehicleClass);
@@ -3062,7 +3060,7 @@ export function getClassMaxAcceleration(vehicleClass) {
 /**
  * No comment provided
  *
- * Hash: 0x4F930AD022D6DE3B | Since: 323 | API-Set: unknown
+ * Hash: 0x4F930AD022D6DE3B | Since: unknown | API-Set: unknown
  */
 export function getClassMaxAgility(vehicleClass) {
     return GetVehicleClassMaxAgility(vehicleClass);
@@ -3070,7 +3068,7 @@ export function getClassMaxAgility(vehicleClass) {
 /**
  * No comment provided
  *
- * Hash: 0x4BF54C16EC8FEC03 | Since: 323 | API-Set: unknown
+ * Hash: 0x4BF54C16EC8FEC03 | Since: unknown | API-Set: unknown
  */
 export function getClassMaxBraking(vehicleClass) {
     return GetVehicleClassMaxBraking(vehicleClass);
@@ -3078,7 +3076,7 @@ export function getClassMaxBraking(vehicleClass) {
 /**
  * No comment provided
  *
- * Hash: 0xDBC86D85C5059461 | Since: 323 | API-Set: unknown
+ * Hash: 0xDBC86D85C5059461 | Since: unknown | API-Set: unknown
  */
 export function getClassMaxTraction(vehicleClass) {
     return GetVehicleClassMaxTraction(vehicleClass);
@@ -3086,7 +3084,7 @@ export function getClassMaxTraction(vehicleClass) {
 /**
  * No comment provided
  *
- * Hash: 0xF3CC740D36221548 | Since: 323 | API-Set: unknown
+ * Hash: 0xF3CC740D36221548 | Since: unknown | API-Set: unknown
  */
 export function getColor(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3095,7 +3093,7 @@ export function getColor(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xA19435F193E081AC | Since: 323 | API-Set: unknown
+ * Hash: 0xA19435F193E081AC | Since: unknown | API-Set: unknown
  */
 export function getColours(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3104,7 +3102,7 @@ export function getColours(vehicle) {
 /**
  * Some kind of flags.
  *
- * Hash: 0xEEBFC7A7EFDC35B4 | Since: 323 | API-Set: unknown
+ * Hash: 0xEEBFC7A7EFDC35B4 | Since: unknown | API-Set: unknown
  */
 export function getColoursWhichCanBeSet(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3113,7 +3111,7 @@ export function getColoursWhichCanBeSet(vehicle) {
 /**
  * Returns the index of the color combination found in the vehicle's carvariations.meta entry.
  *
- * Hash: 0x6A842D197F845D56 | Since: 323 | API-Set: unknown
+ * Hash: 0x6A842D197F845D56 | Since: unknown | API-Set: unknown
  */
 export function getColourCombination(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3123,7 +3121,7 @@ export function getColourCombination(vehicle) {
  * Similar to `GET_VEHICLE_BOMB_AMMO`, this gets the amount of countermeasures that are present on this vehicle.
  * Use SET_VEHICLE_COUNTERMEASURE_AMMO to set the current amount.
  *
- * Hash: 0xF846AA63DF56B804 | Since: 1180 | API-Set: unknown
+ * Hash: 0xF846AA63DF56B804 | Since: unknown | API-Set: unknown
  */
 export function getCountermeasureAmmo(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3132,7 +3130,7 @@ export function getCountermeasureAmmo(vehicle) {
 /**
  * Returns a float value between 0.0 and 3.0 related to its slipstream draft (boost/speedup).
  *
- * Hash: 0x36492C2F0D134C56 | Since: 323 | API-Set: unknown
+ * Hash: 0x36492C2F0D134C56 | Since: unknown | API-Set: unknown
  */
 export function getCurrentTimeInSlipStream(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3141,7 +3139,7 @@ export function getCurrentTimeInSlipStream(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xB64CF2CCA9D95F52 | Since: 323 | API-Set: unknown
+ * Hash: 0xB64CF2CCA9D95F52 | Since: unknown | API-Set: unknown
  */
 export function getCustomPrimaryColour(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3150,7 +3148,7 @@ export function getCustomPrimaryColour(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x8389CD56CA8072DC | Since: 323 | API-Set: unknown
+ * Hash: 0x8389CD56CA8072DC | Since: unknown | API-Set: unknown
  */
 export function getCustomSecondaryColour(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3166,7 +3164,7 @@ export function getCustomSecondaryColour(vehicle) {
  *
  * `v_5\/\*{3}\*\/ = VEHICLE::GET_VEHICLE_DEFORMATION_AT_POS(a_0._f1, 1.21, 6.15, 0.3);`
  *
- * Hash: 0x4EC6CFBC7B2E9536 | Since: 323 | API-Set: unknown
+ * Hash: 0x4EC6CFBC7B2E9536 | Since: unknown | API-Set: unknown
  */
 export function getDeformationAtPos(vehicle, offsetX, offsetY, offsetZ) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3175,7 +3173,7 @@ export function getDeformationAtPos(vehicle, offsetX, offsetY, offsetZ) {
 /**
  * Dirt level does not become greater than 15.0
  *
- * Hash: 0x8F17BC8BA08DA62B | Since: 323 | API-Set: unknown
+ * Hash: 0x8F17BC8BA08DA62B | Since: unknown | API-Set: unknown
  */
 export function getDirtLevel(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3184,7 +3182,7 @@ export function getDirtLevel(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xF6AF6CB341349015 | Since: 323 | API-Set: unknown
+ * Hash: 0xF6AF6CB341349015 | Since: unknown | API-Set: unknown
  */
 export function getDoorsLockedForPlayer(vehicle, player) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3194,7 +3192,7 @@ export function getDoorsLockedForPlayer(vehicle, player) {
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  *
- * Hash: 0xFE3F9C29F7B32BD5 | Since: 323 | API-Set: unknown
+ * Hash: 0xFE3F9C29F7B32BD5 | Since: unknown | API-Set: unknown
  */
 export function getDoorAngleRatio(vehicle, doorId) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3212,7 +3210,7 @@ export function getDoorAngleRatio(vehicle, doorId) {
  * CannotBeTriedToEnter = 10, -- Cannot be tried to enter (Nothing happens when you press the vehicle enter key).
  * }
  *
- * Hash: 0x25BC98A59C2EA962 | Since: 323 | API-Set: unknown
+ * Hash: 0x25BC98A59C2EA962 | Since: unknown | API-Set: unknown
  */
 export function getDoorLockStatus(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3229,7 +3227,7 @@ export function getDoorLockStatus(vehicle) {
  * 300: Engine is smoking and losing functionality
  * 1000: Engine is perfect
  *
- * Hash: 0xC45D23BAF168AAB8 | Since: 323 | API-Set: unknown
+ * Hash: 0xC45D23BAF168AAB8 | Since: unknown | API-Set: unknown
  */
 export function getEngineHealth(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3238,7 +3236,7 @@ export function getEngineHealth(vehicle) {
 /**
  * The result is a value from 0-1, where 0 is fresh paint.
  *
- * Hash: 0xA82819CAC9C4C403 | Since: 323 | API-Set: unknown
+ * Hash: 0xA82819CAC9C4C403 | Since: unknown | API-Set: unknown
  */
 export function getEnveffScale(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3247,7 +3245,7 @@ export function getEnveffScale(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x53AF99BAA671CA47 | Since: 323 | API-Set: unknown
+ * Hash: 0x53AF99BAA671CA47 | Since: unknown | API-Set: unknown
  */
 export function getEstimatedMaxSpeed(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3256,7 +3254,7 @@ export function getEstimatedMaxSpeed(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x3BC4245933A166F7 | Since: 323 | API-Set: unknown
+ * Hash: 0x3BC4245933A166F7 | Since: unknown | API-Set: unknown
  */
 export function getExtraColours(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3265,7 +3263,7 @@ export function getExtraColours(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x7D1464D472D32136 | Since: 505 | API-Set: unknown
+ * Hash: 0x7D1464D472D32136 | Since: unknown | API-Set: unknown
  */
 export function getExtraColour5(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3274,7 +3272,7 @@ export function getExtraColour5(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xB7635E80A5C31BFF | Since: 505 | API-Set: unknown
+ * Hash: 0xB7635E80A5C31BFF | Since: unknown | API-Set: unknown
  */
 export function getExtraColour6(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3283,7 +3281,7 @@ export function getExtraColour6(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xDA62027C8BDB326E | Since: 1180 | API-Set: unknown
+ * Hash: 0xDA62027C8BDB326E | Since: unknown | API-Set: unknown
  */
 export function getFlightNozzlePosition(plane) {
     const _plane = typeof plane == 'object' ? plane.handle() : plane;
@@ -3292,7 +3290,7 @@ export function getFlightNozzlePosition(plane) {
 /**
  * Returns true if the vehicle has a HF_HAS_KERS (strHandlingFlags 0x4) handing flag set, for instance the lectro/vindicator bikes or the open wheelers.
  *
- * Hash: 0x50634E348C8D44EF | Since: 372 | API-Set: unknown
+ * Hash: 0x50634E348C8D44EF | Since: unknown | API-Set: unknown
  */
 export function getHasKers(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3301,7 +3299,7 @@ export function getHasKers(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xE43701C36CAFF1A4 | Since: 1180 | API-Set: unknown
+ * Hash: 0xE43701C36CAFF1A4 | Since: unknown | API-Set: unknown
  */
 export function getHasLandingGear(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3310,7 +3308,7 @@ export function getHasLandingGear(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xBC9CFF381338CB4F | Since: 944 | API-Set: unknown
+ * Hash: 0xBC9CFF381338CB4F | Since: unknown | API-Set: unknown
  */
 export function getHasParachute(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3336,7 +3334,7 @@ export function getHasParachute(vehicle) {
  * }
  * }
  *
- * Hash: 0xB8EF61207C2393A9 | Since: 323 | API-Set: unknown
+ * Hash: 0xB8EF61207C2393A9 | Since: unknown | API-Set: unknown
  */
 export function getHealthPercentage(vehicle, maxEngineHealth, maxPetrolTankHealth, maxBodyHealth, maxMainRotorHealth, maxTailRotorHealth, maxUnkHealth) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3345,7 +3343,7 @@ export function getHealthPercentage(vehicle, maxEngineHealth, maxPetrolTankHealt
 /**
  * No comment provided
  *
- * Hash: 0x6EAAEFC76ACC311F | Since: 757 | API-Set: unknown
+ * Hash: 0x6EAAEFC76ACC311F | Since: unknown | API-Set: unknown
  */
 export function getHomingLockedontoState() {
     return Citizen.invokeNative('0x6EAAEFC76ACC311F', undefined);
@@ -3356,7 +3354,7 @@ export function getHomingLockedontoState() {
  * 1: locking on
  * 2: locked on
  *
- * Hash: 0xE6B0E8CFC3633BF0 | Since: 323 | API-Set: unknown
+ * Hash: 0xE6B0E8CFC3633BF0 | Since: unknown | API-Set: unknown
  */
 export function getHomingLockonState(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3365,7 +3363,7 @@ export function getHomingLockonState(vehicle) {
 /**
  * Returns vehicle door lock state previously set with SET_VEHICLE_INDIVIDUAL_DOORS_LOCKED
  *
- * Hash: 0xCA4AC3EAAE46EC7B | Since: 1103 | API-Set: unknown
+ * Hash: 0xCA4AC3EAAE46EC7B | Since: unknown | API-Set: unknown
  */
 export function getIndividualDoorLockStatus(vehicle, doorId) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3374,7 +3372,7 @@ export function getIndividualDoorLockStatus(vehicle, doorId) {
 /**
  * No comment provided
  *
- * Hash: 0x8533CAFDE1F0F336 | Since: 505 | API-Set: unknown
+ * Hash: 0x8533CAFDE1F0F336 | Since: unknown | API-Set: unknown
  */
 export function getIsDummy() {
     return Citizen.invokeNative('0x8533CAFDE1F0F336', undefined);
@@ -3382,7 +3380,7 @@ export function getIsDummy() {
 /**
  * No comment provided
  *
- * Hash: 0xD4C4642CB7F50B5D | Since: 323 | API-Set: unknown
+ * Hash: 0xD4C4642CB7F50B5D | Since: unknown | API-Set: unknown
  */
 export function getIsMercenary(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3391,7 +3389,7 @@ export function getIsMercenary(vehicle) {
 /**
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  *
- * Hash: 0x28D37D4F71AC5C58 | Since: 323 | API-Set: unknown
+ * Hash: 0x28D37D4F71AC5C58 | Since: unknown | API-Set: unknown
  */
 export function getLayoutHash(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3400,7 +3398,7 @@ export function getLayoutHash(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xB91B4C20085BD12F | Since: 323 | API-Set: unknown
+ * Hash: 0xB91B4C20085BD12F | Since: unknown | API-Set: unknown
  */
 export function getLightsState(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3409,7 +3407,7 @@ export function getLightsState(vehicle) {
 /**
  * -1 = no livery
  *
- * Hash: 0x2BB9230590DA5E8A | Since: 323 | API-Set: unknown
+ * Hash: 0x2BB9230590DA5E8A | Since: unknown | API-Set: unknown
  */
 export function getLivery(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3418,7 +3416,7 @@ export function getLivery(vehicle) {
 /**
  * Returns index of the current vehicle's secondary livery. A getter for SET_VEHICLE_LIVERY2.
  *
- * Hash: 0x60190048C0764A26 | Since: 505 | API-Set: unknown
+ * Hash: 0x60190048C0764A26 | Since: unknown | API-Set: unknown
  */
 export function getLivery2(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3427,7 +3425,7 @@ export function getLivery2(vehicle) {
 /**
  * Returns a number of available secondary liveries, or -1 if vehicle has no secondary liveries available.
  *
- * Hash: 0x5ECB40269053C0D4 | Since: 505 | API-Set: unknown
+ * Hash: 0x5ECB40269053C0D4 | Since: unknown | API-Set: unknown
  */
 export function getLivery2Count(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3436,7 +3434,7 @@ export function getLivery2Count(vehicle) {
 /**
  * Returns -1 if the vehicle has no livery
  *
- * Hash: 0x87B63E25A529D526 | Since: 323 | API-Set: unknown
+ * Hash: 0x87B63E25A529D526 | Since: unknown | API-Set: unknown
  */
 export function getLiveryCount(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3445,7 +3443,7 @@ export function getLiveryCount(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x8F5EBAB1F260CFCE | Since: 323 | API-Set: unknown
+ * Hash: 0x8F5EBAB1F260CFCE | Since: unknown | API-Set: unknown
  */
 export function getLockOnTarget(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3454,7 +3452,7 @@ export function getLockOnTarget(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xAD7E85FC227197C4 | Since: 323 | API-Set: unknown
+ * Hash: 0xAD7E85FC227197C4 | Since: unknown | API-Set: unknown
  */
 export function getMaxBraking(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3463,7 +3461,7 @@ export function getMaxBraking(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xA7C4F2C6E744A550 | Since: 323 | API-Set: unknown
+ * Hash: 0xA7C4F2C6E744A550 | Since: unknown | API-Set: unknown
  */
 export function getMaxNumberOfPassengers(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3472,7 +3470,7 @@ export function getMaxNumberOfPassengers(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xA132FB5370554DB0 | Since: 323 | API-Set: unknown
+ * Hash: 0xA132FB5370554DB0 | Since: unknown | API-Set: unknown
  */
 export function getMaxTraction(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3483,7 +3481,7 @@ export function getMaxTraction(vehicle) {
  *
  * Returns -1 if the vehicle mod is stock
  *
- * Hash: 0x772960298DA26FDB | Since: 323 | API-Set: unknown
+ * Hash: 0x772960298DA26FDB | Since: unknown | API-Set: unknown
  */
 export function getMod(vehicle, modType) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3494,7 +3492,7 @@ export function getMod(vehicle, modType) {
  *
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  *
- * Hash: 0x8C044C5C84505B6A | Since: 323 | API-Set: unknown
+ * Hash: 0x8C044C5C84505B6A | Since: unknown | API-Set: unknown
  */
 export function getModelAcceleration(modelHash) {
     if (typeof modelHash === 'string')
@@ -3506,7 +3504,7 @@ export function getModelAcceleration(modelHash) {
  *
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  *
- * Hash: 0x53409B5163D5B846 | Since: 323 | API-Set: unknown
+ * Hash: 0x53409B5163D5B846 | Since: unknown | API-Set: unknown
  */
 export function getModelAccelerationMaxMods(modelHash) {
     if (typeof modelHash === 'string')
@@ -3518,7 +3516,7 @@ export function getModelAccelerationMaxMods(modelHash) {
  *
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  *
- * Hash: 0xF417C2502FFFED43 | Since: 323 | API-Set: unknown
+ * Hash: 0xF417C2502FFFED43 | Since: unknown | API-Set: unknown
  */
 export function getModelEstimatedMaxSpeed(modelHash) {
     if (typeof modelHash === 'string')
@@ -3530,7 +3528,7 @@ export function getModelEstimatedMaxSpeed(modelHash) {
  *
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  *
- * Hash: 0xDC53FD41B4ED944C | Since: 323 | API-Set: unknown
+ * Hash: 0xDC53FD41B4ED944C | Since: unknown | API-Set: unknown
  */
 export function getModelMaxBraking(modelHash) {
     if (typeof modelHash === 'string')
@@ -3540,7 +3538,7 @@ export function getModelMaxBraking(modelHash) {
 /**
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  *
- * Hash: 0xBFBA3BA79CFF7EBF | Since: 323 | API-Set: unknown
+ * Hash: 0xBFBA3BA79CFF7EBF | Since: unknown | API-Set: unknown
  */
 export function getModelMaxBrakingMaxMods(modelHash) {
     if (typeof modelHash === 'string')
@@ -3552,7 +3550,7 @@ export function getModelMaxBrakingMaxMods(modelHash) {
  *
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  *
- * Hash: 0x539DE94D44FDFD0D | Since: 323 | API-Set: unknown
+ * Hash: 0x539DE94D44FDFD0D | Since: unknown | API-Set: unknown
  */
 export function getModelMaxTraction(modelHash) {
     if (typeof modelHash === 'string')
@@ -3564,7 +3562,7 @@ export function getModelMaxTraction(modelHash) {
  *
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  *
- * Hash: 0x2AD93716F184EDA4 | Since: 323 | API-Set: unknown
+ * Hash: 0x2AD93716F184EDA4 | Since: unknown | API-Set: unknown
  */
 export function getModelNumberOfSeats(modelHash) {
     if (typeof modelHash === 'string')
@@ -3574,7 +3572,7 @@ export function getModelNumberOfSeats(modelHash) {
 /**
  * Returns `nMonetaryValue` from handling.meta for specific model.
  *
- * Hash: 0x5873C14A52D74236 | Since: 463 | API-Set: unknown
+ * Hash: 0x5873C14A52D74236 | Since: unknown | API-Set: unknown
  */
 export function getModelValue(vehicleModel) {
     if (typeof vehicleModel === 'string')
@@ -3584,7 +3582,7 @@ export function getModelValue(vehicleModel) {
 /**
  * No comment provided
  *
- * Hash: 0xE8D65CA700C9A693 | Since: 323 | API-Set: unknown
+ * Hash: 0xE8D65CA700C9A693 | Since: unknown | API-Set: unknown
  */
 export function getModColor1(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3595,7 +3593,7 @@ export function getModColor1(vehicle) {
  *
  * p1 is always 0
  *
- * Hash: 0xB45085B721EFD38C | Since: 323 | API-Set: unknown
+ * Hash: 0xB45085B721EFD38C | Since: unknown | API-Set: unknown
  */
 export function getModColor1Name(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3604,7 +3602,7 @@ export function getModColor1Name(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x81592BE4E3878728 | Since: 323 | API-Set: unknown
+ * Hash: 0x81592BE4E3878728 | Since: unknown | API-Set: unknown
  */
 export function getModColor2(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3613,7 +3611,7 @@ export function getModColor2(vehicle) {
 /**
  * Returns a string which is the codename of the vehicle's currently selected secondary color
  *
- * Hash: 0x4967A516ED23A5A1 | Since: 323 | API-Set: unknown
+ * Hash: 0x4967A516ED23A5A1 | Since: unknown | API-Set: unknown
  */
 export function getModColor2Name(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3622,7 +3620,7 @@ export function getModColor2Name(vehicle) {
 /**
  * Can be used for IS_DLC_VEHICLE_MOD and GET_DLC_VEHICLE_MOD_LOCK_HASH
  *
- * Hash: 0x4593CF82AA179706 | Since: 323 | API-Set: unknown
+ * Hash: 0x4593CF82AA179706 | Since: unknown | API-Set: unknown
  */
 export function getModIdentifierHash(vehicle, modType, modIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3631,7 +3629,7 @@ export function getModIdentifierHash(vehicle, modType, modIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x6325D1A044AE510D | Since: 323 | API-Set: unknown
+ * Hash: 0x6325D1A044AE510D | Since: unknown | API-Set: unknown
  */
 export function getModKit(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3640,7 +3638,7 @@ export function getModKit(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xFC058F5121E54C32 | Since: 323 | API-Set: unknown
+ * Hash: 0xFC058F5121E54C32 | Since: unknown | API-Set: unknown
  */
 export function getModKitType(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3649,7 +3647,7 @@ export function getModKitType(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x90A38E9838E0A8C1 | Since: 323 | API-Set: unknown
+ * Hash: 0x90A38E9838E0A8C1 | Since: unknown | API-Set: unknown
  */
 export function getModModifierValue(vehicle, modType, modIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3658,7 +3656,7 @@ export function getModModifierValue(vehicle, modType, modIndex) {
 /**
  * Only used for wheels(ModType = 23/24) Returns true if the wheels are custom wheels
  *
- * Hash: 0xB3924ECD70E095DC | Since: 323 | API-Set: unknown
+ * Hash: 0xB3924ECD70E095DC | Since: unknown | API-Set: unknown
  */
 export function getModVariation(vehicle, modType) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3669,7 +3667,7 @@ export function getModVariation(vehicle, modType) {
  *
  * See SET_VEHICLE_NEON_COLOUR (0x8E0A582209A62695) for more information
  *
- * Hash: 0x7619EEE8C886757F | Since: 323 | API-Set: unknown
+ * Hash: 0x7619EEE8C886757F | Since: unknown | API-Set: unknown
  */
 export function getNeonColour(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3682,7 +3680,7 @@ export function getNeonColour(vehicle) {
  * 2 = Front
  * 3 = Back
  *
- * Hash: 0x8C4B92553E4766A5 | Since: 323 | API-Set: unknown
+ * Hash: 0x8C4B92553E4766A5 | Since: unknown | API-Set: unknown
  */
 export function getNeonEnabled(vehicle, index) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3695,7 +3693,7 @@ export function getNeonEnabled(vehicle, index) {
  *
  * To keep it working like before b2545, set includeDriver to false and includeDeadOccupants to true.
  *
- * Hash: 0x24CB2137731FFE89 | Since: 323 | API-Set: unknown
+ * Hash: 0x24CB2137731FFE89 | Since: unknown | API-Set: unknown
  */
 export function getNumberOfPassengers(vehicle, includeDriver, includeDeadOccupants) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3704,7 +3702,7 @@ export function getNumberOfPassengers(vehicle, includeDriver, includeDeadOccupan
 /**
  * Returns the license plate text from a vehicle. 8 chars maximum.
  *
- * Hash: 0x7CE1CCB9B293020E | Since: 323 | API-Set: unknown
+ * Hash: 0x7CE1CCB9B293020E | Since: unknown | API-Set: unknown
  */
 export function getNumberPlateText(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3719,7 +3717,7 @@ export function getNumberPlateText(vehicle) {
  * Yellow_on_Black = 1,
  * North_Yankton = 5,
  *
- * Hash: 0xF11BC2DD9A3E7195 | Since: 323 | API-Set: unknown
+ * Hash: 0xF11BC2DD9A3E7195 | Since: unknown | API-Set: unknown
  */
 export function getNumberPlateTextIndex(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3728,7 +3726,7 @@ export function getNumberPlateTextIndex(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x2C8CBFE1EA5FC631 | Since: 323 | API-Set: unknown
+ * Hash: 0x2C8CBFE1EA5FC631 | Since: unknown | API-Set: unknown
  */
 export function getNumOfBrokenLoosenParts(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3737,7 +3735,7 @@ export function getNumOfBrokenLoosenParts(vehicle) {
 /**
  * Also includes some "turnOffBones" when vehicle mods are installed.
  *
- * Hash: 0x42A4BEB35D372407 | Since: 323 | API-Set: unknown
+ * Hash: 0x42A4BEB35D372407 | Since: unknown | API-Set: unknown
  */
 export function getNumOfBrokenOffParts(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3748,7 +3746,7 @@ export function getNumOfBrokenOffParts(vehicle) {
  * Begins leaking gas at around 650 health
  * -999.90002441406 appears to be minimum health, although nothing special occurs
  *
- * Hash: 0x7D5DABE888D2D074 | Since: 323 | API-Set: unknown
+ * Hash: 0x7D5DABE888D2D074 | Since: unknown | API-Set: unknown
  */
 export function getPetrolTankHealth(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3757,7 +3755,7 @@ export function getPetrolTankHealth(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x9CCC9525BF2408E0 | Since: 323 | API-Set: unknown
+ * Hash: 0x9CCC9525BF2408E0 | Since: unknown | API-Set: unknown
  */
 export function getPlateType(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3766,7 +3764,7 @@ export function getPlateType(vehicle) {
 /**
  * See REQUEST_VEHICLE_RECORDING
  *
- * Hash: 0x21543C612379DB3C | Since: 323 | API-Set: unknown
+ * Hash: 0x21543C612379DB3C | Since: unknown | API-Set: unknown
  */
 export function getRecordingId(recording, script) {
     return GetVehicleRecordingId(recording, script);
@@ -3776,7 +3774,7 @@ export function getRecordingId(recording, script) {
  * Scripts check if out2.x - out1.x > someshit.x
  * Could be suspension related, as in max suspension height and min suspension height, considering the natives location.
  *
- * Hash: 0xDF7E3EEB29642C38 | Since: 323 | API-Set: unknown
+ * Hash: 0xDF7E3EEB29642C38 | Since: unknown | API-Set: unknown
  */
 export function getSize(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3785,7 +3783,7 @@ export function getSize(vehicle) {
 /**
  * Gets the trailer of a vehicle and puts it into the trailer parameter.
  *
- * Hash: 0x1CDD6BADC297830D | Since: 323 | API-Set: unknown
+ * Hash: 0x1CDD6BADC297830D | Since: unknown | API-Set: unknown
  */
 export function getTrailerVehicle(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3794,7 +3792,7 @@ export function getTrailerVehicle(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x678B9BB8C3F58FEB | Since: 323 | API-Set: unknown
+ * Hash: 0x678B9BB8C3F58FEB | Since: unknown | API-Set: unknown
  */
 export function getTyresCanBurst(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3803,7 +3801,7 @@ export function getTyresCanBurst(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xB635392A4938B3C3 | Since: 323 | API-Set: unknown
+ * Hash: 0xB635392A4938B3C3 | Since: unknown | API-Set: unknown
  */
 export function getTyreSmokeColor(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3812,7 +3810,7 @@ export function getTyreSmokeColor(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x8181CE2F25CB9BB7 | Since: 1011 | API-Set: unknown
+ * Hash: 0x8181CE2F25CB9BB7 | Since: unknown | API-Set: unknown
  */
 export function getWeaponRestrictedAmmo(vehicle, weaponIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3838,7 +3836,7 @@ export function getWeaponRestrictedAmmo(vehicle, weaponIndex) {
  *
  * Tested in Los Santos Customs
  *
- * Hash: 0xB3ED1BFB4BE636DC | Since: 323 | API-Set: unknown
+ * Hash: 0xB3ED1BFB4BE636DC | Since: unknown | API-Set: unknown
  */
 export function getWheelType(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3847,7 +3845,7 @@ export function getWheelType(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x0EE21293DAD47C95 | Since: 323 | API-Set: unknown
+ * Hash: 0x0EE21293DAD47C95 | Since: unknown | API-Set: unknown
  */
 export function getWindowTint(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3860,7 +3858,7 @@ export function getWindowTint(vehicle) {
  *
  * Returns an int, value between 0-12 or 255 if no color is set.
  *
- * Hash: 0x3DFF319A831E0CDB | Since: 1604 | API-Set: unknown
+ * Hash: 0x3DFF319A831E0CDB | Since: unknown | API-Set: unknown
  */
 export function getXenonLightColorIndex(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3869,7 +3867,7 @@ export function getXenonLightColorIndex(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x91D6DD290888CBAB | Since: 323 | API-Set: unknown
+ * Hash: 0x91D6DD290888CBAB | Since: unknown | API-Set: unknown
  */
 export function hasInstantFillPopulationFinished() {
     return HasFilledVehiclePopulation();
@@ -3877,7 +3875,7 @@ export function hasInstantFillPopulationFinished() {
 /**
  * No comment provided
  *
- * Hash: 0x06F43E5175EB6D96 | Since: 323 | API-Set: unknown
+ * Hash: 0x06F43E5175EB6D96 | Since: unknown | API-Set: unknown
  */
 export function hasPreloadModsFinished(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3886,7 +3884,7 @@ export function hasPreloadModsFinished(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x1BBE0523B8DB9A21 | Since: 323 | API-Set: unknown
+ * Hash: 0x1BBE0523B8DB9A21 | Since: unknown | API-Set: unknown
  */
 export function hasAssetLoaded(vehicleAsset) {
     return HasVehicleAssetLoaded(vehicleAsset);
@@ -3894,7 +3892,7 @@ export function hasAssetLoaded(vehicleAsset) {
 /**
  * No comment provided
  *
- * Hash: 0x5BA68A0840D546AC | Since: 463 | API-Set: unknown
+ * Hash: 0x5BA68A0840D546AC | Since: unknown | API-Set: unknown
  */
 export function hasPetroltankSetOnFireByEntity() {
     return Citizen.invokeNative('0x5BA68A0840D546AC', undefined, undefined);
@@ -3902,7 +3900,7 @@ export function hasPetroltankSetOnFireByEntity() {
 /**
  * No comment provided
  *
- * Hash: 0x6ADAABD3068C5235 | Since: 323 | API-Set: unknown
+ * Hash: 0x6ADAABD3068C5235 | Since: unknown | API-Set: unknown
  */
 export function hasPhoneExplosiveDevice() {
     return HasVehiclePhoneExplosiveDevice();
@@ -3910,7 +3908,7 @@ export function hasPhoneExplosiveDevice() {
 /**
  * See REQUEST_VEHICLE_RECORDING
  *
- * Hash: 0x300D614A4C785FC4 | Since: 323 | API-Set: unknown
+ * Hash: 0x300D614A4C785FC4 | Since: unknown | API-Set: unknown
  */
 export function hasRecordingBeenLoaded(recording, script) {
     return HasVehicleRecordingBeenLoaded(recording, script);
@@ -3918,7 +3916,7 @@ export function hasRecordingBeenLoaded(recording, script) {
 /**
  * No comment provided
  *
- * Hash: 0x9A83F5F9963775EF | Since: 323 | API-Set: unknown
+ * Hash: 0x9A83F5F9963775EF | Since: unknown | API-Set: unknown
  */
 export function haveModsStreamedIn(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3927,7 +3925,7 @@ export function haveModsStreamedIn(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x6B407F2525E93644 | Since: 2944 | API-Set: unknown
+ * Hash: 0x6B407F2525E93644 | Since: unknown | API-Set: unknown
  */
 export function haveRearDoorsBeenBlownOpenByStickybomb(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3936,7 +3934,7 @@ export function haveRearDoorsBeenBlownOpenByStickybomb(vehicle) {
 /**
  * Disables detachable bumber from domnator4, dominator5, dominator6, see https://gfycat.com/SecondUnluckyGosling
  *
- * Hash: 0xAE71FB656C600587 | Since: 1604 | API-Set: unknown
+ * Hash: 0xAE71FB656C600587 | Since: unknown | API-Set: unknown
  */
 export function hideTombstone(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3945,7 +3943,7 @@ export function hideTombstone(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x48ADC8A773564670 | Since: 323 | API-Set: unknown
+ * Hash: 0x48ADC8A773564670 | Since: unknown | API-Set: unknown
  */
 export function instantlyFillPopulation() {
     InstantlyFillVehiclePopulation();
@@ -3953,7 +3951,7 @@ export function instantlyFillPopulation() {
 /**
  * No comment provided
  *
- * Hash: 0x62CA17B74C435651 | Since: 323 | API-Set: unknown
+ * Hash: 0x62CA17B74C435651 | Since: unknown | API-Set: unknown
  */
 export function isAnyEntityAttachedToHandlerFrame(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3962,7 +3960,7 @@ export function isAnyEntityAttachedToHandlerFrame(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x291E373D483E7EE7 | Since: 323 | API-Set: unknown
+ * Hash: 0x291E373D483E7EE7 | Since: unknown | API-Set: unknown
  */
 export function isAnyPedRappellingFromHeli(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3971,7 +3969,7 @@ export function isAnyPedRappellingFromHeli(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x61E1DD6125A3EEE6 | Since: 323 | API-Set: unknown
+ * Hash: 0x61E1DD6125A3EEE6 | Since: unknown | API-Set: unknown
  */
 export function isAnyNearPoint(pos, radius) {
     return IsAnyVehicleNearPoint(pos.x, pos.y, pos.z, radius);
@@ -3979,7 +3977,7 @@ export function isAnyNearPoint(pos, radius) {
 /**
  * Returns true if MF_IS_BIG (strModelFlags 0x8) handling model flag is set.
  *
- * Hash: 0x9F243D3919F442FE | Since: 323 | API-Set: unknown
+ * Hash: 0x9F243D3919F442FE | Since: unknown | API-Set: unknown
  */
 export function isBig(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3988,7 +3986,7 @@ export function isBig(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xB0AD1238A709B1A2 | Since: 573 | API-Set: unknown
+ * Hash: 0xB0AD1238A709B1A2 | Since: unknown | API-Set: unknown
  */
 export function isBoatAnchored(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4002,7 +4000,7 @@ export function isBoatAnchored(vehicle) {
  * return Function.Call<bool>(Hash.IS_COP_PED_IN_AREA_3D, Location.X - Range, Location.Y - Range, Location.Z - Range, Location.X + Range, Location.Y + Range, Location.Z + Range);
  * }
  *
- * Hash: 0x7EEF65D5F153E26A | Since: 323 | API-Set: unknown
+ * Hash: 0x7EEF65D5F153E26A | Since: unknown | API-Set: unknown
  */
 export function isCopInArea3d(x1, x2, y1, y2, z1, z2) {
     return IsCopVehicleInArea3d(x1, x2, y1, y2, z1, z2);
@@ -4010,7 +4008,7 @@ export function isCopInArea3d(x1, x2, y1, y2, z1, z2) {
 /**
  * No comment provided
  *
- * Hash: 0x57715966069157AD | Since: 323 | API-Set: unknown
+ * Hash: 0x57715966069157AD | Since: unknown | API-Set: unknown
  */
 export function isEntityAttachedToHandlerFrame(vehicle, entity) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4025,7 +4023,7 @@ export function isEntityAttachedToHandlerFrame(vehicle, entity) {
  * side = only relevant for bikes/motorcycles to check if the left (false)/right (true) side is blocked.
  * onEnter = check if you can enter (true) or exit (false) a vehicle.
  *
- * Hash: 0x639431E895B9AA57 | Since: 323 | API-Set: unknown
+ * Hash: 0x639431E895B9AA57 | Since: unknown | API-Set: unknown
  */
 export function isEntryPointForSeatClear(ped, vehicle, seatIndex, side, onEnter) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4035,7 +4033,7 @@ export function isEntryPointForSeatClear(ped, vehicle, seatIndex, side, onEnter)
 /**
  * Returns true if specified extra part is broken off. It only works for extras that can break off during collisions, non-breakable extras always return false. Also returns true if the breakable extra is toggled off through script.
  *
- * Hash: 0x534E36D4DB9ECC5D | Since: 1493 | API-Set: unknown
+ * Hash: 0x534E36D4DB9ECC5D | Since: unknown | API-Set: unknown
  */
 export function isExtraBrokenOff(vehicle, extraId) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4044,7 +4042,7 @@ export function isExtraBrokenOff(vehicle, extraId) {
 /**
  * No comment provided
  *
- * Hash: 0x89D630CF5EA96D23 | Since: 323 | API-Set: unknown
+ * Hash: 0x89D630CF5EA96D23 | Since: unknown | API-Set: unknown
  */
 export function isHandlerFrameLinedUpWithContainer(vehicle, entity) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4054,7 +4052,7 @@ export function isHandlerFrameLinedUpWithContainer(vehicle, entity) {
 /**
  * No comment provided
  *
- * Hash: 0x634148744F385576 | Since: 323 | API-Set: unknown
+ * Hash: 0x634148744F385576 | Since: unknown | API-Set: unknown
  */
 export function isHeliLandingAreaBlocked(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4063,7 +4061,7 @@ export function isHeliLandingAreaBlocked(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xBC74B4BE25EB6C8A | Since: 323 | API-Set: unknown
+ * Hash: 0xBC74B4BE25EB6C8A | Since: unknown | API-Set: unknown
  */
 export function isHeliPartBroken(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4072,7 +4070,7 @@ export function isHeliPartBroken(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xAD464F2E18836BFC | Since: 2372 | API-Set: unknown
+ * Hash: 0xAD464F2E18836BFC | Since: unknown | API-Set: unknown
  */
 export function isMissionTrain(train) {
     const _train = typeof train == 'object' ? train.handle() : train;
@@ -4081,7 +4079,7 @@ export function isMissionTrain(train) {
 /**
  * No comment provided
  *
- * Hash: 0x491E822B2C464FE4 | Since: 3095 | API-Set: unknown
+ * Hash: 0x491E822B2C464FE4 | Since: unknown | API-Set: unknown
  */
 export function isNitrousActive(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4090,7 +4088,7 @@ export function isNitrousActive(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xB09D25E77C33EB3F | Since: 463 | API-Set: unknown
+ * Hash: 0xB09D25E77C33EB3F | Since: unknown | API-Set: unknown
  */
 export function isPedExclusiveDriverOf(ped, vehicle) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4100,7 +4098,7 @@ export function isPedExclusiveDriverOf(ped, vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x4198AB0022B15F87 | Since: 323 | API-Set: unknown
+ * Hash: 0x4198AB0022B15F87 | Since: unknown | API-Set: unknown
  */
 export function isPlaneLandingGearIntact(plane) {
     const _plane = typeof plane == 'object' ? plane.handle() : plane;
@@ -4109,7 +4107,7 @@ export function isPlaneLandingGearIntact(plane) {
 /**
  * No comment provided
  *
- * Hash: 0x1C8A4C2C19E68EEC | Since: 323 | API-Set: unknown
+ * Hash: 0x1C8A4C2C19E68EEC | Since: unknown | API-Set: unknown
  */
 export function isPlaybackGoingOnFor(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4118,7 +4116,7 @@ export function isPlaybackGoingOnFor(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xAEA8FD591FAD4106 | Since: 323 | API-Set: unknown
+ * Hash: 0xAEA8FD591FAD4106 | Since: unknown | API-Set: unknown
  */
 export function isPlaybackUsingAiGoingOnFor(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4127,7 +4125,7 @@ export function isPlaybackUsingAiGoingOnFor(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x3D34E80EED4AE3BE | Since: 944 | API-Set: unknown
+ * Hash: 0x3D34E80EED4AE3BE | Since: unknown | API-Set: unknown
  */
 export function isRocketBoostActive(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4136,7 +4134,7 @@ export function isRocketBoostActive(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xF7F203E31F96F6A1 | Since: 323 | API-Set: unknown
+ * Hash: 0xF7F203E31F96F6A1 | Since: unknown | API-Set: unknown
  */
 export function isSeatWarpOnly(vehicle, seatIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4145,7 +4143,7 @@ export function isSeatWarpOnly(vehicle, seatIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x7504C0F113AB50FC | Since: 323 | API-Set: unknown
+ * Hash: 0x7504C0F113AB50FC | Since: unknown | API-Set: unknown
  */
 export function isTaxiLightOn(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4154,7 +4152,7 @@ export function isTaxiLightOn(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x633F6F44A537EBB6 | Since: 944 | API-Set: unknown
+ * Hash: 0x633F6F44A537EBB6 | Since: unknown | API-Set: unknown
  */
 export function isThisModelAnAmphibiousCar(model) {
     if (typeof model === 'string')
@@ -4164,7 +4162,7 @@ export function isThisModelAnAmphibiousCar(model) {
 /**
  * No comment provided
  *
- * Hash: 0xA1A9FC1C76A6730D | Since: 1103 | API-Set: unknown
+ * Hash: 0xA1A9FC1C76A6730D | Since: unknown | API-Set: unknown
  */
 export function isThisModelAnAmphibiousQuadbike(model) {
     if (typeof model === 'string')
@@ -4174,7 +4172,7 @@ export function isThisModelAnAmphibiousQuadbike(model) {
 /**
  * No comment provided
  *
- * Hash: 0xBF94DD42F63BDED2 | Since: 323 | API-Set: unknown
+ * Hash: 0xBF94DD42F63BDED2 | Since: unknown | API-Set: unknown
  */
 export function isThisModelABicycle(model) {
     if (typeof model === 'string')
@@ -4184,7 +4182,7 @@ export function isThisModelABicycle(model) {
 /**
  * No comment provided
  *
- * Hash: 0xB50C0B0CEDC6CE84 | Since: 323 | API-Set: unknown
+ * Hash: 0xB50C0B0CEDC6CE84 | Since: unknown | API-Set: unknown
  */
 export function isThisModelABike(model) {
     if (typeof model === 'string')
@@ -4194,7 +4192,7 @@ export function isThisModelABike(model) {
 /**
  * No comment provided
  *
- * Hash: 0x45A9187928F4B9E3 | Since: 323 | API-Set: unknown
+ * Hash: 0x45A9187928F4B9E3 | Since: unknown | API-Set: unknown
  */
 export function isThisModelABoat(model) {
     if (typeof model === 'string')
@@ -4204,7 +4202,7 @@ export function isThisModelABoat(model) {
 /**
  * To check if the model is an amphibious car, use IS_THIS_MODEL_AN_AMPHIBIOUS_CAR.
  *
- * Hash: 0x7F6DB52EEFC96DF8 | Since: 323 | API-Set: unknown
+ * Hash: 0x7F6DB52EEFC96DF8 | Since: unknown | API-Set: unknown
  */
 export function isThisModelACar(model) {
     if (typeof model === 'string')
@@ -4214,7 +4212,7 @@ export function isThisModelACar(model) {
 /**
  * No comment provided
  *
- * Hash: 0xDCE4334788AF94EA | Since: 323 | API-Set: unknown
+ * Hash: 0xDCE4334788AF94EA | Since: unknown | API-Set: unknown
  */
 export function isThisModelAHeli(model) {
     if (typeof model === 'string')
@@ -4224,7 +4222,7 @@ export function isThisModelAHeli(model) {
 /**
  * Checks if model is a boat, then checks for FLAG_IS_JETSKI.
  *
- * Hash: 0x9537097412CF75FE | Since: 323 | API-Set: unknown
+ * Hash: 0x9537097412CF75FE | Since: unknown | API-Set: unknown
  */
 export function isThisModelAJetski(model) {
     if (typeof model === 'string')
@@ -4234,7 +4232,7 @@ export function isThisModelAJetski(model) {
 /**
  * No comment provided
  *
- * Hash: 0xA0948AB42D7BA0DE | Since: 323 | API-Set: unknown
+ * Hash: 0xA0948AB42D7BA0DE | Since: unknown | API-Set: unknown
  */
 export function isThisModelAPlane(model) {
     if (typeof model === 'string')
@@ -4244,7 +4242,7 @@ export function isThisModelAPlane(model) {
 /**
  * No comment provided
  *
- * Hash: 0x39DAC362EE65FA28 | Since: 323 | API-Set: unknown
+ * Hash: 0x39DAC362EE65FA28 | Since: unknown | API-Set: unknown
  */
 export function isThisModelAQuadbike(model) {
     if (typeof model === 'string')
@@ -4254,7 +4252,7 @@ export function isThisModelAQuadbike(model) {
 /**
  * No comment provided
  *
- * Hash: 0xAB935175B22E822B | Since: 323 | API-Set: unknown
+ * Hash: 0xAB935175B22E822B | Since: unknown | API-Set: unknown
  */
 export function isThisModelATrain(model) {
     if (typeof model === 'string')
@@ -4264,7 +4262,7 @@ export function isThisModelATrain(model) {
 /**
  * No comment provided
  *
- * Hash: 0x84B233A8C8FC8AE7 | Since: 323 | API-Set: unknown
+ * Hash: 0x84B233A8C8FC8AE7 | Since: unknown | API-Set: unknown
  */
 export function isToggleModOn(vehicle, modType) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4273,7 +4271,7 @@ export function isToggleModOn(vehicle, modType) {
 /**
  * No comment provided
  *
- * Hash: 0xE33FFA906CE74880 | Since: 323 | API-Set: unknown
+ * Hash: 0xE33FFA906CE74880 | Since: unknown | API-Set: unknown
  */
 export function isTurretSeat(vehicle, seatIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4282,7 +4280,7 @@ export function isTurretSeat(vehicle, seatIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x4319E335B71FFF34 | Since: 323 | API-Set: unknown
+ * Hash: 0x4319E335B71FFF34 | Since: unknown | API-Set: unknown
  */
 export function isAlarmActivated(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4291,7 +4289,7 @@ export function isAlarmActivated(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xD40148F22E81A1D9 | Since: 323 | API-Set: unknown
+ * Hash: 0xD40148F22E81A1D9 | Since: unknown | API-Set: unknown
  */
 export function isAttachedToCargobob(cargobob, vehicleAttached) {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -4301,7 +4299,7 @@ export function isAttachedToCargobob(cargobob, vehicleAttached) {
 /**
  * Scripts verify that towTruck is the first parameter, not the second.
  *
- * Hash: 0x146DF9EC4C4B9FD4 | Since: 323 | API-Set: unknown
+ * Hash: 0x146DF9EC4C4B9FD4 | Since: unknown | API-Set: unknown
  */
 export function isAttachedToTowTruck(towTruck, vehicle) {
     const _towTruck = typeof towTruck == 'object' ? towTruck.handle() : towTruck;
@@ -4311,7 +4309,7 @@ export function isAttachedToTowTruck(towTruck, vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xE7CF3C4F9F489F0C | Since: 323 | API-Set: unknown
+ * Hash: 0xE7CF3C4F9F489F0C | Since: unknown | API-Set: unknown
  */
 export function isAttachedToTrailer(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4322,7 +4320,7 @@ export function isAttachedToTrailer(vehicle) {
  *
  * p1 is false almost always. However, in launcher_carwash/carwash1/carwash2 scripts, p1 is true and is accompanied by DOES_VEHICLE_HAVE_ROOF. If p1 is true, it seems that every single vehicle will return true irrespective of being a convertible.
  *
- * Hash: 0x52F357A30698BCCE | Since: 323 | API-Set: unknown
+ * Hash: 0x52F357A30698BCCE | Since: unknown | API-Set: unknown
  */
 export function isAConvertible(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4331,7 +4329,7 @@ export function isAConvertible(vehicle) {
 /**
  * Returns true if vehicle is halted by BRING_VEHICLE_TO_HALT
  *
- * Hash: 0xC69BB1D832A710EF | Since: 1493 | API-Set: unknown
+ * Hash: 0xC69BB1D832A710EF | Since: unknown | API-Set: unknown
  */
 export function isBeingBroughtToHalt(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4340,7 +4338,7 @@ export function isBeingBroughtToHalt(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x27B926779DEB502D | Since: 323 | API-Set: unknown
+ * Hash: 0x27B926779DEB502D | Since: unknown | API-Set: unknown
  */
 export function isBumperBouncing(vehicle, frontBumper) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4349,7 +4347,7 @@ export function isBumperBouncing(vehicle, frontBumper) {
 /**
  * No comment provided
  *
- * Hash: 0x468056A6BB6F3846 | Since: 323 | API-Set: unknown
+ * Hash: 0x468056A6BB6F3846 | Since: unknown | API-Set: unknown
  */
 export function isBumperBrokenOff(vehicle, frontBumper) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4358,7 +4356,7 @@ export function isBumperBrokenOff(vehicle, frontBumper) {
 /**
  * doorID starts at 0, not seeming to skip any numbers. Four door vehicles intuitively range from 0 to 3.
  *
- * Hash: 0xB8E181E559464527 | Since: 323 | API-Set: unknown
+ * Hash: 0xB8E181E559464527 | Since: unknown | API-Set: unknown
  */
 export function isDoorDamaged(veh, doorID) {
     const _veh = typeof veh == 'object' ? veh.handle() : veh;
@@ -4367,7 +4365,7 @@ export function isDoorDamaged(veh, doorID) {
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  *
- * Hash: 0x3E933CFF7B111C22 | Since: 323 | API-Set: unknown
+ * Hash: 0x3E933CFF7B111C22 | Since: unknown | API-Set: unknown
  */
 export function isDoorFullyOpen(vehicle, doorId) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4378,7 +4376,7 @@ export function isDoorFullyOpen(vehicle, doorId) {
  *
  * p1 = check if vehicle is on fire
  *
- * Hash: 0x4C241E39B23DF959 | Since: 323 | API-Set: unknown
+ * Hash: 0x4C241E39B23DF959 | Since: unknown | API-Set: unknown
  */
 export function isDriveable(vehicle, isOnFireCheck) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4387,7 +4385,7 @@ export function isDriveable(vehicle, isOnFireCheck) {
 /**
  * No comment provided
  *
- * Hash: 0xD2E6822DBFD6C8BD | Since: 323 | API-Set: unknown
+ * Hash: 0xD2E6822DBFD6C8BD | Since: unknown | API-Set: unknown
  */
 export function isExtraTurnedOn(vehicle, extraId) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4396,7 +4394,7 @@ export function isExtraTurnedOn(vehicle, extraId) {
 /**
  * No comment provided
  *
- * Hash: 0x1F25887F3C104278 | Since: 323 | API-Set: unknown
+ * Hash: 0x1F25887F3C104278 | Since: unknown | API-Set: unknown
  */
 export function isHighDetail(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4411,7 +4409,7 @@ export function isHighDetail(vehicle) {
  * Return Native.Function.Call(Of Boolean)(Hash.IS_VEHICLE_IN_BURNOUT, vh)
  * End Function
  *
- * Hash: 0x1297A88E081430EB | Since: 323 | API-Set: unknown
+ * Hash: 0x1297A88E081430EB | Since: unknown | API-Set: unknown
  */
 export function isInBurnout(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4422,7 +4420,7 @@ export function isInBurnout(vehicle) {
  *
  * Full list of garages by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/garages.json
  *
- * Hash: 0xCEE4490CD57BB3C2 | Since: 323 | API-Set: unknown
+ * Hash: 0xCEE4490CD57BB3C2 | Since: unknown | API-Set: unknown
  */
 export function isInGarageArea(garageName, vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4431,7 +4429,7 @@ export function isInGarageArea(garageName, vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xA77DC70BD689A1E5 | Since: 1290 | API-Set: unknown
+ * Hash: 0xA77DC70BD689A1E5 | Since: unknown | API-Set: unknown
  */
 export function isInSubmarineMode(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4440,7 +4438,7 @@ export function isInSubmarineMode(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x423E8DE37D934D89 | Since: 323 | API-Set: unknown
+ * Hash: 0x423E8DE37D934D89 | Since: unknown | API-Set: unknown
  */
 export function isModel(vehicle, model) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4451,7 +4449,7 @@ export function isModel(vehicle, model) {
 /**
  * Returns true for any mod part listed in GEN9_EXCLUSIVE_ASSETS_VEHICLES_FILE.
  *
- * Hash: 0x00834EAC4A96E010 | Since: 2699 | API-Set: unknown
+ * Hash: 0x00834EAC4A96E010 | Since: unknown | API-Set: unknown
  */
 export function isModGen9Exclusive(vehicle, modType, modIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4463,7 +4461,7 @@ export function isModGen9Exclusive(vehicle, modType, modIndex) {
  * End Function
  *
  *
- * Hash: 0xB104CD1BABF302E2 | Since: 323 | API-Set: unknown
+ * Hash: 0xB104CD1BABF302E2 | Since: unknown | API-Set: unknown
  */
 export function isOnAllWheels(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4472,7 +4470,7 @@ export function isOnAllWheels(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x3DE51E9C80B116CF | Since: 1011 | API-Set: unknown
+ * Hash: 0x3DE51E9C80B116CF | Since: unknown | API-Set: unknown
  */
 export function isParachuteDeployed(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4481,7 +4479,7 @@ export function isParachuteDeployed(vehicle) {
 /**
  * Returns true if the vehicle is being slipstreamed by another vehicle
  *
- * Hash: 0x48C633E94A8142A7 | Since: 877 | API-Set: unknown
+ * Hash: 0x48C633E94A8142A7 | Since: unknown | API-Set: unknown
  */
 export function isProducingSlipStream(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4492,7 +4490,7 @@ export function isProducingSlipStream(vehicle) {
  *
  * @Author Nac
  *
- * Hash: 0xC0F97FCE55094987 | Since: 323 | API-Set: unknown
+ * Hash: 0xC0F97FCE55094987 | Since: unknown | API-Set: unknown
  */
 export function isSearchlightOn(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4505,7 +4503,7 @@ export function isSearchlightOn(vehicle) {
  * Use GET_VEHICLE_MAX_NUMBER_OF_PASSENGERS(vehicle) - 1 for last seat index.
  * isTaskRunning = on true the function returns already false while a task on the target seat is running (TASK_ENTER_VEHICLE/TASK_SHUFFLE_TO_NEXT_VEHICLE_SEAT) - on false only when a ped is finally sitting in the seat.
  *
- * Hash: 0x22AC59A870E6A669 | Since: 323 | API-Set: unknown
+ * Hash: 0x22AC59A870E6A669 | Since: unknown | API-Set: unknown
  */
 export function isSeatFree(vehicle, seatIndex, isTaskRunning) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4514,7 +4512,7 @@ export function isSeatFree(vehicle, seatIndex, isTaskRunning) {
 /**
  * No comment provided
  *
- * Hash: 0xB5CC40FBCB586380 | Since: 323 | API-Set: unknown
+ * Hash: 0xB5CC40FBCB586380 | Since: unknown | API-Set: unknown
  */
 export function isSirenAudioOn(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4523,7 +4521,7 @@ export function isSirenAudioOn(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x4C9BF537BE2634B2 | Since: 323 | API-Set: unknown
+ * Hash: 0x4C9BF537BE2634B2 | Since: unknown | API-Set: unknown
  */
 export function isSirenOn(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4532,7 +4530,7 @@ export function isSirenOn(vehicle) {
 /**
  * Returns false if the vehicle has the FLAG_NO_RESPRAY flag set.
  *
- * Hash: 0x8D474C8FAEFF6CDE | Since: 323 | API-Set: unknown
+ * Hash: 0x8D474C8FAEFF6CDE | Since: unknown | API-Set: unknown
  */
 export function isSprayable(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4541,7 +4539,7 @@ export function isSprayable(vehicle) {
 /**
  * Only returns true if the vehicle was marked as stolen with SET_VEHICLE_IS_STOLEN.
  *
- * Hash: 0x4AF9BD80EEBEB453 | Since: 323 | API-Set: unknown
+ * Hash: 0x4AF9BD80EEBEB453 | Since: unknown | API-Set: unknown
  */
 export function isStolen(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4552,7 +4550,7 @@ export function isStolen(vehicle) {
  *
  * For some vehicles it returns true if the current speed is <= 0.00039999999.
  *
- * Hash: 0x5721B434AD84D57A | Since: 323 | API-Set: unknown
+ * Hash: 0x5721B434AD84D57A | Since: unknown | API-Set: unknown
  */
 export function isStopped(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4561,7 +4559,7 @@ export function isStopped(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x2959F696AE390A99 | Since: 323 | API-Set: unknown
+ * Hash: 0x2959F696AE390A99 | Since: unknown | API-Set: unknown
  */
 export function isStoppedAtTrafficLights(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4570,7 +4568,7 @@ export function isStoppedAtTrafficLights(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xB497F06B288DCFDF | Since: 323 | API-Set: unknown
+ * Hash: 0xB497F06B288DCFDF | Since: unknown | API-Set: unknown
  */
 export function isStuckOnRoof(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4580,7 +4578,7 @@ export function isStuckOnRoof(vehicle) {
  * p1 can be anywhere from 0 to 3 in the scripts.
  * p2 being how long in milliseconds the vehicle has been stuck
  *
- * Hash: 0x679BE1DAF71DA874 | Since: 323 | API-Set: unknown
+ * Hash: 0x679BE1DAF71DA874 | Since: unknown | API-Set: unknown
  */
 export function isStuckTimerUp(vehicle, ms) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4599,7 +4597,7 @@ export function isStuckTimerUp(vehicle, ms) {
  * '45 = 6 wheels trailer mid wheel left
  * '47 = 6 wheels trailer mid wheel right
  *
- * Hash: 0xBA291848A0815CA9 | Since: 323 | API-Set: unknown
+ * Hash: 0xBA291848A0815CA9 | Since: unknown | API-Set: unknown
  */
 export function isTyreBurst(vehicle, wheelID, completely) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4610,7 +4608,7 @@ export function isTyreBurst(vehicle, wheelID, completely) {
  *
  * it's not instant so probabilly must pass an 'update' to see correct result.
  *
- * Hash: 0xAA0A52D24FB98293 | Since: 323 | API-Set: unknown
+ * Hash: 0xAA0A52D24FB98293 | Since: unknown | API-Set: unknown
  */
 export function isVisible(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4619,7 +4617,7 @@ export function isVisible(vehicle) {
 /**
  * Full list of weapons by DurtyFree (Search for VEHICLE_*): https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
  *
- * Hash: 0x563B65A643ED072E | Since: 1011 | API-Set: unknown
+ * Hash: 0x563B65A643ED072E | Since: unknown | API-Set: unknown
  */
 export function isWeaponDisabled(weaponHash, vehicle, owner) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4639,7 +4637,7 @@ export function isWeaponDisabled(weaponHash, vehicle, owner) {
  *
  * Those numbers go on for vehicles that have more than 4 doors with windows.
  *
- * Hash: 0x46E571A0E20D01F1 | Since: 323 | API-Set: unknown
+ * Hash: 0x46E571A0E20D01F1 | Since: unknown | API-Set: unknown
  */
 export function isWindowIntact(vehicle, windowIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4648,7 +4646,7 @@ export function isWindowIntact(vehicle, windowIndex) {
 /**
  * No comment provided
  *
- * Hash: 0xCFD778E7904C255E | Since: 323 | API-Set: unknown
+ * Hash: 0xCFD778E7904C255E | Since: unknown | API-Set: unknown
  */
 export function lockDoorsWhenNoLongerNeeded(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4657,7 +4655,7 @@ export function lockDoorsWhenNoLongerNeeded(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xDED51F703D0FA83D | Since: 323 | API-Set: unknown
+ * Hash: 0xDED51F703D0FA83D | Since: unknown | API-Set: unknown
  */
 export function lowerConvertibleRoof(vehicle, instantlyLower) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4666,7 +4664,7 @@ export function lowerConvertibleRoof(vehicle, instantlyLower) {
 /**
  * No comment provided
  *
- * Hash: 0x923A293361DF44E5 | Since: 2802 | API-Set: unknown
+ * Hash: 0x923A293361DF44E5 | Since: unknown | API-Set: unknown
  */
 export function lowerForkliftForks(forklift) {
     const _forklift = typeof forklift == 'object' ? forklift.handle() : forklift;
@@ -4675,7 +4673,7 @@ export function lowerForkliftForks(forklift) {
 /**
  * No comment provided
  *
- * Hash: 0x93A3996368C94158 | Since: 323 | API-Set: unknown
+ * Hash: 0x93A3996368C94158 | Since: unknown | API-Set: unknown
  */
 export function modifyTopSpeed(vehicle, value) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4684,7 +4682,7 @@ export function modifyTopSpeed(vehicle, value) {
 /**
  * Default:1000||This sets a value which is used when NETWORK_ENABLE_EMPTY_CROWDING_VEHICLES_REMOVAL(true) is called each frame.
  *
- * Hash: 0xA4A9A4C40E615885 | Since: 1604 | API-Set: unknown
+ * Hash: 0xA4A9A4C40E615885 | Since: unknown | API-Set: unknown
  */
 export function networkCapEmptyCrowdingsRemoval() {
     Citizen.invokeNative('0xA4A9A4C40E615885', 0);
@@ -4692,7 +4690,7 @@ export function networkCapEmptyCrowdingsRemoval() {
 /**
  * No comment provided
  *
- * Hash: 0x51DB102F4A3BA5E0 | Since: 323 | API-Set: unknown
+ * Hash: 0x51DB102F4A3BA5E0 | Since: unknown | API-Set: unknown
  */
 export function networkEnableEmptyCrowdingsRemoval(toggle) {
     Citizen.invokeNative('0x51DB102F4A3BA5E0', toggle);
@@ -4700,7 +4698,7 @@ export function networkEnableEmptyCrowdingsRemoval(toggle) {
 /**
  * Implemented only for trains.
  *
- * Hash: 0xEC0C1D4922AF9754 | Since: 2372 | API-Set: unknown
+ * Hash: 0xEC0C1D4922AF9754 | Since: unknown | API-Set: unknown
  */
 export function networkUseHighPrecisionTrainBlending(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4709,7 +4707,7 @@ export function networkUseHighPrecisionTrainBlending(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x87E7F24270732CB1 | Since: 323 | API-Set: unknown
+ * Hash: 0x87E7F24270732CB1 | Since: unknown | API-Set: unknown
  */
 export function openBombBayDoors(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4718,7 +4716,7 @@ export function openBombBayDoors(vehicle) {
 /**
  * Used for helis.
  *
- * Hash: 0x5EE5632F47AE9695 | Since: 463 | API-Set: unknown
+ * Hash: 0x5EE5632F47AE9695 | Since: unknown | API-Set: unknown
  */
 export function overridePlaneDamageThrehsold(vehicle, health) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4727,7 +4725,7 @@ export function overridePlaneDamageThrehsold(vehicle, health) {
 /**
  * No comment provided
  *
- * Hash: 0x632A689BF42301B1 | Since: 323 | API-Set: unknown
+ * Hash: 0x632A689BF42301B1 | Since: unknown | API-Set: unknown
  */
 export function pausePlaybackRecorded(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4736,7 +4734,7 @@ export function pausePlaybackRecorded(vehicle) {
 /**
  * Pops off the "roof" bone in the direction of the specified offset from the vehicle.
  *
- * Hash: 0xE38CB9D7D39FDBCC | Since: 323 | API-Set: unknown
+ * Hash: 0xE38CB9D7D39FDBCC | Since: unknown | API-Set: unknown
  */
 export function popOffRoofWithImpulse(vehicle, pos) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4746,7 +4744,7 @@ export function popOffRoofWithImpulse(vehicle, pos) {
  * Detaches the vehicle's windscreen.
  * For further information, see : gtaforums.com/topic/859570-glass/#entry1068894566
  *
- * Hash: 0x6D645D59FB5F5AD3 | Since: 323 | API-Set: unknown
+ * Hash: 0x6D645D59FB5F5AD3 | Since: unknown | API-Set: unknown
  */
 export function popOutWindscreen(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4755,7 +4753,7 @@ export function popOutWindscreen(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x758F49C24925568A | Since: 323 | API-Set: unknown
+ * Hash: 0x758F49C24925568A | Since: unknown | API-Set: unknown
  */
 export function preloadMod(vehicle, modType, modIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4764,7 +4762,7 @@ export function preloadMod(vehicle, modType, modIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x8F5FB35D7E88FC70 | Since: 323 | API-Set: unknown
+ * Hash: 0x8F5FB35D7E88FC70 | Since: unknown | API-Set: unknown
  */
 export function raiseConvertibleRoof(vehicle, instantlyRaise) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4773,7 +4771,7 @@ export function raiseConvertibleRoof(vehicle, instantlyRaise) {
 /**
  * No comment provided
  *
- * Hash: 0x445D79F995508307 | Since: 323 | API-Set: unknown
+ * Hash: 0x445D79F995508307 | Since: unknown | API-Set: unknown
  */
 export function releasePreloadMods(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4784,7 +4782,7 @@ export function releasePreloadMods(vehicle) {
  *
  * Note: after you retract it the natives for dropping the hook no longer work
  *
- * Hash: 0x9768CF648F54C804 | Since: 323 | API-Set: unknown
+ * Hash: 0x9768CF648F54C804 | Since: unknown | API-Set: unknown
  */
 export function removePickUpRopeForCargobob(cargobob) {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -4793,7 +4791,7 @@ export function removePickUpRopeForCargobob(cargobob) {
 /**
  * No comment provided
  *
- * Hash: 0x1033371FC8E842A7 | Since: 323 | API-Set: unknown
+ * Hash: 0x1033371FC8E842A7 | Since: unknown | API-Set: unknown
  */
 export function removeRoadNodeSpeedZone(speedzone) {
     return RemoveRoadNodeSpeedZone(speedzone);
@@ -4801,7 +4799,7 @@ export function removeRoadNodeSpeedZone(speedzone) {
 /**
  * No comment provided
  *
- * Hash: 0x46A1E1A299EC4BBA | Since: 323 | API-Set: unknown
+ * Hash: 0x46A1E1A299EC4BBA | Since: unknown | API-Set: unknown
  */
 export function removesFromGeneratorsInArea(x1, y1, z1, x2, y2, z2) {
     RemoveVehiclesFromGeneratorsInArea(x1, y1, z1, x2, y2, z2, undefined);
@@ -4809,7 +4807,7 @@ export function removesFromGeneratorsInArea(x1, y1, z1, x2, y2, z2) {
 /**
  * No comment provided
  *
- * Hash: 0xACE699C71AB9DEB5 | Since: 323 | API-Set: unknown
+ * Hash: 0xACE699C71AB9DEB5 | Since: unknown | API-Set: unknown
  */
 export function removeAsset(vehicleAsset) {
     RemoveVehicleAsset(vehicleAsset);
@@ -4817,7 +4815,7 @@ export function removeAsset(vehicleAsset) {
 /**
  * No comment provided
  *
- * Hash: 0xE30524E1871F481D | Since: 323 | API-Set: unknown
+ * Hash: 0xE30524E1871F481D | Since: unknown | API-Set: unknown
  */
 export function removeCombatAvoidanceArea() {
     RemoveVehicleCombatAvoidanceArea(0);
@@ -4825,7 +4823,7 @@ export function removeCombatAvoidanceArea() {
 /**
  * No comment provided
  *
- * Hash: 0x00689CDE5F7C6787 | Since: 323 | API-Set: unknown
+ * Hash: 0x00689CDE5F7C6787 | Since: unknown | API-Set: unknown
  */
 export function removeHighDetailModel(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4834,7 +4832,7 @@ export function removeHighDetailModel(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x92D619E420858204 | Since: 323 | API-Set: unknown
+ * Hash: 0x92D619E420858204 | Since: unknown | API-Set: unknown
  */
 export function removeMod(vehicle, modType) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4843,7 +4841,7 @@ export function removeMod(vehicle, modType) {
 /**
  * See REQUEST_VEHICLE_RECORDING
  *
- * Hash: 0xF1160ACCF98A3FC8 | Since: 323 | API-Set: unknown
+ * Hash: 0xF1160ACCF98A3FC8 | Since: unknown | API-Set: unknown
  */
 export function removeRecording(recording, script) {
     RemoveVehicleRecording(recording, script);
@@ -4851,7 +4849,7 @@ export function removeRecording(recording, script) {
 /**
  * No comment provided
  *
- * Hash: 0x8386BFB614D06749 | Since: 323 | API-Set: unknown
+ * Hash: 0x8386BFB614D06749 | Since: unknown | API-Set: unknown
  */
 export function removeStuckCheck(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4860,7 +4858,7 @@ export function removeStuckCheck(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xC53EB42A499A7E90 | Since: 323 | API-Set: unknown
+ * Hash: 0xC53EB42A499A7E90 | Since: unknown | API-Set: unknown
  */
 export function removeUpsidedownCheck(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4877,7 +4875,7 @@ export function removeUpsidedownCheck(vehicle) {
  * 6 = Windscreen
  * 7 = Rear Windscreen
  *
- * Hash: 0xA711568EEDB43069 | Since: 323 | API-Set: unknown
+ * Hash: 0xA711568EEDB43069 | Since: unknown | API-Set: unknown
  */
 export function removeWindow(vehicle, windowIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4891,7 +4889,7 @@ export function removeWindow(vehicle, windowIndex) {
  * submersible
  * blazer
  *
- * Hash: 0x81A15811460FAB3A | Since: 323 | API-Set: unknown
+ * Hash: 0x81A15811460FAB3A | Since: unknown | API-Set: unknown
  */
 export function requestAsset(vehicleHash, vehicleAsset) {
     if (typeof vehicleHash === 'string')
@@ -4901,7 +4899,7 @@ export function requestAsset(vehicleHash, vehicleAsset) {
 /**
  * No comment provided
  *
- * Hash: 0xDBA3C090E3D74690 | Since: 323 | API-Set: unknown
+ * Hash: 0xDBA3C090E3D74690 | Since: unknown | API-Set: unknown
  */
 export function requestDial(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4910,7 +4908,7 @@ export function requestDial(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xA6E9FDCB2C76785E | Since: 323 | API-Set: unknown
+ * Hash: 0xA6E9FDCB2C76785E | Since: unknown | API-Set: unknown
  */
 export function requestHighDetailModel(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4921,7 +4919,7 @@ export function requestHighDetailModel(vehicle) {
  * For all vehicle recording/playback natives, "script" is a common prefix that usually corresponds to the script/mission the recording is used in, "recording" is its int suffix, and "id" (e.g., in native GET_TOTAL_DURATION_OF_VEHICLE_RECORDING_ID) corresponds to a unique identifier within the recording streaming module.
  * Note that only 24 recordings (hardcoded in multiple places) can ever active at a given time before clobbering begins.
  *
- * Hash: 0xAF514CABE74CBF15 | Since: 323 | API-Set: unknown
+ * Hash: 0xAF514CABE74CBF15 | Since: unknown | API-Set: unknown
  */
 export function requestRecording(recording, script) {
     RequestVehicleRecording(recording, script);
@@ -4929,7 +4927,7 @@ export function requestRecording(recording, script) {
 /**
  * Resets the effect of SET_FORMATION_LEADER
  *
- * Hash: 0xE2F53F172B45EDE1 | Since: 877 | API-Set: unknown
+ * Hash: 0xE2F53F172B45EDE1 | Since: unknown | API-Set: unknown
  */
 export function resetFormationLeader() {
     Citizen.invokeNative('0xE2F53F172B45EDE1');
@@ -4959,7 +4957,7 @@ export function resetFormationLeader() {
  * };
  * }
  *
- * Hash: 0xD7591B0065AFAA7A | Since: 323 | API-Set: unknown
+ * Hash: 0xD7591B0065AFAA7A | Since: unknown | API-Set: unknown
  */
 export function resetStuckTimer(vehicle, nullAttributes) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4968,7 +4966,7 @@ export function resetStuckTimer(vehicle, nullAttributes) {
 /**
  * No comment provided
  *
- * Hash: 0x21D2E5662C1F6FED | Since: 323 | API-Set: unknown
+ * Hash: 0x21D2E5662C1F6FED | Since: unknown | API-Set: unknown
  */
 export function resetWheels(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4986,7 +4984,7 @@ export function resetWheels(vehicle, toggle) {
  * 7 = Mid Right
  * 8 = Invalid
  *
- * Hash: 0x7AD9E6CE657D69E3 | Since: 323 | API-Set: unknown
+ * Hash: 0x7AD9E6CE657D69E3 | Since: unknown | API-Set: unknown
  */
 export function rollDownWindow(vehicle, windowIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4995,7 +4993,7 @@ export function rollDownWindow(vehicle, windowIndex) {
 /**
  * Roll down all the windows of the vehicle passed through the first parameter.
  *
- * Hash: 0x85796B0549DDE156 | Since: 323 | API-Set: unknown
+ * Hash: 0x85796B0549DDE156 | Since: unknown | API-Set: unknown
  */
 export function rollDownWindows(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5013,7 +5011,7 @@ export function rollDownWindows(vehicle) {
  * 7 = Mid Right
  * 8 = Invalid
  *
- * Hash: 0x602E548F46E24D59 | Since: 323 | API-Set: unknown
+ * Hash: 0x602E548F46E24D59 | Since: unknown | API-Set: unknown
  */
 export function rollUpWindow(vehicle, windowIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5022,7 +5020,7 @@ export function rollUpWindow(vehicle, windowIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x5845066D8A1EA7F7 | Since: 323 | API-Set: unknown
+ * Hash: 0x5845066D8A1EA7F7 | Since: unknown | API-Set: unknown
  */
 export function setAdditionalRotationForRecordedPlayback(vehicle, pos) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5031,7 +5029,7 @@ export function setAdditionalRotationForRecordedPlayback(vehicle, pos) {
 /**
  * No comment provided
  *
- * Hash: 0xF8B49F5BA7F850E7 | Since: 2060 | API-Set: unknown
+ * Hash: 0xF8B49F5BA7F850E7 | Since: unknown | API-Set: unknown
  */
 export function setAircraftIgnoreHightmapOptimisation(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5040,7 +5038,7 @@ export function setAircraftIgnoreHightmapOptimisation(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xE5810AC70602F2F5 | Since: 323 | API-Set: unknown
+ * Hash: 0xE5810AC70602F2F5 | Since: unknown | API-Set: unknown
  */
 export function setAircraftPilotSkillNoiseScalar(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5049,7 +5047,7 @@ export function setAircraftPilotSkillNoiseScalar(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x80E3357FDEF45C21 | Since: 944 | API-Set: unknown
+ * Hash: 0x80E3357FDEF45C21 | Since: unknown | API-Set: unknown
  */
 export function setAllowRammingSoopOrRamp() {
     Citizen.invokeNative('0x80E3357FDEF45C21', undefined, undefined);
@@ -5057,7 +5055,7 @@ export function setAllowRammingSoopOrRamp() {
 /**
  * No comment provided
  *
- * Hash: 0x3441CAD2F2231923 | Since: 323 | API-Set: unknown
+ * Hash: 0x3441CAD2F2231923 | Since: unknown | API-Set: unknown
  */
 export function setAllowExplodesOnContact(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5066,7 +5064,7 @@ export function setAllowExplodesOnContact(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x608207E7A8FB787C | Since: 323 | API-Set: unknown
+ * Hash: 0x608207E7A8FB787C | Since: unknown | API-Set: unknown
  */
 export function setAllLowPriorityGeneratorsActive(active) {
     SetAllLowPriorityVehicleGeneratorsActive(active);
@@ -5074,7 +5072,7 @@ export function setAllLowPriorityGeneratorsActive(active) {
 /**
  * No comment provided
  *
- * Hash: 0x34AD89078831A4BC | Since: 323 | API-Set: unknown
+ * Hash: 0x34AD89078831A4BC | Since: unknown | API-Set: unknown
  */
 export function setAllGeneratorsActive() {
     SetAllVehicleGeneratorsActive();
@@ -5083,7 +5081,7 @@ export function setAllGeneratorsActive() {
  * When p6 is true, vehicle generators are active.
  * p7 seems to always be true in story mode scripts, but it's sometimes false in online scripts.
  *
- * Hash: 0xC12321827687FE4D | Since: 323 | API-Set: unknown
+ * Hash: 0xC12321827687FE4D | Since: unknown | API-Set: unknown
  */
 export function setAllGeneratorsActiveInArea(x1, y1, z1, x2, y2, z2, toggle) {
     SetAllVehicleGeneratorsActiveInArea(x1, y1, z1, x2, y2, z2, toggle, false);
@@ -5091,7 +5089,7 @@ export function setAllGeneratorsActiveInArea(x1, y1, z1, x2, y2, z2, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x35E0654F4BAD7971 | Since: 323 | API-Set: unknown
+ * Hash: 0x35E0654F4BAD7971 | Since: unknown | API-Set: unknown
  */
 export function setAmbientNeonEnabled() {
     Citizen.invokeNative('0x35E0654F4BAD7971', false);
@@ -5099,7 +5097,7 @@ export function setAmbientNeonEnabled() {
 /**
  * No comment provided
  *
- * Hash: 0x90B6DA738A9A25DA | Since: 323 | API-Set: unknown
+ * Hash: 0x90B6DA738A9A25DA | Since: unknown | API-Set: unknown
  */
 export function setAmbientRangeMultiplierThisFrame(value) {
     SetAmbientVehicleRangeMultiplierThisFrame(value);
@@ -5107,7 +5105,7 @@ export function setAmbientRangeMultiplierThisFrame(value) {
 /**
  * No comment provided
  *
- * Hash: 0x0205F5365292D2EB | Since: 1290 | API-Set: unknown
+ * Hash: 0x0205F5365292D2EB | Since: unknown | API-Set: unknown
  */
 export function setArriveDistanceOverrideForPersuitAttack(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5116,7 +5114,7 @@ export function setArriveDistanceOverrideForPersuitAttack(vehicle) {
 /**
  * When enabled, the player won't fall off the bike when landing from large heights.
  *
- * Hash: 0x73561D4425A021A2 | Since: 791 | API-Set: unknown
+ * Hash: 0x73561D4425A021A2 | Since: unknown | API-Set: unknown
  */
 export function setBikeEasyToLand(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5131,7 +5129,7 @@ export function setBikeEasyToLand(vehicle, toggle) {
  * Example with X -1/Y 1
  * http://i.imgur.com/TgIuAPJ.jpg
  *
- * Hash: 0x9CFA4896C3A53CBB | Since: 323 | API-Set: unknown
+ * Hash: 0x9CFA4896C3A53CBB | Since: unknown | API-Set: unknown
  */
 export function setBikeOnStand(vehicle, x, y) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5140,7 +5138,7 @@ export function setBikeOnStand(vehicle, x, y) {
 /**
  * No comment provided
  *
- * Hash: 0x75DBEC174AEEAD10 | Since: 323 | API-Set: unknown
+ * Hash: 0x75DBEC174AEEAD10 | Since: unknown | API-Set: unknown
  */
 export function setBoatAnchor(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5149,7 +5147,7 @@ export function setBoatAnchor(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x0A6A279F3AA4FD70 | Since: 323 | API-Set: unknown
+ * Hash: 0x0A6A279F3AA4FD70 | Since: unknown | API-Set: unknown
  */
 export function setBoatDisableAvoidance(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5158,7 +5156,7 @@ export function setBoatDisableAvoidance(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xED5EDE9E676643C9 | Since: 944 | API-Set: unknown
+ * Hash: 0xED5EDE9E676643C9 | Since: unknown | API-Set: unknown
  */
 export function setBoatIgnoreLandProbes() {
     Citizen.invokeNative('0xED5EDE9E676643C9', undefined, undefined);
@@ -5166,7 +5164,7 @@ export function setBoatIgnoreLandProbes() {
 /**
  * No comment provided
  *
- * Hash: 0xE842A9398079BD82 | Since: 323 | API-Set: unknown
+ * Hash: 0xE842A9398079BD82 | Since: unknown | API-Set: unknown
  */
 export function setBoatLowLodAnchorDistance(vehicle, value) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5175,7 +5173,7 @@ export function setBoatLowLodAnchorDistance(vehicle, value) {
 /**
  * No comment provided
  *
- * Hash: 0xE3EBAAE484798530 | Since: 323 | API-Set: unknown
+ * Hash: 0xE3EBAAE484798530 | Since: unknown | API-Set: unknown
  */
 export function setBoatRemainsAnchoredWhilePlayerIsDriver(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5184,7 +5182,7 @@ export function setBoatRemainsAnchoredWhilePlayerIsDriver(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x8F719973E1445BA2 | Since: 323 | API-Set: unknown
+ * Hash: 0x8F719973E1445BA2 | Since: unknown | API-Set: unknown
  */
 export function setBoatSinksWhenWrecked(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5193,7 +5191,7 @@ export function setBoatSinksWhenWrecked(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xBD32E46AA95C1DD2 | Since: 757 | API-Set: unknown
+ * Hash: 0xBD32E46AA95C1DD2 | Since: unknown | API-Set: unknown
  */
 export function setBoatWrecked(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5202,7 +5200,7 @@ export function setBoatWrecked(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xA7DCDF4DED40A8F4 | Since: 323 | API-Set: unknown
+ * Hash: 0xA7DCDF4DED40A8F4 | Since: unknown | API-Set: unknown
  */
 export function setCanAdjustGroundClearance(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5211,7 +5209,7 @@ export function setCanAdjustGroundClearance(vehicle) {
 /**
  * Hardcoded to not work in multiplayer.
  *
- * Hash: 0x52BBA29D5EC69356 | Since: 323 | API-Set: unknown
+ * Hash: 0x52BBA29D5EC69356 | Since: unknown | API-Set: unknown
  */
 export function setCanRespray(vehicle, state) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5220,7 +5218,7 @@ export function setCanRespray(vehicle, state) {
 /**
  * No comment provided
  *
- * Hash: 0x1201E8A3290A3B98 | Since: 505 | API-Set: unknown
+ * Hash: 0x1201E8A3290A3B98 | Since: unknown | API-Set: unknown
  */
 export function setCanUseHydraulics(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5229,7 +5227,7 @@ export function setCanUseHydraulics(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x1F34B0626C594380 | Since: 757 | API-Set: unknown
+ * Hash: 0x1F34B0626C594380 | Since: unknown | API-Set: unknown
  */
 export function setCargobobExcludeFromPickupEntity() {
     SetCargobobExcludeFromPickupEntity(undefined, undefined);
@@ -5237,7 +5235,7 @@ export function setCargobobExcludeFromPickupEntity() {
 /**
  * No comment provided
  *
- * Hash: 0x72BECCF4B829522E | Since: 1103 | API-Set: unknown
+ * Hash: 0x72BECCF4B829522E | Since: unknown | API-Set: unknown
  */
 export function setCargobobExtaPickupRange() {
     Citizen.invokeNative('0x72BECCF4B829522E', undefined, undefined);
@@ -5245,7 +5243,7 @@ export function setCargobobExtaPickupRange() {
 /**
  * Stops cargobob from being able to detach the attached vehicle.
  *
- * Hash: 0x571FEB383F629926 | Since: 323 | API-Set: unknown
+ * Hash: 0x571FEB383F629926 | Since: unknown | API-Set: unknown
  */
 export function setCargobobForceDontDetach(cargobob, toggle) {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -5254,7 +5252,7 @@ export function setCargobobForceDontDetach(cargobob, toggle) {
 /**
  * Won't attract or magnetize to any helicopters or planes of course, but that's common sense.
  *
- * Hash: 0x9A665550F8DA349B | Since: 323 | API-Set: unknown
+ * Hash: 0x9A665550F8DA349B | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetActive(cargobob, isActive) {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -5263,7 +5261,7 @@ export function setCargobobPickupMagnetActive(cargobob, isActive) {
 /**
  * No comment provided
  *
- * Hash: 0x56EB5E94318D3FB6 | Since: 323 | API-Set: unknown
+ * Hash: 0x56EB5E94318D3FB6 | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetEnsurePickupEntityUpright(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5272,7 +5270,7 @@ export function setCargobobPickupMagnetEnsurePickupEntityUpright(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xA17BAD153B51547E | Since: 323 | API-Set: unknown
+ * Hash: 0xA17BAD153B51547E | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetFalloff(cargobob) {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -5281,7 +5279,7 @@ export function setCargobobPickupMagnetFalloff(cargobob) {
 /**
  * No comment provided
  *
- * Hash: 0x685D5561680D088B | Since: 323 | API-Set: unknown
+ * Hash: 0x685D5561680D088B | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetPullRopeLength(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5290,7 +5288,7 @@ export function setCargobobPickupMagnetPullRopeLength(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xED8286F71A819BAA | Since: 323 | API-Set: unknown
+ * Hash: 0xED8286F71A819BAA | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetPullStrength(cargobob) {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -5299,7 +5297,7 @@ export function setCargobobPickupMagnetPullStrength(cargobob) {
 /**
  * No comment provided
  *
- * Hash: 0x6D8EAC07506291FB | Since: 323 | API-Set: unknown
+ * Hash: 0x6D8EAC07506291FB | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetReducedFalloff(cargobob) {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -5308,7 +5306,7 @@ export function setCargobobPickupMagnetReducedFalloff(cargobob) {
 /**
  * No comment provided
  *
- * Hash: 0x66979ACF5102FD2F | Since: 323 | API-Set: unknown
+ * Hash: 0x66979ACF5102FD2F | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetReducedStrength(cargobob) {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -5317,7 +5315,7 @@ export function setCargobobPickupMagnetReducedStrength(cargobob) {
 /**
  * No comment provided
  *
- * Hash: 0x9BDDC73CC6A115D4 | Since: 323 | API-Set: unknown
+ * Hash: 0x9BDDC73CC6A115D4 | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetSetAmbientMode(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5326,7 +5324,7 @@ export function setCargobobPickupMagnetSetAmbientMode(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xE301BD63E9E13CF0 | Since: 323 | API-Set: unknown
+ * Hash: 0xE301BD63E9E13CF0 | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetSetTargetedMode(vehicle, cargobob) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5336,7 +5334,7 @@ export function setCargobobPickupMagnetSetTargetedMode(vehicle, cargobob) {
 /**
  * No comment provided
  *
- * Hash: 0xBCBFCD9D1DAC19E2 | Since: 323 | API-Set: unknown
+ * Hash: 0xBCBFCD9D1DAC19E2 | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetStrength(cargobob, strength) {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -5345,7 +5343,7 @@ export function setCargobobPickupMagnetStrength(cargobob, strength) {
 /**
  * No comment provided
  *
- * Hash: 0xCF1182F682F65307 | Since: 323 | API-Set: unknown
+ * Hash: 0xCF1182F682F65307 | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupRopeDampingMultiplier() {
     SetCargobobPickupRopeDampingMultiplier(undefined, undefined);
@@ -5353,7 +5351,7 @@ export function setCargobobPickupRopeDampingMultiplier() {
 /**
  * No comment provided
  *
- * Hash: 0x0D5F65A8F4EBDAB5 | Since: 1103 | API-Set: unknown
+ * Hash: 0x0D5F65A8F4EBDAB5 | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupRopeType() {
     SetCargobobPickupRopeType(undefined, undefined);
@@ -5361,7 +5359,7 @@ export function setCargobobPickupRopeType() {
 /**
  * No comment provided
  *
- * Hash: 0xB9562064627FF9DB | Since: 573 | API-Set: unknown
+ * Hash: 0xB9562064627FF9DB | Since: unknown | API-Set: unknown
  */
 export function setCarjackMissionRemovalParameters() {
     Citizen.invokeNative('0xB9562064627FF9DB', undefined, undefined);
@@ -5369,7 +5367,7 @@ export function setCarjackMissionRemovalParameters() {
 /**
  * No comment provided
  *
- * Hash: 0xFC40CBF7B90CA77C | Since: 877 | API-Set: unknown
+ * Hash: 0xFC40CBF7B90CA77C | Since: unknown | API-Set: unknown
  */
 export function setCarBootOpen(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5378,7 +5376,7 @@ export function setCarBootOpen(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x84FD40F56075E816 | Since: 323 | API-Set: unknown
+ * Hash: 0x84FD40F56075E816 | Since: unknown | API-Set: unknown
  */
 export function setCarHighSpeedBumpSeverityMultiplier(multiplier) {
     SetCarHighSpeedBumpSeverityMultiplier(multiplier);
@@ -5386,7 +5384,7 @@ export function setCarHighSpeedBumpSeverityMultiplier(multiplier) {
 /**
  * Only used in R* Script fm_content_cargo
  *
- * Hash: 0xEF9D388F8D377F44 | Since: 2699 | API-Set: unknown
+ * Hash: 0xEF9D388F8D377F44 | Since: unknown | API-Set: unknown
  */
 export function setCheckForEnoughRoomForPed(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5395,7 +5393,7 @@ export function setCheckForEnoughRoomForPed(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xB2E0C0D6922D31F2 | Since: 944 | API-Set: unknown
+ * Hash: 0xB2E0C0D6922D31F2 | Since: unknown | API-Set: unknown
  */
 export function setClearFreezeWaitingOnCollisionOncePlayerEnters(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5404,7 +5402,7 @@ export function setClearFreezeWaitingOnCollisionOncePlayerEnters(vehicle, toggle
 /**
  * No comment provided
  *
- * Hash: 0xF39C4F538B5124C2 | Since: 323 | API-Set: unknown
+ * Hash: 0xF39C4F538B5124C2 | Since: unknown | API-Set: unknown
  */
 export function setConvertibleRoof(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5413,7 +5411,7 @@ export function setConvertibleRoof(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x1A78AD3D8240536F | Since: 323 | API-Set: unknown
+ * Hash: 0x1A78AD3D8240536F | Since: unknown | API-Set: unknown
  */
 export function setConvertibleRoofLatchState(vehicle, state) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5422,7 +5420,7 @@ export function setConvertibleRoofLatchState(vehicle, state) {
 /**
  * Only used with the "akula" and "annihilator2" in the decompiled native scripts.
  *
- * Hash: 0xB251E0B33E58B424 | Since: 1290 | API-Set: unknown
+ * Hash: 0xB251E0B33E58B424 | Since: unknown | API-Set: unknown
  */
 export function setDeployFoldingWings(vehicle, deploy) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5431,7 +5429,7 @@ export function setDeployFoldingWings(vehicle, deploy) {
 /**
  * No comment provided
  *
- * Hash: 0xAA653AE61924B0A0 | Since: 1290 | API-Set: unknown
+ * Hash: 0xAA653AE61924B0A0 | Since: unknown | API-Set: unknown
  */
 export function setDipStraightDownWhenCrashingPlane(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5440,7 +5438,7 @@ export function setDipStraightDownWhenCrashingPlane(vehicle, toggle) {
 /**
  * Sets a flag on heli and another vehicle type.
  *
- * Hash: 0x97841634EF7DF1D6 | Since: 1180 | API-Set: unknown
+ * Hash: 0x97841634EF7DF1D6 | Since: unknown | API-Set: unknown
  */
 export function setDisableAutomaticCrashTask(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5449,7 +5447,7 @@ export function setDisableAutomaticCrashTask(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x26D99D5A82FD18E8 | Since: 463 | API-Set: unknown
+ * Hash: 0x26D99D5A82FD18E8 | Since: unknown | API-Set: unknown
  */
 export function setDisableBmxExtraTrickForces() {
     SetDisableBmxExtraTrickForces(undefined);
@@ -5457,7 +5455,7 @@ export function setDisableBmxExtraTrickForces() {
 /**
  * No comment provided
  *
- * Hash: 0xD4196117AF7BB974 | Since: 757 | API-Set: unknown
+ * Hash: 0xD4196117AF7BB974 | Since: unknown | API-Set: unknown
  */
 export function setDisableDamageWithPickedUpEntity() {
     return Citizen.invokeNative('0xD4196117AF7BB974', undefined, undefined);
@@ -5465,7 +5463,7 @@ export function setDisableDamageWithPickedUpEntity() {
 /**
  * Prevents the vehicle from exploding when taking body damage if it was caused by a collision. Only works for planes.
  *
- * Hash: 0x26E13D440E7F6064 | Since: 1290 | API-Set: unknown
+ * Hash: 0x26E13D440E7F6064 | Since: unknown | API-Set: unknown
  */
 export function setDisableExplodeFromBodyDamageOnCollision(vehicle, disable) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5474,7 +5472,7 @@ export function setDisableExplodeFromBodyDamageOnCollision(vehicle, disable) {
 /**
  * Prevents the vehicle from exploding when taking body damage. Only works for helis and planes.
  *
- * Hash: 0xEDBC8405B3895CC9 | Since: 1103 | API-Set: unknown
+ * Hash: 0xEDBC8405B3895CC9 | Since: unknown | API-Set: unknown
  */
 export function setDisableHeliExplodeFromBodyDamage(vehicle, disable) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5486,7 +5484,7 @@ export function setDisableHeliExplodeFromBodyDamage(vehicle, disable) {
  * For oppressor 2 it will remove wings right after you land. And you will not able to fly up anymore too.
  * But for opressor 2 you still can fly if you somehow get back in the air.
  *
- * Hash: 0x2D55FE374D5FDB91 | Since: 1290 | API-Set: unknown
+ * Hash: 0x2D55FE374D5FDB91 | Since: unknown | API-Set: unknown
  */
 export function setDisableHoverModeFlight(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5498,7 +5496,7 @@ export function setDisableHoverModeFlight(vehicle, toggle) {
  * Example: https://streamable.com/6n45d5
  * Not sure if there is a native (and if so, which one) that resets the collisions.
  *
- * Hash: 0x75627043C6AA90AD | Since: 1180 | API-Set: unknown
+ * Hash: 0x75627043C6AA90AD | Since: unknown | API-Set: unknown
  */
 export function setDisableMapCollision(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5507,7 +5505,7 @@ export function setDisableMapCollision(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x8235F1BEAD557629 | Since: 1180 | API-Set: unknown
+ * Hash: 0x8235F1BEAD557629 | Since: unknown | API-Set: unknown
  */
 export function setDisablePedStandOnTop(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5516,7 +5514,7 @@ export function setDisablePedStandOnTop(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x25367DE49D64CF16 | Since: 323 | API-Set: unknown
+ * Hash: 0x25367DE49D64CF16 | Since: unknown | API-Set: unknown
  */
 export function setDisablePretendOccupants(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5525,7 +5523,7 @@ export function setDisablePretendOccupants(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xD4B8E3D1917BC86B | Since: 323 | API-Set: unknown
+ * Hash: 0xD4B8E3D1917BC86B | Since: unknown | API-Set: unknown
  */
 export function setDisableRandomTrainsThisFrame(toggle) {
     SetDisableRandomTrainsThisFrame(toggle);
@@ -5533,7 +5531,7 @@ export function setDisableRandomTrainsThisFrame(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x8F0D5BA1C2CC91D7 | Since: 1604 | API-Set: unknown
+ * Hash: 0x8F0D5BA1C2CC91D7 | Since: unknown | API-Set: unknown
  */
 export function setDisableRetractingWeaponBlades(toggle) {
     Citizen.invokeNative('0x8F0D5BA1C2CC91D7', toggle);
@@ -5541,7 +5539,7 @@ export function setDisableRetractingWeaponBlades(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xB088E9A47AE6EDD5 | Since: 323 | API-Set: unknown
+ * Hash: 0xB088E9A47AE6EDD5 | Since: unknown | API-Set: unknown
  */
 export function setDisableSuperdummy(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5550,7 +5548,7 @@ export function setDisableSuperdummy(vehicle) {
 /**
  * Disables turret movement when called in a loop. You can still fire and aim. You cannot shoot backwards though.
  *
- * Hash: 0xE615BB7A7752C76A | Since: 1365 | API-Set: unknown
+ * Hash: 0xE615BB7A7752C76A | Since: unknown | API-Set: unknown
  */
 export function setDisableTurretMovement(vehicle, turretId) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5559,7 +5557,7 @@ export function setDisableTurretMovement(vehicle, turretId) {
 /**
  * No comment provided
  *
- * Hash: 0x91A0BD635321F145 | Since: 323 | API-Set: unknown
+ * Hash: 0x91A0BD635321F145 | Since: unknown | API-Set: unknown
  */
 export function setDisableEngineFires(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5568,7 +5566,7 @@ export function setDisableEngineFires(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x143921E45EC44D62 | Since: 1604 | API-Set: unknown
+ * Hash: 0x143921E45EC44D62 | Since: unknown | API-Set: unknown
  */
 export function setDisableExplosionsDamage(toggle) {
     SetDisableVehicleUnk(toggle);
@@ -5576,7 +5574,7 @@ export function setDisableExplosionsDamage(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x37C8252A7C92D017 | Since: 323 | API-Set: unknown
+ * Hash: 0x37C8252A7C92D017 | Since: unknown | API-Set: unknown
  */
 export function setDisablePetrolTankDamage(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5585,7 +5583,7 @@ export function setDisablePetrolTankDamage(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x465BF26AB9684352 | Since: 323 | API-Set: unknown
+ * Hash: 0x465BF26AB9684352 | Since: unknown | API-Set: unknown
  */
 export function setDisablePetrolTankFires(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5594,7 +5592,7 @@ export function setDisablePetrolTankFires(vehicle, toggle) {
 /**
  * True stops vtols from switching modes. Doesn't stop the sound though.
  *
- * Hash: 0xCE2B43770B655F8F | Since: 1290 | API-Set: unknown
+ * Hash: 0xCE2B43770B655F8F | Since: unknown | API-Set: unknown
  */
 export function setDisableVerticalFlightModeTransition(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5603,7 +5601,7 @@ export function setDisableVerticalFlightModeTransition(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x4AD280EB48B2D8E6 | Since: 1868 | API-Set: unknown
+ * Hash: 0x4AD280EB48B2D8E6 | Since: unknown | API-Set: unknown
  */
 export function setDisableWantedConesResponse(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5612,7 +5610,7 @@ export function setDisableWantedConesResponse(vehicle, toggle) {
 /**
  * Sets some global vehicle related bool
  *
- * Hash: 0x211E95CE9903940C | Since: 1604 | API-Set: unknown
+ * Hash: 0x211E95CE9903940C | Since: unknown | API-Set: unknown
  */
 export function setDisableWeaponBladeForces(toggle) {
     SetDisableVehicleUnk2(toggle);
@@ -5620,7 +5618,7 @@ export function setDisableWeaponBladeForces(toggle) {
 /**
  * Toggles to render distant vehicles. They may not be vehicles but images to look like vehicles.
  *
- * Hash: 0xF796359A959DF65D | Since: 323 | API-Set: unknown
+ * Hash: 0xF796359A959DF65D | Since: unknown | API-Set: unknown
  */
 export function setDistantCarsEnabled(toggle) {
     SetDistantCarsEnabled(toggle);
@@ -5628,7 +5626,7 @@ export function setDistantCarsEnabled(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xDBC631F109350B8C | Since: 323 | API-Set: unknown
+ * Hash: 0xDBC631F109350B8C | Since: unknown | API-Set: unknown
  */
 export function setDontAllowPlayerToEnterIfLockedForPlayer(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5637,7 +5635,7 @@ export function setDontAllowPlayerToEnterIfLockedForPlayer(vehicle) {
 /**
  * R* used it to "remove" vehicle windows when "nightshark" had some mod, which adding some kind of armored windows. When enabled, you can't break vehicles glass. All your bullets wiil shoot through glass. You also will not able to break the glass with any other way (hitting and etc)
  *
- * Hash: 0x1087BC8EC540DAEB | Since: 1103 | API-Set: unknown
+ * Hash: 0x1087BC8EC540DAEB | Since: unknown | API-Set: unknown
  */
 export function setDontProcessGlass(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5646,7 +5644,7 @@ export function setDontProcessGlass(vehicle, toggle) {
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  *
- * Hash: 0x2FA133A4A9D37ED8 | Since: 323 | API-Set: unknown
+ * Hash: 0x2FA133A4A9D37ED8 | Since: unknown | API-Set: unknown
  */
 export function setDoorAllowedToBeBrokenOff(vehicle, doorId, isBreakable) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5655,7 +5653,7 @@ export function setDoorAllowedToBeBrokenOff(vehicle, doorId, isBreakable) {
 /**
  * No comment provided
  *
- * Hash: 0x5AC79C98C5C17F05 | Since: 2372 | API-Set: unknown
+ * Hash: 0x5AC79C98C5C17F05 | Since: unknown | API-Set: unknown
  */
 export function setDriftTyres(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5664,7 +5662,7 @@ export function setDriftTyres(vehicle, toggle) {
 /**
  * Enable/Disables global slipstream physics
  *
- * Hash: 0xE6C0C80B8C867537 | Since: 323 | API-Set: unknown
+ * Hash: 0xE6C0C80B8C867537 | Since: unknown | API-Set: unknown
  */
 export function setEnableSlipstreaming(toggle) {
     SetEnableVehicleSlipstreaming(toggle);
@@ -5672,7 +5670,7 @@ export function setEnableSlipstreaming(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x26324F33423F3CC3 | Since: 323 | API-Set: unknown
+ * Hash: 0x26324F33423F3CC3 | Since: unknown | API-Set: unknown
  */
 export function setFarDraws(toggle) {
     SetFarDrawVehicles(toggle);
@@ -5680,7 +5678,7 @@ export function setFarDraws(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xA247F9EF01D8082E | Since: 1103 | API-Set: unknown
+ * Hash: 0xA247F9EF01D8082E | Since: unknown | API-Set: unknown
  */
 export function setFleeingsUseSwitchedOffNodes() {
     Citizen.invokeNative('0xA247F9EF01D8082E', undefined);
@@ -5688,7 +5686,7 @@ export function setFleeingsUseSwitchedOffNodes() {
 /**
  * No comment provided
  *
- * Hash: 0x887FA38787DE8C72 | Since: 1365 | API-Set: unknown
+ * Hash: 0x887FA38787DE8C72 | Since: unknown | API-Set: unknown
  */
 export function setForceFixLinkMatrices(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5697,7 +5695,7 @@ export function setForceFixLinkMatrices(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x97CE68CB032583F0 | Since: 323 | API-Set: unknown
+ * Hash: 0x97CE68CB032583F0 | Since: unknown | API-Set: unknown
  */
 export function setForceHd(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5706,7 +5704,7 @@ export function setForceHd(vehicle, toggle) {
 /**
  * No observed effect.
  *
- * Hash: 0xB28B1FE5BFADD7F5 | Since: 323 | API-Set: unknown
+ * Hash: 0xB28B1FE5BFADD7F5 | Since: unknown | API-Set: unknown
  */
 export function setForceLowLodAnchorMode(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5715,7 +5713,7 @@ export function setForceLowLodAnchorMode(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x4D9D109F63FEE1D4 | Since: 323 | API-Set: unknown
+ * Hash: 0x4D9D109F63FEE1D4 | Since: unknown | API-Set: unknown
  */
 export function setForceEngineDamageByBullet() {
     Citizen.invokeNative('0x4D9D109F63FEE1D4', undefined, false);
@@ -5723,7 +5721,7 @@ export function setForceEngineDamageByBullet() {
 /**
  * 0.0 = Lowest 1.0 = Highest. This is best to be used if you wanna pick-up a car since un-realistically on GTA V forklifts can't pick up much of anything due to vehicle mass. If you put this under a car then set it above 0.0 to a 'lifted-value' it will raise the car with no issue lol
  *
- * Hash: 0x37EBBF3117BD6A25 | Since: 323 | API-Set: unknown
+ * Hash: 0x37EBBF3117BD6A25 | Since: unknown | API-Set: unknown
  */
 export function setForkliftForkHeight(vehicle, height) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5732,7 +5730,7 @@ export function setForkliftForkHeight(vehicle, height) {
 /**
  * No comment provided
  *
- * Hash: 0x428AD3E26C8D9EB0 | Since: 877 | API-Set: unknown
+ * Hash: 0x428AD3E26C8D9EB0 | Since: unknown | API-Set: unknown
  */
 export function setFormationLeader(vehicle, pos) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5741,7 +5739,7 @@ export function setFormationLeader(vehicle, pos) {
 /**
  * No comment provided
  *
- * Hash: 0x2AFD795EEAC8D30D | Since: 323 | API-Set: unknown
+ * Hash: 0x2AFD795EEAC8D30D | Since: unknown | API-Set: unknown
  */
 export function setGarbageTrucks(toggle) {
     SetGarbageTrucks(toggle);
@@ -5749,7 +5747,7 @@ export function setGarbageTrucks(toggle) {
 /**
  * Set state to true to extend the wings, false to retract them.
  *
- * Hash: 0x544996C0081ABDEB | Since: 1103 | API-Set: unknown
+ * Hash: 0x544996C0081ABDEB | Since: unknown | API-Set: unknown
  */
 export function setGliderActive(vehicle, state) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5758,7 +5756,7 @@ export function setGliderActive(vehicle, state) {
 /**
  * No comment provided
  *
- * Hash: 0xFAF2A78061FD9EF4 | Since: 323 | API-Set: unknown
+ * Hash: 0xFAF2A78061FD9EF4 | Since: unknown | API-Set: unknown
  */
 export function setGlobalPositionOffsetForRecordedPlayback(vehicle, pos) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5767,7 +5765,7 @@ export function setGlobalPositionOffsetForRecordedPlayback(vehicle, pos) {
 /**
  * Used for GTAO CEO/Associate spawned vehicles.
  *
- * Hash: 0xAB31EF4DE6800CE9 | Since: 573 | API-Set: unknown
+ * Hash: 0xAB31EF4DE6800CE9 | Since: unknown | API-Set: unknown
  */
 export function setGoonBoss(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5776,7 +5774,7 @@ export function setGoonBoss(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x430A7631A84C9BE7 | Since: 1180 | API-Set: unknown
+ * Hash: 0x430A7631A84C9BE7 | Since: unknown | API-Set: unknown
  */
 export function setGroundEffectReducesDrag(toggle) {
     Citizen.invokeNative('0x430A7631A84C9BE7', toggle);
@@ -5784,7 +5782,7 @@ export function setGroundEffectReducesDrag(toggle) {
 /**
  * Equivalent of SET_HELI_BLADES_SPEED(vehicleHandle, 1.0f);
  *
- * Hash: 0xA178472EBB8AE60D | Since: 323 | API-Set: unknown
+ * Hash: 0xA178472EBB8AE60D | Since: unknown | API-Set: unknown
  */
 export function setHeliBladesFullSpeed(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5796,7 +5794,7 @@ export function setHeliBladesFullSpeed(vehicle) {
  * vehicleHandle: The helicopter.
  * speed: The speed in percentage, 0.0f being 0% and 1.0f being 100%.
  *
- * Hash: 0xFD280B4D7F3ABC4D | Since: 323 | API-Set: unknown
+ * Hash: 0xFD280B4D7F3ABC4D | Since: unknown | API-Set: unknown
  */
 export function setHeliBladesSpeed(vehicle, speed) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5805,7 +5803,7 @@ export function setHeliBladesSpeed(vehicle, speed) {
 /**
  * Stops the cargobob from being able to attach any vehicle
  *
- * Hash: 0x94A68DA412C4007D | Since: 1180 | API-Set: unknown
+ * Hash: 0x94A68DA412C4007D | Since: unknown | API-Set: unknown
  */
 export function setHeliCanPickupEntityThatHasPickUpDisabled(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5814,7 +5812,7 @@ export function setHeliCanPickupEntityThatHasPickUpDisabled(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x0A3F820A9A9A9AC5 | Since: 1180 | API-Set: unknown
+ * Hash: 0x0A3F820A9A9A9AC5 | Since: unknown | API-Set: unknown
  */
 export function setHeliCombatOffset(vehicle, pos) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5823,7 +5821,7 @@ export function setHeliCombatOffset(vehicle, pos) {
 /**
  * value between 0.0 and 1.0
  *
- * Hash: 0x6E0859B530A365CC | Since: 323 | API-Set: unknown
+ * Hash: 0x6E0859B530A365CC | Since: unknown | API-Set: unknown
  */
 export function setHeliControlLaggingRateScalar(helicopter, multiplier) {
     const _helicopter = typeof helicopter == 'object' ? helicopter.handle() : helicopter;
@@ -5832,7 +5830,7 @@ export function setHeliControlLaggingRateScalar(helicopter, multiplier) {
 /**
  * No comment provided
  *
- * Hash: 0x4056EA1105F5ABD7 | Since: 463 | API-Set: unknown
+ * Hash: 0x4056EA1105F5ABD7 | Since: unknown | API-Set: unknown
  */
 export function setHeliMainRotorHealth(vehicle, health) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5841,7 +5839,7 @@ export function setHeliMainRotorHealth(vehicle, health) {
 /**
  * No comment provided
  *
- * Hash: 0x8074CC1886802912 | Since: 2545 | API-Set: unknown
+ * Hash: 0x8074CC1886802912 | Since: unknown | API-Set: unknown
  */
 export function setHeliResistToExplosion(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5850,7 +5848,7 @@ export function setHeliResistToExplosion(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x3EC8BF18AA453FE9 | Since: 323 | API-Set: unknown
+ * Hash: 0x3EC8BF18AA453FE9 | Since: unknown | API-Set: unknown
  */
 export function setHeliTailBoomCanBreakOff(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5859,7 +5857,7 @@ export function setHeliTailBoomCanBreakOff(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xFE205F38AAA58E5B | Since: 463 | API-Set: unknown
+ * Hash: 0xFE205F38AAA58E5B | Since: unknown | API-Set: unknown
  */
 export function setHeliTailRotorHealth(vehicle, health) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5868,7 +5866,7 @@ export function setHeliTailRotorHealth(vehicle, health) {
 /**
  * No comment provided
  *
- * Hash: 0xE6F13851780394DA | Since: 323 | API-Set: unknown
+ * Hash: 0xE6F13851780394DA | Since: unknown | API-Set: unknown
  */
 export function setHeliTurbulenceScalar(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5877,7 +5875,7 @@ export function setHeliTurbulenceScalar(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x70A252F60A3E036B | Since: 1365 | API-Set: unknown
+ * Hash: 0x70A252F60A3E036B | Since: unknown | API-Set: unknown
  */
 export function setHoverModeWingRatio(vehicle, ratio) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5888,7 +5886,7 @@ export function setHoverModeWingRatio(vehicle, ratio) {
  *
  * Only used once in each carmod script, on a car that does not have hydraulics to begin with.
  *
- * Hash: 0x28B18377EB6E25F6 | Since: 505 | API-Set: unknown
+ * Hash: 0x28B18377EB6E25F6 | Since: unknown | API-Set: unknown
  */
 export function setHydraulicsControl(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5897,7 +5895,7 @@ export function setHydraulicsControl(vehicle, toggle) {
 /**
  * Works only on vehicles that support hydraulics.
  *
- * Hash: 0x84EA99C62CB3EF0C | Since: 505 | API-Set: unknown
+ * Hash: 0x84EA99C62CB3EF0C | Since: unknown | API-Set: unknown
  */
 export function setHydraulicSuspensionRaiseFactor(vehicle, wheelId, value) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5909,7 +5907,7 @@ export function setHydraulicSuspensionRaiseFactor(vehicle, wheelId, value) {
  * 5 = lower
  * 6 = jump
  *
- * Hash: 0x8EA86DF356801C7D | Since: 505 | API-Set: unknown
+ * Hash: 0x8EA86DF356801C7D | Since: unknown | API-Set: unknown
  */
 export function setHydraulicState(vehicle, state) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5921,7 +5919,7 @@ export function setHydraulicState(vehicle, state) {
  * 1 - raise wheel (uses value arg, works just like _SET_VEHICLE_HYDRAULIC_WHEEL_VALUE)
  * 2 - jump using wheel
  *
- * Hash: 0xC24075310A8B9CD1 | Since: 505 | API-Set: unknown
+ * Hash: 0xC24075310A8B9CD1 | Since: unknown | API-Set: unknown
  */
 export function setHydraulicWheelState(vehicle, wheelId, state, value) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5930,7 +5928,7 @@ export function setHydraulicWheelState(vehicle, wheelId, state, value) {
 /**
  * No comment provided
  *
- * Hash: 0x8664170EF165C4A6 | Since: 2189 | API-Set: unknown
+ * Hash: 0x8664170EF165C4A6 | Since: unknown | API-Set: unknown
  */
 export function setIgnorePlanesSmallPitchChange() {
     Citizen.invokeNative('0x8664170EF165C4A6', undefined, undefined);
@@ -5938,7 +5936,7 @@ export function setIgnorePlanesSmallPitchChange() {
 /**
  * No comment provided
  *
- * Hash: 0x2970EAA18FD5E42F | Since: 1604 | API-Set: unknown
+ * Hash: 0x2970EAA18FD5E42F | Since: unknown | API-Set: unknown
  */
 export function setIncreaseWheelCrushDamage(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5948,7 +5946,7 @@ export function setIncreaseWheelCrushDamage(vehicle, toggle) {
  * Inverts vehicle's controls. So INPUT_VEH_ACCELERATE will be INPUT_VEH_BRAKE and vise versa (same for A/D controls)
  * Doesn't work for planes/helis.
  *
- * Hash: 0x5B91B229243351A8 | Since: 791 | API-Set: unknown
+ * Hash: 0x5B91B229243351A8 | Since: unknown | API-Set: unknown
  */
 export function setInvertControls(vehicle, state) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5957,7 +5955,7 @@ export function setInvertControls(vehicle, state) {
 /**
  * No comment provided
  *
- * Hash: 0xACFB2463CC22BED2 | Since: 323 | API-Set: unknown
+ * Hash: 0xACFB2463CC22BED2 | Since: unknown | API-Set: unknown
  */
 export function setLastDriven(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5966,7 +5964,7 @@ export function setLastDriven(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xBC3CCA5844452B06 | Since: 323 | API-Set: unknown
+ * Hash: 0xBC3CCA5844452B06 | Since: unknown | API-Set: unknown
  */
 export function setLightsCutoffDistanceTweak(distance) {
     SetLightsCutoffDistanceTweak(distance);
@@ -5974,16 +5972,15 @@ export function setLightsCutoffDistanceTweak(distance) {
 /**
  * p1 is always 0
  *
- * Hash: 0xBBE7648349B49BE8 | Since: 323 | API-Set: unknown
+ * Hash: 0xBBE7648349B49BE8 | Since: unknown | API-Set: unknown
  */
-export function setMissionTrainAsNoLongerNeeded(train) {
-    const _train = typeof train == 'object' ? train.handle() : train;
-    SetMissionTrainAsNoLongerNeeded(_train, false);
+export function setMissionTrainAsNoLongerNeeded() {
+    return SetMissionTrainAsNoLongerNeeded(false);
 }
 /**
  * No comment provided
  *
- * Hash: 0x591CA673AA6AB736 | Since: 323 | API-Set: unknown
+ * Hash: 0x591CA673AA6AB736 | Since: unknown | API-Set: unknown
  */
 export function setMissionTrainCoords(train, pos) {
     const _train = typeof train == 'object' ? train.handle() : train;
@@ -5992,7 +5989,7 @@ export function setMissionTrainCoords(train, pos) {
 /**
  * No comment provided
  *
- * Hash: 0x9E566EA551F4F1A6 | Since: 3407 | API-Set: unknown
+ * Hash: 0x9E566EA551F4F1A6 | Since: unknown | API-Set: unknown
  */
 export function setNitrousIsActive(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6001,7 +5998,7 @@ export function setNitrousIsActive(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xCAA15F13EBD417FF | Since: 323 | API-Set: unknown
+ * Hash: 0xCAA15F13EBD417FF | Since: unknown | API-Set: unknown
  */
 export function setNumberOfParkeds(value) {
     SetNumberOfParkedVehicles(value);
@@ -6009,7 +6006,7 @@ export function setNumberOfParkeds(value) {
 /**
  * No comment provided
  *
- * Hash: 0x1B212B26DD3C04DF | Since: 757 | API-Set: unknown
+ * Hash: 0x1B212B26DD3C04DF | Since: unknown | API-Set: unknown
  */
 export function setOpenRearDoorsOnExplosion(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6018,7 +6015,7 @@ export function setOpenRearDoorsOnExplosion(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xC8E9B6B71B8E660D | Since: 1604 | API-Set: unknown
+ * Hash: 0xC8E9B6B71B8E660D | Since: unknown | API-Set: unknown
  */
 export function setOverrideNitrousLevel(vehicle, toggle, level, power, rechargeTime, disableSound) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6027,7 +6024,7 @@ export function setOverrideNitrousLevel(vehicle, toggle, level, power, rechargeT
 /**
  * No comment provided
  *
- * Hash: 0x66E3AAFACE2D1EB8 | Since: 1103 | API-Set: unknown
+ * Hash: 0x66E3AAFACE2D1EB8 | Since: unknown | API-Set: unknown
  */
 export function setOverrideDoorTorque() {
     Citizen.invokeNative('0x66E3AAFACE2D1EB8', undefined, undefined, undefined);
@@ -6035,7 +6032,7 @@ export function setOverrideDoorTorque() {
 /**
  * No comment provided
  *
- * Hash: 0xEAE6DCC7EEE3DB1D | Since: 323 | API-Set: unknown
+ * Hash: 0xEAE6DCC7EEE3DB1D | Since: unknown | API-Set: unknown
  */
 export function setParkedDensityMultiplierThisFrame(multiplier) {
     SetParkedVehicleDensityMultiplierThisFrame(multiplier);
@@ -6043,7 +6040,7 @@ export function setParkedDensityMultiplierThisFrame(multiplier) {
 /**
  * Sets some bit and float of vehicle. float is >= 0
  *
- * Hash: 0x59C3757B3B7408E8 | Since: 1493 | API-Set: unknown
+ * Hash: 0x59C3757B3B7408E8 | Since: unknown | API-Set: unknown
  */
 export function setPedsCanFallOffThisFromLargeFallDamage(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6052,7 +6049,7 @@ export function setPedsCanFallOffThisFromLargeFallDamage(vehicle, toggle) {
 /**
  * min: 1.9f, max: 100.0f
  *
- * Hash: 0x877C1EAEAC531023 | Since: 323 | API-Set: unknown
+ * Hash: 0x877C1EAEAC531023 | Since: unknown | API-Set: unknown
  */
 export function setPickupRopeLengthForCargobob(cargobob, length1, length2) {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -6061,7 +6058,7 @@ export function setPickupRopeLengthForCargobob(cargobob, length1, length2) {
 /**
  * No comment provided
  *
- * Hash: 0xC0ED6438E6D39BA8 | Since: 944 | API-Set: unknown
+ * Hash: 0xC0ED6438E6D39BA8 | Since: unknown | API-Set: unknown
  */
 export function setPickupRopeLengthWithoutCreatingRopeForCargobob() {
     Citizen.invokeNative('0xC0ED6438E6D39BA8', undefined, undefined, undefined);
@@ -6069,7 +6066,7 @@ export function setPickupRopeLengthWithoutCreatingRopeForCargobob() {
 /**
  * No comment provided
  *
- * Hash: 0xDD8A2D3337F04196 | Since: 3407 | API-Set: unknown
+ * Hash: 0xDD8A2D3337F04196 | Since: unknown | API-Set: unknown
  */
 export function setPlaneControlSectionsShouldBreakOffFromExplosions(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6078,7 +6075,7 @@ export function setPlaneControlSectionsShouldBreakOffFromExplosions(vehicle, tog
 /**
  * Works just like SET_VEHICLE_ENGINE_HEALTH, but only for planes.
  *
- * Hash: 0x2A86A0475B6A1434 | Since: 1103 | API-Set: unknown
+ * Hash: 0x2A86A0475B6A1434 | Since: unknown | API-Set: unknown
  */
 export function setPlaneEngineHealth(vehicle, health) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6087,7 +6084,7 @@ export function setPlaneEngineHealth(vehicle, health) {
 /**
  * No comment provided
  *
- * Hash: 0x4C815EB175086F84 | Since: 1103 | API-Set: unknown
+ * Hash: 0x4C815EB175086F84 | Since: unknown | API-Set: unknown
  */
 export function setPlanePropellerHealth(plane, health) {
     const _plane = typeof plane == 'object' ? plane.handle() : plane;
@@ -6096,7 +6093,7 @@ export function setPlanePropellerHealth(plane, health) {
 /**
  * No comment provided
  *
- * Hash: 0xE16142B94664DEFD | Since: 323 | API-Set: unknown
+ * Hash: 0xE16142B94664DEFD | Since: unknown | API-Set: unknown
  */
 export function setPlaneResistToExplosion(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6105,7 +6102,7 @@ export function setPlaneResistToExplosion(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x0BBB9A7A8FFE931B | Since: 1290 | API-Set: unknown
+ * Hash: 0x0BBB9A7A8FFE931B | Since: unknown | API-Set: unknown
  */
 export function setPlaneSectionDamageScale(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6117,7 +6114,7 @@ export function setPlaneSectionDamageScale(vehicle) {
  * 1.0 = heavy turbulence.
  * Works by just calling it once, does not need to be called every tick.
  *
- * Hash: 0xAD2D28A1AFDFF131 | Since: 323 | API-Set: unknown
+ * Hash: 0xAD2D28A1AFDFF131 | Since: unknown | API-Set: unknown
  */
 export function setPlaneTurbulenceMultiplier(vehicle, multiplier) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6126,7 +6123,7 @@ export function setPlaneTurbulenceMultiplier(vehicle, multiplier) {
 /**
  * No comment provided
  *
- * Hash: 0x6683AB880E427778 | Since: 323 | API-Set: unknown
+ * Hash: 0x6683AB880E427778 | Since: unknown | API-Set: unknown
  */
 export function setPlaybackSpeed(vehicle, speed) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6135,7 +6132,7 @@ export function setPlaybackSpeed(vehicle, speed) {
 /**
  * Identical to SET_PLAYBACK_TO_USE_AI_TRY_TO_REVERT_BACK_LATER with 0 as arguments for p1 and p3.
  *
- * Hash: 0xA549C3B37EA28131 | Since: 323 | API-Set: unknown
+ * Hash: 0xA549C3B37EA28131 | Since: unknown | API-Set: unknown
  */
 export function setPlaybackToUseAi(vehicle, drivingStyle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6144,7 +6141,7 @@ export function setPlaybackToUseAi(vehicle, drivingStyle) {
 /**
  * Time is number of milliseconds before reverting, zero for indefinitely.
  *
- * Hash: 0x6E63860BBB190730 | Since: 323 | API-Set: unknown
+ * Hash: 0x6E63860BBB190730 | Since: unknown | API-Set: unknown
  */
 export function setPlaybackToUseAiTryToRevertBackLater(vehicle, time, drivingStyle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6153,7 +6150,7 @@ export function setPlaybackToUseAiTryToRevertBackLater(vehicle, time, drivingSty
 /**
  * No comment provided
  *
- * Hash: 0xBCDF8BAF56C87B6A | Since: 323 | API-Set: unknown
+ * Hash: 0xBCDF8BAF56C87B6A | Since: unknown | API-Set: unknown
  */
 export function setPlayersLast(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6162,7 +6159,7 @@ export function setPlayersLast(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x4E74E62E0A97E901 | Since: 323 | API-Set: unknown
+ * Hash: 0x4E74E62E0A97E901 | Since: unknown | API-Set: unknown
  */
 export function setPoliceFocusWillTrack(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6171,7 +6168,7 @@ export function setPoliceFocusWillTrack(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x796A877E459B99EA | Since: 323 | API-Set: unknown
+ * Hash: 0x796A877E459B99EA | Since: unknown | API-Set: unknown
  */
 export function setPositionOffsetForRecordedPlayback(vehicle, pos) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6180,7 +6177,7 @@ export function setPositionOffsetForRecordedPlayback(vehicle, pos) {
 /**
  * No comment provided
  *
- * Hash: 0x84436EC293B1415F | Since: 323 | API-Set: unknown
+ * Hash: 0x84436EC293B1415F | Since: unknown | API-Set: unknown
  */
 export function setRandomBoats(toggle) {
     SetRandomBoats(toggle);
@@ -6188,7 +6185,7 @@ export function setRandomBoats(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xDA5E12F728DB30CA | Since: 2372 | API-Set: unknown
+ * Hash: 0xDA5E12F728DB30CA | Since: unknown | API-Set: unknown
  */
 export function setRandomBoatsMp(toggle) {
     SetRandomBoatsInMp(toggle);
@@ -6196,7 +6193,7 @@ export function setRandomBoatsMp(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x80D9F74197EA47D9 | Since: 323 | API-Set: unknown
+ * Hash: 0x80D9F74197EA47D9 | Since: unknown | API-Set: unknown
  */
 export function setRandomTrains(toggle) {
     SetRandomTrains(toggle);
@@ -6204,7 +6201,7 @@ export function setRandomTrains(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xB3B3359379FE77D3 | Since: 323 | API-Set: unknown
+ * Hash: 0xB3B3359379FE77D3 | Since: unknown | API-Set: unknown
  */
 export function setRandomDensityMultiplierThisFrame(multiplier) {
     SetRandomVehicleDensityMultiplierThisFrame(multiplier);
@@ -6212,7 +6209,7 @@ export function setRandomDensityMultiplierThisFrame(multiplier) {
 /**
  * Lowers the vehicle's stance. Only works for vehicles that have strAdvancedFlags 0x8000 and 0x4000000 set.
  *
- * Hash: 0x3A375167F5782A65 | Since: 2372 | API-Set: unknown
+ * Hash: 0x3A375167F5782A65 | Since: unknown | API-Set: unknown
  */
 export function setReducedSuspensionForce(vehicle, enable) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6221,7 +6218,7 @@ export function setReducedSuspensionForce(vehicle, enable) {
 /**
  * Makes the train all jumbled up and derailed as it moves on the tracks (though that wont stop it from its normal operations)
  *
- * Hash: 0x317B11A312DF5534 | Since: 323 | API-Set: unknown
+ * Hash: 0x317B11A312DF5534 | Since: unknown | API-Set: unknown
  */
 export function setRenderTrainAsDerailed(train, toggle) {
     const _train = typeof train == 'object' ? train.handle() : train;
@@ -6230,7 +6227,7 @@ export function setRenderTrainAsDerailed(train, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x81E1552E35DC3839 | Since: 944 | API-Set: unknown
+ * Hash: 0x81E1552E35DC3839 | Since: unknown | API-Set: unknown
  */
 export function setRocketBoostActive(vehicle, active) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6239,7 +6236,7 @@ export function setRocketBoostActive(vehicle, active) {
 /**
  * No comment provided
  *
- * Hash: 0xFEB2DDED3509562E | Since: 1103 | API-Set: unknown
+ * Hash: 0xFEB2DDED3509562E | Since: unknown | API-Set: unknown
  */
 export function setRocketBoostFill(vehicle, percentage) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6248,7 +6245,7 @@ export function setRocketBoostFill(vehicle, percentage) {
 /**
  * No comment provided
  *
- * Hash: 0xEFC13B1CE30D755D | Since: 944 | API-Set: unknown
+ * Hash: 0xEFC13B1CE30D755D | Since: unknown | API-Set: unknown
  */
 export function setScriptRampImpulseScale(vehicle, impulseScale) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6257,7 +6254,7 @@ export function setScriptRampImpulseScale(vehicle, impulseScale) {
 /**
  * No comment provided
  *
- * Hash: 0xE00F2AB100B76E89 | Since: 944 | API-Set: unknown
+ * Hash: 0xE00F2AB100B76E89 | Since: unknown | API-Set: unknown
  */
 export function setScriptRocketBoostRechargeTime(vehicle, seconds) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6266,7 +6263,7 @@ export function setScriptRocketBoostRechargeTime(vehicle, seconds) {
 /**
  * Only called once in the decompiled scripts. Presumably activates the specified generator.
  *
- * Hash: 0xD9D620E0AC6DC4B0 | Since: 323 | API-Set: unknown
+ * Hash: 0xD9D620E0AC6DC4B0 | Since: unknown | API-Set: unknown
  */
 export function setScriptGenerator(vehicleGenerator, enabled) {
     SetScriptVehicleGenerator(vehicleGenerator, enabled);
@@ -6274,7 +6271,7 @@ export function setScriptGenerator(vehicleGenerator, enabled) {
 /**
  * Used on helicopters and blimps during the CTaskVehicleLand task. Sets a value on the task to 10f
  *
- * Hash: 0x107A473D7A6647A9 | Since: 1290 | API-Set: unknown
+ * Hash: 0x107A473D7A6647A9 | Since: unknown | API-Set: unknown
  */
 export function setShortSlowdownForLanding(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6283,7 +6280,7 @@ export function setShortSlowdownForLanding(vehicle) {
 /**
  * A vehicle recording playback flag only used in jewelry_heist
  *
- * Hash: 0x063AE2B2CC273588 | Since: 323 | API-Set: unknown
+ * Hash: 0x063AE2B2CC273588 | Since: unknown | API-Set: unknown
  */
 export function setShouldLerpFromAiToFullRecording(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6292,7 +6289,7 @@ export function setShouldLerpFromAiToFullRecording(vehicle) {
 /**
  * Resets the vehicle's turret to its default position in scripted cameras. Doesn't seem to affect turrets that are occupied by a ped.
  *
- * Hash: 0x78CEEE41F49F421F | Since: 1103 | API-Set: unknown
+ * Hash: 0x78CEEE41F49F421F | Since: unknown | API-Set: unknown
  */
 export function setShouldResetTurretInScriptedCameras(vehicle, shouldReset) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6301,7 +6298,7 @@ export function setShouldResetTurretInScriptedCameras(vehicle, shouldReset) {
 /**
  * Disables the screen effects and sound effects when driving over a slowdown pad.
  *
- * Hash: 0x65B080555EA48149 | Since: 1011 | API-Set: unknown
+ * Hash: 0x65B080555EA48149 | Since: unknown | API-Set: unknown
  */
 export function setSlowDownEffectDisabled(disabled) {
     Citizen.invokeNative('0x65B080555EA48149', disabled);
@@ -6309,7 +6306,7 @@ export function setSlowDownEffectDisabled(disabled) {
 /**
  * It will override the ability to transform deluxo. For oppressor it will work just like SET_DISABLE_HOVER_MODE_FLIGHT
  *
- * Hash: 0xF1211889DF15A763 | Since: 1290 | API-Set: unknown
+ * Hash: 0xF1211889DF15A763 | Since: unknown | API-Set: unknown
  */
 export function setSpecialFlightModeAllowed(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6326,7 +6323,7 @@ export function setSpecialFlightModeAllowed(vehicle, toggle) {
  * `VEHICLE::SET_SPECIAL_FLIGHT_MODE_RATIO(veh, 0.7f);`
  * `VEHICLE::SET_SPECIAL_FLIGHT_MODE_TARGET_RATIO(veh, 1.0f);`
  *
- * Hash: 0xD138FA15C9776837 | Since: 1290 | API-Set: unknown
+ * Hash: 0xD138FA15C9776837 | Since: unknown | API-Set: unknown
  */
 export function setSpecialFlightModeRatio(vehicle, ratio) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6345,7 +6342,7 @@ export function setSpecialFlightModeRatio(vehicle, ratio) {
  * `VEHICLE::SET_SPECIAL_FLIGHT_MODE_RATIO(veh, 0.7f);`
  * `VEHICLE::SET_SPECIAL_FLIGHT_MODE_TARGET_RATIO(veh, 1.0f);`
  *
- * Hash: 0x438B3D7CA026FE91 | Since: 1290 | API-Set: unknown
+ * Hash: 0x438B3D7CA026FE91 | Since: unknown | API-Set: unknown
  */
 export function setSpecialFlightModeTargetRatio(vehicle, targetRatio) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6354,7 +6351,7 @@ export function setSpecialFlightModeTargetRatio(vehicle, targetRatio) {
 /**
  * Disables the screen effects and sound effects when driving over a speed boost pad.
  *
- * Hash: 0x7BBE7FF626A591FE | Since: 877 | API-Set: unknown
+ * Hash: 0x7BBE7FF626A591FE | Since: unknown | API-Set: unknown
  */
 export function setSpeedBoostEffectDisabled(disabled) {
     Citizen.invokeNative('0x7BBE7FF626A591FE', disabled);
@@ -6362,7 +6359,7 @@ export function setSpeedBoostEffectDisabled(disabled) {
 /**
  * No comment provided
  *
- * Hash: 0xC59872A5134879C7 | Since: 323 | API-Set: unknown
+ * Hash: 0xC59872A5134879C7 | Since: unknown | API-Set: unknown
  */
 export function setSubmarineCrushDepths(vehicle, depth1, depth2, depth3) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6371,7 +6368,7 @@ export function setSubmarineCrushDepths(vehicle, depth1, depth2, depth3) {
 /**
  * No comment provided
  *
- * Hash: 0xB893215D8D4C015B | Since: 323 | API-Set: unknown
+ * Hash: 0xB893215D8D4C015B | Since: unknown | API-Set: unknown
  */
 export function setTaskGotoPlaneMinHeightAboveTerrain(plane, height) {
     const _plane = typeof plane == 'object' ? plane.handle() : plane;
@@ -6389,7 +6386,7 @@ export function setTaskGotoPlaneMinHeightAboveTerrain(plane, height) {
  * `VEHICLE::SET_TAXI_LIGHTS(l_115, 1);`
  * }
  *
- * Hash: 0x598803E85E8448D9 | Since: 323 | API-Set: unknown
+ * Hash: 0x598803E85E8448D9 | Since: unknown | API-Set: unknown
  */
 export function setTaxiLights(vehicle, state) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6398,7 +6395,7 @@ export function setTaxiLights(vehicle, state) {
 /**
  * No comment provided
  *
- * Hash: 0x2FA2494B47FDD009 | Since: 1103 | API-Set: unknown
+ * Hash: 0x2FA2494B47FDD009 | Since: unknown | API-Set: unknown
  */
 export function setTrailerAttachmentEnabled() {
     Citizen.invokeNative('0x2FA2494B47FDD009', undefined, undefined);
@@ -6406,7 +6403,7 @@ export function setTrailerAttachmentEnabled() {
 /**
  * No comment provided
  *
- * Hash: 0x2A8F319B392E7B3F | Since: 323 | API-Set: unknown
+ * Hash: 0x2A8F319B392E7B3F | Since: unknown | API-Set: unknown
  */
 export function setTrailerInverseMassScale(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6415,7 +6412,7 @@ export function setTrailerInverseMassScale(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x878C75C09FBDB942 | Since: 1103 | API-Set: unknown
+ * Hash: 0x878C75C09FBDB942 | Since: unknown | API-Set: unknown
  */
 export function setTrailerLegsLowered(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6424,7 +6421,7 @@ export function setTrailerLegsLowered(vehicle) {
 /**
  * in the decompiled scripts, seems to be always called on the vehicle right after being attached to a trailer.
  *
- * Hash: 0x95CF53B3D687F9FA | Since: 323 | API-Set: unknown
+ * Hash: 0x95CF53B3D687F9FA | Since: unknown | API-Set: unknown
  */
 export function setTrailerLegsRaised(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6433,7 +6430,7 @@ export function setTrailerLegsRaised(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x16469284DB8C62B5 | Since: 323 | API-Set: unknown
+ * Hash: 0x16469284DB8C62B5 | Since: unknown | API-Set: unknown
  */
 export function setTrainCruiseSpeed(train, speed) {
     const _train = typeof train == 'object' ? train.handle() : train;
@@ -6442,7 +6439,7 @@ export function setTrainCruiseSpeed(train, speed) {
 /**
  * No comment provided
  *
- * Hash: 0xAA0BC91BE0B796E3 | Since: 323 | API-Set: unknown
+ * Hash: 0xAA0BC91BE0B796E3 | Since: unknown | API-Set: unknown
  */
 export function setTrainSpeed(train, speed) {
     const _train = typeof train == 'object' ? train.handle() : train;
@@ -6454,7 +6451,7 @@ export function setTrainSpeed(train, speed) {
  * trackIndex: 0 - 26
  * Full list of all train tracks + track nodes by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/traintracks.json
  *
- * Hash: 0x21973BBF8D17EDFA | Since: 323 | API-Set: unknown
+ * Hash: 0x21973BBF8D17EDFA | Since: unknown | API-Set: unknown
  */
 export function setTrainTrackSpawnFrequency(trackIndex, frequency) {
     SetTrainTrackSpawnFrequency(trackIndex, frequency);
@@ -6462,7 +6459,7 @@ export function setTrainTrackSpawnFrequency(trackIndex, frequency) {
 /**
  * Affects the playback speed of the submarine car conversion animations. Does not affect hardcoded animations such as the wheels being retracted.
  *
- * Hash: 0x498218259FB7C72D | Since: 1365 | API-Set: unknown
+ * Hash: 0x498218259FB7C72D | Since: unknown | API-Set: unknown
  */
 export function setTransformRateForAnimation(vehicle, transformRate) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6471,7 +6468,7 @@ export function setTransformRateForAnimation(vehicle, transformRate) {
 /**
  * When set to true, the key to transform a car to submarine mode changes from raise/lower convertible roof (hold H by default) to special vehicle transform (press X by default.)
  *
- * Hash: 0x41B9FB92EDED32A6 | Since: 1365 | API-Set: unknown
+ * Hash: 0x41B9FB92EDED32A6 | Since: unknown | API-Set: unknown
  */
 export function setTransformToSubmarineUsesAlternateInput(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6480,7 +6477,7 @@ export function setTransformToSubmarineUsesAlternateInput(vehicle, toggle) {
 /**
  * Toggles specific flag on turret
  *
- * Hash: 0xC60060EB0D8AC7B1 | Since: 1290 | API-Set: unknown
+ * Hash: 0xC60060EB0D8AC7B1 | Since: unknown | API-Set: unknown
  */
 export function setTurretHidden(vehicle, index, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6497,7 +6494,7 @@ export function setTurretHidden(vehicle, index, toggle) {
  * 4: wheel_lr
  * 5: wheel_rr
  *
- * Hash: 0x74C68EF97645E79D | Since: 1868 | API-Set: unknown
+ * Hash: 0x74C68EF97645E79D | Since: unknown | API-Set: unknown
  */
 export function setTyreHealth(vehicle, wheelIndex, health) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6519,7 +6516,7 @@ export function setTyreHealth(vehicle, wheelIndex, health) {
  * 4: wheel_lr
  * 5: wheel_rr
  *
- * Hash: 0xC970D0E0FC31D768 | Since: 2060 | API-Set: unknown
+ * Hash: 0xC970D0E0FC31D768 | Since: unknown | API-Set: unknown
  */
 export function setTyreMaximumGripDifferenceDueToWearRate(vehicle, wheelIndex, multiplier) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6537,7 +6534,7 @@ export function setTyreMaximumGripDifferenceDueToWearRate(vehicle, wheelIndex, m
  * 4: wheel_lr
  * 5: wheel_rr
  *
- * Hash: 0x01894E2EDE923CA2 | Since: 1868 | API-Set: unknown
+ * Hash: 0x01894E2EDE923CA2 | Since: unknown | API-Set: unknown
  */
 export function setTyreWearRate(vehicle, wheelIndex, multiplier) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6559,7 +6556,7 @@ export function setTyreWearRate(vehicle, wheelIndex, multiplier) {
  * 4: wheel_lr
  * 5: wheel_rr
  *
- * Hash: 0x392183BB9EA57697 | Since: 2060 | API-Set: unknown
+ * Hash: 0x392183BB9EA57697 | Since: unknown | API-Set: unknown
  */
 export function setTyreWearRateScale(vehicle, wheelIndex, multiplier) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6568,7 +6565,7 @@ export function setTyreWearRateScale(vehicle, wheelIndex, multiplier) {
 /**
  * No comment provided
  *
- * Hash: 0xB68CFAF83A02768D | Since: 1290 | API-Set: unknown
+ * Hash: 0xB68CFAF83A02768D | Since: unknown | API-Set: unknown
  */
 export function setUseDesiredZCruiseSpeedForLanding(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6577,7 +6574,7 @@ export function setUseDesiredZCruiseSpeedForLanding(vehicle, toggle) {
 /**
  * Changes the car jump control to require a double-tap to activate.
  *
- * Hash: 0x5BBCF35BF6E456F7 | Since: 1604 | API-Set: unknown
+ * Hash: 0x5BBCF35BF6E456F7 | Since: unknown | API-Set: unknown
  */
 export function setUseDoubleClickForCarJump(toggle) {
     Citizen.invokeNative('0x5BBCF35BF6E456F7', toggle);
@@ -6585,7 +6582,7 @@ export function setUseDoubleClickForCarJump(toggle) {
 /**
  * Allows vehicles with the FLAG_JUMPING_CAR flag to jump higher (i.e. Ruiner 2000).
  *
- * Hash: 0xF06A16CA55D138D8 | Since: 944 | API-Set: unknown
+ * Hash: 0xF06A16CA55D138D8 | Since: unknown | API-Set: unknown
  */
 export function setUseHigherCarJump(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6594,7 +6591,7 @@ export function setUseHigherCarJump(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xDFFCEF48E511DB48 | Since: 323 | API-Set: unknown
+ * Hash: 0xDFFCEF48E511DB48 | Since: unknown | API-Set: unknown
  */
 export function setActiveDuringPlayback(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6603,7 +6600,7 @@ export function setActiveDuringPlayback(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x21115BCD6E44656A | Since: 323 | API-Set: unknown
+ * Hash: 0x21115BCD6E44656A | Since: unknown | API-Set: unknown
  */
 export function setActiveForPedNavigation(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6612,7 +6609,7 @@ export function setActiveForPedNavigation(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x9BECD4B9FEF3F8A6 | Since: 323 | API-Set: unknown
+ * Hash: 0x9BECD4B9FEF3F8A6 | Since: unknown | API-Set: unknown
  */
 export function setActAsIfHasSirenOn(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6621,7 +6618,7 @@ export function setActAsIfHasSirenOn(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x1F9FB66F3A3842D2 | Since: 323 | API-Set: unknown
+ * Hash: 0x1F9FB66F3A3842D2 | Since: unknown | API-Set: unknown
  */
 export function setActAsIfHighSpeedForFragSmashing(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6631,7 +6628,7 @@ export function setActAsIfHighSpeedForFragSmashing(vehicle) {
  * Used to be incorrectly named SET_VEHICLE_EXCLUSIVE_DRIVER
  * Toggles a flag related to SET_VEHICLE_EXCLUSIVE_DRIVER, however, doesn't enable that feature (or trigger script events related to it).
  *
- * Hash: 0x41062318F23ED854 | Since: 323 | API-Set: unknown
+ * Hash: 0x41062318F23ED854 | Since: unknown | API-Set: unknown
  */
 export function setAiCanUseExclusiveSeats(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6640,7 +6637,7 @@ export function setAiCanUseExclusiveSeats(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xCDE5E70C1DDB954C | Since: 323 | API-Set: unknown
+ * Hash: 0xCDE5E70C1DDB954C | Since: unknown | API-Set: unknown
  */
 export function setAlarm(vehicle, state) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6649,7 +6646,7 @@ export function setAlarm(vehicle, state) {
 /**
  * No comment provided
  *
- * Hash: 0x7D6F9A3EF26136A0 | Since: 323 | API-Set: unknown
+ * Hash: 0x7D6F9A3EF26136A0 | Since: unknown | API-Set: unknown
  */
 export function setAllowHomingMissleLockon(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6658,7 +6655,7 @@ export function setAllowHomingMissleLockon(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x1DDA078D12879EEE | Since: 463 | API-Set: unknown
+ * Hash: 0x1DDA078D12879EEE | Since: unknown | API-Set: unknown
  */
 export function setAllowHomingMissleLockonSynced(vehicle, canBeLockedOn) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6667,7 +6664,7 @@ export function setAllowHomingMissleLockonSynced(vehicle, canBeLockedOn) {
 /**
  * Makes the vehicle accept no passengers.
  *
- * Hash: 0x5D14D4154BFE7B2C | Since: 323 | API-Set: unknown
+ * Hash: 0x5D14D4154BFE7B2C | Since: unknown | API-Set: unknown
  */
 export function setAllowNoPassengersLockon(veh, toggle) {
     const _veh = typeof veh == 'object' ? veh.handle() : veh;
@@ -6676,7 +6673,7 @@ export function setAllowNoPassengersLockon(veh, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x8BA6F76BC53A1493 | Since: 323 | API-Set: unknown
+ * Hash: 0x8BA6F76BC53A1493 | Since: unknown | API-Set: unknown
  */
 export function setAutomaticallyAttaches(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6685,7 +6682,7 @@ export function setAutomaticallyAttaches(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xD3301660A57C9272 | Since: 757 | API-Set: unknown
+ * Hash: 0xD3301660A57C9272 | Since: unknown | API-Set: unknown
  */
 export function setAvoidPlayerVehicleRiotVanMission() {
     Citizen.invokeNative('0xD3301660A57C9272', undefined);
@@ -6693,7 +6690,7 @@ export function setAvoidPlayerVehicleRiotVanMission() {
 /**
  * No comment provided
  *
- * Hash: 0x9F3F689B814F2599 | Since: 323 | API-Set: unknown
+ * Hash: 0x9F3F689B814F2599 | Since: unknown | API-Set: unknown
  */
 export function setBlipThrottleRandomly(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6704,7 +6701,7 @@ export function setBlipThrottleRandomly(vehicle) {
  *
  * p2 is probably z, but changing that value didn't seem to have a noticeable effect.
  *
- * Hash: 0x870B8B7A766615C8 | Since: 505 | API-Set: unknown
+ * Hash: 0x870B8B7A766615C8 | Since: unknown | API-Set: unknown
  */
 export function setBobbleheadVelocity(x, y) {
     Citizen.invokeNative('0x870B8B7A766615C8', x, y, 0);
@@ -6712,7 +6709,7 @@ export function setBobbleheadVelocity(x, y) {
 /**
  * p2 often set to 1000.0 in the decompiled scripts.
  *
- * Hash: 0xB77D05AC8C78AADB | Since: 323 | API-Set: unknown
+ * Hash: 0xB77D05AC8C78AADB | Since: unknown | API-Set: unknown
  */
 export function setBodyHealth(vehicle, value) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6721,7 +6718,7 @@ export function setBodyHealth(vehicle, value) {
 /**
  * Sets the amount of bombs that this vehicle has. As far as I know, this does _not_ impact vehicle weapons or the ammo of those weapons in any way, it is just a way to keep track of the amount of bombs in a specific plane.
  *
- * Hash: 0xF4B2ED59DEB5D774 | Since: 1180 | API-Set: unknown
+ * Hash: 0xF4B2ED59DEB5D774 | Since: unknown | API-Set: unknown
  */
 export function setBombAmmo(vehicle, bombCount) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6730,7 +6727,7 @@ export function setBombAmmo(vehicle, bombCount) {
 /**
  * No comment provided
  *
- * Hash: 0xE4E2FD323574965C | Since: 757 | API-Set: unknown
+ * Hash: 0xE4E2FD323574965C | Since: unknown | API-Set: unknown
  */
 export function setBrake(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6739,7 +6736,7 @@ export function setBrake(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x92B35082E0B42F66 | Since: 323 | API-Set: unknown
+ * Hash: 0x92B35082E0B42F66 | Since: unknown | API-Set: unknown
  */
 export function setBrakeLights(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6748,7 +6745,7 @@ export function setBrakeLights(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xC361AA040D6637A8 | Since: 323 | API-Set: unknown
+ * Hash: 0xC361AA040D6637A8 | Since: unknown | API-Set: unknown
  */
 export function setBrokenPartsDontAffectAiHandling(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6757,7 +6754,7 @@ export function setBrokenPartsDontAffectAiHandling(vehicle) {
 /**
  * Sets the arm position of a bulldozer. Position must be a value between 0.0 and 1.0. Ignored when `p2` is set to false, instead incrementing arm position by 0.1 (or 10%).
  *
- * Hash: 0xF8EBCCC96ADB9FB7 | Since: 323 | API-Set: unknown
+ * Hash: 0xF8EBCCC96ADB9FB7 | Since: unknown | API-Set: unknown
  */
 export function setBulldozerArmPosition(vehicle, position) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6766,7 +6763,7 @@ export function setBulldozerArmPosition(vehicle, position) {
 /**
  * On accelerating, spins the driven wheels with the others braked, so you don't go anywhere.
  *
- * Hash: 0xFB8794444A7D60FB | Since: 323 | API-Set: unknown
+ * Hash: 0xFB8794444A7D60FB | Since: unknown | API-Set: unknown
  */
 export function setBurnout(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6775,7 +6772,7 @@ export function setBurnout(vehicle, toggle) {
 /**
  * This has not yet been tested - it's just an assumption of what the types could be.
  *
- * Hash: 0x3750146A28097A82 | Since: 323 | API-Set: unknown
+ * Hash: 0x3750146A28097A82 | Since: unknown | API-Set: unknown
  */
 export function setCanBeTargetted(vehicle, state) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6784,7 +6781,7 @@ export function setCanBeTargetted(vehicle, state) {
 /**
  * No comment provided
  *
- * Hash: 0x300504B23BD3B711 | Since: 323 | API-Set: unknown
+ * Hash: 0x300504B23BD3B711 | Since: unknown | API-Set: unknown
  */
 export function setCanBeUsedByFleeingPeds(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6793,7 +6790,7 @@ export function setCanBeUsedByFleeingPeds(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x4C7028F78FFD3681 | Since: 323 | API-Set: unknown
+ * Hash: 0x4C7028F78FFD3681 | Since: unknown | API-Set: unknown
  */
 export function setCanBeVisiblyDamaged(vehicle, state) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6802,7 +6799,7 @@ export function setCanBeVisiblyDamaged(vehicle, state) {
 /**
  * No comment provided
  *
- * Hash: 0x59BF8C3D52C92F66 | Since: 323 | API-Set: unknown
+ * Hash: 0x59BF8C3D52C92F66 | Since: unknown | API-Set: unknown
  */
 export function setCanBreak(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6811,7 +6808,7 @@ export function setCanBreak(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x0CDDA42F9E360CA6 | Since: 323 | API-Set: unknown
+ * Hash: 0x0CDDA42F9E360CA6 | Since: unknown | API-Set: unknown
  */
 export function setCanDeformWheels(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6820,7 +6817,7 @@ export function setCanDeformWheels(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x065D03A9D6B2C6B5 | Since: 463 | API-Set: unknown
+ * Hash: 0x065D03A9D6B2C6B5 | Since: unknown | API-Set: unknown
  */
 export function setCanEjectPassengersIfLocked() {
     Citizen.invokeNative('0x065D03A9D6B2C6B5', undefined, undefined);
@@ -6828,7 +6825,7 @@ export function setCanEjectPassengersIfLocked() {
 /**
  * No comment provided
  *
- * Hash: 0x206BC5DC9D1AC70A | Since: 323 | API-Set: unknown
+ * Hash: 0x206BC5DC9D1AC70A | Since: unknown | API-Set: unknown
  */
 export function setCanEngineMissfire(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6837,7 +6834,7 @@ export function setCanEngineMissfire(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x51BB2D88D31A914B | Since: 323 | API-Set: unknown
+ * Hash: 0x51BB2D88D31A914B | Since: unknown | API-Set: unknown
  */
 export function setCanLeakOil(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6846,7 +6843,7 @@ export function setCanLeakOil(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x192547247864DFDD | Since: 323 | API-Set: unknown
+ * Hash: 0x192547247864DFDD | Since: unknown | API-Set: unknown
  */
 export function setCanLeakPetrol(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6855,7 +6852,7 @@ export function setCanLeakPetrol(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x428BACCDF5E26EAD | Since: 323 | API-Set: unknown
+ * Hash: 0x428BACCDF5E26EAD | Since: unknown | API-Set: unknown
  */
 export function setCanSaveInGarage(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6864,7 +6861,7 @@ export function setCanSaveInGarage(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x9849DE24FCF23CCC | Since: 1604 | API-Set: unknown
+ * Hash: 0x9849DE24FCF23CCC | Since: unknown | API-Set: unknown
  */
 export function setCausesSwerving(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6873,7 +6870,7 @@ export function setCausesSwerving(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xA46413066687A328 | Since: 323 | API-Set: unknown
+ * Hash: 0xA46413066687A328 | Since: unknown | API-Set: unknown
  */
 export function setCeilingHeight(vehicle, height) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6890,7 +6887,7 @@ export function setCeilingHeight(vehicle, height) {
  *
  * This needs to be called every frame to take effect.
  *
- * Hash: 0xB59E4BD37AE292DB | Since: 323 | API-Set: unknown
+ * Hash: 0xB59E4BD37AE292DB | Since: unknown | API-Set: unknown
  */
 export function setCheatPowerIncrease(vehicle, value) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6904,7 +6901,7 @@ export function setCheatPowerIncrease(vehicle, value) {
  *
  * Full list of vehicle colors by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicleColors.json
  *
- * Hash: 0x4F1D4BE3A7F24601 | Since: 323 | API-Set: unknown
+ * Hash: 0x4F1D4BE3A7F24601 | Since: unknown | API-Set: unknown
  */
 export function setColours(vehicle, colorPrimary, colorSecondary) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6913,7 +6910,7 @@ export function setColours(vehicle, colorPrimary, colorSecondary) {
 /**
  * Sets the selected vehicle's colors to the specified index of the color combination found in the vehicle's carvariations.meta entry.
  *
- * Hash: 0x33E8CD3322E2FE31 | Since: 323 | API-Set: unknown
+ * Hash: 0x33E8CD3322E2FE31 | Since: unknown | API-Set: unknown
  */
 export function setColourCombination(vehicle, colorCombination) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6922,7 +6919,7 @@ export function setColourCombination(vehicle, colorCombination) {
 /**
  * Does nothing. It's a nullsub.
  *
- * Hash: 0x36DE109527A2C0C4 | Since: 1604 | API-Set: unknown
+ * Hash: 0x36DE109527A2C0C4 | Since: unknown | API-Set: unknown
  */
 export function setCombatMode(toggle) {
     Citizen.invokeNative('0x36DE109527A2C0C4', toggle);
@@ -6931,7 +6928,7 @@ export function setCombatMode(toggle) {
  * Similar to SET_VEHICLE_BOMB_AMMO, this sets the amount of countermeasures that are present on this vehicle.
  * Use GET_VEHICLE_BOMB_AMMO to get the current amount.
  *
- * Hash: 0x9BDA23BF666F0855 | Since: 1180 | API-Set: unknown
+ * Hash: 0x9BDA23BF666F0855 | Since: unknown | API-Set: unknown
  */
 export function setCountermeasureAmmo(vehicle, counterMeasureCount) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6940,7 +6937,7 @@ export function setCountermeasureAmmo(vehicle, counterMeasureCount) {
 /**
  * No comment provided
  *
- * Hash: 0x182F266C2D9E2BEB | Since: 323 | API-Set: unknown
+ * Hash: 0x182F266C2D9E2BEB | Since: unknown | API-Set: unknown
  */
 export function setCustomPathNodeStreamingRadius(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6949,7 +6946,7 @@ export function setCustomPathNodeStreamingRadius(vehicle) {
 /**
  * p1, p2, p3 are RGB values for color (255,0,0 for Red, ect)
  *
- * Hash: 0x7141766F91D15BEA | Since: 323 | API-Set: unknown
+ * Hash: 0x7141766F91D15BEA | Since: unknown | API-Set: unknown
  */
 export function setCustomPrimaryColour(vehicle, r, g, b) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6958,7 +6955,7 @@ export function setCustomPrimaryColour(vehicle, r, g, b) {
 /**
  * p1, p2, p3 are RGB values for color (255,0,0 for Red, ect)
  *
- * Hash: 0x36CED73BFED89754 | Since: 323 | API-Set: unknown
+ * Hash: 0x36CED73BFED89754 | Since: unknown | API-Set: unknown
  */
 export function setCustomSecondaryColour(vehicle, r, g, b) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6970,7 +6967,7 @@ export function setCustomSecondaryColour(vehicle, r, g, b) {
  * Radius of effect damage applied in a sphere at impact location
  * When `focusOnModel` set to `true`, the damage sphere will travel towards the vehicle from the given point, thus guaranteeing an impact
  *
- * Hash: 0xA1DD317EA8FD4F29 | Since: 323 | API-Set: unknown
+ * Hash: 0xA1DD317EA8FD4F29 | Since: unknown | API-Set: unknown
  */
 export function setDamage(vehicle, xOffset, yOffset, zOffset, damage, radius, focusOnModel) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6979,7 +6976,7 @@ export function setDamage(vehicle, xOffset, yOffset, zOffset, damage, radius, fo
 /**
  * No comment provided
  *
- * Hash: 0x4E20D2A627011E8E | Since: 757 | API-Set: unknown
+ * Hash: 0x4E20D2A627011E8E | Since: unknown | API-Set: unknown
  */
 export function setDamageScale(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6988,7 +6985,7 @@ export function setDamageScale(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x9640E30A7F395E4B | Since: 1290 | API-Set: unknown
+ * Hash: 0x9640E30A7F395E4B | Since: unknown | API-Set: unknown
  */
 export function setDamageScales(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6997,7 +6994,7 @@ export function setDamageScales(vehicle) {
 /**
  * This fixes the deformation of a vehicle but the vehicle health doesn't improve
  *
- * Hash: 0x953DA1E1B12C0491 | Since: 323 | API-Set: unknown
+ * Hash: 0x953DA1E1B12C0491 | Since: unknown | API-Set: unknown
  */
 export function setDeformationFixed(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7009,7 +7006,7 @@ export function setDeformationFixed(vehicle) {
  * - `0.0` = no vehicles on streets
  * - `1.0` = normal vehicles on streets
  *
- * Hash: 0x245A6883D966D537 | Since: 323 | API-Set: unknown
+ * Hash: 0x245A6883D966D537 | Since: unknown | API-Set: unknown
  */
 export function setDensityMultiplierThisFrame(multiplier) {
     SetVehicleDensityMultiplierThisFrame(multiplier);
@@ -7017,7 +7014,7 @@ export function setDensityMultiplierThisFrame(multiplier) {
 /**
  * Does nothing. It's a nullsub.
  *
- * Hash: 0x82E0AC411E41A5B4 | Since: 1604 | API-Set: unknown
+ * Hash: 0x82E0AC411E41A5B4 | Since: unknown | API-Set: unknown
  */
 export function setDetonationMode(toggle) {
     Citizen.invokeNative('0x82E0AC411E41A5B4', toggle);
@@ -7026,7 +7023,7 @@ export function setDetonationMode(toggle) {
  * You can't use values greater than 15.0
  * Also, R* does (float)(rand() % 15) to get a random dirt level when generating a vehicle.
  *
- * Hash: 0x79D3B596FE44EE8B | Since: 323 | API-Set: unknown
+ * Hash: 0x79D3B596FE44EE8B | Since: unknown | API-Set: unknown
  */
 export function setDirtLevel(vehicle, dirtLevel) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7035,7 +7032,7 @@ export function setDirtLevel(vehicle, dirtLevel) {
 /**
  * No comment provided
  *
- * Hash: 0xAF60E6A2936F982A | Since: 1103 | API-Set: unknown
+ * Hash: 0xAF60E6A2936F982A | Since: unknown | API-Set: unknown
  */
 export function setDisableCollisionUponCreation(vehicle, disable) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7044,7 +7041,7 @@ export function setDisableCollisionUponCreation(vehicle, disable) {
 /**
  * No comment provided
  *
- * Hash: 0x8AA9180DE2FEDD45 | Since: 323 | API-Set: unknown
+ * Hash: 0x8AA9180DE2FEDD45 | Since: unknown | API-Set: unknown
  */
 export function setDisableHeightMapAvoidance(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7053,7 +7050,7 @@ export function setDisableHeightMapAvoidance(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x2B6747FAA9DB9D6B | Since: 323 | API-Set: unknown
+ * Hash: 0x2B6747FAA9DB9D6B | Since: unknown | API-Set: unknown
  */
 export function setDisableTowing(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7062,7 +7059,7 @@ export function setDisableTowing(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x76D26A22750E849E | Since: 1103 | API-Set: unknown
+ * Hash: 0x76D26A22750E849E | Since: unknown | API-Set: unknown
  */
 export function setDontTerminateTaskWhenAchieved(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7084,7 +7081,7 @@ export function setDontTerminateTaskWhenAchieved(vehicle) {
  * VEHICLELOCK_CANNOT_ENTER
  * };
  *
- * Hash: 0xB664292EAECF7FA6 | Since: 323 | API-Set: unknown
+ * Hash: 0xB664292EAECF7FA6 | Since: unknown | API-Set: unknown
  */
 export function setDoorsLocked(vehicle, doorLockStatus) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7098,7 +7095,7 @@ export function setDoorsLocked(vehicle, doorLockStatus) {
  * ...
  * `VEHICLE::SET_VEHICLE_DOORS_LOCKED_FOR_ALL_PLAYERS(l_11A1, 1);`
  *
- * Hash: 0xA2F80B8D040727CC | Since: 323 | API-Set: unknown
+ * Hash: 0xA2F80B8D040727CC | Since: unknown | API-Set: unknown
  */
 export function setDoorsLockedForAllPlayers(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7107,7 +7104,7 @@ export function setDoorsLockedForAllPlayers(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x203B527D1B77904C | Since: 1365 | API-Set: unknown
+ * Hash: 0x203B527D1B77904C | Since: unknown | API-Set: unknown
  */
 export function setDoorsLockedForAllTeams(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7116,7 +7113,7 @@ export function setDoorsLockedForAllTeams(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x9737A37136F07E75 | Since: 323 | API-Set: unknown
+ * Hash: 0x9737A37136F07E75 | Since: unknown | API-Set: unknown
  */
 export function setDoorsLockedForNonScriptPlayers(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7125,7 +7122,7 @@ export function setDoorsLockedForNonScriptPlayers(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x517AAF684BB50CD1 | Since: 323 | API-Set: unknown
+ * Hash: 0x517AAF684BB50CD1 | Since: unknown | API-Set: unknown
  */
 export function setDoorsLockedForPlayer(vehicle, player, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7135,7 +7132,7 @@ export function setDoorsLockedForPlayer(vehicle, player, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xB81F6D4A8F5EEBA8 | Since: 323 | API-Set: unknown
+ * Hash: 0xB81F6D4A8F5EEBA8 | Since: unknown | API-Set: unknown
  */
 export function setDoorsLockedForTeam(vehicle, team, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7144,7 +7141,7 @@ export function setDoorsLockedForTeam(vehicle, team, toggle) {
 /**
  * Closes all doors of a vehicle:
  *
- * Hash: 0x781B3D62BB013EF5 | Since: 323 | API-Set: unknown
+ * Hash: 0x781B3D62BB013EF5 | Since: unknown | API-Set: unknown
  */
 export function setDoorsShut(vehicle, closeInstantly) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7155,7 +7152,7 @@ export function setDoorsShut(vehicle, closeInstantly) {
  *
  * Usually used alongside other vehicle door natives.
  *
- * Hash: 0x3B458DDB57038F08 | Since: 877 | API-Set: unknown
+ * Hash: 0x3B458DDB57038F08 | Since: unknown | API-Set: unknown
  */
 export function setDoorAutoLock(vehicle, doorId, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7164,7 +7161,7 @@ export function setDoorAutoLock(vehicle, doorId, toggle) {
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  *
- * Hash: 0xD4D4F6A4AB575A33 | Since: 323 | API-Set: unknown
+ * Hash: 0xD4D4F6A4AB575A33 | Since: unknown | API-Set: unknown
  */
 export function setDoorBroken(vehicle, doorId, deleteDoor) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7173,7 +7170,7 @@ export function setDoorBroken(vehicle, doorId, deleteDoor) {
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  *
- * Hash: 0xF2BFA0430F0A0FCB | Since: 323 | API-Set: unknown
+ * Hash: 0xF2BFA0430F0A0FCB | Since: unknown | API-Set: unknown
  */
 export function setDoorControl(vehicle, doorId, speed, angle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7182,7 +7179,7 @@ export function setDoorControl(vehicle, doorId, speed, angle) {
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  *
- * Hash: 0xA5A9653A8D2CAF48 | Since: 323 | API-Set: unknown
+ * Hash: 0xA5A9653A8D2CAF48 | Since: unknown | API-Set: unknown
  */
 export function setDoorLatched(vehicle, doorId) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7191,7 +7188,7 @@ export function setDoorLatched(vehicle, doorId) {
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  *
- * Hash: 0x7C65DAC73C35C862 | Since: 323 | API-Set: unknown
+ * Hash: 0x7C65DAC73C35C862 | Since: unknown | API-Set: unknown
  */
 export function setDoorOpen(vehicle, doorId, loose, openInstantly) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7209,7 +7206,7 @@ export function setDoorOpen(vehicle, doorId, loose, openInstantly) {
  * VEH_EXT_BOOT
  * };
  *
- * Hash: 0x93D9BD300D7789E5 | Since: 323 | API-Set: unknown
+ * Hash: 0x93D9BD300D7789E5 | Since: unknown | API-Set: unknown
  */
 export function setDoorShut(vehicle, doorId, closeInstantly) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7221,7 +7218,7 @@ export function setDoorShut(vehicle, doorId, closeInstantly) {
  * youtu.be/3arlUxzHl5Y
  * i.imgur.com/WrNpYFs.jpg
  *
- * Hash: 0x068F64F2470F9656 | Since: 323 | API-Set: unknown
+ * Hash: 0x068F64F2470F9656 | Since: unknown | API-Set: unknown
  */
 export function setDropsMoneyWhenBlownUp(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7230,7 +7227,7 @@ export function setDropsMoneyWhenBlownUp(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x983765856F2564F9 | Since: 323 | API-Set: unknown
+ * Hash: 0x983765856F2564F9 | Since: unknown | API-Set: unknown
  */
 export function setEngineCanDegrade(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7247,7 +7244,7 @@ export function setEngineCanDegrade(vehicle, toggle) {
  * 300: Engine is smoking and losing functionality
  * 1000: Engine is perfect
  *
- * Hash: 0x45F6D8EEF34ABEF1 | Since: 323 | API-Set: unknown
+ * Hash: 0x45F6D8EEF34ABEF1 | Since: unknown | API-Set: unknown
  */
 export function setEngineHealth(vehicle, health) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7261,7 +7258,7 @@ export function setEngineHealth(vehicle, health) {
  * instantly: if true, the vehicle will be set to the state immediately; otherwise, the current driver will physically turn on or off the engine.
  * disableAutoStart: If true, the system will prevent the engine from starting when the player got into it.
  *
- * Hash: 0x2497C4717C8B881E | Since: 323 | API-Set: unknown
+ * Hash: 0x2497C4717C8B881E | Since: unknown | API-Set: unknown
  */
 export function setEngineOn(vehicle, value, instantly, disableAutoStart) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7270,7 +7267,7 @@ export function setEngineOn(vehicle, value, instantly, disableAutoStart) {
 /**
  * The parameter fade is a value from 0-1, where 0 is fresh paint.
  *
- * Hash: 0x3AFDC536C3D01674 | Since: 323 | API-Set: unknown
+ * Hash: 0x3AFDC536C3D01674 | Since: unknown | API-Set: unknown
  */
 export function setEnveffScale(vehicle, fade) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7281,7 +7278,7 @@ export function setEnveffScale(vehicle, fade) {
  *
  * Used to be incorrectly named _SET_VEHICLE_EXCLUSIVE_DRIVER_2
  *
- * Hash: 0xB5C51B5502E85E83 | Since: 323 | API-Set: unknown
+ * Hash: 0xB5C51B5502E85E83 | Since: unknown | API-Set: unknown
  */
 export function setExclusiveDriver(vehicle, ped, index) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7291,7 +7288,7 @@ export function setExclusiveDriver(vehicle, ped, index) {
 /**
  * No comment provided
  *
- * Hash: 0xD565F438137F0E10 | Since: 1103 | API-Set: unknown
+ * Hash: 0xD565F438137F0E10 | Since: unknown | API-Set: unknown
  */
 export function setExplodesOnExplosionDamageAtZeroBodyHealth(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7300,7 +7297,7 @@ export function setExplodesOnExplosionDamageAtZeroBodyHealth(vehicle, toggle) {
 /**
  * Sets a vehicle to be strongly resistant to explosions. p0 is the vehicle; set p1 to false to toggle the effect on/off.
  *
- * Hash: 0x71B0892EC081D60A | Since: 323 | API-Set: unknown
+ * Hash: 0x71B0892EC081D60A | Since: unknown | API-Set: unknown
  */
 export function setExplodesOnHighExplosionDamage(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7309,7 +7306,7 @@ export function setExplodesOnHighExplosionDamage(vehicle, toggle) {
 /**
  * Max value is 32767
  *
- * Hash: 0x79DF7E806202CE01 | Since: 323 | API-Set: unknown
+ * Hash: 0x79DF7E806202CE01 | Since: unknown | API-Set: unknown
  */
 export function setExtendedRemovalRange(vehicle, range) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7318,7 +7315,7 @@ export function setExtendedRemovalRange(vehicle, range) {
 /**
  * Available extraIds are 1-14, however none of the vehicles have extras above 12.
  *
- * Hash: 0x7EE3A3C5E4A40CC9 | Since: 323 | API-Set: unknown
+ * Hash: 0x7EE3A3C5E4A40CC9 | Since: unknown | API-Set: unknown
  */
 export function setExtra(vehicle, extraId, disable) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7327,7 +7324,7 @@ export function setExtra(vehicle, extraId, disable) {
 /**
  * They use the same color indexs as SET_VEHICLE_COLOURS.
  *
- * Hash: 0x2036F561ADD12E33 | Since: 323 | API-Set: unknown
+ * Hash: 0x2036F561ADD12E33 | Since: unknown | API-Set: unknown
  */
 export function setExtraColours(vehicle, pearlescentColor, wheelColor) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7336,7 +7333,7 @@ export function setExtraColours(vehicle, pearlescentColor, wheelColor) {
 /**
  * No comment provided
  *
- * Hash: 0xF40DD601A65F7F19 | Since: 505 | API-Set: unknown
+ * Hash: 0xF40DD601A65F7F19 | Since: unknown | API-Set: unknown
  */
 export function setExtraColour5(vehicle, color) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7345,7 +7342,7 @@ export function setExtraColour5(vehicle, color) {
 /**
  * No comment provided
  *
- * Hash: 0x6089CDF6A57F326C | Since: 505 | API-Set: unknown
+ * Hash: 0x6089CDF6A57F326C | Since: unknown | API-Set: unknown
  */
 export function setExtraColour6(vehicle, color) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7355,7 +7352,7 @@ export function setExtraColour6(vehicle, color) {
  * This fixes a vehicle.
  * If the vehicle's engine's broken then you cannot fix it with this native.
  *
- * Hash: 0x115722B1B9C14C1C | Since: 323 | API-Set: unknown
+ * Hash: 0x115722B1B9C14C1C | Since: unknown | API-Set: unknown
  */
 export function setFixed(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7364,7 +7361,7 @@ export function setFixed(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x30D779DE7C4F6DD3 | Since: 323 | API-Set: unknown
+ * Hash: 0x30D779DE7C4F6DD3 | Since: unknown | API-Set: unknown
  */
 export function setFlightNozzlePosition(vehicle, angleRatio) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7373,7 +7370,7 @@ export function setFlightNozzlePosition(vehicle, angleRatio) {
 /**
  * No comment provided
  *
- * Hash: 0x9AA47FFF660CB932 | Since: 323 | API-Set: unknown
+ * Hash: 0x9AA47FFF660CB932 | Since: unknown | API-Set: unknown
  */
 export function setFlightNozzlePositionImmediate(vehicle, angle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7382,7 +7379,7 @@ export function setFlightNozzlePositionImmediate(vehicle, angle) {
 /**
  * No comment provided
  *
- * Hash: 0xB055A34527CB8FD7 | Since: 323 | API-Set: unknown
+ * Hash: 0xB055A34527CB8FD7 | Since: unknown | API-Set: unknown
  */
 export function setForceAfterburner(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7391,7 +7388,7 @@ export function setForceAfterburner(vehicle, toggle) {
 /**
  * Sets some bit of vehicle
  *
- * Hash: 0x8821196D91FA2DE5 | Since: 1290 | API-Set: unknown
+ * Hash: 0x8821196D91FA2DE5 | Since: unknown | API-Set: unknown
  */
 export function setForceInteriorlight(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7404,7 +7401,7 @@ export function setForceInteriorlight(vehicle, toggle) {
  * You can convert meters/s to mph here:
  * http://www.calculateme.com/Speed/MetersperSecond/ToMilesperHour.htm
  *
- * Hash: 0xAB54A438726D25D5 | Since: 323 | API-Set: unknown
+ * Hash: 0xAB54A438726D25D5 | Since: unknown | API-Set: unknown
  */
 export function setForwardSpeed(vehicle, speed) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7413,7 +7410,7 @@ export function setForwardSpeed(vehicle, speed) {
 /**
  * Seems to be identical to SET_VEHICLE_FORWARD_SPEED
  *
- * Hash: 0x6501129C9E0FFA05 | Since: 877 | API-Set: unknown
+ * Hash: 0x6501129C9E0FFA05 | Since: unknown | API-Set: unknown
  */
 export function setForwardSpeedXy(vehicle, speed) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7422,7 +7419,7 @@ export function setForwardSpeedXy(vehicle, speed) {
 /**
  * Seems to be related to the metal parts, not tyres (like i was expecting lol)
  *
- * Hash: 0x1837AF7C627009BA | Since: 323 | API-Set: unknown
+ * Hash: 0x1837AF7C627009BA | Since: unknown | API-Set: unknown
  */
 export function setFrictionOverride(vehicle, friction) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7431,7 +7428,7 @@ export function setFrictionOverride(vehicle, friction) {
 /**
  * It switch to highbeam when p1 is set to true.
  *
- * Hash: 0x8B7FD87F0DDB421E | Since: 323 | API-Set: unknown
+ * Hash: 0x8B7FD87F0DDB421E | Since: unknown | API-Set: unknown
  */
 export function setFullbeam(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7440,7 +7437,7 @@ export function setFullbeam(vehicle, toggle) {
 /**
  * Allows creation of CEventShockingPlaneFlyby, CEventShockingHelicopterOverhead, and other(?) Shocking events
  *
- * Hash: 0x279D50DE5652D935 | Since: 323 | API-Set: unknown
+ * Hash: 0x279D50DE5652D935 | Since: unknown | API-Set: unknown
  */
 export function setGeneratesEngineShockingEvents(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7449,7 +7446,7 @@ export function setGeneratesEngineShockingEvents(vehicle, toggle) {
 /**
  * Related to car generators & CPlayerSwitchMgrLong
  *
- * Hash: 0x9A75585FB2E54FAD | Since: 323 | API-Set: unknown
+ * Hash: 0x9A75585FB2E54FAD | Since: unknown | API-Set: unknown
  */
 export function setGeneratorAreaOfInterest(pos, radius) {
     SetVehicleGeneratorAreaOfInterest(pos.x, pos.y, pos.z, radius);
@@ -7457,7 +7454,7 @@ export function setGeneratorAreaOfInterest(pos, radius) {
 /**
  * No comment provided
  *
- * Hash: 0x89F149B6131E57DA | Since: 323 | API-Set: unknown
+ * Hash: 0x89F149B6131E57DA | Since: unknown | API-Set: unknown
  */
 export function setGravity(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7466,7 +7463,7 @@ export function setGravity(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x684785568EF26A22 | Since: 323 | API-Set: unknown
+ * Hash: 0x684785568EF26A22 | Since: unknown | API-Set: unknown
  */
 export function setHandbrake(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7475,7 +7472,7 @@ export function setHandbrake(vehicle, toggle) {
 /**
  * Use the "AIHandling" string found in handling.meta
  *
- * Hash: 0x10655FAB9915623D | Since: 323 | API-Set: unknown
+ * Hash: 0x10655FAB9915623D | Since: unknown | API-Set: unknown
  */
 export function setHandlingOverride(vehicle, hash) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7486,7 +7483,7 @@ export function setHandlingOverride(vehicle, hash) {
 /**
  * No comment provided
  *
- * Hash: 0x02398B627547189C | Since: 323 | API-Set: unknown
+ * Hash: 0x02398B627547189C | Since: unknown | API-Set: unknown
  */
 export function setHasBeenDrivenFlag(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7495,7 +7492,7 @@ export function setHasBeenDrivenFlag(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x2B5F9D2AF1F1722D | Since: 323 | API-Set: unknown
+ * Hash: 0x2B5F9D2AF1F1722D | Since: unknown | API-Set: unknown
  */
 export function setHasBeenOwnedByPlayer(vehicle, owned) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7504,7 +7501,7 @@ export function setHasBeenOwnedByPlayer(vehicle, owned) {
 /**
  * If set to true, prevents vehicle sirens from having sound, leaving only the lights.
  *
- * Hash: 0xD8050E0EB60CF274 | Since: 323 | API-Set: unknown
+ * Hash: 0xD8050E0EB60CF274 | Since: unknown | API-Set: unknown
  */
 export function setHasMutedSirens(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7513,7 +7510,7 @@ export function setHasMutedSirens(vehicle, toggle) {
 /**
  * if true, axles won't bend.
  *
- * Hash: 0x92F0CF722BC4202F | Since: 323 | API-Set: unknown
+ * Hash: 0x92F0CF722BC4202F | Since: unknown | API-Set: unknown
  */
 export function setHasStrongAxles(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7522,7 +7519,7 @@ export function setHasStrongAxles(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x1AA8A837D2169D94 | Since: 323 | API-Set: unknown
+ * Hash: 0x1AA8A837D2169D94 | Since: unknown | API-Set: unknown
  */
 export function setHasUnbreakableLights(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7537,7 +7534,7 @@ export function setHasUnbreakableLights(vehicle, toggle) {
  * 1 = Lights Disabled (Lights are fully disabled, cannot be toggled)
  * 2 = Always On (Lights can be toggled between normal and high beams)
  *
- * Hash: 0x1FD09E7390A74D54 | Since: 323 | API-Set: unknown
+ * Hash: 0x1FD09E7390A74D54 | Since: unknown | API-Set: unknown
  */
 export function setHeadlightShadows(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7546,7 +7543,7 @@ export function setHeadlightShadows(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x407DC5E97DB1A4D3 | Since: 1493 | API-Set: unknown
+ * Hash: 0x407DC5E97DB1A4D3 | Since: unknown | API-Set: unknown
  */
 export function setHomingLockedontoState() {
     Citizen.invokeNative('0x407DC5E97DB1A4D3', undefined, undefined);
@@ -7554,7 +7551,7 @@ export function setHomingLockedontoState() {
 /**
  * Seems to copy some values in vehicle
  *
- * Hash: 0x6A973569BA094650 | Since: 1604 | API-Set: unknown
+ * Hash: 0x6A973569BA094650 | Since: unknown | API-Set: unknown
  */
 export function setImpatienceTimer(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7563,7 +7560,7 @@ export function setImpatienceTimer(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x06582AFF74894C75 | Since: 323 | API-Set: unknown
+ * Hash: 0x06582AFF74894C75 | Since: unknown | API-Set: unknown
  */
 export function setInactiveDuringPlayback(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7573,7 +7570,7 @@ export function setInactiveDuringPlayback(vehicle, toggle) {
  * Sets the turn signal enabled for a vehicle.
  * Set turnSignal to 1 for left light, 0 for right light.
  *
- * Hash: 0xB5D45264751B7DF0 | Since: 323 | API-Set: unknown
+ * Hash: 0xB5D45264751B7DF0 | Since: unknown | API-Set: unknown
  */
 export function setIndicatorLights(vehicle, turnSignal, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7582,7 +7579,7 @@ export function setIndicatorLights(vehicle, turnSignal, toggle) {
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  *
- * Hash: 0xBE70724027F85BCD | Since: 323 | API-Set: unknown
+ * Hash: 0xBE70724027F85BCD | Since: unknown | API-Set: unknown
  */
 export function setIndividualDoorsLocked(vehicle, doorId, doorLockStatus) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7591,7 +7588,7 @@ export function setIndividualDoorsLocked(vehicle, doorId, doorLockStatus) {
 /**
  * No comment provided
  *
- * Hash: 0x0AD9E8F87FF7C16F | Since: 323 | API-Set: unknown
+ * Hash: 0x0AD9E8F87FF7C16F | Since: unknown | API-Set: unknown
  */
 export function setInfluencesWantedLevel() {
     SetVehicleInfluencesWantedLevel(undefined, false);
@@ -7599,7 +7596,7 @@ export function setInfluencesWantedLevel() {
 /**
  * No comment provided
  *
- * Hash: 0xBC2042F090AF6AD3 | Since: 323 | API-Set: unknown
+ * Hash: 0xBC2042F090AF6AD3 | Since: unknown | API-Set: unknown
  */
 export function setInteriorlight(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7608,7 +7605,7 @@ export function setInteriorlight(vehicle, toggle) {
 /**
  * If set to TRUE, it seems to suppress door noises and doesn't allow the horn to be continuous.
  *
- * Hash: 0x9D44FCCE98450843 | Since: 323 | API-Set: unknown
+ * Hash: 0x9D44FCCE98450843 | Since: unknown | API-Set: unknown
  */
 export function setInCarModShop(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7617,7 +7614,7 @@ export function setInCarModShop(vehicle, toggle) {
 /**
  * Setting this to false, makes the specified vehicle to where if you press Y your character doesn't even attempt the animation to enter the vehicle. Hence it's not considered aka ignored.
  *
- * Hash: 0x31B927BBC44156CD | Since: 323 | API-Set: unknown
+ * Hash: 0x31B927BBC44156CD | Since: unknown | API-Set: unknown
  */
 export function setIsConsideredByPlayer(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7626,7 +7623,7 @@ export function setIsConsideredByPlayer(vehicle, toggle) {
 /**
  * p1 (toggle) was always 1 (true) except in one case in the b678 scripts.
  *
- * Hash: 0x07116E24E9D1929D | Since: 323 | API-Set: unknown
+ * Hash: 0x07116E24E9D1929D | Since: unknown | API-Set: unknown
  */
 export function setIsRacing(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7635,7 +7632,7 @@ export function setIsRacing(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x67B2C79AA7FF5738 | Since: 323 | API-Set: unknown
+ * Hash: 0x67B2C79AA7FF5738 | Since: unknown | API-Set: unknown
  */
 export function setIsStolen(vehicle, isStolen) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7644,7 +7641,7 @@ export function setIsStolen(vehicle, isStolen) {
 /**
  * Sets the wanted state of this vehicle.
  *
- * Hash: 0xF7EC25A3EBEEC726 | Since: 323 | API-Set: unknown
+ * Hash: 0xF7EC25A3EBEEC726 | Since: unknown | API-Set: unknown
  */
 export function setIsWanted(vehicle, state) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7653,7 +7650,7 @@ export function setIsWanted(vehicle, state) {
 /**
  * No comment provided
  *
- * Hash: 0xB8FBC8B1330CA9B4 | Since: 323 | API-Set: unknown
+ * Hash: 0xB8FBC8B1330CA9B4 | Since: unknown | API-Set: unknown
  */
 export function setKeepEngineOnWhenAbandoned(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7662,7 +7659,7 @@ export function setKeepEngineOnWhenAbandoned(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x99C82F8A139F3E4E | Since: 323 | API-Set: unknown
+ * Hash: 0x99C82F8A139F3E4E | Since: unknown | API-Set: unknown
  */
 export function setKersAllowed(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7679,7 +7676,7 @@ export function setKersAllowed(vehicle, toggle) {
  * but at night it's lowbeam,lowbeam,highbeam
  * note2: when using =0 it's affected by day or night for highbeams don't exist in daytime.
  *
- * Hash: 0x34E710FF01247C5A | Since: 323 | API-Set: unknown
+ * Hash: 0x34E710FF01247C5A | Since: unknown | API-Set: unknown
  */
 export function setLights(vehicle, state) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7693,7 +7690,7 @@ export function setLights(vehicle, state) {
  * multiplier = 1.0 default game value
  *
  *
- * Hash: 0xB385454F8791F57C | Since: 323 | API-Set: unknown
+ * Hash: 0xB385454F8791F57C | Since: unknown | API-Set: unknown
  */
 export function setLightMultiplier(vehicle, multiplier) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7702,7 +7699,7 @@ export function setLightMultiplier(vehicle, multiplier) {
 /**
  * No comment provided
  *
- * Hash: 0xC50CE861B55EAB8B | Since: 323 | API-Set: unknown
+ * Hash: 0xC50CE861B55EAB8B | Since: unknown | API-Set: unknown
  */
 export function setLimitSpeedWhenPlayerInactive(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7711,7 +7708,7 @@ export function setLimitSpeedWhenPlayerInactive(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x60BF608F1B8CD1B6 | Since: 323 | API-Set: unknown
+ * Hash: 0x60BF608F1B8CD1B6 | Since: unknown | API-Set: unknown
  */
 export function setLivery(vehicle, livery) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7722,7 +7719,7 @@ export function setLivery(vehicle, livery) {
  *
  * Livery value is dependent on the amount of liveries present in the vehicle's texture dictionary, for Tornado Custom this would be 0-6.
  *
- * Hash: 0xA6D3A8750DC73270 | Since: 505 | API-Set: unknown
+ * Hash: 0xA6D3A8750DC73270 | Since: unknown | API-Set: unknown
  */
 export function setLivery2(vehicle, livery) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7731,7 +7728,7 @@ export function setLivery2(vehicle, livery) {
 /**
  * No comment provided
  *
- * Hash: 0x93AE6A61BE015BF1 | Since: 323 | API-Set: unknown
+ * Hash: 0x93AE6A61BE015BF1 | Since: unknown | API-Set: unknown
  */
 export function setLodMultiplier(vehicle, multiplier) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7740,7 +7737,7 @@ export function setLodMultiplier(vehicle, multiplier) {
 /**
  * To reset the max speed, set the `speed` value to `0.0` or lower.
  *
- * Hash: 0xBAA045B4E42F3C06 | Since: 1103 | API-Set: unknown
+ * Hash: 0xBAA045B4E42F3C06 | Since: unknown | API-Set: unknown
  */
 export function setMaxSpeed(vehicle, speed) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7749,7 +7746,7 @@ export function setMaxSpeed(vehicle, speed) {
 /**
  * No comment provided
  *
- * Hash: 0xE851E480B814D4BA | Since: 323 | API-Set: unknown
+ * Hash: 0xE851E480B814D4BA | Since: unknown | API-Set: unknown
  */
 export function setMayBeUsedByGotoPointAnyMeans(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7795,7 +7792,7 @@ export function setMayBeUsedByGotoPointAnyMeans(vehicle) {
  *
  * ENUMS: https://pastebin.com/QzEAn02v
  *
- * Hash: 0x6AF0636DDEDCB6DD | Since: 323 | API-Set: unknown
+ * Hash: 0x6AF0636DDEDCB6DD | Since: unknown | API-Set: unknown
  */
 export function setMod(vehicle, modType, modIndex, customTires) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7808,7 +7805,7 @@ export function setMod(vehicle, modType, modIndex, customTires) {
  *
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  *
- * Hash: 0x0FC2D89AC25A5814 | Since: 323 | API-Set: unknown
+ * Hash: 0x0FC2D89AC25A5814 | Since: unknown | API-Set: unknown
  */
 export function setModelIsSuppressed(model, suppressed) {
     if (typeof model === 'string')
@@ -7831,7 +7828,7 @@ export function setModelIsSuppressed(model, suppressed) {
  *
  * Full list of vehicle colors and vehicle plates by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicleColors.json
  *
- * Hash: 0x43FEB945EE7F85B8 | Since: 323 | API-Set: unknown
+ * Hash: 0x43FEB945EE7F85B8 | Since: unknown | API-Set: unknown
  */
 export function setModColor1(vehicle, paintType, color, pearlescentColor) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7852,7 +7849,7 @@ export function setModColor1(vehicle, paintType, color, pearlescentColor) {
  *
  * Full list of vehicle colors and vehicle plates by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicleColors.json
  *
- * Hash: 0x816562BADFDEC83E | Since: 323 | API-Set: unknown
+ * Hash: 0x816562BADFDEC83E | Since: unknown | API-Set: unknown
  */
 export function setModColor2(vehicle, paintType, color) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7863,7 +7860,7 @@ export function setModColor2(vehicle, paintType, color) {
  *
  * Full list of vehicle mod kits and mods by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicleModKits.json
  *
- * Hash: 0x1F2AA07F00B3217A | Since: 323 | API-Set: unknown
+ * Hash: 0x1F2AA07F00B3217A | Since: unknown | API-Set: unknown
  */
 export function setModKit(vehicle, modKit) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7872,7 +7869,7 @@ export function setModKit(vehicle, modKit) {
 /**
  * NOTE: Debugging functions are not present in the retail version of the game.
  *
- * Hash: 0xBFDF984E2C22B94F | Since: 323 | API-Set: unknown
+ * Hash: 0xBFDF984E2C22B94F | Since: unknown | API-Set: unknown
  */
 export function setNameDebug(vehicle, name) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7881,7 +7878,7 @@ export function setNameDebug(vehicle, name) {
 /**
  * No comment provided
  *
- * Hash: 0xFBA550EA44404EE6 | Since: 323 | API-Set: unknown
+ * Hash: 0xFBA550EA44404EE6 | Since: unknown | API-Set: unknown
  */
 export function setNeedsToBeHotwired(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7890,7 +7887,7 @@ export function setNeedsToBeHotwired(vehicle, toggle) {
 /**
  * Sets the color of the neon lights of the specified vehicle.
  *
- * Hash: 0x8E0A582209A62695 | Since: 323 | API-Set: unknown
+ * Hash: 0x8E0A582209A62695 | Since: unknown | API-Set: unknown
  */
 export function setNeonColour(vehicle, r, g, b) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7905,7 +7902,7 @@ export function setNeonColour(vehicle, r, g, b) {
  * 2 = Front
  * 3 = Back
  *
- * Hash: 0x2AA720E4287BF269 | Since: 323 | API-Set: unknown
+ * Hash: 0x2AA720E4287BF269 | Since: unknown | API-Set: unknown
  */
 export function setNeonEnabled(vehicle, index, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7914,7 +7911,7 @@ export function setNeonEnabled(vehicle, index, toggle) {
 /**
  * Index references CVehicleModelColor
  *
- * Hash: 0xB93B2867F7B479D1 | Since: 1493 | API-Set: unknown
+ * Hash: 0xB93B2867F7B479D1 | Since: unknown | API-Set: unknown
  */
 export function setNeonIndexColour(vehicle, index) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7923,7 +7920,7 @@ export function setNeonIndexColour(vehicle, index) {
 /**
  * No comment provided
  *
- * Hash: 0xAB04325045427AAE | Since: 323 | API-Set: unknown
+ * Hash: 0xAB04325045427AAE | Since: unknown | API-Set: unknown
  */
 export function setNotStealableAmbiently(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7932,7 +7929,7 @@ export function setNotStealableAmbiently(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x5E569EC46EC21CAE | Since: 323 | API-Set: unknown
+ * Hash: 0x5E569EC46EC21CAE | Since: unknown | API-Set: unknown
  */
 export function setNoExplosionDamageFromDriver(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7947,7 +7944,7 @@ export function setNoExplosionDamageFromDriver(vehicle, toggle) {
  * char *plateText = "KING";
  * `VEHICLE::SET_VEHICLE_NUMBER_PLATE_TEXT(veh, plateText);`
  *
- * Hash: 0x95A88F0B409CDA47 | Since: 323 | API-Set: unknown
+ * Hash: 0x95A88F0B409CDA47 | Since: unknown | API-Set: unknown
  */
 export function setNumberPlateText(vehicle, plateText) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7962,7 +7959,7 @@ export function setNumberPlateText(vehicle, plateText) {
  * Blue/White3 - 4
  * Yankton - 5
  *
- * Hash: 0x9088EB5A43FFB0A1 | Since: 323 | API-Set: unknown
+ * Hash: 0x9088EB5A43FFB0A1 | Since: unknown | API-Set: unknown
  */
 export function setNumberPlateTextIndex(vehicle, plateIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7971,7 +7968,7 @@ export function setNumberPlateTextIndex(vehicle, plateIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x35BB21DE06784373 | Since: 463 | API-Set: unknown
+ * Hash: 0x35BB21DE06784373 | Since: unknown | API-Set: unknown
  */
 export function setOccupantsTakeExplosiveDamage(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7982,7 +7979,7 @@ export function setOccupantsTakeExplosiveDamage(vehicle, toggle) {
  *
  * sfink: This has an additional param(Vehicle vehicle, float p1) which is always set to 5.0f in the b944 scripts.
  *
- * Hash: 0x49733E92263139D1 | Since: 323 | API-Set: unknown
+ * Hash: 0x49733E92263139D1 | Since: unknown | API-Set: unknown
  */
 export function setOnGroundProperly(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7991,7 +7988,7 @@ export function setOnGroundProperly(vehicle) {
 /**
  * Tested on the player's current vehicle. Unless you kill the driver, the vehicle doesn't loose control, however, if enabled, explodeOnImpact is still active. The moment you crash, boom.
  *
- * Hash: 0xF19D095E42D430CC | Since: 323 | API-Set: unknown
+ * Hash: 0xF19D095E42D430CC | Since: unknown | API-Set: unknown
  */
 export function setOutOfControl(vehicle, killDriver, explodeOnImpact) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8002,7 +7999,7 @@ export function setOutOfControl(vehicle, killDriver, explodeOnImpact) {
  * Begins leaking gas at around 650 health
  * -999.90002441406 appears to be minimum health, although nothing special occurs
  *
- * Hash: 0x70DB57649FA8D0D8 | Since: 323 | API-Set: unknown
+ * Hash: 0x70DB57649FA8D0D8 | Since: unknown | API-Set: unknown
  */
 export function setPetrolTankHealth(vehicle, health) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8011,7 +8008,7 @@ export function setPetrolTankHealth(vehicle, health) {
 /**
  * No comment provided
  *
- * Hash: 0x5AFEEDD9BB2899D7 | Since: 323 | API-Set: unknown
+ * Hash: 0x5AFEEDD9BB2899D7 | Since: unknown | API-Set: unknown
  */
 export function setProvidesCover(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8020,7 +8017,7 @@ export function setProvidesCover(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xCF9159024555488C | Since: 944 | API-Set: unknown
+ * Hash: 0xCF9159024555488C | Since: unknown | API-Set: unknown
  */
 export function setReadyForCleanup() {
     Citizen.invokeNative('0xCF9159024555488C', undefined);
@@ -8028,7 +8025,7 @@ export function setReadyForCleanup() {
 /**
  * Reduces grip significantly so it's hard to go anywhere.
  *
- * Hash: 0x222FF6A823D122E2 | Since: 323 | API-Set: unknown
+ * Hash: 0x222FF6A823D122E2 | Since: unknown | API-Set: unknown
  */
 export function setReduceGrip(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8038,7 +8035,7 @@ export function setReduceGrip(vehicle, toggle) {
  * val is 0-3
  * Often used in conjunction with: SET_VEHICLE_REDUCE_GRIP
  *
- * Hash: 0x6DEE944E1EE90CFB | Since: 1604 | API-Set: unknown
+ * Hash: 0x6DEE944E1EE90CFB | Since: unknown | API-Set: unknown
  */
 export function setReduceGripLevel(vehicle, val) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8047,7 +8044,7 @@ export function setReduceGripLevel(vehicle, val) {
 /**
  * No comment provided
  *
- * Hash: 0xC4B3347BD68BD609 | Since: 573 | API-Set: unknown
+ * Hash: 0xC4B3347BD68BD609 | Since: unknown | API-Set: unknown
  */
 export function setRemoveAggressiveCarjackMission() {
     Citizen.invokeNative('0xC4B3347BD68BD609', undefined);
@@ -8055,7 +8052,7 @@ export function setRemoveAggressiveCarjackMission() {
 /**
  * No comment provided
  *
- * Hash: 0x2311DD7159F00582 | Since: 323 | API-Set: unknown
+ * Hash: 0x2311DD7159F00582 | Since: unknown | API-Set: unknown
  */
 export function setRespectsLocksWhenHasDriver(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8064,7 +8061,7 @@ export function setRespectsLocksWhenHasDriver(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x09606148B6C71DEF | Since: 323 | API-Set: unknown
+ * Hash: 0x09606148B6C71DEF | Since: unknown | API-Set: unknown
  */
 export function setRudderBroken(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8073,7 +8070,7 @@ export function setRudderBroken(vehicle, toggle) {
 /**
  * Only works during nighttime.
  *
- * Hash: 0x14E85C5EE7A4D542 | Since: 323 | API-Set: unknown
+ * Hash: 0x14E85C5EE7A4D542 | Since: unknown | API-Set: unknown
  */
 export function setSearchlight(heli, toggle, canBeUsedByAI) {
     const _heli = typeof heli == 'object' ? heli.handle() : heli;
@@ -8084,7 +8081,7 @@ export function setSearchlight(heli, toggle, canBeUsedByAI) {
  *
  * `WEAPON::SET_CURRENT_PED_VEHICLE_WEAPON(pilot,MISC::GET_HASH_KEY("VEHICLE_WEAPON_PLANE_ROCKET"));                        VEHICLE::SET_VEHICLE_SHOOT_AT_TARGET(pilot, target, targPos.x, targPos.y, targPos.z);`
  *
- * Hash: 0x74CD9A9327A282EA | Since: 323 | API-Set: unknown
+ * Hash: 0x74CD9A9327A282EA | Since: unknown | API-Set: unknown
  */
 export function setShootAtTarget(driver, entity, xTarget, yTarget, zTarget) {
     const _driver = typeof driver == 'object' ? driver.handle() : driver;
@@ -8094,7 +8091,7 @@ export function setShootAtTarget(driver, entity, xTarget, yTarget, zTarget) {
 /**
  * Does nothing. It's a nullsub.
  *
- * Hash: 0x99A05839C46CE316 | Since: 1604 | API-Set: unknown
+ * Hash: 0x99A05839C46CE316 | Since: unknown | API-Set: unknown
  */
 export function setShuntOnStick(toggle) {
     Citizen.invokeNative('0x99A05839C46CE316', toggle);
@@ -8102,7 +8099,7 @@ export function setShuntOnStick(toggle) {
 /**
  * Activate siren on vehicle (Only works if the vehicle has a siren).
  *
- * Hash: 0xF4924635A19EB37D | Since: 323 | API-Set: unknown
+ * Hash: 0xF4924635A19EB37D | Since: unknown | API-Set: unknown
  */
 export function setSiren(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8111,7 +8108,7 @@ export function setSiren(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xF051D9BFB6BA39C0 | Since: 877 | API-Set: unknown
+ * Hash: 0xF051D9BFB6BA39C0 | Since: unknown | API-Set: unknown
  */
 export function setSlipstreamingShouldTimeOut(toggle) {
     Citizen.invokeNative('0xF051D9BFB6BA39C0', toggle);
@@ -8120,7 +8117,7 @@ export function setSlipstreamingShouldTimeOut(toggle) {
  * Has something to do with trains. Always precedes SET_MISSION_TRAIN_AS_NO_LONGER_NEEDED.
  * May be true that it can be used with trains not sure, but not specifically for trains. Go find Xbox360 decompiled scripts and search for 'func_1333' in freemode.c it isn't used just for trains. Thanks for the info tho.
  *
- * Hash: 0x1CF38D529D7441D9 | Since: 323 | API-Set: unknown
+ * Hash: 0x1CF38D529D7441D9 | Since: unknown | API-Set: unknown
  */
 export function setStaysFrozenWhenCleanedUp(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8129,7 +8126,7 @@ export function setStaysFrozenWhenCleanedUp(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x9007A2F21DC108D4 | Since: 323 | API-Set: unknown
+ * Hash: 0x9007A2F21DC108D4 | Since: unknown | API-Set: unknown
  */
 export function setSteeringBiasScalar() {
     SetVehicleSteeringBiasScalar(undefined, 0);
@@ -8144,7 +8141,7 @@ export function setSteeringBiasScalar() {
  * 0.0 = centered steering
  * 1.0 = full left
  *
- * Hash: 0x42A8EC77D5150CBE | Since: 323 | API-Set: unknown
+ * Hash: 0x42A8EC77D5150CBE | Since: unknown | API-Set: unknown
  */
 export function setSteerBias(vehicle, value) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8153,7 +8150,7 @@ export function setSteerBias(vehicle, value) {
 /**
  * No comment provided
  *
- * Hash: 0xDCE97BDF8A0EABC8 | Since: 1103 | API-Set: unknown
+ * Hash: 0xDCE97BDF8A0EABC8 | Since: unknown | API-Set: unknown
  */
 export function setSteerForBuildings(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8174,7 +8171,7 @@ export function setSteerForBuildings(vehicle) {
  * return result;
  * }
  *
- * Hash: 0x6EBFB22D646FFC18 | Since: 323 | API-Set: unknown
+ * Hash: 0x6EBFB22D646FFC18 | Since: unknown | API-Set: unknown
  */
 export function setStopInstantlyWhenPlayerInactive(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8183,7 +8180,7 @@ export function setStopInstantlyWhenPlayerInactive(vehicle, toggle) {
 /**
  * If set to true, vehicle will not take crash damage, but is still susceptible to damage from bullets and explosives
  *
- * Hash: 0x3E8C8727991A8A0B | Since: 323 | API-Set: unknown
+ * Hash: 0x3E8C8727991A8A0B | Since: unknown | API-Set: unknown
  */
 export function setStrong(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8192,7 +8189,7 @@ export function setStrong(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x6CB5B84B78AC55FE | Since: 3717 | API-Set: unknown
+ * Hash: 0x6CB5B84B78AC55FE | Since: unknown | API-Set: unknown
  */
 export function setTailBroken(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8201,7 +8198,7 @@ export function setTailBroken(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x5815BD2763178DF4 | Since: 2802 | API-Set: unknown
+ * Hash: 0x5815BD2763178DF4 | Since: unknown | API-Set: unknown
  */
 export function setTailLights(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8210,7 +8207,7 @@ export function setTailLights(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x737E398138550FFF | Since: 944 | API-Set: unknown
+ * Hash: 0x737E398138550FFF | Since: unknown | API-Set: unknown
  */
 export function setTankStationary(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8219,7 +8216,7 @@ export function setTankStationary(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x56B94C6D7127DFBA | Since: 323 | API-Set: unknown
+ * Hash: 0x56B94C6D7127DFBA | Since: unknown | API-Set: unknown
  */
 export function setTankTurretPosition(vehicle, position) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8228,7 +8225,7 @@ export function setTankTurretPosition(vehicle, position) {
 /**
  * No comment provided
  *
- * Hash: 0x2E0A74E1002380B1 | Since: 323 | API-Set: unknown
+ * Hash: 0x2E0A74E1002380B1 | Since: unknown | API-Set: unknown
  */
 export function setTimedExplosion(vehicle, ped, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8238,7 +8235,7 @@ export function setTimedExplosion(vehicle, ped, toggle) {
 /**
  * Sets how much the crane on the tow truck is raised, where 0.0 is fully lowered and 1.0 is fully raised.
  *
- * Hash: 0xFE54B92A344583CA | Since: 323 | API-Set: unknown
+ * Hash: 0xFE54B92A344583CA | Since: unknown | API-Set: unknown
  */
 export function setTowTruckArmPosition(vehicle, position) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8247,7 +8244,7 @@ export function setTowTruckArmPosition(vehicle, position) {
 /**
  * No comment provided
  *
- * Hash: 0x1093408B4B9D1146 | Since: 323 | API-Set: unknown
+ * Hash: 0x1093408B4B9D1146 | Since: unknown | API-Set: unknown
  */
 export function setTurretSpeedThisFrame(vehicle, speed) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8256,7 +8253,7 @@ export function setTurretSpeedThisFrame(vehicle, speed) {
 /**
  * No comment provided
  *
- * Hash: 0x0581730AB9380412 | Since: 1103 | API-Set: unknown
+ * Hash: 0x0581730AB9380412 | Since: unknown | API-Set: unknown
  */
 export function setTurretTarget(vehicle, pos) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8265,7 +8262,7 @@ export function setTurretTarget(vehicle, pos) {
 /**
  * Allows you to toggle bulletproof tires.
  *
- * Hash: 0xEB9DC3C7D8596C46 | Since: 323 | API-Set: unknown
+ * Hash: 0xEB9DC3C7D8596C46 | Since: unknown | API-Set: unknown
  */
 export function setTyresCanBurst(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8286,7 +8283,7 @@ export function setTyresCanBurst(vehicle, toggle) {
  * '45 = 6 wheels trailer mid wheel left
  * '47 = 6 wheels trailer mid wheel right
  *
- * Hash: 0xEC6A202EE4960385 | Since: 323 | API-Set: unknown
+ * Hash: 0xEC6A202EE4960385 | Since: unknown | API-Set: unknown
  */
 export function setTyreBurst(vehicle, index, onRim) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8304,7 +8301,7 @@ export function setTyreBurst(vehicle, index, onRim) {
  * '45 = 6 wheels trailer mid wheel left
  * '47 = 6 wheels trailer mid wheel right
  *
- * Hash: 0x6E13FC662B882D1D | Since: 323 | API-Set: unknown
+ * Hash: 0x6E13FC662B882D1D | Since: unknown | API-Set: unknown
  */
 export function setTyreFixed(vehicle, tyreIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8320,7 +8317,7 @@ export function setTyreFixed(vehicle, tyreIndex) {
  *
  * Note: setting r,g,b to 0 will give the car the "Patriot" tire smoke.
  *
- * Hash: 0xB5BA80F839791C0F | Since: 323 | API-Set: unknown
+ * Hash: 0xB5BA80F839791C0F | Since: unknown | API-Set: unknown
  */
 export function setTyreSmokeColor(vehicle, r, g, b) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8329,7 +8326,7 @@ export function setTyreSmokeColor(vehicle, r, g, b) {
 /**
  * No comment provided
  *
- * Hash: 0x8ABA6AF54B942B95 | Since: 323 | API-Set: unknown
+ * Hash: 0x8ABA6AF54B942B95 | Since: unknown | API-Set: unknown
  */
 export function setUndriveable(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8338,7 +8335,7 @@ export function setUndriveable(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xE05DD0E9707003A3 | Since: 323 | API-Set: unknown
+ * Hash: 0xE05DD0E9707003A3 | Since: unknown | API-Set: unknown
  */
 export function setUsedForPilotSchool(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8347,7 +8344,7 @@ export function setUsedForPilotSchool(vehicle, toggle) {
 /**
  * vehicle must be a plane
  *
- * Hash: 0xCAC66558B944DA67 | Since: 323 | API-Set: unknown
+ * Hash: 0xCAC66558B944DA67 | Since: unknown | API-Set: unknown
  */
 export function setUsesLargeRearRamp(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8356,7 +8353,7 @@ export function setUsesLargeRearRamp(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xBB2333BB87DDD87F | Since: 757 | API-Set: unknown
+ * Hash: 0xBB2333BB87DDD87F | Since: unknown | API-Set: unknown
  */
 export function setUsesMpPlayerDamageMultiplier() {
     Citizen.invokeNative('0xBB2333BB87DDD87F', undefined, undefined);
@@ -8364,7 +8361,7 @@ export function setUsesMpPlayerDamageMultiplier() {
 /**
  * No comment provided
  *
- * Hash: 0x1D97D1E3A70A649F | Since: 323 | API-Set: unknown
+ * Hash: 0x1D97D1E3A70A649F | Since: unknown | API-Set: unknown
  */
 export function setUseAlternateHandling(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8373,7 +8370,7 @@ export function setUseAlternateHandling(vehicle, toggle) {
 /**
  * Used for blazer5. Changes the quadbike-jetski transformation input from raise/lower convertible roof (hold H by default) to horn (press E by default.)
  *
- * Hash: 0x41290B40FA63E6DA | Since: 1011 | API-Set: unknown
+ * Hash: 0x41290B40FA63E6DA | Since: unknown | API-Set: unknown
  */
 export function setUseBoostButtonForWheelRetract(toggle) {
     Citizen.invokeNative('0x41290B40FA63E6DA', toggle);
@@ -8381,7 +8378,7 @@ export function setUseBoostButtonForWheelRetract(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xE023E8AC4EF7C117 | Since: 323 | API-Set: unknown
+ * Hash: 0xE023E8AC4EF7C117 | Since: unknown | API-Set: unknown
  */
 export function setUseCutsceneWheelCompression(p0) {
     const _p0 = typeof p0 == 'object' ? p0.handle() : p0;
@@ -8390,7 +8387,7 @@ export function setUseCutsceneWheelCompression(p0) {
 /**
  * No comment provided
  *
- * Hash: 0x88BC673CA9E0AE99 | Since: 323 | API-Set: unknown
+ * Hash: 0x88BC673CA9E0AE99 | Since: unknown | API-Set: unknown
  */
 export function setUseMoreRestrictiveSpawnChecks(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8399,7 +8396,7 @@ export function setUseMoreRestrictiveSpawnChecks(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xC45C27EF50F36ADC | Since: 323 | API-Set: unknown
+ * Hash: 0xC45C27EF50F36ADC | Since: unknown | API-Set: unknown
  */
 export function setUsePlayerLightSettings(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8408,7 +8405,7 @@ export function setUsePlayerLightSettings(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x86B4B6212CB8B627 | Since: 1011 | API-Set: unknown
+ * Hash: 0x86B4B6212CB8B627 | Since: unknown | API-Set: unknown
  */
 export function setWeaponCanTargetObjects(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8417,7 +8414,7 @@ export function setWeaponCanTargetObjects(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x45A561A9421AB6AD | Since: 944 | API-Set: unknown
+ * Hash: 0x45A561A9421AB6AD | Since: unknown | API-Set: unknown
  */
 export function setWeaponDamageScale(vehicle, multiplier) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8428,7 +8425,7 @@ export function setWeaponDamageScale(vehicle, multiplier) {
  * For example, you can "remove" any vehicle weapon from any vehicle.
  * ammoAmount -1 = infinite ammo (default value for any spawned vehicle tho)
  *
- * Hash: 0x44CD1F493DB2A0A6 | Since: 944 | API-Set: unknown
+ * Hash: 0x44CD1F493DB2A0A6 | Since: unknown | API-Set: unknown
  */
 export function setWeaponRestrictedAmmo(vehicle, weaponIndex, capacity) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8437,7 +8434,7 @@ export function setWeaponRestrictedAmmo(vehicle, weaponIndex, capacity) {
 /**
  * No comment provided
  *
- * Hash: 0x29B18B4FD460CA8F | Since: 323 | API-Set: unknown
+ * Hash: 0x29B18B4FD460CA8F | Since: unknown | API-Set: unknown
  */
 export function setWheelsCanBreak(vehicle, enabled) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8446,7 +8443,7 @@ export function setWheelsCanBreak(vehicle, enabled) {
 /**
  * No comment provided
  *
- * Hash: 0xA37B9A517B133349 | Since: 323 | API-Set: unknown
+ * Hash: 0xA37B9A517B133349 | Since: unknown | API-Set: unknown
  */
 export function setWheelsCanBreakOffWhenBlowUp(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8467,7 +8464,7 @@ export function setWheelsCanBreakOffWhenBlowUp(vehicle, toggle) {
  * 11: Street
  * 12: Track
  *
- * Hash: 0x487EB21CC7295BA1 | Since: 323 | API-Set: unknown
+ * Hash: 0x487EB21CC7295BA1 | Since: unknown | API-Set: unknown
  */
 export function setWheelType(vehicle, WheelType) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8476,7 +8473,7 @@ export function setWheelType(vehicle, WheelType) {
 /**
  * No comment provided
  *
- * Hash: 0xBE5C1255A1830FF5 | Since: 323 | API-Set: unknown
+ * Hash: 0xBE5C1255A1830FF5 | Since: unknown | API-Set: unknown
  */
 export function setWillForceOtherVehiclesToStop(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8485,7 +8482,7 @@ export function setWillForceOtherVehiclesToStop(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x2C4A1590ABF43E8B | Since: 323 | API-Set: unknown
+ * Hash: 0x2C4A1590ABF43E8B | Since: unknown | API-Set: unknown
  */
 export function setWillTellOthersToHurry(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8504,7 +8501,7 @@ export function setWillTellOthersToHurry(vehicle) {
  * };
  * Full list of all vehicle window tints by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicleColors.json
  *
- * Hash: 0x57C51E6BAD752696 | Since: 323 | API-Set: unknown
+ * Hash: 0x57C51E6BAD752696 | Since: unknown | API-Set: unknown
  */
 export function setWindowTint(vehicle, tint) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8516,7 +8513,7 @@ export function setWindowTint(vehicle, tint) {
  * Be aware that it only works on xenon lights. Example: https://i.imgur.com/yV3cpG9.png
  * Full list of all vehicle xenon lights by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicleColors.json
  *
- * Hash: 0xE41033B25D003A07 | Since: 1604 | API-Set: unknown
+ * Hash: 0xE41033B25D003A07 | Since: unknown | API-Set: unknown
  */
 export function setXenonLightColorIndex(vehicle, colorIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8525,7 +8522,7 @@ export function setXenonLightColorIndex(vehicle, colorIndex) {
 /**
  * Enables/disables the ability to wheelie on motorcycles.
  *
- * Hash: 0x1312DDD8385AEE4E | Since: 1103 | API-Set: unknown
+ * Hash: 0x1312DDD8385AEE4E | Since: unknown | API-Set: unknown
  */
 export function setWheelieEnabled(vehicle, enabled) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8534,7 +8531,7 @@ export function setWheelieEnabled(vehicle, enabled) {
 /**
  * No comment provided
  *
- * Hash: 0xF660602546D27BA8 | Since: 944 | API-Set: unknown
+ * Hash: 0xF660602546D27BA8 | Since: unknown | API-Set: unknown
  */
 export function setWheelsExtendedInstantly(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8543,7 +8540,7 @@ export function setWheelsExtendedInstantly(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x5335BE58C083E74E | Since: 1011 | API-Set: unknown
+ * Hash: 0x5335BE58C083E74E | Since: unknown | API-Set: unknown
  */
 export function setWheelsRetractedInstantly(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8552,7 +8549,7 @@ export function setWheelsRetractedInstantly(vehicle) {
 /**
  * SET_TIME_POSITION_IN_RECORDING can be emulated by: desired_time - GET_TIME_POSITION_IN_RECORDING(vehicle)
  *
- * Hash: 0x9438F7AD68771A20 | Since: 323 | API-Set: unknown
+ * Hash: 0x9438F7AD68771A20 | Since: unknown | API-Set: unknown
  */
 export function skipTimeInPlaybackRecorded(vehicle, time) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8561,7 +8558,7 @@ export function skipTimeInPlaybackRecorded(vehicle, time) {
 /**
  * No comment provided
  *
- * Hash: 0xAB8E2EDA0C0A5883 | Since: 323 | API-Set: unknown
+ * Hash: 0xAB8E2EDA0C0A5883 | Since: unknown | API-Set: unknown
  */
 export function skipToEndAndStopPlaybackRecorded(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8579,7 +8576,7 @@ export function skipToEndAndStopPlaybackRecorded(vehicle) {
  * 7 = Mid Right
  * 8 = Invalid
  *
- * Hash: 0x9E5B5E4D2CCD2259 | Since: 323 | API-Set: unknown
+ * Hash: 0x9E5B5E4D2CCD2259 | Since: unknown | API-Set: unknown
  */
 export function smashWindow(vehicle, windowIndex) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8588,7 +8585,7 @@ export function smashWindow(vehicle, windowIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x374706271354CB18 | Since: 323 | API-Set: unknown
+ * Hash: 0x374706271354CB18 | Since: unknown | API-Set: unknown
  */
 export function stabiliseEntityAttachedToHeli(vehicle, entity) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8600,7 +8597,7 @@ export function stabiliseEntityAttachedToHeli(vehicle, entity) {
  *
  * See REQUEST_VEHICLE_RECORDING
  *
- * Hash: 0x3F878F92B3A7A071 | Since: 323 | API-Set: unknown
+ * Hash: 0x3F878F92B3A7A071 | Since: unknown | API-Set: unknown
  */
 export function startPlaybackRecorded(vehicle, recording, script) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8611,7 +8608,7 @@ export function startPlaybackRecorded(vehicle, recording, script) {
  *
  * FORCE_PLAYBACK_RECORDED_VEHICLE_UPDATE is a related native that deals with the AI physics for such recordings.
  *
- * Hash: 0x29DE5FA52D00428C | Since: 323 | API-Set: unknown
+ * Hash: 0x29DE5FA52D00428C | Since: unknown | API-Set: unknown
  */
 export function startPlaybackRecordedUsingAi(vehicle, recording, script, speed, drivingStyle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8622,7 +8619,7 @@ export function startPlaybackRecordedUsingAi(vehicle, recording, script, speed, 
  *
  * time, often zero and capped at 500, is related to SET_PLAYBACK_TO_USE_AI_TRY_TO_REVERT_BACK_LATER
  *
- * Hash: 0x7D80FD645D4DA346 | Since: 323 | API-Set: unknown
+ * Hash: 0x7D80FD645D4DA346 | Since: unknown | API-Set: unknown
  */
 export function startPlaybackRecordedWithFlags(vehicle, recording, script, flags, time, drivingStyle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8631,7 +8628,7 @@ export function startPlaybackRecordedWithFlags(vehicle, recording, script, flags
 /**
  * No comment provided
  *
- * Hash: 0xB8FF7AB45305C345 | Since: 323 | API-Set: unknown
+ * Hash: 0xB8FF7AB45305C345 | Since: unknown | API-Set: unknown
  */
 export function startAlarm(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8646,7 +8643,7 @@ export function startAlarm(vehicle) {
  *
  * Note: If a player is in the vehicle, it will only sound briefly.
  *
- * Hash: 0x9C8C6504B5B63D2C | Since: 323 | API-Set: unknown
+ * Hash: 0x9C8C6504B5B63D2C | Since: unknown | API-Set: unknown
  */
 export function startHorn(vehicle, duration, mode, forever) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8657,7 +8654,7 @@ export function startHorn(vehicle, duration, mode, forever) {
 /**
  * No comment provided
  *
- * Hash: 0x0F87E938BDF29D66 | Since: 323 | API-Set: unknown
+ * Hash: 0x0F87E938BDF29D66 | Since: unknown | API-Set: unknown
  */
 export function stopAllGarageActivity() {
     StopAllGarageActivity();
@@ -8665,7 +8662,7 @@ export function stopAllGarageActivity() {
 /**
  * Stops CTaskBringVehicleToHalt
  *
- * Hash: 0x7C06330BFDDA182E | Since: 1103 | API-Set: unknown
+ * Hash: 0x7C06330BFDDA182E | Since: unknown | API-Set: unknown
  */
 export function stopBringingToHalt(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8674,7 +8671,7 @@ export function stopBringingToHalt(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x54833611C17ABDEA | Since: 323 | API-Set: unknown
+ * Hash: 0x54833611C17ABDEA | Since: unknown | API-Set: unknown
  */
 export function stopPlaybackRecorded(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8683,7 +8680,7 @@ export function stopPlaybackRecorded(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x83F813570FF519DE | Since: 573 | API-Set: unknown
+ * Hash: 0x83F813570FF519DE | Since: unknown | API-Set: unknown
  */
 export function suppressNeonsOn(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8692,7 +8689,7 @@ export function suppressNeonsOn(vehicle, toggle) {
 /**
  * Same call as ALLOW_BOAT_BOOM_TO_ANIMATE
  *
- * Hash: 0xC1F981A6F74F0C23 | Since: 323 | API-Set: unknown
+ * Hash: 0xC1F981A6F74F0C23 | Since: unknown | API-Set: unknown
  */
 export function swingBoatBoomFreely(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8703,7 +8700,7 @@ export function swingBoatBoomFreely(vehicle, toggle) {
  * Ratio value is between `0.0` and `1.0`, where `0.0` is 90 degrees to the left of the boat, and `1.0` is just slightly to the right/back of the boat.
  * To get the current boom position ratio, use GET_BOAT_BOOM_POSITION_RATIO
  *
- * Hash: 0xF488C566413B4232 | Since: 323 | API-Set: unknown
+ * Hash: 0xF488C566413B4232 | Since: unknown | API-Set: unknown
  */
 export function swingBoatBoomToRatio(vehicle, ratio) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8730,7 +8727,7 @@ export function swingBoatBoomToRatio(vehicle, ratio) {
  * 11 (`trains12.dat`) Yankton prologue mission train
  * Full list of all train tracks + track nodes by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/traintracks.json
  *
- * Hash: 0xFD813BB7DB977F20 | Since: 323 | API-Set: unknown
+ * Hash: 0xFD813BB7DB977F20 | Since: unknown | API-Set: unknown
  */
 export function switchTrainTrack(trackId, state) {
     SwitchTrainTrack(trackId, state);
@@ -8744,7 +8741,7 @@ export function switchTrainTrack(trackId, state) {
  * UNK21 - 21
  * Xenon Headlights - 22
  *
- * Hash: 0x2A1F4F37F95BAD08 | Since: 323 | API-Set: unknown
+ * Hash: 0x2A1F4F37F95BAD08 | Since: unknown | API-Set: unknown
  */
 export function toggleMod(vehicle, modType, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8756,7 +8753,7 @@ export function toggleMod(vehicle, modType, toggle) {
  * Vehicle v = ...;
  * Function.Call(Hash.TRACK_VEHICLE_VISIBILITY, v.Handle);
  *
- * Hash: 0x64473AEFDCF47DCA | Since: 323 | API-Set: unknown
+ * Hash: 0x64473AEFDCF47DCA | Since: unknown | API-Set: unknown
  */
 export function trackVisibility(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8765,7 +8762,7 @@ export function trackVisibility(vehicle) {
 /**
  * Transforms the `stormberg`/`toreador` to its "road vehicle" variant. If the vehicle is already in that state then the vehicle transformation audio will still play, but the vehicle won't change at all.
  *
- * Hash: 0x2A69FFD1B42BFF9E | Since: 1290 | API-Set: unknown
+ * Hash: 0x2A69FFD1B42BFF9E | Since: unknown | API-Set: unknown
  */
 export function transformToCar(vehicle, noAnimation) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8774,7 +8771,7 @@ export function transformToCar(vehicle, noAnimation) {
 /**
  * Transforms the `stormberg`/`toreador` to its "submarine" variant. If the vehicle is already in that state then the vehicle transformation audio will still play, but the vehicle won't change at all.
  *
- * Hash: 0xBE4C854FFDB6EEBE | Since: 1365 | API-Set: unknown
+ * Hash: 0xBE4C854FFDB6EEBE | Since: unknown | API-Set: unknown
  */
 export function transformToSubmarine(vehicle, noAnimation) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8783,7 +8780,7 @@ export function transformToSubmarine(vehicle, noAnimation) {
 /**
  * No comment provided
  *
- * Hash: 0x8879EE09268305D5 | Since: 323 | API-Set: unknown
+ * Hash: 0x8879EE09268305D5 | Since: unknown | API-Set: unknown
  */
 export function unpausePlaybackRecorded(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8792,7 +8789,7 @@ export function unpausePlaybackRecorded(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x756AE6E962168A04 | Since: 944 | API-Set: unknown
+ * Hash: 0x756AE6E962168A04 | Since: unknown | API-Set: unknown
  */
 export function setEnableNormaliseRampCarVerticalVeloctiy() {
     SetVehicleRampUpwardsLaunchMotion(undefined, undefined);
@@ -8800,7 +8797,7 @@ export function setEnableNormaliseRampCarVerticalVeloctiy() {
 /**
  * No comment provided
  *
- * Hash: 0x1BBAC99C0BC53656 | Since: 944 | API-Set: unknown
+ * Hash: 0x1BBAC99C0BC53656 | Since: unknown | API-Set: unknown
  */
 export function setEnableRampCarSideImpulse() {
     SetVehicleRampSidewaysLaunchMotion(undefined, undefined);
@@ -8808,7 +8805,7 @@ export function setEnableRampCarSideImpulse() {
 /**
  * No comment provided
  *
- * Hash: 0xF3B0E0AED097A3F5 | Since: 1103 | API-Set: unknown
+ * Hash: 0xF3B0E0AED097A3F5 | Since: unknown | API-Set: unknown
  */
 export function setExtenableSideTargetRatio() {
     return Citizen.invokeNative('0xF3B0E0AED097A3F5', undefined, undefined);
@@ -8816,7 +8813,7 @@ export function setExtenableSideTargetRatio() {
 /**
  * No comment provided
  *
- * Hash: 0x9D30687C57BAA0BB | Since: 1011 | API-Set: unknown
+ * Hash: 0x9D30687C57BAA0BB | Since: unknown | API-Set: unknown
  */
 export function setJetWashForceEnabled() {
     Citizen.invokeNative('0x9D30687C57BAA0BB', undefined);
@@ -8824,7 +8821,7 @@ export function setJetWashForceEnabled() {
 /**
  * No comment provided
  *
- * Hash: 0x0419B167EE128F33 | Since: 1103 | API-Set: unknown
+ * Hash: 0x0419B167EE128F33 | Since: unknown | API-Set: unknown
  */
 export function setOverrideExtenableSideRatio() {
     return Citizen.invokeNative('0x0419B167EE128F33', undefined, undefined);
@@ -8832,7 +8829,7 @@ export function setOverrideExtenableSideRatio() {
 /**
  * No comment provided
  *
- * Hash: 0xD3E51C0AB8C26EEE | Since: 1103 | API-Set: unknown
+ * Hash: 0xD3E51C0AB8C26EEE | Since: unknown | API-Set: unknown
  */
 export function setOverrideSideRatio() {
     return Citizen.invokeNative('0xD3E51C0AB8C26EEE', undefined, undefined);
@@ -8843,7 +8840,7 @@ export function setOverrideSideRatio() {
  * - imp_prop_impexp_para_s (SecuroServ; Default)
  * Plus, many more props can be used as vehicle parachutes, like umbrellas (prop_beach_parasol_03), and unlike SET_PLAYER_PARACHUTE_MODEL_OVERRIDE, you won't get stuck mid-air when using an umbrella.
  *
- * Hash: 0x4D610C6B56031351 | Since: 1011 | API-Set: unknown
+ * Hash: 0x4D610C6B56031351 | Since: unknown | API-Set: unknown
  */
 export function setParachuteModelOverride(vehicle, modelHash) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8862,7 +8859,7 @@ export function setParachuteModelOverride(vehicle, modelHash) {
  * - 6: Black
  * - 7: Black, yellow
  *
- * Hash: 0xA74AD2439468C883 | Since: 1011 | API-Set: unknown
+ * Hash: 0xA74AD2439468C883 | Since: unknown | API-Set: unknown
  */
 export function setParachuteModelTintIndex(vehicle, textureVariation) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8871,7 +8868,7 @@ export function setParachuteModelTintIndex(vehicle, textureVariation) {
 /**
  * No comment provided
  *
- * Hash: 0x28D034A93FE31BF5 | Since: 944 | API-Set: unknown
+ * Hash: 0x28D034A93FE31BF5 | Since: unknown | API-Set: unknown
  */
 export function setRampAndRammingCarsTakeDamage(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8880,7 +8877,7 @@ export function setRampAndRammingCarsTakeDamage(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x0BFFB028B3DD0A97 | Since: 944 | API-Set: unknown
+ * Hash: 0x0BFFB028B3DD0A97 | Since: unknown | API-Set: unknown
  */
 export function startParachuting(vehicle, active) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8889,7 +8886,7 @@ export function startParachuting(vehicle, active) {
 /**
  * No comment provided
  *
- * Hash: 0xEA4743874D515F13 | Since: 2944 | API-Set: unknown
+ * Hash: 0xEA4743874D515F13 | Since: unknown | API-Set: unknown
  */
 export function areMissileBaysDeployed(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8898,7 +8895,7 @@ export function areMissileBaysDeployed(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xDC05D2777F855F44 | Since: 3407 | API-Set: unknown
+ * Hash: 0xDC05D2777F855F44 | Since: unknown | API-Set: unknown
  */
 export function enableIndividualPlanePropeller(vehicle, propeller) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8907,7 +8904,7 @@ export function enableIndividualPlanePropeller(vehicle, propeller) {
 /**
  * No comment provided
  *
- * Hash: 0x1FCB07FE230B6639 | Since: 3258 | API-Set: unknown
+ * Hash: 0x1FCB07FE230B6639 | Since: unknown | API-Set: unknown
  */
 export function getIsElectric(vehicleModel) {
     if (typeof vehicleModel === 'string')
@@ -8917,7 +8914,7 @@ export function getIsElectric(vehicleModel) {
 /**
  * No comment provided
  *
- * Hash: 0x7DFAD92A34F09C00 | Since: 3717 | API-Set: unknown
+ * Hash: 0x7DFAD92A34F09C00 | Since: unknown | API-Set: unknown
  */
 export function getMissionTrainConfigIndexByName(name) {
     return Citizen.invokeNative('0x7DFAD92A34F09C00', name);
@@ -8925,7 +8922,7 @@ export function getMissionTrainConfigIndexByName(name) {
 /**
  * No comment provided
  *
- * Hash: 0xBEC4B8653462450E | Since: 3095 | API-Set: unknown
+ * Hash: 0xBEC4B8653462450E | Since: unknown | API-Set: unknown
  */
 export function getRemainingNitrousDuration(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8934,7 +8931,7 @@ export function getRemainingNitrousDuration(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x613A431BCD5A22EB | Since: 3717 | API-Set: unknown
+ * Hash: 0x613A431BCD5A22EB | Since: unknown | API-Set: unknown
  */
 export function getAllowHomingMissleLockonSynced(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8943,7 +8940,7 @@ export function getAllowHomingMissleLockonSynced(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x56185A25D45A0DCD | Since: 3095 | API-Set: unknown
+ * Hash: 0x56185A25D45A0DCD | Since: unknown | API-Set: unknown
  */
 export function getCurrentDriveGear(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8952,7 +8949,7 @@ export function getCurrentDriveGear(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xF9DDA40BC293A61E | Since: 3095 | API-Set: unknown
+ * Hash: 0xF9DDA40BC293A61E | Since: unknown | API-Set: unknown
  */
 export function getCurrentRevRatio(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8961,7 +8958,7 @@ export function getCurrentRevRatio(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0xFD8CE53356B5D745 | Since: 3095 | API-Set: unknown
+ * Hash: 0xFD8CE53356B5D745 | Since: unknown | API-Set: unknown
  */
 export function getDesiredDriveGear(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8980,7 +8977,7 @@ export function getDesiredDriveGear(vehicle) {
  *
  * _GET_VEHICLE_DE* - _GET_VEHICLE_DI*
  *
- * Hash: 0x1423725069EE1D14 | Since: 3258 | API-Set: unknown
+ * Hash: 0x1423725069EE1D14 | Since: unknown | API-Set: unknown
  */
 export function getDrivetrainType(vehicleModel) {
     if (typeof vehicleModel === 'string')
@@ -8990,7 +8987,7 @@ export function getDrivetrainType(vehicleModel) {
 /**
  * No comment provided
  *
- * Hash: 0xE728F090D538CB18 | Since: 3095 | API-Set: unknown
+ * Hash: 0xE728F090D538CB18 | Since: unknown | API-Set: unknown
  */
 export function getExhaustBone(vehicle, index) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8999,7 +8996,7 @@ export function getExhaustBone(vehicle, index) {
 /**
  * No comment provided
  *
- * Hash: 0x24910C3D66BA770D | Since: 3095 | API-Set: unknown
+ * Hash: 0x24910C3D66BA770D | Since: unknown | API-Set: unknown
  */
 export function getMaxDriveGearCount(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9008,7 +9005,7 @@ export function getMaxDriveGearCount(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x3EE18B00CD86C54F | Since: 3095 | API-Set: unknown
+ * Hash: 0x3EE18B00CD86C54F | Since: unknown | API-Set: unknown
  */
 export function getMaxExhaustBoneCount() {
     return Citizen.invokeNative('0x3EE18B00CD86C54F');
@@ -9016,7 +9013,7 @@ export function getMaxExhaustBoneCount() {
 /**
  * No comment provided
  *
- * Hash: 0x61F02E4E9A7A61EA | Since: 3095 | API-Set: unknown
+ * Hash: 0x61F02E4E9A7A61EA | Since: unknown | API-Set: unknown
  */
 export function getModelNumDriveGears(vehicleModel) {
     if (typeof vehicleModel === 'string')
@@ -9026,7 +9023,7 @@ export function getModelNumDriveGears(vehicleModel) {
 /**
  * No comment provided
  *
- * Hash: 0x92D96892FC06AF22 | Since: 3095 | API-Set: unknown
+ * Hash: 0x92D96892FC06AF22 | Since: unknown | API-Set: unknown
  */
 export function getThrottle(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9035,7 +9032,7 @@ export function getThrottle(vehicle) {
 /**
  * No comment provided
  *
- * Hash: 0x80D9D32636369C92 | Since: 2802 | API-Set: unknown
+ * Hash: 0x80D9D32636369C92 | Since: unknown | API-Set: unknown
  */
 export function getTrailerParentVehicle(trailer) {
     const _trailer = typeof trailer == 'object' ? trailer.handle() : trailer;
@@ -9044,17 +9041,20 @@ export function getTrailerParentVehicle(trailer) {
 /**
  * No comment provided
  *
- * Hash: 0x6638C0F19DE692FE | Since: 3095 | API-Set: unknown
+ * Hash: 0x6638C0F19DE692FE | Since: unknown | API-Set: unknown
  */
 export function isGen9ExclusiveModel(vehicleModel) {
     if (typeof vehicleModel === 'string')
         vehicleModel = GetHashKey(vehicleModel);
+    if (IsGameEnhancedVersion())
+        console.error('This native is not supported on enhanced (0x6638C0F19DE692FE)');
+    return;
     return Citizen.invokeNative('0x6638C0F19DE692FE', vehicleModel);
 }
 /**
  * No comment provided
  *
- * Hash: 0x71C6302CBCA6CA35 | Since: 3407 | API-Set: unknown
+ * Hash: 0x71C6302CBCA6CA35 | Since: unknown | API-Set: unknown
  */
 export function isOnBoostPad(vehicle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9063,7 +9063,7 @@ export function isOnBoostPad(vehicle) {
 /**
  * _SET_ALLOW_R* - _SET_ALLOW_V*
  *
- * Hash: 0x27D27223E8EF22ED | Since: 3095 | API-Set: unknown
+ * Hash: 0x27D27223E8EF22ED | Since: unknown | API-Set: unknown
  */
 export function setAllowCollisionWhenIn(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9072,7 +9072,7 @@ export function setAllowCollisionWhenIn(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x48BD57D0DD17786A | Since: 3095 | API-Set: unknown
+ * Hash: 0x48BD57D0DD17786A | Since: unknown | API-Set: unknown
  */
 export function setAttachedToTowTruckArm(towTruck, vehicle) {
     const _towTruck = typeof towTruck == 'object' ? towTruck.handle() : towTruck;
@@ -9082,7 +9082,7 @@ export function setAttachedToTowTruckArm(towTruck, vehicle) {
 /**
  * Use the vehicle bounds (instead of viewport) when deciding if a vehicle is sufficiently above the water (waterheight.dat), bypassing wave simulation checks
  *
- * Hash: 0x85FC953F6C6CBDE1 | Since: 2802 | API-Set: unknown
+ * Hash: 0x85FC953F6C6CBDE1 | Since: unknown | API-Set: unknown
  */
 export function setBoundsAffectWaterProbes(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9091,7 +9091,7 @@ export function setBoundsAffectWaterProbes(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x0C02468829E4AA65 | Since: 2944 | API-Set: unknown
+ * Hash: 0x0C02468829E4AA65 | Since: unknown | API-Set: unknown
  */
 export function setDeployMissileBays(vehicle, deploy) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9100,7 +9100,7 @@ export function setDeployMissileBays(vehicle, deploy) {
 /**
  * Prevents the vehicle from exploding when taking body damage if the inflictor is an AI-controlled vehicle. Only works for planes.
  *
- * Hash: 0xB0B7DF5CB876FF5E | Since: 3407 | API-Set: unknown
+ * Hash: 0xB0B7DF5CB876FF5E | Since: unknown | API-Set: unknown
  */
 export function setDisableExplodeFromBodyDamageReceivedByAi(vehicle, disable) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9109,7 +9109,7 @@ export function setDisableExplodeFromBodyDamageReceivedByAi(vehicle, disable) {
 /**
  * First two floats relate to rumble, the last is a threshold
  *
- * Hash: 0xDAF4C98C18AC6F06 | Since: 3095 | API-Set: unknown
+ * Hash: 0xDAF4C98C18AC6F06 | Since: unknown | API-Set: unknown
  */
 export function setDriftSlipAngleLimits(vehicle, durationScalar, amplitudeScalar, slipAngleLimit) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9118,7 +9118,7 @@ export function setDriftSlipAngleLimits(vehicle, durationScalar, amplitudeScalar
 /**
  * No comment provided
  *
- * Hash: 0x559B6073DB7FFFF9 | Since: 3717 | API-Set: unknown
+ * Hash: 0x559B6073DB7FFFF9 | Since: unknown | API-Set: unknown
  */
 export function setMakeTrainScanForBlockingEntities(train, toggle) {
     const _train = typeof train == 'object' ? train.handle() : train;
@@ -9127,7 +9127,7 @@ export function setMakeTrainScanForBlockingEntities(train, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x16CFBC5E7EB32861 | Since: 3095 | API-Set: unknown
+ * Hash: 0x16CFBC5E7EB32861 | Since: unknown | API-Set: unknown
  */
 export function setMinimumTimeBetweenGearShifts(vehicle, time) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9136,7 +9136,7 @@ export function setMinimumTimeBetweenGearShifts(vehicle, time) {
 /**
  * No comment provided
  *
- * Hash: 0x465EEA70AF251045 | Since: 3095 | API-Set: unknown
+ * Hash: 0x465EEA70AF251045 | Since: unknown | API-Set: unknown
  */
 export function setNitrousIsVisible(vehicle, enabled) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9145,7 +9145,7 @@ export function setNitrousIsVisible(vehicle, enabled) {
 /**
  * No comment provided
  *
- * Hash: 0xAFD262ACCA64479A | Since: 3095 | API-Set: unknown
+ * Hash: 0xAFD262ACCA64479A | Since: unknown | API-Set: unknown
  */
 export function setOverrideTractionLossMultiplier(vehicle, modifier) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9154,7 +9154,7 @@ export function setOverrideTractionLossMultiplier(vehicle, modifier) {
 /**
  * No comment provided
  *
- * Hash: 0xBAFB99B304BC52A7 | Since: 3407 | API-Set: unknown
+ * Hash: 0xBAFB99B304BC52A7 | Since: unknown | API-Set: unknown
  */
 export function setPlaneAvoidsOthers(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9163,7 +9163,7 @@ export function setPlaneAvoidsOthers(vehicle, toggle) {
 /**
  * No comment provided
  *
- * Hash: 0x1AD0F63A94E10EFF | Since: 3407 | API-Set: unknown
+ * Hash: 0x1AD0F63A94E10EFF | Since: unknown | API-Set: unknown
  */
 export function setRemainingNitrousDuration(vehicle, duration) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9172,7 +9172,7 @@ export function setRemainingNitrousDuration(vehicle, duration) {
 /**
  * No comment provided
  *
- * Hash: 0x337EF33DA3DDB990 | Since: 3095 | API-Set: unknown
+ * Hash: 0x337EF33DA3DDB990 | Since: unknown | API-Set: unknown
  */
 export function setTransmissionReducedGearRatio(vehicle, toggle) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9181,7 +9181,7 @@ export function setTransmissionReducedGearRatio(vehicle, toggle) {
 /**
  * Does not actually return anything.
  *
- * Hash: 0x84D7FFD223CAAFFD | Since: 3407 | API-Set: unknown
+ * Hash: 0x84D7FFD223CAAFFD | Since: unknown | API-Set: unknown
  */
 export function setExplosiveDamageScale(vehicle, scale) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9191,7 +9191,7 @@ export function setExplosiveDamageScale(vehicle, scale) {
  * 0.0f = engine rev minimum
  * 1.0f = engine rev limit
  *
- * Hash: 0x5AE614ECA5FDD423 | Since: 3095 | API-Set: unknown
+ * Hash: 0x5AE614ECA5FDD423 | Since: unknown | API-Set: unknown
  */
 export function setMaxLaunchEngineRevs(vehicle, modifier) {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9200,7 +9200,7 @@ export function setMaxLaunchEngineRevs(vehicle, modifier) {
 /**
  * No comment provided
  *
- * Hash: 0x1980F68872CC2C3D | Since: 3095 | API-Set: unknown
+ * Hash: 0x1980F68872CC2C3D | Since: unknown | API-Set: unknown
  */
 export function setUseHornButtonForNitrous(toggle) {
     SetVehicleUseHornButtonForNitrous(toggle);

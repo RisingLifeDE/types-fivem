@@ -5,7 +5,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * 
  * When used with an asynchronous shape test, this native should be looped until returning 0 or 2, after which the handle is invalidated.
  * 
- * Hash: 0x3D87450E15D98694 | Since: 323
+ * Hash: 0x3D87450E15D98694 | Since: unknown
  */
 export function getResult(shapeTestHandle: number): [number, boolean, Vector3, Vector3, number] {
     return GetShapeTestResult(shapeTestHandle);
@@ -18,7 +18,7 @@ export function getResult(shapeTestHandle: number): [number, boolean, Vector3, V
  * 
  * Unless the return value is 2, the other return values are undefined.
  * 
- * Hash: 0x65287525D951F6BE | Since: 323
+ * Hash: 0x65287525D951F6BE | Since: unknown
  */
 export function getResultIncludingMaterial(shapeTestHandle: number): [number, boolean, Vector3, Vector3, number, number] {
     return GetShapeTestResultIncludingMaterial(shapeTestHandle);
@@ -27,7 +27,7 @@ export function getResultIncludingMaterial(shapeTestHandle: number): [number, bo
 /**
  * Invalidates the entity handle passed by removing the fwScriptGuid from the entity. This should be used when receiving an ambient entity from shape testing natives, but can also be used for other natives returning an 'irrelevant' entity handle.
  * 
- * Hash: 0x2B3334BCA57CD799 | Since: 323
+ * Hash: 0x2B3334BCA57CD799 | Since: unknown
  */
 export function releaseScriptGuidFromEntity(entityHit: number | IEntity): void {
     const _entityHit = typeof entityHit == 'object' ? entityHit.handle() : entityHit;
@@ -37,7 +37,7 @@ export function releaseScriptGuidFromEntity(entityHit: number | IEntity): void {
 /**
  * Does the same as 0x7EE9F5D83DD4F90E, except blocking until the shape test completes.
  * 
- * Hash: 0x377906D8A31E5586 | Since: 323
+ * Hash: 0x377906D8A31E5586 | Since: unknown
  */
 export function startExpensiveSynchronousLosProbe(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, flags: number, entity: number | IEntity): number {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -47,7 +47,7 @@ export function startExpensiveSynchronousLosProbe(x1: number, y1: number, z1: nu
 /**
  * No comment provided
  * 
- * Hash: 0x37181417CE7C8900 | Since: 323
+ * Hash: 0x37181417CE7C8900 | Since: unknown
  */
 export function startBound(entity: number | IEntity, flags1: number, flags2: number): number {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -57,7 +57,7 @@ export function startBound(entity: number | IEntity, flags1: number, flags2: num
 /**
  * No comment provided
  * 
- * Hash: 0x052837721A854EC7 | Since: 323
+ * Hash: 0x052837721A854EC7 | Since: unknown
  */
 export function startBoundingBox(entity: number | IEntity, flags1: number, flags2: number): number {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -67,7 +67,7 @@ export function startBoundingBox(entity: number | IEntity, flags1: number, flags
 /**
  * No comment provided
  * 
- * Hash: 0xFE466162C4401D18 | Since: 323
+ * Hash: 0xFE466162C4401D18 | Since: unknown
  */
 export function startBox(pos: Vector3, dimX: number, dimY: number, dimZ: number, rot: Vector3, flags: number, entity: number | IEntity): number {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -87,7 +87,7 @@ export function startBox(pos: Vector3, dimX: number, dimY: number, dimZ: number,
  * 
  * Entity is an entity to ignore
  * 
- * Hash: 0x28579D1B8F8AAC80 | Since: 323
+ * Hash: 0x28579D1B8F8AAC80 | Since: unknown
  */
 export function startCapsule(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, radius: number, flags: number, entity: number | IEntity): number {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -101,7 +101,7 @@ export function startCapsule(x1: number, y1: number, z1: number, x2: number, y2:
  * 
  * p8 is a bit mask with bits 1, 2 and/or 4, relating to collider types; 4 should usually be used.
  * 
- * Hash: 0x7EE9F5D83DD4F90E | Since: 323
+ * Hash: 0x7EE9F5D83DD4F90E | Since: unknown
  */
 export function startLosProbe(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, flags: number, entity: number | IEntity): number {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -113,7 +113,7 @@ export function startLosProbe(x1: number, y1: number, z1: number, x2: number, y2
  * 
  * In its only usage in game scripts its called with flag set to 511, entity to player_ped_id and flag2 set to 7
  * 
- * Hash: 0xFF6BE494C7987F34 | Since: 323
+ * Hash: 0xFF6BE494C7987F34 | Since: unknown
  */
 export function startMouseCursorLosProbe(flag: number, entity: number | IEntity, flag2: number): [number, Vector3, Vector3] {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -123,7 +123,7 @@ export function startMouseCursorLosProbe(flag: number, entity: number | IEntity,
 /**
  * No comment provided
  * 
- * Hash: 0xE6AC6C45FBE83004 | Since: 323
+ * Hash: 0xE6AC6C45FBE83004 | Since: unknown
  */
 export function startSweptSphere(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, radius: number, flags: number, entity: number | IEntity): number {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;

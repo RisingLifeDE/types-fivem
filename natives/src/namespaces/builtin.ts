@@ -3,7 +3,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
 /**
  * I'm guessing this rounds a float value up to the next whole number, and FLOOR rounds it down
  * 
- * Hash: 0x11E019C8F43ACC8A | Since: 323
+ * Hash: 0x11E019C8F43ACC8A | Since: unknown
  */
 export function ceil(value: number): number {
     return Ceil(value);
@@ -12,7 +12,7 @@ export function ceil(value: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0xD0FFB162F40A139C | Since: 323
+ * Hash: 0xD0FFB162F40A139C | Since: unknown
  */
 export function cos(value: number): number {
     return Cos(value);
@@ -21,7 +21,7 @@ export function cos(value: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0xF34EE736CF047844 | Since: 323
+ * Hash: 0xF34EE736CF047844 | Since: unknown
  */
 export function floor(value: number): number {
     return Floor(value);
@@ -30,7 +30,7 @@ export function floor(value: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0xE816E655DE37FE20 | Since: 1493
+ * Hash: 0xE816E655DE37FE20 | Since: unknown
  */
 export function log10(value: number): number {
     return Log10(value);
@@ -39,7 +39,7 @@ export function log10(value: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0xE3621CC40F31FE2E | Since: 323
+ * Hash: 0xE3621CC40F31FE2E | Since: unknown
  */
 export function pow(base: number, exponent: number): number {
     return Pow(base, exponent);
@@ -48,7 +48,7 @@ export function pow(base: number, exponent: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0xF2DB717A73826179 | Since: 323
+ * Hash: 0xF2DB717A73826179 | Since: unknown
  */
 export function round(value: number): number {
     return Round(value);
@@ -57,7 +57,7 @@ export function round(value: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0xC1B1E9A034A63A62 | Since: 323
+ * Hash: 0xC1B1E9A034A63A62 | Since: unknown
  */
 export function settimera(value: number): void {
     Settimera(value);
@@ -66,7 +66,7 @@ export function settimera(value: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x5AE11BC36633DE4E | Since: 323
+ * Hash: 0x5AE11BC36633DE4E | Since: unknown
  */
 export function settimerb(value: number): void {
     Settimerb(value);
@@ -78,7 +78,7 @@ export function settimerb(value: number): void {
  * THREAD_PRIO_LOWEST = 2
  * THREAD_PRIO_MANUAL_UPDATE = 100
  * 
- * Hash: 0x42B65DEEF2EDF2A1 | Since: 877
+ * Hash: 0x42B65DEEF2EDF2A1 | Since: unknown
  */
 export function setThisThreadPriority(priority: number): void {
     SetThreadPriority(priority);
@@ -87,7 +87,7 @@ export function setThisThreadPriority(priority: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xEDD95A39E5544DE8 | Since: 323
+ * Hash: 0xEDD95A39E5544DE8 | Since: unknown
  */
 export function shiftLeft(value: number, bitShift: number): number {
     return ShiftLeft(value, bitShift);
@@ -96,7 +96,7 @@ export function shiftLeft(value: number, bitShift: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0x97EF1E5BCE9DC075 | Since: 323
+ * Hash: 0x97EF1E5BCE9DC075 | Since: unknown
  */
 export function shiftRight(value: number, bitShift: number): number {
     return ShiftRight(value, bitShift);
@@ -105,7 +105,7 @@ export function shiftRight(value: number, bitShift: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0x0BADBFA3B172435F | Since: 323
+ * Hash: 0x0BADBFA3B172435F | Since: unknown
  */
 export function sin(value: number): number {
     return Sin(value);
@@ -114,7 +114,7 @@ export function sin(value: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0x71D93B57D07F9804 | Since: 323
+ * Hash: 0x71D93B57D07F9804 | Since: unknown
  */
 export function sqrt(value: number): number {
     return Sqrt(value);
@@ -153,7 +153,7 @@ export function sqrt(value: number): number {
  * `SYSTEM::START_NEW_SCRIPT(v_2, 17000);`
  * `SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(v_2);`
  * 
- * Hash: 0xE81651AD79516E48 | Since: 323
+ * Hash: 0xE81651AD79516E48 | Since: unknown
  */
 export function startNewScript(scriptName: string, stackSize: number): number {
     return StartNewScript(scriptName, stackSize);
@@ -163,7 +163,7 @@ export function startNewScript(scriptName: string, stackSize: number): number {
  * return : script thread id, 0 if failed
  * Pass pointer to struct of args in p1, size of struct goes into p2
  * 
- * Hash: 0xB8BA7F44DF1575E1 | Since: 323
+ * Hash: 0xB8BA7F44DF1575E1 | Since: unknown
  */
 export function startNewScriptWithArgs(scriptName: string, argCount: number, stackSize: number): [number, any] {
     return StartNewScriptWithArgs(scriptName, argCount, stackSize);
@@ -172,7 +172,7 @@ export function startNewScriptWithArgs(scriptName: string, argCount: number, sta
 /**
  * No comment provided
  * 
- * Hash: 0xEB1C67C3A5333A92 | Since: 323
+ * Hash: 0xEB1C67C3A5333A92 | Since: unknown
  */
 export function startNewScriptWithNameHash(scriptHash: number | string, stackSize: number): number {
     if (typeof scriptHash === 'string') scriptHash = GetHashKey(scriptHash)
@@ -182,7 +182,7 @@ export function startNewScriptWithNameHash(scriptHash: number | string, stackSiz
 /**
  * No comment provided
  * 
- * Hash: 0xC4BB298BD441BE78 | Since: 323
+ * Hash: 0xC4BB298BD441BE78 | Since: unknown
  */
 export function startNewScriptWithNameHashAndArgs(scriptHash: number | string, argCount: number, stackSize: number): [number, any] {
     if (typeof scriptHash === 'string') scriptHash = GetHashKey(scriptHash)
@@ -192,7 +192,7 @@ export function startNewScriptWithNameHashAndArgs(scriptHash: number | string, a
 /**
  * Counts up. Every 1000 is 1 real-time second. Use SETTIMERA(int value) to set the timer (e.g.: SETTIMERA(0)).
  * 
- * Hash: 0x83666F9FB8FEBD4B | Since: 323
+ * Hash: 0x83666F9FB8FEBD4B | Since: unknown
  */
 export function timera(): number {
     return Timera();
@@ -201,7 +201,7 @@ export function timera(): number {
 /**
  * No comment provided
  * 
- * Hash: 0xC9D9444186B5A374 | Since: 323
+ * Hash: 0xC9D9444186B5A374 | Since: unknown
  */
 export function timerb(): number {
     return Timerb();
@@ -210,7 +210,7 @@ export function timerb(): number {
 /**
  * Gets the current frame time.
  * 
- * Hash: 0x0000000050597EE2 | Since: 323
+ * Hash: 0x0000000050597EE2 | Since: unknown
  */
 export function timestep(): number {
     return Timestep();
@@ -219,7 +219,7 @@ export function timestep(): number {
 /**
  * No comment provided
  * 
- * Hash: 0xBBDA792448DB5A89 | Since: 323
+ * Hash: 0xBBDA792448DB5A89 | Since: unknown
  */
 export function toFloat(value: number): number {
     return ToFloat(value);
@@ -228,7 +228,7 @@ export function toFloat(value: number): number {
 /**
  * Calculates distance between vectors.
  * 
- * Hash: 0x2A488C176D52CCA5 | Since: 323
+ * Hash: 0x2A488C176D52CCA5 | Since: unknown
  */
 export function vdist(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): number {
     return Vdist(x1, y1, z1, x2, y2, z2);
@@ -237,7 +237,7 @@ export function vdist(x1: number, y1: number, z1: number, x2: number, y2: number
 /**
  * Calculates distance between vectors but does not perform Sqrt operations. (Its way faster)
  * 
- * Hash: 0xB7A628320EFF8E47 | Since: 323
+ * Hash: 0xB7A628320EFF8E47 | Since: unknown
  */
 export function vdist2(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): number {
     return Vdist2(x1, y1, z1, x2, y2, z2);
@@ -246,7 +246,7 @@ export function vdist2(x1: number, y1: number, z1: number, x2: number, y2: numbe
 /**
  * Calculates the magnitude of a vector.
  * 
- * Hash: 0x652D2EEEF1D3E62C | Since: 323
+ * Hash: 0x652D2EEEF1D3E62C | Since: unknown
  */
 export function vmag(pos: Vector3): number {
     return Vmag(pos.x, pos.y, pos.z);
@@ -255,7 +255,7 @@ export function vmag(pos: Vector3): number {
 /**
  * Calculates the magnitude of a vector but does not perform Sqrt operations. (Its way faster)
  * 
- * Hash: 0xA8CEACB4F35AE058 | Since: 323
+ * Hash: 0xA8CEACB4F35AE058 | Since: unknown
  */
 export function vmag2(pos: Vector3): number {
     return Vmag2(pos.x, pos.y, pos.z);
@@ -264,7 +264,7 @@ export function vmag2(pos: Vector3): number {
 /**
  * Pauses execution of the current script, please note this behavior is only seen when called from one of the game script files(ysc). In order to wait an asi script use "static void WAIT(DWORD time);" found in main.h
  * 
- * Hash: 0x4EDE34FBADD967A6 | Since: 323
+ * Hash: 0x4EDE34FBADD967A6 | Since: unknown
  */
 export function wait(ms: number): void {
     Wait(ms);

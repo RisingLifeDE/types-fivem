@@ -1,7 +1,7 @@
 /**
  * No comment provided
  *
- * Hash: 0x84B418E93894AC1C | Since: 2372
+ * Hash: 0x84B418E93894AC1C | Since: unknown
  */
 export function isMpEnabled() {
     return Citizen.invokeNative('0x84B418E93894AC1C');
@@ -9,7 +9,7 @@ export function isMpEnabled() {
 /**
  * No comment provided
  *
- * Hash: 0xFCE2747EEF1D05FC | Since: 2612
+ * Hash: 0xFCE2747EEF1D05FC | Since: unknown
  */
 export function mpGetAccount() {
     return Citizen.invokeNative('0xFCE2747EEF1D05FC', 0);
@@ -17,7 +17,7 @@ export function mpGetAccount() {
 /**
  * No comment provided
  *
- * Hash: 0xC8CB5999919EA2CA | Since: 2612
+ * Hash: 0xC8CB5999919EA2CA | Since: unknown
  */
 export function mpGetAccountsStatus() {
     return Citizen.invokeNative('0xC8CB5999919EA2CA');
@@ -25,7 +25,7 @@ export function mpGetAccountsStatus() {
 /**
  * No comment provided
  *
- * Hash: 0x690B76BD2763E068 | Since: 2372
+ * Hash: 0x690B76BD2763E068 | Since: unknown
  */
 export function mpGetStatus() {
     return Citizen.invokeNative('0x690B76BD2763E068');
@@ -33,7 +33,18 @@ export function mpGetStatus() {
 /**
  * No comment provided
  *
- * Hash: 0x77A16200E18E0C55 | Since: 2612
+ * Hash: 0xB2C55F521748367B | Since: unknown
+ */
+export function mpIsPlatformGeneration(generation) {
+    if (!IsGameEnhancedVersion())
+        console.error('This native is not supported on legacy (0xB2C55F521748367B)');
+    return;
+    return Citizen.invokeNative('0xB2C55F521748367B', generation);
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0x77A16200E18E0C55 | Since: unknown
  */
 export function mpNumAccounts() {
     return Citizen.invokeNative('0x77A16200E18E0C55');
@@ -41,7 +52,7 @@ export function mpNumAccounts() {
 /**
  * No comment provided
  *
- * Hash: 0x85F41F9225D08C72 | Since: 2612
+ * Hash: 0x85F41F9225D08C72 | Since: unknown
  */
 export function mpRequestAccounts() {
     return Citizen.invokeNative('0x85F41F9225D08C72');
@@ -49,7 +60,7 @@ export function mpRequestAccounts() {
 /**
  * No comment provided
  *
- * Hash: 0xE5E9746A66359F9D | Since: 2372
+ * Hash: 0xE5E9746A66359F9D | Since: unknown
  */
 export function mpRequestStatus() {
     return Citizen.invokeNative('0xE5E9746A66359F9D');

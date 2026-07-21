@@ -3,7 +3,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
 /**
  * No comment provided
  * 
- * Hash: 0xB56BBBCC2955D9CB | Since: 323 | API-Set: unknown
+ * Hash: 0xB56BBBCC2955D9CB | Since: unknown | API-Set: unknown
  */
 export function canRequestAssetsForEntity(): boolean {
     return CanRequestAssetsForCutsceneEntity();
@@ -12,7 +12,7 @@ export function canRequestAssetsForEntity(): boolean {
 /**
  * modelHash (p1) was always 0 in R* scripts
  * 
- * Hash: 0x645D0B458D8E17B5 | Since: 323 | API-Set: unknown
+ * Hash: 0x645D0B458D8E17B5 | Since: unknown | API-Set: unknown
  */
 export function canSetEnterStateForRegisteredEntity(cutsceneEntName: string, modelHash: number | string): boolean {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -22,7 +22,7 @@ export function canSetEnterStateForRegisteredEntity(cutsceneEntName: string, mod
 /**
  * No comment provided
  * 
- * Hash: 0xB2CBCD0930DFB420 | Since: 323 | API-Set: unknown
+ * Hash: 0xB2CBCD0930DFB420 | Since: unknown | API-Set: unknown
  */
 export function canSetExitStateForCamera(): boolean {
     return CanSetExitStateForCamera(false);
@@ -31,7 +31,7 @@ export function canSetExitStateForCamera(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x4C6A6451C79E4662 | Since: 323 | API-Set: unknown
+ * Hash: 0x4C6A6451C79E4662 | Since: unknown | API-Set: unknown
  */
 export function canSetExitStateForRegisteredEntity(cutsceneEntName: string, modelHash: number | string): boolean {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -41,7 +41,7 @@ export function canSetExitStateForRegisteredEntity(cutsceneEntName: string, mode
 /**
  * No comment provided
  * 
- * Hash: 0x5EDEF0CF8C1DAB3C | Since: 323 | API-Set: unknown
+ * Hash: 0x5EDEF0CF8C1DAB3C | Since: unknown | API-Set: unknown
  */
 export function canUseMobilePhoneDuring(): boolean {
     return Citizen.invokeNative('0x5EDEF0CF8C1DAB3C');
@@ -50,7 +50,7 @@ export function canUseMobilePhoneDuring(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x499EF20C5DB25C59 | Since: 323 | API-Set: unknown
+ * Hash: 0x499EF20C5DB25C59 | Since: unknown | API-Set: unknown
  */
 export function doesEntityExist(cutsceneEntName: string, modelHash: number | string): boolean {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -60,7 +60,7 @@ export function doesEntityExist(cutsceneEntName: string, modelHash: number | str
 /**
  * No comment provided
  * 
- * Hash: 0x4FCD976DA686580C | Since: 1290 | API-Set: unknown
+ * Hash: 0x4FCD976DA686580C | Since: unknown | API-Set: unknown
  */
 export function doesHandleExist(cutsceneHandle: number): number {
     return Citizen.invokeNative('0x4FCD976DA686580C', cutsceneHandle);
@@ -69,7 +69,7 @@ export function doesHandleExist(cutsceneHandle: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0x583DF8E3D4AFBD98 | Since: 323 | API-Set: unknown
+ * Hash: 0x583DF8E3D4AFBD98 | Since: unknown | API-Set: unknown
  */
 export function getConcatSectionPlaying(): number {
     return Citizen.invokeNative('0x583DF8E3D4AFBD98');
@@ -78,7 +78,7 @@ export function getConcatSectionPlaying(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x971D7B15BCDBEF99 | Since: 1734 | API-Set: unknown
+ * Hash: 0x971D7B15BCDBEF99 | Since: unknown | API-Set: unknown
  */
 export function getEndTime(): number {
     return Citizen.invokeNative('0x971D7B15BCDBEF99');
@@ -87,7 +87,7 @@ export function getEndTime(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x5D583F71C901F2A3 | Since: 2802 | API-Set: unknown
+ * Hash: 0x5D583F71C901F2A3 | Since: unknown | API-Set: unknown
  */
 export function getPlayDuration(): number {
     return Citizen.invokeNative('0x5D583F71C901F2A3');
@@ -96,7 +96,7 @@ export function getPlayDuration(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x710286BC5EF4D6E1 | Since: 3258 | API-Set: unknown
+ * Hash: 0x710286BC5EF4D6E1 | Since: unknown | API-Set: unknown
  */
 export function getPlayTime(): number {
     return GetCutscenePlayTime();
@@ -105,7 +105,7 @@ export function getPlayTime(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x49010A6A396553D8 | Since: 323 | API-Set: unknown
+ * Hash: 0x49010A6A396553D8 | Since: unknown | API-Set: unknown
  */
 export function getSectionPlaying(): number {
     return GetCutsceneSectionPlaying();
@@ -114,7 +114,7 @@ export function getSectionPlaying(): number {
 /**
  * No comment provided
  * 
- * Hash: 0xE625BEABBAFFDAB9 | Since: 323 | API-Set: unknown
+ * Hash: 0xE625BEABBAFFDAB9 | Since: unknown | API-Set: unknown
  */
 export function getTime(): number {
     return GetCutsceneTime();
@@ -123,7 +123,7 @@ export function getTime(): number {
 /**
  * No comment provided
  * 
- * Hash: 0xEE53B14A19E480D4 | Since: 323 | API-Set: unknown
+ * Hash: 0xEE53B14A19E480D4 | Since: unknown | API-Set: unknown
  */
 export function getTotalDuration(): number {
     return GetCutsceneTotalDuration();
@@ -132,7 +132,7 @@ export function getTotalDuration(): number {
 /**
  * Full list of cutscene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/cutsceneNames.json
  * 
- * Hash: 0x0ABC54DE641DC0FC | Since: 323 | API-Set: unknown
+ * Hash: 0x0ABC54DE641DC0FC | Since: unknown | API-Set: unknown
  */
 export function getCutFileConcatCount(cutsceneName: string): number {
     return GetCutFileNumSections(cutsceneName);
@@ -141,7 +141,7 @@ export function getCutFileConcatCount(cutsceneName: string): number {
 /**
  * No comment provided
  * 
- * Hash: 0x1FA904B60E492336 | Since: 3570 | API-Set: unknown
+ * Hash: 0x1FA904B60E492336 | Since: unknown | API-Set: unknown
  */
 export function getCutFileOffset(cutsceneName: string, index: number): Vector3 {
     return new Vector3(Citizen.invokeNative('0x1FA904B60E492336', cutsceneName, index));
@@ -150,7 +150,7 @@ export function getCutFileOffset(cutsceneName: string, index: number): Vector3 {
 /**
  * No comment provided
  * 
- * Hash: 0x0A2E9FDB9A8C62F6 | Since: 323 | API-Set: unknown
+ * Hash: 0x0A2E9FDB9A8C62F6 | Since: unknown | API-Set: unknown
  */
 export function getEntityIndexOfEntity(cutsceneEntName: string, modelHash: number | string): number {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -160,7 +160,7 @@ export function getEntityIndexOfEntity(cutsceneEntName: string, modelHash: numbe
 /**
  * No comment provided
  * 
- * Hash: 0xC0741A26499654CD | Since: 323 | API-Set: unknown
+ * Hash: 0xC0741A26499654CD | Since: unknown | API-Set: unknown
  */
 export function getEntityIndexOfRegisteredEntity(cutsceneEntName: string, modelHash: number | string): number {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -170,7 +170,7 @@ export function getEntityIndexOfRegisteredEntity(cutsceneEntName: string, modelH
 /**
  * Possibly HAS_CUTSCENE_CUT_THIS_FRAME, needs more research.
  * 
- * Hash: 0x708BDD8CD795B043 | Since: 323 | API-Set: unknown
+ * Hash: 0x708BDD8CD795B043 | Since: unknown | API-Set: unknown
  */
 export function hasCutThisFrame(): boolean {
     return HasCutsceneCutThisFrame();
@@ -179,7 +179,7 @@ export function hasCutThisFrame(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x7C0A893088881D57 | Since: 323 | API-Set: unknown
+ * Hash: 0x7C0A893088881D57 | Since: unknown | API-Set: unknown
  */
 export function hasFinished(): boolean {
     return HasCutsceneFinished();
@@ -188,7 +188,7 @@ export function hasFinished(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xC59F528E9AB9F339 | Since: 323 | API-Set: unknown
+ * Hash: 0xC59F528E9AB9F339 | Since: unknown | API-Set: unknown
  */
 export function hasLoaded(): boolean {
     return HasCutsceneLoaded();
@@ -198,7 +198,7 @@ export function hasLoaded(): boolean {
  * Simply checks if the cutscene has loaded and doesn't check via CutSceneManager as opposed to HAS_[THIS]_CUTSCENE_LOADED.
  * Full list of cutscene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/cutsceneNames.json
  * 
- * Hash: 0xA1C996C2A744262E | Since: 323 | API-Set: unknown
+ * Hash: 0xA1C996C2A744262E | Since: unknown | API-Set: unknown
  */
 export function hasCutFileLoaded(cutsceneName: string): boolean {
     return HasCutFileLoaded(cutsceneName);
@@ -207,7 +207,7 @@ export function hasCutFileLoaded(cutsceneName: string): boolean {
 /**
  * Full list of cutscene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/cutsceneNames.json
  * 
- * Hash: 0x228D3D94F8A11C3C | Since: 323 | API-Set: unknown
+ * Hash: 0x228D3D94F8A11C3C | Since: unknown | API-Set: unknown
  */
 export function hasThisLoaded(cutsceneName: string): boolean {
     return HasThisCutsceneLoaded(cutsceneName);
@@ -216,7 +216,7 @@ export function hasThisLoaded(cutsceneName: string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x991251AFC3981F84 | Since: 323 | API-Set: unknown
+ * Hash: 0x991251AFC3981F84 | Since: unknown | API-Set: unknown
  */
 export function isActive(): boolean {
     return IsCutsceneActive();
@@ -225,7 +225,7 @@ export function isActive(): boolean {
 /**
  * This function is hard-coded to always return 1.
  * 
- * Hash: 0x4CEBC1ED31E8925E | Since: 323 | API-Set: unknown
+ * Hash: 0x4CEBC1ED31E8925E | Since: unknown | API-Set: unknown
  */
 export function isAuthorized(cutsceneName: string): boolean {
     return Citizen.invokeNative('0x4CEBC1ED31E8925E', cutsceneName);
@@ -234,7 +234,7 @@ export function isAuthorized(cutsceneName: string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x71B74D2AE19338D0 | Since: 323 | API-Set: unknown
+ * Hash: 0x71B74D2AE19338D0 | Since: unknown | API-Set: unknown
  */
 export function isPlaybackFlagSet(flag: number): boolean {
     return IsCutscenePlaybackFlagSet(flag);
@@ -243,7 +243,7 @@ export function isPlaybackFlagSet(flag: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xD3C2E180A40F031E | Since: 323 | API-Set: unknown
+ * Hash: 0xD3C2E180A40F031E | Since: unknown | API-Set: unknown
  */
 export function isPlaying(): boolean {
     return IsCutscenePlaying();
@@ -252,7 +252,7 @@ export function isPlaying(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xA0FE76168A189DDB | Since: 323 | API-Set: unknown
+ * Hash: 0xA0FE76168A189DDB | Since: unknown | API-Set: unknown
  */
 export function isMultiheadFadeUp(): boolean {
     return Citizen.invokeNative('0xA0FE76168A189DDB');
@@ -261,7 +261,7 @@ export function isMultiheadFadeUp(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x2F137B508DE238F2 | Since: 323 | API-Set: unknown
+ * Hash: 0x2F137B508DE238F2 | Since: unknown | API-Set: unknown
  */
 export function networkSetMocapCanBeSkipped(toggle: boolean): void {
     Citizen.invokeNative('0x2F137B508DE238F2', toggle);
@@ -270,7 +270,7 @@ export function networkSetMocapCanBeSkipped(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xE40C1C56DF95C2E8 | Since: 323 | API-Set: unknown
+ * Hash: 0xE40C1C56DF95C2E8 | Since: unknown | API-Set: unknown
  */
 export function registerEntityFor(cutscenePed: number | IPed, cutsceneEntName: string, modelHash: number | string): void {
     const _cutscenePed = typeof cutscenePed == 'object' ? cutscenePed.handle() : cutscenePed;
@@ -281,7 +281,7 @@ export function registerEntityFor(cutscenePed: number | IPed, cutsceneEntName: s
 /**
  * No comment provided
  * 
- * Hash: 0x440AF51A3462B86F | Since: 323 | API-Set: unknown
+ * Hash: 0x440AF51A3462B86F | Since: unknown | API-Set: unknown
  */
 export function remove(): void {
     RemoveCutscene();
@@ -291,7 +291,7 @@ export function remove(): void {
  * Simply unloads the cutscene and doesn't do extra stuff that REMOVE_CUTSCENE does.
  * Full list of cutscene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/cutsceneNames.json
  * 
- * Hash: 0xD00D76A7DFC9D852 | Since: 323 | API-Set: unknown
+ * Hash: 0xD00D76A7DFC9D852 | Since: unknown | API-Set: unknown
  */
 export function removeCutFile(cutsceneName: string): void {
     RemoveCutFile(cutsceneName);
@@ -301,7 +301,7 @@ export function removeCutFile(cutsceneName: string): void {
  * flags: Usually 8
  * Full list of cutscene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/cutsceneNames.json
  * 
- * Hash: 0x7A86743F475D9E09 | Since: 323 | API-Set: unknown
+ * Hash: 0x7A86743F475D9E09 | Since: unknown | API-Set: unknown
  */
 export function request(cutsceneName: string, flags: number): void {
     RequestCutscene(cutsceneName, flags);
@@ -314,7 +314,7 @@ export function request(cutsceneName: string, flags: number): void {
  * Example: 0x105 (bit 0, 2 and 8 set) will enable scene 1, 3 and 9.
  * Full list of cutscene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/cutsceneNames.json
  * 
- * Hash: 0xC23DE0E91C30B58C | Since: 323 | API-Set: unknown
+ * Hash: 0xC23DE0E91C30B58C | Since: unknown | API-Set: unknown
  */
 export function requestWithPlaybackList(cutsceneName: string, playbackFlags: number, flags: number): void {
     RequestCutsceneWithPlaybackList(cutsceneName, playbackFlags, flags);
@@ -324,7 +324,7 @@ export function requestWithPlaybackList(cutsceneName: string, playbackFlags: num
  * Simply loads the cutscene and doesn't do extra stuff that REQUEST_CUTSCENE does.
  * Full list of cutscene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/cutsceneNames.json
  * 
- * Hash: 0x06A3524161C502BA | Since: 323 | API-Set: unknown
+ * Hash: 0x06A3524161C502BA | Since: unknown | API-Set: unknown
  */
 export function requestCutFile(cutsceneName: string): void {
     RequestCutFile(cutsceneName);
@@ -333,7 +333,7 @@ export function requestCutFile(cutsceneName: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2131046957F31B04 | Since: 323 | API-Set: unknown
+ * Hash: 0x2131046957F31B04 | Since: unknown | API-Set: unknown
  */
 export function setCanDisplayMinimapDuringThisUpdate(): void {
     RegisterSynchronisedScriptSpeech();
@@ -342,7 +342,7 @@ export function setCanDisplayMinimapDuringThisUpdate(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xE36A98D8AB3D3C66 | Since: 323 | API-Set: unknown
+ * Hash: 0xE36A98D8AB3D3C66 | Since: unknown | API-Set: unknown
  */
 export function setCarGeneratorsCanUpdateDuring(): void {
     Citizen.invokeNative('0xE36A98D8AB3D3C66', false);
@@ -351,7 +351,7 @@ export function setCarGeneratorsCanUpdateDuring(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x41FAA8FB2ECE8720 | Since: 323 | API-Set: unknown
+ * Hash: 0x41FAA8FB2ECE8720 | Since: unknown | API-Set: unknown
  */
 export function setCanBeSkipped(): void {
     SetCutsceneCanBeSkipped(false);
@@ -360,7 +360,7 @@ export function setCanBeSkipped(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x4C61C75BEE8184C2 | Since: 323 | API-Set: unknown
+ * Hash: 0x4C61C75BEE8184C2 | Since: unknown | API-Set: unknown
  */
 export function setEntityStreamingFlags(cutsceneEntName: string): void {
     SetCutsceneEntityStreamingFlags(cutsceneEntName, 0, 0);
@@ -369,7 +369,7 @@ export function setEntityStreamingFlags(cutsceneEntName: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0x8093F23ABACCC7D4 | Since: 323 | API-Set: unknown
+ * Hash: 0x8093F23ABACCC7D4 | Since: unknown | API-Set: unknown
  */
 export function setFadeValues(): void {
     SetCutsceneFadeValues(false, false, false, false);
@@ -378,7 +378,7 @@ export function setFadeValues(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x20746F7B1032A3C7 | Since: 323 | API-Set: unknown
+ * Hash: 0x20746F7B1032A3C7 | Since: unknown | API-Set: unknown
  */
 export function setMultiheadFade(): void {
     Citizen.invokeNative('0x20746F7B1032A3C7', false, false, false, false);
@@ -387,7 +387,7 @@ export function setMultiheadFade(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x06EE9048FD080382 | Since: 323 | API-Set: unknown
+ * Hash: 0x06EE9048FD080382 | Since: unknown | API-Set: unknown
  */
 export function setMultiheadFadeManual(): void {
     Citizen.invokeNative('0x06EE9048FD080382', false);
@@ -396,7 +396,7 @@ export function setMultiheadFadeManual(): void {
 /**
  * p3 could be heading. Needs more research.
  * 
- * Hash: 0xB812B3FD1C01CF27 | Since: 323 | API-Set: unknown
+ * Hash: 0xB812B3FD1C01CF27 | Since: unknown | API-Set: unknown
  */
 export function setOrigin(pos: Vector3): void {
     SetCutsceneOrigin(pos.x, pos.y, pos.z, 0, 0);
@@ -405,7 +405,7 @@ export function setOrigin(pos: Vector3): void {
 /**
  * No comment provided
  * 
- * Hash: 0x011883F41211432A | Since: 323 | API-Set: unknown
+ * Hash: 0x011883F41211432A | Since: unknown | API-Set: unknown
  */
 export function setOriginAndOrientation(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): void {
     Citizen.invokeNative('0x011883F41211432A', x1, y1, z1, x2, y2, z2, 0);
@@ -414,7 +414,7 @@ export function setOriginAndOrientation(x1: number, y1: number, z1: number, x2: 
 /**
  * Full list of ped components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedComponentVariations.json
  * 
- * Hash: 0xBA01E7B6DEEFBBC9 | Since: 323 | API-Set: unknown
+ * Hash: 0xBA01E7B6DEEFBBC9 | Since: unknown | API-Set: unknown
  */
 export function setPedComponentVariation(cutsceneEntName: string, componentId: number, drawableId: number, textureId: number, modelHash: number | string): void {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -424,7 +424,7 @@ export function setPedComponentVariation(cutsceneEntName: string, componentId: n
 /**
  * No comment provided
  * 
- * Hash: 0x2A56C06EBEF2B0D9 | Since: 323 | API-Set: unknown
+ * Hash: 0x2A56C06EBEF2B0D9 | Since: unknown | API-Set: unknown
  */
 export function setPedComponentVariationFromPed(cutsceneEntName: string, ped: number | IPed, modelHash: number | string): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -442,7 +442,7 @@ export function setPedComponentVariationFromPed(cutsceneEntName: string, ped: nu
  * 
  * Full list of ped components by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/pedComponentVariations.json
  * 
- * Hash: 0x0546524ADE2E9723 | Since: 323 | API-Set: unknown
+ * Hash: 0x0546524ADE2E9723 | Since: unknown | API-Set: unknown
  */
 export function setPedPropVariation(cutsceneEntName: string, componentId: number, drawableId: number, textureId: number, modelHash: number | string): void {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -452,7 +452,7 @@ export function setPedPropVariation(cutsceneEntName: string, componentId: number
 /**
  * Only used twice in R* scripts
  * 
- * Hash: 0x9896CE4721BE84BA | Since: 323 | API-Set: unknown
+ * Hash: 0x9896CE4721BE84BA | Since: unknown | API-Set: unknown
  */
 export function setTriggerArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): void {
     SetCutsceneTriggerArea(x1, y1, z1, x2, y2, z2);
@@ -461,7 +461,7 @@ export function setTriggerArea(x1: number, y1: number, z1: number, x2: number, y
 /**
  * Toggles a value (bool) for cutscenes.
  * 
- * Hash: 0xC61B86C9F61EB404 | Since: 323 | API-Set: unknown
+ * Hash: 0xC61B86C9F61EB404 | Since: unknown | API-Set: unknown
  */
 export function setPadCanShakeDuring(toggle: boolean): void {
     Citizen.invokeNative('0xC61B86C9F61EB404', toggle);
@@ -470,7 +470,7 @@ export function setPadCanShakeDuring(toggle: boolean): void {
 /**
  * Sets the cutscene's owning thread ID.
  * 
- * Hash: 0x8D9DF6ECA8768583 | Since: 323 | API-Set: unknown
+ * Hash: 0x8D9DF6ECA8768583 | Since: unknown | API-Set: unknown
  */
 export function setScriptCanStart(threadId: number): void {
     Citizen.invokeNative('0x8D9DF6ECA8768583', threadId);
@@ -479,7 +479,7 @@ export function setScriptCanStart(threadId: number): void {
 /**
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  * 
- * Hash: 0x7F96F23FA9B73327 | Since: 323 | API-Set: unknown
+ * Hash: 0x7F96F23FA9B73327 | Since: unknown | API-Set: unknown
  */
 export function setVehicleModelPlayerWillExitScene(modelHash: number | string): void {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -489,7 +489,7 @@ export function setVehicleModelPlayerWillExitScene(modelHash: number | string): 
 /**
  * flags: Usually 0.
  * 
- * Hash: 0x186D5CB5E7B0FF7B | Since: 323 | API-Set: unknown
+ * Hash: 0x186D5CB5E7B0FF7B | Since: unknown | API-Set: unknown
  */
 export function start(flags: number): void {
     StartCutscene(flags);
@@ -498,7 +498,7 @@ export function start(flags: number): void {
 /**
  * flags: Usually 0.
  * 
- * Hash: 0x1C9ADDA3244A1FBF | Since: 323 | API-Set: unknown
+ * Hash: 0x1C9ADDA3244A1FBF | Since: unknown | API-Set: unknown
  */
 export function startAtCoords(pos: Vector3, flags: number): void {
     StartCutsceneAtCoords(pos.x, pos.y, pos.z, flags);
@@ -507,7 +507,7 @@ export function startAtCoords(pos: Vector3, flags: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xC7272775B4DC786E | Since: 323 | API-Set: unknown
+ * Hash: 0xC7272775B4DC786E | Since: unknown | API-Set: unknown
  */
 export function stop(): void {
     StopCutscene(false);
@@ -516,7 +516,7 @@ export function stop(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xD220BDD222AC4A1E | Since: 323 | API-Set: unknown
+ * Hash: 0xD220BDD222AC4A1E | Since: unknown | API-Set: unknown
  */
 export function stopImmediately(): void {
     StopCutsceneImmediately();
@@ -525,7 +525,7 @@ export function stopImmediately(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x40C8656EDAEDD569 | Since: 323 | API-Set: unknown
+ * Hash: 0x40C8656EDAEDD569 | Since: unknown | API-Set: unknown
  */
 export function wasSkipped(): boolean {
     return WasCutsceneSkipped();

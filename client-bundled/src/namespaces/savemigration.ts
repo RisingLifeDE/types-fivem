@@ -3,7 +3,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
 /**
  * No comment provided
  * 
- * Hash: 0x84B418E93894AC1C | Since: 2372 | API-Set: unknown
+ * Hash: 0x84B418E93894AC1C | Since: unknown | API-Set: unknown
  */
 export function isMpEnabled(): boolean {
     return Citizen.invokeNative('0x84B418E93894AC1C');
@@ -12,7 +12,7 @@ export function isMpEnabled(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xFCE2747EEF1D05FC | Since: 2612 | API-Set: unknown
+ * Hash: 0xFCE2747EEF1D05FC | Since: unknown | API-Set: unknown
  */
 export function mpGetAccount(): [boolean, any] {
     return Citizen.invokeNative('0xFCE2747EEF1D05FC', 0);
@@ -21,7 +21,7 @@ export function mpGetAccount(): [boolean, any] {
 /**
  * No comment provided
  * 
- * Hash: 0xC8CB5999919EA2CA | Since: 2612 | API-Set: unknown
+ * Hash: 0xC8CB5999919EA2CA | Since: unknown | API-Set: unknown
  */
 export function mpGetAccountsStatus(): number {
     return Citizen.invokeNative('0xC8CB5999919EA2CA');
@@ -30,7 +30,7 @@ export function mpGetAccountsStatus(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x690B76BD2763E068 | Since: 2372 | API-Set: unknown
+ * Hash: 0x690B76BD2763E068 | Since: unknown | API-Set: unknown
  */
 export function mpGetStatus(): number {
     return Citizen.invokeNative('0x690B76BD2763E068');
@@ -39,7 +39,17 @@ export function mpGetStatus(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x77A16200E18E0C55 | Since: 2612 | API-Set: unknown
+ * Hash: 0xB2C55F521748367B | Since: unknown | API-Set: unknown
+ */
+export function mpIsPlatformGeneration(generation: number): boolean {
+    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0xB2C55F521748367B)'); return;
+    return Citizen.invokeNative('0xB2C55F521748367B', generation);
+}
+
+/**
+ * No comment provided
+ * 
+ * Hash: 0x77A16200E18E0C55 | Since: unknown | API-Set: unknown
  */
 export function mpNumAccounts(): number {
     return Citizen.invokeNative('0x77A16200E18E0C55');
@@ -48,7 +58,7 @@ export function mpNumAccounts(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x85F41F9225D08C72 | Since: 2612 | API-Set: unknown
+ * Hash: 0x85F41F9225D08C72 | Since: unknown | API-Set: unknown
  */
 export function mpRequestAccounts(): boolean {
     return Citizen.invokeNative('0x85F41F9225D08C72');
@@ -57,7 +67,7 @@ export function mpRequestAccounts(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xE5E9746A66359F9D | Since: 2372 | API-Set: unknown
+ * Hash: 0xE5E9746A66359F9D | Since: unknown | API-Set: unknown
  */
 export function mpRequestStatus(): boolean {
     return Citizen.invokeNative('0xE5E9746A66359F9D');

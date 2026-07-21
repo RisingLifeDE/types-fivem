@@ -207,6 +207,15 @@ export function getScenarioPedDensityMultiplier(): number {
 }
 
 /**
+ * No comment provided
+ * 
+ * Hash: 0x4DD998F6
+ */
+export function isGameEnhancedVersion(): boolean {
+    return IsGameEnhancedVersion();
+}
+
+/**
  * **Experimental**: This native may be altered or removed in future versions of CitizenFX without warning.
  * 
  * Returns whether an asynchronous streaming file registration completed.

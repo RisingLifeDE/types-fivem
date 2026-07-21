@@ -9,7 +9,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * 
  * Hardcoded to not work in Multiplayer.
  * 
- * Hash: 0x4EE5367468A65CCC | Since: 323 | API-Set: unknown
+ * Hash: 0x4EE5367468A65CCC | Since: unknown | API-Set: unknown
  */
 export function addScriptToRandomPed(name: string, model: number | string): void {
     if (typeof model === 'string') model = GetHashKey(model)
@@ -19,7 +19,7 @@ export function addScriptToRandomPed(name: string, model: number | string): void
 /**
  * No comment provided
  * 
- * Hash: 0x14D8518E9760F08F | Since: 323 | API-Set: unknown
+ * Hash: 0x14D8518E9760F08F | Since: unknown | API-Set: unknown
  */
 export function disableScriptSet(brainSet: number): void {
     DisableScriptBrainSet(brainSet);
@@ -28,7 +28,7 @@ export function disableScriptSet(brainSet: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x67AA4D73F0CFA86B | Since: 323 | API-Set: unknown
+ * Hash: 0x67AA4D73F0CFA86B | Since: unknown | API-Set: unknown
  */
 export function enableScriptSet(brainSet: number): void {
     EnableScriptBrainSet(brainSet);
@@ -37,7 +37,7 @@ export function enableScriptSet(brainSet: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xCCBA154209823057 | Since: 323 | API-Set: unknown
+ * Hash: 0xCCBA154209823057 | Since: unknown | API-Set: unknown
  */
 export function isObjectWithinActivationRange(_object: number | IObject): boolean {
     const __object = typeof _object == 'object' ? _object.handle() : _object;
@@ -47,7 +47,7 @@ export function isObjectWithinActivationRange(_object: number | IObject): boolea
 /**
  * Gets whether the world point the calling script is registered to is within desired range of the player.
  * 
- * Hash: 0xC5042CC6F5E3D450 | Since: 323 | API-Set: unknown
+ * Hash: 0xC5042CC6F5E3D450 | Since: unknown | API-Set: unknown
  */
 export function isWorldPointWithinActivationRange(): boolean {
     return IsWorldPointWithinBrainActivationRange();
@@ -56,7 +56,7 @@ export function isWorldPointWithinActivationRange(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x4D953DF78EBF8158 | Since: 323 | API-Set: unknown
+ * Hash: 0x4D953DF78EBF8158 | Since: unknown | API-Set: unknown
  */
 export function reactivateAllObjectsThatAreWaitingTillOutOfRange(): void {
     Citizen.invokeNative('0x4D953DF78EBF8158');
@@ -65,7 +65,7 @@ export function reactivateAllObjectsThatAreWaitingTillOutOfRange(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x0B40ED49D7D6FF84 | Since: 323 | API-Set: unknown
+ * Hash: 0x0B40ED49D7D6FF84 | Since: unknown | API-Set: unknown
  */
 export function reactivateAllWorldsThatAreWaitingTillOutOfRange(): void {
     Citizen.invokeNative('0x0B40ED49D7D6FF84');
@@ -79,7 +79,7 @@ export function reactivateAllWorldsThatAreWaitingTillOutOfRange(): void {
  * "ob_tv"
  * "launcher_Darts"
  * 
- * Hash: 0x6E91B04E08773030 | Since: 323 | API-Set: unknown
+ * Hash: 0x6E91B04E08773030 | Since: unknown | API-Set: unknown
  */
 export function reactivateNamedObjectsWaitingTillOutOfRange(scriptName: string): void {
     Citizen.invokeNative('0x6E91B04E08773030', scriptName);
@@ -115,7 +115,7 @@ export function reactivateNamedObjectsWaitingTillOutOfRange(scriptName: string):
  * ob_mp_bed_low
  * ob_mp_bed_med
  * 
- * Hash: 0x6D6840CEE8845831 | Since: 323 | API-Set: unknown
+ * Hash: 0x6D6840CEE8845831 | Since: unknown | API-Set: unknown
  */
 export function reactivateNamedWorldsWaitingTillOutOfRange(scriptName: string): void {
     Citizen.invokeNative('0x6D6840CEE8845831', scriptName);
@@ -128,7 +128,7 @@ export function reactivateNamedWorldsWaitingTillOutOfRange(scriptName: string): 
  * 
  * - Nacorpio
  * 
- * Hash: 0x0BE84C318BA6EC22 | Since: 323 | API-Set: unknown
+ * Hash: 0x0BE84C318BA6EC22 | Since: unknown | API-Set: unknown
  */
 export function registerObjectScript(scriptName: string, modelHash: number | string, activationRange: number): void {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -138,7 +138,7 @@ export function registerObjectScript(scriptName: string, modelHash: number | str
 /**
  * No comment provided
  * 
- * Hash: 0x3CDC7136613284BD | Since: 323 | API-Set: unknown
+ * Hash: 0x3CDC7136613284BD | Since: unknown | API-Set: unknown
  */
 export function registerWorldPointScript(scriptName: string, activationRange: number): void {
     RegisterWorldPointScriptBrain(scriptName, activationRange, 0);

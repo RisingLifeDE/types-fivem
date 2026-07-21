@@ -1,7 +1,7 @@
 /**
  * No comment provided
  *
- * Hash: 0x7796B21B76221BC5 | Since: 2612
+ * Hash: 0x7796B21B76221BC5 | Since: unknown
  */
 export function doesCurrentPedComponentHaveRestrictionTag(ped, componentId, restrictionTagHash) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -12,7 +12,7 @@ export function doesCurrentPedComponentHaveRestrictionTag(ped, componentId, rest
 /**
  * No comment provided
  *
- * Hash: 0xD726BAB4554DA580 | Since: 2612
+ * Hash: 0xD726BAB4554DA580 | Since: unknown
  */
 export function doesCurrentPedPropHaveRestrictionTag(ped, componentId, restrictionTagHash) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -25,7 +25,7 @@ export function doesCurrentPedPropHaveRestrictionTag(ped, componentId, restricti
  *
  * componentId/last parameter seems to be unused.
  *
- * Hash: 0x341DE7ED1D2A1BFD | Since: 323
+ * Hash: 0x341DE7ED1D2A1BFD | Since: unknown
  */
 export function doesShopPedApparelHaveRestrictionTag(componentHash, restrictionTagHash, componentId) {
     if (typeof componentHash === 'string')
@@ -40,7 +40,7 @@ export function doesShopPedApparelHaveRestrictionTag(componentHash, restrictionT
  * `FILES::REVERT_CONTENT_CHANGESET_GROUP_FOR_ALL(joaat("GROUP_MAP_SP"));`
  * `FILES::EXECUTE_CONTENT_CHANGESET_GROUP_FOR_ALL(joaat("GROUP_MAP"));`
  *
- * Hash: 0x6BEDF5769AC2DC07 | Since: 1604
+ * Hash: 0x6BEDF5769AC2DC07 | Since: unknown
  */
 export function executeContentChangesetGroupForAll(hash) {
     if (typeof hash === 'string')
@@ -52,7 +52,7 @@ export function executeContentChangesetGroupForAll(hash) {
  * outData is a struct of 3 8-byte items.
  * The Second item in the struct *(Hash *)(outData + 1) is the vehicle hash.
  *
- * Hash: 0x33468EDC08E371F6 | Since: 323
+ * Hash: 0x33468EDC08E371F6 | Since: unknown
  */
 export function getDlcVehicleData(dlcVehicleIndex) {
     return GetDlcVehicleData(dlcVehicleIndex);
@@ -60,7 +60,7 @@ export function getDlcVehicleData(dlcVehicleIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x5549EE11FA22FCF2 | Since: 323
+ * Hash: 0x5549EE11FA22FCF2 | Since: unknown
  */
 export function getDlcVehicleFlags(dlcVehicleIndex) {
     return GetDlcVehicleFlags(dlcVehicleIndex);
@@ -68,7 +68,7 @@ export function getDlcVehicleFlags(dlcVehicleIndex) {
 /**
  * dlcVehicleIndex is 0 to GET_NUM_DLC_VEHICLS() - 1
  *
- * Hash: 0xECC01B7C5763333C | Since: 323
+ * Hash: 0xECC01B7C5763333C | Since: unknown
  */
 export function getDlcVehicleModel(dlcVehicleIndex) {
     return GetDlcVehicleModel(dlcVehicleIndex);
@@ -76,7 +76,7 @@ export function getDlcVehicleModel(dlcVehicleIndex) {
 /**
  * No comment provided
  *
- * Hash: 0xC098810437312FFF | Since: 323
+ * Hash: 0xC098810437312FFF | Since: unknown
  */
 export function getDlcVehicleModLockHash(hash) {
     if (typeof hash === 'string')
@@ -104,7 +104,7 @@ export function getDlcVehicleModLockHash(hash) {
  * };
  *
  *
- * Hash: 0x6CF598A2957C2BF8 | Since: 323
+ * Hash: 0x6CF598A2957C2BF8 | Since: unknown
  */
 export function getDlcWeaponComponentData(dlcWeaponIndex, dlcWeapCompIndex) {
     return GetDlcWeaponComponentData(dlcWeaponIndex, dlcWeapCompIndex);
@@ -112,7 +112,7 @@ export function getDlcWeaponComponentData(dlcWeaponIndex, dlcWeapCompIndex) {
 /**
  * Same as GET_DLC_WEAPON_COMPONENT_DATA but only works for DLC components that are available in SP.
  *
- * Hash: 0x31D5E073B6F93CDC | Since: 2060
+ * Hash: 0x31D5E073B6F93CDC | Since: unknown
  */
 export function getDlcWeaponComponentDataSp(dlcWeaponIndex, dlcWeapCompIndex) {
     return GetDlcWeaponComponentDataSp(dlcWeaponIndex, dlcWeapCompIndex);
@@ -142,7 +142,7 @@ export function getDlcWeaponComponentDataSp(dlcWeaponIndex, dlcWeapCompIndex) {
  * char upperCaseNameLabel[64];
  * };
  *
- * Hash: 0x79923CD21BECE14E | Since: 323
+ * Hash: 0x79923CD21BECE14E | Since: unknown
  */
 export function getDlcWeaponData(dlcWeaponIndex) {
     return GetDlcWeaponData(dlcWeaponIndex);
@@ -150,7 +150,7 @@ export function getDlcWeaponData(dlcWeaponIndex) {
 /**
  * Same as GET_DLC_WEAPON_DATA but only works for DLC weapons that are available in SP.
  *
- * Hash: 0x310836EE7129BA33 | Since: 2060
+ * Hash: 0x310836EE7129BA33 | Since: unknown
  */
 export function getDlcWeaponDataSp(dlcWeaponIndex) {
     return GetDlcWeaponDataSp(dlcWeaponIndex);
@@ -158,7 +158,7 @@ export function getDlcWeaponDataSp(dlcWeaponIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x6C93ED8C2F74859B | Since: 323
+ * Hash: 0x6C93ED8C2F74859B | Since: unknown
  */
 export function getForcedComponent(componentHash, forcedComponentIndex) {
     if (typeof componentHash === 'string')
@@ -168,7 +168,7 @@ export function getForcedComponent(componentHash, forcedComponentIndex) {
 /**
  * No comment provided
  *
- * Hash: 0xE1CA84EBF72E691D | Since: 323
+ * Hash: 0xE1CA84EBF72E691D | Since: unknown
  */
 export function getForcedProp(componentHash, forcedPropIndex) {
     if (typeof componentHash === 'string')
@@ -178,7 +178,7 @@ export function getForcedProp(componentHash, forcedPropIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x0368B3A838070348 | Since: 323
+ * Hash: 0x0368B3A838070348 | Since: unknown
  */
 export function getHashNameForComponent(entity, componentId, drawableVariant, textureVariant) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -187,7 +187,7 @@ export function getHashNameForComponent(entity, componentId, drawableVariant, te
 /**
  * No comment provided
  *
- * Hash: 0x5D6160275CAEC8DD | Since: 323
+ * Hash: 0x5D6160275CAEC8DD | Since: unknown
  */
 export function getHashNameForProp(entity, componentId, propIndex, propTextureIndex) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -196,7 +196,7 @@ export function getHashNameForProp(entity, componentId, propIndex, propTextureIn
 /**
  * No comment provided
  *
- * Hash: 0xA7A866D21CD2329B | Since: 323
+ * Hash: 0xA7A866D21CD2329B | Since: unknown
  */
 export function getNumDlcVehicles() {
     return GetNumDlcVehicles();
@@ -204,7 +204,7 @@ export function getNumDlcVehicles() {
 /**
  * Returns the total number of DLC weapons.
  *
- * Hash: 0xEE47635F352DA367 | Since: 323
+ * Hash: 0xEE47635F352DA367 | Since: unknown
  */
 export function getNumDlcWeapons() {
     return GetNumDlcWeapons();
@@ -212,7 +212,7 @@ export function getNumDlcWeapons() {
 /**
  * Returns the total number of DLC weapons that are available in SP (availableInSP field in shop_weapon.meta).
  *
- * Hash: 0x4160B65AE085B5A9 | Since: 2060
+ * Hash: 0x4160B65AE085B5A9 | Since: unknown
  */
 export function getNumDlcWeaponsSp() {
     return GetNumDlcWeaponsSp();
@@ -220,7 +220,7 @@ export function getNumDlcWeaponsSp() {
 /**
  * Returns the total number of DLC weapon components.
  *
- * Hash: 0x405425358A7D61FE | Since: 323
+ * Hash: 0x405425358A7D61FE | Since: unknown
  */
 export function getNumDlcWeaponComponents(dlcWeaponIndex) {
     return GetNumDlcWeaponComponents(dlcWeaponIndex);
@@ -228,7 +228,7 @@ export function getNumDlcWeaponComponents(dlcWeaponIndex) {
 /**
  * Returns the total number of DLC weapon components that are available in SP.
  *
- * Hash: 0xAD2A7A6DFF55841B | Since: 2060
+ * Hash: 0xAD2A7A6DFF55841B | Since: unknown
  */
 export function getNumDlcWeaponComponentsSp(dlcWeaponIndex) {
     return GetNumDlcWeaponComponentsSp(dlcWeaponIndex);
@@ -241,7 +241,7 @@ export function getNumDlcWeaponComponentsSp(dlcWeaponIndex) {
  * 3 = MPMale,
  * 4 = MPFemale
  *
- * Hash: 0x278F76C3B0A8F109 | Since: 323
+ * Hash: 0x278F76C3B0A8F109 | Since: unknown
  */
 export function getNumTattooShopDlcItems(character) {
     return GetNumTattooShopDlcItems(character);
@@ -249,7 +249,7 @@ export function getNumTattooShopDlcItems(character) {
 /**
  * Returns number of possible values of the forcedComponentIndex argument of GET_FORCED_COMPONENT.
  *
- * Hash: 0xC6B9DB42C04DD8C3 | Since: 323
+ * Hash: 0xC6B9DB42C04DD8C3 | Since: unknown
  */
 export function getShopPedApparelForcedComponentCount(componentHash) {
     if (typeof componentHash === 'string')
@@ -259,7 +259,7 @@ export function getShopPedApparelForcedComponentCount(componentHash) {
 /**
  * Returns number of possible values of the forcedPropIndex argument of GET_FORCED_PROP.
  *
- * Hash: 0x017568A8182D98A6 | Since: 323
+ * Hash: 0x017568A8182D98A6 | Since: unknown
  */
 export function getShopPedApparelForcedPropCount(componentHash) {
     if (typeof componentHash === 'string')
@@ -269,7 +269,7 @@ export function getShopPedApparelForcedPropCount(componentHash) {
 /**
  * No comment provided
  *
- * Hash: 0xC17AD0E5752BECDA | Since: 323
+ * Hash: 0xC17AD0E5752BECDA | Since: unknown
  */
 export function getShopPedApparelVariantComponentCount(componentHash) {
     if (typeof componentHash === 'string')
@@ -280,7 +280,7 @@ export function getShopPedApparelVariantComponentCount(componentHash) {
  * `propHash`: Ped helmet prop hash?
  * This native returns 1 when the player helmet has a visor (there is another prop index for the same helmet with closed/opened visor variant) that can be toggled. 0 if there's no alternative version with a visor for this helmet prop.
  *
- * Hash: 0xD40AAC51E8E4C663 | Since: 791
+ * Hash: 0xD40AAC51E8E4C663 | Since: unknown
  */
 export function getShopPedApparelVariantPropCount(propHash) {
     if (typeof propHash === 'string')
@@ -290,7 +290,7 @@ export function getShopPedApparelVariantPropCount(propHash) {
 /**
  * More info here: https://gist.github.com/root-cause/3b80234367b0c856d60bf5cb4b826f86
  *
- * Hash: 0x74C0E2A57EC66760 | Since: 323
+ * Hash: 0x74C0E2A57EC66760 | Since: unknown
  */
 export function getShopPedComponent(componentHash) {
     if (typeof componentHash === 'string')
@@ -300,7 +300,7 @@ export function getShopPedComponent(componentHash) {
 /**
  * No comment provided
  *
- * Hash: 0xB7952076E444979D | Since: 323
+ * Hash: 0xB7952076E444979D | Since: unknown
  */
 export function getShopPedOutfit() {
     return GetShopPedOutfit(undefined);
@@ -308,7 +308,7 @@ export function getShopPedOutfit() {
 /**
  * See https://git.io/JtcBH for example and structs.
  *
- * Hash: 0x19F2A026EDF0013F | Since: 323
+ * Hash: 0x19F2A026EDF0013F | Since: unknown
  */
 export function getShopPedOutfitComponentVariant(outfitHash, variantIndex) {
     if (typeof outfitHash === 'string')
@@ -318,7 +318,7 @@ export function getShopPedOutfitComponentVariant(outfitHash, variantIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x073CA26B079F956E | Since: 323
+ * Hash: 0x073CA26B079F956E | Since: unknown
  */
 export function getShopPedOutfitLocate() {
     return GetShopPedOutfitLocate(undefined);
@@ -326,7 +326,7 @@ export function getShopPedOutfitLocate() {
 /**
  * See https://git.io/JtcBH for example and structs.
  *
- * Hash: 0xA9F9C2E0FDE11CBB | Since: 323
+ * Hash: 0xA9F9C2E0FDE11CBB | Since: unknown
  */
 export function getShopPedOutfitPropVariant(outfitHash, variantIndex) {
     if (typeof outfitHash === 'string')
@@ -336,7 +336,7 @@ export function getShopPedOutfitPropVariant(outfitHash, variantIndex) {
 /**
  * More info here: https://gist.github.com/root-cause/3b80234367b0c856d60bf5cb4b826f86
  *
- * Hash: 0x5D5CAFF661DDF6FC | Since: 323
+ * Hash: 0x5D5CAFF661DDF6FC | Since: unknown
  */
 export function getShopPedProp(componentHash) {
     if (typeof componentHash === 'string')
@@ -346,7 +346,7 @@ export function getShopPedProp(componentHash) {
 /**
  * See https://git.io/JtcRf for example and structs.
  *
- * Hash: 0x249E310B2D920699 | Since: 323
+ * Hash: 0x249E310B2D920699 | Since: unknown
  */
 export function getShopPedQueryComponent(componentId) {
     return GetShopPedQueryComponent(componentId);
@@ -355,7 +355,7 @@ export function getShopPedQueryComponent(componentId) {
  * Returns some sort of index/offset for components.
  * Needs _GET_NUM_PROPS_FROM_OUTFIT to be called with p3 = false and componentId with the drawable's component slot first, returns -1 otherwise.
  *
- * Hash: 0x96E2929292A4DB77 | Since: 2189
+ * Hash: 0x96E2929292A4DB77 | Since: unknown
  */
 export function getShopPedQueryComponentIndex(componentHash) {
     if (typeof componentHash === 'string')
@@ -366,7 +366,7 @@ export function getShopPedQueryComponentIndex(componentHash) {
  * outfitIndex: from 0 to SETUP_SHOP_PED_OUTFIT_QUERY(characterIndex, false) - 1.
  * See https://git.io/JtcB8 for example and outfit struct.
  *
- * Hash: 0x6D793F03A631FE56 | Since: 323
+ * Hash: 0x6D793F03A631FE56 | Since: unknown
  */
 export function getShopPedQueryOutfit(outfitIndex) {
     return GetShopPedQueryOutfit(outfitIndex);
@@ -374,7 +374,7 @@ export function getShopPedQueryOutfit(outfitIndex) {
 /**
  * See https://git.io/JtcRf for example and structs.
  *
- * Hash: 0xDE44A00999B2837D | Since: 323
+ * Hash: 0xDE44A00999B2837D | Since: unknown
  */
 export function getShopPedQueryProp(componentId) {
     return GetShopPedQueryProp(componentId);
@@ -383,7 +383,7 @@ export function getShopPedQueryProp(componentId) {
  * Returns some sort of index/offset for props.
  * Needs _GET_NUM_PROPS_FROM_OUTFIT to be called with p3 = true and componentId = -1 first, returns -1 otherwise.
  *
- * Hash: 0x6CEBE002E58DEE97 | Since: 2189
+ * Hash: 0x6CEBE002E58DEE97 | Since: unknown
  */
 export function getShopPedQueryPropIndex(componentHash) {
     if (typeof componentHash === 'string')
@@ -424,7 +424,7 @@ export function getShopPedQueryPropIndex(componentHash) {
  * // maybe more, not sure exactly, decompiled scripts are very vague around this part.
  * }
  *
- * Hash: 0xFF56381874F82086 | Since: 323
+ * Hash: 0xFF56381874F82086 | Since: unknown
  */
 export function getTattooShopDlcItemData(characterType, decorationIndex) {
     return GetTattooShopDlcItemData(characterType, decorationIndex);
@@ -439,7 +439,7 @@ export function getTattooShopDlcItemData(characterType, decorationIndex) {
  * 3 = MPMale,
  * 4 = MPFemale
  *
- * Hash: 0x10144267DD22866C | Since: 2189
+ * Hash: 0x10144267DD22866C | Since: unknown
  */
 export function getTattooShopDlcItemIndex(overlayHash, character) {
     if (typeof overlayHash === 'string')
@@ -449,7 +449,7 @@ export function getTattooShopDlcItemIndex(overlayHash, character) {
 /**
  * No comment provided
  *
- * Hash: 0x6E11F282F11863B6 | Since: 323
+ * Hash: 0x6E11F282F11863B6 | Since: unknown
  */
 export function getVariantComponent(componentHash, variantComponentIndex) {
     if (typeof componentHash === 'string')
@@ -459,7 +459,7 @@ export function getVariantComponent(componentHash, variantComponentIndex) {
 /**
  * No comment provided
  *
- * Hash: 0xD81B7F27BC773E66 | Since: 791
+ * Hash: 0xD81B7F27BC773E66 | Since: unknown
  */
 export function getVariantProp(componentHash, variantPropIndex) {
     if (typeof componentHash === 'string')
@@ -469,7 +469,7 @@ export function getVariantProp(componentHash, variantPropIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x1E8C308FD312C036 | Since: 323
+ * Hash: 0x1E8C308FD312C036 | Since: unknown
  */
 export function initShopPedComponent() {
     return InitShopPedComponent();
@@ -477,7 +477,7 @@ export function initShopPedComponent() {
 /**
  * No comment provided
  *
- * Hash: 0xEB0A2B758F7B850F | Since: 323
+ * Hash: 0xEB0A2B758F7B850F | Since: unknown
  */
 export function initShopPedProp() {
     return InitShopPedProp();
@@ -485,7 +485,7 @@ export function initShopPedProp() {
 /**
  * No comment provided
  *
- * Hash: 0xD4D7B033C3AA243C | Since: 323
+ * Hash: 0xD4D7B033C3AA243C | Since: unknown
  */
 export function isContentItemLocked(itemHash) {
     if (typeof itemHash === 'string')
@@ -495,7 +495,7 @@ export function isContentItemLocked(itemHash) {
 /**
  * No comment provided
  *
- * Hash: 0x0564B9FF9631B82C | Since: 323
+ * Hash: 0x0564B9FF9631B82C | Since: unknown
  */
 export function isDlcVehicleMod(hash) {
     if (typeof hash === 'string')
@@ -508,7 +508,7 @@ export function isDlcVehicleMod(hash) {
  * `FILES::REVERT_CONTENT_CHANGESET_GROUP_FOR_ALL(joaat("GROUP_MAP_SP"));`
  * `FILES::EXECUTE_CONTENT_CHANGESET_GROUP_FOR_ALL(joaat("GROUP_MAP"));`
  *
- * Hash: 0x3C1978285B036B25 | Since: 1604
+ * Hash: 0x3C1978285B036B25 | Since: unknown
  */
 export function revertContentChangesetGroupForAll(hash) {
     if (typeof hash === 'string')
@@ -518,7 +518,7 @@ export function revertContentChangesetGroupForAll(hash) {
 /**
  * No comment provided
  *
- * Hash: 0x50F457823CE6EB5F | Since: 323
+ * Hash: 0x50F457823CE6EB5F | Since: unknown
  */
 export function setupShopPedApparelQuery() {
     return SetupShopPedApparelQuery(0, 0, 0, 0);
@@ -538,7 +538,7 @@ export function setupShopPedApparelQuery() {
  *
  * componentId is -1 when p3 is true in decompiled scripts.
  *
- * Hash: 0x9BDF59818B1E38C1 | Since: 323
+ * Hash: 0x9BDF59818B1E38C1 | Since: unknown
  */
 export function setupShopPedApparelQueryTu(character, componentId) {
     return SetupShopPedApparelQueryTu(character, 0, 0, false, 0, componentId);
@@ -552,7 +552,7 @@ export function setupShopPedApparelQueryTu(character, componentId) {
  * 3: MPMale
  * 4: MPFemale
  *
- * Hash: 0xF3FBE2D50A6A8C28 | Since: 323
+ * Hash: 0xF3FBE2D50A6A8C28 | Since: unknown
  */
 export function setupShopPedOutfitQuery(character) {
     return SetupShopPedOutfitQuery(character, false);

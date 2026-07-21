@@ -3,7 +3,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
 /**
  * Returns the nickname of the logged-in Rockstar Social Club account.
  * 
- * Hash: 0x198D161F458ECC7F | Since: 323 | API-Set: unknown
+ * Hash: 0x198D161F458ECC7F | Since: unknown | API-Set: unknown
  */
 export function scAccountInfoGetNickname(): string {
     return ScGetNickname();
@@ -12,7 +12,7 @@ export function scAccountInfoGetNickname(): string {
 /**
  * No comment provided
  * 
- * Hash: 0x225798743970412B | Since: 323 | API-Set: unknown
+ * Hash: 0x225798743970412B | Since: unknown | API-Set: unknown
  */
 export function scAchievementInfoStatus(): [boolean, number] {
     return Citizen.invokeNative('0x225798743970412B');
@@ -21,7 +21,7 @@ export function scAchievementInfoStatus(): [boolean, number] {
 /**
  * No comment provided
  * 
- * Hash: 0xBFA0A56A817C6C7D | Since: 323 | API-Set: unknown
+ * Hash: 0xBFA0A56A817C6C7D | Since: unknown | API-Set: unknown
  */
 export function scCacheNewRockstarMsgs(toggle: boolean): void {
     SetHandleRockstarMessageViaScript(toggle);
@@ -30,7 +30,7 @@ export function scCacheNewRockstarMsgs(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xC2C97EA97711D1AE | Since: 323 | API-Set: unknown
+ * Hash: 0xC2C97EA97711D1AE | Since: unknown | API-Set: unknown
  */
 export function scCommunityEventGetDisplayName(): [boolean, string] {
     return Citizen.invokeNative('0xC2C97EA97711D1AE');
@@ -39,7 +39,7 @@ export function scCommunityEventGetDisplayName(): [boolean, string] {
 /**
  * No comment provided
  * 
- * Hash: 0x19853B5B17D77BCA | Since: 323 | API-Set: unknown
+ * Hash: 0x19853B5B17D77BCA | Since: unknown | API-Set: unknown
  */
 export function scCommunityEventGetDisplayNameById(): [boolean, string] {
     return Citizen.invokeNative('0x19853B5B17D77BCA', 0);
@@ -48,7 +48,7 @@ export function scCommunityEventGetDisplayNameById(): [boolean, string] {
 /**
  * No comment provided
  * 
- * Hash: 0x33DF47CC0642061B | Since: 323 | API-Set: unknown
+ * Hash: 0x33DF47CC0642061B | Since: unknown | API-Set: unknown
  */
 export function scCommunityEventGetDisplayNameForType(): [boolean, string] {
     return Citizen.invokeNative('0x33DF47CC0642061B', undefined);
@@ -57,7 +57,7 @@ export function scCommunityEventGetDisplayNameForType(): [boolean, string] {
 /**
  * No comment provided
  * 
- * Hash: 0x4ED9C8D6DA297639 | Since: 323 | API-Set: unknown
+ * Hash: 0x4ED9C8D6DA297639 | Since: unknown | API-Set: unknown
  */
 export function scCommunityEventGetEventId(): number {
     return Citizen.invokeNative('0x4ED9C8D6DA297639');
@@ -66,7 +66,7 @@ export function scCommunityEventGetEventId(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x4A7D6E727F941747 | Since: 323 | API-Set: unknown
+ * Hash: 0x4A7D6E727F941747 | Since: unknown | API-Set: unknown
  */
 export function scCommunityEventGetEventIdForType(): number {
     return Citizen.invokeNative('0x4A7D6E727F941747', undefined);
@@ -75,7 +75,7 @@ export function scCommunityEventGetEventIdForType(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x50A8A36201DBF83E | Since: 323 | API-Set: unknown
+ * Hash: 0x50A8A36201DBF83E | Since: unknown | API-Set: unknown
  */
 export function scCommunityEventGetExtraDataFloat(): [boolean, number] {
     return Citizen.invokeNative('0x50A8A36201DBF83E', undefined);
@@ -84,7 +84,7 @@ export function scCommunityEventGetExtraDataFloat(): [boolean, number] {
 /**
  * No comment provided
  * 
- * Hash: 0xC5A35C73B68F3C49 | Since: 323 | API-Set: unknown
+ * Hash: 0xC5A35C73B68F3C49 | Since: unknown | API-Set: unknown
  */
 export function scCommunityEventGetExtraDataFloatById(): [boolean, number] {
     return Citizen.invokeNative('0xC5A35C73B68F3C49', 0, undefined);
@@ -93,7 +93,7 @@ export function scCommunityEventGetExtraDataFloatById(): [boolean, number] {
 /**
  * No comment provided
  * 
- * Hash: 0x2570E26BE63964E3 | Since: 323 | API-Set: unknown
+ * Hash: 0x2570E26BE63964E3 | Since: unknown | API-Set: unknown
  */
 export function scCommunityEventGetExtraDataFloatForType(): [boolean, number] {
     return Citizen.invokeNative('0x2570E26BE63964E3', undefined, undefined);
@@ -102,7 +102,7 @@ export function scCommunityEventGetExtraDataFloatForType(): [boolean, number] {
 /**
  * No comment provided
  * 
- * Hash: 0x710BCDA8071EDED1 | Since: 323 | API-Set: unknown
+ * Hash: 0x710BCDA8071EDED1 | Since: unknown | API-Set: unknown
  */
 export function scCommunityEventGetExtraDataInt(): [boolean, number] {
     return Citizen.invokeNative('0x710BCDA8071EDED1', undefined);
@@ -111,7 +111,7 @@ export function scCommunityEventGetExtraDataInt(): [boolean, number] {
 /**
  * No comment provided
  * 
- * Hash: 0x8CC469AB4D349B7C | Since: 323 | API-Set: unknown
+ * Hash: 0x8CC469AB4D349B7C | Since: unknown | API-Set: unknown
  */
 export function scCommunityEventGetExtraDataIntById(): [boolean, number] {
     return Citizen.invokeNative('0x8CC469AB4D349B7C', 0, undefined);
@@ -120,7 +120,7 @@ export function scCommunityEventGetExtraDataIntById(): [boolean, number] {
 /**
  * No comment provided
  * 
- * Hash: 0xE75A4A2E5E316D86 | Since: 323 | API-Set: unknown
+ * Hash: 0xE75A4A2E5E316D86 | Since: unknown | API-Set: unknown
  */
 export function scCommunityEventGetExtraDataIntForType(): [boolean, number] {
     return Citizen.invokeNative('0xE75A4A2E5E316D86', undefined, undefined);
@@ -129,7 +129,7 @@ export function scCommunityEventGetExtraDataIntForType(): [boolean, number] {
 /**
  * No comment provided
  * 
- * Hash: 0x9DE5D2F723575ED0 | Since: 323 | API-Set: unknown
+ * Hash: 0x9DE5D2F723575ED0 | Since: unknown | API-Set: unknown
  */
 export function scCommunityEventGetExtraDataString(): [boolean, string] {
     return Citizen.invokeNative('0x9DE5D2F723575ED0', undefined);
@@ -138,7 +138,7 @@ export function scCommunityEventGetExtraDataString(): [boolean, string] {
 /**
  * No comment provided
  * 
- * Hash: 0x699E4A5C8C893A18 | Since: 323 | API-Set: unknown
+ * Hash: 0x699E4A5C8C893A18 | Since: unknown | API-Set: unknown
  */
 export function scCommunityEventGetExtraDataStringById(): [boolean, string] {
     return Citizen.invokeNative('0x699E4A5C8C893A18', 0, undefined);
@@ -147,7 +147,7 @@ export function scCommunityEventGetExtraDataStringById(): [boolean, string] {
 /**
  * No comment provided
  * 
- * Hash: 0x1D12A56FC95BE92E | Since: 323 | API-Set: unknown
+ * Hash: 0x1D12A56FC95BE92E | Since: unknown | API-Set: unknown
  */
 export function scCommunityEventGetExtraDataStringForType(): [boolean, string] {
     return Citizen.invokeNative('0x1D12A56FC95BE92E', undefined, undefined);
@@ -156,7 +156,7 @@ export function scCommunityEventGetExtraDataStringForType(): [boolean, string] {
 /**
  * No comment provided
  * 
- * Hash: 0xFF8F3A92B75ED67A | Since: 323 | API-Set: unknown
+ * Hash: 0xFF8F3A92B75ED67A | Since: unknown | API-Set: unknown
  */
 export function scCommunityEventIsActive(): boolean {
     return Citizen.invokeNative('0xFF8F3A92B75ED67A');
@@ -165,7 +165,7 @@ export function scCommunityEventIsActive(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xA468E0BE12B12C70 | Since: 323 | API-Set: unknown
+ * Hash: 0xA468E0BE12B12C70 | Since: unknown | API-Set: unknown
  */
 export function scCommunityEventIsActiveById(): boolean {
     return Citizen.invokeNative('0xA468E0BE12B12C70', 0);
@@ -174,7 +174,7 @@ export function scCommunityEventIsActiveById(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x450819D8CF90C416 | Since: 323 | API-Set: unknown
+ * Hash: 0x450819D8CF90C416 | Since: unknown | API-Set: unknown
  */
 export function scCommunityEventIsActiveForType(): boolean {
     return Citizen.invokeNative('0x450819D8CF90C416', undefined);
@@ -183,7 +183,7 @@ export function scCommunityEventIsActiveForType(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x44ACA259D67651DB | Since: 323 | API-Set: unknown
+ * Hash: 0x44ACA259D67651DB | Since: unknown | API-Set: unknown
  */
 export function scEmailDeleteEmails(): any {
     return Citizen.invokeNative('0x44ACA259D67651DB', undefined);
@@ -192,7 +192,7 @@ export function scEmailDeleteEmails(): any {
 /**
  * No comment provided
  * 
- * Hash: 0x4737980E8A283806 | Since: 323 | API-Set: unknown
+ * Hash: 0x4737980E8A283806 | Since: unknown | API-Set: unknown
  */
 export function scEmailGetEmailAtIndex(): [boolean, any] {
     return Citizen.invokeNative('0x4737980E8A283806', 0);
@@ -201,7 +201,7 @@ export function scEmailGetEmailAtIndex(): [boolean, any] {
 /**
  * No comment provided
  * 
- * Hash: 0x7DB18CA8CAD5B098 | Since: 505 | API-Set: unknown
+ * Hash: 0x7DB18CA8CAD5B098 | Since: unknown | API-Set: unknown
  */
 export function scEmailGetNumRetrievedEmails(): number {
     return Citizen.invokeNative('0x7DB18CA8CAD5B098');
@@ -210,7 +210,7 @@ export function scEmailGetNumRetrievedEmails(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x16DA8172459434AA | Since: 323 | API-Set: unknown
+ * Hash: 0x16DA8172459434AA | Since: unknown | API-Set: unknown
  */
 export function scEmailGetRetrievalStatus(): number {
     return Citizen.invokeNative('0x16DA8172459434AA');
@@ -219,7 +219,7 @@ export function scEmailGetRetrievalStatus(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x55DF6DB45179236E | Since: 323 | API-Set: unknown
+ * Hash: 0x55DF6DB45179236E | Since: unknown | API-Set: unknown
  */
 export function scEmailMessageClearRecipList(): void {
     ScEmailMessageClearRecipList();
@@ -228,7 +228,7 @@ export function scEmailMessageClearRecipList(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2330C12A7A605D16 | Since: 323 | API-Set: unknown
+ * Hash: 0x2330C12A7A605D16 | Since: unknown | API-Set: unknown
  */
 export function scEmailMessagePushGamerToRecipList(): any {
     return ScEmailMessagePushGamerToRecipList();
@@ -237,7 +237,7 @@ export function scEmailMessagePushGamerToRecipList(): any {
 /**
  * No comment provided
  * 
- * Hash: 0x040ADDCBAFA1018A | Since: 323 | API-Set: unknown
+ * Hash: 0x040ADDCBAFA1018A | Since: unknown | API-Set: unknown
  */
 export function scEmailRetrieveEmails(offset: number, limit: number): void {
     ScInboxGetEmails(offset, limit);
@@ -246,7 +246,7 @@ export function scEmailRetrieveEmails(offset: number, limit: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x116FB94DC4B79F17 | Since: 323 | API-Set: unknown
+ * Hash: 0x116FB94DC4B79F17 | Since: unknown | API-Set: unknown
  */
 export function scEmailSendEmail(): void {
     Citizen.invokeNative('0x116FB94DC4B79F17', undefined);
@@ -255,7 +255,7 @@ export function scEmailSendEmail(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x07DBD622D9533857 | Since: 505 | API-Set: unknown
+ * Hash: 0x07DBD622D9533857 | Since: unknown | API-Set: unknown
  */
 export function scEmailSetCurrentEmailTag(): boolean {
     return Citizen.invokeNative('0x07DBD622D9533857', undefined);
@@ -264,7 +264,7 @@ export function scEmailSetCurrentEmailTag(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x2D874D4AE612A65F | Since: 323 | API-Set: unknown
+ * Hash: 0x2D874D4AE612A65F | Since: unknown | API-Set: unknown
  */
 export function scGamerdataGetActiveXpBonus(): [boolean, number] {
     return Citizen.invokeNative('0x2D874D4AE612A65F');
@@ -273,7 +273,7 @@ export function scGamerdataGetActiveXpBonus(): [boolean, number] {
 /**
  * No comment provided
  * 
- * Hash: 0x8416FE4E4629D7D7 | Since: 323 | API-Set: unknown
+ * Hash: 0x8416FE4E4629D7D7 | Since: unknown | API-Set: unknown
  */
 export function scGamerdataGetBool(name: string): boolean {
     return ScGamerdataGetBool(name);
@@ -282,7 +282,7 @@ export function scGamerdataGetBool(name: string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xA770C8EEC6FB2AC5 | Since: 323 | API-Set: unknown
+ * Hash: 0xA770C8EEC6FB2AC5 | Since: unknown | API-Set: unknown
  */
 export function scGamerdataGetFloat(name: string): [boolean, number] {
     return ScGamerdataGetFloat(name);
@@ -291,7 +291,7 @@ export function scGamerdataGetFloat(name: string): [boolean, number] {
 /**
  * No comment provided
  * 
- * Hash: 0xC85A7127E7AD02AA | Since: 323 | API-Set: unknown
+ * Hash: 0xC85A7127E7AD02AA | Since: unknown | API-Set: unknown
  */
 export function scGamerdataGetInt(name: string): [boolean, number] {
     return ScGamerdataGetInt(name);
@@ -300,7 +300,7 @@ export function scGamerdataGetInt(name: string): [boolean, number] {
 /**
  * No comment provided
  * 
- * Hash: 0x7FFCBFEE44ECFABF | Since: 323 | API-Set: unknown
+ * Hash: 0x7FFCBFEE44ECFABF | Since: unknown | API-Set: unknown
  */
 export function scGamerdataGetString(name: string): [boolean, string] {
     return Citizen.invokeNative('0x7FFCBFEE44ECFABF', name);
@@ -309,7 +309,7 @@ export function scGamerdataGetString(name: string): [boolean, string] {
 /**
  * No comment provided
  * 
- * Hash: 0xDF649C4E9AFDD788 | Since: 323 | API-Set: unknown
+ * Hash: 0xDF649C4E9AFDD788 | Since: unknown | API-Set: unknown
  */
 export function scGetNewRockstarMsg(): string {
     return RockstarMessageGetString();
@@ -318,7 +318,7 @@ export function scGetNewRockstarMsg(): string {
 /**
  * Same as HAS_ACHIEVEMENT_BEEN_PASSED
  * 
- * Hash: 0x418DC16FAE452C1C | Since: 323 | API-Set: unknown
+ * Hash: 0x418DC16FAE452C1C | Since: unknown | API-Set: unknown
  */
 export function scHasAchievementBeenPassed(achievementId: number): boolean {
     return ScGetHasAchievementBeenPassed(achievementId);
@@ -327,7 +327,7 @@ export function scHasAchievementBeenPassed(achievementId: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xBC1CC91205EC8D6E | Since: 323 | API-Set: unknown
+ * Hash: 0xBC1CC91205EC8D6E | Since: unknown | API-Set: unknown
  */
 export function scHasNewRockstarMsg(): boolean {
     return IsRockstarMessageReadyForScript();
@@ -336,7 +336,7 @@ export function scHasNewRockstarMsg(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x87E0052F08BD64E6 | Since: 323 | API-Set: unknown
+ * Hash: 0x87E0052F08BD64E6 | Since: unknown | API-Set: unknown
  */
 export function scInboxGetBountyDataAtIndex(index: number): [boolean, any] {
     return ScInboxMessageGetBountyData(index);
@@ -345,7 +345,7 @@ export function scInboxGetBountyDataAtIndex(index: number): [boolean, any] {
 /**
  * No comment provided
  * 
- * Hash: 0x93028F1DB42BFD08 | Since: 323 | API-Set: unknown
+ * Hash: 0x93028F1DB42BFD08 | Since: unknown | API-Set: unknown
  */
 export function scInboxGetMessageIsReadAtIndex(msgIndex: number): boolean {
     return ScInboxGetMessageIsReadAtIndex(msgIndex);
@@ -354,7 +354,7 @@ export function scInboxGetMessageIsReadAtIndex(msgIndex: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xBB8EA16ECBC976C4 | Since: 323 | API-Set: unknown
+ * Hash: 0xBB8EA16ECBC976C4 | Since: unknown | API-Set: unknown
  */
 export function scInboxGetMessageTypeAtIndex(msgIndex: number): number {
     return ScInboxGetMessageTypeAtIndex(msgIndex);
@@ -363,7 +363,7 @@ export function scInboxGetMessageTypeAtIndex(msgIndex: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0x03A93FF1A2CA0864 | Since: 323 | API-Set: unknown
+ * Hash: 0x03A93FF1A2CA0864 | Since: unknown | API-Set: unknown
  */
 export function scInboxGetTotalNumMessages(): number {
     return ScInboxGetTotalNumMessages();
@@ -372,7 +372,7 @@ export function scInboxGetTotalNumMessages(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x9A2C8064B6C1E41A | Since: 323 | API-Set: unknown
+ * Hash: 0x9A2C8064B6C1E41A | Since: unknown | API-Set: unknown
  */
 export function scInboxMessageDoApply(): boolean {
     return ScInboxMessageDoApply(0);
@@ -381,7 +381,7 @@ export function scInboxMessageDoApply(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xFFE5C16F402D851D | Since: 323 | API-Set: unknown
+ * Hash: 0xFFE5C16F402D851D | Since: unknown | API-Set: unknown
  */
 export function scInboxMessageGetDataBool(): boolean {
     return ScInboxMessageGetDataBool(0, undefined);
@@ -390,7 +390,7 @@ export function scInboxMessageGetDataBool(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xA00EFE4082C4056E | Since: 323 | API-Set: unknown
+ * Hash: 0xA00EFE4082C4056E | Since: unknown | API-Set: unknown
  */
 export function scInboxMessageGetDataInt(context: string): [boolean, number] {
     return ScInboxMessageGetDataInt(0, context);
@@ -399,7 +399,7 @@ export function scInboxMessageGetDataInt(context: string): [boolean, number] {
 /**
  * No comment provided
  * 
- * Hash: 0x7572EF42FC6A9B6D | Since: 323 | API-Set: unknown
+ * Hash: 0x7572EF42FC6A9B6D | Since: unknown | API-Set: unknown
  */
 export function scInboxMessageGetDataString(context: string): [boolean, string] {
     return ScInboxMessageGetDataString(0, context);
@@ -408,7 +408,7 @@ export function scInboxMessageGetDataString(context: string): [boolean, string] 
 /**
  * No comment provided
  * 
- * Hash: 0xF3E31D16CBDCB304 | Since: 323 | API-Set: unknown
+ * Hash: 0xF3E31D16CBDCB304 | Since: unknown | API-Set: unknown
  */
 export function scInboxMessageGetRawTypeAtIndex(): string {
     return ScInboxMessageGetString(0);
@@ -417,7 +417,7 @@ export function scInboxMessageGetRawTypeAtIndex(): string {
 /**
  * No comment provided
  * 
- * Hash: 0x69D82604A1A5A254 | Since: 323 | API-Set: unknown
+ * Hash: 0x69D82604A1A5A254 | Since: unknown | API-Set: unknown
  */
 export function scInboxMessageGetUgcdata(): [boolean, any] {
     return ScInboxMessageGetUgcdata(0);
@@ -426,7 +426,7 @@ export function scInboxMessageGetUgcdata(): [boolean, any] {
 /**
  * No comment provided
  * 
- * Hash: 0xDA024BDBD600F44A | Since: 323 | API-Set: unknown
+ * Hash: 0xDA024BDBD600F44A | Since: unknown | API-Set: unknown
  */
 export function scInboxMessagePushGamerT0RecipList(): any {
     return ScInboxMessagePushGamerToEventRecipList();
@@ -435,7 +435,7 @@ export function scInboxMessagePushGamerT0RecipList(): any {
 /**
  * No comment provided
  * 
- * Hash: 0xA68D3D229F4F3B06 | Since: 323 | API-Set: unknown
+ * Hash: 0xA68D3D229F4F3B06 | Since: unknown | API-Set: unknown
  */
 export function scInboxSendUgcstatupdateToRecipList(): any {
     return ScInboxMessageSendUgcStatUpdateEvent();
@@ -444,7 +444,7 @@ export function scInboxSendUgcstatupdateToRecipList(): any {
 /**
  * No comment provided
  * 
- * Hash: 0x2C015348CF19CA1D | Since: 323 | API-Set: unknown
+ * Hash: 0x2C015348CF19CA1D | Since: unknown | API-Set: unknown
  */
 export function scInboxSetMessageAsReadAtIndex(msgIndex: number): boolean {
     return ScInboxMessagePop(msgIndex);
@@ -453,7 +453,7 @@ export function scInboxSetMessageAsReadAtIndex(msgIndex: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x1989C6E6F67E76A8 | Since: 323 | API-Set: unknown
+ * Hash: 0x1989C6E6F67E76A8 | Since: unknown | API-Set: unknown
  */
 export function scLicenseplateAdd(plateText: string): [boolean, any, number] {
     return ScLicenseplateAdd(plateText);
@@ -462,7 +462,7 @@ export function scLicenseplateAdd(plateText: string): [boolean, any, number] {
 /**
  * No comment provided
  * 
- * Hash: 0xF6BAAAF762E1BF40 | Since: 323 | API-Set: unknown
+ * Hash: 0xF6BAAAF762E1BF40 | Since: unknown | API-Set: unknown
  */
 export function scLicenseplateCheckString(): [boolean, number] {
     return Citizen.invokeNative('0xF6BAAAF762E1BF40', undefined);
@@ -471,7 +471,7 @@ export function scLicenseplateCheckString(): [boolean, number] {
 /**
  * No comment provided
  * 
- * Hash: 0x07C61676E5BB52CD | Since: 323 | API-Set: unknown
+ * Hash: 0x07C61676E5BB52CD | Since: unknown | API-Set: unknown
  */
 export function scLicenseplateGetAddIsPending(token: number): boolean {
     return ScLicenseplateGetAddIsPending(token);
@@ -480,7 +480,7 @@ export function scLicenseplateGetAddIsPending(token: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x8147FFF6A718E1AD | Since: 323 | API-Set: unknown
+ * Hash: 0x8147FFF6A718E1AD | Since: unknown | API-Set: unknown
  */
 export function scLicenseplateGetAddStatus(token: number): number {
     return ScLicenseplateGetAddStatus(token);
@@ -489,7 +489,7 @@ export function scLicenseplateGetAddStatus(token: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0x9237E334F6E43156 | Since: 323 | API-Set: unknown
+ * Hash: 0x9237E334F6E43156 | Since: unknown | API-Set: unknown
  */
 export function scLicenseplateGetCheckIsPending(): boolean {
     return Citizen.invokeNative('0x9237E334F6E43156', undefined);
@@ -498,7 +498,7 @@ export function scLicenseplateGetCheckIsPending(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xF22CA0FD74B80E7A | Since: 323 | API-Set: unknown
+ * Hash: 0xF22CA0FD74B80E7A | Since: unknown | API-Set: unknown
  */
 export function scLicenseplateGetCheckIsValid(): boolean {
     return Citizen.invokeNative('0xF22CA0FD74B80E7A', undefined);
@@ -507,7 +507,7 @@ export function scLicenseplateGetCheckIsValid(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x700569DBA175A77C | Since: 323 | API-Set: unknown
+ * Hash: 0x700569DBA175A77C | Since: unknown | API-Set: unknown
  */
 export function scLicenseplateGetCount(token: number): number {
     return ScLicenseplateGetCount(token);
@@ -516,7 +516,7 @@ export function scLicenseplateGetCount(token: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0xD302E99EDF0449CF | Since: 323 | API-Set: unknown
+ * Hash: 0xD302E99EDF0449CF | Since: unknown | API-Set: unknown
  */
 export function scLicenseplateGetIsvalidIsPending(token: number): boolean {
     return ScLicenseplateGetIsvalidIsPending(token);
@@ -525,7 +525,7 @@ export function scLicenseplateGetIsvalidIsPending(token: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x5C4EBFFA98BDB41C | Since: 323 | API-Set: unknown
+ * Hash: 0x5C4EBFFA98BDB41C | Since: unknown | API-Set: unknown
  */
 export function scLicenseplateGetIsvalidStatus(token: number): number {
     return ScLicenseplateGetIsvalidStatus(token);
@@ -534,7 +534,7 @@ export function scLicenseplateGetIsvalidStatus(token: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0x1D4446A62D35B0D0 | Since: 323 | API-Set: unknown
+ * Hash: 0x1D4446A62D35B0D0 | Since: unknown | API-Set: unknown
  */
 export function scLicenseplateGetPlate(token: number, plateIndex: number): string {
     return ScLicenseplateGetPlate(token, plateIndex);
@@ -543,7 +543,7 @@ export function scLicenseplateGetPlate(token: number, plateIndex: number): strin
 /**
  * No comment provided
  * 
- * Hash: 0x2E89990DDFF670C3 | Since: 323 | API-Set: unknown
+ * Hash: 0x2E89990DDFF670C3 | Since: unknown | API-Set: unknown
  */
 export function scLicenseplateGetPlateData(token: number, plateIndex: number): string {
     return ScLicenseplateGetPlateData(token, plateIndex);
@@ -552,7 +552,7 @@ export function scLicenseplateGetPlateData(token: number, plateIndex: number): s
 /**
  * No comment provided
  * 
- * Hash: 0x0F73393BAC7E6730 | Since: 323 | API-Set: unknown
+ * Hash: 0x0F73393BAC7E6730 | Since: unknown | API-Set: unknown
  */
 export function scLicenseplateIsvalid(plateText: string): [boolean, number] {
     return ScLicenseplateIsvalid(plateText);
@@ -561,7 +561,7 @@ export function scLicenseplateIsvalid(plateText: string): [boolean, number] {
 /**
  * No comment provided
  * 
- * Hash: 0xD0EE05FE193646EA | Since: 323 | API-Set: unknown
+ * Hash: 0xD0EE05FE193646EA | Since: unknown | API-Set: unknown
  */
 export function scLicenseplateSetPlateData(oldPlateText: string, newPlateText: string): [boolean, any] {
     return ScLicenseplateSetPlateData(oldPlateText, newPlateText);
@@ -570,7 +570,7 @@ export function scLicenseplateSetPlateData(oldPlateText: string, newPlateText: s
 /**
  * Fills some 0x30 sized struct
  * 
- * Hash: 0x8A4416C0DB05FA66 | Since: 1290 | API-Set: unknown
+ * Hash: 0x8A4416C0DB05FA66 | Since: unknown | API-Set: unknown
  */
 export function scPauseNewsGetPendingStory(): boolean {
     return Citizen.invokeNative('0x8A4416C0DB05FA66', undefined);
@@ -579,16 +579,27 @@ export function scPauseNewsGetPendingStory(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xE4F6E8D07A2F0F51 | Since: 1290 | API-Set: unknown
+ * Hash: 0xE4F6E8D07A2F0F51 | Since: unknown | API-Set: unknown
  */
 export function scPauseNewsInitStarterPack(): boolean {
+    if (IsGameEnhancedVersion()) console.error('This native is not supported on enhanced (0xE4F6E8D07A2F0F51)'); return;
     return Citizen.invokeNative('0xE4F6E8D07A2F0F51', undefined);
 }
 
 /**
  * No comment provided
  * 
- * Hash: 0xEA95C0853A27888E | Since: 1290 | API-Set: unknown
+ * Hash: 0x76A6981AEF0376EB | Since: unknown | API-Set: unknown
+ */
+export function scPauseNewsInitStoryType(storyType: number, textOnly: boolean): boolean {
+    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x76A6981AEF0376EB)'); return;
+    return Citizen.invokeNative('0x76A6981AEF0376EB', storyType, textOnly);
+}
+
+/**
+ * No comment provided
+ * 
+ * Hash: 0xEA95C0853A27888E | Since: unknown | API-Set: unknown
  */
 export function scPauseNewsShutdown(): void {
     Citizen.invokeNative('0xEA95C0853A27888E');
@@ -597,7 +608,7 @@ export function scPauseNewsShutdown(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xC4C4575F62534A24 | Since: 323 | API-Set: unknown
+ * Hash: 0xC4C4575F62534A24 | Since: unknown | API-Set: unknown
  */
 export function scPresenceAttrSetFloat(attrHash: number | string, value: number): boolean {
     if (typeof attrHash === 'string') attrHash = GetHashKey(attrHash)
@@ -607,7 +618,7 @@ export function scPresenceAttrSetFloat(attrHash: number | string, value: number)
 /**
  * No comment provided
  * 
- * Hash: 0x1F1E9682483697C7 | Since: 323 | API-Set: unknown
+ * Hash: 0x1F1E9682483697C7 | Since: unknown | API-Set: unknown
  */
 export function scPresenceAttrSetInt(attrHash: number | string, value: number): boolean {
     if (typeof attrHash === 'string') attrHash = GetHashKey(attrHash)
@@ -617,7 +628,7 @@ export function scPresenceAttrSetInt(attrHash: number | string, value: number): 
 /**
  * No comment provided
  * 
- * Hash: 0x287F1F75D2803595 | Since: 323 | API-Set: unknown
+ * Hash: 0x287F1F75D2803595 | Since: unknown | API-Set: unknown
  */
 export function scPresenceAttrSetString(attrHash: number | string, value: string): boolean {
     if (typeof attrHash === 'string') attrHash = GetHashKey(attrHash)
@@ -627,7 +638,7 @@ export function scPresenceAttrSetString(attrHash: number | string, value: string
 /**
  * No comment provided
  * 
- * Hash: 0x487912FD248EFDDF | Since: 323 | API-Set: unknown
+ * Hash: 0x487912FD248EFDDF | Since: unknown | API-Set: unknown
  */
 export function scPresenceSetActivityRating(): boolean {
     return Citizen.invokeNative('0x487912FD248EFDDF', undefined, 0);
@@ -638,7 +649,7 @@ export function scPresenceSetActivityRating(): boolean {
  * 
  * See also: 1753344C770358AE, 82E4A58BABC15AE7.
  * 
- * Hash: 0x75632C5ECD7ED843 | Since: 323 | API-Set: unknown
+ * Hash: 0x75632C5ECD7ED843 | Since: unknown | API-Set: unknown
  */
 export function scProfanityCheckString(_string: string): [boolean, number] {
     return ScProfanityCheckString(_string);
@@ -647,7 +658,7 @@ export function scProfanityCheckString(_string: string): [boolean, number] {
 /**
  * No comment provided
  * 
- * Hash: 0xEB2BF817463DFA28 | Since: 678 | API-Set: unknown
+ * Hash: 0xEB2BF817463DFA28 | Since: unknown | API-Set: unknown
  */
 export function scProfanityCheckStringUgc(_string: string): [boolean, number] {
     return ScProfanityCheckUgcString(_string);
@@ -656,7 +667,7 @@ export function scProfanityCheckStringUgc(_string: string): [boolean, number] {
 /**
  * No comment provided
  * 
- * Hash: 0x82E4A58BABC15AE7 | Since: 323 | API-Set: unknown
+ * Hash: 0x82E4A58BABC15AE7 | Since: unknown | API-Set: unknown
  */
 export function scProfanityGetCheckIsPending(token: number): boolean {
     return ScProfanityGetCheckIsPending(token);
@@ -665,7 +676,7 @@ export function scProfanityGetCheckIsPending(token: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x1753344C770358AE | Since: 323 | API-Set: unknown
+ * Hash: 0x1753344C770358AE | Since: unknown | API-Set: unknown
  */
 export function scProfanityGetCheckIsValid(token: number): boolean {
     return ScProfanityGetCheckIsValid(token);
@@ -675,7 +686,7 @@ export function scProfanityGetCheckIsValid(token: number): boolean {
  * Retrieves the profane part of the string with max size of 128.
  * Returns true if profane term was retrieved.
  * 
- * Hash: 0x75CC8931A11128C9 | Since: 3258 | API-Set: unknown
+ * Hash: 0x75CC8931A11128C9 | Since: unknown | API-Set: unknown
  */
 export function scProfanityGetProfaneWord(token: number): [boolean, string] {
     return Citizen.invokeNative('0x75CC8931A11128C9', token);
@@ -684,7 +695,7 @@ export function scProfanityGetProfaneWord(token: number): [boolean, string] {
 /**
  * No comment provided
  * 
- * Hash: 0x85535ACF97FC0969 | Since: 323 | API-Set: unknown
+ * Hash: 0x85535ACF97FC0969 | Since: unknown | API-Set: unknown
  */
 export function scProfanityGetStringPassed(token: number): boolean {
     return ScProfanityGetStringPassed(token);
@@ -693,7 +704,7 @@ export function scProfanityGetStringPassed(token: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x930DE22F07B1CCE3 | Since: 323 | API-Set: unknown
+ * Hash: 0x930DE22F07B1CCE3 | Since: unknown | API-Set: unknown
  */
 export function scProfanityGetStringStatus(token: number): number {
     return ScProfanityGetStringStatus(token);
@@ -702,7 +713,7 @@ export function scProfanityGetStringStatus(token: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0x675721C9F644D161 | Since: 323 | API-Set: unknown
+ * Hash: 0x675721C9F644D161 | Since: unknown | API-Set: unknown
  */
 export function scTransitionNewsEnd(): void {
     Citizen.invokeNative('0x675721C9F644D161');
@@ -711,7 +722,7 @@ export function scTransitionNewsEnd(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x92DA6E70EF249BD1 | Since: 323 | API-Set: unknown
+ * Hash: 0x92DA6E70EF249BD1 | Since: unknown | API-Set: unknown
  */
 export function scTransitionNewsGetExtraDataIntTu(): [boolean, number] {
     return Citizen.invokeNative('0x92DA6E70EF249BD1', undefined);
@@ -720,7 +731,7 @@ export function scTransitionNewsGetExtraDataIntTu(): [boolean, number] {
 /**
  * No comment provided
  * 
- * Hash: 0x3001BEF2FECA3680 | Since: 323 | API-Set: unknown
+ * Hash: 0x3001BEF2FECA3680 | Since: unknown | API-Set: unknown
  */
 export function scTransitionNewsHasExtraDataTu(): boolean {
     return Citizen.invokeNative('0x3001BEF2FECA3680');
@@ -729,7 +740,7 @@ export function scTransitionNewsHasExtraDataTu(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x6BFB12CE158E3DD4 | Since: 323 | API-Set: unknown
+ * Hash: 0x6BFB12CE158E3DD4 | Since: unknown | API-Set: unknown
  */
 export function scTransitionNewsShow(): boolean {
     return Citizen.invokeNative('0x6BFB12CE158E3DD4', undefined);
@@ -738,7 +749,7 @@ export function scTransitionNewsShow(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xD8122C407663B995 | Since: 323 | API-Set: unknown
+ * Hash: 0xD8122C407663B995 | Since: unknown | API-Set: unknown
  */
 export function scTransitionNewsShowNextItem(): boolean {
     return Citizen.invokeNative('0xD8122C407663B995');
@@ -747,7 +758,7 @@ export function scTransitionNewsShowNextItem(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xFE4C1D0D3B9CC17E | Since: 323 | API-Set: unknown
+ * Hash: 0xFE4C1D0D3B9CC17E | Since: unknown | API-Set: unknown
  */
 export function scTransitionNewsShowTimed(): boolean {
     return Citizen.invokeNative('0xFE4C1D0D3B9CC17E', undefined, undefined);
@@ -756,7 +767,7 @@ export function scTransitionNewsShowTimed(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x69AA35F3F391CDBA | Since: 3258 | API-Set: unknown
+ * Hash: 0x69AA35F3F391CDBA | Since: unknown | API-Set: unknown
  */
 export function scEmailMarketingEmailOpened(index: number, _type: number | string): void {
     if (typeof _type === 'string') _type = GetHashKey(_type)

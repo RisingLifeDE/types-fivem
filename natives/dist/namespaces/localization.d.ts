@@ -13,18 +13,18 @@
  * 11 = mexican (es-MX)
  * 12 = chinesesimp (zh-CN)
  *
- * Hash: 0x2BDD44CC428A7EAE | Since: 323
+ * Hash: 0x2BDD44CC428A7EAE | Since: unknown
  */
 export declare function getCurrentLanguage(): number;
 /**
  * Possible return values: 0, 1, 2
  *
- * Hash: 0xA8AE43AEC1A61314 | Since: 323
+ * Hash: 0xA8AE43AEC1A61314 | Since: unknown
  */
 export declare function getSystemDateType(): number;
 /**
  * Same return values as GET_CURRENT_LANGUAGE
  *
- * Hash: 0x497420E022796B3F | Since: 877
+ * Hash: 0x497420E022796B3F | Since: unknown
  */
 export declare function getSystemLanguage(): number;

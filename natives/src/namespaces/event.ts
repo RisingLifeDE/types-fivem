@@ -3,7 +3,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
 /**
  * eventType: https://alloc8or.re/gta5/doc/enums/eEventType.txt
  * 
- * Hash: 0xD9F8455409B525E9 | Since: 323
+ * Hash: 0xD9F8455409B525E9 | Since: unknown
  */
 export function addShockingAtPosition(eventType: number, pos: Vector3, duration: number): number {
     return AddShockingEventAtPosition(eventType, pos.x, pos.y, pos.z, duration);
@@ -12,7 +12,7 @@ export function addShockingAtPosition(eventType: number, pos: Vector3, duration:
 /**
  * eventType: https://alloc8or.re/gta5/doc/enums/eEventType.txt
  * 
- * Hash: 0x7FD8F3BE76F89422 | Since: 323
+ * Hash: 0x7FD8F3BE76F89422 | Since: unknown
  */
 export function addShockingForEntity(eventType: number, entity: number | IEntity, duration: number): number {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -24,7 +24,7 @@ export function addShockingForEntity(eventType: number, entity: number | IEntity
  * 
  * This is limited to 4 blocked events at a time.
  * 
- * Hash: 0xE42FCDFD0E4196F7 | Since: 323
+ * Hash: 0xE42FCDFD0E4196F7 | Since: unknown
  */
 export function blockDecisionMaker(name: number | string, eventType: number): void {
     if (typeof name === 'string') name = GetHashKey(name)
@@ -34,7 +34,7 @@ export function blockDecisionMaker(name: number | string, eventType: number): vo
 /**
  * eventType: https://alloc8or.re/gta5/doc/enums/eEventType.txt
  * 
- * Hash: 0x4FC9381A7AEE8968 | Since: 323
+ * Hash: 0x4FC9381A7AEE8968 | Since: unknown
  */
 export function clearDecisionMakerResponse(name: number | string, eventType: number): void {
     if (typeof name === 'string') name = GetHashKey(name)
@@ -44,7 +44,7 @@ export function clearDecisionMakerResponse(name: number | string, eventType: num
 /**
  * eventType: https://alloc8or.re/gta5/doc/enums/eEventType.txt
  * 
- * Hash: 0x1374ABB7C15BAB92 | Since: 323
+ * Hash: 0x1374ABB7C15BAB92 | Since: unknown
  */
 export function isShockingInSphere(eventType: number, pos: Vector3, radius: number): boolean {
     return IsShockingEventInSphere(eventType, pos.x, pos.y, pos.z, radius);
@@ -53,7 +53,7 @@ export function isShockingInSphere(eventType: number, pos: Vector3, radius: numb
 /**
  * No comment provided
  * 
- * Hash: 0xEAABE8FDFA21274C | Since: 323
+ * Hash: 0xEAABE8FDFA21274C | Since: unknown
  */
 export function removeAllShockings(): void {
     RemoveAllShockingEvents(false);
@@ -62,7 +62,7 @@ export function removeAllShockings(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2CDA538C44C6CCE5 | Since: 323
+ * Hash: 0x2CDA538C44C6CCE5 | Since: unknown
  */
 export function removeShocking(event: number): boolean {
     return RemoveShockingEvent(event);
@@ -71,7 +71,7 @@ export function removeShocking(event: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x340F1415B68AEADE | Since: 323
+ * Hash: 0x340F1415B68AEADE | Since: unknown
  */
 export function removeShockingSpawnBlockingAreas(): void {
     RemoveShockingEventSpawnBlockingAreas();
@@ -80,7 +80,7 @@ export function removeShockingSpawnBlockingAreas(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xB604A2942ADED0EE | Since: 323
+ * Hash: 0xB604A2942ADED0EE | Since: unknown
  */
 export function setDecisionMaker(ped: number | IPed, name: number | string): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -91,7 +91,7 @@ export function setDecisionMaker(ped: number | IPed, name: number | string): voi
 /**
  * No comment provided
  * 
- * Hash: 0x5F3B7749C112D552 | Since: 323
+ * Hash: 0x5F3B7749C112D552 | Since: unknown
  */
 export function suppressAgitationsNextFrame(): void {
     SuppressAgitationEventsNextFrame();
@@ -100,7 +100,7 @@ export function suppressAgitationsNextFrame(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2F9A292AD0A3BD89 | Since: 323
+ * Hash: 0x2F9A292AD0A3BD89 | Since: unknown
  */
 export function suppressShockingsNextFrame(): void {
     SuppressShockingEventsNextFrame();
@@ -109,7 +109,7 @@ export function suppressShockingsNextFrame(): void {
 /**
  * eventType: https://alloc8or.re/gta5/doc/enums/eEventType.txt
  * 
- * Hash: 0x3FD2EC8BF1F1CF30 | Since: 323
+ * Hash: 0x3FD2EC8BF1F1CF30 | Since: unknown
  */
 export function suppressShockingTypeNextFrame(eventType: number): void {
     SuppressShockingEventTypeNextFrame(eventType);
@@ -118,7 +118,7 @@ export function suppressShockingTypeNextFrame(eventType: number): void {
 /**
  * eventType: https://alloc8or.re/gta5/doc/enums/eEventType.txt
  * 
- * Hash: 0xD7CD9CF34F2C99E8 | Since: 323
+ * Hash: 0xD7CD9CF34F2C99E8 | Since: unknown
  */
 export function unblockDecisionMaker(name: number | string, eventType: number): void {
     if (typeof name === 'string') name = GetHashKey(name)

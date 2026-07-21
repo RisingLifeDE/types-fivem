@@ -1,7 +1,7 @@
 /**
  * No comment provided
  *
- * Hash: 0x0F6F1EBBC4E1D5E6 | Since: 323
+ * Hash: 0x0F6F1EBBC4E1D5E6 | Since: unknown
  */
 export function bgDoesLaunchParamExist(scriptIndex) {
     return Citizen.invokeNative('0x0F6F1EBBC4E1D5E6', scriptIndex, undefined);
@@ -9,7 +9,7 @@ export function bgDoesLaunchParamExist(scriptIndex) {
 /**
  * Deletes the given context from the background scripts context map.
  *
- * Hash: 0xDC2BACD920D0A0DD | Since: 323
+ * Hash: 0xDC2BACD920D0A0DD | Since: unknown
  */
 export function bgEndContext(contextName) {
     BgEndContext(contextName);
@@ -17,7 +17,7 @@ export function bgEndContext(contextName) {
 /**
  * Hashed version of BG_END_CONTEXT.
  *
- * Hash: 0x107E5CC7CA942BC1 | Since: 323
+ * Hash: 0x107E5CC7CA942BC1 | Since: unknown
  */
 export function bgEndContextHash(contextHash) {
     if (typeof contextHash === 'string')
@@ -27,7 +27,7 @@ export function bgEndContextHash(contextHash) {
 /**
  * No comment provided
  *
- * Hash: 0x22E21FBCFC88C149 | Since: 323
+ * Hash: 0x22E21FBCFC88C149 | Since: unknown
  */
 export function bgGetLaunchParamValue(scriptIndex) {
     return Citizen.invokeNative('0x22E21FBCFC88C149', scriptIndex, undefined);
@@ -35,7 +35,7 @@ export function bgGetLaunchParamValue(scriptIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x829CD22E043A2577 | Since: 323
+ * Hash: 0x829CD22E043A2577 | Since: unknown
  */
 export function bgGetIdFromNameHash(p0) {
     if (typeof p0 === 'string')
@@ -45,7 +45,7 @@ export function bgGetIdFromNameHash(p0) {
 /**
  * Returns true if bit 0 in GtaThread+0x154 is set.
  *
- * Hash: 0x836B62713E0534CA | Since: 323
+ * Hash: 0x836B62713E0534CA | Since: unknown
  */
 export function bgIsExitflagSet() {
     return Citizen.invokeNative('0x836B62713E0534CA');
@@ -53,7 +53,7 @@ export function bgIsExitflagSet() {
 /**
  * Sets bit 1 in GtaThread+0x154
  *
- * Hash: 0x760910B49D2B98EA | Since: 323
+ * Hash: 0x760910B49D2B98EA | Since: unknown
  */
 export function bgSetExitflagResponse() {
     Citizen.invokeNative('0x760910B49D2B98EA');
@@ -61,7 +61,7 @@ export function bgSetExitflagResponse() {
 /**
  * Inserts the given context into the background scripts context map.
  *
- * Hash: 0x9D5A25BADB742ACD | Since: 323
+ * Hash: 0x9D5A25BADB742ACD | Since: unknown
  */
 export function bgStartContext(contextName) {
     BgStartContext(contextName);
@@ -69,7 +69,7 @@ export function bgStartContext(contextName) {
 /**
  * Hashed version of BG_START_CONTEXT.
  *
- * Hash: 0x75B18E49607874C7 | Since: 323
+ * Hash: 0x75B18E49607874C7 | Since: unknown
  */
 export function bgStartContextHash(contextHash) {
     if (typeof contextHash === 'string')
@@ -79,7 +79,7 @@ export function bgStartContextHash(contextHash) {
 /**
  * No comment provided
  *
- * Hash: 0xB1577667C3708F9B | Since: 323
+ * Hash: 0xB1577667C3708F9B | Since: unknown
  */
 export function commitToLoadingscreenSelction() {
     LockLoadingScreenButtons();
@@ -87,7 +87,7 @@ export function commitToLoadingscreenSelction() {
 /**
  * No comment provided
  *
- * Hash: 0xFC04745FBE67C19A | Since: 323
+ * Hash: 0xFC04745FBE67C19A | Since: unknown
  */
 export function doesExist(scriptName) {
     return DoesScriptExist(scriptName);
@@ -95,7 +95,7 @@ export function doesExist(scriptName) {
 /**
  * No comment provided
  *
- * Hash: 0xF86AA3C56BA31381 | Since: 323
+ * Hash: 0xF86AA3C56BA31381 | Since: unknown
  */
 export function doesWithNameHashExist(scriptHash) {
     if (typeof scriptHash === 'string')
@@ -105,7 +105,7 @@ export function doesWithNameHashExist(scriptHash) {
 /**
  * eventGroup: 0 = SCRIPT_EVENT_QUEUE_AI (CEventGroupScriptAI), 1 = SCRIPT_EVENT_QUEUE_NETWORK (CEventGroupScriptNetwork)
  *
- * Hash: 0xD8F66A3A60C62153 | Since: 323
+ * Hash: 0xD8F66A3A60C62153 | Since: unknown
  */
 export function getEventAtIndex(eventGroup, eventIndex) {
     return GetEventAtIndex(eventGroup, eventIndex);
@@ -115,7 +115,7 @@ export function getEventAtIndex(eventGroup, eventIndex) {
  *
  * Note: eventDataSize is NOT the size in bytes, it is the size determined by the SIZE_OF operator (RAGE Script operator, not C/C++ sizeof). That is, the size in bytes divided by 8 (script variables are always 8-byte aligned!).
  *
- * Hash: 0x2902843FCD2B2D79 | Since: 323
+ * Hash: 0x2902843FCD2B2D79 | Since: unknown
  */
 export function getEventData(eventGroup, eventIndex, eventDataSize) {
     return GetEventData(eventGroup, eventIndex, eventDataSize);
@@ -123,7 +123,7 @@ export function getEventData(eventGroup, eventIndex, eventDataSize) {
 /**
  * eventGroup: 0 = SCRIPT_EVENT_QUEUE_AI (CEventGroupScriptAI), 1 = SCRIPT_EVENT_QUEUE_NETWORK (CEventGroupScriptNetwork)
  *
- * Hash: 0x936E6168A9BCEDB5 | Since: 323
+ * Hash: 0x936E6168A9BCEDB5 | Since: unknown
  */
 export function getEventExists(eventGroup, eventIndex) {
     return GetEventExists(eventGroup, eventIndex);
@@ -131,7 +131,7 @@ export function getEventExists(eventGroup, eventIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x8A1C8B1738FFE87E | Since: 323
+ * Hash: 0x8A1C8B1738FFE87E | Since: unknown
  */
 export function getHashOfThisName() {
     return GetHashOfThisScriptName();
@@ -139,7 +139,7 @@ export function getHashOfThisName() {
 /**
  * No comment provided
  *
- * Hash: 0xC30338E8088E2E21 | Since: 323
+ * Hash: 0xC30338E8088E2E21 | Since: unknown
  */
 export function getIdOfThisThread() {
     return GetIdOfThisThread();
@@ -147,7 +147,7 @@ export function getIdOfThisThread() {
 /**
  * No comment provided
  *
- * Hash: 0x05A42BA9FC8DA96B | Since: 323
+ * Hash: 0x05A42BA9FC8DA96B | Since: unknown
  */
 export function getNameOfWithThisId(threadId) {
     return GetNameOfThread(threadId);
@@ -155,7 +155,7 @@ export function getNameOfWithThisId(threadId) {
 /**
  * No comment provided
  *
- * Hash: 0x18C1270EA7F199BC | Since: 323
+ * Hash: 0x18C1270EA7F199BC | Since: unknown
  */
 export function getNoLoadingScreen() {
     return GetNoLoadingScreen();
@@ -163,7 +163,7 @@ export function getNoLoadingScreen() {
 /**
  * eventGroup: 0 = SCRIPT_EVENT_QUEUE_AI (CEventGroupScriptAI), 1 = SCRIPT_EVENT_QUEUE_NETWORK (CEventGroupScriptNetwork)
  *
- * Hash: 0x5F92A689A06620AA | Since: 323
+ * Hash: 0x5F92A689A06620AA | Since: unknown
  */
 export function getNumberOfEvents(eventGroup) {
     return GetNumberOfEvents(eventGroup);
@@ -176,7 +176,7 @@ export function getNumberOfEvents(eventGroup) {
  * `v3 = rage::scrProgram::GetNumRefs(program) - 1;`
  * return v3;
  *
- * Hash: 0x2C83A9DA6BFFC4F9 | Since: 323
+ * Hash: 0x2C83A9DA6BFFC4F9 | Since: unknown
  */
 export function getNumberOfThreadsRunningTheWithThisHash(scriptHash) {
     if (typeof scriptHash === 'string')
@@ -186,7 +186,7 @@ export function getNumberOfThreadsRunningTheWithThisHash(scriptHash) {
 /**
  * No comment provided
  *
- * Hash: 0x442E0A7EDE4A738A | Since: 323
+ * Hash: 0x442E0A7EDE4A738A | Since: unknown
  */
 export function getThisName() {
     return GetThisScriptName();
@@ -194,7 +194,7 @@ export function getThisName() {
 /**
  * Returns if a script has been loaded into the game. Used to see if a script was loaded after requesting.
  *
- * Hash: 0xE6CC9F3BA0FB9EF1 | Since: 323
+ * Hash: 0xE6CC9F3BA0FB9EF1 | Since: unknown
  */
 export function hasLoaded(scriptName) {
     return HasScriptLoaded(scriptName);
@@ -202,7 +202,7 @@ export function hasLoaded(scriptName) {
 /**
  * No comment provided
  *
- * Hash: 0x5F0F0C783EB16C04 | Since: 323
+ * Hash: 0x5F0F0C783EB16C04 | Since: unknown
  */
 export function hasWithNameHashLoaded(scriptHash) {
     if (typeof scriptHash === 'string')
@@ -212,7 +212,7 @@ export function hasWithNameHashLoaded(scriptHash) {
 /**
  * No comment provided
  *
- * Hash: 0x46E9AE36D8FA6417 | Since: 323
+ * Hash: 0x46E9AE36D8FA6417 | Since: unknown
  */
 export function isThreadActive(threadId) {
     return IsThreadActive(threadId);
@@ -220,7 +220,7 @@ export function isThreadActive(threadId) {
 /**
  * No comment provided
  *
- * Hash: 0x6EB5F71AA68F2E8E | Since: 323
+ * Hash: 0x6EB5F71AA68F2E8E | Since: unknown
  */
 export function request(scriptName) {
     RequestScript(scriptName);
@@ -228,7 +228,7 @@ export function request(scriptName) {
 /**
  * formerly _REQUEST_STREAMED_SCRIPT
  *
- * Hash: 0xD62A67D26D9653E6 | Since: 323
+ * Hash: 0xD62A67D26D9653E6 | Since: unknown
  */
 export function requestWithNameHash(scriptHash) {
     if (typeof scriptHash === 'string')
@@ -238,7 +238,7 @@ export function requestWithNameHash(scriptHash) {
 /**
  * If the function returns 0, the end of the iteration has been reached.
  *
- * Hash: 0x30B4FA1C82DD4B9F | Since: 323
+ * Hash: 0x30B4FA1C82DD4B9F | Since: unknown
  */
 export function threadIteratorGetNextThreadId() {
     return ScriptThreadIteratorGetNextThreadId();
@@ -247,7 +247,7 @@ export function threadIteratorGetNextThreadId() {
  * Starts a new iteration of the current threads.
  * Call this first, then SCRIPT_THREAD_ITERATOR_GET_NEXT_THREAD_ID (0x30B4FA1C82DD4B9F)
  *
- * Hash: 0xDADFADA5A20143A8 | Since: 323
+ * Hash: 0xDADFADA5A20143A8 | Since: unknown
  */
 export function threadIteratorReset() {
     ScriptThreadIteratorReset();
@@ -255,7 +255,18 @@ export function threadIteratorReset() {
 /**
  * No comment provided
  *
- * Hash: 0x5262CC1995D07E09 | Since: 323
+ * Hash: 0x2CAFD5254592365F | Since: unknown
+ */
+export function setLoadingScreenBlank() {
+    if (!IsGameEnhancedVersion())
+        console.error('This native is not supported on legacy (0x2CAFD5254592365F)');
+    return;
+    return Citizen.invokeNative('0x2CAFD5254592365F');
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0x5262CC1995D07E09 | Since: unknown
  */
 export function setNoLoadingScreen(toggle) {
     SetNoLoadingScreen(toggle);
@@ -263,7 +274,7 @@ export function setNoLoadingScreen(toggle) {
 /**
  * No comment provided
  *
- * Hash: 0xC90D2DCACD56184C | Since: 323
+ * Hash: 0xC90D2DCACD56184C | Since: unknown
  */
 export function setAsNoLongerNeeded(scriptName) {
     SetScriptAsNoLongerNeeded(scriptName);
@@ -271,7 +282,7 @@ export function setAsNoLongerNeeded(scriptName) {
 /**
  * No comment provided
  *
- * Hash: 0xC5BC038960E9DB27 | Since: 323
+ * Hash: 0xC5BC038960E9DB27 | Since: unknown
  */
 export function setWithNameHashAsNoLongerNeeded(scriptHash) {
     if (typeof scriptHash === 'string')
@@ -281,7 +292,7 @@ export function setWithNameHashAsNoLongerNeeded(scriptHash) {
 /**
  * No comment provided
  *
- * Hash: 0x078EBE9809CCD637 | Since: 323
+ * Hash: 0x078EBE9809CCD637 | Since: unknown
  */
 export function shutdownLoadingScreen() {
     ShutdownLoadingScreen();
@@ -289,7 +300,7 @@ export function shutdownLoadingScreen() {
 /**
  * No comment provided
  *
- * Hash: 0x1090044AD1DA76FA | Since: 323
+ * Hash: 0x1090044AD1DA76FA | Since: unknown
  */
 export function terminateThisThread() {
     TerminateThisThread();
@@ -297,7 +308,7 @@ export function terminateThisThread() {
 /**
  * No comment provided
  *
- * Hash: 0xC8B189ED9138BCD4 | Since: 323
+ * Hash: 0xC8B189ED9138BCD4 | Since: unknown
  */
 export function terminateThread(threadId) {
     TerminateThread(threadId);
@@ -309,7 +320,7 @@ export function terminateThread(threadId) {
  *
  * playerBits (also known as playersToBroadcastTo) is a bitset that indicates which players this event should be sent to. In order to send the event to specific players only, use (1 << playerIndex). Set all bits if it should be broadcast to all players.
  *
- * Hash: 0x5AE99C571D5BBE5D | Since: 323
+ * Hash: 0x5AE99C571D5BBE5D | Since: unknown
  */
 export function triggerEvent(eventGroup, eventDataSize, playerBits) {
     return TriggerScriptEvent(eventGroup, eventDataSize, playerBits);
@@ -318,7 +329,7 @@ export function triggerEvent(eventGroup, eventDataSize, playerBits) {
  * New variant of SEND_TU_SCRIPT_EVENT that automatically initializes the event data header.
  * See TRIGGER_SCRIPT_EVENT for more info.
  *
- * Hash: 0x71A6F836422FDD2B | Since: 3095
+ * Hash: 0x71A6F836422FDD2B | Since: unknown
  */
 export function sendTuEventNew(eventGroup, eventDataSize, playerBits, eventType) {
     if (typeof eventType === 'string')

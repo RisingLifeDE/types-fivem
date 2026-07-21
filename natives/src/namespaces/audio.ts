@@ -14,7 +14,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * BARRY_02_SLOWMO
  * BARRY_01_SLOWMO
  * 
- * Hash: 0xD01005D2BA2EB778 | Since: 323
+ * Hash: 0xD01005D2BA2EB778 | Since: unknown
  */
 export function activateSlowmoMode(mode: string): void {
     ActivateAudioSlowmoMode(mode);
@@ -24,7 +24,7 @@ export function activateSlowmoMode(mode: string): void {
  * All found occurrences in b678d:
  * https://pastebin.com/ceu67jz8
  * 
- * Hash: 0x153973AB99FE8980 | Since: 323
+ * Hash: 0x153973AB99FE8980 | Since: unknown
  */
 export function addEntityToMixGroup(entity: number | IEntity, groupName: string): void {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -49,7 +49,7 @@ export function addEntityToMixGroup(entity: number | IEntity, groupName: string)
  * p11 is either 0 or 1 (The func to determine this is bool)
  * p12 is unknown as in TU27 X360 scripts it only goes to p11.
  * 
- * Hash: 0xC5EF963405593646 | Since: 323
+ * Hash: 0xC5EF963405593646 | Since: unknown
  */
 export function addLineToConversation(index: number): void {
     AddLineToConversation(index, undefined, undefined, 0, 0, false, false, false, false, 0, false, false, false);
@@ -63,7 +63,7 @@ export function addLineToConversation(index: number): void {
  * =================================================
  * One of the 2 calls in dialogue_handler.c p0 is in a while-loop, and so is determined to also possibly be 0 - 15.
  * 
- * Hash: 0x95D9F4BC443956E7 | Since: 323
+ * Hash: 0x95D9F4BC443956E7 | Since: unknown
  */
 export function addPedToConversation(index: number, ped: number | IPed): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -73,7 +73,7 @@ export function addPedToConversation(index: number, ped: number | IPed): void {
 /**
  * No comment provided
  * 
- * Hash: 0x845FFC3A4FEEFA3E | Since: 323
+ * Hash: 0x845FFC3A4FEEFA3E | Since: unknown
  */
 export function isMusicPlaying(): boolean {
     return AudioIsScriptedMusicPlaying();
@@ -82,7 +82,7 @@ export function isMusicPlaying(): boolean {
 /**
  * This is an alias of AUDIO_IS_MUSIC_PLAYING.
  * 
- * Hash: 0x2DD39BF3E2F9C47F | Since: 463
+ * Hash: 0x2DD39BF3E2F9C47F | Since: unknown
  */
 export function isScriptedMusicPlaying(): boolean {
     return Citizen.invokeNative('0x2DD39BF3E2F9C47F');
@@ -92,7 +92,7 @@ export function isScriptedMusicPlaying(): boolean {
  * Plays the siren sound of a vehicle which is otherwise activated when fastly double-pressing the horn key.
  * Only works on vehicles with a police siren.
  * 
- * Hash: 0x1B9025BDA76822B6 | Since: 323
+ * Hash: 0x1B9025BDA76822B6 | Since: unknown
  */
 export function blipSiren(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -102,7 +102,7 @@ export function blipSiren(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0xF8AD2EED7C47E8FE | Since: 1734
+ * Hash: 0xF8AD2EED7C47E8FE | Since: unknown
  */
 export function blockAllSpeechFromPed(ped: number | IPed): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -112,7 +112,7 @@ export function blockAllSpeechFromPed(ped: number | IPed): void {
 /**
  * No comment provided
  * 
- * Hash: 0xF154B8D1775B2DEC | Since: 323
+ * Hash: 0xF154B8D1775B2DEC | Since: unknown
  */
 export function blockDeathJingle(toggle: boolean): void {
     BlockDeathJingle(toggle);
@@ -121,7 +121,7 @@ export function blockDeathJingle(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA8A7D434AFB4B97B | Since: 1493
+ * Hash: 0xA8A7D434AFB4B97B | Since: unknown
  */
 export function blockSpeechContextGroup(): void {
     BlockSpeechContextGroup(undefined, 0);
@@ -130,7 +130,7 @@ export function blockSpeechContextGroup(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xB4F90FAF7670B16F | Since: 323
+ * Hash: 0xB4F90FAF7670B16F | Since: unknown
  */
 export function cancelAllPoliceReports(): void {
     CancelAllPoliceReports();
@@ -140,7 +140,7 @@ export function cancelAllPoliceReports(): void {
  * All music event names found in the b617d scripts: https://pastebin.com/GnYt0R3P
  * Full list of music event names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/musicEventNames.json
  * 
- * Hash: 0x5B17A90291133DA5 | Since: 323
+ * Hash: 0x5B17A90291133DA5 | Since: unknown
  */
 export function cancelMusicEvent(eventName: string): boolean {
     return CancelMusicEvent(eventName);
@@ -149,7 +149,7 @@ export function cancelMusicEvent(eventName: string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x032A116663A4D5AC | Since: 323
+ * Hash: 0x032A116663A4D5AC | Since: unknown
  */
 export function canVehicleReceiveCbRadio(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -159,7 +159,7 @@ export function canVehicleReceiveCbRadio(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xB32209EFFDC04913 | Since: 323
+ * Hash: 0xB32209EFFDC04913 | Since: unknown
  */
 export function clearAllBrokenGlass(): void {
     ClearAllBrokenGlass();
@@ -168,7 +168,7 @@ export function clearAllBrokenGlass(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x120C48C614909FA4 | Since: 323
+ * Hash: 0x120C48C614909FA4 | Since: unknown
  */
 export function clearAmbientZoneListState(ambientZone: string): void {
     ClearAmbientZoneListState(ambientZone, false);
@@ -181,7 +181,7 @@ export function clearAmbientZoneListState(ambientZone: string): void {
  * 
  * Full list of ambient zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientZones.json
  * 
- * Hash: 0x218DD44AAAC964FF | Since: 323
+ * Hash: 0x218DD44AAAC964FF | Since: unknown
  */
 export function clearAmbientZoneState(zoneName: string): void {
     ClearAmbientZoneState(zoneName, false);
@@ -193,7 +193,7 @@ export function clearAmbientZoneState(zoneName: string): void {
  * `AUDIO::CLEAR_CUSTOM_RADIO_TRACK_LIST("RADIO_16_SILVERLAKE");`
  * `AUDIO::CLEAR_CUSTOM_RADIO_TRACK_LIST("RADIO_01_CLASS_ROCK");`
  * 
- * Hash: 0x1654F24A88A8E3FE | Since: 323
+ * Hash: 0x1654F24A88A8E3FE | Since: unknown
  */
 export function clearCustomRadioTrackList(radioStation: string): void {
     ClearCustomRadioTrackList(radioStation);
@@ -202,7 +202,7 @@ export function clearCustomRadioTrackList(radioStation: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0xD2C91A0B572AAE56 | Since: 323
+ * Hash: 0xD2C91A0B572AAE56 | Since: unknown
  */
 export function createNewScriptedConversation(): void {
     CreateNewScriptedConversation();
@@ -211,7 +211,7 @@ export function createNewScriptedConversation(): void {
 /**
  * see ACTIVATE_AUDIO_SLOWMO_MODE for modes
  * 
- * Hash: 0xDDC635D5B3262C56 | Since: 323
+ * Hash: 0xDDC635D5B3262C56 | Since: unknown
  */
 export function deactivateSlowmoMode(mode: string): void {
     DeactivateAudioSlowmoMode(mode);
@@ -220,7 +220,7 @@ export function deactivateSlowmoMode(mode: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA9A41C1E940FB0E8 | Since: 323
+ * Hash: 0xA9A41C1E940FB0E8 | Since: unknown
  */
 export function disablePedPain(ped: number | IPed, toggle: boolean): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -231,7 +231,7 @@ export function disablePedPain(ped: number | IPed, toggle: boolean): void {
  * If value is set to true, and ambient siren sound will be played.
  * Appears to enable/disable an audio flag.
  * 
- * Hash: 0x552369F549563AD5 | Since: 323
+ * Hash: 0x552369F549563AD5 | Since: unknown
  */
 export function distantCopCarSirens(value: boolean): void {
     DistantCopCarSirens(value);
@@ -240,7 +240,7 @@ export function distantCopCarSirens(value: boolean): void {
 /**
  * Checks if the ped can play the speech or has the speech file, p2 is usually false.
  * 
- * Hash: 0x49B99BF3FDA89A7A | Since: 323
+ * Hash: 0x49B99BF3FDA89A7A | Since: unknown
  */
 export function doesContextExistForThisPed(ped: number | IPed, speechName: string): boolean {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -250,7 +250,7 @@ export function doesContextExistForThisPed(ped: number | IPed, speechName: strin
 /**
  * No comment provided
  * 
- * Hash: 0x109697E2FFBAC8A1 | Since: 323
+ * Hash: 0x109697E2FFBAC8A1 | Since: unknown
  */
 export function doesPlayerVehHaveRadio(): boolean {
     return DoesPlayerVehHaveRadio();
@@ -259,7 +259,7 @@ export function doesPlayerVehHaveRadio(): boolean {
 /**
  * Works for planes only.
  * 
- * Hash: 0xC15907D667F7CFB2 | Since: 323
+ * Hash: 0xC15907D667F7CFB2 | Since: unknown
  */
 export function enableStallWarningSounds(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -269,7 +269,7 @@ export function enableStallWarningSounds(vehicle: number | IVehicle, toggle: boo
 /**
  * No comment provided
  * 
- * Hash: 0xB81CF134AEB56FFB | Since: 791
+ * Hash: 0xB81CF134AEB56FFB | Since: unknown
  */
 export function enableStuntJump(): void {
     EnableStuntJumpAudio();
@@ -278,7 +278,7 @@ export function enableStuntJump(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2BE4BC731D039D5A | Since: 323
+ * Hash: 0x2BE4BC731D039D5A | Since: unknown
  */
 export function enableVehicleExhaustPops(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -288,7 +288,7 @@ export function enableVehicleExhaustPops(vehicle: number | IVehicle, toggle: boo
 /**
  * No comment provided
  * 
- * Hash: 0x1C073274E065C6D2 | Since: 323
+ * Hash: 0x1C073274E065C6D2 | Since: unknown
  */
 export function enableVehicleFanbeltDamage(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -298,7 +298,7 @@ export function enableVehicleFanbeltDamage(vehicle: number | IVehicle, toggle: b
 /**
  * No comment provided
  * 
- * Hash: 0x8D67489793FF428B | Since: 323
+ * Hash: 0x8D67489793FF428B | Since: unknown
  */
 export function findRadioStationIndex(stationNameHash: number | string): number {
     if (typeof stationNameHash === 'string') stationNameHash = GetHashKey(stationNameHash)
@@ -309,7 +309,7 @@ export function findRadioStationIndex(stationNameHash: number | string): number 
  * Changes start time of a tracklist (milliseconds)
  * `R* uses a random int: MISC::GET_RANDOM_INT_IN_RANGE(0, 13) * 60000)`
  * 
- * Hash: 0x4E0AF9114608257C | Since: 2372
+ * Hash: 0x4E0AF9114608257C | Since: unknown
  */
 export function forceMusicTrackList(radioStation: string, trackListName: string, milliseconds: number): void {
     ForceMusicTrackList(radioStation, trackListName, milliseconds);
@@ -318,7 +318,7 @@ export function forceMusicTrackList(radioStation: string, trackListName: string,
 /**
  * No comment provided
  * 
- * Hash: 0x062D5EAD4DA2FA6A | Since: 323
+ * Hash: 0x062D5EAD4DA2FA6A | Since: unknown
  */
 export function forcePedPanicWalla(): void {
     ForcePedPanicWalla();
@@ -333,7 +333,7 @@ export function forcePedPanicWalla(): void {
  * _SET_VEHICLE_AUDIO(veh, "ADDER");
  * The selected vehicle will now have the audio of the Adder.
  * 
- * Hash: 0x4F0C413926060B38 | Since: 323
+ * Hash: 0x4F0C413926060B38 | Since: unknown
  */
 export function forceUseGameObject(vehicle: number | IVehicle, audioName: string): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -343,7 +343,7 @@ export function forceUseGameObject(vehicle: number | IVehicle, audioName: string
 /**
  * No comment provided
  * 
- * Hash: 0xD57AAAE0E2214D11 | Since: 323
+ * Hash: 0xD57AAAE0E2214D11 | Since: unknown
  */
 export function freezeMicrophone(): void {
     FreezeMicrophone();
@@ -352,7 +352,7 @@ export function freezeMicrophone(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x344F393B027E38C3 | Since: 323
+ * Hash: 0x344F393B027E38C3 | Since: unknown
  */
 export function freezeRadioStation(radioStation: string): void {
     FreezeRadioStation(radioStation);
@@ -361,7 +361,7 @@ export function freezeRadioStation(radioStation: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0x5E203DA2BA15D436 | Since: 463
+ * Hash: 0x5E203DA2BA15D436 | Since: unknown
  */
 export function getAmbientVoiceNameHash(ped: number | IPed): number {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -371,7 +371,7 @@ export function getAmbientVoiceNameHash(ped: number | IPed): number {
 /**
  * No comment provided
  * 
- * Hash: 0x50B196FC9ED6545B | Since: 323
+ * Hash: 0x50B196FC9ED6545B | Since: unknown
  */
 export function getAudibleMusicTrackTextId(): number {
     return GetAudibleMusicTrackTextId();
@@ -380,7 +380,7 @@ export function getAudibleMusicTrackTextId(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x480357EE890C295A | Since: 323
+ * Hash: 0x480357EE890C295A | Since: unknown
  */
 export function getCurrentScriptedConversationLine(): number {
     return GetCurrentScriptedConversationLine();
@@ -389,7 +389,7 @@ export function getCurrentScriptedConversationLine(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x3E65CDE5215832C1 | Since: 1493
+ * Hash: 0x3E65CDE5215832C1 | Since: unknown
  */
 export function getCurrentTrackPlayTime(radioStationName: string): number {
     return GetCurrentRadioTrackPlaybackTime(radioStationName);
@@ -398,7 +398,7 @@ export function getCurrentTrackPlayTime(radioStationName: string): number {
 /**
  * No comment provided
  * 
- * Hash: 0x34D66BC058019CE0 | Since: 1493
+ * Hash: 0x34D66BC058019CE0 | Since: unknown
  */
 export function getCurrentTrackSoundName(radioStationName: string): number {
     return GetCurrentTrackSoundName(radioStationName);
@@ -407,7 +407,7 @@ export function getCurrentTrackSoundName(radioStationName: string): number {
 /**
  * No comment provided
  * 
- * Hash: 0xDD3AA743AB7D4D75 | Since: 3095
+ * Hash: 0xDD3AA743AB7D4D75 | Since: unknown
  */
 export function getCurrentTvShowPlayTime(): number {
     return Citizen.invokeNative('0xDD3AA743AB7D4D75');
@@ -416,7 +416,7 @@ export function getCurrentTvShowPlayTime(): number {
 /**
  * No comment provided
  * 
- * Hash: 0xE73364DB90778FFA | Since: 323
+ * Hash: 0xE73364DB90778FFA | Since: unknown
  */
 export function getIsPreloadedConversationReady(): boolean {
     return GetIsPreloadedConversationReady();
@@ -425,7 +425,7 @@ export function getIsPreloadedConversationReady(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xE7A0D23DC414507B | Since: 323
+ * Hash: 0xE7A0D23DC414507B | Since: unknown
  */
 export function getMusicPlaytime(): number {
     return GetMusicPlaytime();
@@ -434,7 +434,7 @@ export function getMusicPlaytime(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x3A48AB4445D499BE | Since: 323
+ * Hash: 0x3A48AB4445D499BE | Since: unknown
  */
 export function getMusicVolSlider(): number {
     return GetMusicVolSlider();
@@ -443,7 +443,7 @@ export function getMusicVolSlider(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x2DE3F0A134FFBC0D | Since: 323
+ * Hash: 0x2DE3F0A134FFBC0D | Since: unknown
  */
 export function getNetworkIdFromSoundId(soundId: number): number {
     return GetNetworkIdFromSoundId(soundId);
@@ -452,7 +452,7 @@ export function getNetworkIdFromSoundId(soundId: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0xC64A06D939F826F5 | Since: 1493
+ * Hash: 0xC64A06D939F826F5 | Since: unknown
  */
 export function getNextAudibleBeat(): [boolean, number, number, number] {
     return GetNextAudibleBeat();
@@ -461,7 +461,7 @@ export function getNextAudibleBeat(): [boolean, number, number, number] {
 /**
  * No comment provided
  * 
- * Hash: 0xF1620ECB50E01DE7 | Since: 323
+ * Hash: 0xF1620ECB50E01DE7 | Since: unknown
  */
 export function getNumUnlockedRadioStations(): number {
     return GetNumUnlockedRadioStations();
@@ -470,7 +470,7 @@ export function getNumUnlockedRadioStations(): number {
 /**
  * No comment provided
  * 
- * Hash: 0xA571991A7FE6CCEB | Since: 323
+ * Hash: 0xA571991A7FE6CCEB | Since: unknown
  */
 export function getPlayerRadioStationGenre(): number {
     return GetPlayerRadioStationGenre();
@@ -479,7 +479,7 @@ export function getPlayerRadioStationGenre(): number {
 /**
  * Returns 255 (radio off index) if the function fails.
  * 
- * Hash: 0xE8AF77C4C06ADC93 | Since: 323
+ * Hash: 0xE8AF77C4C06ADC93 | Since: unknown
  */
 export function getPlayerRadioStationIndex(): number {
     return GetPlayerRadioStationIndex();
@@ -488,7 +488,7 @@ export function getPlayerRadioStationIndex(): number {
 /**
  * Returns active radio station name
  * 
- * Hash: 0xF6D733C32076AD03 | Since: 323
+ * Hash: 0xF6D733C32076AD03 | Since: unknown
  */
 export function getPlayerRadioStationName(): string {
     return GetPlayerRadioStationName();
@@ -497,7 +497,7 @@ export function getPlayerRadioStationName(): string {
 /**
  * `Converts radio station index to string. Use HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION to get the user-readable text.`
  * 
- * Hash: 0xB28ECA15046CA8B9 | Since: 323
+ * Hash: 0xB28ECA15046CA8B9 | Since: unknown
  */
 export function getRadioStationName(radioStation: number): string {
     return GetRadioStationName(radioStation);
@@ -506,7 +506,7 @@ export function getRadioStationName(radioStation: number): string {
 /**
  * No comment provided
  * 
- * Hash: 0x430386FE9BF80B45 | Since: 323
+ * Hash: 0x430386FE9BF80B45 | Since: unknown
  */
 export function getSoundId(): number {
     return GetSoundId();
@@ -515,7 +515,7 @@ export function getSoundId(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x75262FD12D0A1C84 | Since: 323
+ * Hash: 0x75262FD12D0A1C84 | Since: unknown
  */
 export function getSoundIdFromNetworkId(netId: number): number {
     return GetSoundIdFromNetworkId(netId);
@@ -524,7 +524,7 @@ export function getSoundIdFromNetworkId(netId: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0x4E72BBDBCA58A3DB | Since: 323
+ * Hash: 0x4E72BBDBCA58A3DB | Since: unknown
  */
 export function getStreamPlayTime(): number {
     return GetStreamPlayTime();
@@ -533,7 +533,7 @@ export function getStreamPlayTime(): number {
 /**
  * No comment provided
  * 
- * Hash: 0xAA19F5572C38B564 | Since: 323
+ * Hash: 0xAA19F5572C38B564 | Since: unknown
  */
 export function getVariationChosenForScriptedLine(): [number, any] {
     return GetVariationChosenForScriptedLine();
@@ -544,7 +544,7 @@ export function getVariationChosenForScriptedLine(): [number, any] {
  * 
  * Hash is stored in audVehicleAudioEntity
  * 
- * Hash: 0x02165D55000219AC | Since: 323
+ * Hash: 0x02165D55000219AC | Since: unknown
  */
 export function getVehicleDefaultHorn(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -554,7 +554,7 @@ export function getVehicleDefaultHorn(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0xACB5DCCA1EC76840 | Since: 323
+ * Hash: 0xACB5DCCA1EC76840 | Since: unknown
  */
 export function getVehicleDefaultHornIgnoreMods(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -564,7 +564,7 @@ export function getVehicleDefaultHornIgnoreMods(vehicle: number | IVehicle): num
 /**
  * No comment provided
  * 
- * Hash: 0xD53F3A29BCE2580E | Since: 1365
+ * Hash: 0xD53F3A29BCE2580E | Since: unknown
  */
 export function getVehicleHornSoundIndex(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -574,7 +574,7 @@ export function getVehicleHornSoundIndex(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0x544810ED9DB6BBE6 | Since: 323
+ * Hash: 0x544810ED9DB6BBE6 | Since: unknown
  */
 export function hasLoadedMpDataSet(): boolean {
     return HasLoadedMpDataSet();
@@ -583,7 +583,7 @@ export function hasLoadedMpDataSet(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x5B50ABB1FE3746F4 | Since: 323
+ * Hash: 0x5B50ABB1FE3746F4 | Since: unknown
  */
 export function hasLoadedSpDataSet(): boolean {
     return HasLoadedSpDataSet();
@@ -592,7 +592,7 @@ export function hasLoadedSpDataSet(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xFCBDCE714A7C88E5 | Since: 323
+ * Hash: 0xFCBDCE714A7C88E5 | Since: unknown
  */
 export function hasSoundFinished(soundId: number): boolean {
     return HasSoundFinished(soundId);
@@ -601,7 +601,7 @@ export function hasSoundFinished(soundId: number): boolean {
 /**
  * p2 is always -1
  * 
- * Hash: 0x8F8C0E370AE62F5C | Since: 323
+ * Hash: 0x8F8C0E370AE62F5C | Since: unknown
  */
 export function hintAmbientBank(audioBank: string): boolean {
     return HintAmbientAudioBank(audioBank, false, undefined);
@@ -610,7 +610,7 @@ export function hintAmbientBank(audioBank: string): boolean {
 /**
  * p2 is always -1
  * 
- * Hash: 0x40763EA7B9B783E7 | Since: 573
+ * Hash: 0x40763EA7B9B783E7 | Since: unknown
  */
 export function hintMissionBank(audioBank: string): boolean {
     return HintMissionAudioBank(audioBank, false, undefined);
@@ -619,7 +619,7 @@ export function hintMissionBank(audioBank: string): boolean {
 /**
  * p2 is always -1
  * 
- * Hash: 0xFB380A29641EC31A | Since: 323
+ * Hash: 0xFB380A29641EC31A | Since: unknown
  */
 export function hintScriptBank(audioBank: string): boolean {
     return HintScriptAudioBank(audioBank, false, undefined);
@@ -628,7 +628,7 @@ export function hintScriptBank(audioBank: string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x950A154B8DAB6185 | Since: 323
+ * Hash: 0x950A154B8DAB6185 | Since: unknown
  */
 export function initSynchSceneWithEntity(audioEvent: string, entity: number | IEntity): void {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -638,7 +638,7 @@ export function initSynchSceneWithEntity(audioEvent: string, entity: number | IE
 /**
  * No comment provided
  * 
- * Hash: 0xC8EDE9BDBCCBA6D4 | Since: 323
+ * Hash: 0xC8EDE9BDBCCBA6D4 | Since: unknown
  */
 export function initSynchSceneWithPosition(audioEvent: string, pos: Vector3): void {
     InitSynchSceneAudioWithPosition(audioEvent, pos.x, pos.y, pos.z);
@@ -648,7 +648,7 @@ export function initSynchSceneWithPosition(audioEvent: string, pos: Vector3): vo
  * `Example from carsteal3.c: AUDIO::INTERRUPT_CONVERSATION(PLAYER::PLAYER_PED_ID(), "CST4_CFAA", "FRANKLIN");`
  * Voicelines can be found in GTAV\x64\audio\sfx in files starting with "SS_" which seems to mean scripted speech.
  * 
- * Hash: 0xA018A12E5C5C2FA6 | Since: 323
+ * Hash: 0xA018A12E5C5C2FA6 | Since: unknown
  */
 export function interruptConversation(ped: number | IPed, voiceline: string, speaker: string): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -660,7 +660,7 @@ export function interruptConversation(ped: number | IPed, voiceline: string, spe
  * 
  * `AUDIO::INTERRUPT_CONVERSATION_AND_PAUSE(NETWORK::NET_TO_PED(l_3989._f26F[0\/\*1\*\/]), "CONV_INTERRUPT_QUIT_IT", "LESTER");`
  * 
- * Hash: 0x8A694D7A68F8DC38 | Since: 323
+ * Hash: 0x8A694D7A68F8DC38 | Since: unknown
  */
 export function interruptConversationAndPause(ped: number | IPed, speaker: string): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -673,7 +673,7 @@ export function interruptConversationAndPause(ped: number | IPed, speaker: strin
  * `bool playing = AUDIO::IS_ALARM_PLAYING("PORT_OF_LS_HEIST_FORT_ZANCUDO_ALARMS");`
  * Full list of alarm names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/alarmSounds.json
  * 
- * Hash: 0x226435CB96CCFC8C | Since: 323
+ * Hash: 0x226435CB96CCFC8C | Since: unknown
  */
 export function isAlarmPlaying(alarmName: string): boolean {
     return IsAlarmPlaying(alarmName);
@@ -683,7 +683,7 @@ export function isAlarmPlaying(alarmName: string): boolean {
  * Common in the scripts:
  * `AUDIO::IS_AMBIENT_SPEECH_DISABLED(PLAYER::PLAYER_PED_ID());`
  * 
- * Hash: 0x932C2D096A2C3FFF | Since: 323
+ * Hash: 0x932C2D096A2C3FFF | Since: unknown
  */
 export function isAmbientSpeechDisabled(ped: number | IPed): boolean {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -693,7 +693,7 @@ export function isAmbientSpeechDisabled(ped: number | IPed): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x9072C8B49907BFAD | Since: 323
+ * Hash: 0x9072C8B49907BFAD | Since: unknown
  */
 export function isAmbientSpeechPlaying(ped: number | IPed): boolean {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -703,7 +703,7 @@ export function isAmbientSpeechPlaying(ped: number | IPed): boolean {
 /**
  * Full list of ambient zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientZones.json
  * 
- * Hash: 0x01E2817A479A7F9B | Since: 323
+ * Hash: 0x01E2817A479A7F9B | Since: unknown
  */
 export function isAmbientZoneEnabled(ambientZone: string): boolean {
     return IsAmbientZoneEnabled(ambientZone);
@@ -712,7 +712,7 @@ export function isAmbientZoneEnabled(ambientZone: string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xC265DF9FB44A9FBD | Since: 323
+ * Hash: 0xC265DF9FB44A9FBD | Since: unknown
  */
 export function isAnimalVocalizationPlaying(pedHandle: number | IPed): boolean {
     const _pedHandle = typeof pedHandle == 'object' ? pedHandle.handle() : pedHandle;
@@ -722,7 +722,7 @@ export function isAnimalVocalizationPlaying(pedHandle: number | IPed): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x30CA2EF91D15ADF8 | Since: 2189
+ * Hash: 0x30CA2EF91D15ADF8 | Since: unknown
  */
 export function isAnyPositionalSpeechPlaying(): boolean {
     return IsAnyPositionalSpeechPlaying();
@@ -731,7 +731,7 @@ export function isAnyPositionalSpeechPlaying(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x729072355FA39EC9 | Since: 323
+ * Hash: 0x729072355FA39EC9 | Since: unknown
  */
 export function isAnySpeechPlaying(ped: number | IPed): boolean {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -741,7 +741,7 @@ export function isAnySpeechPlaying(ped: number | IPed): boolean {
 /**
  * Full list of audio scene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/audioSceneNames.json
  * 
- * Hash: 0xB65B60556E2A9225 | Since: 323
+ * Hash: 0xB65B60556E2A9225 | Since: unknown
  */
 export function isSceneActive(scene: string): boolean {
     return IsAudioSceneActive(scene);
@@ -750,7 +750,7 @@ export function isSceneActive(scene: string): boolean {
 /**
  * Hardcoded to return 1
  * 
- * Hash: 0x6D28DC1671E334FD | Since: 323
+ * Hash: 0x6D28DC1671E334FD | Since: unknown
  */
 export function isGameInControlOfMusic(): boolean {
     return IsGameInControlOfMusic();
@@ -759,7 +759,7 @@ export function isGameInControlOfMusic(): boolean {
 /**
  * Checks whether the horn of a vehicle is currently played.
  * 
- * Hash: 0x9D6BFC12B05C6121 | Since: 323
+ * Hash: 0x9D6BFC12B05C6121 | Since: unknown
  */
 export function isHornActive(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -769,7 +769,7 @@ export function isHornActive(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x19A30C23F5827F8A | Since: 323
+ * Hash: 0x19A30C23F5827F8A | Since: unknown
  */
 export function isMissionCompletePlaying(): boolean {
     return IsMissionCompletePlaying();
@@ -778,7 +778,7 @@ export function isMissionCompletePlaying(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x6F259F82D873B8B8 | Since: 323
+ * Hash: 0x6F259F82D873B8B8 | Since: unknown
  */
 export function isMissionCompleteReadyForUi(): boolean {
     return IsMissionCompleteReadyForUi();
@@ -787,7 +787,7 @@ export function isMissionCompleteReadyForUi(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x66E49BF55B4B1874 | Since: 323
+ * Hash: 0x66E49BF55B4B1874 | Since: unknown
  */
 export function isMissionNewsStoryUnlocked(newsStory: number): boolean {
     return IsMissionNewsStoryUnlocked(newsStory);
@@ -796,7 +796,7 @@ export function isMissionNewsStoryUnlocked(newsStory: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xC8B1B2425604CDD0 | Since: 323
+ * Hash: 0xC8B1B2425604CDD0 | Since: unknown
  */
 export function isMobileInterferenceActive(): boolean {
     return IsMobileInterferenceActive();
@@ -805,7 +805,7 @@ export function isMobileInterferenceActive(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x7497D2CE2C30D24C | Since: 323
+ * Hash: 0x7497D2CE2C30D24C | Since: unknown
  */
 export function isMobilePhoneCallOngoing(): boolean {
     return IsMobilePhoneCallOngoing();
@@ -814,7 +814,7 @@ export function isMobilePhoneCallOngoing(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xB35CE999E8EF317E | Since: 323
+ * Hash: 0xB35CE999E8EF317E | Since: unknown
  */
 export function isMobilePhoneRadioActive(): boolean {
     return IsMobilePhoneRadioActive();
@@ -823,7 +823,7 @@ export function isMobilePhoneRadioActive(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xA097AB275061FB21 | Since: 323
+ * Hash: 0xA097AB275061FB21 | Since: unknown
  */
 export function isMusicOneshotPlaying(): boolean {
     return IsMusicOneshotPlaying();
@@ -832,7 +832,7 @@ export function isMusicOneshotPlaying(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x049E937F18F4020C | Since: 323
+ * Hash: 0x049E937F18F4020C | Since: unknown
  */
 export function isPedInCurrentConversation(ped: number | IPed): boolean {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -842,7 +842,7 @@ export function isPedInCurrentConversation(ped: number | IPed): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x1E8E5E20937E3137 | Since: 323
+ * Hash: 0x1E8E5E20937E3137 | Since: unknown
  */
 export function isPedRingtonePlaying(ped: number | IPed): boolean {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -852,7 +852,7 @@ export function isPedRingtonePlaying(ped: number | IPed): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x5F43D83FD6738741 | Since: 323
+ * Hash: 0x5F43D83FD6738741 | Since: unknown
  */
 export function isPlayerVehRadioEnable(): boolean {
     return IsPlayerVehRadioEnable();
@@ -861,7 +861,7 @@ export function isPlayerVehRadioEnable(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x0626A247D2405330 | Since: 323
+ * Hash: 0x0626A247D2405330 | Since: unknown
  */
 export function isRadioFadedOut(): boolean {
     return IsRadioFadedOut();
@@ -870,7 +870,7 @@ export function isRadioFadedOut(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xA151A7394A214E65 | Since: 323
+ * Hash: 0xA151A7394A214E65 | Since: unknown
  */
 export function isRadioRetuning(): boolean {
     return IsRadioRetuning();
@@ -879,7 +879,7 @@ export function isRadioRetuning(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x2B1784DB08AFEA79 | Since: 2699
+ * Hash: 0x2B1784DB08AFEA79 | Since: unknown
  */
 export function isRadioStationFavourited(radioStation: string): boolean {
     return IsRadioStationFavourited(radioStation);
@@ -888,7 +888,7 @@ export function isRadioStationFavourited(radioStation: string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xDF0D54BE7A776737 | Since: 323
+ * Hash: 0xDF0D54BE7A776737 | Since: unknown
  */
 export function isScriptedConversationLoaded(): boolean {
     return IsScriptedConversationLoaded();
@@ -897,7 +897,7 @@ export function isScriptedConversationLoaded(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x16754C556D2EDE3D | Since: 323
+ * Hash: 0x16754C556D2EDE3D | Since: unknown
  */
 export function isScriptedConversationOngoing(): boolean {
     return IsScriptedConversationOngoing();
@@ -906,7 +906,7 @@ export function isScriptedConversationOngoing(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xCC9AA18DCC7084F4 | Since: 323
+ * Hash: 0xCC9AA18DCC7084F4 | Since: unknown
  */
 export function isScriptedSpeechPlaying(p0: number | IPed): boolean {
     const _p0 = typeof p0 == 'object' ? p0.handle() : p0;
@@ -916,7 +916,7 @@ export function isScriptedSpeechPlaying(p0: number | IPed): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xD11FA52EB849D978 | Since: 323
+ * Hash: 0xD11FA52EB849D978 | Since: unknown
  */
 export function isStreamPlaying(): boolean {
     return IsStreamPlaying();
@@ -925,7 +925,7 @@ export function isStreamPlaying(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x5DB8010EE71FDEF2 | Since: 323
+ * Hash: 0x5DB8010EE71FDEF2 | Since: unknown
  */
 export function isVehicleAudiblyDamaged(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -935,7 +935,7 @@ export function isVehicleAudiblyDamaged(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x0BE4BE946463F917 | Since: 505
+ * Hash: 0x0BE4BE946463F917 | Since: unknown
  */
 export function isVehicleRadioOn(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -945,7 +945,7 @@ export function isVehicleRadioOn(vehicle: number | IVehicle): boolean {
 /**
  * Full list of static emitters by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/staticEmitters.json
  * 
- * Hash: 0x651D3228960D08AF | Since: 505
+ * Hash: 0x651D3228960D08AF | Since: unknown
  */
 export function linkStaticEmitterToEntity(emitterName: string, entity: number | IEntity): void {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -964,7 +964,7 @@ export function linkStaticEmitterToEntity(emitterName: string, entity: number | 
  * 
  * Full list of audio / sound names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/soundNames.json
  * 
- * Hash: 0x1F1F957154EC51DF | Since: 323
+ * Hash: 0x1F1F957154EC51DF | Since: unknown
  */
 export function loadStream(streamName: string, soundSet: string): boolean {
     return LoadStream(streamName, soundSet);
@@ -978,7 +978,7 @@ export function loadStream(streamName: string, soundSet: string): boolean {
  * 
  * Full list of audio / sound names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/soundNames.json
  * 
- * Hash: 0x59C16B79F53B3712 | Since: 323
+ * Hash: 0x59C16B79F53B3712 | Since: unknown
  */
 export function loadStreamWithStartOffset(streamName: string, startOffset: number, soundSet: string): boolean {
     return LoadStreamWithStartOffset(streamName, startOffset, soundSet);
@@ -987,7 +987,7 @@ export function loadStreamWithStartOffset(streamName: string, startOffset: numbe
 /**
  * Disables the radio station (hides it from the radio wheel).
  * 
- * Hash: 0x477D9DB48F889591 | Since: 1493
+ * Hash: 0x477D9DB48F889591 | Since: unknown
  */
 export function lockRadioStation(radioStationName: string, toggle: boolean): void {
     LockRadioStation(radioStationName, toggle);
@@ -996,7 +996,7 @@ export function lockRadioStation(radioStationName: string, toggle: boolean): voi
 /**
  * No comment provided
  * 
- * Hash: 0xFF5E5EA2DCEEACF3 | Since: 2372
+ * Hash: 0xFF5E5EA2DCEEACF3 | Since: unknown
  */
 export function lockRadioStationTrackList(radioStation: string, trackListName: string): void {
     LockRadioStationTrackList(radioStation, trackListName);
@@ -1005,7 +1005,7 @@ export function lockRadioStationTrackList(radioStation: string, trackListName: s
 /**
  * Sets audio flag "OverrideMicrophoneSettings"
  * 
- * Hash: 0x75773E11BA459E90 | Since: 323
+ * Hash: 0x75773E11BA459E90 | Since: unknown
  */
 export function overrideMicrophoneSettings(hash: number | string, toggle: boolean): void {
     if (typeof hash === 'string') hash = GetHashKey(hash)
@@ -1015,7 +1015,7 @@ export function overrideMicrophoneSettings(hash: number | string, toggle: boolea
 /**
  * Sets audio flag "OverridePlayerGroundMaterial"
  * 
- * Hash: 0xD2CC78CD3D0B50F9 | Since: 323
+ * Hash: 0xD2CC78CD3D0B50F9 | Since: unknown
  */
 export function overridePlayerGroundMaterial(hash: number | string, toggle: boolean): void {
     if (typeof hash === 'string') hash = GetHashKey(hash)
@@ -1025,7 +1025,7 @@ export function overridePlayerGroundMaterial(hash: number | string, toggle: bool
 /**
  * This native enables the audio flag "TrevorRageIsOverridden" and sets the voice effect to `voiceEffect`
  * 
- * Hash: 0x13AD665062541A7E | Since: 323
+ * Hash: 0x13AD665062541A7E | Since: unknown
  */
 export function overrideTrevorRage(voiceEffect: string): void {
     OverrideTrevorRage(voiceEffect);
@@ -1034,7 +1034,7 @@ export function overrideTrevorRage(voiceEffect: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0xF2A9CDABCEA04BD6 | Since: 323
+ * Hash: 0xF2A9CDABCEA04BD6 | Since: unknown
  */
 export function overrideUnderwaterStream(): void {
     OverrideUnderwaterStream(undefined, false);
@@ -1046,7 +1046,7 @@ export function overrideUnderwaterStream(): void {
  * 
  * vehicle - the vehicle whose horn should be overwritten
  * 
- * Hash: 0x3CDC1E622CCE0356 | Since: 323
+ * Hash: 0x3CDC1E622CCE0356 | Since: unknown
  */
 export function overrideVehHorn(vehicle: number | IVehicle, override: boolean, hornHash: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1056,7 +1056,7 @@ export function overrideVehHorn(vehicle: number | IVehicle, override: boolean, h
 /**
  * No comment provided
  * 
- * Hash: 0x8530AD776CD72B12 | Since: 323
+ * Hash: 0x8530AD776CD72B12 | Since: unknown
  */
 export function pauseScriptedConversation(): void {
     PauseScriptedConversation(false);
@@ -1065,7 +1065,7 @@ export function pauseScriptedConversation(): void {
 /**
  * Full list of speeches and voices names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/speeches.json
  * 
- * Hash: 0xED640017ED337E45 | Since: 323
+ * Hash: 0xED640017ED337E45 | Since: unknown
  */
 export function playAmbientSpeechFromPositionNative(speechName: string, voiceName: string, pos: Vector3, speechParam: string): void {
     PlayAmbientSpeechFromPositionNative(speechName, voiceName, pos.x, pos.y, pos.z, speechParam);
@@ -1076,7 +1076,7 @@ export function playAmbientSpeechFromPositionNative(speechName: string, voiceNam
  * This native is works only when you call it on the ped with right model (ac_chop only ?)
  * Speech Name can be: CHOP_SNIFF_SEQ CHOP_WHINE CHOP_LICKS_MOUTH CHOP_PANT bark GROWL SNARL BARK_SEQ
  * 
- * Hash: 0xEE066C7006C49C0A | Since: 323
+ * Hash: 0xEE066C7006C49C0A | Since: unknown
  */
 export function playAnimalVocalization(pedHandle: number | IPed, speechName: string): void {
     const _pedHandle = typeof pedHandle == 'object' ? pedHandle.handle() : pedHandle;
@@ -1090,7 +1090,7 @@ export function playAnimalVocalization(pedHandle: number | IPed, speechName: str
  * 
  * Full list of audio / sound names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/soundNames.json
  * 
- * Hash: 0xCADA5A0D0702381E | Since: 323
+ * Hash: 0xCADA5A0D0702381E | Since: unknown
  */
 export function playDeferredSoundFrontend(soundName: string, soundsetName: string): void {
     PlayDeferredSoundFrontend(soundName, soundsetName);
@@ -1099,7 +1099,7 @@ export function playDeferredSoundFrontend(soundName: string, soundsetName: strin
 /**
  * No comment provided
  * 
- * Hash: 0xCD536C4D33DCC900 | Since: 323
+ * Hash: 0xCD536C4D33DCC900 | Since: unknown
  */
 export function playEndCreditsMusic(play: boolean): void {
     PlayEndCreditsMusic(play);
@@ -1114,7 +1114,7 @@ export function playEndCreditsMusic(play: boolean): void {
  * `AUDIO::PLAY_MISSION_COMPLETE_AUDIO("GENERIC_FAILED");`
  * `AUDIO::PLAY_MISSION_COMPLETE_AUDIO("TREVOR_SMALL_01");`
  * 
- * Hash: 0xB138AAB8A70D3C69 | Since: 323
+ * Hash: 0xB138AAB8A70D3C69 | Since: unknown
  */
 export function playMissionComplete(audioName: string): void {
     PlayMissionCompleteAudio(audioName);
@@ -1136,7 +1136,7 @@ export function playMissionComplete(audioName: string): void {
  * 8 - On Fire
  * 
  * 
- * Hash: 0xBC9AE166038A5CEC | Since: 323
+ * Hash: 0xBC9AE166038A5CEC | Since: unknown
  */
 export function playPain(ped: number | IPed, painID: number): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1150,7 +1150,7 @@ export function playPain(ped: number | IPed, painID: number): void {
  * 
  * Full list of speeches and voices names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/speeches.json
  * 
- * Hash: 0xC6941B4A3A8FBBB9 | Since: 323
+ * Hash: 0xC6941B4A3A8FBBB9 | Since: unknown
  */
 export function playPedAmbientSpeechAndCloneNative(ped: number | IPed, speechName: string, speechParam: string): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1205,7 +1205,7 @@ export function playPedAmbientSpeechAndCloneNative(ped: number | IPed, speechNam
  * 
  * Full list of speeches and voices names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/speeches.json
  * 
- * Hash: 0x8E04FEDD28D42462 | Since: 323
+ * Hash: 0x8E04FEDD28D42462 | Since: unknown
  */
 export function playPedAmbientSpeechNative(ped: number | IPed, speechName: string, speechParam: string): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1222,7 +1222,7 @@ export function playPedAmbientSpeechNative(ped: number | IPed, speechName: strin
  * 
  * Full list of speeches and voices names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/speeches.json
  * 
- * Hash: 0x3523634255FC3318 | Since: 323
+ * Hash: 0x3523634255FC3318 | Since: unknown
  */
 export function playPedAmbientSpeechWithVoiceNative(ped: number | IPed, speechName: string, voiceName: string, speechParam: string): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1232,7 +1232,7 @@ export function playPedAmbientSpeechWithVoiceNative(ped: number | IPed, speechNa
 /**
  * No comment provided
  * 
- * Hash: 0xAD2191A6E3543189 | Since: 3717
+ * Hash: 0xAD2191A6E3543189 | Since: unknown
  */
 export function playPedEventAnim(pedHandle: number | IPed, audioEvent: string): void {
     const _pedHandle = typeof pedHandle == 'object' ? pedHandle.handle() : pedHandle;
@@ -1246,7 +1246,7 @@ export function playPedEventAnim(pedHandle: number | IPed, audioEvent: string): 
  * `AUDIO::PLAY_PED_RINGTONE("Dial_and_Remote_Ring", PLAYER::PLAYER_PED_ID(), 1);`
  * 
  * 
- * Hash: 0xF9E56683CA8E11A5 | Since: 323
+ * Hash: 0xF9E56683CA8E11A5 | Since: unknown
  */
 export function playPedRingtone(ringtoneName: string, ped: number | IPed): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1259,7 +1259,7 @@ export function playPedRingtone(ringtoneName: string, ped: number | IPed): void 
  * All found occurrences in b617d, sorted alphabetically and identical lines removed: https://pastebin.com/GBnsQ5hr
  * Full list of police report names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/policeReportNames.json
  * 
- * Hash: 0xDFEBD56D9BD1EB16 | Since: 323
+ * Hash: 0xDFEBD56D9BD1EB16 | Since: unknown
  */
 export function playPoliceReport(name: string): number {
     return PlayPoliceReport(name, 0);
@@ -1270,7 +1270,7 @@ export function playPoliceReport(name: string): number {
  * 
  * Full list of audio / sound names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/soundNames.json
  * 
- * Hash: 0x7FF4944CC209192D | Since: 323
+ * Hash: 0x7FF4944CC209192D | Since: unknown
  */
 export function playSound(soundId: number, audioName: string, audioRef: string): void {
     PlaySound(soundId, audioName, audioRef, false, undefined, false);
@@ -1283,7 +1283,7 @@ export function playSound(soundId: number, audioName: string, audioRef: string):
  * 
  * Full list of audio / sound names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/soundNames.json
  * 
- * Hash: 0x8D8686B622B88120 | Since: 323
+ * Hash: 0x8D8686B622B88120 | Since: unknown
  */
 export function playSoundFromCoord(soundId: number, audioName: string, pos: Vector3, audioRef: string, isNetwork: boolean, range: number): void {
     PlaySoundFromCoord(soundId, audioName, pos.x, pos.y, pos.z, audioRef, isNetwork, range, false);
@@ -1297,7 +1297,7 @@ export function playSoundFromCoord(soundId: number, audioName: string, pos: Vect
  * 
  * Full list of audio / sound names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/soundNames.json
  * 
- * Hash: 0xE65F427EB70AB1ED | Since: 323
+ * Hash: 0xE65F427EB70AB1ED | Since: unknown
  */
 export function playSoundFromEntity(soundId: number, audioName: string, entity: number | IEntity, audioRef: string, isNetwork: boolean): void {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -1308,7 +1308,7 @@ export function playSoundFromEntity(soundId: number, audioName: string, entity: 
  * Only used with "formation_flying_blips_soundset" and "biker_formation_blips_soundset".
  * p1 is always the model of p2
  * 
- * Hash: 0x5B9853296731E88D | Since: 877
+ * Hash: 0x5B9853296731E88D | Since: unknown
  */
 export function playSoundFromEntityHash(soundId: number, model: number | string, entity: number | IEntity, soundSetHash: number | string): void {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -1324,7 +1324,7 @@ export function playSoundFromEntityHash(soundId: number, model: number | string,
  * 
  * Full list of audio / sound names by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/soundNames.json
  * 
- * Hash: 0x67C540AA08E4A6F5 | Since: 323
+ * Hash: 0x67C540AA08E4A6F5 | Since: unknown
  */
 export function playSoundFrontend(soundId: number, audioName: string, audioRef: string): void {
     PlaySoundFrontend(soundId, audioName, audioRef, false);
@@ -1343,7 +1343,7 @@ export function playSoundFrontend(soundId: number, audioName: string, audioRef: 
  * `AUDIO::PLAY_STREAM_FROM_OBJECT(l_36F[0\/\*1\*\/]);`
  * }
  * 
- * Hash: 0xEBAA9B64D76356FD | Since: 323
+ * Hash: 0xEBAA9B64D76356FD | Since: unknown
  */
 export function playStreamFromObject(_object: number | IObject): void {
     const __object = typeof _object == 'object' ? _object.handle() : _object;
@@ -1353,7 +1353,7 @@ export function playStreamFromObject(_object: number | IObject): void {
 /**
  * No comment provided
  * 
- * Hash: 0x89049DD63C08B5D1 | Since: 323
+ * Hash: 0x89049DD63C08B5D1 | Since: unknown
  */
 export function playStreamFromPed(ped: number | IPed): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1363,7 +1363,7 @@ export function playStreamFromPed(ped: number | IPed): void {
 /**
  * No comment provided
  * 
- * Hash: 0x21442F412E8DE56B | Since: 323
+ * Hash: 0x21442F412E8DE56B | Since: unknown
  */
 export function playStreamFromPosition(pos: Vector3): void {
     PlayStreamFromPosition(pos.x, pos.y, pos.z);
@@ -1372,7 +1372,7 @@ export function playStreamFromPosition(pos: Vector3): void {
 /**
  * No comment provided
  * 
- * Hash: 0xB70374A758007DFA | Since: 323
+ * Hash: 0xB70374A758007DFA | Since: unknown
  */
 export function playStreamFromVehicle(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1382,7 +1382,7 @@ export function playStreamFromVehicle(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x58FCE43488F9F5F4 | Since: 323
+ * Hash: 0x58FCE43488F9F5F4 | Since: unknown
  */
 export function playStreamFrontend(): void {
     PlayStreamFrontend();
@@ -1391,7 +1391,7 @@ export function playStreamFrontend(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x8B2FD4560E55DD2D | Since: 323
+ * Hash: 0x8B2FD4560E55DD2D | Since: unknown
  */
 export function playSynchronizedEvent(sceneID: number): boolean {
     return PlaySynchronizedAudioEvent(sceneID);
@@ -1400,7 +1400,7 @@ export function playSynchronizedEvent(sceneID: number): boolean {
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  * 
- * Hash: 0x62A456AA4769EF34 | Since: 323
+ * Hash: 0x62A456AA4769EF34 | Since: unknown
  */
 export function playVehicleDoorCloseSound(vehicle: number | IVehicle, doorId: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1410,7 +1410,7 @@ export function playVehicleDoorCloseSound(vehicle: number | IVehicle, doorId: nu
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  * 
- * Hash: 0x3A539D52857EA82D | Since: 323
+ * Hash: 0x3A539D52857EA82D | Since: unknown
  */
 export function playVehicleDoorOpenSound(vehicle: number | IVehicle, doorId: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1420,7 +1420,7 @@ export function playVehicleDoorOpenSound(vehicle: number | IVehicle, doorId: num
 /**
  * No comment provided
  * 
- * Hash: 0x3B3CAD6166916D87 | Since: 323
+ * Hash: 0x3B3CAD6166916D87 | Since: unknown
  */
 export function preloadScriptConversation(): void {
     PreloadScriptConversation(false, false, false, false);
@@ -1429,7 +1429,7 @@ export function preloadScriptConversation(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x6004BCB0E226AAEA | Since: 323
+ * Hash: 0x6004BCB0E226AAEA | Since: unknown
  */
 export function preloadScriptPhoneConversation(): void {
     PreloadScriptPhoneConversation(false, false);
@@ -1438,7 +1438,7 @@ export function preloadScriptPhoneConversation(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xCA4CEA6AE0000A7E | Since: 1180
+ * Hash: 0xCA4CEA6AE0000A7E | Since: unknown
  */
 export function preloadVehicleBank(vehicleModel: number | string): void {
     if (typeof vehicleModel === 'string') vehicleModel = GetHashKey(vehicleModel)
@@ -1451,7 +1451,7 @@ export function preloadVehicleBank(vehicleModel: number | string): void {
  * `bool prepareAlarm = AUDIO::PREPARE_ALARM("PORT_OF_LS_HEIST_FORT_ZANCUDO_ALARMS");`
  * Full list of alarm names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/alarmSounds.json
  * 
- * Hash: 0x9D74AE343DB65533 | Since: 323
+ * Hash: 0x9D74AE343DB65533 | Since: unknown
  */
 export function prepareAlarm(alarmName: string): boolean {
     return PrepareAlarm(alarmName);
@@ -1461,7 +1461,7 @@ export function prepareAlarm(alarmName: string): boolean {
  * All music event names found in the b617d scripts: https://pastebin.com/GnYt0R3P
  * Full list of music event names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/musicEventNames.json
  * 
- * Hash: 0x1E5185B72EF5158A | Since: 323
+ * Hash: 0x1E5185B72EF5158A | Since: unknown
  */
 export function prepareMusicEvent(eventName: string): boolean {
     return PrepareMusicEvent(eventName);
@@ -1470,7 +1470,7 @@ export function prepareMusicEvent(eventName: string): boolean {
 /**
  * p1 is always 0 in the scripts
  * 
- * Hash: 0xC7ABCACA4985A766 | Since: 323
+ * Hash: 0xC7ABCACA4985A766 | Since: unknown
  */
 export function prepareSynchronizedEvent(audioEvent: string): boolean {
     return PrepareSynchronizedAudioEvent(audioEvent, undefined);
@@ -1479,7 +1479,7 @@ export function prepareSynchronizedEvent(audioEvent: string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x029FE7CD1B7E2E75 | Since: 323
+ * Hash: 0x029FE7CD1B7E2E75 | Since: unknown
  */
 export function prepareSynchronizedEventForScene(sceneID: number, audioEvent: string): boolean {
     return PrepareSynchronizedAudioEventForScene(sceneID, audioEvent);
@@ -1488,7 +1488,7 @@ export function prepareSynchronizedEventForScene(sceneID: number, audioEvent: st
 /**
  * No comment provided
  * 
- * Hash: 0xFBE20329593DEC9D | Since: 323
+ * Hash: 0xFBE20329593DEC9D | Since: unknown
  */
 export function recordBrokenGlass(pos: Vector3, radius: number): void {
     RecordBrokenGlass(pos.x, pos.y, pos.z, radius);
@@ -1497,7 +1497,7 @@ export function recordBrokenGlass(pos: Vector3, radius: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x5D2BFAAB8D956E0E | Since: 573
+ * Hash: 0x5D2BFAAB8D956E0E | Since: unknown
  */
 export function refreshClosestOceanShoreline(): void {
     RefreshClosestOceanShoreline();
@@ -1506,7 +1506,7 @@ export function refreshClosestOceanShoreline(): void {
 /**
  * This native does absolutely nothing, just a nullsub
  * 
- * Hash: 0xC6ED9D5092438D91 | Since: 323
+ * Hash: 0xC6ED9D5092438D91 | Since: unknown
  */
 export function registerScriptWith(): void {
     RegisterScriptWithAudio(0);
@@ -1515,7 +1515,7 @@ export function registerScriptWith(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x65475A218FFAA93D | Since: 323
+ * Hash: 0x65475A218FFAA93D | Since: unknown
  */
 export function releaseAmbientBank(): void {
     ReleaseAmbientAudioBank();
@@ -1524,7 +1524,7 @@ export function releaseAmbientBank(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x0EC92A1BF0857187 | Since: 323
+ * Hash: 0x0EC92A1BF0857187 | Since: unknown
  */
 export function releaseMissionBank(): void {
     ReleaseMissionAudioBank();
@@ -1533,7 +1533,7 @@ export function releaseMissionBank(): void {
 /**
  * Full list of script audio bank names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scriptAudioBankNames.json
  * 
- * Hash: 0x77ED170667F50170 | Since: 323
+ * Hash: 0x77ED170667F50170 | Since: unknown
  */
 export function releaseNamedScriptBank(audioBank: string): void {
     ReleaseNamedScriptAudioBank(audioBank);
@@ -1542,7 +1542,7 @@ export function releaseNamedScriptBank(audioBank: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0x7A2D8AD0A9EB9C3F | Since: 323
+ * Hash: 0x7A2D8AD0A9EB9C3F | Since: unknown
  */
 export function releaseScriptBank(): void {
     ReleaseScriptAudioBank();
@@ -1551,7 +1551,7 @@ export function releaseScriptBank(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x353FC880830B88FA | Since: 323
+ * Hash: 0x353FC880830B88FA | Since: unknown
  */
 export function releaseSoundId(soundId: number): void {
     ReleaseSoundId(soundId);
@@ -1560,7 +1560,7 @@ export function releaseSoundId(soundId: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xCE4AC0439F607045 | Since: 323
+ * Hash: 0xCE4AC0439F607045 | Since: unknown
  */
 export function releaseWeapon(): void {
     ReleaseWeaponAudio();
@@ -1569,7 +1569,7 @@ export function releaseWeapon(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x18EB48CFC41F2EA0 | Since: 323
+ * Hash: 0x18EB48CFC41F2EA0 | Since: unknown
  */
 export function removeEntityFromMixGroup(entity: number | IEntity): void {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -1579,7 +1579,7 @@ export function removeEntityFromMixGroup(entity: number | IEntity): void {
 /**
  * No comment provided
  * 
- * Hash: 0x8EF105736194F80C | Since: 3570
+ * Hash: 0x8EF105736194F80C | Since: unknown
  */
 export function removeIndividualPortalSettingsOverride(interiorNameHash: number | string, roomIndex: number, doorIndex: number): void {
     if (typeof interiorNameHash === 'string') interiorNameHash = GetHashKey(interiorNameHash)
@@ -1595,7 +1595,7 @@ export function removeIndividualPortalSettingsOverride(interiorNameHash: number 
  * `AUDIO::REMOVE_PORTAL_SETTINGS_OVERRIDE("V_FINALEBANK_PS_VAULT_INTACT");`
  * `AUDIO::REMOVE_PORTAL_SETTINGS_OVERRIDE("V_MICHAEL_PS_BATHROOM_WITH_WINDOW");`
  * 
- * Hash: 0xB4BBFD9CD8B3922B | Since: 323
+ * Hash: 0xB4BBFD9CD8B3922B | Since: unknown
  */
 export function removePortalSettingsOverride(): void {
     RemovePortalSettingsOverride(undefined);
@@ -1606,7 +1606,7 @@ export function removePortalSettingsOverride(): void {
  * Full list of ambient audio bank names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientAudioBankNames.json
  * p2 is always -1
  * 
- * Hash: 0xFE02FFBED8CA9D99 | Since: 323
+ * Hash: 0xFE02FFBED8CA9D99 | Since: unknown
  */
 export function requestAmbientBank(audioBank: string): boolean {
     return RequestAmbientAudioBank(audioBank, false, undefined);
@@ -1617,7 +1617,7 @@ export function requestAmbientBank(audioBank: string): boolean {
  * Full list of mission audio bank names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/missionAudioBankNames.json
  * p2 is always -1
  * 
- * Hash: 0x7345BDD95E62E0F2 | Since: 323
+ * Hash: 0x7345BDD95E62E0F2 | Since: unknown
  */
 export function requestMissionBank(audioBank: string): boolean {
     return RequestMissionAudioBank(audioBank, false, undefined);
@@ -1628,7 +1628,7 @@ export function requestMissionBank(audioBank: string): boolean {
  * Full list of script audio bank names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/scriptAudioBankNames.json
  * p2 is always -1
  * 
- * Hash: 0x2F844A8B08D76685 | Since: 323
+ * Hash: 0x2F844A8B08D76685 | Since: unknown
  */
 export function requestScriptBank(audioBank: string): boolean {
     return RequestScriptAudioBank(audioBank, false, undefined);
@@ -1637,7 +1637,7 @@ export function requestScriptBank(audioBank: string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x4ADA3F19BE4A6047 | Since: 323
+ * Hash: 0x4ADA3F19BE4A6047 | Since: unknown
  */
 export function requestTennisBanks(ped: number | IPed): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1647,7 +1647,7 @@ export function requestTennisBanks(ped: number | IPed): void {
 /**
  * No comment provided
  * 
- * Hash: 0xF54BB7B61036F335 | Since: 323
+ * Hash: 0xF54BB7B61036F335 | Since: unknown
  */
 export function resetPedFlags(ped: number | IPed): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1657,7 +1657,7 @@ export function resetPedFlags(ped: number | IPed): void {
 /**
  * No comment provided
  * 
- * Hash: 0xE78503B10C4314E0 | Since: 323
+ * Hash: 0xE78503B10C4314E0 | Since: unknown
  */
 export function resetTrevorRage(): void {
     ResetTrevorRage();
@@ -1666,7 +1666,7 @@ export function resetTrevorRage(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xD2DCCD8E16E20997 | Since: 323
+ * Hash: 0xD2DCCD8E16E20997 | Since: unknown
  */
 export function resetVehicleStartupRevSound(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1676,7 +1676,7 @@ export function resetVehicleStartupRevSound(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x9AEB285D1818C9AC | Since: 323
+ * Hash: 0x9AEB285D1818C9AC | Since: unknown
  */
 export function restartScriptedConversation(): void {
     RestartScriptedConversation();
@@ -1685,7 +1685,7 @@ export function restartScriptedConversation(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x70B8EC8FC108A634 | Since: 323
+ * Hash: 0x70B8EC8FC108A634 | Since: unknown
  */
 export function scriptOverridesWindElevation(): void {
     ScriptOverridesWindElevation(false, undefined);
@@ -1694,7 +1694,7 @@ export function scriptOverridesWindElevation(): void {
 /**
  * Makes pedestrians sound their horn longer, faster and more agressive when they use their horn.
  * 
- * Hash: 0x395BF71085D1B1D9 | Since: 323
+ * Hash: 0x395BF71085D1B1D9 | Since: unknown
  */
 export function setAggressiveHorns(toggle: boolean): void {
     SetAggressiveHorns(toggle);
@@ -1706,7 +1706,7 @@ export function setAggressiveHorns(toggle: boolean): void {
  * 
  * All found occurrences in b617d, sorted alphabetically and identical lines removed: https://pastebin.com/FTeAj4yZ
  * 
- * Hash: 0x6C8065A3B780185B | Since: 323
+ * Hash: 0x6C8065A3B780185B | Since: unknown
  */
 export function setAmbientVoiceName(ped: number | IPed, name: string): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1716,7 +1716,7 @@ export function setAmbientVoiceName(ped: number | IPed, name: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0x9A53DED9921DE990 | Since: 463
+ * Hash: 0x9A53DED9921DE990 | Since: unknown
  */
 export function setAmbientVoiceNameHash(ped: number | IPed, hash: number | string): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -1727,43 +1727,43 @@ export function setAmbientVoiceNameHash(ped: number | IPed, hash: number | strin
 /**
  * No comment provided
  * 
- * Hash: 0x9748FA4DE50CCE3E | Since: 323
+ * Hash: 0x9748FA4DE50CCE3E | Since: unknown
  */
-export function setAmbientZoneListState(ambientZone: string, enabled: boolean, forceUpdate: boolean): void {
-    SetAmbientZoneListState(ambientZone, enabled, forceUpdate);
+export function setAmbientZoneListState(ambientZone: string): void {
+    SetAmbientZoneListState(ambientZone, false, false);
 }
 
 /**
  * Full list of ambient zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientZones.json
  * 
- * Hash: 0xF3638DAE8C4045E1 | Since: 323
+ * Hash: 0xF3638DAE8C4045E1 | Since: unknown
  */
-export function setAmbientZoneListStatePersistent(ambientZone: string, enabled: boolean, forceUpdate: boolean): void {
-    SetAmbientZoneListStatePersistent(ambientZone, enabled, forceUpdate);
+export function setAmbientZoneListStatePersistent(ambientZone: string): void {
+    SetAmbientZoneListStatePersistent(ambientZone, false, false);
 }
 
 /**
  * Full list of ambient zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientZones.json
  * 
- * Hash: 0xBDA07E5950085E46 | Since: 323
+ * Hash: 0xBDA07E5950085E46 | Since: unknown
  */
-export function setAmbientZoneState(zoneName: string, enabled: boolean, forceUpdate: boolean): void {
-    SetAmbientZoneState(zoneName, enabled, forceUpdate);
+export function setAmbientZoneState(zoneName: string): void {
+    SetAmbientZoneState(zoneName, false, false);
 }
 
 /**
  * Full list of ambient zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/ambientZones.json
  * 
- * Hash: 0x1D6650420CEC9D3B | Since: 323
+ * Hash: 0x1D6650420CEC9D3B | Since: unknown
  */
-export function setAmbientZoneStatePersistent(ambientZone: string, enabled: boolean, forceUpdate: boolean): void {
-    SetAmbientZoneStatePersistent(ambientZone, enabled, forceUpdate);
+export function setAmbientZoneStatePersistent(ambientZone: string): void {
+    SetAmbientZoneStatePersistent(ambientZone, false, false);
 }
 
 /**
  * mood can be 0 or 1 (it's not a boolean value!). Effects audio of the animal.
  * 
- * Hash: 0xCC97B29285B1DC3B | Since: 323
+ * Hash: 0xCC97B29285B1DC3B | Since: unknown
  */
 export function setAnimalMood(animal: number | IPed, mood: number): void {
     const _animal = typeof animal == 'object' ? animal.handle() : animal;
@@ -1885,7 +1885,7 @@ export function setAnimalMood(animal: number | IPed, mood: number): void {
  * ID: 62 | Hash: 0xE24C3AA6
  * ID: 63 | Hash: 0xBFFDD2B7
  * 
- * Hash: 0xB9EFD5C25018725A | Since: 323
+ * Hash: 0xB9EFD5C25018725A | Since: unknown
  */
 export function setFlag(flagName: string, toggle: boolean): void {
     SetAudioFlag(flagName, toggle);
@@ -1894,7 +1894,7 @@ export function setFlag(flagName: string, toggle: boolean): void {
 /**
  * Full list of audio scene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/audioSceneNames.json
  * 
- * Hash: 0xEF21A9EF089A2668 | Since: 323
+ * Hash: 0xEF21A9EF089A2668 | Since: unknown
  */
 export function setSceneVariable(scene: string, variable: string, value: number): void {
     SetAudioSceneVariable(scene, variable, value);
@@ -1903,7 +1903,7 @@ export function setSceneVariable(scene: string, variable: string, value: number)
 /**
  * No comment provided
  * 
- * Hash: 0xA5F377B175A699C5 | Since: 323
+ * Hash: 0xA5F377B175A699C5 | Since: unknown
  */
 export function setScriptCleanupTime(time: number): void {
     SetAudioScriptCleanupTime(time);
@@ -1913,7 +1913,7 @@ export function setScriptCleanupTime(time: number): void {
  * Needs to be called every frame.
  * Audio mode to apply this frame: https://alloc8or.re/gta5/doc/enums/audSpecialEffectMode.txt
  * 
- * Hash: 0x12561FCBB62D5B9C | Since: 323
+ * Hash: 0x12561FCBB62D5B9C | Since: unknown
  */
 export function setSpecialEffectMode(mode: number): void {
     SetAudioSpecialEffectMode(mode);
@@ -1922,7 +1922,7 @@ export function setSpecialEffectMode(mode: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xE5564483E407F914 | Since: 323
+ * Hash: 0xE5564483E407F914 | Since: unknown
  */
 export function setVehiclePriority(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1932,7 +1932,7 @@ export function setVehiclePriority(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x0B568201DD99F0EB | Since: 323
+ * Hash: 0x0B568201DD99F0EB | Since: unknown
  */
 export function setConversationControlledByAnim(): void {
     SetConversationAudioControlledByAnim(false);
@@ -1941,7 +1941,7 @@ export function setConversationControlledByAnim(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x61631F5DF50D1C34 | Since: 323
+ * Hash: 0x61631F5DF50D1C34 | Since: unknown
  */
 export function setConversationPlaceholder(): void {
     SetConversationAudioPlaceholder(false);
@@ -1959,7 +1959,7 @@ export function setConversationPlaceholder(): void {
  * `AUDIO::SET_CUSTOM_RADIO_TRACK_LIST("RADIO_16_SILVERLAKE", "SEA_RACE_RADIO_PLAYLIST", 1);`
  * `AUDIO::SET_CUSTOM_RADIO_TRACK_LIST("RADIO_01_CLASS_ROCK", "OFF_ROAD_RADIO_ROCK_LIST", 1);`
  * 
- * Hash: 0x4E404A9361F75BB2 | Since: 323
+ * Hash: 0x4E404A9361F75BB2 | Since: unknown
  */
 export function setCustomRadioTrackList(radioStation: string, trackListName: string): void {
     SetCustomRadioTrackList(radioStation, trackListName, false);
@@ -1973,7 +1973,7 @@ export function setCustomRadioTrackList(radioStation: string, trackListName: str
  * `AUDIO::SET_CUTSCENE_AUDIO_OVERRIDE("_TOOTHLESS");`
  * Full list of cutscene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/cutsceneNames.json
  * 
- * Hash: 0x3B4BF5F0859204D9 | Since: 323
+ * Hash: 0x3B4BF5F0859204D9 | Since: unknown
  */
 export function setCutsceneOverride(name: string): void {
     SetCutsceneAudioOverride(name);
@@ -1982,7 +1982,7 @@ export function setCutsceneOverride(name: string): void {
 /**
  * Full list of static emitters by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/staticEmitters.json
  * 
- * Hash: 0xACF57305B12AF907 | Since: 323
+ * Hash: 0xACF57305B12AF907 | Since: unknown
  */
 export function setEmitterRadioStation(emitterName: string, radioStation: string): void {
     SetEmitterRadioStation(emitterName, radioStation, undefined);
@@ -1991,7 +1991,7 @@ export function setEmitterRadioStation(emitterName: string, radioStation: string
 /**
  * No comment provided
  * 
- * Hash: 0x892B6AB8F33606F5 | Since: 323
+ * Hash: 0x892B6AB8F33606F5 | Since: unknown
  */
 export function setEntityForNullConvPed(entity: number | IEntity): void {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -2001,7 +2001,7 @@ export function setEntityForNullConvPed(entity: number | IEntity): void {
 /**
  * No comment provided
  * 
- * Hash: 0xF7F26C6E9CC9EBB8 | Since: 323
+ * Hash: 0xF7F26C6E9CC9EBB8 | Since: unknown
  */
 export function setFrontendRadioActive(active: boolean): void {
     SetFrontendRadioActive(active);
@@ -2010,7 +2010,7 @@ export function setFrontendRadioActive(active: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x159B7318403A1CD8 | Since: 1103
+ * Hash: 0x159B7318403A1CD8 | Since: unknown
  */
 export function setGlobalRadioSignalLevel(): void {
     SetGlobalRadioSignalLevel(undefined);
@@ -2019,7 +2019,7 @@ export function setGlobalRadioSignalLevel(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x3BD3F52BA9B1E4E8 | Since: 323
+ * Hash: 0x3BD3F52BA9B1E4E8 | Since: unknown
  */
 export function setGpsActive(active: boolean): void {
     SetGpsActive(active);
@@ -2028,7 +2028,7 @@ export function setGpsActive(active: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x76D683C108594D0E | Since: 323
+ * Hash: 0x76D683C108594D0E | Since: unknown
  */
 export function setHornEnabled(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2038,7 +2038,7 @@ export function setHornEnabled(vehicle: number | IVehicle, toggle: boolean): voi
 /**
  * No comment provided
  * 
- * Hash: 0x9C11908013EA4715 | Since: 323
+ * Hash: 0x9C11908013EA4715 | Since: unknown
  */
 export function setHornPermanentlyOn(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2048,7 +2048,7 @@ export function setHornPermanentlyOn(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x9D3AF56E94C9AE98 | Since: 323
+ * Hash: 0x9D3AF56E94C9AE98 | Since: unknown
  */
 export function setHornPermanentlyOnTime(vehicle: number | IVehicle, time: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2058,7 +2058,7 @@ export function setHornPermanentlyOnTime(vehicle: number | IVehicle, time: numbe
 /**
  * No comment provided
  * 
- * Hash: 0xC9D623C5A3D8FD5D | Since: 3570
+ * Hash: 0xC9D623C5A3D8FD5D | Since: unknown
  */
 export function setIndividualPortalSettingsOverride(interiorNameHash: number | string, roomIndex: number, doorIndex: number, newPortalSettingsName: string): void {
     if (typeof interiorNameHash === 'string') interiorNameHash = GetHashKey(interiorNameHash)
@@ -2068,7 +2068,7 @@ export function setIndividualPortalSettingsOverride(interiorNameHash: number | s
 /**
  * No comment provided
  * 
- * Hash: 0x88795F13FACDA88D | Since: 323
+ * Hash: 0x88795F13FACDA88D | Since: unknown
  */
 export function setInitialPlayerStation(radioStation: string): void {
     SetInitialPlayerStation(radioStation);
@@ -2081,7 +2081,7 @@ export function setInitialPlayerStation(radioStation: string): void {
  * The scripts mostly use it with only one position such as in fbi3.c:
  * `AUDIO::SET_MICROPHONE_POSITION(true, ENTITY::GET_ENTITY_COORDS(iLocal_3091, true), ENTITY::GET_ENTITY_COORDS(iLocal_3091, true), ENTITY::GET_ENTITY_COORDS(iLocal_3091, true));`
  * 
- * Hash: 0xB6AE90EDDE95C762 | Since: 323
+ * Hash: 0xB6AE90EDDE95C762 | Since: unknown
  */
 export function setMicrophonePosition(toggle: boolean, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, x3: number, y3: number, z3: number): void {
     SetMicrophonePosition(toggle, x1, y1, z1, x2, y2, z2, x3, y3, z3);
@@ -2090,7 +2090,7 @@ export function setMicrophonePosition(toggle: boolean, x1: number, y1: number, z
 /**
  * No comment provided
  * 
- * Hash: 0xBF286C554784F3DF | Since: 323
+ * Hash: 0xBF286C554784F3DF | Since: unknown
  */
 export function setMobilePhoneRadioState(state: boolean): void {
     SetMobilePhoneRadioState(state);
@@ -2099,7 +2099,7 @@ export function setMobilePhoneRadioState(state: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x1098355A16064BB3 | Since: 323
+ * Hash: 0x1098355A16064BB3 | Since: unknown
  */
 export function setMobileRadioEnabledDuringGameplay(toggle: boolean): void {
     SetMobileRadioEnabledDuringGameplay(toggle);
@@ -2108,7 +2108,7 @@ export function setMobileRadioEnabledDuringGameplay(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x55ECF4D13D9903B0 | Since: 1868
+ * Hash: 0x55ECF4D13D9903B0 | Since: unknown
  */
 export function setNextRadioTrack(radioName: string, radioTrack: string): void {
     Citizen.invokeNative('0x55ECF4D13D9903B0', radioName, radioTrack, undefined, undefined);
@@ -2117,7 +2117,7 @@ export function setNextRadioTrack(radioName: string, radioTrack: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0xB542DE8C3D1CB210 | Since: 323
+ * Hash: 0xB542DE8C3D1CB210 | Since: unknown
  */
 export function setNoDuckingForConversation(): void {
     Citizen.invokeNative('0xB542DE8C3D1CB210', false);
@@ -2126,7 +2126,7 @@ export function setNoDuckingForConversation(): void {
 /**
  * Enables/disables ped's "quiet" footstep sound.
  * 
- * Hash: 0x29DA3CA8D8B2692D | Since: 1493
+ * Hash: 0x29DA3CA8D8B2692D | Since: unknown
  */
 export function setPedClothEventsEnabled(ped: number | IPed, toggle: boolean): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2136,7 +2136,7 @@ export function setPedClothEventsEnabled(ped: number | IPed, toggle: boolean): v
 /**
  * Enables/disables ped's "loud" footstep sound.
  * 
- * Hash: 0x0653B735BFBDFE87 | Since: 1493
+ * Hash: 0x0653B735BFBDFE87 | Since: unknown
  */
 export function setPedFootstepsEventsEnabled(ped: number | IPed, toggle: boolean): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2146,7 +2146,7 @@ export function setPedFootstepsEventsEnabled(ped: number | IPed, toggle: boolean
 /**
  * BOOL p1: 0 = Female; 1 = Male
  * 
- * Hash: 0xA5342D390CDA41D6 | Since: 323
+ * Hash: 0xA5342D390CDA41D6 | Since: unknown
  */
 export function setPedGender(ped: number | IPed): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2156,7 +2156,7 @@ export function setPedGender(ped: number | IPed): void {
 /**
  * No comment provided
  * 
- * Hash: 0x8BF907833BE275DE | Since: 323
+ * Hash: 0x8BF907833BE275DE | Since: unknown
  */
 export function setPedInteriorWallaDensity(): void {
     Citizen.invokeNative('0x8BF907833BE275DE', 0, 0);
@@ -2184,7 +2184,7 @@ export function setPedInteriorWallaDensity(): void {
  * And to stop the effect use
  * RESET_PED_MOVEMENT_CLIPSET
  * 
- * Hash: 0x95D2D383D5396B8A | Since: 323
+ * Hash: 0x95D2D383D5396B8A | Since: unknown
  */
 export function setPedIsDrunk(ped: number | IPed, toggle: boolean): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2194,7 +2194,7 @@ export function setPedIsDrunk(ped: number | IPed, toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x1B7ABE26CBCBF8C7 | Since: 372
+ * Hash: 0x1B7ABE26CBCBF8C7 | Since: unknown
  */
 export function setPedRaceAndVoiceGroup(ped: number | IPed, voiceGroup: number | string): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2205,7 +2205,7 @@ export function setPedRaceAndVoiceGroup(ped: number | IPed, voiceGroup: number |
 /**
  * Assigns some ambient voice to the ped.
  * 
- * Hash: 0x40CF0D12D142A9E8 | Since: 323
+ * Hash: 0x40CF0D12D142A9E8 | Since: unknown
  */
 export function setPedVoiceFull(ped: number | IPed): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2220,7 +2220,7 @@ export function setPedVoiceFull(ped: number | IPed): void {
  * `AUDIO::SET_PED_VOICE_GROUP(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY("FEMALE_LOST_BLACK_PVG"));`
  * `AUDIO::SET_PED_VOICE_GROUP(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY("FEMALE_LOST_WHITE_PVG"));`
  * 
- * Hash: 0x7CDC8C3B89F661B3 | Since: 323
+ * Hash: 0x7CDC8C3B89F661B3 | Since: unknown
  */
 export function setPedVoiceGroup(ped: number | IPed, voiceGroupHash: number | string): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2231,7 +2231,7 @@ export function setPedVoiceGroup(ped: number | IPed, voiceGroupHash: number | st
 /**
  * Dat151RelType == 29
  * 
- * Hash: 0x0BABC1345ABBFB16 | Since: 2699
+ * Hash: 0x0BABC1345ABBFB16 | Since: unknown
  */
 export function setPedVoiceGroupFromRaceToPvg(ped: number | IPed, voiceGroupHash: number | string): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2242,7 +2242,7 @@ export function setPedVoiceGroupFromRaceToPvg(ped: number | IPed, voiceGroupHash
 /**
  * No comment provided
  * 
- * Hash: 0x149AEE66F0CB3A99 | Since: 323
+ * Hash: 0x149AEE66F0CB3A99 | Since: unknown
  */
 export function setPedWallaDensity(): void {
     SetPedWallaDensity(0, 0);
@@ -2251,7 +2251,7 @@ export function setPedWallaDensity(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xEA241BB04110F091 | Since: 323
+ * Hash: 0xEA241BB04110F091 | Since: unknown
  */
 export function setPlayerAngry(ped: number | IPed, toggle: boolean): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2261,7 +2261,7 @@ export function setPlayerAngry(ped: number | IPed, toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x6FDDAD856E36988A | Since: 323
+ * Hash: 0x6FDDAD856E36988A | Since: unknown
  */
 export function setPlayerVehicleAlarmActive(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2281,7 +2281,7 @@ export function setPlayerVehicleAlarmActive(vehicle: number | IVehicle, toggle: 
  * 
  * `AUDIO::SET_PORTAL_SETTINGS_OVERRIDE("V_MICHAEL_PS_BATHROOM_WITH_WINDOW", "V_MICHAEL_PS_BATHROOM_WITHOUT_WINDOW");`
  * 
- * Hash: 0x044DBAD7A7FA2BE5 | Since: 323
+ * Hash: 0x044DBAD7A7FA2BE5 | Since: unknown
  */
 export function setPortalSettingsOverride(): void {
     SetPortalSettingsOverride(undefined, undefined);
@@ -2290,7 +2290,7 @@ export function setPortalSettingsOverride(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xDA07819E452FFE8F | Since: 505
+ * Hash: 0xDA07819E452FFE8F | Since: unknown
  */
 export function setPositionedPlayerVehicleRadioEmitterEnabled(): void {
     SetPositionedPlayerVehicleRadioEmitterEnabled(undefined);
@@ -2299,7 +2299,7 @@ export function setPositionedPlayerVehicleRadioEmitterEnabled(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x33E3C6C6F2F0B506 | Since: 323
+ * Hash: 0x33E3C6C6F2F0B506 | Since: unknown
  */
 export function setPositionForNullConvPed(): void {
     SetPositionForNullConvPed(undefined, 0, 0, 0);
@@ -2308,7 +2308,7 @@ export function setPositionForNullConvPed(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xC1AA9F53CE982990 | Since: 323
+ * Hash: 0xC1AA9F53CE982990 | Since: unknown
  */
 export function setRadioAutoUnfreeze(toggle: boolean): void {
     SetRadioAutoUnfreeze(toggle);
@@ -2317,7 +2317,7 @@ export function setRadioAutoUnfreeze(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2C96CDB04FCA358E | Since: 323
+ * Hash: 0x2C96CDB04FCA358E | Since: unknown
  */
 export function setRadioFrontendFadeTime(fadeTime: number): void {
     SetRadioFrontendFadeTime(fadeTime);
@@ -2326,7 +2326,7 @@ export function setRadioFrontendFadeTime(fadeTime: number): void {
 /**
  * Does nothing (it's a nullsub).
  * 
- * Hash: 0x02E93C796ABD3A97 | Since: 323
+ * Hash: 0x02E93C796ABD3A97 | Since: unknown
  */
 export function setRadioPositionMute(): void {
     Citizen.invokeNative('0x02E93C796ABD3A97', false);
@@ -2335,7 +2335,7 @@ export function setRadioPositionMute(): void {
 /**
  * Tune Backwards...
  * 
- * Hash: 0xDD6BCF9E94425DF9 | Since: 323
+ * Hash: 0xDD6BCF9E94425DF9 | Since: unknown
  */
 export function setRadioRetuneDown(): void {
     Citizen.invokeNative('0xDD6BCF9E94425DF9');
@@ -2344,7 +2344,7 @@ export function setRadioRetuneDown(): void {
 /**
  * Tune Forward...
  * 
- * Hash: 0xFF266D1D0EB1195D | Since: 323
+ * Hash: 0xFF266D1D0EB1195D | Since: unknown
  */
 export function setRadioRetuneUp(): void {
     Citizen.invokeNative('0xFF266D1D0EB1195D');
@@ -2353,7 +2353,7 @@ export function setRadioRetuneUp(): void {
 /**
  * Doesn't have an effect in Story Mode.
  * 
- * Hash: 0x4CAFEBFA21EC188D | Since: 2372
+ * Hash: 0x4CAFEBFA21EC188D | Since: unknown
  */
 export function setRadioStationAsFavourite(radioStation: string, toggle: boolean): void {
     SetRadioStationIsVisible(radioStation, toggle);
@@ -2366,7 +2366,7 @@ export function setRadioStationAsFavourite(radioStation: string, toggle: boolean
  * `AUDIO::SET_RADIO_STATION_MUSIC_ONLY(AUDIO::GET_RADIO_STATION_NAME(10), 0);`
  * `AUDIO::SET_RADIO_STATION_MUSIC_ONLY(AUDIO::GET_RADIO_STATION_NAME(10), 1);`
  * 
- * Hash: 0x774BD811F656A122 | Since: 323
+ * Hash: 0x774BD811F656A122 | Since: unknown
  */
 export function setRadioStationMusicOnly(radioStation: string, toggle: boolean): void {
     SetRadioStationMusicOnly(radioStation, toggle);
@@ -2375,7 +2375,7 @@ export function setRadioStationMusicOnly(radioStation: string, toggle: boolean):
 /**
  * Sets radio station by index.
  * 
- * Hash: 0xA619B168B8A8570F | Since: 323
+ * Hash: 0xA619B168B8A8570F | Since: unknown
  */
 export function setRadioToStationIndex(radioStation: number): void {
     SetRadioToStationIndex(radioStation);
@@ -2385,7 +2385,7 @@ export function setRadioToStationIndex(radioStation: number): void {
  * List of radio stations that are in the wheel, in clockwise order, as of LS Tuners DLC: https://git.io/J8a3k
  * An older list including hidden radio stations: https://pastebin.com/Kj9t38KF
  * 
- * Hash: 0xC69EDA28699D5107 | Since: 323
+ * Hash: 0xC69EDA28699D5107 | Since: unknown
  */
 export function setRadioToStationName(stationName: string): void {
     SetRadioToStationName(stationName);
@@ -2397,7 +2397,7 @@ export function setRadioToStationName(stationName: string): void {
  * `AUDIO::SET_RADIO_TRACK("RADIO_03_HIPHOP_NEW", "ARM1_RADIO_STARTS");`
  * 
  * 
- * Hash: 0xB39786F201FEE30B | Since: 323
+ * Hash: 0xB39786F201FEE30B | Since: unknown
  */
 export function setRadioTrack(radioStation: string, radioTrack: string): void {
     SetRadioTrack(radioStation, radioTrack);
@@ -2406,7 +2406,7 @@ export function setRadioTrack(radioStation: string, radioTrack: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2CB0075110BE1E56 | Since: 1493
+ * Hash: 0x2CB0075110BE1E56 | Since: unknown
  */
 export function setRadioTrackWithStartOffset(radioStationName: string, mixName: string): void {
     SetRadioTrackMix(radioStationName, mixName, 0);
@@ -2415,7 +2415,7 @@ export function setRadioTrackWithStartOffset(radioStationName: string, mixName: 
 /**
  * No comment provided
  * 
- * Hash: 0x06C0023BED16DD6B | Since: 323
+ * Hash: 0x06C0023BED16DD6B | Since: unknown
  */
 export function setScriptUpdateDoor(doorHash: number | string, toggle: boolean): void {
     if (typeof doorHash === 'string') doorHash = GetHashKey(doorHash)
@@ -2425,7 +2425,7 @@ export function setScriptUpdateDoor(doorHash: number | string, toggle: boolean):
 /**
  * No comment provided
  * 
- * Hash: 0xF584CF8529B51434 | Since: 2372
+ * Hash: 0xF584CF8529B51434 | Since: unknown
  */
 export function setSirenBypassMpDriverCheck(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2435,7 +2435,7 @@ export function setSirenBypassMpDriverCheck(vehicle: number | IVehicle, toggle: 
 /**
  * No comment provided
  * 
- * Hash: 0x43FA0DFC5DF87815 | Since: 323
+ * Hash: 0x43FA0DFC5DF87815 | Since: unknown
  */
 export function setSirenCanBeControlledBy(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2445,7 +2445,7 @@ export function setSirenCanBeControlledBy(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x1FEF0683B96EBCF2 | Since: 323
+ * Hash: 0x1FEF0683B96EBCF2 | Since: unknown
  */
 export function setSirenWithNoDriver(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2455,7 +2455,7 @@ export function setSirenWithNoDriver(vehicle: number | IVehicle, toggle: boolean
 /**
  * No comment provided
  * 
- * Hash: 0xBEF34B1D9624D5DD | Since: 323
+ * Hash: 0xBEF34B1D9624D5DD | Since: unknown
  */
 export function setSkipMinigunSpinUp(): void {
     Citizen.invokeNative('0xBEF34B1D9624D5DD', false);
@@ -2469,7 +2469,7 @@ export function setSkipMinigunSpinUp(): void {
  * 
  * Full list of static emitters by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/staticEmitters.json
  * 
- * Hash: 0x399D2D3B33F1B8EB | Since: 323
+ * Hash: 0x399D2D3B33F1B8EB | Since: unknown
  */
 export function setStaticEmitterEnabled(emitterName: string, toggle: boolean): void {
     SetStaticEmitterEnabled(emitterName, toggle);
@@ -2478,7 +2478,7 @@ export function setStaticEmitterEnabled(emitterName: string, toggle: boolean): v
 /**
  * No comment provided
  * 
- * Hash: 0x19F21E63AE6EAE4E | Since: 323
+ * Hash: 0x19F21E63AE6EAE4E | Since: unknown
  */
 export function setUserRadioControlEnabled(toggle: boolean): void {
     SetUserRadioControlEnabled(toggle);
@@ -2487,7 +2487,7 @@ export function setUserRadioControlEnabled(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xAD6B3148A78AE9B6 | Since: 323
+ * Hash: 0xAD6B3148A78AE9B6 | Since: unknown
  */
 export function setVariableOnSound(soundId: number, variable: string): void {
     SetVariableOnSound(soundId, variable, 0);
@@ -2501,7 +2501,7 @@ export function setVariableOnSound(soundId: number, variable: string): void {
  * "Monkey_Stream",
  * "ZoomLevel"
  * 
- * Hash: 0x2F9D3834AEB9EF79 | Since: 323
+ * Hash: 0x2F9D3834AEB9EF79 | Since: unknown
  */
 export function setVariableOnStream(variable: string): void {
     SetVariableOnStream(variable, 0);
@@ -2510,7 +2510,7 @@ export function setVariableOnStream(variable: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0xBCC29F935ED07688 | Since: 323
+ * Hash: 0xBCC29F935ED07688 | Since: unknown
  */
 export function setVariableOnSynchScene(variableName: string, value: number): void {
     SetVariableOnCutsceneAudio(variableName, value);
@@ -2520,7 +2520,7 @@ export function setVariableOnSynchScene(variableName: string, value: number): vo
  * `AUDIO::SET_VARIABLE_ON_UNDER_WATER_STREAM("inTunnel", 1.0);`
  * `AUDIO::SET_VARIABLE_ON_UNDER_WATER_STREAM("inTunnel", 0.0);`
  * 
- * Hash: 0x733ADF241531E5C2 | Since: 323
+ * Hash: 0x733ADF241531E5C2 | Since: unknown
  */
 export function setVariableOnUnderWaterStream(variableName: string, value: number): void {
     SetVariableOnUnderWaterStream(variableName, value);
@@ -2530,7 +2530,7 @@ export function setVariableOnUnderWaterStream(variableName: string, value: numbe
  * intensity: 0.0f - 1.0f, only used once with 1.0f in R* Scripts (nigel2)
  * Makes an engine rattling noise when you decelerate, you need to be going faster to hear lower values
  * 
- * Hash: 0x01BB4D577D38BD9E | Since: 323
+ * Hash: 0x01BB4D577D38BD9E | Since: unknown
  */
 export function setVehicleBodyDamageFactor(vehicle: number | IVehicle, intensity: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2540,7 +2540,7 @@ export function setVehicleBodyDamageFactor(vehicle: number | IVehicle, intensity
 /**
  * No comment provided
  * 
- * Hash: 0x59E7B488451F4D3A | Since: 323
+ * Hash: 0x59E7B488451F4D3A | Since: unknown
  */
 export function setVehicleEngineDamageFactor(vehicle: number | IVehicle, damageFactor: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2553,7 +2553,7 @@ export function setVehicleEngineDamageFactor(vehicle: number | IVehicle, damageF
  * 
  * Will give a boost-soundeffect.
  * 
- * Hash: 0x4A04DE7CAB2739A1 | Since: 323
+ * Hash: 0x4A04DE7CAB2739A1 | Since: unknown
  */
 export function setVehicleBoostActive(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2563,7 +2563,7 @@ export function setVehicleBoostActive(vehicle: number | IVehicle, toggle: boolea
 /**
  * No comment provided
  * 
- * Hash: 0x58BB377BEC7CD5F4 | Since: 323
+ * Hash: 0x58BB377BEC7CD5F4 | Since: unknown
  */
 export function setVehicleConversationsPersist(): void {
     Citizen.invokeNative('0x58BB377BEC7CD5F4', false, false);
@@ -2572,7 +2572,7 @@ export function setVehicleConversationsPersist(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x9BD7BD55E4533183 | Since: 1290
+ * Hash: 0x9BD7BD55E4533183 | Since: unknown
  */
 export function setVehicleConversationsPersistNew(): void {
     Citizen.invokeNative('0x9BD7BD55E4533183', false, false, false);
@@ -2581,7 +2581,7 @@ export function setVehicleConversationsPersistNew(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x97FFB4ADEED08066 | Since: 2372
+ * Hash: 0x97FFB4ADEED08066 | Since: unknown
  */
 export function setVehicleForceReverseWarning(): void {
     Citizen.invokeNative('0x97FFB4ADEED08066', undefined, undefined);
@@ -2590,7 +2590,7 @@ export function setVehicleForceReverseWarning(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x0350E7E17BA767D0 | Since: 1365
+ * Hash: 0x0350E7E17BA767D0 | Since: unknown
  */
 export function setVehicleHornSoundIndex(vehicle: number | IVehicle, value: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2600,7 +2600,7 @@ export function setVehicleHornSoundIndex(vehicle: number | IVehicle, value: numb
 /**
  * No comment provided
  * 
- * Hash: 0xF3365489E0DD50F9 | Since: 323
+ * Hash: 0xF3365489E0DD50F9 | Since: unknown
  */
 export function setVehicleMissileWarningEnabled(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2610,7 +2610,7 @@ export function setVehicleMissileWarningEnabled(vehicle: number | IVehicle, togg
 /**
  * can't seem to enable radio on cop cars etc
  * 
- * Hash: 0x3B988190C0AA6C0B | Since: 323
+ * Hash: 0x3B988190C0AA6C0B | Since: unknown
  */
 export function setVehicleRadioEnabled(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2620,7 +2620,7 @@ export function setVehicleRadioEnabled(vehicle: number | IVehicle, toggle: boole
 /**
  * No comment provided
  * 
- * Hash: 0xBB6F1CAEC68B0BCE | Since: 323
+ * Hash: 0xBB6F1CAEC68B0BCE | Since: unknown
  */
 export function setVehicleRadioLoud(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2630,7 +2630,7 @@ export function setVehicleRadioLoud(vehicle: number | IVehicle, toggle: boolean)
 /**
  * No comment provided
  * 
- * Hash: 0xF1F8157B8C3F171C | Since: 323
+ * Hash: 0xF1F8157B8C3F171C | Since: unknown
  */
 export function setVehicleStartupRevSound(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2640,7 +2640,7 @@ export function setVehicleStartupRevSound(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0xC1805D05E6D4FE10 | Since: 323
+ * Hash: 0xC1805D05E6D4FE10 | Since: unknown
  */
 export function setVehForcedRadioThisFrame(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2650,7 +2650,7 @@ export function setVehForcedRadioThisFrame(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x3E45765F3FBB582F | Since: 2372
+ * Hash: 0x3E45765F3FBB582F | Since: unknown
  */
 export function setVehHasNormalRadio(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2661,7 +2661,7 @@ export function setVehHasNormalRadio(vehicle: number | IVehicle): void {
  * List of radio stations that are in the wheel, in clockwise order, as of LS Tuners DLC: https://git.io/J8a3k
  * An older list including hidden radio stations: https://pastebin.com/Kj9t38KF
  * 
- * Hash: 0x1B9C0099CB942AC6 | Since: 323
+ * Hash: 0x1B9C0099CB942AC6 | Since: unknown
  */
 export function setVehRadioStation(vehicle: number | IVehicle, radioStation: string): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2671,7 +2671,7 @@ export function setVehRadioStation(vehicle: number | IVehicle, radioStation: str
 /**
  * No comment provided
  * 
- * Hash: 0x6DDBBDD98E2E9C25 | Since: 323
+ * Hash: 0x6DDBBDD98E2E9C25 | Since: unknown
  */
 export function skipRadioForward(): void {
     SkipRadioForward();
@@ -2680,7 +2680,7 @@ export function skipRadioForward(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x9663FE6B7A61EB00 | Since: 323
+ * Hash: 0x9663FE6B7A61EB00 | Since: unknown
  */
 export function skipToNextScriptedConversationLine(): void {
     SkipToNextScriptedConversationLine();
@@ -2719,7 +2719,7 @@ export function skipToNextScriptedConversationLine(): void {
  * `AUDIO::START_ALARM("PROLOGUE_VAULT_ALARMS", 0);`
  * Full list of alarm names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/alarmSounds.json
  * 
- * Hash: 0x0355EF116C4C97B2 | Since: 323
+ * Hash: 0x0355EF116C4C97B2 | Since: unknown
  */
 export function startAlarm(alarmName: string): void {
     StartAlarm(alarmName, false);
@@ -2731,7 +2731,7 @@ export function startAlarm(alarmName: string): void {
  * List of all usable scene names found in b617d. Sorted alphabetically and identical names removed: https://pastebin.com/MtM9N9CC
  * Full list of audio scene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/audioSceneNames.json
  * 
- * Hash: 0x013A80FC08F6E4F2 | Since: 323
+ * Hash: 0x013A80FC08F6E4F2 | Since: unknown
  */
 export function startScene(scene: string): boolean {
     return StartAudioScene(scene);
@@ -2740,7 +2740,7 @@ export function startScene(scene: string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x23641AFE870AF385 | Since: 323
+ * Hash: 0x23641AFE870AF385 | Since: unknown
  */
 export function startPreloadedConversation(): void {
     StartPreloadedConversation();
@@ -2749,7 +2749,7 @@ export function startPreloadedConversation(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x6B17C62C9635D2DC | Since: 323
+ * Hash: 0x6B17C62C9635D2DC | Since: unknown
  */
 export function startScriptConversation(): void {
     StartScriptConversation(false, false, false, false);
@@ -2758,7 +2758,7 @@ export function startScriptConversation(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x252E5F915EABB675 | Since: 323
+ * Hash: 0x252E5F915EABB675 | Since: unknown
  */
 export function startScriptPhoneConversation(): void {
     StartScriptPhoneConversation(false, false);
@@ -2775,7 +2775,7 @@ export function startScriptPhoneConversation(): void {
  * Second parameter (bool) has to be true (1) to have any effect.
  * Full list of alarm names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/alarmSounds.json
  * 
- * Hash: 0xA1CADDCD98415A41 | Since: 323
+ * Hash: 0xA1CADDCD98415A41 | Since: unknown
  */
 export function stopAlarm(alarmName: string, toggle: boolean): void {
     StopAlarm(alarmName, toggle);
@@ -2784,7 +2784,7 @@ export function stopAlarm(alarmName: string, toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2F794A877ADD4C92 | Since: 323
+ * Hash: 0x2F794A877ADD4C92 | Since: unknown
  */
 export function stopAllAlarms(stop: boolean): void {
     StopAllAlarms(stop);
@@ -2793,7 +2793,7 @@ export function stopAllAlarms(stop: boolean): void {
 /**
  * Full list of audio scene names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/audioSceneNames.json
  * 
- * Hash: 0xDFE8422B3B94E688 | Since: 323
+ * Hash: 0xDFE8422B3B94E688 | Since: unknown
  */
 export function stopScene(scene: string): void {
     StopAudioScene(scene);
@@ -2802,7 +2802,7 @@ export function stopScene(scene: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0xBAC7FC81A75EC1A1 | Since: 323
+ * Hash: 0xBAC7FC81A75EC1A1 | Since: unknown
  */
 export function stopScenes(): void {
     StopAudioScenes();
@@ -2811,7 +2811,7 @@ export function stopScenes(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xB8BEC0CA6F0EDB0F | Since: 323
+ * Hash: 0xB8BEC0CA6F0EDB0F | Since: unknown
  */
 export function stopCurrentPlayingAmbientSpeech(ped: number | IPed): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2821,7 +2821,7 @@ export function stopCurrentPlayingAmbientSpeech(ped: number | IPed): void {
 /**
  * No comment provided
  * 
- * Hash: 0x7A73D05A607734C7 | Since: 323
+ * Hash: 0x7A73D05A607734C7 | Since: unknown
  */
 export function stopCurrentPlayingSpeech(ped: number | IPed): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2831,7 +2831,7 @@ export function stopCurrentPlayingSpeech(ped: number | IPed): void {
 /**
  * No comment provided
  * 
- * Hash: 0x806058BBDC136E06 | Since: 323
+ * Hash: 0x806058BBDC136E06 | Since: unknown
  */
 export function stopCutscene(): void {
     StopCutsceneAudio();
@@ -2840,7 +2840,7 @@ export function stopCutscene(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x6C5AE23EFA885092 | Since: 323
+ * Hash: 0x6C5AE23EFA885092 | Since: unknown
  */
 export function stopPedRingtone(ped: number | IPed): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2850,7 +2850,7 @@ export function stopPedRingtone(ped: number | IPed): void {
 /**
  * No comment provided
  * 
- * Hash: 0x9D64D7405520E3D3 | Since: 323
+ * Hash: 0x9D64D7405520E3D3 | Since: unknown
  */
 export function stopPedSpeaking(ped: number | IPed, shaking: boolean): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2860,7 +2860,7 @@ export function stopPedSpeaking(ped: number | IPed, shaking: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xAB6781A5F3101470 | Since: 1868
+ * Hash: 0xAB6781A5F3101470 | Since: unknown
  */
 export function stopPedSpeakingSynced(ped: number | IPed): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2870,7 +2870,7 @@ export function stopPedSpeakingSynced(ped: number | IPed): void {
 /**
  * No comment provided
  * 
- * Hash: 0xD79DEEFB53455EBA | Since: 323
+ * Hash: 0xD79DEEFB53455EBA | Since: unknown
  */
 export function stopScriptedConversation(): number {
     return StopScriptedConversation(false);
@@ -2879,7 +2879,7 @@ export function stopScriptedConversation(): number {
 /**
  * No comment provided
  * 
- * Hash: 0xE4E6DD5566D28C82 | Since: 323
+ * Hash: 0xE4E6DD5566D28C82 | Since: unknown
  */
 export function stopSmokeGrenadeExplosionSounds(): void {
     StopSmokeGrenadeExplosionSounds();
@@ -2888,7 +2888,7 @@ export function stopSmokeGrenadeExplosionSounds(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA3B0C41BA5CC0BB5 | Since: 323
+ * Hash: 0xA3B0C41BA5CC0BB5 | Since: unknown
  */
 export function stopSound(soundId: number): void {
     StopSound(soundId);
@@ -2897,7 +2897,7 @@ export function stopSound(soundId: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA4718A1419D18151 | Since: 323
+ * Hash: 0xA4718A1419D18151 | Since: unknown
  */
 export function stopStream(): void {
     StopStream();
@@ -2906,7 +2906,7 @@ export function stopStream(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x92D6A88E64A94430 | Since: 323
+ * Hash: 0x92D6A88E64A94430 | Since: unknown
  */
 export function stopSynchronizedEvent(sceneID: number): boolean {
     return StopSynchronizedAudioEvent(sceneID);
@@ -2918,7 +2918,7 @@ export function stopSynchronizedEvent(sceneID: number): boolean {
  * All music event names found in the b617d scripts: https://pastebin.com/GnYt0R3P
  * Full list of music event names by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/musicEventNames.json
  * 
- * Hash: 0x706D57B0F50DA710 | Since: 323
+ * Hash: 0x706D57B0F50DA710 | Since: unknown
  */
 export function triggerMusicEvent(eventName: string): boolean {
     return TriggerMusicEvent(eventName);
@@ -2927,7 +2927,7 @@ export function triggerMusicEvent(eventName: string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x66C3FB05206041BA | Since: 1290
+ * Hash: 0x66C3FB05206041BA | Since: unknown
  */
 export function triggerSiren(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2937,7 +2937,7 @@ export function triggerSiren(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2ACABED337622DF2 | Since: 1493
+ * Hash: 0x2ACABED337622DF2 | Since: unknown
  */
 export function unblockSpeechContextGroup(): void {
     UnblockSpeechContextGroup(undefined);
@@ -2946,7 +2946,7 @@ export function unblockSpeechContextGroup(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xFC00454CF60B91DD | Since: 323
+ * Hash: 0xFC00454CF60B91DD | Since: unknown
  */
 export function unfreezeRadioStation(radioStation: string): void {
     UnfreezeRadioStation(radioStation);
@@ -2955,7 +2955,7 @@ export function unfreezeRadioStation(radioStation: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0x19AF7ED9B9D23058 | Since: 323
+ * Hash: 0x19AF7ED9B9D23058 | Since: unknown
  */
 export function unhintAmbientBank(): void {
     Citizen.invokeNative('0x19AF7ED9B9D23058');
@@ -2964,7 +2964,7 @@ export function unhintAmbientBank(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x11579D940949C49E | Since: 678
+ * Hash: 0x11579D940949C49E | Since: unknown
  */
 export function unhintNamedScriptBank(audioBank: string): void {
     Citizen.invokeNative('0x11579D940949C49E', audioBank);
@@ -2973,7 +2973,7 @@ export function unhintNamedScriptBank(audioBank: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0x9AC92EED5E4793AB | Since: 323
+ * Hash: 0x9AC92EED5E4793AB | Since: unknown
  */
 export function unhintScriptBank(): void {
     Citizen.invokeNative('0x9AC92EED5E4793AB');
@@ -2982,7 +2982,7 @@ export function unhintScriptBank(): void {
 /**
  * "news" that play on the radio after you've done something in story mode(?)
  * 
- * Hash: 0xB165AB7C248B2DC1 | Since: 323
+ * Hash: 0xB165AB7C248B2DC1 | Since: unknown
  */
 export function unlockMissionNewsStory(newsStory: number): void {
     UnlockMissionNewsStory(newsStory);
@@ -2991,7 +2991,7 @@ export function unlockMissionNewsStory(newsStory: number): void {
 /**
  * `AUDIO::UNLOCK_RADIO_STATION_TRACK_LIST("RADIO_16_SILVERLAKE", "MIRRORPARK_LOCKED");`
  * 
- * Hash: 0x031ACB6ABA18C729 | Since: 323
+ * Hash: 0x031ACB6ABA18C729 | Since: unknown
  */
 export function unlockRadioStationTrackList(radioStation: string, trackListName: string): void {
     UnlockRadioStationTrackList(radioStation, trackListName);
@@ -3000,7 +3000,7 @@ export function unlockRadioStationTrackList(radioStation: string, trackListName:
 /**
  * This native does absolutely nothing, just a nullsub
  * 
- * Hash: 0xA8638BE228D4751A | Since: 323
+ * Hash: 0xA8638BE228D4751A | Since: unknown
  */
 export function unregisterScriptWith(): void {
     UnregisterScriptWithAudio();
@@ -3009,7 +3009,7 @@ export function unregisterScriptWith(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x0150B6FF25A9E2E5 | Since: 323
+ * Hash: 0x0150B6FF25A9E2E5 | Since: unknown
  */
 export function unrequestTennisBanks(): void {
     UnrequestTennisBanks();
@@ -3018,7 +3018,7 @@ export function unrequestTennisBanks(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x7EC3C679D0E7E46B | Since: 678
+ * Hash: 0x7EC3C679D0E7E46B | Since: unknown
  */
 export function updateSoundCoord(soundId: number, pos: Vector3): void {
     UpdateSoundCoord(soundId, pos.x, pos.y, pos.z);
@@ -3027,7 +3027,7 @@ export function updateSoundCoord(soundId: number, pos: Vector3): void {
 /**
  * Just a nullsub (i.e. does absolutely nothing) since build 1604.
  * 
- * Hash: 0x47AED84213A47510 | Since: 1493
+ * Hash: 0x47AED84213A47510 | Since: unknown
  */
 export function updateUnlockableDjRadioTracks(enableMixes: boolean): void {
     UpdateUnlockableDjRadioTracks(enableMixes);
@@ -3036,7 +3036,7 @@ export function updateUnlockableDjRadioTracks(enableMixes: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xBF4DC1784BE94DFA | Since: 323
+ * Hash: 0xBF4DC1784BE94DFA | Since: unknown
  */
 export function useFootstepScriptSweeteners(ped: number | IPed, hash: number | string): void {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -3047,7 +3047,7 @@ export function useFootstepScriptSweeteners(ped: number | IPed, hash: number | s
 /**
  * No comment provided
  * 
- * Hash: 0xFA932DE350266EF8 | Since: 323
+ * Hash: 0xFA932DE350266EF8 | Since: unknown
  */
 export function useSirenAsHorn(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3057,7 +3057,7 @@ export function useSirenAsHorn(vehicle: number | IVehicle, toggle: boolean): voi
 /**
  * No comment provided
  * 
- * Hash: 0xBEFB80290414FD4F | Since: 3095
+ * Hash: 0xBEFB80290414FD4F | Since: unknown
  */
 export function enableDragRaceStationaryWarningSounds(vehicle: number | IVehicle, enable: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3067,7 +3067,7 @@ export function enableDragRaceStationaryWarningSounds(vehicle: number | IVehicle
 /**
  * Called together with SET_VEHICLE_TYRES_CAN_BURST
  * 
- * Hash: 0xEB7D0E1FCC8FE17A | Since: 3258
+ * Hash: 0xEB7D0E1FCC8FE17A | Since: unknown
  */
 export function forceVehicleEngineSynth(vehicle: number | IVehicle, force: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;

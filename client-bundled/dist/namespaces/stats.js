@@ -1,7 +1,7 @@
 /**
  * No comment provided
  *
- * Hash: 0x44919CC079BB60BF | Since: 573 | API-Set: unknown
+ * Hash: 0x44919CC079BB60BF | Since: unknown | API-Set: unknown
  */
 export function changeGoonLookingForWork() {
     Citizen.invokeNative('0x44919CC079BB60BF', undefined);
@@ -9,7 +9,7 @@ export function changeGoonLookingForWork() {
 /**
  * No comment provided
  *
- * Hash: 0xD1C9B92BDD3F151D | Since: 573 | API-Set: unknown
+ * Hash: 0xD1C9B92BDD3F151D | Since: unknown | API-Set: unknown
  */
 export function changeUniform() {
     Citizen.invokeNative('0xD1C9B92BDD3F151D', undefined, undefined, undefined);
@@ -17,7 +17,7 @@ export function changeUniform() {
 /**
  * No comment provided
  *
- * Hash: 0xA3C53804BDB68ED2 | Since: 573 | API-Set: unknown
+ * Hash: 0xA3C53804BDB68ED2 | Since: unknown | API-Set: unknown
  */
 export function endBeingBoss() {
     Citizen.invokeNative('0xA3C53804BDB68ED2', undefined, undefined, undefined);
@@ -25,7 +25,7 @@ export function endBeingBoss() {
 /**
  * No comment provided
  *
- * Hash: 0x6BCCF9948492FD85 | Since: 573 | API-Set: unknown
+ * Hash: 0x6BCCF9948492FD85 | Since: unknown | API-Set: unknown
  */
 export function endBeingGoon() {
     Citizen.invokeNative('0x6BCCF9948492FD85', undefined, undefined, undefined, undefined, undefined);
@@ -33,7 +33,7 @@ export function endBeingGoon() {
 /**
  * No comment provided
  *
- * Hash: 0x6F361B8889A792A3 | Since: 323 | API-Set: unknown
+ * Hash: 0x6F361B8889A792A3 | Since: unknown | API-Set: unknown
  */
 export function forceCloudMpDownloadAndOverwriteLocalSave() {
     Citizen.invokeNative('0x6F361B8889A792A3');
@@ -41,7 +41,7 @@ export function forceCloudMpDownloadAndOverwriteLocalSave() {
 /**
  * No comment provided
  *
- * Hash: 0x6BC0ACD0673ACEBE | Since: 573 | API-Set: unknown
+ * Hash: 0x6BC0ACD0673ACEBE | Since: unknown | API-Set: unknown
  */
 export function getBossGoonUuid(characterSlot) {
     Citizen.invokeNative('0x6BC0ACD0673ACEBE', characterSlot, undefined, undefined);
@@ -49,7 +49,7 @@ export function getBossGoonUuid(characterSlot) {
 /**
  * No comment provided
  *
- * Hash: 0x61E111E323419E07 | Since: 323 | API-Set: unknown
+ * Hash: 0x61E111E323419E07 | Since: unknown | API-Set: unknown
  */
 export function getPackedIntStatKey(index, spStat, charStat, character) {
     return GetPackedIntStatKey(index, spStat, charStat, character);
@@ -75,7 +75,7 @@ export function getPackedIntStatKey(index, spStat, charStat, character) {
  * "_CASINOPSTAT_INT"
  * "_CASINOHSTPSTAT_INT"
  *
- * Hash: 0x2B4CDCA6F07FF3DA | Since: 323 | API-Set: unknown
+ * Hash: 0x2B4CDCA6F07FF3DA | Since: unknown | API-Set: unknown
  */
 export function getPackedNgIntStatKey(index, spStat, charStat, character, section) {
     return GetNgstatIntHash(index, spStat, charStat, character, section);
@@ -83,7 +83,7 @@ export function getPackedNgIntStatKey(index, spStat, charStat, character, sectio
 /**
  * No comment provided
  *
- * Hash: 0xDA7EBFC49AE3F1B0 | Since: 2545 | API-Set: unknown
+ * Hash: 0xDA7EBFC49AE3F1B0 | Since: unknown | API-Set: unknown
  */
 export function getPackedStatBoolCode(index, characterSlot) {
     return Citizen.invokeNative('0xDA7EBFC49AE3F1B0', index, characterSlot);
@@ -91,7 +91,7 @@ export function getPackedStatBoolCode(index, characterSlot) {
 /**
  * No comment provided
  *
- * Hash: 0x0BC900A6FE73770C | Since: 2545 | API-Set: unknown
+ * Hash: 0x0BC900A6FE73770C | Since: unknown | API-Set: unknown
  */
 export function getPackedStatIntCode(index, characterSlot) {
     return Citizen.invokeNative('0x0BC900A6FE73770C', index, characterSlot);
@@ -99,7 +99,7 @@ export function getPackedStatIntCode(index, characterSlot) {
 /**
  * No comment provided
  *
- * Hash: 0xD16C2AD6B8E32854 | Since: 323 | API-Set: unknown
+ * Hash: 0xD16C2AD6B8E32854 | Since: unknown | API-Set: unknown
  */
 export function getPackedTuIntStatKey(index, spStat, charStat, character) {
     return GetPackedTuIntStatKey(index, spStat, charStat, character);
@@ -107,7 +107,7 @@ export function getPackedTuIntStatKey(index, spStat, charStat, character) {
 /**
  * No comment provided
  *
- * Hash: 0x5EAD2BF6484852E4 | Since: 323 | API-Set: unknown
+ * Hash: 0x5EAD2BF6484852E4 | Since: unknown | API-Set: unknown
  */
 export function getPlayerHasDrivenAllVehicles() {
     return Citizen.invokeNative('0x5EAD2BF6484852E4');
@@ -115,7 +115,7 @@ export function getPlayerHasDrivenAllVehicles() {
 /**
  * No comment provided
  *
- * Hash: 0x792271AB35C356A4 | Since: 573 | API-Set: unknown
+ * Hash: 0x792271AB35C356A4 | Since: unknown | API-Set: unknown
  */
 export function hiredLimo() {
     HiredLimo(undefined, undefined);
@@ -123,7 +123,7 @@ export function hiredLimo() {
 /**
  * No comment provided
  *
- * Hash: 0xC30713A383BFBF0E | Since: 323 | API-Set: unknown
+ * Hash: 0xC30713A383BFBF0E | Since: unknown | API-Set: unknown
  */
 export function leaderboards2ReadByHandle() {
     return Leaderboards2ReadByHandle();
@@ -131,7 +131,7 @@ export function leaderboards2ReadByHandle() {
 /**
  * No comment provided
  *
- * Hash: 0xF1AE5DCDBFCA2721 | Since: 323 | API-Set: unknown
+ * Hash: 0xF1AE5DCDBFCA2721 | Since: unknown | API-Set: unknown
  */
 export function leaderboards2ReadByPlaform(gamerHandleCsv, platformName) {
     return Leaderboards2ReadByPlatform(gamerHandleCsv, platformName);
@@ -139,7 +139,7 @@ export function leaderboards2ReadByPlaform(gamerHandleCsv, platformName) {
 /**
  * No comment provided
  *
- * Hash: 0x5CE587FB5A42C8C4 | Since: 323 | API-Set: unknown
+ * Hash: 0x5CE587FB5A42C8C4 | Since: unknown | API-Set: unknown
  */
 export function leaderboards2ReadByRadius() {
     return Leaderboards2ReadByRadius(undefined);
@@ -147,7 +147,7 @@ export function leaderboards2ReadByRadius() {
 /**
  * No comment provided
  *
- * Hash: 0xBA2C7DB0C129449A | Since: 323 | API-Set: unknown
+ * Hash: 0xBA2C7DB0C129449A | Since: unknown | API-Set: unknown
  */
 export function leaderboards2ReadByRank() {
     return Leaderboards2ReadByRank(undefined, undefined);
@@ -155,7 +155,7 @@ export function leaderboards2ReadByRank() {
 /**
  * No comment provided
  *
- * Hash: 0xE662C8B759D08F3C | Since: 323 | API-Set: unknown
+ * Hash: 0xE662C8B759D08F3C | Since: unknown | API-Set: unknown
  */
 export function leaderboards2ReadByScoreFloat() {
     return Leaderboards2ReadByScoreFloat(0, undefined);
@@ -163,7 +163,7 @@ export function leaderboards2ReadByScoreFloat() {
 /**
  * No comment provided
  *
- * Hash: 0x7EEC7E4F6984A16A | Since: 323 | API-Set: unknown
+ * Hash: 0x7EEC7E4F6984A16A | Since: unknown | API-Set: unknown
  */
 export function leaderboards2ReadByScoreInt() {
     return Leaderboards2ReadByScoreInt(undefined, undefined);
@@ -171,7 +171,7 @@ export function leaderboards2ReadByScoreInt() {
 /**
  * No comment provided
  *
- * Hash: 0x918B101666F9CB83 | Since: 323 | API-Set: unknown
+ * Hash: 0x918B101666F9CB83 | Since: unknown | API-Set: unknown
  */
 export function leaderboards2ReadFriendsByRow() {
     return Leaderboards2ReadFriendsByRow(undefined, false, undefined, undefined);
@@ -179,7 +179,7 @@ export function leaderboards2ReadFriendsByRow() {
 /**
  * No comment provided
  *
- * Hash: 0x71B008056E5692D6 | Since: 323 | API-Set: unknown
+ * Hash: 0x71B008056E5692D6 | Since: unknown | API-Set: unknown
  */
 export function leaderboards2ReadGetRowDataEnd() {
     Citizen.invokeNative('0x71B008056E5692D6');
@@ -187,7 +187,7 @@ export function leaderboards2ReadGetRowDataEnd() {
 /**
  * No comment provided
  *
- * Hash: 0x38491439B6BA7F7D | Since: 323 | API-Set: unknown
+ * Hash: 0x38491439B6BA7F7D | Since: unknown | API-Set: unknown
  */
 export function leaderboards2ReadGetRowDataFloat() {
     return Citizen.invokeNative('0x38491439B6BA7F7D', undefined, undefined);
@@ -195,7 +195,7 @@ export function leaderboards2ReadGetRowDataFloat() {
 /**
  * No comment provided
  *
- * Hash: 0x34770B9CE0E03B91 | Since: 323 | API-Set: unknown
+ * Hash: 0x34770B9CE0E03B91 | Since: unknown | API-Set: unknown
  */
 export function leaderboards2ReadGetRowDataInfo() {
     return Citizen.invokeNative('0x34770B9CE0E03B91', undefined);
@@ -203,7 +203,7 @@ export function leaderboards2ReadGetRowDataInfo() {
 /**
  * No comment provided
  *
- * Hash: 0x88578F6EC36B4A3A | Since: 323 | API-Set: unknown
+ * Hash: 0x88578F6EC36B4A3A | Since: unknown | API-Set: unknown
  */
 export function leaderboards2ReadGetRowDataInt() {
     return Citizen.invokeNative('0x88578F6EC36B4A3A', undefined, undefined);
@@ -211,7 +211,7 @@ export function leaderboards2ReadGetRowDataInt() {
 /**
  * No comment provided
  *
- * Hash: 0xA0F93D5465B3094D | Since: 323 | API-Set: unknown
+ * Hash: 0xA0F93D5465B3094D | Since: unknown | API-Set: unknown
  */
 export function leaderboards2ReadGetRowDataStart() {
     return Citizen.invokeNative('0xA0F93D5465B3094D');
@@ -219,7 +219,7 @@ export function leaderboards2ReadGetRowDataStart() {
 /**
  * No comment provided
  *
- * Hash: 0xC38DC1E90D22547C | Since: 323 | API-Set: unknown
+ * Hash: 0xC38DC1E90D22547C | Since: unknown | API-Set: unknown
  */
 export function leaderboards2ReadRankPrediction() {
     return Leaderboards2ReadRankPrediction();
@@ -227,7 +227,7 @@ export function leaderboards2ReadRankPrediction() {
 /**
  * No comment provided
  *
- * Hash: 0xAE2206545888AE49 | Since: 323 | API-Set: unknown
+ * Hash: 0xAE2206545888AE49 | Since: unknown | API-Set: unknown
  */
 export function leaderboards2WriteData() {
     return Leaderboards2WriteData();
@@ -235,7 +235,7 @@ export function leaderboards2WriteData() {
 /**
  * No comment provided
  *
- * Hash: 0xC980E62E33DF1D5C | Since: 323 | API-Set: unknown
+ * Hash: 0xC980E62E33DF1D5C | Since: unknown | API-Set: unknown
  */
 export function leaderboards2WriteDataForEventType() {
     return Leaderboards2WriteDataForEventType();
@@ -243,7 +243,7 @@ export function leaderboards2WriteDataForEventType() {
 /**
  * No comment provided
  *
- * Hash: 0xB9BB18E2C40142ED | Since: 323 | API-Set: unknown
+ * Hash: 0xB9BB18E2C40142ED | Since: unknown | API-Set: unknown
  */
 export function leaderboardsCacheDataRow() {
     return LeaderboardsCacheDataRow();
@@ -251,7 +251,7 @@ export function leaderboardsCacheDataRow() {
 /**
  * No comment provided
  *
- * Hash: 0xD4B02A6B476E1FDC | Since: 323 | API-Set: unknown
+ * Hash: 0xD4B02A6B476E1FDC | Since: unknown | API-Set: unknown
  */
 export function leaderboardsClearCacheData() {
     LeaderboardsClearCacheData();
@@ -259,7 +259,7 @@ export function leaderboardsClearCacheData() {
 /**
  * No comment provided
  *
- * Hash: 0x8EC74CEB042E7CFF | Since: 323 | API-Set: unknown
+ * Hash: 0x8EC74CEB042E7CFF | Since: unknown | API-Set: unknown
  */
 export function leaderboardsClearCacheDataId() {
     Citizen.invokeNative('0x8EC74CEB042E7CFF', undefined);
@@ -267,7 +267,7 @@ export function leaderboardsClearCacheDataId() {
 /**
  * No comment provided
  *
- * Hash: 0x9120E8DBA3D69273 | Since: 323 | API-Set: unknown
+ * Hash: 0x9120E8DBA3D69273 | Since: unknown | API-Set: unknown
  */
 export function leaderboardsGetCacheDataRow() {
     return LeaderboardsGetCacheDataRow(undefined, undefined);
@@ -275,7 +275,7 @@ export function leaderboardsGetCacheDataRow() {
 /**
  * No comment provided
  *
- * Hash: 0x9C51349BE6CDFE2C | Since: 323 | API-Set: unknown
+ * Hash: 0x9C51349BE6CDFE2C | Since: unknown | API-Set: unknown
  */
 export function leaderboardsGetCacheExists() {
     return LeaderboardsGetCacheExists(undefined);
@@ -283,7 +283,7 @@ export function leaderboardsGetCacheExists() {
 /**
  * No comment provided
  *
- * Hash: 0x58A651CD201D89AD | Since: 323 | API-Set: unknown
+ * Hash: 0x58A651CD201D89AD | Since: unknown | API-Set: unknown
  */
 export function leaderboardsGetCacheNumberOfRows() {
     return LeaderboardsGetCacheNumberOfRows(undefined);
@@ -291,7 +291,7 @@ export function leaderboardsGetCacheNumberOfRows() {
 /**
  * No comment provided
  *
- * Hash: 0xF04C1C27DA35F6C8 | Since: 323 | API-Set: unknown
+ * Hash: 0xF04C1C27DA35F6C8 | Since: unknown | API-Set: unknown
  */
 export function leaderboardsGetCacheTime() {
     return LeaderboardsGetCacheTime(undefined);
@@ -299,7 +299,7 @@ export function leaderboardsGetCacheTime() {
 /**
  * No comment provided
  *
- * Hash: 0xC4B5467A1886EA7E | Since: 323 | API-Set: unknown
+ * Hash: 0xC4B5467A1886EA7E | Since: unknown | API-Set: unknown
  */
 export function leaderboardsGetColumnId() {
     return LeaderboardsGetColumnId(0, 0, 0);
@@ -307,7 +307,7 @@ export function leaderboardsGetColumnId() {
 /**
  * No comment provided
  *
- * Hash: 0xBF4FEF46DB7894D3 | Since: 323 | API-Set: unknown
+ * Hash: 0xBF4FEF46DB7894D3 | Since: unknown | API-Set: unknown
  */
 export function leaderboardsGetColumnType() {
     return LeaderboardsGetColumnType(0, undefined, undefined);
@@ -315,7 +315,7 @@ export function leaderboardsGetColumnType() {
 /**
  * No comment provided
  *
- * Hash: 0x117B45156D7EFF2E | Since: 323 | API-Set: unknown
+ * Hash: 0x117B45156D7EFF2E | Since: unknown | API-Set: unknown
  */
 export function leaderboardsGetNumberOfColumns() {
     return LeaderboardsGetNumberOfColumns(0, undefined);
@@ -323,7 +323,7 @@ export function leaderboardsGetNumberOfColumns() {
 /**
  * No comment provided
  *
- * Hash: 0xA31FD15197B192BD | Since: 323 | API-Set: unknown
+ * Hash: 0xA31FD15197B192BD | Since: unknown | API-Set: unknown
  */
 export function leaderboardsReadAnyPending() {
     return LeaderboardsReadAnyPending();
@@ -331,7 +331,7 @@ export function leaderboardsReadAnyPending() {
 /**
  * No comment provided
  *
- * Hash: 0x7CCE5C737A665701 | Since: 323 | API-Set: unknown
+ * Hash: 0x7CCE5C737A665701 | Since: unknown | API-Set: unknown
  */
 export function leaderboardsReadClear() {
     return LeaderboardsReadClear(undefined, undefined, undefined);
@@ -339,7 +339,7 @@ export function leaderboardsReadClear() {
 /**
  * No comment provided
  *
- * Hash: 0xA34CB6E6F0DF4A0B | Since: 323 | API-Set: unknown
+ * Hash: 0xA34CB6E6F0DF4A0B | Since: unknown | API-Set: unknown
  */
 export function leaderboardsReadClearAll() {
     return LeaderboardsReadClearAll();
@@ -347,7 +347,7 @@ export function leaderboardsReadClearAll() {
 /**
  * No comment provided
  *
- * Hash: 0xAC392C8483342AC2 | Since: 323 | API-Set: unknown
+ * Hash: 0xAC392C8483342AC2 | Since: unknown | API-Set: unknown
  */
 export function leaderboardsReadPending() {
     return LeaderboardsReadPending(undefined, undefined, undefined);
@@ -355,7 +355,7 @@ export function leaderboardsReadPending() {
 /**
  * No comment provided
  *
- * Hash: 0x2FB19228983E832C | Since: 323 | API-Set: unknown
+ * Hash: 0x2FB19228983E832C | Since: unknown | API-Set: unknown
  */
 export function leaderboardsReadSuccessful() {
     return LeaderboardsReadSuccessful(undefined, undefined, undefined);
@@ -363,7 +363,7 @@ export function leaderboardsReadSuccessful() {
 /**
  * No comment provided
  *
- * Hash: 0x0BCA1D2C47B0D269 | Since: 323 | API-Set: unknown
+ * Hash: 0x0BCA1D2C47B0D269 | Since: unknown | API-Set: unknown
  */
 export function leaderboardsWriteAddColumn() {
     LeaderboardsWriteAddColumn(undefined, undefined, 0);
@@ -371,7 +371,7 @@ export function leaderboardsWriteAddColumn() {
 /**
  * No comment provided
  *
- * Hash: 0x2E65248609523599 | Since: 323 | API-Set: unknown
+ * Hash: 0x2E65248609523599 | Since: unknown | API-Set: unknown
  */
 export function leaderboardsWriteAddColumnLong() {
     LeaderboardsWriteAddColumnLong(undefined, undefined, undefined);
@@ -379,7 +379,7 @@ export function leaderboardsWriteAddColumnLong() {
 /**
  * No comment provided
  *
- * Hash: 0xCEA553E35C2246E1 | Since: 573 | API-Set: unknown
+ * Hash: 0xCEA553E35C2246E1 | Since: unknown | API-Set: unknown
  */
 export function orderBossVehicle(vehicleHash) {
     if (typeof vehicleHash === 'string')
@@ -389,7 +389,7 @@ export function orderBossVehicle(vehicleHash) {
 /**
  * Needs more research. Possibly used to calculate the "mask" when calling "STAT_SET_MASKED_INT"?
  *
- * Hash: 0x94F12ABF9C79E339 | Since: 323 | API-Set: unknown
+ * Hash: 0x94F12ABF9C79E339 | Since: unknown | API-Set: unknown
  */
 export function packedStatGetIntStatIndex() {
     return StatGetPackedIntMask(0);
@@ -397,7 +397,7 @@ export function packedStatGetIntStatIndex() {
 /**
  * No comment provided
  *
- * Hash: 0xD558BEC0BBA7E8D2 | Since: 877 | API-Set: unknown
+ * Hash: 0xD558BEC0BBA7E8D2 | Since: unknown | API-Set: unknown
  */
 export function playAbandonedMc() {
     Citizen.invokeNative('0xD558BEC0BBA7E8D2', undefined, undefined, undefined, undefined, undefined);
@@ -405,7 +405,7 @@ export function playAbandonedMc() {
 /**
  * No comment provided
  *
- * Hash: 0x79AB33F0FBFAC40C | Since: 323 | API-Set: unknown
+ * Hash: 0x79AB33F0FBFAC40C | Since: unknown | API-Set: unknown
  */
 export function playAcquiredHiddenPackage() {
     PlaystatsAcquiredHiddenPackage(undefined);
@@ -413,7 +413,7 @@ export function playAcquiredHiddenPackage() {
 /**
  * No comment provided
  *
- * Hash: 0xA071E0ED98F91286 | Since: 323 | API-Set: unknown
+ * Hash: 0xA071E0ED98F91286 | Since: unknown | API-Set: unknown
  */
 export function playActivityDone(activityId) {
     PlaystatsActivityDone(0, activityId, undefined);
@@ -421,7 +421,7 @@ export function playActivityDone(activityId) {
 /**
  * No comment provided
  *
- * Hash: 0x46326E13DA4E0546 | Since: 323 | API-Set: unknown
+ * Hash: 0x46326E13DA4E0546 | Since: unknown | API-Set: unknown
  */
 export function playAppendDirectorMetric() {
     return PlaystatsDirectorMode();
@@ -429,7 +429,7 @@ export function playAppendDirectorMetric() {
 /**
  * No comment provided
  *
- * Hash: 0xF9096193DF1F99D4 | Since: 1868 | API-Set: unknown
+ * Hash: 0xF9096193DF1F99D4 | Since: unknown | API-Set: unknown
  */
 export function playArcadeCabinet() {
     Citizen.invokeNative('0xF9096193DF1F99D4', undefined);
@@ -437,7 +437,7 @@ export function playArcadeCabinet() {
 /**
  * No comment provided
  *
- * Hash: 0x533A7D1EA58DF958 | Since: 1734 | API-Set: unknown
+ * Hash: 0x533A7D1EA58DF958 | Since: unknown | API-Set: unknown
  */
 export function playArcadeGame() {
     PlaystatsArcadegame(undefined, undefined, undefined, undefined, undefined, undefined, undefined);
@@ -445,7 +445,7 @@ export function playArcadeGame() {
 /**
  * No comment provided
  *
- * Hash: 0x4FCDBD3F0A813C25 | Since: 1868 | API-Set: unknown
+ * Hash: 0x4FCDBD3F0A813C25 | Since: unknown | API-Set: unknown
  */
 export function playArcadeLoveMatch() {
     Citizen.invokeNative('0x4FCDBD3F0A813C25', undefined, undefined);
@@ -453,7 +453,7 @@ export function playArcadeLoveMatch() {
 /**
  * No comment provided
  *
- * Hash: 0xB479D9F0D48A1BC5 | Since: 1604 | API-Set: unknown
+ * Hash: 0xB479D9F0D48A1BC5 | Since: unknown | API-Set: unknown
  */
 export function playArenaWarsEnded() {
     return PlaystatsArenaWarsEnded();
@@ -461,7 +461,7 @@ export function playArenaWarsEnded() {
 /**
  * No comment provided
  *
- * Hash: 0x6F4F599753F8200A | Since: 1604 | API-Set: unknown
+ * Hash: 0x6F4F599753F8200A | Since: unknown | API-Set: unknown
  */
 export function playArenaWarsSpectator() {
     PlaystatsArenaWarSpectator(0, 0, 0, 0, 0);
@@ -469,7 +469,7 @@ export function playArenaWarsSpectator() {
 /**
  * No comment provided
  *
- * Hash: 0x47B32F5611E6E483 | Since: 463 | API-Set: unknown
+ * Hash: 0x47B32F5611E6E483 | Since: unknown | API-Set: unknown
  */
 export function playAwardBadSport(id) {
     PlaystatsAwardBadsport(id);
@@ -477,7 +477,7 @@ export function playAwardBadSport(id) {
 /**
  * No comment provided
  *
- * Hash: 0x70F52471E758EBAE | Since: 2545 | API-Set: unknown
+ * Hash: 0x70F52471E758EBAE | Since: unknown | API-Set: unknown
  */
 export function playAwardNav() {
     Citizen.invokeNative('0x70F52471E758EBAE', undefined, undefined, undefined, undefined);
@@ -485,7 +485,7 @@ export function playAwardNav() {
 /**
  * No comment provided
  *
- * Hash: 0x46F917F6B4128FE4 | Since: 323 | API-Set: unknown
+ * Hash: 0x46F917F6B4128FE4 | Since: unknown | API-Set: unknown
  */
 export function playAwardXp(amount, _type, category) {
     if (typeof _type === 'string')
@@ -497,7 +497,7 @@ export function playAwardXp(amount, _type, category) {
 /**
  * No comment provided
  *
- * Hash: 0x5009DFD741329729 | Since: 323 | API-Set: unknown
+ * Hash: 0x5009DFD741329729 | Since: unknown | API-Set: unknown
  */
 export function playBackgroundScriptAction(action, value) {
     PlaystatsBackgroundScriptAction(action, value);
@@ -505,7 +505,7 @@ export function playBackgroundScriptAction(action, value) {
 /**
  * No comment provided
  *
- * Hash: 0x516FC96EB88EEFE5 | Since: 1011 | API-Set: unknown
+ * Hash: 0x516FC96EB88EEFE5 | Since: unknown | API-Set: unknown
  */
 export function playBanAlert() {
     PlaystatsBanAlert(0);
@@ -513,7 +513,7 @@ export function playBanAlert() {
 /**
  * No comment provided
  *
- * Hash: 0x7B18DA61F6BAE9D5 | Since: 573 | API-Set: unknown
+ * Hash: 0x7B18DA61F6BAE9D5 | Since: unknown | API-Set: unknown
  */
 export function playBcCarJacking() {
     Citizen.invokeNative('0x7B18DA61F6BAE9D5', undefined);
@@ -521,7 +521,7 @@ export function playBcCarJacking() {
 /**
  * No comment provided
  *
- * Hash: 0x53CAE13E9B426993 | Since: 757 | API-Set: unknown
+ * Hash: 0x53CAE13E9B426993 | Since: unknown | API-Set: unknown
  */
 export function playBcCashing() {
     Citizen.invokeNative('0x53CAE13E9B426993', undefined);
@@ -529,7 +529,7 @@ export function playBcCashing() {
 /**
  * No comment provided
  *
- * Hash: 0xE3261D791EB44ACB | Since: 573 | API-Set: unknown
+ * Hash: 0xE3261D791EB44ACB | Since: unknown | API-Set: unknown
  */
 export function playBcFindersKeepers() {
     Citizen.invokeNative('0xE3261D791EB44ACB', undefined);
@@ -537,7 +537,7 @@ export function playBcFindersKeepers() {
 /**
  * No comment provided
  *
- * Hash: 0x930F504203F561C9 | Since: 573 | API-Set: unknown
+ * Hash: 0x930F504203F561C9 | Since: unknown | API-Set: unknown
  */
 export function playBcMostWanted() {
     Citizen.invokeNative('0x930F504203F561C9', undefined);
@@ -545,7 +545,7 @@ export function playBcMostWanted() {
 /**
  * No comment provided
  *
- * Hash: 0x73001E34F85137F8 | Since: 573 | API-Set: unknown
+ * Hash: 0x73001E34F85137F8 | Since: unknown | API-Set: unknown
  */
 export function playBcPointToPoint() {
     Citizen.invokeNative('0x73001E34F85137F8', undefined);
@@ -553,7 +553,7 @@ export function playBcPointToPoint() {
 /**
  * No comment provided
  *
- * Hash: 0x14EDA9EE27BD1626 | Since: 573 | API-Set: unknown
+ * Hash: 0x14EDA9EE27BD1626 | Since: unknown | API-Set: unknown
  */
 export function playBcProtectionRacket() {
     Citizen.invokeNative('0x14EDA9EE27BD1626', undefined);
@@ -561,7 +561,7 @@ export function playBcProtectionRacket() {
 /**
  * No comment provided
  *
- * Hash: 0x7D36291161859389 | Since: 757 | API-Set: unknown
+ * Hash: 0x7D36291161859389 | Since: unknown | API-Set: unknown
  */
 export function playBcSalvage() {
     Citizen.invokeNative('0x7D36291161859389', undefined);
@@ -569,7 +569,7 @@ export function playBcSalvage() {
 /**
  * No comment provided
  *
- * Hash: 0x06EAF70AE066441E | Since: 573 | API-Set: unknown
+ * Hash: 0x06EAF70AE066441E | Since: unknown | API-Set: unknown
  */
 export function playBcSmashAndGrab() {
     Citizen.invokeNative('0x06EAF70AE066441E', undefined);
@@ -577,7 +577,7 @@ export function playBcSmashAndGrab() {
 /**
  * No comment provided
  *
- * Hash: 0x316DB59CD14C1774 | Since: 1493 | API-Set: unknown
+ * Hash: 0x316DB59CD14C1774 | Since: unknown | API-Set: unknown
  */
 export function playBusinessBattleEnded() {
     Citizen.invokeNative('0x316DB59CD14C1774', undefined);
@@ -585,7 +585,7 @@ export function playBusinessBattleEnded() {
 /**
  * No comment provided
  *
- * Hash: 0xD6781E42755531F7 | Since: 757 | API-Set: unknown
+ * Hash: 0xD6781E42755531F7 | Since: unknown | API-Set: unknown
  */
 export function playBuyContrabandMission() {
     return PlaystatsBuyContraband();
@@ -593,7 +593,7 @@ export function playBuyContrabandMission() {
 /**
  * No comment provided
  *
- * Hash: 0xF06A6F41CB445443 | Since: 757 | API-Set: unknown
+ * Hash: 0xF06A6F41CB445443 | Since: unknown | API-Set: unknown
  */
 export function playBwAirFreight() {
     Citizen.invokeNative('0xF06A6F41CB445443', undefined);
@@ -601,7 +601,7 @@ export function playBwAirFreight() {
 /**
  * No comment provided
  *
- * Hash: 0x678F86D8FC040BDB | Since: 573 | API-Set: unknown
+ * Hash: 0x678F86D8FC040BDB | Since: unknown | API-Set: unknown
  */
 export function playBwAssault() {
     Citizen.invokeNative('0x678F86D8FC040BDB', undefined);
@@ -609,7 +609,7 @@ export function playBwAssault() {
 /**
  * No comment provided
  *
- * Hash: 0xA6F54BB2FFCA35EA | Since: 573 | API-Set: unknown
+ * Hash: 0xA6F54BB2FFCA35EA | Since: unknown | API-Set: unknown
  */
 export function playBwBellyOfTheBeast() {
     Citizen.invokeNative('0xA6F54BB2FFCA35EA', undefined);
@@ -617,7 +617,7 @@ export function playBwBellyOfTheBeast() {
 /**
  * No comment provided
  *
- * Hash: 0x8D8ADB562F09A245 | Since: 573 | API-Set: unknown
+ * Hash: 0x8D8ADB562F09A245 | Since: unknown | API-Set: unknown
  */
 export function playBwBossonbossdeathmatch() {
     Citizen.invokeNative('0x8D8ADB562F09A245', undefined);
@@ -625,7 +625,7 @@ export function playBwBossonbossdeathmatch() {
 /**
  * No comment provided
  *
- * Hash: 0x282B6739644F4347 | Since: 757 | API-Set: unknown
+ * Hash: 0x282B6739644F4347 | Since: unknown | API-Set: unknown
  */
 export function playBwFragileGoods() {
     Citizen.invokeNative('0x282B6739644F4347', undefined);
@@ -633,7 +633,7 @@ export function playBwFragileGoods() {
 /**
  * No comment provided
  *
- * Hash: 0x5FF2C33B13A02A11 | Since: 757 | API-Set: unknown
+ * Hash: 0x5FF2C33B13A02A11 | Since: unknown | API-Set: unknown
  */
 export function playBwHeadHunter() {
     Citizen.invokeNative('0x5FF2C33B13A02A11', undefined);
@@ -641,7 +641,7 @@ export function playBwHeadHunter() {
 /**
  * No comment provided
  *
- * Hash: 0x88087EE1F28024AE | Since: 573 | API-Set: unknown
+ * Hash: 0x88087EE1F28024AE | Since: unknown | API-Set: unknown
  */
 export function playBwHuntTheBoss() {
     Citizen.invokeNative('0x88087EE1F28024AE', undefined);
@@ -649,7 +649,7 @@ export function playBwHuntTheBoss() {
 /**
  * No comment provided
  *
- * Hash: 0xFCC228E07217FCAC | Since: 573 | API-Set: unknown
+ * Hash: 0xFCC228E07217FCAC | Since: unknown | API-Set: unknown
  */
 export function playBwSightseer() {
     Citizen.invokeNative('0xFCC228E07217FCAC', undefined);
@@ -657,7 +657,7 @@ export function playBwSightseer() {
 /**
  * No comment provided
  *
- * Hash: 0xD1A1EE3B4FA8E760 | Since: 573 | API-Set: unknown
+ * Hash: 0xD1A1EE3B4FA8E760 | Since: unknown | API-Set: unknown
  */
 export function playBwYatchattack() {
     Citizen.invokeNative('0xD1A1EE3B4FA8E760', undefined);
@@ -665,7 +665,7 @@ export function playBwYatchattack() {
 /**
  * No comment provided
  *
- * Hash: 0x1187CB58D7F3BED7 | Since: 2372 | API-Set: unknown
+ * Hash: 0x1187CB58D7F3BED7 | Since: unknown | API-Set: unknown
  */
 export function playCarclubChallenge() {
     PlaystatsCarclubChallenge(undefined, undefined, undefined, undefined);
@@ -673,7 +673,7 @@ export function playCarclubChallenge() {
 /**
  * No comment provided
  *
- * Hash: 0xFF14D6FEEC507BBE | Since: 2372 | API-Set: unknown
+ * Hash: 0xFF14D6FEEC507BBE | Since: unknown | API-Set: unknown
  */
 export function playCarclubPoints() {
     PlaystatsCarclubPoints(undefined);
@@ -681,7 +681,7 @@ export function playCarclubPoints() {
 /**
  * No comment provided
  *
- * Hash: 0x69C922B677621428 | Since: 2372 | API-Set: unknown
+ * Hash: 0x69C922B677621428 | Since: unknown | API-Set: unknown
  */
 export function playCarclubPrize(vehicleModel) {
     if (typeof vehicleModel === 'string')
@@ -691,7 +691,7 @@ export function playCarclubPrize(vehicleModel) {
 /**
  * No comment provided
  *
- * Hash: 0x3EAE97309727E7AD | Since: 1734 | API-Set: unknown
+ * Hash: 0x3EAE97309727E7AD | Since: unknown | API-Set: unknown
  */
 export function playCasinoBlackjack() {
     PlaystatsCasinoBlackjack(undefined);
@@ -699,7 +699,7 @@ export function playCasinoBlackjack() {
 /**
  * No comment provided
  *
- * Hash: 0xD5451C7BF151EB6F | Since: 1734 | API-Set: unknown
+ * Hash: 0xD5451C7BF151EB6F | Since: unknown | API-Set: unknown
  */
 export function playCasinoBlackjackLight() {
     PlaystatsCasinoBlackjackLight(undefined);
@@ -707,7 +707,7 @@ export function playCasinoBlackjackLight() {
 /**
  * No comment provided
  *
- * Hash: 0x0999F3F090EC5012 | Since: 1734 | API-Set: unknown
+ * Hash: 0x0999F3F090EC5012 | Since: unknown | API-Set: unknown
  */
 export function playCasinoChip() {
     PlaystatsCasinoChip(undefined);
@@ -715,7 +715,7 @@ export function playCasinoChip() {
 /**
  * No comment provided
  *
- * Hash: 0x049F059625058A86 | Since: 1734 | API-Set: unknown
+ * Hash: 0x049F059625058A86 | Since: unknown | API-Set: unknown
  */
 export function playCasinoInsideTrack() {
     PlaystatsCasinoInsidetrack(undefined);
@@ -723,7 +723,7 @@ export function playCasinoInsideTrack() {
 /**
  * No comment provided
  *
- * Hash: 0x23A3CBCD50D54E47 | Since: 1734 | API-Set: unknown
+ * Hash: 0x23A3CBCD50D54E47 | Since: unknown | API-Set: unknown
  */
 export function playCasinoInsideTrackLight() {
     PlaystatsCasinoInsidetrackLight(undefined);
@@ -731,7 +731,7 @@ export function playCasinoInsideTrackLight() {
 /**
  * No comment provided
  *
- * Hash: 0x0C432C1435F5E4FA | Since: 1734 | API-Set: unknown
+ * Hash: 0x0C432C1435F5E4FA | Since: unknown | API-Set: unknown
  */
 export function playCasinoLuckySeven() {
     PlaystatsCasinoLuckyseven(undefined);
@@ -739,7 +739,7 @@ export function playCasinoLuckySeven() {
 /**
  * No comment provided
  *
- * Hash: 0x95101C443A84E7F1 | Since: 1734 | API-Set: unknown
+ * Hash: 0x95101C443A84E7F1 | Since: unknown | API-Set: unknown
  */
 export function playCasinoRoulette() {
     PlaystatsCasinoRoulette(undefined);
@@ -747,7 +747,7 @@ export function playCasinoRoulette() {
 /**
  * No comment provided
  *
- * Hash: 0x6572ABA3DE1197FC | Since: 1734 | API-Set: unknown
+ * Hash: 0x6572ABA3DE1197FC | Since: unknown | API-Set: unknown
  */
 export function playCasinoRouletteLight() {
     PlaystatsCasinoRouletteLight(undefined);
@@ -755,7 +755,7 @@ export function playCasinoRouletteLight() {
 /**
  * No comment provided
  *
- * Hash: 0xEF5EC67D392B830A | Since: 1734 | API-Set: unknown
+ * Hash: 0xEF5EC67D392B830A | Since: unknown | API-Set: unknown
  */
 export function playCasinoSlotMachine() {
     PlaystatsCasinoSlotmachine(undefined);
@@ -763,7 +763,7 @@ export function playCasinoSlotMachine() {
 /**
  * No comment provided
  *
- * Hash: 0xE60054A0FAE8227F | Since: 1734 | API-Set: unknown
+ * Hash: 0xE60054A0FAE8227F | Since: unknown | API-Set: unknown
  */
 export function playCasinoSlotMachineLight() {
     PlaystatsCasinoSlotmachineLight(undefined);
@@ -771,7 +771,7 @@ export function playCasinoSlotMachineLight() {
 /**
  * No comment provided
  *
- * Hash: 0xFCCCAC2BD3C1F180 | Since: 1734 | API-Set: unknown
+ * Hash: 0xFCCCAC2BD3C1F180 | Since: unknown | API-Set: unknown
  */
 export function playCasinoStoryMissionEnded() {
     PlaystatsCasinoStoryMissionEnded(undefined, undefined);
@@ -779,7 +779,7 @@ export function playCasinoStoryMissionEnded() {
 /**
  * No comment provided
  *
- * Hash: 0xF740FB339D471C35 | Since: 1734 | API-Set: unknown
+ * Hash: 0xF740FB339D471C35 | Since: unknown | API-Set: unknown
  */
 export function playCasinoThreeCardPoker() {
     PlaystatsCasinoThreecardpoker(undefined);
@@ -787,7 +787,7 @@ export function playCasinoThreeCardPoker() {
 /**
  * No comment provided
  *
- * Hash: 0xC9001364B4388F22 | Since: 1734 | API-Set: unknown
+ * Hash: 0xC9001364B4388F22 | Since: unknown | API-Set: unknown
  */
 export function playCasinoThreeCardPokerLight() {
     PlaystatsCasinoThreecardpokerLight(undefined);
@@ -795,7 +795,7 @@ export function playCasinoThreeCardPokerLight() {
 /**
  * No comment provided
  *
- * Hash: 0x28ECB8AC2F607DB2 | Since: 877 | API-Set: unknown
+ * Hash: 0x28ECB8AC2F607DB2 | Since: unknown | API-Set: unknown
  */
 export function playChangeMcOutfit() {
     Citizen.invokeNative('0x28ECB8AC2F607DB2', undefined, undefined, undefined, undefined, undefined);
@@ -803,7 +803,7 @@ export function playChangeMcOutfit() {
 /**
  * No comment provided
  *
- * Hash: 0x0B565B0AAE56A0E8 | Since: 877 | API-Set: unknown
+ * Hash: 0x0B565B0AAE56A0E8 | Since: unknown | API-Set: unknown
  */
 export function playChangeMcRole(role) {
     Citizen.invokeNative('0x0B565B0AAE56A0E8', undefined, undefined, undefined, undefined, role, 0, undefined);
@@ -811,7 +811,7 @@ export function playChangeMcRole(role) {
 /**
  * No comment provided
  *
- * Hash: 0x6058665D72302D3F | Since: 323 | API-Set: unknown
+ * Hash: 0x6058665D72302D3F | Since: unknown | API-Set: unknown
  */
 export function playCheatApplied(cheat) {
     PlaystatsCheatApplied(cheat);
@@ -819,7 +819,7 @@ export function playCheatApplied(cheat) {
 /**
  * No comment provided
  *
- * Hash: 0x34B973047A2268B9 | Since: 323 | API-Set: unknown
+ * Hash: 0x34B973047A2268B9 | Since: unknown | API-Set: unknown
  */
 export function playClothChange(p0) {
     const _p0 = typeof p0 == 'object' ? p0.handle() : p0;
@@ -828,7 +828,7 @@ export function playClothChange(p0) {
 /**
  * No comment provided
  *
- * Hash: 0xCD0A8A9338681CF2 | Since: 1734 | API-Set: unknown
+ * Hash: 0xCD0A8A9338681CF2 | Since: unknown | API-Set: unknown
  */
 export function playCollectiblePickedUp(objectHash, moneyAmount, rpAmount, chipsAmount) {
     if (typeof objectHash === 'string')
@@ -838,7 +838,7 @@ export function playCollectiblePickedUp(objectHash, moneyAmount, rpAmount, chips
 /**
  * No comment provided
  *
- * Hash: 0xB7257BA2550EA10A | Since: 877 | API-Set: unknown
+ * Hash: 0xB7257BA2550EA10A | Since: unknown | API-Set: unknown
  */
 export function playCopyRankIntoNewSlot() {
     PlaystatsCopyRankIntoNewSlot(undefined, undefined, undefined, undefined, undefined, undefined, undefined);
@@ -846,7 +846,7 @@ export function playCopyRankIntoNewSlot() {
 /**
  * No comment provided
  *
- * Hash: 0xAFC7E5E075A96F46 | Since: 323 | API-Set: unknown
+ * Hash: 0xAFC7E5E075A96F46 | Since: unknown | API-Set: unknown
  */
 export function playCrateCreated() {
     PlaystatsCrateCreated(0, 0, 0);
@@ -854,7 +854,7 @@ export function playCrateCreated() {
 /**
  * No comment provided
  *
- * Hash: 0x1CAE5D2E3F9A07F0 | Since: 323 | API-Set: unknown
+ * Hash: 0x1CAE5D2E3F9A07F0 | Since: unknown | API-Set: unknown
  */
 export function playCrateDropMissionDone() {
     PlaystatsCrateDropMissionDone(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined);
@@ -862,7 +862,7 @@ export function playCrateDropMissionDone() {
 /**
  * No comment provided
  *
- * Hash: 0x6DEE77AFF8C21BD1 | Since: 323 | API-Set: unknown
+ * Hash: 0x6DEE77AFF8C21BD1 | Since: unknown | API-Set: unknown
  */
 export function playCreateMatchHistoryId2() {
     return Citizen.invokeNative('0x6DEE77AFF8C21BD1');
@@ -870,7 +870,7 @@ export function playCreateMatchHistoryId2() {
 /**
  * No comment provided
  *
- * Hash: 0x0BC254FF3A911501 | Since: 1290 | API-Set: unknown
+ * Hash: 0x0BC254FF3A911501 | Since: unknown | API-Set: unknown
  */
 export function playDarCheckpoint() {
     return PlaystatsDarMissionEnd();
@@ -878,7 +878,7 @@ export function playDarCheckpoint() {
 /**
  * No comment provided
  *
- * Hash: 0x2605663BD4F23B5D | Since: 757 | API-Set: unknown
+ * Hash: 0x2605663BD4F23B5D | Since: unknown | API-Set: unknown
  */
 export function playDefendContrabandMission() {
     return PlaystatsDefendContraband();
@@ -886,7 +886,7 @@ export function playDefendContrabandMission() {
 /**
  * No comment provided
  *
- * Hash: 0xD6CA58B3B53A0F22 | Since: 2189 | API-Set: unknown
+ * Hash: 0xD6CA58B3B53A0F22 | Since: unknown | API-Set: unknown
  */
 export function playDjMissionEnded() {
     Citizen.invokeNative('0xD6CA58B3B53A0F22', undefined);
@@ -894,7 +894,7 @@ export function playDjMissionEnded() {
 /**
  * No comment provided
  *
- * Hash: 0xB26F670685631727 | Since: 1493 | API-Set: unknown
+ * Hash: 0xB26F670685631727 | Since: unknown | API-Set: unknown
  */
 export function playDjUsage() {
     Citizen.invokeNative('0xB26F670685631727', undefined, undefined);
@@ -902,7 +902,7 @@ export function playDjUsage() {
 /**
  * No comment provided
  *
- * Hash: 0x66C7BB2416ED3FCE | Since: 1493 | API-Set: unknown
+ * Hash: 0x66C7BB2416ED3FCE | Since: unknown | API-Set: unknown
  */
 export function playDroneUsage() {
     PlaystatsDroneUsage(0, 0, 0);
@@ -910,7 +910,7 @@ export function playDroneUsage() {
 /**
  * No comment provided
  *
- * Hash: 0x848B66100EE33B05 | Since: 1011 | API-Set: unknown
+ * Hash: 0x848B66100EE33B05 | Since: unknown | API-Set: unknown
  */
 export function playDupeDetected() {
     return PlaystatsDupeDetection();
@@ -918,7 +918,7 @@ export function playDupeDetected() {
 /**
  * No comment provided
  *
- * Hash: 0x501478855A6074CE | Since: 877 | API-Set: unknown
+ * Hash: 0x501478855A6074CE | Since: unknown | API-Set: unknown
  */
 export function playEarnedMcPoints() {
     PlaystatsEarnedMcPoints(undefined, undefined, undefined, undefined, undefined, undefined);
@@ -926,7 +926,7 @@ export function playEarnedMcPoints() {
 /**
  * No comment provided
  *
- * Hash: 0x878FF156D36E9956 | Since: 1290 | API-Set: unknown
+ * Hash: 0x878FF156D36E9956 | Since: unknown | API-Set: unknown
  */
 export function playEnterSessionPack() {
     return PlaystatsEnterSessionPack();
@@ -934,7 +934,7 @@ export function playEnterSessionPack() {
 /**
  * No comment provided
  *
- * Hash: 0xFA5B74BAB8A7EF99 | Since: 2372 | API-Set: unknown
+ * Hash: 0xFA5B74BAB8A7EF99 | Since: unknown | API-Set: unknown
  */
 export function playExtraEvent() {
     PlaystatsExtraEvent(undefined);
@@ -942,7 +942,7 @@ export function playExtraEvent() {
 /**
  * No comment provided
  *
- * Hash: 0x4DC416F246A41FC8 | Since: 2189 | API-Set: unknown
+ * Hash: 0x4DC416F246A41FC8 | Since: unknown | API-Set: unknown
  */
 export function playFastTrvl() {
     Citizen.invokeNative('0x4DC416F246A41FC8', undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined);
@@ -950,7 +950,7 @@ export function playFastTrvl() {
 /**
  * No comment provided
  *
- * Hash: 0xBAA2F0490E146BE8 | Since: 463 | API-Set: unknown
+ * Hash: 0xBAA2F0490E146BE8 | Since: unknown | API-Set: unknown
  */
 export function playFmEventAtob() {
     Citizen.invokeNative('0xBAA2F0490E146BE8', undefined);
@@ -958,7 +958,7 @@ export function playFmEventAtob() {
 /**
  * No comment provided
  *
- * Hash: 0x6A60E43998228229 | Since: 463 | API-Set: unknown
+ * Hash: 0x6A60E43998228229 | Since: unknown | API-Set: unknown
  */
 export function playFmEventChallenges() {
     Citizen.invokeNative('0x6A60E43998228229', undefined);
@@ -966,7 +966,7 @@ export function playFmEventChallenges() {
 /**
  * No comment provided
  *
- * Hash: 0x3DE3AA516FB126A4 | Since: 463 | API-Set: unknown
+ * Hash: 0x3DE3AA516FB126A4 | Since: unknown | API-Set: unknown
  */
 export function playFmEventCheckpointcollection() {
     Citizen.invokeNative('0x3DE3AA516FB126A4', undefined);
@@ -974,7 +974,7 @@ export function playFmEventCheckpointcollection() {
 /**
  * No comment provided
  *
- * Hash: 0x6551B1F7F6CD46EA | Since: 463 | API-Set: unknown
+ * Hash: 0x6551B1F7F6CD46EA | Since: unknown | API-Set: unknown
  */
 export function playFmEventCompetitiveurbanwarfare() {
     Citizen.invokeNative('0x6551B1F7F6CD46EA', undefined);
@@ -982,7 +982,7 @@ export function playFmEventCompetitiveurbanwarfare() {
 /**
  * No comment provided
  *
- * Hash: 0xEDBF6C9B0D2C65C8 | Since: 463 | API-Set: unknown
+ * Hash: 0xEDBF6C9B0D2C65C8 | Since: unknown | API-Set: unknown
  */
 export function playFmEventCriminaldamage() {
     Citizen.invokeNative('0xEDBF6C9B0D2C65C8', undefined);
@@ -990,7 +990,7 @@ export function playFmEventCriminaldamage() {
 /**
  * No comment provided
  *
- * Hash: 0x0A9C7F36E5D7B683 | Since: 463 | API-Set: unknown
+ * Hash: 0x0A9C7F36E5D7B683 | Since: unknown | API-Set: unknown
  */
 export function playFmEventDeaddrop() {
     Citizen.invokeNative('0x0A9C7F36E5D7B683', undefined);
@@ -998,7 +998,7 @@ export function playFmEventDeaddrop() {
 /**
  * No comment provided
  *
- * Hash: 0x84DFC579C2FC214C | Since: 463 | API-Set: unknown
+ * Hash: 0x84DFC579C2FC214C | Since: unknown | API-Set: unknown
  */
 export function playFmEventHotproperty() {
     Citizen.invokeNative('0x84DFC579C2FC214C', undefined);
@@ -1006,7 +1006,7 @@ export function playFmEventHotproperty() {
 /**
  * No comment provided
  *
- * Hash: 0x2CD90358F67D0AA8 | Since: 463 | API-Set: unknown
+ * Hash: 0x2CD90358F67D0AA8 | Since: unknown | API-Set: unknown
  */
 export function playFmEventHuntbeast() {
     Citizen.invokeNative('0x2CD90358F67D0AA8', undefined);
@@ -1014,7 +1014,7 @@ export function playFmEventHuntbeast() {
 /**
  * No comment provided
  *
- * Hash: 0x164C5FF663790845 | Since: 463 | API-Set: unknown
+ * Hash: 0x164C5FF663790845 | Since: unknown | API-Set: unknown
  */
 export function playFmEventKingofthecastle() {
     Citizen.invokeNative('0x164C5FF663790845', undefined);
@@ -1022,7 +1022,7 @@ export function playFmEventKingofthecastle() {
 /**
  * No comment provided
  *
- * Hash: 0x419615486BBF1956 | Since: 463 | API-Set: unknown
+ * Hash: 0x419615486BBF1956 | Since: unknown | API-Set: unknown
  */
 export function playFmEventPasstheparcel() {
     Citizen.invokeNative('0x419615486BBF1956', undefined);
@@ -1030,7 +1030,7 @@ export function playFmEventPasstheparcel() {
 /**
  * No comment provided
  *
- * Hash: 0x1A7CE7CD3E653485 | Since: 463 | API-Set: unknown
+ * Hash: 0x1A7CE7CD3E653485 | Since: unknown | API-Set: unknown
  */
 export function playFmEventPennedin() {
     Citizen.invokeNative('0x1A7CE7CD3E653485', undefined);
@@ -1038,7 +1038,7 @@ export function playFmEventPennedin() {
 /**
  * No comment provided
  *
- * Hash: 0x8C9D11605E59D955 | Since: 463 | API-Set: unknown
+ * Hash: 0x8C9D11605E59D955 | Since: unknown | API-Set: unknown
  */
 export function playFmEventUrbanwarfare() {
     Citizen.invokeNative('0x8C9D11605E59D955', undefined);
@@ -1046,7 +1046,7 @@ export function playFmEventUrbanwarfare() {
 /**
  * No comment provided
  *
- * Hash: 0xBFAFDB5FAAA5C5AB | Since: 463 | API-Set: unknown
+ * Hash: 0xBFAFDB5FAAA5C5AB | Since: unknown | API-Set: unknown
  */
 export function playFmEventVehicletarget() {
     Citizen.invokeNative('0xBFAFDB5FAAA5C5AB', undefined);
@@ -1054,7 +1054,7 @@ export function playFmEventVehicletarget() {
 /**
  * No comment provided
  *
- * Hash: 0xD8AFB345A9C5CCBB | Since: 1290 | API-Set: unknown
+ * Hash: 0xD8AFB345A9C5CCBB | Since: unknown | API-Set: unknown
  */
 export function playFmHeistPrepEnded() {
     return PlaystatsH2FmprepEnd();
@@ -1062,7 +1062,7 @@ export function playFmHeistPrepEnded() {
 /**
  * No comment provided
  *
- * Hash: 0x46A70777BE6CEAB9 | Since: 2545 | API-Set: unknown
+ * Hash: 0x46A70777BE6CEAB9 | Since: unknown | API-Set: unknown
  */
 export function playFmMissionEnd() {
     Citizen.invokeNative('0x46A70777BE6CEAB9', undefined, undefined, undefined, undefined);
@@ -1070,7 +1070,7 @@ export function playFmMissionEnd() {
 /**
  * No comment provided
  *
- * Hash: 0x1A0D4A6C336B7BC5 | Since: 1734 | API-Set: unknown
+ * Hash: 0x1A0D4A6C336B7BC5 | Since: unknown | API-Set: unknown
  */
 export function playFreemodeCasinoMissionEnded() {
     return PlaystatsCasinoMissionEnded();
@@ -1078,7 +1078,7 @@ export function playFreemodeCasinoMissionEnded() {
 /**
  * No comment provided
  *
- * Hash: 0x0F71DE29AB2258F1 | Since: 323 | API-Set: unknown
+ * Hash: 0x0F71DE29AB2258F1 | Since: unknown | API-Set: unknown
  */
 export function playFriendActivity() {
     PlaystatsFriendActivity(0, false);
@@ -1086,7 +1086,7 @@ export function playFriendActivity() {
 /**
  * No comment provided
  *
- * Hash: 0x0EACDF8487D5155A | Since: 1103 | API-Set: unknown
+ * Hash: 0x0EACDF8487D5155A | Since: unknown | API-Set: unknown
  */
 export function playGunrunningMissionEnded() {
     return PlaystatsGunrunMissionEnded();
@@ -1094,7 +1094,7 @@ export function playGunrunningMissionEnded() {
 /**
  * No comment provided
  *
- * Hash: 0xDAF80797FC534BEC | Since: 1103 | API-Set: unknown
+ * Hash: 0xDAF80797FC534BEC | Since: unknown | API-Set: unknown
  */
 export function playGunrunningRnd() {
     Citizen.invokeNative('0xDAF80797FC534BEC', undefined);
@@ -1102,7 +1102,7 @@ export function playGunrunningRnd() {
 /**
  * No comment provided
  *
- * Hash: 0xDFBD93BF2943E29B | Since: 1868 | API-Set: unknown
+ * Hash: 0xDFBD93BF2943E29B | Since: unknown | API-Set: unknown
  */
 export function playHeist3Drone() {
     Citizen.invokeNative('0xDFBD93BF2943E29B', undefined);
@@ -1110,7 +1110,7 @@ export function playHeist3Drone() {
 /**
  * No comment provided
  *
- * Hash: 0x2E0259BABC27A327 | Since: 1868 | API-Set: unknown
+ * Hash: 0x2E0259BABC27A327 | Since: unknown | API-Set: unknown
  */
 export function playHeist3Finale() {
     Citizen.invokeNative('0x2E0259BABC27A327', undefined);
@@ -1118,7 +1118,7 @@ export function playHeist3Finale() {
 /**
  * No comment provided
  *
- * Hash: 0x92FC0EEDFAC04A14 | Since: 1868 | API-Set: unknown
+ * Hash: 0x92FC0EEDFAC04A14 | Since: unknown | API-Set: unknown
  */
 export function playHeist3Hack() {
     Citizen.invokeNative('0x92FC0EEDFAC04A14', undefined, undefined, undefined, undefined, undefined, undefined);
@@ -1126,7 +1126,7 @@ export function playHeist3Hack() {
 /**
  * No comment provided
  *
- * Hash: 0x53C31853EC9531FF | Since: 1868 | API-Set: unknown
+ * Hash: 0x53C31853EC9531FF | Since: unknown | API-Set: unknown
  */
 export function playHeist3Prep() {
     Citizen.invokeNative('0x53C31853EC9531FF', undefined);
@@ -1134,7 +1134,7 @@ export function playHeist3Prep() {
 /**
  * No comment provided
  *
- * Hash: 0xC1E963C58664B556 | Since: 2189 | API-Set: unknown
+ * Hash: 0xC1E963C58664B556 | Since: unknown | API-Set: unknown
  */
 export function playHeist4Finale() {
     Citizen.invokeNative('0xC1E963C58664B556', undefined);
@@ -1142,7 +1142,7 @@ export function playHeist4Finale() {
 /**
  * No comment provided
  *
- * Hash: 0x2FA3173480008493 | Since: 2189 | API-Set: unknown
+ * Hash: 0x2FA3173480008493 | Since: unknown | API-Set: unknown
  */
 export function playHeist4Hack() {
     Citizen.invokeNative('0x2FA3173480008493', undefined, undefined, undefined, undefined, undefined);
@@ -1150,7 +1150,7 @@ export function playHeist4Hack() {
 /**
  * No comment provided
  *
- * Hash: 0xDFCDB14317A9B361 | Since: 2189 | API-Set: unknown
+ * Hash: 0xDFCDB14317A9B361 | Since: unknown | API-Set: unknown
  */
 export function playHeist4Prep() {
     Citizen.invokeNative('0xDFCDB14317A9B361', undefined);
@@ -1158,7 +1158,7 @@ export function playHeist4Prep() {
 /**
  * No comment provided
  *
- * Hash: 0xF4FF020A08BC8863 | Since: 323 | API-Set: unknown
+ * Hash: 0xF4FF020A08BC8863 | Since: unknown | API-Set: unknown
  */
 export function playHeistSaveCheat(hash) {
     if (typeof hash === 'string')
@@ -1168,7 +1168,7 @@ export function playHeistSaveCheat(hash) {
 /**
  * No comment provided
  *
- * Hash: 0x60EEDC12AF66E846 | Since: 757 | API-Set: unknown
+ * Hash: 0x60EEDC12AF66E846 | Since: unknown | API-Set: unknown
  */
 export function playHitContrabandDestroyLimit() {
     Citizen.invokeNative('0x60EEDC12AF66E846', undefined);
@@ -1176,7 +1176,7 @@ export function playHitContrabandDestroyLimit() {
 /**
  * No comment provided
  *
- * Hash: 0xCB00196B31C39EB1 | Since: 323 | API-Set: unknown
+ * Hash: 0xCB00196B31C39EB1 | Since: unknown | API-Set: unknown
  */
 export function playHoldUpMissionDone() {
     PlaystatsHoldUpMissionDone(undefined, undefined, undefined, undefined);
@@ -1184,7 +1184,7 @@ export function playHoldUpMissionDone() {
 /**
  * No comment provided
  *
- * Hash: 0x2818FF6638CB09DE | Since: 2189 | API-Set: unknown
+ * Hash: 0x2818FF6638CB09DE | Since: unknown | API-Set: unknown
  */
 export function playHubEntry() {
     Citizen.invokeNative('0x2818FF6638CB09DE', undefined);
@@ -1192,7 +1192,7 @@ export function playHubEntry() {
 /**
  * No comment provided
  *
- * Hash: 0x5A46ACE5C4661132 | Since: 2545 | API-Set: unknown
+ * Hash: 0x5A46ACE5C4661132 | Since: unknown | API-Set: unknown
  */
 export function playHubExit() {
     Citizen.invokeNative('0x5A46ACE5C4661132', undefined);
@@ -1200,7 +1200,7 @@ export function playHubExit() {
 /**
  * No comment provided
  *
- * Hash: 0x5DA3A8DE8CB6226F | Since: 323 | API-Set: unknown
+ * Hash: 0x5DA3A8DE8CB6226F | Since: unknown | API-Set: unknown
  */
 export function playIdleKick(msStoodIdle) {
     PlaystatsIdleKick(msStoodIdle);
@@ -1208,7 +1208,7 @@ export function playIdleKick(msStoodIdle) {
 /**
  * No comment provided
  *
- * Hash: 0x7D8BA05688AD64C7 | Since: 944 | API-Set: unknown
+ * Hash: 0x7D8BA05688AD64C7 | Since: unknown | API-Set: unknown
  */
 export function playImpexpMissionEnded() {
     Citizen.invokeNative('0x7D8BA05688AD64C7', undefined);
@@ -1216,7 +1216,7 @@ export function playImpexpMissionEnded() {
 /**
  * No comment provided
  *
- * Hash: 0x2B69F5074C894811 | Since: 323 | API-Set: unknown
+ * Hash: 0x2B69F5074C894811 | Since: unknown | API-Set: unknown
  */
 export function playImportExportMissionDone() {
     PlaystatsImportExportMissionDone(undefined, undefined, undefined, undefined);
@@ -1224,7 +1224,7 @@ export function playImportExportMissionDone() {
 /**
  * No comment provided
  *
- * Hash: 0x1E1497D0D2108115 | Since: 1290 | API-Set: unknown
+ * Hash: 0x1E1497D0D2108115 | Since: unknown | API-Set: unknown
  */
 export function playInstancedHeistEnded() {
     return PlaystatsH2InstanceEnd(undefined, undefined, undefined);
@@ -1232,7 +1232,7 @@ export function playInstancedHeistEnded() {
 /**
  * No comment provided
  *
- * Hash: 0xFEA3F7E83C0610FA | Since: 2545 | API-Set: unknown
+ * Hash: 0xFEA3F7E83C0610FA | Since: unknown | API-Set: unknown
  */
 export function playInstMissionEnd() {
     Citizen.invokeNative('0xFEA3F7E83C0610FA', undefined);
@@ -1240,7 +1240,7 @@ export function playInstMissionEnd() {
 /**
  * No comment provided
  *
- * Hash: 0x887DAD63CF5B7908 | Since: 2699 | API-Set: unknown
+ * Hash: 0x887DAD63CF5B7908 | Since: unknown | API-Set: unknown
  */
 export function playInventory() {
     PlaystatsInventory(undefined);
@@ -1248,7 +1248,7 @@ export function playInventory() {
 /**
  * No comment provided
  *
- * Hash: 0xF8C54A461C3E11DC | Since: 323 | API-Set: unknown
+ * Hash: 0xF8C54A461C3E11DC | Since: unknown | API-Set: unknown
  */
 export function playJobActivityEnd() {
     return Citizen.invokeNative('0xF8C54A461C3E11DC');
@@ -1256,7 +1256,7 @@ export function playJobActivityEnd() {
 /**
  * No comment provided
  *
- * Hash: 0xF5BB8DAC426A52C0 | Since: 323 | API-Set: unknown
+ * Hash: 0xF5BB8DAC426A52C0 | Since: unknown | API-Set: unknown
  */
 export function playJobBend() {
     return PlaystatsJobBend();
@@ -1264,7 +1264,7 @@ export function playJobBend() {
 /**
  * No comment provided
  *
- * Hash: 0xA736CF7FB7C5BFF4 | Since: 323 | API-Set: unknown
+ * Hash: 0xA736CF7FB7C5BFF4 | Since: unknown | API-Set: unknown
  */
 export function playJobLtsEnd() {
     return Citizen.invokeNative('0xA736CF7FB7C5BFF4');
@@ -1272,7 +1272,7 @@ export function playJobLtsEnd() {
 /**
  * No comment provided
  *
- * Hash: 0x14E0B2D1AD1044E0 | Since: 323 | API-Set: unknown
+ * Hash: 0x14E0B2D1AD1044E0 | Since: unknown | API-Set: unknown
  */
 export function playJobLtsRoundEnd() {
     return Citizen.invokeNative('0x14E0B2D1AD1044E0');
@@ -1280,7 +1280,7 @@ export function playJobLtsRoundEnd() {
 /**
  * No comment provided
  *
- * Hash: 0xC5BE134EC7BA96A0 | Since: 323 | API-Set: unknown
+ * Hash: 0xC5BE134EC7BA96A0 | Since: unknown | API-Set: unknown
  */
 export function playLeaveJobChain() {
     PlaystatsLeaveJobChain(undefined, undefined, undefined, undefined, undefined);
@@ -1288,7 +1288,18 @@ export function playLeaveJobChain() {
 /**
  * No comment provided
  *
- * Hash: 0x810B5FCC52EC7FF0 | Since: 1868 | API-Set: unknown
+ * Hash: 0x3019851E2CF1B047 | Since: unknown | API-Set: unknown
+ */
+export function playLpNav() {
+    if (!IsGameEnhancedVersion())
+        console.error('This native is not supported on legacy (0x3019851E2CF1B047)');
+    return;
+    return Citizen.invokeNative('0x3019851E2CF1B047');
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0x810B5FCC52EC7FF0 | Since: unknown | API-Set: unknown
  */
 export function playMasterControl() {
     Citizen.invokeNative('0x810B5FCC52EC7FF0', undefined, undefined, undefined, undefined, undefined);
@@ -1296,7 +1307,7 @@ export function playMasterControl() {
 /**
  * No comment provided
  *
- * Hash: 0xBC80E22DED931E3D | Since: 323 | API-Set: unknown
+ * Hash: 0xBC80E22DED931E3D | Since: unknown | API-Set: unknown
  */
 export function playMatchStarted() {
     PlaystatsMatchStarted(undefined, undefined, undefined);
@@ -1304,7 +1315,7 @@ export function playMatchStarted() {
 /**
  * No comment provided
  *
- * Hash: 0x8989CBD7B4E82534 | Since: 877 | API-Set: unknown
+ * Hash: 0x8989CBD7B4E82534 | Since: unknown | API-Set: unknown
  */
 export function playMcClubhouseActivity() {
     Citizen.invokeNative('0x8989CBD7B4E82534', undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined);
@@ -1312,7 +1323,7 @@ export function playMcClubhouseActivity() {
 /**
  * No comment provided
  *
- * Hash: 0x03C2EEBB04B3FB72 | Since: 877 | API-Set: unknown
+ * Hash: 0x03C2EEBB04B3FB72 | Since: unknown | API-Set: unknown
  */
 export function playMcFormationEnds() {
     Citizen.invokeNative('0x03C2EEBB04B3FB72', undefined, undefined, undefined, undefined, undefined, undefined, undefined);
@@ -1320,7 +1331,7 @@ export function playMcFormationEnds() {
 /**
  * No comment provided
  *
- * Hash: 0xF534D94DFA2EAD26 | Since: 877 | API-Set: unknown
+ * Hash: 0xF534D94DFA2EAD26 | Since: unknown | API-Set: unknown
  */
 export function playMcKilledRivalMcMember() {
     Citizen.invokeNative('0xF534D94DFA2EAD26', undefined, undefined, undefined, undefined, undefined);
@@ -1328,7 +1339,7 @@ export function playMcKilledRivalMcMember() {
 /**
  * No comment provided
  *
- * Hash: 0xCC25A4553DFBF9EA | Since: 877 | API-Set: unknown
+ * Hash: 0xCC25A4553DFBF9EA | Since: unknown | API-Set: unknown
  */
 export function playMcRequestBike() {
     Citizen.invokeNative('0xCC25A4553DFBF9EA', undefined, undefined, undefined, undefined, undefined);
@@ -1336,7 +1347,7 @@ export function playMcRequestBike() {
 /**
  * No comment provided
  *
- * Hash: 0xC14BD9F5337219B2 | Since: 1493 | API-Set: unknown
+ * Hash: 0xC14BD9F5337219B2 | Since: unknown | API-Set: unknown
  */
 export function playMinigameUsage() {
     Citizen.invokeNative('0xC14BD9F5337219B2', undefined, undefined, undefined);
@@ -1344,7 +1355,7 @@ export function playMinigameUsage() {
 /**
  * No comment provided
  *
- * Hash: 0xC900596A63978C1D | Since: 323 | API-Set: unknown
+ * Hash: 0xC900596A63978C1D | Since: unknown | API-Set: unknown
  */
 export function playMissionCheckpoint() {
     PlaystatsMissionCheckpoint(undefined, undefined, undefined, undefined);
@@ -1352,7 +1363,7 @@ export function playMissionCheckpoint() {
 /**
  * No comment provided
  *
- * Hash: 0xBF371CD2B64212FD | Since: 877 | API-Set: unknown
+ * Hash: 0xBF371CD2B64212FD | Since: unknown | API-Set: unknown
  */
 export function playMissionEnded() {
     Citizen.invokeNative('0xBF371CD2B64212FD', undefined);
@@ -1360,7 +1371,7 @@ export function playMissionEnded() {
 /**
  * No comment provided
  *
- * Hash: 0x7C4BB33A8CED7324 | Since: 323 | API-Set: unknown
+ * Hash: 0x7C4BB33A8CED7324 | Since: unknown | API-Set: unknown
  */
 export function playMissionOver() {
     PlaystatsMissionOver(undefined, undefined, undefined, false, false, false);
@@ -1368,7 +1379,7 @@ export function playMissionOver() {
 /**
  * No comment provided
  *
- * Hash: 0xC19A2925C34D2231 | Since: 323 | API-Set: unknown
+ * Hash: 0xC19A2925C34D2231 | Since: unknown | API-Set: unknown
  */
 export function playMissionStarted() {
     PlaystatsMissionStarted(undefined, undefined, undefined, false);
@@ -1376,7 +1387,7 @@ export function playMissionStarted() {
 /**
  * No comment provided
  *
- * Hash: 0xC03FAB2C2F92289B | Since: 1868 | API-Set: unknown
+ * Hash: 0xC03FAB2C2F92289B | Since: unknown | API-Set: unknown
  */
 export function playMissionVote() {
     Citizen.invokeNative('0xC03FAB2C2F92289B', undefined);
@@ -1384,7 +1395,7 @@ export function playMissionVote() {
 /**
  * No comment provided
  *
- * Hash: 0x830C3A44EB3F2CF9 | Since: 1493 | API-Set: unknown
+ * Hash: 0x830C3A44EB3F2CF9 | Since: unknown | API-Set: unknown
  */
 export function playNightclubMissionEnded() {
     Citizen.invokeNative('0x830C3A44EB3F2CF9', undefined);
@@ -1392,7 +1403,7 @@ export function playNightclubMissionEnded() {
 /**
  * No comment provided
  *
- * Hash: 0x5CDAED54B34B0ED0 | Since: 1868 | API-Set: unknown
+ * Hash: 0x5CDAED54B34B0ED0 | Since: unknown | API-Set: unknown
  */
 export function playNjvsVote() {
     Citizen.invokeNative('0x5CDAED54B34B0ED0', undefined);
@@ -1400,7 +1411,7 @@ export function playNjvsVote() {
 /**
  * No comment provided
  *
- * Hash: 0x93054C88E6AA7C44 | Since: 323 | API-Set: unknown
+ * Hash: 0x93054C88E6AA7C44 | Since: unknown | API-Set: unknown
  */
 export function playNpcInvite() {
     PlaystatsNpcInvite(undefined);
@@ -1408,7 +1419,7 @@ export function playNpcInvite() {
 /**
  * No comment provided
  *
- * Hash: 0x0077F15613D36993 | Since: 1868 | API-Set: unknown
+ * Hash: 0x0077F15613D36993 | Since: unknown | API-Set: unknown
  */
 export function playNpcPhone() {
     return Citizen.invokeNative('0x0077F15613D36993');
@@ -1416,7 +1427,7 @@ export function playNpcPhone() {
 /**
  * This native does absolutely nothing, just a nullsub
  *
- * Hash: 0x69DEA3E9DB727B4C | Since: 323 | API-Set: unknown
+ * Hash: 0x69DEA3E9DB727B4C | Since: unknown | API-Set: unknown
  */
 export function playOddjobDone(totalTimeMs) {
     PlaystatsOddjobDone(totalTimeMs, 0, false);
@@ -1424,7 +1435,7 @@ export function playOddjobDone(totalTimeMs) {
 /**
  * No comment provided
  *
- * Hash: 0x9572BD4DD6B72122 | Since: 1180 | API-Set: unknown
+ * Hash: 0x9572BD4DD6B72122 | Since: unknown | API-Set: unknown
  */
 export function playPegasusAsPersonalAircraft(modelHash) {
     if (typeof modelHash === 'string')
@@ -1434,7 +1445,7 @@ export function playPegasusAsPersonalAircraft(modelHash) {
 /**
  * No comment provided
  *
- * Hash: 0x203B381133817079 | Since: 393 | API-Set: unknown
+ * Hash: 0x203B381133817079 | Since: unknown | API-Set: unknown
  */
 export function playPimenuHideOptions() {
     return PlaystatsPiMenuHideSettings();
@@ -1442,7 +1453,7 @@ export function playPimenuHideOptions() {
 /**
  * No comment provided
  *
- * Hash: 0xBA739D6D5A05D6E7 | Since: 323 | API-Set: unknown
+ * Hash: 0xBA739D6D5A05D6E7 | Since: unknown | API-Set: unknown
  */
 export function playPropChange(p0) {
     const _p0 = typeof p0 == 'object' ? p0.handle() : p0;
@@ -1451,7 +1462,7 @@ export function playPropChange(p0) {
 /**
  * No comment provided
  *
- * Hash: 0x90D0622866E80445 | Since: 323 | API-Set: unknown
+ * Hash: 0x90D0622866E80445 | Since: unknown | API-Set: unknown
  */
 export function playQuickfixTool(element, item) {
     PlaystatsQuickfixTool(element, item);
@@ -1459,7 +1470,7 @@ export function playQuickfixTool(element, item) {
 /**
  * No comment provided
  *
- * Hash: 0x5BF29846C6527C54 | Since: 1868 | API-Set: unknown
+ * Hash: 0x5BF29846C6527C54 | Since: unknown | API-Set: unknown
  */
 export function playQuitMode() {
     Citizen.invokeNative('0x5BF29846C6527C54', undefined, undefined, undefined, undefined, undefined);
@@ -1467,7 +1478,7 @@ export function playQuitMode() {
 /**
  * No comment provided
  *
- * Hash: 0x9C375C315099DDE4 | Since: 323 | API-Set: unknown
+ * Hash: 0x9C375C315099DDE4 | Since: unknown | API-Set: unknown
  */
 export function playRaceCheckpoint(p0) {
     const _p0 = typeof p0 == 'object' ? p0.handle() : p0;
@@ -1476,7 +1487,7 @@ export function playRaceCheckpoint(p0) {
 /**
  * No comment provided
  *
- * Hash: 0xADDD1C754E2E2914 | Since: 323 | API-Set: unknown
+ * Hash: 0xADDD1C754E2E2914 | Since: unknown | API-Set: unknown
  */
 export function playRaceToPointMissionDone() {
     PlaystatsRaceToPointMissionDone(0, undefined, undefined, undefined);
@@ -1484,7 +1495,7 @@ export function playRaceToPointMissionDone() {
 /**
  * No comment provided
  *
- * Hash: 0x71862B1D855F32E1 | Since: 323 | API-Set: unknown
+ * Hash: 0x71862B1D855F32E1 | Since: unknown | API-Set: unknown
  */
 export function playRandomMissionDone(name) {
     PlaystatsRandomMissionDone(name, undefined, undefined, undefined);
@@ -1492,7 +1503,7 @@ export function playRandomMissionDone(name) {
 /**
  * No comment provided
  *
- * Hash: 0xC7F2DE41D102BFB4 | Since: 323 | API-Set: unknown
+ * Hash: 0xC7F2DE41D102BFB4 | Since: unknown | API-Set: unknown
  */
 export function playRankUp(rank) {
     PlaystatsRankUp(rank);
@@ -1500,7 +1511,7 @@ export function playRankUp(rank) {
 /**
  * No comment provided
  *
- * Hash: 0x04D90BA8207ADA2D | Since: 757 | API-Set: unknown
+ * Hash: 0x04D90BA8207ADA2D | Since: unknown | API-Set: unknown
  */
 export function playRecoverContrabandMission() {
     return PlaystatsRecoverContraband();
@@ -1508,7 +1519,7 @@ export function playRecoverContrabandMission() {
 /**
  * No comment provided
  *
- * Hash: 0x27AA1C973CACFE63 | Since: 944 | API-Set: unknown
+ * Hash: 0x27AA1C973CACFE63 | Since: unknown | API-Set: unknown
  */
 export function playRivalBehavior() {
     Citizen.invokeNative('0x27AA1C973CACFE63', undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined);
@@ -1516,7 +1527,7 @@ export function playRivalBehavior() {
 /**
  * No comment provided
  *
- * Hash: 0xBBA55BE9AAAABF44 | Since: 2372 | API-Set: unknown
+ * Hash: 0xBBA55BE9AAAABF44 | Since: unknown | API-Set: unknown
  */
 export function playRobberyFinale() {
     PlaystatsRobberyFinale(undefined);
@@ -1524,7 +1535,7 @@ export function playRobberyFinale() {
 /**
  * No comment provided
  *
- * Hash: 0x1A67DFBF1F5C3835 | Since: 2372 | API-Set: unknown
+ * Hash: 0x1A67DFBF1F5C3835 | Since: unknown | API-Set: unknown
  */
 export function playRobberyPrep() {
     PlaystatsRobberyPrep(undefined);
@@ -1532,7 +1543,7 @@ export function playRobberyPrep() {
 /**
  * No comment provided
  *
- * Hash: 0x121FB4DDDC2D5291 | Since: 323 | API-Set: unknown
+ * Hash: 0x121FB4DDDC2D5291 | Since: unknown | API-Set: unknown
  */
 export function playRosBet(amount, act, player, cm) {
     const _player = typeof player == 'object' ? player.playerId() : player;
@@ -1541,7 +1552,7 @@ export function playRosBet(amount, act, player, cm) {
 /**
  * No comment provided
  *
- * Hash: 0xC729991A9065376E | Since: 757 | API-Set: unknown
+ * Hash: 0xC729991A9065376E | Since: unknown | API-Set: unknown
  */
 export function playSellContrabandMission() {
     return PlaystatsSellContraband();
@@ -1549,7 +1560,7 @@ export function playSellContrabandMission() {
 /**
  * No comment provided
  *
- * Hash: 0xD1032E482629049E | Since: 323 | API-Set: unknown
+ * Hash: 0xD1032E482629049E | Since: unknown | API-Set: unknown
  */
 export function playSetJoinType(joinType) {
     PlaystatsSetJoinType(joinType);
@@ -1557,7 +1568,7 @@ export function playSetJoinType(joinType) {
 /**
  * No comment provided
  *
- * Hash: 0x176852ACAAC173D1 | Since: 323 | API-Set: unknown
+ * Hash: 0x176852ACAAC173D1 | Since: unknown | API-Set: unknown
  */
 export function playShopItem() {
     PlaystatsShopItem(undefined, undefined, undefined, undefined, undefined);
@@ -1565,7 +1576,7 @@ export function playShopItem() {
 /**
  * No comment provided
  *
- * Hash: 0x320C35147D5B5DDD | Since: 1180 | API-Set: unknown
+ * Hash: 0x320C35147D5B5DDD | Since: unknown | API-Set: unknown
  */
 export function playSmugglerMissionEnded() {
     return PlaystatsSmugMissionEnded();
@@ -1573,7 +1584,7 @@ export function playSmugglerMissionEnded() {
 /**
  * No comment provided
  *
- * Hash: 0xBE509B0A3693DE8B | Since: 757 | API-Set: unknown
+ * Hash: 0xBE509B0A3693DE8B | Since: unknown | API-Set: unknown
  */
 export function playSpentPiCustomLoadout(amount) {
     PlaystatsSpentPiCustomLoadout(amount);
@@ -1581,7 +1592,7 @@ export function playSpentPiCustomLoadout(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x6731DE84A38BFAD0 | Since: 1604 | API-Set: unknown
+ * Hash: 0x6731DE84A38BFAD0 | Since: unknown | API-Set: unknown
  */
 export function playSpinWheel() {
     PlaystatsSpectatorWheelSpin(0, 0, 0, 0);
@@ -1589,7 +1600,7 @@ export function playSpinWheel() {
 /**
  * No comment provided
  *
- * Hash: 0x098760C7461724CD | Since: 323 | API-Set: unknown
+ * Hash: 0x098760C7461724CD | Since: unknown | API-Set: unknown
  */
 export function playStartedSessionInOfflinemode() {
     PlaystatsStartOfflineMode();
@@ -1597,7 +1608,7 @@ export function playStartedSessionInOfflinemode() {
 /**
  * Allows CEventNetworkStuntPerformed to be triggered.
  *
- * Hash: 0x928DBFB892638EF3 | Since: 791 | API-Set: unknown
+ * Hash: 0x928DBFB892638EF3 | Since: unknown | API-Set: unknown
  */
 export function playStartTrackingStunts() {
     PlaystatsStartTrackingStunts();
@@ -1605,7 +1616,7 @@ export function playStartTrackingStunts() {
 /**
  * No comment provided
  *
- * Hash: 0x35E39E5570358630 | Since: 1493 | API-Set: unknown
+ * Hash: 0x35E39E5570358630 | Since: unknown | API-Set: unknown
  */
 export function playStoneHatchetEnded() {
     return PlaystatsStoneHatchetEnd();
@@ -1613,7 +1624,7 @@ export function playStoneHatchetEnded() {
 /**
  * Disallows CEventNetworkStuntPerformed to be triggered.
  *
- * Hash: 0x8A800DACCC0DA55D | Since: 791 | API-Set: unknown
+ * Hash: 0x8A800DACCC0DA55D | Since: unknown | API-Set: unknown
  */
 export function playStopTrackingStunts() {
     PlaystatsStopTrackingStunts();
@@ -1621,7 +1632,7 @@ export function playStopTrackingStunts() {
 /**
  * No comment provided
  *
- * Hash: 0xD4367D310F079DB0 | Since: 2189 | API-Set: unknown
+ * Hash: 0xD4367D310F079DB0 | Since: unknown | API-Set: unknown
  */
 export function playSubWeap() {
     Citizen.invokeNative('0xD4367D310F079DB0', undefined, undefined, undefined, undefined);
@@ -1629,7 +1640,7 @@ export function playSubWeap() {
 /**
  * No comment provided
  *
- * Hash: 0x0A50D2604E05CB94 | Since: 877 | API-Set: unknown
+ * Hash: 0x0A50D2604E05CB94 | Since: unknown | API-Set: unknown
  */
 export function playSwitchMcEmblem() {
     PlaystatsChangeMcEmblem(undefined, undefined, undefined, undefined, undefined);
@@ -1637,7 +1648,7 @@ export function playSwitchMcEmblem() {
 /**
  * No comment provided
  *
- * Hash: 0x35EEC6C2BC821A71 | Since: 1734 | API-Set: unknown
+ * Hash: 0x35EEC6C2BC821A71 | Since: unknown | API-Set: unknown
  */
 export function playSwitchPassiveMode() {
     PlaystatsPassiveMode(false, 0, 0, 0);
@@ -1645,7 +1656,7 @@ export function playSwitchPassiveMode() {
 /**
  * No comment provided
  *
- * Hash: 0x10A691F5756416D0 | Since: 2944 | API-Set: unknown
+ * Hash: 0x10A691F5756416D0 | Since: unknown | API-Set: unknown
  */
 export function playVehDel(bossId1, bossId2, bossType, vehicleID, reason) {
     Citizen.invokeNative('0x10A691F5756416D0', bossId1, bossId2, bossType, vehicleID, reason);
@@ -1653,7 +1664,7 @@ export function playVehDel(bossId1, bossId2, bossType, vehicleID, reason) {
 /**
  * No comment provided
  *
- * Hash: 0x2D7A9B577E72385E | Since: 1493 | API-Set: unknown
+ * Hash: 0x2D7A9B577E72385E | Since: unknown | API-Set: unknown
  */
 export function playWarehouseMissionEnded() {
     Citizen.invokeNative('0x2D7A9B577E72385E', undefined);
@@ -1661,7 +1672,7 @@ export function playWarehouseMissionEnded() {
 /**
  * This is a typo made by R*. It's supposed to be called PLAYSTATS_WEAPON_MOD_CHANGE.
  *
- * Hash: 0xE95C8A1875A02CA4 | Since: 323 | API-Set: unknown
+ * Hash: 0xE95C8A1875A02CA4 | Since: unknown | API-Set: unknown
  */
 export function playWeaponModeChange(weaponHash, componentHashTo, componentHashFrom) {
     if (typeof weaponHash === 'string')
@@ -1675,7 +1686,7 @@ export function playWeaponModeChange(weaponHash, componentHashTo, componentHashF
 /**
  * No comment provided
  *
- * Hash: 0xDDF24D535060F811 | Since: 323 | API-Set: unknown
+ * Hash: 0xDDF24D535060F811 | Since: unknown | API-Set: unknown
  */
 export function playWebsiteVisited(scaleformHash) {
     if (typeof scaleformHash === 'string')
@@ -1685,7 +1696,7 @@ export function playWebsiteVisited(scaleformHash) {
 /**
  * No comment provided
  *
- * Hash: 0x30A6614C1F7799B8 | Since: 323 | API-Set: unknown
+ * Hash: 0x30A6614C1F7799B8 | Since: unknown | API-Set: unknown
  */
 export function presenceEventUpdatestatFloat(statHash, value) {
     if (typeof statHash === 'string')
@@ -1695,7 +1706,7 @@ export function presenceEventUpdatestatFloat(statHash, value) {
 /**
  * No comment provided
  *
- * Hash: 0x11FF1C80276097ED | Since: 323 | API-Set: unknown
+ * Hash: 0x11FF1C80276097ED | Since: unknown | API-Set: unknown
  */
 export function presenceEventUpdatestatInt(statHash, value) {
     if (typeof statHash === 'string')
@@ -1705,7 +1716,7 @@ export function presenceEventUpdatestatInt(statHash, value) {
 /**
  * No comment provided
  *
- * Hash: 0x6483C25849031C4F | Since: 323 | API-Set: unknown
+ * Hash: 0x6483C25849031C4F | Since: unknown | API-Set: unknown
  */
 export function presenceEventUpdatestatIntWithString(statHash, value, _string) {
     if (typeof statHash === 'string')
@@ -1715,7 +1726,7 @@ export function presenceEventUpdatestatIntWithString(statHash, value, _string) {
 /**
  * No comment provided
  *
- * Hash: 0x7033EEFD9B28088E | Since: 678 | API-Set: unknown
+ * Hash: 0x7033EEFD9B28088E | Since: unknown | API-Set: unknown
  */
 export function sendMetricGhostingToPlayer() {
     Citizen.invokeNative('0x7033EEFD9B28088E', undefined);
@@ -1723,7 +1734,7 @@ export function sendMetricGhostingToPlayer() {
 /**
  * No comment provided
  *
- * Hash: 0x015B03EE1C43E6EC | Since: 757 | API-Set: unknown
+ * Hash: 0x015B03EE1C43E6EC | Since: unknown | API-Set: unknown
  */
 export function sendMetricPunishBodyguard() {
     Citizen.invokeNative('0x015B03EE1C43E6EC', undefined);
@@ -1731,7 +1742,7 @@ export function sendMetricPunishBodyguard() {
 /**
  * No comment provided
  *
- * Hash: 0xAA525DFF66BB82F5 | Since: 757 | API-Set: unknown
+ * Hash: 0xAA525DFF66BB82F5 | Since: unknown | API-Set: unknown
  */
 export function sendMetricVipPoach() {
     Citizen.invokeNative('0xAA525DFF66BB82F5', undefined, undefined, undefined);
@@ -1739,7 +1750,7 @@ export function sendMetricVipPoach() {
 /**
  * No comment provided
  *
- * Hash: 0x0D01D20616FC73FB | Since: 323 | API-Set: unknown
+ * Hash: 0x0D01D20616FC73FB | Since: unknown | API-Set: unknown
  */
 export function setFreemodePrologueDone(characterSlot) {
     Citizen.invokeNative('0x0D01D20616FC73FB', undefined, characterSlot);
@@ -1747,7 +1758,7 @@ export function setFreemodePrologueDone(characterSlot) {
 /**
  * Sets profile setting 940 and 941
  *
- * Hash: 0x79D310A861697CC9 | Since: 2699 | API-Set: unknown
+ * Hash: 0x79D310A861697CC9 | Since: unknown | API-Set: unknown
  */
 export function setFreemodeStrandProgressionStatus(profileSetting, settingValue) {
     Citizen.invokeNative('0x79D310A861697CC9', profileSetting, settingValue);
@@ -1755,7 +1766,7 @@ export function setFreemodeStrandProgressionStatus(profileSetting, settingValue)
 /**
  * No comment provided
  *
- * Hash: 0xC141B8917E0017EC | Since: 323 | API-Set: unknown
+ * Hash: 0xC141B8917E0017EC | Since: unknown | API-Set: unknown
  */
 export function setHasPostedAllVehiclesDriven() {
     Citizen.invokeNative('0xC141B8917E0017EC');
@@ -1763,7 +1774,7 @@ export function setHasPostedAllVehiclesDriven() {
 /**
  * Sets profile setting 866
  *
- * Hash: 0xDAC073C7901F9E15 | Since: 323 | API-Set: unknown
+ * Hash: 0xDAC073C7901F9E15 | Since: unknown | API-Set: unknown
  */
 export function setHasSpecialeditionContent(value) {
     SetHasContentUnlocksFlags(value);
@@ -1771,7 +1782,7 @@ export function setHasSpecialeditionContent(value) {
 /**
  * No comment provided
  *
- * Hash: 0x723C1CE13FBFDB67 | Since: 323 | API-Set: unknown
+ * Hash: 0x723C1CE13FBFDB67 | Since: unknown | API-Set: unknown
  */
 export function setJobActivityIdStarted(characterSlot) {
     Citizen.invokeNative('0x723C1CE13FBFDB67', undefined, characterSlot);
@@ -1779,7 +1790,7 @@ export function setJobActivityIdStarted(characterSlot) {
 /**
  * No comment provided
  *
- * Hash: 0xDB8A58AEAA67CD07 | Since: 2545 | API-Set: unknown
+ * Hash: 0xDB8A58AEAA67CD07 | Since: unknown | API-Set: unknown
  */
 export function setPackedStatBoolCode(index, value, characterSlot) {
     Citizen.invokeNative('0xDB8A58AEAA67CD07', index, value, characterSlot);
@@ -1787,7 +1798,7 @@ export function setPackedStatBoolCode(index, value, characterSlot) {
 /**
  * No comment provided
  *
- * Hash: 0x1581503AE529CD2E | Since: 2545 | API-Set: unknown
+ * Hash: 0x1581503AE529CD2E | Since: unknown | API-Set: unknown
  */
 export function setPackedStatIntCode(index, value, characterSlot) {
     Citizen.invokeNative('0x1581503AE529CD2E', index, value, characterSlot);
@@ -1795,7 +1806,7 @@ export function setPackedStatIntCode(index, value, characterSlot) {
 /**
  * Sets profile setting 935
  *
- * Hash: 0x55384438FC55AD8E | Since: 323 | API-Set: unknown
+ * Hash: 0x55384438FC55AD8E | Since: unknown | API-Set: unknown
  */
 export function setProfileSettingCreatorCtfDone(value) {
     Citizen.invokeNative('0x55384438FC55AD8E', value);
@@ -1803,7 +1814,7 @@ export function setProfileSettingCreatorCtfDone(value) {
 /**
  * Sets profile setting 934
  *
- * Hash: 0x38BAAA5DD4C9D19F | Since: 323 | API-Set: unknown
+ * Hash: 0x38BAAA5DD4C9D19F | Since: unknown | API-Set: unknown
  */
 export function setProfileSettingCreatorDmDone(value) {
     Citizen.invokeNative('0x38BAAA5DD4C9D19F', value);
@@ -1811,7 +1822,7 @@ export function setProfileSettingCreatorDmDone(value) {
 /**
  * Sets profile setting 933
  *
- * Hash: 0xF1A1803D3476F215 | Since: 323 | API-Set: unknown
+ * Hash: 0xF1A1803D3476F215 | Since: unknown | API-Set: unknown
  */
 export function setProfileSettingCreatorRacesDone(value) {
     Citizen.invokeNative('0xF1A1803D3476F215', value);
@@ -1819,7 +1830,7 @@ export function setProfileSettingCreatorRacesDone(value) {
 /**
  * No comment provided
  *
- * Hash: 0xB475F27C6A994D65 | Since: 323 | API-Set: unknown
+ * Hash: 0xB475F27C6A994D65 | Since: unknown | API-Set: unknown
  */
 export function setProfileSettingPrologueComplete() {
     SetProfileSettingPrologueComplete();
@@ -1827,7 +1838,7 @@ export function setProfileSettingPrologueComplete() {
 /**
  * Sets profile setting 939
  *
- * Hash: 0xC67E2DA1CBE759E2 | Since: 1734 | API-Set: unknown
+ * Hash: 0xC67E2DA1CBE759E2 | Since: unknown | API-Set: unknown
  */
 export function setProfileSettingSpChopMissionComplete() {
     Citizen.invokeNative('0xC67E2DA1CBE759E2');
@@ -1835,7 +1846,7 @@ export function setProfileSettingSpChopMissionComplete() {
 /**
  * Sets profile setting 501
  *
- * Hash: 0xF6792800AC95350D | Since: 323 | API-Set: unknown
+ * Hash: 0xF6792800AC95350D | Since: unknown | API-Set: unknown
  */
 export function setSaveMigrationTransactionIdWarning(transactionId) {
     SetSaveMigrationTransactionId(transactionId);
@@ -1843,7 +1854,7 @@ export function setSaveMigrationTransactionIdWarning(transactionId) {
 /**
  * No comment provided
  *
- * Hash: 0x3EBEAC6C3F81F6BD | Since: 573 | API-Set: unknown
+ * Hash: 0x3EBEAC6C3F81F6BD | Since: unknown | API-Set: unknown
  */
 export function startBeingBoss() {
     Citizen.invokeNative('0x3EBEAC6C3F81F6BD', undefined, undefined, undefined);
@@ -1851,15 +1862,26 @@ export function startBeingBoss() {
 /**
  * No comment provided
  *
- * Hash: 0x96E6D5150DBF1C09 | Since: 573 | API-Set: unknown
+ * Hash: 0x96E6D5150DBF1C09 | Since: unknown | API-Set: unknown
  */
 export function startBeingGoon() {
     Citizen.invokeNative('0x96E6D5150DBF1C09', undefined, undefined, undefined);
 }
 /**
+ * No comment provided
+ *
+ * Hash: 0x66ED2A62D0054F1A | Since: unknown | API-Set: unknown
+ */
+export function characterCreationOutfitSelected(outfit) {
+    if (!IsGameEnhancedVersion())
+        console.error('This native is not supported on legacy (0x66ED2A62D0054F1A)');
+    return;
+    Citizen.invokeNative('0x66ED2A62D0054F1A', outfit);
+}
+/**
  * This native does absolutely nothing, just a nullsub
  *
- * Hash: 0xC01D2470F22CDE5A | Since: 2372 | API-Set: unknown
+ * Hash: 0xC01D2470F22CDE5A | Since: unknown | API-Set: unknown
  */
 export function completedCharacterCreation() {
     Citizen.invokeNative('0xC01D2470F22CDE5A', undefined);
@@ -1867,7 +1889,7 @@ export function completedCharacterCreation() {
 /**
  * No comment provided
  *
- * Hash: 0x9B4BD21D69B1E609 | Since: 323 | API-Set: unknown
+ * Hash: 0x9B4BD21D69B1E609 | Since: unknown | API-Set: unknown
  */
 export function statClearDirtyReadDetected() {
     Citizen.invokeNative('0x9B4BD21D69B1E609');
@@ -1875,7 +1897,7 @@ export function statClearDirtyReadDetected() {
 /**
  * No comment provided
  *
- * Hash: 0xA8733668D1047B51 | Since: 323 | API-Set: unknown
+ * Hash: 0xA8733668D1047B51 | Since: unknown | API-Set: unknown
  */
 export function statClearPendingSaves() {
     Citizen.invokeNative('0xA8733668D1047B51', undefined);
@@ -1887,7 +1909,7 @@ export function statClearPendingSaves() {
  * `STATS::STAT_CLEAR_SLOT_FOR_RELOAD(v_2);`
  * }
  *
- * Hash: 0xEB0A72181D4AA4AD | Since: 323 | API-Set: unknown
+ * Hash: 0xEB0A72181D4AA4AD | Since: unknown | API-Set: unknown
  */
 export function statClearSlotForReload(statSlot) {
     return StatClearSlotForReload(statSlot);
@@ -1895,7 +1917,7 @@ export function statClearSlotForReload(statSlot) {
 /**
  * No comment provided
  *
- * Hash: 0x7F2C4CDF2E82DF4C | Since: 323 | API-Set: unknown
+ * Hash: 0x7F2C4CDF2E82DF4C | Since: unknown | API-Set: unknown
  */
 export function statCloudSlotLoadFailed() {
     return Citizen.invokeNative('0x7F2C4CDF2E82DF4C', 0);
@@ -1903,7 +1925,7 @@ export function statCloudSlotLoadFailed() {
 /**
  * No comment provided
  *
- * Hash: 0xE496A53BA5F50A56 | Since: 323 | API-Set: unknown
+ * Hash: 0xE496A53BA5F50A56 | Since: unknown | API-Set: unknown
  */
 export function statCloudSlotLoadFailedCode() {
     return Citizen.invokeNative('0xE496A53BA5F50A56', undefined);
@@ -1911,7 +1933,7 @@ export function statCloudSlotLoadFailedCode() {
 /**
  * No comment provided
  *
- * Hash: 0x7E6946F68A38B74F | Since: 323 | API-Set: unknown
+ * Hash: 0x7E6946F68A38B74F | Since: unknown | API-Set: unknown
  */
 export function statCloudSlotSaveFailed() {
     return Citizen.invokeNative('0x7E6946F68A38B74F', undefined);
@@ -1919,7 +1941,7 @@ export function statCloudSlotSaveFailed() {
 /**
  * No comment provided
  *
- * Hash: 0xBED9F5693F34ED17 | Since: 323 | API-Set: unknown
+ * Hash: 0xBED9F5693F34ED17 | Since: unknown | API-Set: unknown
  */
 export function statCommunityGetHistory(statName) {
     if (typeof statName === 'string')
@@ -1929,7 +1951,7 @@ export function statCommunityGetHistory(statName) {
 /**
  * No comment provided
  *
- * Hash: 0x5A556B229A169402 | Since: 323 | API-Set: unknown
+ * Hash: 0x5A556B229A169402 | Since: unknown | API-Set: unknown
  */
 export function statCommunityStartSynch() {
     return Citizen.invokeNative('0x5A556B229A169402');
@@ -1937,7 +1959,7 @@ export function statCommunityStartSynch() {
 /**
  * No comment provided
  *
- * Hash: 0xB1D2BB1E1631F5B1 | Since: 323 | API-Set: unknown
+ * Hash: 0xB1D2BB1E1631F5B1 | Since: unknown | API-Set: unknown
  */
 export function statCommunitySynchIsPending() {
     return Citizen.invokeNative('0xB1D2BB1E1631F5B1');
@@ -1945,7 +1967,7 @@ export function statCommunitySynchIsPending() {
 /**
  * p0 is characterSlot? seems range from 0 to 2
  *
- * Hash: 0x49A49BED12794D70 | Since: 323 | API-Set: unknown
+ * Hash: 0x49A49BED12794D70 | Since: unknown | API-Set: unknown
  */
 export function statDeleteSlot() {
     return StatDeleteSlot(0);
@@ -1953,7 +1975,7 @@ export function statDeleteSlot() {
 /**
  * Prevents updates to CStatsMgr (e.g., STAT_SET_* natives)
  *
- * Hash: 0x629526ABA383BCAA | Since: 323 | API-Set: unknown
+ * Hash: 0x629526ABA383BCAA | Since: unknown | API-Set: unknown
  */
 export function statDisableTracking() {
     Citizen.invokeNative('0x629526ABA383BCAA');
@@ -1961,7 +1983,7 @@ export function statDisableTracking() {
 /**
  * No comment provided
  *
- * Hash: 0x98E2BC1CA26287C3 | Since: 323 | API-Set: unknown
+ * Hash: 0x98E2BC1CA26287C3 | Since: unknown | API-Set: unknown
  */
 export function statEnableTracking() {
     Citizen.invokeNative('0x98E2BC1CA26287C3');
@@ -1969,7 +1991,7 @@ export function statEnableTracking() {
 /**
  * No comment provided
  *
- * Hash: 0x6A7F19756F1A9016 | Since: 2060 | API-Set: unknown
+ * Hash: 0x6A7F19756F1A9016 | Since: unknown | API-Set: unknown
  */
 export function statGetBlockSaves() {
     return Citizen.invokeNative('0x6A7F19756F1A9016');
@@ -1977,7 +1999,7 @@ export function statGetBlockSaves() {
 /**
  * No comment provided
  *
- * Hash: 0x11B5E6D2AE73F48E | Since: 323 | API-Set: unknown
+ * Hash: 0x11B5E6D2AE73F48E | Since: unknown | API-Set: unknown
  */
 export function statGetBool(statHash) {
     if (typeof statHash === 'string')
@@ -1987,7 +2009,7 @@ export function statGetBool(statHash) {
 /**
  * No comment provided
  *
- * Hash: 0x567384DFA67029E6 | Since: 323 | API-Set: unknown
+ * Hash: 0x567384DFA67029E6 | Since: unknown | API-Set: unknown
  */
 export function statGetCancelSaveMigrationStatus() {
     return StatGetCancelSaveMigrationStatus();
@@ -1995,7 +2017,7 @@ export function statGetCancelSaveMigrationStatus() {
 /**
  * Fly low to the ground for the longest distance
  *
- * Hash: 0x6E0A5253375C4584 | Since: 463 | API-Set: unknown
+ * Hash: 0x6E0A5253375C4584 | Since: unknown | API-Set: unknown
  */
 export function statGetChallengeFlyingDist() {
     return Citizen.invokeNative('0x6E0A5253375C4584');
@@ -2003,7 +2025,7 @@ export function statGetChallengeFlyingDist() {
 /**
  * Drive the furthest distance in a land vehicle without crashing
  *
- * Hash: 0xBA9749CC94C1FD85 | Since: 463 | API-Set: unknown
+ * Hash: 0xBA9749CC94C1FD85 | Since: unknown | API-Set: unknown
  */
 export function statGetCurrentDriveNocrashDistance() {
     return Citizen.invokeNative('0xBA9749CC94C1FD85');
@@ -2011,7 +2033,7 @@ export function statGetCurrentDriveNocrashDistance() {
 /**
  * Reverse the longest distance without crashing
  *
- * Hash: 0x32CAC93C9DE73D32 | Since: 463 | API-Set: unknown
+ * Hash: 0x32CAC93C9DE73D32 | Since: unknown | API-Set: unknown
  */
 export function statGetCurrentDrivingReverseDistance() {
     return Citizen.invokeNative('0x32CAC93C9DE73D32');
@@ -2019,7 +2041,7 @@ export function statGetCurrentDrivingReverseDistance() {
 /**
  * Perform the longest stoppie on a motorcycle
  *
- * Hash: 0x84A810B375E69C0E | Since: 463 | API-Set: unknown
+ * Hash: 0x84A810B375E69C0E | Since: unknown | API-Set: unknown
  */
 export function statGetCurrentFrontWheelDistance() {
     return Citizen.invokeNative('0x84A810B375E69C0E');
@@ -2027,7 +2049,7 @@ export function statGetCurrentFrontWheelDistance() {
 /**
  * Perform the longest jump in a land vehicle
  *
- * Hash: 0x9EC8858184CD253A | Since: 463 | API-Set: unknown
+ * Hash: 0x9EC8858184CD253A | Since: unknown | API-Set: unknown
  */
 export function statGetCurrentJumpDistance() {
     return Citizen.invokeNative('0x9EC8858184CD253A');
@@ -2035,7 +2057,7 @@ export function statGetCurrentJumpDistance() {
 /**
  * Perform the most near misses with other vehicles in a land vehicle without crashing
  *
- * Hash: 0xE8853FBCE7D8D0D6 | Since: 463 | API-Set: unknown
+ * Hash: 0xE8853FBCE7D8D0D6 | Since: unknown | API-Set: unknown
  */
 export function statGetCurrentNearMissNocrashPrecise() {
     return Citizen.invokeNative('0xE8853FBCE7D8D0D6');
@@ -2043,7 +2065,7 @@ export function statGetCurrentNearMissNocrashPrecise() {
 /**
  * Perform the longest wheelie on a motorcycle
  *
- * Hash: 0xA943FD1722E11EFD | Since: 463 | API-Set: unknown
+ * Hash: 0xA943FD1722E11EFD | Since: unknown | API-Set: unknown
  */
 export function statGetCurrentRearWheelDistance() {
     return Citizen.invokeNative('0xA943FD1722E11EFD');
@@ -2051,7 +2073,7 @@ export function statGetCurrentRearWheelDistance() {
 /**
  * Fall the longest distance with a parachute before opening it
  *
- * Hash: 0xAFF47709F1D5DCCE | Since: 463 | API-Set: unknown
+ * Hash: 0xAFF47709F1D5DCCE | Since: unknown | API-Set: unknown
  */
 export function statGetCurrentSkydivingDistance() {
     return Citizen.invokeNative('0xAFF47709F1D5DCCE');
@@ -2059,7 +2081,7 @@ export function statGetCurrentSkydivingDistance() {
 /**
  * Achieve the highest speed in a land vehicle
  *
- * Hash: 0x55A8BECAF28A4EB7 | Since: 463 | API-Set: unknown
+ * Hash: 0x55A8BECAF28A4EB7 | Since: unknown | API-Set: unknown
  */
 export function statGetCurrentSpeed() {
     return Citizen.invokeNative('0x55A8BECAF28A4EB7');
@@ -2067,7 +2089,7 @@ export function statGetCurrentSpeed() {
 /**
  * p3 is probably characterSlot or BOOL save, always -1
  *
- * Hash: 0x8B0FACEFC36C824B | Since: 323 | API-Set: unknown
+ * Hash: 0x8B0FACEFC36C824B | Since: unknown | API-Set: unknown
  */
 export function statGetDate(statHash, numFields) {
     if (typeof statHash === 'string')
@@ -2077,7 +2099,7 @@ export function statGetDate(statHash, numFields) {
 /**
  * No comment provided
  *
- * Hash: 0xD7AE6C9C9C6AC54C | Since: 323 | API-Set: unknown
+ * Hash: 0xD7AE6C9C9C6AC54C | Since: unknown | API-Set: unknown
  */
 export function statGetFloat(statHash) {
     if (typeof statHash === 'string')
@@ -2087,7 +2109,7 @@ export function statGetFloat(statHash) {
 /**
  * No comment provided
  *
- * Hash: 0x1A8EA222F9C67DBB | Since: 463 | API-Set: unknown
+ * Hash: 0x1A8EA222F9C67DBB | Since: unknown | API-Set: unknown
  */
 export function statGetFlyingAltitude() {
     return Citizen.invokeNative('0x1A8EA222F9C67DBB');
@@ -2096,7 +2118,7 @@ export function statGetFlyingAltitude() {
  * p2 appears to always be -1
  *
  *
- * Hash: 0x767FBC2AC802EF3D | Since: 323 | API-Set: unknown
+ * Hash: 0x767FBC2AC802EF3D | Since: unknown | API-Set: unknown
  */
 export function statGetInt(statHash) {
     if (typeof statHash === 'string')
@@ -2106,7 +2128,7 @@ export function statGetInt(statHash) {
 /**
  * No comment provided
  *
- * Hash: 0x5473D4195058B2E4 | Since: 323 | API-Set: unknown
+ * Hash: 0x5473D4195058B2E4 | Since: unknown | API-Set: unknown
  */
 export function statGetLicensePlate(statName) {
     if (typeof statName === 'string')
@@ -2116,7 +2138,7 @@ export function statGetLicensePlate(statName) {
 /**
  * No comment provided
  *
- * Hash: 0xC0E0D686DDFC6EAE | Since: 323 | API-Set: unknown
+ * Hash: 0xC0E0D686DDFC6EAE | Since: unknown | API-Set: unknown
  */
 export function statGetLoadSafeToProgressToMpFromSp() {
     return Citizen.invokeNative('0xC0E0D686DDFC6EAE');
@@ -2124,7 +2146,7 @@ export function statGetLoadSafeToProgressToMpFromSp() {
 /**
  * p4 is probably characterSlot or BOOL save
  *
- * Hash: 0x655185A06D9EEAAB | Since: 323 | API-Set: unknown
+ * Hash: 0x655185A06D9EEAAB | Since: unknown | API-Set: unknown
  */
 export function statGetMaskedInt(statHash) {
     if (typeof statHash === 'string')
@@ -2134,7 +2156,7 @@ export function statGetMaskedInt(statHash) {
 /**
  * No comment provided
  *
- * Hash: 0xE0E854F5280FB769 | Since: 323 | API-Set: unknown
+ * Hash: 0xE0E854F5280FB769 | Since: unknown | API-Set: unknown
  */
 export function statGetNumberOfDays(statName) {
     if (typeof statName === 'string')
@@ -2144,7 +2166,7 @@ export function statGetNumberOfDays(statName) {
 /**
  * No comment provided
  *
- * Hash: 0xF2D4B2FE415AAFC3 | Since: 323 | API-Set: unknown
+ * Hash: 0xF2D4B2FE415AAFC3 | Since: unknown | API-Set: unknown
  */
 export function statGetNumberOfHours(statName) {
     if (typeof statName === 'string')
@@ -2154,7 +2176,7 @@ export function statGetNumberOfHours(statName) {
 /**
  * No comment provided
  *
- * Hash: 0x7583B4BE4C5A41B5 | Since: 323 | API-Set: unknown
+ * Hash: 0x7583B4BE4C5A41B5 | Since: unknown | API-Set: unknown
  */
 export function statGetNumberOfMinutes(statName) {
     if (typeof statName === 'string')
@@ -2164,7 +2186,7 @@ export function statGetNumberOfMinutes(statName) {
 /**
  * No comment provided
  *
- * Hash: 0x2CE056FF3723F00B | Since: 323 | API-Set: unknown
+ * Hash: 0x2CE056FF3723F00B | Since: unknown | API-Set: unknown
  */
 export function statGetNumberOfSeconds(statName) {
     if (typeof statName === 'string')
@@ -2174,7 +2196,7 @@ export function statGetNumberOfSeconds(statName) {
 /**
  * p3 is probably characterSlot or BOOL save, always -1
  *
- * Hash: 0x350F82CCB186AA1B | Since: 323 | API-Set: unknown
+ * Hash: 0x350F82CCB186AA1B | Since: unknown | API-Set: unknown
  */
 export function statGetPos(statName) {
     if (typeof statName === 'string')
@@ -2184,7 +2206,7 @@ export function statGetPos(statName) {
 /**
  * No comment provided
  *
- * Hash: 0xF11F01D98113536A | Since: 463 | API-Set: unknown
+ * Hash: 0xF11F01D98113536A | Since: unknown | API-Set: unknown
  */
 export function statGetRecordedValue() {
     return Citizen.invokeNative('0xF11F01D98113536A');
@@ -2192,7 +2214,7 @@ export function statGetRecordedValue() {
 /**
  * No comment provided
  *
- * Hash: 0xCE5AA445ABA8DEE0 | Since: 323 | API-Set: unknown
+ * Hash: 0xCE5AA445ABA8DEE0 | Since: unknown | API-Set: unknown
  */
 export function statGetSaveMigrationConsumeContentStatus() {
     return StatGetSaveMigrationConsumeContentUnlockStatus();
@@ -2200,7 +2222,7 @@ export function statGetSaveMigrationConsumeContentStatus() {
 /**
  * No comment provided
  *
- * Hash: 0x886913BBEACA68C1 | Since: 323 | API-Set: unknown
+ * Hash: 0x886913BBEACA68C1 | Since: unknown | API-Set: unknown
  */
 export function statGetSaveMigrationStatus() {
     return StatGetSaveMigrationStatus();
@@ -2208,7 +2230,7 @@ export function statGetSaveMigrationStatus() {
 /**
  * p1 is always -1 in the script files
  *
- * Hash: 0xE50384ACC2C3DB74 | Since: 323 | API-Set: unknown
+ * Hash: 0xE50384ACC2C3DB74 | Since: unknown | API-Set: unknown
  */
 export function statGetString(statHash) {
     if (typeof statHash === 'string')
@@ -2218,7 +2240,7 @@ export function statGetString(statHash) {
 /**
  * Returns the rockstar ID (user id) value of a given stat. Returns "STAT_UNKNOWN" if the statHash is invalid or the stat has no userId
  *
- * Hash: 0x2365C388E393BBE2 | Since: 323 | API-Set: unknown
+ * Hash: 0x2365C388E393BBE2 | Since: unknown | API-Set: unknown
  */
 export function statGetUserId(statHash) {
     if (typeof statHash === 'string')
@@ -2228,7 +2250,7 @@ export function statGetUserId(statHash) {
 /**
  * Travel the furthest distance when bailing from a vehicle
  *
- * Hash: 0x0B8B7F74BF061C6D | Since: 463 | API-Set: unknown
+ * Hash: 0x0B8B7F74BF061C6D | Since: unknown | API-Set: unknown
  */
 export function statGetVehicleBailDistance() {
     return Citizen.invokeNative('0x0B8B7F74BF061C6D');
@@ -2236,7 +2258,7 @@ export function statGetVehicleBailDistance() {
 /**
  * No comment provided
  *
- * Hash: 0x9B5A68C6489E9909 | Since: 323 | API-Set: unknown
+ * Hash: 0x9B5A68C6489E9909 | Since: unknown | API-Set: unknown
  */
 export function statIncrement(statName, value) {
     if (typeof statName === 'string')
@@ -2246,7 +2268,7 @@ export function statIncrement(statName, value) {
 /**
  * Or non-flyable area
  *
- * Hash: 0xF9F2922717B819EC | Since: 505 | API-Set: unknown
+ * Hash: 0xF9F2922717B819EC | Since: unknown | API-Set: unknown
  */
 export function statIsPlayerVehicleAboveOcean() {
     return Citizen.invokeNative('0xF9F2922717B819EC');
@@ -2254,7 +2276,7 @@ export function statIsPlayerVehicleAboveOcean() {
 /**
  * No comment provided
  *
- * Hash: 0x8B9CDBD6C566C38C | Since: 944 | API-Set: unknown
+ * Hash: 0x8B9CDBD6C566C38C | Since: unknown | API-Set: unknown
  */
 export function statIsRecordingStat() {
     return Citizen.invokeNative('0x8B9CDBD6C566C38C');
@@ -2262,7 +2284,7 @@ export function statIsRecordingStat() {
 /**
  * No comment provided
  *
- * Hash: 0xBE3DB208333D9844 | Since: 463 | API-Set: unknown
+ * Hash: 0xBE3DB208333D9844 | Since: unknown | API-Set: unknown
  */
 export function statIsTrackingEnabled() {
     return Citizen.invokeNative('0xBE3DB208333D9844');
@@ -2270,7 +2292,7 @@ export function statIsTrackingEnabled() {
 /**
  * No comment provided
  *
- * Hash: 0xA651443F437B1CE6 | Since: 323 | API-Set: unknown
+ * Hash: 0xA651443F437B1CE6 | Since: unknown | API-Set: unknown
  */
 export function statLoad(statSlot) {
     return StatLoad(statSlot);
@@ -2278,7 +2300,7 @@ export function statLoad(statSlot) {
 /**
  * No comment provided
  *
- * Hash: 0xECB41AC6AB754401 | Since: 323 | API-Set: unknown
+ * Hash: 0xECB41AC6AB754401 | Since: unknown | API-Set: unknown
  */
 export function statLoadDirtyReadDetected() {
     return Citizen.invokeNative('0xECB41AC6AB754401');
@@ -2286,7 +2308,7 @@ export function statLoadDirtyReadDetected() {
 /**
  * No comment provided
  *
- * Hash: 0xA1750FFAFA181661 | Since: 323 | API-Set: unknown
+ * Hash: 0xA1750FFAFA181661 | Since: unknown | API-Set: unknown
  */
 export function statLoadPending(statSlot) {
     return StatLoadPending(statSlot);
@@ -2294,7 +2316,7 @@ export function statLoadPending(statSlot) {
 /**
  * p0 seems to range from 0 to 7
  *
- * Hash: 0xA78B8FA58200DA56 | Since: 323 | API-Set: unknown
+ * Hash: 0xA78B8FA58200DA56 | Since: unknown | API-Set: unknown
  */
 export function statLocalResetAllOnlineCharacter() {
     Citizen.invokeNative('0xA78B8FA58200DA56', 0);
@@ -2302,7 +2324,7 @@ export function statLocalResetAllOnlineCharacter() {
 /**
  * No comment provided
  *
- * Hash: 0x4C89FE2BDEB3F169 | Since: 323 | API-Set: unknown
+ * Hash: 0x4C89FE2BDEB3F169 | Since: unknown | API-Set: unknown
  */
 export function statMigrateCheckAlreadyDone() {
     return Citizen.invokeNative('0x4C89FE2BDEB3F169');
@@ -2310,7 +2332,7 @@ export function statMigrateCheckAlreadyDone() {
 /**
  * No comment provided
  *
- * Hash: 0x5BD5F255321C4AAF | Since: 323 | API-Set: unknown
+ * Hash: 0x5BD5F255321C4AAF | Since: unknown | API-Set: unknown
  */
 export function statMigrateCheckGetIsPlatformAvailable() {
     return Citizen.invokeNative('0x5BD5F255321C4AAF', 0);
@@ -2318,7 +2340,7 @@ export function statMigrateCheckGetIsPlatformAvailable() {
 /**
  * No comment provided
  *
- * Hash: 0xDEAAF77EB3687E97 | Since: 323 | API-Set: unknown
+ * Hash: 0xDEAAF77EB3687E97 | Since: unknown | API-Set: unknown
  */
 export function statMigrateCheckGetPlatformStatus() {
     return Citizen.invokeNative('0xDEAAF77EB3687E97', 0);
@@ -2326,7 +2348,7 @@ export function statMigrateCheckGetPlatformStatus() {
 /**
  * No comment provided
  *
- * Hash: 0xC6E0E2616A7576BB | Since: 323 | API-Set: unknown
+ * Hash: 0xC6E0E2616A7576BB | Since: unknown | API-Set: unknown
  */
 export function statMigrateCheckStart() {
     return Citizen.invokeNative('0xC6E0E2616A7576BB');
@@ -2334,7 +2356,7 @@ export function statMigrateCheckStart() {
 /**
  * No comment provided
  *
- * Hash: 0xC847B43F369AC0B5 | Since: 323 | API-Set: unknown
+ * Hash: 0xC847B43F369AC0B5 | Since: unknown | API-Set: unknown
  */
 export function statMigrateClearForRestart() {
     Citizen.invokeNative('0xC847B43F369AC0B5');
@@ -2342,7 +2364,7 @@ export function statMigrateClearForRestart() {
 /**
  * No comment provided
  *
- * Hash: 0x9A62EC95AE10E011 | Since: 323 | API-Set: unknown
+ * Hash: 0x9A62EC95AE10E011 | Since: unknown | API-Set: unknown
  */
 export function statMigrateSavegameGetStatus() {
     return Citizen.invokeNative('0x9A62EC95AE10E011');
@@ -2350,7 +2372,7 @@ export function statMigrateSavegameGetStatus() {
 /**
  * platformName must be one of the following: ps3, xbox360, ps4, xboxone
  *
- * Hash: 0xA5C80D8E768A9E66 | Since: 323 | API-Set: unknown
+ * Hash: 0xA5C80D8E768A9E66 | Since: unknown | API-Set: unknown
  */
 export function statMigrateSavegameStart(platformName) {
     return StatMigrateSave(platformName);
@@ -2358,7 +2380,7 @@ export function statMigrateSavegameStart(platformName) {
 /**
  * No comment provided
  *
- * Hash: 0x428EAF89E24F6C36 | Since: 323 | API-Set: unknown
+ * Hash: 0x428EAF89E24F6C36 | Since: unknown | API-Set: unknown
  */
 export function statNetworkIncrementOnSuicide() {
     LeaderboardsDeaths(undefined, 0);
@@ -2366,7 +2388,7 @@ export function statNetworkIncrementOnSuicide() {
 /**
  * p0 seems to range from 0 to 7
  *
- * Hash: 0x26D7399B9587FE89 | Since: 323 | API-Set: unknown
+ * Hash: 0x26D7399B9587FE89 | Since: unknown | API-Set: unknown
  */
 export function statResetAllOnlineCharacter() {
     Citizen.invokeNative('0x26D7399B9587FE89', 0);
@@ -2374,7 +2396,7 @@ export function statResetAllOnlineCharacter() {
 /**
  * This function is hard-coded to always return 1.
  *
- * Hash: 0xB3DA2606774A8E2D | Since: 323 | API-Set: unknown
+ * Hash: 0xB3DA2606774A8E2D | Since: unknown | API-Set: unknown
  */
 export function statRollbackSaveMigration() {
     return Citizen.invokeNative('0xB3DA2606774A8E2D');
@@ -2382,7 +2404,7 @@ export function statRollbackSaveMigration() {
 /**
  * No comment provided
  *
- * Hash: 0xE07BCA305B82D2FD | Since: 323 | API-Set: unknown
+ * Hash: 0xE07BCA305B82D2FD | Since: unknown | API-Set: unknown
  */
 export function ave() {
     return StatSave(0, false, 0, false);
@@ -2390,7 +2412,7 @@ export function ave() {
 /**
  * No comment provided
  *
- * Hash: 0x4FEF53183C3C6414 | Since: 323 | API-Set: unknown
+ * Hash: 0x4FEF53183C3C6414 | Since: unknown | API-Set: unknown
  */
 export function aveMigrationCancelPendingOperation() {
     return StatSaveMigrationCancel();
@@ -2398,7 +2420,7 @@ export function aveMigrationCancelPendingOperation() {
 /**
  * No comment provided
  *
- * Hash: 0x3270F67EED31FBC1 | Since: 323 | API-Set: unknown
+ * Hash: 0x3270F67EED31FBC1 | Since: unknown | API-Set: unknown
  */
 export function aveMigrationConsumeContent(contentId, srcPlatform, srcGamerHandle) {
     if (typeof contentId === 'string')
@@ -2408,7 +2430,7 @@ export function aveMigrationConsumeContent(contentId, srcPlatform, srcGamerHandl
 /**
  * No comment provided
  *
- * Hash: 0x7D3A583856F2C5AC | Since: 323 | API-Set: unknown
+ * Hash: 0x7D3A583856F2C5AC | Since: unknown | API-Set: unknown
  */
 export function avePending() {
     return StatSavePending();
@@ -2416,7 +2438,7 @@ export function avePending() {
 /**
  * No comment provided
  *
- * Hash: 0xBBB6AD006F1BBEA3 | Since: 323 | API-Set: unknown
+ * Hash: 0xBBB6AD006F1BBEA3 | Since: unknown | API-Set: unknown
  */
 export function avePendingOrRequested() {
     return StatSavePendingOrRequested();
@@ -2424,7 +2446,7 @@ export function avePendingOrRequested() {
 /**
  * No comment provided
  *
- * Hash: 0xF434A10BA01C37D0 | Since: 323 | API-Set: unknown
+ * Hash: 0xF434A10BA01C37D0 | Since: unknown | API-Set: unknown
  */
 export function etBlockSaves(toggle) {
     StatSetBlockSaves(toggle);
@@ -2433,7 +2455,7 @@ export function etBlockSaves(toggle) {
  * Example:
  * `STATS::STAT_SET_BOOL(MISC::GET_HASH_KEY("MPPLY_MELEECHLENGECOMPLETED"), trur, true);`
  *
- * Hash: 0x4B33C4243DE0C432 | Since: 323 | API-Set: unknown
+ * Hash: 0x4B33C4243DE0C432 | Since: unknown | API-Set: unknown
  */
 export function etBool(statName, value, save) {
     if (typeof statName === 'string')
@@ -2443,7 +2465,7 @@ export function etBool(statName, value, save) {
 /**
  * No comment provided
  *
- * Hash: 0x047CBED6F6F8B63C | Since: 323 | API-Set: unknown
+ * Hash: 0x047CBED6F6F8B63C | Since: unknown | API-Set: unknown
  */
 export function etCheatIsActive() {
     StatSetCheatIsActive();
@@ -2451,7 +2473,7 @@ export function etCheatIsActive() {
 /**
  * p1 always true.
  *
- * Hash: 0xC2F84B7F9C4D0C61 | Since: 323 | API-Set: unknown
+ * Hash: 0xC2F84B7F9C4D0C61 | Since: unknown | API-Set: unknown
  */
 export function etCurrentPosixTime(statName) {
     if (typeof statName === 'string')
@@ -2473,7 +2495,7 @@ export function etCurrentPosixTime(statName) {
  *
  * `The decompiled scripts use TIME::GET_POSIX_TIME to fill this structure.`
  *
- * Hash: 0x2C29BFB64F4FCBE4 | Since: 323 | API-Set: unknown
+ * Hash: 0x2C29BFB64F4FCBE4 | Since: unknown | API-Set: unknown
  */
 export function etDate(statName, numFields, save) {
     if (typeof statName === 'string')
@@ -2484,7 +2506,7 @@ export function etDate(statName, numFields, save) {
  * Example:
  * `STATS::STAT_SET_FLOAT(MISC::GET_HASH_KEY("MP0_WEAPON_ACCURACY"), 66.6f, true);`
  *
- * Hash: 0x4851997F37FE9B3C | Since: 323 | API-Set: unknown
+ * Hash: 0x4851997F37FE9B3C | Since: unknown | API-Set: unknown
  */
 export function etFloat(statName, value, save) {
     if (typeof statName === 'string')
@@ -2557,7 +2579,7 @@ export function etFloat(statName, value, save) {
  * "RC_TON4"
  * "RC_TON5"
  *
- * Hash: 0x17695002FD8B2AE0 | Since: 323 | API-Set: unknown
+ * Hash: 0x17695002FD8B2AE0 | Since: unknown | API-Set: unknown
  */
 export function etGxtLabel(statName, value, save) {
     if (typeof statName === 'string')
@@ -2568,7 +2590,7 @@ export function etGxtLabel(statName, value, save) {
  * Example:
  * `STATS::STAT_SET_INT(MISC::GET_HASH_KEY("MPPLY_KILLS_PLAYERS"), 1337, true);`
  *
- * Hash: 0xB3271D7AB655B441 | Since: 323 | API-Set: unknown
+ * Hash: 0xB3271D7AB655B441 | Since: unknown | API-Set: unknown
  */
 export function etInt(statName, value, save) {
     if (typeof statName === 'string')
@@ -2578,7 +2600,7 @@ export function etInt(statName, value, save) {
 /**
  * No comment provided
  *
- * Hash: 0x69FF13266D7296DA | Since: 323 | API-Set: unknown
+ * Hash: 0x69FF13266D7296DA | Since: unknown | API-Set: unknown
  */
 export function etLicensePlate(statName, str) {
     if (typeof statName === 'string')
@@ -2588,7 +2610,7 @@ export function etLicensePlate(statName, str) {
 /**
  * No comment provided
  *
- * Hash: 0x7BBB1B54583ED410 | Since: 323 | API-Set: unknown
+ * Hash: 0x7BBB1B54583ED410 | Since: unknown | API-Set: unknown
  */
 export function etMaskedInt(statName, save) {
     if (typeof statName === 'string')
@@ -2598,7 +2620,7 @@ export function etMaskedInt(statName, save) {
 /**
  * No comment provided
  *
- * Hash: 0x5688585E6D563CD8 | Since: 323 | API-Set: unknown
+ * Hash: 0x5688585E6D563CD8 | Since: unknown | API-Set: unknown
  */
 export function etOpenSavetypeInJob() {
     Citizen.invokeNative('0x5688585E6D563CD8', 0);
@@ -2606,7 +2628,7 @@ export function etOpenSavetypeInJob() {
 /**
  * No comment provided
  *
- * Hash: 0xDB283FDE680FE72E | Since: 323 | API-Set: unknown
+ * Hash: 0xDB283FDE680FE72E | Since: unknown | API-Set: unknown
  */
 export function etPos(statName, pos, save) {
     if (typeof statName === 'string')
@@ -2618,7 +2640,7 @@ export function etPos(statName, pos, save) {
  *
  * profileSetting seems to only be 936, 937 and 938 in scripts
  *
- * Hash: 0x68F01422BE1D838F | Since: 323 | API-Set: unknown
+ * Hash: 0x68F01422BE1D838F | Since: unknown | API-Set: unknown
  */
 export function etProfileSettingValue(profileSetting, value) {
     StatSetProfileSettingValue(profileSetting, value);
@@ -2626,7 +2648,7 @@ export function etProfileSettingValue(profileSetting, value) {
 /**
  * No comment provided
  *
- * Hash: 0xA87B2335D12531D7 | Since: 323 | API-Set: unknown
+ * Hash: 0xA87B2335D12531D7 | Since: unknown | API-Set: unknown
  */
 export function etString(statName, value, save) {
     if (typeof statName === 'string')
@@ -2636,7 +2658,7 @@ export function etString(statName, value, save) {
 /**
  * No comment provided
  *
- * Hash: 0x8CDDF1E452BABE11 | Since: 323 | API-Set: unknown
+ * Hash: 0x8CDDF1E452BABE11 | Since: unknown | API-Set: unknown
  */
 export function etUserId(statName, value, save) {
     if (typeof statName === 'string')
@@ -2646,7 +2668,7 @@ export function etUserId(statName, value, save) {
 /**
  * No comment provided
  *
- * Hash: 0x0D0A9F0E7BD91E3C | Since: 323 | API-Set: unknown
+ * Hash: 0x0D0A9F0E7BD91E3C | Since: unknown | API-Set: unknown
  */
 export function lotIsLoaded(statSlot) {
     return StatSlotIsLoaded(statSlot);
@@ -2694,7 +2716,7 @@ export function lotIsLoaded(statSlot) {
  * Min
  * }
  *
- * Hash: 0x33D72899E24C3365 | Since: 463 | API-Set: unknown
+ * Hash: 0x33D72899E24C3365 | Since: unknown | API-Set: unknown
  */
 export function tartRecordStat(statType, valueType) {
     return Citizen.invokeNative('0x33D72899E24C3365', statType, valueType);
@@ -2702,7 +2724,7 @@ export function tartRecordStat(statType, valueType) {
 /**
  * No comment provided
  *
- * Hash: 0xA761D4AC6115623D | Since: 463 | API-Set: unknown
+ * Hash: 0xA761D4AC6115623D | Since: unknown | API-Set: unknown
  */
 export function topRecordStat() {
     return Citizen.invokeNative('0xA761D4AC6115623D');
@@ -2710,7 +2732,7 @@ export function topRecordStat() {
 /**
  * Returns stat hash based on dataType, statIndex/statId and characterSlot. Related to CStatsMpCharacterMappingData
  *
- * Hash: 0xD69CE161FE614531 | Since: 2944 | API-Set: unknown
+ * Hash: 0xD69CE161FE614531 | Since: unknown | API-Set: unknown
  */
 export function getStatHashForCharacterStat(dataType, statIndex, charSlot) {
     return Citizen.invokeNative('0xD69CE161FE614531', dataType, statIndex, charSlot);
@@ -2718,7 +2740,7 @@ export function getStatHashForCharacterStat(dataType, statIndex, charSlot) {
 /**
  * No comment provided
  *
- * Hash: 0x8A23D1324F6B2BAC | Since: 2802 | API-Set: unknown
+ * Hash: 0x8A23D1324F6B2BAC | Since: unknown | API-Set: unknown
  */
 export function playAcidMissionEnd() {
     Citizen.invokeNative('0x8A23D1324F6B2BAC', undefined);
@@ -2726,7 +2748,7 @@ export function playAcidMissionEnd() {
 /**
  * No comment provided
  *
- * Hash: 0xCEACCF0550FDC5BA | Since: 2802 | API-Set: unknown
+ * Hash: 0xCEACCF0550FDC5BA | Since: unknown | API-Set: unknown
  */
 export function playAcidRnd() {
     Citizen.invokeNative('0xCEACCF0550FDC5BA', undefined);
@@ -2734,7 +2756,7 @@ export function playAcidRnd() {
 /**
  * No comment provided
  *
- * Hash: 0x5649CA22AF74E019 | Since: 3095 | API-Set: unknown
+ * Hash: 0x5649CA22AF74E019 | Since: unknown | API-Set: unknown
  */
 export function playAlert() {
     return Citizen.invokeNative('0x5649CA22AF74E019');
@@ -2742,7 +2764,7 @@ export function playAlert() {
 /**
  * No comment provided
  *
- * Hash: 0xBD642335A732F1A8 | Since: 2944 | API-Set: unknown
+ * Hash: 0xBD642335A732F1A8 | Since: unknown | API-Set: unknown
  */
 export function playAttritionStageEnd() {
     Citizen.invokeNative('0xBD642335A732F1A8', undefined);
@@ -2750,7 +2772,7 @@ export function playAttritionStageEnd() {
 /**
  * No comment provided
  *
- * Hash: 0x72289B8C78B02962 | Since: 3717 | API-Set: unknown
+ * Hash: 0x72289B8C78B02962 | Since: unknown | API-Set: unknown
  */
 export function playCreatorEnd() {
     return Citizen.invokeNative('0x72289B8C78B02962');
@@ -2758,7 +2780,7 @@ export function playCreatorEnd() {
 /**
  * No comment provided
  *
- * Hash: 0x01D8B04D02F1217F | Since: 3570 | API-Set: unknown
+ * Hash: 0x01D8B04D02F1217F | Since: unknown | API-Set: unknown
  */
 export function playDeathInfo(victimPed, killerPed, mentalState, revengeKill, victimKvK, killerKvK) {
     const _victimPed = typeof victimPed == 'object' ? victimPed.handle() : victimPed;
@@ -2768,7 +2790,7 @@ export function playDeathInfo(victimPed, killerPed, mentalState, revengeKill, vi
 /**
  * No comment provided
  *
- * Hash: 0xCFB0E9C3456319EA | Since: 3258 | API-Set: unknown
+ * Hash: 0xCFB0E9C3456319EA | Since: unknown | API-Set: unknown
  */
 export function playFlowHigh(pos, action) {
     Citizen.invokeNative('0xCFB0E9C3456319EA', pos.x, pos.y, pos.z, action, false, 0);
@@ -2776,7 +2798,7 @@ export function playFlowHigh(pos, action) {
 /**
  * No comment provided
  *
- * Hash: 0xE6A27CDA42887F93 | Since: 2944 | API-Set: unknown
+ * Hash: 0xE6A27CDA42887F93 | Since: unknown | API-Set: unknown
  */
 export function playFlowLow(pos, action) {
     Citizen.invokeNative('0xE6A27CDA42887F93', pos.x, pos.y, pos.z, action, false, 0);
@@ -2784,7 +2806,7 @@ export function playFlowLow(pos, action) {
 /**
  * No comment provided
  *
- * Hash: 0xC4493521BAA12CCE | Since: 3095 | API-Set: unknown
+ * Hash: 0xC4493521BAA12CCE | Since: unknown | API-Set: unknown
  */
 export function playFlowMedium(pos, action) {
     Citizen.invokeNative('0xC4493521BAA12CCE', pos.x, pos.y, pos.z, action, false, 0);
@@ -2792,7 +2814,31 @@ export function playFlowMedium(pos, action) {
 /**
  * No comment provided
  *
- * Hash: 0xEC9553A178E8F1D1 | Since: 2802 | API-Set: unknown
+ * Hash: 0x8897A71C988F7936 | Since: unknown | API-Set: unknown
+ */
+export function playHeist5Finale() {
+    return Citizen.invokeNative('0x8897A71C988F7936');
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0xBE656648E63C73D7 | Since: unknown | API-Set: unknown
+ */
+export function playHeist5Hack() {
+    return Citizen.invokeNative('0xBE656648E63C73D7');
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0x3B144C0026DCBA41 | Since: unknown | API-Set: unknown
+ */
+export function playHeist5Prep() {
+    return Citizen.invokeNative('0x3B144C0026DCBA41');
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0xEC9553A178E8F1D1 | Since: unknown | API-Set: unknown
  */
 export function playIdle() {
     Citizen.invokeNative('0xEC9553A178E8F1D1', undefined, undefined, undefined);
@@ -2800,7 +2846,7 @@ export function playIdle() {
 /**
  * No comment provided
  *
- * Hash: 0x7E5EED10B11CEDBA | Since: 3407 | API-Set: unknown
+ * Hash: 0x7E5EED10B11CEDBA | Since: unknown | API-Set: unknown
  */
 export function playInitMultiplayer() {
     Citizen.invokeNative('0x7E5EED10B11CEDBA', undefined, undefined, undefined);
@@ -2808,7 +2854,7 @@ export function playInitMultiplayer() {
 /**
  * No comment provided
  *
- * Hash: 0x4649D80CE1A35BA1 | Since: 3717 | API-Set: unknown
+ * Hash: 0x4649D80CE1A35BA1 | Since: unknown | API-Set: unknown
  */
 export function playLobbyExit() {
     return Citizen.invokeNative('0x4649D80CE1A35BA1');
@@ -2816,15 +2862,26 @@ export function playLobbyExit() {
 /**
  * No comment provided
  *
- * Hash: 0xDC00BB9C27347A8F | Since: 3717 | API-Set: unknown
+ * Hash: 0xDC00BB9C27347A8F | Since: unknown | API-Set: unknown
  */
 export function playLobbyStarted() {
     return Citizen.invokeNative('0xDC00BB9C27347A8F');
 }
 /**
+ * No comment provided
+ *
+ * Hash: 0xD4E1FE520138900B | Since: unknown | API-Set: unknown
+ */
+export function playLpSubtile() {
+    if (!IsGameEnhancedVersion())
+        console.error('This native is not supported on legacy (0xD4E1FE520138900B)');
+    return;
+    Citizen.invokeNative('0xD4E1FE520138900B', undefined, undefined, undefined, undefined, undefined);
+}
+/**
  * Known text types: NAME_YACHT, NAME_ORG_OFFICE
  *
- * Hash: 0xAA434D7D0A89A95C | Since: 3258 | API-Set: unknown
+ * Hash: 0xAA434D7D0A89A95C | Since: unknown | API-Set: unknown
  */
 export function playNamedUserContent(isBoss, bossType, bossId1, bossId2, textType, textString, textSource) {
     Citizen.invokeNative('0xAA434D7D0A89A95C', isBoss, bossType, bossId1, bossId2, textType, textString, textSource);
@@ -2832,7 +2889,62 @@ export function playNamedUserContent(isBoss, bossType, bossId1, bossId2, textTyp
 /**
  * No comment provided
  *
- * Hash: 0xE6D323A5E9EFFB76 | Since: 3258 | API-Set: unknown
+ * Hash: 0x9C4B3BAF947660BB | Since: unknown | API-Set: unknown
+ */
+export function playPhActivity() {
+    if (!IsGameEnhancedVersion())
+        console.error('This native is not supported on legacy (0x9C4B3BAF947660BB)');
+    return;
+    Citizen.invokeNative('0x9C4B3BAF947660BB', undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined);
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0x681672A1F5F17EF9 | Since: unknown | API-Set: unknown
+ */
+export function playPhNav() {
+    if (!IsGameEnhancedVersion())
+        console.error('This native is not supported on legacy (0x681672A1F5F17EF9)');
+    return;
+    Citizen.invokeNative('0x681672A1F5F17EF9', undefined);
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0xFEF378E70D9AE59C | Since: unknown | API-Set: unknown
+ */
+export function playPhProgressObjectives() {
+    if (!IsGameEnhancedVersion())
+        console.error('This native is not supported on legacy (0xFEF378E70D9AE59C)');
+    return;
+    Citizen.invokeNative('0xFEF378E70D9AE59C', undefined);
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0x0466968813A9FFE2 | Since: unknown | API-Set: unknown
+ */
+export function playPhProgressTiers() {
+    if (!IsGameEnhancedVersion())
+        console.error('This native is not supported on legacy (0x0466968813A9FFE2)');
+    return;
+    Citizen.invokeNative('0x0466968813A9FFE2', undefined);
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0x47506D5327297364 | Since: unknown | API-Set: unknown
+ */
+export function playPhSnapshot() {
+    if (!IsGameEnhancedVersion())
+        console.error('This native is not supported on legacy (0x47506D5327297364)');
+    return;
+    Citizen.invokeNative('0x47506D5327297364', undefined);
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0xE6D323A5E9EFFB76 | Since: unknown | API-Set: unknown
  */
 export function playPimenuNav() {
     return Citizen.invokeNative('0xE6D323A5E9EFFB76');
@@ -2840,7 +2952,7 @@ export function playPimenuNav() {
 /**
  * No comment provided
  *
- * Hash: 0x48FAC5DC7AC6EA99 | Since: 2802 | API-Set: unknown
+ * Hash: 0x48FAC5DC7AC6EA99 | Since: unknown | API-Set: unknown
  */
 export function playPlayerStyle() {
     Citizen.invokeNative('0x48FAC5DC7AC6EA99', undefined);
@@ -2848,7 +2960,7 @@ export function playPlayerStyle() {
 /**
  * No comment provided
  *
- * Hash: 0x7EA06F970F999394 | Since: 2944 | API-Set: unknown
+ * Hash: 0x7EA06F970F999394 | Since: unknown | API-Set: unknown
  */
 export function playRandomEvent() {
     Citizen.invokeNative('0x7EA06F970F999394', undefined);
@@ -2856,7 +2968,7 @@ export function playRandomEvent() {
 /**
  * No comment provided
  *
- * Hash: 0xBEB0D930B3CCE4D5 | Since: 3258 | API-Set: unknown
+ * Hash: 0xBEB0D930B3CCE4D5 | Since: unknown | API-Set: unknown
  */
 export function playRecoverVehicle() {
     return Citizen.invokeNative('0xBEB0D930B3CCE4D5');
@@ -2864,7 +2976,7 @@ export function playRecoverVehicle() {
 /**
  * No comment provided
  *
- * Hash: 0x574A7808450E141C | Since: 3570 | API-Set: unknown
+ * Hash: 0x574A7808450E141C | Since: unknown | API-Set: unknown
  */
 export function playScriptEventFpom() {
     return Citizen.invokeNative('0x574A7808450E141C');
@@ -2872,7 +2984,7 @@ export function playScriptEventFpom() {
 /**
  * No comment provided
  *
- * Hash: 0xF96E9EA876D9DC92 | Since: 2802 | API-Set: unknown
+ * Hash: 0xF96E9EA876D9DC92 | Since: unknown | API-Set: unknown
  */
 export function playShopmenuNav() {
     Citizen.invokeNative('0xF96E9EA876D9DC92', undefined, undefined, undefined, undefined);
@@ -2880,7 +2992,7 @@ export function playShopmenuNav() {
 /**
  * No comment provided
  *
- * Hash: 0x961D4157B9B428DB | Since: 2944 | API-Set: unknown
+ * Hash: 0x961D4157B9B428DB | Since: unknown | API-Set: unknown
  */
 export function playShowroomNav(entity) {
     if (typeof entity === 'string')
@@ -2890,7 +3002,7 @@ export function playShowroomNav(entity) {
 /**
  * Data struct contains various tunables related to test drives at Simeons Showroom or Luxury Showcase.
  *
- * Hash: 0x151D6C04C9E2742F | Since: 2944 | API-Set: unknown
+ * Hash: 0x151D6C04C9E2742F | Since: unknown | API-Set: unknown
  */
 export function playShowroomOverview() {
     return Citizen.invokeNative('0x151D6C04C9E2742F');

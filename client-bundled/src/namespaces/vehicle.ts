@@ -839,7 +839,7 @@ export function setHandlingVector(vehicle: string, class_: string, fieldName: st
  * Hash: 0xB90BBC6E | Since: unknown | API-Set: client
  */
 export function setReactionToWithSirenDisabled(state: boolean): void {
-    SetReactionToVehicleWithSirenDisabled(state);
+    Citizen.invokeNative('0xB90BBC6E', state);
 }
 
 /**
@@ -1486,7 +1486,7 @@ export function getType(vehicle: number | IVehicle): string {
 /**
  * No comment provided
  * 
- * Hash: 0x2CE544C68FB812A0 | Since: 323 | API-Set: unknown
+ * Hash: 0x2CE544C68FB812A0 | Since: unknown | API-Set: unknown
  */
 export function addRoadNodeSpeedZone(pos: Vector3, radius: number, speed: number): number {
     return AddRoadNodeSpeedZone(pos.x, pos.y, pos.z, radius, speed, false);
@@ -1495,7 +1495,7 @@ export function addRoadNodeSpeedZone(pos: Vector3, radius: number, speed: number
 /**
  * No comment provided
  * 
- * Hash: 0x54B0F614960F4A5F | Since: 323 | API-Set: unknown
+ * Hash: 0x54B0F614960F4A5F | Since: unknown | API-Set: unknown
  */
 export function addCombatAngledAvoidanceArea(): number {
     return AddVehicleCombatAngledAvoidanceArea(0, 0, 0, 0, 0, 0, 0);
@@ -1504,7 +1504,7 @@ export function addCombatAngledAvoidanceArea(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x99AD4CCCB128CBC9 | Since: 323 | API-Set: unknown
+ * Hash: 0x99AD4CCCB128CBC9 | Since: unknown | API-Set: unknown
  */
 export function addPhoneExplosiveDevice(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1514,7 +1514,7 @@ export function addPhoneExplosiveDevice(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2FA9923062DD396C | Since: 323 | API-Set: unknown
+ * Hash: 0x2FA9923062DD396C | Since: unknown | API-Set: unknown
  */
 export function addStuckCheckWithWarp(): void {
     AddVehicleStuckCheckWithWarp(undefined, 0, undefined, false, false, false, undefined);
@@ -1523,7 +1523,7 @@ export function addStuckCheckWithWarp(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xB72E26D81006005B | Since: 323 | API-Set: unknown
+ * Hash: 0xB72E26D81006005B | Since: unknown | API-Set: unknown
  */
 export function addUpsidedownCheck(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1535,7 +1535,7 @@ export function addUpsidedownCheck(vehicle: number | IVehicle): void {
  * 
  * Confirmed, it is a debug native.
  * 
- * Hash: 0xB264C4D2F2B0A78B | Since: 323 | API-Set: unknown
+ * Hash: 0xB264C4D2F2B0A78B | Since: unknown | API-Set: unknown
  */
 export function allowAmbientsToAvoidAdverseConditions(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1545,7 +1545,7 @@ export function allowAmbientsToAvoidAdverseConditions(vehicle: number | IVehicle
 /**
  * No comment provided
  * 
- * Hash: 0x0F3B4D4E43177236 | Since: 323 | API-Set: unknown
+ * Hash: 0x0F3B4D4E43177236 | Since: unknown | API-Set: unknown
  */
 export function allowBoatBoomToAnimate(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1555,7 +1555,7 @@ export function allowBoatBoomToAnimate(vehicle: number | IVehicle, toggle: boole
 /**
  * No comment provided
  * 
- * Hash: 0x2310A8F9421EBF43 | Since: 2372 | API-Set: unknown
+ * Hash: 0x2310A8F9421EBF43 | Since: unknown | API-Set: unknown
  */
 export function allowTrainToBeRemovedByPopulation(): void {
     Citizen.invokeNative('0x2310A8F9421EBF43', undefined);
@@ -1564,7 +1564,7 @@ export function allowTrainToBeRemovedByPopulation(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x249249D74F813EB2 | Since: 3095 | API-Set: unknown
+ * Hash: 0x249249D74F813EB2 | Since: unknown | API-Set: unknown
  */
 export function applyEmpEffect(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1574,7 +1574,7 @@ export function applyEmpEffect(vehicle: number | IVehicle): void {
 /**
  * Appears to return false if any window is broken.
  * 
- * Hash: 0x11D862A3E977A9EF | Since: 323 | API-Set: unknown
+ * Hash: 0x11D862A3E977A9EF | Since: unknown | API-Set: unknown
  */
 export function areAllWindowsIntact(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1584,7 +1584,7 @@ export function areAllWindowsIntact(vehicle: number | IVehicle): boolean {
 /**
  * Returns false if every seat is occupied.
  * 
- * Hash: 0x2D34FC3BC4ADB780 | Since: 323 | API-Set: unknown
+ * Hash: 0x2D34FC3BC4ADB780 | Since: unknown | API-Set: unknown
  */
 export function areAnySeatsFree(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1594,7 +1594,7 @@ export function areAnySeatsFree(vehicle: number | IVehicle): boolean {
 /**
  * Only used with the "akula" and "annihilator2" in the decompiled native scripts.
  * 
- * Hash: 0xAEF12960FA943792 | Since: 1290 | API-Set: unknown
+ * Hash: 0xAEF12960FA943792 | Since: unknown | API-Set: unknown
  */
 export function areFoldingWingsDeployed(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1604,7 +1604,7 @@ export function areFoldingWingsDeployed(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xF78F94D60248C737 | Since: 323 | API-Set: unknown
+ * Hash: 0xF78F94D60248C737 | Since: unknown | API-Set: unknown
  */
 export function arePlaneControlPanelsIntact(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1614,7 +1614,7 @@ export function arePlaneControlPanelsIntact(vehicle: number | IVehicle): boolean
 /**
  * No comment provided
  * 
- * Hash: 0x755D6D5267CBBD7E | Since: 323 | API-Set: unknown
+ * Hash: 0x755D6D5267CBBD7E | Since: unknown | API-Set: unknown
  */
 export function arePlanePropellersIntact(plane: number | IVehicle): boolean {
     const _plane = typeof plane == 'object' ? plane.handle() : plane;
@@ -1624,7 +1624,7 @@ export function arePlanePropellersIntact(plane: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x5991A01434CE9677 | Since: 323 | API-Set: unknown
+ * Hash: 0x5991A01434CE9677 | Since: unknown | API-Set: unknown
  */
 export function areWingsOfPlaneIntact(plane: number | IVehicle): boolean {
     const _plane = typeof plane == 'object' ? plane.handle() : plane;
@@ -1634,7 +1634,7 @@ export function areWingsOfPlaneIntact(plane: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x6A98C2ECF57FA5D4 | Since: 323 | API-Set: unknown
+ * Hash: 0x6A98C2ECF57FA5D4 | Since: unknown | API-Set: unknown
  */
 export function attachContainerToHandlerFrameWhenLinedUp(vehicle: number | IVehicle, entity: number | IEntity): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1645,7 +1645,7 @@ export function attachContainerToHandlerFrameWhenLinedUp(vehicle: number | IVehi
 /**
  * No comment provided
  * 
- * Hash: 0xA1DD82F3CCF9A01E | Since: 944 | API-Set: unknown
+ * Hash: 0xA1DD82F3CCF9A01E | Since: unknown | API-Set: unknown
  */
 export function attachEntityToCargobob(): void {
     AttachEntityToCargobob(undefined, undefined, undefined, undefined, undefined, undefined);
@@ -1654,7 +1654,7 @@ export function attachEntityToCargobob(): void {
 /**
  * This is the proper way of attaching vehicles to the car carrier, it's what Rockstar uses. Video Demo: https://www.youtube.com/watch?v=2lVEIzf7bgo
  * 
- * Hash: 0x16B5E274BDE402F8 | Since: 323 | API-Set: unknown
+ * Hash: 0x16B5E274BDE402F8 | Since: unknown | API-Set: unknown
  */
 export function attachOnToTrailer(vehicle: number | IVehicle, trailer: number | IVehicle, offsetX: number, offsetY: number, offsetZ: number, coordsX: number, coordsY: number, coordsZ: number, rotationX: number, rotationY: number, rotationZ: number, disableCollisions: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1665,7 +1665,7 @@ export function attachOnToTrailer(vehicle: number | IVehicle, trailer: number | 
 /**
  * No comment provided
  * 
- * Hash: 0x4127F1D84E347769 | Since: 323 | API-Set: unknown
+ * Hash: 0x4127F1D84E347769 | Since: unknown | API-Set: unknown
  */
 export function attachToCargobob(cargobob: number | IVehicle, vehicle: number | IVehicle, pos: Vector3): void {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -1676,7 +1676,7 @@ export function attachToCargobob(cargobob: number | IVehicle, vehicle: number | 
 /**
  * HookOffset defines where the hook is attached. leave at 0 for default attachment.
  * 
- * Hash: 0x29A16F8D621C4508 | Since: 323 | API-Set: unknown
+ * Hash: 0x29A16F8D621C4508 | Since: unknown | API-Set: unknown
  */
 export function attachToTowTruck(towTruck: number | IVehicle, vehicle: number | IVehicle, rear: boolean, hookOffsetX: number, hookOffsetY: number, hookOffsetZ: number): void {
     const _towTruck = typeof towTruck == 'object' ? towTruck.handle() : towTruck;
@@ -1687,7 +1687,7 @@ export function attachToTowTruck(towTruck: number | IVehicle, vehicle: number | 
 /**
  * No comment provided
  * 
- * Hash: 0x3C7D42D58F770B54 | Since: 323 | API-Set: unknown
+ * Hash: 0x3C7D42D58F770B54 | Since: unknown | API-Set: unknown
  */
 export function attachToTrailer(vehicle: number | IVehicle, trailer: number | IVehicle, radius: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1702,7 +1702,7 @@ export function attachToTrailer(vehicle: number | IVehicle, trailer: number | IV
  * 
  * . If killEngine is set to 1, you cannot resume driving the vehicle once it stops. This looks like is a bitmapped integer.
  * 
- * Hash: 0x260BE8F09E326A20 | Since: 323 | API-Set: unknown
+ * Hash: 0x260BE8F09E326A20 | Since: unknown | API-Set: unknown
  */
 export function bringToHalt(vehicle: number | IVehicle, distance: number, duration: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1712,7 +1712,7 @@ export function bringToHalt(vehicle: number | IVehicle, distance: number, durati
 /**
  * No comment provided
  * 
- * Hash: 0x26C10ECBDA5D043B | Since: 323 | API-Set: unknown
+ * Hash: 0x26C10ECBDA5D043B | Since: unknown | API-Set: unknown
  */
 export function canAnchorBoatHere(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1722,7 +1722,7 @@ export function canAnchorBoatHere(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x24F4121D07579880 | Since: 678 | API-Set: unknown
+ * Hash: 0x24F4121D07579880 | Since: unknown | API-Set: unknown
  */
 export function canAnchorBoatHereIgnorePlayers(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1732,7 +1732,7 @@ export function canAnchorBoatHereIgnorePlayers(vehicle: number | IVehicle): bool
 /**
  * No comment provided
  * 
- * Hash: 0x2C1D8B3B19E517CC | Since: 757 | API-Set: unknown
+ * Hash: 0x2C1D8B3B19E517CC | Since: unknown | API-Set: unknown
  */
 export function canCargobobPickUpEntity(): boolean {
     return CanCargobobPickUpEntity(undefined, undefined);
@@ -1741,7 +1741,7 @@ export function canCargobobPickUpEntity(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x30785D90C956BF35 | Since: 323 | API-Set: unknown
+ * Hash: 0x30785D90C956BF35 | Since: unknown | API-Set: unknown
  */
 export function canShuffleSeat(vehicle: number | IVehicle, seatIndex: number): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1751,7 +1751,7 @@ export function canShuffleSeat(vehicle: number | IVehicle, seatIndex: number): b
 /**
  * No comment provided
  * 
- * Hash: 0xE01903C47C7AC89E | Since: 323 | API-Set: unknown
+ * Hash: 0xE01903C47C7AC89E | Since: unknown | API-Set: unknown
  */
 export function clearLastDriven(): void {
     ClearLastDrivenVehicle();
@@ -1760,7 +1760,7 @@ export function clearLastDriven(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xC889AE921400E1ED | Since: 3095 | API-Set: unknown
+ * Hash: 0xC889AE921400E1ED | Since: unknown | API-Set: unknown
  */
 export function clearNitrous(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1770,7 +1770,7 @@ export function clearNitrous(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x55E1D2758F34E437 | Since: 323 | API-Set: unknown
+ * Hash: 0x55E1D2758F34E437 | Since: unknown | API-Set: unknown
  */
 export function clearCustomPrimaryColour(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1780,7 +1780,7 @@ export function clearCustomPrimaryColour(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x5FFBDEEC3E8E2009 | Since: 323 | API-Set: unknown
+ * Hash: 0x5FFBDEEC3E8E2009 | Since: unknown | API-Set: unknown
  */
 export function clearCustomSecondaryColour(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1790,7 +1790,7 @@ export function clearCustomSecondaryColour(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x0A436B8643716D14 | Since: 323 | API-Set: unknown
+ * Hash: 0x0A436B8643716D14 | Since: unknown | API-Set: unknown
  */
 export function clearGeneratorAreaOfInterest(): void {
     ClearVehicleGeneratorAreaOfInterest();
@@ -1799,7 +1799,7 @@ export function clearGeneratorAreaOfInterest(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x4419966C9936071A | Since: 463 | API-Set: unknown
+ * Hash: 0x4419966C9936071A | Since: unknown | API-Set: unknown
  */
 export function clearPetroltankFireCulprit(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1809,7 +1809,7 @@ export function clearPetroltankFireCulprit(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0xAA3F739ABDDCF21F | Since: 463 | API-Set: unknown
+ * Hash: 0xAA3F739ABDDCF21F | Since: unknown | API-Set: unknown
  */
 export function clearPhoneExplosiveDevice(): void {
     ClearVehiclePhoneExplosiveDevice();
@@ -1818,7 +1818,7 @@ export function clearPhoneExplosiveDevice(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x6D6AF961B72728AE | Since: 323 | API-Set: unknown
+ * Hash: 0x6D6AF961B72728AE | Since: unknown | API-Set: unknown
  */
 export function clearRouteHistory(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1828,7 +1828,7 @@ export function clearRouteHistory(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x3556041742A0DC74 | Since: 323 | API-Set: unknown
+ * Hash: 0x3556041742A0DC74 | Since: unknown | API-Set: unknown
  */
 export function closeBombBayDoors(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1845,7 +1845,7 @@ export function closeBombBayDoors(vehicle: number | IVehicle): void {
  * 2: Opening
  * 3: Retracted
  * 
- * Hash: 0xCFC8BE9A5E1FE575 | Since: 323 | API-Set: unknown
+ * Hash: 0xCFC8BE9A5E1FE575 | Since: unknown | API-Set: unknown
  */
 export function controlLandingGear(vehicle: number | IVehicle, state: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1855,7 +1855,7 @@ export function controlLandingGear(vehicle: number | IVehicle, state: number): v
 /**
  * Copies sourceVehicle's damage (broken bumpers, broken lights, etc.) to targetVehicle.
  * 
- * Hash: 0xE44A982368A4AF23 | Since: 323 | API-Set: unknown
+ * Hash: 0xE44A982368A4AF23 | Since: unknown | API-Set: unknown
  */
 export function copyDamages(sourceVehicle: number | IVehicle, targetVehicle: number | IVehicle): void {
     const _sourceVehicle = typeof sourceVehicle == 'object' ? sourceVehicle.handle() : sourceVehicle;
@@ -1876,7 +1876,7 @@ export function copyDamages(sourceVehicle: number | IVehicle, targetVehicle: num
  * 
  * 
  * 
- * Hash: 0x63C6CCA8E68AE8C8 | Since: 323 | API-Set: unknown
+ * Hash: 0x63C6CCA8E68AE8C8 | Since: unknown | API-Set: unknown
  */
 export function createMissionTrain(variation: number, pos: Vector3, direction: boolean): number {
     return CreateMissionTrain(variation, pos.x, pos.y, pos.z, direction, undefined, undefined);
@@ -1892,7 +1892,7 @@ export function createMissionTrain(variation: number, pos: Vector3, direction: b
  * CARGOBOB_MAGNET = 1,
  * };
  * 
- * Hash: 0x7BEB0C7A235F6F3B | Since: 323 | API-Set: unknown
+ * Hash: 0x7BEB0C7A235F6F3B | Since: unknown | API-Set: unknown
  */
 export function createPickUpRopeForCargobob(cargobob: number | IVehicle, state: number): void {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -1917,7 +1917,7 @@ export function createPickUpRopeForCargobob(cargobob: number | IVehicle, state: 
  * 
  * Vector3 coords = GET_ENTITY_COORDS(PLAYER_PED_ID(), 0);    CREATE_SCRIPT_VEHICLE_GENERATOR(coords.x, coords.y, coords.z, 1.0f, 5.0f, 3.0f, GET_HASH_KEY("adder"), -1. -1, -1, -1, -1, true, false, false, false, true, -1);
  * 
- * Hash: 0x9DEF883114668116 | Since: 323 | API-Set: unknown
+ * Hash: 0x9DEF883114668116 | Since: unknown | API-Set: unknown
  */
 export function createScriptGenerator(pos: Vector3, heading: number, modelHash: number | string): number {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -1928,7 +1928,7 @@ export function createScriptGenerator(pos: Vector3, heading: number, modelHash: 
  * p7 when set to true allows you to spawn vehicles under -100 z.
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  * 
- * Hash: 0xAF35D0D2583051B0 | Since: 323 | API-Set: unknown
+ * Hash: 0xAF35D0D2583051B0 | Since: unknown | API-Set: unknown
  */
 export function create(modelHash: number | string, pos: Vector3, heading: number, isNetwork: boolean, bScriptHostVeh: boolean): number {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -1938,7 +1938,7 @@ export function create(modelHash: number | string, pos: Vector3, heading: number
 /**
  * No comment provided
  * 
- * Hash: 0x736A718577F39C7D | Since: 323 | API-Set: unknown
+ * Hash: 0x736A718577F39C7D | Since: unknown | API-Set: unknown
  */
 export function deleteAllTrains(): void {
     DeleteAllTrains();
@@ -1947,17 +1947,16 @@ export function deleteAllTrains(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x5B76B14AE875C795 | Since: 323 | API-Set: unknown
+ * Hash: 0x5B76B14AE875C795 | Since: unknown | API-Set: unknown
  */
-export function deleteMissionTrain(train: number | IVehicle): void {
-    const _train = typeof train == 'object' ? train.handle() : train;
-    DeleteMissionTrain(_train);
+export function deleteMissionTrain(): number {
+    return DeleteMissionTrain();
 }
 
 /**
  * No comment provided
  * 
- * Hash: 0x22102C9ABFCF125D | Since: 323 | API-Set: unknown
+ * Hash: 0x22102C9ABFCF125D | Since: unknown | API-Set: unknown
  */
 export function deleteScriptGenerator(vehicleGenerator: number): void {
     DeleteScriptVehicleGenerator(vehicleGenerator);
@@ -1973,17 +1972,16 @@ export function deleteScriptGenerator(vehicleGenerator: number): void {
  * 
  * Deletes the specified vehicle, then sets the handle pointed to by the pointer to NULL.
  * 
- * Hash: 0xEA386986E786A54F | Since: 323 | API-Set: unknown
+ * Hash: 0xEA386986E786A54F | Since: unknown | API-Set: unknown
  */
-export function deleteVehicle(vehicle: number | IVehicle): void {
-    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
-    DeleteVehicle(_vehicle);
+export function deleteVehicle(): number {
+    return DeleteVehicle();
 }
 
 /**
  * No comment provided
  * 
- * Hash: 0x7C0043FDFF6436BC | Since: 323 | API-Set: unknown
+ * Hash: 0x7C0043FDFF6436BC | Since: unknown | API-Set: unknown
  */
 export function detachContainerFromHandlerFrame(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -1993,7 +1991,7 @@ export function detachContainerFromHandlerFrame(vehicle: number | IVehicle): voi
 /**
  * No comment provided
  * 
- * Hash: 0xAF03011701811146 | Since: 678 | API-Set: unknown
+ * Hash: 0xAF03011701811146 | Since: unknown | API-Set: unknown
  */
 export function detachEntityFromCargobob(cargobob: number | IVehicle, entity: number | IEntity): boolean {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -2004,7 +2002,7 @@ export function detachEntityFromCargobob(cargobob: number | IVehicle, entity: nu
 /**
  * No comment provided
  * 
- * Hash: 0xADF7BE450512C12F | Since: 323 | API-Set: unknown
+ * Hash: 0xADF7BE450512C12F | Since: unknown | API-Set: unknown
  */
 export function detachFromAnyCargobob(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2014,7 +2012,7 @@ export function detachFromAnyCargobob(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xD0E9CE05A1E68CD8 | Since: 323 | API-Set: unknown
+ * Hash: 0xD0E9CE05A1E68CD8 | Since: unknown | API-Set: unknown
  */
 export function detachFromAnyTowTruck(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2024,7 +2022,7 @@ export function detachFromAnyTowTruck(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x0E21D3DF1051399D | Since: 323 | API-Set: unknown
+ * Hash: 0x0E21D3DF1051399D | Since: unknown | API-Set: unknown
  */
 export function detachFromCargobob(vehicle: number | IVehicle, cargobob: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2035,7 +2033,7 @@ export function detachFromCargobob(vehicle: number | IVehicle, cargobob: number 
 /**
  * First two parameters swapped. Scripts verify that towTruck is the first parameter, not the second.
  * 
- * Hash: 0xC2DB6B6708350ED8 | Since: 323 | API-Set: unknown
+ * Hash: 0xC2DB6B6708350ED8 | Since: unknown | API-Set: unknown
  */
 export function detachFromTowTruck(towTruck: number | IVehicle, vehicle: number | IVehicle): void {
     const _towTruck = typeof towTruck == 'object' ? towTruck.handle() : towTruck;
@@ -2046,7 +2044,7 @@ export function detachFromTowTruck(towTruck: number | IVehicle, vehicle: number 
 /**
  * No comment provided
  * 
- * Hash: 0x90532EDF0D2BDD86 | Since: 323 | API-Set: unknown
+ * Hash: 0x90532EDF0D2BDD86 | Since: unknown | API-Set: unknown
  */
 export function detachFromTrailer(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2056,7 +2054,7 @@ export function detachFromTrailer(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0xEF49CF0270307CBE | Since: 323 | API-Set: unknown
+ * Hash: 0xEF49CF0270307CBE | Since: unknown | API-Set: unknown
  */
 export function detonatePhoneExplosiveDevice(): void {
     DetonateVehiclePhoneExplosiveDevice();
@@ -2065,7 +2063,7 @@ export function detonatePhoneExplosiveDevice(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x500873A45724C863 | Since: 323 | API-Set: unknown
+ * Hash: 0x500873A45724C863 | Since: unknown | API-Set: unknown
  */
 export function disableIndividualPlanePropeller(vehicle: number | IVehicle, propeller: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2075,7 +2073,7 @@ export function disableIndividualPlanePropeller(vehicle: number | IVehicle, prop
 /**
  * No comment provided
  * 
- * Hash: 0x23428FC53C60919C | Since: 323 | API-Set: unknown
+ * Hash: 0x23428FC53C60919C | Since: unknown | API-Set: unknown
  */
 export function disablePlaneAileron(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2087,7 +2085,7 @@ export function disablePlaneAileron(vehicle: number | IVehicle): void {
  * 
  * p1 and p2 use values from 0-255 and both make the shadow darker the lower the value is. -1 disables the effect.
  * 
- * Hash: 0xF0E4BA16D1DB546C | Since: 323 | API-Set: unknown
+ * Hash: 0xF0E4BA16D1DB546C | Since: unknown | API-Set: unknown
  */
 export function disableVehcileDynamicAmbientScales(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2097,7 +2095,7 @@ export function disableVehcileDynamicAmbientScales(vehicle: number | IVehicle): 
 /**
  * No comment provided
  * 
- * Hash: 0xF25E02CB9C5818F8 | Since: 323 | API-Set: unknown
+ * Hash: 0xF25E02CB9C5818F8 | Since: unknown | API-Set: unknown
  */
 export function disableExplosionBreakOffParts(): void {
     Citizen.invokeNative('0xF25E02CB9C5818F8');
@@ -2106,7 +2104,7 @@ export function disableExplosionBreakOffParts(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x32CAEDF24A583345 | Since: 463 | API-Set: unknown
+ * Hash: 0x32CAEDF24A583345 | Since: unknown | API-Set: unknown
  */
 export function disableTurretMovementThisFrame(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2116,7 +2114,7 @@ export function disableTurretMovementThisFrame(vehicle: number | IVehicle): void
 /**
  * Full list of weapons by DurtyFree (Search for VEHICLE_*): https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
  * 
- * Hash: 0xF4FC6A6F67D8D856 | Since: 323 | API-Set: unknown
+ * Hash: 0xF4FC6A6F67D8D856 | Since: unknown | API-Set: unknown
  */
 export function disableWeapon(disabled: boolean, weaponHash: number | string, vehicle: number | IVehicle, owner: number | IPed): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2128,7 +2126,7 @@ export function disableWeapon(disabled: boolean, weaponHash: number | string, ve
 /**
  * Returns true only when the magnet is active, will return false if the hook is active
  * 
- * Hash: 0x6E08BF5B3722BAC9 | Since: 323 | API-Set: unknown
+ * Hash: 0x6E08BF5B3722BAC9 | Since: unknown | API-Set: unknown
  */
 export function doesCargobobHavePickupMagnet(cargobob: number | IVehicle): boolean {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -2138,7 +2136,7 @@ export function doesCargobobHavePickupMagnet(cargobob: number | IVehicle): boole
 /**
  * Returns true only when the hook is active, will return false if the magnet is active
  * 
- * Hash: 0x1821D91AD4B56108 | Since: 323 | API-Set: unknown
+ * Hash: 0x1821D91AD4B56108 | Since: unknown | API-Set: unknown
  */
 export function doesCargobobHavePickUpRope(cargobob: number | IVehicle): boolean {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -2148,7 +2146,7 @@ export function doesCargobobHavePickUpRope(cargobob: number | IVehicle): boolean
 /**
  * Checks via CVehicleModelInfo
  * 
- * Hash: 0x1262D55792428154 | Since: 323 | API-Set: unknown
+ * Hash: 0x1262D55792428154 | Since: unknown | API-Set: unknown
  */
 export function doesExtraExist(vehicle: number | IVehicle, extraId: number): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2158,7 +2156,7 @@ export function doesExtraExist(vehicle: number | IVehicle, extraId: number): boo
 /**
  * No comment provided
  * 
- * Hash: 0xF6086BC836400876 | Since: 323 | API-Set: unknown
+ * Hash: 0xF6086BC836400876 | Since: unknown | API-Set: unknown
  */
 export function doesScriptGeneratorExist(vehicleGenerator: number): boolean {
     return DoesScriptVehicleGeneratorExist(vehicleGenerator);
@@ -2167,7 +2165,7 @@ export function doesScriptGeneratorExist(vehicleGenerator: number): boolean {
 /**
  * Returns true if the vehicle has the FLAG_ALLOWS_RAPPEL flag set.
  * 
- * Hash: 0x4E417C547182C84D | Since: 757 | API-Set: unknown
+ * Hash: 0x4E417C547182C84D | Since: unknown | API-Set: unknown
  */
 export function doesAllowRappel(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2177,7 +2175,7 @@ export function doesAllowRappel(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x956B409B984D9BF7 | Since: 323 | API-Set: unknown
+ * Hash: 0x956B409B984D9BF7 | Since: unknown | API-Set: unknown
  */
 export function doesExistWithDecorator(decorator: string): number {
     return DoesVehicleExistWithDecorator(decorator);
@@ -2186,7 +2184,7 @@ export function doesExistWithDecorator(decorator: string): number {
 /**
  * No comment provided
  * 
- * Hash: 0x8AC862B0B32C5B80 | Since: 323 | API-Set: unknown
+ * Hash: 0x8AC862B0B32C5B80 | Since: unknown | API-Set: unknown
  */
 export function doesHaveRoof(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2196,7 +2194,7 @@ export function doesHaveRoof(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x99015ED7DBEA5113 | Since: 2189 | API-Set: unknown
+ * Hash: 0x99015ED7DBEA5113 | Since: unknown | API-Set: unknown
  */
 export function doesHaveSearchlight(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2206,7 +2204,7 @@ export function doesHaveSearchlight(vehicle: number | IVehicle): boolean {
 /**
  * Maximum amount of vehicles with vehicle stuck check appears to be 16.
  * 
- * Hash: 0x57E4C39DE5EE8470 | Since: 323 | API-Set: unknown
+ * Hash: 0x57E4C39DE5EE8470 | Since: unknown | API-Set: unknown
  */
 export function doesHaveStuckVehicleCheck(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2216,7 +2214,7 @@ export function doesHaveStuckVehicleCheck(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x25ECB9F8017D98E0 | Since: 323 | API-Set: unknown
+ * Hash: 0x25ECB9F8017D98E0 | Since: unknown | API-Set: unknown
  */
 export function doesHaveWeapons(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2226,7 +2224,7 @@ export function doesHaveWeapons(vehicle: number | IVehicle): boolean {
 /**
  * Remove the weird shadow applied by DISABLE_VEHCILE_DYNAMIC_AMBIENT_SCALES.
  * 
- * Hash: 0xF87D9F2301F7D206 | Since: 323 | API-Set: unknown
+ * Hash: 0xF87D9F2301F7D206 | Since: unknown | API-Set: unknown
  */
 export function enableDynamicAmbientScales(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2242,7 +2240,7 @@ export function enableDynamicAmbientScales(vehicle: number | IVehicle): void {
  * 
  * First BOOL does not give any visual explosion, the vehicle just falls apart completely but slowly and starts to burn.
  * 
- * Hash: 0xBA71116ADF5B514C | Since: 323 | API-Set: unknown
+ * Hash: 0xBA71116ADF5B514C | Since: unknown | API-Set: unknown
  */
 export function explode(vehicle: number | IVehicle, isAudible: boolean, isInvisible: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2252,7 +2250,7 @@ export function explode(vehicle: number | IVehicle, isAudible: boolean, isInvisi
 /**
  * No comment provided
  * 
- * Hash: 0x786A4EB67B01BF0B | Since: 323 | API-Set: unknown
+ * Hash: 0x786A4EB67B01BF0B | Since: unknown | API-Set: unknown
  */
 export function explodeInCutscene(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2263,7 +2261,7 @@ export function explodeInCutscene(vehicle: number | IVehicle): void {
  * Finds the vehicle that is carrying this entity with a handler frame.
  * The model of the entity must be prop_contr_03b_ld or the function will return 0.
  * 
- * Hash: 0x375E7FC44F21C8AB | Since: 323 | API-Set: unknown
+ * Hash: 0x375E7FC44F21C8AB | Since: unknown | API-Set: unknown
  */
 export function findHandlerContainerIsAttachedTo(entity: number | IEntity): number {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -2274,7 +2272,7 @@ export function findHandlerContainerIsAttachedTo(entity: number | IEntity): numb
  * Native is significantly more complicated than simply generating a random vector & length.
  * `The 'point' is either 400.0 or 250.0 units away from the Ped's current coordinates; and paths into functions like rage::grcViewport___IsSphereVisible`
  * 
- * Hash: 0x8DC9675797123522 | Since: 1290 | API-Set: unknown
+ * Hash: 0x8DC9675797123522 | Since: unknown | API-Set: unknown
  */
 export function findSpawnCoordinatesForHeli(ped: number | IPed): Vector3 {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -2297,7 +2295,7 @@ export function findSpawnCoordinatesForHeli(ped: number | IPed): Vector3 {
  * 
  * Also, this function is coded to not work on vehicles of type: CBike, Bmx, CBoat, CTrain, and CSubmarine.
  * 
- * Hash: 0x772282EBEB95E682 | Since: 323 | API-Set: unknown
+ * Hash: 0x772282EBEB95E682 | Since: unknown | API-Set: unknown
  */
 export function fixWindow(vehicle: number | IVehicle, windowIndex: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2307,7 +2305,7 @@ export function fixWindow(vehicle: number | IVehicle, windowIndex: number): void
 /**
  * Often called after START_PLAYBACK_RECORDED_VEHICLE and SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE; similar in use to FORCE_ENTITY_AI_AND_ANIMATION_UPDATE.
  * 
- * Hash: 0x1F2E4E06DEA8992B | Since: 323 | API-Set: unknown
+ * Hash: 0x1F2E4E06DEA8992B | Since: unknown | API-Set: unknown
  */
 export function forcePlaybackRecordedUpdate(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2317,7 +2315,7 @@ export function forcePlaybackRecordedUpdate(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0xC67DB108A9ADE3BE | Since: 2189 | API-Set: unknown
+ * Hash: 0xC67DB108A9ADE3BE | Since: unknown | API-Set: unknown
  */
 export function forceSubmarineNeurtalBuoyancy(): void {
     ForceSubmarineNeurtalBuoyancy(undefined, undefined);
@@ -2326,7 +2324,7 @@ export function forceSubmarineNeurtalBuoyancy(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x33506883545AC0DF | Since: 323 | API-Set: unknown
+ * Hash: 0x33506883545AC0DF | Since: unknown | API-Set: unknown
  */
 export function forceSubmarineSurfaceMode(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2336,7 +2334,7 @@ export function forceSubmarineSurfaceMode(vehicle: number | IVehicle, toggle: bo
 /**
  * No comment provided
  * 
- * Hash: 0x99CAD8E7AFDB60FA | Since: 323 | API-Set: unknown
+ * Hash: 0x99CAD8E7AFDB60FA | Since: unknown | API-Set: unknown
  */
 export function forceSubThrottleForTime(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2346,7 +2344,7 @@ export function forceSubThrottleForTime(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x1A2BCC8C636F9226 | Since: 3095 | API-Set: unknown
+ * Hash: 0x1A2BCC8C636F9226 | Since: unknown | API-Set: unknown
  */
 export function fullyChargeNitrous(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2356,7 +2354,7 @@ export function fullyChargeNitrous(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA4822F1CF23F4810 | Since: 323 | API-Set: unknown
+ * Hash: 0xA4822F1CF23F4810 | Since: unknown | API-Set: unknown
  */
 export function generateCreationPosFromPaths(): [boolean, Vector3, Vector3] {
     return Citizen.invokeNative('0xA4822F1CF23F4810', undefined, undefined, undefined, undefined, undefined, undefined, undefined);
@@ -2365,7 +2363,7 @@ export function generateCreationPosFromPaths(): [boolean, Vector3, Vector3] {
 /**
  * No comment provided
  * 
- * Hash: 0x9B8E1BF04B51F2E8 | Since: 1103 | API-Set: unknown
+ * Hash: 0x9B8E1BF04B51F2E8 | Since: unknown | API-Set: unknown
  */
 export function getAlls(): [number, any] {
     return GetAllVehicles();
@@ -2374,7 +2372,7 @@ export function getAlls(): [number, any] {
 /**
  * Returns true when the bomb bay doors of this plane are open. False if they're closed.
  * 
- * Hash: 0xD0917A423314BBA8 | Since: 1180 | API-Set: unknown
+ * Hash: 0xD0917A423314BBA8 | Since: unknown | API-Set: unknown
  */
 export function getAreBombBayDoorsOpen(aircraft: number | IVehicle): boolean {
     const _aircraft = typeof aircraft == 'object' ? aircraft.handle() : aircraft;
@@ -2384,7 +2382,7 @@ export function getAreBombBayDoorsOpen(aircraft: number | IVehicle): boolean {
 /**
  * Gets the position of the cargobob hook, in world coords.
  * 
- * Hash: 0xCBDB9B923CACC92D | Since: 323 | API-Set: unknown
+ * Hash: 0xCBDB9B923CACC92D | Since: unknown | API-Set: unknown
  */
 export function getAttachedPickUpHookPosition(cargobob: number | IVehicle): Vector3 {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -2394,7 +2392,7 @@ export function getAttachedPickUpHookPosition(cargobob: number | IVehicle): Vect
 /**
  * No comment provided
  * 
- * Hash: 0x6636C535F6CC2725 | Since: 323 | API-Set: unknown
+ * Hash: 0x6636C535F6CC2725 | Since: unknown | API-Set: unknown
  */
 export function getBoatBoomPositionRatio(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2404,7 +2402,7 @@ export function getBoatBoomPositionRatio(vehicle: number | IVehicle): number {
 /**
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  * 
- * Hash: 0x5AA3F878A178C4FC | Since: 323 | API-Set: unknown
+ * Hash: 0x5AA3F878A178C4FC | Since: unknown | API-Set: unknown
  */
 export function getBoatModelAgility(modelHash: number | string): number {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -2414,7 +2412,7 @@ export function getBoatModelAgility(modelHash: number | string): number {
 /**
  * Returns true when both headlights are broken. This does not include extralights.
  * 
- * Hash: 0xEC69ADF931AAE0C3 | Since: 505 | API-Set: unknown
+ * Hash: 0xEC69ADF931AAE0C3 | Since: unknown | API-Set: unknown
  */
 export function getBothHeadlightsDamaged(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2426,7 +2424,7 @@ export function getBothHeadlightsDamaged(vehicle: number | IVehicle): boolean {
  * p7 is usually 2
  * p8 is usually 1
  * 
- * Hash: 0x51F30DB60626A20E | Since: 1180 | API-Set: unknown
+ * Hash: 0x51F30DB60626A20E | Since: unknown | API-Set: unknown
  */
 export function getCanBePlacedHere(vehicle: number | IVehicle, pos: Vector3, rot: Vector3): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2436,7 +2434,7 @@ export function getCanBePlacedHere(vehicle: number | IVehicle, pos: Vector3, rot
 /**
  * Returns true if the vehicle has the FLAG_JUMPING_CAR flag set.
  * 
- * Hash: 0x9078C0C5EF8C19E9 | Since: 944 | API-Set: unknown
+ * Hash: 0x9078C0C5EF8C19E9 | Since: unknown | API-Set: unknown
  */
 export function getCarHasJump(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2473,7 +2471,7 @@ export function getCarHasJump(vehicle: number | IVehicle): boolean {
  * 
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  * 
- * Hash: 0xF73EB622C4F1689B | Since: 323 | API-Set: unknown
+ * Hash: 0xF73EB622C4F1689B | Since: unknown | API-Set: unknown
  */
 export function getClosest(pos: Vector3, radius: number, modelHash: number | string, flags: number): number {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -2486,7 +2484,7 @@ export function getClosest(pos: Vector3, radius: number, modelHash: number | str
  * 2 -> down
  * 3 -> raising up
  * 
- * Hash: 0xF8C397922FC03F41 | Since: 323 | API-Set: unknown
+ * Hash: 0xF8C397922FC03F41 | Since: unknown | API-Set: unknown
  */
 export function getConvertibleRoofState(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2496,7 +2494,7 @@ export function getConvertibleRoofState(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0x42BC05C27A946054 | Since: 323 | API-Set: unknown
+ * Hash: 0x42BC05C27A946054 | Since: unknown | API-Set: unknown
  */
 export function getCurrentPlaybackFor(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2515,7 +2513,7 @@ export function getCurrentPlaybackFor(vehicle: number | IVehicle): number {
  * 
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  * 
- * Hash: 0xB215AAC32D25D019 | Since: 323 | API-Set: unknown
+ * Hash: 0xB215AAC32D25D019 | Since: unknown | API-Set: unknown
  */
 export function getDisplayNameFromModel(modelHash: number | string): string {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -2525,7 +2523,7 @@ export function getDisplayNameFromModel(modelHash: number | string): string {
 /**
  * Appears to return true if the vehicle has any damage, including cosmetically.
  * 
- * Hash: 0xBCDC5017D3CE1E9E | Since: 323 | API-Set: unknown
+ * Hash: 0xBCDC5017D3CE1E9E | Since: unknown | API-Set: unknown
  */
 export function getDoesHaveDamageDecals(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2535,7 +2533,7 @@ export function getDoesHaveDamageDecals(vehicle: number | IVehicle): boolean {
 /**
  * Returns true only if the "tombstone" bone is attached to the vehicle, irrespective of "FLAG_HAS_TOMBSTONE" being present or not. Detaching the tombstone will return false.
  * 
- * Hash: 0x71AFB258CCED3A27 | Since: 1604 | API-Set: unknown
+ * Hash: 0x71AFB258CCED3A27 | Since: unknown | API-Set: unknown
  */
 export function getDoesHaveTombstone(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2545,7 +2543,7 @@ export function getDoesHaveTombstone(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x2F5A72430E78C8D3 | Since: 2372 | API-Set: unknown
+ * Hash: 0x2F5A72430E78C8D3 | Since: unknown | API-Set: unknown
  */
 export function getDriftTyresSet(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2555,7 +2553,7 @@ export function getDriftTyresSet(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x99093F60746708CA | Since: 1103 | API-Set: unknown
+ * Hash: 0x99093F60746708CA | Since: unknown | API-Set: unknown
  */
 export function getEntityAttachedToCargobob(): number {
     return GetEntityAttachedToCargobob(undefined);
@@ -2564,7 +2562,7 @@ export function getEntityAttachedToCargobob(): number {
 /**
  * No comment provided
  * 
- * Hash: 0xEFEA18DCF10F8F75 | Since: 323 | API-Set: unknown
+ * Hash: 0xEFEA18DCF10F8F75 | Since: unknown | API-Set: unknown
  */
 export function getEntityAttachedToTowTruck(towTruck: number | IVehicle): number {
     const _towTruck = typeof towTruck == 'object' ? towTruck.handle() : towTruck;
@@ -2574,7 +2572,7 @@ export function getEntityAttachedToTowTruck(towTruck: number | IVehicle): number
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  * 
- * Hash: 0xC0572928C0ABFDA3 | Since: 944 | API-Set: unknown
+ * Hash: 0xC0572928C0ABFDA3 | Since: unknown | API-Set: unknown
  */
 export function getEntryPointPosition(vehicle: number | IVehicle, doorId: number): Vector3 {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2587,7 +2585,7 @@ export function getEntryPointPosition(vehicle: number | IVehicle, doorId: number
  * 0.000 is the stock suspension.
  * 0.008 is Ultra Suspension.
  * 
- * Hash: 0x53952FD2BAA19F17 | Since: 323 | API-Set: unknown
+ * Hash: 0x53952FD2BAA19F17 | Since: unknown | API-Set: unknown
  */
 export function getFakeSuspensionLoweringAmount(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2597,7 +2595,7 @@ export function getFakeSuspensionLoweringAmount(vehicle: number | IVehicle): num
 /**
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  * 
- * Hash: 0xC6AD107DDC9054CC | Since: 323 | API-Set: unknown
+ * Hash: 0xC6AD107DDC9054CC | Since: unknown | API-Set: unknown
  */
 export function getFlyingModelAgility(modelHash: number | string): number {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -2607,7 +2605,7 @@ export function getFlyingModelAgility(modelHash: number | string): number {
 /**
  * No comment provided
  * 
- * Hash: 0xDCA174A42133F08C | Since: 944 | API-Set: unknown
+ * Hash: 0xDCA174A42133F08C | Since: unknown | API-Set: unknown
  */
 export function getHasRetractableWheels(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2617,7 +2615,7 @@ export function getHasRetractableWheels(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x36D782F68B309BDA | Since: 944 | API-Set: unknown
+ * Hash: 0x36D782F68B309BDA | Since: unknown | API-Set: unknown
  */
 export function getHasRocketBoost(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2627,7 +2625,7 @@ export function getHasRocketBoost(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xE8718FAF591FD224 | Since: 1604 | API-Set: unknown
+ * Hash: 0xE8718FAF591FD224 | Since: unknown | API-Set: unknown
  */
 export function getHasBeenHitByShunt(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2638,7 +2636,7 @@ export function getHasBeenHitByShunt(vehicle: number | IVehicle): boolean {
  * Max 1000.
  * At 0 the main rotor will stall.
  * 
- * Hash: 0xE4CB7541F413D2C5 | Since: 323 | API-Set: unknown
+ * Hash: 0xE4CB7541F413D2C5 | Since: unknown | API-Set: unknown
  */
 export function getHeliMainRotorHealth(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2649,7 +2647,7 @@ export function getHeliMainRotorHealth(vehicle: number | IVehicle): number {
  * Max 1000.
  * At -100 both helicopter rotors will stall.
  * 
- * Hash: 0xAC51915D27E4A5F7 | Since: 323 | API-Set: unknown
+ * Hash: 0xAC51915D27E4A5F7 | Since: unknown | API-Set: unknown
  */
 export function getHeliTailBoomHealth(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2660,7 +2658,7 @@ export function getHeliTailBoomHealth(vehicle: number | IVehicle): number {
  * Max 1000.
  * At 0 the tail rotor will stall.
  * 
- * Hash: 0xAE8CE82A4219AC8C | Since: 323 | API-Set: unknown
+ * Hash: 0xAE8CE82A4219AC8C | Since: unknown | API-Set: unknown
  */
 export function getHeliTailRotorHealth(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2670,7 +2668,7 @@ export function getHeliTailRotorHealth(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0x0BB5CBDDD0F25AE3 | Since: 2372 | API-Set: unknown
+ * Hash: 0x0BB5CBDDD0F25AE3 | Since: unknown | API-Set: unknown
  */
 export function getHydraulicSuspensionRaiseFactor(vehicle: number | IVehicle, wheelId: number): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2680,7 +2678,7 @@ export function getHydraulicSuspensionRaiseFactor(vehicle: number | IVehicle, wh
 /**
  * No comment provided
  * 
- * Hash: 0xA01BC64DD4BFBBAC | Since: 323 | API-Set: unknown
+ * Hash: 0xA01BC64DD4BFBBAC | Since: unknown | API-Set: unknown
  */
 export function getInClipsetHashForSeat(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2690,7 +2688,7 @@ export function getInClipsetHashForSeat(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0xBA91D045575699AD | Since: 877 | API-Set: unknown
+ * Hash: 0xBA91D045575699AD | Since: unknown | API-Set: unknown
  */
 export function getIsBoatCapsized(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2700,7 +2698,7 @@ export function getIsBoatCapsized(vehicle: number | IVehicle): boolean {
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  * 
- * Hash: 0x645F4B6E8499F632 | Since: 944 | API-Set: unknown
+ * Hash: 0x645F4B6E8499F632 | Since: unknown | API-Set: unknown
  */
 export function getIsDoorValid(vehicle: number | IVehicle, doorId: number): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2710,7 +2708,7 @@ export function getIsDoorValid(vehicle: number | IVehicle, doorId: number): bool
 /**
  * From the driver's perspective, is the left headlight broken.
  * 
- * Hash: 0x5EF77C9ADD3B11A3 | Since: 323 | API-Set: unknown
+ * Hash: 0x5EF77C9ADD3B11A3 | Since: unknown | API-Set: unknown
  */
 export function getIsLeftHeadlightDamaged(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2720,7 +2718,7 @@ export function getIsLeftHeadlightDamaged(vehicle: number | IVehicle): boolean {
 /**
  * From the driver's perspective, is the right headlight broken.
  * 
- * Hash: 0xA7ECB73355EB2F20 | Since: 323 | API-Set: unknown
+ * Hash: 0xA7ECB73355EB2F20 | Since: unknown | API-Set: unknown
  */
 export function getIsRightHeadlightDamaged(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2730,7 +2728,7 @@ export function getIsRightHeadlightDamaged(vehicle: number | IVehicle): boolean 
 /**
  * Returns whether this vehicle is currently disabled by an EMP mine.
  * 
- * Hash: 0x0506ED94363AD905 | Since: 1604 | API-Set: unknown
+ * Hash: 0x0506ED94363AD905 | Since: unknown | API-Set: unknown
  */
 export function getIsDisabledByEmp(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2740,7 +2738,7 @@ export function getIsDisabledByEmp(vehicle: number | IVehicle): boolean {
 /**
  * Returns true when in a vehicle, false whilst entering/exiting.
  * 
- * Hash: 0xAE31E7DF9B5B132E | Since: 323 | API-Set: unknown
+ * Hash: 0xAE31E7DF9B5B132E | Since: unknown | API-Set: unknown
  */
 export function getIsEngineRunning(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2750,7 +2748,7 @@ export function getIsEngineRunning(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xF095C0405307B21B | Since: 323 | API-Set: unknown
+ * Hash: 0xF095C0405307B21B | Since: unknown | API-Set: unknown
  */
 export function getIsPrimaryColourCustom(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2760,7 +2758,7 @@ export function getIsPrimaryColourCustom(vehicle: number | IVehicle): boolean {
 /**
  * Check if Vehicle Secondary is avaliable for customize
  * 
- * Hash: 0x910A32E7AAD2656C | Since: 323 | API-Set: unknown
+ * Hash: 0x910A32E7AAD2656C | Since: unknown | API-Set: unknown
  */
 export function getIsSecondaryColourCustom(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2770,7 +2768,7 @@ export function getIsSecondaryColourCustom(vehicle: number | IVehicle): boolean 
 /**
  * No comment provided
  * 
- * Hash: 0xA2459F72C14E2E8D | Since: 1604 | API-Set: unknown
+ * Hash: 0xA2459F72C14E2E8D | Since: unknown | API-Set: unknown
  */
 export function getIsShunting(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2780,7 +2778,7 @@ export function getIsShunting(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x1DA0DA9CB3F0C8BF | Since: 944 | API-Set: unknown
+ * Hash: 0x1DA0DA9CB3F0C8BF | Since: unknown | API-Set: unknown
  */
 export function getIsWheelsRetracted(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2798,7 +2796,7 @@ export function getIsWheelsRetracted(vehicle: number | IVehicle): boolean {
  * 
  * Returns the current state of the vehicles landing gear.
  * 
- * Hash: 0x9B0F3DCA3DB0F4CD | Since: 323 | API-Set: unknown
+ * Hash: 0x9B0F3DCA3DB0F4CD | Since: unknown | API-Set: unknown
  */
 export function getLandingGearState(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2808,7 +2806,7 @@ export function getLandingGearState(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0xB2D06FAEDE65B577 | Since: 323 | API-Set: unknown
+ * Hash: 0xB2D06FAEDE65B577 | Since: unknown | API-Set: unknown
  */
 export function getLastDriven(): number {
     return GetLastDrivenVehicle();
@@ -2817,7 +2815,7 @@ export function getLastDriven(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x83F969AA1EE2A664 | Since: 323 | API-Set: unknown
+ * Hash: 0x83F969AA1EE2A664 | Since: unknown | API-Set: unknown
  */
 export function getLastPedInSeat(vehicle: number | IVehicle, seatIndex: number): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2827,7 +2825,7 @@ export function getLastPedInSeat(vehicle: number | IVehicle, seatIndex: number):
 /**
  * Returns last vehicle that was rammed by the given vehicle using the shunt boost.
  * 
- * Hash: 0x04F2FA6E234162F7 | Since: 1604 | API-Set: unknown
+ * Hash: 0x04F2FA6E234162F7 | Since: unknown | API-Set: unknown
  */
 export function getLastShunt(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2860,7 +2858,7 @@ export function getLastShunt(vehicle: number | IVehicle): number {
  * 
  * Full list of vehicle mod kits and mods by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicleModKits.json
  * 
- * Hash: 0xB4C7A93837C91A1F | Since: 323 | API-Set: unknown
+ * Hash: 0xB4C7A93837C91A1F | Since: unknown | API-Set: unknown
  */
 export function getLiveryName(vehicle: number | IVehicle, liveryIndex: number): string {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2873,7 +2871,7 @@ export function getLiveryName(vehicle: number | IVehicle, liveryIndex: number): 
  * 
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  * 
- * Hash: 0xF7AF4F159FF99F97 | Since: 1868 | API-Set: unknown
+ * Hash: 0xF7AF4F159FF99F97 | Since: unknown | API-Set: unknown
  */
 export function getMakeNameFromModel(modelHash: number | string): string {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -2884,7 +2882,7 @@ export function getMakeNameFromModel(modelHash: number | string): string {
  * Returns the name for the type of vehicle mod(Armour, engine etc)
  * 
  * 
- * Hash: 0x51F0FEB9F6AE98C0 | Since: 323 | API-Set: unknown
+ * Hash: 0x51F0FEB9F6AE98C0 | Since: unknown | API-Set: unknown
  */
 export function getModSlotName(vehicle: number | IVehicle, modType: number): string {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2896,7 +2894,7 @@ export function getModSlotName(vehicle: number | IVehicle, modType: number): str
  * 
  * Use GET_FILENAME_FOR_AUDIO_CONVERSATION to get the part name in the game's language
  * 
- * Hash: 0x8935624F8C5592CC | Since: 323 | API-Set: unknown
+ * Hash: 0x8935624F8C5592CC | Since: unknown | API-Set: unknown
  */
 export function getModTextLabel(vehicle: number | IVehicle, modType: number, modValue: number): string {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2906,7 +2904,7 @@ export function getModTextLabel(vehicle: number | IVehicle, modType: number, mod
 /**
  * Returns the total amount of color combinations found in the vehicle's carvariations.meta entry.
  * 
- * Hash: 0x3B963160CD65D41E | Since: 323 | API-Set: unknown
+ * Hash: 0x3B963160CD65D41E | Since: unknown | API-Set: unknown
  */
 export function getNumberOfColours(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2916,7 +2914,7 @@ export function getNumberOfColours(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0x92922A607497B14D | Since: 463 | API-Set: unknown
+ * Hash: 0x92922A607497B14D | Since: unknown | API-Set: unknown
  */
 export function getNumberOfDoors(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2926,7 +2924,7 @@ export function getNumberOfDoors(vehicle: number | IVehicle): number {
 /**
  * Returns the number of *types* of licence plates, enumerated below in SET_VEHICLE_NUMBER_PLATE_TEXT_INDEX.
  * 
- * Hash: 0x4C4D6B2644F458CB | Since: 323 | API-Set: unknown
+ * Hash: 0x4C4D6B2644F458CB | Since: unknown | API-Set: unknown
  */
 export function getNumberOfNumberPlates(): number {
     return GetNumberOfVehicleNumberPlates();
@@ -2942,7 +2940,7 @@ export function getNumberOfNumberPlates(): number {
  * 5: Chrome
  * 6: Chameleon
  * 
- * Hash: 0xA551BE18C11A476D | Since: 323 | API-Set: unknown
+ * Hash: 0xA551BE18C11A476D | Since: unknown | API-Set: unknown
  */
 export function getNumModColors(paintType: number): number {
     return GetNumModColors(paintType, false);
@@ -2951,7 +2949,7 @@ export function getNumModColors(paintType: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0x33F2E3FE70EAAE1D | Since: 323 | API-Set: unknown
+ * Hash: 0x33F2E3FE70EAAE1D | Since: unknown | API-Set: unknown
  */
 export function getNumModKits(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2961,7 +2959,7 @@ export function getNumModKits(vehicle: number | IVehicle): number {
 /**
  * Returns how many possible mods a vehicle has for a given mod type
  * 
- * Hash: 0xE38E9162A2500646 | Since: 323 | API-Set: unknown
+ * Hash: 0xE38E9162A2500646 | Since: unknown | API-Set: unknown
  */
 export function getNumMods(vehicle: number | IVehicle, modType: number): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -2971,7 +2969,7 @@ export function getNumMods(vehicle: number | IVehicle, modType: number): number 
 /**
  * No comment provided
  * 
- * Hash: 0x9D1224004B3A6707 | Since: 323 | API-Set: unknown
+ * Hash: 0x9D1224004B3A6707 | Since: unknown | API-Set: unknown
  */
 export function getNumWindowTints(): number {
     return GetNumVehicleWindowTints();
@@ -2982,7 +2980,7 @@ export function getNumWindowTints(): number {
  * These are the metal supports that allow it to fire.
  * This native only applies to the Chernobog.
  * 
- * Hash: 0x3A9128352EAC9E85 | Since: 1290 | API-Set: unknown
+ * Hash: 0x3A9128352EAC9E85 | Since: unknown | API-Set: unknown
  */
 export function getOutriggersDeployed(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3003,7 +3001,7 @@ export function getOutriggersDeployed(vehicle: number | IVehicle): boolean {
  * 
  * If p2 is true it uses a different GetOccupant function.
  * 
- * Hash: 0xBB40DD2270B65366 | Since: 323 | API-Set: unknown
+ * Hash: 0xBB40DD2270B65366 | Since: unknown | API-Set: unknown
  */
 export function getPedInSeat(vehicle: number | IVehicle, seatIndex: number): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3013,7 +3011,7 @@ export function getPedInSeat(vehicle: number | IVehicle, seatIndex: number): num
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  * 
- * Hash: 0x218297BF0CFD853B | Since: 323 | API-Set: unknown
+ * Hash: 0x218297BF0CFD853B | Since: unknown | API-Set: unknown
  */
 export function getPedUsingDoor(vehicle: number | IVehicle, doord: number): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3023,7 +3021,7 @@ export function getPedUsingDoor(vehicle: number | IVehicle, doord: number): numb
 /**
  * Distance traveled in the vehicles current recording.
  * 
- * Hash: 0x2DACD605FC681475 | Since: 323 | API-Set: unknown
+ * Hash: 0x2DACD605FC681475 | Since: unknown | API-Set: unknown
  */
 export function getPositionInRecording(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3035,7 +3033,7 @@ export function getPositionInRecording(vehicle: number | IVehicle): number {
  * 
  * See REQUEST_VEHICLE_RECORDING
  * 
- * Hash: 0xD242728AA6F0FBA2 | Since: 323 | API-Set: unknown
+ * Hash: 0xD242728AA6F0FBA2 | Since: unknown | API-Set: unknown
  */
 export function getPositionOfRecordingAtTime(recording: number, time: number, script: string): Vector3 {
     return new Vector3(GetPositionOfVehicleRecordingAtTime(recording, time, script));
@@ -3044,7 +3042,7 @@ export function getPositionOfRecordingAtTime(recording: number, time: number, sc
 /**
  * No comment provided
  * 
- * Hash: 0x92523B76657A517D | Since: 323 | API-Set: unknown
+ * Hash: 0x92523B76657A517D | Since: unknown | API-Set: unknown
  */
 export function getPositionOfRecordingIdAtTime(id: number, time: number): Vector3 {
     return new Vector3(GetPositionOfVehicleRecordingIdAtTime(id, time));
@@ -3053,7 +3051,7 @@ export function getPositionOfRecordingIdAtTime(id: number, time: number): Vector
 /**
  * No comment provided
  * 
- * Hash: 0xB50807EABE20A8DC | Since: 323 | API-Set: unknown
+ * Hash: 0xB50807EABE20A8DC | Since: unknown | API-Set: unknown
  */
 export function getRandomBackBumperInSphere(): number {
     return GetRandomVehicleBackBumperInSphere(0, 0, 0, 0, 0, 0, 0);
@@ -3062,7 +3060,7 @@ export function getRandomBackBumperInSphere(): number {
 /**
  * No comment provided
  * 
- * Hash: 0xC5574E0AEB86BA68 | Since: 323 | API-Set: unknown
+ * Hash: 0xC5574E0AEB86BA68 | Since: unknown | API-Set: unknown
  */
 export function getRandomFrontBumperInSphere(): number {
     return GetRandomVehicleFrontBumperInSphere(0, 0, 0, 0, 0, 0, 0);
@@ -3080,7 +3078,7 @@ export function getRandomFrontBumperInSphere(): number {
  * 
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  * 
- * Hash: 0x386F6CE5BAF6091C | Since: 323 | API-Set: unknown
+ * Hash: 0x386F6CE5BAF6091C | Since: unknown | API-Set: unknown
  */
 export function getRandomInSphere(pos: Vector3, radius: number, modelHash: number | string, flags: number): number {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -3093,7 +3091,7 @@ export function getRandomInSphere(pos: Vector3, radius: number, modelHash: numbe
  * p0 always true (except in one case)
  * successIndicator: 0 if success, -1 if failed
  * 
- * Hash: 0x055BF0AC0C34F4FD | Since: 323 | API-Set: unknown
+ * Hash: 0x055BF0AC0C34F4FD | Since: unknown | API-Set: unknown
  */
 export function getRandomModelInMemory(): [number, number] {
     return GetRandomVehicleModelInMemory(false);
@@ -3104,7 +3102,7 @@ export function getRandomModelInMemory(): [number, number] {
  * 
  * See REQUEST_VEHICLE_RECORDING
  * 
- * Hash: 0x2058206FBE79A8AD | Since: 323 | API-Set: unknown
+ * Hash: 0x2058206FBE79A8AD | Since: unknown | API-Set: unknown
  */
 export function getRotationOfRecordingAtTime(recording: number, time: number, script: string): Vector3 {
     return new Vector3(GetRotationOfVehicleRecordingAtTime(recording, time, script));
@@ -3113,7 +3111,7 @@ export function getRotationOfRecordingAtTime(recording: number, time: number, sc
 /**
  * No comment provided
  * 
- * Hash: 0xF0F2103EFAF8CBA7 | Since: 323 | API-Set: unknown
+ * Hash: 0xF0F2103EFAF8CBA7 | Since: unknown | API-Set: unknown
  */
 export function getRotationOfRecordingIdAtTime(id: number, time: number): Vector3 {
     return new Vector3(GetRotationOfVehicleRecordingIdAtTime(id, time));
@@ -3122,7 +3120,7 @@ export function getRotationOfRecordingIdAtTime(id: number, time: number): Vector
 /**
  * No comment provided
  * 
- * Hash: 0x3E71D0B300B7AA79 | Since: 2189 | API-Set: unknown
+ * Hash: 0x3E71D0B300B7AA79 | Since: unknown | API-Set: unknown
  */
 export function getSubmarineIsUnderDesignDepth(submarine: number | IVehicle): boolean {
     const _submarine = typeof submarine == 'object' ? submarine.handle() : submarine;
@@ -3132,7 +3130,7 @@ export function getSubmarineIsUnderDesignDepth(submarine: number | IVehicle): bo
 /**
  * No comment provided
  * 
- * Hash: 0x093D6DDCA5B8FBAE | Since: 2189 | API-Set: unknown
+ * Hash: 0x093D6DDCA5B8FBAE | Since: unknown | API-Set: unknown
  */
 export function getSubmarineNumberOfAirLeaks(submarine: number | IVehicle): number {
     const _submarine = typeof submarine == 'object' ? submarine.handle() : submarine;
@@ -3142,7 +3140,7 @@ export function getSubmarineNumberOfAirLeaks(submarine: number | IVehicle): numb
 /**
  * Can be used with GET_TOTAL_DURATION_OF_VEHICLE_RECORDING{_ID} to compute a percentage.
  * 
- * Hash: 0x5746F3A7AB7FE544 | Since: 323 | API-Set: unknown
+ * Hash: 0x5746F3A7AB7FE544 | Since: unknown | API-Set: unknown
  */
 export function getTimePositionInRecording(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3152,7 +3150,7 @@ export function getTimePositionInRecording(vehicle: number | IVehicle): number {
 /**
  * See REQUEST_VEHICLE_RECORDING
  * 
- * Hash: 0x0E48D1C262390950 | Since: 323 | API-Set: unknown
+ * Hash: 0x0E48D1C262390950 | Since: unknown | API-Set: unknown
  */
 export function getTotalDurationOfRecording(recording: number, script: string): number {
     return GetTotalDurationOfVehicleRecording(recording, script);
@@ -3161,7 +3159,7 @@ export function getTotalDurationOfRecording(recording: number, script: string): 
 /**
  * No comment provided
  * 
- * Hash: 0x102D125411A7B6E6 | Since: 323 | API-Set: unknown
+ * Hash: 0x102D125411A7B6E6 | Since: unknown | API-Set: unknown
  */
 export function getTotalDurationOfRecordingId(id: number): number {
     return GetTotalDurationOfVehicleRecordingId(id);
@@ -3170,7 +3168,7 @@ export function getTotalDurationOfRecordingId(id: number): number {
 /**
  * Corrected p1. it's basically the 'carriage/trailer number'. So if the train has 3 trailers you'd call the native once with a var or 3 times with 1, 2, 3.
  * 
- * Hash: 0x08AAFD0814722BC3 | Since: 323 | API-Set: unknown
+ * Hash: 0x08AAFD0814722BC3 | Since: unknown | API-Set: unknown
  */
 export function getTrainCarriage(train: number | IVehicle, trailerNumber: number): number {
     const _train = typeof train == 'object' ? train.handle() : train;
@@ -3186,7 +3184,7 @@ export function getTrainCarriage(train: number | IVehicle, trailerNumber: number
  * 4: wheel_lr
  * 5: wheel_rr
  * 
- * Hash: 0x55EAB010FAEE9380 | Since: 1868 | API-Set: unknown
+ * Hash: 0x55EAB010FAEE9380 | Since: unknown | API-Set: unknown
  */
 export function getTyreHealth(vehicle: number | IVehicle, wheelIndex: number): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3204,7 +3202,7 @@ export function getTyreHealth(vehicle: number | IVehicle, wheelIndex: number): n
  * 4: wheel_lr
  * 5: wheel_rr
  * 
- * Hash: 0x6E387895952F4F71 | Since: 2060 | API-Set: unknown
+ * Hash: 0x6E387895952F4F71 | Since: unknown | API-Set: unknown
  */
 export function getTyreWearRate(vehicle: number | IVehicle, wheelIndex: number): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3214,7 +3212,7 @@ export function getTyreWearRate(vehicle: number | IVehicle, wheelIndex: number):
 /**
  * static - max acceleration
  * 
- * Hash: 0x5DD35C8D074E57AE | Since: 323 | API-Set: unknown
+ * Hash: 0x5DD35C8D074E57AE | Since: unknown | API-Set: unknown
  */
 export function getAcceleration(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3224,7 +3222,7 @@ export function getAcceleration(vehicle: number | IVehicle): number {
 /**
  * Returns attached vehicle (Vehicle in parameter must be cargobob)
  * 
- * Hash: 0x873B82D42AC2B9E5 | Since: 323 | API-Set: unknown
+ * Hash: 0x873B82D42AC2B9E5 | Since: unknown | API-Set: unknown
  */
 export function getAttachedToCargobob(cargobob: number | IVehicle): number {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -3236,7 +3234,7 @@ export function getAttachedToCargobob(cargobob: number | IVehicle): number {
  * Max 1000, min 0.
  * Vehicle does not necessarily explode or become undrivable at 0.
  * 
- * Hash: 0xF271147EB7B40F12 | Since: 323 | API-Set: unknown
+ * Hash: 0xF271147EB7B40F12 | Since: unknown | API-Set: unknown
  */
 export function getBodyHealth(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3246,7 +3244,7 @@ export function getBodyHealth(vehicle: number | IVehicle): number {
 /**
  * Gets the amount of bombs that this vehicle has. As far as I know, this does _not_ impact vehicle weapons or the ammo of those weapons in any way, it is just a way to keep track of the amount of bombs in a specific plane.
  * 
- * Hash: 0xEA12BD130D7569A1 | Since: 1180 | API-Set: unknown
+ * Hash: 0xEA12BD130D7569A1 | Since: unknown | API-Set: unknown
  */
 export function getBombAmmo(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3256,7 +3254,7 @@ export function getBombAmmo(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0xA916396DF4154EE3 | Since: 944 | API-Set: unknown
+ * Hash: 0xA916396DF4154EE3 | Since: unknown | API-Set: unknown
  */
 export function getCanDeployParachute(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3271,7 +3269,7 @@ export function getCanDeployParachute(vehicle: number | IVehicle): boolean {
  * iLocal_260 = 1;
  * }
  * 
- * Hash: 0xE495D1EF4C91FD20 | Since: 323 | API-Set: unknown
+ * Hash: 0xE495D1EF4C91FD20 | Since: unknown | API-Set: unknown
  */
 export function getCauseOfDestruction(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3310,7 +3308,7 @@ export function getCauseOfDestruction(vehicle: number | IVehicle): number {
  * 
  * `const char* className = HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(buffer);`
  * 
- * Hash: 0x29439776AAA00A62 | Since: 323 | API-Set: unknown
+ * Hash: 0x29439776AAA00A62 | Since: unknown | API-Set: unknown
  */
 export function getClass(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3320,7 +3318,7 @@ export function getClass(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0x00C09F246ABEDD82 | Since: 323 | API-Set: unknown
+ * Hash: 0x00C09F246ABEDD82 | Since: unknown | API-Set: unknown
  */
 export function getClassEstimatedMaxSpeed(vehicleClass: number): number {
     return GetVehicleClassEstimatedMaxSpeed(vehicleClass);
@@ -3334,7 +3332,7 @@ export function getClassEstimatedMaxSpeed(vehicleClass: number): number {
  * 
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  * 
- * Hash: 0xDEDF1C8BD47C2200 | Since: 323 | API-Set: unknown
+ * Hash: 0xDEDF1C8BD47C2200 | Since: unknown | API-Set: unknown
  */
 export function getClassFromName(modelHash: number | string): number {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -3344,7 +3342,7 @@ export function getClassFromName(modelHash: number | string): number {
 /**
  * No comment provided
  * 
- * Hash: 0x2F83E7E45D9EA7AE | Since: 323 | API-Set: unknown
+ * Hash: 0x2F83E7E45D9EA7AE | Since: unknown | API-Set: unknown
  */
 export function getClassMaxAcceleration(vehicleClass: number): number {
     return GetVehicleClassMaxAcceleration(vehicleClass);
@@ -3353,7 +3351,7 @@ export function getClassMaxAcceleration(vehicleClass: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0x4F930AD022D6DE3B | Since: 323 | API-Set: unknown
+ * Hash: 0x4F930AD022D6DE3B | Since: unknown | API-Set: unknown
  */
 export function getClassMaxAgility(vehicleClass: number): number {
     return GetVehicleClassMaxAgility(vehicleClass);
@@ -3362,7 +3360,7 @@ export function getClassMaxAgility(vehicleClass: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0x4BF54C16EC8FEC03 | Since: 323 | API-Set: unknown
+ * Hash: 0x4BF54C16EC8FEC03 | Since: unknown | API-Set: unknown
  */
 export function getClassMaxBraking(vehicleClass: number): number {
     return GetVehicleClassMaxBraking(vehicleClass);
@@ -3371,7 +3369,7 @@ export function getClassMaxBraking(vehicleClass: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0xDBC86D85C5059461 | Since: 323 | API-Set: unknown
+ * Hash: 0xDBC86D85C5059461 | Since: unknown | API-Set: unknown
  */
 export function getClassMaxTraction(vehicleClass: number): number {
     return GetVehicleClassMaxTraction(vehicleClass);
@@ -3380,7 +3378,7 @@ export function getClassMaxTraction(vehicleClass: number): number {
 /**
  * No comment provided
  * 
- * Hash: 0xF3CC740D36221548 | Since: 323 | API-Set: unknown
+ * Hash: 0xF3CC740D36221548 | Since: unknown | API-Set: unknown
  */
 export function getColor(vehicle: number | IVehicle): [number, number, number] {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3390,7 +3388,7 @@ export function getColor(vehicle: number | IVehicle): [number, number, number] {
 /**
  * No comment provided
  * 
- * Hash: 0xA19435F193E081AC | Since: 323 | API-Set: unknown
+ * Hash: 0xA19435F193E081AC | Since: unknown | API-Set: unknown
  */
 export function getColours(vehicle: number | IVehicle): [number, number] {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3400,7 +3398,7 @@ export function getColours(vehicle: number | IVehicle): [number, number] {
 /**
  * Some kind of flags.
  * 
- * Hash: 0xEEBFC7A7EFDC35B4 | Since: 323 | API-Set: unknown
+ * Hash: 0xEEBFC7A7EFDC35B4 | Since: unknown | API-Set: unknown
  */
 export function getColoursWhichCanBeSet(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3410,7 +3408,7 @@ export function getColoursWhichCanBeSet(vehicle: number | IVehicle): number {
 /**
  * Returns the index of the color combination found in the vehicle's carvariations.meta entry.
  * 
- * Hash: 0x6A842D197F845D56 | Since: 323 | API-Set: unknown
+ * Hash: 0x6A842D197F845D56 | Since: unknown | API-Set: unknown
  */
 export function getColourCombination(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3421,7 +3419,7 @@ export function getColourCombination(vehicle: number | IVehicle): number {
  * Similar to `GET_VEHICLE_BOMB_AMMO`, this gets the amount of countermeasures that are present on this vehicle.
  * Use SET_VEHICLE_COUNTERMEASURE_AMMO to set the current amount.
  * 
- * Hash: 0xF846AA63DF56B804 | Since: 1180 | API-Set: unknown
+ * Hash: 0xF846AA63DF56B804 | Since: unknown | API-Set: unknown
  */
 export function getCountermeasureAmmo(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3431,7 +3429,7 @@ export function getCountermeasureAmmo(vehicle: number | IVehicle): number {
 /**
  * Returns a float value between 0.0 and 3.0 related to its slipstream draft (boost/speedup).
  * 
- * Hash: 0x36492C2F0D134C56 | Since: 323 | API-Set: unknown
+ * Hash: 0x36492C2F0D134C56 | Since: unknown | API-Set: unknown
  */
 export function getCurrentTimeInSlipStream(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3441,7 +3439,7 @@ export function getCurrentTimeInSlipStream(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0xB64CF2CCA9D95F52 | Since: 323 | API-Set: unknown
+ * Hash: 0xB64CF2CCA9D95F52 | Since: unknown | API-Set: unknown
  */
 export function getCustomPrimaryColour(vehicle: number | IVehicle): [number, number, number] {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3451,7 +3449,7 @@ export function getCustomPrimaryColour(vehicle: number | IVehicle): [number, num
 /**
  * No comment provided
  * 
- * Hash: 0x8389CD56CA8072DC | Since: 323 | API-Set: unknown
+ * Hash: 0x8389CD56CA8072DC | Since: unknown | API-Set: unknown
  */
 export function getCustomSecondaryColour(vehicle: number | IVehicle): [number, number, number] {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3468,7 +3466,7 @@ export function getCustomSecondaryColour(vehicle: number | IVehicle): [number, n
  * 
  * `v_5\/\*{3}\*\/ = VEHICLE::GET_VEHICLE_DEFORMATION_AT_POS(a_0._f1, 1.21, 6.15, 0.3);`
  * 
- * Hash: 0x4EC6CFBC7B2E9536 | Since: 323 | API-Set: unknown
+ * Hash: 0x4EC6CFBC7B2E9536 | Since: unknown | API-Set: unknown
  */
 export function getDeformationAtPos(vehicle: number | IVehicle, offsetX: number, offsetY: number, offsetZ: number): Vector3 {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3478,7 +3476,7 @@ export function getDeformationAtPos(vehicle: number | IVehicle, offsetX: number,
 /**
  * Dirt level does not become greater than 15.0
  * 
- * Hash: 0x8F17BC8BA08DA62B | Since: 323 | API-Set: unknown
+ * Hash: 0x8F17BC8BA08DA62B | Since: unknown | API-Set: unknown
  */
 export function getDirtLevel(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3488,7 +3486,7 @@ export function getDirtLevel(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0xF6AF6CB341349015 | Since: 323 | API-Set: unknown
+ * Hash: 0xF6AF6CB341349015 | Since: unknown | API-Set: unknown
  */
 export function getDoorsLockedForPlayer(vehicle: number | IVehicle, player: number | string | IPlayer): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3499,7 +3497,7 @@ export function getDoorsLockedForPlayer(vehicle: number | IVehicle, player: numb
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  * 
- * Hash: 0xFE3F9C29F7B32BD5 | Since: 323 | API-Set: unknown
+ * Hash: 0xFE3F9C29F7B32BD5 | Since: unknown | API-Set: unknown
  */
 export function getDoorAngleRatio(vehicle: number | IVehicle, doorId: number): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3518,7 +3516,7 @@ export function getDoorAngleRatio(vehicle: number | IVehicle, doorId: number): n
  * CannotBeTriedToEnter = 10, -- Cannot be tried to enter (Nothing happens when you press the vehicle enter key).
  * }
  * 
- * Hash: 0x25BC98A59C2EA962 | Since: 323 | API-Set: unknown
+ * Hash: 0x25BC98A59C2EA962 | Since: unknown | API-Set: unknown
  */
 export function getDoorLockStatus(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3536,7 +3534,7 @@ export function getDoorLockStatus(vehicle: number | IVehicle): number {
  * 300: Engine is smoking and losing functionality
  * 1000: Engine is perfect
  * 
- * Hash: 0xC45D23BAF168AAB8 | Since: 323 | API-Set: unknown
+ * Hash: 0xC45D23BAF168AAB8 | Since: unknown | API-Set: unknown
  */
 export function getEngineHealth(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3546,7 +3544,7 @@ export function getEngineHealth(vehicle: number | IVehicle): number {
 /**
  * The result is a value from 0-1, where 0 is fresh paint.
  * 
- * Hash: 0xA82819CAC9C4C403 | Since: 323 | API-Set: unknown
+ * Hash: 0xA82819CAC9C4C403 | Since: unknown | API-Set: unknown
  */
 export function getEnveffScale(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3556,7 +3554,7 @@ export function getEnveffScale(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0x53AF99BAA671CA47 | Since: 323 | API-Set: unknown
+ * Hash: 0x53AF99BAA671CA47 | Since: unknown | API-Set: unknown
  */
 export function getEstimatedMaxSpeed(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3566,7 +3564,7 @@ export function getEstimatedMaxSpeed(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0x3BC4245933A166F7 | Since: 323 | API-Set: unknown
+ * Hash: 0x3BC4245933A166F7 | Since: unknown | API-Set: unknown
  */
 export function getExtraColours(vehicle: number | IVehicle): [number, number] {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3576,7 +3574,7 @@ export function getExtraColours(vehicle: number | IVehicle): [number, number] {
 /**
  * No comment provided
  * 
- * Hash: 0x7D1464D472D32136 | Since: 505 | API-Set: unknown
+ * Hash: 0x7D1464D472D32136 | Since: unknown | API-Set: unknown
  */
 export function getExtraColour5(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3586,7 +3584,7 @@ export function getExtraColour5(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0xB7635E80A5C31BFF | Since: 505 | API-Set: unknown
+ * Hash: 0xB7635E80A5C31BFF | Since: unknown | API-Set: unknown
  */
 export function getExtraColour6(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3596,7 +3594,7 @@ export function getExtraColour6(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0xDA62027C8BDB326E | Since: 1180 | API-Set: unknown
+ * Hash: 0xDA62027C8BDB326E | Since: unknown | API-Set: unknown
  */
 export function getFlightNozzlePosition(plane: number | IVehicle): number {
     const _plane = typeof plane == 'object' ? plane.handle() : plane;
@@ -3606,7 +3604,7 @@ export function getFlightNozzlePosition(plane: number | IVehicle): number {
 /**
  * Returns true if the vehicle has a HF_HAS_KERS (strHandlingFlags 0x4) handing flag set, for instance the lectro/vindicator bikes or the open wheelers.
  * 
- * Hash: 0x50634E348C8D44EF | Since: 372 | API-Set: unknown
+ * Hash: 0x50634E348C8D44EF | Since: unknown | API-Set: unknown
  */
 export function getHasKers(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3616,7 +3614,7 @@ export function getHasKers(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xE43701C36CAFF1A4 | Since: 1180 | API-Set: unknown
+ * Hash: 0xE43701C36CAFF1A4 | Since: unknown | API-Set: unknown
  */
 export function getHasLandingGear(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3626,7 +3624,7 @@ export function getHasLandingGear(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xBC9CFF381338CB4F | Since: 944 | API-Set: unknown
+ * Hash: 0xBC9CFF381338CB4F | Since: unknown | API-Set: unknown
  */
 export function getHasParachute(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3653,7 +3651,7 @@ export function getHasParachute(vehicle: number | IVehicle): boolean {
  * }
  * }
  * 
- * Hash: 0xB8EF61207C2393A9 | Since: 323 | API-Set: unknown
+ * Hash: 0xB8EF61207C2393A9 | Since: unknown | API-Set: unknown
  */
 export function getHealthPercentage(vehicle: number | IVehicle, maxEngineHealth: number, maxPetrolTankHealth: number, maxBodyHealth: number, maxMainRotorHealth: number, maxTailRotorHealth: number, maxUnkHealth: number): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3663,7 +3661,7 @@ export function getHealthPercentage(vehicle: number | IVehicle, maxEngineHealth:
 /**
  * No comment provided
  * 
- * Hash: 0x6EAAEFC76ACC311F | Since: 757 | API-Set: unknown
+ * Hash: 0x6EAAEFC76ACC311F | Since: unknown | API-Set: unknown
  */
 export function getHomingLockedontoState(): number {
     return Citizen.invokeNative('0x6EAAEFC76ACC311F', undefined);
@@ -3675,7 +3673,7 @@ export function getHomingLockedontoState(): number {
  * 1: locking on
  * 2: locked on
  * 
- * Hash: 0xE6B0E8CFC3633BF0 | Since: 323 | API-Set: unknown
+ * Hash: 0xE6B0E8CFC3633BF0 | Since: unknown | API-Set: unknown
  */
 export function getHomingLockonState(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3685,7 +3683,7 @@ export function getHomingLockonState(vehicle: number | IVehicle): number {
 /**
  * Returns vehicle door lock state previously set with SET_VEHICLE_INDIVIDUAL_DOORS_LOCKED
  * 
- * Hash: 0xCA4AC3EAAE46EC7B | Since: 1103 | API-Set: unknown
+ * Hash: 0xCA4AC3EAAE46EC7B | Since: unknown | API-Set: unknown
  */
 export function getIndividualDoorLockStatus(vehicle: number | IVehicle, doorId: number): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3695,7 +3693,7 @@ export function getIndividualDoorLockStatus(vehicle: number | IVehicle, doorId: 
 /**
  * No comment provided
  * 
- * Hash: 0x8533CAFDE1F0F336 | Since: 505 | API-Set: unknown
+ * Hash: 0x8533CAFDE1F0F336 | Since: unknown | API-Set: unknown
  */
 export function getIsDummy(): boolean {
     return Citizen.invokeNative('0x8533CAFDE1F0F336', undefined);
@@ -3704,7 +3702,7 @@ export function getIsDummy(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xD4C4642CB7F50B5D | Since: 323 | API-Set: unknown
+ * Hash: 0xD4C4642CB7F50B5D | Since: unknown | API-Set: unknown
  */
 export function getIsMercenary(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3714,7 +3712,7 @@ export function getIsMercenary(vehicle: number | IVehicle): boolean {
 /**
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  * 
- * Hash: 0x28D37D4F71AC5C58 | Since: 323 | API-Set: unknown
+ * Hash: 0x28D37D4F71AC5C58 | Since: unknown | API-Set: unknown
  */
 export function getLayoutHash(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3724,7 +3722,7 @@ export function getLayoutHash(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0xB91B4C20085BD12F | Since: 323 | API-Set: unknown
+ * Hash: 0xB91B4C20085BD12F | Since: unknown | API-Set: unknown
  */
 export function getLightsState(vehicle: number | IVehicle): [boolean, boolean, boolean] {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3734,7 +3732,7 @@ export function getLightsState(vehicle: number | IVehicle): [boolean, boolean, b
 /**
  * -1 = no livery
  * 
- * Hash: 0x2BB9230590DA5E8A | Since: 323 | API-Set: unknown
+ * Hash: 0x2BB9230590DA5E8A | Since: unknown | API-Set: unknown
  */
 export function getLivery(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3744,7 +3742,7 @@ export function getLivery(vehicle: number | IVehicle): number {
 /**
  * Returns index of the current vehicle's secondary livery. A getter for SET_VEHICLE_LIVERY2.
  * 
- * Hash: 0x60190048C0764A26 | Since: 505 | API-Set: unknown
+ * Hash: 0x60190048C0764A26 | Since: unknown | API-Set: unknown
  */
 export function getLivery2(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3754,7 +3752,7 @@ export function getLivery2(vehicle: number | IVehicle): number {
 /**
  * Returns a number of available secondary liveries, or -1 if vehicle has no secondary liveries available.
  * 
- * Hash: 0x5ECB40269053C0D4 | Since: 505 | API-Set: unknown
+ * Hash: 0x5ECB40269053C0D4 | Since: unknown | API-Set: unknown
  */
 export function getLivery2Count(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3764,7 +3762,7 @@ export function getLivery2Count(vehicle: number | IVehicle): number {
 /**
  * Returns -1 if the vehicle has no livery
  * 
- * Hash: 0x87B63E25A529D526 | Since: 323 | API-Set: unknown
+ * Hash: 0x87B63E25A529D526 | Since: unknown | API-Set: unknown
  */
 export function getLiveryCount(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3774,7 +3772,7 @@ export function getLiveryCount(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0x8F5EBAB1F260CFCE | Since: 323 | API-Set: unknown
+ * Hash: 0x8F5EBAB1F260CFCE | Since: unknown | API-Set: unknown
  */
 export function getLockOnTarget(vehicle: number | IVehicle): [boolean, number] {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3784,7 +3782,7 @@ export function getLockOnTarget(vehicle: number | IVehicle): [boolean, number] {
 /**
  * No comment provided
  * 
- * Hash: 0xAD7E85FC227197C4 | Since: 323 | API-Set: unknown
+ * Hash: 0xAD7E85FC227197C4 | Since: unknown | API-Set: unknown
  */
 export function getMaxBraking(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3794,7 +3792,7 @@ export function getMaxBraking(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0xA7C4F2C6E744A550 | Since: 323 | API-Set: unknown
+ * Hash: 0xA7C4F2C6E744A550 | Since: unknown | API-Set: unknown
  */
 export function getMaxNumberOfPassengers(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3804,7 +3802,7 @@ export function getMaxNumberOfPassengers(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0xA132FB5370554DB0 | Since: 323 | API-Set: unknown
+ * Hash: 0xA132FB5370554DB0 | Since: unknown | API-Set: unknown
  */
 export function getMaxTraction(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3816,7 +3814,7 @@ export function getMaxTraction(vehicle: number | IVehicle): number {
  * 
  * Returns -1 if the vehicle mod is stock
  * 
- * Hash: 0x772960298DA26FDB | Since: 323 | API-Set: unknown
+ * Hash: 0x772960298DA26FDB | Since: unknown | API-Set: unknown
  */
 export function getMod(vehicle: number | IVehicle, modType: number): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3828,7 +3826,7 @@ export function getMod(vehicle: number | IVehicle, modType: number): number {
  * 
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  * 
- * Hash: 0x8C044C5C84505B6A | Since: 323 | API-Set: unknown
+ * Hash: 0x8C044C5C84505B6A | Since: unknown | API-Set: unknown
  */
 export function getModelAcceleration(modelHash: number | string): number {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -3840,7 +3838,7 @@ export function getModelAcceleration(modelHash: number | string): number {
  * 
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  * 
- * Hash: 0x53409B5163D5B846 | Since: 323 | API-Set: unknown
+ * Hash: 0x53409B5163D5B846 | Since: unknown | API-Set: unknown
  */
 export function getModelAccelerationMaxMods(modelHash: number | string): number {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -3852,7 +3850,7 @@ export function getModelAccelerationMaxMods(modelHash: number | string): number 
  * 
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  * 
- * Hash: 0xF417C2502FFFED43 | Since: 323 | API-Set: unknown
+ * Hash: 0xF417C2502FFFED43 | Since: unknown | API-Set: unknown
  */
 export function getModelEstimatedMaxSpeed(modelHash: number | string): number {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -3864,7 +3862,7 @@ export function getModelEstimatedMaxSpeed(modelHash: number | string): number {
  * 
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  * 
- * Hash: 0xDC53FD41B4ED944C | Since: 323 | API-Set: unknown
+ * Hash: 0xDC53FD41B4ED944C | Since: unknown | API-Set: unknown
  */
 export function getModelMaxBraking(modelHash: number | string): number {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -3874,7 +3872,7 @@ export function getModelMaxBraking(modelHash: number | string): number {
 /**
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  * 
- * Hash: 0xBFBA3BA79CFF7EBF | Since: 323 | API-Set: unknown
+ * Hash: 0xBFBA3BA79CFF7EBF | Since: unknown | API-Set: unknown
  */
 export function getModelMaxBrakingMaxMods(modelHash: number | string): number {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -3886,7 +3884,7 @@ export function getModelMaxBrakingMaxMods(modelHash: number | string): number {
  * 
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  * 
- * Hash: 0x539DE94D44FDFD0D | Since: 323 | API-Set: unknown
+ * Hash: 0x539DE94D44FDFD0D | Since: unknown | API-Set: unknown
  */
 export function getModelMaxTraction(modelHash: number | string): number {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -3898,7 +3896,7 @@ export function getModelMaxTraction(modelHash: number | string): number {
  * 
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  * 
- * Hash: 0x2AD93716F184EDA4 | Since: 323 | API-Set: unknown
+ * Hash: 0x2AD93716F184EDA4 | Since: unknown | API-Set: unknown
  */
 export function getModelNumberOfSeats(modelHash: number | string): number {
     if (typeof modelHash === 'string') modelHash = GetHashKey(modelHash)
@@ -3908,7 +3906,7 @@ export function getModelNumberOfSeats(modelHash: number | string): number {
 /**
  * Returns `nMonetaryValue` from handling.meta for specific model.
  * 
- * Hash: 0x5873C14A52D74236 | Since: 463 | API-Set: unknown
+ * Hash: 0x5873C14A52D74236 | Since: unknown | API-Set: unknown
  */
 export function getModelValue(vehicleModel: number | string): number {
     if (typeof vehicleModel === 'string') vehicleModel = GetHashKey(vehicleModel)
@@ -3918,7 +3916,7 @@ export function getModelValue(vehicleModel: number | string): number {
 /**
  * No comment provided
  * 
- * Hash: 0xE8D65CA700C9A693 | Since: 323 | API-Set: unknown
+ * Hash: 0xE8D65CA700C9A693 | Since: unknown | API-Set: unknown
  */
 export function getModColor1(vehicle: number | IVehicle): [number, number, number] {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3930,7 +3928,7 @@ export function getModColor1(vehicle: number | IVehicle): [number, number, numbe
  * 
  * p1 is always 0
  * 
- * Hash: 0xB45085B721EFD38C | Since: 323 | API-Set: unknown
+ * Hash: 0xB45085B721EFD38C | Since: unknown | API-Set: unknown
  */
 export function getModColor1Name(vehicle: number | IVehicle): string {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3940,7 +3938,7 @@ export function getModColor1Name(vehicle: number | IVehicle): string {
 /**
  * No comment provided
  * 
- * Hash: 0x81592BE4E3878728 | Since: 323 | API-Set: unknown
+ * Hash: 0x81592BE4E3878728 | Since: unknown | API-Set: unknown
  */
 export function getModColor2(vehicle: number | IVehicle): [number, number] {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3950,7 +3948,7 @@ export function getModColor2(vehicle: number | IVehicle): [number, number] {
 /**
  * Returns a string which is the codename of the vehicle's currently selected secondary color
  * 
- * Hash: 0x4967A516ED23A5A1 | Since: 323 | API-Set: unknown
+ * Hash: 0x4967A516ED23A5A1 | Since: unknown | API-Set: unknown
  */
 export function getModColor2Name(vehicle: number | IVehicle): string {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3960,7 +3958,7 @@ export function getModColor2Name(vehicle: number | IVehicle): string {
 /**
  * Can be used for IS_DLC_VEHICLE_MOD and GET_DLC_VEHICLE_MOD_LOCK_HASH
  * 
- * Hash: 0x4593CF82AA179706 | Since: 323 | API-Set: unknown
+ * Hash: 0x4593CF82AA179706 | Since: unknown | API-Set: unknown
  */
 export function getModIdentifierHash(vehicle: number | IVehicle, modType: number, modIndex: number): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3970,7 +3968,7 @@ export function getModIdentifierHash(vehicle: number | IVehicle, modType: number
 /**
  * No comment provided
  * 
- * Hash: 0x6325D1A044AE510D | Since: 323 | API-Set: unknown
+ * Hash: 0x6325D1A044AE510D | Since: unknown | API-Set: unknown
  */
 export function getModKit(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3980,7 +3978,7 @@ export function getModKit(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0xFC058F5121E54C32 | Since: 323 | API-Set: unknown
+ * Hash: 0xFC058F5121E54C32 | Since: unknown | API-Set: unknown
  */
 export function getModKitType(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -3990,7 +3988,7 @@ export function getModKitType(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0x90A38E9838E0A8C1 | Since: 323 | API-Set: unknown
+ * Hash: 0x90A38E9838E0A8C1 | Since: unknown | API-Set: unknown
  */
 export function getModModifierValue(vehicle: number | IVehicle, modType: number, modIndex: number): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4000,7 +3998,7 @@ export function getModModifierValue(vehicle: number | IVehicle, modType: number,
 /**
  * Only used for wheels(ModType = 23/24) Returns true if the wheels are custom wheels
  * 
- * Hash: 0xB3924ECD70E095DC | Since: 323 | API-Set: unknown
+ * Hash: 0xB3924ECD70E095DC | Since: unknown | API-Set: unknown
  */
 export function getModVariation(vehicle: number | IVehicle, modType: number): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4012,7 +4010,7 @@ export function getModVariation(vehicle: number | IVehicle, modType: number): nu
  * 
  * See SET_VEHICLE_NEON_COLOUR (0x8E0A582209A62695) for more information
  * 
- * Hash: 0x7619EEE8C886757F | Since: 323 | API-Set: unknown
+ * Hash: 0x7619EEE8C886757F | Since: unknown | API-Set: unknown
  */
 export function getNeonColour(vehicle: number | IVehicle): [number, number, number] {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4026,7 +4024,7 @@ export function getNeonColour(vehicle: number | IVehicle): [number, number, numb
  * 2 = Front
  * 3 = Back
  * 
- * Hash: 0x8C4B92553E4766A5 | Since: 323 | API-Set: unknown
+ * Hash: 0x8C4B92553E4766A5 | Since: unknown | API-Set: unknown
  */
 export function getNeonEnabled(vehicle: number | IVehicle, index: number): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4040,7 +4038,7 @@ export function getNeonEnabled(vehicle: number | IVehicle, index: number): boole
  * 
  * To keep it working like before b2545, set includeDriver to false and includeDeadOccupants to true.
  * 
- * Hash: 0x24CB2137731FFE89 | Since: 323 | API-Set: unknown
+ * Hash: 0x24CB2137731FFE89 | Since: unknown | API-Set: unknown
  */
 export function getNumberOfPassengers(vehicle: number | IVehicle, includeDriver: boolean, includeDeadOccupants: boolean): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4050,7 +4048,7 @@ export function getNumberOfPassengers(vehicle: number | IVehicle, includeDriver:
 /**
  * Returns the license plate text from a vehicle. 8 chars maximum.
  * 
- * Hash: 0x7CE1CCB9B293020E | Since: 323 | API-Set: unknown
+ * Hash: 0x7CE1CCB9B293020E | Since: unknown | API-Set: unknown
  */
 export function getNumberPlateText(vehicle: number | IVehicle): string {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4066,7 +4064,7 @@ export function getNumberPlateText(vehicle: number | IVehicle): string {
  * Yellow_on_Black = 1,
  * North_Yankton = 5,
  * 
- * Hash: 0xF11BC2DD9A3E7195 | Since: 323 | API-Set: unknown
+ * Hash: 0xF11BC2DD9A3E7195 | Since: unknown | API-Set: unknown
  */
 export function getNumberPlateTextIndex(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4076,7 +4074,7 @@ export function getNumberPlateTextIndex(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0x2C8CBFE1EA5FC631 | Since: 323 | API-Set: unknown
+ * Hash: 0x2C8CBFE1EA5FC631 | Since: unknown | API-Set: unknown
  */
 export function getNumOfBrokenLoosenParts(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4086,7 +4084,7 @@ export function getNumOfBrokenLoosenParts(vehicle: number | IVehicle): number {
 /**
  * Also includes some "turnOffBones" when vehicle mods are installed.
  * 
- * Hash: 0x42A4BEB35D372407 | Since: 323 | API-Set: unknown
+ * Hash: 0x42A4BEB35D372407 | Since: unknown | API-Set: unknown
  */
 export function getNumOfBrokenOffParts(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4098,7 +4096,7 @@ export function getNumOfBrokenOffParts(vehicle: number | IVehicle): number {
  * Begins leaking gas at around 650 health
  * -999.90002441406 appears to be minimum health, although nothing special occurs
  * 
- * Hash: 0x7D5DABE888D2D074 | Since: 323 | API-Set: unknown
+ * Hash: 0x7D5DABE888D2D074 | Since: unknown | API-Set: unknown
  */
 export function getPetrolTankHealth(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4108,7 +4106,7 @@ export function getPetrolTankHealth(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0x9CCC9525BF2408E0 | Since: 323 | API-Set: unknown
+ * Hash: 0x9CCC9525BF2408E0 | Since: unknown | API-Set: unknown
  */
 export function getPlateType(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4118,7 +4116,7 @@ export function getPlateType(vehicle: number | IVehicle): number {
 /**
  * See REQUEST_VEHICLE_RECORDING
  * 
- * Hash: 0x21543C612379DB3C | Since: 323 | API-Set: unknown
+ * Hash: 0x21543C612379DB3C | Since: unknown | API-Set: unknown
  */
 export function getRecordingId(recording: number, script: string): number {
     return GetVehicleRecordingId(recording, script);
@@ -4129,7 +4127,7 @@ export function getRecordingId(recording: number, script: string): number {
  * Scripts check if out2.x - out1.x > someshit.x
  * Could be suspension related, as in max suspension height and min suspension height, considering the natives location.
  * 
- * Hash: 0xDF7E3EEB29642C38 | Since: 323 | API-Set: unknown
+ * Hash: 0xDF7E3EEB29642C38 | Since: unknown | API-Set: unknown
  */
 export function getSize(vehicle: number | IVehicle): [Vector3, Vector3] {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4139,7 +4137,7 @@ export function getSize(vehicle: number | IVehicle): [Vector3, Vector3] {
 /**
  * Gets the trailer of a vehicle and puts it into the trailer parameter.
  * 
- * Hash: 0x1CDD6BADC297830D | Since: 323 | API-Set: unknown
+ * Hash: 0x1CDD6BADC297830D | Since: unknown | API-Set: unknown
  */
 export function getTrailerVehicle(vehicle: number | IVehicle): [boolean, number] {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4149,7 +4147,7 @@ export function getTrailerVehicle(vehicle: number | IVehicle): [boolean, number]
 /**
  * No comment provided
  * 
- * Hash: 0x678B9BB8C3F58FEB | Since: 323 | API-Set: unknown
+ * Hash: 0x678B9BB8C3F58FEB | Since: unknown | API-Set: unknown
  */
 export function getTyresCanBurst(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4159,7 +4157,7 @@ export function getTyresCanBurst(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xB635392A4938B3C3 | Since: 323 | API-Set: unknown
+ * Hash: 0xB635392A4938B3C3 | Since: unknown | API-Set: unknown
  */
 export function getTyreSmokeColor(vehicle: number | IVehicle): [number, number, number] {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4169,7 +4167,7 @@ export function getTyreSmokeColor(vehicle: number | IVehicle): [number, number, 
 /**
  * No comment provided
  * 
- * Hash: 0x8181CE2F25CB9BB7 | Since: 1011 | API-Set: unknown
+ * Hash: 0x8181CE2F25CB9BB7 | Since: unknown | API-Set: unknown
  */
 export function getWeaponRestrictedAmmo(vehicle: number | IVehicle, weaponIndex: number): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4196,7 +4194,7 @@ export function getWeaponRestrictedAmmo(vehicle: number | IVehicle, weaponIndex:
  * 
  * Tested in Los Santos Customs
  * 
- * Hash: 0xB3ED1BFB4BE636DC | Since: 323 | API-Set: unknown
+ * Hash: 0xB3ED1BFB4BE636DC | Since: unknown | API-Set: unknown
  */
 export function getWheelType(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4206,7 +4204,7 @@ export function getWheelType(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0x0EE21293DAD47C95 | Since: 323 | API-Set: unknown
+ * Hash: 0x0EE21293DAD47C95 | Since: unknown | API-Set: unknown
  */
 export function getWindowTint(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4220,7 +4218,7 @@ export function getWindowTint(vehicle: number | IVehicle): number {
  * 
  * Returns an int, value between 0-12 or 255 if no color is set.
  * 
- * Hash: 0x3DFF319A831E0CDB | Since: 1604 | API-Set: unknown
+ * Hash: 0x3DFF319A831E0CDB | Since: unknown | API-Set: unknown
  */
 export function getXenonLightColorIndex(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4230,7 +4228,7 @@ export function getXenonLightColorIndex(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0x91D6DD290888CBAB | Since: 323 | API-Set: unknown
+ * Hash: 0x91D6DD290888CBAB | Since: unknown | API-Set: unknown
  */
 export function hasInstantFillPopulationFinished(): boolean {
     return HasFilledVehiclePopulation();
@@ -4239,7 +4237,7 @@ export function hasInstantFillPopulationFinished(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x06F43E5175EB6D96 | Since: 323 | API-Set: unknown
+ * Hash: 0x06F43E5175EB6D96 | Since: unknown | API-Set: unknown
  */
 export function hasPreloadModsFinished(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4249,7 +4247,7 @@ export function hasPreloadModsFinished(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x1BBE0523B8DB9A21 | Since: 323 | API-Set: unknown
+ * Hash: 0x1BBE0523B8DB9A21 | Since: unknown | API-Set: unknown
  */
 export function hasAssetLoaded(vehicleAsset: number): boolean {
     return HasVehicleAssetLoaded(vehicleAsset);
@@ -4258,7 +4256,7 @@ export function hasAssetLoaded(vehicleAsset: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x5BA68A0840D546AC | Since: 463 | API-Set: unknown
+ * Hash: 0x5BA68A0840D546AC | Since: unknown | API-Set: unknown
  */
 export function hasPetroltankSetOnFireByEntity(): boolean {
     return Citizen.invokeNative('0x5BA68A0840D546AC', undefined, undefined);
@@ -4267,7 +4265,7 @@ export function hasPetroltankSetOnFireByEntity(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x6ADAABD3068C5235 | Since: 323 | API-Set: unknown
+ * Hash: 0x6ADAABD3068C5235 | Since: unknown | API-Set: unknown
  */
 export function hasPhoneExplosiveDevice(): boolean {
     return HasVehiclePhoneExplosiveDevice();
@@ -4276,7 +4274,7 @@ export function hasPhoneExplosiveDevice(): boolean {
 /**
  * See REQUEST_VEHICLE_RECORDING
  * 
- * Hash: 0x300D614A4C785FC4 | Since: 323 | API-Set: unknown
+ * Hash: 0x300D614A4C785FC4 | Since: unknown | API-Set: unknown
  */
 export function hasRecordingBeenLoaded(recording: number, script: string): boolean {
     return HasVehicleRecordingBeenLoaded(recording, script);
@@ -4285,7 +4283,7 @@ export function hasRecordingBeenLoaded(recording: number, script: string): boole
 /**
  * No comment provided
  * 
- * Hash: 0x9A83F5F9963775EF | Since: 323 | API-Set: unknown
+ * Hash: 0x9A83F5F9963775EF | Since: unknown | API-Set: unknown
  */
 export function haveModsStreamedIn(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4295,7 +4293,7 @@ export function haveModsStreamedIn(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x6B407F2525E93644 | Since: 2944 | API-Set: unknown
+ * Hash: 0x6B407F2525E93644 | Since: unknown | API-Set: unknown
  */
 export function haveRearDoorsBeenBlownOpenByStickybomb(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4305,7 +4303,7 @@ export function haveRearDoorsBeenBlownOpenByStickybomb(vehicle: number | IVehicl
 /**
  * Disables detachable bumber from domnator4, dominator5, dominator6, see https://gfycat.com/SecondUnluckyGosling
  * 
- * Hash: 0xAE71FB656C600587 | Since: 1604 | API-Set: unknown
+ * Hash: 0xAE71FB656C600587 | Since: unknown | API-Set: unknown
  */
 export function hideTombstone(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4315,7 +4313,7 @@ export function hideTombstone(vehicle: number | IVehicle, toggle: boolean): void
 /**
  * No comment provided
  * 
- * Hash: 0x48ADC8A773564670 | Since: 323 | API-Set: unknown
+ * Hash: 0x48ADC8A773564670 | Since: unknown | API-Set: unknown
  */
 export function instantlyFillPopulation(): void {
     InstantlyFillVehiclePopulation();
@@ -4324,7 +4322,7 @@ export function instantlyFillPopulation(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x62CA17B74C435651 | Since: 323 | API-Set: unknown
+ * Hash: 0x62CA17B74C435651 | Since: unknown | API-Set: unknown
  */
 export function isAnyEntityAttachedToHandlerFrame(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4334,7 +4332,7 @@ export function isAnyEntityAttachedToHandlerFrame(vehicle: number | IVehicle): b
 /**
  * No comment provided
  * 
- * Hash: 0x291E373D483E7EE7 | Since: 323 | API-Set: unknown
+ * Hash: 0x291E373D483E7EE7 | Since: unknown | API-Set: unknown
  */
 export function isAnyPedRappellingFromHeli(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4344,7 +4342,7 @@ export function isAnyPedRappellingFromHeli(vehicle: number | IVehicle): boolean 
 /**
  * No comment provided
  * 
- * Hash: 0x61E1DD6125A3EEE6 | Since: 323 | API-Set: unknown
+ * Hash: 0x61E1DD6125A3EEE6 | Since: unknown | API-Set: unknown
  */
 export function isAnyNearPoint(pos: Vector3, radius: number): boolean {
     return IsAnyVehicleNearPoint(pos.x, pos.y, pos.z, radius);
@@ -4353,7 +4351,7 @@ export function isAnyNearPoint(pos: Vector3, radius: number): boolean {
 /**
  * Returns true if MF_IS_BIG (strModelFlags 0x8) handling model flag is set.
  * 
- * Hash: 0x9F243D3919F442FE | Since: 323 | API-Set: unknown
+ * Hash: 0x9F243D3919F442FE | Since: unknown | API-Set: unknown
  */
 export function isBig(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4363,7 +4361,7 @@ export function isBig(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xB0AD1238A709B1A2 | Since: 573 | API-Set: unknown
+ * Hash: 0xB0AD1238A709B1A2 | Since: unknown | API-Set: unknown
  */
 export function isBoatAnchored(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4378,7 +4376,7 @@ export function isBoatAnchored(vehicle: number | IVehicle): boolean {
  * return Function.Call<bool>(Hash.IS_COP_PED_IN_AREA_3D, Location.X - Range, Location.Y - Range, Location.Z - Range, Location.X + Range, Location.Y + Range, Location.Z + Range);
  * }
  * 
- * Hash: 0x7EEF65D5F153E26A | Since: 323 | API-Set: unknown
+ * Hash: 0x7EEF65D5F153E26A | Since: unknown | API-Set: unknown
  */
 export function isCopInArea3d(x1: number, x2: number, y1: number, y2: number, z1: number, z2: number): boolean {
     return IsCopVehicleInArea3d(x1, x2, y1, y2, z1, z2);
@@ -4387,7 +4385,7 @@ export function isCopInArea3d(x1: number, x2: number, y1: number, y2: number, z1
 /**
  * No comment provided
  * 
- * Hash: 0x57715966069157AD | Since: 323 | API-Set: unknown
+ * Hash: 0x57715966069157AD | Since: unknown | API-Set: unknown
  */
 export function isEntityAttachedToHandlerFrame(vehicle: number | IVehicle, entity: number | IEntity): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4403,7 +4401,7 @@ export function isEntityAttachedToHandlerFrame(vehicle: number | IVehicle, entit
  * side = only relevant for bikes/motorcycles to check if the left (false)/right (true) side is blocked.
  * onEnter = check if you can enter (true) or exit (false) a vehicle.
  * 
- * Hash: 0x639431E895B9AA57 | Since: 323 | API-Set: unknown
+ * Hash: 0x639431E895B9AA57 | Since: unknown | API-Set: unknown
  */
 export function isEntryPointForSeatClear(ped: number | IPed, vehicle: number | IVehicle, seatIndex: number, side: boolean, onEnter: boolean): boolean {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4414,7 +4412,7 @@ export function isEntryPointForSeatClear(ped: number | IPed, vehicle: number | I
 /**
  * Returns true if specified extra part is broken off. It only works for extras that can break off during collisions, non-breakable extras always return false. Also returns true if the breakable extra is toggled off through script.
  * 
- * Hash: 0x534E36D4DB9ECC5D | Since: 1493 | API-Set: unknown
+ * Hash: 0x534E36D4DB9ECC5D | Since: unknown | API-Set: unknown
  */
 export function isExtraBrokenOff(vehicle: number | IVehicle, extraId: number): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4424,7 +4422,7 @@ export function isExtraBrokenOff(vehicle: number | IVehicle, extraId: number): b
 /**
  * No comment provided
  * 
- * Hash: 0x89D630CF5EA96D23 | Since: 323 | API-Set: unknown
+ * Hash: 0x89D630CF5EA96D23 | Since: unknown | API-Set: unknown
  */
 export function isHandlerFrameLinedUpWithContainer(vehicle: number | IVehicle, entity: number | IEntity): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4435,7 +4433,7 @@ export function isHandlerFrameLinedUpWithContainer(vehicle: number | IVehicle, e
 /**
  * No comment provided
  * 
- * Hash: 0x634148744F385576 | Since: 323 | API-Set: unknown
+ * Hash: 0x634148744F385576 | Since: unknown | API-Set: unknown
  */
 export function isHeliLandingAreaBlocked(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4445,7 +4443,7 @@ export function isHeliLandingAreaBlocked(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xBC74B4BE25EB6C8A | Since: 323 | API-Set: unknown
+ * Hash: 0xBC74B4BE25EB6C8A | Since: unknown | API-Set: unknown
  */
 export function isHeliPartBroken(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4455,7 +4453,7 @@ export function isHeliPartBroken(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xAD464F2E18836BFC | Since: 2372 | API-Set: unknown
+ * Hash: 0xAD464F2E18836BFC | Since: unknown | API-Set: unknown
  */
 export function isMissionTrain(train: number | IVehicle): boolean {
     const _train = typeof train == 'object' ? train.handle() : train;
@@ -4465,7 +4463,7 @@ export function isMissionTrain(train: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x491E822B2C464FE4 | Since: 3095 | API-Set: unknown
+ * Hash: 0x491E822B2C464FE4 | Since: unknown | API-Set: unknown
  */
 export function isNitrousActive(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4475,7 +4473,7 @@ export function isNitrousActive(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xB09D25E77C33EB3F | Since: 463 | API-Set: unknown
+ * Hash: 0xB09D25E77C33EB3F | Since: unknown | API-Set: unknown
  */
 export function isPedExclusiveDriverOf(ped: number | IPed, vehicle: number | IVehicle): [boolean, number] {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
@@ -4486,7 +4484,7 @@ export function isPedExclusiveDriverOf(ped: number | IPed, vehicle: number | IVe
 /**
  * No comment provided
  * 
- * Hash: 0x4198AB0022B15F87 | Since: 323 | API-Set: unknown
+ * Hash: 0x4198AB0022B15F87 | Since: unknown | API-Set: unknown
  */
 export function isPlaneLandingGearIntact(plane: number | IVehicle): boolean {
     const _plane = typeof plane == 'object' ? plane.handle() : plane;
@@ -4496,7 +4494,7 @@ export function isPlaneLandingGearIntact(plane: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x1C8A4C2C19E68EEC | Since: 323 | API-Set: unknown
+ * Hash: 0x1C8A4C2C19E68EEC | Since: unknown | API-Set: unknown
  */
 export function isPlaybackGoingOnFor(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4506,7 +4504,7 @@ export function isPlaybackGoingOnFor(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xAEA8FD591FAD4106 | Since: 323 | API-Set: unknown
+ * Hash: 0xAEA8FD591FAD4106 | Since: unknown | API-Set: unknown
  */
 export function isPlaybackUsingAiGoingOnFor(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4516,7 +4514,7 @@ export function isPlaybackUsingAiGoingOnFor(vehicle: number | IVehicle): boolean
 /**
  * No comment provided
  * 
- * Hash: 0x3D34E80EED4AE3BE | Since: 944 | API-Set: unknown
+ * Hash: 0x3D34E80EED4AE3BE | Since: unknown | API-Set: unknown
  */
 export function isRocketBoostActive(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4526,7 +4524,7 @@ export function isRocketBoostActive(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xF7F203E31F96F6A1 | Since: 323 | API-Set: unknown
+ * Hash: 0xF7F203E31F96F6A1 | Since: unknown | API-Set: unknown
  */
 export function isSeatWarpOnly(vehicle: number | IVehicle, seatIndex: number): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4536,7 +4534,7 @@ export function isSeatWarpOnly(vehicle: number | IVehicle, seatIndex: number): b
 /**
  * No comment provided
  * 
- * Hash: 0x7504C0F113AB50FC | Since: 323 | API-Set: unknown
+ * Hash: 0x7504C0F113AB50FC | Since: unknown | API-Set: unknown
  */
 export function isTaxiLightOn(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4546,7 +4544,7 @@ export function isTaxiLightOn(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x633F6F44A537EBB6 | Since: 944 | API-Set: unknown
+ * Hash: 0x633F6F44A537EBB6 | Since: unknown | API-Set: unknown
  */
 export function isThisModelAnAmphibiousCar(model: number | string): boolean {
     if (typeof model === 'string') model = GetHashKey(model)
@@ -4556,7 +4554,7 @@ export function isThisModelAnAmphibiousCar(model: number | string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xA1A9FC1C76A6730D | Since: 1103 | API-Set: unknown
+ * Hash: 0xA1A9FC1C76A6730D | Since: unknown | API-Set: unknown
  */
 export function isThisModelAnAmphibiousQuadbike(model: number | string): boolean {
     if (typeof model === 'string') model = GetHashKey(model)
@@ -4566,7 +4564,7 @@ export function isThisModelAnAmphibiousQuadbike(model: number | string): boolean
 /**
  * No comment provided
  * 
- * Hash: 0xBF94DD42F63BDED2 | Since: 323 | API-Set: unknown
+ * Hash: 0xBF94DD42F63BDED2 | Since: unknown | API-Set: unknown
  */
 export function isThisModelABicycle(model: number | string): boolean {
     if (typeof model === 'string') model = GetHashKey(model)
@@ -4576,7 +4574,7 @@ export function isThisModelABicycle(model: number | string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xB50C0B0CEDC6CE84 | Since: 323 | API-Set: unknown
+ * Hash: 0xB50C0B0CEDC6CE84 | Since: unknown | API-Set: unknown
  */
 export function isThisModelABike(model: number | string): boolean {
     if (typeof model === 'string') model = GetHashKey(model)
@@ -4586,7 +4584,7 @@ export function isThisModelABike(model: number | string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x45A9187928F4B9E3 | Since: 323 | API-Set: unknown
+ * Hash: 0x45A9187928F4B9E3 | Since: unknown | API-Set: unknown
  */
 export function isThisModelABoat(model: number | string): boolean {
     if (typeof model === 'string') model = GetHashKey(model)
@@ -4596,7 +4594,7 @@ export function isThisModelABoat(model: number | string): boolean {
 /**
  * To check if the model is an amphibious car, use IS_THIS_MODEL_AN_AMPHIBIOUS_CAR.
  * 
- * Hash: 0x7F6DB52EEFC96DF8 | Since: 323 | API-Set: unknown
+ * Hash: 0x7F6DB52EEFC96DF8 | Since: unknown | API-Set: unknown
  */
 export function isThisModelACar(model: number | string): boolean {
     if (typeof model === 'string') model = GetHashKey(model)
@@ -4606,7 +4604,7 @@ export function isThisModelACar(model: number | string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xDCE4334788AF94EA | Since: 323 | API-Set: unknown
+ * Hash: 0xDCE4334788AF94EA | Since: unknown | API-Set: unknown
  */
 export function isThisModelAHeli(model: number | string): boolean {
     if (typeof model === 'string') model = GetHashKey(model)
@@ -4616,7 +4614,7 @@ export function isThisModelAHeli(model: number | string): boolean {
 /**
  * Checks if model is a boat, then checks for FLAG_IS_JETSKI.
  * 
- * Hash: 0x9537097412CF75FE | Since: 323 | API-Set: unknown
+ * Hash: 0x9537097412CF75FE | Since: unknown | API-Set: unknown
  */
 export function isThisModelAJetski(model: number | string): boolean {
     if (typeof model === 'string') model = GetHashKey(model)
@@ -4626,7 +4624,7 @@ export function isThisModelAJetski(model: number | string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xA0948AB42D7BA0DE | Since: 323 | API-Set: unknown
+ * Hash: 0xA0948AB42D7BA0DE | Since: unknown | API-Set: unknown
  */
 export function isThisModelAPlane(model: number | string): boolean {
     if (typeof model === 'string') model = GetHashKey(model)
@@ -4636,7 +4634,7 @@ export function isThisModelAPlane(model: number | string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x39DAC362EE65FA28 | Since: 323 | API-Set: unknown
+ * Hash: 0x39DAC362EE65FA28 | Since: unknown | API-Set: unknown
  */
 export function isThisModelAQuadbike(model: number | string): boolean {
     if (typeof model === 'string') model = GetHashKey(model)
@@ -4646,7 +4644,7 @@ export function isThisModelAQuadbike(model: number | string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xAB935175B22E822B | Since: 323 | API-Set: unknown
+ * Hash: 0xAB935175B22E822B | Since: unknown | API-Set: unknown
  */
 export function isThisModelATrain(model: number | string): boolean {
     if (typeof model === 'string') model = GetHashKey(model)
@@ -4656,7 +4654,7 @@ export function isThisModelATrain(model: number | string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x84B233A8C8FC8AE7 | Since: 323 | API-Set: unknown
+ * Hash: 0x84B233A8C8FC8AE7 | Since: unknown | API-Set: unknown
  */
 export function isToggleModOn(vehicle: number | IVehicle, modType: number): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4666,7 +4664,7 @@ export function isToggleModOn(vehicle: number | IVehicle, modType: number): bool
 /**
  * No comment provided
  * 
- * Hash: 0xE33FFA906CE74880 | Since: 323 | API-Set: unknown
+ * Hash: 0xE33FFA906CE74880 | Since: unknown | API-Set: unknown
  */
 export function isTurretSeat(vehicle: number | IVehicle, seatIndex: number): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4676,7 +4674,7 @@ export function isTurretSeat(vehicle: number | IVehicle, seatIndex: number): boo
 /**
  * No comment provided
  * 
- * Hash: 0x4319E335B71FFF34 | Since: 323 | API-Set: unknown
+ * Hash: 0x4319E335B71FFF34 | Since: unknown | API-Set: unknown
  */
 export function isAlarmActivated(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4686,7 +4684,7 @@ export function isAlarmActivated(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xD40148F22E81A1D9 | Since: 323 | API-Set: unknown
+ * Hash: 0xD40148F22E81A1D9 | Since: unknown | API-Set: unknown
  */
 export function isAttachedToCargobob(cargobob: number | IVehicle, vehicleAttached: number | IVehicle): boolean {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -4697,7 +4695,7 @@ export function isAttachedToCargobob(cargobob: number | IVehicle, vehicleAttache
 /**
  * Scripts verify that towTruck is the first parameter, not the second.
  * 
- * Hash: 0x146DF9EC4C4B9FD4 | Since: 323 | API-Set: unknown
+ * Hash: 0x146DF9EC4C4B9FD4 | Since: unknown | API-Set: unknown
  */
 export function isAttachedToTowTruck(towTruck: number | IVehicle, vehicle: number | IVehicle): boolean {
     const _towTruck = typeof towTruck == 'object' ? towTruck.handle() : towTruck;
@@ -4708,7 +4706,7 @@ export function isAttachedToTowTruck(towTruck: number | IVehicle, vehicle: numbe
 /**
  * No comment provided
  * 
- * Hash: 0xE7CF3C4F9F489F0C | Since: 323 | API-Set: unknown
+ * Hash: 0xE7CF3C4F9F489F0C | Since: unknown | API-Set: unknown
  */
 export function isAttachedToTrailer(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4720,7 +4718,7 @@ export function isAttachedToTrailer(vehicle: number | IVehicle): boolean {
  * 
  * p1 is false almost always. However, in launcher_carwash/carwash1/carwash2 scripts, p1 is true and is accompanied by DOES_VEHICLE_HAVE_ROOF. If p1 is true, it seems that every single vehicle will return true irrespective of being a convertible.
  * 
- * Hash: 0x52F357A30698BCCE | Since: 323 | API-Set: unknown
+ * Hash: 0x52F357A30698BCCE | Since: unknown | API-Set: unknown
  */
 export function isAConvertible(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4730,7 +4728,7 @@ export function isAConvertible(vehicle: number | IVehicle): boolean {
 /**
  * Returns true if vehicle is halted by BRING_VEHICLE_TO_HALT
  * 
- * Hash: 0xC69BB1D832A710EF | Since: 1493 | API-Set: unknown
+ * Hash: 0xC69BB1D832A710EF | Since: unknown | API-Set: unknown
  */
 export function isBeingBroughtToHalt(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4740,7 +4738,7 @@ export function isBeingBroughtToHalt(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x27B926779DEB502D | Since: 323 | API-Set: unknown
+ * Hash: 0x27B926779DEB502D | Since: unknown | API-Set: unknown
  */
 export function isBumperBouncing(vehicle: number | IVehicle, frontBumper: boolean): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4750,7 +4748,7 @@ export function isBumperBouncing(vehicle: number | IVehicle, frontBumper: boolea
 /**
  * No comment provided
  * 
- * Hash: 0x468056A6BB6F3846 | Since: 323 | API-Set: unknown
+ * Hash: 0x468056A6BB6F3846 | Since: unknown | API-Set: unknown
  */
 export function isBumperBrokenOff(vehicle: number | IVehicle, frontBumper: boolean): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4760,7 +4758,7 @@ export function isBumperBrokenOff(vehicle: number | IVehicle, frontBumper: boole
 /**
  * doorID starts at 0, not seeming to skip any numbers. Four door vehicles intuitively range from 0 to 3.
  * 
- * Hash: 0xB8E181E559464527 | Since: 323 | API-Set: unknown
+ * Hash: 0xB8E181E559464527 | Since: unknown | API-Set: unknown
  */
 export function isDoorDamaged(veh: number | IVehicle, doorID: number): boolean {
     const _veh = typeof veh == 'object' ? veh.handle() : veh;
@@ -4770,7 +4768,7 @@ export function isDoorDamaged(veh: number | IVehicle, doorID: number): boolean {
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  * 
- * Hash: 0x3E933CFF7B111C22 | Since: 323 | API-Set: unknown
+ * Hash: 0x3E933CFF7B111C22 | Since: unknown | API-Set: unknown
  */
 export function isDoorFullyOpen(vehicle: number | IVehicle, doorId: number): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4782,7 +4780,7 @@ export function isDoorFullyOpen(vehicle: number | IVehicle, doorId: number): boo
  * 
  * p1 = check if vehicle is on fire
  * 
- * Hash: 0x4C241E39B23DF959 | Since: 323 | API-Set: unknown
+ * Hash: 0x4C241E39B23DF959 | Since: unknown | API-Set: unknown
  */
 export function isDriveable(vehicle: number | IVehicle, isOnFireCheck: boolean): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4792,7 +4790,7 @@ export function isDriveable(vehicle: number | IVehicle, isOnFireCheck: boolean):
 /**
  * No comment provided
  * 
- * Hash: 0xD2E6822DBFD6C8BD | Since: 323 | API-Set: unknown
+ * Hash: 0xD2E6822DBFD6C8BD | Since: unknown | API-Set: unknown
  */
 export function isExtraTurnedOn(vehicle: number | IVehicle, extraId: number): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4802,7 +4800,7 @@ export function isExtraTurnedOn(vehicle: number | IVehicle, extraId: number): bo
 /**
  * No comment provided
  * 
- * Hash: 0x1F25887F3C104278 | Since: 323 | API-Set: unknown
+ * Hash: 0x1F25887F3C104278 | Since: unknown | API-Set: unknown
  */
 export function isHighDetail(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4818,7 +4816,7 @@ export function isHighDetail(vehicle: number | IVehicle): boolean {
  * Return Native.Function.Call(Of Boolean)(Hash.IS_VEHICLE_IN_BURNOUT, vh)
  * End Function
  * 
- * Hash: 0x1297A88E081430EB | Since: 323 | API-Set: unknown
+ * Hash: 0x1297A88E081430EB | Since: unknown | API-Set: unknown
  */
 export function isInBurnout(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4830,7 +4828,7 @@ export function isInBurnout(vehicle: number | IVehicle): boolean {
  * 
  * Full list of garages by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/garages.json
  * 
- * Hash: 0xCEE4490CD57BB3C2 | Since: 323 | API-Set: unknown
+ * Hash: 0xCEE4490CD57BB3C2 | Since: unknown | API-Set: unknown
  */
 export function isInGarageArea(garageName: string, vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4840,7 +4838,7 @@ export function isInGarageArea(garageName: string, vehicle: number | IVehicle): 
 /**
  * No comment provided
  * 
- * Hash: 0xA77DC70BD689A1E5 | Since: 1290 | API-Set: unknown
+ * Hash: 0xA77DC70BD689A1E5 | Since: unknown | API-Set: unknown
  */
 export function isInSubmarineMode(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4850,7 +4848,7 @@ export function isInSubmarineMode(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x423E8DE37D934D89 | Since: 323 | API-Set: unknown
+ * Hash: 0x423E8DE37D934D89 | Since: unknown | API-Set: unknown
  */
 export function isModel(vehicle: number | IVehicle, model: number | string): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4861,7 +4859,7 @@ export function isModel(vehicle: number | IVehicle, model: number | string): boo
 /**
  * Returns true for any mod part listed in GEN9_EXCLUSIVE_ASSETS_VEHICLES_FILE.
  * 
- * Hash: 0x00834EAC4A96E010 | Since: 2699 | API-Set: unknown
+ * Hash: 0x00834EAC4A96E010 | Since: unknown | API-Set: unknown
  */
 export function isModGen9Exclusive(vehicle: number | IVehicle, modType: number, modIndex: number): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4874,7 +4872,7 @@ export function isModGen9Exclusive(vehicle: number | IVehicle, modType: number, 
  * End Function
  * 
  * 
- * Hash: 0xB104CD1BABF302E2 | Since: 323 | API-Set: unknown
+ * Hash: 0xB104CD1BABF302E2 | Since: unknown | API-Set: unknown
  */
 export function isOnAllWheels(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4884,7 +4882,7 @@ export function isOnAllWheels(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x3DE51E9C80B116CF | Since: 1011 | API-Set: unknown
+ * Hash: 0x3DE51E9C80B116CF | Since: unknown | API-Set: unknown
  */
 export function isParachuteDeployed(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4894,7 +4892,7 @@ export function isParachuteDeployed(vehicle: number | IVehicle): boolean {
 /**
  * Returns true if the vehicle is being slipstreamed by another vehicle
  * 
- * Hash: 0x48C633E94A8142A7 | Since: 877 | API-Set: unknown
+ * Hash: 0x48C633E94A8142A7 | Since: unknown | API-Set: unknown
  */
 export function isProducingSlipStream(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4906,7 +4904,7 @@ export function isProducingSlipStream(vehicle: number | IVehicle): boolean {
  * 
  * @Author Nac
  * 
- * Hash: 0xC0F97FCE55094987 | Since: 323 | API-Set: unknown
+ * Hash: 0xC0F97FCE55094987 | Since: unknown | API-Set: unknown
  */
 export function isSearchlightOn(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4920,7 +4918,7 @@ export function isSearchlightOn(vehicle: number | IVehicle): boolean {
  * Use GET_VEHICLE_MAX_NUMBER_OF_PASSENGERS(vehicle) - 1 for last seat index.
  * isTaskRunning = on true the function returns already false while a task on the target seat is running (TASK_ENTER_VEHICLE/TASK_SHUFFLE_TO_NEXT_VEHICLE_SEAT) - on false only when a ped is finally sitting in the seat.
  * 
- * Hash: 0x22AC59A870E6A669 | Since: 323 | API-Set: unknown
+ * Hash: 0x22AC59A870E6A669 | Since: unknown | API-Set: unknown
  */
 export function isSeatFree(vehicle: number | IVehicle, seatIndex: number, isTaskRunning: boolean): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4930,7 +4928,7 @@ export function isSeatFree(vehicle: number | IVehicle, seatIndex: number, isTask
 /**
  * No comment provided
  * 
- * Hash: 0xB5CC40FBCB586380 | Since: 323 | API-Set: unknown
+ * Hash: 0xB5CC40FBCB586380 | Since: unknown | API-Set: unknown
  */
 export function isSirenAudioOn(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4940,7 +4938,7 @@ export function isSirenAudioOn(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x4C9BF537BE2634B2 | Since: 323 | API-Set: unknown
+ * Hash: 0x4C9BF537BE2634B2 | Since: unknown | API-Set: unknown
  */
 export function isSirenOn(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4950,7 +4948,7 @@ export function isSirenOn(vehicle: number | IVehicle): boolean {
 /**
  * Returns false if the vehicle has the FLAG_NO_RESPRAY flag set.
  * 
- * Hash: 0x8D474C8FAEFF6CDE | Since: 323 | API-Set: unknown
+ * Hash: 0x8D474C8FAEFF6CDE | Since: unknown | API-Set: unknown
  */
 export function isSprayable(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4960,7 +4958,7 @@ export function isSprayable(vehicle: number | IVehicle): boolean {
 /**
  * Only returns true if the vehicle was marked as stolen with SET_VEHICLE_IS_STOLEN.
  * 
- * Hash: 0x4AF9BD80EEBEB453 | Since: 323 | API-Set: unknown
+ * Hash: 0x4AF9BD80EEBEB453 | Since: unknown | API-Set: unknown
  */
 export function isStolen(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4972,7 +4970,7 @@ export function isStolen(vehicle: number | IVehicle): boolean {
  * 
  * For some vehicles it returns true if the current speed is <= 0.00039999999.
  * 
- * Hash: 0x5721B434AD84D57A | Since: 323 | API-Set: unknown
+ * Hash: 0x5721B434AD84D57A | Since: unknown | API-Set: unknown
  */
 export function isStopped(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4982,7 +4980,7 @@ export function isStopped(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x2959F696AE390A99 | Since: 323 | API-Set: unknown
+ * Hash: 0x2959F696AE390A99 | Since: unknown | API-Set: unknown
  */
 export function isStoppedAtTrafficLights(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -4992,7 +4990,7 @@ export function isStoppedAtTrafficLights(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xB497F06B288DCFDF | Since: 323 | API-Set: unknown
+ * Hash: 0xB497F06B288DCFDF | Since: unknown | API-Set: unknown
  */
 export function isStuckOnRoof(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5003,7 +5001,7 @@ export function isStuckOnRoof(vehicle: number | IVehicle): boolean {
  * p1 can be anywhere from 0 to 3 in the scripts.
  * p2 being how long in milliseconds the vehicle has been stuck
  * 
- * Hash: 0x679BE1DAF71DA874 | Since: 323 | API-Set: unknown
+ * Hash: 0x679BE1DAF71DA874 | Since: unknown | API-Set: unknown
  */
 export function isStuckTimerUp(vehicle: number | IVehicle, ms: number): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5023,7 +5021,7 @@ export function isStuckTimerUp(vehicle: number | IVehicle, ms: number): boolean 
  * '45 = 6 wheels trailer mid wheel left
  * '47 = 6 wheels trailer mid wheel right
  * 
- * Hash: 0xBA291848A0815CA9 | Since: 323 | API-Set: unknown
+ * Hash: 0xBA291848A0815CA9 | Since: unknown | API-Set: unknown
  */
 export function isTyreBurst(vehicle: number | IVehicle, wheelID: number, completely: boolean): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5035,7 +5033,7 @@ export function isTyreBurst(vehicle: number | IVehicle, wheelID: number, complet
  * 
  * it's not instant so probabilly must pass an 'update' to see correct result.
  * 
- * Hash: 0xAA0A52D24FB98293 | Since: 323 | API-Set: unknown
+ * Hash: 0xAA0A52D24FB98293 | Since: unknown | API-Set: unknown
  */
 export function isVisible(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5045,7 +5043,7 @@ export function isVisible(vehicle: number | IVehicle): boolean {
 /**
  * Full list of weapons by DurtyFree (Search for VEHICLE_*): https://github.com/DurtyFree/gta-v-data-dumps/blob/master/weapons.json
  * 
- * Hash: 0x563B65A643ED072E | Since: 1011 | API-Set: unknown
+ * Hash: 0x563B65A643ED072E | Since: unknown | API-Set: unknown
  */
 export function isWeaponDisabled(weaponHash: number | string, vehicle: number | IVehicle, owner: number | IPed): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5065,7 +5063,7 @@ export function isWeaponDisabled(weaponHash: number | string, vehicle: number | 
  * 
  * Those numbers go on for vehicles that have more than 4 doors with windows.
  * 
- * Hash: 0x46E571A0E20D01F1 | Since: 323 | API-Set: unknown
+ * Hash: 0x46E571A0E20D01F1 | Since: unknown | API-Set: unknown
  */
 export function isWindowIntact(vehicle: number | IVehicle, windowIndex: number): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5075,7 +5073,7 @@ export function isWindowIntact(vehicle: number | IVehicle, windowIndex: number):
 /**
  * No comment provided
  * 
- * Hash: 0xCFD778E7904C255E | Since: 323 | API-Set: unknown
+ * Hash: 0xCFD778E7904C255E | Since: unknown | API-Set: unknown
  */
 export function lockDoorsWhenNoLongerNeeded(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5085,7 +5083,7 @@ export function lockDoorsWhenNoLongerNeeded(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0xDED51F703D0FA83D | Since: 323 | API-Set: unknown
+ * Hash: 0xDED51F703D0FA83D | Since: unknown | API-Set: unknown
  */
 export function lowerConvertibleRoof(vehicle: number | IVehicle, instantlyLower: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5095,7 +5093,7 @@ export function lowerConvertibleRoof(vehicle: number | IVehicle, instantlyLower:
 /**
  * No comment provided
  * 
- * Hash: 0x923A293361DF44E5 | Since: 2802 | API-Set: unknown
+ * Hash: 0x923A293361DF44E5 | Since: unknown | API-Set: unknown
  */
 export function lowerForkliftForks(forklift: number | IVehicle): void {
     const _forklift = typeof forklift == 'object' ? forklift.handle() : forklift;
@@ -5105,7 +5103,7 @@ export function lowerForkliftForks(forklift: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x93A3996368C94158 | Since: 323 | API-Set: unknown
+ * Hash: 0x93A3996368C94158 | Since: unknown | API-Set: unknown
  */
 export function modifyTopSpeed(vehicle: number | IVehicle, value: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5115,7 +5113,7 @@ export function modifyTopSpeed(vehicle: number | IVehicle, value: number): void 
 /**
  * Default:1000||This sets a value which is used when NETWORK_ENABLE_EMPTY_CROWDING_VEHICLES_REMOVAL(true) is called each frame.
  * 
- * Hash: 0xA4A9A4C40E615885 | Since: 1604 | API-Set: unknown
+ * Hash: 0xA4A9A4C40E615885 | Since: unknown | API-Set: unknown
  */
 export function networkCapEmptyCrowdingsRemoval(): void {
     Citizen.invokeNative('0xA4A9A4C40E615885', 0);
@@ -5124,7 +5122,7 @@ export function networkCapEmptyCrowdingsRemoval(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x51DB102F4A3BA5E0 | Since: 323 | API-Set: unknown
+ * Hash: 0x51DB102F4A3BA5E0 | Since: unknown | API-Set: unknown
  */
 export function networkEnableEmptyCrowdingsRemoval(toggle: boolean): void {
     Citizen.invokeNative('0x51DB102F4A3BA5E0', toggle);
@@ -5133,7 +5131,7 @@ export function networkEnableEmptyCrowdingsRemoval(toggle: boolean): void {
 /**
  * Implemented only for trains.
  * 
- * Hash: 0xEC0C1D4922AF9754 | Since: 2372 | API-Set: unknown
+ * Hash: 0xEC0C1D4922AF9754 | Since: unknown | API-Set: unknown
  */
 export function networkUseHighPrecisionTrainBlending(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5143,7 +5141,7 @@ export function networkUseHighPrecisionTrainBlending(vehicle: number | IVehicle,
 /**
  * No comment provided
  * 
- * Hash: 0x87E7F24270732CB1 | Since: 323 | API-Set: unknown
+ * Hash: 0x87E7F24270732CB1 | Since: unknown | API-Set: unknown
  */
 export function openBombBayDoors(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5153,7 +5151,7 @@ export function openBombBayDoors(vehicle: number | IVehicle): void {
 /**
  * Used for helis.
  * 
- * Hash: 0x5EE5632F47AE9695 | Since: 463 | API-Set: unknown
+ * Hash: 0x5EE5632F47AE9695 | Since: unknown | API-Set: unknown
  */
 export function overridePlaneDamageThrehsold(vehicle: number | IVehicle, health: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5163,7 +5161,7 @@ export function overridePlaneDamageThrehsold(vehicle: number | IVehicle, health:
 /**
  * No comment provided
  * 
- * Hash: 0x632A689BF42301B1 | Since: 323 | API-Set: unknown
+ * Hash: 0x632A689BF42301B1 | Since: unknown | API-Set: unknown
  */
 export function pausePlaybackRecorded(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5173,7 +5171,7 @@ export function pausePlaybackRecorded(vehicle: number | IVehicle): void {
 /**
  * Pops off the "roof" bone in the direction of the specified offset from the vehicle.
  * 
- * Hash: 0xE38CB9D7D39FDBCC | Since: 323 | API-Set: unknown
+ * Hash: 0xE38CB9D7D39FDBCC | Since: unknown | API-Set: unknown
  */
 export function popOffRoofWithImpulse(vehicle: number | IVehicle, pos: Vector3): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5184,7 +5182,7 @@ export function popOffRoofWithImpulse(vehicle: number | IVehicle, pos: Vector3):
  * Detaches the vehicle's windscreen.
  * For further information, see : gtaforums.com/topic/859570-glass/#entry1068894566
  * 
- * Hash: 0x6D645D59FB5F5AD3 | Since: 323 | API-Set: unknown
+ * Hash: 0x6D645D59FB5F5AD3 | Since: unknown | API-Set: unknown
  */
 export function popOutWindscreen(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5194,7 +5192,7 @@ export function popOutWindscreen(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x758F49C24925568A | Since: 323 | API-Set: unknown
+ * Hash: 0x758F49C24925568A | Since: unknown | API-Set: unknown
  */
 export function preloadMod(vehicle: number | IVehicle, modType: number, modIndex: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5204,7 +5202,7 @@ export function preloadMod(vehicle: number | IVehicle, modType: number, modIndex
 /**
  * No comment provided
  * 
- * Hash: 0x8F5FB35D7E88FC70 | Since: 323 | API-Set: unknown
+ * Hash: 0x8F5FB35D7E88FC70 | Since: unknown | API-Set: unknown
  */
 export function raiseConvertibleRoof(vehicle: number | IVehicle, instantlyRaise: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5214,7 +5212,7 @@ export function raiseConvertibleRoof(vehicle: number | IVehicle, instantlyRaise:
 /**
  * No comment provided
  * 
- * Hash: 0x445D79F995508307 | Since: 323 | API-Set: unknown
+ * Hash: 0x445D79F995508307 | Since: unknown | API-Set: unknown
  */
 export function releasePreloadMods(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5226,7 +5224,7 @@ export function releasePreloadMods(vehicle: number | IVehicle): void {
  * 
  * Note: after you retract it the natives for dropping the hook no longer work
  * 
- * Hash: 0x9768CF648F54C804 | Since: 323 | API-Set: unknown
+ * Hash: 0x9768CF648F54C804 | Since: unknown | API-Set: unknown
  */
 export function removePickUpRopeForCargobob(cargobob: number | IVehicle): void {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -5236,7 +5234,7 @@ export function removePickUpRopeForCargobob(cargobob: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x1033371FC8E842A7 | Since: 323 | API-Set: unknown
+ * Hash: 0x1033371FC8E842A7 | Since: unknown | API-Set: unknown
  */
 export function removeRoadNodeSpeedZone(speedzone: number): boolean {
     return RemoveRoadNodeSpeedZone(speedzone);
@@ -5245,7 +5243,7 @@ export function removeRoadNodeSpeedZone(speedzone: number): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x46A1E1A299EC4BBA | Since: 323 | API-Set: unknown
+ * Hash: 0x46A1E1A299EC4BBA | Since: unknown | API-Set: unknown
  */
 export function removesFromGeneratorsInArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): void {
     RemoveVehiclesFromGeneratorsInArea(x1, y1, z1, x2, y2, z2, undefined);
@@ -5254,7 +5252,7 @@ export function removesFromGeneratorsInArea(x1: number, y1: number, z1: number, 
 /**
  * No comment provided
  * 
- * Hash: 0xACE699C71AB9DEB5 | Since: 323 | API-Set: unknown
+ * Hash: 0xACE699C71AB9DEB5 | Since: unknown | API-Set: unknown
  */
 export function removeAsset(vehicleAsset: number): void {
     RemoveVehicleAsset(vehicleAsset);
@@ -5263,7 +5261,7 @@ export function removeAsset(vehicleAsset: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xE30524E1871F481D | Since: 323 | API-Set: unknown
+ * Hash: 0xE30524E1871F481D | Since: unknown | API-Set: unknown
  */
 export function removeCombatAvoidanceArea(): void {
     RemoveVehicleCombatAvoidanceArea(0);
@@ -5272,7 +5270,7 @@ export function removeCombatAvoidanceArea(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x00689CDE5F7C6787 | Since: 323 | API-Set: unknown
+ * Hash: 0x00689CDE5F7C6787 | Since: unknown | API-Set: unknown
  */
 export function removeHighDetailModel(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5282,7 +5280,7 @@ export function removeHighDetailModel(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x92D619E420858204 | Since: 323 | API-Set: unknown
+ * Hash: 0x92D619E420858204 | Since: unknown | API-Set: unknown
  */
 export function removeMod(vehicle: number | IVehicle, modType: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5292,7 +5290,7 @@ export function removeMod(vehicle: number | IVehicle, modType: number): void {
 /**
  * See REQUEST_VEHICLE_RECORDING
  * 
- * Hash: 0xF1160ACCF98A3FC8 | Since: 323 | API-Set: unknown
+ * Hash: 0xF1160ACCF98A3FC8 | Since: unknown | API-Set: unknown
  */
 export function removeRecording(recording: number, script: string): void {
     RemoveVehicleRecording(recording, script);
@@ -5301,7 +5299,7 @@ export function removeRecording(recording: number, script: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0x8386BFB614D06749 | Since: 323 | API-Set: unknown
+ * Hash: 0x8386BFB614D06749 | Since: unknown | API-Set: unknown
  */
 export function removeStuckCheck(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5311,7 +5309,7 @@ export function removeStuckCheck(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0xC53EB42A499A7E90 | Since: 323 | API-Set: unknown
+ * Hash: 0xC53EB42A499A7E90 | Since: unknown | API-Set: unknown
  */
 export function removeUpsidedownCheck(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5329,7 +5327,7 @@ export function removeUpsidedownCheck(vehicle: number | IVehicle): void {
  * 6 = Windscreen
  * 7 = Rear Windscreen
  * 
- * Hash: 0xA711568EEDB43069 | Since: 323 | API-Set: unknown
+ * Hash: 0xA711568EEDB43069 | Since: unknown | API-Set: unknown
  */
 export function removeWindow(vehicle: number | IVehicle, windowIndex: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5344,7 +5342,7 @@ export function removeWindow(vehicle: number | IVehicle, windowIndex: number): v
  * submersible
  * blazer
  * 
- * Hash: 0x81A15811460FAB3A | Since: 323 | API-Set: unknown
+ * Hash: 0x81A15811460FAB3A | Since: unknown | API-Set: unknown
  */
 export function requestAsset(vehicleHash: number | string, vehicleAsset: number): void {
     if (typeof vehicleHash === 'string') vehicleHash = GetHashKey(vehicleHash)
@@ -5354,7 +5352,7 @@ export function requestAsset(vehicleHash: number | string, vehicleAsset: number)
 /**
  * No comment provided
  * 
- * Hash: 0xDBA3C090E3D74690 | Since: 323 | API-Set: unknown
+ * Hash: 0xDBA3C090E3D74690 | Since: unknown | API-Set: unknown
  */
 export function requestDial(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5364,7 +5362,7 @@ export function requestDial(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA6E9FDCB2C76785E | Since: 323 | API-Set: unknown
+ * Hash: 0xA6E9FDCB2C76785E | Since: unknown | API-Set: unknown
  */
 export function requestHighDetailModel(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5376,7 +5374,7 @@ export function requestHighDetailModel(vehicle: number | IVehicle): void {
  * For all vehicle recording/playback natives, "script" is a common prefix that usually corresponds to the script/mission the recording is used in, "recording" is its int suffix, and "id" (e.g., in native GET_TOTAL_DURATION_OF_VEHICLE_RECORDING_ID) corresponds to a unique identifier within the recording streaming module.
  * Note that only 24 recordings (hardcoded in multiple places) can ever active at a given time before clobbering begins.
  * 
- * Hash: 0xAF514CABE74CBF15 | Since: 323 | API-Set: unknown
+ * Hash: 0xAF514CABE74CBF15 | Since: unknown | API-Set: unknown
  */
 export function requestRecording(recording: number, script: string): void {
     RequestVehicleRecording(recording, script);
@@ -5385,7 +5383,7 @@ export function requestRecording(recording: number, script: string): void {
 /**
  * Resets the effect of SET_FORMATION_LEADER
  * 
- * Hash: 0xE2F53F172B45EDE1 | Since: 877 | API-Set: unknown
+ * Hash: 0xE2F53F172B45EDE1 | Since: unknown | API-Set: unknown
  */
 export function resetFormationLeader(): void {
     Citizen.invokeNative('0xE2F53F172B45EDE1');
@@ -5416,7 +5414,7 @@ export function resetFormationLeader(): void {
  * };
  * }
  * 
- * Hash: 0xD7591B0065AFAA7A | Since: 323 | API-Set: unknown
+ * Hash: 0xD7591B0065AFAA7A | Since: unknown | API-Set: unknown
  */
 export function resetStuckTimer(vehicle: number | IVehicle, nullAttributes: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5426,7 +5424,7 @@ export function resetStuckTimer(vehicle: number | IVehicle, nullAttributes: numb
 /**
  * No comment provided
  * 
- * Hash: 0x21D2E5662C1F6FED | Since: 323 | API-Set: unknown
+ * Hash: 0x21D2E5662C1F6FED | Since: unknown | API-Set: unknown
  */
 export function resetWheels(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5445,7 +5443,7 @@ export function resetWheels(vehicle: number | IVehicle, toggle: boolean): void {
  * 7 = Mid Right
  * 8 = Invalid
  * 
- * Hash: 0x7AD9E6CE657D69E3 | Since: 323 | API-Set: unknown
+ * Hash: 0x7AD9E6CE657D69E3 | Since: unknown | API-Set: unknown
  */
 export function rollDownWindow(vehicle: number | IVehicle, windowIndex: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5455,7 +5453,7 @@ export function rollDownWindow(vehicle: number | IVehicle, windowIndex: number):
 /**
  * Roll down all the windows of the vehicle passed through the first parameter.
  * 
- * Hash: 0x85796B0549DDE156 | Since: 323 | API-Set: unknown
+ * Hash: 0x85796B0549DDE156 | Since: unknown | API-Set: unknown
  */
 export function rollDownWindows(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5474,7 +5472,7 @@ export function rollDownWindows(vehicle: number | IVehicle): void {
  * 7 = Mid Right
  * 8 = Invalid
  * 
- * Hash: 0x602E548F46E24D59 | Since: 323 | API-Set: unknown
+ * Hash: 0x602E548F46E24D59 | Since: unknown | API-Set: unknown
  */
 export function rollUpWindow(vehicle: number | IVehicle, windowIndex: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5484,7 +5482,7 @@ export function rollUpWindow(vehicle: number | IVehicle, windowIndex: number): v
 /**
  * No comment provided
  * 
- * Hash: 0x5845066D8A1EA7F7 | Since: 323 | API-Set: unknown
+ * Hash: 0x5845066D8A1EA7F7 | Since: unknown | API-Set: unknown
  */
 export function setAdditionalRotationForRecordedPlayback(vehicle: number | IVehicle, pos: Vector3): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5494,7 +5492,7 @@ export function setAdditionalRotationForRecordedPlayback(vehicle: number | IVehi
 /**
  * No comment provided
  * 
- * Hash: 0xF8B49F5BA7F850E7 | Since: 2060 | API-Set: unknown
+ * Hash: 0xF8B49F5BA7F850E7 | Since: unknown | API-Set: unknown
  */
 export function setAircraftIgnoreHightmapOptimisation(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5504,7 +5502,7 @@ export function setAircraftIgnoreHightmapOptimisation(vehicle: number | IVehicle
 /**
  * No comment provided
  * 
- * Hash: 0xE5810AC70602F2F5 | Since: 323 | API-Set: unknown
+ * Hash: 0xE5810AC70602F2F5 | Since: unknown | API-Set: unknown
  */
 export function setAircraftPilotSkillNoiseScalar(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5514,7 +5512,7 @@ export function setAircraftPilotSkillNoiseScalar(vehicle: number | IVehicle): vo
 /**
  * No comment provided
  * 
- * Hash: 0x80E3357FDEF45C21 | Since: 944 | API-Set: unknown
+ * Hash: 0x80E3357FDEF45C21 | Since: unknown | API-Set: unknown
  */
 export function setAllowRammingSoopOrRamp(): void {
     Citizen.invokeNative('0x80E3357FDEF45C21', undefined, undefined);
@@ -5523,7 +5521,7 @@ export function setAllowRammingSoopOrRamp(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x3441CAD2F2231923 | Since: 323 | API-Set: unknown
+ * Hash: 0x3441CAD2F2231923 | Since: unknown | API-Set: unknown
  */
 export function setAllowExplodesOnContact(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5533,7 +5531,7 @@ export function setAllowExplodesOnContact(vehicle: number | IVehicle, toggle: bo
 /**
  * No comment provided
  * 
- * Hash: 0x608207E7A8FB787C | Since: 323 | API-Set: unknown
+ * Hash: 0x608207E7A8FB787C | Since: unknown | API-Set: unknown
  */
 export function setAllLowPriorityGeneratorsActive(active: boolean): void {
     SetAllLowPriorityVehicleGeneratorsActive(active);
@@ -5542,7 +5540,7 @@ export function setAllLowPriorityGeneratorsActive(active: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x34AD89078831A4BC | Since: 323 | API-Set: unknown
+ * Hash: 0x34AD89078831A4BC | Since: unknown | API-Set: unknown
  */
 export function setAllGeneratorsActive(): void {
     SetAllVehicleGeneratorsActive();
@@ -5552,7 +5550,7 @@ export function setAllGeneratorsActive(): void {
  * When p6 is true, vehicle generators are active.
  * p7 seems to always be true in story mode scripts, but it's sometimes false in online scripts.
  * 
- * Hash: 0xC12321827687FE4D | Since: 323 | API-Set: unknown
+ * Hash: 0xC12321827687FE4D | Since: unknown | API-Set: unknown
  */
 export function setAllGeneratorsActiveInArea(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, toggle: boolean): void {
     SetAllVehicleGeneratorsActiveInArea(x1, y1, z1, x2, y2, z2, toggle, false);
@@ -5561,7 +5559,7 @@ export function setAllGeneratorsActiveInArea(x1: number, y1: number, z1: number,
 /**
  * No comment provided
  * 
- * Hash: 0x35E0654F4BAD7971 | Since: 323 | API-Set: unknown
+ * Hash: 0x35E0654F4BAD7971 | Since: unknown | API-Set: unknown
  */
 export function setAmbientNeonEnabled(): void {
     Citizen.invokeNative('0x35E0654F4BAD7971', false);
@@ -5570,7 +5568,7 @@ export function setAmbientNeonEnabled(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x90B6DA738A9A25DA | Since: 323 | API-Set: unknown
+ * Hash: 0x90B6DA738A9A25DA | Since: unknown | API-Set: unknown
  */
 export function setAmbientRangeMultiplierThisFrame(value: number): void {
     SetAmbientVehicleRangeMultiplierThisFrame(value);
@@ -5579,7 +5577,7 @@ export function setAmbientRangeMultiplierThisFrame(value: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x0205F5365292D2EB | Since: 1290 | API-Set: unknown
+ * Hash: 0x0205F5365292D2EB | Since: unknown | API-Set: unknown
  */
 export function setArriveDistanceOverrideForPersuitAttack(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5589,7 +5587,7 @@ export function setArriveDistanceOverrideForPersuitAttack(vehicle: number | IVeh
 /**
  * When enabled, the player won't fall off the bike when landing from large heights.
  * 
- * Hash: 0x73561D4425A021A2 | Since: 791 | API-Set: unknown
+ * Hash: 0x73561D4425A021A2 | Since: unknown | API-Set: unknown
  */
 export function setBikeEasyToLand(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5605,7 +5603,7 @@ export function setBikeEasyToLand(vehicle: number | IVehicle, toggle: boolean): 
  * Example with X -1/Y 1
  * http://i.imgur.com/TgIuAPJ.jpg
  * 
- * Hash: 0x9CFA4896C3A53CBB | Since: 323 | API-Set: unknown
+ * Hash: 0x9CFA4896C3A53CBB | Since: unknown | API-Set: unknown
  */
 export function setBikeOnStand(vehicle: number | IVehicle, x: number, y: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5615,7 +5613,7 @@ export function setBikeOnStand(vehicle: number | IVehicle, x: number, y: number)
 /**
  * No comment provided
  * 
- * Hash: 0x75DBEC174AEEAD10 | Since: 323 | API-Set: unknown
+ * Hash: 0x75DBEC174AEEAD10 | Since: unknown | API-Set: unknown
  */
 export function setBoatAnchor(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5625,7 +5623,7 @@ export function setBoatAnchor(vehicle: number | IVehicle, toggle: boolean): void
 /**
  * No comment provided
  * 
- * Hash: 0x0A6A279F3AA4FD70 | Since: 323 | API-Set: unknown
+ * Hash: 0x0A6A279F3AA4FD70 | Since: unknown | API-Set: unknown
  */
 export function setBoatDisableAvoidance(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5635,7 +5633,7 @@ export function setBoatDisableAvoidance(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0xED5EDE9E676643C9 | Since: 944 | API-Set: unknown
+ * Hash: 0xED5EDE9E676643C9 | Since: unknown | API-Set: unknown
  */
 export function setBoatIgnoreLandProbes(): void {
     Citizen.invokeNative('0xED5EDE9E676643C9', undefined, undefined);
@@ -5644,7 +5642,7 @@ export function setBoatIgnoreLandProbes(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xE842A9398079BD82 | Since: 323 | API-Set: unknown
+ * Hash: 0xE842A9398079BD82 | Since: unknown | API-Set: unknown
  */
 export function setBoatLowLodAnchorDistance(vehicle: number | IVehicle, value: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5654,7 +5652,7 @@ export function setBoatLowLodAnchorDistance(vehicle: number | IVehicle, value: n
 /**
  * No comment provided
  * 
- * Hash: 0xE3EBAAE484798530 | Since: 323 | API-Set: unknown
+ * Hash: 0xE3EBAAE484798530 | Since: unknown | API-Set: unknown
  */
 export function setBoatRemainsAnchoredWhilePlayerIsDriver(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5664,7 +5662,7 @@ export function setBoatRemainsAnchoredWhilePlayerIsDriver(vehicle: number | IVeh
 /**
  * No comment provided
  * 
- * Hash: 0x8F719973E1445BA2 | Since: 323 | API-Set: unknown
+ * Hash: 0x8F719973E1445BA2 | Since: unknown | API-Set: unknown
  */
 export function setBoatSinksWhenWrecked(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5674,7 +5672,7 @@ export function setBoatSinksWhenWrecked(vehicle: number | IVehicle, toggle: bool
 /**
  * No comment provided
  * 
- * Hash: 0xBD32E46AA95C1DD2 | Since: 757 | API-Set: unknown
+ * Hash: 0xBD32E46AA95C1DD2 | Since: unknown | API-Set: unknown
  */
 export function setBoatWrecked(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5684,7 +5682,7 @@ export function setBoatWrecked(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA7DCDF4DED40A8F4 | Since: 323 | API-Set: unknown
+ * Hash: 0xA7DCDF4DED40A8F4 | Since: unknown | API-Set: unknown
  */
 export function setCanAdjustGroundClearance(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5694,7 +5692,7 @@ export function setCanAdjustGroundClearance(vehicle: number | IVehicle): void {
 /**
  * Hardcoded to not work in multiplayer.
  * 
- * Hash: 0x52BBA29D5EC69356 | Since: 323 | API-Set: unknown
+ * Hash: 0x52BBA29D5EC69356 | Since: unknown | API-Set: unknown
  */
 export function setCanRespray(vehicle: number | IVehicle, state: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5704,7 +5702,7 @@ export function setCanRespray(vehicle: number | IVehicle, state: boolean): void 
 /**
  * No comment provided
  * 
- * Hash: 0x1201E8A3290A3B98 | Since: 505 | API-Set: unknown
+ * Hash: 0x1201E8A3290A3B98 | Since: unknown | API-Set: unknown
  */
 export function setCanUseHydraulics(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5714,7 +5712,7 @@ export function setCanUseHydraulics(vehicle: number | IVehicle, toggle: boolean)
 /**
  * No comment provided
  * 
- * Hash: 0x1F34B0626C594380 | Since: 757 | API-Set: unknown
+ * Hash: 0x1F34B0626C594380 | Since: unknown | API-Set: unknown
  */
 export function setCargobobExcludeFromPickupEntity(): void {
     SetCargobobExcludeFromPickupEntity(undefined, undefined);
@@ -5723,7 +5721,7 @@ export function setCargobobExcludeFromPickupEntity(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x72BECCF4B829522E | Since: 1103 | API-Set: unknown
+ * Hash: 0x72BECCF4B829522E | Since: unknown | API-Set: unknown
  */
 export function setCargobobExtaPickupRange(): void {
     Citizen.invokeNative('0x72BECCF4B829522E', undefined, undefined);
@@ -5732,7 +5730,7 @@ export function setCargobobExtaPickupRange(): void {
 /**
  * Stops cargobob from being able to detach the attached vehicle.
  * 
- * Hash: 0x571FEB383F629926 | Since: 323 | API-Set: unknown
+ * Hash: 0x571FEB383F629926 | Since: unknown | API-Set: unknown
  */
 export function setCargobobForceDontDetach(cargobob: number | IVehicle, toggle: boolean): void {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -5742,7 +5740,7 @@ export function setCargobobForceDontDetach(cargobob: number | IVehicle, toggle: 
 /**
  * Won't attract or magnetize to any helicopters or planes of course, but that's common sense.
  * 
- * Hash: 0x9A665550F8DA349B | Since: 323 | API-Set: unknown
+ * Hash: 0x9A665550F8DA349B | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetActive(cargobob: number | IVehicle, isActive: boolean): void {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -5752,7 +5750,7 @@ export function setCargobobPickupMagnetActive(cargobob: number | IVehicle, isAct
 /**
  * No comment provided
  * 
- * Hash: 0x56EB5E94318D3FB6 | Since: 323 | API-Set: unknown
+ * Hash: 0x56EB5E94318D3FB6 | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetEnsurePickupEntityUpright(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5762,7 +5760,7 @@ export function setCargobobPickupMagnetEnsurePickupEntityUpright(vehicle: number
 /**
  * No comment provided
  * 
- * Hash: 0xA17BAD153B51547E | Since: 323 | API-Set: unknown
+ * Hash: 0xA17BAD153B51547E | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetFalloff(cargobob: number | IVehicle): void {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -5772,7 +5770,7 @@ export function setCargobobPickupMagnetFalloff(cargobob: number | IVehicle): voi
 /**
  * No comment provided
  * 
- * Hash: 0x685D5561680D088B | Since: 323 | API-Set: unknown
+ * Hash: 0x685D5561680D088B | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetPullRopeLength(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5782,7 +5780,7 @@ export function setCargobobPickupMagnetPullRopeLength(vehicle: number | IVehicle
 /**
  * No comment provided
  * 
- * Hash: 0xED8286F71A819BAA | Since: 323 | API-Set: unknown
+ * Hash: 0xED8286F71A819BAA | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetPullStrength(cargobob: number | IVehicle): void {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -5792,7 +5790,7 @@ export function setCargobobPickupMagnetPullStrength(cargobob: number | IVehicle)
 /**
  * No comment provided
  * 
- * Hash: 0x6D8EAC07506291FB | Since: 323 | API-Set: unknown
+ * Hash: 0x6D8EAC07506291FB | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetReducedFalloff(cargobob: number | IVehicle): void {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -5802,7 +5800,7 @@ export function setCargobobPickupMagnetReducedFalloff(cargobob: number | IVehicl
 /**
  * No comment provided
  * 
- * Hash: 0x66979ACF5102FD2F | Since: 323 | API-Set: unknown
+ * Hash: 0x66979ACF5102FD2F | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetReducedStrength(cargobob: number | IVehicle): void {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -5812,7 +5810,7 @@ export function setCargobobPickupMagnetReducedStrength(cargobob: number | IVehic
 /**
  * No comment provided
  * 
- * Hash: 0x9BDDC73CC6A115D4 | Since: 323 | API-Set: unknown
+ * Hash: 0x9BDDC73CC6A115D4 | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetSetAmbientMode(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5822,7 +5820,7 @@ export function setCargobobPickupMagnetSetAmbientMode(vehicle: number | IVehicle
 /**
  * No comment provided
  * 
- * Hash: 0xE301BD63E9E13CF0 | Since: 323 | API-Set: unknown
+ * Hash: 0xE301BD63E9E13CF0 | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetSetTargetedMode(vehicle: number | IVehicle, cargobob: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5833,7 +5831,7 @@ export function setCargobobPickupMagnetSetTargetedMode(vehicle: number | IVehicl
 /**
  * No comment provided
  * 
- * Hash: 0xBCBFCD9D1DAC19E2 | Since: 323 | API-Set: unknown
+ * Hash: 0xBCBFCD9D1DAC19E2 | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupMagnetStrength(cargobob: number | IVehicle, strength: number): void {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -5843,7 +5841,7 @@ export function setCargobobPickupMagnetStrength(cargobob: number | IVehicle, str
 /**
  * No comment provided
  * 
- * Hash: 0xCF1182F682F65307 | Since: 323 | API-Set: unknown
+ * Hash: 0xCF1182F682F65307 | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupRopeDampingMultiplier(): void {
     SetCargobobPickupRopeDampingMultiplier(undefined, undefined);
@@ -5852,7 +5850,7 @@ export function setCargobobPickupRopeDampingMultiplier(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x0D5F65A8F4EBDAB5 | Since: 1103 | API-Set: unknown
+ * Hash: 0x0D5F65A8F4EBDAB5 | Since: unknown | API-Set: unknown
  */
 export function setCargobobPickupRopeType(): void {
     SetCargobobPickupRopeType(undefined, undefined);
@@ -5861,7 +5859,7 @@ export function setCargobobPickupRopeType(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xB9562064627FF9DB | Since: 573 | API-Set: unknown
+ * Hash: 0xB9562064627FF9DB | Since: unknown | API-Set: unknown
  */
 export function setCarjackMissionRemovalParameters(): void {
     Citizen.invokeNative('0xB9562064627FF9DB', undefined, undefined);
@@ -5870,7 +5868,7 @@ export function setCarjackMissionRemovalParameters(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xFC40CBF7B90CA77C | Since: 877 | API-Set: unknown
+ * Hash: 0xFC40CBF7B90CA77C | Since: unknown | API-Set: unknown
  */
 export function setCarBootOpen(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5880,7 +5878,7 @@ export function setCarBootOpen(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x84FD40F56075E816 | Since: 323 | API-Set: unknown
+ * Hash: 0x84FD40F56075E816 | Since: unknown | API-Set: unknown
  */
 export function setCarHighSpeedBumpSeverityMultiplier(multiplier: number): void {
     SetCarHighSpeedBumpSeverityMultiplier(multiplier);
@@ -5889,7 +5887,7 @@ export function setCarHighSpeedBumpSeverityMultiplier(multiplier: number): void 
 /**
  * Only used in R* Script fm_content_cargo
  * 
- * Hash: 0xEF9D388F8D377F44 | Since: 2699 | API-Set: unknown
+ * Hash: 0xEF9D388F8D377F44 | Since: unknown | API-Set: unknown
  */
 export function setCheckForEnoughRoomForPed(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5899,7 +5897,7 @@ export function setCheckForEnoughRoomForPed(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0xB2E0C0D6922D31F2 | Since: 944 | API-Set: unknown
+ * Hash: 0xB2E0C0D6922D31F2 | Since: unknown | API-Set: unknown
  */
 export function setClearFreezeWaitingOnCollisionOncePlayerEnters(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5909,7 +5907,7 @@ export function setClearFreezeWaitingOnCollisionOncePlayerEnters(vehicle: number
 /**
  * No comment provided
  * 
- * Hash: 0xF39C4F538B5124C2 | Since: 323 | API-Set: unknown
+ * Hash: 0xF39C4F538B5124C2 | Since: unknown | API-Set: unknown
  */
 export function setConvertibleRoof(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5919,7 +5917,7 @@ export function setConvertibleRoof(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x1A78AD3D8240536F | Since: 323 | API-Set: unknown
+ * Hash: 0x1A78AD3D8240536F | Since: unknown | API-Set: unknown
  */
 export function setConvertibleRoofLatchState(vehicle: number | IVehicle, state: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5929,7 +5927,7 @@ export function setConvertibleRoofLatchState(vehicle: number | IVehicle, state: 
 /**
  * Only used with the "akula" and "annihilator2" in the decompiled native scripts.
  * 
- * Hash: 0xB251E0B33E58B424 | Since: 1290 | API-Set: unknown
+ * Hash: 0xB251E0B33E58B424 | Since: unknown | API-Set: unknown
  */
 export function setDeployFoldingWings(vehicle: number | IVehicle, deploy: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5939,7 +5937,7 @@ export function setDeployFoldingWings(vehicle: number | IVehicle, deploy: boolea
 /**
  * No comment provided
  * 
- * Hash: 0xAA653AE61924B0A0 | Since: 1290 | API-Set: unknown
+ * Hash: 0xAA653AE61924B0A0 | Since: unknown | API-Set: unknown
  */
 export function setDipStraightDownWhenCrashingPlane(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5949,7 +5947,7 @@ export function setDipStraightDownWhenCrashingPlane(vehicle: number | IVehicle, 
 /**
  * Sets a flag on heli and another vehicle type.
  * 
- * Hash: 0x97841634EF7DF1D6 | Since: 1180 | API-Set: unknown
+ * Hash: 0x97841634EF7DF1D6 | Since: unknown | API-Set: unknown
  */
 export function setDisableAutomaticCrashTask(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5959,7 +5957,7 @@ export function setDisableAutomaticCrashTask(vehicle: number | IVehicle, toggle:
 /**
  * No comment provided
  * 
- * Hash: 0x26D99D5A82FD18E8 | Since: 463 | API-Set: unknown
+ * Hash: 0x26D99D5A82FD18E8 | Since: unknown | API-Set: unknown
  */
 export function setDisableBmxExtraTrickForces(): void {
     SetDisableBmxExtraTrickForces(undefined);
@@ -5968,7 +5966,7 @@ export function setDisableBmxExtraTrickForces(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xD4196117AF7BB974 | Since: 757 | API-Set: unknown
+ * Hash: 0xD4196117AF7BB974 | Since: unknown | API-Set: unknown
  */
 export function setDisableDamageWithPickedUpEntity(): boolean {
     return Citizen.invokeNative('0xD4196117AF7BB974', undefined, undefined);
@@ -5977,7 +5975,7 @@ export function setDisableDamageWithPickedUpEntity(): boolean {
 /**
  * Prevents the vehicle from exploding when taking body damage if it was caused by a collision. Only works for planes.
  * 
- * Hash: 0x26E13D440E7F6064 | Since: 1290 | API-Set: unknown
+ * Hash: 0x26E13D440E7F6064 | Since: unknown | API-Set: unknown
  */
 export function setDisableExplodeFromBodyDamageOnCollision(vehicle: number | IVehicle, disable: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -5987,7 +5985,7 @@ export function setDisableExplodeFromBodyDamageOnCollision(vehicle: number | IVe
 /**
  * Prevents the vehicle from exploding when taking body damage. Only works for helis and planes.
  * 
- * Hash: 0xEDBC8405B3895CC9 | Since: 1103 | API-Set: unknown
+ * Hash: 0xEDBC8405B3895CC9 | Since: unknown | API-Set: unknown
  */
 export function setDisableHeliExplodeFromBodyDamage(vehicle: number | IVehicle, disable: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6000,7 +5998,7 @@ export function setDisableHeliExplodeFromBodyDamage(vehicle: number | IVehicle, 
  * For oppressor 2 it will remove wings right after you land. And you will not able to fly up anymore too.
  * But for opressor 2 you still can fly if you somehow get back in the air.
  * 
- * Hash: 0x2D55FE374D5FDB91 | Since: 1290 | API-Set: unknown
+ * Hash: 0x2D55FE374D5FDB91 | Since: unknown | API-Set: unknown
  */
 export function setDisableHoverModeFlight(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6013,7 +6011,7 @@ export function setDisableHoverModeFlight(vehicle: number | IVehicle, toggle: bo
  * Example: https://streamable.com/6n45d5
  * Not sure if there is a native (and if so, which one) that resets the collisions.
  * 
- * Hash: 0x75627043C6AA90AD | Since: 1180 | API-Set: unknown
+ * Hash: 0x75627043C6AA90AD | Since: unknown | API-Set: unknown
  */
 export function setDisableMapCollision(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6023,7 +6021,7 @@ export function setDisableMapCollision(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x8235F1BEAD557629 | Since: 1180 | API-Set: unknown
+ * Hash: 0x8235F1BEAD557629 | Since: unknown | API-Set: unknown
  */
 export function setDisablePedStandOnTop(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6033,7 +6031,7 @@ export function setDisablePedStandOnTop(vehicle: number | IVehicle, toggle: bool
 /**
  * No comment provided
  * 
- * Hash: 0x25367DE49D64CF16 | Since: 323 | API-Set: unknown
+ * Hash: 0x25367DE49D64CF16 | Since: unknown | API-Set: unknown
  */
 export function setDisablePretendOccupants(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6043,7 +6041,7 @@ export function setDisablePretendOccupants(vehicle: number | IVehicle, toggle: b
 /**
  * No comment provided
  * 
- * Hash: 0xD4B8E3D1917BC86B | Since: 323 | API-Set: unknown
+ * Hash: 0xD4B8E3D1917BC86B | Since: unknown | API-Set: unknown
  */
 export function setDisableRandomTrainsThisFrame(toggle: boolean): void {
     SetDisableRandomTrainsThisFrame(toggle);
@@ -6052,7 +6050,7 @@ export function setDisableRandomTrainsThisFrame(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x8F0D5BA1C2CC91D7 | Since: 1604 | API-Set: unknown
+ * Hash: 0x8F0D5BA1C2CC91D7 | Since: unknown | API-Set: unknown
  */
 export function setDisableRetractingWeaponBlades(toggle: boolean): void {
     Citizen.invokeNative('0x8F0D5BA1C2CC91D7', toggle);
@@ -6061,7 +6059,7 @@ export function setDisableRetractingWeaponBlades(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xB088E9A47AE6EDD5 | Since: 323 | API-Set: unknown
+ * Hash: 0xB088E9A47AE6EDD5 | Since: unknown | API-Set: unknown
  */
 export function setDisableSuperdummy(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6071,7 +6069,7 @@ export function setDisableSuperdummy(vehicle: number | IVehicle): void {
 /**
  * Disables turret movement when called in a loop. You can still fire and aim. You cannot shoot backwards though.
  * 
- * Hash: 0xE615BB7A7752C76A | Since: 1365 | API-Set: unknown
+ * Hash: 0xE615BB7A7752C76A | Since: unknown | API-Set: unknown
  */
 export function setDisableTurretMovement(vehicle: number | IVehicle, turretId: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6081,7 +6079,7 @@ export function setDisableTurretMovement(vehicle: number | IVehicle, turretId: n
 /**
  * No comment provided
  * 
- * Hash: 0x91A0BD635321F145 | Since: 323 | API-Set: unknown
+ * Hash: 0x91A0BD635321F145 | Since: unknown | API-Set: unknown
  */
 export function setDisableEngineFires(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6091,7 +6089,7 @@ export function setDisableEngineFires(vehicle: number | IVehicle, toggle: boolea
 /**
  * No comment provided
  * 
- * Hash: 0x143921E45EC44D62 | Since: 1604 | API-Set: unknown
+ * Hash: 0x143921E45EC44D62 | Since: unknown | API-Set: unknown
  */
 export function setDisableExplosionsDamage(toggle: boolean): void {
     SetDisableVehicleUnk(toggle);
@@ -6100,7 +6098,7 @@ export function setDisableExplosionsDamage(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x37C8252A7C92D017 | Since: 323 | API-Set: unknown
+ * Hash: 0x37C8252A7C92D017 | Since: unknown | API-Set: unknown
  */
 export function setDisablePetrolTankDamage(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6110,7 +6108,7 @@ export function setDisablePetrolTankDamage(vehicle: number | IVehicle, toggle: b
 /**
  * No comment provided
  * 
- * Hash: 0x465BF26AB9684352 | Since: 323 | API-Set: unknown
+ * Hash: 0x465BF26AB9684352 | Since: unknown | API-Set: unknown
  */
 export function setDisablePetrolTankFires(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6120,7 +6118,7 @@ export function setDisablePetrolTankFires(vehicle: number | IVehicle, toggle: bo
 /**
  * True stops vtols from switching modes. Doesn't stop the sound though.
  * 
- * Hash: 0xCE2B43770B655F8F | Since: 1290 | API-Set: unknown
+ * Hash: 0xCE2B43770B655F8F | Since: unknown | API-Set: unknown
  */
 export function setDisableVerticalFlightModeTransition(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6130,7 +6128,7 @@ export function setDisableVerticalFlightModeTransition(vehicle: number | IVehicl
 /**
  * No comment provided
  * 
- * Hash: 0x4AD280EB48B2D8E6 | Since: 1868 | API-Set: unknown
+ * Hash: 0x4AD280EB48B2D8E6 | Since: unknown | API-Set: unknown
  */
 export function setDisableWantedConesResponse(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6140,7 +6138,7 @@ export function setDisableWantedConesResponse(vehicle: number | IVehicle, toggle
 /**
  * Sets some global vehicle related bool
  * 
- * Hash: 0x211E95CE9903940C | Since: 1604 | API-Set: unknown
+ * Hash: 0x211E95CE9903940C | Since: unknown | API-Set: unknown
  */
 export function setDisableWeaponBladeForces(toggle: boolean): void {
     SetDisableVehicleUnk2(toggle);
@@ -6149,7 +6147,7 @@ export function setDisableWeaponBladeForces(toggle: boolean): void {
 /**
  * Toggles to render distant vehicles. They may not be vehicles but images to look like vehicles.
  * 
- * Hash: 0xF796359A959DF65D | Since: 323 | API-Set: unknown
+ * Hash: 0xF796359A959DF65D | Since: unknown | API-Set: unknown
  */
 export function setDistantCarsEnabled(toggle: boolean): void {
     SetDistantCarsEnabled(toggle);
@@ -6158,7 +6156,7 @@ export function setDistantCarsEnabled(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xDBC631F109350B8C | Since: 323 | API-Set: unknown
+ * Hash: 0xDBC631F109350B8C | Since: unknown | API-Set: unknown
  */
 export function setDontAllowPlayerToEnterIfLockedForPlayer(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6168,7 +6166,7 @@ export function setDontAllowPlayerToEnterIfLockedForPlayer(vehicle: number | IVe
 /**
  * R* used it to "remove" vehicle windows when "nightshark" had some mod, which adding some kind of armored windows. When enabled, you can't break vehicles glass. All your bullets wiil shoot through glass. You also will not able to break the glass with any other way (hitting and etc)
  * 
- * Hash: 0x1087BC8EC540DAEB | Since: 1103 | API-Set: unknown
+ * Hash: 0x1087BC8EC540DAEB | Since: unknown | API-Set: unknown
  */
 export function setDontProcessGlass(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6178,7 +6176,7 @@ export function setDontProcessGlass(vehicle: number | IVehicle, toggle: boolean)
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  * 
- * Hash: 0x2FA133A4A9D37ED8 | Since: 323 | API-Set: unknown
+ * Hash: 0x2FA133A4A9D37ED8 | Since: unknown | API-Set: unknown
  */
 export function setDoorAllowedToBeBrokenOff(vehicle: number | IVehicle, doorId: number, isBreakable: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6188,7 +6186,7 @@ export function setDoorAllowedToBeBrokenOff(vehicle: number | IVehicle, doorId: 
 /**
  * No comment provided
  * 
- * Hash: 0x5AC79C98C5C17F05 | Since: 2372 | API-Set: unknown
+ * Hash: 0x5AC79C98C5C17F05 | Since: unknown | API-Set: unknown
  */
 export function setDriftTyres(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6198,7 +6196,7 @@ export function setDriftTyres(vehicle: number | IVehicle, toggle: boolean): void
 /**
  * Enable/Disables global slipstream physics
  * 
- * Hash: 0xE6C0C80B8C867537 | Since: 323 | API-Set: unknown
+ * Hash: 0xE6C0C80B8C867537 | Since: unknown | API-Set: unknown
  */
 export function setEnableSlipstreaming(toggle: boolean): void {
     SetEnableVehicleSlipstreaming(toggle);
@@ -6207,7 +6205,7 @@ export function setEnableSlipstreaming(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x26324F33423F3CC3 | Since: 323 | API-Set: unknown
+ * Hash: 0x26324F33423F3CC3 | Since: unknown | API-Set: unknown
  */
 export function setFarDraws(toggle: boolean): void {
     SetFarDrawVehicles(toggle);
@@ -6216,7 +6214,7 @@ export function setFarDraws(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA247F9EF01D8082E | Since: 1103 | API-Set: unknown
+ * Hash: 0xA247F9EF01D8082E | Since: unknown | API-Set: unknown
  */
 export function setFleeingsUseSwitchedOffNodes(): void {
     Citizen.invokeNative('0xA247F9EF01D8082E', undefined);
@@ -6225,7 +6223,7 @@ export function setFleeingsUseSwitchedOffNodes(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x887FA38787DE8C72 | Since: 1365 | API-Set: unknown
+ * Hash: 0x887FA38787DE8C72 | Since: unknown | API-Set: unknown
  */
 export function setForceFixLinkMatrices(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6235,7 +6233,7 @@ export function setForceFixLinkMatrices(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x97CE68CB032583F0 | Since: 323 | API-Set: unknown
+ * Hash: 0x97CE68CB032583F0 | Since: unknown | API-Set: unknown
  */
 export function setForceHd(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6245,7 +6243,7 @@ export function setForceHd(vehicle: number | IVehicle, toggle: boolean): void {
 /**
  * No observed effect.
  * 
- * Hash: 0xB28B1FE5BFADD7F5 | Since: 323 | API-Set: unknown
+ * Hash: 0xB28B1FE5BFADD7F5 | Since: unknown | API-Set: unknown
  */
 export function setForceLowLodAnchorMode(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6255,7 +6253,7 @@ export function setForceLowLodAnchorMode(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x4D9D109F63FEE1D4 | Since: 323 | API-Set: unknown
+ * Hash: 0x4D9D109F63FEE1D4 | Since: unknown | API-Set: unknown
  */
 export function setForceEngineDamageByBullet(): void {
     Citizen.invokeNative('0x4D9D109F63FEE1D4', undefined, false);
@@ -6264,7 +6262,7 @@ export function setForceEngineDamageByBullet(): void {
 /**
  * 0.0 = Lowest 1.0 = Highest. This is best to be used if you wanna pick-up a car since un-realistically on GTA V forklifts can't pick up much of anything due to vehicle mass. If you put this under a car then set it above 0.0 to a 'lifted-value' it will raise the car with no issue lol
  * 
- * Hash: 0x37EBBF3117BD6A25 | Since: 323 | API-Set: unknown
+ * Hash: 0x37EBBF3117BD6A25 | Since: unknown | API-Set: unknown
  */
 export function setForkliftForkHeight(vehicle: number | IVehicle, height: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6274,7 +6272,7 @@ export function setForkliftForkHeight(vehicle: number | IVehicle, height: number
 /**
  * No comment provided
  * 
- * Hash: 0x428AD3E26C8D9EB0 | Since: 877 | API-Set: unknown
+ * Hash: 0x428AD3E26C8D9EB0 | Since: unknown | API-Set: unknown
  */
 export function setFormationLeader(vehicle: number | IVehicle, pos: Vector3): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6284,7 +6282,7 @@ export function setFormationLeader(vehicle: number | IVehicle, pos: Vector3): vo
 /**
  * No comment provided
  * 
- * Hash: 0x2AFD795EEAC8D30D | Since: 323 | API-Set: unknown
+ * Hash: 0x2AFD795EEAC8D30D | Since: unknown | API-Set: unknown
  */
 export function setGarbageTrucks(toggle: boolean): void {
     SetGarbageTrucks(toggle);
@@ -6293,7 +6291,7 @@ export function setGarbageTrucks(toggle: boolean): void {
 /**
  * Set state to true to extend the wings, false to retract them.
  * 
- * Hash: 0x544996C0081ABDEB | Since: 1103 | API-Set: unknown
+ * Hash: 0x544996C0081ABDEB | Since: unknown | API-Set: unknown
  */
 export function setGliderActive(vehicle: number | IVehicle, state: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6303,7 +6301,7 @@ export function setGliderActive(vehicle: number | IVehicle, state: boolean): voi
 /**
  * No comment provided
  * 
- * Hash: 0xFAF2A78061FD9EF4 | Since: 323 | API-Set: unknown
+ * Hash: 0xFAF2A78061FD9EF4 | Since: unknown | API-Set: unknown
  */
 export function setGlobalPositionOffsetForRecordedPlayback(vehicle: number | IVehicle, pos: Vector3): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6313,7 +6311,7 @@ export function setGlobalPositionOffsetForRecordedPlayback(vehicle: number | IVe
 /**
  * Used for GTAO CEO/Associate spawned vehicles.
  * 
- * Hash: 0xAB31EF4DE6800CE9 | Since: 573 | API-Set: unknown
+ * Hash: 0xAB31EF4DE6800CE9 | Since: unknown | API-Set: unknown
  */
 export function setGoonBoss(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6323,7 +6321,7 @@ export function setGoonBoss(vehicle: number | IVehicle, toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x430A7631A84C9BE7 | Since: 1180 | API-Set: unknown
+ * Hash: 0x430A7631A84C9BE7 | Since: unknown | API-Set: unknown
  */
 export function setGroundEffectReducesDrag(toggle: boolean): void {
     Citizen.invokeNative('0x430A7631A84C9BE7', toggle);
@@ -6332,7 +6330,7 @@ export function setGroundEffectReducesDrag(toggle: boolean): void {
 /**
  * Equivalent of SET_HELI_BLADES_SPEED(vehicleHandle, 1.0f);
  * 
- * Hash: 0xA178472EBB8AE60D | Since: 323 | API-Set: unknown
+ * Hash: 0xA178472EBB8AE60D | Since: unknown | API-Set: unknown
  */
 export function setHeliBladesFullSpeed(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6345,7 +6343,7 @@ export function setHeliBladesFullSpeed(vehicle: number | IVehicle): void {
  * vehicleHandle: The helicopter.
  * speed: The speed in percentage, 0.0f being 0% and 1.0f being 100%.
  * 
- * Hash: 0xFD280B4D7F3ABC4D | Since: 323 | API-Set: unknown
+ * Hash: 0xFD280B4D7F3ABC4D | Since: unknown | API-Set: unknown
  */
 export function setHeliBladesSpeed(vehicle: number | IVehicle, speed: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6355,7 +6353,7 @@ export function setHeliBladesSpeed(vehicle: number | IVehicle, speed: number): v
 /**
  * Stops the cargobob from being able to attach any vehicle
  * 
- * Hash: 0x94A68DA412C4007D | Since: 1180 | API-Set: unknown
+ * Hash: 0x94A68DA412C4007D | Since: unknown | API-Set: unknown
  */
 export function setHeliCanPickupEntityThatHasPickUpDisabled(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6365,7 +6363,7 @@ export function setHeliCanPickupEntityThatHasPickUpDisabled(vehicle: number | IV
 /**
  * No comment provided
  * 
- * Hash: 0x0A3F820A9A9A9AC5 | Since: 1180 | API-Set: unknown
+ * Hash: 0x0A3F820A9A9A9AC5 | Since: unknown | API-Set: unknown
  */
 export function setHeliCombatOffset(vehicle: number | IVehicle, pos: Vector3): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6375,7 +6373,7 @@ export function setHeliCombatOffset(vehicle: number | IVehicle, pos: Vector3): v
 /**
  * value between 0.0 and 1.0
  * 
- * Hash: 0x6E0859B530A365CC | Since: 323 | API-Set: unknown
+ * Hash: 0x6E0859B530A365CC | Since: unknown | API-Set: unknown
  */
 export function setHeliControlLaggingRateScalar(helicopter: number | IVehicle, multiplier: number): void {
     const _helicopter = typeof helicopter == 'object' ? helicopter.handle() : helicopter;
@@ -6385,7 +6383,7 @@ export function setHeliControlLaggingRateScalar(helicopter: number | IVehicle, m
 /**
  * No comment provided
  * 
- * Hash: 0x4056EA1105F5ABD7 | Since: 463 | API-Set: unknown
+ * Hash: 0x4056EA1105F5ABD7 | Since: unknown | API-Set: unknown
  */
 export function setHeliMainRotorHealth(vehicle: number | IVehicle, health: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6395,7 +6393,7 @@ export function setHeliMainRotorHealth(vehicle: number | IVehicle, health: numbe
 /**
  * No comment provided
  * 
- * Hash: 0x8074CC1886802912 | Since: 2545 | API-Set: unknown
+ * Hash: 0x8074CC1886802912 | Since: unknown | API-Set: unknown
  */
 export function setHeliResistToExplosion(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6405,7 +6403,7 @@ export function setHeliResistToExplosion(vehicle: number | IVehicle, toggle: boo
 /**
  * No comment provided
  * 
- * Hash: 0x3EC8BF18AA453FE9 | Since: 323 | API-Set: unknown
+ * Hash: 0x3EC8BF18AA453FE9 | Since: unknown | API-Set: unknown
  */
 export function setHeliTailBoomCanBreakOff(vehicle: number | IVehicle, toggle: boolean): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6415,7 +6413,7 @@ export function setHeliTailBoomCanBreakOff(vehicle: number | IVehicle, toggle: b
 /**
  * No comment provided
  * 
- * Hash: 0xFE205F38AAA58E5B | Since: 463 | API-Set: unknown
+ * Hash: 0xFE205F38AAA58E5B | Since: unknown | API-Set: unknown
  */
 export function setHeliTailRotorHealth(vehicle: number | IVehicle, health: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6425,7 +6423,7 @@ export function setHeliTailRotorHealth(vehicle: number | IVehicle, health: numbe
 /**
  * No comment provided
  * 
- * Hash: 0xE6F13851780394DA | Since: 323 | API-Set: unknown
+ * Hash: 0xE6F13851780394DA | Since: unknown | API-Set: unknown
  */
 export function setHeliTurbulenceScalar(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6435,7 +6433,7 @@ export function setHeliTurbulenceScalar(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x70A252F60A3E036B | Since: 1365 | API-Set: unknown
+ * Hash: 0x70A252F60A3E036B | Since: unknown | API-Set: unknown
  */
 export function setHoverModeWingRatio(vehicle: number | IVehicle, ratio: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6447,7 +6445,7 @@ export function setHoverModeWingRatio(vehicle: number | IVehicle, ratio: number)
  * 
  * Only used once in each carmod script, on a car that does not have hydraulics to begin with.
  * 
- * Hash: 0x28B18377EB6E25F6 | Since: 505 | API-Set: unknown
+ * Hash: 0x28B18377EB6E25F6 | Since: unknown | API-Set: unknown
  */
 export function setHydraulicsControl(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6457,7 +6455,7 @@ export function setHydraulicsControl(vehicle: number | IVehicle, toggle: boolean
 /**
  * Works only on vehicles that support hydraulics.
  * 
- * Hash: 0x84EA99C62CB3EF0C | Since: 505 | API-Set: unknown
+ * Hash: 0x84EA99C62CB3EF0C | Since: unknown | API-Set: unknown
  */
 export function setHydraulicSuspensionRaiseFactor(vehicle: number | IVehicle, wheelId: number, value: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6470,7 +6468,7 @@ export function setHydraulicSuspensionRaiseFactor(vehicle: number | IVehicle, wh
  * 5 = lower
  * 6 = jump
  * 
- * Hash: 0x8EA86DF356801C7D | Since: 505 | API-Set: unknown
+ * Hash: 0x8EA86DF356801C7D | Since: unknown | API-Set: unknown
  */
 export function setHydraulicState(vehicle: number | IVehicle, state: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6483,7 +6481,7 @@ export function setHydraulicState(vehicle: number | IVehicle, state: number): vo
  * 1 - raise wheel (uses value arg, works just like _SET_VEHICLE_HYDRAULIC_WHEEL_VALUE)
  * 2 - jump using wheel
  * 
- * Hash: 0xC24075310A8B9CD1 | Since: 505 | API-Set: unknown
+ * Hash: 0xC24075310A8B9CD1 | Since: unknown | API-Set: unknown
  */
 export function setHydraulicWheelState(vehicle: number | IVehicle, wheelId: number, state: number, value: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6493,7 +6491,7 @@ export function setHydraulicWheelState(vehicle: number | IVehicle, wheelId: numb
 /**
  * No comment provided
  * 
- * Hash: 0x8664170EF165C4A6 | Since: 2189 | API-Set: unknown
+ * Hash: 0x8664170EF165C4A6 | Since: unknown | API-Set: unknown
  */
 export function setIgnorePlanesSmallPitchChange(): void {
     Citizen.invokeNative('0x8664170EF165C4A6', undefined, undefined);
@@ -6502,7 +6500,7 @@ export function setIgnorePlanesSmallPitchChange(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2970EAA18FD5E42F | Since: 1604 | API-Set: unknown
+ * Hash: 0x2970EAA18FD5E42F | Since: unknown | API-Set: unknown
  */
 export function setIncreaseWheelCrushDamage(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6513,7 +6511,7 @@ export function setIncreaseWheelCrushDamage(vehicle: number | IVehicle, toggle: 
  * Inverts vehicle's controls. So INPUT_VEH_ACCELERATE will be INPUT_VEH_BRAKE and vise versa (same for A/D controls)
  * Doesn't work for planes/helis.
  * 
- * Hash: 0x5B91B229243351A8 | Since: 791 | API-Set: unknown
+ * Hash: 0x5B91B229243351A8 | Since: unknown | API-Set: unknown
  */
 export function setInvertControls(vehicle: number | IVehicle, state: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6523,7 +6521,7 @@ export function setInvertControls(vehicle: number | IVehicle, state: boolean): v
 /**
  * No comment provided
  * 
- * Hash: 0xACFB2463CC22BED2 | Since: 323 | API-Set: unknown
+ * Hash: 0xACFB2463CC22BED2 | Since: unknown | API-Set: unknown
  */
 export function setLastDriven(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6533,7 +6531,7 @@ export function setLastDriven(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0xBC3CCA5844452B06 | Since: 323 | API-Set: unknown
+ * Hash: 0xBC3CCA5844452B06 | Since: unknown | API-Set: unknown
  */
 export function setLightsCutoffDistanceTweak(distance: number): void {
     SetLightsCutoffDistanceTweak(distance);
@@ -6542,17 +6540,16 @@ export function setLightsCutoffDistanceTweak(distance: number): void {
 /**
  * p1 is always 0
  * 
- * Hash: 0xBBE7648349B49BE8 | Since: 323 | API-Set: unknown
+ * Hash: 0xBBE7648349B49BE8 | Since: unknown | API-Set: unknown
  */
-export function setMissionTrainAsNoLongerNeeded(train: number | IVehicle): void {
-    const _train = typeof train == 'object' ? train.handle() : train;
-    SetMissionTrainAsNoLongerNeeded(_train, false);
+export function setMissionTrainAsNoLongerNeeded(): number {
+    return SetMissionTrainAsNoLongerNeeded(false);
 }
 
 /**
  * No comment provided
  * 
- * Hash: 0x591CA673AA6AB736 | Since: 323 | API-Set: unknown
+ * Hash: 0x591CA673AA6AB736 | Since: unknown | API-Set: unknown
  */
 export function setMissionTrainCoords(train: number | IVehicle, pos: Vector3): void {
     const _train = typeof train == 'object' ? train.handle() : train;
@@ -6562,7 +6559,7 @@ export function setMissionTrainCoords(train: number | IVehicle, pos: Vector3): v
 /**
  * No comment provided
  * 
- * Hash: 0x9E566EA551F4F1A6 | Since: 3407 | API-Set: unknown
+ * Hash: 0x9E566EA551F4F1A6 | Since: unknown | API-Set: unknown
  */
 export function setNitrousIsActive(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6572,7 +6569,7 @@ export function setNitrousIsActive(vehicle: number | IVehicle, toggle: boolean):
 /**
  * No comment provided
  * 
- * Hash: 0xCAA15F13EBD417FF | Since: 323 | API-Set: unknown
+ * Hash: 0xCAA15F13EBD417FF | Since: unknown | API-Set: unknown
  */
 export function setNumberOfParkeds(value: number): void {
     SetNumberOfParkedVehicles(value);
@@ -6581,7 +6578,7 @@ export function setNumberOfParkeds(value: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x1B212B26DD3C04DF | Since: 757 | API-Set: unknown
+ * Hash: 0x1B212B26DD3C04DF | Since: unknown | API-Set: unknown
  */
 export function setOpenRearDoorsOnExplosion(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6591,7 +6588,7 @@ export function setOpenRearDoorsOnExplosion(vehicle: number | IVehicle, toggle: 
 /**
  * No comment provided
  * 
- * Hash: 0xC8E9B6B71B8E660D | Since: 1604 | API-Set: unknown
+ * Hash: 0xC8E9B6B71B8E660D | Since: unknown | API-Set: unknown
  */
 export function setOverrideNitrousLevel(vehicle: number | IVehicle, toggle: boolean, level: number, power: number, rechargeTime: number, disableSound: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6601,7 +6598,7 @@ export function setOverrideNitrousLevel(vehicle: number | IVehicle, toggle: bool
 /**
  * No comment provided
  * 
- * Hash: 0x66E3AAFACE2D1EB8 | Since: 1103 | API-Set: unknown
+ * Hash: 0x66E3AAFACE2D1EB8 | Since: unknown | API-Set: unknown
  */
 export function setOverrideDoorTorque(): void {
     Citizen.invokeNative('0x66E3AAFACE2D1EB8', undefined, undefined, undefined);
@@ -6610,7 +6607,7 @@ export function setOverrideDoorTorque(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xEAE6DCC7EEE3DB1D | Since: 323 | API-Set: unknown
+ * Hash: 0xEAE6DCC7EEE3DB1D | Since: unknown | API-Set: unknown
  */
 export function setParkedDensityMultiplierThisFrame(multiplier: number): void {
     SetParkedVehicleDensityMultiplierThisFrame(multiplier);
@@ -6619,7 +6616,7 @@ export function setParkedDensityMultiplierThisFrame(multiplier: number): void {
 /**
  * Sets some bit and float of vehicle. float is >= 0
  * 
- * Hash: 0x59C3757B3B7408E8 | Since: 1493 | API-Set: unknown
+ * Hash: 0x59C3757B3B7408E8 | Since: unknown | API-Set: unknown
  */
 export function setPedsCanFallOffThisFromLargeFallDamage(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6629,7 +6626,7 @@ export function setPedsCanFallOffThisFromLargeFallDamage(vehicle: number | IVehi
 /**
  * min: 1.9f, max: 100.0f
  * 
- * Hash: 0x877C1EAEAC531023 | Since: 323 | API-Set: unknown
+ * Hash: 0x877C1EAEAC531023 | Since: unknown | API-Set: unknown
  */
 export function setPickupRopeLengthForCargobob(cargobob: number | IVehicle, length1: number, length2: number): void {
     const _cargobob = typeof cargobob == 'object' ? cargobob.handle() : cargobob;
@@ -6639,7 +6636,7 @@ export function setPickupRopeLengthForCargobob(cargobob: number | IVehicle, leng
 /**
  * No comment provided
  * 
- * Hash: 0xC0ED6438E6D39BA8 | Since: 944 | API-Set: unknown
+ * Hash: 0xC0ED6438E6D39BA8 | Since: unknown | API-Set: unknown
  */
 export function setPickupRopeLengthWithoutCreatingRopeForCargobob(): void {
     Citizen.invokeNative('0xC0ED6438E6D39BA8', undefined, undefined, undefined);
@@ -6648,7 +6645,7 @@ export function setPickupRopeLengthWithoutCreatingRopeForCargobob(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xDD8A2D3337F04196 | Since: 3407 | API-Set: unknown
+ * Hash: 0xDD8A2D3337F04196 | Since: unknown | API-Set: unknown
  */
 export function setPlaneControlSectionsShouldBreakOffFromExplosions(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6658,7 +6655,7 @@ export function setPlaneControlSectionsShouldBreakOffFromExplosions(vehicle: num
 /**
  * Works just like SET_VEHICLE_ENGINE_HEALTH, but only for planes.
  * 
- * Hash: 0x2A86A0475B6A1434 | Since: 1103 | API-Set: unknown
+ * Hash: 0x2A86A0475B6A1434 | Since: unknown | API-Set: unknown
  */
 export function setPlaneEngineHealth(vehicle: number | IVehicle, health: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6668,7 +6665,7 @@ export function setPlaneEngineHealth(vehicle: number | IVehicle, health: number)
 /**
  * No comment provided
  * 
- * Hash: 0x4C815EB175086F84 | Since: 1103 | API-Set: unknown
+ * Hash: 0x4C815EB175086F84 | Since: unknown | API-Set: unknown
  */
 export function setPlanePropellerHealth(plane: number | IVehicle, health: number): boolean {
     const _plane = typeof plane == 'object' ? plane.handle() : plane;
@@ -6678,7 +6675,7 @@ export function setPlanePropellerHealth(plane: number | IVehicle, health: number
 /**
  * No comment provided
  * 
- * Hash: 0xE16142B94664DEFD | Since: 323 | API-Set: unknown
+ * Hash: 0xE16142B94664DEFD | Since: unknown | API-Set: unknown
  */
 export function setPlaneResistToExplosion(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6688,7 +6685,7 @@ export function setPlaneResistToExplosion(vehicle: number | IVehicle, toggle: bo
 /**
  * No comment provided
  * 
- * Hash: 0x0BBB9A7A8FFE931B | Since: 1290 | API-Set: unknown
+ * Hash: 0x0BBB9A7A8FFE931B | Since: unknown | API-Set: unknown
  */
 export function setPlaneSectionDamageScale(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6701,7 +6698,7 @@ export function setPlaneSectionDamageScale(vehicle: number | IVehicle): void {
  * 1.0 = heavy turbulence.
  * Works by just calling it once, does not need to be called every tick.
  * 
- * Hash: 0xAD2D28A1AFDFF131 | Since: 323 | API-Set: unknown
+ * Hash: 0xAD2D28A1AFDFF131 | Since: unknown | API-Set: unknown
  */
 export function setPlaneTurbulenceMultiplier(vehicle: number | IVehicle, multiplier: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6711,7 +6708,7 @@ export function setPlaneTurbulenceMultiplier(vehicle: number | IVehicle, multipl
 /**
  * No comment provided
  * 
- * Hash: 0x6683AB880E427778 | Since: 323 | API-Set: unknown
+ * Hash: 0x6683AB880E427778 | Since: unknown | API-Set: unknown
  */
 export function setPlaybackSpeed(vehicle: number | IVehicle, speed: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6721,7 +6718,7 @@ export function setPlaybackSpeed(vehicle: number | IVehicle, speed: number): voi
 /**
  * Identical to SET_PLAYBACK_TO_USE_AI_TRY_TO_REVERT_BACK_LATER with 0 as arguments for p1 and p3.
  * 
- * Hash: 0xA549C3B37EA28131 | Since: 323 | API-Set: unknown
+ * Hash: 0xA549C3B37EA28131 | Since: unknown | API-Set: unknown
  */
 export function setPlaybackToUseAi(vehicle: number | IVehicle, drivingStyle: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6731,7 +6728,7 @@ export function setPlaybackToUseAi(vehicle: number | IVehicle, drivingStyle: num
 /**
  * Time is number of milliseconds before reverting, zero for indefinitely.
  * 
- * Hash: 0x6E63860BBB190730 | Since: 323 | API-Set: unknown
+ * Hash: 0x6E63860BBB190730 | Since: unknown | API-Set: unknown
  */
 export function setPlaybackToUseAiTryToRevertBackLater(vehicle: number | IVehicle, time: number, drivingStyle: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6741,7 +6738,7 @@ export function setPlaybackToUseAiTryToRevertBackLater(vehicle: number | IVehicl
 /**
  * No comment provided
  * 
- * Hash: 0xBCDF8BAF56C87B6A | Since: 323 | API-Set: unknown
+ * Hash: 0xBCDF8BAF56C87B6A | Since: unknown | API-Set: unknown
  */
 export function setPlayersLast(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6751,7 +6748,7 @@ export function setPlayersLast(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x4E74E62E0A97E901 | Since: 323 | API-Set: unknown
+ * Hash: 0x4E74E62E0A97E901 | Since: unknown | API-Set: unknown
  */
 export function setPoliceFocusWillTrack(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6761,7 +6758,7 @@ export function setPoliceFocusWillTrack(vehicle: number | IVehicle, toggle: bool
 /**
  * No comment provided
  * 
- * Hash: 0x796A877E459B99EA | Since: 323 | API-Set: unknown
+ * Hash: 0x796A877E459B99EA | Since: unknown | API-Set: unknown
  */
 export function setPositionOffsetForRecordedPlayback(vehicle: number | IVehicle, pos: Vector3): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6771,7 +6768,7 @@ export function setPositionOffsetForRecordedPlayback(vehicle: number | IVehicle,
 /**
  * No comment provided
  * 
- * Hash: 0x84436EC293B1415F | Since: 323 | API-Set: unknown
+ * Hash: 0x84436EC293B1415F | Since: unknown | API-Set: unknown
  */
 export function setRandomBoats(toggle: boolean): void {
     SetRandomBoats(toggle);
@@ -6780,7 +6777,7 @@ export function setRandomBoats(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xDA5E12F728DB30CA | Since: 2372 | API-Set: unknown
+ * Hash: 0xDA5E12F728DB30CA | Since: unknown | API-Set: unknown
  */
 export function setRandomBoatsMp(toggle: boolean): void {
     SetRandomBoatsInMp(toggle);
@@ -6789,7 +6786,7 @@ export function setRandomBoatsMp(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x80D9F74197EA47D9 | Since: 323 | API-Set: unknown
+ * Hash: 0x80D9F74197EA47D9 | Since: unknown | API-Set: unknown
  */
 export function setRandomTrains(toggle: boolean): void {
     SetRandomTrains(toggle);
@@ -6798,7 +6795,7 @@ export function setRandomTrains(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xB3B3359379FE77D3 | Since: 323 | API-Set: unknown
+ * Hash: 0xB3B3359379FE77D3 | Since: unknown | API-Set: unknown
  */
 export function setRandomDensityMultiplierThisFrame(multiplier: number): void {
     SetRandomVehicleDensityMultiplierThisFrame(multiplier);
@@ -6807,7 +6804,7 @@ export function setRandomDensityMultiplierThisFrame(multiplier: number): void {
 /**
  * Lowers the vehicle's stance. Only works for vehicles that have strAdvancedFlags 0x8000 and 0x4000000 set.
  * 
- * Hash: 0x3A375167F5782A65 | Since: 2372 | API-Set: unknown
+ * Hash: 0x3A375167F5782A65 | Since: unknown | API-Set: unknown
  */
 export function setReducedSuspensionForce(vehicle: number | IVehicle, enable: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6817,7 +6814,7 @@ export function setReducedSuspensionForce(vehicle: number | IVehicle, enable: bo
 /**
  * Makes the train all jumbled up and derailed as it moves on the tracks (though that wont stop it from its normal operations)
  * 
- * Hash: 0x317B11A312DF5534 | Since: 323 | API-Set: unknown
+ * Hash: 0x317B11A312DF5534 | Since: unknown | API-Set: unknown
  */
 export function setRenderTrainAsDerailed(train: number | IVehicle, toggle: boolean): void {
     const _train = typeof train == 'object' ? train.handle() : train;
@@ -6827,7 +6824,7 @@ export function setRenderTrainAsDerailed(train: number | IVehicle, toggle: boole
 /**
  * No comment provided
  * 
- * Hash: 0x81E1552E35DC3839 | Since: 944 | API-Set: unknown
+ * Hash: 0x81E1552E35DC3839 | Since: unknown | API-Set: unknown
  */
 export function setRocketBoostActive(vehicle: number | IVehicle, active: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6837,7 +6834,7 @@ export function setRocketBoostActive(vehicle: number | IVehicle, active: boolean
 /**
  * No comment provided
  * 
- * Hash: 0xFEB2DDED3509562E | Since: 1103 | API-Set: unknown
+ * Hash: 0xFEB2DDED3509562E | Since: unknown | API-Set: unknown
  */
 export function setRocketBoostFill(vehicle: number | IVehicle, percentage: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6847,7 +6844,7 @@ export function setRocketBoostFill(vehicle: number | IVehicle, percentage: numbe
 /**
  * No comment provided
  * 
- * Hash: 0xEFC13B1CE30D755D | Since: 944 | API-Set: unknown
+ * Hash: 0xEFC13B1CE30D755D | Since: unknown | API-Set: unknown
  */
 export function setScriptRampImpulseScale(vehicle: number | IVehicle, impulseScale: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6857,7 +6854,7 @@ export function setScriptRampImpulseScale(vehicle: number | IVehicle, impulseSca
 /**
  * No comment provided
  * 
- * Hash: 0xE00F2AB100B76E89 | Since: 944 | API-Set: unknown
+ * Hash: 0xE00F2AB100B76E89 | Since: unknown | API-Set: unknown
  */
 export function setScriptRocketBoostRechargeTime(vehicle: number | IVehicle, seconds: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6867,7 +6864,7 @@ export function setScriptRocketBoostRechargeTime(vehicle: number | IVehicle, sec
 /**
  * Only called once in the decompiled scripts. Presumably activates the specified generator.
  * 
- * Hash: 0xD9D620E0AC6DC4B0 | Since: 323 | API-Set: unknown
+ * Hash: 0xD9D620E0AC6DC4B0 | Since: unknown | API-Set: unknown
  */
 export function setScriptGenerator(vehicleGenerator: number, enabled: boolean): void {
     SetScriptVehicleGenerator(vehicleGenerator, enabled);
@@ -6876,7 +6873,7 @@ export function setScriptGenerator(vehicleGenerator: number, enabled: boolean): 
 /**
  * Used on helicopters and blimps during the CTaskVehicleLand task. Sets a value on the task to 10f
  * 
- * Hash: 0x107A473D7A6647A9 | Since: 1290 | API-Set: unknown
+ * Hash: 0x107A473D7A6647A9 | Since: unknown | API-Set: unknown
  */
 export function setShortSlowdownForLanding(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6886,7 +6883,7 @@ export function setShortSlowdownForLanding(vehicle: number | IVehicle): void {
 /**
  * A vehicle recording playback flag only used in jewelry_heist
  * 
- * Hash: 0x063AE2B2CC273588 | Since: 323 | API-Set: unknown
+ * Hash: 0x063AE2B2CC273588 | Since: unknown | API-Set: unknown
  */
 export function setShouldLerpFromAiToFullRecording(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6896,7 +6893,7 @@ export function setShouldLerpFromAiToFullRecording(vehicle: number | IVehicle): 
 /**
  * Resets the vehicle's turret to its default position in scripted cameras. Doesn't seem to affect turrets that are occupied by a ped.
  * 
- * Hash: 0x78CEEE41F49F421F | Since: 1103 | API-Set: unknown
+ * Hash: 0x78CEEE41F49F421F | Since: unknown | API-Set: unknown
  */
 export function setShouldResetTurretInScriptedCameras(vehicle: number | IVehicle, shouldReset: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6906,7 +6903,7 @@ export function setShouldResetTurretInScriptedCameras(vehicle: number | IVehicle
 /**
  * Disables the screen effects and sound effects when driving over a slowdown pad.
  * 
- * Hash: 0x65B080555EA48149 | Since: 1011 | API-Set: unknown
+ * Hash: 0x65B080555EA48149 | Since: unknown | API-Set: unknown
  */
 export function setSlowDownEffectDisabled(disabled: boolean): void {
     Citizen.invokeNative('0x65B080555EA48149', disabled);
@@ -6915,7 +6912,7 @@ export function setSlowDownEffectDisabled(disabled: boolean): void {
 /**
  * It will override the ability to transform deluxo. For oppressor it will work just like SET_DISABLE_HOVER_MODE_FLIGHT
  * 
- * Hash: 0xF1211889DF15A763 | Since: 1290 | API-Set: unknown
+ * Hash: 0xF1211889DF15A763 | Since: unknown | API-Set: unknown
  */
 export function setSpecialFlightModeAllowed(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6933,7 +6930,7 @@ export function setSpecialFlightModeAllowed(vehicle: number | IVehicle, toggle: 
  * `VEHICLE::SET_SPECIAL_FLIGHT_MODE_RATIO(veh, 0.7f);`
  * `VEHICLE::SET_SPECIAL_FLIGHT_MODE_TARGET_RATIO(veh, 1.0f);`
  * 
- * Hash: 0xD138FA15C9776837 | Since: 1290 | API-Set: unknown
+ * Hash: 0xD138FA15C9776837 | Since: unknown | API-Set: unknown
  */
 export function setSpecialFlightModeRatio(vehicle: number | IVehicle, ratio: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6953,7 +6950,7 @@ export function setSpecialFlightModeRatio(vehicle: number | IVehicle, ratio: num
  * `VEHICLE::SET_SPECIAL_FLIGHT_MODE_RATIO(veh, 0.7f);`
  * `VEHICLE::SET_SPECIAL_FLIGHT_MODE_TARGET_RATIO(veh, 1.0f);`
  * 
- * Hash: 0x438B3D7CA026FE91 | Since: 1290 | API-Set: unknown
+ * Hash: 0x438B3D7CA026FE91 | Since: unknown | API-Set: unknown
  */
 export function setSpecialFlightModeTargetRatio(vehicle: number | IVehicle, targetRatio: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6963,7 +6960,7 @@ export function setSpecialFlightModeTargetRatio(vehicle: number | IVehicle, targ
 /**
  * Disables the screen effects and sound effects when driving over a speed boost pad.
  * 
- * Hash: 0x7BBE7FF626A591FE | Since: 877 | API-Set: unknown
+ * Hash: 0x7BBE7FF626A591FE | Since: unknown | API-Set: unknown
  */
 export function setSpeedBoostEffectDisabled(disabled: boolean): void {
     Citizen.invokeNative('0x7BBE7FF626A591FE', disabled);
@@ -6972,7 +6969,7 @@ export function setSpeedBoostEffectDisabled(disabled: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xC59872A5134879C7 | Since: 323 | API-Set: unknown
+ * Hash: 0xC59872A5134879C7 | Since: unknown | API-Set: unknown
  */
 export function setSubmarineCrushDepths(vehicle: number | IVehicle, depth1: number, depth2: number, depth3: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -6982,7 +6979,7 @@ export function setSubmarineCrushDepths(vehicle: number | IVehicle, depth1: numb
 /**
  * No comment provided
  * 
- * Hash: 0xB893215D8D4C015B | Since: 323 | API-Set: unknown
+ * Hash: 0xB893215D8D4C015B | Since: unknown | API-Set: unknown
  */
 export function setTaskGotoPlaneMinHeightAboveTerrain(plane: number | IVehicle, height: number): void {
     const _plane = typeof plane == 'object' ? plane.handle() : plane;
@@ -7001,7 +6998,7 @@ export function setTaskGotoPlaneMinHeightAboveTerrain(plane: number | IVehicle, 
  * `VEHICLE::SET_TAXI_LIGHTS(l_115, 1);`
  * }
  * 
- * Hash: 0x598803E85E8448D9 | Since: 323 | API-Set: unknown
+ * Hash: 0x598803E85E8448D9 | Since: unknown | API-Set: unknown
  */
 export function setTaxiLights(vehicle: number | IVehicle, state: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7011,7 +7008,7 @@ export function setTaxiLights(vehicle: number | IVehicle, state: boolean): void 
 /**
  * No comment provided
  * 
- * Hash: 0x2FA2494B47FDD009 | Since: 1103 | API-Set: unknown
+ * Hash: 0x2FA2494B47FDD009 | Since: unknown | API-Set: unknown
  */
 export function setTrailerAttachmentEnabled(): void {
     Citizen.invokeNative('0x2FA2494B47FDD009', undefined, undefined);
@@ -7020,7 +7017,7 @@ export function setTrailerAttachmentEnabled(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2A8F319B392E7B3F | Since: 323 | API-Set: unknown
+ * Hash: 0x2A8F319B392E7B3F | Since: unknown | API-Set: unknown
  */
 export function setTrailerInverseMassScale(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7030,7 +7027,7 @@ export function setTrailerInverseMassScale(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x878C75C09FBDB942 | Since: 1103 | API-Set: unknown
+ * Hash: 0x878C75C09FBDB942 | Since: unknown | API-Set: unknown
  */
 export function setTrailerLegsLowered(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7040,7 +7037,7 @@ export function setTrailerLegsLowered(vehicle: number | IVehicle): void {
 /**
  * in the decompiled scripts, seems to be always called on the vehicle right after being attached to a trailer.
  * 
- * Hash: 0x95CF53B3D687F9FA | Since: 323 | API-Set: unknown
+ * Hash: 0x95CF53B3D687F9FA | Since: unknown | API-Set: unknown
  */
 export function setTrailerLegsRaised(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7050,7 +7047,7 @@ export function setTrailerLegsRaised(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x16469284DB8C62B5 | Since: 323 | API-Set: unknown
+ * Hash: 0x16469284DB8C62B5 | Since: unknown | API-Set: unknown
  */
 export function setTrainCruiseSpeed(train: number | IVehicle, speed: number): void {
     const _train = typeof train == 'object' ? train.handle() : train;
@@ -7060,7 +7057,7 @@ export function setTrainCruiseSpeed(train: number | IVehicle, speed: number): vo
 /**
  * No comment provided
  * 
- * Hash: 0xAA0BC91BE0B796E3 | Since: 323 | API-Set: unknown
+ * Hash: 0xAA0BC91BE0B796E3 | Since: unknown | API-Set: unknown
  */
 export function setTrainSpeed(train: number | IVehicle, speed: number): void {
     const _train = typeof train == 'object' ? train.handle() : train;
@@ -7073,7 +7070,7 @@ export function setTrainSpeed(train: number | IVehicle, speed: number): void {
  * trackIndex: 0 - 26
  * Full list of all train tracks + track nodes by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/traintracks.json
  * 
- * Hash: 0x21973BBF8D17EDFA | Since: 323 | API-Set: unknown
+ * Hash: 0x21973BBF8D17EDFA | Since: unknown | API-Set: unknown
  */
 export function setTrainTrackSpawnFrequency(trackIndex: number, frequency: number): void {
     SetTrainTrackSpawnFrequency(trackIndex, frequency);
@@ -7082,7 +7079,7 @@ export function setTrainTrackSpawnFrequency(trackIndex: number, frequency: numbe
 /**
  * Affects the playback speed of the submarine car conversion animations. Does not affect hardcoded animations such as the wheels being retracted.
  * 
- * Hash: 0x498218259FB7C72D | Since: 1365 | API-Set: unknown
+ * Hash: 0x498218259FB7C72D | Since: unknown | API-Set: unknown
  */
 export function setTransformRateForAnimation(vehicle: number | IVehicle, transformRate: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7092,7 +7089,7 @@ export function setTransformRateForAnimation(vehicle: number | IVehicle, transfo
 /**
  * When set to true, the key to transform a car to submarine mode changes from raise/lower convertible roof (hold H by default) to special vehicle transform (press X by default.)
  * 
- * Hash: 0x41B9FB92EDED32A6 | Since: 1365 | API-Set: unknown
+ * Hash: 0x41B9FB92EDED32A6 | Since: unknown | API-Set: unknown
  */
 export function setTransformToSubmarineUsesAlternateInput(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7102,7 +7099,7 @@ export function setTransformToSubmarineUsesAlternateInput(vehicle: number | IVeh
 /**
  * Toggles specific flag on turret
  * 
- * Hash: 0xC60060EB0D8AC7B1 | Since: 1290 | API-Set: unknown
+ * Hash: 0xC60060EB0D8AC7B1 | Since: unknown | API-Set: unknown
  */
 export function setTurretHidden(vehicle: number | IVehicle, index: number, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7120,7 +7117,7 @@ export function setTurretHidden(vehicle: number | IVehicle, index: number, toggl
  * 4: wheel_lr
  * 5: wheel_rr
  * 
- * Hash: 0x74C68EF97645E79D | Since: 1868 | API-Set: unknown
+ * Hash: 0x74C68EF97645E79D | Since: unknown | API-Set: unknown
  */
 export function setTyreHealth(vehicle: number | IVehicle, wheelIndex: number, health: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7143,7 +7140,7 @@ export function setTyreHealth(vehicle: number | IVehicle, wheelIndex: number, he
  * 4: wheel_lr
  * 5: wheel_rr
  * 
- * Hash: 0xC970D0E0FC31D768 | Since: 2060 | API-Set: unknown
+ * Hash: 0xC970D0E0FC31D768 | Since: unknown | API-Set: unknown
  */
 export function setTyreMaximumGripDifferenceDueToWearRate(vehicle: number | IVehicle, wheelIndex: number, multiplier: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7162,7 +7159,7 @@ export function setTyreMaximumGripDifferenceDueToWearRate(vehicle: number | IVeh
  * 4: wheel_lr
  * 5: wheel_rr
  * 
- * Hash: 0x01894E2EDE923CA2 | Since: 1868 | API-Set: unknown
+ * Hash: 0x01894E2EDE923CA2 | Since: unknown | API-Set: unknown
  */
 export function setTyreWearRate(vehicle: number | IVehicle, wheelIndex: number, multiplier: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7185,7 +7182,7 @@ export function setTyreWearRate(vehicle: number | IVehicle, wheelIndex: number, 
  * 4: wheel_lr
  * 5: wheel_rr
  * 
- * Hash: 0x392183BB9EA57697 | Since: 2060 | API-Set: unknown
+ * Hash: 0x392183BB9EA57697 | Since: unknown | API-Set: unknown
  */
 export function setTyreWearRateScale(vehicle: number | IVehicle, wheelIndex: number, multiplier: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7195,7 +7192,7 @@ export function setTyreWearRateScale(vehicle: number | IVehicle, wheelIndex: num
 /**
  * No comment provided
  * 
- * Hash: 0xB68CFAF83A02768D | Since: 1290 | API-Set: unknown
+ * Hash: 0xB68CFAF83A02768D | Since: unknown | API-Set: unknown
  */
 export function setUseDesiredZCruiseSpeedForLanding(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7205,7 +7202,7 @@ export function setUseDesiredZCruiseSpeedForLanding(vehicle: number | IVehicle, 
 /**
  * Changes the car jump control to require a double-tap to activate.
  * 
- * Hash: 0x5BBCF35BF6E456F7 | Since: 1604 | API-Set: unknown
+ * Hash: 0x5BBCF35BF6E456F7 | Since: unknown | API-Set: unknown
  */
 export function setUseDoubleClickForCarJump(toggle: boolean): void {
     Citizen.invokeNative('0x5BBCF35BF6E456F7', toggle);
@@ -7214,7 +7211,7 @@ export function setUseDoubleClickForCarJump(toggle: boolean): void {
 /**
  * Allows vehicles with the FLAG_JUMPING_CAR flag to jump higher (i.e. Ruiner 2000).
  * 
- * Hash: 0xF06A16CA55D138D8 | Since: 944 | API-Set: unknown
+ * Hash: 0xF06A16CA55D138D8 | Since: unknown | API-Set: unknown
  */
 export function setUseHigherCarJump(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7224,7 +7221,7 @@ export function setUseHigherCarJump(vehicle: number | IVehicle, toggle: boolean)
 /**
  * No comment provided
  * 
- * Hash: 0xDFFCEF48E511DB48 | Since: 323 | API-Set: unknown
+ * Hash: 0xDFFCEF48E511DB48 | Since: unknown | API-Set: unknown
  */
 export function setActiveDuringPlayback(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7234,7 +7231,7 @@ export function setActiveDuringPlayback(vehicle: number | IVehicle, toggle: bool
 /**
  * No comment provided
  * 
- * Hash: 0x21115BCD6E44656A | Since: 323 | API-Set: unknown
+ * Hash: 0x21115BCD6E44656A | Since: unknown | API-Set: unknown
  */
 export function setActiveForPedNavigation(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7244,7 +7241,7 @@ export function setActiveForPedNavigation(vehicle: number | IVehicle, toggle: bo
 /**
  * No comment provided
  * 
- * Hash: 0x9BECD4B9FEF3F8A6 | Since: 323 | API-Set: unknown
+ * Hash: 0x9BECD4B9FEF3F8A6 | Since: unknown | API-Set: unknown
  */
 export function setActAsIfHasSirenOn(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7254,7 +7251,7 @@ export function setActAsIfHasSirenOn(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x1F9FB66F3A3842D2 | Since: 323 | API-Set: unknown
+ * Hash: 0x1F9FB66F3A3842D2 | Since: unknown | API-Set: unknown
  */
 export function setActAsIfHighSpeedForFragSmashing(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7265,7 +7262,7 @@ export function setActAsIfHighSpeedForFragSmashing(vehicle: number | IVehicle): 
  * Used to be incorrectly named SET_VEHICLE_EXCLUSIVE_DRIVER
  * Toggles a flag related to SET_VEHICLE_EXCLUSIVE_DRIVER, however, doesn't enable that feature (or trigger script events related to it).
  * 
- * Hash: 0x41062318F23ED854 | Since: 323 | API-Set: unknown
+ * Hash: 0x41062318F23ED854 | Since: unknown | API-Set: unknown
  */
 export function setAiCanUseExclusiveSeats(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7275,7 +7272,7 @@ export function setAiCanUseExclusiveSeats(vehicle: number | IVehicle, toggle: bo
 /**
  * No comment provided
  * 
- * Hash: 0xCDE5E70C1DDB954C | Since: 323 | API-Set: unknown
+ * Hash: 0xCDE5E70C1DDB954C | Since: unknown | API-Set: unknown
  */
 export function setAlarm(vehicle: number | IVehicle, state: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7285,7 +7282,7 @@ export function setAlarm(vehicle: number | IVehicle, state: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x7D6F9A3EF26136A0 | Since: 323 | API-Set: unknown
+ * Hash: 0x7D6F9A3EF26136A0 | Since: unknown | API-Set: unknown
  */
 export function setAllowHomingMissleLockon(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7295,7 +7292,7 @@ export function setAllowHomingMissleLockon(vehicle: number | IVehicle, toggle: b
 /**
  * No comment provided
  * 
- * Hash: 0x1DDA078D12879EEE | Since: 463 | API-Set: unknown
+ * Hash: 0x1DDA078D12879EEE | Since: unknown | API-Set: unknown
  */
 export function setAllowHomingMissleLockonSynced(vehicle: number | IVehicle, canBeLockedOn: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7305,7 +7302,7 @@ export function setAllowHomingMissleLockonSynced(vehicle: number | IVehicle, can
 /**
  * Makes the vehicle accept no passengers.
  * 
- * Hash: 0x5D14D4154BFE7B2C | Since: 323 | API-Set: unknown
+ * Hash: 0x5D14D4154BFE7B2C | Since: unknown | API-Set: unknown
  */
 export function setAllowNoPassengersLockon(veh: number | IVehicle, toggle: boolean): void {
     const _veh = typeof veh == 'object' ? veh.handle() : veh;
@@ -7315,7 +7312,7 @@ export function setAllowNoPassengersLockon(veh: number | IVehicle, toggle: boole
 /**
  * No comment provided
  * 
- * Hash: 0x8BA6F76BC53A1493 | Since: 323 | API-Set: unknown
+ * Hash: 0x8BA6F76BC53A1493 | Since: unknown | API-Set: unknown
  */
 export function setAutomaticallyAttaches(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7325,7 +7322,7 @@ export function setAutomaticallyAttaches(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0xD3301660A57C9272 | Since: 757 | API-Set: unknown
+ * Hash: 0xD3301660A57C9272 | Since: unknown | API-Set: unknown
  */
 export function setAvoidPlayerVehicleRiotVanMission(): void {
     Citizen.invokeNative('0xD3301660A57C9272', undefined);
@@ -7334,7 +7331,7 @@ export function setAvoidPlayerVehicleRiotVanMission(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x9F3F689B814F2599 | Since: 323 | API-Set: unknown
+ * Hash: 0x9F3F689B814F2599 | Since: unknown | API-Set: unknown
  */
 export function setBlipThrottleRandomly(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7346,7 +7343,7 @@ export function setBlipThrottleRandomly(vehicle: number | IVehicle): void {
  * 
  * p2 is probably z, but changing that value didn't seem to have a noticeable effect.
  * 
- * Hash: 0x870B8B7A766615C8 | Since: 505 | API-Set: unknown
+ * Hash: 0x870B8B7A766615C8 | Since: unknown | API-Set: unknown
  */
 export function setBobbleheadVelocity(x: number, y: number): void {
     Citizen.invokeNative('0x870B8B7A766615C8', x, y, 0);
@@ -7355,7 +7352,7 @@ export function setBobbleheadVelocity(x: number, y: number): void {
 /**
  * p2 often set to 1000.0 in the decompiled scripts.
  * 
- * Hash: 0xB77D05AC8C78AADB | Since: 323 | API-Set: unknown
+ * Hash: 0xB77D05AC8C78AADB | Since: unknown | API-Set: unknown
  */
 export function setBodyHealth(vehicle: number | IVehicle, value: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7365,7 +7362,7 @@ export function setBodyHealth(vehicle: number | IVehicle, value: number): void {
 /**
  * Sets the amount of bombs that this vehicle has. As far as I know, this does _not_ impact vehicle weapons or the ammo of those weapons in any way, it is just a way to keep track of the amount of bombs in a specific plane.
  * 
- * Hash: 0xF4B2ED59DEB5D774 | Since: 1180 | API-Set: unknown
+ * Hash: 0xF4B2ED59DEB5D774 | Since: unknown | API-Set: unknown
  */
 export function setBombAmmo(vehicle: number | IVehicle, bombCount: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7375,7 +7372,7 @@ export function setBombAmmo(vehicle: number | IVehicle, bombCount: number): void
 /**
  * No comment provided
  * 
- * Hash: 0xE4E2FD323574965C | Since: 757 | API-Set: unknown
+ * Hash: 0xE4E2FD323574965C | Since: unknown | API-Set: unknown
  */
 export function setBrake(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7385,7 +7382,7 @@ export function setBrake(vehicle: number | IVehicle, toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x92B35082E0B42F66 | Since: 323 | API-Set: unknown
+ * Hash: 0x92B35082E0B42F66 | Since: unknown | API-Set: unknown
  */
 export function setBrakeLights(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7395,7 +7392,7 @@ export function setBrakeLights(vehicle: number | IVehicle, toggle: boolean): voi
 /**
  * No comment provided
  * 
- * Hash: 0xC361AA040D6637A8 | Since: 323 | API-Set: unknown
+ * Hash: 0xC361AA040D6637A8 | Since: unknown | API-Set: unknown
  */
 export function setBrokenPartsDontAffectAiHandling(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7405,7 +7402,7 @@ export function setBrokenPartsDontAffectAiHandling(vehicle: number | IVehicle): 
 /**
  * Sets the arm position of a bulldozer. Position must be a value between 0.0 and 1.0. Ignored when `p2` is set to false, instead incrementing arm position by 0.1 (or 10%).
  * 
- * Hash: 0xF8EBCCC96ADB9FB7 | Since: 323 | API-Set: unknown
+ * Hash: 0xF8EBCCC96ADB9FB7 | Since: unknown | API-Set: unknown
  */
 export function setBulldozerArmPosition(vehicle: number | IVehicle, position: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7415,7 +7412,7 @@ export function setBulldozerArmPosition(vehicle: number | IVehicle, position: nu
 /**
  * On accelerating, spins the driven wheels with the others braked, so you don't go anywhere.
  * 
- * Hash: 0xFB8794444A7D60FB | Since: 323 | API-Set: unknown
+ * Hash: 0xFB8794444A7D60FB | Since: unknown | API-Set: unknown
  */
 export function setBurnout(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7425,7 +7422,7 @@ export function setBurnout(vehicle: number | IVehicle, toggle: boolean): void {
 /**
  * This has not yet been tested - it's just an assumption of what the types could be.
  * 
- * Hash: 0x3750146A28097A82 | Since: 323 | API-Set: unknown
+ * Hash: 0x3750146A28097A82 | Since: unknown | API-Set: unknown
  */
 export function setCanBeTargetted(vehicle: number | IVehicle, state: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7435,7 +7432,7 @@ export function setCanBeTargetted(vehicle: number | IVehicle, state: boolean): v
 /**
  * No comment provided
  * 
- * Hash: 0x300504B23BD3B711 | Since: 323 | API-Set: unknown
+ * Hash: 0x300504B23BD3B711 | Since: unknown | API-Set: unknown
  */
 export function setCanBeUsedByFleeingPeds(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7445,7 +7442,7 @@ export function setCanBeUsedByFleeingPeds(vehicle: number | IVehicle, toggle: bo
 /**
  * No comment provided
  * 
- * Hash: 0x4C7028F78FFD3681 | Since: 323 | API-Set: unknown
+ * Hash: 0x4C7028F78FFD3681 | Since: unknown | API-Set: unknown
  */
 export function setCanBeVisiblyDamaged(vehicle: number | IVehicle, state: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7455,7 +7452,7 @@ export function setCanBeVisiblyDamaged(vehicle: number | IVehicle, state: boolea
 /**
  * No comment provided
  * 
- * Hash: 0x59BF8C3D52C92F66 | Since: 323 | API-Set: unknown
+ * Hash: 0x59BF8C3D52C92F66 | Since: unknown | API-Set: unknown
  */
 export function setCanBreak(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7465,7 +7462,7 @@ export function setCanBreak(vehicle: number | IVehicle, toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x0CDDA42F9E360CA6 | Since: 323 | API-Set: unknown
+ * Hash: 0x0CDDA42F9E360CA6 | Since: unknown | API-Set: unknown
  */
 export function setCanDeformWheels(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7475,7 +7472,7 @@ export function setCanDeformWheels(vehicle: number | IVehicle, toggle: boolean):
 /**
  * No comment provided
  * 
- * Hash: 0x065D03A9D6B2C6B5 | Since: 463 | API-Set: unknown
+ * Hash: 0x065D03A9D6B2C6B5 | Since: unknown | API-Set: unknown
  */
 export function setCanEjectPassengersIfLocked(): void {
     Citizen.invokeNative('0x065D03A9D6B2C6B5', undefined, undefined);
@@ -7484,7 +7481,7 @@ export function setCanEjectPassengersIfLocked(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x206BC5DC9D1AC70A | Since: 323 | API-Set: unknown
+ * Hash: 0x206BC5DC9D1AC70A | Since: unknown | API-Set: unknown
  */
 export function setCanEngineMissfire(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7494,7 +7491,7 @@ export function setCanEngineMissfire(vehicle: number | IVehicle, toggle: boolean
 /**
  * No comment provided
  * 
- * Hash: 0x51BB2D88D31A914B | Since: 323 | API-Set: unknown
+ * Hash: 0x51BB2D88D31A914B | Since: unknown | API-Set: unknown
  */
 export function setCanLeakOil(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7504,7 +7501,7 @@ export function setCanLeakOil(vehicle: number | IVehicle, toggle: boolean): void
 /**
  * No comment provided
  * 
- * Hash: 0x192547247864DFDD | Since: 323 | API-Set: unknown
+ * Hash: 0x192547247864DFDD | Since: unknown | API-Set: unknown
  */
 export function setCanLeakPetrol(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7514,7 +7511,7 @@ export function setCanLeakPetrol(vehicle: number | IVehicle, toggle: boolean): v
 /**
  * No comment provided
  * 
- * Hash: 0x428BACCDF5E26EAD | Since: 323 | API-Set: unknown
+ * Hash: 0x428BACCDF5E26EAD | Since: unknown | API-Set: unknown
  */
 export function setCanSaveInGarage(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7524,7 +7521,7 @@ export function setCanSaveInGarage(vehicle: number | IVehicle, toggle: boolean):
 /**
  * No comment provided
  * 
- * Hash: 0x9849DE24FCF23CCC | Since: 1604 | API-Set: unknown
+ * Hash: 0x9849DE24FCF23CCC | Since: unknown | API-Set: unknown
  */
 export function setCausesSwerving(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7534,7 +7531,7 @@ export function setCausesSwerving(vehicle: number | IVehicle, toggle: boolean): 
 /**
  * No comment provided
  * 
- * Hash: 0xA46413066687A328 | Since: 323 | API-Set: unknown
+ * Hash: 0xA46413066687A328 | Since: unknown | API-Set: unknown
  */
 export function setCeilingHeight(vehicle: number | IVehicle, height: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7552,7 +7549,7 @@ export function setCeilingHeight(vehicle: number | IVehicle, height: number): vo
  * 
  * This needs to be called every frame to take effect.
  * 
- * Hash: 0xB59E4BD37AE292DB | Since: 323 | API-Set: unknown
+ * Hash: 0xB59E4BD37AE292DB | Since: unknown | API-Set: unknown
  */
 export function setCheatPowerIncrease(vehicle: number | IVehicle, value: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7567,7 +7564,7 @@ export function setCheatPowerIncrease(vehicle: number | IVehicle, value: number)
  * 
  * Full list of vehicle colors by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicleColors.json
  * 
- * Hash: 0x4F1D4BE3A7F24601 | Since: 323 | API-Set: unknown
+ * Hash: 0x4F1D4BE3A7F24601 | Since: unknown | API-Set: unknown
  */
 export function setColours(vehicle: number | IVehicle, colorPrimary: number, colorSecondary: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7577,7 +7574,7 @@ export function setColours(vehicle: number | IVehicle, colorPrimary: number, col
 /**
  * Sets the selected vehicle's colors to the specified index of the color combination found in the vehicle's carvariations.meta entry.
  * 
- * Hash: 0x33E8CD3322E2FE31 | Since: 323 | API-Set: unknown
+ * Hash: 0x33E8CD3322E2FE31 | Since: unknown | API-Set: unknown
  */
 export function setColourCombination(vehicle: number | IVehicle, colorCombination: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7587,7 +7584,7 @@ export function setColourCombination(vehicle: number | IVehicle, colorCombinatio
 /**
  * Does nothing. It's a nullsub.
  * 
- * Hash: 0x36DE109527A2C0C4 | Since: 1604 | API-Set: unknown
+ * Hash: 0x36DE109527A2C0C4 | Since: unknown | API-Set: unknown
  */
 export function setCombatMode(toggle: boolean): void {
     Citizen.invokeNative('0x36DE109527A2C0C4', toggle);
@@ -7597,7 +7594,7 @@ export function setCombatMode(toggle: boolean): void {
  * Similar to SET_VEHICLE_BOMB_AMMO, this sets the amount of countermeasures that are present on this vehicle.
  * Use GET_VEHICLE_BOMB_AMMO to get the current amount.
  * 
- * Hash: 0x9BDA23BF666F0855 | Since: 1180 | API-Set: unknown
+ * Hash: 0x9BDA23BF666F0855 | Since: unknown | API-Set: unknown
  */
 export function setCountermeasureAmmo(vehicle: number | IVehicle, counterMeasureCount: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7607,7 +7604,7 @@ export function setCountermeasureAmmo(vehicle: number | IVehicle, counterMeasure
 /**
  * No comment provided
  * 
- * Hash: 0x182F266C2D9E2BEB | Since: 323 | API-Set: unknown
+ * Hash: 0x182F266C2D9E2BEB | Since: unknown | API-Set: unknown
  */
 export function setCustomPathNodeStreamingRadius(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7617,7 +7614,7 @@ export function setCustomPathNodeStreamingRadius(vehicle: number | IVehicle): vo
 /**
  * p1, p2, p3 are RGB values for color (255,0,0 for Red, ect)
  * 
- * Hash: 0x7141766F91D15BEA | Since: 323 | API-Set: unknown
+ * Hash: 0x7141766F91D15BEA | Since: unknown | API-Set: unknown
  */
 export function setCustomPrimaryColour(vehicle: number | IVehicle, r: number, g: number, b: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7627,7 +7624,7 @@ export function setCustomPrimaryColour(vehicle: number | IVehicle, r: number, g:
 /**
  * p1, p2, p3 are RGB values for color (255,0,0 for Red, ect)
  * 
- * Hash: 0x36CED73BFED89754 | Since: 323 | API-Set: unknown
+ * Hash: 0x36CED73BFED89754 | Since: unknown | API-Set: unknown
  */
 export function setCustomSecondaryColour(vehicle: number | IVehicle, r: number, g: number, b: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7640,7 +7637,7 @@ export function setCustomSecondaryColour(vehicle: number | IVehicle, r: number, 
  * Radius of effect damage applied in a sphere at impact location
  * When `focusOnModel` set to `true`, the damage sphere will travel towards the vehicle from the given point, thus guaranteeing an impact
  * 
- * Hash: 0xA1DD317EA8FD4F29 | Since: 323 | API-Set: unknown
+ * Hash: 0xA1DD317EA8FD4F29 | Since: unknown | API-Set: unknown
  */
 export function setDamage(vehicle: number | IVehicle, xOffset: number, yOffset: number, zOffset: number, damage: number, radius: number, focusOnModel: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7650,7 +7647,7 @@ export function setDamage(vehicle: number | IVehicle, xOffset: number, yOffset: 
 /**
  * No comment provided
  * 
- * Hash: 0x4E20D2A627011E8E | Since: 757 | API-Set: unknown
+ * Hash: 0x4E20D2A627011E8E | Since: unknown | API-Set: unknown
  */
 export function setDamageScale(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7660,7 +7657,7 @@ export function setDamageScale(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x9640E30A7F395E4B | Since: 1290 | API-Set: unknown
+ * Hash: 0x9640E30A7F395E4B | Since: unknown | API-Set: unknown
  */
 export function setDamageScales(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7670,7 +7667,7 @@ export function setDamageScales(vehicle: number | IVehicle): void {
 /**
  * This fixes the deformation of a vehicle but the vehicle health doesn't improve
  * 
- * Hash: 0x953DA1E1B12C0491 | Since: 323 | API-Set: unknown
+ * Hash: 0x953DA1E1B12C0491 | Since: unknown | API-Set: unknown
  */
 export function setDeformationFixed(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7683,7 +7680,7 @@ export function setDeformationFixed(vehicle: number | IVehicle): void {
  * - `0.0` = no vehicles on streets
  * - `1.0` = normal vehicles on streets
  * 
- * Hash: 0x245A6883D966D537 | Since: 323 | API-Set: unknown
+ * Hash: 0x245A6883D966D537 | Since: unknown | API-Set: unknown
  */
 export function setDensityMultiplierThisFrame(multiplier: number): void {
     SetVehicleDensityMultiplierThisFrame(multiplier);
@@ -7692,7 +7689,7 @@ export function setDensityMultiplierThisFrame(multiplier: number): void {
 /**
  * Does nothing. It's a nullsub.
  * 
- * Hash: 0x82E0AC411E41A5B4 | Since: 1604 | API-Set: unknown
+ * Hash: 0x82E0AC411E41A5B4 | Since: unknown | API-Set: unknown
  */
 export function setDetonationMode(toggle: boolean): void {
     Citizen.invokeNative('0x82E0AC411E41A5B4', toggle);
@@ -7702,7 +7699,7 @@ export function setDetonationMode(toggle: boolean): void {
  * You can't use values greater than 15.0
  * Also, R* does (float)(rand() % 15) to get a random dirt level when generating a vehicle.
  * 
- * Hash: 0x79D3B596FE44EE8B | Since: 323 | API-Set: unknown
+ * Hash: 0x79D3B596FE44EE8B | Since: unknown | API-Set: unknown
  */
 export function setDirtLevel(vehicle: number | IVehicle, dirtLevel: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7712,7 +7709,7 @@ export function setDirtLevel(vehicle: number | IVehicle, dirtLevel: number): voi
 /**
  * No comment provided
  * 
- * Hash: 0xAF60E6A2936F982A | Since: 1103 | API-Set: unknown
+ * Hash: 0xAF60E6A2936F982A | Since: unknown | API-Set: unknown
  */
 export function setDisableCollisionUponCreation(vehicle: number | IVehicle, disable: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7722,7 +7719,7 @@ export function setDisableCollisionUponCreation(vehicle: number | IVehicle, disa
 /**
  * No comment provided
  * 
- * Hash: 0x8AA9180DE2FEDD45 | Since: 323 | API-Set: unknown
+ * Hash: 0x8AA9180DE2FEDD45 | Since: unknown | API-Set: unknown
  */
 export function setDisableHeightMapAvoidance(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7732,7 +7729,7 @@ export function setDisableHeightMapAvoidance(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2B6747FAA9DB9D6B | Since: 323 | API-Set: unknown
+ * Hash: 0x2B6747FAA9DB9D6B | Since: unknown | API-Set: unknown
  */
 export function setDisableTowing(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7742,7 +7739,7 @@ export function setDisableTowing(vehicle: number | IVehicle, toggle: boolean): v
 /**
  * No comment provided
  * 
- * Hash: 0x76D26A22750E849E | Since: 1103 | API-Set: unknown
+ * Hash: 0x76D26A22750E849E | Since: unknown | API-Set: unknown
  */
 export function setDontTerminateTaskWhenAchieved(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7765,7 +7762,7 @@ export function setDontTerminateTaskWhenAchieved(vehicle: number | IVehicle): vo
  * VEHICLELOCK_CANNOT_ENTER
  * };
  * 
- * Hash: 0xB664292EAECF7FA6 | Since: 323 | API-Set: unknown
+ * Hash: 0xB664292EAECF7FA6 | Since: unknown | API-Set: unknown
  */
 export function setDoorsLocked(vehicle: number | IVehicle, doorLockStatus: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7780,7 +7777,7 @@ export function setDoorsLocked(vehicle: number | IVehicle, doorLockStatus: numbe
  * ...
  * `VEHICLE::SET_VEHICLE_DOORS_LOCKED_FOR_ALL_PLAYERS(l_11A1, 1);`
  * 
- * Hash: 0xA2F80B8D040727CC | Since: 323 | API-Set: unknown
+ * Hash: 0xA2F80B8D040727CC | Since: unknown | API-Set: unknown
  */
 export function setDoorsLockedForAllPlayers(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7790,7 +7787,7 @@ export function setDoorsLockedForAllPlayers(vehicle: number | IVehicle, toggle: 
 /**
  * No comment provided
  * 
- * Hash: 0x203B527D1B77904C | Since: 1365 | API-Set: unknown
+ * Hash: 0x203B527D1B77904C | Since: unknown | API-Set: unknown
  */
 export function setDoorsLockedForAllTeams(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7800,7 +7797,7 @@ export function setDoorsLockedForAllTeams(vehicle: number | IVehicle, toggle: bo
 /**
  * No comment provided
  * 
- * Hash: 0x9737A37136F07E75 | Since: 323 | API-Set: unknown
+ * Hash: 0x9737A37136F07E75 | Since: unknown | API-Set: unknown
  */
 export function setDoorsLockedForNonScriptPlayers(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7810,7 +7807,7 @@ export function setDoorsLockedForNonScriptPlayers(vehicle: number | IVehicle, to
 /**
  * No comment provided
  * 
- * Hash: 0x517AAF684BB50CD1 | Since: 323 | API-Set: unknown
+ * Hash: 0x517AAF684BB50CD1 | Since: unknown | API-Set: unknown
  */
 export function setDoorsLockedForPlayer(vehicle: number | IVehicle, player: number | string | IPlayer, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7821,7 +7818,7 @@ export function setDoorsLockedForPlayer(vehicle: number | IVehicle, player: numb
 /**
  * No comment provided
  * 
- * Hash: 0xB81F6D4A8F5EEBA8 | Since: 323 | API-Set: unknown
+ * Hash: 0xB81F6D4A8F5EEBA8 | Since: unknown | API-Set: unknown
  */
 export function setDoorsLockedForTeam(vehicle: number | IVehicle, team: number, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7831,7 +7828,7 @@ export function setDoorsLockedForTeam(vehicle: number | IVehicle, team: number, 
 /**
  * Closes all doors of a vehicle:
  * 
- * Hash: 0x781B3D62BB013EF5 | Since: 323 | API-Set: unknown
+ * Hash: 0x781B3D62BB013EF5 | Since: unknown | API-Set: unknown
  */
 export function setDoorsShut(vehicle: number | IVehicle, closeInstantly: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7843,7 +7840,7 @@ export function setDoorsShut(vehicle: number | IVehicle, closeInstantly: boolean
  * 
  * Usually used alongside other vehicle door natives.
  * 
- * Hash: 0x3B458DDB57038F08 | Since: 877 | API-Set: unknown
+ * Hash: 0x3B458DDB57038F08 | Since: unknown | API-Set: unknown
  */
 export function setDoorAutoLock(vehicle: number | IVehicle, doorId: number, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7853,7 +7850,7 @@ export function setDoorAutoLock(vehicle: number | IVehicle, doorId: number, togg
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  * 
- * Hash: 0xD4D4F6A4AB575A33 | Since: 323 | API-Set: unknown
+ * Hash: 0xD4D4F6A4AB575A33 | Since: unknown | API-Set: unknown
  */
 export function setDoorBroken(vehicle: number | IVehicle, doorId: number, deleteDoor: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7863,7 +7860,7 @@ export function setDoorBroken(vehicle: number | IVehicle, doorId: number, delete
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  * 
- * Hash: 0xF2BFA0430F0A0FCB | Since: 323 | API-Set: unknown
+ * Hash: 0xF2BFA0430F0A0FCB | Since: unknown | API-Set: unknown
  */
 export function setDoorControl(vehicle: number | IVehicle, doorId: number, speed: number, angle: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7873,7 +7870,7 @@ export function setDoorControl(vehicle: number | IVehicle, doorId: number, speed
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  * 
- * Hash: 0xA5A9653A8D2CAF48 | Since: 323 | API-Set: unknown
+ * Hash: 0xA5A9653A8D2CAF48 | Since: unknown | API-Set: unknown
  */
 export function setDoorLatched(vehicle: number | IVehicle, doorId: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7883,7 +7880,7 @@ export function setDoorLatched(vehicle: number | IVehicle, doorId: number): void
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  * 
- * Hash: 0x7C65DAC73C35C862 | Since: 323 | API-Set: unknown
+ * Hash: 0x7C65DAC73C35C862 | Since: unknown | API-Set: unknown
  */
 export function setDoorOpen(vehicle: number | IVehicle, doorId: number, loose: boolean, openInstantly: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7902,7 +7899,7 @@ export function setDoorOpen(vehicle: number | IVehicle, doorId: number, loose: b
  * VEH_EXT_BOOT
  * };
  * 
- * Hash: 0x93D9BD300D7789E5 | Since: 323 | API-Set: unknown
+ * Hash: 0x93D9BD300D7789E5 | Since: unknown | API-Set: unknown
  */
 export function setDoorShut(vehicle: number | IVehicle, doorId: number, closeInstantly: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7915,7 +7912,7 @@ export function setDoorShut(vehicle: number | IVehicle, doorId: number, closeIns
  * youtu.be/3arlUxzHl5Y
  * i.imgur.com/WrNpYFs.jpg
  * 
- * Hash: 0x068F64F2470F9656 | Since: 323 | API-Set: unknown
+ * Hash: 0x068F64F2470F9656 | Since: unknown | API-Set: unknown
  */
 export function setDropsMoneyWhenBlownUp(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7925,7 +7922,7 @@ export function setDropsMoneyWhenBlownUp(vehicle: number | IVehicle, toggle: boo
 /**
  * No comment provided
  * 
- * Hash: 0x983765856F2564F9 | Since: 323 | API-Set: unknown
+ * Hash: 0x983765856F2564F9 | Since: unknown | API-Set: unknown
  */
 export function setEngineCanDegrade(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7943,7 +7940,7 @@ export function setEngineCanDegrade(vehicle: number | IVehicle, toggle: boolean)
  * 300: Engine is smoking and losing functionality
  * 1000: Engine is perfect
  * 
- * Hash: 0x45F6D8EEF34ABEF1 | Since: 323 | API-Set: unknown
+ * Hash: 0x45F6D8EEF34ABEF1 | Since: unknown | API-Set: unknown
  */
 export function setEngineHealth(vehicle: number | IVehicle, health: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7958,7 +7955,7 @@ export function setEngineHealth(vehicle: number | IVehicle, health: number): voi
  * instantly: if true, the vehicle will be set to the state immediately; otherwise, the current driver will physically turn on or off the engine.
  * disableAutoStart: If true, the system will prevent the engine from starting when the player got into it.
  * 
- * Hash: 0x2497C4717C8B881E | Since: 323 | API-Set: unknown
+ * Hash: 0x2497C4717C8B881E | Since: unknown | API-Set: unknown
  */
 export function setEngineOn(vehicle: number | IVehicle, value: boolean, instantly: boolean, disableAutoStart: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7968,7 +7965,7 @@ export function setEngineOn(vehicle: number | IVehicle, value: boolean, instantl
 /**
  * The parameter fade is a value from 0-1, where 0 is fresh paint.
  * 
- * Hash: 0x3AFDC536C3D01674 | Since: 323 | API-Set: unknown
+ * Hash: 0x3AFDC536C3D01674 | Since: unknown | API-Set: unknown
  */
 export function setEnveffScale(vehicle: number | IVehicle, fade: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7980,7 +7977,7 @@ export function setEnveffScale(vehicle: number | IVehicle, fade: number): void {
  * 
  * Used to be incorrectly named _SET_VEHICLE_EXCLUSIVE_DRIVER_2
  * 
- * Hash: 0xB5C51B5502E85E83 | Since: 323 | API-Set: unknown
+ * Hash: 0xB5C51B5502E85E83 | Since: unknown | API-Set: unknown
  */
 export function setExclusiveDriver(vehicle: number | IVehicle, ped: number | IPed, index: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -7991,7 +7988,7 @@ export function setExclusiveDriver(vehicle: number | IVehicle, ped: number | IPe
 /**
  * No comment provided
  * 
- * Hash: 0xD565F438137F0E10 | Since: 1103 | API-Set: unknown
+ * Hash: 0xD565F438137F0E10 | Since: unknown | API-Set: unknown
  */
 export function setExplodesOnExplosionDamageAtZeroBodyHealth(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8001,7 +7998,7 @@ export function setExplodesOnExplosionDamageAtZeroBodyHealth(vehicle: number | I
 /**
  * Sets a vehicle to be strongly resistant to explosions. p0 is the vehicle; set p1 to false to toggle the effect on/off.
  * 
- * Hash: 0x71B0892EC081D60A | Since: 323 | API-Set: unknown
+ * Hash: 0x71B0892EC081D60A | Since: unknown | API-Set: unknown
  */
 export function setExplodesOnHighExplosionDamage(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8011,7 +8008,7 @@ export function setExplodesOnHighExplosionDamage(vehicle: number | IVehicle, tog
 /**
  * Max value is 32767
  * 
- * Hash: 0x79DF7E806202CE01 | Since: 323 | API-Set: unknown
+ * Hash: 0x79DF7E806202CE01 | Since: unknown | API-Set: unknown
  */
 export function setExtendedRemovalRange(vehicle: number | IVehicle, range: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8021,7 +8018,7 @@ export function setExtendedRemovalRange(vehicle: number | IVehicle, range: numbe
 /**
  * Available extraIds are 1-14, however none of the vehicles have extras above 12.
  * 
- * Hash: 0x7EE3A3C5E4A40CC9 | Since: 323 | API-Set: unknown
+ * Hash: 0x7EE3A3C5E4A40CC9 | Since: unknown | API-Set: unknown
  */
 export function setExtra(vehicle: number | IVehicle, extraId: number, disable: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8031,7 +8028,7 @@ export function setExtra(vehicle: number | IVehicle, extraId: number, disable: b
 /**
  * They use the same color indexs as SET_VEHICLE_COLOURS.
  * 
- * Hash: 0x2036F561ADD12E33 | Since: 323 | API-Set: unknown
+ * Hash: 0x2036F561ADD12E33 | Since: unknown | API-Set: unknown
  */
 export function setExtraColours(vehicle: number | IVehicle, pearlescentColor: number, wheelColor: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8041,7 +8038,7 @@ export function setExtraColours(vehicle: number | IVehicle, pearlescentColor: nu
 /**
  * No comment provided
  * 
- * Hash: 0xF40DD601A65F7F19 | Since: 505 | API-Set: unknown
+ * Hash: 0xF40DD601A65F7F19 | Since: unknown | API-Set: unknown
  */
 export function setExtraColour5(vehicle: number | IVehicle, color: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8051,7 +8048,7 @@ export function setExtraColour5(vehicle: number | IVehicle, color: number): void
 /**
  * No comment provided
  * 
- * Hash: 0x6089CDF6A57F326C | Since: 505 | API-Set: unknown
+ * Hash: 0x6089CDF6A57F326C | Since: unknown | API-Set: unknown
  */
 export function setExtraColour6(vehicle: number | IVehicle, color: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8062,7 +8059,7 @@ export function setExtraColour6(vehicle: number | IVehicle, color: number): void
  * This fixes a vehicle.
  * If the vehicle's engine's broken then you cannot fix it with this native.
  * 
- * Hash: 0x115722B1B9C14C1C | Since: 323 | API-Set: unknown
+ * Hash: 0x115722B1B9C14C1C | Since: unknown | API-Set: unknown
  */
 export function setFixed(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8072,7 +8069,7 @@ export function setFixed(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x30D779DE7C4F6DD3 | Since: 323 | API-Set: unknown
+ * Hash: 0x30D779DE7C4F6DD3 | Since: unknown | API-Set: unknown
  */
 export function setFlightNozzlePosition(vehicle: number | IVehicle, angleRatio: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8082,7 +8079,7 @@ export function setFlightNozzlePosition(vehicle: number | IVehicle, angleRatio: 
 /**
  * No comment provided
  * 
- * Hash: 0x9AA47FFF660CB932 | Since: 323 | API-Set: unknown
+ * Hash: 0x9AA47FFF660CB932 | Since: unknown | API-Set: unknown
  */
 export function setFlightNozzlePositionImmediate(vehicle: number | IVehicle, angle: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8092,7 +8089,7 @@ export function setFlightNozzlePositionImmediate(vehicle: number | IVehicle, ang
 /**
  * No comment provided
  * 
- * Hash: 0xB055A34527CB8FD7 | Since: 323 | API-Set: unknown
+ * Hash: 0xB055A34527CB8FD7 | Since: unknown | API-Set: unknown
  */
 export function setForceAfterburner(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8102,7 +8099,7 @@ export function setForceAfterburner(vehicle: number | IVehicle, toggle: boolean)
 /**
  * Sets some bit of vehicle
  * 
- * Hash: 0x8821196D91FA2DE5 | Since: 1290 | API-Set: unknown
+ * Hash: 0x8821196D91FA2DE5 | Since: unknown | API-Set: unknown
  */
 export function setForceInteriorlight(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8116,7 +8113,7 @@ export function setForceInteriorlight(vehicle: number | IVehicle, toggle: boolea
  * You can convert meters/s to mph here:
  * http://www.calculateme.com/Speed/MetersperSecond/ToMilesperHour.htm
  * 
- * Hash: 0xAB54A438726D25D5 | Since: 323 | API-Set: unknown
+ * Hash: 0xAB54A438726D25D5 | Since: unknown | API-Set: unknown
  */
 export function setForwardSpeed(vehicle: number | IVehicle, speed: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8126,7 +8123,7 @@ export function setForwardSpeed(vehicle: number | IVehicle, speed: number): void
 /**
  * Seems to be identical to SET_VEHICLE_FORWARD_SPEED
  * 
- * Hash: 0x6501129C9E0FFA05 | Since: 877 | API-Set: unknown
+ * Hash: 0x6501129C9E0FFA05 | Since: unknown | API-Set: unknown
  */
 export function setForwardSpeedXy(vehicle: number | IVehicle, speed: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8136,7 +8133,7 @@ export function setForwardSpeedXy(vehicle: number | IVehicle, speed: number): vo
 /**
  * Seems to be related to the metal parts, not tyres (like i was expecting lol)
  * 
- * Hash: 0x1837AF7C627009BA | Since: 323 | API-Set: unknown
+ * Hash: 0x1837AF7C627009BA | Since: unknown | API-Set: unknown
  */
 export function setFrictionOverride(vehicle: number | IVehicle, friction: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8146,7 +8143,7 @@ export function setFrictionOverride(vehicle: number | IVehicle, friction: number
 /**
  * It switch to highbeam when p1 is set to true.
  * 
- * Hash: 0x8B7FD87F0DDB421E | Since: 323 | API-Set: unknown
+ * Hash: 0x8B7FD87F0DDB421E | Since: unknown | API-Set: unknown
  */
 export function setFullbeam(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8156,7 +8153,7 @@ export function setFullbeam(vehicle: number | IVehicle, toggle: boolean): void {
 /**
  * Allows creation of CEventShockingPlaneFlyby, CEventShockingHelicopterOverhead, and other(?) Shocking events
  * 
- * Hash: 0x279D50DE5652D935 | Since: 323 | API-Set: unknown
+ * Hash: 0x279D50DE5652D935 | Since: unknown | API-Set: unknown
  */
 export function setGeneratesEngineShockingEvents(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8166,7 +8163,7 @@ export function setGeneratesEngineShockingEvents(vehicle: number | IVehicle, tog
 /**
  * Related to car generators & CPlayerSwitchMgrLong
  * 
- * Hash: 0x9A75585FB2E54FAD | Since: 323 | API-Set: unknown
+ * Hash: 0x9A75585FB2E54FAD | Since: unknown | API-Set: unknown
  */
 export function setGeneratorAreaOfInterest(pos: Vector3, radius: number): void {
     SetVehicleGeneratorAreaOfInterest(pos.x, pos.y, pos.z, radius);
@@ -8175,7 +8172,7 @@ export function setGeneratorAreaOfInterest(pos: Vector3, radius: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x89F149B6131E57DA | Since: 323 | API-Set: unknown
+ * Hash: 0x89F149B6131E57DA | Since: unknown | API-Set: unknown
  */
 export function setGravity(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8185,7 +8182,7 @@ export function setGravity(vehicle: number | IVehicle, toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x684785568EF26A22 | Since: 323 | API-Set: unknown
+ * Hash: 0x684785568EF26A22 | Since: unknown | API-Set: unknown
  */
 export function setHandbrake(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8195,7 +8192,7 @@ export function setHandbrake(vehicle: number | IVehicle, toggle: boolean): void 
 /**
  * Use the "AIHandling" string found in handling.meta
  * 
- * Hash: 0x10655FAB9915623D | Since: 323 | API-Set: unknown
+ * Hash: 0x10655FAB9915623D | Since: unknown | API-Set: unknown
  */
 export function setHandlingOverride(vehicle: number | IVehicle, hash: number | string): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8206,7 +8203,7 @@ export function setHandlingOverride(vehicle: number | IVehicle, hash: number | s
 /**
  * No comment provided
  * 
- * Hash: 0x02398B627547189C | Since: 323 | API-Set: unknown
+ * Hash: 0x02398B627547189C | Since: unknown | API-Set: unknown
  */
 export function setHasBeenDrivenFlag(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8216,7 +8213,7 @@ export function setHasBeenDrivenFlag(vehicle: number | IVehicle, toggle: boolean
 /**
  * No comment provided
  * 
- * Hash: 0x2B5F9D2AF1F1722D | Since: 323 | API-Set: unknown
+ * Hash: 0x2B5F9D2AF1F1722D | Since: unknown | API-Set: unknown
  */
 export function setHasBeenOwnedByPlayer(vehicle: number | IVehicle, owned: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8226,7 +8223,7 @@ export function setHasBeenOwnedByPlayer(vehicle: number | IVehicle, owned: boole
 /**
  * If set to true, prevents vehicle sirens from having sound, leaving only the lights.
  * 
- * Hash: 0xD8050E0EB60CF274 | Since: 323 | API-Set: unknown
+ * Hash: 0xD8050E0EB60CF274 | Since: unknown | API-Set: unknown
  */
 export function setHasMutedSirens(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8236,7 +8233,7 @@ export function setHasMutedSirens(vehicle: number | IVehicle, toggle: boolean): 
 /**
  * if true, axles won't bend.
  * 
- * Hash: 0x92F0CF722BC4202F | Since: 323 | API-Set: unknown
+ * Hash: 0x92F0CF722BC4202F | Since: unknown | API-Set: unknown
  */
 export function setHasStrongAxles(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8246,7 +8243,7 @@ export function setHasStrongAxles(vehicle: number | IVehicle, toggle: boolean): 
 /**
  * No comment provided
  * 
- * Hash: 0x1AA8A837D2169D94 | Since: 323 | API-Set: unknown
+ * Hash: 0x1AA8A837D2169D94 | Since: unknown | API-Set: unknown
  */
 export function setHasUnbreakableLights(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8262,7 +8259,7 @@ export function setHasUnbreakableLights(vehicle: number | IVehicle, toggle: bool
  * 1 = Lights Disabled (Lights are fully disabled, cannot be toggled)
  * 2 = Always On (Lights can be toggled between normal and high beams)
  * 
- * Hash: 0x1FD09E7390A74D54 | Since: 323 | API-Set: unknown
+ * Hash: 0x1FD09E7390A74D54 | Since: unknown | API-Set: unknown
  */
 export function setHeadlightShadows(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8272,7 +8269,7 @@ export function setHeadlightShadows(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x407DC5E97DB1A4D3 | Since: 1493 | API-Set: unknown
+ * Hash: 0x407DC5E97DB1A4D3 | Since: unknown | API-Set: unknown
  */
 export function setHomingLockedontoState(): void {
     Citizen.invokeNative('0x407DC5E97DB1A4D3', undefined, undefined);
@@ -8281,7 +8278,7 @@ export function setHomingLockedontoState(): void {
 /**
  * Seems to copy some values in vehicle
  * 
- * Hash: 0x6A973569BA094650 | Since: 1604 | API-Set: unknown
+ * Hash: 0x6A973569BA094650 | Since: unknown | API-Set: unknown
  */
 export function setImpatienceTimer(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8291,7 +8288,7 @@ export function setImpatienceTimer(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x06582AFF74894C75 | Since: 323 | API-Set: unknown
+ * Hash: 0x06582AFF74894C75 | Since: unknown | API-Set: unknown
  */
 export function setInactiveDuringPlayback(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8302,7 +8299,7 @@ export function setInactiveDuringPlayback(vehicle: number | IVehicle, toggle: bo
  * Sets the turn signal enabled for a vehicle.
  * Set turnSignal to 1 for left light, 0 for right light.
  * 
- * Hash: 0xB5D45264751B7DF0 | Since: 323 | API-Set: unknown
+ * Hash: 0xB5D45264751B7DF0 | Since: unknown | API-Set: unknown
  */
 export function setIndicatorLights(vehicle: number | IVehicle, turnSignal: number, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8312,7 +8309,7 @@ export function setIndicatorLights(vehicle: number | IVehicle, turnSignal: numbe
 /**
  * doorId: see SET_VEHICLE_DOOR_SHUT
  * 
- * Hash: 0xBE70724027F85BCD | Since: 323 | API-Set: unknown
+ * Hash: 0xBE70724027F85BCD | Since: unknown | API-Set: unknown
  */
 export function setIndividualDoorsLocked(vehicle: number | IVehicle, doorId: number, doorLockStatus: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8322,7 +8319,7 @@ export function setIndividualDoorsLocked(vehicle: number | IVehicle, doorId: num
 /**
  * No comment provided
  * 
- * Hash: 0x0AD9E8F87FF7C16F | Since: 323 | API-Set: unknown
+ * Hash: 0x0AD9E8F87FF7C16F | Since: unknown | API-Set: unknown
  */
 export function setInfluencesWantedLevel(): void {
     SetVehicleInfluencesWantedLevel(undefined, false);
@@ -8331,7 +8328,7 @@ export function setInfluencesWantedLevel(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xBC2042F090AF6AD3 | Since: 323 | API-Set: unknown
+ * Hash: 0xBC2042F090AF6AD3 | Since: unknown | API-Set: unknown
  */
 export function setInteriorlight(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8341,7 +8338,7 @@ export function setInteriorlight(vehicle: number | IVehicle, toggle: boolean): v
 /**
  * If set to TRUE, it seems to suppress door noises and doesn't allow the horn to be continuous.
  * 
- * Hash: 0x9D44FCCE98450843 | Since: 323 | API-Set: unknown
+ * Hash: 0x9D44FCCE98450843 | Since: unknown | API-Set: unknown
  */
 export function setInCarModShop(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8351,7 +8348,7 @@ export function setInCarModShop(vehicle: number | IVehicle, toggle: boolean): vo
 /**
  * Setting this to false, makes the specified vehicle to where if you press Y your character doesn't even attempt the animation to enter the vehicle. Hence it's not considered aka ignored.
  * 
- * Hash: 0x31B927BBC44156CD | Since: 323 | API-Set: unknown
+ * Hash: 0x31B927BBC44156CD | Since: unknown | API-Set: unknown
  */
 export function setIsConsideredByPlayer(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8361,7 +8358,7 @@ export function setIsConsideredByPlayer(vehicle: number | IVehicle, toggle: bool
 /**
  * p1 (toggle) was always 1 (true) except in one case in the b678 scripts.
  * 
- * Hash: 0x07116E24E9D1929D | Since: 323 | API-Set: unknown
+ * Hash: 0x07116E24E9D1929D | Since: unknown | API-Set: unknown
  */
 export function setIsRacing(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8371,7 +8368,7 @@ export function setIsRacing(vehicle: number | IVehicle, toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x67B2C79AA7FF5738 | Since: 323 | API-Set: unknown
+ * Hash: 0x67B2C79AA7FF5738 | Since: unknown | API-Set: unknown
  */
 export function setIsStolen(vehicle: number | IVehicle, isStolen: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8381,7 +8378,7 @@ export function setIsStolen(vehicle: number | IVehicle, isStolen: boolean): void
 /**
  * Sets the wanted state of this vehicle.
  * 
- * Hash: 0xF7EC25A3EBEEC726 | Since: 323 | API-Set: unknown
+ * Hash: 0xF7EC25A3EBEEC726 | Since: unknown | API-Set: unknown
  */
 export function setIsWanted(vehicle: number | IVehicle, state: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8391,7 +8388,7 @@ export function setIsWanted(vehicle: number | IVehicle, state: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xB8FBC8B1330CA9B4 | Since: 323 | API-Set: unknown
+ * Hash: 0xB8FBC8B1330CA9B4 | Since: unknown | API-Set: unknown
  */
 export function setKeepEngineOnWhenAbandoned(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8401,7 +8398,7 @@ export function setKeepEngineOnWhenAbandoned(vehicle: number | IVehicle, toggle:
 /**
  * No comment provided
  * 
- * Hash: 0x99C82F8A139F3E4E | Since: 323 | API-Set: unknown
+ * Hash: 0x99C82F8A139F3E4E | Since: unknown | API-Set: unknown
  */
 export function setKersAllowed(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8419,7 +8416,7 @@ export function setKersAllowed(vehicle: number | IVehicle, toggle: boolean): voi
  * but at night it's lowbeam,lowbeam,highbeam
  * note2: when using =0 it's affected by day or night for highbeams don't exist in daytime.
  * 
- * Hash: 0x34E710FF01247C5A | Since: 323 | API-Set: unknown
+ * Hash: 0x34E710FF01247C5A | Since: unknown | API-Set: unknown
  */
 export function setLights(vehicle: number | IVehicle, state: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8434,7 +8431,7 @@ export function setLights(vehicle: number | IVehicle, state: number): void {
  * multiplier = 1.0 default game value
  * 
  * 
- * Hash: 0xB385454F8791F57C | Since: 323 | API-Set: unknown
+ * Hash: 0xB385454F8791F57C | Since: unknown | API-Set: unknown
  */
 export function setLightMultiplier(vehicle: number | IVehicle, multiplier: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8444,7 +8441,7 @@ export function setLightMultiplier(vehicle: number | IVehicle, multiplier: numbe
 /**
  * No comment provided
  * 
- * Hash: 0xC50CE861B55EAB8B | Since: 323 | API-Set: unknown
+ * Hash: 0xC50CE861B55EAB8B | Since: unknown | API-Set: unknown
  */
 export function setLimitSpeedWhenPlayerInactive(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8454,7 +8451,7 @@ export function setLimitSpeedWhenPlayerInactive(vehicle: number | IVehicle, togg
 /**
  * No comment provided
  * 
- * Hash: 0x60BF608F1B8CD1B6 | Since: 323 | API-Set: unknown
+ * Hash: 0x60BF608F1B8CD1B6 | Since: unknown | API-Set: unknown
  */
 export function setLivery(vehicle: number | IVehicle, livery: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8466,7 +8463,7 @@ export function setLivery(vehicle: number | IVehicle, livery: number): void {
  * 
  * Livery value is dependent on the amount of liveries present in the vehicle's texture dictionary, for Tornado Custom this would be 0-6.
  * 
- * Hash: 0xA6D3A8750DC73270 | Since: 505 | API-Set: unknown
+ * Hash: 0xA6D3A8750DC73270 | Since: unknown | API-Set: unknown
  */
 export function setLivery2(vehicle: number | IVehicle, livery: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8476,7 +8473,7 @@ export function setLivery2(vehicle: number | IVehicle, livery: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x93AE6A61BE015BF1 | Since: 323 | API-Set: unknown
+ * Hash: 0x93AE6A61BE015BF1 | Since: unknown | API-Set: unknown
  */
 export function setLodMultiplier(vehicle: number | IVehicle, multiplier: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8486,7 +8483,7 @@ export function setLodMultiplier(vehicle: number | IVehicle, multiplier: number)
 /**
  * To reset the max speed, set the `speed` value to `0.0` or lower.
  * 
- * Hash: 0xBAA045B4E42F3C06 | Since: 1103 | API-Set: unknown
+ * Hash: 0xBAA045B4E42F3C06 | Since: unknown | API-Set: unknown
  */
 export function setMaxSpeed(vehicle: number | IVehicle, speed: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8496,7 +8493,7 @@ export function setMaxSpeed(vehicle: number | IVehicle, speed: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xE851E480B814D4BA | Since: 323 | API-Set: unknown
+ * Hash: 0xE851E480B814D4BA | Since: unknown | API-Set: unknown
  */
 export function setMayBeUsedByGotoPointAnyMeans(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8543,7 +8540,7 @@ export function setMayBeUsedByGotoPointAnyMeans(vehicle: number | IVehicle): voi
  * 
  * ENUMS: https://pastebin.com/QzEAn02v
  * 
- * Hash: 0x6AF0636DDEDCB6DD | Since: 323 | API-Set: unknown
+ * Hash: 0x6AF0636DDEDCB6DD | Since: unknown | API-Set: unknown
  */
 export function setMod(vehicle: number | IVehicle, modType: number, modIndex: number, customTires: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8557,7 +8554,7 @@ export function setMod(vehicle: number | IVehicle, modType: number, modIndex: nu
  * 
  * Full list of vehicles by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicles.json
  * 
- * Hash: 0x0FC2D89AC25A5814 | Since: 323 | API-Set: unknown
+ * Hash: 0x0FC2D89AC25A5814 | Since: unknown | API-Set: unknown
  */
 export function setModelIsSuppressed(model: number | string, suppressed: boolean): void {
     if (typeof model === 'string') model = GetHashKey(model)
@@ -8580,7 +8577,7 @@ export function setModelIsSuppressed(model: number | string, suppressed: boolean
  * 
  * Full list of vehicle colors and vehicle plates by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicleColors.json
  * 
- * Hash: 0x43FEB945EE7F85B8 | Since: 323 | API-Set: unknown
+ * Hash: 0x43FEB945EE7F85B8 | Since: unknown | API-Set: unknown
  */
 export function setModColor1(vehicle: number | IVehicle, paintType: number, color: number, pearlescentColor: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8602,7 +8599,7 @@ export function setModColor1(vehicle: number | IVehicle, paintType: number, colo
  * 
  * Full list of vehicle colors and vehicle plates by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicleColors.json
  * 
- * Hash: 0x816562BADFDEC83E | Since: 323 | API-Set: unknown
+ * Hash: 0x816562BADFDEC83E | Since: unknown | API-Set: unknown
  */
 export function setModColor2(vehicle: number | IVehicle, paintType: number, color: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8614,7 +8611,7 @@ export function setModColor2(vehicle: number | IVehicle, paintType: number, colo
  * 
  * Full list of vehicle mod kits and mods by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicleModKits.json
  * 
- * Hash: 0x1F2AA07F00B3217A | Since: 323 | API-Set: unknown
+ * Hash: 0x1F2AA07F00B3217A | Since: unknown | API-Set: unknown
  */
 export function setModKit(vehicle: number | IVehicle, modKit: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8624,7 +8621,7 @@ export function setModKit(vehicle: number | IVehicle, modKit: number): void {
 /**
  * NOTE: Debugging functions are not present in the retail version of the game.
  * 
- * Hash: 0xBFDF984E2C22B94F | Since: 323 | API-Set: unknown
+ * Hash: 0xBFDF984E2C22B94F | Since: unknown | API-Set: unknown
  */
 export function setNameDebug(vehicle: number | IVehicle, name: string): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8634,7 +8631,7 @@ export function setNameDebug(vehicle: number | IVehicle, name: string): void {
 /**
  * No comment provided
  * 
- * Hash: 0xFBA550EA44404EE6 | Since: 323 | API-Set: unknown
+ * Hash: 0xFBA550EA44404EE6 | Since: unknown | API-Set: unknown
  */
 export function setNeedsToBeHotwired(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8644,7 +8641,7 @@ export function setNeedsToBeHotwired(vehicle: number | IVehicle, toggle: boolean
 /**
  * Sets the color of the neon lights of the specified vehicle.
  * 
- * Hash: 0x8E0A582209A62695 | Since: 323 | API-Set: unknown
+ * Hash: 0x8E0A582209A62695 | Since: unknown | API-Set: unknown
  */
 export function setNeonColour(vehicle: number | IVehicle, r: number, g: number, b: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8660,7 +8657,7 @@ export function setNeonColour(vehicle: number | IVehicle, r: number, g: number, 
  * 2 = Front
  * 3 = Back
  * 
- * Hash: 0x2AA720E4287BF269 | Since: 323 | API-Set: unknown
+ * Hash: 0x2AA720E4287BF269 | Since: unknown | API-Set: unknown
  */
 export function setNeonEnabled(vehicle: number | IVehicle, index: number, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8670,7 +8667,7 @@ export function setNeonEnabled(vehicle: number | IVehicle, index: number, toggle
 /**
  * Index references CVehicleModelColor
  * 
- * Hash: 0xB93B2867F7B479D1 | Since: 1493 | API-Set: unknown
+ * Hash: 0xB93B2867F7B479D1 | Since: unknown | API-Set: unknown
  */
 export function setNeonIndexColour(vehicle: number | IVehicle, index: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8680,7 +8677,7 @@ export function setNeonIndexColour(vehicle: number | IVehicle, index: number): v
 /**
  * No comment provided
  * 
- * Hash: 0xAB04325045427AAE | Since: 323 | API-Set: unknown
+ * Hash: 0xAB04325045427AAE | Since: unknown | API-Set: unknown
  */
 export function setNotStealableAmbiently(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8690,7 +8687,7 @@ export function setNotStealableAmbiently(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x5E569EC46EC21CAE | Since: 323 | API-Set: unknown
+ * Hash: 0x5E569EC46EC21CAE | Since: unknown | API-Set: unknown
  */
 export function setNoExplosionDamageFromDriver(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8706,7 +8703,7 @@ export function setNoExplosionDamageFromDriver(vehicle: number | IVehicle, toggl
  * char *plateText = "KING";
  * `VEHICLE::SET_VEHICLE_NUMBER_PLATE_TEXT(veh, plateText);`
  * 
- * Hash: 0x95A88F0B409CDA47 | Since: 323 | API-Set: unknown
+ * Hash: 0x95A88F0B409CDA47 | Since: unknown | API-Set: unknown
  */
 export function setNumberPlateText(vehicle: number | IVehicle, plateText: string): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8722,7 +8719,7 @@ export function setNumberPlateText(vehicle: number | IVehicle, plateText: string
  * Blue/White3 - 4
  * Yankton - 5
  * 
- * Hash: 0x9088EB5A43FFB0A1 | Since: 323 | API-Set: unknown
+ * Hash: 0x9088EB5A43FFB0A1 | Since: unknown | API-Set: unknown
  */
 export function setNumberPlateTextIndex(vehicle: number | IVehicle, plateIndex: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8732,7 +8729,7 @@ export function setNumberPlateTextIndex(vehicle: number | IVehicle, plateIndex: 
 /**
  * No comment provided
  * 
- * Hash: 0x35BB21DE06784373 | Since: 463 | API-Set: unknown
+ * Hash: 0x35BB21DE06784373 | Since: unknown | API-Set: unknown
  */
 export function setOccupantsTakeExplosiveDamage(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8744,7 +8741,7 @@ export function setOccupantsTakeExplosiveDamage(vehicle: number | IVehicle, togg
  * 
  * sfink: This has an additional param(Vehicle vehicle, float p1) which is always set to 5.0f in the b944 scripts.
  * 
- * Hash: 0x49733E92263139D1 | Since: 323 | API-Set: unknown
+ * Hash: 0x49733E92263139D1 | Since: unknown | API-Set: unknown
  */
 export function setOnGroundProperly(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8754,7 +8751,7 @@ export function setOnGroundProperly(vehicle: number | IVehicle): boolean {
 /**
  * Tested on the player's current vehicle. Unless you kill the driver, the vehicle doesn't loose control, however, if enabled, explodeOnImpact is still active. The moment you crash, boom.
  * 
- * Hash: 0xF19D095E42D430CC | Since: 323 | API-Set: unknown
+ * Hash: 0xF19D095E42D430CC | Since: unknown | API-Set: unknown
  */
 export function setOutOfControl(vehicle: number | IVehicle, killDriver: boolean, explodeOnImpact: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8766,7 +8763,7 @@ export function setOutOfControl(vehicle: number | IVehicle, killDriver: boolean,
  * Begins leaking gas at around 650 health
  * -999.90002441406 appears to be minimum health, although nothing special occurs
  * 
- * Hash: 0x70DB57649FA8D0D8 | Since: 323 | API-Set: unknown
+ * Hash: 0x70DB57649FA8D0D8 | Since: unknown | API-Set: unknown
  */
 export function setPetrolTankHealth(vehicle: number | IVehicle, health: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8776,7 +8773,7 @@ export function setPetrolTankHealth(vehicle: number | IVehicle, health: number):
 /**
  * No comment provided
  * 
- * Hash: 0x5AFEEDD9BB2899D7 | Since: 323 | API-Set: unknown
+ * Hash: 0x5AFEEDD9BB2899D7 | Since: unknown | API-Set: unknown
  */
 export function setProvidesCover(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8786,7 +8783,7 @@ export function setProvidesCover(vehicle: number | IVehicle, toggle: boolean): v
 /**
  * No comment provided
  * 
- * Hash: 0xCF9159024555488C | Since: 944 | API-Set: unknown
+ * Hash: 0xCF9159024555488C | Since: unknown | API-Set: unknown
  */
 export function setReadyForCleanup(): void {
     Citizen.invokeNative('0xCF9159024555488C', undefined);
@@ -8795,7 +8792,7 @@ export function setReadyForCleanup(): void {
 /**
  * Reduces grip significantly so it's hard to go anywhere.
  * 
- * Hash: 0x222FF6A823D122E2 | Since: 323 | API-Set: unknown
+ * Hash: 0x222FF6A823D122E2 | Since: unknown | API-Set: unknown
  */
 export function setReduceGrip(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8806,7 +8803,7 @@ export function setReduceGrip(vehicle: number | IVehicle, toggle: boolean): void
  * val is 0-3
  * Often used in conjunction with: SET_VEHICLE_REDUCE_GRIP
  * 
- * Hash: 0x6DEE944E1EE90CFB | Since: 1604 | API-Set: unknown
+ * Hash: 0x6DEE944E1EE90CFB | Since: unknown | API-Set: unknown
  */
 export function setReduceGripLevel(vehicle: number | IVehicle, val: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8816,7 +8813,7 @@ export function setReduceGripLevel(vehicle: number | IVehicle, val: number): voi
 /**
  * No comment provided
  * 
- * Hash: 0xC4B3347BD68BD609 | Since: 573 | API-Set: unknown
+ * Hash: 0xC4B3347BD68BD609 | Since: unknown | API-Set: unknown
  */
 export function setRemoveAggressiveCarjackMission(): void {
     Citizen.invokeNative('0xC4B3347BD68BD609', undefined);
@@ -8825,7 +8822,7 @@ export function setRemoveAggressiveCarjackMission(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x2311DD7159F00582 | Since: 323 | API-Set: unknown
+ * Hash: 0x2311DD7159F00582 | Since: unknown | API-Set: unknown
  */
 export function setRespectsLocksWhenHasDriver(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8835,7 +8832,7 @@ export function setRespectsLocksWhenHasDriver(vehicle: number | IVehicle): void 
 /**
  * No comment provided
  * 
- * Hash: 0x09606148B6C71DEF | Since: 323 | API-Set: unknown
+ * Hash: 0x09606148B6C71DEF | Since: unknown | API-Set: unknown
  */
 export function setRudderBroken(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8845,7 +8842,7 @@ export function setRudderBroken(vehicle: number | IVehicle, toggle: boolean): vo
 /**
  * Only works during nighttime.
  * 
- * Hash: 0x14E85C5EE7A4D542 | Since: 323 | API-Set: unknown
+ * Hash: 0x14E85C5EE7A4D542 | Since: unknown | API-Set: unknown
  */
 export function setSearchlight(heli: number | IVehicle, toggle: boolean, canBeUsedByAI: boolean): void {
     const _heli = typeof heli == 'object' ? heli.handle() : heli;
@@ -8857,7 +8854,7 @@ export function setSearchlight(heli: number | IVehicle, toggle: boolean, canBeUs
  * 
  * `WEAPON::SET_CURRENT_PED_VEHICLE_WEAPON(pilot,MISC::GET_HASH_KEY("VEHICLE_WEAPON_PLANE_ROCKET"));                        VEHICLE::SET_VEHICLE_SHOOT_AT_TARGET(pilot, target, targPos.x, targPos.y, targPos.z);`
  * 
- * Hash: 0x74CD9A9327A282EA | Since: 323 | API-Set: unknown
+ * Hash: 0x74CD9A9327A282EA | Since: unknown | API-Set: unknown
  */
 export function setShootAtTarget(driver: number | IPed, entity: number | IEntity, xTarget: number, yTarget: number, zTarget: number): void {
     const _driver = typeof driver == 'object' ? driver.handle() : driver;
@@ -8868,7 +8865,7 @@ export function setShootAtTarget(driver: number | IPed, entity: number | IEntity
 /**
  * Does nothing. It's a nullsub.
  * 
- * Hash: 0x99A05839C46CE316 | Since: 1604 | API-Set: unknown
+ * Hash: 0x99A05839C46CE316 | Since: unknown | API-Set: unknown
  */
 export function setShuntOnStick(toggle: boolean): void {
     Citizen.invokeNative('0x99A05839C46CE316', toggle);
@@ -8877,7 +8874,7 @@ export function setShuntOnStick(toggle: boolean): void {
 /**
  * Activate siren on vehicle (Only works if the vehicle has a siren).
  * 
- * Hash: 0xF4924635A19EB37D | Since: 323 | API-Set: unknown
+ * Hash: 0xF4924635A19EB37D | Since: unknown | API-Set: unknown
  */
 export function setSiren(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8887,7 +8884,7 @@ export function setSiren(vehicle: number | IVehicle, toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xF051D9BFB6BA39C0 | Since: 877 | API-Set: unknown
+ * Hash: 0xF051D9BFB6BA39C0 | Since: unknown | API-Set: unknown
  */
 export function setSlipstreamingShouldTimeOut(toggle: boolean): void {
     Citizen.invokeNative('0xF051D9BFB6BA39C0', toggle);
@@ -8897,7 +8894,7 @@ export function setSlipstreamingShouldTimeOut(toggle: boolean): void {
  * Has something to do with trains. Always precedes SET_MISSION_TRAIN_AS_NO_LONGER_NEEDED.
  * May be true that it can be used with trains not sure, but not specifically for trains. Go find Xbox360 decompiled scripts and search for 'func_1333' in freemode.c it isn't used just for trains. Thanks for the info tho.
  * 
- * Hash: 0x1CF38D529D7441D9 | Since: 323 | API-Set: unknown
+ * Hash: 0x1CF38D529D7441D9 | Since: unknown | API-Set: unknown
  */
 export function setStaysFrozenWhenCleanedUp(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8907,7 +8904,7 @@ export function setStaysFrozenWhenCleanedUp(vehicle: number | IVehicle, toggle: 
 /**
  * No comment provided
  * 
- * Hash: 0x9007A2F21DC108D4 | Since: 323 | API-Set: unknown
+ * Hash: 0x9007A2F21DC108D4 | Since: unknown | API-Set: unknown
  */
 export function setSteeringBiasScalar(): void {
     SetVehicleSteeringBiasScalar(undefined, 0);
@@ -8923,7 +8920,7 @@ export function setSteeringBiasScalar(): void {
  * 0.0 = centered steering
  * 1.0 = full left
  * 
- * Hash: 0x42A8EC77D5150CBE | Since: 323 | API-Set: unknown
+ * Hash: 0x42A8EC77D5150CBE | Since: unknown | API-Set: unknown
  */
 export function setSteerBias(vehicle: number | IVehicle, value: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8933,7 +8930,7 @@ export function setSteerBias(vehicle: number | IVehicle, value: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xDCE97BDF8A0EABC8 | Since: 1103 | API-Set: unknown
+ * Hash: 0xDCE97BDF8A0EABC8 | Since: unknown | API-Set: unknown
  */
 export function setSteerForBuildings(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8955,7 +8952,7 @@ export function setSteerForBuildings(vehicle: number | IVehicle): void {
  * return result;
  * }
  * 
- * Hash: 0x6EBFB22D646FFC18 | Since: 323 | API-Set: unknown
+ * Hash: 0x6EBFB22D646FFC18 | Since: unknown | API-Set: unknown
  */
 export function setStopInstantlyWhenPlayerInactive(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8965,7 +8962,7 @@ export function setStopInstantlyWhenPlayerInactive(vehicle: number | IVehicle, t
 /**
  * If set to true, vehicle will not take crash damage, but is still susceptible to damage from bullets and explosives
  * 
- * Hash: 0x3E8C8727991A8A0B | Since: 323 | API-Set: unknown
+ * Hash: 0x3E8C8727991A8A0B | Since: unknown | API-Set: unknown
  */
 export function setStrong(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8975,7 +8972,7 @@ export function setStrong(vehicle: number | IVehicle, toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x6CB5B84B78AC55FE | Since: 3717 | API-Set: unknown
+ * Hash: 0x6CB5B84B78AC55FE | Since: unknown | API-Set: unknown
  */
 export function setTailBroken(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8985,7 +8982,7 @@ export function setTailBroken(vehicle: number | IVehicle, toggle: boolean): void
 /**
  * No comment provided
  * 
- * Hash: 0x5815BD2763178DF4 | Since: 2802 | API-Set: unknown
+ * Hash: 0x5815BD2763178DF4 | Since: unknown | API-Set: unknown
  */
 export function setTailLights(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -8995,7 +8992,7 @@ export function setTailLights(vehicle: number | IVehicle, toggle: boolean): void
 /**
  * No comment provided
  * 
- * Hash: 0x737E398138550FFF | Since: 944 | API-Set: unknown
+ * Hash: 0x737E398138550FFF | Since: unknown | API-Set: unknown
  */
 export function setTankStationary(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9005,7 +9002,7 @@ export function setTankStationary(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x56B94C6D7127DFBA | Since: 323 | API-Set: unknown
+ * Hash: 0x56B94C6D7127DFBA | Since: unknown | API-Set: unknown
  */
 export function setTankTurretPosition(vehicle: number | IVehicle, position: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9015,7 +9012,7 @@ export function setTankTurretPosition(vehicle: number | IVehicle, position: numb
 /**
  * No comment provided
  * 
- * Hash: 0x2E0A74E1002380B1 | Since: 323 | API-Set: unknown
+ * Hash: 0x2E0A74E1002380B1 | Since: unknown | API-Set: unknown
  */
 export function setTimedExplosion(vehicle: number | IVehicle, ped: number | IPed, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9026,7 +9023,7 @@ export function setTimedExplosion(vehicle: number | IVehicle, ped: number | IPed
 /**
  * Sets how much the crane on the tow truck is raised, where 0.0 is fully lowered and 1.0 is fully raised.
  * 
- * Hash: 0xFE54B92A344583CA | Since: 323 | API-Set: unknown
+ * Hash: 0xFE54B92A344583CA | Since: unknown | API-Set: unknown
  */
 export function setTowTruckArmPosition(vehicle: number | IVehicle, position: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9036,7 +9033,7 @@ export function setTowTruckArmPosition(vehicle: number | IVehicle, position: num
 /**
  * No comment provided
  * 
- * Hash: 0x1093408B4B9D1146 | Since: 323 | API-Set: unknown
+ * Hash: 0x1093408B4B9D1146 | Since: unknown | API-Set: unknown
  */
 export function setTurretSpeedThisFrame(vehicle: number | IVehicle, speed: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9046,7 +9043,7 @@ export function setTurretSpeedThisFrame(vehicle: number | IVehicle, speed: numbe
 /**
  * No comment provided
  * 
- * Hash: 0x0581730AB9380412 | Since: 1103 | API-Set: unknown
+ * Hash: 0x0581730AB9380412 | Since: unknown | API-Set: unknown
  */
 export function setTurretTarget(vehicle: number | IVehicle, pos: Vector3): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9056,7 +9053,7 @@ export function setTurretTarget(vehicle: number | IVehicle, pos: Vector3): void 
 /**
  * Allows you to toggle bulletproof tires.
  * 
- * Hash: 0xEB9DC3C7D8596C46 | Since: 323 | API-Set: unknown
+ * Hash: 0xEB9DC3C7D8596C46 | Since: unknown | API-Set: unknown
  */
 export function setTyresCanBurst(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9078,7 +9075,7 @@ export function setTyresCanBurst(vehicle: number | IVehicle, toggle: boolean): v
  * '45 = 6 wheels trailer mid wheel left
  * '47 = 6 wheels trailer mid wheel right
  * 
- * Hash: 0xEC6A202EE4960385 | Since: 323 | API-Set: unknown
+ * Hash: 0xEC6A202EE4960385 | Since: unknown | API-Set: unknown
  */
 export function setTyreBurst(vehicle: number | IVehicle, index: number, onRim: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9097,7 +9094,7 @@ export function setTyreBurst(vehicle: number | IVehicle, index: number, onRim: b
  * '45 = 6 wheels trailer mid wheel left
  * '47 = 6 wheels trailer mid wheel right
  * 
- * Hash: 0x6E13FC662B882D1D | Since: 323 | API-Set: unknown
+ * Hash: 0x6E13FC662B882D1D | Since: unknown | API-Set: unknown
  */
 export function setTyreFixed(vehicle: number | IVehicle, tyreIndex: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9114,7 +9111,7 @@ export function setTyreFixed(vehicle: number | IVehicle, tyreIndex: number): voi
  * 
  * Note: setting r,g,b to 0 will give the car the "Patriot" tire smoke.
  * 
- * Hash: 0xB5BA80F839791C0F | Since: 323 | API-Set: unknown
+ * Hash: 0xB5BA80F839791C0F | Since: unknown | API-Set: unknown
  */
 export function setTyreSmokeColor(vehicle: number | IVehicle, r: number, g: number, b: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9124,7 +9121,7 @@ export function setTyreSmokeColor(vehicle: number | IVehicle, r: number, g: numb
 /**
  * No comment provided
  * 
- * Hash: 0x8ABA6AF54B942B95 | Since: 323 | API-Set: unknown
+ * Hash: 0x8ABA6AF54B942B95 | Since: unknown | API-Set: unknown
  */
 export function setUndriveable(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9134,7 +9131,7 @@ export function setUndriveable(vehicle: number | IVehicle, toggle: boolean): voi
 /**
  * No comment provided
  * 
- * Hash: 0xE05DD0E9707003A3 | Since: 323 | API-Set: unknown
+ * Hash: 0xE05DD0E9707003A3 | Since: unknown | API-Set: unknown
  */
 export function setUsedForPilotSchool(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9144,7 +9141,7 @@ export function setUsedForPilotSchool(vehicle: number | IVehicle, toggle: boolea
 /**
  * vehicle must be a plane
  * 
- * Hash: 0xCAC66558B944DA67 | Since: 323 | API-Set: unknown
+ * Hash: 0xCAC66558B944DA67 | Since: unknown | API-Set: unknown
  */
 export function setUsesLargeRearRamp(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9154,7 +9151,7 @@ export function setUsesLargeRearRamp(vehicle: number | IVehicle, toggle: boolean
 /**
  * No comment provided
  * 
- * Hash: 0xBB2333BB87DDD87F | Since: 757 | API-Set: unknown
+ * Hash: 0xBB2333BB87DDD87F | Since: unknown | API-Set: unknown
  */
 export function setUsesMpPlayerDamageMultiplier(): void {
     Citizen.invokeNative('0xBB2333BB87DDD87F', undefined, undefined);
@@ -9163,7 +9160,7 @@ export function setUsesMpPlayerDamageMultiplier(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x1D97D1E3A70A649F | Since: 323 | API-Set: unknown
+ * Hash: 0x1D97D1E3A70A649F | Since: unknown | API-Set: unknown
  */
 export function setUseAlternateHandling(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9173,7 +9170,7 @@ export function setUseAlternateHandling(vehicle: number | IVehicle, toggle: bool
 /**
  * Used for blazer5. Changes the quadbike-jetski transformation input from raise/lower convertible roof (hold H by default) to horn (press E by default.)
  * 
- * Hash: 0x41290B40FA63E6DA | Since: 1011 | API-Set: unknown
+ * Hash: 0x41290B40FA63E6DA | Since: unknown | API-Set: unknown
  */
 export function setUseBoostButtonForWheelRetract(toggle: boolean): void {
     Citizen.invokeNative('0x41290B40FA63E6DA', toggle);
@@ -9182,7 +9179,7 @@ export function setUseBoostButtonForWheelRetract(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xE023E8AC4EF7C117 | Since: 323 | API-Set: unknown
+ * Hash: 0xE023E8AC4EF7C117 | Since: unknown | API-Set: unknown
  */
 export function setUseCutsceneWheelCompression(p0: number | IVehicle): boolean {
     const _p0 = typeof p0 == 'object' ? p0.handle() : p0;
@@ -9192,7 +9189,7 @@ export function setUseCutsceneWheelCompression(p0: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x88BC673CA9E0AE99 | Since: 323 | API-Set: unknown
+ * Hash: 0x88BC673CA9E0AE99 | Since: unknown | API-Set: unknown
  */
 export function setUseMoreRestrictiveSpawnChecks(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9202,7 +9199,7 @@ export function setUseMoreRestrictiveSpawnChecks(vehicle: number | IVehicle): vo
 /**
  * No comment provided
  * 
- * Hash: 0xC45C27EF50F36ADC | Since: 323 | API-Set: unknown
+ * Hash: 0xC45C27EF50F36ADC | Since: unknown | API-Set: unknown
  */
 export function setUsePlayerLightSettings(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9212,7 +9209,7 @@ export function setUsePlayerLightSettings(vehicle: number | IVehicle, toggle: bo
 /**
  * No comment provided
  * 
- * Hash: 0x86B4B6212CB8B627 | Since: 1011 | API-Set: unknown
+ * Hash: 0x86B4B6212CB8B627 | Since: unknown | API-Set: unknown
  */
 export function setWeaponCanTargetObjects(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9222,7 +9219,7 @@ export function setWeaponCanTargetObjects(vehicle: number | IVehicle, toggle: bo
 /**
  * No comment provided
  * 
- * Hash: 0x45A561A9421AB6AD | Since: 944 | API-Set: unknown
+ * Hash: 0x45A561A9421AB6AD | Since: unknown | API-Set: unknown
  */
 export function setWeaponDamageScale(vehicle: number | IVehicle, multiplier: number): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9234,7 +9231,7 @@ export function setWeaponDamageScale(vehicle: number | IVehicle, multiplier: num
  * For example, you can "remove" any vehicle weapon from any vehicle.
  * ammoAmount -1 = infinite ammo (default value for any spawned vehicle tho)
  * 
- * Hash: 0x44CD1F493DB2A0A6 | Since: 944 | API-Set: unknown
+ * Hash: 0x44CD1F493DB2A0A6 | Since: unknown | API-Set: unknown
  */
 export function setWeaponRestrictedAmmo(vehicle: number | IVehicle, weaponIndex: number, capacity: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9244,7 +9241,7 @@ export function setWeaponRestrictedAmmo(vehicle: number | IVehicle, weaponIndex:
 /**
  * No comment provided
  * 
- * Hash: 0x29B18B4FD460CA8F | Since: 323 | API-Set: unknown
+ * Hash: 0x29B18B4FD460CA8F | Since: unknown | API-Set: unknown
  */
 export function setWheelsCanBreak(vehicle: number | IVehicle, enabled: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9254,7 +9251,7 @@ export function setWheelsCanBreak(vehicle: number | IVehicle, enabled: boolean):
 /**
  * No comment provided
  * 
- * Hash: 0xA37B9A517B133349 | Since: 323 | API-Set: unknown
+ * Hash: 0xA37B9A517B133349 | Since: unknown | API-Set: unknown
  */
 export function setWheelsCanBreakOffWhenBlowUp(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9276,7 +9273,7 @@ export function setWheelsCanBreakOffWhenBlowUp(vehicle: number | IVehicle, toggl
  * 11: Street
  * 12: Track
  * 
- * Hash: 0x487EB21CC7295BA1 | Since: 323 | API-Set: unknown
+ * Hash: 0x487EB21CC7295BA1 | Since: unknown | API-Set: unknown
  */
 export function setWheelType(vehicle: number | IVehicle, WheelType: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9286,7 +9283,7 @@ export function setWheelType(vehicle: number | IVehicle, WheelType: number): voi
 /**
  * No comment provided
  * 
- * Hash: 0xBE5C1255A1830FF5 | Since: 323 | API-Set: unknown
+ * Hash: 0xBE5C1255A1830FF5 | Since: unknown | API-Set: unknown
  */
 export function setWillForceOtherVehiclesToStop(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9296,7 +9293,7 @@ export function setWillForceOtherVehiclesToStop(vehicle: number | IVehicle, togg
 /**
  * No comment provided
  * 
- * Hash: 0x2C4A1590ABF43E8B | Since: 323 | API-Set: unknown
+ * Hash: 0x2C4A1590ABF43E8B | Since: unknown | API-Set: unknown
  */
 export function setWillTellOthersToHurry(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9316,7 +9313,7 @@ export function setWillTellOthersToHurry(vehicle: number | IVehicle): void {
  * };
  * Full list of all vehicle window tints by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicleColors.json
  * 
- * Hash: 0x57C51E6BAD752696 | Since: 323 | API-Set: unknown
+ * Hash: 0x57C51E6BAD752696 | Since: unknown | API-Set: unknown
  */
 export function setWindowTint(vehicle: number | IVehicle, tint: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9329,7 +9326,7 @@ export function setWindowTint(vehicle: number | IVehicle, tint: number): void {
  * Be aware that it only works on xenon lights. Example: https://i.imgur.com/yV3cpG9.png
  * Full list of all vehicle xenon lights by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/vehicleColors.json
  * 
- * Hash: 0xE41033B25D003A07 | Since: 1604 | API-Set: unknown
+ * Hash: 0xE41033B25D003A07 | Since: unknown | API-Set: unknown
  */
 export function setXenonLightColorIndex(vehicle: number | IVehicle, colorIndex: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9339,7 +9336,7 @@ export function setXenonLightColorIndex(vehicle: number | IVehicle, colorIndex: 
 /**
  * Enables/disables the ability to wheelie on motorcycles.
  * 
- * Hash: 0x1312DDD8385AEE4E | Since: 1103 | API-Set: unknown
+ * Hash: 0x1312DDD8385AEE4E | Since: unknown | API-Set: unknown
  */
 export function setWheelieEnabled(vehicle: number | IVehicle, enabled: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9349,7 +9346,7 @@ export function setWheelieEnabled(vehicle: number | IVehicle, enabled: boolean):
 /**
  * No comment provided
  * 
- * Hash: 0xF660602546D27BA8 | Since: 944 | API-Set: unknown
+ * Hash: 0xF660602546D27BA8 | Since: unknown | API-Set: unknown
  */
 export function setWheelsExtendedInstantly(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9359,7 +9356,7 @@ export function setWheelsExtendedInstantly(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x5335BE58C083E74E | Since: 1011 | API-Set: unknown
+ * Hash: 0x5335BE58C083E74E | Since: unknown | API-Set: unknown
  */
 export function setWheelsRetractedInstantly(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9369,7 +9366,7 @@ export function setWheelsRetractedInstantly(vehicle: number | IVehicle): void {
 /**
  * SET_TIME_POSITION_IN_RECORDING can be emulated by: desired_time - GET_TIME_POSITION_IN_RECORDING(vehicle)
  * 
- * Hash: 0x9438F7AD68771A20 | Since: 323 | API-Set: unknown
+ * Hash: 0x9438F7AD68771A20 | Since: unknown | API-Set: unknown
  */
 export function skipTimeInPlaybackRecorded(vehicle: number | IVehicle, time: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9379,7 +9376,7 @@ export function skipTimeInPlaybackRecorded(vehicle: number | IVehicle, time: num
 /**
  * No comment provided
  * 
- * Hash: 0xAB8E2EDA0C0A5883 | Since: 323 | API-Set: unknown
+ * Hash: 0xAB8E2EDA0C0A5883 | Since: unknown | API-Set: unknown
  */
 export function skipToEndAndStopPlaybackRecorded(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9398,7 +9395,7 @@ export function skipToEndAndStopPlaybackRecorded(vehicle: number | IVehicle): vo
  * 7 = Mid Right
  * 8 = Invalid
  * 
- * Hash: 0x9E5B5E4D2CCD2259 | Since: 323 | API-Set: unknown
+ * Hash: 0x9E5B5E4D2CCD2259 | Since: unknown | API-Set: unknown
  */
 export function smashWindow(vehicle: number | IVehicle, windowIndex: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9408,7 +9405,7 @@ export function smashWindow(vehicle: number | IVehicle, windowIndex: number): vo
 /**
  * No comment provided
  * 
- * Hash: 0x374706271354CB18 | Since: 323 | API-Set: unknown
+ * Hash: 0x374706271354CB18 | Since: unknown | API-Set: unknown
  */
 export function stabiliseEntityAttachedToHeli(vehicle: number | IVehicle, entity: number | IEntity): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9421,7 +9418,7 @@ export function stabiliseEntityAttachedToHeli(vehicle: number | IVehicle, entity
  * 
  * See REQUEST_VEHICLE_RECORDING
  * 
- * Hash: 0x3F878F92B3A7A071 | Since: 323 | API-Set: unknown
+ * Hash: 0x3F878F92B3A7A071 | Since: unknown | API-Set: unknown
  */
 export function startPlaybackRecorded(vehicle: number | IVehicle, recording: number, script: string): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9433,7 +9430,7 @@ export function startPlaybackRecorded(vehicle: number | IVehicle, recording: num
  * 
  * FORCE_PLAYBACK_RECORDED_VEHICLE_UPDATE is a related native that deals with the AI physics for such recordings.
  * 
- * Hash: 0x29DE5FA52D00428C | Since: 323 | API-Set: unknown
+ * Hash: 0x29DE5FA52D00428C | Since: unknown | API-Set: unknown
  */
 export function startPlaybackRecordedUsingAi(vehicle: number | IVehicle, recording: number, script: string, speed: number, drivingStyle: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9445,7 +9442,7 @@ export function startPlaybackRecordedUsingAi(vehicle: number | IVehicle, recordi
  * 
  * time, often zero and capped at 500, is related to SET_PLAYBACK_TO_USE_AI_TRY_TO_REVERT_BACK_LATER
  * 
- * Hash: 0x7D80FD645D4DA346 | Since: 323 | API-Set: unknown
+ * Hash: 0x7D80FD645D4DA346 | Since: unknown | API-Set: unknown
  */
 export function startPlaybackRecordedWithFlags(vehicle: number | IVehicle, recording: number, script: string, flags: number, time: number, drivingStyle: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9455,7 +9452,7 @@ export function startPlaybackRecordedWithFlags(vehicle: number | IVehicle, recor
 /**
  * No comment provided
  * 
- * Hash: 0xB8FF7AB45305C345 | Since: 323 | API-Set: unknown
+ * Hash: 0xB8FF7AB45305C345 | Since: unknown | API-Set: unknown
  */
 export function startAlarm(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9471,7 +9468,7 @@ export function startAlarm(vehicle: number | IVehicle): void {
  * 
  * Note: If a player is in the vehicle, it will only sound briefly.
  * 
- * Hash: 0x9C8C6504B5B63D2C | Since: 323 | API-Set: unknown
+ * Hash: 0x9C8C6504B5B63D2C | Since: unknown | API-Set: unknown
  */
 export function startHorn(vehicle: number | IVehicle, duration: number, mode: number | string, forever: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9482,7 +9479,7 @@ export function startHorn(vehicle: number | IVehicle, duration: number, mode: nu
 /**
  * No comment provided
  * 
- * Hash: 0x0F87E938BDF29D66 | Since: 323 | API-Set: unknown
+ * Hash: 0x0F87E938BDF29D66 | Since: unknown | API-Set: unknown
  */
 export function stopAllGarageActivity(): void {
     StopAllGarageActivity();
@@ -9491,7 +9488,7 @@ export function stopAllGarageActivity(): void {
 /**
  * Stops CTaskBringVehicleToHalt
  * 
- * Hash: 0x7C06330BFDDA182E | Since: 1103 | API-Set: unknown
+ * Hash: 0x7C06330BFDDA182E | Since: unknown | API-Set: unknown
  */
 export function stopBringingToHalt(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9501,7 +9498,7 @@ export function stopBringingToHalt(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x54833611C17ABDEA | Since: 323 | API-Set: unknown
+ * Hash: 0x54833611C17ABDEA | Since: unknown | API-Set: unknown
  */
 export function stopPlaybackRecorded(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9511,7 +9508,7 @@ export function stopPlaybackRecorded(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x83F813570FF519DE | Since: 573 | API-Set: unknown
+ * Hash: 0x83F813570FF519DE | Since: unknown | API-Set: unknown
  */
 export function suppressNeonsOn(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9521,7 +9518,7 @@ export function suppressNeonsOn(vehicle: number | IVehicle, toggle: boolean): vo
 /**
  * Same call as ALLOW_BOAT_BOOM_TO_ANIMATE
  * 
- * Hash: 0xC1F981A6F74F0C23 | Since: 323 | API-Set: unknown
+ * Hash: 0xC1F981A6F74F0C23 | Since: unknown | API-Set: unknown
  */
 export function swingBoatBoomFreely(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9533,7 +9530,7 @@ export function swingBoatBoomFreely(vehicle: number | IVehicle, toggle: boolean)
  * Ratio value is between `0.0` and `1.0`, where `0.0` is 90 degrees to the left of the boat, and `1.0` is just slightly to the right/back of the boat.
  * To get the current boom position ratio, use GET_BOAT_BOOM_POSITION_RATIO
  * 
- * Hash: 0xF488C566413B4232 | Since: 323 | API-Set: unknown
+ * Hash: 0xF488C566413B4232 | Since: unknown | API-Set: unknown
  */
 export function swingBoatBoomToRatio(vehicle: number | IVehicle, ratio: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9561,7 +9558,7 @@ export function swingBoatBoomToRatio(vehicle: number | IVehicle, ratio: number):
  * 11 (`trains12.dat`) Yankton prologue mission train
  * Full list of all train tracks + track nodes by DurtyFree https://github.com/DurtyFree/gta-v-data-dumps/blob/master/traintracks.json
  * 
- * Hash: 0xFD813BB7DB977F20 | Since: 323 | API-Set: unknown
+ * Hash: 0xFD813BB7DB977F20 | Since: unknown | API-Set: unknown
  */
 export function switchTrainTrack(trackId: number, state: boolean): void {
     SwitchTrainTrack(trackId, state);
@@ -9576,7 +9573,7 @@ export function switchTrainTrack(trackId: number, state: boolean): void {
  * UNK21 - 21
  * Xenon Headlights - 22
  * 
- * Hash: 0x2A1F4F37F95BAD08 | Since: 323 | API-Set: unknown
+ * Hash: 0x2A1F4F37F95BAD08 | Since: unknown | API-Set: unknown
  */
 export function toggleMod(vehicle: number | IVehicle, modType: number, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9589,7 +9586,7 @@ export function toggleMod(vehicle: number | IVehicle, modType: number, toggle: b
  * Vehicle v = ...;
  * Function.Call(Hash.TRACK_VEHICLE_VISIBILITY, v.Handle);
  * 
- * Hash: 0x64473AEFDCF47DCA | Since: 323 | API-Set: unknown
+ * Hash: 0x64473AEFDCF47DCA | Since: unknown | API-Set: unknown
  */
 export function trackVisibility(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9599,7 +9596,7 @@ export function trackVisibility(vehicle: number | IVehicle): void {
 /**
  * Transforms the `stormberg`/`toreador` to its "road vehicle" variant. If the vehicle is already in that state then the vehicle transformation audio will still play, but the vehicle won't change at all.
  * 
- * Hash: 0x2A69FFD1B42BFF9E | Since: 1290 | API-Set: unknown
+ * Hash: 0x2A69FFD1B42BFF9E | Since: unknown | API-Set: unknown
  */
 export function transformToCar(vehicle: number | IVehicle, noAnimation: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9609,7 +9606,7 @@ export function transformToCar(vehicle: number | IVehicle, noAnimation: boolean)
 /**
  * Transforms the `stormberg`/`toreador` to its "submarine" variant. If the vehicle is already in that state then the vehicle transformation audio will still play, but the vehicle won't change at all.
  * 
- * Hash: 0xBE4C854FFDB6EEBE | Since: 1365 | API-Set: unknown
+ * Hash: 0xBE4C854FFDB6EEBE | Since: unknown | API-Set: unknown
  */
 export function transformToSubmarine(vehicle: number | IVehicle, noAnimation: boolean): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9619,7 +9616,7 @@ export function transformToSubmarine(vehicle: number | IVehicle, noAnimation: bo
 /**
  * No comment provided
  * 
- * Hash: 0x8879EE09268305D5 | Since: 323 | API-Set: unknown
+ * Hash: 0x8879EE09268305D5 | Since: unknown | API-Set: unknown
  */
 export function unpausePlaybackRecorded(vehicle: number | IVehicle): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9629,7 +9626,7 @@ export function unpausePlaybackRecorded(vehicle: number | IVehicle): void {
 /**
  * No comment provided
  * 
- * Hash: 0x756AE6E962168A04 | Since: 944 | API-Set: unknown
+ * Hash: 0x756AE6E962168A04 | Since: unknown | API-Set: unknown
  */
 export function setEnableNormaliseRampCarVerticalVeloctiy(): void {
     SetVehicleRampUpwardsLaunchMotion(undefined, undefined);
@@ -9638,7 +9635,7 @@ export function setEnableNormaliseRampCarVerticalVeloctiy(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x1BBAC99C0BC53656 | Since: 944 | API-Set: unknown
+ * Hash: 0x1BBAC99C0BC53656 | Since: unknown | API-Set: unknown
  */
 export function setEnableRampCarSideImpulse(): void {
     SetVehicleRampSidewaysLaunchMotion(undefined, undefined);
@@ -9647,7 +9644,7 @@ export function setEnableRampCarSideImpulse(): void {
 /**
  * No comment provided
  * 
- * Hash: 0xF3B0E0AED097A3F5 | Since: 1103 | API-Set: unknown
+ * Hash: 0xF3B0E0AED097A3F5 | Since: unknown | API-Set: unknown
  */
 export function setExtenableSideTargetRatio(): number {
     return Citizen.invokeNative('0xF3B0E0AED097A3F5', undefined, undefined);
@@ -9656,7 +9653,7 @@ export function setExtenableSideTargetRatio(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x9D30687C57BAA0BB | Since: 1011 | API-Set: unknown
+ * Hash: 0x9D30687C57BAA0BB | Since: unknown | API-Set: unknown
  */
 export function setJetWashForceEnabled(): void {
     Citizen.invokeNative('0x9D30687C57BAA0BB', undefined);
@@ -9665,7 +9662,7 @@ export function setJetWashForceEnabled(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x0419B167EE128F33 | Since: 1103 | API-Set: unknown
+ * Hash: 0x0419B167EE128F33 | Since: unknown | API-Set: unknown
  */
 export function setOverrideExtenableSideRatio(): number {
     return Citizen.invokeNative('0x0419B167EE128F33', undefined, undefined);
@@ -9674,7 +9671,7 @@ export function setOverrideExtenableSideRatio(): number {
 /**
  * No comment provided
  * 
- * Hash: 0xD3E51C0AB8C26EEE | Since: 1103 | API-Set: unknown
+ * Hash: 0xD3E51C0AB8C26EEE | Since: unknown | API-Set: unknown
  */
 export function setOverrideSideRatio(): number {
     return Citizen.invokeNative('0xD3E51C0AB8C26EEE', undefined, undefined);
@@ -9686,7 +9683,7 @@ export function setOverrideSideRatio(): number {
  * - imp_prop_impexp_para_s (SecuroServ; Default)
  * Plus, many more props can be used as vehicle parachutes, like umbrellas (prop_beach_parasol_03), and unlike SET_PLAYER_PARACHUTE_MODEL_OVERRIDE, you won't get stuck mid-air when using an umbrella.
  * 
- * Hash: 0x4D610C6B56031351 | Since: 1011 | API-Set: unknown
+ * Hash: 0x4D610C6B56031351 | Since: unknown | API-Set: unknown
  */
 export function setParachuteModelOverride(vehicle: number | IVehicle, modelHash: number | string): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9705,7 +9702,7 @@ export function setParachuteModelOverride(vehicle: number | IVehicle, modelHash:
  * - 6: Black
  * - 7: Black, yellow
  * 
- * Hash: 0xA74AD2439468C883 | Since: 1011 | API-Set: unknown
+ * Hash: 0xA74AD2439468C883 | Since: unknown | API-Set: unknown
  */
 export function setParachuteModelTintIndex(vehicle: number | IVehicle, textureVariation: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9715,7 +9712,7 @@ export function setParachuteModelTintIndex(vehicle: number | IVehicle, textureVa
 /**
  * No comment provided
  * 
- * Hash: 0x28D034A93FE31BF5 | Since: 944 | API-Set: unknown
+ * Hash: 0x28D034A93FE31BF5 | Since: unknown | API-Set: unknown
  */
 export function setRampAndRammingCarsTakeDamage(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9725,7 +9722,7 @@ export function setRampAndRammingCarsTakeDamage(vehicle: number | IVehicle, togg
 /**
  * No comment provided
  * 
- * Hash: 0x0BFFB028B3DD0A97 | Since: 944 | API-Set: unknown
+ * Hash: 0x0BFFB028B3DD0A97 | Since: unknown | API-Set: unknown
  */
 export function startParachuting(vehicle: number | IVehicle, active: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9735,7 +9732,7 @@ export function startParachuting(vehicle: number | IVehicle, active: boolean): v
 /**
  * No comment provided
  * 
- * Hash: 0xEA4743874D515F13 | Since: 2944 | API-Set: unknown
+ * Hash: 0xEA4743874D515F13 | Since: unknown | API-Set: unknown
  */
 export function areMissileBaysDeployed(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9745,7 +9742,7 @@ export function areMissileBaysDeployed(vehicle: number | IVehicle): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xDC05D2777F855F44 | Since: 3407 | API-Set: unknown
+ * Hash: 0xDC05D2777F855F44 | Since: unknown | API-Set: unknown
  */
 export function enableIndividualPlanePropeller(vehicle: number | IVehicle, propeller: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9755,7 +9752,7 @@ export function enableIndividualPlanePropeller(vehicle: number | IVehicle, prope
 /**
  * No comment provided
  * 
- * Hash: 0x1FCB07FE230B6639 | Since: 3258 | API-Set: unknown
+ * Hash: 0x1FCB07FE230B6639 | Since: unknown | API-Set: unknown
  */
 export function getIsElectric(vehicleModel: number | string): boolean {
     if (typeof vehicleModel === 'string') vehicleModel = GetHashKey(vehicleModel)
@@ -9765,7 +9762,7 @@ export function getIsElectric(vehicleModel: number | string): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0x7DFAD92A34F09C00 | Since: 3717 | API-Set: unknown
+ * Hash: 0x7DFAD92A34F09C00 | Since: unknown | API-Set: unknown
  */
 export function getMissionTrainConfigIndexByName(name: string): number {
     return Citizen.invokeNative('0x7DFAD92A34F09C00', name);
@@ -9774,7 +9771,7 @@ export function getMissionTrainConfigIndexByName(name: string): number {
 /**
  * No comment provided
  * 
- * Hash: 0xBEC4B8653462450E | Since: 3095 | API-Set: unknown
+ * Hash: 0xBEC4B8653462450E | Since: unknown | API-Set: unknown
  */
 export function getRemainingNitrousDuration(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9784,7 +9781,7 @@ export function getRemainingNitrousDuration(vehicle: number | IVehicle): number 
 /**
  * No comment provided
  * 
- * Hash: 0x613A431BCD5A22EB | Since: 3717 | API-Set: unknown
+ * Hash: 0x613A431BCD5A22EB | Since: unknown | API-Set: unknown
  */
 export function getAllowHomingMissleLockonSynced(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9794,7 +9791,7 @@ export function getAllowHomingMissleLockonSynced(vehicle: number | IVehicle): bo
 /**
  * No comment provided
  * 
- * Hash: 0x56185A25D45A0DCD | Since: 3095 | API-Set: unknown
+ * Hash: 0x56185A25D45A0DCD | Since: unknown | API-Set: unknown
  */
 export function getCurrentDriveGear(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9804,7 +9801,7 @@ export function getCurrentDriveGear(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0xF9DDA40BC293A61E | Since: 3095 | API-Set: unknown
+ * Hash: 0xF9DDA40BC293A61E | Since: unknown | API-Set: unknown
  */
 export function getCurrentRevRatio(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9814,7 +9811,7 @@ export function getCurrentRevRatio(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0xFD8CE53356B5D745 | Since: 3095 | API-Set: unknown
+ * Hash: 0xFD8CE53356B5D745 | Since: unknown | API-Set: unknown
  */
 export function getDesiredDriveGear(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9834,7 +9831,7 @@ export function getDesiredDriveGear(vehicle: number | IVehicle): number {
  * 
  * _GET_VEHICLE_DE* - _GET_VEHICLE_DI*
  * 
- * Hash: 0x1423725069EE1D14 | Since: 3258 | API-Set: unknown
+ * Hash: 0x1423725069EE1D14 | Since: unknown | API-Set: unknown
  */
 export function getDrivetrainType(vehicleModel: number | string): number {
     if (typeof vehicleModel === 'string') vehicleModel = GetHashKey(vehicleModel)
@@ -9844,7 +9841,7 @@ export function getDrivetrainType(vehicleModel: number | string): number {
 /**
  * No comment provided
  * 
- * Hash: 0xE728F090D538CB18 | Since: 3095 | API-Set: unknown
+ * Hash: 0xE728F090D538CB18 | Since: unknown | API-Set: unknown
  */
 export function getExhaustBone(vehicle: number | IVehicle, index: number): [boolean, number, boolean] {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9854,7 +9851,7 @@ export function getExhaustBone(vehicle: number | IVehicle, index: number): [bool
 /**
  * No comment provided
  * 
- * Hash: 0x24910C3D66BA770D | Since: 3095 | API-Set: unknown
+ * Hash: 0x24910C3D66BA770D | Since: unknown | API-Set: unknown
  */
 export function getMaxDriveGearCount(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9864,7 +9861,7 @@ export function getMaxDriveGearCount(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0x3EE18B00CD86C54F | Since: 3095 | API-Set: unknown
+ * Hash: 0x3EE18B00CD86C54F | Since: unknown | API-Set: unknown
  */
 export function getMaxExhaustBoneCount(): number {
     return Citizen.invokeNative('0x3EE18B00CD86C54F');
@@ -9873,7 +9870,7 @@ export function getMaxExhaustBoneCount(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x61F02E4E9A7A61EA | Since: 3095 | API-Set: unknown
+ * Hash: 0x61F02E4E9A7A61EA | Since: unknown | API-Set: unknown
  */
 export function getModelNumDriveGears(vehicleModel: number | string): number {
     if (typeof vehicleModel === 'string') vehicleModel = GetHashKey(vehicleModel)
@@ -9883,7 +9880,7 @@ export function getModelNumDriveGears(vehicleModel: number | string): number {
 /**
  * No comment provided
  * 
- * Hash: 0x92D96892FC06AF22 | Since: 3095 | API-Set: unknown
+ * Hash: 0x92D96892FC06AF22 | Since: unknown | API-Set: unknown
  */
 export function getThrottle(vehicle: number | IVehicle): number {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9893,7 +9890,7 @@ export function getThrottle(vehicle: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0x80D9D32636369C92 | Since: 2802 | API-Set: unknown
+ * Hash: 0x80D9D32636369C92 | Since: unknown | API-Set: unknown
  */
 export function getTrailerParentVehicle(trailer: number | IVehicle): number {
     const _trailer = typeof trailer == 'object' ? trailer.handle() : trailer;
@@ -9903,17 +9900,18 @@ export function getTrailerParentVehicle(trailer: number | IVehicle): number {
 /**
  * No comment provided
  * 
- * Hash: 0x6638C0F19DE692FE | Since: 3095 | API-Set: unknown
+ * Hash: 0x6638C0F19DE692FE | Since: unknown | API-Set: unknown
  */
 export function isGen9ExclusiveModel(vehicleModel: number | string): boolean {
     if (typeof vehicleModel === 'string') vehicleModel = GetHashKey(vehicleModel)
+    if (IsGameEnhancedVersion()) console.error('This native is not supported on enhanced (0x6638C0F19DE692FE)'); return;
     return Citizen.invokeNative('0x6638C0F19DE692FE', vehicleModel);
 }
 
 /**
  * No comment provided
  * 
- * Hash: 0x71C6302CBCA6CA35 | Since: 3407 | API-Set: unknown
+ * Hash: 0x71C6302CBCA6CA35 | Since: unknown | API-Set: unknown
  */
 export function isOnBoostPad(vehicle: number | IVehicle): boolean {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9923,7 +9921,7 @@ export function isOnBoostPad(vehicle: number | IVehicle): boolean {
 /**
  * _SET_ALLOW_R* - _SET_ALLOW_V*
  * 
- * Hash: 0x27D27223E8EF22ED | Since: 3095 | API-Set: unknown
+ * Hash: 0x27D27223E8EF22ED | Since: unknown | API-Set: unknown
  */
 export function setAllowCollisionWhenIn(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9933,7 +9931,7 @@ export function setAllowCollisionWhenIn(vehicle: number | IVehicle, toggle: bool
 /**
  * No comment provided
  * 
- * Hash: 0x48BD57D0DD17786A | Since: 3095 | API-Set: unknown
+ * Hash: 0x48BD57D0DD17786A | Since: unknown | API-Set: unknown
  */
 export function setAttachedToTowTruckArm(towTruck: number | IVehicle, vehicle: number | IVehicle): void {
     const _towTruck = typeof towTruck == 'object' ? towTruck.handle() : towTruck;
@@ -9944,7 +9942,7 @@ export function setAttachedToTowTruckArm(towTruck: number | IVehicle, vehicle: n
 /**
  * Use the vehicle bounds (instead of viewport) when deciding if a vehicle is sufficiently above the water (waterheight.dat), bypassing wave simulation checks
  * 
- * Hash: 0x85FC953F6C6CBDE1 | Since: 2802 | API-Set: unknown
+ * Hash: 0x85FC953F6C6CBDE1 | Since: unknown | API-Set: unknown
  */
 export function setBoundsAffectWaterProbes(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9954,7 +9952,7 @@ export function setBoundsAffectWaterProbes(vehicle: number | IVehicle, toggle: b
 /**
  * No comment provided
  * 
- * Hash: 0x0C02468829E4AA65 | Since: 2944 | API-Set: unknown
+ * Hash: 0x0C02468829E4AA65 | Since: unknown | API-Set: unknown
  */
 export function setDeployMissileBays(vehicle: number | IVehicle, deploy: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9964,7 +9962,7 @@ export function setDeployMissileBays(vehicle: number | IVehicle, deploy: boolean
 /**
  * Prevents the vehicle from exploding when taking body damage if the inflictor is an AI-controlled vehicle. Only works for planes.
  * 
- * Hash: 0xB0B7DF5CB876FF5E | Since: 3407 | API-Set: unknown
+ * Hash: 0xB0B7DF5CB876FF5E | Since: unknown | API-Set: unknown
  */
 export function setDisableExplodeFromBodyDamageReceivedByAi(vehicle: number | IVehicle, disable: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9974,7 +9972,7 @@ export function setDisableExplodeFromBodyDamageReceivedByAi(vehicle: number | IV
 /**
  * First two floats relate to rumble, the last is a threshold
  * 
- * Hash: 0xDAF4C98C18AC6F06 | Since: 3095 | API-Set: unknown
+ * Hash: 0xDAF4C98C18AC6F06 | Since: unknown | API-Set: unknown
  */
 export function setDriftSlipAngleLimits(vehicle: number | IVehicle, durationScalar: number, amplitudeScalar: number, slipAngleLimit: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -9984,7 +9982,7 @@ export function setDriftSlipAngleLimits(vehicle: number | IVehicle, durationScal
 /**
  * No comment provided
  * 
- * Hash: 0x559B6073DB7FFFF9 | Since: 3717 | API-Set: unknown
+ * Hash: 0x559B6073DB7FFFF9 | Since: unknown | API-Set: unknown
  */
 export function setMakeTrainScanForBlockingEntities(train: number | IVehicle, toggle: boolean): void {
     const _train = typeof train == 'object' ? train.handle() : train;
@@ -9994,7 +9992,7 @@ export function setMakeTrainScanForBlockingEntities(train: number | IVehicle, to
 /**
  * No comment provided
  * 
- * Hash: 0x16CFBC5E7EB32861 | Since: 3095 | API-Set: unknown
+ * Hash: 0x16CFBC5E7EB32861 | Since: unknown | API-Set: unknown
  */
 export function setMinimumTimeBetweenGearShifts(vehicle: number | IVehicle, time: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -10004,7 +10002,7 @@ export function setMinimumTimeBetweenGearShifts(vehicle: number | IVehicle, time
 /**
  * No comment provided
  * 
- * Hash: 0x465EEA70AF251045 | Since: 3095 | API-Set: unknown
+ * Hash: 0x465EEA70AF251045 | Since: unknown | API-Set: unknown
  */
 export function setNitrousIsVisible(vehicle: number | IVehicle, enabled: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -10014,7 +10012,7 @@ export function setNitrousIsVisible(vehicle: number | IVehicle, enabled: boolean
 /**
  * No comment provided
  * 
- * Hash: 0xAFD262ACCA64479A | Since: 3095 | API-Set: unknown
+ * Hash: 0xAFD262ACCA64479A | Since: unknown | API-Set: unknown
  */
 export function setOverrideTractionLossMultiplier(vehicle: number | IVehicle, modifier: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -10024,7 +10022,7 @@ export function setOverrideTractionLossMultiplier(vehicle: number | IVehicle, mo
 /**
  * No comment provided
  * 
- * Hash: 0xBAFB99B304BC52A7 | Since: 3407 | API-Set: unknown
+ * Hash: 0xBAFB99B304BC52A7 | Since: unknown | API-Set: unknown
  */
 export function setPlaneAvoidsOthers(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -10034,7 +10032,7 @@ export function setPlaneAvoidsOthers(vehicle: number | IVehicle, toggle: boolean
 /**
  * No comment provided
  * 
- * Hash: 0x1AD0F63A94E10EFF | Since: 3407 | API-Set: unknown
+ * Hash: 0x1AD0F63A94E10EFF | Since: unknown | API-Set: unknown
  */
 export function setRemainingNitrousDuration(vehicle: number | IVehicle, duration: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -10044,7 +10042,7 @@ export function setRemainingNitrousDuration(vehicle: number | IVehicle, duration
 /**
  * No comment provided
  * 
- * Hash: 0x337EF33DA3DDB990 | Since: 3095 | API-Set: unknown
+ * Hash: 0x337EF33DA3DDB990 | Since: unknown | API-Set: unknown
  */
 export function setTransmissionReducedGearRatio(vehicle: number | IVehicle, toggle: boolean): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -10054,7 +10052,7 @@ export function setTransmissionReducedGearRatio(vehicle: number | IVehicle, togg
 /**
  * Does not actually return anything.
  * 
- * Hash: 0x84D7FFD223CAAFFD | Since: 3407 | API-Set: unknown
+ * Hash: 0x84D7FFD223CAAFFD | Since: unknown | API-Set: unknown
  */
 export function setExplosiveDamageScale(vehicle: number | IVehicle, scale: number): any {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -10065,7 +10063,7 @@ export function setExplosiveDamageScale(vehicle: number | IVehicle, scale: numbe
  * 0.0f = engine rev minimum
  * 1.0f = engine rev limit
  * 
- * Hash: 0x5AE614ECA5FDD423 | Since: 3095 | API-Set: unknown
+ * Hash: 0x5AE614ECA5FDD423 | Since: unknown | API-Set: unknown
  */
 export function setMaxLaunchEngineRevs(vehicle: number | IVehicle, modifier: number): void {
     const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
@@ -10075,7 +10073,7 @@ export function setMaxLaunchEngineRevs(vehicle: number | IVehicle, modifier: num
 /**
  * No comment provided
  * 
- * Hash: 0x1980F68872CC2C3D | Since: 3095 | API-Set: unknown
+ * Hash: 0x1980F68872CC2C3D | Since: unknown | API-Set: unknown
  */
 export function setUseHornButtonForNitrous(toggle: boolean): void {
     SetVehicleUseHornButtonForNitrous(toggle);

@@ -8,43 +8,43 @@ import { IObject } from '@risinglife/fivem-shared';
  *
  * Hardcoded to not work in Multiplayer.
  *
- * Hash: 0x4EE5367468A65CCC | Since: 323
+ * Hash: 0x4EE5367468A65CCC | Since: unknown
  */
 export declare function addScriptToRandomPed(name: string, model: number | string): void;
 /**
  * No comment provided
  *
- * Hash: 0x14D8518E9760F08F | Since: 323
+ * Hash: 0x14D8518E9760F08F | Since: unknown
  */
 export declare function disableScriptSet(brainSet: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x67AA4D73F0CFA86B | Since: 323
+ * Hash: 0x67AA4D73F0CFA86B | Since: unknown
  */
 export declare function enableScriptSet(brainSet: number): void;
 /**
  * No comment provided
  *
- * Hash: 0xCCBA154209823057 | Since: 323
+ * Hash: 0xCCBA154209823057 | Since: unknown
  */
 export declare function isObjectWithinActivationRange(_object: number | IObject): boolean;
 /**
  * Gets whether the world point the calling script is registered to is within desired range of the player.
  *
- * Hash: 0xC5042CC6F5E3D450 | Since: 323
+ * Hash: 0xC5042CC6F5E3D450 | Since: unknown
  */
 export declare function isWorldPointWithinActivationRange(): boolean;
 /**
  * No comment provided
  *
- * Hash: 0x4D953DF78EBF8158 | Since: 323
+ * Hash: 0x4D953DF78EBF8158 | Since: unknown
  */
 export declare function reactivateAllObjectsThatAreWaitingTillOutOfRange(): void;
 /**
  * No comment provided
  *
- * Hash: 0x0B40ED49D7D6FF84 | Since: 323
+ * Hash: 0x0B40ED49D7D6FF84 | Since: unknown
  */
 export declare function reactivateAllWorldsThatAreWaitingTillOutOfRange(): void;
 /**
@@ -55,7 +55,7 @@ export declare function reactivateAllWorldsThatAreWaitingTillOutOfRange(): void;
  * "ob_tv"
  * "launcher_Darts"
  *
- * Hash: 0x6E91B04E08773030 | Since: 323
+ * Hash: 0x6E91B04E08773030 | Since: unknown
  */
 export declare function reactivateNamedObjectsWaitingTillOutOfRange(scriptName: string): void;
 /**
@@ -88,7 +88,7 @@ export declare function reactivateNamedObjectsWaitingTillOutOfRange(scriptName: 
  * ob_mp_bed_low
  * ob_mp_bed_med
  *
- * Hash: 0x6D6840CEE8845831 | Since: 323
+ * Hash: 0x6D6840CEE8845831 | Since: unknown
  */
 export declare function reactivateNamedWorldsWaitingTillOutOfRange(scriptName: string): void;
 /**
@@ -98,12 +98,12 @@ export declare function reactivateNamedWorldsWaitingTillOutOfRange(scriptName: s
  *
  * - Nacorpio
  *
- * Hash: 0x0BE84C318BA6EC22 | Since: 323
+ * Hash: 0x0BE84C318BA6EC22 | Since: unknown
  */
 export declare function registerObjectScript(scriptName: string, modelHash: number | string, activationRange: number): void;
 /**
  * No comment provided
  *
- * Hash: 0x3CDC7136613284BD | Since: 323
+ * Hash: 0x3CDC7136613284BD | Since: unknown
  */
 export declare function registerWorldPointScript(scriptName: string, activationRange: number): void;

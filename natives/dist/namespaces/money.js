@@ -1,7 +1,7 @@
 /**
  * No comment provided
  *
- * Hash: 0x9777734DAD16992F | Since: 573
+ * Hash: 0x9777734DAD16992F | Since: unknown
  */
 export function canPayAmountToBoss(amount) {
     return CanPayGoon(0, 0, amount);
@@ -9,7 +9,7 @@ export function canPayAmountToBoss(amount) {
 /**
  * Does nothing and always returns false.
  *
- * Hash: 0xE260E0BB9CD995AC | Since: 323
+ * Hash: 0xE260E0BB9CD995AC | Since: unknown
  */
 export function depositVc(amount) {
     return DepositVc(amount);
@@ -17,7 +17,7 @@ export function depositVc(amount) {
 /**
  * This function is hard-coded to always return 1.
  *
- * Hash: 0xE154B48B68EF72BC | Since: 323
+ * Hash: 0xE154B48B68EF72BC | Since: unknown
  */
 export function hasVcWithdrawalCompleted() {
     return Citizen.invokeNative('0xE154B48B68EF72BC', undefined);
@@ -26,7 +26,7 @@ export function hasVcWithdrawalCompleted() {
  * p1 = 0 (always)
  * p2 = 1 (always)
  *
- * Hash: 0x763B4BD305338F19 | Since: 323
+ * Hash: 0x763B4BD305338F19 | Since: unknown
  */
 export function networkBuyAirstrike(cost) {
     NetworkBuyAirstrike(cost, false, false, undefined);
@@ -34,7 +34,7 @@ export function networkBuyAirstrike(cost) {
 /**
  * No comment provided
  *
- * Hash: 0xA3EDDAA42411D3B9 | Since: 323
+ * Hash: 0xA3EDDAA42411D3B9 | Since: unknown
  */
 export function networkBuyBackupGang(npcProvider) {
     NetworkBuyBackupGang(0, 0, false, false, npcProvider);
@@ -42,7 +42,7 @@ export function networkBuyBackupGang(npcProvider) {
 /**
  * p1 is just an assumption. p2 was false and p3 was true.
  *
- * Hash: 0x7B718E197453F2D9 | Since: 323
+ * Hash: 0x7B718E197453F2D9 | Since: unknown
  */
 export function networkBuyBounty(amount, victim) {
     const _victim = typeof victim == 'object' ? victim.playerId() : victim;
@@ -51,7 +51,7 @@ export function networkBuyBounty(amount, victim) {
 /**
  * No comment provided
  *
- * Hash: 0x30FD873ECE50E9F6 | Since: 757
+ * Hash: 0x30FD873ECE50E9F6 | Since: unknown
  */
 export function networkBuyContrabandMission(p2) {
     if (typeof p2 === 'string')
@@ -66,7 +66,7 @@ export function networkBuyContrabandMission(p2) {
  * 1,0,1 in the am_rollercoaster.c
  *
  *
- * Hash: 0x8A7B3952DD64D2B5 | Since: 323
+ * Hash: 0x8A7B3952DD64D2B5 | Since: unknown
  */
 export function networkBuyFairgroundRide(amount) {
     NetworkBuyFairgroundRide(amount, undefined, false, false, undefined);
@@ -74,7 +74,7 @@ export function networkBuyFairgroundRide(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xD9B067E55253E3DD | Since: 323
+ * Hash: 0xD9B067E55253E3DD | Since: unknown
  */
 export function networkBuyHealthcare(cost) {
     NetworkBuyHealthcare(cost, false, false);
@@ -83,7 +83,7 @@ export function networkBuyHealthcare(cost) {
  * p1 = 0 (always)
  * p2 = 1 (always)
  *
- * Hash: 0x81AA4610E3FD3A69 | Since: 323
+ * Hash: 0x81AA4610E3FD3A69 | Since: unknown
  */
 export function networkBuyHeliStrike(cost) {
     NetworkBuyHeliStrike(cost, false, false, undefined);
@@ -91,7 +91,7 @@ export function networkBuyHeliStrike(cost) {
 /**
  * No comment provided
  *
- * Hash: 0xF0077C797F66A355 | Since: 323
+ * Hash: 0xF0077C797F66A355 | Since: unknown
  */
 export function networkBuyItem(amount, item, item_name) {
     if (typeof item === 'string')
@@ -101,7 +101,7 @@ export function networkBuyItem(amount, item, item_name) {
 /**
  * No comment provided
  *
- * Hash: 0x650A08A280870AF6 | Since: 323
+ * Hash: 0x650A08A280870AF6 | Since: unknown
  */
 export function networkBuyProperty(cost, propertyName) {
     if (typeof propertyName === 'string')
@@ -111,7 +111,7 @@ export function networkBuyProperty(cost, propertyName) {
 /**
  * No comment provided
  *
- * Hash: 0x75AF80E61248EEBD | Since: 323
+ * Hash: 0x75AF80E61248EEBD | Since: unknown
  */
 export function networkBuySmokes() {
     NetworkBuySmokes(0, false, false);
@@ -119,7 +119,7 @@ export function networkBuySmokes() {
 /**
  * No comment provided
  *
- * Hash: 0x3A54E33660DED67F | Since: 323
+ * Hash: 0x3A54E33660DED67F | Since: unknown
  */
 export function networkCanBet(amount) {
     return NetworkCanBet(amount);
@@ -127,7 +127,7 @@ export function networkCanBet(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x5D17BE59D2123284 | Since: 323
+ * Hash: 0x5D17BE59D2123284 | Since: unknown
  */
 export function networkCanReceivePlayerCash() {
     return NetworkCanReceivePlayerCash(undefined, undefined, undefined, undefined);
@@ -135,7 +135,7 @@ export function networkCanReceivePlayerCash() {
 /**
  * No comment provided
  *
- * Hash: 0x1C2473301B1C66BA | Since: 323
+ * Hash: 0x1C2473301B1C66BA | Since: unknown
  */
 export function networkCanShareJobCash() {
     return NetworkCanShareJobCash();
@@ -143,7 +143,7 @@ export function networkCanShareJobCash() {
 /**
  * No comment provided
  *
- * Hash: 0xAB3CAA6B422164DA | Since: 323
+ * Hash: 0xAB3CAA6B422164DA | Since: unknown
  */
 export function networkCanSpend() {
     return NetworkCanSpendMoney(undefined, false, false, false, undefined, undefined);
@@ -151,7 +151,7 @@ export function networkCanSpend() {
 /**
  * No comment provided
  *
- * Hash: 0x7303E27CC6532080 | Since: 323
+ * Hash: 0x7303E27CC6532080 | Since: unknown
  */
 export function networkCanSpend2() {
     return NetworkCanSpendMoney2(undefined, false, false, false, undefined, undefined);
@@ -159,7 +159,7 @@ export function networkCanSpend2() {
 /**
  * No comment provided
  *
- * Hash: 0x3BD101471C7F9EEC | Since: 1734
+ * Hash: 0x3BD101471C7F9EEC | Since: unknown
  */
 export function networkCasinoBuyChips() {
     return NetworkCasinoPurchaseChips(0, 0);
@@ -175,7 +175,7 @@ export function networkCasinoBuyChips() {
  *
  * NETWORK_C*
  *
- * Hash: 0x158C16F5E4CF41F8 | Since: 1734
+ * Hash: 0x158C16F5E4CF41F8 | Since: unknown
  */
 export function networkCasinoCanBet(hash) {
     if (typeof hash === 'string')
@@ -185,7 +185,7 @@ export function networkCasinoCanBet(hash) {
 /**
  * No comment provided
  *
- * Hash: 0xF62F6D9528358FE4 | Since: 1734
+ * Hash: 0xF62F6D9528358FE4 | Since: unknown
  */
 export function networkCasinoCanBetAmount() {
     return NetworkCasinoCanGamble(undefined);
@@ -193,7 +193,7 @@ export function networkCasinoCanBetAmount() {
 /**
  * No comment provided
  *
- * Hash: 0x394DCDB9E836B7A9 | Since: 1734
+ * Hash: 0x394DCDB9E836B7A9 | Since: unknown
  */
 export function networkCasinoCanBetPvc() {
     return NetworkCasinoCanPurchaseChipsWithPvc();
@@ -201,7 +201,7 @@ export function networkCasinoCanBetPvc() {
 /**
  * No comment provided
  *
- * Hash: 0x8968D4D8C6C40C11 | Since: 1734
+ * Hash: 0x8968D4D8C6C40C11 | Since: unknown
  */
 export function networkCasinoCanBuyChipsPvc() {
     return NetworkCasinoCanPurchaseChipsWithPvc2();
@@ -209,7 +209,7 @@ export function networkCasinoCanBuyChipsPvc() {
 /**
  * No comment provided
  *
- * Hash: 0xED44897CB336F480 | Since: 1734
+ * Hash: 0xED44897CB336F480 | Since: unknown
  */
 export function networkCasinoSellChips() {
     return NetworkCasinoSellChips(0, 0);
@@ -217,7 +217,7 @@ export function networkCasinoSellChips() {
 /**
  * No comment provided
  *
- * Hash: 0xA921DED15FDF28F5 | Since: 323
+ * Hash: 0xA921DED15FDF28F5 | Since: unknown
  */
 export function networkClearCharacterWallet(characterSlot) {
     NetworkClearCharacterWallet(characterSlot);
@@ -225,7 +225,7 @@ export function networkClearCharacterWallet(characterSlot) {
 /**
  * No comment provided
  *
- * Hash: 0x18B7AE224B087E26 | Since: 323
+ * Hash: 0x18B7AE224B087E26 | Since: unknown
  */
 export function networkDeductCash(amount) {
     NetworkDeductCash(amount, undefined, undefined, false, false, false);
@@ -233,7 +233,7 @@ export function networkDeductCash(amount) {
 /**
  * Does nothing (it's a nullsub).
  *
- * Hash: 0xCD0F5B5D932AE473 | Since: 323
+ * Hash: 0xCD0F5B5D932AE473 | Since: unknown
  */
 export function networkDeferCashTransactionsUntilShopSave() {
     Citizen.invokeNative('0xCD0F5B5D932AE473');
@@ -241,7 +241,7 @@ export function networkDeferCashTransactionsUntilShopSave() {
 /**
  * Note the 2nd parameters are always 1, 0. I have a feeling it deals with your money, wallet, bank. So when you delete the character it of course wipes the wallet cash at that time. So if that was the case, it would be eg, NETWORK_DELETE_CHARACTER(characterIndex, deleteWalletCash, deleteBankCash);
  *
- * Hash: 0x05A50AF38947EB8D | Since: 323
+ * Hash: 0x05A50AF38947EB8D | Since: unknown
  */
 export function networkDeleteCharacter(characterSlot) {
     NetworkDeleteCharacter(characterSlot, false, false);
@@ -249,7 +249,7 @@ export function networkDeleteCharacter(characterSlot) {
 /**
  * No comment provided
  *
- * Hash: 0x0CB1BE0633C024A8 | Since: 573
+ * Hash: 0x0CB1BE0633C024A8 | Since: unknown
  */
 export function networkEarnAgency() {
     NetworkEarnBossAgency(undefined, undefined, undefined, undefined);
@@ -257,7 +257,7 @@ export function networkEarnAgency() {
 /**
  * No comment provided
  *
- * Hash: 0x38482AD49CB905C7 | Since: 2545
+ * Hash: 0x38482AD49CB905C7 | Since: unknown
  */
 export function networkEarnAgencyContract() {
     Citizen.invokeNative('0x38482AD49CB905C7', undefined, undefined);
@@ -265,7 +265,7 @@ export function networkEarnAgencyContract() {
 /**
  * No comment provided
  *
- * Hash: 0xE29F3D5FA63B1B82 | Since: 2545
+ * Hash: 0xE29F3D5FA63B1B82 | Since: unknown
  */
 export function networkEarnAgencyPhone() {
     Citizen.invokeNative('0xE29F3D5FA63B1B82', undefined, undefined, undefined);
@@ -273,7 +273,7 @@ export function networkEarnAgencyPhone() {
 /**
  * No comment provided
  *
- * Hash: 0x663B4B9D11742A12 | Since: 2545
+ * Hash: 0x663B4B9D11742A12 | Since: unknown
  */
 export function networkEarnAgencySafe() {
     Citizen.invokeNative('0x663B4B9D11742A12', undefined, undefined);
@@ -281,7 +281,7 @@ export function networkEarnAgencySafe() {
 /**
  * No comment provided
  *
- * Hash: 0xD29334ED1A256DBF | Since: 1868
+ * Hash: 0xD29334ED1A256DBF | Since: unknown
  */
 export function networkEarnArcade() {
     Citizen.invokeNative('0xD29334ED1A256DBF', undefined, undefined, undefined, undefined, undefined, undefined);
@@ -289,7 +289,7 @@ export function networkEarnArcade() {
 /**
  * No comment provided
  *
- * Hash: 0x0F99F70C61F14619 | Since: 1604
+ * Hash: 0x0F99F70C61F14619 | Since: unknown
  */
 export function networkEarnArenaCareerProgression(amount) {
     NetworkEarnFromArenaCareerProgression(amount, undefined);
@@ -297,7 +297,7 @@ export function networkEarnArenaCareerProgression(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xE08256F972C7BB2C | Since: 1604
+ * Hash: 0xE08256F972C7BB2C | Since: unknown
  */
 export function networkEarnArenaSkillLevelProgression(amount) {
     NetworkEarnFromArenaSkillLevelProgression(amount, undefined);
@@ -305,7 +305,7 @@ export function networkEarnArenaSkillLevelProgression(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x631F1CB8FB4130AA | Since: 1604
+ * Hash: 0x631F1CB8FB4130AA | Since: unknown
  */
 export function networkEarnArenaWar(amount) {
     NetworkEarnFromArenaWar(amount, undefined, undefined, undefined);
@@ -313,7 +313,7 @@ export function networkEarnArenaWar(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x5E7AE8AABE8B7C0D | Since: 1604
+ * Hash: 0x5E7AE8AABE8B7C0D | Since: unknown
  */
 export function networkEarnArenaWarAssassinateTarget(amount) {
     NetworkEarnFromAssassinateTargetKilled2(amount);
@@ -321,7 +321,7 @@ export function networkEarnArenaWarAssassinateTarget(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xA82959062361B259 | Since: 1604
+ * Hash: 0xA82959062361B259 | Since: unknown
  */
 export function networkEarnArenaWarEventCargo(amount) {
     NetworkEarnFromBbEventCargo(amount);
@@ -329,7 +329,7 @@ export function networkEarnArenaWarEventCargo(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xFA700D8A9905F78A | Since: 1604
+ * Hash: 0xFA700D8A9905F78A | Since: unknown
  */
 export function networkEarnAssassinateTargetKilled(amount) {
     NetworkEarnFromAssassinateTargetKilled(amount);
@@ -337,7 +337,7 @@ export function networkEarnAssassinateTargetKilled(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x36A7FD5A7194B03E | Since: 2372
+ * Hash: 0x36A7FD5A7194B03E | Since: unknown
  */
 export function networkEarnAutoshopBusiness() {
     NetworkEarnFromAutoshopBusiness(undefined, undefined, undefined);
@@ -345,7 +345,7 @@ export function networkEarnAutoshopBusiness() {
 /**
  * No comment provided
  *
- * Hash: 0xC66D1CF99ED7FE25 | Since: 2372
+ * Hash: 0xC66D1CF99ED7FE25 | Since: unknown
  */
 export function networkEarnAutoshopIncome() {
     NetworkEarnFromAutoshopIncome(undefined, 0);
@@ -353,7 +353,7 @@ export function networkEarnAutoshopIncome() {
 /**
  * No comment provided
  *
- * Hash: 0x146D4EB6D22A403F | Since: 2545
+ * Hash: 0x146D4EB6D22A403F | Since: unknown
  */
 export function networkEarnAwardContract() {
     Citizen.invokeNative('0x146D4EB6D22A403F', undefined, undefined);
@@ -361,7 +361,7 @@ export function networkEarnAwardContract() {
 /**
  * No comment provided
  *
- * Hash: 0x88D6C327D6C57C45 | Since: 2545
+ * Hash: 0x88D6C327D6C57C45 | Since: unknown
  */
 export function networkEarnAwardFixerMission() {
     Citizen.invokeNative('0x88D6C327D6C57C45', undefined, undefined);
@@ -369,7 +369,7 @@ export function networkEarnAwardFixerMission() {
 /**
  * No comment provided
  *
- * Hash: 0x7397A115030F1BE3 | Since: 2545
+ * Hash: 0x7397A115030F1BE3 | Since: unknown
  */
 export function networkEarnAwardPhone() {
     Citizen.invokeNative('0x7397A115030F1BE3', undefined, undefined);
@@ -377,7 +377,7 @@ export function networkEarnAwardPhone() {
 /**
  * No comment provided
  *
- * Hash: 0x5B4DBDED84D6A420 | Since: 2545
+ * Hash: 0x5B4DBDED84D6A420 | Since: unknown
  */
 export function networkEarnAwardShortTrip() {
     Citizen.invokeNative('0x5B4DBDED84D6A420', undefined, undefined);
@@ -385,7 +385,7 @@ export function networkEarnAwardShortTrip() {
 /**
  * No comment provided
  *
- * Hash: 0xFDD8D2440DAF1590 | Since: 1604
+ * Hash: 0xFDD8D2440DAF1590 | Since: unknown
  */
 export function networkEarnBbEventBonus(amount) {
     NetworkEarnFromBbEventBonus(amount);
@@ -393,7 +393,7 @@ export function networkEarnBbEventBonus(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xA51338E0DCCD4065 | Since: 2189
+ * Hash: 0xA51338E0DCCD4065 | Since: unknown
  */
 export function networkEarnBeachPartyLostFound() {
     Citizen.invokeNative('0xA51338E0DCCD4065', undefined, undefined, undefined);
@@ -401,7 +401,7 @@ export function networkEarnBeachPartyLostFound() {
 /**
  * No comment provided
  *
- * Hash: 0x71BEC32FA466E105 | Since: 2699
+ * Hash: 0x71BEC32FA466E105 | Since: unknown
  */
 export function networkEarnBiker() {
     NetworkEarnFromBikerIncome(undefined);
@@ -409,7 +409,7 @@ export function networkEarnBiker() {
 /**
  * No comment provided
  *
- * Hash: 0x2C5809EB9DF57257 | Since: 2699
+ * Hash: 0x2C5809EB9DF57257 | Since: unknown
  */
 export function networkEarnBikerShop() {
     NetworkEarnFromBikeShopBusiness(undefined, undefined);
@@ -417,7 +417,7 @@ export function networkEarnBikerShop() {
 /**
  * No comment provided
  *
- * Hash: 0x08B0CA7A6AB3AC32 | Since: 573
+ * Hash: 0x08B0CA7A6AB3AC32 | Since: unknown
  */
 export function networkEarnBoss() {
     NetworkEarnBoss(undefined, undefined, undefined);
@@ -425,7 +425,7 @@ export function networkEarnBoss() {
 /**
  * No comment provided
  *
- * Hash: 0xF6B170F9A02E9E87 | Since: 1493
+ * Hash: 0xF6B170F9A02E9E87 | Since: unknown
  */
 export function networkEarnBountyHunterReward() {
     NetworkEarnBountyHunterReward(undefined);
@@ -433,7 +433,7 @@ export function networkEarnBountyHunterReward() {
 /**
  * No comment provided
  *
- * Hash: 0xBC6227792A188E2E | Since: 2372
+ * Hash: 0xBC6227792A188E2E | Since: unknown
  */
 export function networkEarnCarclubMembership() {
     NetworkEarnFromCarclubMembership(undefined);
@@ -441,7 +441,7 @@ export function networkEarnCarclubMembership() {
 /**
  * No comment provided
  *
- * Hash: 0x973A9781A34F8DEB | Since: 1734
+ * Hash: 0x973A9781A34F8DEB | Since: unknown
  */
 export function networkEarnCasinoAward(amount, hash) {
     if (typeof hash === 'string')
@@ -451,7 +451,7 @@ export function networkEarnCasinoAward(amount, hash) {
 /**
  * No comment provided
  *
- * Hash: 0x83AD64F53F4E9483 | Since: 1734
+ * Hash: 0x83AD64F53F4E9483 | Since: unknown
  */
 export function networkEarnCasinoCollectableCompletedCollection(amount) {
     NetworkEarnFromCompleteCollection(amount);
@@ -459,7 +459,7 @@ export function networkEarnCasinoCollectableCompletedCollection(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x72E7C7B9615FA3C3 | Since: 1868
+ * Hash: 0x72E7C7B9615FA3C3 | Since: unknown
  */
 export function networkEarnCasinoHeist() {
     NetworkEarnCasinoHeist(undefined, undefined, undefined, undefined, undefined, undefined, undefined);
@@ -467,7 +467,7 @@ export function networkEarnCasinoHeist() {
 /**
  * No comment provided
  *
- * Hash: 0x3EC7471E6909798A | Since: 1868
+ * Hash: 0x3EC7471E6909798A | Since: unknown
  */
 export function networkEarnCasinoHeistAwards() {
     NetworkEarnCasinoHeistBonus(undefined, undefined, undefined, undefined, undefined);
@@ -475,7 +475,7 @@ export function networkEarnCasinoHeistAwards() {
 /**
  * No comment provided
  *
- * Hash: 0x09E8F18641BE2575 | Since: 1734
+ * Hash: 0x09E8F18641BE2575 | Since: unknown
  */
 export function networkEarnCasinoMissionParticipation(amount) {
     NetworkEarnFromCasinoMissionParticipation(amount);
@@ -483,7 +483,7 @@ export function networkEarnCasinoMissionParticipation(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x566FD402B25787DE | Since: 1734
+ * Hash: 0x566FD402B25787DE | Since: unknown
  */
 export function networkEarnCasinoMissionReward(amount) {
     NetworkEarnFromCasinoMissionReward(amount);
@@ -491,7 +491,7 @@ export function networkEarnCasinoMissionReward(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xAC95ED552157E092 | Since: 1734
+ * Hash: 0xAC95ED552157E092 | Since: unknown
  */
 export function networkEarnCasinoStoryMissionReward(amount) {
     NetworkEarnFromCasinoStoryMissionReward(amount);
@@ -499,7 +499,7 @@ export function networkEarnCasinoStoryMissionReward(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x0819DB99FD2FBBD8 | Since: 1734
+ * Hash: 0x0819DB99FD2FBBD8 | Since: unknown
  */
 export function networkEarnCasinoTimeTrialWin(amount) {
     NetworkEarnFromTimeTrialWin(amount);
@@ -507,7 +507,7 @@ export function networkEarnCasinoTimeTrialWin(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x0DD362F14F18942A | Since: 1868
+ * Hash: 0x0DD362F14F18942A | Since: unknown
  */
 export function networkEarnChallenge(amount) {
     Citizen.invokeNative('0x0DD362F14F18942A', amount, undefined, undefined);
@@ -515,7 +515,7 @@ export function networkEarnChallenge(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xA95CFB4E02390842 | Since: 1868
+ * Hash: 0xA95CFB4E02390842 | Since: unknown
  */
 export function networkEarnCollectables() {
     Citizen.invokeNative('0xA95CFB4E02390842', undefined, undefined, undefined);
@@ -523,7 +523,7 @@ export function networkEarnCollectables() {
 /**
  * No comment provided
  *
- * Hash: 0x5517F90043466049 | Since: 1734
+ * Hash: 0x5517F90043466049 | Since: unknown
  */
 export function networkEarnCollectablesActionFigures(amount) {
     NetworkEarnFromCollectablesActionFigures(amount);
@@ -531,7 +531,7 @@ export function networkEarnCollectablesActionFigures(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x5C9B198AF5A54FA6 | Since: 2060
+ * Hash: 0x5C9B198AF5A54FA6 | Since: unknown
  */
 export function networkEarnCollectableCompletedCollection(amount) {
     NetworkEarnCollectableCompletedCollection(amount, undefined);
@@ -539,7 +539,7 @@ export function networkEarnCollectableCompletedCollection(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x84FF63BD4966F33D | Since: 1734
+ * Hash: 0x84FF63BD4966F33D | Since: unknown
  */
 export function networkEarnCollectableItem(amount) {
     NetworkEarnFromCollectionItem(amount, undefined);
@@ -547,7 +547,7 @@ export function networkEarnCollectableItem(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x5128DF14A5BB86FC | Since: 1734
+ * Hash: 0x5128DF14A5BB86FC | Since: unknown
  */
 export function networkEarnDailyObjectiveEvent(amount) {
     NetworkEarnFromDailyObjectiveEvent(amount);
@@ -555,7 +555,7 @@ export function networkEarnDailyObjectiveEvent(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x533073E8A596008C | Since: 2372
+ * Hash: 0x533073E8A596008C | Since: unknown
  */
 export function networkEarnDailyVehicle() {
     NetworkEarnFromVehicleAutoshop(undefined, undefined);
@@ -563,7 +563,7 @@ export function networkEarnDailyVehicle() {
 /**
  * No comment provided
  *
- * Hash: 0xFE65AFE7308E32B2 | Since: 2372
+ * Hash: 0xFE65AFE7308E32B2 | Since: unknown
  */
 export function networkEarnDailyVehicleBonus() {
     NetworkEarnFromVehicleAutoshopBonus(undefined);
@@ -571,7 +571,7 @@ export function networkEarnDailyVehicleBonus() {
 /**
  * No comment provided
  *
- * Hash: 0xCAC672087B4A24AB | Since: 1290
+ * Hash: 0xCAC672087B4A24AB | Since: unknown
  */
 export function networkEarnDarChallenge(amount) {
     NetworkEarnFromDarChallenge(amount, undefined);
@@ -579,7 +579,7 @@ export function networkEarnDarChallenge(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xE2E244AB823B4483 | Since: 2060
+ * Hash: 0xE2E244AB823B4483 | Since: unknown
  */
 export function networkEarnDispatchCall(amount) {
     Citizen.invokeNative('0xE2E244AB823B4483', amount, undefined);
@@ -587,7 +587,7 @@ export function networkEarnDispatchCall(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x128A747F4A230952 | Since: 1290
+ * Hash: 0x128A747F4A230952 | Since: unknown
  */
 export function networkEarnDoomsdayFinaleBonus(amount, vehicleHash) {
     if (typeof vehicleHash === 'string')
@@ -597,7 +597,7 @@ export function networkEarnDoomsdayFinaleBonus(amount, vehicleHash) {
 /**
  * No comment provided
  *
- * Hash: 0x11B0A20C493F7E36 | Since: 1290
+ * Hash: 0x11B0A20C493F7E36 | Since: unknown
  */
 export function networkEarnFirstTimeBonus() {
     NetworkEarnJobBonusFirstTimeBonus(undefined, undefined, undefined);
@@ -605,7 +605,7 @@ export function networkEarnFirstTimeBonus() {
 /**
  * No comment provided
  *
- * Hash: 0xF4A8E57460BF2037 | Since: 2545
+ * Hash: 0xF4A8E57460BF2037 | Since: unknown
  */
 export function networkEarnFixerAgencyShortTrip() {
     Citizen.invokeNative('0xF4A8E57460BF2037', undefined, undefined);
@@ -613,7 +613,7 @@ export function networkEarnFixerAgencyShortTrip() {
 /**
  * No comment provided
  *
- * Hash: 0xBA154373C5FE51E8 | Since: 2545
+ * Hash: 0xBA154373C5FE51E8 | Since: unknown
  */
 export function networkEarnFixerFinale() {
     Citizen.invokeNative('0xBA154373C5FE51E8', undefined, undefined);
@@ -621,7 +621,7 @@ export function networkEarnFixerFinale() {
 /**
  * No comment provided
  *
- * Hash: 0x6283E5DE4C4460C6 | Since: 2545
+ * Hash: 0x6283E5DE4C4460C6 | Since: unknown
  */
 export function networkEarnFixerPrep() {
     Citizen.invokeNative('0x6283E5DE4C4460C6', undefined, undefined);
@@ -629,7 +629,7 @@ export function networkEarnFixerPrep() {
 /**
  * No comment provided
  *
- * Hash: 0x235D41210B3A1A5E | Since: 2545
+ * Hash: 0x235D41210B3A1A5E | Since: unknown
  */
 export function networkEarnFixerRivalDelivery() {
     Citizen.invokeNative('0x235D41210B3A1A5E', undefined, undefined);
@@ -637,7 +637,7 @@ export function networkEarnFixerRivalDelivery() {
 /**
  * No comment provided
  *
- * Hash: 0xFFFBA1B1F7C0B6F4 | Since: 1493
+ * Hash: 0xFFFBA1B1F7C0B6F4 | Since: unknown
  */
 export function networkEarnFmbbWageBonus() {
     NetworkEarnFmbbWageBonus(undefined);
@@ -645,7 +645,7 @@ export function networkEarnFmbbWageBonus() {
 /**
  * DSPORT
  *
- * Hash: 0x515B4A22E4D3C6D7 | Since: 323
+ * Hash: 0x515B4A22E4D3C6D7 | Since: unknown
  */
 export function networkEarnFromAiTargetKill() {
     NetworkEarnFromAiTargetKill(undefined, undefined);
@@ -653,7 +653,7 @@ export function networkEarnFromAiTargetKill() {
 /**
  * Example for p1: "AM_DISTRACT_COPS"
  *
- * Hash: 0xFB6DB092FBAE29E6 | Since: 323
+ * Hash: 0xFB6DB092FBAE29E6 | Since: unknown
  */
 export function networkEarnFromAmbientJob() {
     return NetworkEarnFromAmbientJob(0, undefined);
@@ -661,7 +661,7 @@ export function networkEarnFromAmbientJob() {
 /**
  * No comment provided
  *
- * Hash: 0x61326EE6DF15B0CA | Since: 323
+ * Hash: 0x61326EE6DF15B0CA | Since: unknown
  */
 export function networkEarnFromBendJob(amount, heistHash) {
     NetworkEarnFromBendJob(amount, heistHash);
@@ -669,7 +669,7 @@ export function networkEarnFromBendJob(amount, heistHash) {
 /**
  * No comment provided
  *
- * Hash: 0x827A5BA1A44ACA6D | Since: 323
+ * Hash: 0x827A5BA1A44ACA6D | Since: unknown
  */
 export function networkEarnFromBetting(amount) {
     NetworkEarnFromBetting(amount, undefined);
@@ -677,7 +677,7 @@ export function networkEarnFromBetting(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x131BB5DA15453ACF | Since: 323
+ * Hash: 0x131BB5DA15453ACF | Since: unknown
  */
 export function networkEarnFromBounty(amount) {
     return NetworkEarnFromBounty(amount, undefined);
@@ -685,7 +685,7 @@ export function networkEarnFromBounty(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x42FCE14F50F27291 | Since: 1493
+ * Hash: 0x42FCE14F50F27291 | Since: unknown
  */
 export function networkEarnFromBusinessBattle() {
     NetworkEarnFromBusinessBattle(undefined);
@@ -693,7 +693,7 @@ export function networkEarnFromBusinessBattle() {
 /**
  * No comment provided
  *
- * Hash: 0x0B39CF0D53F1C883 | Since: 1493
+ * Hash: 0x0B39CF0D53F1C883 | Since: unknown
  */
 export function networkEarnFromBusinessHubSell() {
     NetworkEarnFromBusinessHubSell(undefined, undefined, undefined);
@@ -701,7 +701,7 @@ export function networkEarnFromBusinessHubSell() {
 /**
  * No comment provided
  *
- * Hash: 0x8586789730B10CAF | Since: 877
+ * Hash: 0x8586789730B10CAF | Since: unknown
  */
 export function networkEarnFromBusinessProduct(amount) {
     NetworkEarnFromBusinessProduct(amount, undefined, undefined, undefined);
@@ -709,7 +709,7 @@ export function networkEarnFromBusinessProduct(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x718FBBF67414FA36 | Since: 1290
+ * Hash: 0x718FBBF67414FA36 | Since: unknown
  */
 export function networkEarnFromCashingOut(amount) {
     Citizen.invokeNative('0x718FBBF67414FA36', amount);
@@ -717,7 +717,7 @@ export function networkEarnFromCashingOut(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x2B171E6B2F64D8DF | Since: 323
+ * Hash: 0x2B171E6B2F64D8DF | Since: unknown
  */
 export function networkEarnFromChallengeWin() {
     return NetworkEarnFromChallengeWin(undefined, false);
@@ -725,7 +725,7 @@ export function networkEarnFromChallengeWin() {
 /**
  * No comment provided
  *
- * Hash: 0xA75EAC69F59E96E7 | Since: 1493
+ * Hash: 0xA75EAC69F59E96E7 | Since: unknown
  */
 export function networkEarnFromClubManagementParticipation() {
     NetworkEarnFromClubManagementParticipation(undefined, 0);
@@ -733,7 +733,7 @@ export function networkEarnFromClubManagementParticipation() {
 /**
  * No comment provided
  *
- * Hash: 0xECA658CE2A4E5A72 | Since: 757
+ * Hash: 0xECA658CE2A4E5A72 | Since: unknown
  */
 export function networkEarnFromContraband(amount) {
     NetworkEarnFromContraband(amount, undefined);
@@ -741,7 +741,7 @@ export function networkEarnFromContraband(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xB1CC1B9EC3007A2A | Since: 323
+ * Hash: 0xB1CC1B9EC3007A2A | Since: unknown
  */
 export function networkEarnFromCrateDrop(amount) {
     NetworkEarnFromCrateDrop(amount);
@@ -749,7 +749,7 @@ export function networkEarnFromCrateDrop(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xFA009A62990671D4 | Since: 1290
+ * Hash: 0xFA009A62990671D4 | Since: unknown
  */
 export function networkEarnFromCriminalMastermind() {
     NetworkEarnFromCriminalMastermindBonus(undefined, undefined, undefined);
@@ -757,7 +757,7 @@ export function networkEarnFromCriminalMastermind() {
 /**
  * type either Monthly,Weekly,Daily
  *
- * Hash: 0x6EA318C91C1A8786 | Since: 323
+ * Hash: 0x6EA318C91C1A8786 | Since: unknown
  */
 export function networkEarnFromDailyObjectives(amount, _type, characterSlot) {
     NetworkEarnFromDailyObjectives(amount, _type, characterSlot);
@@ -765,7 +765,7 @@ export function networkEarnFromDailyObjectives(amount, _type, characterSlot) {
 /**
  * No comment provided
  *
- * Hash: 0x84C0116D012E8FC2 | Since: 757
+ * Hash: 0x84C0116D012E8FC2 | Since: unknown
  */
 export function networkEarnFromDestroyingContraband() {
     NetworkEarnFromDestroyingContraband(undefined, undefined, undefined);
@@ -773,7 +773,7 @@ export function networkEarnFromDestroyingContraband() {
 /**
  * No comment provided
  *
- * Hash: 0x1FDA0AA679C9919B | Since: 1493
+ * Hash: 0x1FDA0AA679C9919B | Since: unknown
  */
 export function networkEarnFromFmbbBossWork() {
     NetworkEarnFromFmbbBossWork(undefined);
@@ -781,7 +781,7 @@ export function networkEarnFromFmbbBossWork() {
 /**
  * No comment provided
  *
- * Hash: 0xC5156361F26E2212 | Since: 1493
+ * Hash: 0xC5156361F26E2212 | Since: unknown
  */
 export function networkEarnFromFmbbPhonecallMission() {
     NetworkEarnFromFmbbPhonecallMission(undefined);
@@ -789,7 +789,7 @@ export function networkEarnFromFmbbPhonecallMission() {
 /**
  * No comment provided
  *
- * Hash: 0xA03D4ACE0A3284CE | Since: 323
+ * Hash: 0xA03D4ACE0A3284CE | Since: unknown
  */
 export function networkEarnFromGangattackPickup(amount) {
     NetworkEarnFromGangPickup(amount);
@@ -797,7 +797,7 @@ export function networkEarnFromGangattackPickup(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x31BA138F6304FB9F | Since: 1180
+ * Hash: 0x31BA138F6304FB9F | Since: unknown
  */
 export function networkEarnFromHangarTrade() {
     Citizen.invokeNative('0x31BA138F6304FB9F', undefined, undefined);
@@ -805,7 +805,7 @@ export function networkEarnFromHangarTrade() {
 /**
  * No comment provided
  *
- * Hash: 0x45B8154E077D9E4D | Since: 323
+ * Hash: 0x45B8154E077D9E4D | Since: unknown
  */
 export function networkEarnFromHoldups(amount) {
     NetworkEarnFromHoldups(amount);
@@ -813,7 +813,7 @@ export function networkEarnFromHoldups(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xF92A014A634442D6 | Since: 323
+ * Hash: 0xF92A014A634442D6 | Since: unknown
  */
 export function networkEarnFromImportExport(amount, modelHash) {
     if (typeof modelHash === 'string')
@@ -823,7 +823,7 @@ export function networkEarnFromImportExport(amount, modelHash) {
 /**
  * No comment provided
  *
- * Hash: 0xE2BB399D90942091 | Since: 2189
+ * Hash: 0xE2BB399D90942091 | Since: unknown
  */
 export function networkEarnFromIslandHeistDjMission() {
     Citizen.invokeNative('0xE2BB399D90942091', undefined, undefined);
@@ -831,7 +831,7 @@ export function networkEarnFromIslandHeistDjMission() {
 /**
  * No comment provided
  *
- * Hash: 0xB2CC4836834E8A98 | Since: 323
+ * Hash: 0xB2CC4836834E8A98 | Since: unknown
  */
 export function networkEarnFromJob(amount) {
     NetworkEarnFromJob(amount, undefined);
@@ -839,7 +839,7 @@ export function networkEarnFromJob(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xDEBBF584665411D0 | Since: 1734
+ * Hash: 0xDEBBF584665411D0 | Since: unknown
  */
 export function networkEarnFromJobx2(amount) {
     NetworkEarnFromJobX2(amount, undefined);
@@ -847,7 +847,7 @@ export function networkEarnFromJobx2(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x6816FB4416760775 | Since: 323
+ * Hash: 0x6816FB4416760775 | Since: unknown
  */
 export function networkEarnFromJobBonus() {
     return NetworkEarnFromJobBonus(undefined);
@@ -855,7 +855,7 @@ export function networkEarnFromJobBonus() {
 /**
  * No comment provided
  *
- * Hash: 0x4337511FA8221D36 | Since: 323
+ * Hash: 0x4337511FA8221D36 | Since: unknown
  */
 export function networkEarnFromNotBadsport(amount) {
     NetworkEarnFromNotBadsport(amount);
@@ -863,7 +863,7 @@ export function networkEarnFromNotBadsport(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x3F4D00167E41E0AD | Since: 323
+ * Hash: 0x3F4D00167E41E0AD | Since: unknown
  */
 export function networkEarnFromPersonalVehicle() {
     NetworkEarnFromPersonalVehicle(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined);
@@ -871,7 +871,7 @@ export function networkEarnFromPersonalVehicle() {
 /**
  * No comment provided
  *
- * Hash: 0xED1517D3AF17C698 | Since: 323
+ * Hash: 0xED1517D3AF17C698 | Since: unknown
  */
 export function networkEarnFromPickup(amount) {
     NetworkEarnFromPickup(amount);
@@ -879,7 +879,7 @@ export function networkEarnFromPickup(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xC8407624CEF2354B | Since: 791
+ * Hash: 0xC8407624CEF2354B | Since: unknown
  */
 export function networkEarnFromPremiumJob(amount) {
     NetworkEarnFromPremiumJob(amount, undefined);
@@ -887,7 +887,7 @@ export function networkEarnFromPremiumJob(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x849648349D77F5C5 | Since: 323
+ * Hash: 0x849648349D77F5C5 | Since: unknown
  */
 export function networkEarnFromProperty(amount, propertyName) {
     if (typeof propertyName === 'string')
@@ -899,7 +899,7 @@ export function networkEarnFromProperty(amount, propertyName) {
  *
  * Most likely NETWORK_EARN_FROM_ROB***
  *
- * Hash: 0xF514621E8EA463D0 | Since: 323
+ * Hash: 0xF514621E8EA463D0 | Since: unknown
  */
 export function networkEarnFromRobArmoredCars(amount) {
     NetworkEarnFromArmourTruck(amount);
@@ -907,7 +907,7 @@ export function networkEarnFromRobArmoredCars(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x9251B6ABF2D0A5B4 | Since: 1103
+ * Hash: 0x9251B6ABF2D0A5B4 | Since: unknown
  */
 export function networkEarnFromSellBunker(amount, bunkerHash) {
     if (typeof bunkerHash === 'string')
@@ -917,7 +917,7 @@ export function networkEarnFromSellBunker(amount, bunkerHash) {
 /**
  * No comment provided
  *
- * Hash: 0x6B7E4FB50D5F3D65 | Since: 1180
+ * Hash: 0x6B7E4FB50D5F3D65 | Since: unknown
  */
 export function networkEarnFromSmugglerWork() {
     Citizen.invokeNative('0x6B7E4FB50D5F3D65', undefined, undefined, undefined, undefined, undefined, undefined);
@@ -925,7 +925,7 @@ export function networkEarnFromSmugglerWork() {
 /**
  * No comment provided
  *
- * Hash: 0xB539BD8A4C1EECF8 | Since: 323
+ * Hash: 0xB539BD8A4C1EECF8 | Since: unknown
  */
 export function networkEarnFromVehicle() {
     NetworkEarnFromVehicle(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined);
@@ -933,7 +933,7 @@ export function networkEarnFromVehicle() {
 /**
  * No comment provided
  *
- * Hash: 0xEDEAD9A91EC768B3 | Since: 944
+ * Hash: 0xEDEAD9A91EC768B3 | Since: unknown
  */
 export function networkEarnFromVehicleExport(amount) {
     NetworkEarnFromVehicleExport(amount, undefined, undefined);
@@ -941,7 +941,7 @@ export function networkEarnFromVehicleExport(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x3E4ADAFF1830F146 | Since: 757
+ * Hash: 0x3E4ADAFF1830F146 | Since: unknown
  */
 export function networkEarnFromWarehouse(amount, id) {
     NetworkEarnFromWarehouse(amount, id);
@@ -949,7 +949,7 @@ export function networkEarnFromWarehouse(amount, id) {
 /**
  * No comment provided
  *
- * Hash: 0xA9A31475F530DFDA | Since: 1290
+ * Hash: 0xA9A31475F530DFDA | Since: unknown
  */
 export function networkEarnGangopsAward(amount) {
     NetworkEarnFromGangopsAwards(amount, undefined, undefined);
@@ -957,7 +957,7 @@ export function networkEarnGangopsAward(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x2597A0D4A4FC2C77 | Since: 1290
+ * Hash: 0x2597A0D4A4FC2C77 | Since: unknown
  */
 export function networkEarnGangopsElite(amount, actIndex) {
     NetworkEarnFromGangopsElite(amount, undefined, actIndex);
@@ -965,7 +965,7 @@ export function networkEarnGangopsElite(amount, actIndex) {
 /**
  * No comment provided
  *
- * Hash: 0x1C121FC9545E0D52 | Since: 1290
+ * Hash: 0x1C121FC9545E0D52 | Since: unknown
  */
 export function networkEarnGangopsFinale(amount) {
     NetworkEarnFromGangopsJobsFinale(amount, undefined);
@@ -973,7 +973,7 @@ export function networkEarnGangopsFinale(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xED26584F6BDCBBFD | Since: 1290
+ * Hash: 0xED26584F6BDCBBFD | Since: unknown
  */
 export function networkEarnGangopsPrepParticipation(amount) {
     NetworkEarnFromGangopsJobsPrepParticipation(amount);
@@ -981,7 +981,7 @@ export function networkEarnGangopsPrepParticipation(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xA9160796D47A2CF8 | Since: 1290
+ * Hash: 0xA9160796D47A2CF8 | Since: unknown
  */
 export function networkEarnGangopsSetup(amount) {
     NetworkEarnFromGangopsJobsSetup(amount, undefined);
@@ -989,7 +989,7 @@ export function networkEarnGangopsSetup(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x2DCB19ABAB0380A8 | Since: 1290
+ * Hash: 0x2DCB19ABAB0380A8 | Since: unknown
  */
 export function networkEarnGangopsWages(amount) {
     NetworkEarnFromGangopsWages(amount, 0);
@@ -997,7 +997,7 @@ export function networkEarnGangopsWages(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x15BB2A5C757EB91F | Since: 1290
+ * Hash: 0x15BB2A5C757EB91F | Since: unknown
  */
 export function networkEarnGangopsWagesBonus(amount) {
     NetworkEarnFromGangopsWagesBonus(amount, 0);
@@ -1005,7 +1005,7 @@ export function networkEarnGangopsWagesBonus(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xCDA1C62BE2777802 | Since: 573
+ * Hash: 0xCDA1C62BE2777802 | Since: unknown
  */
 export function networkEarnGoon() {
     NetworkEarnGoon(undefined, undefined, undefined);
@@ -1013,7 +1013,7 @@ export function networkEarnGoon() {
 /**
  * No comment provided
  *
- * Hash: 0xE8815FE993896AD3 | Since: 1493
+ * Hash: 0xE8815FE993896AD3 | Since: unknown
  */
 export function networkEarnHackerTruck(amount) {
     NetworkEarnFromHackerTruckMission(undefined, amount, undefined, undefined);
@@ -1021,7 +1021,7 @@ export function networkEarnHackerTruck(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x9D4FDBB035229669 | Since: 1290
+ * Hash: 0x9D4FDBB035229669 | Since: unknown
  */
 export function networkEarnHeistAward() {
     NetworkEarnJobBonusHeistAward(undefined, undefined, undefined);
@@ -1029,7 +1029,7 @@ export function networkEarnHeistAward() {
 /**
  * No comment provided
  *
- * Hash: 0xD21D111C46BA9F15 | Since: 2189
+ * Hash: 0xD21D111C46BA9F15 | Since: unknown
  */
 export function networkEarnIslandHeist(amount1, amount2) {
     NetworkEarnIslandHeist(amount1, undefined, undefined, undefined, amount2, 0);
@@ -1037,7 +1037,7 @@ export function networkEarnIslandHeist(amount1, amount2) {
 /**
  * No comment provided
  *
- * Hash: 0xE0F82D68C7039158 | Since: 1493
+ * Hash: 0xE0F82D68C7039158 | Since: unknown
  */
 export function networkEarnNightclub() {
     Citizen.invokeNative('0xE0F82D68C7039158', undefined, undefined);
@@ -1045,7 +1045,7 @@ export function networkEarnNightclub() {
 /**
  * No comment provided
  *
- * Hash: 0xC6E74CF8C884C880 | Since: 1493
+ * Hash: 0xC6E74CF8C884C880 | Since: unknown
  */
 export function networkEarnNightclubAndWarehouse() {
     Citizen.invokeNative('0xC6E74CF8C884C880', undefined, undefined, undefined, undefined, undefined, undefined, undefined);
@@ -1053,7 +1053,7 @@ export function networkEarnNightclubAndWarehouse() {
 /**
  * No comment provided
  *
- * Hash: 0xB4DEAE67F35E2ACD | Since: 1493
+ * Hash: 0xB4DEAE67F35E2ACD | Since: unknown
  */
 export function networkEarnNightclubDancing() {
     Citizen.invokeNative('0xB4DEAE67F35E2ACD', undefined);
@@ -1061,7 +1061,7 @@ export function networkEarnNightclubDancing() {
 /**
  * No comment provided
  *
- * Hash: 0x55A1E095DB052FA5 | Since: 877
+ * Hash: 0x55A1E095DB052FA5 | Since: unknown
  */
 export function networkEarnPurchaseClubHouse() {
     Citizen.invokeNative('0x55A1E095DB052FA5', undefined, undefined);
@@ -1069,7 +1069,7 @@ export function networkEarnPurchaseClubHouse() {
 /**
  * No comment provided
  *
- * Hash: 0xDFF49EE984E7AAE8 | Since: 1734
+ * Hash: 0xDFF49EE984E7AAE8 | Since: unknown
  */
 export function networkEarnRcTimeTrial(amount) {
     NetworkEarnFromRcTimeTrial(amount);
@@ -1077,7 +1077,7 @@ export function networkEarnRcTimeTrial(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x7A5349B773584675 | Since: 1290
+ * Hash: 0x7A5349B773584675 | Since: unknown
  */
 export function networkEarnRdrBonus(amount) {
     NetworkEarnFromRdrBonus(amount, undefined);
@@ -1085,7 +1085,7 @@ export function networkEarnRdrBonus(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x0E1E2FF3F4EC11AA | Since: 1290
+ * Hash: 0x0E1E2FF3F4EC11AA | Since: unknown
  */
 export function networkEarnSellBase(amount, baseNameHash) {
     if (typeof baseNameHash === 'string')
@@ -1095,7 +1095,7 @@ export function networkEarnSellBase(amount, baseNameHash) {
 /**
  * No comment provided
  *
- * Hash: 0x8BCB27A057DF7B7F | Since: 1734
+ * Hash: 0x8BCB27A057DF7B7F | Since: unknown
  */
 export function networkEarnSellPrizeVehicle(amount) {
     NetworkEarnFromSellingVehicle(amount, undefined, undefined);
@@ -1103,7 +1103,7 @@ export function networkEarnSellPrizeVehicle(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x45087AE480B233AC | Since: 2699
+ * Hash: 0x45087AE480B233AC | Since: unknown
  */
 export function networkEarnSightseeingReward() {
     NetworkEarnFromSightseeing(undefined, undefined, undefined, undefined);
@@ -1111,7 +1111,7 @@ export function networkEarnSightseeingReward() {
 /**
  * No comment provided
  *
- * Hash: 0xDEE612F2D71B0308 | Since: 1180
+ * Hash: 0xDEE612F2D71B0308 | Since: unknown
  */
 export function networkEarnSmugglerAgency(amount) {
     NetworkEarnFromSmuggling(amount, undefined, undefined, undefined);
@@ -1119,7 +1119,7 @@ export function networkEarnSmugglerAgency(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x676C48776CACBB5A | Since: 1604
+ * Hash: 0x676C48776CACBB5A | Since: unknown
  */
 export function networkEarnSpinTheWheelCash(amount) {
     NetworkEarnFromSpinTheWheelCash(amount);
@@ -1127,7 +1127,7 @@ export function networkEarnSpinTheWheelCash(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x5B669CF2299A271F | Since: 1290
+ * Hash: 0x5B669CF2299A271F | Since: unknown
  */
 export function networkEarnTargetRefund(amount) {
     NetworkEarnFromTargetRefund(amount, 0);
@@ -1135,7 +1135,7 @@ export function networkEarnTargetRefund(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xB846F547D3792DF6 | Since: 2372
+ * Hash: 0xB846F547D3792DF6 | Since: unknown
  */
 export function networkEarnTunerAward() {
     NetworkEarnFromTunerAward(undefined, undefined, undefined);
@@ -1143,7 +1143,7 @@ export function networkEarnTunerAward() {
 /**
  * No comment provided
  *
- * Hash: 0xBCB266247193AC61 | Since: 2372
+ * Hash: 0xBCB266247193AC61 | Since: unknown
  */
 export function networkEarnTunerRobbery() {
     NetworkEarnFromTunerFinale(undefined, undefined, undefined, undefined, undefined);
@@ -1151,7 +1151,7 @@ export function networkEarnTunerRobbery() {
 /**
  * No comment provided
  *
- * Hash: 0xD07C7C3F1995108C | Since: 2545
+ * Hash: 0xD07C7C3F1995108C | Since: unknown
  */
 export function networkEarnUpgradeAgency() {
     Citizen.invokeNative('0xD07C7C3F1995108C', undefined, undefined);
@@ -1159,7 +1159,7 @@ export function networkEarnUpgradeAgency() {
 /**
  * No comment provided
  *
- * Hash: 0x4C3B75694F7E0D9C | Since: 1868
+ * Hash: 0x4C3B75694F7E0D9C | Since: unknown
  */
 export function networkEarnUpgradeArcade() {
     Citizen.invokeNative('0x4C3B75694F7E0D9C', undefined, undefined, undefined);
@@ -1167,7 +1167,7 @@ export function networkEarnUpgradeArcade() {
 /**
  * No comment provided
  *
- * Hash: 0xC10322A8D3E061EE | Since: 2372
+ * Hash: 0xC10322A8D3E061EE | Since: unknown
  */
 export function networkEarnUpgradeAutoshop() {
     NetworkEarnFromUpgradeAutoshopLocation(undefined, undefined);
@@ -1175,7 +1175,7 @@ export function networkEarnUpgradeAutoshop() {
 /**
  * No comment provided
  *
- * Hash: 0x35F8DA0E8A31EF1B | Since: 1180
+ * Hash: 0x35F8DA0E8A31EF1B | Since: unknown
  */
 export function networkEarnWagePayment(amount) {
     NetworkEarnFromWagePayment(amount, undefined);
@@ -1183,7 +1183,7 @@ export function networkEarnWagePayment(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x005ACA7100BD101D | Since: 1180
+ * Hash: 0x005ACA7100BD101D | Since: unknown
  */
 export function networkEarnWagePaymentBonus(amount) {
     NetworkEarnFromWagePaymentBonus(amount);
@@ -1191,7 +1191,7 @@ export function networkEarnWagePaymentBonus(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xDE68E30D89F97132 | Since: 2060
+ * Hash: 0xDE68E30D89F97132 | Since: unknown
  */
 export function networkEarnYatchMission(amount) {
     Citizen.invokeNative('0xDE68E30D89F97132', amount, undefined);
@@ -1199,7 +1199,7 @@ export function networkEarnYatchMission(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x7C4FCCD2E4DEB394 | Since: 323
+ * Hash: 0x7C4FCCD2E4DEB394 | Since: unknown
  */
 export function networkEconomyHasFixedCrazyNumbers() {
     return Citizen.invokeNative('0x7C4FCCD2E4DEB394');
@@ -1207,7 +1207,7 @@ export function networkEconomyHasFixedCrazyNumbers() {
 /**
  * Returns true if bank balance >= amount.
  *
- * Hash: 0xA31FD6A0865B6D14 | Since: 323
+ * Hash: 0xA31FD6A0865B6D14 | Since: unknown
  */
 export function networkGetCanSpendFromBank(amount) {
     return NetworkGetVcBankBalanceIsNotLessThan(amount);
@@ -1215,7 +1215,7 @@ export function networkGetCanSpendFromBank(amount) {
 /**
  * Returns true if bank balance + wallet balance >= amount.
  *
- * Hash: 0xDC18531D7019A535 | Since: 323
+ * Hash: 0xDC18531D7019A535 | Since: unknown
  */
 export function networkGetCanSpendFromBankAndWallet(amount, characterSlot) {
     return NetworkGetVcBankWalletBalanceIsNotLessThan(amount, characterSlot);
@@ -1223,7 +1223,7 @@ export function networkGetCanSpendFromBankAndWallet(amount, characterSlot) {
 /**
  * Returns true if wallet balance >= amount.
  *
- * Hash: 0xED5AB8860415BABA | Since: 323
+ * Hash: 0xED5AB8860415BABA | Since: unknown
  */
 export function networkGetCanSpendFromWallet(amount, characterSlot) {
     return NetworkGetVcWalletBalanceIsNotLessThan(amount, characterSlot);
@@ -1231,7 +1231,7 @@ export function networkGetCanSpendFromWallet(amount, characterSlot) {
 /**
  * Returns false if amount > wallet balance or daily transfer limit has been hit.
  *
- * Hash: 0x08E8EEADFD0DC4A0 | Since: 323
+ * Hash: 0x08E8EEADFD0DC4A0 | Since: unknown
  */
 export function networkGetCanTransferCash(amount) {
     return Citizen.invokeNative('0x08E8EEADFD0DC4A0', amount);
@@ -1239,7 +1239,7 @@ export function networkGetCanTransferCash(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x5D1E75F91C07DEE5 | Since: 323
+ * Hash: 0x5D1E75F91C07DEE5 | Since: unknown
  */
 export function networkGetEvcBalance() {
     return NetworkGetEvcBalance();
@@ -1247,7 +1247,18 @@ export function networkGetEvcBalance() {
 /**
  * No comment provided
  *
- * Hash: 0xFB2456B2040A6A67 | Since: 323
+ * Hash: 0xA6E586C3BD772B7B | Since: unknown
+ */
+export function networkGetMpWindfallAvailable() {
+    if (!IsGameEnhancedVersion())
+        console.error('This native is not supported on legacy (0xA6E586C3BD772B7B)');
+    return;
+    return Citizen.invokeNative('0xA6E586C3BD772B7B');
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0xFB2456B2040A6A67 | Since: unknown
  */
 export function networkGetPlayerIsHighEarner() {
     return NetworkGetIsHighEarner();
@@ -1255,7 +1266,7 @@ export function networkGetPlayerIsHighEarner() {
 /**
  * No comment provided
  *
- * Hash: 0x4F54F3B6C202FB4E | Since: 323
+ * Hash: 0x4F54F3B6C202FB4E | Since: unknown
  */
 export function networkGetPvcBalance() {
     return NetworkGetPvcBalance();
@@ -1263,7 +1274,7 @@ export function networkGetPvcBalance() {
 /**
  * Retturns the same value as NETWORK_GET_REMAINING_TRANSFER_BALANCE.
  *
- * Hash: 0x13A8DE2FD77D04F3 | Since: 323
+ * Hash: 0x13A8DE2FD77D04F3 | Since: unknown
  */
 export function networkGetPvcTransferBalance() {
     return NetworkGetPvcTransferBalance();
@@ -1271,7 +1282,7 @@ export function networkGetPvcTransferBalance() {
 /**
  * Returns the same value as NETWORK_GET_PVC_TRANSFER_BALANCE.
  *
- * Hash: 0xEA560AC9EEB1E19B | Since: 323
+ * Hash: 0xEA560AC9EEB1E19B | Since: unknown
  */
 export function networkGetRemainingTransferBalance() {
     return NetworkGetRemainingTransferBalance();
@@ -1279,7 +1290,7 @@ export function networkGetRemainingTransferBalance() {
 /**
  * No comment provided
  *
- * Hash: 0xA6FA3979BED01B81 | Since: 323
+ * Hash: 0xA6FA3979BED01B81 | Since: unknown
  */
 export function networkGetStringBankBalance() {
     return NetworkGetStringBankBalance();
@@ -1287,7 +1298,7 @@ export function networkGetStringBankBalance() {
 /**
  * No comment provided
  *
- * Hash: 0x700AF71AE615E6DD | Since: 323
+ * Hash: 0x700AF71AE615E6DD | Since: unknown
  */
 export function networkGetStringBankWalletBalance(character) {
     return NetworkGetStringBankWalletBalance(character);
@@ -1295,7 +1306,7 @@ export function networkGetStringBankWalletBalance(character) {
 /**
  * No comment provided
  *
- * Hash: 0xF9B10B529DCFB33B | Since: 323
+ * Hash: 0xF9B10B529DCFB33B | Since: unknown
  */
 export function networkGetStringWalletBalance(characterSlot) {
     return NetworkGetStringWalletBalance(characterSlot);
@@ -1303,7 +1314,7 @@ export function networkGetStringWalletBalance(characterSlot) {
 /**
  * No comment provided
  *
- * Hash: 0x5CBAD97E059E1B94 | Since: 323
+ * Hash: 0x5CBAD97E059E1B94 | Since: unknown
  */
 export function networkGetVcBalance() {
     return NetworkGetVcBalance();
@@ -1311,7 +1322,7 @@ export function networkGetVcBalance() {
 /**
  * No comment provided
  *
- * Hash: 0x76EF28DA05EA395A | Since: 323
+ * Hash: 0x76EF28DA05EA395A | Since: unknown
  */
 export function networkGetVcBankBalance() {
     return NetworkGetVcBankBalance();
@@ -1319,7 +1330,7 @@ export function networkGetVcBankBalance() {
 /**
  * No comment provided
  *
- * Hash: 0xA40F9C2623F6A8B5 | Since: 323
+ * Hash: 0xA40F9C2623F6A8B5 | Since: unknown
  */
 export function networkGetVcWalletBalance(characterSlot) {
     return NetworkGetVcWalletBalance(characterSlot);
@@ -1327,7 +1338,7 @@ export function networkGetVcWalletBalance(characterSlot) {
 /**
  * No comment provided
  *
- * Hash: 0xFB18DF9CB95E0105 | Since: 323
+ * Hash: 0xFB18DF9CB95E0105 | Since: unknown
  */
 export function networkGivePlayerJobshareCash(amount) {
     return NetworkGivePlayerJobshareCash(amount);
@@ -1335,7 +1346,7 @@ export function networkGivePlayerJobshareCash(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x3DA5ECD1A56CBA6D | Since: 323
+ * Hash: 0x3DA5ECD1A56CBA6D | Since: unknown
  */
 export function networkInitializeCash(wallet, bank) {
     NetworkInitializeCash(wallet, bank);
@@ -1343,7 +1354,7 @@ export function networkInitializeCash(wallet, bank) {
 /**
  * No comment provided
  *
- * Hash: 0x821418C727FCACD7 | Since: 791
+ * Hash: 0x821418C727FCACD7 | Since: unknown
  */
 export function networkManualDeleteCharacter(characterSlot) {
     NetworkManualDeleteCharacter(characterSlot);
@@ -1351,7 +1362,7 @@ export function networkManualDeleteCharacter(characterSlot) {
 /**
  * No comment provided
  *
- * Hash: 0x81404F3DC124FE5B | Since: 323
+ * Hash: 0x81404F3DC124FE5B | Since: unknown
  */
 export function networkMoneyCanBet(amount) {
     return NetworkMoneyCanBet(amount, false, false);
@@ -1359,7 +1370,7 @@ export function networkMoneyCanBet(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x5FD5ED82CBBE9989 | Since: 323
+ * Hash: 0x5FD5ED82CBBE9989 | Since: unknown
  */
 export function networkPayEmployeeWage() {
     NetworkPayEmployeeWage(undefined, false, false);
@@ -1367,7 +1378,7 @@ export function networkPayEmployeeWage() {
 /**
  * No comment provided
  *
- * Hash: 0x9346E14F2AF74D46 | Since: 323
+ * Hash: 0x9346E14F2AF74D46 | Since: unknown
  */
 export function networkPayMatchEntryFee(amount, matchId) {
     NetworkPayMatchEntryFee(amount, matchId, false, false);
@@ -1375,7 +1386,7 @@ export function networkPayMatchEntryFee(amount, matchId) {
 /**
  * No comment provided
  *
- * Hash: 0x56A3B51944C50598 | Since: 323
+ * Hash: 0x56A3B51944C50598 | Since: unknown
  */
 export function networkReceivePlayerJobshareCash(value) {
     return NetworkReceivePlayerJobshareCash(value);
@@ -1419,7 +1430,7 @@ export function networkReceivePlayerJobshareCash(value) {
  *
  *
  *
- * Hash: 0xF9C812CD7C46E817 | Since: 323
+ * Hash: 0xF9C812CD7C46E817 | Since: unknown
  */
 export function networkRefundCash(index, context, reason) {
     NetworkRefundCash(index, context, reason, false);
@@ -1427,7 +1438,7 @@ export function networkRefundCash(index, context, reason) {
 /**
  * No comment provided
  *
- * Hash: 0x1B882107C23A9022 | Since: 1290
+ * Hash: 0x1B882107C23A9022 | Since: unknown
  */
 export function networkServiceEarnGangopsRivalDelivery(earnedMoney) {
     NetworkRivalDeliveryCompleted(earnedMoney);
@@ -1435,7 +1446,7 @@ export function networkServiceEarnGangopsRivalDelivery(earnedMoney) {
 /**
  * No comment provided
  *
- * Hash: 0x1B2120405080125C | Since: 2545
+ * Hash: 0x1B2120405080125C | Since: unknown
  */
 export function networkSpendAgency() {
     Citizen.invokeNative('0x1B2120405080125C', undefined, undefined, undefined, undefined, undefined);
@@ -1443,7 +1454,7 @@ export function networkSpendAgency() {
 /**
  * No comment provided
  *
- * Hash: 0x1254B5B3925EFD3D | Since: 2545
+ * Hash: 0x1254B5B3925EFD3D | Since: unknown
  */
 export function networkSpendApartmentUtilities(amount) {
     return Citizen.invokeNative('0x1254B5B3925EFD3D', amount, false, false);
@@ -1451,7 +1462,7 @@ export function networkSpendApartmentUtilities(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x43AA7FAC4E6D6687 | Since: 1868
+ * Hash: 0x43AA7FAC4E6D6687 | Since: unknown
  */
 export function networkSpendArcade() {
     NetworkSpentArcadeGeneric(undefined, undefined, undefined, undefined, undefined);
@@ -1459,7 +1470,7 @@ export function networkSpendArcade() {
 /**
  * No comment provided
  *
- * Hash: 0xB5B58E24868CB09E | Since: 1868
+ * Hash: 0xB5B58E24868CB09E | Since: unknown
  */
 export function networkSpendArcadeMgmt() {
     Citizen.invokeNative('0xB5B58E24868CB09E', undefined, undefined, undefined, undefined, undefined);
@@ -1467,7 +1478,7 @@ export function networkSpendArcadeMgmt() {
 /**
  * No comment provided
  *
- * Hash: 0x619496D837EFD920 | Since: 1604
+ * Hash: 0x619496D837EFD920 | Since: unknown
  */
 export function networkSpendArenaPremium(amount) {
     NetworkSpentArenaPremium(amount, false, false);
@@ -1475,7 +1486,7 @@ export function networkSpendArenaPremium(amount) {
 /**
  * type either, 1 for cam spectate, 2 for drone
  *
- * Hash: 0x7049BF858601DC0F | Since: 1604
+ * Hash: 0x7049BF858601DC0F | Since: unknown
  */
 export function networkSpendArenaSpectatorBox(amount, _type) {
     NetworkSpentArenaSpectatorBox(amount, _type, false, false);
@@ -1483,7 +1494,7 @@ export function networkSpendArenaSpectatorBox(amount, _type) {
 /**
  * No comment provided
  *
- * Hash: 0x9BEA350D7C48061B | Since: 2372
+ * Hash: 0x9BEA350D7C48061B | Since: unknown
  */
 export function networkSpendAutoshopModify() {
     NetworkSpentAutoshopModifications(undefined, undefined, undefined, undefined, undefined);
@@ -1491,7 +1502,7 @@ export function networkSpendAutoshopModify() {
 /**
  * No comment provided
  *
- * Hash: 0x54ABA22FA6371249 | Since: 2189
+ * Hash: 0x54ABA22FA6371249 | Since: unknown
  */
 export function networkSpendBeachParty() {
     NetworkSpentBeachPartyGeneric(undefined);
@@ -1499,7 +1510,7 @@ export function networkSpendBeachParty() {
 /**
  * No comment provided
  *
- * Hash: 0x923AEA8E78F8DF0B | Since: 2699
+ * Hash: 0x923AEA8E78F8DF0B | Since: unknown
  */
 export function networkSpendBikeShop() {
     NetworkSpentBikeShopModify(undefined, undefined, undefined, undefined);
@@ -1507,7 +1518,7 @@ export function networkSpendBikeShop() {
 /**
  * No comment provided
  *
- * Hash: 0xDBC966A01C02BCA7 | Since: 573
+ * Hash: 0xDBC966A01C02BCA7 | Since: unknown
  */
 export function networkSpendBoss() {
     NetworkSpentPayBoss(undefined, undefined, undefined);
@@ -1515,7 +1526,7 @@ export function networkSpendBoss() {
 /**
  * No comment provided
  *
- * Hash: 0x1BEA0CD93470BB1F | Since: 1493
+ * Hash: 0x1BEA0CD93470BB1F | Since: unknown
  */
 export function networkSpendBountyHunterMission(amount) {
     NetworkSpentBountyHunterMission(amount, false, false);
@@ -1523,7 +1534,7 @@ export function networkSpendBountyHunterMission(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x92D1CFDA1227FF1C | Since: 2545
+ * Hash: 0x92D1CFDA1227FF1C | Since: unknown
  */
 export function networkSpendBusinessPropertyFees() {
     Citizen.invokeNative('0x92D1CFDA1227FF1C', undefined, undefined, undefined, undefined);
@@ -1531,7 +1542,7 @@ export function networkSpendBusinessPropertyFees() {
 /**
  * No comment provided
  *
- * Hash: 0xEA8CD3C9B3C35884 | Since: 2545
+ * Hash: 0xEA8CD3C9B3C35884 | Since: unknown
  */
 export function networkSpendBuyAgency() {
     Citizen.invokeNative('0xEA8CD3C9B3C35884', undefined, undefined, undefined, undefined);
@@ -1539,7 +1550,7 @@ export function networkSpendBuyAgency() {
 /**
  * No comment provided
  *
- * Hash: 0x870289A558348378 | Since: 1868
+ * Hash: 0x870289A558348378 | Since: unknown
  */
 export function networkSpendBuyArcade() {
     Citizen.invokeNative('0x870289A558348378', undefined, undefined, undefined, undefined);
@@ -1547,7 +1558,7 @@ export function networkSpendBuyArcade() {
 /**
  * No comment provided
  *
- * Hash: 0x40D5DA9550B7CB46 | Since: 1604
+ * Hash: 0x40D5DA9550B7CB46 | Since: unknown
  */
 export function networkSpendBuyArena(amount) {
     NetworkSpentBuyArena(amount, false, false, undefined);
@@ -1555,7 +1566,7 @@ export function networkSpendBuyArena(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xEEB7E5D1FEB20869 | Since: 2372
+ * Hash: 0xEEB7E5D1FEB20869 | Since: unknown
  */
 export function networkSpendBuyAutoshop() {
     NetworkSpentBuyAutoshop(undefined, undefined, undefined, undefined);
@@ -1563,7 +1574,7 @@ export function networkSpendBuyAutoshop() {
 /**
  * No comment provided
  *
- * Hash: 0x34A6FC4D06C4DA0F | Since: 1734
+ * Hash: 0x34A6FC4D06C4DA0F | Since: unknown
  */
 export function networkSpendBuyCasino(amount) {
     return NetworkSpentBuyCasino(amount, false, false);
@@ -1571,7 +1582,7 @@ export function networkSpendBuyCasino(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x90CD7C6871FBF1B4 | Since: 2189
+ * Hash: 0x90CD7C6871FBF1B4 | Since: unknown
  */
 export function networkSpendBuySub() {
     Citizen.invokeNative('0x90CD7C6871FBF1B4', undefined, undefined, undefined, undefined);
@@ -1579,7 +1590,7 @@ export function networkSpendBuySub() {
 /**
  * No comment provided
  *
- * Hash: 0x925227803A0EAA1B | Since: 2372
+ * Hash: 0x925227803A0EAA1B | Since: unknown
  */
 export function networkSpendCarClubBar() {
     NetworkSpentCarclub(undefined, false, false, undefined);
@@ -1587,7 +1598,7 @@ export function networkSpendCarClubBar() {
 /**
  * No comment provided
  *
- * Hash: 0x1464E17207CD36E2 | Since: 2372
+ * Hash: 0x1464E17207CD36E2 | Since: unknown
  */
 export function networkSpendCarClubMembership(amount1, amount2) {
     NetworkSpentCarclubMembership(amount1, undefined, undefined, amount2, undefined);
@@ -1595,7 +1606,7 @@ export function networkSpendCarClubMembership(amount1, amount2) {
 /**
  * No comment provided
  *
- * Hash: 0xD1E46824E6FB92B5 | Since: 2372
+ * Hash: 0xD1E46824E6FB92B5 | Since: unknown
  */
 export function networkSpendCarClubTakeover() {
     NetworkSpentCarclubTakeover(undefined, undefined, undefined, undefined);
@@ -1603,7 +1614,7 @@ export function networkSpendCarClubTakeover() {
 /**
  * No comment provided
  *
- * Hash: 0xC991C255AA6D90B2 | Since: 2189
+ * Hash: 0xC991C255AA6D90B2 | Since: unknown
  */
 export function networkSpendCasinoClub(amount1, amount2) {
     NetworkSpentCasinoClubGeneric(amount1, undefined, false, undefined, 0, 0, 0, amount2, undefined);
@@ -1611,7 +1622,7 @@ export function networkSpendCasinoClub(amount1, amount2) {
 /**
  * No comment provided
  *
- * Hash: 0x88BF9B612B84D3C3 | Since: 1734
+ * Hash: 0x88BF9B612B84D3C3 | Since: unknown
  */
 export function networkSpendCasinoGeneric(amount) {
     NetworkSpentCasinoGeneric(amount, undefined, undefined, undefined, undefined);
@@ -1619,7 +1630,7 @@ export function networkSpendCasinoGeneric(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xD30E8392F407C328 | Since: 1868
+ * Hash: 0xD30E8392F407C328 | Since: unknown
  */
 export function networkSpendCasinoHeist() {
     NetworkSpentCasinoHeist(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined);
@@ -1627,7 +1638,7 @@ export function networkSpendCasinoHeist() {
 /**
  * No comment provided
  *
- * Hash: 0x487009DD91D93429 | Since: 1868
+ * Hash: 0x487009DD91D93429 | Since: unknown
  */
 export function networkSpendCasinoHeistSkipMission() {
     NetworkSpentCasinoHeistSkipMission(undefined, undefined, undefined, undefined);
@@ -1635,7 +1646,7 @@ export function networkSpendCasinoHeistSkipMission() {
 /**
  * No comment provided
  *
- * Hash: 0xFBBE0570EDF39D46 | Since: 1734
+ * Hash: 0xFBBE0570EDF39D46 | Since: unknown
  */
 export function networkSpendCasinoMembership(amount) {
     NetworkSpentCasinoMembership(amount, false, false, 0);
@@ -1643,7 +1654,7 @@ export function networkSpendCasinoMembership(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xD86581F9E7CDA383 | Since: 2545
+ * Hash: 0xD86581F9E7CDA383 | Since: unknown
  */
 export function networkSpendCompSuv() {
     Citizen.invokeNative('0xD86581F9E7CDA383', undefined, undefined, undefined, undefined);
@@ -1651,7 +1662,7 @@ export function networkSpendCompSuv() {
 /**
  * Hardcoded to return 0.
  *
- * Hash: 0x9B5016A6433A68C5 | Since: 323
+ * Hash: 0x9B5016A6433A68C5 | Since: unknown
  */
 export function networkSpendEarnedFromBankAndWallets(amount) {
     return Citizen.invokeNative('0x9B5016A6433A68C5', amount);
@@ -1659,7 +1670,7 @@ export function networkSpendEarnedFromBankAndWallets(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x771ADB0E7635B7BF | Since: 1290
+ * Hash: 0x771ADB0E7635B7BF | Since: unknown
  */
 export function networkSpendGangopsCannon() {
     NetworkSpentGangopsCannon(undefined, undefined, undefined, undefined);
@@ -1667,7 +1678,7 @@ export function networkSpendGangopsCannon() {
 /**
  * No comment provided
  *
- * Hash: 0x2A7CEC72C3443BCC | Since: 1290
+ * Hash: 0x2A7CEC72C3443BCC | Since: unknown
  */
 export function networkSpendGangopsRepairCost() {
     Citizen.invokeNative('0x2A7CEC72C3443BCC', undefined, undefined, undefined);
@@ -1675,7 +1686,7 @@ export function networkSpendGangopsRepairCost() {
 /**
  * No comment provided
  *
- * Hash: 0xDA947AE8880D5C18 | Since: 1290
+ * Hash: 0xDA947AE8880D5C18 | Since: unknown
  */
 export function networkSpendGangopsSkipMission() {
     NetworkSpentGangopsStartMission(undefined, undefined, undefined, undefined);
@@ -1683,7 +1694,7 @@ export function networkSpendGangopsSkipMission() {
 /**
  * No comment provided
  *
- * Hash: 0xA19EC0786E326E06 | Since: 1290
+ * Hash: 0xA19EC0786E326E06 | Since: unknown
  */
 export function networkSpendGangopsStartStrand(_type, amount) {
     NetworkSpentGangopsStartStrand(_type, amount, false, false);
@@ -1691,7 +1702,7 @@ export function networkSpendGangopsStartStrand(_type, amount) {
 /**
  * No comment provided
  *
- * Hash: 0x5ECE6FD7B4EC8D6A | Since: 1290
+ * Hash: 0x5ECE6FD7B4EC8D6A | Since: unknown
  */
 export function networkSpendGangopsTripSkip(amount) {
     NetworkSpentGangopsTripSkip(amount, false, false);
@@ -1699,7 +1710,7 @@ export function networkSpendGangopsTripSkip(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x08A1B82B91900682 | Since: 573
+ * Hash: 0x08A1B82B91900682 | Since: unknown
  */
 export function networkSpendGoon(amount) {
     NetworkSpentPayGoon(0, 0, amount);
@@ -1707,7 +1718,7 @@ export function networkSpendGoon(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x2CEB0E0BC2A77C05 | Since: 2699
+ * Hash: 0x2CEB0E0BC2A77C05 | Since: unknown
  */
 export function networkSpendGunrunning() {
     NetworkSpentGunrunningContactService(undefined, undefined, undefined, undefined);
@@ -1715,7 +1726,7 @@ export function networkSpendGunrunning() {
 /**
  * No comment provided
  *
- * Hash: 0xBF8793B91EA094A7 | Since: 2545
+ * Hash: 0xBF8793B91EA094A7 | Since: unknown
  */
 export function networkSpendHidden() {
     Citizen.invokeNative('0xBF8793B91EA094A7', undefined, undefined, undefined, undefined);
@@ -1723,7 +1734,7 @@ export function networkSpendHidden() {
 /**
  * No comment provided
  *
- * Hash: 0x93AA4165CB67E925 | Since: 2372
+ * Hash: 0x93AA4165CB67E925 | Since: unknown
  */
 export function networkSpendInteractionMenuAbility() {
     NetworkSpentImAbility(undefined, undefined, undefined, undefined);
@@ -1731,7 +1742,7 @@ export function networkSpendInteractionMenuAbility() {
 /**
  * No comment provided
  *
- * Hash: 0xE86689E5F82DE429 | Since: 2189
+ * Hash: 0xE86689E5F82DE429 | Since: unknown
  */
 export function networkSpendIslandHeist() {
     NetworkSpentIslandHeist(undefined, undefined, undefined, undefined);
@@ -1739,7 +1750,7 @@ export function networkSpendIslandHeist() {
 /**
  * No comment provided
  *
- * Hash: 0xE5F5A060439C2F5D | Since: 1604
+ * Hash: 0xE5F5A060439C2F5D | Since: unknown
  */
 export function networkSpendMakeItRain(amount) {
     NetworkSpentMakeItRain(amount, false, false);
@@ -1747,7 +1758,7 @@ export function networkSpendMakeItRain(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x65482BFD0923C8A1 | Since: 1493
+ * Hash: 0x65482BFD0923C8A1 | Since: unknown
  */
 export function networkSpendNightclubAndWarehouse() {
     Citizen.invokeNative('0x65482BFD0923C8A1', undefined, undefined, undefined, undefined);
@@ -1755,7 +1766,7 @@ export function networkSpendNightclubAndWarehouse() {
 /**
  * No comment provided
  *
- * Hash: 0xDD21B016E4289465 | Since: 1493
+ * Hash: 0xDD21B016E4289465 | Since: unknown
  */
 export function networkSpendNightclubBarDrink(amount) {
     NetworkSpentNightclubBarDrink(amount, undefined, false, false);
@@ -1763,7 +1774,7 @@ export function networkSpendNightclubBarDrink(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xEAD3D81F2C3A1458 | Since: 1868
+ * Hash: 0xEAD3D81F2C3A1458 | Since: unknown
  */
 export function networkSpendPlayArcade() {
     NetworkSpentArcadeGame(undefined, undefined, undefined, undefined, undefined);
@@ -1771,7 +1782,7 @@ export function networkSpendPlayArcade() {
 /**
  * No comment provided
  *
- * Hash: 0xB9F7A469460E7A4A | Since: 2372
+ * Hash: 0xB9F7A469460E7A4A | Since: unknown
  */
 export function networkSpendSetCommonFields() {
     NetworkSpentFromBank(undefined, undefined, undefined, false);
@@ -1779,7 +1790,7 @@ export function networkSpendSetCommonFields() {
 /**
  * No comment provided
  *
- * Hash: 0x7E2F4E8F44CAF4E0 | Since: 2699
+ * Hash: 0x7E2F4E8F44CAF4E0 | Since: unknown
  */
 export function networkSpendSetDiscount() {
     NetworkSpentSalesDisplay(false);
@@ -1787,7 +1798,7 @@ export function networkSpendSetDiscount() {
 /**
  * No comment provided
  *
- * Hash: 0xD9DF467CBE4398C8 | Since: 2545
+ * Hash: 0xD9DF467CBE4398C8 | Since: unknown
  */
 export function networkSpendSourceBike() {
     Citizen.invokeNative('0xD9DF467CBE4398C8', undefined, undefined, undefined, undefined);
@@ -1795,7 +1806,7 @@ export function networkSpendSourceBike() {
 /**
  * No comment provided
  *
- * Hash: 0x9A5BD1D0000B339C | Since: 1604
+ * Hash: 0x9A5BD1D0000B339C | Since: unknown
  */
 export function networkSpendSpinTheWheelPayment(amount) {
     NetworkSpentSpinTheWheelPayment(amount, undefined, false);
@@ -1803,7 +1814,7 @@ export function networkSpendSpinTheWheelPayment(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x6C8BC1488527AAAB | Since: 2189
+ * Hash: 0x6C8BC1488527AAAB | Since: unknown
  */
 export function networkSpendSubmarine() {
     NetworkSpentSubmarine(undefined, undefined, undefined, undefined, undefined, undefined);
@@ -1811,7 +1822,7 @@ export function networkSpendSubmarine() {
 /**
  * No comment provided
  *
- * Hash: 0xEBD482B82ACB8BAD | Since: 2545
+ * Hash: 0xEBD482B82ACB8BAD | Since: unknown
  */
 export function networkSpendSupply() {
     Citizen.invokeNative('0xEBD482B82ACB8BAD', undefined, undefined, undefined, undefined);
@@ -1819,7 +1830,7 @@ export function networkSpendSupply() {
 /**
  * No comment provided
  *
- * Hash: 0x61A2DF64ED2D396E | Since: 2545
+ * Hash: 0x61A2DF64ED2D396E | Since: unknown
  */
 export function networkSpendSuvFstTrvl() {
     Citizen.invokeNative('0x61A2DF64ED2D396E', 0, false, false, undefined);
@@ -1827,7 +1838,7 @@ export function networkSpendSuvFstTrvl() {
 /**
  * No comment provided
  *
- * Hash: 0x6CCA64840589A3B6 | Since: 2545
+ * Hash: 0x6CCA64840589A3B6 | Since: unknown
  */
 export function networkSpendUpgradeAgency() {
     Citizen.invokeNative('0x6CCA64840589A3B6', undefined, undefined, undefined, undefined);
@@ -1835,7 +1846,7 @@ export function networkSpendUpgradeAgency() {
 /**
  * No comment provided
  *
- * Hash: 0x5574637681911FDA | Since: 1868
+ * Hash: 0x5574637681911FDA | Since: unknown
  */
 export function networkSpendUpgradeArcade() {
     Citizen.invokeNative('0x5574637681911FDA', undefined, undefined, undefined, undefined);
@@ -1843,7 +1854,7 @@ export function networkSpendUpgradeArcade() {
 /**
  * No comment provided
  *
- * Hash: 0x037ABB06825D7AB1 | Since: 1604
+ * Hash: 0x037ABB06825D7AB1 | Since: unknown
  */
 export function networkSpendUpgradeArena(amount) {
     NetworkSpentUpgradeArena(amount, false, false, undefined);
@@ -1851,7 +1862,7 @@ export function networkSpendUpgradeArena(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xDD829AA198FDC46C | Since: 2372
+ * Hash: 0xDD829AA198FDC46C | Since: unknown
  */
 export function networkSpendUpgradeAutoshop() {
     NetworkSpentUpgradeAutoshop(undefined, undefined, undefined, undefined);
@@ -1859,7 +1870,7 @@ export function networkSpendUpgradeAutoshop() {
 /**
  * No comment provided
  *
- * Hash: 0x4740D62BC1B4EBEA | Since: 1734
+ * Hash: 0x4740D62BC1B4EBEA | Since: unknown
  */
 export function networkSpendUpgradeCasino(amount) {
     return NetworkSpentUpgradeCasino(amount, false, false);
@@ -1867,7 +1878,7 @@ export function networkSpendUpgradeCasino(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x89049A84065CE68E | Since: 2189
+ * Hash: 0x89049A84065CE68E | Since: unknown
  */
 export function networkSpendUpgradeSub() {
     NetworkSpentUpgradeSub(undefined, undefined, undefined, undefined);
@@ -1875,7 +1886,7 @@ export function networkSpendUpgradeSub() {
 /**
  * No comment provided
  *
- * Hash: 0x02D24A35A9CC3503 | Since: 2699
+ * Hash: 0x02D24A35A9CC3503 | Since: unknown
  */
 export function networkSpendVehicleRequested() {
     NetworkSpentVehicleRequested(undefined, undefined, undefined, undefined, undefined);
@@ -1883,7 +1894,7 @@ export function networkSpendVehicleRequested() {
 /**
  * No comment provided
  *
- * Hash: 0xB162DC95C0A3317B | Since: 323
+ * Hash: 0xB162DC95C0A3317B | Since: unknown
  */
 export function networkSpentAmmoDrop() {
     NetworkSpentAmmoDrop(undefined, false, false, undefined);
@@ -1891,7 +1902,7 @@ export function networkSpentAmmoDrop() {
 /**
  * No comment provided
  *
- * Hash: 0x14EAEA58F93B55AF | Since: 1604
+ * Hash: 0x14EAEA58F93B55AF | Since: unknown
  */
 export function networkSpentArenaJoinSpectator(amount) {
     NetworkSpentArenaJoinSpectator(amount, undefined, false, false);
@@ -1899,7 +1910,7 @@ export function networkSpentArenaJoinSpectator(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x812F5488B1B2A299 | Since: 323
+ * Hash: 0x812F5488B1B2A299 | Since: unknown
  */
 export function networkSpentArrestBail() {
     NetworkSpentArrestBail(undefined, false, false);
@@ -1907,7 +1918,7 @@ export function networkSpentArrestBail() {
 /**
  * No comment provided
  *
- * Hash: 0x5D97630A8A0EF123 | Since: 1103
+ * Hash: 0x5D97630A8A0EF123 | Since: unknown
  */
 export function networkSpentBallisticEquipment(amount) {
     NetworkSpentBallisticEquipment(amount, false, false);
@@ -1915,7 +1926,7 @@ export function networkSpentBallisticEquipment(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xCA230C9682556CF1 | Since: 323
+ * Hash: 0xCA230C9682556CF1 | Since: unknown
  */
 export function networkSpentBankInterest() {
     NetworkSpentBankInterest(0, false, false);
@@ -1923,7 +1934,7 @@ export function networkSpentBankInterest() {
 /**
  * No comment provided
  *
- * Hash: 0x1C436FD11FFA692F | Since: 323
+ * Hash: 0x1C436FD11FFA692F | Since: unknown
  */
 export function networkSpentBetting(amount, matchId) {
     NetworkSpentBetting(amount, 0, matchId, false, false);
@@ -1931,7 +1942,7 @@ export function networkSpentBetting(amount, matchId) {
 /**
  * No comment provided
  *
- * Hash: 0x524EE43A37232C00 | Since: 323
+ * Hash: 0x524EE43A37232C00 | Since: unknown
  */
 export function networkSpentBoatPickup() {
     NetworkSpentBoatPickup(undefined, false, false, undefined);
@@ -1939,7 +1950,7 @@ export function networkSpentBoatPickup() {
 /**
  * No comment provided
  *
- * Hash: 0xFFBE02CD385356BD | Since: 573
+ * Hash: 0xFFBE02CD385356BD | Since: unknown
  */
 export function networkSpentBossGoon(amount) {
     return NetworkSpentBoss(amount, false, false);
@@ -1947,7 +1958,7 @@ export function networkSpentBossGoon(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x29B260B84947DFCC | Since: 323
+ * Hash: 0x29B260B84947DFCC | Since: unknown
  */
 export function networkSpentBounty() {
     NetworkSpentBounty(undefined, false, false);
@@ -1955,7 +1966,7 @@ export function networkSpentBounty() {
 /**
  * No comment provided
  *
- * Hash: 0xA6DD8458CE24012C | Since: 323
+ * Hash: 0xA6DD8458CE24012C | Since: unknown
  */
 export function networkSpentBullShark() {
     NetworkSpentBullShark(undefined, false, false, undefined);
@@ -1963,7 +1974,7 @@ export function networkSpentBullShark() {
 /**
  * No comment provided
  *
- * Hash: 0x4EA3F425C7744D21 | Since: 1290
+ * Hash: 0x4EA3F425C7744D21 | Since: unknown
  */
 export function networkSpentBuyBase() {
     NetworkSpentBuyBase(undefined, undefined, undefined, undefined);
@@ -1971,7 +1982,7 @@ export function networkSpentBuyBase() {
 /**
  * No comment provided
  *
- * Hash: 0x12D148D26538D0F9 | Since: 1103
+ * Hash: 0x12D148D26538D0F9 | Since: unknown
  */
 export function networkSpentBuyBunker() {
     NetworkSpentBuyBunker(undefined, undefined, undefined, undefined);
@@ -1979,7 +1990,7 @@ export function networkSpentBuyBunker() {
 /**
  * No comment provided
  *
- * Hash: 0xA628A745E2275C5D | Since: 323
+ * Hash: 0xA628A745E2275C5D | Since: unknown
  */
 export function networkSpentBuyOfftheradar() {
     NetworkSpentBuyOfftheradar(undefined, false, false, undefined);
@@ -1987,7 +1998,7 @@ export function networkSpentBuyOfftheradar() {
 /**
  * No comment provided
  *
- * Hash: 0x6D3A430D1A809179 | Since: 323
+ * Hash: 0x6D3A430D1A809179 | Since: unknown
  */
 export function networkSpentBuyPassiveMode() {
     NetworkSpentBuyPassiveMode(undefined, false, false, undefined);
@@ -1995,7 +2006,7 @@ export function networkSpentBuyPassiveMode() {
 /**
  * No comment provided
  *
- * Hash: 0x6E176F1B18BC0637 | Since: 323
+ * Hash: 0x6E176F1B18BC0637 | Since: unknown
  */
 export function networkSpentBuyRevealPlayers() {
     NetworkSpentBuyRevealPlayers(undefined, false, false, undefined);
@@ -2003,7 +2014,7 @@ export function networkSpentBuyRevealPlayers() {
 /**
  * No comment provided
  *
- * Hash: 0x0CCE73BC7A11E885 | Since: 1290
+ * Hash: 0x0CCE73BC7A11E885 | Since: unknown
  */
 export function networkSpentBuyTiltrotor() {
     NetworkSpentBuyTiltrotor(undefined, undefined, undefined, undefined);
@@ -2011,7 +2022,7 @@ export function networkSpentBuyTiltrotor() {
 /**
  * No comment provided
  *
- * Hash: 0xAC272C0AE01B4BD8 | Since: 1103
+ * Hash: 0xAC272C0AE01B4BD8 | Since: unknown
  */
 export function networkSpentBuyTruck() {
     NetworkSpentBuyTruck(undefined, undefined, undefined, undefined);
@@ -2019,7 +2030,7 @@ export function networkSpentBuyTruck() {
 /**
  * No comment provided
  *
- * Hash: 0xE1B13771A843C4F6 | Since: 323
+ * Hash: 0xE1B13771A843C4F6 | Since: unknown
  */
 export function networkSpentBuyWantedlevel() {
     return NetworkSpentBuyWantedlevel(undefined, false, false, undefined);
@@ -2027,7 +2038,7 @@ export function networkSpentBuyWantedlevel() {
 /**
  * No comment provided
  *
- * Hash: 0xACDE7185B374177C | Since: 323
+ * Hash: 0xACDE7185B374177C | Since: unknown
  */
 export function networkSpentCallPlayer() {
     return NetworkSpentCallPlayer(undefined, false, false);
@@ -2035,7 +2046,7 @@ export function networkSpentCallPlayer() {
 /**
  * No comment provided
  *
- * Hash: 0x948705F6F9C50824 | Since: 2699
+ * Hash: 0x948705F6F9C50824 | Since: unknown
  */
 export function networkSpentCargoSourcing() {
     NetworkSpentCargoSourcing(undefined, undefined, undefined, undefined, undefined, undefined, undefined);
@@ -2043,7 +2054,7 @@ export function networkSpentCargoSourcing() {
 /**
  * No comment provided
  *
- * Hash: 0xEC03C719DB2F4306 | Since: 323
+ * Hash: 0xEC03C719DB2F4306 | Since: unknown
  */
 export function networkSpentCarwash() {
     NetworkSpentCarwash(undefined, undefined, undefined, false, false);
@@ -2051,7 +2062,7 @@ export function networkSpentCarwash() {
 /**
  * No comment provided
  *
- * Hash: 0x289016EC778D60E0 | Since: 323
+ * Hash: 0x289016EC778D60E0 | Since: unknown
  */
 export function networkSpentCashDrop(amount) {
     NetworkSpentCashDrop(amount, false, false);
@@ -2059,7 +2070,7 @@ export function networkSpentCashDrop(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x5F456788B05FAEAC | Since: 944
+ * Hash: 0x5F456788B05FAEAC | Since: unknown
  */
 export function networkSpentChangeAppearance() {
     Citizen.invokeNative('0x5F456788B05FAEAC', undefined, undefined, undefined);
@@ -2067,7 +2078,7 @@ export function networkSpentChangeAppearance() {
 /**
  * No comment provided
  *
- * Hash: 0x6B38ECB05A63A685 | Since: 323
+ * Hash: 0x6B38ECB05A63A685 | Since: unknown
  */
 export function networkSpentCinema() {
     NetworkSpentCinema(undefined, undefined, false, false);
@@ -2075,7 +2086,7 @@ export function networkSpentCinema() {
 /**
  * No comment provided
  *
- * Hash: 0x5BBBD92186E1F1C5 | Since: 1290
+ * Hash: 0x5BBBD92186E1F1C5 | Since: unknown
  */
 export function networkSpentEmployAssassins() {
     NetworkSpentEmployAssassins(undefined, undefined, undefined, undefined);
@@ -2083,7 +2094,7 @@ export function networkSpentEmployAssassins() {
 /**
  * No comment provided
  *
- * Hash: 0x6A445B64ED7ABEB5 | Since: 323
+ * Hash: 0x6A445B64ED7ABEB5 | Since: unknown
  */
 export function networkSpentFromRockstar() {
     NetworkSpentFromRockstar(0, false, false);
@@ -2091,7 +2102,7 @@ export function networkSpentFromRockstar() {
 /**
  * No comment provided
  *
- * Hash: 0xB1F1346FD57685D7 | Since: 1180
+ * Hash: 0xB1F1346FD57685D7 | Since: unknown
  */
 export function networkSpentHangarStaffCharges(amount) {
     NetworkSpentHangarStaffCharges(amount, false, false);
@@ -2099,7 +2110,7 @@ export function networkSpentHangarStaffCharges(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xB18AC2ECBB15CB6A | Since: 1180
+ * Hash: 0xB18AC2ECBB15CB6A | Since: unknown
  */
 export function networkSpentHangarUtilityCharges(amount) {
     NetworkSpentHangarUtilityCharges(amount, false, false);
@@ -2107,7 +2118,7 @@ export function networkSpentHangarUtilityCharges(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x7BF1D73DB2ECA492 | Since: 323
+ * Hash: 0x7BF1D73DB2ECA492 | Since: unknown
  */
 export function networkSpentHeliPickup() {
     NetworkSpentHeliPickup(undefined, false, false, undefined);
@@ -2115,7 +2126,7 @@ export function networkSpentHeliPickup() {
 /**
  * No comment provided
  *
- * Hash: 0xE7B80E2BF9D80BD6 | Since: 323
+ * Hash: 0xE7B80E2BF9D80BD6 | Since: unknown
  */
 export function networkSpentHireMercenary() {
     NetworkSpentHireMercenary(undefined, false, false, undefined);
@@ -2125,7 +2136,7 @@ export function networkSpentHireMercenary() {
  * p1 = 0
  * p2 = 1
  *
- * Hash: 0xE404BFB981665BF0 | Since: 323
+ * Hash: 0xE404BFB981665BF0 | Since: unknown
  */
 export function networkSpentHireMugger() {
     NetworkSpentHireMugger(undefined, false, false, undefined);
@@ -2133,7 +2144,7 @@ export function networkSpentHireMugger() {
 /**
  * No comment provided
  *
- * Hash: 0xD9B86B9872039763 | Since: 323
+ * Hash: 0xD9B86B9872039763 | Since: unknown
  */
 export function networkSpentHoldups() {
     NetworkSpentHoldups(undefined, false, false);
@@ -2141,7 +2152,7 @@ export function networkSpentHoldups() {
 /**
  * No comment provided
  *
- * Hash: 0xC1952F3773BA18FE | Since: 944
+ * Hash: 0xC1952F3773BA18FE | Since: unknown
  */
 export function networkSpentImportExportRepair() {
     NetworkSpentImportExportRepair(undefined, undefined, undefined);
@@ -2149,7 +2160,7 @@ export function networkSpentImportExportRepair() {
 /**
  * No comment provided
  *
- * Hash: 0xEE99784E4467689C | Since: 323
+ * Hash: 0xEE99784E4467689C | Since: unknown
  */
 export function networkSpentInStripclub() {
     NetworkSpentInStripclub(undefined, false, undefined, false);
@@ -2157,7 +2168,7 @@ export function networkSpentInStripclub() {
 /**
  * No comment provided
  *
- * Hash: 0x28F174A67B8D0C2F | Since: 323
+ * Hash: 0x28F174A67B8D0C2F | Since: unknown
  */
 export function networkSpentJobSkip(amount, matchId) {
     NetworkSpentJobSkip(amount, matchId, false, false);
@@ -2165,7 +2176,7 @@ export function networkSpentJobSkip(amount, matchId) {
 /**
  * No comment provided
  *
- * Hash: 0x5BCDE0F640C773D2 | Since: 877
+ * Hash: 0x5BCDE0F640C773D2 | Since: unknown
  */
 export function networkSpentJukebox() {
     NetworkSpentJukebox(undefined, undefined, undefined, undefined);
@@ -2173,7 +2184,7 @@ export function networkSpentJukebox() {
 /**
  * No comment provided
  *
- * Hash: 0xD7CCCBA28C4ECAF0 | Since: 877
+ * Hash: 0xD7CCCBA28C4ECAF0 | Since: unknown
  */
 export function networkSpentMcAbility() {
     NetworkSpentBaService(undefined, undefined, undefined, undefined, undefined);
@@ -2181,7 +2192,7 @@ export function networkSpentMcAbility() {
 /**
  * No comment provided
  *
- * Hash: 0xCD4D66B43B1DD28D | Since: 2189
+ * Hash: 0xCD4D66B43B1DD28D | Since: unknown
  */
 export function networkSpentMoveSubmarine() {
     Citizen.invokeNative('0xCD4D66B43B1DD28D', undefined, undefined, undefined);
@@ -2189,7 +2200,7 @@ export function networkSpentMoveSubmarine() {
 /**
  * No comment provided
  *
- * Hash: 0xE7DF4E0545DFB56E | Since: 573
+ * Hash: 0xE7DF4E0545DFB56E | Since: unknown
  */
 export function networkSpentMoveYacht(amount) {
     NetworkSpentMoveYacht(amount, false, false);
@@ -2197,7 +2208,7 @@ export function networkSpentMoveYacht(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x876056684281655D | Since: 1493
+ * Hash: 0x876056684281655D | Since: unknown
  */
 export function networkSpentNightclubEntryFee(player, amount) {
     const _player = typeof player == 'object' ? player.playerId() : player;
@@ -2206,7 +2217,7 @@ export function networkSpentNightclubEntryFee(player, amount) {
 /**
  * No comment provided
  *
- * Hash: 0xD5BB406F4E04019F | Since: 323
+ * Hash: 0xD5BB406F4E04019F | Since: unknown
  */
 export function networkSpentNoCops() {
     NetworkSpentNoCops(undefined, false, false, undefined);
@@ -2214,7 +2225,7 @@ export function networkSpentNoCops() {
 /**
  * No comment provided
  *
- * Hash: 0xE8B0B270B6E7C76E | Since: 757
+ * Hash: 0xE8B0B270B6E7C76E | Since: unknown
  */
 export function networkSpentOrderBodyguardVehicle() {
     NetworkSpentOrderBodyguardVehicle(undefined, undefined, undefined, undefined);
@@ -2222,7 +2233,7 @@ export function networkSpentOrderBodyguardVehicle() {
 /**
  * No comment provided
  *
- * Hash: 0x05F04155A226FBBF | Since: 757
+ * Hash: 0x05F04155A226FBBF | Since: unknown
  */
 export function networkSpentOrderWarehouseVehicle() {
     NetworkSpentOrderWarehouseVehicle(undefined, undefined, undefined, undefined);
@@ -2230,7 +2241,7 @@ export function networkSpentOrderWarehouseVehicle() {
 /**
  * No comment provided
  *
- * Hash: 0x0035BB914316F1E3 | Since: 877
+ * Hash: 0x0035BB914316F1E3 | Since: unknown
  */
 export function networkSpentPayBusinessSupplies() {
     NetworkSpentBusiness(undefined, undefined, undefined, undefined);
@@ -2248,7 +2259,7 @@ export function networkSpentPayBusinessSupplies() {
  * The fifth and last parameter is a bool that returns true/false depending on if you have the money for the car based on the cost returned by func_5749. In the freemode script eg,
  * `bool hasTheMoney = MONEY::_GET_BANK_BALANCE() < carCost.`
  *
- * Hash: 0x9FF28D88C766E3E8 | Since: 323
+ * Hash: 0x9FF28D88C766E3E8 | Since: unknown
  */
 export function networkSpentPayVehicleInsurancePremium(amount, vehicleModel, notBankrupt, hasTheMoney) {
     if (typeof vehicleModel === 'string')
@@ -2258,7 +2269,7 @@ export function networkSpentPayVehicleInsurancePremium(amount, vehicleModel, not
 /**
  * No comment provided
  *
- * Hash: 0x0FE8E1FCD2B86B33 | Since: 757
+ * Hash: 0x0FE8E1FCD2B86B33 | Since: unknown
  */
 export function networkSpentPaHeliPickup() {
     NetworkSpentPaServiceHeliPickup(undefined, undefined, undefined, undefined);
@@ -2266,7 +2277,7 @@ export function networkSpentPaHeliPickup() {
 /**
  * No comment provided
  *
- * Hash: 0xB49ECA122467D05F | Since: 757
+ * Hash: 0xB49ECA122467D05F | Since: unknown
  */
 export function networkSpentPaServiceDancer() {
     NetworkSpentPaServiceDancer(undefined, undefined, undefined, undefined);
@@ -2274,7 +2285,7 @@ export function networkSpentPaServiceDancer() {
 /**
  * No comment provided
  *
- * Hash: 0x112209CE0290C03A | Since: 757
+ * Hash: 0x112209CE0290C03A | Since: unknown
  */
 export function networkSpentPaServiceHeli() {
     Citizen.invokeNative('0x112209CE0290C03A', undefined, undefined, undefined, undefined);
@@ -2282,7 +2293,7 @@ export function networkSpentPaServiceHeli() {
 /**
  * No comment provided
  *
- * Hash: 0xE23ADC6FCB1F29AE | Since: 757
+ * Hash: 0xE23ADC6FCB1F29AE | Since: unknown
  */
 export function networkSpentPaServiceImpound() {
     Citizen.invokeNative('0xE23ADC6FCB1F29AE', undefined, undefined, undefined);
@@ -2290,7 +2301,7 @@ export function networkSpentPaServiceImpound() {
 /**
  * No comment provided
  *
- * Hash: 0x0D30EB83668E63C5 | Since: 757
+ * Hash: 0x0D30EB83668E63C5 | Since: unknown
  */
 export function networkSpentPaServiceSnack() {
     Citizen.invokeNative('0x0D30EB83668E63C5', undefined, undefined, undefined, undefined);
@@ -2298,7 +2309,7 @@ export function networkSpentPaServiceSnack() {
 /**
  * No comment provided
  *
- * Hash: 0xED5FD7AF10F5E262 | Since: 757
+ * Hash: 0xED5FD7AF10F5E262 | Since: unknown
  */
 export function networkSpentPaServiceVehicle() {
     Citizen.invokeNative('0xED5FD7AF10F5E262', undefined, undefined, undefined, undefined);
@@ -2306,7 +2317,7 @@ export function networkSpentPaServiceVehicle() {
 /**
  * No comment provided
  *
- * Hash: 0x7C99101F7FCE2EE5 | Since: 323
+ * Hash: 0x7C99101F7FCE2EE5 | Since: unknown
  */
 export function networkSpentPlayerHealthcare() {
     NetworkSpentPlayerHealthcare(0, 0, false, false);
@@ -2314,7 +2325,7 @@ export function networkSpentPlayerHealthcare() {
 /**
  * No comment provided
  *
- * Hash: 0xB21B89501CFAC79E | Since: 323
+ * Hash: 0xB21B89501CFAC79E | Since: unknown
  */
 export function networkSpentProstitutes() {
     NetworkSpentProstitutes(undefined, false, false);
@@ -2322,7 +2333,7 @@ export function networkSpentProstitutes() {
 /**
  * No comment provided
  *
- * Hash: 0x6FD97159FE3C971A | Since: 877
+ * Hash: 0x6FD97159FE3C971A | Since: unknown
  */
 export function networkSpentPurchaseBusinessProperty() {
     Citizen.invokeNative('0x6FD97159FE3C971A', undefined, undefined, undefined, undefined);
@@ -2330,7 +2341,7 @@ export function networkSpentPurchaseBusinessProperty() {
 /**
  * No comment provided
  *
- * Hash: 0x998E18CEB44487FC | Since: 877
+ * Hash: 0x998E18CEB44487FC | Since: unknown
  */
 export function networkSpentPurchaseClubHouse() {
     Citizen.invokeNative('0x998E18CEB44487FC', undefined, undefined, undefined, undefined);
@@ -2338,7 +2349,7 @@ export function networkSpentPurchaseClubHouse() {
 /**
  * No comment provided
  *
- * Hash: 0x2A93C46AAB1EACC9 | Since: 1493
+ * Hash: 0x2A93C46AAB1EACC9 | Since: unknown
  */
 export function networkSpentPurchaseHackerTruck() {
     Citizen.invokeNative('0x2A93C46AAB1EACC9', undefined, undefined, undefined, undefined);
@@ -2346,7 +2357,7 @@ export function networkSpentPurchaseHackerTruck() {
 /**
  * No comment provided
  *
- * Hash: 0xCCB339CC970452DA | Since: 1180
+ * Hash: 0xCCB339CC970452DA | Since: unknown
  */
 export function networkSpentPurchaseHangar() {
     NetworkSpentPurchaseHangar(undefined, undefined, undefined, undefined);
@@ -2354,7 +2365,7 @@ export function networkSpentPurchaseHangar() {
 /**
  * No comment provided
  *
- * Hash: 0x33981D6804E62F49 | Since: 944
+ * Hash: 0x33981D6804E62F49 | Since: unknown
  */
 export function networkSpentPurchaseImpexpWarehouseProperty(amount) {
     return NetworkSpentPurchaseWarehouse(amount, false, false);
@@ -2362,7 +2373,7 @@ export function networkSpentPurchaseImpexpWarehouseProperty(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xED76D195E6E3BF7F | Since: 1493
+ * Hash: 0xED76D195E6E3BF7F | Since: unknown
  */
 export function networkSpentPurchaseNightclubAndWarehouse() {
     Citizen.invokeNative('0xED76D195E6E3BF7F', undefined, undefined, undefined, undefined);
@@ -2370,7 +2381,7 @@ export function networkSpentPurchaseNightclubAndWarehouse() {
 /**
  * No comment provided
  *
- * Hash: 0xB4C2EC463672474E | Since: 944
+ * Hash: 0xB4C2EC463672474E | Since: unknown
  */
 export function networkSpentPurchaseOfficeGarage() {
     Citizen.invokeNative('0xB4C2EC463672474E', undefined, undefined, undefined, undefined);
@@ -2378,7 +2389,7 @@ export function networkSpentPurchaseOfficeGarage() {
 /**
  * No comment provided
  *
- * Hash: 0x69EF772B192614C1 | Since: 757
+ * Hash: 0x69EF772B192614C1 | Since: unknown
  */
 export function networkSpentPurchaseOfficeProperty() {
     Citizen.invokeNative('0x69EF772B192614C1', undefined, undefined, undefined, undefined, undefined);
@@ -2386,7 +2397,7 @@ export function networkSpentPurchaseOfficeProperty() {
 /**
  * No comment provided
  *
- * Hash: 0xBD0EFB25CCA8F97A | Since: 757
+ * Hash: 0xBD0EFB25CCA8F97A | Since: unknown
  */
 export function networkSpentPurchaseWarehouseProperty() {
     Citizen.invokeNative('0xBD0EFB25CCA8F97A', undefined, undefined, undefined, undefined);
@@ -2394,7 +2405,7 @@ export function networkSpentPurchaseWarehouseProperty() {
 /**
  * No comment provided
  *
- * Hash: 0xE284D46FFDB82E36 | Since: 1493
+ * Hash: 0xE284D46FFDB82E36 | Since: unknown
  */
 export function networkSpentRdrHatchetBonus(amount) {
     NetworkSpentRdrhatchetBonus(amount, false, false);
@@ -2402,7 +2413,7 @@ export function networkSpentRdrHatchetBonus(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xF6C8A544E4CF14FC | Since: 1493
+ * Hash: 0xF6C8A544E4CF14FC | Since: unknown
  */
 export function networkSpentRehireDj(amount) {
     NetworkSpentRehireDj(amount, undefined, false, false);
@@ -2410,7 +2421,7 @@ export function networkSpentRehireDj(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xFC4EE00A7B3BFB76 | Since: 573
+ * Hash: 0xFC4EE00A7B3BFB76 | Since: unknown
  */
 export function networkSpentRenameOrganization() {
     NetworkSpentRenameOrganization(undefined, undefined, undefined, undefined);
@@ -2418,7 +2429,7 @@ export function networkSpentRenameOrganization() {
 /**
  * No comment provided
  *
- * Hash: 0x9D26502BB97BFE62 | Since: 323
+ * Hash: 0x9D26502BB97BFE62 | Since: unknown
  */
 export function networkSpentRequestHeist() {
     NetworkSpentRequestHeist(undefined, false, false, undefined);
@@ -2426,7 +2437,7 @@ export function networkSpentRequestHeist() {
 /**
  * No comment provided
  *
- * Hash: 0x8204DA7934DF3155 | Since: 323
+ * Hash: 0x8204DA7934DF3155 | Since: unknown
  */
 export function networkSpentRequestJob() {
     NetworkSpentRequestJob(undefined, false, false, undefined);
@@ -2434,7 +2445,7 @@ export function networkSpentRequestJob() {
 /**
  * No comment provided
  *
- * Hash: 0x995A65F15F581359 | Since: 323
+ * Hash: 0x995A65F15F581359 | Since: unknown
  */
 export function networkSpentRobbedByMugger(amount) {
     NetworkSpentRobbedByMugger(amount, false, false, undefined);
@@ -2442,7 +2453,7 @@ export function networkSpentRobbedByMugger(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x17C3A7D31EAE39F9 | Since: 323
+ * Hash: 0x17C3A7D31EAE39F9 | Since: unknown
  */
 export function networkSpentTaxi(amount) {
     NetworkSpentTaxi(amount, false, false, undefined, undefined);
@@ -2450,7 +2461,7 @@ export function networkSpentTaxi(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x7FE61782AD94CC09 | Since: 323
+ * Hash: 0x7FE61782AD94CC09 | Since: unknown
  */
 export function networkSpentTelescope() {
     NetworkSpentTelescope(undefined, false, false);
@@ -2458,7 +2469,7 @@ export function networkSpentTelescope() {
 /**
  * No comment provided
  *
- * Hash: 0xA51B086B0B2C0F7A | Since: 877
+ * Hash: 0xA51B086B0B2C0F7A | Since: unknown
  */
 export function networkSpentTradeBusinessProperty() {
     Citizen.invokeNative('0xA51B086B0B2C0F7A', undefined, undefined, undefined, undefined);
@@ -2466,7 +2477,7 @@ export function networkSpentTradeBusinessProperty() {
 /**
  * No comment provided
  *
- * Hash: 0x2FAB6614CE22E196 | Since: 944
+ * Hash: 0x2FAB6614CE22E196 | Since: unknown
  */
 export function networkSpentTradeImpexpWarehouseProperty() {
     Citizen.invokeNative('0x2FAB6614CE22E196', undefined, undefined, undefined, undefined);
@@ -2474,7 +2485,7 @@ export function networkSpentTradeImpexpWarehouseProperty() {
 /**
  * No comment provided
  *
- * Hash: 0x3DD3F33A5D55EA6F | Since: 1290
+ * Hash: 0x3DD3F33A5D55EA6F | Since: unknown
  */
 export function networkSpentUpgradeBase() {
     NetworkSpentUpgradeBase(undefined, undefined, undefined, undefined);
@@ -2482,7 +2493,7 @@ export function networkSpentUpgradeBase() {
 /**
  * No comment provided
  *
- * Hash: 0x675D19C6067CAE08 | Since: 877
+ * Hash: 0x675D19C6067CAE08 | Since: unknown
  */
 export function networkSpentUpgradeBusinessProperty() {
     Citizen.invokeNative('0x675D19C6067CAE08', undefined, undefined, undefined, undefined);
@@ -2490,7 +2501,7 @@ export function networkSpentUpgradeBusinessProperty() {
 /**
  * No comment provided
  *
- * Hash: 0xFA07759E6FDDD7CF | Since: 877
+ * Hash: 0xFA07759E6FDDD7CF | Since: unknown
  */
 export function networkSpentUpgradeClubHouse() {
     Citizen.invokeNative('0xFA07759E6FDDD7CF', undefined, undefined, undefined, undefined);
@@ -2498,7 +2509,7 @@ export function networkSpentUpgradeClubHouse() {
 /**
  * No comment provided
  *
- * Hash: 0x226C284C830D0CA8 | Since: 1493
+ * Hash: 0x226C284C830D0CA8 | Since: unknown
  */
 export function networkSpentUpgradeHackerTruck() {
     Citizen.invokeNative('0x226C284C830D0CA8', undefined, undefined, undefined, undefined);
@@ -2506,7 +2517,7 @@ export function networkSpentUpgradeHackerTruck() {
 /**
  * No comment provided
  *
- * Hash: 0x615EB504B0788DAF | Since: 1180
+ * Hash: 0x615EB504B0788DAF | Since: unknown
  */
 export function networkSpentUpgradeHangar() {
     NetworkSpentUpgradeHangar(undefined, undefined, undefined, undefined);
@@ -2514,7 +2525,7 @@ export function networkSpentUpgradeHangar() {
 /**
  * No comment provided
  *
- * Hash: 0x4128464231E3CA0B | Since: 944
+ * Hash: 0x4128464231E3CA0B | Since: unknown
  */
 export function networkSpentUpgradeImpexpWarehouseProperty() {
     Citizen.invokeNative('0x4128464231E3CA0B', undefined, undefined, undefined, undefined);
@@ -2522,7 +2533,7 @@ export function networkSpentUpgradeImpexpWarehouseProperty() {
 /**
  * No comment provided
  *
- * Hash: 0x1DC9B749E7AE282B | Since: 1493
+ * Hash: 0x1DC9B749E7AE282B | Since: unknown
  */
 export function networkSpentUpgradeNightclubAndWarehouse() {
     Citizen.invokeNative('0x1DC9B749E7AE282B', undefined, undefined, undefined, undefined);
@@ -2530,7 +2541,7 @@ export function networkSpentUpgradeNightclubAndWarehouse() {
 /**
  * No comment provided
  *
- * Hash: 0x2AFC2D19B50797F2 | Since: 944
+ * Hash: 0x2AFC2D19B50797F2 | Since: unknown
  */
 export function networkSpentUpgradeOfficeGarage() {
     Citizen.invokeNative('0x2AFC2D19B50797F2', undefined, undefined, undefined, undefined);
@@ -2538,7 +2549,7 @@ export function networkSpentUpgradeOfficeGarage() {
 /**
  * No comment provided
  *
- * Hash: 0x8E243837643D9583 | Since: 757
+ * Hash: 0x8E243837643D9583 | Since: unknown
  */
 export function networkSpentUpgradeOfficeProperty() {
     Citizen.invokeNative('0x8E243837643D9583', undefined, undefined, undefined, undefined, undefined);
@@ -2546,7 +2557,7 @@ export function networkSpentUpgradeOfficeProperty() {
 /**
  * No comment provided
  *
- * Hash: 0x165E135D6DFA2907 | Since: 1290
+ * Hash: 0x165E135D6DFA2907 | Since: unknown
  */
 export function networkSpentUpgradeTiltrotor() {
     NetworkSpentUpgradeTiltrotor(undefined, undefined, undefined, undefined);
@@ -2554,7 +2565,7 @@ export function networkSpentUpgradeTiltrotor() {
 /**
  * No comment provided
  *
- * Hash: 0x365E877C61D6988B | Since: 1103
+ * Hash: 0x365E877C61D6988B | Since: unknown
  */
 export function networkSpentUpgradeTruck() {
     NetworkSpentUpgradeTruck(undefined, undefined, undefined, undefined);
@@ -2562,7 +2573,7 @@ export function networkSpentUpgradeTruck() {
 /**
  * No comment provided
  *
- * Hash: 0xA95F667A755725DA | Since: 757
+ * Hash: 0xA95F667A755725DA | Since: unknown
  */
 export function networkSpentUpgradeWarehouseProperty() {
     Citizen.invokeNative('0xA95F667A755725DA', undefined, undefined, undefined, undefined);
@@ -2570,7 +2581,7 @@ export function networkSpentUpgradeWarehouseProperty() {
 /**
  * No comment provided
  *
- * Hash: 0x0C82D21A77C22D49 | Since: 1103
+ * Hash: 0x0C82D21A77C22D49 | Since: unknown
  */
 export function networkSpentUpradeBunker() {
     NetworkSpentUpgradeBunker(undefined, undefined, undefined, undefined);
@@ -2578,7 +2589,7 @@ export function networkSpentUpradeBunker() {
 /**
  * No comment provided
  *
- * Hash: 0xA75CCF58A60A5FD1 | Since: 944
+ * Hash: 0xA75CCF58A60A5FD1 | Since: unknown
  */
 export function networkSpentVehicleExportMods() {
     NetworkSpentVehicleExportMods(undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined);
@@ -2586,7 +2597,7 @@ export function networkSpentVehicleExportMods() {
 /**
  * No comment provided
  *
- * Hash: 0xD99DB210089617FE | Since: 573
+ * Hash: 0xD99DB210089617FE | Since: unknown
  */
 export function networkSpentWager(amount) {
     NetworkSpentWager(undefined, undefined, amount);
@@ -2594,7 +2605,7 @@ export function networkSpentWager(amount) {
 /**
  * No comment provided
  *
- * Hash: 0x59498BC8B1C8B15C | Since: 2699
+ * Hash: 0x59498BC8B1C8B15C | Since: unknown
  */
 export function networkYohanSourceGoods() {
     NetworkEarnFromBusinessHubSource(undefined, undefined, undefined, undefined);
@@ -2602,7 +2613,7 @@ export function networkYohanSourceGoods() {
 /**
  * This isn't a hash collision.
  *
- * Hash: 0x20194D48EAEC9A41 | Since: 323
+ * Hash: 0x20194D48EAEC9A41 | Since: unknown
  */
 export function processCashGift() {
     return ProcessCashGift(undefined);
@@ -2610,7 +2621,7 @@ export function processCashGift() {
 /**
  * This function is hard-coded to always return 1.
  *
- * Hash: 0x6FCF8DDEA146C45B | Since: 323
+ * Hash: 0x6FCF8DDEA146C45B | Since: unknown
  */
 export function wasVcWithdrawalSuccessful() {
     return Citizen.invokeNative('0x6FCF8DDEA146C45B', undefined);
@@ -2618,7 +2629,7 @@ export function wasVcWithdrawalSuccessful() {
 /**
  * Does nothing and always returns 0.
  *
- * Hash: 0xF70EFA14FE091429 | Since: 323
+ * Hash: 0xF70EFA14FE091429 | Since: unknown
  */
 export function withdrawVc(amount) {
     return WithdrawVc(amount);
@@ -2626,7 +2637,7 @@ export function withdrawVc(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xE03B9F95556E48E9 | Since: 3095
+ * Hash: 0xE03B9F95556E48E9 | Since: unknown
  */
 export function networkClearTransactionTelemetryNonce() {
     Citizen.invokeNative('0xE03B9F95556E48E9');
@@ -2634,7 +2645,7 @@ export function networkClearTransactionTelemetryNonce() {
 /**
  * Used for SERVICE_EARN_AVENGER_OPERATIONS & SERVICE_EARN_AVENGER_OPS_BONUS
  *
- * Hash: 0x55F006B9D4A46C1D | Since: 2944
+ * Hash: 0x55F006B9D4A46C1D | Since: unknown
  */
 export function networkEarnAvenger(amount) {
     Citizen.invokeNative('0x55F006B9D4A46C1D', amount, 0);
@@ -2642,7 +2653,7 @@ export function networkEarnAvenger(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xD1A8165767AD2D23 | Since: 2802
+ * Hash: 0xD1A8165767AD2D23 | Since: unknown
  */
 export function networkEarnAwardAcidLab() {
     Citizen.invokeNative('0xD1A8165767AD2D23', undefined, undefined);
@@ -2650,7 +2661,7 @@ export function networkEarnAwardAcidLab() {
 /**
  * No comment provided
  *
- * Hash: 0xC30650FA74A19D02 | Since: 2802
+ * Hash: 0xC30650FA74A19D02 | Since: unknown
  */
 export function networkEarnAwardDailyStash() {
     Citizen.invokeNative('0xC30650FA74A19D02', undefined, undefined);
@@ -2658,7 +2669,7 @@ export function networkEarnAwardDailyStash() {
 /**
  * No comment provided
  *
- * Hash: 0xD01EBAEA1F905EF6 | Since: 2802
+ * Hash: 0xD01EBAEA1F905EF6 | Since: unknown
  */
 export function networkEarnAwardDeadDrop() {
     Citizen.invokeNative('0xD01EBAEA1F905EF6', undefined, undefined);
@@ -2666,7 +2677,7 @@ export function networkEarnAwardDeadDrop() {
 /**
  * No comment provided
  *
- * Hash: 0xDDF047577F1A02A7 | Since: 2802
+ * Hash: 0xDDF047577F1A02A7 | Since: unknown
  */
 export function networkEarnAwardJuggaloMission() {
     Citizen.invokeNative('0xDDF047577F1A02A7', undefined, undefined);
@@ -2674,7 +2685,7 @@ export function networkEarnAwardJuggaloMission() {
 /**
  * No comment provided
  *
- * Hash: 0xBEAFBB1B98B7EF55 | Since: 2802
+ * Hash: 0xBEAFBB1B98B7EF55 | Since: unknown
  */
 export function networkEarnAwardRandomEvent() {
     Citizen.invokeNative('0xBEAFBB1B98B7EF55', undefined, undefined);
@@ -2682,7 +2693,7 @@ export function networkEarnAwardRandomEvent() {
 /**
  * No comment provided
  *
- * Hash: 0xA914768AD35CD3A5 | Since: 2802
+ * Hash: 0xA914768AD35CD3A5 | Since: unknown
  */
 export function networkEarnAwardTaxi() {
     Citizen.invokeNative('0xA914768AD35CD3A5', undefined, undefined);
@@ -2690,7 +2701,7 @@ export function networkEarnAwardTaxi() {
 /**
  * No comment provided
  *
- * Hash: 0xDCEF983C24191997 | Since: 2944
+ * Hash: 0xDCEF983C24191997 | Since: unknown
  */
 export function networkEarnBonusObjective(amount) {
     Citizen.invokeNative('0xDCEF983C24191997', amount, undefined, undefined);
@@ -2698,7 +2709,7 @@ export function networkEarnBonusObjective(amount) {
 /**
  * No comment provided
  *
- * Hash: 0xCABC9874AFA70D6D | Since: 2802
+ * Hash: 0xCABC9874AFA70D6D | Since: unknown
  */
 export function networkEarnDailyStashHouseCompleted() {
     Citizen.invokeNative('0xCABC9874AFA70D6D', undefined, undefined);
@@ -2706,7 +2717,7 @@ export function networkEarnDailyStashHouseCompleted() {
 /**
  * No comment provided
  *
- * Hash: 0x9C0C6BD0F94CE391 | Since: 2802
+ * Hash: 0x9C0C6BD0F94CE391 | Since: unknown
  */
 export function networkEarnDailyStashHouseParticipation() {
     Citizen.invokeNative('0x9C0C6BD0F94CE391', undefined, undefined);
@@ -2714,7 +2725,7 @@ export function networkEarnDailyStashHouseParticipation() {
 /**
  * JUGGALO_PHONE_MISSION...
  *
- * Hash: 0xCE4452AE85F5E252 | Since: 2802
+ * Hash: 0xCE4452AE85F5E252 | Since: unknown
  */
 export function networkEarnFooliganJob() {
     Citizen.invokeNative('0xCE4452AE85F5E252', undefined, undefined);
@@ -2722,7 +2733,7 @@ export function networkEarnFooliganJob() {
 /**
  * JUGGALO_PHONE_MISSION_PARTICIPATION...
  *
- * Hash: 0xC376B92D0E060970 | Since: 2802
+ * Hash: 0xC376B92D0E060970 | Since: unknown
  */
 export function networkEarnFooliganJobParticipation() {
     Citizen.invokeNative('0xC376B92D0E060970', undefined, undefined);
@@ -2730,7 +2741,7 @@ export function networkEarnFooliganJobParticipation() {
 /**
  * _NETWORK_EARN_G*
  *
- * Hash: 0xBF7B5BB7ED890380 | Since: 3095
+ * Hash: 0xBF7B5BB7ED890380 | Since: unknown
  */
 export function networkEarnGeneric(amount, earn) {
     if (typeof earn === 'string')
@@ -2740,7 +2751,7 @@ export function networkEarnGeneric(amount, earn) {
 /**
  * No comment provided
  *
- * Hash: 0xE01D10BA8CD53621 | Since: 2802
+ * Hash: 0xE01D10BA8CD53621 | Since: unknown
  */
 export function networkEarnJuggaloStoryMission() {
     Citizen.invokeNative('0xE01D10BA8CD53621', undefined, undefined);
@@ -2748,7 +2759,7 @@ export function networkEarnJuggaloStoryMission() {
 /**
  * No comment provided
  *
- * Hash: 0x40FF6CCCC476185C | Since: 2802
+ * Hash: 0x40FF6CCCC476185C | Since: unknown
  */
 export function networkEarnJuggaloStoryMissionParticipation() {
     Citizen.invokeNative('0x40FF6CCCC476185C', undefined, undefined);
@@ -2756,7 +2767,7 @@ export function networkEarnJuggaloStoryMissionParticipation() {
 /**
  * No comment provided
  *
- * Hash: 0xF8332B06F0EECC9C | Since: 2944
+ * Hash: 0xF8332B06F0EECC9C | Since: unknown
  */
 export function networkEarnProgressHub() {
     Citizen.invokeNative('0xF8332B06F0EECC9C', undefined, undefined);
@@ -2764,7 +2775,7 @@ export function networkEarnProgressHub() {
 /**
  * No comment provided
  *
- * Hash: 0x79B656937DF6DF5D | Since: 2802
+ * Hash: 0x79B656937DF6DF5D | Since: unknown
  */
 export function networkEarnSellAcid() {
     Citizen.invokeNative('0x79B656937DF6DF5D', undefined, undefined);
@@ -2772,7 +2783,7 @@ export function networkEarnSellAcid() {
 /**
  * No comment provided
  *
- * Hash: 0xCA3EF9B09A8D76B4 | Since: 2802
+ * Hash: 0xCA3EF9B09A8D76B4 | Since: unknown
  */
 export function networkEarnSellParticipationAcidLab() {
     Citizen.invokeNative('0xCA3EF9B09A8D76B4', undefined, undefined);
@@ -2780,7 +2791,7 @@ export function networkEarnSellParticipationAcidLab() {
 /**
  * No comment provided
  *
- * Hash: 0xE3942D59E8A7F70D | Since: 2802
+ * Hash: 0xE3942D59E8A7F70D | Since: unknown
  */
 export function networkEarnSetupParticipationAcidLab() {
     Citizen.invokeNative('0xE3942D59E8A7F70D', undefined, undefined);
@@ -2788,7 +2799,7 @@ export function networkEarnSetupParticipationAcidLab() {
 /**
  * No comment provided
  *
- * Hash: 0xDEA273D5F8A9661A | Since: 2944
+ * Hash: 0xDEA273D5F8A9661A | Since: unknown
  */
 export function networkEarnSmugglerOps() {
     Citizen.invokeNative('0xDEA273D5F8A9661A', undefined, undefined, undefined);
@@ -2796,7 +2807,7 @@ export function networkEarnSmugglerOps() {
 /**
  * No comment provided
  *
- * Hash: 0x136F11B5DF1B304D | Since: 2802
+ * Hash: 0x136F11B5DF1B304D | Since: unknown
  */
 export function networkEarnSourceParticipationAcidLab() {
     Citizen.invokeNative('0x136F11B5DF1B304D', undefined, undefined);
@@ -2804,7 +2815,7 @@ export function networkEarnSourceParticipationAcidLab() {
 /**
  * No comment provided
  *
- * Hash: 0xA81017EE1324FDFE | Since: 2802
+ * Hash: 0xA81017EE1324FDFE | Since: unknown
  */
 export function networkEarnStreetDealer() {
     Citizen.invokeNative('0xA81017EE1324FDFE', undefined, undefined);
@@ -2812,7 +2823,7 @@ export function networkEarnStreetDealer() {
 /**
  * No comment provided
  *
- * Hash: 0x991E1588FAD9019D | Since: 2802
+ * Hash: 0x991E1588FAD9019D | Since: unknown
  */
 export function networkEarnTaxiJob() {
     Citizen.invokeNative('0x991E1588FAD9019D', undefined, undefined);
@@ -2820,7 +2831,31 @@ export function networkEarnTaxiJob() {
 /**
  * No comment provided
  *
- * Hash: 0xF1E26A7924327152 | Since: 2802
+ * Hash: 0xDBD91315C80E9483 | Since: unknown
+ */
+export function networkGetTotalEvcBalanceIsGreaterThan100m() {
+    return Citizen.invokeNative('0xDBD91315C80E9483');
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0xEEB1C310842A81E0 | Since: unknown
+ */
+export function networkGetTotalEvcBalanceIsGreaterThan1b() {
+    return Citizen.invokeNative('0xEEB1C310842A81E0');
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0xC44398D46FF6ADB9 | Since: unknown
+ */
+export function networkGetTotalEvcBalanceIsGreaterThan500m() {
+    return Citizen.invokeNative('0xC44398D46FF6ADB9');
+}
+/**
+ * No comment provided
+ *
+ * Hash: 0xF1E26A7924327152 | Since: unknown
  */
 export function networkSpendBuyAcidLab() {
     Citizen.invokeNative('0xF1E26A7924327152', undefined, undefined, undefined, undefined);
@@ -2828,7 +2863,7 @@ export function networkSpendBuyAcidLab() {
 /**
  * No comment provided
  *
- * Hash: 0xA2ED36DCF0FCA413 | Since: 2802
+ * Hash: 0xA2ED36DCF0FCA413 | Since: unknown
  */
 export function networkSpendBuyMfgarage() {
     Citizen.invokeNative('0xA2ED36DCF0FCA413', undefined, undefined, undefined, undefined);
@@ -2836,7 +2871,7 @@ export function networkSpendBuyMfgarage() {
 /**
  * No comment provided
  *
- * Hash: 0xB48185C0CA67B16B | Since: 2802
+ * Hash: 0xB48185C0CA67B16B | Since: unknown
  */
 export function networkSpendBuySupplies() {
     Citizen.invokeNative('0xB48185C0CA67B16B', 0, false, false, 0);
@@ -2844,7 +2879,7 @@ export function networkSpendBuySupplies() {
 /**
  * No comment provided
  *
- * Hash: 0x842B1C5AF61ACDE9 | Since: 2802
+ * Hash: 0x842B1C5AF61ACDE9 | Since: unknown
  */
 export function networkSpendRenameAcidLab() {
     Citizen.invokeNative('0x842B1C5AF61ACDE9', undefined, undefined, undefined, undefined);
@@ -2852,7 +2887,7 @@ export function networkSpendRenameAcidLab() {
 /**
  * No comment provided
  *
- * Hash: 0x446798F7495DD7D8 | Since: 2802
+ * Hash: 0x446798F7495DD7D8 | Since: unknown
  */
 export function networkSpendRenameAcidProduct() {
     Citizen.invokeNative('0x446798F7495DD7D8', undefined, undefined, undefined, undefined);
@@ -2860,7 +2895,7 @@ export function networkSpendRenameAcidProduct() {
 /**
  * No comment provided
  *
- * Hash: 0xA7D541C9ACD63133 | Since: 2802
+ * Hash: 0xA7D541C9ACD63133 | Since: unknown
  */
 export function networkSpendUpgradeAcidLabArmor() {
     Citizen.invokeNative('0xA7D541C9ACD63133', 0, false, false, 0);
@@ -2868,7 +2903,7 @@ export function networkSpendUpgradeAcidLabArmor() {
 /**
  * No comment provided
  *
- * Hash: 0x110EE9D486C23126 | Since: 2802
+ * Hash: 0x110EE9D486C23126 | Since: unknown
  */
 export function networkSpendUpgradeAcidLabEquipment() {
     Citizen.invokeNative('0x110EE9D486C23126', undefined, undefined, undefined, undefined);
@@ -2876,7 +2911,7 @@ export function networkSpendUpgradeAcidLabEquipment() {
 /**
  * No comment provided
  *
- * Hash: 0x4B99AB08C92C54E4 | Since: 2802
+ * Hash: 0x4B99AB08C92C54E4 | Since: unknown
  */
 export function networkSpendUpgradeAcidLabMines() {
     Citizen.invokeNative('0x4B99AB08C92C54E4', 0, false, false, 0);
@@ -2884,7 +2919,7 @@ export function networkSpendUpgradeAcidLabMines() {
 /**
  * No comment provided
  *
- * Hash: 0x2940558E05BCC2EC | Since: 2802
+ * Hash: 0x2940558E05BCC2EC | Since: unknown
  */
 export function networkSpendUpgradeAcidLabScoop() {
     Citizen.invokeNative('0x2940558E05BCC2EC', 0, false, false, 0);
@@ -2892,7 +2927,7 @@ export function networkSpendUpgradeAcidLabScoop() {
 /**
  * No comment provided
  *
- * Hash: 0xCF8F346DDDC66643 | Since: 2802
+ * Hash: 0xCF8F346DDDC66643 | Since: unknown
  */
 export function networkSpendUpgradeMfgarage() {
     Citizen.invokeNative('0xCF8F346DDDC66643', undefined, undefined, undefined, undefined);
@@ -2900,7 +2935,7 @@ export function networkSpendUpgradeMfgarage() {
 /**
  * No comment provided
  *
- * Hash: 0x8C7E8D6F96C9E948 | Since: 2944
+ * Hash: 0x8C7E8D6F96C9E948 | Since: unknown
  */
 export function networkSpentAirFreight(hangarCargoSourcingPrice, fromBank, fromBankAndWallet, cost, warehouseId, warehouseSlot) {
     Citizen.invokeNative('0x8C7E8D6F96C9E948', hangarCargoSourcingPrice, fromBank, fromBankAndWallet, cost, warehouseId, warehouseSlot, undefined);
@@ -2908,7 +2943,7 @@ export function networkSpentAirFreight(hangarCargoSourcingPrice, fromBank, fromB
 /**
  * No comment provided
  *
- * Hash: 0x2803B027479FB640 | Since: 3095
+ * Hash: 0x2803B027479FB640 | Since: unknown
  */
 export function networkSpentGeneric(price, stat, spent) {
     if (typeof stat === 'string')
@@ -2920,7 +2955,7 @@ export function networkSpentGeneric(price, stat, spent) {
 /**
  * Hash p3 = MISSILE_JAMMER
  *
- * Hash: 0xD687100F616163F4 | Since: 2944
+ * Hash: 0xD687100F616163F4 | Since: unknown
  */
 export function networkSpentMissileJammer(amount, fromBank, fromBankAndWallet, p3) {
     if (typeof p3 === 'string')
@@ -2930,7 +2965,7 @@ export function networkSpentMissileJammer(amount, fromBank, fromBankAndWallet, p
 /**
  * No comment provided
  *
- * Hash: 0xED1B407BADA42CEC | Since: 2944
+ * Hash: 0xED1B407BADA42CEC | Since: unknown
  */
 export function networkSpentSkipCargoSourceSetup(amount, fromBank, fromBankAndWallet, cost) {
     Citizen.invokeNative('0xED1B407BADA42CEC', amount, fromBank, fromBankAndWallet, cost);
@@ -2938,7 +2973,7 @@ export function networkSpentSkipCargoSourceSetup(amount, fromBank, fromBankAndWa
 /**
  * Hash p3 = STEALTH_MODULE
  *
- * Hash: 0x95CE79A6939C537A | Since: 2944
+ * Hash: 0x95CE79A6939C537A | Since: unknown
  */
 export function networkSpentStealthModule(amount, fromBank, fromBankAndWallet, p3) {
     if (typeof p3 === 'string')

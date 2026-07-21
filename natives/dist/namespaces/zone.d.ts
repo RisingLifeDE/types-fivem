@@ -9,7 +9,7 @@ import { Vector3 } from '@risinglife/fivem-shared';
  * `STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(vehicleHash);`
  * `ZONE::CLEAR_POPSCHEDULE_OVERRIDE_VEHICLE_MODEL(popSchedules[index]);`
  *
- * Hash: 0x5C0DE367AA0D911C | Since: 323
+ * Hash: 0x5C0DE367AA0D911C | Since: unknown
  */
 export declare function clearPopscheduleOverrideVehicleModel(scheduleId: number): void;
 /**
@@ -24,7 +24,7 @@ export declare function clearPopscheduleOverrideVehicleModel(scheduleId: number)
  * Ped player = Game.Player.Character;
  * Hash h = Function.Call<Hash>(Hash.GET_HASH_OF_MAP_AREA_AT_COORDS, player.Position.X, player.Position.Y, player.Position.Z);
  *
- * Hash: 0x7EE64D51E8498728 | Since: 323
+ * Hash: 0x7EE64D51E8498728 | Since: unknown
  */
 export declare function getHashOfMapAreaAtCoords(pos: Vector3): number;
 /**
@@ -120,13 +120,13 @@ export declare function getHashOfMapAreaAtCoords(pos: Vector3): number;
  *
  * Full list of zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/zones.json
  *
- * Hash: 0xCD90657D4C30E1CA | Since: 323
+ * Hash: 0xCD90657D4C30E1CA | Since: unknown
  */
 export declare function getNameOf(pos: Vector3): string;
 /**
  * No comment provided
  *
- * Hash: 0x27040C25DE6CB2F4 | Since: 323
+ * Hash: 0x27040C25DE6CB2F4 | Since: unknown
  */
 export declare function getAtCoords(pos: Vector3): number;
 /**
@@ -224,19 +224,19 @@ export declare function getAtCoords(pos: Vector3): number;
  *
  * Full list of zones by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/zones.json
  *
- * Hash: 0x98CD1D2934B76CC1 | Since: 323
+ * Hash: 0x98CD1D2934B76CC1 | Since: unknown
  */
 export declare function getFromNameId(zoneName: string): number;
 /**
  * No comment provided
  *
- * Hash: 0x4334BC40AA0CB4BB | Since: 323
+ * Hash: 0x4334BC40AA0CB4BB | Since: unknown
  */
 export declare function getPopschedule(zoneId: number): number;
 /**
  * cellphone range 1- 5 used for signal bar in iFruit phone
  *
- * Hash: 0x5F7B268D15BA0739 | Since: 323
+ * Hash: 0x5F7B268D15BA0739 | Since: unknown
  */
 export declare function getScumminess(zoneId: number): number;
 /**
@@ -249,12 +249,12 @@ export declare function getScumminess(zoneId: number): number;
  * `ZONE::OVERRIDE_POPSCHEDULE_VEHICLE_MODEL(popSchedules[index], vehicleHash);`
  * `STREAMING::REQUEST_MODEL(vehicleHash);`
  *
- * Hash: 0x5F7D596BAC2E7777 | Since: 323
+ * Hash: 0x5F7D596BAC2E7777 | Since: unknown
  */
 export declare function overridePopscheduleVehicleModel(scheduleId: number, vehicleHash: number | string): void;
 /**
  * No comment provided
  *
- * Hash: 0xBA5ECEEA120E5611 | Since: 323
+ * Hash: 0xBA5ECEEA120E5611 | Since: unknown
  */
 export declare function setEnabled(zoneId: number, toggle: boolean): void;

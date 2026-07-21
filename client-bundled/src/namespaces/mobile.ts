@@ -6,7 +6,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * 
  * I can confirm the above. This function is hard-coded to always return 1.
  * 
- * Hash: 0xC4E2813898C97A4B | Since: 323 | API-Set: unknown
+ * Hash: 0xC4E2813898C97A4B | Since: unknown | API-Set: unknown
  */
 export function canPhoneBeSeenOnScreen(): boolean {
     return CanPhoneBeSeenOnScreen();
@@ -15,7 +15,7 @@ export function canPhoneBeSeenOnScreen(): boolean {
 /**
  * No comment provided
  * 
- * Hash: 0xFDE8F069C542D126 | Since: 323 | API-Set: unknown
+ * Hash: 0xFDE8F069C542D126 | Since: unknown | API-Set: unknown
  */
 export function cellCamActivate(): void {
     CellCamActivate(false, false);
@@ -24,7 +24,7 @@ export function cellCamActivate(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x015C49A93E3E086E | Since: 323 | API-Set: unknown
+ * Hash: 0x015C49A93E3E086E | Since: unknown | API-Set: unknown
  */
 export function cellCamActivateSelfieMode(toggle: boolean): void {
     CellCamActivateSelfieMode(toggle);
@@ -33,7 +33,7 @@ export function cellCamActivateSelfieMode(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0xA2CCBE62CD4C91A4 | Since: 323 | API-Set: unknown
+ * Hash: 0xA2CCBE62CD4C91A4 | Since: unknown | API-Set: unknown
  */
 export function cellCamActivateShallowDofMode(toggle: boolean): void {
     Citizen.invokeNative('0xA2CCBE62CD4C91A4', toggle);
@@ -42,7 +42,7 @@ export function cellCamActivateShallowDofMode(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x439E9BC95B7E7FBE | Since: 323 | API-Set: unknown
+ * Hash: 0x439E9BC95B7E7FBE | Since: unknown | API-Set: unknown
  */
 export function cellCamIsCharVisibleNoFaceCheck(entity: number | IEntity): boolean {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -52,7 +52,7 @@ export function cellCamIsCharVisibleNoFaceCheck(entity: number | IEntity): boole
 /**
  * No comment provided
  * 
- * Hash: 0xAC2890471901861C | Since: 323 | API-Set: unknown
+ * Hash: 0xAC2890471901861C | Since: unknown | API-Set: unknown
  */
 export function cellCamSetSelfieModeDistanceScaling(distanceScaling: number): void {
     Citizen.invokeNative('0xAC2890471901861C', distanceScaling);
@@ -61,7 +61,7 @@ export function cellCamSetSelfieModeDistanceScaling(distanceScaling: number): vo
 /**
  * No comment provided
  * 
- * Hash: 0x466DA42C89865553 | Since: 323 | API-Set: unknown
+ * Hash: 0x466DA42C89865553 | Since: unknown | API-Set: unknown
  */
 export function cellCamSetSelfieModeHeadPitchOffset(pitch: number): void {
     CellCamSetHeadHeight(pitch);
@@ -70,7 +70,7 @@ export function cellCamSetSelfieModeHeadPitchOffset(pitch: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xF1E22DC13F5EEBAD | Since: 323 | API-Set: unknown
+ * Hash: 0xF1E22DC13F5EEBAD | Since: unknown | API-Set: unknown
  */
 export function cellCamSetSelfieModeHeadRollOffset(roll: number): void {
     CellCamSetHeadRoll(roll);
@@ -79,7 +79,7 @@ export function cellCamSetSelfieModeHeadRollOffset(roll: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0xD6ADE981781FCA09 | Since: 323 | API-Set: unknown
+ * Hash: 0xD6ADE981781FCA09 | Since: unknown | API-Set: unknown
  */
 export function cellCamSetSelfieModeHeadYawOffset(yaw: number): void {
     CellCamSetHeadPitch(yaw);
@@ -88,7 +88,7 @@ export function cellCamSetSelfieModeHeadYawOffset(yaw: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x53F4892D18EC90A4 | Since: 323 | API-Set: unknown
+ * Hash: 0x53F4892D18EC90A4 | Since: unknown | API-Set: unknown
  */
 export function cellCamSetSelfieModeHorzPanOffset(horizontalPan: number): void {
     CellCamSetDistance(horizontalPan);
@@ -97,7 +97,7 @@ export function cellCamSetSelfieModeHorzPanOffset(horizontalPan: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x15E69E2802C24B8D | Since: 323 | API-Set: unknown
+ * Hash: 0x15E69E2802C24B8D | Since: unknown | API-Set: unknown
  */
 export function cellCamSetSelfieModeRollOffset(roll: number): void {
     CellCamSetRoll(roll);
@@ -106,7 +106,7 @@ export function cellCamSetSelfieModeRollOffset(roll: number): void {
 /**
  * No comment provided
  * 
- * Hash: 0x1B0B4AEED5B9B41C | Since: 323 | API-Set: unknown
+ * Hash: 0x1B0B4AEED5B9B41C | Since: unknown | API-Set: unknown
  */
 export function cellCamSetSelfieModeSideOffsetScaling(): void {
     CellCamSetHorizontalOffset(0);
@@ -115,7 +115,7 @@ export function cellCamSetSelfieModeSideOffsetScaling(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x3117D84EFA60F77B | Since: 323 | API-Set: unknown
+ * Hash: 0x3117D84EFA60F77B | Since: unknown | API-Set: unknown
  */
 export function cellCamSetSelfieModeVertPanOffset(vertPan: number): void {
     CellCamSetVerticalOffset(vertPan);
@@ -125,7 +125,7 @@ export function cellCamSetSelfieModeVertPanOffset(vertPan: number): void {
  * if the bool "Toggle" is "true" so the phone is lean.
  * if the bool "Toggle" is "false" so the phone is not lean.
  * 
- * Hash: 0x44E44169EF70138E | Since: 323 | API-Set: unknown
+ * Hash: 0x44E44169EF70138E | Since: unknown | API-Set: unknown
  */
 export function cellHorizontalModeToggle(toggle: boolean): void {
     CellCamSetLean(toggle);
@@ -134,7 +134,7 @@ export function cellHorizontalModeToggle(toggle: boolean): void {
 /**
  * For move the finger of player, the value of int goes 1 at 5.
  * 
- * Hash: 0x95C9E72F3D7DEC9B | Since: 323 | API-Set: unknown
+ * Hash: 0x95C9E72F3D7DEC9B | Since: unknown | API-Set: unknown
  */
 export function cellSetInput(direction: number): void {
     CellCamMoveFinger(direction);
@@ -153,7 +153,7 @@ export function cellSetInput(direction: number): void {
  * 
  * Higher values may crash your game.
  * 
- * Hash: 0xA4E8E696C532FBC7 | Since: 323 | API-Set: unknown
+ * Hash: 0xA4E8E696C532FBC7 | Since: unknown | API-Set: unknown
  */
 export function createPhone(phoneType: number): void {
     CreateMobilePhone(phoneType);
@@ -162,7 +162,7 @@ export function createPhone(phoneType: number): void {
 /**
  * Destroys the currently active mobile phone.
  * 
- * Hash: 0x3BC861DF703E5097 | Since: 323 | API-Set: unknown
+ * Hash: 0x3BC861DF703E5097 | Since: unknown | API-Set: unknown
  */
 export function destroyPhone(): void {
     DestroyMobilePhone();
@@ -171,7 +171,7 @@ export function destroyPhone(): void {
 /**
  * No comment provided
  * 
- * Hash: 0x584FDFDA48805B86 | Since: 323 | API-Set: unknown
+ * Hash: 0x584FDFDA48805B86 | Since: unknown | API-Set: unknown
  */
 export function getPhonePosition(): Vector3 {
     return GetMobilePhonePosition();
@@ -180,7 +180,7 @@ export function getPhonePosition(): Vector3 {
 /**
  * No comment provided
  * 
- * Hash: 0xB4A53E05F68B6FA1 | Since: 323 | API-Set: unknown
+ * Hash: 0xB4A53E05F68B6FA1 | Since: unknown | API-Set: unknown
  */
 export function getPhoneRenderId(): number {
     return GetMobilePhoneRenderId();
@@ -189,7 +189,7 @@ export function getPhoneRenderId(): number {
 /**
  * No comment provided
  * 
- * Hash: 0x1CEFB61F193070AE | Since: 323 | API-Set: unknown
+ * Hash: 0x1CEFB61F193070AE | Since: unknown | API-Set: unknown
  */
 export function getPhoneRotation(p1: number | IVehicle): Vector3 {
     const _p1 = typeof p1 == 'object' ? p1.handle() : p1;
@@ -200,7 +200,7 @@ export function getPhoneRotation(p1: number | IVehicle): Vector3 {
  * If bool Toggle = true so the mobile is hide to screen.
  * If bool Toggle = false so the mobile is show to screen.
  * 
- * Hash: 0xF511F759238A5122 | Since: 323 | API-Set: unknown
+ * Hash: 0xF511F759238A5122 | Since: unknown | API-Set: unknown
  */
 export function scriptIsMovingPhoneOffscreen(toggle: boolean): void {
     ScriptIsMovingMobilePhoneOffscreen(toggle);
@@ -209,7 +209,7 @@ export function scriptIsMovingPhoneOffscreen(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x375A706A5C2FD084 | Since: 372 | API-Set: unknown
+ * Hash: 0x375A706A5C2FD084 | Since: unknown | API-Set: unknown
  */
 export function setPhoneDofState(toggle: boolean): void {
     SetMobilePhoneDofState(toggle);
@@ -218,7 +218,7 @@ export function setPhoneDofState(toggle: boolean): void {
 /**
  * No comment provided
  * 
- * Hash: 0x693A5C6D6734085B | Since: 323 | API-Set: unknown
+ * Hash: 0x693A5C6D6734085B | Since: unknown | API-Set: unknown
  */
 export function setPhonePosition(pos: Vector3): void {
     SetMobilePhonePosition(pos.x, pos.y, pos.z);
@@ -227,7 +227,7 @@ export function setPhonePosition(pos: Vector3): void {
 /**
  * Last parameter is unknown and always zero.
  * 
- * Hash: 0xBB779C0CA917E865 | Since: 323 | API-Set: unknown
+ * Hash: 0xBB779C0CA917E865 | Since: unknown | API-Set: unknown
  */
 export function setPhoneRotation(rot: Vector3): void {
     SetMobilePhoneRotation(rot.x, rot.y, rot.z, undefined);
@@ -236,7 +236,7 @@ export function setPhoneRotation(rot: Vector3): void {
 /**
  * The minimum/default is 500.0f. If you plan to make it bigger set it's position as well. Also this seems to need to be called in a loop as when you close the phone the scale is reset. If not in a loop you'd need to call it everytime before you re-open the phone.
  * 
- * Hash: 0xCBDD322A73D6D932 | Since: 323 | API-Set: unknown
+ * Hash: 0xCBDD322A73D6D932 | Since: unknown | API-Set: unknown
  */
 export function setPhoneScale(scale: number): void {
     SetMobilePhoneScale(scale);

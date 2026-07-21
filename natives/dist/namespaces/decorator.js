@@ -1,7 +1,7 @@
 /**
  * Returns whether or not the specified property is set for the entity.
  *
- * Hash: 0x05661B80A8C9165F | Since: 323
+ * Hash: 0x05661B80A8C9165F | Since: unknown
  */
 export function decorExistOn(entity, propertyName) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -10,7 +10,7 @@ export function decorExistOn(entity, propertyName) {
 /**
  * No comment provided
  *
- * Hash: 0xDACE671663F2F5DB | Since: 323
+ * Hash: 0xDACE671663F2F5DB | Since: unknown
  */
 export function decorGetBool(entity, propertyName) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -19,7 +19,7 @@ export function decorGetBool(entity, propertyName) {
 /**
  * No comment provided
  *
- * Hash: 0x6524A2F114706F43 | Since: 323
+ * Hash: 0x6524A2F114706F43 | Since: unknown
  */
 export function decorGetFloat(entity, propertyName) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -28,7 +28,7 @@ export function decorGetFloat(entity, propertyName) {
 /**
  * No comment provided
  *
- * Hash: 0xA06C969B02A97298 | Since: 323
+ * Hash: 0xA06C969B02A97298 | Since: unknown
  */
 export function decorGetInt(entity, propertyName) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -37,7 +37,7 @@ export function decorGetInt(entity, propertyName) {
 /**
  * type: see DECOR_REGISTER
  *
- * Hash: 0x4F14F9F870D6FBC8 | Since: 323
+ * Hash: 0x4F14F9F870D6FBC8 | Since: unknown
  */
 export function decorIsRegisteredAsType(propertyName, _type) {
     return DecorIsRegisteredAsType(propertyName, _type);
@@ -45,7 +45,7 @@ export function decorIsRegisteredAsType(propertyName, _type) {
 /**
  * https://alloc8or.re/gta5/doc/enums/eDecorType.txt
  *
- * Hash: 0x9FD90732F56403CE | Since: 323
+ * Hash: 0x9FD90732F56403CE | Since: unknown
  */
 export function decorRegister(propertyName, _type) {
     DecorRegister(propertyName, _type);
@@ -53,7 +53,7 @@ export function decorRegister(propertyName, _type) {
 /**
  * Called after all decorator type initializations.
  *
- * Hash: 0xA9D14EEA259F9248 | Since: 323
+ * Hash: 0xA9D14EEA259F9248 | Since: unknown
  */
 export function decorRegisterLock() {
     DecorRegisterLock();
@@ -61,7 +61,7 @@ export function decorRegisterLock() {
 /**
  * No comment provided
  *
- * Hash: 0x00EE9F297C738720 | Since: 323
+ * Hash: 0x00EE9F297C738720 | Since: unknown
  */
 export function decorRemove(entity, propertyName) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -71,7 +71,7 @@ export function decorRemove(entity, propertyName) {
  * This function sets metadata of type bool to specified entity.
  *
  *
- * Hash: 0x6B1E8E2ED1335B71 | Since: 323
+ * Hash: 0x6B1E8E2ED1335B71 | Since: unknown
  */
 export function decorSetBool(entity, propertyName, value) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -80,7 +80,7 @@ export function decorSetBool(entity, propertyName, value) {
 /**
  * No comment provided
  *
- * Hash: 0x211AB1DD8D0F363A | Since: 323
+ * Hash: 0x211AB1DD8D0F363A | Since: unknown
  */
 export function decorSetFloat(entity, propertyName, value) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -89,7 +89,7 @@ export function decorSetFloat(entity, propertyName, value) {
 /**
  * Sets property to int.
  *
- * Hash: 0x0CE3AA5E1CA19E10 | Since: 323
+ * Hash: 0x0CE3AA5E1CA19E10 | Since: unknown
  */
 export function decorSetInt(entity, propertyName, value) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
@@ -98,7 +98,7 @@ export function decorSetInt(entity, propertyName, value) {
 /**
  * No comment provided
  *
- * Hash: 0x95AED7B8E39ECAA4 | Since: 323
+ * Hash: 0x95AED7B8E39ECAA4 | Since: unknown
  */
 export function decorSetTime(entity, propertyName, timestamp) {
     const _entity = typeof entity == 'object' ? entity.handle() : entity;
