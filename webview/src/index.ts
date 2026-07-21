@@ -3,17 +3,17 @@ export class api {
     /**
      * This should be replaced if we send the event to another resource instead of the current.
      */
-    static targetResource: string = undefined;
+    static targetResource: string | undefined = undefined;
     /**
      * This should be replaced if this web view isn't a framed element.
      *
      * For more details look at the README file.
      */
-    static viewId: string = undefined;
+    static viewId: string | undefined = undefined;
     static readonly eventListeners = new Map();
 
     static emit(eventName: string, ...args: any[]) {
-        if (window['nuiTargetGame'] !== undefined) {
+        if (document.baseURI.startsWith('nui://')) {
             try {
                 fetch(`https://${this.getTargetResource()}/view-event`, {
                     method: "POST",
@@ -55,7 +55,7 @@ export class api {
     }
 
     static once(eventName: string, listener: (...args: any[]) => void) {
-        const onceListener = (...args) => {
+        const onceListener = (...args: any[]) => {
             this.off(eventName, onceListener);
             listener(...args);
         };
@@ -68,7 +68,7 @@ export class api {
      *
      * @param event
      */
-    private static handleMessage = (event) => {
+    private static handleMessage = (event: any) => {
         if (!Array.isArray(event.data) || event.data.length === 0) return;
 
         const [receivedEventName, ...args] = event.data;

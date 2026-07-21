@@ -11,7 +11,7 @@ export class api {
     static viewId = undefined;
     static eventListeners = new Map();
     static emit(eventName, ...args) {
-        if (window['nuiTargetGame'] !== undefined) {
+        if (document.baseURI.startsWith('nui://')) {
             try {
                 fetch(`https://${this.getTargetResource()}/view-event`, {
                     method: "POST",
