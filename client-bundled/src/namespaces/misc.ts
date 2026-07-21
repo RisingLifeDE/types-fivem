@@ -2442,7 +2442,7 @@ export function getGroundZExcludingObjectsFor3dCoord(pos: Vector3): [boolean, nu
  * Hash: 0xC906A7DAB05C8D2B | Since: unknown | API-Set: unknown
  */
 export function getGroundZFor3dCoord(pos: Vector3, ignoreWater: boolean): [boolean, number] {
-    return GetGroundZFor3dCoord(pos.x, pos.y, pos.z, ignoreWater, false);
+    return GetGroundZFor_3dCoord(pos.x, pos.y, pos.z, ignoreWater, false);
 }
 
 /**
