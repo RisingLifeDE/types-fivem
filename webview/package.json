@@ -1,7 +1,7 @@
 {
   "name": "@risinglife/fivem-webview",
   "description": "This package is an easy-to-use solution for FiveM NUI listener/sender",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "url": "git+https://github.com/RisingLifeDE/types-fivem.git"
   },

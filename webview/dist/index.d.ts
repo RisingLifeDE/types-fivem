@@ -10,6 +10,7 @@ export declare class api {
      */
     static viewId: string | undefined;
     static readonly eventListeners: Map<any, any>;
+    static isNui(): boolean;
     static emit(eventName: string, ...args: any[]): void;
     static on(eventName: string, listener: (...args: any[]) => void): void;
     static off(eventName: string, listener: (...args: any[]) => void): void;

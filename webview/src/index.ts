@@ -12,8 +12,12 @@ export class api {
     static viewId: string | undefined = undefined;
     static readonly eventListeners = new Map();
 
+    static isNui(): boolean {
+        return typeof (window as any).GetParentResourceName === 'function';
+    }
+
     static emit(eventName: string, ...args: any[]) {
-        if (document.baseURI.startsWith('nui://')) {
+        if (this.isNui()) {
             try {
                 fetch(`https://${this.getTargetResource()}/view-event`, {
                     method: "POST",
