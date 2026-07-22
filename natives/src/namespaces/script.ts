@@ -282,7 +282,7 @@ export function threadIteratorReset(): void {
  * Hash: 0x2CAFD5254592365F | Since: unknown
  */
 export function setLoadingScreenBlank(): boolean {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x2CAFD5254592365F)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0x2CAFD5254592365F)'); return;}
     return Citizen.invokeNative('0x2CAFD5254592365F');
 }
 

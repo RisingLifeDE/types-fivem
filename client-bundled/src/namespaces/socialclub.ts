@@ -582,7 +582,7 @@ export function scPauseNewsGetPendingStory(): boolean {
  * Hash: 0xE4F6E8D07A2F0F51 | Since: unknown | API-Set: unknown
  */
 export function scPauseNewsInitStarterPack(): boolean {
-    if (IsGameEnhancedVersion()) console.error('This native is not supported on enhanced (0xE4F6E8D07A2F0F51)'); return;
+    if (IsGameEnhancedVersion()) {console.error('This native is not supported on enhanced (0xE4F6E8D07A2F0F51)'); return;}
     return Citizen.invokeNative('0xE4F6E8D07A2F0F51', undefined);
 }
 
@@ -592,7 +592,7 @@ export function scPauseNewsInitStarterPack(): boolean {
  * Hash: 0x76A6981AEF0376EB | Since: unknown | API-Set: unknown
  */
 export function scPauseNewsInitStoryType(storyType: number, textOnly: boolean): boolean {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x76A6981AEF0376EB)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0x76A6981AEF0376EB)'); return;}
     return Citizen.invokeNative('0x76A6981AEF0376EB', storyType, textOnly);
 }
 

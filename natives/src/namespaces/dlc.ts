@@ -15,7 +15,7 @@ export function areAnyCcsPending(): boolean {
  * Hash: 0xB42DBFF903BB270F | Since: unknown
  */
 export function areUserEntitlementsUpToDate(): boolean {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0xB42DBFF903BB270F)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0xB42DBFF903BB270F)'); return;}
     return Citizen.invokeNative('0xB42DBFF903BB270F');
 }
 
@@ -25,7 +25,7 @@ export function areUserEntitlementsUpToDate(): boolean {
  * Hash: 0xF3A281B1AA86DBA9 | Since: unknown
  */
 export function declareInMultiplayerThisFrame(): void {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0xF3A281B1AA86DBA9)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0xF3A281B1AA86DBA9)'); return;}
     Citizen.invokeNative('0xF3A281B1AA86DBA9');
 }
 
@@ -130,7 +130,7 @@ export function onEnterSp(): void {
  * Hash: 0x140491FD99CE6F5D | Since: unknown
  */
 export function tryGetUserEntitlements(): [boolean, any] {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x140491FD99CE6F5D)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0x140491FD99CE6F5D)'); return;}
     return Citizen.invokeNative('0x140491FD99CE6F5D');
 }
 

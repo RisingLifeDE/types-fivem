@@ -9049,9 +9049,10 @@ export function getTrailerParentVehicle(trailer) {
 export function isGen9ExclusiveModel(vehicleModel) {
     if (typeof vehicleModel === 'string')
         vehicleModel = GetHashKey(vehicleModel);
-    if (IsGameEnhancedVersion())
+    if (IsGameEnhancedVersion()) {
         console.error('This native is not supported on enhanced (0x6638C0F19DE692FE)');
-    return;
+        return;
+    }
     return Citizen.invokeNative('0x6638C0F19DE692FE', vehicleModel);
 }
 /**

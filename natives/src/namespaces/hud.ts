@@ -2970,7 +2970,7 @@ export function pauseMenuActivateContext(contextHash: number | string): void {
  * Hash: 0x4947F58BB3AB76D2 | Since: unknown
  */
 export function pauseMenuClearCloudBusySpinner(): void {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x4947F58BB3AB76D2)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0x4947F58BB3AB76D2)'); return;}
     Citizen.invokeNative('0x4947F58BB3AB76D2');
 }
 
@@ -3063,7 +3063,7 @@ export function pauseMenuSetBusySpinner(position: number, spinnerIndex: number):
  * Hash: 0x640B4FB20A104099 | Since: unknown
  */
 export function pauseMenuSetCloudBusySpinner(TextLabel: string, bNoMenu: boolean, bBlackBackground: boolean): void {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x640B4FB20A104099)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0x640B4FB20A104099)'); return;}
     Citizen.invokeNative('0x640B4FB20A104099', TextLabel, bNoMenu, bBlackBackground);
 }
 

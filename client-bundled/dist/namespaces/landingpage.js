@@ -4,9 +4,10 @@
  * Hash: 0x770CB76ED0895B5B | Since: unknown | API-Set: unknown
  */
 export function getSelectedCharacterSlot() {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0x770CB76ED0895B5B)');
-    return;
+        return;
+    }
     return Citizen.invokeNative('0x770CB76ED0895B5B');
 }
 /**
@@ -15,9 +16,10 @@ export function getSelectedCharacterSlot() {
  * Hash: 0xB37FC2FB7418367C | Since: unknown | API-Set: unknown
  */
 export function isActive() {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0xB37FC2FB7418367C)');
-    return;
+        return;
+    }
     return Citizen.invokeNative('0xB37FC2FB7418367C');
 }
 /**
@@ -26,9 +28,10 @@ export function isActive() {
  * Hash: 0x237D6F6D474FC93C | Since: unknown | API-Set: unknown
  */
 export function setShouldDismiss() {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0x237D6F6D474FC93C)');
-    return;
+        return;
+    }
     Citizen.invokeNative('0x237D6F6D474FC93C');
 }
 /**
@@ -37,8 +40,9 @@ export function setShouldDismiss() {
  * Hash: 0xFD1B81BDD7FBCB41 | Since: unknown | API-Set: unknown
  */
 export function setShouldLaunch(entrypointId) {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0xFD1B81BDD7FBCB41)');
-    return;
+        return;
+    }
     Citizen.invokeNative('0xFD1B81BDD7FBCB41', entrypointId);
 }

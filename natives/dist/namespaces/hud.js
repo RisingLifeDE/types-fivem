@@ -2704,9 +2704,10 @@ export function pauseMenuActivateContext(contextHash) {
  * Hash: 0x4947F58BB3AB76D2 | Since: unknown
  */
 export function pauseMenuClearCloudBusySpinner() {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0x4947F58BB3AB76D2)');
-    return;
+        return;
+    }
     Citizen.invokeNative('0x4947F58BB3AB76D2');
 }
 /**
@@ -2791,9 +2792,10 @@ export function pauseMenuSetBusySpinner(position, spinnerIndex) {
  * Hash: 0x640B4FB20A104099 | Since: unknown
  */
 export function pauseMenuSetCloudBusySpinner(TextLabel, bNoMenu, bBlackBackground) {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0x640B4FB20A104099)');
-    return;
+        return;
+    }
     Citizen.invokeNative('0x640B4FB20A104099', TextLabel, bNoMenu, bBlackBackground);
 }
 /**

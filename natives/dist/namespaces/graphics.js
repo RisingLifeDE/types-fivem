@@ -708,9 +708,10 @@ export function disableVehicleDistantlights(toggle) {
  * Hash: 0x7A019A9E156318FC | Since: unknown
  */
 export function displayLoadingScreenNow(onOff) {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0x7A019A9E156318FC)');
-    return;
+        return;
+    }
     Citizen.invokeNative('0x7A019A9E156318FC', onOff);
 }
 /**
@@ -3897,9 +3898,10 @@ export function makeGlowsAdditive(toggle) {
  * Hash: 0xDA256F9AEAC28331 | Since: unknown
  */
 export function registerPtfxFogVolume(pos, range, density) {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0xDA256F9AEAC28331)');
-    return;
+        return;
+    }
     Citizen.invokeNative('0xDA256F9AEAC28331', pos.x, pos.y, pos.z, range, density);
 }
 /**

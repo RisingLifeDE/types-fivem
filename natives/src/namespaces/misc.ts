@@ -486,7 +486,7 @@ export function clearScenarioSpawnHistory(): void {
  * Hash: 0xC3BCD7401198B284 | Since: unknown
  */
 export function clearScriptRouterLink(): void {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0xC3BCD7401198B284)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0xC3BCD7401198B284)'); return;}
     Citizen.invokeNative('0xC3BCD7401198B284');
 }
 
@@ -866,7 +866,7 @@ export function getBitsInRange(_var: number, rangeStart: number, rangeEnd: numbe
  * Hash: 0xA0A0D77ECEDD4136 | Since: unknown
  */
 export function getChosenCriminalCareer(): number {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0xA0A0D77ECEDD4136)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0xA0A0D77ECEDD4136)'); return;}
     return Citizen.invokeNative('0xA0A0D77ECEDD4136');
 }
 
@@ -876,7 +876,7 @@ export function getChosenCriminalCareer(): number {
  * Hash: 0xFBEF52A5C70F324F | Since: unknown
  */
 export function getChosenMpCharacterSlot(): number {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0xFBEF52A5C70F324F)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0xFBEF52A5C70F324F)'); return;}
     return Citizen.invokeNative('0xFBEF52A5C70F324F');
 }
 
@@ -1324,7 +1324,7 @@ export function getSaveHouseDetailsAfterSuccessfulLoad(): [boolean, Vector3, num
  * Hash: 0x99BE65CCCBE09C71 | Since: unknown
  */
 export function getScriptRouterContext(): [boolean, any] {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x99BE65CCCBE09C71)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0x99BE65CCCBE09C71)'); return;}
     return Citizen.invokeNative('0x99BE65CCCBE09C71');
 }
 
@@ -1485,7 +1485,7 @@ export function hasCodeRequestedAutosave(): boolean {
  * Hash: 0xB233964AC562A357 | Since: unknown
  */
 export function hasFinalizedChosenCriminalCareer(): boolean {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0xB233964AC562A357)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0xB233964AC562A357)'); return;}
     return Citizen.invokeNative('0xB233964AC562A357');
 }
 
@@ -1526,7 +1526,7 @@ export function hasPcCheatWithHashBeenActivated(hash: number | string): boolean 
  * Hash: 0x776947A43CCD5328 | Since: unknown
  */
 export function hasPendingScriptRouterLink(): boolean {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x776947A43CCD5328)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0x776947A43CCD5328)'); return;}
     return Citizen.invokeNative('0x776947A43CCD5328');
 }
 
@@ -1862,7 +1862,7 @@ export function isScePlatform(): boolean {
  * Hash: 0x0E50FCE4525E3D72 | Since: unknown
  */
 export function isSessionInitialized(): boolean {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x0E50FCE4525E3D72)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0x0E50FCE4525E3D72)'); return;}
     return Citizen.invokeNative('0x0E50FCE4525E3D72');
 }
 
@@ -2303,7 +2303,7 @@ export function removePopMultiplierSphere(id: number): void {
  * Hash: 0x1997BABDBA01F72C | Since: unknown
  */
 export function reportInvalidScriptRouterArgument(argument: string): void {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x1997BABDBA01F72C)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0x1997BABDBA01F72C)'); return;}
     Citizen.invokeNative('0x1997BABDBA01F72C', argument);
 }
 
@@ -2313,7 +2313,7 @@ export function reportInvalidScriptRouterArgument(argument: string): void {
  * Hash: 0x54A2DDE8F751EEE5 | Since: unknown
  */
 export function resetChosenMpCharacterSlot(): void {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x54A2DDE8F751EEE5)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0x54A2DDE8F751EEE5)'); return;}
     Citizen.invokeNative('0x54A2DDE8F751EEE5');
 }
 
@@ -2433,7 +2433,7 @@ export function scriptRaceShutdown(): void {
  * Hash: 0xE8CABE94E8592520 | Since: unknown
  */
 export function setActivityScriptRoutingEnabled(enabled: boolean): void {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0xE8CABE94E8592520)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0xE8CABE94E8592520)'); return;}
     Citizen.invokeNative('0xE8CABE94E8592520', enabled);
 }
 
@@ -2896,7 +2896,7 @@ export function setScriptHighPrio(toggle: boolean): void {
  * Hash: 0x317989BB72A2EBFB | Since: unknown
  */
 export function setScriptRouterLink(): [boolean, any] {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x317989BB72A2EBFB)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0x317989BB72A2EBFB)'); return;}
     return Citizen.invokeNative('0x317989BB72A2EBFB');
 }
 
@@ -2906,7 +2906,7 @@ export function setScriptRouterLink(): [boolean, any] {
  * Hash: 0x244A22A2DA85D8C8 | Since: unknown
  */
 export function setShouldLaunchIis(): void {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x244A22A2DA85D8C8)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0x244A22A2DA85D8C8)'); return;}
     Citizen.invokeNative('0x244A22A2DA85D8C8');
 }
 

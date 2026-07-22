@@ -774,7 +774,7 @@ export function disableVehicleDistantlights(toggle: boolean): void {
  * Hash: 0x7A019A9E156318FC | Since: unknown
  */
 export function displayLoadingScreenNow(onOff: boolean): void {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x7A019A9E156318FC)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0x7A019A9E156318FC)'); return;}
     Citizen.invokeNative('0x7A019A9E156318FC', onOff);
 }
 
@@ -4298,7 +4298,7 @@ export function makeGlowsAdditive(toggle: boolean): void {
  * Hash: 0xDA256F9AEAC28331 | Since: unknown
  */
 export function registerPtfxFogVolume(pos: Vector3, range: number, density: number): void {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0xDA256F9AEAC28331)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0xDA256F9AEAC28331)'); return;}
     Citizen.invokeNative('0xDA256F9AEAC28331', pos.x, pos.y, pos.z, range, density);
 }
 

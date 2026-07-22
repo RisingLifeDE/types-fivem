@@ -36,9 +36,10 @@ export function mpGetStatus() {
  * Hash: 0xB2C55F521748367B | Since: unknown | API-Set: unknown
  */
 export function mpIsPlatformGeneration(generation) {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0xB2C55F521748367B)');
-    return;
+        return;
+    }
     return Citizen.invokeNative('0xB2C55F521748367B', generation);
 }
 /**

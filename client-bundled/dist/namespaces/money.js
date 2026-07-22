@@ -1250,9 +1250,10 @@ export function networkGetEvcBalance() {
  * Hash: 0xA6E586C3BD772B7B | Since: unknown | API-Set: unknown
  */
 export function networkGetMpWindfallAvailable() {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0xA6E586C3BD772B7B)');
-    return;
+        return;
+    }
     return Citizen.invokeNative('0xA6E586C3BD772B7B');
 }
 /**

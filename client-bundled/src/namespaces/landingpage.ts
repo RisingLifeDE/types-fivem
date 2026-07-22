@@ -6,7 +6,7 @@ import {Vector3,Vector2,IEntity,IPed,IPlayer,IVehicle,IObject,IBlip,ICamera} fro
  * Hash: 0x770CB76ED0895B5B | Since: unknown | API-Set: unknown
  */
 export function getSelectedCharacterSlot(): number {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x770CB76ED0895B5B)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0x770CB76ED0895B5B)'); return;}
     return Citizen.invokeNative('0x770CB76ED0895B5B');
 }
 
@@ -16,7 +16,7 @@ export function getSelectedCharacterSlot(): number {
  * Hash: 0xB37FC2FB7418367C | Since: unknown | API-Set: unknown
  */
 export function isActive(): boolean {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0xB37FC2FB7418367C)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0xB37FC2FB7418367C)'); return;}
     return Citizen.invokeNative('0xB37FC2FB7418367C');
 }
 
@@ -26,7 +26,7 @@ export function isActive(): boolean {
  * Hash: 0x237D6F6D474FC93C | Since: unknown | API-Set: unknown
  */
 export function setShouldDismiss(): void {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x237D6F6D474FC93C)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0x237D6F6D474FC93C)'); return;}
     Citizen.invokeNative('0x237D6F6D474FC93C');
 }
 
@@ -36,7 +36,7 @@ export function setShouldDismiss(): void {
  * Hash: 0xFD1B81BDD7FBCB41 | Since: unknown | API-Set: unknown
  */
 export function setShouldLaunch(entrypointId: number): void {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0xFD1B81BDD7FBCB41)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0xFD1B81BDD7FBCB41)'); return;}
     Citizen.invokeNative('0xFD1B81BDD7FBCB41', entrypointId);
 }
 

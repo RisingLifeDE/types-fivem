@@ -329,9 +329,10 @@ export function isEntityFocus(entity) {
  * Hash: 0x7F87B6CE3D8D9DD8 | Since: unknown
  */
 export function isGameInstalled() {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0x7F87B6CE3D8D9DD8)');
-    return;
+        return;
+    }
     return Citizen.invokeNative('0x7F87B6CE3D8D9DD8');
 }
 /**

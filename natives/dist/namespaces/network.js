@@ -86,9 +86,10 @@ export function canRegisterMissionVehicles(amount) {
  * Hash: 0xBF7B00C05D66667C | Since: unknown
  */
 export function checkoutCommerceProduct(productID, location, launchLandingPageOnClose) {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0xBF7B00C05D66667C)');
-    return;
+        return;
+    }
     Citizen.invokeNative('0xBF7B00C05D66667C', productID, location, launchLandingPageOnClose);
 }
 /**
@@ -1675,9 +1676,10 @@ export function disableRealtimeMultiplayer() {
  * Hash: 0xE20BEB3E2B5A8A2B | Since: unknown
  */
 export function disableRealtimeMultiplayerSpectator() {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0xE20BEB3E2B5A8A2B)');
-    return;
+        return;
+    }
     Citizen.invokeNative('0xE20BEB3E2B5A8A2B');
 }
 /**
@@ -2778,9 +2780,10 @@ export function getScriptStatus() {
  * Hash: 0x9FA18B5CD8803086 | Since: unknown
  */
 export function getScMembershipInfo() {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0x9FA18B5CD8803086)');
-    return;
+        return;
+    }
     return Citizen.invokeNative('0x9FA18B5CD8803086');
 }
 /**
@@ -3102,9 +3105,10 @@ export function hasScMembership() {
  * Hash: 0x483F6369B8CEE24B | Since: unknown
  */
 export function hasScMembershipInfo() {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0x483F6369B8CEE24B)');
-    return;
+        return;
+    }
     return Citizen.invokeNative('0x483F6369B8CEE24B');
 }
 /**
@@ -4199,9 +4203,10 @@ export function overrideCoordsAndHeading(entity, pos, heading) {
  * Hash: 0x04D27017A38E747D | Since: unknown
  */
 export function overrideRealtimeMultiplayerControlDisable() {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0x04D27017A38E747D)');
-    return;
+        return;
+    }
     Citizen.invokeNative('0x04D27017A38E747D');
 }
 /**
@@ -4354,9 +4359,10 @@ export function playerIsRockstarDev(player) {
  * Hash: 0x8A50277FD4E75404 | Since: unknown
  */
 export function postUdsActivityAvailabilityChange() {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0x8A50277FD4E75404)');
-    return;
+        return;
+    }
     return Citizen.invokeNative('0x8A50277FD4E75404');
 }
 /**
@@ -4365,9 +4371,10 @@ export function postUdsActivityAvailabilityChange() {
  * Hash: 0xC78F2FFEECA7EE57 | Since: unknown
  */
 export function postUdsActivityEnd(activityId, iOutcome, iScore) {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0xC78F2FFEECA7EE57)');
-    return;
+        return;
+    }
     Citizen.invokeNative('0xC78F2FFEECA7EE57', activityId, iOutcome, iScore);
 }
 /**
@@ -4376,9 +4383,10 @@ export function postUdsActivityEnd(activityId, iOutcome, iScore) {
  * Hash: 0xB8B3A6B404B1844B | Since: unknown
  */
 export function postUdsActivityResume(activityId) {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0xB8B3A6B404B1844B)');
-    return;
+        return;
+    }
     Citizen.invokeNative('0xB8B3A6B404B1844B', activityId);
 }
 /**
@@ -4387,9 +4395,10 @@ export function postUdsActivityResume(activityId) {
  * Hash: 0xD06669003AD0DA58 | Since: unknown
  */
 export function postUdsActivityResumeWithTasks(activityId) {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0xD06669003AD0DA58)');
-    return;
+        return;
+    }
     return Citizen.invokeNative('0xD06669003AD0DA58', activityId);
 }
 /**
@@ -4398,9 +4407,10 @@ export function postUdsActivityResumeWithTasks(activityId) {
  * Hash: 0x06FF3C88FCADEDB0 | Since: unknown
  */
 export function postUdsActivityStart(activityId) {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0x06FF3C88FCADEDB0)');
-    return;
+        return;
+    }
     Citizen.invokeNative('0x06FF3C88FCADEDB0', activityId);
 }
 /**
@@ -4409,9 +4419,10 @@ export function postUdsActivityStart(activityId) {
  * Hash: 0xC243F786521F4321 | Since: unknown
  */
 export function postUdsActivityTerminate() {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0xC243F786521F4321)');
-    return;
+        return;
+    }
     Citizen.invokeNative('0xC243F786521F4321');
 }
 /**
@@ -6095,9 +6106,10 @@ export function requestCommerceItemImage(index) {
  * Hash: 0xD5AEB715D79ADE64 | Since: unknown
  */
 export function reserveCommerceStorePurchaseLocation(location) {
-    if (!IsGameEnhancedVersion())
+    if (!IsGameEnhancedVersion()) {
         console.error('This native is not supported on legacy (0xD5AEB715D79ADE64)');
-    return;
+        return;
+    }
     Citizen.invokeNative('0xD5AEB715D79ADE64', location);
 }
 /**

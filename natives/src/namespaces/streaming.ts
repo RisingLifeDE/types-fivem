@@ -366,7 +366,7 @@ export function isEntityFocus(entity: number | IEntity): boolean {
  * Hash: 0x7F87B6CE3D8D9DD8 | Since: unknown
  */
 export function isGameInstalled(): boolean {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x7F87B6CE3D8D9DD8)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0x7F87B6CE3D8D9DD8)'); return;}
     return Citizen.invokeNative('0x7F87B6CE3D8D9DD8');
 }
 

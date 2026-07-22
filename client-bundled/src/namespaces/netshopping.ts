@@ -386,7 +386,7 @@ export function netGameserverUseServerTransactions(): boolean {
  * Hash: 0x2D3A836D29A50D88 | Since: unknown | API-Set: unknown
  */
 export function netGameserverFlagForSessionRestart(): boolean {
-    if (!IsGameEnhancedVersion()) console.error('This native is not supported on legacy (0x2D3A836D29A50D88)'); return;
+    if (!IsGameEnhancedVersion()) {console.error('This native is not supported on legacy (0x2D3A836D29A50D88)'); return;}
     return Citizen.invokeNative('0x2D3A836D29A50D88');
 }
 
