@@ -191,9 +191,9 @@ export function getCurrentPedVehicle(ped) {
  *
  * Hash: 0x3A87E44BB9A01D54 | Since: unknown
  */
-export function getCurrentPed(ped, doDeadCheck) {
+export function getCurrentPed(ped, weaponHash, doDeadCheck) {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
-    return GetCurrentPedWeapon(_ped, doDeadCheck);
+    return GetCurrentPedWeapon(_ped, weaponHash, doDeadCheck);
 }
 /**
  * doDeadCheck does nothing in release builds.

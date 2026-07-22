@@ -425,8 +425,9 @@ export function deleteAllTrains() {
  *
  * Hash: 0x5B76B14AE875C795 | Since: unknown
  */
-export function deleteMissionTrain() {
-    return DeleteMissionTrain();
+export function deleteMissionTrain(train) {
+    const _train = typeof train == 'object' ? train.handle() : train;
+    DeleteMissionTrain(_train);
 }
 /**
  * No comment provided
@@ -448,8 +449,9 @@ export function deleteScriptGenerator(vehicleGenerator) {
  *
  * Hash: 0xEA386986E786A54F | Since: unknown
  */
-export function deleteVehicle() {
-    return DeleteVehicle();
+export function deleteVehicle(vehicle) {
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
+    DeleteVehicle(_vehicle);
 }
 /**
  * No comment provided
@@ -4627,8 +4629,9 @@ export function setLightsCutoffDistanceTweak(distance) {
  *
  * Hash: 0xBBE7648349B49BE8 | Since: unknown
  */
-export function setMissionTrainAsNoLongerNeeded() {
-    return SetMissionTrainAsNoLongerNeeded(false);
+export function setMissionTrainAsNoLongerNeeded(train) {
+    const _train = typeof train == 'object' ? train.handle() : train;
+    SetMissionTrainAsNoLongerNeeded(_train, false);
 }
 /**
  * No comment provided

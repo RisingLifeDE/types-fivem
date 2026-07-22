@@ -186,8 +186,9 @@ export function createModelSwap(pos: Vector3, radius: number, originalModel: num
  * 
  * Hash: 0xAE3CBE5BF394C9C9 | Since: unknown
  */
-export function deleteEntity(): number {
-    return DeleteEntity();
+export function deleteEntity(entity: number | IEntity): void {
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
+    DeleteEntity(_entity);
 }
 
 /**
@@ -1595,8 +1596,9 @@ export function setAsMissionEntity(entity: number | IEntity, bScriptHostObject: 
  * 
  * Hash: 0xB736A491E64A32CF | Since: unknown
  */
-export function setAsNoLongerNeeded(): number {
-    return SetEntityAsNoLongerNeeded();
+export function setAsNoLongerNeeded(entity: number | IEntity): void {
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
+    SetEntityAsNoLongerNeeded(_entity);
 }
 
 /**
@@ -2086,8 +2088,9 @@ export function setWaterReflectionFlag(entity: number | IEntity, toggle: boolean
  * 
  * Hash: 0x3AE22DEB5BA5A3E6 | Since: unknown
  */
-export function setObjectAsNoLongerNeeded(): number {
-    return SetObjectAsNoLongerNeeded();
+export function setObjectAsNoLongerNeeded(_object: number | IObject): void {
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
+    SetObjectAsNoLongerNeeded(__object);
 }
 
 /**
@@ -2095,8 +2098,9 @@ export function setObjectAsNoLongerNeeded(): number {
  * 
  * Hash: 0x2595DD4236549CE3 | Since: unknown
  */
-export function setPedAsNoLongerNeeded(): number {
-    return SetPedAsNoLongerNeeded();
+export function setPedAsNoLongerNeeded(ped: number | IPed): void {
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    SetPedAsNoLongerNeeded(_ped);
 }
 
 /**
@@ -2123,8 +2127,9 @@ export function setPickUpByCargobobDisabled(entity: number | IEntity, toggle: bo
  * 
  * Hash: 0x629BFA74418D6239 | Since: unknown
  */
-export function setVehicleAsNoLongerNeeded(): number {
-    return SetVehicleAsNoLongerNeeded();
+export function setVehicleAsNoLongerNeeded(vehicle: number | IVehicle): void {
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
+    SetVehicleAsNoLongerNeeded(_vehicle);
 }
 
 /**

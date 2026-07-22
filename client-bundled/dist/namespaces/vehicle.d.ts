@@ -1265,7 +1265,7 @@ export declare function deleteAllTrains(): void;
  *
  * Hash: 0x5B76B14AE875C795 | Since: unknown | API-Set: unknown
  */
-export declare function deleteMissionTrain(): number;
+export declare function deleteMissionTrain(train: number | IVehicle): void;
 /**
  * No comment provided
  *
@@ -1284,7 +1284,7 @@ export declare function deleteScriptGenerator(vehicleGenerator: number): void;
  *
  * Hash: 0xEA386986E786A54F | Since: unknown | API-Set: unknown
  */
-export declare function deleteVehicle(): number;
+export declare function deleteVehicle(vehicle: number | IVehicle): void;
 /**
  * No comment provided
  *
@@ -4235,7 +4235,7 @@ export declare function setLightsCutoffDistanceTweak(distance: number): void;
  *
  * Hash: 0xBBE7648349B49BE8 | Since: unknown | API-Set: unknown
  */
-export declare function setMissionTrainAsNoLongerNeeded(): number;
+export declare function setMissionTrainAsNoLongerNeeded(train: number | IVehicle): void;
 /**
  * No comment provided
  *

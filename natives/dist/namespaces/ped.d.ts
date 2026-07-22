@@ -515,7 +515,7 @@ export declare function createSynchronizedSceneAtMapObject(pos: Vector3, radius:
  *
  * Hash: 0x9614299DCB53E54B | Since: unknown
  */
-export declare function deletePed(): number;
+export declare function deletePed(ped: number | IPed): void;
 /**
  * No comment provided
  *

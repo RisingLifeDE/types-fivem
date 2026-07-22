@@ -192,8 +192,8 @@ export function deleteChildRope(ropeId) {
  *
  * Hash: 0x52B4829281364649 | Since: unknown | API-Set: unknown
  */
-export function deleteRope() {
-    return DeleteRope();
+export function deleteRope(ropeId) {
+    DeleteRope(ropeId);
 }
 /**
  * No comment provided

@@ -210,8 +210,8 @@ export function deleteChildRope(ropeId: number): void {
  * 
  * Hash: 0x52B4829281364649 | Since: unknown | API-Set: unknown
  */
-export function deleteRope(): number {
-    return DeleteRope();
+export function deleteRope(ropeId: number): void {
+    DeleteRope(ropeId);
 }
 
 /**

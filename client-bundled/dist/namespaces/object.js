@@ -336,8 +336,9 @@ export function damageFragmentChild() {
  *
  * Hash: 0x539E0AE3E6634B9F | Since: unknown | API-Set: unknown
  */
-export function deleteObject() {
-    return DeleteObject();
+export function deleteObject(_object) {
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
+    DeleteObject(__object);
 }
 /**
  * No comment provided

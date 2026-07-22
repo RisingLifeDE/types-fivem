@@ -357,9 +357,9 @@ export function getCurrentPedVehicle(ped: number | IPed): [boolean, number] {
  * 
  * Hash: 0x3A87E44BB9A01D54 | Since: unknown | API-Set: unknown
  */
-export function getCurrentPed(ped: number | IPed, doDeadCheck: boolean): [boolean, number] {
+export function getCurrentPed(ped: number | IPed, weaponHash: number | string, doDeadCheck: boolean): boolean {
     const _ped = typeof ped == 'object' ? ped.handle() : ped;
-    return GetCurrentPedWeapon(_ped, doDeadCheck);
+    return GetCurrentPedWeapon(_ped, weaponHash, doDeadCheck);
 }
 
 /**

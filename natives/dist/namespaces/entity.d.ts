@@ -1,4 +1,4 @@
-import { Vector3, IEntity } from '@risinglife/fivem-shared';
+import { Vector3, IEntity, IPed, IVehicle, IObject } from '@risinglife/fivem-shared';
 /**
  * Documented here:
  * gtaforums.com/topic/885669-precisely-define-object-physics/
@@ -131,7 +131,7 @@ export declare function createModelSwap(pos: Vector3, radius: number, originalMo
  *
  * Hash: 0xAE3CBE5BF394C9C9 | Since: unknown
  */
-export declare function deleteEntity(): number;
+export declare function deleteEntity(entity: number | IEntity): void;
 /**
  * If `collision` is set to true, both entities won't collide with the other until the distance between them is above 4 meters.
  * Set `dynamic` to true to keep velocity after dettaching
@@ -1046,7 +1046,7 @@ export declare function setAsMissionEntity(entity: number | IEntity, bScriptHost
  *
  * Hash: 0xB736A491E64A32CF | Since: unknown
  */
-export declare function setAsNoLongerNeeded(): number;
+export declare function setAsNoLongerNeeded(entity: number | IEntity): void;
 /**
  * No comment provided
  *
@@ -1357,13 +1357,13 @@ export declare function setWaterReflectionFlag(entity: number | IEntity, toggle:
  *
  * Hash: 0x3AE22DEB5BA5A3E6 | Since: unknown
  */
-export declare function setObjectAsNoLongerNeeded(): number;
+export declare function setObjectAsNoLongerNeeded(_object: number | IObject): void;
 /**
  * This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
  *
  * Hash: 0x2595DD4236549CE3 | Since: unknown
  */
-export declare function setPedAsNoLongerNeeded(): number;
+export declare function setPedAsNoLongerNeeded(ped: number | IPed): void;
 /**
  * No comment provided
  *
@@ -1381,7 +1381,7 @@ export declare function setPickUpByCargobobDisabled(entity: number | IEntity, to
  *
  * Hash: 0x629BFA74418D6239 | Since: unknown
  */
-export declare function setVehicleAsNoLongerNeeded(): number;
+export declare function setVehicleAsNoLongerNeeded(vehicle: number | IVehicle): void;
 /**
  * Only called within 1 script for x360. 'fm_mission_controller' and it used on an object.
  *

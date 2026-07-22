@@ -153,7 +153,7 @@ export declare function deleteChildRope(ropeId: number): void;
  *
  * Hash: 0x52B4829281364649 | Since: unknown | API-Set: unknown
  */
-export declare function deleteRope(): number;
+export declare function deleteRope(ropeId: number): void;
 /**
  * No comment provided
  *

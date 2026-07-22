@@ -224,7 +224,7 @@ export declare function getCurrentPedVehicle(ped: number | IPed): [boolean, numb
  *
  * Hash: 0x3A87E44BB9A01D54 | Since: unknown | API-Set: unknown
  */
-export declare function getCurrentPed(ped: number | IPed, doDeadCheck: boolean): [boolean, number];
+export declare function getCurrentPed(ped: number | IPed, weaponHash: number | string, doDeadCheck: boolean): boolean;
 /**
  * doDeadCheck does nothing in release builds.
  *

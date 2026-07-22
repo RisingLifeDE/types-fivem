@@ -178,8 +178,9 @@ export function createModelSwap(pos, radius, originalModel, newModel) {
  *
  * Hash: 0xAE3CBE5BF394C9C9 | Since: unknown
  */
-export function deleteEntity() {
-    return DeleteEntity();
+export function deleteEntity(entity) {
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
+    DeleteEntity(_entity);
 }
 /**
  * If `collision` is set to true, both entities won't collide with the other until the distance between them is above 4 meters.
@@ -1472,8 +1473,9 @@ export function setAsMissionEntity(entity, bScriptHostObject, bGrabFromOtherScri
  *
  * Hash: 0xB736A491E64A32CF | Since: unknown
  */
-export function setAsNoLongerNeeded() {
-    return SetEntityAsNoLongerNeeded();
+export function setAsNoLongerNeeded(entity) {
+    const _entity = typeof entity == 'object' ? entity.handle() : entity;
+    SetEntityAsNoLongerNeeded(_entity);
 }
 /**
  * No comment provided
@@ -1920,16 +1922,18 @@ export function setWaterReflectionFlag(entity, toggle) {
  *
  * Hash: 0x3AE22DEB5BA5A3E6 | Since: unknown
  */
-export function setObjectAsNoLongerNeeded() {
-    return SetObjectAsNoLongerNeeded();
+export function setObjectAsNoLongerNeeded(_object) {
+    const __object = typeof _object == 'object' ? _object.handle() : _object;
+    SetObjectAsNoLongerNeeded(__object);
 }
 /**
  * This is an alias of SET_ENTITY_AS_NO_LONGER_NEEDED.
  *
  * Hash: 0x2595DD4236549CE3 | Since: unknown
  */
-export function setPedAsNoLongerNeeded() {
-    return SetPedAsNoLongerNeeded();
+export function setPedAsNoLongerNeeded(ped) {
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    SetPedAsNoLongerNeeded(_ped);
 }
 /**
  * No comment provided
@@ -1953,8 +1957,9 @@ export function setPickUpByCargobobDisabled(entity, toggle) {
  *
  * Hash: 0x629BFA74418D6239 | Since: unknown
  */
-export function setVehicleAsNoLongerNeeded() {
-    return SetVehicleAsNoLongerNeeded();
+export function setVehicleAsNoLongerNeeded(vehicle) {
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
+    SetVehicleAsNoLongerNeeded(_vehicle);
 }
 /**
  * Only called within 1 script for x360. 'fm_mission_controller' and it used on an object.

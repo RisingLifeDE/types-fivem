@@ -1179,8 +1179,9 @@ export function createSynchronizedSceneAtMapObject(pos, radius, _object) {
  *
  * Hash: 0x9614299DCB53E54B | Since: unknown | API-Set: unknown
  */
-export function deletePed() {
-    return DeletePed();
+export function deletePed(ped) {
+    const _ped = typeof ped == 'object' ? ped.handle() : ped;
+    DeletePed(_ped);
 }
 /**
  * No comment provided

@@ -227,7 +227,7 @@ export declare function damageFragmentChild(): void;
  *
  * Hash: 0x539E0AE3E6634B9F | Since: unknown | API-Set: unknown
  */
-export declare function deleteObject(): number;
+export declare function deleteObject(_object: number | IObject): void;
 /**
  * No comment provided
  *

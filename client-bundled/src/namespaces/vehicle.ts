@@ -1949,8 +1949,9 @@ export function deleteAllTrains(): void {
  * 
  * Hash: 0x5B76B14AE875C795 | Since: unknown | API-Set: unknown
  */
-export function deleteMissionTrain(): number {
-    return DeleteMissionTrain();
+export function deleteMissionTrain(train: number | IVehicle): void {
+    const _train = typeof train == 'object' ? train.handle() : train;
+    DeleteMissionTrain(_train);
 }
 
 /**
@@ -1974,8 +1975,9 @@ export function deleteScriptGenerator(vehicleGenerator: number): void {
  * 
  * Hash: 0xEA386986E786A54F | Since: unknown | API-Set: unknown
  */
-export function deleteVehicle(): number {
-    return DeleteVehicle();
+export function deleteVehicle(vehicle: number | IVehicle): void {
+    const _vehicle = typeof vehicle == 'object' ? vehicle.handle() : vehicle;
+    DeleteVehicle(_vehicle);
 }
 
 /**
@@ -6542,8 +6544,9 @@ export function setLightsCutoffDistanceTweak(distance: number): void {
  * 
  * Hash: 0xBBE7648349B49BE8 | Since: unknown | API-Set: unknown
  */
-export function setMissionTrainAsNoLongerNeeded(): number {
-    return SetMissionTrainAsNoLongerNeeded(false);
+export function setMissionTrainAsNoLongerNeeded(train: number | IVehicle): void {
+    const _train = typeof train == 'object' ? train.handle() : train;
+    SetMissionTrainAsNoLongerNeeded(_train, false);
 }
 
 /**
